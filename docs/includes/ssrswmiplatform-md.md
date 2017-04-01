@@ -1,0 +1,1 @@
+ Windows Server 2003, Datacenter Edition; Windows Server 2003, Enterprise Edition; Windows Server 2003, Standard Edition; Windows Vista; Windows XP Professional mit Service Pack 2 (SP2) oder Service Pack 1 (SP1); oder Windows 2000 (alle Versionen) 

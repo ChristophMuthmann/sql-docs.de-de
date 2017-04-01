@@ -1,0 +1,1 @@
+<Token>**DIESES THEMA GILT FÜR:**![ja](../includes/media/yes.png)SQL Server (ab 2008)![nein](../includes/media/no.png)Azure SQL-Datenbank![nein](../includes/media/no.png)Azure SQL Data Warehouse ![nein](../includes/media/no.png)Parallel Data Warehouse </Token>

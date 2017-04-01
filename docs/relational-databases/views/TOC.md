@@ -1,0 +1,8 @@
+# [Erstellen von indizierten Sichten](create-indexed-views.md)
+# [Sichten](views.md)
+# [Löschen von Sichten](delete-views.md)
+# [Umbenennen von Sichten](rename-views.md)
+# [Ändern von Daten über eine Sicht](modify-data-through-a-view.md)
+# [Ändern von Sichten](modify-views.md)
+# [Erstellen von Sichten](create-views.md)
+# [Abrufen von Informationen zu einer Sicht](get-information-about-a-view.md)

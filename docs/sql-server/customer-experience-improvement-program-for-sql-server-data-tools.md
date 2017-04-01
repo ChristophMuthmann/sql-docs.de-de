@@ -1,0 +1,101 @@
+---
+title: "Programm zur Verbesserung der Benutzerfreundlichkeit f&#252;r SQL Server Data Tools | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/21/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tools-ssdt"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
+caps.latest.revision: 11
+author: "stevestein"
+ms.author: "sstein"
+manager: "jhubbard"
+caps.handback.revision: 11
+---
+# Programm zur Verbesserung der Benutzerfreundlichkeit f&#252;r SQL Server Data Tools
+  Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program; CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
+  
+> [!NOTE]  
+>  Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+  
+## Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
+ Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) sowohl in Visual Studio 2015 als auch in Visual Studio 2013 widerrufen bzw. neu erteilen können.  
+  
+### Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2015  
+ SSDT für Visual Studio 2015 ist das Datenmodellierungstool, das mit SQL Server 2016 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2015 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2015 finden Sie in diesem [Hilfedokument von Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
+  
+ In Vorschauversionen von SQL Server 2016 ist das CEIP standardmäßig aktiviert. Sie können es mithilfe der folgenden Anweisungen deaktivieren oder wieder aktivieren.  
+  
+ **In Visual Studio (gilt für vollständige Sprachinstallationen von Visual Studio 2015)**  
+  
+ Wenn Sie das SSDT-Setup auf einem Computer ausführen, auf dem Visual Studio bereits installiert ist, werden nur die SQL Server- und Business Intelligence-Projektvorlagen hinzugefügt. In diesem Szenario können von Visual Studio bereitgestellte Kunden-Feedbackoptionen verwendet werden, um das Einverständnis im CEIP zu widerrufen bzw. neu zu erteilen.  
+  
+1.  Starten Sie Visual Studio.  
+  
+2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen** aus.  
+  
+3.  Um CEIP zu deaktivieren, klicken Sie auf **Nein, ich möchte nicht teilnehmen**, und klicken Sie dann auf **OK**.  
+  
+     Um CEIP zu aktivieren, klicken Sie auf **Ja, ich möchte teilnehmen**, und klicken Sie dann auf **OK**.  
+  
+
+  
+ **Verwenden einer registrierungsbasierten Richtlinie oder Gruppenrichtlinie**  
+  
+ Wenn Sie das SSDT-Setup auf einem Computer ausführen, auf dem Visual Studio 2015 nicht installiert ist, wird nur die Visual Studio-Shell installiert. Die Shell stellt keine Kunden-Feedbackoptionen bereit. In diesem Fall stellt ein Registrierungsupdate die einzige Option zum Konfigurieren des CEIP dar.  
+  
+ Unternehmenskunden können durch Festlegen einer registrierungsbasierten Richtlinie für SQL Server 2016 eine Gruppenrichtlinie erstellen, um das Einverständnis zu widerrufen bzw. neu zu erteilen.  
+  
+ Der entsprechende Registrierungsschlüssel und die entsprechenden Einstellungen lauten wie folgt:  
+  
+ Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\14.0\SQM  
+  
+ RegEntry name = OptIn  
+  
+ DWORD-Eintrag:  
+  
+-   0 bedeutet keine Teilnahme  
+  
+-   1 bedeutet einschalten  
+  
+> [!CAUTION]  
+>  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
+  
+ Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen zum Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit](http://go.microsoft.com/fwlink/?LinkId=52143).  
+  
+### Auswahl und Steuerung für das CEIP und SQL Server Data Tools – BI (SSDT-BI)  
+ Falls Sie SSDT-BI verwenden, erhalten Sie während der Installation die Gelegenheit zur Teilnahme am CEIP. Später können Sie die CEIP-Konfiguration für SSDT-BI durch Clienttools oder durch Ändern der Registrierungseinstellungen ändern.  
+  
+ **In SSDT und SSDT-BI für Visual Studio 2013**  
+  
+1.  Starten Sie das Tool, und öffnen Sie ein neues oder vorhandenes Projekt für Analysis Services oder Integration Services.  
+  
+2.  Wählen Sie im Menü „Hilfe“ **Kundenfeedbackoptionen für Microsoft SQL Server**aus.  
+  
+3.  Zum Deaktivieren des CEIP klicken Sie auf **Nein, ich möchte nicht teilnehmen**.  
+  
+     Zum Aktivieren des CEIP klicken Sie auf **Ja, ich möchte teilnehmen**.  
+  
+4.  Klicken Sie auf **OK**.  
+  
+ **Verwenden einer registrierungsbasierten Richtlinie oder Gruppenrichtlinie**  
+  
+ Unternehmenskunden können durch Festlegen einer registrierungsbasierten Richtlinie für SQL Server 2014 eine Gruppenrichtlinie erstellen, um das Einverständnis zu widerrufen bzw. neu zu erteilen.  
+  
+ Der entsprechende Registrierungsschlüssel und die entsprechenden Einstellungen lauten wie folgt:  
+  
+ Schlüssel = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\120  
+  
+ Name des Registrierungseintrags = CustomerFeedback  
+  
+ DWORD-Eintrag:  
+  
+-   0 bedeutet keine Teilnahme  
+  
+-   1 bedeutet einschalten  
+  
+  
