@@ -1,0 +1,1 @@
+ AlwaysOn-Verfügbarkeitsgruppen 

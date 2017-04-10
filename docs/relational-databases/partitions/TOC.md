@@ -1,0 +1,5 @@
+# [Assistent zum Verwalten von Partitionen (F1-Hilfe)](manage-partition-wizard-f1-help.md)
+# [Partitionierte Tabellen und Indizes](partitioned-tables-and-indexes.md)
+# [Ändern einer Partitionsfunktion](modify-a-partition-function.md)
+# [Erstellen partitionierter Tabellen und Indizes](create-partitioned-tables-and-indexes.md)
+# [Ändern eines Partitionsschemas](modify-a-partition-scheme.md)

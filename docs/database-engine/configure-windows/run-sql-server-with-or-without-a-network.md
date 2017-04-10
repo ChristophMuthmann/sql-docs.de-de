@@ -1,0 +1,55 @@
+---
+title: "Ausf&#252;hren von SQL Server mit oder ohne Netzwerk | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Überprüfen des Startstatus des Serverdiensts"
+  - "net-Start [SQL Server]"
+  - "Eingabeaufforderung [SQL Server], Verbindungen"
+  - "SQL Server-Dienste, Netzwerk"
+  - "Statusinformationen [SQL Server], Serverdienst"
+  - "Ausführen von SQL Server"
+  - "Netzwerk [SQL Server], SQL Server mit oder ohne"
+  - "Dienste [SQL Server], Netzwerk"
+  - "Starten des Serverdiensts"
+  - "SQL Server, Ausführung"
+ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
+caps.latest.revision: 26
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# Ausf&#252;hren von SQL Server mit oder ohne Netzwerk
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mit und ohne Netzwerk ausgeführt werden.  
+  
+## Ausführen von SQL Server in einem Netzwerk  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über ein Netzwerk kommunizieren soll, muss der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt werden. Standardmäßig wird der integrierte [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Dienst automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows gestartet. Wenn Sie feststellen möchten, ob der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst gestartet wurde, geben Sie Folgendes an der Eingabeaufforderung ein:  
+  
+ **net start**  
+  
+ Wenn die Dienste für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wurden, werden in der Ausgabe von **net start** folgende Dienste angezeigt:  
+  
+-   SQL Server Analysis Services (MSSQLSERVER)  
+  
+-   SQL Server (MSSQLSERVER)  
+  
+-   SQL Server-Agent (MSSQLSERVER)  
+  
+## Ausführen von SQL Server ohne Netzwerk  
+ Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ohne Netzwerk ausgeführt wird, müssen Sie den integrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst nicht starten. Da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], der SQL Server-Konfigurations-Manager und die Befehle **net start** und **net stop** immer funktionsfähig sind, sogar ohne Netzwerk, sind daher die Verfahren für das Starten und Beenden einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit und ohne Netzwerk identisch.  
+  
+ Wenn Sie von einem lokalen Client (z.B. **sqlcmd**) eine Verbindung mit einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, wird das Netzwerk umgangen. Die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt direkt mithilfe einer lokalen Pipe. Der Unterschied zwischen einer lokalen Pipe und einer Netzwerkpipe besteht darin, dass bei letzterer ein Netzwerk verwendet wird. Sowohl lokale Pipes als auch Netzwerkpipes stellen eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Standardpipe her (\\\\.\pipe\sql\query), sofern nichts anderes festgelegt wird.  
+  
+ Wenn Sie ohne Angabe eines Servernamens eine Verbindung mit einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, verwenden Sie eine lokale Pipe. Wenn Sie jedoch bei der Verbindung mit einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explizit einen Servernamen angeben, verwenden Sie entweder eine Netzwerkpipe oder einen anderen Mechanismus für die prozessübergreifende Kommunikation (IPC, Interprocess Communication) in Netzwerken, wie z. B. IPX/SPX (unter der Annahme, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Verwendung mehrerer Netzwerke konfiguriert wurde). Da ein eigenständiger Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerkpipes nicht unterstützt, dürfen Sie das nicht notwendige **/***<Servername>*-Argument nicht verwenden, wenn Sie von einem Client eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Um z.B. mit **osql** eine Verbindung mit einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, geben Sie Folgendes ein:  
+  
+ **osql /Usa /P** *\<saPassword>*  
+  
+  

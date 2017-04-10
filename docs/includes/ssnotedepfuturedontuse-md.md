@@ -1,0 +1,1 @@
+ Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Verwenden Sie dieses Feature nicht in einer neuen Entwicklungsarbeit, und ändern Sie Anwendungen, die dieses Feature verwenden, so schnell wie möglich. 

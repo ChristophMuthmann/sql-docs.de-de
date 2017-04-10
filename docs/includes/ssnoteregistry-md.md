@@ -1,0 +1,1 @@
+ Ein fehlerhaftes Bearbeiten der Registrierung kann eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie die wertvollen Daten auf dem Computer sichern. 

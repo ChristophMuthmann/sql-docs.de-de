@@ -1,0 +1,74 @@
+---
+title: "Angeben einer Trefferanzahl | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.debug.breakpt.hitcount"
+helpviewer_keywords: 
+  - "Transact-SQL-Debugger, Breakpoint-Trefferanzahl"
+ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
+caps.latest.revision: 6
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 6
+---
+# Angeben einer Trefferanzahl
+  Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
+  
+## Überlegungen zur Trefferanzahl  
+ Standardmäßig wird die Ausführung stets unterbrochen, wenn ein Breakpoint erreicht wird. Folgende Optionen sind verfügbar:  
+  
+-   Immer anhalten (Standard).  
+  
+-   Anhalten, wenn die Trefferanzahl gleich einem angegebenen Wert ist.  
+  
+-   Anhalten, wenn die Trefferanzahl ein Vielfaches ist von einem angegebenen Wert.  
+  
+-   Anhalten, wenn die Trefferanzahl größer oder gleich einem angegebenen Wert ist.  
+  
+ Die Breakpoint-Trefferanzahlen werden innerhalb einer Debugsitzung inkrementiert. Zu Beginn jeder Debugsitzung werden alle Trefferanzahlen auf 0 festgelegt.  
+  
+ Wenn Sie die Häufigkeit nachverfolgen möchten, mit der ein Breakpoint erreicht wurde, ohne die Ausführung zu unterbrechen, geben Sie eine Trefferanzahl mit sehr hohen Wert an, damit beim Breakpoint nie eine Unterbrechung eintritt.  
+  
+ Die Standardaktion für einen Breakpoint besteht darin, die Ausführung zu unterbrechen, wenn die Trefferanzahl- und die Breakpointbedingung erfüllt sind. Informationen zum Angeben anderer Aktionen finden Sie unter [Angeben einer Breakpointaktion](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+  
+#### So geben Sie eine Trefferanzahl an  
+  
+1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+  
+     -oder-  
+  
+     Klicken Sie im Fenster **Breakpoints**mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+  
+2.  Wählen Sie im Dialogfeld **Trefferanzahl für Haltepunkt** im Feld **Wenn der Haltepunkt erreicht wird** das gewünschte Verhalten aus.  
+  
+     Wenn Sie eine andere Einstellung als **Immer anhalten**auswählen, wird rechts neben der Liste ein Textfeld angezeigt. Geben Sie in diesem Textfeld die gewünschte Trefferanzahl als ganze Zahl ein.  
+  
+3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
+  
+#### So zeigen Sie die aktuelle Trefferanzahl an oder setzen diese zurück  
+  
+1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+  
+     -oder-  
+  
+     Klicken Sie im Fenster **Breakpoints**mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+  
+2.  Im Dialogfeld **Trefferanzahl für Haltepunkt** wird direkt über der Schaltfläche **Zurücksetzen** der Wert **Aktuelle Trefferanzahl** angezeigt.  
+  
+3.  Klicken Sie auf **Zurücksetzen** , wenn Sie die aktuelle Trefferanzahl auf 0 festlegen möchten.  
+  
+4.  Klicken Sie auf **OK** oder **Abbrechen** , um das Dialogfeld zu schließen.  
+  
+## Siehe auch  
+ [Angeben einer Breakpointbedingung](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
+  
+  

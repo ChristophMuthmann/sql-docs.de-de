@@ -1,0 +1,1 @@
+ Assistent für neue Verfügbarkeitsgruppen 
