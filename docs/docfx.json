@@ -3,33 +3,28 @@
     "content": [
       {
         "files": [
-          "!**/*.md",
-          "!**/*.yml"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
-          "LICENSE-CODE",
-          "**/*.md",
-          "**/*.yml"
+          "LICENSE-CODE"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "!**/*.png",
-          "!**/*.gif",
-          "!**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
           "**/*.png",
           "**/*.gif",
           "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
         ]
       }
     ],
