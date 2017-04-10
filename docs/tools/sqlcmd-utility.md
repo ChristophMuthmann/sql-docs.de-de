@@ -204,13 +204,13 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
  Werden nach der Option **-P** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
  **-S** [*Protokoll*:]*Servername*[**\\***Instanzname*][**,***Port*]  
- Gibt die [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]-Instanz an, mit der eine Verbindung hergestellt wird. Durch die Option wird die **sqlcmd**-Skriptvariable SQLCMDSERVER festgelegt.  
+ Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an, mit der eine Verbindung hergestellt wird. Durch die Option wird die **sqlcmd**-Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Servername* [**\\***Instanzname*] an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt **sqlcmd** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Servername* [**\\***Instanzname*] an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt **sqlcmd** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  *Protokoll* kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes).  
   
- Wenn Sie keinen *Servernamen*[**\\***Instanzname]* beim Starten von **sqlcmd** angeben, sucht [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] nach der SQLCMDSERVER-Umgebungsvariablen, und wird diese verwendet.  
+ Wenn Sie keinen *Servernamen*[**\\***Instanzname]* beim Starten von **sqlcmd** angeben, sucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach der SQLCMDSERVER-Umgebungsvariablen, und wird diese verwendet.  
   
 > [!NOTE]  
 >  Die OSQLSERVER-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDSERVER-Umgebungsvariable hat Vorrang vor der OSQLSERVER-Umgebungsvariablen. Das bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können und dass alte Skripts weiterhin funktionsfähig sind.  
@@ -221,7 +221,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
 > [!NOTE]  
 >  Die OSQLUSER-Umgebungsvariable steht aus Gründen der Abwärtskompatibilität zur Verfügung. Die SQLCMDUSER-Umgebungsvariable ist bezüglich der OSQLUSER-Umgebungsvariable vorrangig. Dies bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können. Es bedeutet ferner, dass vorhandene **osql**-Skripts weiterhin funktionieren.  
   
- Wenn weder die Option **-U** noch die Option **-P** angegeben wird, versucht **sqlcmd**, die Verbindung im [!INCLUDE[msCoName](../Token/msCoName_md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem Windows-Konto des Benutzers, der **sqlcmd** ausführt.  
+ Wenn weder die Option **-U** noch die Option **-P** angegeben wird, versucht **sqlcmd**, die Verbindung im [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem Windows-Konto des Benutzers, der **sqlcmd** ausführt.  
   
  Wird die Option **-U** zusammen mit der Option **-E** verwendet (weiter unten in diesem Thema beschrieben), wird eine Fehlermeldung generiert. Werden nach der Option **-U** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
@@ -284,7 +284,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
  Leitet die Ausgabe der Fehlermeldung auf den Bildschirm um (**stderr**). Wenn Sie keinen Parameter bzw. wenn Sie **0** angeben, werden nur Fehlermeldungen mit dem Schweregrad 11 oder höher umgeleitet. Wenn Sie **1** angeben, wird die gesamte Fehlermeldungsausgabe (einschließlich der Ausgabe von PRINT) umgeleitet. Dies hat keine Wirkung, wenn Sie die Option -o verwenden. Standardmäßig werden Meldungen an **stdout** gesendet.  
   
  **-R**  
- Bewirkt, dass **sqlcmd** aus [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] abgerufene numerische Spalten sowie Währungs-, Datums- und Zeitspalten basierend auf dem Gebietsschema des Clients lokalisiert. Standardmäßig werden diese Spalten entsprechend den regionalen Einstellungen des Servers angezeigt.  
+ Bewirkt, dass **sqlcmd** aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abgerufene numerische Spalten sowie Währungs-, Datums- und Zeitspalten basierend auf dem Gebietsschema des Clients lokalisiert. Standardmäßig werden diese Spalten entsprechend den regionalen Einstellungen des Servers angezeigt.  
   
  **-u**  
  Gibt an, dass *Ausgabedatei* unabhängig vom Format von *Eingabedatei* im Unicode-Format gespeichert wird.  
@@ -401,7 +401,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
  **Optionen für die Fehlerberichterstellung**  
   **-b**  
- Gibt an, dass **sqlcmd** beendet und ein DOS ERRORLEVEL-Wert zurückgegeben wird, wenn ein Fehler auftritt. Für die DOS ERRORLEVEL-Variable wird der Wert **1** zurückgegeben, wenn der Schweregrad der [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]-Fehlermeldung größer als 10 ist. Andernfalls wird der Wert **0** zurückgegeben. Wenn die Option **-V** zusätzlich zu **-b** festgelegt wurde, meldet **sqlcmd** keinen Fehler, wenn der Schweregrad kleiner ist als die mithilfe von **-V** festgelegten Werte. Mit Eingabeaufforderungs-Batchdateien kann der Wert von ERRORLEVEL getestet und der Fehler entsprechend behoben werden. **sqlcmd** meldet keine Fehler für Schweregrad 10 (Informationsmeldungen).  
+ Gibt an, dass **sqlcmd** beendet und ein DOS ERRORLEVEL-Wert zurückgegeben wird, wenn ein Fehler auftritt. Für die DOS ERRORLEVEL-Variable wird der Wert **1** zurückgegeben, wenn der Schweregrad der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Fehlermeldung größer als 10 ist. Andernfalls wird der Wert **0** zurückgegeben. Wenn die Option **-V** zusätzlich zu **-b** festgelegt wurde, meldet **sqlcmd** keinen Fehler, wenn der Schweregrad kleiner ist als die mithilfe von **-V** festgelegten Werte. Mit Eingabeaufforderungs-Batchdateien kann der Wert von ERRORLEVEL getestet und der Fehler entsprechend behoben werden. **sqlcmd** meldet keine Fehler für Schweregrad 10 (Informationsmeldungen).  
   
  Wenn das **sqlcmd**-Skript einen falschen Kommentar bzw. einen Syntaxfehler enthält oder eine Skriptvariable fehlt, wird der ERRORLEVEL-Wert 1 zurückgegeben.  
   
@@ -418,7 +418,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
  Fordert ein Paket einer anderen Größe an. Durch diese Option wird die **sqlcmd**-Skriptvariable SQLCMDPACKETSIZE festgelegt. *packet_size* muss einen Wert zwischen 512 und 32767 haben. Der Standardwert lautet 4096. Ein höherer Wert für die Paketgröße kann das Leistungsverhalten beim Ausführen von Skripts verbessern, die zahlreiche SQL-Anweisungen zwischen GO-Befehlen aufweisen. Sie können eine größere Paketgröße anfordern. Wenn die Anforderung abgelehnt wird, verwendet **sqlcmd** jedoch den Standardwert des Servers für die Paketgröße.  
   
  **-c** *Batchabschlusszeichen*  
- Gibt das Batchabschlusszeichen an. Standardmäßig werden Befehle abgeschlossen und an [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] gesendet, indem das Wort „GO“ in eine eigene Zeile eingegeben wird. Wenn Sie das Batchabschlusszeichen neu festlegen, dürfen Sie keine für [!INCLUDE[tsql](../Token/tsql_md.md)] reservierten Schlüsselwörter oder Zeichen verwenden, die eine spezielle Bedeutung für das Betriebssystem haben, und zwar auch dann nicht, wenn vor dem Wort bzw. Zeichen ein umgekehrter Schrägstrich steht.  
+ Gibt das Batchabschlusszeichen an. Standardmäßig werden Befehle abgeschlossen und an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gesendet, indem das Wort „GO“ in eine eigene Zeile eingegeben wird. Wenn Sie das Batchabschlusszeichen neu festlegen, dürfen Sie keine für [!INCLUDE[tsql](../includes/tsql-md.md)] reservierten Schlüsselwörter oder Zeichen verwenden, die eine spezielle Bedeutung für das Betriebssystem haben, und zwar auch dann nicht, wenn vor dem Wort bzw. Zeichen ein umgekehrter Schrägstrich steht.  
   
  **-L**[**c**]  
  Listet die lokal konfigurierten Servercomputer sowie die Namen der Servercomputer auf, die Broadcastnachrichten über das Netzwerk senden. Dieser Parameter kann nicht in Verbindung mit anderen Parametern verwendet werden. Es können maximal 3.000 Servercomputer aufgelistet werden. Wenn die Serverliste aufgrund der Puffergröße abgeschnitten wurde, wird eine Warnmeldung angezeigt.  
@@ -439,7 +439,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
  Erläuterungen:  
   
- `x` = Anzahl von Transaktionen, die von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] verarbeitet werden.  
+ `x` = Anzahl von Transaktionen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verarbeitet werden.  
   
  `t1` = Gesamtdauer aller Transaktionen.  
   
@@ -521,7 +521,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
  Durch R/W wird angezeigt, dass der Wert mithilfe des **setvar**-Befehls geändert werden kann und auf nachfolgende Befehle der neue Wert angewendet wird.  
   
 ## <a name="sqlcmd-commands"></a>sqlcmd-Befehle  
- Zusätzlich zu den [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen sind in **sqlcmd** auch die folgenden Befehle verfügbar:  
+ Zusätzlich zu den [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen sind in **sqlcmd** auch die folgenden Befehle verfügbar:  
   
 |||  
 |-|-|  
@@ -546,15 +546,15 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
 -   Bei keinem **sqlcmd**-Befehl wird die Groß- und Kleinschreibung beachtet.  
   
--   Jeder Befehl muss in einer eigenen Zeile stehen. Auf einen Befehl darf keine [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisung oder ein anderer Befehl folgen.  
+-   Jeder Befehl muss in einer eigenen Zeile stehen. Auf einen Befehl darf keine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung oder ein anderer Befehl folgen.  
   
--   Die Befehle werden sofort ausgeführt. Sie werden nicht wie [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen in den Ausführungspuffer gestellt.  
+-   Die Befehle werden sofort ausgeführt. Sie werden nicht wie [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen in den Ausführungspuffer gestellt.  
   
  **Bearbeitungsbefehle**  
   [**:**] **ED**  
- Startet den Text-Editor. Mit diesem Editor kann der aktuelle [!INCLUDE[tsql](../Token/tsql_md.md)]-Batch oder der zuletzt ausgeführte Batch bearbeitet werden. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED**-Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
+ Startet den Text-Editor. Mit diesem Editor kann der aktuelle [!INCLUDE[tsql](../includes/tsql-md.md)]-Batch oder der zuletzt ausgeführte Batch bearbeitet werden. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED**-Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
   
- Der Text-Editor wird durch die SQLCMDEDITOR-Umgebungsvariable definiert. Der Standardeditor ist 'Edit'. Sie können den Editor ändern, indem Sie die SQLCMDEDITOR-Umgebungsvariable festlegen. Wenn Sie beispielsweise den [!INCLUDE[msCoName](../Token/msCoName_md.md)]-Editor als Editor festlegen möchten, müssen Sie Folgendes eingeben:  
+ Der Text-Editor wird durch die SQLCMDEDITOR-Umgebungsvariable definiert. Der Standardeditor ist 'Edit'. Sie können den Editor ändern, indem Sie die SQLCMDEDITOR-Umgebungsvariable festlegen. Wenn Sie beispielsweise den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Editor als Editor festlegen möchten, müssen Sie Folgendes eingeben:  
   
  `SET SQLCMDEDITOR=notepad`  
   
@@ -663,7 +663,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
  Dieser Fehler bewirkt, dass das **sqlcmd**-Skript beendet und die Meldungs-ID 50001 an den Client zurückgegeben wird.  
   
- Die Rückgabewerte -1 bis -99 sind für [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
+ Die Rückgabewerte -1 bis -99 sind für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
 |Rückgabewerte|Description|  
 |-------------------|-----------------|  
@@ -672,13 +672,13 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
 |-102|Beim Auswählen des Rückgabewerts ist ein Konvertierungsfehler aufgetreten.|  
   
  **GO** [*Anzahl*]  
- GO signalisiert sowohl das Ende eines Batches als auch die Ausführung aller zwischengespeicherten [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen. Der Batch wird mehrmals als eigenständiger Batch ausgeführt. Sie dürfen eine Variable in einem einzelnen Batch nur einmal definieren.
+ GO signalisiert sowohl das Ende eines Batches als auch die Ausführung aller zwischengespeicherten [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen. Der Batch wird mehrmals als eigenständiger Batch ausgeführt. Sie dürfen eine Variable in einem einzelnen Batch nur einmal definieren.
   
  **Sonstige Befehle**  
   **:r \<** *Dateiname* **>**  
- Analysiert zusätzliche [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen und **sqlcmd**-Befehle aus der durch **\<***Dateiname***>** angegebenen Datei und schreibt das Ergebnis in den Anweisungscache.  
+ Analysiert zusätzliche [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen und **sqlcmd**-Befehle aus der durch **\<***Dateiname***>** angegebenen Datei und schreibt das Ergebnis in den Anweisungscache.  
   
- Wenn die Datei [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen enthält, die nicht von **GO** gefolgt sind, müssen Sie **GO** in der ersten Zeile nach **:r** eingeben.  
+ Wenn die Datei [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen enthält, die nicht von **GO** gefolgt sind, müssen Sie **GO** in der ersten Zeile nach **:r** eingeben.  
   
 > [!NOTE]  
 >  **\<** *Dateiname* **>** wird relativ zum Startverzeichnis gelesen, in dem **sqlcmd** ausgeführt wurde.  
@@ -692,7 +692,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
  **:Connect**  *Servername*[**\\***Instanzname*] [-l *Timeout*] [-U *Benutzername* [-P *Kennwort*]]  
- Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] her. Schließt außerdem die aktuelle Verbindung.  
+ Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] her. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  
   
@@ -705,7 +705,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
  Wenn *Timeout* nicht angegeben wird, gilt standardmäßig der Wert der SQLCMDLOGINTIMEOUT-Variablen.  
   
- Wenn nur *Benutzername* angegeben wird (entweder als Option oder als Umgebungsvariable), wird der Benutzer zur Eingabe eines Kennworts aufgefordert. Dies trifft nicht zu, wenn die Umgebungsvariable SQLCMDUSER oder SQLCMDPASSWORD festgelegt wurde. Wenn weder Optionen noch Umgebungsvariablen angegeben werden, wird der Windows-Authentifizierungsmodus für die Anmeldung verwendet. Wenn z. B. mithilfe integrierter Sicherheit eine Verbindung mit der Instanz `instance1` auf dem Computer mit [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] (`myserver`) hergestellt werden soll, würden Sie Folgendes eingeben:  
+ Wenn nur *Benutzername* angegeben wird (entweder als Option oder als Umgebungsvariable), wird der Benutzer zur Eingabe eines Kennworts aufgefordert. Dies trifft nicht zu, wenn die Umgebungsvariable SQLCMDUSER oder SQLCMDPASSWORD festgelegt wurde. Wenn weder Optionen noch Umgebungsvariablen angegeben werden, wird der Windows-Authentifizierungsmodus für die Anmeldung verwendet. Wenn z. B. mithilfe integrierter Sicherheit eine Verbindung mit der Instanz `instance1` auf dem Computer mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (`myserver`) hergestellt werden soll, würden Sie Folgendes eingeben:  
   
  `:connect myserver\instance1`  
   
@@ -743,7 +743,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
 -   Mit jeder neuen **sqlcmd**-Sitzung werden eventuell schon vorhandene gleichnamige Dateien überschrieben.  
   
 ### <a name="informational-messages"></a>Informationsmeldungen  
- **sqlcmd** gibt alle vom Server gesendeten Informationsmeldungen aus. Im folgenden Beispiel wird eine Informationsmeldung ausgegeben, nachdem die [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen ausgeführt wurden.  
+ **sqlcmd** gibt alle vom Server gesendeten Informationsmeldungen aus. Im folgenden Beispiel wird eine Informationsmeldung ausgegeben, nachdem die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausgeführt wurden.  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -798,7 +798,7 @@ Legt „Column Encryption Setting“ auf `Enabled` fest. Weitere Informationen h
   
  Der GO-Befehl sollte nicht verwendet werden, bevor der XML OFF-Befehl ausgegeben wurde, da XML OFF bewirkt, dass **sqlcmd** zur zeilenbasierten Ausgabe zurückkehrt.  
   
- Es ist nicht möglich, XML-Daten (Datenstrom) und Rowsetdaten zu mischen. Wenn der XML ON-Befehl nicht ausgegeben wurde, bevor eine [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisung, die XML-Datenströme ausgibt, ausgeführt wurde, wird die Ausgabe nicht richtig dargestellt. Wenn der XML ON-Befehl ausgegeben wurde, können Sie keine [!INCLUDE[tsql](../Token/tsql_md.md)]-Anweisungen ausführen, die reguläre Rowsets ausgeben.  
+ Es ist nicht möglich, XML-Daten (Datenstrom) und Rowsetdaten zu mischen. Wenn der XML ON-Befehl nicht ausgegeben wurde, bevor eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung, die XML-Datenströme ausgibt, ausgeführt wurde, wird die Ausgabe nicht richtig dargestellt. Wenn der XML ON-Befehl ausgegeben wurde, können Sie keine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausführen, die reguläre Rowsets ausgeben.  
   
 > [!NOTE]  
 >  Der **:XML**-Befehl unterstützt die SET STATISTICS XML-Anweisung nicht.  

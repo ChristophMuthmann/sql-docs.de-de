@@ -302,7 +302,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
     -   Die zum Ausführen der Integritätsprüfungen erforderliche T-SQL-Anweisung wird mithilfe der Hilfsprozeduren dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck und dbo.GenerateUQCheck generiert.  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
- OSTRESS ist ein Befehlszeilentool, das vom [!INCLUDE[msCoName](../Token/msCoName_md.md)] -Supportteam des [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] CSS entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
+ OSTRESS ist ein Befehlszeilentool, das vom [!INCLUDE[msCoName](../../includes/msCoName-md.md)] -Supportteam des [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] CSS entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
   
 ### <a name="installing-ostress"></a>Installieren von OSTRESS  
  OSTRESS wird nicht eigenständig, sondern als Teil der RML-Hilfsprogramme installiert.  
@@ -324,9 +324,9 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Um die Befehlszeilenoptionen für OSTRESS anzuzeigen, führen Sie ostress.exe einfach ohne Angabe von Befehlszeilenoptionen aus. Im Folgenden die wichtigsten Optionen, die beim Ausführen von OSTRESS für dieses Beispiel angegeben werden:  
   
--   -S: Der Name der [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll.  
+-   -S: Der Name der [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll.  
   
--   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] -Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
+-   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] -Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
   
 -   -d: Der Name der Datenbank, in diesem Beispiel "AdventureWorks2014".  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrugt die Dauer 41 Minuten und 25 Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang 52 Minuten und 16 Sekunden.  
   
- Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Das [!INCLUDE[hek_2](../Token/hek_2_md.md)] -Modul verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] voll ausgeschöpft werden.  
+ Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Das [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] voll ausgeschöpft werden.  
   
  Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
  Die Testergebnisse variieren normalerweise je nach Hardware und dem im Testlauf verwendeten Parallelitätsgrad. Wenn die Ergebnisse nicht wie erwartet ausfallen, sollten Sie folgende Punkte überprüfen:  
   
--   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn von [!INCLUDE[hek_2](../Token/hek_2_md.md)] wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
+-   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn von [!INCLUDE[hek_2](../../includes/hek-2-md.md)] wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
   
--   [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für datenträgerbasierte Tabellen hoch ist, liegen normalerweise wenig Konflikte vor, was auf eine fehlende Parallelität hinweist.  
   
--   Geschwindigkeit des Protokolllaufwerks: Wenn das Protokolllaufwerk für den Transaktionsdurchsatz im System zu langsam ist, verursacht die Arbeitsauslastung bei E/A-Protokollvorgängen einen Engpass. Obwohl die Protokollierung mit [!INCLUDE[hek_2](../Token/hek_2_md.md)]effizienter ist, wenn E/A-Protokollvorgänge einen Engpass verursachen, ist der potenzielle Leistungsgewinn begrenzt.  
+-   Geschwindigkeit des Protokolllaufwerks: Wenn das Protokolllaufwerk für den Transaktionsdurchsatz im System zu langsam ist, verursacht die Arbeitsauslastung bei E/A-Protokollvorgängen einen Engpass. Obwohl die Protokollierung mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)]effizienter ist, wenn E/A-Protokollvorgänge einen Engpass verursachen, ist der potenzielle Leistungsgewinn begrenzt.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für speicheroptimierte Tabellen nicht nahe 100 % liegt oder unregelmäßige Spitzen aufweist, kann ein Engpass bei E/A-Protokollvorgängen vorliegen. Sie können die Ursache im Ressourcenmonitor anhand der Warteschlangenlänge für das Protokolllaufwerk ermitteln.  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Arbeitsspeichernutzung für speicheroptimierte Tabellen  
   
 #### <a name="overall-utilization-of-the-database"></a>Gesamtnutzung der Datenbank  
- Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für [!INCLUDE[hek_2](../Token/hek_2_md.md)] im System ermittelt werden.  
+ Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für [!INCLUDE[hek_2](../../includes/hek-2-md.md)] im System ermittelt werden.  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Standardwert|0|  
 |MEMORYCLERK_XTP|Standardwert|0|  
   
- Sie sehen, dass [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
+ Sie sehen, dass [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
   
  Nach einem Testlauf ergibt sich die folgende Arbeitsspeichernutzung nach Tabellen:  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Die gespeicherte Prozedur Demo.usp_DemoReset kann verwendet werden, um die exemplarische Arbeitsauslastung zurückzusetzen. Durch sie werden die Daten in den Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem gelöscht und mit neuen Ausgangsdaten aus den urspünglichen Tabellen SalesOrderHeader und SalesOrderDetail aufgefüllt.  
   
- Obwohl die Zeilen in den Tabellen gelöscht wurden, bedeutet dies nicht, dass der Arbeitsspeicher sofort freigegeben wird. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] gibt den Arbeitsspeicher, der von den aus speicheroptimierten Tabellen gelöschten Zeilen belegt wurde, nach Bedarf im Hintergrund frei. Wenn im System keine Transaktionen ausgeführt werden, werden Sie feststellen, dass der von den gelöschten Zeilen belegte Arbeitsspeicher unmittelbar nach dem Zurücksetzen der exemplarischen Arbeitsauslastung noch nicht freigegeben wurde:  
+ Obwohl die Zeilen in den Tabellen gelöscht wurden, bedeutet dies nicht, dass der Arbeitsspeicher sofort freigegeben wird. [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] gibt den Arbeitsspeicher, der von den aus speicheroptimierten Tabellen gelöschten Zeilen belegt wurde, nach Bedarf im Hintergrund frei. Wenn im System keine Transaktionen ausgeführt werden, werden Sie feststellen, dass der von den gelöschten Zeilen belegte Arbeitsspeicher unmittelbar nach dem Zurücksetzen der exemplarischen Arbeitsauslastung noch nicht freigegeben wurde:  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
+ Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
   
  Die tatsächlichen Daten der speicheroptimierten Tabellen sind in einer einzelnen Datendatei gespeichert.  
   
