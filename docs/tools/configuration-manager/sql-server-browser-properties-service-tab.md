@@ -1,0 +1,61 @@
+---
+title: "Eigenschaften von SQL Server-Browser (Registerkarte Dienst) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/16/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
+caps.latest.revision: 16
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 16
+---
+# Eigenschaften von SQL Server-Browser (Registerkarte Dienst)
+  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Programm wird als Dienst auf dem Server ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser achtet auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind.  
+  
+ Verwenden Sie im Dialogfeld **Eigenschaften von SQL Server-Browser** die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen. Alle Eigenschaften außer **Startmodus** sind schreibgeschützt.  
+  
+## <a name="options"></a>enthalten  
+ **Binärpfad**  
+ Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
+  
+ **Fehlersteuerung**  
+ 1 steht für `SERVICE_ERROR_NORMAL`. Wenn der Dienst nicht zusammen mit dem Computer gestartet werden kann, wird der Fehler vom Startprogramm protokolliert und eine Popupmeldung angezeigt, der Startvorgang aber fortgesetzt. Dieser Wert kann nicht geändert werden.  
+  
+ **Exitcode**  
+ Bei einem Fehler wird die dazu gehörende Nummer in diesem Feld angezeigt. Verwenden Sie diese Nummer für die Problembehandlung. Stellen Sie die Fehlernummer dem technischen Support zur Verfügung, oder durchsuchen Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+  
+ **Hostname**  
+ Zeigt den Namen des Computers oder Clusters an, auf dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst ausgeführt wird.  
+  
+ **Name**  
+ Zeigt den Anzeigenamen des Dienstes an.  
+  
+ **Prozess-ID**  
+ Zeigt die Prozess-ID von Windows an.  
+  
+ **Diensttyp**  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
+  
+ **Startmodus**  
+ Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
+  
+-   Manuell: Dieser Dienst wird nicht automatisch zusammen mit dem Computer gestartet. Zum Starten des Dienstes verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder ein anderes Tool.  
+  
+-   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
+  
+-   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+  
+ **Status**  
+ Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. "**…**" gibt einen ausstehenden Statuswechsel an.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [SQL Server-Browserdienst](../../tools/configuration-manager/sql-server-browser-service.md)  
+  
+  

@@ -1,0 +1,2 @@
+  Sie können paginierte Berichtsdefinitionsdateien (.rdl) im Berichts-Generator und im Berichts-Designer in SQL Server-Datentools erstellen und ändern. Jede Erstellungsumgebung bietet verschiedene Methoden zum Erstellen, Öffnen und Speichern von Berichten und verwandten Elementen.
+   

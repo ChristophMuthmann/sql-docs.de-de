@@ -1,0 +1,1 @@
+<Token>![Benötigen Sie Hilfe?](/Image/Shiproom/needhelp_person_icon.png)  **Benötigen Sie Hilfe?** [MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016), [Stapelüberlauf](http://stackoverflow.com/questions/tagged/sql-server-2016), [Verbinden](https://connect.microsoft.com/SQLServer/Feedback)</Token>

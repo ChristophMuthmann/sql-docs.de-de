@@ -1,0 +1,142 @@
+---
+title: "Erstellen von Indizes mit eingeschlossenen Spalten | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/09/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-indexes"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Indexgröße [SQL Server]"
+  - "Indexschlüssel [SQL Server]"
+  - "Indexspalten [SQL Server]"
+  - "Größe [SQL Server], Indizes"
+  - "Schlüsselspalten [SQL Server]"
+  - "Eingeschlossene Spalten"
+  - "Nicht gruppierte Indizes [SQL Server], eingeschlossene Spalten"
+  - "Entwerfen von Indizes [SQL Server], eingeschlossene Spalten"
+  - "Nichtschlüsselspalten"
+ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
+caps.latest.revision: 29
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 28
+---
+# Erstellen von Indizes mit eingeschlossenen Spalten
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+  In diesem Thema wird beschrieben, wie eingeschlossene Spalten (oder Nichtschlüsselspalten) hinzugefügt werden, um die Funktionalität von nicht gruppierten Indizes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] zu erweitern. Indem Sie Nichtschlüsselspalten einschließen, erstellen Sie nicht gruppierte Indizes, die eine größere Anzahl von Abfragen abdecken. Dies ist der Fall, weil Nichtschlüsselspalten die folgenden Vorteile aufweisen:  
+  
+-   Es kann sich um Datentypen handeln, die als Indexschlüsselspalten nicht zulässig sind.  
+  
+-   Sie werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Berechnen der Indexschlüsselspalten oder Indexschlüsselgröße nicht berücksichtigt.  
+  
+ Ein Index mit Nichtschlüsselspalten kann die Abfrageleistung erheblich steigern, wenn alle Spalten in der Abfrage in den Index als Schlüssel- oder Nichtschlüsselspalten eingeschlossen werden. Leistungsvorteile werden erzielt, weil der Abfrageoptimierer alle Spaltenwerte im Index finden kann; auf Daten der Tabelle oder des gruppierten Indexes wird nicht zugegriffen, sodass als Ergebnis weniger Datenträger-E/A-Vorgänge auftreten.  
+  
+> [!NOTE]  
+>  Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage* bezeichnet.  
+  
+ **In diesem Thema**  
+  
+-   **Vorbereitungen:**  
+  
+     [Entwurfsempfehlungen](#DesignRecs)  
+  
+     [Einschränkungen](#Restrictions)  
+  
+     [Sicherheit](#Security)  
+  
+-   **So erstellen Sie einen Index mit Nichtschlüsselspalten mit:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+  
+###  <a name="DesignRecs"></a> Entwurfsempfehlungen  
+  
+-   Überarbeiten Sie nicht gruppierte Indizes mit großen Indexschlüsseln so, dass nur Spalten, die für Suchen und Suchvorgänge verwendet werden, Schlüsselspalten sind. Erklären Sie alle anderen Spalten, die die Abfrage abdecken, zu Nichtschlüsselspalten. Auf diese Weise sind alle Spalten vorhanden, die zum Abdecken der Abfrage erforderlich sind, der Indexschlüssel selbst ist jedoch klein und effizient.  
+  
+-   Schließen Sie Nichtschlüsselspalten in einen nicht gruppierten Index ein, damit die Größenbegrenzungen des aktuellen Indexes von maximal 16 Schlüsselspalten und einer maximalen Größe des Indexschlüssels von 900 Byte nicht überschritten werden. Nichtschlüsselspalten werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Berechnen der Indexschlüsselspalten oder Indexschlüsselgröße nicht berücksichtigt.  
+  
+###  <a name="Restrictions"></a> Einschränkungen  
+  
+-   Nichtschlüsselspalten können nur für nicht gruppierte Indizes definiert werden.  
+  
+-   Alle Datentypen außer **text**, **ntext**und **image** können als Nichtschlüsselspalten verwendet werden.  
+  
+-   Berechnete Spalten, die deterministisch und entweder präzise oder unpräzise sind, können als Nichtschlüsselspalten verwendet werden. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+  
+-   Berechnete Spalten, die aus den Datentypen **image**, **ntext**und **text** abgeleitet werden, können Nichtschlüsselspalten sein, wenn der Datentyp der berechneten Spalte als Nichtschlüssel-Indexspalte zulässig ist.  
+  
+-   Nichtschlüsselspalten können nur aus einer Tabelle gelöscht werden, wenn der Index der Tabelle zuvor gelöscht wird.  
+  
+-   Nichtschlüsselspalten können nur zum Ausführen der folgenden Aufgaben geändert werden:  
+  
+    -   Ändern der NULL-Zulässigkeit der Spalte von NOT NULL in NULL.  
+  
+    -   Vergrößern der Länge von **varchar**-, **nvarchar**- oder **varbinary** -Spalten.  
+  
+###  <a name="Security"></a> Sicherheit  
+  
+####  <a name="Permissions"></a> Berechtigungen  
+ Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
+  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+  
+#### So erstellen Sie einen Index mit Nichtschlüsselspalten  
+  
+1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie einen Index mit Nichtschlüsselspalten erstellen möchten.  
+  
+2.  Klicken Sie auf das Pluszeichen, um den Ordner **Tabellen** zu erweitern.  
+  
+3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, für die Sie einen Index mit Nichtschlüsselspalten erstellen möchten.  
+  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
+  
+5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
+  
+6.  Klicken Sie auf der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…**.  
+  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus** *table_name* die Kontrollkästchen der Tabellenspalten, die dem Index hinzugefügt werden sollen.  
+  
+8.  Klicken Sie auf **OK**.  
+  
+9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen…**.  
+  
+10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus** *table_name* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
+  
+11. Klicken Sie auf **OK**.  
+  
+12. Klicken Sie im Dialogfeld **Neuer Index** auf **OK**.  
+  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+  
+#### So erstellen Sie einen Index mit Nichtschlüsselspalten  
+  
+1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+  
+2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+  
+    ```  
+    USE AdventureWorks2012;  
+    GO  
+    -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
+    -- index key column is PostalCode and the nonkey columns are  
+    -- AddressLine1, AddressLine2, City, and StateProvinceID.  
+    CREATE NONCLUSTERED INDEX IX_Address_PostalCode  
+    ON Person.Address (PostalCode)  
+    INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
+    GO  
+    ```  
+  
+ Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+  
+  

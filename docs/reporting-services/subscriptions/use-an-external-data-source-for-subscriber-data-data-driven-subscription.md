@@ -1,0 +1,86 @@
+---
+title: "Verwenden einer externen Datenquelle f&#252;r Abonnentendaten (datengesteuertes Abonnement) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Abonnentendatenquellen [Reporting Services]"
+  - "Abonnements [Reporting Services], externe Datenquellen"
+  - "Abfragebasierte Abonnements [Reporting Services]"
+  - "Externe Datenquellen [Reporting Services]"
+  - "Datengesteuerte Abonnements"
+  - "Datenquellen [Reporting Services], Abonnements"
+ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
+caps.latest.revision: 43
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 43
+---
+# Verwenden einer externen Datenquelle f&#252;r Abonnentendaten (datengesteuertes Abonnement)
+  In einem datengesteuerten Abonnement werden dynamische Abonnementdaten von einer Abfrage oder einem Befehl bereitgestellt, die bzw. der Daten aus einer externen Datenquelle abruft. Abonnementdaten können aus allen unterstützten Datenquellen abgerufen werden, die die Anforderungen der datengesteuerten Abonnementverarbeitung erfüllen. Die Abfrage- oder Befehlssyntax muss für eine Datenverarbeitungserweiterung gültig sein, die mit dem Berichtsserver installiert wurde.  
+  
+## Anforderungen für die Datenverarbeitung  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Datenverarbeitungserweiterungen zum Abrufen von Abonnementdaten. Folgende Datenquellentypen werden empfohlen:  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken  
+  
+-   Oracle-Datenbanken  
+  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - und Data Mining-Datenquellen  
+  
+-   XML-Datenquellen  
+  
+     Stellen Sie sicher, dass Sie die Einstellungen für das Abfragetimeout im Abonnement erhöht haben, wenn Sie die XML-Datenverarbeitungserweiterung für Abonnentendaten verwenden. Bei der XML-Datenverarbeitungserweiterung werden für die Abfragetimeoutwerte Millisekunden statt Sekunden verwendet. Wenn Sie den Wert für das Timeout nicht erhöhen, führt das Abonnement möglicherweise zu einem Fehler, da die Verarbeitungszeit zu kurz ist.  
+  
+     Verwenden Sie die Option **Anmeldeinformationen sind nicht erforderlich** möglichst nicht, wenn Sie die Verbindung zur Datenquelle für Abonnentendaten konfigurieren. Bei der Verwendung der XML-Datenverarbeitungserweiterung zum Abrufen von Abonnementdaten zur Laufzeit werden gespeicherte Anmeldedaten empfohlen.  
+  
+ Sie können möglicherweise andere unterstützte Datenquellentypen verwenden, aber es kann nicht garantiert werden, dass diese funktionsfähig sind. Die folgenden Datenquellentypen können beispielsweise nicht für Abonnentendaten verwendet werden:  
+  
+-   SAP Netweaver BI-Datenbanken  
+  
+-   Berichtsmodelle  
+  
+ Wenn Sie über eine benutzerdefinierte Datenverarbeitungserweiterung verfügen, die Sie in datengesteuerten Abonnements verwenden möchten, muss diese die Schnittstellen <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> und <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> implementieren. Die Datenverarbeitungserweiterung muss eine Abfrageausführung vom Typ schema only unterstützen. Diese Abfrage wird zum Abrufen von Spaltenmetadaten zur Entwurfszeit verwendet, damit Benutzer Übermittlungsoptionen und Berichtsparametern in der Abonnementdefinition Spalten zuordnen können. Die Abfrageausführung vom Typ schema only tritt in einem frühen Stadium auf, wenn der Benutzer das Abonnement definiert.  
+  
+## Abfrageanforderungen  
+ Beachten Sie beim Erstellen einer Abfrage, bei der Abonnementdaten abgerufen werden, folgende Punkte:  
+  
+-   Sie können nur eine Abfrage für das Abonnement erstellen.  
+  
+-   Die Abfrage muss alle Werte zurückgeben, die Sie für Übermittlungsoptionen und zum Angeben von Berichtsparametern verwenden möchten.  
+  
+-   Vom Berichtsserver wird eine Berichtsübermittlung für jede Zeile im Resultset erstellt. Wenn das Resultset aus dreihundert Zeilen besteht, versucht der Berichtsserver, dreihundert Berichte zu übermitteln.  
+  
+## Festlegen von Übermittlungsoptionen mithilfe von Variablendaten aus einer Abonnentendatenbank  
+ Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+  
+## Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
+ Wenn Sie ein datengesteuertes Abonnement für einen parametrisierten Bericht erstellen, können Sie Variablenparameterwerte verwenden, um die Ausgabe der einzelnen Berichte anzupassen. Beispielsweise könnte die Abonnentendatenbank Mitarbeiteridentifikationsnummern, Einstellungsdaten, Tätigkeitsbezeichnungen und Informationen zum Bürostandort enthalten, mit denen Berichtsdaten gefiltert werden können. Falls der Bericht Parameter akzeptiert, die auf diesen oder anderen verfügbaren Spaltendaten basieren, können Sie den Parameter der entsprechenden Spalte zuordnen.  
+  
+ Stellen Sie beim Zuordnen von Abonnentenfeldern zu Berichtsparametern sicher, dass die Datentypen und Spaltenlängen kompatibel sind. Bei einem Datentypenkonflikt tritt bei der Abonnementverarbeitung ein Fehler auf. Weitere Informationen zum Verwenden von Abonnentendaten in einem parameterisierten Bericht finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+  
+## Ändern der Datenquelle für Abonnentendaten  
+ Die folgenden Änderungen an der Datenquelle für Abonnentendaten können das Ausführen des Abonnements verhindern:  
+  
+-   Entfernen von Spalten, auf die im Abonnement verwiesen wird.  
+  
+-   Ändern der Tabellenstruktur der Datenquelle.  
+  
+-   Ändern des Datentyps und anderer Spalteneigenschaften.  
+  
+ Falls Sie solche Änderungen vornehmen, müssen Sie das Abonnement aktualisieren.  
+  
+## Siehe auch  
+ [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
+ [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+  
+  

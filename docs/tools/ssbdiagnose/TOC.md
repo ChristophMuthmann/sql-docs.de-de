@@ -1,0 +1,5 @@
+# [Banner-Element (ssbdiagnose)](banner-element-ssbdiagnose.md)
+# [Format der XML-Ausgabedatei (ssbdiagnose)](xml-output-file-format-ssbdiagnose.md)
+# [Issue-Element (ssbdiagnose)](issue-element-ssbdiagnose.md)
+# [DiagnosticInformation-Element (ssbdiagnose)](diagnosticinformation-element-ssbdiagnose.md)
+# [ssbdiagnose-Hilfsprogramm (Service Broker)](ssbdiagnose-utility-service-broker.md)

@@ -1,0 +1,42 @@
+---
+title: "Analysis Services-Funktionen und -Tasks | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
+caps.latest.revision: 13
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 13
+---
+# Analysis Services-Funktionen und -Tasks
+  Die grundlegende Analysis Services-Dokumentation ist nach Modelltyp und Servermodus untergliedert, sodass Sie sich auf die Tools, Aufgaben und Funktionen konzentrieren können, die im installierten Modus verfügbar sind. Die Serverwaltungsaufgaben, die sich auf mehrere Modi beziehen, werden unter dem Thema „Instanzverwaltung“ behandelt.  
+  
+## In diesem Abschnitt  
+ [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+  
+ [In Analysis Services verwendete Tools und Anwendungen](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+  
+ [Analysis Services-Instanzverwaltung](../analysis-services/instances/analysis-services-instance-management.md)  
+  
+[Tabellarische Modelle](../analysis-services/tabular-models/tabular-models-ssas.md) 
+
+[Mehrdimensionale Modelle](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+  
+ [Data Mining &#40;SSAS&#41;](../analysis-services/data-mining/data-mining-ssas.md)  
+  
+ [Power Pivot für SharePoint &#40;SSAS&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+  
+## Siehe auch  
+ [Analysis Services](../analysis-services/analysis-services.md)   
+ [Neuigkeiten in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+  
+  
