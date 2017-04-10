@@ -3,25 +3,28 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "!**/*.md"
         ],
         "exclude": [
           "**/obj/**",
           "sql/analytics-platform-system/**",
-          "**/includes/**"
+          "**/includes/**",
+	  "**/*.md"	
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "**/*.png",
-          "**/*.jpg"
+          "!**/*.png",
+          "!**/*.jpg"
         ],
         "exclude": [
           "**/obj/**",
           "sql/analytics-platform-system/**",
-          "**/includes/**"
+          "**/includes/**",
+	  "**/*.png",
+          "**/*.jpg"	
         ]
       }
     ],
