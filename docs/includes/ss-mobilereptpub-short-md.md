@@ -1,1 +1,1 @@
- Publisher für mobile Berichte 
+Publisher für mobile Berichte 

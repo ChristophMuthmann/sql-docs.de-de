@@ -1,1 +1,1 @@
- Publisher für mobile Berichte von SQL Server 
+Publisher für mobile Berichte von SQL Server 

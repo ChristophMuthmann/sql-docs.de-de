@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Publisher für mobile Berichte</Token>
+Publisher für mobile Berichte 
