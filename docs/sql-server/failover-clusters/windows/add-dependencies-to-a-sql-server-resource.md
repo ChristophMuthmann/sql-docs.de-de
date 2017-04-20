@@ -1,32 +1,36 @@
 ---
-title: "Hinzuf&#252;gen von Abh&#228;ngigkeiten zu einer Ressource von SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ressourcenabhängigkeiten [SQL Server]"
-  - "Failoverclustering [SQL Server], Abhängigkeiten"
-  - "Cluster [SQL Server], Abhängigkeiten"
-  - "Abhängigkeiten [SQL Server], Clustering"
+title: "Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hinzuf&#252;gen von Abh&#228;ngigkeiten zu einer Ressource von SQL Server
+# <a name="add-dependencies-to-a-sql-server-resource"></a>Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
   In diesem Thema wird beschrieben, wie einer AlwaysOn-Failoverclusterinstanz-Ressource mithilfe des Failovercluster-Manager-Snap-Ins Abhängigkeiten hinzugefügt werden. Das Failovercluster-Manager-Snap-In ist die Clusterverwaltungsanwendung für den WSFC (Windows Server Failover Clustering)-Dienst.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Voraussetzungen](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **Hinzufügen einer Abhängigkeit zu einer SQL Server-Ressource mit:** [Windows-Failovercluster-Manager](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -47,21 +51,21 @@ caps.handback.revision: 33
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource: Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe eine Ressource hinzufügen und auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource eine Abhängigkeit besteht, die die Verfügbarkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sicherstellt, empfiehlt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] das Hinzufügen einer Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Ressource. Fügen Sie keine Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource hinzu. Konfigurieren Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Ressource so, dass bei einem Ausfall der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentressource die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe nicht beeinträchtigt. Auf diese Weise stellen Sie sicher, dass der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, hochverfügbar ist.  
   
--   Dateifreigabe- und Druckerressourcen: Dateifreigabe- und Druckerclusterressourcen sollten nicht dieselben physischen Datenträgerressourcen verwenden wie der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird. Bei Verwendung derselben physischen Datenträgerressourcen kann es auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, zu Leistungsabfällen und Dienstausfällen kommen.  
+-   Dateifreigabe- und Druckerressourcen: Dateifreigabe- und Druckerclusterressourcen sollten nicht dieselben physischen Datenträgerressourcen verwenden wie der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird. Bei Verwendung derselben physischen Datenträgerressourcen kann es auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird, zu Leistungsabfällen und Dienstausfällen kommen.  
   
--   Überlegungen zu MS DTC: Nachdem Sie das Betriebssystem installiert und die FCI konfiguriert haben, müssen Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) mithilfe des Failovercluster-Manager-Snap-Ins für die Arbeit in einem Cluster konfigurieren. Wenn MS DTC nicht für die Ausführung in einem Cluster konfiguriert wird, führt dies nicht zu einer Blockierung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setups, aber die Funktionalität der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anwendung kann beeinträchtigt sein, falls MS DTC nicht ordnungsgemäß konfiguriert wurde.  
+-   Überlegungen zu MS DTC: Nachdem Sie das Betriebssystem installiert und die FCI konfiguriert haben, müssen Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) mithilfe des Failovercluster-Manager-Snap-Ins für die Arbeit in einem Cluster konfigurieren. Wenn MS DTC nicht für die Ausführung in einem Cluster konfiguriert wird, führt dies nicht zu einer Blockierung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setups, aber die Funktionalität der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anwendung kann beeinträchtigt sein, falls MS DTC nicht ordnungsgemäß konfiguriert wurde.  
   
      Wenn Sie MS DTC in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe installieren und gleichzeitig andere Ressourcen von MS DTC abhängig sind, steht MS DTC nicht zur Verfügung, wenn diese Gruppe offline ist oder ein Failover eintritt. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, MS DTC möglichst in eine eigene Gruppe mit eigener physischer Datenträgerressource einzufügen.  
   
 ###  <a name="Prerequisites"></a> Voraussetzungen  
- Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer WSFC-Ressourcengruppe mit mehreren Laufwerken installieren und die Daten auf einem dieser Laufwerke speichern möchten, wird festgelegt, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource ausschließlich von diesem Laufwerk abhängig ist. Um Daten oder Protokolle auf einem anderen Datenträger zu speichern, müssen Sie zuerst der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressource eine Abhängigkeit für den zusätzlichen Datenträger hinzufügen.  
+ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer WSFC-Ressourcengruppe mit mehreren Laufwerken installieren und die Daten auf einem dieser Laufwerke speichern möchten, wird festgelegt, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource ausschließlich von diesem Laufwerk abhängig ist. Um Daten oder Protokolle auf einem anderen Datenträger zu speichern, müssen Sie zuerst der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource eine Abhängigkeit für den zusätzlichen Datenträger hinzufügen.  
   
 ##  <a name="WinClusManager"></a> Verwenden des Failovercluster-Manager-Snap-Ins  
  **So fügen Sie einer SQL Server-Ressource eine Abhängigkeit hinzu**  
   
 -   Öffnen Sie des Failovercluster-Manager-Snap-In.  
   
--   Suchen Sie die Gruppe, die die anwendbare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressource enthält, für die Sie eine Abhängigkeit erstellen möchten.  
+-   Suchen Sie die Gruppe, die die anwendbare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource enthält, für die Sie eine Abhängigkeit erstellen möchten.  
   
 -   Wenn sich die Ressource für den Datenträger bereits in dieser Gruppe befindet, fahren Sie mit Schritt 4 fort. Andernfalls wechseln Sie zu der Gruppe, die den Datenträger enthält. Wenn diese Gruppe und die Gruppe, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält, nicht zum selben Knoten gehören, verschieben Sie die Gruppe mit der Ressource für den Datenträger zu dem Knoten mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe.  
   

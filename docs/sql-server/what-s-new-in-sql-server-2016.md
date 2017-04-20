@@ -1,30 +1,34 @@
 ---
-title: "Was ist neu in SQLServer 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Neu SQL Server"
-helpviewer_keywords: 
-  - "Neue Funktionen [SQL Server]"
-  - "SQL Server, Neuigkeiten"
-  - "Neuigkeiten zu SQL Server 2008"
-  - "Neuigkeiten [SQL Server]"
+title: Neuigkeiten in SQL Server 2016 | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Neu SQL Server
+helpviewer_keywords:
+- new features [SQL Server]
+- SQL Server, what's new
+- SQL Server 2008 what's new
+- what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 224
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-caps.handback.revision: 224
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Was ist neu in SQLServer 2016
+# <a name="what39s-new-in-sql-server-2016"></a>Neuigkeiten in SQL Server 2016
  [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ist der größte Fortschritt in der Geschichte der Microsoft-Datenplattform. Gewinnen Sie Einblicke in Echtzeit in Ihre Transaktions- und analytischen Daten mit einer skalierbaren Datenbankplattform, in die alles integriert ist, von herausragender In-Memory-Leistung, Sicherheitsinnovationen und hoher Verfügbarkeit bis zu erweiterten Analysen, die unternehmenswichtige Anwendungen „intelligent“ werden lassen.
  
  In diesem Thema sind Links zu den ausführlichen Informationen zusammengestellt, in denen die Neuerungen auf Komponentenebene von [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] beschrieben sind.   
@@ -35,14 +39,14 @@ caps.handback.revision: 224
  
     
  **Probieren Sie SQL Server noch heute aus!**    
- - Laden Sie sich [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) **kostenlos** herunter.
+ - Laden Sie sich **SQL Server 2016 Developer Edition** [**kostenlos**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
  
  
-[![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** herunter. 
+[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Download SQL Server 2016 from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 
     
-[![Azure Virtual Machine (klein)](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)**, um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.  
+[![Azure Virtual Machine (klein)](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.  
 
- [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [** Laden Sie die neueste Version von SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx) herunter.   
+ [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
 
     
  ## <a name="whats-new-in-sql-server"></a>Neuerungen in SQL Server
@@ -67,9 +71,11 @@ Links zu einzelnen Themen:
   
     
 ## <a name="see-also"></a>Siehe auch    
- + [![Versionsanmerkungen](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](../Topic/SQL%20Server%202016%20Release%20Notes.md)  [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). 
+ +   [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)herunter. 
 + [SQL Server 2016-Datenblatt](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Von den SQL Server-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx)
- + [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
- + [Installieren von SQL Server 2016 vom Installations-Assistenten aus](../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)
- [Setup und Wartungsinstallation](Setup%20and%20Servicing%20Installation.md)    
+ + [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+ + [Installieren von SQL Server 2016 vom Installations-Assistenten aus](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ [Setup und Wartungsinstallation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+
+

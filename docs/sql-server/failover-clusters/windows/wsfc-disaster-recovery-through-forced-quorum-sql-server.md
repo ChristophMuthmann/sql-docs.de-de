@@ -1,31 +1,35 @@
 ---
-title: "WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server], WSFC-Cluster"
-  - "Quorum [SQL Server], AlwaysOn- und WSFC-quorum"
-  - "Failoverclustering [SQL Server], AlwaysOn-Verfügbarkeitsgruppen "
+title: WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
   Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
   
--   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren** [WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 20
  Bei der Prozedur für erzwungene Quoren wird davon ausgegangen, dass vor dem Quorumfehler ein fehlerfreies Quorum vorhanden war.  
   
 > [!WARNING]  
->  Der Benutzer sollte mit den Begriffen und Wechselwirkungen von Windows Server Failover Clustering, WSFC-Quorummodellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und der spezifischen Bereitstellungskonfiguration der Umgebung vertraut sein.  
+>  Der Benutzer sollte mit den Begriffen und Wechselwirkungen von Windows Server Failover Clustering, WSFC-Quorummodellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]und der spezifischen Bereitstellungskonfiguration der Umgebung vertraut sein.  
 >   
->  Weitere Informationen finden Sie unter: [Windows Server Failover Clustering (WSFC) mit SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
+>  Weitere Informationen finden Sie unter:  [Windows Server Failover Clustering (WSFC) mit SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
   
 ###  <a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
   
 ##  <a name="Main"></a> WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren  
- Vergessen Sie nicht, dass bei einem Quorumfehler alle gruppierten Dienste, SQL Server-Instanzen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] im WSFC-Cluster offline geschaltet werden, da der Cluster in der aktuellen Konfiguration keine Fehlertoleranz auf Knotenebene gewährleisten kann.  Ein Quorumfehler bedeutet, dass fehlerfreie Abstimmungsknoten im WSFC-Cluster nicht mehr dem Quorummodell entsprechen. Einige Knoten sind möglicherweise völlig ausgefallen, und andere haben den WSFC-Dienst möglicherweise nur heruntergefahren und sind, abgesehen vom Verlust der Fähigkeit, mit einem Quorum zu kommunizieren, möglicherweise fehlerfrei.  
+ Vergessen Sie nicht, dass bei einem Quorumfehler alle gruppierten Dienste, SQL Server-Instanzen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]im WSFC-Cluster offline geschaltet werden, da der Cluster in der aktuellen Konfiguration keine Fehlertoleranz auf Knotenebene gewährleisten kann.  Ein Quorumfehler bedeutet, dass fehlerfreie Abstimmungsknoten im WSFC-Cluster nicht mehr dem Quorummodell entsprechen. Einige Knoten sind möglicherweise völlig ausgefallen, und andere haben den WSFC-Dienst möglicherweise nur heruntergefahren und sind, abgesehen vom Verlust der Fähigkeit, mit einem Quorum zu kommunizieren, möglicherweise fehlerfrei.  
   
  Um den WSFC-Cluster wieder online zu schalten, müssen Sie die Ursache für den Quorumfehler in der vorhandenen Konfiguration beheben, die betroffenen Datenbanken nach Bedarf wiederherstellen und die übrigen Knoten im WSFC-Cluster neu konfigurieren, um die verbleibende Clustertopologie widerzuspiegeln.  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  Dieser Typ von Notfallwiederherstellungsprozess sollte die folgenden Schritte umfassen:  
   
-#### So stellen Sie das System nach Quorumfehler wieder her:  
+#### <a name="to-recover-from-quorum-failure"></a>So stellen Sie das System nach Quorumfehler wieder her:  
   
 1.  **Bestimmen Sie den Fehlerumfang.** Identifizieren Sie, welche Verfügbarkeitsgruppen oder SQL Server-Instanzen nicht mehr reagieren, welche Clusterknoten online sind und zur Verwendung nach der Katastrophe verfügbar sind, und untersuchen Sie die Windows-Ereignisprotokolle und die SQL Server-Systemprotokolle.  Wo praktikabel, sollten Sie forensische Daten und Systemprotokolle für spätere Analysen beibehalten.  
   
     > [!TIP]  
-    >  Auf einer reagierenden Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] können Sie Informationen zum Zustand von Verfügbarkeitsgruppen, die auf der lokalen Serverinstanz ein Verfügbarkeitsreplikat besitzen, abrufen, indem Sie die dynamische Verwaltungssicht (DMV, Dynamic Management View) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) abfragen.  
+    >  Auf einer reagierenden Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]können Sie Informationen zum Zustand von Verfügbarkeitsgruppen, die auf der lokalen Serverinstanz ein Verfügbarkeitsreplikat besitzen, abrufen, indem Sie die dynamische Verwaltungssicht (DMV, Dynamic Management View) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) abfragen.  
   
 2.  **Starten Sie den WSFC-Cluster mit erzwungenem Quorum auf einem einzelnen Knoten.** Identifizieren Sie einen Knoten mit einer minimalen Anzahl von Komponentenfehlern, auf dem der WSFC-Clusterdienst nicht heruntergefahren wurde.  Überprüfen Sie, ob dieser Knoten mit den meisten anderen Knoten kommunizieren kann.  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

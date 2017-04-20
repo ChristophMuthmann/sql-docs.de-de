@@ -1,26 +1,30 @@
 ---
-title: "WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server], WSFC-Cluster"
-  - "Quorum [SQL Server], AlwaysOn- und WSFC-quorum"
-  - "Failoverclustering [SQL Server], AlwaysOn-Verfügbarkeitsgruppen "
+title: WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
   Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch Always On-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der Always On-Lösung für hohe Verfügbarkeit und für die Notfallwiederherstellung.  
   
  **In diesem Thema:**  
@@ -42,12 +46,12 @@ caps.handback.revision: 14
   
  Ein *Quorum* knotensatz wird aus der Mehrheit der Abstimmungsknoten und -zeugen im WSFC-Cluster gebildet. Die allgemeine Integrität und der Status eines WSFC-Clusters wird mithilfe einer regelmäßigen *Quorumabstimmung*ermittelt.  Das Vorhandensein eines Quorums bedeutet, dass der Cluster fehlerfrei ist und die Fehlertoleranz auf Knotenebene bereitstellen kann.  
   
- Die Abwesenheit eines Quorums gibt an, dass der Cluster nicht fehlerfrei ist.  Der Gesamtzustand des WSFC-Clusters muss aufrechterhalten werden, um sicherzustellen, dass fehlerfreie sekundäre Knoten für das Failover von Primärknoten verfügbar sind.  Wenn die Quorumabstimmung negativ ausfällt, wird der WSFC-Cluster als Vorsichtsmaßnahme in den Offlinezustand versetzt.  Dies führt auch dazu, dass alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen, die beim Cluster registriert sind, beendet werden.  
+ Die Abwesenheit eines Quorums gibt an, dass der Cluster nicht fehlerfrei ist.  Der Gesamtzustand des WSFC-Clusters muss aufrechterhalten werden, um sicherzustellen, dass fehlerfreie sekundäre Knoten für das Failover von Primärknoten verfügbar sind.  Wenn die Quorumabstimmung negativ ausfällt, wird der WSFC-Cluster als Vorsichtsmaßnahme in den Offlinezustand versetzt.  Dies führt auch dazu, dass alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen, die beim Cluster registriert sind, beendet werden.  
   
 > [!IMPORTANT]  
 >  Wenn ein WSFC-Cluster aufgrund eines Quorumfehlers in den Offlinezustand versetzt wird, ist ein manueller Eingriff erforderlich, um den Onlinezustand wiederherzustellen.  
 >   
->  Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ermittelt.  
   
 ##  <a name="QuorumModes"></a> Quorummodi  
  Ein *Quorummodus* wird auf der WSFC-Clusterebene konfiguriert, mit dem die Methodik für die Quorumabstimmung vorgegeben wird.  Das Failovercluster-Manager-Hilfsprogramm empfiehlt basierend auf der Anzahl von Knoten im Cluster einen Quorummodus.  
@@ -65,7 +69,7 @@ caps.handback.revision: 14
 -   **Nur Datenträger:** Eine Clusterressource für einen freigegebenen Datenträger wird als Zeuge festgelegt, und die Konnektivität von Knoten zu diesem freigegebenen Datenträger wird als positive Abstimmung betrachtet.  
   
 > [!TIP]  
->  Beim Verwenden einer asymmetrische Speicherkonfiguration für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sollten Sie den Knotenmehrheit-Quorummodus generell verwenden, wenn Sie über eine ungerade Zahl von Abstimmungsknoten verfügen, oder den Quorummodus Knoten- und Dateifreigabemehrheit, wenn Sie über eine gerade Zahl von Abstimmungsknoten verfügen.  
+>  Beim Verwenden einer asymmetrische Speicherkonfiguration für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]sollten Sie den Knotenmehrheit-Quorummodus generell verwenden, wenn Sie über eine ungerade Zahl von Abstimmungsknoten verfügen, oder den Quorummodus Knoten- und Dateifreigabemehrheit, wenn Sie über eine gerade Zahl von Abstimmungsknoten verfügen.  
   
 ##  <a name="VotingandNonVotingNodes"></a> Abstimmungsknoten und Nicht-Abstimmungsknoten  
  Standardmäßig wird jeder Knoten im WSFC-Cluster als Mitglied des Clusterquorums einbezogen. Jeder Knoten verfügt bei der Ermittlung des Gesamtclusterzustands über eine (1) Stimme, und jeder Knoten versucht ununterbrochen, ein Quorum zu erzielen.  Die Quorumdiskussion hat zu diesem Zeitpunkt eine sorgfältige Qualifizierung des Satzes an WSFC-Clusterknoten durchgeführt, die als *Abstimmungsknoten*über den Clusterzustand abstimmen.  
@@ -76,7 +80,7 @@ caps.handback.revision: 14
   
  Wenn ein Knoten in einem anderen Subnetz für eine Quorumabstimmung jedoch als nicht reagierend angesehen wird, während der Knoten eigentlich online und auch sonst fehlerfrei ist, liegt dies in den meisten Fällen an einem Netzwerkkommunikationsfehler zwischen Subnetzen.  Je nach Clustertopologie, Quorummodus und Konfiguration der Failoverrichtlinien kann bei dem Netzwerkkommunikationsfehler ggf. mehr als ein Satz (oder eine Teilmenge) mit Abstimmungsknoten erstellt werden.  
   
- Wenn mehr als eine Teilmenge mit Abstimmungsknoten selbständig ein Quorum erzielen kann, wird dies als *Split-Brain-Szenario* bezeichnet.  Bei solch einem Szenario kann es vorkommen, dass sich die Knoten in den einzelnen Quoren unterschiedlich verhalten und in Konflikt miteinander stehen.  
+ Wenn mehr als eine Teilmenge mit Abstimmungsknoten selbständig ein Quorum erzielen kann, wird dies als *Split-Brain-Szenario*bezeichnet.  Bei solch einem Szenario kann es vorkommen, dass sich die Knoten in den einzelnen Quoren unterschiedlich verhalten und in Konflikt miteinander stehen.  
   
 > [!NOTE]  
 >  Das Split-Brain-Szenario ist nur möglich, wenn ein Systemadministrator manuell einen erzwungenen Quorumvorgang ausführt, oder in sehr seltenen Fällen bei einem erzwungenen Failover, bei dem der Quorumknotensatz explizit unterteilt wird.  
@@ -113,7 +117,7 @@ caps.handback.revision: 14
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Es werden mehrere dynamische Verwaltungssichten (DMVs) für das System verfügbar gemacht, mit denen Sie Einstellungen in Bezug auf die WSFC-Clusterkonfiguration und die Knotenquorumabstimmung verwalten können.  
 >   
->  Weitere Informationen finden Sie unter [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) und [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md).  
+>  Weitere Informationen finden Sie unter  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -125,14 +129,15 @@ caps.handback.revision: 14
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Überprüfung der Konfiguration der Quorumabstimmung in Always On-Verfügbarkeitsgruppen-Assistenten](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/03/13/quorum-vote-configuration-check-in-Always%20On-availability-group-wizards-andy-jing.aspx)  
+-   [Überprüfung der Konfiguration der Quorumabstimmung in Always On-Verfügbarkeitsgruppen-Assistenten](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
 -   [Windows Server-Technologien: Failovercluster](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [Schritt-für-Schritt-Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
+

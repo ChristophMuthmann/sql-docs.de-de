@@ -1,31 +1,35 @@
 ---
-title: "Programm zur Verbesserung der Benutzerfreundlichkeit f&#252;r SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.lasthandoff: 04/11/2017
+
 ---
-# Programm zur Verbesserung der Benutzerfreundlichkeit f&#252;r SQL Server Data Tools
+# <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools
   Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program; CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
   
 > [!NOTE]  
 >  Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
   
-## Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
+## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
  Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) sowohl in Visual Studio 2015 als auch in Visual Studio 2013 widerrufen bzw. neu erteilen können.  
   
-### Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2015  
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2015  
  SSDT für Visual Studio 2015 ist das Datenmodellierungstool, das mit SQL Server 2016 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2015 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2015 finden Sie in diesem [Hilfedokument von Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
   
  In Vorschauversionen von SQL Server 2016 ist das CEIP standardmäßig aktiviert. Sie können es mithilfe der folgenden Anweisungen deaktivieren oder wieder aktivieren.  
@@ -36,7 +40,7 @@ caps.handback.revision: 11
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen** aus.  
+2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen**aus.  
   
 3.  Um CEIP zu deaktivieren, klicken Sie auf **Nein, ich möchte nicht teilnehmen**, und klicken Sie dann auf **OK**.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 11
   
  Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen zum Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit](http://go.microsoft.com/fwlink/?LinkId=52143).  
   
-### Auswahl und Steuerung für das CEIP und SQL Server Data Tools – BI (SSDT-BI)  
+### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Auswahl und Steuerung für das CEIP und SQL Server Data Tools – BI (SSDT-BI)  
  Falls Sie SSDT-BI verwenden, erhalten Sie während der Installation die Gelegenheit zur Teilnahme am CEIP. Später können Sie die CEIP-Konfiguration für SSDT-BI durch Clienttools oder durch Ändern der Registrierungseinstellungen ändern.  
   
  **In SSDT und SSDT-BI für Visual Studio 2013**  
@@ -99,3 +103,4 @@ caps.handback.revision: 11
 -   1 bedeutet einschalten  
   
   
+

@@ -1,30 +1,34 @@
 ---
-title: "Hinzuf&#252;gen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hinzufügen von Knoten"
-  - "Knoten [Failoverclustering], entfernen"
-  - "Knoten [Failoverclustering], hinzufügen"
-  - "Failoverclustering [SQL Server], Knoten"
-  - "Löschen von Knoten"
-  - "Clusterverwaltung [SQL Server]"
-  - "Entfernen von Knoten"
+title: "Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding nodes
+- nodes [Faillover Clustering], removing
+- nodes [Faillover Clustering], adding
+- failover clustering [SQL Server], nodes
+- deleting nodes
+- cluster maintenance [SQL Server]
+- removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d61da5ddef04a1edacf6f5b8bf98bb04b53fa5a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hinzuf&#252;gen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup)
+# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup)
   Verwenden Sie diese Prozedur, um Knoten in einer vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz zu verwalten.  
   
  Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster zu aktualisieren oder zu entfernen, müssen Sie lokaler Administrator mit der Berechtigung sein, sich als Dienst auf allen Knoten des Failoverclusters anzumelden. Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
@@ -40,15 +44,15 @@ caps.handback.revision: 49
 -   [Entfernen eines Knotens aus einem vorhandenen SQL Server-Failovercluster](#Remove)  
   
 > [!IMPORTANT]  
->  Der Laufwerkbuchstabe des Betriebssystems für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsverzeichnisse muss auf allen Knoten übereinstimmen, die dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster hinzugefügt werden.  
+>  Der Laufwerkbuchstabe des Betriebssystems für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsverzeichnisse muss auf allen Knoten übereinstimmen, die dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster hinzugefügt werden.  
   
 ##  <a name="Add"></a> Hinzufügen eines Knotens  
   
-#### So fügen Sie einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster einen Knoten hinzu  
+#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>So fügen Sie einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster einen Knoten hinzu  
   
-1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf Setup.exe.  
+1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf Setup.exe.  
   
-2.  Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationscenter wird vom Installations-Assistenten gestartet. Um einer vorhandenen Failoverclusterinstanz einen Knoten hinzuzufügen, klicken Sie im linken Bereich auf **Installation**. Wählen Sie dann **Knoten einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster** hinzufügen aus.  
+2.  Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationscenter wird vom Installations-Assistenten gestartet. Um einer vorhandenen Failoverclusterinstanz einen Knoten hinzuzufügen, klicken Sie im linken Bereich auf **Installation**. Wählen Sie dann **Knoten einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster** hinzufügen aus.  
   
 3.  Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. [!INCLUDE[clickOK](../../../includes/clickok-md.md)], um den Vorgang fortzusetzen.  
   
@@ -62,9 +66,9 @@ caps.handback.revision: 49
   
 7.  Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Nachdem die Prüfung abgeschlossen wurde, klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
   
-8.  Verwenden Sie auf der Seite Clusterknotenkonfiguration das Dropdownfeld, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz anzugeben, die bei diesem Setupvorgang geändert werden soll.  
+8.  Verwenden Sie auf der Seite Clusterknotenkonfiguration das Dropdownfeld, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz anzugeben, die bei diesem Setupvorgang geändert werden soll.  
   
-9. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten Anmeldekonten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben. Bei Failoverclusterinstallationen wurden der Kontoname und der Starttyp anhand der Einstellungen für den aktiven Knoten bereits auf dieser Seite eingetragen. Sie müssen Kennwörter für jedes Konto bereitstellen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](../Topic/Server%20Configuration%20-%20Service%20Accounts.md) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten Anmeldekonten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben. Bei Failoverclusterinstallationen wurden der Kontoname und der Starttyp anhand der Einstellungen für den aktiven Knoten bereits auf dieser Seite eingetragen. Sie müssen Kennwörter für jedes Konto bereitstellen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Sicherheitshinweis** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -84,9 +88,9 @@ caps.handback.revision: 49
   
 ##  <a name="Remove"></a> Entfernen eines Knotens  
   
-#### So entfernen Sie einen Knoten aus einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
+#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>So entfernen Sie einen Knoten aus einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
   
-1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf Setup.exe.  
+1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf Setup.exe.  
   
 2.  Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationscenter wird vom Installations-Assistenten gestartet. Um einen Knoten aus einer vorhandenen Failoverclusterinstanz zu entfernen, klicken Sie im linken Bereich auf **Wartung** und wählen dann **Knoten aus einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster entfernen** aus.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 49
   
 4.  Nachdem Sie auf der Seite Setupunterstützungsdateien auf Installieren geklickt haben, wird der Systemstatus des Computers von der Systemkonfigurationsprüfung überprüft, bevor Setup fortgesetzt wird. Nachdem die Prüfung abgeschlossen wurde, klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
   
-5.  Verwenden Sie auf der Seite Clusterknotenkonfiguration das Dropdownfeld, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz anzugeben, die bei diesem Setupvorgang geändert werden soll. Der zu entfernende Knoten wird im Feld **Name dieses Knotens** aufgeführt.  
+5.  Verwenden Sie auf der Seite Clusterknotenkonfiguration das Dropdownfeld, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz anzugeben, die bei diesem Setupvorgang geändert werden soll. Der zu entfernende Knoten wird im Feld **Name dieses Knotens** aufgeführt.  
   
 6.  Auf der Seite Der Knoten kann nun entfernt werden wird eine Strukturansicht der Optionen angezeigt, die während des Setups angegeben wurden. Klicken Sie zum Fortsetzen des Vorgangs auf **Entfernen**.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 49
   
 8.  Auf der Seite Abgeschlossen finden Sie einen Link zur zusammenfassenden Protokolldatei für das Entfernen des Knotens und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um das Entfernen des Knotens in ****abzuschließen. Weitere Informationen zu Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
