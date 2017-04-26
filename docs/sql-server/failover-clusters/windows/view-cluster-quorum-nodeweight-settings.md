@@ -1,30 +1,34 @@
 ---
-title: "Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server], WSFC-Cluster"
-  - "Quorum [SQL Server], AlwaysOn- und WSFC-quorum"
+title: Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1bd8e579c3d75e804a552622039053b6700a352a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
-  In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für jeden Elementknoten in einem Windows Server-Failoverclustering-Cluster angezeigt werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]- und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanzen zu unterstützen.  
+# <a name="view-cluster-quorum-nodeweight-settings"></a>Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
+  In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für jeden Elementknoten in einem Windows Server-Failoverclustering-Cluster angezeigt werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
   
--   **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Verwenden von Transact-SQL](#TsqlProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-##### So zeigen Sie NodeWeight-Einstellungen an  
+##### <a name="to-view-nodeweight-settings"></a>So zeigen Sie NodeWeight-Einstellungen an  
   
-1.  Stellen Sie im Cluster eine Verbindung mit einer beliebigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz her.  
+1.  Stellen Sie im Cluster eine Verbindung mit einer beliebigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz her.  
   
 2.  Fragen Sie die Sicht "[sys].[dm_hadr_cluster_members]" ab.  
   
-### Beispiel (Transact-SQL)  
+### <a name="example-transact-sql"></a>Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird eine Systemsicht zur Rückgabe von Werten für alle Knoten im betreffenden Cluster der Instanz abgefragt.  
   
 ```tsql  
@@ -60,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
   
-##### So zeigen Sie NodeWeight-Einstellungen an  
+##### <a name="to-view-nodeweight-settings"></a>So zeigen Sie NodeWeight-Einstellungen an  
   
 1.  Starten Sie eine erhöhte Windows PowerShell mittels **Als Administrator ausführen**.  
   
@@ -70,7 +74,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 4.  Geben Sie die Clusterknoteneigenschaften in einem lesbaren Format aus.  
   
-### Beispiel (PowerShell)  
+### <a name="example-powershell"></a>Beispiel (PowerShell)  
  Im folgenden Beispiel wurden einige der Knoteneigenschaften für den Cluster "Cluster001" ausgegeben.  
   
 ```powershell  
@@ -87,20 +91,20 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  Das Hilfsprogramm von cluster.exe ist in der [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Version veraltet.  Verwenden Sie PowerShell mit Failoverclustering für künftige Entwicklungen.  Das Hilfsprogramm von cluster.exe wird in der nächsten Version von Windows Server entfernt. Weitere Informationen finden Sie unter [Zuordnen von Cluster.exe-Befehlen zu Windows PowerShell-Cmdlets für Failovercluster](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### So zeigen Sie NodeWeight-Einstellungen an  
+##### <a name="to-view-nodeweight-settings"></a>So zeigen Sie NodeWeight-Einstellungen an  
   
 1.  Starten Sie mit **Als Administrator ausführen**eine Eingabeaufforderung mit erweiterten Berechtigungen.  
   
 2.  Verwenden Sie **cluster.exe** , um Knotenstatus- und NodeWeight-Werte zurückzugeben.  
   
-### Beispiel (Cluster.exe)  
+### <a name="example-clusterexe"></a>Beispiel (Cluster.exe)  
  Im folgenden Beispiel werden einige der Knoteneigenschaften für den Cluster "Cluster001" ausgegeben.  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

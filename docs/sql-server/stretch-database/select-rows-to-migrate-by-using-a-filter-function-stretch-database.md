@@ -1,34 +1,38 @@
 ---
-title: "Ausw&#228;hlen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch-Datenbank, Prädikate"
-  - "Prädikate für Stretch-Datenbank"
-  - "Stretch-Datenbank, Inline-Tabellenwertfunktionen"
-  - "Inline-Tabellenwertfunktionen für Stretch-Datenbank"
+title: "Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank) | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, predicates
+- predicates for Stretch Database
+- Stretch Database, inline table-valued functions
+- inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ausw&#228;hlen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie Stretch-Datenbank zum Migrieren der gesamten Tabelle konfigurieren. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. In diesem Thema wird beschrieben, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
   
-> [!IMPORTANT] Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
+> [!IMPORTANT]
+> Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
   
  Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 42
   
  Die ALTER TABLE-Syntax zum Hinzufügen einer Funktion wird weiter unten in diesem Thema beschrieben.  
   
-## Grundlegende Anforderungen für die Filterfunktion  
+## <a name="basic-requirements-for-the-filter-function"></a>Grundlegende Anforderungen für die Filterfunktion  
  Die Inline-Tabellenwertfunktion, die für ein Filterprädikat einer Stretch-Datenbank erforderlich ist, sieht wie im folgenden Beispiel aus.  
   
 ```tsql  
@@ -56,10 +60,10 @@ RETURN  SELECT 1 AS is_eligible
   
  Die Schemabindung ist erforderlich, um zu verhindern, dass Spalten, die von der Filterfunktion verwendet werden, gelöscht oder geändert werden.  
   
-### Rückgabewert  
+### <a name="return-value"></a>Rückgabewert  
  Wenn die Funktion ein nicht leeres Ergebnis zurückgibt, ist die Zeile für die Migration geeignet. Wenn die Funktion hingegen kein Ergebnis zurückgibt, ist die Zeile nicht für die Migration geeignet.  
   
-### Bedingungen  
+### <a name="conditions"></a>Bedingungen  
  Das &lt;*Prädikat*&gt; kann aus einer oder mehreren Bedingungen bestehen, die mit dem logischen AND-Operator verknüpft sind.  
   
 ```  
@@ -72,7 +76,7 @@ RETURN  SELECT 1 AS is_eligible
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
 ```  
   
-### Primitive Bedingungen  
+### <a name="primitive-conditions"></a>Primitive Bedingungen  
  Eine primitive Bedingung eignet sich für die folgenden Vergleiche.  
   
 ```  
@@ -87,7 +91,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Vergleichen eines Funktionsparameters mit einem konstanten Ausdruck. Beispiel: `@column1 < 1000`.  
   
-     Es folgt ein Beispiel, das überprüft, ob der Wert einer *date*-Spalte &lt; 1.1.2016 ist.  
+     Es folgt ein Beispiel, das überprüft, ob der Wert einer *date* -Spalte &lt; 1.1.2016 ist.  
   
     ```tsql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
@@ -109,7 +113,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Verwenden des IN-Operators, um einen Funktionsparameter mit einer Liste konstanter Werte zu vergleichen.  
   
-     Es folgt ein Beispiel, das überprüft, ob der Wert einer *shipment_status*-Spalte `IN (N'Completed', N'Returned', N'Cancelled')` ist.  
+     Es folgt ein Beispiel, das überprüft, ob der Wert einer *shipment_status*  -Spalte `IN (N'Completed', N'Returned', N'Cancelled')`ist.  
   
     ```tsql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
@@ -127,7 +131,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
-### Vergleichsoperatoren  
+### <a name="comparison-operators"></a>Vergleichsoperatoren  
  Die folgenden Vergleichsoperatoren werden unterstützt.  
   
  `<, <=, >, >=, =, <>, !=, !<, !>`  
@@ -136,7 +140,7 @@ RETURN  SELECT 1 AS is_eligible
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
-### Konstante Ausdrücke  
+### <a name="constant-expressions"></a>Konstante Ausdrücke  
  Bei den Konstanten, die Sie in einer Filterfunktion verwenden, kann es sich um einen beliebigen deterministischen Ausdruck handeln, der beim Definieren der Funktion ausgewertet werden kann. Konstante Ausdrücke können Folgendes enthalten.  
   
 -   Literale. Beispiel: `N’abc’, 123`.  
@@ -147,13 +151,13 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Deterministische Konvertierungen, die CAST oder CONVERT verwenden. Beispiel: `CONVERT(datetime, '1/1/2016', 101)`.  
   
-### Andere Ausdrücke  
+### <a name="other-expressions"></a>Andere Ausdrücke  
  Sie können die Operatoren BETWEEN und NOT BETWEEN verwenden, wenn die resultierende Funktion den hier beschriebenen Regeln entspricht, nachdem Sie die Operatoren BETWEEN und NOT BETWEEN durch die entsprechenden AND- und OR-Ausdrücke ersetzt haben.  
   
  Sie können keine Unterabfragen oder nicht deterministische Funktionen wie RAND() oder GETDATE() verwenden.  
   
-## Hinzufügen einer Filterfunktion zu einer Tabelle  
- Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE**-Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Beispiel:  
+## <a name="add-a-filter-function-to-a-table"></a>Hinzufügen einer Filterfunktion zu einer Tabelle  
+ Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE** -Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Beispiel:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -171,9 +175,10 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Sie können die Inline-Tabellenwertfunktion nicht löschen, solange eine Tabelle die Funktion als ihr Filterprädikat nutzt. 
 
-> [!TIP] Erstellen Sie einen Index für die Spalten, die von der Funktion verwendet werden, um die Leistung der Filterfunktion zu verbessern.
+> [!TIP]
+> Erstellen Sie einen Index für die Spalten, die von der Funktion verwendet werden, um die Leistung der Filterfunktion zu verbessern.
 
- ### Übergeben von Spaltennamen an die Filterfunktion
+ ### <a name="passing-column-names-to-the-filter-function"></a>Übergeben von Spaltennamen an die Filterfunktion
  
  Wenn Sie einer Tabelle eine Filterfunktion zuweisen, geben Sie die an die Filterfunktion übergebenen Spaltennamen mit einem einteiligen Namen an. Wenn Sie beim Übergeben der Spaltennamen einen dreiteiligen Namen angeben, treten bei nachfolgenden Abfragen der Stretch-aktivierten Tabelle Fehler auf.
 
@@ -199,7 +204,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach Ausführen des Assistenten  
   
-Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivieren von Stretch für eine Datenbank** nicht erstellen können, können Sie die **ALTER TABLE**-Anweisung ausführen, um nach Beenden des Assistenten eine Funktion anzugeben. Bevor eine Funktion angewendet werden kann, müssen Sie jedoch die Datenmigration anhalten, die bereits in Bearbeitung ist, und migrierte Daten zurückbringen. (Weitere Informationen dazu, warum dies notwendig ist, finden Sie im Abschnitt [Ersetzen einer vorhandenen Filterfunktion](#replacePredicate)).
+Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivieren von Stretch für eine Datenbank** nicht erstellen können, können Sie die **ALTER TABLE** -Anweisung ausführen, um nach Beenden des Assistenten eine Funktion anzugeben. Bevor eine Funktion angewendet werden kann, müssen Sie jedoch die Datenmigration anhalten, die bereits in Bearbeitung ist, und migrierte Daten zurückbringen. (Weitere Informationen dazu, warum dies notwendig ist, finden Sie im Abschnitt [Ersetzen einer vorhandenen Filterfunktion](#replacePredicate)).
   
 1. Kehren Sie die Migrationsrichtung um, und bringen Sie bereits migrierte Daten zurück. Dieser Vorgang kann nach dem Start nicht mehr abgebrochen werden. Es fallen auf Azure auch Kosten für ausgehende Datenübertragungen an. Weitere Informationen finden Sie unter [Datenübertragungen – Preisdetails](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
@@ -208,7 +213,7 @@ Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivier
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status unter **Stretch-Datenbankmonitor** in SQL Server Management Studio überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status unter **Stretch-Datenbankmonitor** in SQL Server Management Studio überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Erstellen Sie die Filterfunktion, die auf die Tabelle angewendet werden soll.  
   
@@ -224,7 +229,7 @@ Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivier
             );   
     ```  
   
-## Filtern von Zeilen nach Datum  
+## <a name="filter-rows-by-date"></a>Filtern von Zeilen nach Datum  
  Im folgenden Beispiel werden Zeilen migriert, in denen die Spalte **date** einen Wert vor dem 1. Januar 2016 enthält.  
   
 ```tsql  
@@ -239,7 +244,7 @@ GO
   
 ```  
   
-## Filtern von Zeilen nach dem Wert in einer Statusspalte  
+## <a name="filter-rows-by-the-value-in-a-status-column"></a>Filtern von Zeilen nach dem Wert in einer Statusspalte  
  Im folgenden Beispiel werden Zeilen migriert, in denen die Spalte **status** einen der angegebenen Werte enthält.  
   
 ```tsql  
@@ -254,7 +259,7 @@ GO
   
 ```  
   
-## Filtern von Zeilen mithilfe eines gleitenden Fensters  
+## <a name="filter-rows-by-using-a-sliding-window"></a>Filtern von Zeilen mithilfe eines gleitenden Fensters  
  Um Zeilen mithilfe eines gleitenden Fensters zu filtern, beachten Sie die folgenden Anforderungen an die Filterfunktion.  
   
 -   Die Funktion muss deterministisch sein. Sie können daher keine Funktion erstellen, die das gleitende Fenster im Ablauf der Zeit neu berechnet.  
@@ -292,9 +297,9 @@ SET (
   
 1.  Erstellen Sie eine neue Funktion, die das neue gleitende Fenster angibt. Das folgende Beispiel wählt Datumsangaben vor dem 2. Januar 2016 statt vor dem 1. Januar 2016 aus.  
   
-2.  Ersetzen Sie die vorherige Filterfunktion durch die neue, indem Sie **ALTER TABLE** aufrufen, wie im folgenden Beispiel dargestellt.  
+2.  Ersetzen Sie die vorherige Filterfunktion durch die neue, indem Sie **ALTER TABLE**aufrufen, wie im folgenden Beispiel dargestellt.  
   
-3.  Löschen Sie optional die vorherige Filterfunktion, die Sie nicht mehr verwenden, indem Sie **DROP FUNCTION** aufrufen. (Dieser Schritt ist nicht im Beispiel dargestellt.)  
+3.  Löschen Sie optional die vorherige Filterfunktion, die Sie nicht mehr verwenden, indem Sie **DROP FUNCTION**aufrufen. (Dieser Schritt ist nicht im Beispiel dargestellt.)  
   
 ```tsql  
 BEGIN TRAN  
@@ -322,7 +327,7 @@ COMMIT ;
   
 ```  
   
-## Weitere Beispiele gültiger Filterfunktionen  
+## <a name="more-examples-of-valid-filter-functions"></a>Weitere Beispiele gültiger Filterfunktionen  
   
 -   Das folgende Beispiel kombiniert die beiden primitiven Bedingungen mithilfe des logischen Operators AND.  
   
@@ -395,7 +400,7 @@ COMMIT ;
   
     ```  
   
-## Beispiele ungültiger Filterfunktionen  
+## <a name="examples-of-filter-functions-that-arent-valid"></a>Beispiele ungültiger Filterfunktionen  
   
 -   Die folgende Funktion ist ungültig, da sie eine nicht deterministische Konvertierung enthält.  
   
@@ -483,7 +488,7 @@ COMMIT ;
   
     ```  
   
-## So wendet Stretch-Datenbank die Filterfunktion an  
+## <a name="how-stretch-database-applies-the-filter-function"></a>So wendet Stretch-Datenbank die Filterfunktion an  
  Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Beispiel:  
   
 ```tsql  
@@ -493,7 +498,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Wenn die Funktion ein nicht leeres Ergebnis für die Zeile zurückgibt, ist die Zeile für die Migration geeignet.  
   
 ## <a name="replacePredicate"></a>Ersetzen einer vorhandenen Filterfunktion  
- Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE**-Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Beispiel:  
+ Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Beispiel:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -512,9 +517,9 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   Der Reihenfolge der Operatorargumente kann sich nicht ändern.  
   
--   Nur konstante Werte, die Teil eines `<, <=, >, >=`-Vergleichs sind, können in einer Weise geändert werden, die die Funktion weniger restriktiv macht.  
+-   Nur konstante Werte, die Teil eines `<, <=, >, >=`  -Vergleichs sind, können in einer Weise geändert werden, die die Funktion weniger restriktiv macht.  
   
-### Beispiel einer gültigen Ersetzung  
+### <a name="example-of-a-valid-replacement"></a>Beispiel einer gültigen Ersetzung  
  Angenommen, die folgende Funktion ist die aktuelle Filterfunktion.  
   
 ```tsql  
@@ -543,7 +548,7 @@ GO
   
 ```  
   
-### Beispiele für ungültige Ersetzungen  
+### <a name="examples-of-replacements-that-arent-valid"></a>Beispiele für ungültige Ersetzungen  
  Die folgende Funktion ist keine gültige Ersetzung, da die neue Datumskonstante (die ein früheres Umstellungsdatum angibt) die Funktion nicht weniger restriktiv macht.  
   
 ```tsql  
@@ -587,8 +592,8 @@ GO
   
 ```  
   
-## Entfernen einer Filterfunktion von einer Tabelle  
- Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE** auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Beispiel:  
+## <a name="remove-a-filter-function-from-a-table"></a>Entfernen einer Filterfunktion von einer Tabelle  
+ Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE**  auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Beispiel:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -600,17 +605,18 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Nachdem Sie die Filterfunktion entfernt haben, sind alle Zeilen in der Tabelle für die Migration geeignet. Sie können daher nicht später eine Filterfunktion für dieselbe Tabelle angeben, es sei denn, Sie bringen zuerst alle Remotedaten für die Tabelle von Azure zurück. Diese Einschränkung gilt, um die Situation zu vermeiden, in der Zeilen, die nicht für die Migration geeignet sind, bei Angabe einer neuen Filterfunktion bereits in Azure migriert wurden.  
   
-## Überprüfen der auf eine Tabelle angewendeten Filterfunktion  
- Öffnen Sie zum Überprüfen der Filterfunktion, die auf eine Tabelle angewendet wurde, die Katalogsicht **sys.remote_data_archive_tables**, und überprüfen Sie den Wert der Spalte **filter_predicate**. Falls der Wert NULL ist, ist die gesamte Tabelle für die Archivierung geeignet. Weitere Informationen finden Sie unter [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md).  
+## <a name="check-the-filter-function-applied-to-a-table"></a>Überprüfen der auf eine Tabelle angewendeten Filterfunktion  
+ Öffnen Sie zum Überprüfen der Filterfunktion, die auf eine Tabelle angewendet wurde, die Katalogsicht **sys.remote_data_archive_tables** , und überprüfen Sie den Wert der Spalte **filter_predicate** . Falls der Wert NULL ist, ist die gesamte Tabelle für die Archivierung geeignet. Weitere Informationen finden Sie unter [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
   
-## Sicherheitshinweise für Filterfunktionen  
+## <a name="security-notes-for-filter-functions"></a>Sicherheitshinweise für Filterfunktionen  
 Ein kompromittiertes Konto mit db_owner-Berechtigungen kann folgende Aktionen ausführen.  
   
 -   Erstellen und Anwenden einer Tabellenwertfunktion, die große Mengen an Serverressourcen verbraucht oder für einen längeren Zeitraum wartet, was zu einem Denial of Service führt.  
   
 -   Erstellen und Anwenden einer Tabellenwertfunktion, die es ermöglicht, den Inhalt einer Tabelle abzuleiten, für die dem Benutzer explizit der Lesezugriff verweigert wurde.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

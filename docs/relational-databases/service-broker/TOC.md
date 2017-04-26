@@ -1,4 +1,4 @@
-# [Abrufen von Informationen zu Ereignisbenachrichtigungen](get-information-about-event-notifications.md)
-# [Ereignisbenachrichtigungen](event-notifications.md)
-# [Implementieren von Ereignisbenachrichtigungen](implement-event-notifications.md)
-# [Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen](configure-dialog-security-for-event-notifications.md)
+# [Übersicht](event-notifications.md)  
+# [Implementieren](implement-event-notifications.md)  
+# [Konfigurieren der Dialogsicherheit](configure-dialog-security-for-event-notifications.md)  
+# [Abrufen von Informationen](get-information-about-event-notifications.md)  

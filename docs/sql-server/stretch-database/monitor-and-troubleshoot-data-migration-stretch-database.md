@@ -1,42 +1,45 @@
 ---
-title: "&#220;berwachung und Problembehandlung bei der Datenmigration (Stretch-Datenbank) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch-Datenbank, Überwachung"
-  - "Stretch-Datenbank überwachen"
+title: "Überwachung und Problembehandlung bei der Datenmigration (Stretch-Datenbank) | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, monitoring
+- monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachung und Problembehandlung bei der Datenmigration (Stretch-Datenbank)
+# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Überwachung und Problembehandlung bei der Datenmigration (Stretch-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Wählen Sie zum Überwachen der Datenmigration in der Stretch-Datenbanküberwachung **Aufgaben | Stretch | Überwachen** für eine Datenbank in SQL Server Management Studio aus.  
   
-## Überprüfen des Status der Datenmigration in der Stretch-Datenbanküberwachung  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Überprüfen des Status der Datenmigration in der Stretch-Datenbanküberwachung  
  Wählen Sie **Aufgaben | Stretch | Überwachen** für eine Datenbank in SQL Server Management Studio aus, um die Stretch-Datenbanküberwachung zu öffnen und die Datenmigration zu überwachen.  
   
 -   Im oberen Bereich der Überwachung werden allgemeine Informationen über die SQL Server-Datenbank mit aktivierter Funktion Stretch-Datenbank und die Azure-Remotedatenbank angezeigt.  
   
 -   Im unteren Bereich der Überwachung wird der Status der Datenmigration für jede Tabelle mit aktivierter Funktion Stretch-Datenbank in der Datenbank angezeigt.  
   
- ![Stretch Database Monitor](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database Monitor")  
+ ![Überwachung der Stretch-Datenbank](../../sql-server/stretch-database/media/stretch-monitor.PNG "Überwachung der Stretch-Datenbank")  
   
 ##  <a name="Migration"></a> Überprüfen des Status der Datenmigration in einer dynamischen Verwaltungsansicht  
- Öffnen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status**, um anzuzeigen, wie viele Batches und Datenzeilen migriert wurden. Weitere Informationen finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../Topic/sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+ Öffnen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** , um anzuzeigen, wie viele Batches und Datenzeilen migriert wurden. Weitere Informationen finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Problembehandlung der Datenmigration  
  **Zeilen aus meiner Tabelle mit aktivierter Funktion Stretch werden nicht zu Azure migriert. Wo liegt das Problem?**  
@@ -48,14 +51,15 @@ caps.handback.revision: 14
   
 -   Überprüfen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** für den Status des aktuellen Batches. Wenn ein Fehler aufgetreten ist, überprüfen Sie die Werte „error_number“, „error_state“ und „error_severity“ für den Batch.  
   
-    -   Weitere Informationen zu dieser Sicht finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../Topic/sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+    -   Weitere Informationen zu dieser Sicht finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
-    -   Weitere Informationen zum Inhalt einer SQL Server-Fehlermeldung finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md).  
+    -   Weitere Informationen zum Inhalt einer SQL Server-Fehlermeldung finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
  **Die Azure-Firewall blockiert Verbindungen von meinem lokalen Server.**  
  Möglicherweise müssen Sie eine Regel zu den Azure-Firewalleinstellungen des Azure-Servers hinzufügen, damit SQL Server mit dem Azure-Remoteserver kommunizieren kann.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten und Problembehandlung von Stretch-Datenbank](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   
+
