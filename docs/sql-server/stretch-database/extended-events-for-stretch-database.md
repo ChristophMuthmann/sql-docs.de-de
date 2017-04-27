@@ -1,29 +1,33 @@
 ---
-title: "Erweiterte Ereignisse f&#252;r Stretch-Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erweiterte Ereignisse für Stretch-Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erweiterte Ereignisse f&#252;r Stretch-Datenbank
+# <a name="extended-events-for-stretch-database"></a>Erweiterte Ereignisse für Stretch-Datenbank
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Stretch-Datenbank stellt eine Reihe von erweiterten Ereignissen für die Problembehandlung bereit.  
   
-Weitere Informationen finden Sie unter [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md). Informationen dazu, wie Sie eine Sitzung für erweiterte Ereignisse zur Problembehandlung starten, finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](Create%20an%20Extended%20Events%20Session.md).  
+Weitere Informationen finden Sie unter [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md). Informationen dazu, wie Sie eine Sitzung für erweiterte Ereignisse zur Problembehandlung starten, finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
-## Liste der erweiterten Ereignisse für Stretch-Datenbank  
+## <a name="list-of-extended-events-for-stretch-database"></a>Liste der erweiterten Ereignisse für Stretch-Datenbank  
   
 Ereignisname|Ereignisbeschreibung   
 ---------|---------  
@@ -80,5 +84,7 @@ stretch_table_unprovision_completed|Gibt den Abschluss der Entfernung von lokale
 stretch_table_validation_error|Gibt den Abschluss der Überprüfung für eine Tabelle an, wenn der Benutzer die Streckung aktiviert.  
 stretch_unprovision_table_start|Gibt den Start der Aufhebung der Bereitstellung der Streckungstabelle an.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Verwalten und Problembehandlung von Stretch-Datenbank](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
+

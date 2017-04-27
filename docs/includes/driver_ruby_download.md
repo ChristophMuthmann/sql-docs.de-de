@@ -1,0 +1,1 @@
+![Herunterladen](../ssdt/media/download.png)[Ruby-Treiber installieren](http://msdn.microsoft.com/library/mt711041.aspx)

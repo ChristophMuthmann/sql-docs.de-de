@@ -1,0 +1,1 @@
+![Herunterladen](../ssdt/media/download.png)[JDBC-Treiber herunterladen](http://go.microsoft.com/fwlink/?LinkId=245496)

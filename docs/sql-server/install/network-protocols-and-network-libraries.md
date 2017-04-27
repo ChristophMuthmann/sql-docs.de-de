@@ -1,43 +1,47 @@
 ---
-title: "Netzwerkprotokolle und Netzwerkbibliotheken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Protokolle [SQL Server]"
-  - "Konfigurationsoptionen [SQL Server], Protokolle"
-  - "Netzwerkbibliotheken [SQL Server]"
-  - "Protokolle [SQL Server], Informationen zu Netzwerkprotokollen"
-  - "Pipes [SQL Server]"
-  - "Netzwerkprotokolle [SQL Server]"
-  - "SQL Server-Standardkonfigurationen"
-  - "Bibliothek [SQL Server]"
-  - "Netzwerkprotokolle [SQL Server], Informationen zu Netzwerkprotokollen"
-  - "Konfigurationsoptionen [SQL Server], Bibliotheken"
+title: Netzwerkprotokolle und Netzwerkbibliotheken | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- protocols [SQL Server]
+- configuration options [SQL Server], protocols
+- network libraries [SQL Server]
+- protocols [SQL Server], about network protocols
+- pipes [SQL Server]
+- network protocols [SQL Server]
+- default SQL Server configurations
+- library [SQL Server]
+- network protocols [SQL Server], about network protocols
+- configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: aac8ea2ddd6582529952398f3896f548d8117078
+ms.lasthandoff: 04/11/2017
+
 ---
-# Netzwerkprotokolle und Netzwerkbibliotheken
+# <a name="network-protocols-and-network-libraries"></a>Netzwerkprotokolle und Netzwerkbibliotheken
   Ein Server kann gleichzeitig auf mehreren Netzwerkprotokollen lauschen bzw. diese überwachen. Jedes Protokoll muss jedoch konfiguriert sein. Wenn ein bestimmtes Protokoll nicht konfiguriert ist, kann der Server auf diesem Protokoll nicht lauschen. Nach der Installation können diese Protokollkonfigurationen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden.  
   
-## Standardnetzwerkkonfiguration von SQL Server  
- Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz wird konfiguriert für TCP/IP, Port 1433 und die Named Pipe „\\\\.\pipe\sql\query“. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden für dynamische TCP-Ports konfiguriert, wobei eine Portnummer vom Betriebssystem zugewiesen wird.  
+## <a name="default-sql-server-network-configuration"></a>Standardnetzwerkkonfiguration von SQL Server  
+ Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz wird konfiguriert für TCP/IP, Port 1433 und die Named Pipe „ \\\\.\pipe\sql\query“. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden für dynamische TCP-Ports konfiguriert, wobei eine Portnummer vom Betriebssystem zugewiesen wird.  
   
- Wenn Sie keine dynamischen Portadressen verwenden können (beispielsweise wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen über einen Firewallserver weitergeleitet werden, der für die Verwendung bestimmter Portadressen konfiguriert ist). Wählen Sie eine nicht zugewiesene Portnummer aus. Portnummernzuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) aufgelistet.  
+ Wenn Sie keine dynamischen Portadressen verwenden können (beispielsweise wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen über einen Firewallserver weitergeleitet werden, der für die Verwendung bestimmter Portadressen konfiguriert ist). Wählen Sie eine nicht zugewiesene Portnummer aus. Portnummernzuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)aufgelistet.  
   
  Zur Verbesserung der Sicherheit wird die Netzwerkkonnektivität bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht vollständig aktiviert. Um Netzwerkprotokolle nach Abschluss des Setups zu aktivieren, zu deaktivieren und zu konfigurieren, verwenden Sie den Bereich für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers.  
   
-## SMB (Server Message-Block)-Protokoll  
+## <a name="server-message-block-protocol"></a>SMB (Server Message-Block)-Protokoll  
  Bei Servern im Umkreisnetzwerk sollten alle nicht benötigten Protokolle deaktiviert sein, einschließlich des SMB (Server Message Block). Webserver und DNS-Server (Domain Name System) benötigen SMB nicht. Dieses Protokoll sollte deaktiviert sein, um der Gefahr der Benutzerenumeration vorzubeugen.  
   
 > [!WARNING]  
@@ -47,7 +51,7 @@ caps.handback.revision: 50
 > -   Angeben einer SMB-Dateifreigabe als Datenverzeichnis während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation  
 > -   Erstellen einer Datenbankdatei auf einer SMB-Dateifreigabe  
   
-#### So deaktivieren Sie SMB  
+#### <a name="to-disable-smb"></a>So deaktivieren Sie SMB  
   
 1.  Zeigen Sie im Menü **Start** auf **Einstellungen**, und klicken Sie dann auf **Netzwerk- und DFÜ-Verbindungen**.  
   
@@ -61,11 +65,11 @@ caps.handback.revision: 50
   
 5.  Befolgen Sie die Schritte zur Deinstallation.  
   
-#### So deaktivieren Sie SMB auf Servern, auf die vom Internet aus zugegriffen werden kann  
+#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>So deaktivieren Sie SMB auf Servern, auf die vom Internet aus zugegriffen werden kann  
   
 -   Deaktivieren Sie in den Eigenschaften von LAN-Verbindung im Dialogfeld **Eigenschaften von Internetprotokoll (TCP/IP)** die Kontrollkästchen **Datei- und Druckerfreigabe für Microsoft-Netzwerke** und **Client für Microsoft-Netzwerke**.  
   
-## Endpunkte  
+## <a name="endpoints"></a>Endpunkte  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein neues Konzept für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen eingeführt: Die Verbindung wird auf dem Server durch einen [!INCLUDE[tsql](../../includes/tsql-md.md)]*Endpunkt*. Für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Endpunkte können Berechtigungen erteilt, aufgehoben oder verweigert werden. Standardmäßig sind alle Benutzer berechtigt, auf einen Endpunkt zuzugreifen, sofern die betreffende Berechtigung nicht durch ein Mitglied der sysadmin-Gruppe oder den Besitzer des Endpunkts verweigert oder aufgehoben wird. Im Rahmen der GRANT-, REVOKE- und DENY ENDPOINT-Syntax wird eine Endpunkt-ID verwendet, die der Administrator aus der Katalogsicht des Endpunkts abrufen muss.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup erstellt [!INCLUDE[tsql](../../includes/tsql-md.md)] -Endpunkte für alle unterstützten Netzwerkprotokolle und für die dedizierte Administratorverbindung.  
@@ -80,11 +84,11 @@ caps.handback.revision: 50
   
  Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfigurationen finden Sie in den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation:  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfigurationen finden Sie in den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
   
 -   [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

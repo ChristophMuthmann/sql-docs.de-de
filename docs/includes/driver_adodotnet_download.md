@@ -1,0 +1,1 @@
+![Herunterladen](../ssdt/media/download.png)[.NET-Treiber herunterladen](https://msdn.microsoft.com/vstudio/aa496123.aspx)

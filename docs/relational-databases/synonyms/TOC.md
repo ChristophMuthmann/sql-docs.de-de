@@ -1,2 +1,2 @@
-# [Erstellen von Synonymen](create-synonyms.md)
-# [Synonyme (Datenbankmodul)](synonyms-database-engine.md)
+# [Übersicht](synonyms-database-engine.md)  
+# [Erstellen von Synonymen](create-synonyms.md)  

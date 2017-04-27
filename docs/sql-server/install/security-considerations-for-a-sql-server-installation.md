@@ -1,41 +1,45 @@
 ---
-title: "&#220;berlegungen zur Sicherheit bei SQL Server-Installationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Firewallsysteme [SQL Server]"
-  - "Server Message Blocks [SQL Server]"
-  - "Deaktivieren von Protokollen"
-  - "Sicherheit [SQL Server], Installationen"
-  - "Protokolle [SQL Server], deaktivieren"
-  - "NetBIOS [SQL Server]"
-  - "Dienste [SQL Server], Sicherheit"
-  - "SMB [SQL Server]"
-  - "Isolieren von Diensten [SQL Server]"
-  - "Setup [SQL Server], Sicherheit"
-  - "Unzureichende Privilegien für die SQL Server-Installation"
-  - "NTFS [SQL Server]"
-  - "Physische Sicherheit [SQL Server]"
-  - "Dateisystemsicherheit [SQL Server]"
-  - "Installieren von SQL Server, Sicherheit"
+title: "Überlegungen zur Sicherheit bei SQL Server-Installationen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- firewall systems [SQL Server]
+- server message blocks [SQL Server]
+- disabling protocols
+- security [SQL Server], installations
+- protocols [SQL Server], disabling
+- NetBIOS [SQL Server]
+- services [SQL Server], security
+- SMB [SQL Server]
+- isolating services [SQL Server]
+- Setup [SQL Server], security
+- low SQL Server installation privileges
+- NTFS [SQL Server]
+- physical security [SQL Server]
+- file system security [SQL Server]
+- installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berlegungen zur Sicherheit bei SQL Server-Installationen
+# <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
   Sicherheit ist für jedes Produkt und jedes Geschäft wichtig. Indem Sie einige einfache bewährte Methoden verwenden, können Sie viele Sicherheitsrisiken vermeiden. In diesem Thema werden einige bewährte Sicherheitsmethoden behandelt, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]berücksichtigen sollten. Sicherheitshinweise für bestimmte Funktionen sind in den Referenzthemen für diese Funktionen enthalten.  
   
-## Vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Beachten Sie beim Einrichten der Serverumgebung diese bewährten Methoden:  
   
 -   [Erhöhen der physischen Sicherheit](#physical_security)  
@@ -50,7 +54,7 @@ caps.handback.revision: 48
   
 -   [Installieren von SQL Server auf einem Domänencontroller](../../sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Erhöhen der physischen Sicherheit  
+###  <a name="physical_security"></a> Enhance Physical Security  
  Physische und logische Isolation bilden die Basis der Sicherheit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Führen Sie die folgenden Aufgaben aus, um die physische Sicherheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation zu erhöhen:  
   
 -   Platzieren Sie den Server in einem Raum, den nur autorisierte Benutzer betreten dürfen.  
@@ -61,7 +65,7 @@ caps.handback.revision: 48
   
 -   Führen Sie regelmäßig Datensicherungen durch, und bewahren Sie die Sicherungskopien an einem Ort außerhalb des Unternehmensgebäudes auf.  
   
-###  <a name="firewalls"></a> Verwenden von Firewalls  
+###  <a name="firewalls"></a> Use Firewalls  
  Firewalls sind eine wichtige Komponente zur Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation. Sie bieten den wirksamsten Schutz, wenn Sie die folgenden Richtlinien beachten:  
   
 -   Richten Sie zwischen Server und Internet eine Firewall ein. Aktivieren Sie die Firewall. Schalten Sie die Firewall ein, wenn sie ausgeschaltet ist. Schalten Sie die Firewall nicht aus, wenn sie eingeschaltet ist.  
@@ -72,26 +76,26 @@ caps.handback.revision: 48
   
 -   Wenn Sie den Server in einer Windows-Domäne installieren, konfigurieren Sie innere Firewalls so, dass die Windows-Authentifizierung zulässig ist.  
   
--   Wenn Ihre Anwendung verteilte Transaktionen verwendet, müssen Sie die Firewall möglicherweise so konfigurieren, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)-Datenverkehr zwischen separaten MS DTC-Instanzen übermittelt werden kann. Außerdem müssen Sie die Firewall für Datenverkehr zwischen MS DTC und Ressourcen-Managern wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfigurieren.  
+-   Wenn Ihre Anwendung verteilte Transaktionen verwendet, müssen Sie die Firewall möglicherweise so konfigurieren, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)-Datenverkehr zwischen separaten MS DTC-Instanzen übermittelt werden kann. Außerdem müssen Sie die Firewall für Datenverkehr zwischen MS DTC und Ressourcen-Managern wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren.  
   
- Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf das [!INCLUDE[ssDE](../../includes/ssde-md.md)], die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf das [!INCLUDE[ssDE](../../includes/ssde-md.md)], die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolieren von Diensten  
+###  <a name="isolated_services"></a> Isolate Services  
  Durch das Isolieren von Diensten reduzieren Sie das Risiko, dass durch einen gefährdeten Dienst andere Dienste ebenfalls gefährdet werden. Beachten Sie beim Isolieren von Diensten die folgenden Richtlinien:  
   
--   Führen Sie separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste unter separaten Windows-Konten aus. Verwenden Sie für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste wo immer das möglich ist separate Windows-Benutzerkonten oder separate lokale Benutzerkonten mit geringen Rechten. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Führen Sie separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste unter separaten Windows-Konten aus. Verwenden Sie für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste wo immer das möglich ist separate Windows-Benutzerkonten oder separate lokale Benutzerkonten mit geringen Rechten. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Konfigurieren eines sicheren Dateisystems  
- Die Verwendung des richtigen Dateisystems erhöht die Sicherheit. Folgende Aufgaben sollten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen ausgeführt werden:  
+###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+ Die Verwendung des richtigen Dateisystems erhöht die Sicherheit. Folgende Aufgaben sollten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen ausgeführt werden:  
   
--   Verwenden Sie das Dateisystem NTFS. NTFS ist das bevorzugte Dateisystem für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen, da im Gegensatz zum Dateisystem FAT eine höhere Stabilität und eine bessere Wiederherstellbarkeit gegeben ist. NTFS bietet darüber hinaus Sicherheitsfeatures wie Zugriffssteuerungslisten (ACL) für Dateien und Verzeichnisse und die Encrypting File System (EFS)-Dateiverschlüsselung. Nachdem NTFS erkannt wurde, werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechende ACLs für Registrierungsschlüssel und Dateien festgelegt. Diese Berechtigungen sollten nicht geändert werden. In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Installation auf Computern mit FAT-Dateisystemen möglicherweise nicht mehr unterstützt.  
+-   Verwenden Sie das Dateisystem NTFS. NTFS ist das bevorzugte Dateisystem für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen, da im Gegensatz zum Dateisystem FAT eine höhere Stabilität und eine bessere Wiederherstellbarkeit gegeben ist. NTFS bietet darüber hinaus Sicherheitsfeatures wie Zugriffssteuerungslisten (ACL) für Dateien und Verzeichnisse und die Encrypting File System (EFS)-Dateiverschlüsselung. Nachdem NTFS erkannt wurde, werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechende ACLs für Registrierungsschlüssel und Dateien festgelegt. Diese Berechtigungen sollten nicht geändert werden. In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Installation auf Computern mit FAT-Dateisystemen möglicherweise nicht mehr unterstützt.  
   
     > [!NOTE]  
-    >  Wenn Sie EFS verwenden, werden Datenbankdateien unter der Identität des Kontos verschlüsselt, mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Die Dateien können nur mit diesem Konto entschlüsselt werden. Falls eine Änderung des Kontos erforderlich wird, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, sollten Sie die Dateien zunächst unter dem alten Konto entschlüsseln und anschließend unter dem neuen Konto verschlüsseln.  
+    >  Wenn Sie EFS verwenden, werden Datenbankdateien unter der Identität des Kontos verschlüsselt, mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Die Dateien können nur mit diesem Konto entschlüsselt werden. Falls eine Änderung des Kontos erforderlich wird, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, sollten Sie die Dateien zunächst unter dem alten Konto entschlüsseln und anschließend unter dem neuen Konto verschlüsseln.  
   
 -   Verwenden Sie für wichtige Datendateien ein redundantes Datenträgerarray (RAID).  
   
-###  <a name="disabled_protocols"></a> Deaktivieren von NetBIOS und Server Message Block  
+###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Für Server im Umkreisnetzwerk sollten alle nicht erforderlichen Protokolle deaktiviert sein, einschließlich NetBIOS und Server Message Block (SMB).  
   
  NetBIOS verwendet die folgenden Ports:  
@@ -121,16 +125,16 @@ caps.handback.revision: 48
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden nicht unterstützt, wenn es sich bei den Clusterknoten um Domänencontroller handelt.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann beim Setup keine Sicherheitsgruppen erstellen oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonten für einen schreibgeschützten Domänencontroller bereitstellen. In diesem Szenario tritt ein Setupfehler auf.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann beim Setup keine Sicherheitsgruppen erstellen oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitstellen. In diesem Szenario tritt ein Setupfehler auf.  
   
-## Während oder nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Während oder nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nach der Installation können Sie die Sicherheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation mit diesen bewährten Methoden bezüglich Konten und Authentifizierungsmodi verbessern:  
   
  **Dienstkonten**  
   
 -   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste mit möglichst geringen Berechtigungen aus.  
   
--   Ordnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste Windows-Benutzerkonten oder lokalen Benutzerkonten mit geringen Berechtigungen zu.  
+-   Ordnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste Windows-Benutzerkonten oder lokalen Benutzerkonten mit geringen Berechtigungen zu.  
   
 -   Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -146,13 +150,13 @@ caps.handback.revision: 48
   
 -   Aktivieren Sie immer die Richtlinienüberprüfung für Kennwörter, um die Sicherheit und das Ablaufdatum der Kennwörter.  
   
--   Verwenden Sie für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen sichere Kennwörter.  
+-   Verwenden Sie für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen sichere Kennwörter.  
   
 > [!IMPORTANT]  
->  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
+>  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
   
-## Siehe auch  
- [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

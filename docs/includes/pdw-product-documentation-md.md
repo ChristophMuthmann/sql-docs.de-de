@@ -1,0 +1,1 @@
+  [Parallel Data Warehouse product documentation (Parallel Data Warehouse-Produktdokumentation)](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
