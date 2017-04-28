@@ -1,29 +1,33 @@
 ---
-title: "Aktivieren von Indizes und Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Indizes [SQL Server], aktivieren"
-  - "Nicht gruppierte Indizes [SQL Server], Aktivieren eines deaktivierten Indexes"
-  - "Indexaktivierung [SQL Server]"
-  - "Deaktivierte Indizes [SQL Server], Vorgehensweise zum Aktivieren"
-  - "Einschränkungen [SQL Server], aktivieren"
-  - "Gruppierte Indizes, Aktivieren deaktivierter Indizes"
+title: "Aktivieren von Indizes und Einschränkungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren von Indizes und Einschr&#228;nkungen
+# <a name="enable-indexes-and-constraints"></a>Aktivieren von Indizes und Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie ein deaktivierter Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktiviert wird. Nach dem Deaktivieren eines Indexes bleibt er deaktiviert, bis er neu erstellt oder gelöscht wird.  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So aktivieren Sie einen deaktivierten Index  
+#### <a name="to-enable-a-disabled-index"></a>So aktivieren Sie einen deaktivierten Index  
   
 1.  Klicken Sie in Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, auf der Sie einen Index aktivieren möchten.  
   
@@ -86,11 +90,11 @@ caps.handback.revision: 27
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie aktivieren möchten, und wählen Sie **Neu erstellen** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie aktivieren möchten, und wählen Sie **Neu erstellen**aus.  
   
 6.  Überprüfen Sie im Dialogfeld **Indizes neu erstellen** , dass der richtige Index im Raster **Neu zu erstellende Indizes** ausgewählt ist, und klicken sie auf **OK**.  
   
-#### So aktivieren Sie alle Indizes auf einer Tabelle  
+#### <a name="to-enable-all-indexes-on-a-table"></a>So aktivieren Sie alle Indizes auf einer Tabelle  
   
 1.  Klicken Sie in Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie die Indizes aktivieren möchten.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 27
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie die Indizes aktivieren möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, und wählen Sie **Alle neu erstellen**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle neu erstellen**.  
   
 5.  Überprüfen Sie im Dialogfeld **Indizes neu erstellen** , dass die richtigen Indizes im Raster **Neu zu erstellende Indizes** ausgewählt sind, und klicken sie auf **OK**. Um einen Index aus dem Raster **Neu zu erstellende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.  
   
@@ -106,9 +110,9 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So aktivieren Sie einen deaktivierten Index mit ALTER INDEX  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>So aktivieren Sie einen deaktivierten Index mit ALTER INDEX  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### So aktivieren Sie einen deaktivierten Index mit CREATE INDEX  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>So aktivieren Sie einen deaktivierten Index mit CREATE INDEX  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -146,9 +150,9 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### So aktivieren Sie einen deaktivierten Index mit DBCC DBREINDEX  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>So aktivieren Sie einen deaktivierten Index mit DBCC DBREINDEX  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -163,9 +167,9 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### So aktivieren Sie alle Indizes auf einer Tabelle mit ALTER INDEX  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>So aktivieren Sie alle Indizes auf einer Tabelle mit ALTER INDEX  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -181,9 +185,9 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### So aktivieren Sie alle Indizes auf einer Tabelle mit DBCC DBREINDEX  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>So aktivieren Sie alle Indizes auf einer Tabelle mit DBCC DBREINDEX  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md), [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) und [DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md).  
   
   
+

@@ -1,42 +1,46 @@
 ---
-title: "Neuorganisieren und Neuerstellen von Indizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "Defragmentieren von großen Objekten"
-  - "Indizes [SQL Server], Neu organisieren"
-  - "Indexneuorganisation [SQL Server]"
-  - "Neuorganisieren von Indizes"
-  - "Defragmentieren von großen Objektdatentypen"
-  - "Indexfragmentierung [SQL Server]"
-  - "Indexneuerstellung [SQL Server]"
-  - "Neuerstellen von Indizes"
-  - "Indizes [SQL Server], Neu erstellen"
-  - "Defragmentieren von Indizes"
-  - "Nicht gruppierte Indizes [SQL Server], Defragmentieren"
-  - "Fragmentierung [SQL Server]"
-  - "Indexdefragmentierung [SQL Server]"
-  - "LOB-Daten [SQL Server], Defragmentieren"
-  - "Gruppierte Indizes, Defragmentieren"
+title: Neuorganisieren und Neuerstellen von Indizes | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# Neuorganisieren und Neuerstellen von Indizes
+# <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]neu organisieren oder neu erstellen. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
@@ -55,20 +59,20 @@ caps.handback.revision: 70
   
 -   **Überprüfen der Fragmentierung eines Indexes mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedureFrag)  
+     [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
 -   **Neuorganisieren oder Neuerstellen eines Indexes mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedureReorg)  
+     [SQL Server Management Studio](#SSMSProcedureReorg)  
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Fragmentation"></a> Erkennen der Fragmentierung  
- Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteht im Analysieren des Indexes, um den Fragmentierungsgrad zu ermitteln. Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.  
+ Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteht im Analysieren des Indexes, um den Fragmentierungsgrad zu ermitteln. Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.  
   
  Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
@@ -80,9 +84,9 @@ caps.handback.revision: 70
   
  Nachdem der Grad der Fragmentierung bekannt ist, verwenden Sie die folgenden Tabelle, um die beste Methode zum Beheben der Fragmentierung zu ermitteln.  
   
-|**avg_fragmentation_in_percent**-Wert|Korrigierende Anweisung|  
+|**avg_fragmentation_in_percent** -Wert|Korrigierende Anweisung|  
 |-----------------------------------------------|--------------------------|  
-|> 5 % und \< = 30 %|ALTER INDEX REORGANIZE|  
+|> 5 % und < = 30 %|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
@@ -98,12 +102,12 @@ caps.handback.revision: 70
   
 -   Indexoptionen können beim Neuorganisieren eines Indexes nicht angegeben werden.  
   
--   Die `ALTER INDEX REORGANIZE`-Anweisung erfordert, dass die Datendatei mit dem Index über Platz verfügt, da der Vorgang temporäre Arbeitsseiten nur in der gleichen Datei zuordnen kann, nicht in einer anderen Datei der Dateigruppe.  Obwohl also in der Dateigruppe möglicherweise noch freie Seiten vorhanden sind, kann dem Benutzer trotzdem der Fehler 1105 angezeigt werden: „Speicherplatz für das \<Indexname>.\<Tabellenname>-Objekt in der \<Datenbankname>-Datenbank konnte nicht zugeordnet werden, da die Dateigruppe ‚PRIMARY‘ voll ist.“
+-   Die `ALTER INDEX REORGANIZE` -Anweisung erfordert, dass die Datendatei mit dem Index über Platz verfügt, da der Vorgang temporäre Arbeitsseiten nur in der gleichen Datei zuordnen kann, nicht in einer anderen Datei der Dateigruppe.  Obwohl also in der Dateigruppe möglicherweise noch freie Seiten vorhanden sind, kann dem Benutzer trotzdem Fehler 1105 angezeigt werden: „Speicherplatz für das \<Indexname>.\<Tabellenname>-Objekt in der \<Datenbankname>-Datenbank konnte nicht zugeordnet werden, da die Dateigruppe „PRIMARY“ voll ist.“
   
--   Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge.
+-   Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge.
   
 > [!NOTE]
->  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie CREATE STATISTICS oder UPDATE STATISTICS mit der FULLSCAN-Klausel.
+>  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie CREATE STATISTICS oder UPDATE STATISTICS mit der FULLSCAN-Klausel.
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureFrag"></a> Verwendung von SQL Server Management Studio  
   
-#### So überprüfen Sie die Fragmentierung eines Indexes  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>So überprüfen Sie die Fragmentierung eines Indexes  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie die Fragmentierung eines Indexes überprüfen möchten.  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 70
   
 4.  Erweitern Sie den Ordner **Indizes** .  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, für den Sie die Fragmentierung überprüfen möchten, und wählen Sie **Eigenschaften** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, für den Sie die Fragmentierung überprüfen möchten, und wählen Sie **Eigenschaften**aus.  
   
 6.  Wählen Sie unter **Seite auswählen**die Option **Fragmentierung**aus.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> Verwenden von Transact-SQL  
   
-#### So überprüfen Sie die Fragmentierung eines Indexes  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>So überprüfen Sie die Fragmentierung eines Indexes  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -207,7 +211,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureReorg"></a> Verwendung von SQL Server Management Studio  
   
-#### So organisieren oder erstellen Sie einen Index neu  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>So organisieren oder erstellen Sie einen Index neu  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie einen Index neu organisieren möchten.  
   
@@ -217,15 +221,15 @@ caps.handback.revision: 70
   
 4.  Erweitern Sie den Ordner **Indizes** .  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren**aus.  
   
 6.  Vergewissern Sie sich im Dialogfeld **Indizes neu organisieren** , dass der richtige Index im Raster **Neu zu organisierende Indizes** ausgewählt ist, und klicken Sie auf **OK**.  
   
-7.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren**, um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
+7.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren** , um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
   
 8.  Klicken Sie auf **OK.**  
   
-#### So organisieren Sie alle Indizes in einer Tabelle neu  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>So organisieren Sie alle Indizes in einer Tabelle neu  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie die Indizes neu organisieren möchten.  
   
@@ -233,15 +237,15 @@ caps.handback.revision: 70
   
 3.  Erweitern Sie die Tabelle, in der Sie die Indizes neu organisieren möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, und wählen Sie **Alle neu organisieren** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle neu organisieren**aus.  
   
 5.  Vergewissern Sie sich im Dialogfeld **Index neu organisieren** , dass die richtigen Indizes im Raster **Neu zu organisierende Indizes**ausgewählt sind. Um einen Index aus dem Raster **Neu zu organisierende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.  
   
-6.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren**, um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
+6.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren** , um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
   
 7.  Klicken Sie auf **OK.**  
   
-#### So erstellen Sie einen Index neu  
+#### <a name="to-rebuild-an-index"></a>So erstellen Sie einen Index neu  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, in der Sie einen Index neu organisieren möchten.  
   
@@ -251,17 +255,17 @@ caps.handback.revision: 70
   
 4.  Erweitern Sie den Ordner **Indizes** .  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren**aus.  
   
 6.  Vergewissern Sie sich im Dialogfeld **Indizes neu erstellen** , dass der richtige Index im Raster **Erneut zu erstellende Indizes** ausgewählt ist, und klicken Sie auf **OK**.  
   
-7.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren**, um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
+7.  Aktivieren Sie das Kontrollkästchen **Spaltendaten großer Objekte komprimieren** , um anzugeben, dass alle Seiten mit umfangreichen Objektdaten (Large Object, LOB) komprimiert werden sollen.  
   
 8.  Klicken Sie auf **OK.**  
   
 ##  <a name="TsqlProcedureReorg"></a> Verwenden von Transact-SQL  
   
-#### So organisieren Sie einen defragmentierten Index neu  
+#### <a name="to-reorganize-a-defragmented-index"></a>So organisieren Sie einen defragmentierten Index neu  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### So organisieren Sie alle Indizes in einer Tabelle neu  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>So organisieren Sie alle Indizes in einer Tabelle neu  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### So erstellen Sie einen defragmentierten Index neu  
+#### <a name="to-rebuild-a-defragmented-index"></a>So erstellen Sie einen defragmentierten Index neu  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### So erstellen Sie alle Indizes in einer Tabelle neu  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>So erstellen Sie alle Indizes in einer Tabelle neu  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Bewährte Methoden für die Indexdefragmentierung in Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Anf&#252;gen einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "Datenbankanfügung [SQL Server]"
-  - "Anfügen von Datenbanken [SQL Server]"
+title: "Anfügen einer Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anf&#252;gen einer Datenbank
+# <a name="attach-a-database"></a>Anfügen einer Datenbank
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angefügt wird. Sie können diese Funktion verwenden, um eine SQL Server-Datenbank zu kopieren, zu verschieben oder zu aktualisieren.  
@@ -51,9 +55,9 @@ Es wird davon abgeraten, Trenn- und Anfügevorgänge für Sicherungen und Wieder
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So fügen Sie eine Datenbank an  
+#### <a name="to-attach-a-database"></a>So fügen Sie eine Datenbank an  
   
-1.  Stellen Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und klicken Sie dann, um diese Instanzansicht in SSMS zu erweitern.  
+1.  Stellen Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und klicken Sie dann, um diese Instanzansicht in SSMS zu erweitern.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und klicken Sie auf **Anfügen**.  
   
@@ -67,13 +71,13 @@ Es wird davon abgeraten, Trenn- und Anfügevorgänge für Sicherungen und Wieder
      **Anzufügende Datenbanken**  
      Zeigt Informationen zu den ausgewählten Datenbanken an.  
   
-     \<kein Spaltenheader>  
+     \<Keine Spaltenüberschrift>  
      Zeigt ein Symbol an, das den Status des Anfügevorgangs angibt. Die möglichen Symbole werden in der unten stehenden Beschreibung von **Status** beschrieben.  
   
      **Speicherort für MDF-Datei**  
      Zeigt den Pfad und den Dateinamen der ausgewählten MDF-Datei an.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der Datenbank an.  
   
      **Anfügen als**  
@@ -123,7 +127,7 @@ Es wird davon abgeraten, Trenn- und Anfügevorgänge für Sicherungen und Wieder
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So fügen Sie eine Datenbank an  
+#### <a name="to-attach-a-database"></a>So fügen Sie eine Datenbank an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -147,7 +151,7 @@ Es wird davon abgeraten, Trenn- und Anfügevorgänge für Sicherungen und Wieder
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
  Nachdem Sie eine Datenbank mithilfe der Anfügemethode aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
   
- War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Wenn Sie eine Datenbank von einer Instanz anfügen, die unter SQL Server 2014 oder älter ausgeführt wurden und für die Change Data Capture (CDC) aktiviert war, müssen Sie auch den unten genannten Befehl ausführen, um die Metadaten von CDC upzugraden.
@@ -156,8 +160,9 @@ Es wird davon abgeraten, Trenn- und Anfügevorgänge für Sicherungen und Wieder
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Trennen einer Datenbank](../../relational-databases/databases/detach-a-database.md)  
   
   
+

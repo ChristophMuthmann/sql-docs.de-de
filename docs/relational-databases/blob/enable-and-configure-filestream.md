@@ -1,41 +1,45 @@
 ---
-title: "Aktivieren und Konfigurieren von FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], aktivieren"
+title: Aktivieren und Konfigurieren von FILESTREAM | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren und Konfigurieren von FILESTREAM
+# <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
   Vor der Verwendung von FILESTREAM müssen Sie FILESTREAM in der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instanz aktivieren. In diesem Thema erfahren Sie, wie Sie FILESTREAM mit dem SQL Server-Konfigurations-Manager aktivieren.  
   
 ##  <a name="enabling"></a> Aktivieren von FILESTREAM  
   
-#### So aktivieren und ändern Sie FILESTREAM-Einstellungen  
+#### <a name="to-enable-and-change-filestream-settings"></a>So aktivieren und ändern Sie FILESTREAM-Einstellungen  
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
 2.  Klicken Sie in der Dienstliste mit der rechten Maustaste auf **SQL Server-Dienste**, und klicken Sie dann auf **Öffnen**.  
   
-3.  Suchen Sie im Snap-In **SQL Server-Konfigurations-Manager** die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], auf der Sie FILESTREAM aktivieren möchten.  
+3.  Suchen Sie im Snap-In **SQL Server-Konfigurations-Manager** die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf der Sie FILESTREAM aktivieren möchten.  
   
 4.  Klicken Sie mit der rechten Maustaste auf die Instanz, und klicken Sie dann auf **Eigenschaften**.  
   
 5.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server** auf die Registerkarte **FILESTREAM** .  
   
-6.  Aktivieren Sie das Kontrollkästchen **FILESTREAM für Transact-SQL-Zugriff aktivieren**.  
+6.  Aktivieren Sie das Kontrollkästchen **FILESTREAM für Transact-SQL-Zugriff aktivieren** .  
   
 7.  Wenn das Lesen und Schreiben von FILESTREAM-Daten über Windows erforderlich ist, klicken Sie auf **FILESTREAM für E/A-Streamingzugriff auf Datei aktivieren**. Geben Sie den Namen der Windows-Freigabe in das Feld **Windows-Freigabename** ein.  
   
@@ -54,9 +58,8 @@ caps.handback.revision: 24
   
 12. Klicken Sie auf **Ausführen**.  
   
-13. Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst neu.  
+13. Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
   
- [In diesem Thema](#TOP)  
   
 ##  <a name="best"></a> Bewährte Methoden  
   
@@ -78,18 +81,17 @@ caps.handback.revision: 24
 ||||||  
 |-|-|-|-|-|  
 |RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Hinweise|  
-|RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
+|RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
 |RAID 0|Hervorragend|Hervorragend|Keine||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  
   
- [In diesem Thema](#TOP)  
   
 ###  <a name="database"></a> Physischer Datenbankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
--   FILESTREAM-Spalten müssen von einer entsprechenden **uniqueidentifier** ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
+-   FILESTREAM-Spalten müssen von einer entsprechenden **uniqueidentifier**ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
   
--   Aus Leistungsgründen sollten die FILESTREAM-Dateigruppen und -Container nicht auf Volumes gespeichert werden, auf denen sich das Betriebssystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll, tempdb oder die Auslagerungsdatei befindet.  
+-   Aus Leistungsgründen sollten die FILESTREAM-Dateigruppen und -Container nicht auf Volumes gespeichert werden, auf denen sich das Betriebssystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokoll, tempdb oder die Auslagerungsdatei befindet.  
   
 -   Speicherplatzverwaltung und Richtlinien werden von FILESTREAM nicht direkt unterstützt. Sie können jedoch indirekt Speicherplatz verwalten und Richtlinien anwenden, indem Sie jede FILESTREAM-Dateigruppe einem separaten Volume zuweisen und die Verwaltungsfunktionen des Volumes verwenden.  
   

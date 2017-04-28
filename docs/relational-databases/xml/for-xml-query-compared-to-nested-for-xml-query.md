@@ -1,28 +1,32 @@
 ---
-title: "FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML-Abfrage"
-  - "Abfragen [XML in SQL Server], Vergleichen von Abfragetypen"
+title: FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
   In diesem Thema wird eine einstufige FOR XML-Abfrage mit einer geschachtelten FOR XML-Abfrage verglichen. Ein Vorteil, den die Verwendung geschachtelter FOR XML-Abfragen bietet, besteht darin, dass Sie eine Kombination aus attributzentriertem und elementzentriertem XML-Code für Abfrageergebnisse angeben können. Das Beispiel veranschaulicht dies.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Die folgende `SELECT` -Abfrage ruft Informationen zur Produktkategorie und Produktunterkategorie aus der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank ab. In der Abfrage gibt es keine geschachtelte FOR XML-Anweisung.  
   
 ```  
@@ -50,7 +54,7 @@ GO
 ...  
 ```  
   
- Wenn Sie die `ELEMENTS`-Direktive in der Abfrage angeben, erhalten Sie ein elementzentriertes Ergebnis, wie es im folgenden Ergebnisfragment gezeigt wird:  
+ Wenn Sie die `ELEMENTS` -Direktive in der Abfrage angeben, erhalten Sie ein elementzentriertes Ergebnis, wie es im folgenden Ergebnisfragment gezeigt wird:  
   
 ```  
 <ProductCategory>  
@@ -115,11 +119,11 @@ FOR XML AUTO, TYPE
   
  Beachten Sie in der vorhergehenden Abfrage Folgendes:  
   
--   Mit der inneren `FOR XML`-Abfrage werden Informationen zur Produktunterkategorie abgerufen. Die `ELEMENTS`-Direktive wird der inneren `FOR XML`-Abfrage hinzugefügt, um elementzentrierten XML-Code zu generieren, der dem von der äußeren Abfrage generierten XML-Code hinzugefügt wird. Standardmäßig generiert die äußere Abfrage attributzentrierten XML-Code.  
+-   Mit der inneren `FOR XML` -Abfrage werden Informationen zur Produktunterkategorie abgerufen. Die `ELEMENTS` -Direktive wird der inneren `FOR XML` -Abfrage hinzugefügt, um elementzentrierten XML-Code zu generieren, der dem von der äußeren Abfrage generierten XML-Code hinzugefügt wird. Standardmäßig generiert die äußere Abfrage attributzentrierten XML-Code.  
   
--   In der inneren Abfrage wird die `TYPE` -Direktive angegeben, sodass das Ergebnis den **xml** -Typ aufweist. Wenn `TYPE` nicht angegeben wird, wird das Ergebnis als **nvarchar(max)**-Typ zurückgegeben, und die XML-Daten werden als Entitäten zurückgegeben.  
+-   In der inneren Abfrage wird die `TYPE` -Direktive angegeben, sodass das Ergebnis den **xml** -Typ aufweist. Wenn `TYPE` nicht angegeben wird, wird das Ergebnis als **nvarchar(max)** -Typ zurückgegeben, und die XML-Daten werden als Entitäten zurückgegeben.  
   
--   Die `TYPE`-Direktive wird auch in der äußeren Abfrage angegeben. Deshalb wird das Ergebnis dieser Abfrage als **xml** -Typ an den Client zurückgegeben.  
+-   Die `TYPE` -Direktive wird auch in der äußeren Abfrage angegeben. Deshalb wird das Ergebnis dieser Abfrage als **xml** -Typ an den Client zurückgegeben.  
   
  Dies ist das Teilergebnis:  
   
@@ -197,9 +201,9 @@ FOR XML AUTO, TYPE
      …  
 ```  
   
- Wenn Sie die `ELEMENTS`-Direktive aus der geschachtelten `FOR XML`-Abfrage entfernen, mit der die Produktunterkategorien generiert werden, ist das gesamte Ergebnis attributzentriert. Sie können diese Abfrage dann ohne Schachtelung schreiben. Das Hinzufügen der `ELEMENTS`-Direktive ergibt einen XML-Code, der teilweise attributzentriert und teilweise elementzentriert ist. Dieses Ergebnis kann nicht durch eine FOR XML-Abfrage mit nur einer einzigen Ebene generiert werden.  
+ Wenn Sie die `ELEMENTS` -Direktive aus der geschachtelten `FOR XML` -Abfrage entfernen, mit der die Produktunterkategorien generiert werden, ist das gesamte Ergebnis attributzentriert. Sie können diese Abfrage dann ohne Schachtelung schreiben. Das Hinzufügen der `ELEMENTS` -Direktive ergibt einen XML-Code, der teilweise attributzentriert und teilweise elementzentriert ist. Dieses Ergebnis kann nicht durch eine FOR XML-Abfrage mit nur einer einzigen Ebene generiert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von geschachtelten FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

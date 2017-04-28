@@ -1,24 +1,28 @@
 ---
-title: "Medieninhalt (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.bnrdevicecontents.f1"
+title: Medieninhalt (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3a9d57f3c21ffc663d87d10eacaaca183d38ec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Medieninhalt (SQL Server)
+# <a name="device-contents-sql-server"></a>Medieninhalt (SQL Server)
   Mithilfe dieses Dialogfelds können Sie die Sicherungsinformationen anzeigen. Diese Informationen beschreiben das Gerät, die Medien, den Mediensatz und den Sicherungssatz bzw. die Sicherungssätze.  
   
  **So verwenden Sie SQL Server Management Studio zum Anzeigen des Inhalts eines Sicherungsmediums**  
@@ -27,7 +31,7 @@ caps.handback.revision: 31
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Medien**  
  Ein Datenträger oder ein Satz von Bändern, auf dem Sicherungsinformationen gespeichert sind.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 31
 |------------|------------|  
 |**Name**|Name des Sicherungssatzes.|  
 |**Typ**|Der Typ der ausgeführten Sicherung: Vollständig, Differenziell oder Transaktionsprotokoll.|  
-|**Komponente**|Die gesicherte Komponente: Datenbank, Datei oder *<leer>\>* (bei Transaktionsprotokollen).|  
+|**Komponente**|Die gesicherte Komponente: Datenbank, Datei oder *\<leer>* (bei Transaktionsprotokollen).|  
 |**Server**|Name der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , durch die der Sicherungsvorgang ausgeführt wurde.|  
 |**Datenbank**|Name der Datenbank, die gesichert wurde.|  
 |**Position**|Position des Sicherungssatzes auf dem Volume.|  
@@ -65,7 +69,7 @@ caps.handback.revision: 31
 |**Benutzername**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**Ablauf**|Datum und Uhrzeit des Zeitpunkts, an dem der Sicherungssatz verfällt.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Überprüfen von Planhinweislisten"
-  - "Planhinweislisten [SQL Server], testen"
-  - "Planhinweislisten [SQL Server], SQL Server Profiler"
-  - "Zuordnen von Abfragen zu Planhinweislisten [SQL Server]"
-  - "Testen von Planhinweislisten"
-  - "SQL Server Profiler, Planhinweislisten"
-  - "Planhinweislisten [SQL Server], erstellen"
-  - "Aufzeichnen von Abfragetext [SQL Server]"
-  - "Überprüfen von Planhinweislisten"
-  - "Profiler [SQL Server Profiler], Planhinweislisten"
-  - "Zuordnung von Abfragen zu Planhinweislisten [SQL Server]"
+title: Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
-  Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text*-Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
+  Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text* -Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
   
-## Aufzeichnen von Abfragetext mithilfe von SQL Server Profiler  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Aufzeichnen von Abfragetext mithilfe von SQL Server Profiler  
  Wenn Sie eine Abfrage ausführen und den Text mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genau so aufzeichnen, wie er an [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]übermittelt wurde, können Sie eine Planhinweisliste des Typs SQL oder TEMPLATE erstellen, die genau mit dem Abfragetext übereinstimmt. Damit wird sichergestellt, dass die Planhinweisliste vom Abfrageoptimierer verwendet wird.  
   
  Angenommen, die folgende Abfrage wird durch eine Anwendung als eigenständiger Batch übermittelt:  
@@ -56,7 +60,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  Klicken Sie auf das **SQL:BatchStarting** -Ereignis, das der Abfrage entspricht.  
   
-5.  Klicken Sie mit der rechten Maustaste auf dieses Ereignis, und wählen Sie **Ereignisdaten extrahieren** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf dieses Ereignis, und wählen Sie **Ereignisdaten extrahieren**aus.  
   
     > [!IMPORTANT]  
     >  Versuchen Sie nicht, den Batchtext zu kopieren, indem Sie ihn im unteren Bereich des Profiler-Ablaufverfolgungsfensters markieren. Das kann dazu führen, dass die von Ihnen erstellte Planhinweisliste nicht mit dem ursprünglichen Batch übereinstimmt.  
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Öffnen Sie die Batchtextdatei in Editor, und kopieren Sie den Text in die Zwischenablage.  
   
-8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt**-Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **@stmt** -Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'**20000101**'** als **''**20000101**''**abgegrenzt werden.  
+8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt** -Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **@stmt** -Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'**20000101**'** als **''**20000101**''**abgegrenzt werden.  
   
  Die Planhinweisliste sieht dann folgendermaßen aus:  
   
@@ -79,10 +83,10 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## Testen von Planhinweislisten mithilfe von SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Testen von Planhinweislisten mithilfe von SQL Server Profiler  
  Um zu überprüfen, ob eine Planhinweisliste mit einer Abfrage in Übereinstimmung gebracht wird, gehen Sie folgendermaßen vor:  
   
-1.  Starten Sie eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]-Ablaufverfolgung, und stellen Sie dabei sicher, dass der **Showplan XML**-Ereignistyp ausgewählt ist (dieser befindet sich unter dem Knoten **Leistung**).  
+1.  Starten Sie eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgung, und stellen Sie dabei sicher, dass der **Showplan XML** -Ereignistyp ausgewählt ist (dieser befindet sich unter dem Knoten **Leistung** ).  
   
 2.  Führen Sie Abfrage mithilfe der Anwendung aus.  
   
@@ -93,9 +97,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  Das Ereignis **Showplan XML for Query Compile** kann nicht verwendet werden. **PlanGuideDB** ist in diesem Ereignis nicht vorhanden.  
   
-5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im **\<StmtSimple>**-Element der Planhinweisliste enthalten.  
+5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im **\<<StmtSimple**-Element der Planhinweisliste enthalten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

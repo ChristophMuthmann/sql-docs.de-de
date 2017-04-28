@@ -1,27 +1,31 @@
 ---
-title: "Aktivieren oder Deaktivieren einer Planhinweisliste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Planhinweislisten [SQL Server], deaktivieren"
-  - "Aktivieren von Planhinweislisten"
-  - "Planhinweislisten [SQL Server], aktivieren"
-  - "Deaktivieren von Planhinweislisten"
+title: Aktivieren oder Deaktivieren einer Planhinweisliste | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren oder Deaktivieren einer Planhinweisliste
+# <a name="enable-or-disable-a-plan-guide"></a>Aktivieren oder Deaktivieren einer Planhinweisliste
   Sie können Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktivieren und aktivieren. Es können entweder eine einzelne Planhinweisliste oder alle Planhinweislisten in einer Datenbank aktiviert oder deaktiviert werden.  
   
  **In diesem Thema**  
@@ -34,7 +38,7 @@ caps.handback.revision: 6
   
 -   **So deaktivieren und aktivieren Sie Planhinweislisten mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,29 +57,29 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So deaktivieren oder aktivieren Sie eine Planhinweisliste  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>So deaktivieren oder aktivieren Sie eine Planhinweisliste  
   
 1.  Klicken Sie auf das Pluszeichen, um die Datenbank zu erweitern, in der Sie eine Planhinweisliste deaktivieren oder aktivieren möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Planhinweislisten** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Planhinweisliste, die deaktiviert oder aktiviert werden soll, und wählen Sie entweder **Deaktivieren** oder **Aktivieren** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Planhinweisliste, die deaktiviert oder aktiviert werden soll, und wählen Sie entweder **Deaktivieren** oder **Aktivieren**aus.  
   
 4.  Überprüfen Sie im Dialogfeld **Planhinweisliste deaktivieren** oder **Planhinweisliste aktivieren** , ob die ausgewählte Aktion erfolgreich war, und klicken Sie dann auf **Schließen**.  
   
-#### So deaktivieren oder aktivieren Sie alle Planhinweislisten in einer Datenbank  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>So deaktivieren oder aktivieren Sie alle Planhinweislisten in einer Datenbank  
   
 1.  Klicken Sie auf das Pluszeichen, um die Datenbank zu erweitern, in der Sie eine Planhinweisliste deaktivieren oder aktivieren möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Planhinweislisten**, und wählen Sie dann **Alle aktivieren** oder **Alle deaktivieren** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Planhinweislisten** , und wählen Sie dann **Alle aktivieren** oder **Alle deaktivieren**aus.  
   
 3.  Überprüfen Sie im Dialogfeld **Alle Planhinweislisten deaktivieren** oder **Alle Planhinweislisten aktivieren** , ob die ausgewählte Aktion erfolgreich war, und klicken Sie dann auf **Schließen**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So deaktivieren oder aktivieren Sie eine Planhinweisliste  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>So deaktivieren oder aktivieren Sie eine Planhinweisliste  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -117,9 +121,9 @@ caps.handback.revision: 6
   
     ```  
   
-#### So deaktivieren oder aktivieren Sie alle Planhinweislisten in einer Datenbank  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>So deaktivieren oder aktivieren Sie alle Planhinweislisten in einer Datenbank  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

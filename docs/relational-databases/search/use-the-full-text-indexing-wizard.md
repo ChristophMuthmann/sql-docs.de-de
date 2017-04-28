@@ -1,38 +1,42 @@
 ---
-title: "Verwenden des Volltextindizierungs-Assistenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "Volltextindizierungs-Assistent"
-  - "Volltextsuche [SQL Server], Volltextindizierungs-Assistent"
+title: Verwenden des Volltextindizierungs-Assistenten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden des Volltextindizierungs-Assistenten
+# <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
   Der Volltextindizierungs-Assistent in SSMS führt Sie durch eine Reihe von Arbeitsschritten, die Ihnen das Erstellen eines Volltextindexes erleichtern.  
   
-## Erstellen eines Volltextindexes 
+## <a name="create-a--full-text-index"></a>Erstellen eines Volltextindexes 
 
 1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, für die Sie einen Volltextindex erstellen möchten, zeigen Sie auf **Volltextindex**, und klicken Sie anschließend auf **Volltextindex definieren**. Diese Aktion startet den Assistenten in einem separaten Fenster.
    Klicken Sie auf „Weiter“. 
@@ -44,13 +48,13 @@ caps.handback.revision: 24
 4. **Sprache für die Wörtertrennung** Wählen Sie eine Sprache aus der Dropdownliste aus. Diese Auswahl wird verwendet, um die richtigen Wörtertrennungen für den Index zu identifizieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In werden mithilfe von Wörtertrennzeichen Wortgrenzen in den volltextindizierten Daten gekennzeichnet.  
   
 5.  **Typspalte** Wählen Sie den Namen der Spalte aus, in der der Dokumenttyp der volltextindizierten Spalte enthalten ist.  
-> **HINWEIS:** Das Feld **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image** ist.  
+> **HINWEIS:** Das Feld  **Typspalte** ist nur verfügbar, wenn die unter **Verfügbare Spalten** genannte Spalte vom Typ **varbinary(max)** oder **image**ist.  
   
 6. **Statistische Semantik** Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
 >**HINWEISE** 
 >
->Wenn die von Ihnen gewählte Sprache nicht über ein zugeordnetes semantisches Sprachmodell verfügt, dann ist das Kontrollkästchen **Statistische Semantik** nicht aktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache** auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
+>Wenn die von Ihnen gewählte Sprache nicht über ein zugeordnetes semantisches Sprachmodell verfügt, dann ist das Kontrollkästchen **Statistische Semantik** nicht aktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.  
 >
 > Die semantische Suche ist für die **Azure SQL-Datenbank nicht verfügbar**. Die Option „Statistische Semantik“ wird nicht angezeigt, wenn dieser Assistent für eine Azure SQL-Datenbank ausgeführt wird.
   
@@ -71,13 +75,13 @@ caps.handback.revision: 24
      
      Klicken Sie auf „Weiter“.
   
-## Katalog, Indexdateigruppe und Stoppliste   
+## <a name="catalog-index-filegroup-and-stoplist"></a>Katalog, Indexdateigruppe und Stoppliste   
   
 9.  **Volltextkatalog auswählen**  
 
      **Katalog auswählen:** Wählen Sie einen Volltextkatalog aus der Liste aus. Der Standardkatalog für die Datenbank entspricht standardmäßig dem in der Liste ausgewählten Element. Wenn keine Kataloge verfügbar sind, wird die Liste deaktiviert, und das Kontrollkästchen **Neuen Katalog erstellen** wird überprüft und deaktiviert.  
   
-  OR
+  oder
   
  10. **Neuen Katalog erstellen**
  - Volltextkatalog auswählen  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. Wählen Sie einen Wert:  
     |Wert|Beschreibung|  
     |-----------|-----------------|
-      |**\<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
+      |**<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
       |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|
              *Eine vom Benutzer angegebene Standarddateigruppe*|Wenn eine benutzerdefinierte Standardstoppliste vorhanden ist, wählen Sie den Namen in der Liste aus, um die zugehörige Dateigruppe für den neuen Volltextindex zu verwenden.|  
   
@@ -111,8 +115,8 @@ caps.handback.revision: 24
   
    |Wert|Beschreibung|  
     |-----------|-----------------|  
-    |**\<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
-    |**\<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
+    |**<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
+    |**<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
     |*user-defined-stoplist-name*|Die Liste enthält die Namen aller benutzerdefinierten Stopplisten (falls vorhanden), die für die Datenbank erstellt wurden. Wählen Sie eine beliebige benutzerdefinierte Stoppliste zur Verwendung für den neuen Volltextindex aus.|  
   
   Klicken Sie auf „Weiter“.
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      Wenn alle Vorgänge ausgeführt wurden, können Sie auf diese Schaltfläche klicken, um auf einen Bericht zu den ausgeführten Vorgängen zuzugreifen. Sie können den Bericht anzeigen, in eine Datei drucken, in die Zwischenablage kopieren oder ihn per E-Mail versenden.  
   
   
+

@@ -1,34 +1,38 @@
 ---
-title: "&#220;berwachen der CPU-Auslastung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Überwachen der Leistung [SQL Server], CPU-Nutzung"
-  - "Optimieren von Datenbanken [SQL Server], CPU-Nutzung"
-  - "Prozessoren [SQL Server], Überwachen der Auslastung"
-  - "Datenbankleistung [SQL Server], CPU-Nutzung"
-  - "Überwachen der CPU-Nutzung [SQL Server]"
-  - "Serverleistung [SQL Server], CPU-Nutzung"
-  - "Datenbanküberwachung [SQL Server], CPU-Nutzung"
-  - "Überwachung [SQL Server], CPU-Nutzung"
-  - "Prozessoren [SQL Server]"
-  - "CPU [SQL Server], überwachen"
-  - "Überwachen der Serverleistung [SQL Server], CPU-Nutzung"
+title: "Überwachen der CPU-Auslastung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], CPU usage
+- tuning databases [SQL Server], CPU usage
+- processors [SQL Server], monitoring usage
+- database performance [SQL Server], CPU usage
+- monitoring CPU usage [SQL Server]
+- server performance [SQL Server], CPU usage
+- database monitoring [SQL Server], CPU usage
+- monitoring [SQL Server], CPU usage
+- processors [SQL Server]
+- CPU [SQL Server], monitoring
+- monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen der CPU-Auslastung
+# <a name="monitor-cpu-usage"></a>Überwachen der CPU-Auslastung
   Überwachen Sie eine Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in regelmäßigen Abständen, um sicherzustellen, dass sich die CPU-Nutzungsraten im Normalbereich bewegen. Eine konstant hohe CPU-Nutzungsrate kann ein Anzeichen dafür sein, dass die CPU aktualisiert werden muss oder weitere Prozessoren hinzugefügt werden müssen. Darüber hinaus kann eine hohe CPU-Nutzungsrate auf eine schlecht angepasste oder entwickelte Anwendung hinweisen. Eine Optimierung der Anwendung kann die CPU-Nutzung senken.  
   
  Um die CPU-Nutzungsrate festzustellen, rufen Sie am besten im Systemmonitor den Leistungsindikator **Prozessor: Prozessorzeit (%)** auf. Dieser Leistungsindikator überwacht die Zeit, die die CPU zur Verarbeitung eines Threads benötigt, der sich nicht im Leerlauf befindet. Ein konstanter Status von 80-90 % kann darauf hinweisen, dass ein CPU-Upgrade notwendig ist oder weitere Prozessoren hinzugefügt werden müssen. Bei Multiprozessorsystemen sollte für jeden Prozessor eine separate Instanz dieses Leistungsindikators überwacht werden. Dieser Wert stellt die Summe der Prozessorzeit für einen bestimmten Prozessor dar. Um den Durchschnitt für alle Prozessoren zu ermitteln, müssen Sie dagegen den Leistungsindikator **System: Gesamtprozessorzeit (%)** aufrufen.  
@@ -37,7 +41,7 @@ caps.handback.revision: 20
   
 -   **Prozessor: Privilegierte Zeit (%)**  
   
-     Gibt den prozentualen Zeitanteil an der Gesamtzeit an, die der Prozessor benötigt, um Microsoft Windows-Kernelbefehle, wie die Verarbeitung von E/A-Anforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], auszuführen. Sollte dieser Leistungsindikator bei hohen Werten für die Leistungsindikatoren **Physischer Datenträger** gleich bleibend hoch sein, sollten Sie die Installation eines schnelleren oder effizienteren Datenträgersubsystems in Erwägung ziehen.  
+     Gibt den prozentualen Zeitanteil an der Gesamtzeit an, die der Prozessor benötigt, um Microsoft Windows-Kernelbefehle, wie die Verarbeitung von E/A-Anforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auszuführen. Sollte dieser Leistungsindikator bei hohen Werten für die Leistungsindikatoren **Physischer Datenträger** gleich bleibend hoch sein, sollten Sie die Installation eines schnelleren oder effizienteren Datenträgersubsystems in Erwägung ziehen.  
   
     > [!NOTE]  
     >  Unterschiedliche Datenträgercontroller und -treiber benötigen unterschiedlich viel Zeit für die Kernelverarbeitung. Effiziente Controller und Treiber beanspruchen weniger privilegierte Zeit und überlassen Benutzeranwendungen so mehr Verarbeitungszeit, wodurch der Durchsatz insgesamt steigt.  

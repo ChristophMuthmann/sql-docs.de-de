@@ -1,31 +1,35 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML-Klausel, Informationen zur FOR XML-Klausel"
-  - "PATH FOR XML-Modus, Erstellung"
-  - "EXPLICIT FOR XML-Modus"
-  - "RAW FOR XML-Modus"
-  - "Abrufen von XML-Daten"
-  - "XML [SQL Server], FOR XML-Klausel"
-  - "AUTO FOR XML-Modus"
-  - "XML [SQL Server], Erstellung"
+title: FOR XML (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Eine SELECT-Abfrage gibt Ergebnisse als Rowset zurück. Sie können optional die formalen Ergebnisse einer SQL-Abfrage als XML abrufen, indem Sie die FOR XML-Klausel in der Abfrage angeben. Die FOR XML-Klausel kann in Abfragen der obersten Ebene sowie in Unterabfragen verwendet werden. Die FOR XML-Klausel der obersten Ebene kann nur in der SELECT-Anweisung verwendet werden. In Unterabfragen kann FOR XML in den INSERT-, UPDATE- und DELETE-Anweisungen verwendet werden. Die Klausel kann auch in Zuweisungsanweisungen verwendet werden.  
   
  In einer FOR XML-Klausel geben Sie einen der folgenden Modi an:  
@@ -52,7 +56,7 @@ caps.handback.revision: 44
   
  FOR XML ist für keine Auswahl gültig, die mit einer FOR BROWSE-Klausel verwendet wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  So ruft die folgende `SELECT` -Anweisung Informationen aus den `Sales.Customer` - und `Sales.SalesOrderHeader` -Tabellen der `AdventureWorks2012` -Datenbank ab. Diese Abfrage gibt den `AUTO` -Modus in der `FOR XML` -Klausel an:  
   
 ```  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## Die FOR XML-Klausel und Servernamen  
+## <a name="the-for-xml-clause-and-server-names"></a>Die FOR XML-Klausel und Servernamen  
  Wenn eine SELECT-Anweisung mit einer FOR XML-Klausel einen vierteiligen Namen in der Abfrage angibt, wird der Servername im sich ergebenden XML-Dokument nicht zurückgegeben, wenn die Abfrage auf dem lokalen Computer ausgeführt wird. Wenn die Abfrage jedoch auf einem Netzwerkserver ausgeführt wird, wird der Servername als vierteiliger Name zurückgegeben.  
   
  Angenommen, Sie haben die folgende Abfrage vorliegen:  
@@ -105,7 +109,7 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Basissyntax der FOR XML-Klausel](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   

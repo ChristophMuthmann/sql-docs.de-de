@@ -1,35 +1,39 @@
 ---
-title: "Erste Schritte mit PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase, erste Schritte"
-  - "Hadoop-Import"
-  - "Hadoop-Export"
-  - "Azure-BLOB-Speicherimport"
-  - "Azure-BLOB-Speicherexport"
-  - "Hadoop-Import, erste Schritte mit PolyBase"
-  - "Hadoop-Export, erste Schritte mit PolyBase"
+title: Erste Schritte mit PolyBase | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- PolyBase
+- PolyBase, getting started
+- Hadoop import
+- Hadoop export
+- Azure blob storage import
+- Azure blob storage export
+- Hadoop import, PolyBase getting started
+- Hadoop export, Polybase getting started
 ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erste Schritte mit PolyBase
+# <a name="get-started-with-polybase"></a>Erste Schritte mit PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dieses Thema behandelt die Grundlagen zum Installieren und Ausführen von PolyBase. Weitere Informationen finden Sie im [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) (PolyBase-Handbuch).  
+  Dieses Thema behandelt die Grundlagen zum Installieren und Ausführen von PolyBase. Weitere Informationen finden Sie im [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).  
   
  Nachdem Sie die Schritte unten ausgeführt haben, verfügen Sie über:  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 73
 -   Beispiele für Abfragen, die PolyBase-Objekte verwenden  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Eine Instanz von [SQL Server (64-Bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+ Eine Instanz von  [SQL Server (64-Bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
 -   Microsoft .NET Framework 4.5.  
   
@@ -57,14 +61,16 @@ caps.handback.revision: 73
  Eine der folgenden externen Datenquellen:  
   
 -   Hadoop-Cluster. Unterstützte Versionen finden Sie unter [Konfigurieren von PolyBase](#supported).  
-  
+
 -   Azure-BLOB-Speicher 
+
+-   Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten mit einer Fehlermeldung fehlschlagen. 
 
 > [!NOTE]
 > HDInsight-Cluster verwenden Azure-BLOB-Speicher als Dateisystem für ihren permanenten Speicher. Sie können mit PolyBase die Dateien abfragen, die von einem HDInsight-Cluster verwaltet werden. Erstellen Sie zu diesem Zweck eine externe Datenquelle, um auf das Blob zu verweisen, das als Speicher für den HDInsight-Cluster konfiguriert ist. 
   
 ## <a name="install-polybase"></a>Installieren von PolyBase  
- Installieren Sie PolyBase als Teil der Installation von SQL Server. Weitere Informationen finden Sie unter  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md) (Installation von PolyBase).  
+ Wenn Sie PolyBase installiert haben, lesen Sie [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md).  
   
 ### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie nach der Installation den folgenden Befehl aus, um zu bestätigen, dass PolyBase erfolgreich installiert wurde. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  
@@ -73,7 +79,7 @@ caps.handback.revision: 73
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="a-namesupporteda-configure-polybase"></a><a name="supported"></a> Konfigurieren von PolyBase  
+##  <a name="supported"></a> Configure PolyBase  
  Nach der Installation müssen Sie SQL Server dafür konfigurieren, entweder Ihre Hadoop-Version oder Azure-BLOB-Speicher zu verwenden. PolyBase unterstützt zwei Hadoop-Anbieter, Hortonworks Data Platform (HDP) und Cloudera CDH. Hortonworks kann wahlweise auf einem Windows- oder einem Linux-Computer ausgeführt werden, und das muss in der Konfiguration berücksichtigt werden.  Zu den unterstützten externen Datenquellen gehören:  
   
 -   Hortonworks HDP 1.3 auf Linux/Windows Server  
@@ -84,13 +90,16 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 unter Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 unter Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9, 5.10 unter Linux  
   
 -   Azure BLOB-Speicher  
   
+>  [!NOTE]
+> Azure Data Lake Store-Konnektivität wird nur in Azure SQL Data Warehouse unterstützt.
+  
 ### <a name="external-data-source-configuration"></a>Konfigurieren der externen Datenquelle  
   
-1.  Führen Sie [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ aus, und legen Sie einen geeigneten Wert fest.  Wie Sie den Wert ermitteln, erfahren Sie unter [PolyBase-Konfiguration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+1.  Führen Sie [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ aus, und legen Sie einen geeigneten Wert fest. Standardmäßig ist die Hadoop-Konnektivität auf 7 festgelegt. Wie Sie den Wert ermitteln, erfahren Sie unter [PolyBase-Konfiguration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
     ```tsql  
     -- Values map to various external data sources.  
@@ -108,7 +117,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
     -   SQL Server PolyBase-Modul  
   
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+ ![Beenden und starten Sie PolyBase-Dienste in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
 ### <a name="pushdown-configuration"></a>Pushdown-Konfiguration  
  Um die Abfrageleistung zu verbessern, aktivieren Sie die Pushdown-Berechnung für einen Hadoop-Cluster:  
@@ -123,8 +132,11 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
   
-3.  Suchen Sie auf dem SQL Server-Computer in der Datei **yarn.site.xml** die Eigenschaft **yarn.application.classpath**. Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
+3.  Suchen Sie auf dem SQL Server-Computer in der Datei **yarn.site.xml** die Eigenschaft **yarn.application.classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
   
+4. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn.site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../../relational-databases/polybase/polybase-configuration.md).
+
+ 
 ## <a name="scale-out-polybase"></a>Horizontales Hochskalieren von PolyBase  
  Die PolyBase-Gruppenfunktion ermöglicht Ihnen die Erstellung eines Clusters aus SQL Server-Instanzen, um große Datasets aus externen Datenquellen in einer Skalierungsart zu verarbeiten, die zu besseren Abfrageleistungen führt.  
   
@@ -132,7 +144,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  Wählen eine SQL Server-Instanz als Hauptknoten aus.  
   
-3.  Fügen Sie andere Instanzen durch Ausführung von [sp_polybase_join_group](../Topic/sp_polybase_join_group.md) als Serverknoten hinzu.  
+3.  Fügen Sie andere Instanzen durch Ausführung von [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)als Serverknoten hinzu.  
   
     ```  
     -- Enter head node details:   
@@ -143,7 +155,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 4.  Starten Sie den PolyBase-Datenverschiebungsdienst auf den Serverknoten neu.  
   
- Weitere Informationen finden Sie unter [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (PolyBase-Erweiterungsgruppen).  
+ Weitere Informationen finden Sie unter [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase-Erweiterungsgruppen).  
   
 ## <a name="create-t-sql-objects"></a>Erstellen von T-SQL-Objekten  
  Erstellen Sie Objekte abhängig von der externen Datenquelle, entweder Hadoop oder Azure-Speicher.  
@@ -335,24 +347,25 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
     ```  
   
 ## <a name="managing-polybase-objects-in-ssms"></a>Verwalten von PolyBase-Objekten in SSMS  
- In SSMS werden externe Tabellen in einem separaten Ordner **Externe Tabellen** angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
+ In SSMS werden externe Tabellen in einem separaten Ordner **Externe Tabellen**angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
   
- ![PolyBase objects in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
+ ![PolyBase-Objekte in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- Verwenden Sie DMVs, um Leistungs- und Abfragenprobleme zu beheben. Weitere Informationen finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (Problembehandlung in PolyBase).  
+ Verwenden Sie DMVs, um Leistungs- und Abfragenprobleme zu beheben. Weitere Informationen finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(Problembehandlung in PolyBase).  
   
- Nach der Aktualisierung von SQL Server 2016 RC1 auf RC2 oder RC3 können Fehler bei Abfragen auftreten. Weitere Informationen und Abhilfe finden Sie unter [Versionsanmerkungen zu SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md), und suchen Sie nach „PolyBase“.  
+ Nach der Aktualisierung von SQL Server 2016 RC1 auf RC2 oder RC3 können Fehler bei Abfragen auftreten. Weitere Informationen und Abhilfe finden Sie unter [Versionsanmerkungen zu SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) , und suchen Sie nach „PolyBase“.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Grundlagen zum horizontalen Skalieren finden Sie unter [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (PolyBase-Erweiterungsgruppen).  Informationen zum Überwachen von PolyBase finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (Problembehandlung in PolyBase). Informationen zur Problembehandlung bei der PolyBase-Leistung finden Sie unter [PolyBase troubleshooting](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md) (Problembehandlung in PolyBase) in den Abschnitten zu dynamischen Verwaltungsansichten.  
+ Grundlagen zum horizontalen Skalieren finden Sie unter [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase-Erweiterungsgruppen).  Informationen zum Überwachen von PolyBase finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(Problembehandlung in PolyBase). Informationen zur Problembehandlung bei der PolyBase-Leistung finden Sie unter [PolyBase troubleshooting](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)(Problembehandlung in PolyBase) in den Abschnitten zu dynamischen Verwaltungsansichten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [Gespeicherte PolyBase-Prozeduren](../Topic/PolyBase%20stored%20procedures.md)   
+ [Gespeicherte PolyBase-Prozeduren](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
+

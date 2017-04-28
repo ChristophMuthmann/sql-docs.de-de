@@ -1,26 +1,30 @@
 ---
-title: "Tools f&#252;r erweiterte Ereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erweiterte Ereignisse [SQL Server], verwenden"
-  - "Erweiterte Ereignisse [SQL Server], Optionen für die Verwendung"
+title: "Tools für erweiterte Ereignisse | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], using
+- extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 923b012345d18abb393479744a65b4572cb20a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tools f&#252;r erweiterte Ereignisse
+# <a name="extended-events-tools"></a>Tools für erweiterte Ereignisse
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Sie können die folgenden Tools verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzungen für erweiterte Ereignisse zu erstellen und zu verwalten:  
@@ -33,11 +37,11 @@ caps.handback.revision: 19
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Anbieter. Dabei handelt es sich um ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Weitere Informationen finden Sie unter [Verwenden des PowerShell-Anbieters für erweiterte Ereignisse](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Damit können Sie die in den Themen zu erweiterten Ereignissen bereitgestellten Codebeispiele erstellen und ausführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Damit können Sie die in den Themen zu erweiterten Ereignissen bereitgestellten Codebeispiele erstellen und ausführen. Weitere Informationen finden Sie unter [Objekt-Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2).  
   
  Zusätzlich zu Sitzungen, die Sie erstellen, ist auf dem Server eine standardmäßige Systemintegritätssitzung vorhanden. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme beheben können. Weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](../../relational-databases/extended-events/use-the-system-health-session.md).  
   
-## DDL-Anweisungen  
+## <a name="ddl-statements"></a>DDL-Anweisungen  
  Verwenden Sie die folgenden DDL-Anweisungen, um eine Sitzung für erweiterte Ereignisse zu erstellen, zu ändern und zu löschen.  
   
 |Name|Beschreibung|  
@@ -46,7 +50,7 @@ caps.handback.revision: 19
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|Startet oder beendet eine Ereignissitzung oder ändert die Konfiguration einer Ereignissitzung.|  
 |[DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)|Löscht eine Ereignissitzung.|  
   
-## Katalogsichten  
+## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die folgenden Katalogsichten, um die beim Erstellen einer Ereignissitzung erstellten Metadaten abzurufen.  
   
 |Name|Beschreibung|  
@@ -57,7 +61,7 @@ caps.handback.revision: 19
 |[sys.server_event_session_fields &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|Gibt eine Zeile für jede anpassbare Spalte zurück, die explizit für Ereignisse und Ziele festgelegt wurde.|  
 |[sys.server_event_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|Gibt für eine Ereignissitzung eine Zeile für jedes Ereignisziel zurück.|  
   
-## Dynamische Verwaltungssichten  
+## <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
  Verwenden Sie die folgenden dynamischen Verwaltungssichten, um Sitzungsmetadaten und Sitzungsdaten abzurufen. Die Metadaten werden aus den Katalogsichten abgerufen, und die Sitzungsdaten werden erstellt, wenn Sie eine Ereignissitzung starten und ausführen.  
   
 > [!NOTE]  
@@ -76,19 +80,20 @@ caps.handback.revision: 19
 |[sys.dm_xe_map_values &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql.md)|Stellt eine Zuordnung von internen numerischen Schlüsseln zu für den Benutzer lesbarem Text bereit.|  
 |[sys.dm_xe_session_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md)|Zeigt die Konfigurationswerte für Objekte an, die an eine Sitzung gebunden sind.|  
   
-## Systemtabellen  
+## <a name="system-tables"></a>Systemtabellen  
  Verwenden Sie die folgenden Systemtabellen, um Informationen zu den Entsprechungen für erweiterte Ereignissen für SQL-Ablaufverfolgungs-Ereignisklassen und -Spalten abzurufen.  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[trace_xe_event_map &#40;Transact-SQL&#41;](../Topic/trace_xe_event_map%20\(Transact-SQL\).md)|Enthält eine Zeile für jedes einer SQL-Ablaufverfolgungs-Ereignisklasse zugeordnete Ereignis für erweiterte Ereignisse.|  
-|[trace_xe_action_map &#40;Transact-SQL&#41;](../Topic/trace_xe_action_map%20\(Transact-SQL\).md)|Enthält eine Zeile für jede Aktion für erweiterte Ereignisse, die der Spalten-ID für eine SQL-Ablaufverfolgung zugeordnet ist.|  
+|[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Enthält eine Zeile für jedes einer SQL-Ablaufverfolgungs-Ereignisklasse zugeordnete Ereignis für erweiterte Ereignisse.|  
+|[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Enthält eine Zeile für jede Aktion für erweiterte Ereignisse, die der Spalten-ID für eine SQL-Ablaufverfolgung zugeordnet ist.|  
   
-## Siehe auch  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Tabellen für erweiterte Ereignisse von SQL Server &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Extended%20Events%20Tables%20\(Transact-SQL\).md)   
+ [Tabellen für erweiterte Ereignisse von SQL Server &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [Verwenden der system_health-Sitzung](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Verwenden des PowerShell-Anbieters für erweiterte Ereignisse](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   
   
+

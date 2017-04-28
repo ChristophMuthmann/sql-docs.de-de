@@ -1,26 +1,30 @@
 ---
-title: "&#196;ndern oder Umbenennen von DML-Triggern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Umbenennen von Triggern"
-  - "Ändern von Triggern"
-  - "DML-Trigger, ändern"
+title: "Ändern oder Umbenennen von DML-Triggern | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern oder Umbenennen von DML-Triggern
+# <a name="modify-or-rename-dml-triggers"></a>Ändern oder Umbenennen von DML-Triggern
   In diesem Thema wird beschrieben, wie Sie einen DML-Trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
   
  **In diesem Thema**  
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So ändern Sie einen DML-Trigger  
+#### <a name="to-modify-a-dml-trigger"></a>So ändern Sie einen DML-Trigger  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 29
   
 4.  Ändern Sie den Trigger, und klicken Sie dann auf **Ausführen**.  
   
-#### So benennen Sie einen DML-Trigger um  
+#### <a name="to-rename-a-dml-trigger"></a>So benennen Sie einen DML-Trigger um  
   
 1.  [Löschen Sie den Trigger](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) , den Sie umbenennen möchten.  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So ändern Sie einen Trigger mit ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>So ändern Sie einen Trigger mit ALTER TRIGGER  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie die folgenden Beispiele, und fügen Sie sie in das Abfragefenster ein. Führen Sie das erste Beispiel aus, um einen DML-Trigger zu erstellen, der eine benutzerdefinierte Meldung an den Client ausgibt, wenn ein Benutzer versucht, Daten in der `SalesPersonQuotaHistory`-Tabelle hinzuzufügen oder zu ändern. Führen Sie die [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) -Anweisung aus, um den Trigger so zu ändern, dass er nur bei `INSERT` -Aktivitäten ausgelöst wird. Dieser Trigger ist hilfreich, da er den Benutzer beim Aktualisieren oder Einfügen von Zeilen in die Tabelle daran erinnert, dass auch die Abteilung `Compensation` benachrichtigt werden muss.  
+3.  Kopieren Sie die folgenden Beispiele, und fügen Sie sie in das Abfragefenster ein. Führen Sie das erste Beispiel aus, um einen DML-Trigger zu erstellen, der eine benutzerdefinierte Meldung an den Client ausgibt, wenn ein Benutzer versucht, Daten in der `SalesPersonQuotaHistory` -Tabelle hinzuzufügen oder zu ändern. Führen Sie die [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) -Anweisung aus, um den Trigger so zu ändern, dass er nur bei `INSERT` -Aktivitäten ausgelöst wird. Dieser Trigger ist hilfreich, da er den Benutzer beim Aktualisieren oder Einfügen von Zeilen in die Tabelle daran erinnert, dass auch die Abteilung `Compensation` benachrichtigt werden muss.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### So benennen Sie einen Trigger mit DROP TRIGGER und ALTER TRIGGER um  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>So benennen Sie einen Trigger mit DROP TRIGGER und ALTER TRIGGER um  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

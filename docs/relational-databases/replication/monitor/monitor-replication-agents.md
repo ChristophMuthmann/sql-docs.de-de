@@ -1,32 +1,36 @@
 ---
-title: "&#220;berwachen der Replikations-Agents | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Überwachen der Leistung [SQL Server-Replikation], Agents"
-  - "Protokolllese-Agent, Überwachung"
-  - "Replikationsmonitor, Agents"
-  - "Merge-Agent, Überwachung"
-  - "Warteschlangenlese-Agent, Überwachung"
-  - "Momentaufnahme-Agent, Überwachung"
-  - "Agents [SQL Server-Replikation], Überwachung"
-  - "Verteilungs-Agent, Überwachung"
+title: "Überwachen der Replikations-Agents | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], agents
+- Log Reader Agent, monitoring
+- Replication Monitor, agents
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- Snapshot Agent, monitoring
+- agents [SQL Server replication], monitoring
+- Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen der Replikations-Agents
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  
+# <a name="monitor-replication-agents"></a>Überwachen der Replikations-Agents
+  Der Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  
   
 -   Die folgenden Agents sind Veröffentlichungen im Replikationsmonitor zugeordnet:  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 17
   
     -   Warteschlangenlese-Agent  
   
-     Zugriff auf Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten: **Agents** (verfügbar für jeden Verleger und Veröffentlichung) und **Warnungen** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents verknüpft sind mit einer Publikation & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+     Auf die Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten zugegriffen werden: **Agents** (verfügbar für jeden Verleger und jede Veröffentlichung) und **Warnungen** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   Die folgenden Agents sind Abonnements im Replikationsmonitor zugeordnet:  
   
@@ -44,26 +48,26 @@ caps.handback.revision: 17
   
     -   Merge-Agent  
   
-     Zugriff auf Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten: **Überwachungsliste für Abonnements** (für jeden Verleger verfügbar) oder der **alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents einem Abonnement zugeordneten & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+     Auf die Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten zugegriffen werden: **Überwachungsliste für Abonnements** (verfügbar für jeden Verleger) bzw. **Alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Überwachen der Replikations-Agents mit SQL Server Management Studio  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] stellt die folgenden Dialogfelder zum Überwachen von Replikations-Agents bereit:  
+## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Überwachen der Replikations-Agents mit SQL Server Management Studio  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
   
--   **Status des Snapshot-Agents anzeigen** (für alle Veröffentlichungen)  
+-   **Status des Momentaufnahme-Agents anzeigen** (bei allen Veröffentlichungen)  
   
--   **Anzeigen des Status des Protokolllese-Agent** (für alle transaktionsveröffentlichungen)  
+-   **Status des Protokolllese-Agents anzeigen** (bei allen Transaktionsveröffentlichungen)  
   
--   **Synchronisierungsstatus anzeigen** (bei allen Abonnements; dieses Dialogfeld ermöglicht den Zugriff auf den Verteilungs-Agent und der Merge-Agent)  
+-   **Synchronisierungsstatus anzeigen** (bei allen Abonnements; von diesem Dialogfeld aus können Sie auf den Verteilungs-Agent und den Merge-Agent zugreifen)  
   
- Der Replikationsmonitor stellt darüber hinaus zusätzliche Informationen zu den einzelnen Agents bereit und bietet außerdem die Möglichkeit der Überwachung des Warteschlangenlese-Agents, sofern dieser verwendet wird. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents verknüpft sind mit einer Publikation & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), [Informationen anzeigen und Ausführen von Aufgaben für eine Veröffentlichung & #40; zugeordneten Agents Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), und [Informationen anzeigen und Ausführen von Aufgaben für ein Abonnement & #40; zugeordneten Agents Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Der Replikationsmonitor stellt darüber hinaus zusätzliche Informationen zu den einzelnen Agents bereit und bietet außerdem die Möglichkeit der Überwachung des Warteschlangenlese-Agents, sofern dieser verwendet wird. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die mit einer Veröffentlichung verknüpften Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md), [Anzeigen von Informationen und Ausführen von Aufgaben für die mit einer Veröffentlichung verknüpften Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-#### So überwachen Sie den Momentaufnahme-Agent und den Protokokolllese-Agent  
+#### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>So überwachen Sie den Momentaufnahme-Agent und den Protokokolllese-Agent  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
-3.  Mit der rechten Maustaste einer Veröffentlichung, und klicken Sie dann auf **Log Reader Agent-Anzeigestatus** oder **Snapshot-Agent-Anzeigestatus**.  
+3.  Klicken Sie mit der rechten Maustaste auf eine Veröffentlichung, und klicken Sie dann auf **Status des Protokolllese-Agents anzeigen** bzw. **Status des Momentaufnahme-Agents anzeigen**.  
   
 4.  Führen Sie im Dialogfeld **Status des Protokolllese-Agents anzeigen** bzw. **Status des Momentaufnahme-Agents anzeigen** einen oder mehrere der folgenden Schritte aus:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 17
   
 5.  Klicken Sie auf **Schließen**.  
   
-#### So überwachen Sie den Verteilungs-Agent und den Merge-Agent (vom Verleger aus)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>So überwachen Sie den Verteilungs-Agent und den Merge-Agent (vom Verleger aus)  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 3.  Erweitern Sie die Veröffentlichung für das Abonnement, das überwacht werden soll.  
   
-4.  Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
+4.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
   
 5.  Führen Sie im Dialogfeld **Synchronisierungsstatus anzeigen** einen oder mehrere der folgenden Schritte aus:  
   
@@ -97,13 +101,13 @@ caps.handback.revision: 17
   
 6.  Klicken Sie auf **Schließen**.  
   
-#### So überwachen Sie den Verteilungs-Agent und den Merge-Agent (vom Abonnenten aus)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>So überwachen Sie den Verteilungs-Agent und den Merge-Agent (vom Abonnenten aus)  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Abonnenten her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Abonnements** .  
   
-3.  Mit der rechten Maustaste des Abonnements zu überwachen, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
+3.  Klicken Sie mit der rechten Maustaste auf das zu überwachende Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
   
 4.  Führen Sie im Dialogfeld **Synchronisierungsstatus anzeigen** einen oder mehrere der folgenden Schritte aus:  
   
@@ -115,8 +119,8 @@ caps.handback.revision: 17
   
 5.  Klicken Sie auf **Schließen**.  
   
-## Siehe auch  
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replikations-Agents (Übersicht)](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

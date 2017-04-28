@@ -1,28 +1,32 @@
 ---
-title: "Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vollständige differenzielle Sicherungen [SQL Server]"
-  - "Wiederherstellen von Datenbanken [SQL Server], vollständige differenzielle Sicherungen"
-  - "Datenbanksicherungen [SQL Server], vollständige differenzielle Sicherungen"
-  - "Datenbankwiederherstellungen [SQL Server], vollständige differenzielle Sicherungen"
-  - "Sichern von Datenbanken [SQL Server], vollständige differenzielle Sicherungen"
+title: Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine differenzielle Datenbanksicherung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen.  
@@ -57,24 +61,24 @@ caps.handback.revision: 46
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
--   Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)vorbereiten.  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
- RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
+ RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur geprüft werden kann, wenn die Datenbank unbeschädigt ist und auf sie zugegriffen werden kann, was beim Ausführen von RESTORE nicht immer der Fall ist, verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So stellen Sie eine differenzielle Datenbanksicherung wieder her  
+#### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
 1.  Stellen Sie eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und klicken Sie danach im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
 2.  Erweitern Sie **Datenbanken**. Wählen Sie je nach Datenbank entweder eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken**, und wählen Sie eine Systemdatenbank aus.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks** und **Wiederherstellung**, und klicken Sie anschließend auf **Datenbank**.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**und **Wiederherstellung**, und klicken Sie anschließend auf **Datenbank**.  
   
 4.  Legen Sie Quelle und Speicherort der wiederherzustellenden Sicherungssätze auf der Seite **Allgemein** mithilfe des Abschnitts **Quelle** fest. Wählen Sie eine der folgenden Optionen aus:  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So stellen Sie eine differenzielle Datenbanksicherung wieder her  
+#### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
 1.  Führen Sie die RESTORE DATABASE-Anweisung mit der NORECOVERY-Klausel aus, um die vollständige Datenbanksicherung wiederherzustellen, die der differenziellen Datenbanksicherung vorausging. Weitere Informationen finden Sie unter [Vorgehensweise: Wiederherstellen einer vollständigen Sicherung](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   
-#### A. Wiederherstellen einer differenziellen Datenbanksicherung  
+#### <a name="a-restoring-a-differential-database-backup"></a>A. Wiederherstellen einer differenziellen Datenbanksicherung  
  In diesem Beispiel werden eine Datenbanksicherung und eine differenzielle Datenbanksicherung der `MyAdvWorks` -Datenbank wiederhergestellt.  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### B. Wiederherstellen einer Datenbank-, einer differenziellen Datenbank- und einer Transaktionsprotokollsicherung  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Wiederherstellen einer Datenbank-, einer differenziellen Datenbank- und einer Transaktionsprotokollsicherung  
  In diesem Beispiel werden eine Datenbanksicherung, eine differenzielle Datenbanksicherung und eine Transaktionsprotokollsicherung der `MyAdvWorks` -Datenbank wiederhergestellt.  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "Wiederherstellungsprotokoll"
-  - "Sichern von Transaktionsprotokollen [SQL Server], wiederherstellen"
-  - "Transaktionsprotokollsicherungen [SQL Server], wiederherstellen"
-  - "Wiederherstellen von Transaktionsprotokollen [SQL Server], Wiederherstellen von Sicherungen"
-  - "Transaktionsprotokollwiederherstellungen [SQL Server], SQL Server Management Studio"
+title: Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server) | Microsoft-Datenbank
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Transaktionsprotokollsicherung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen.  
@@ -68,7 +72,7 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  Beim üblichen Prozess der Wiederherstellung wählen Sie im Dialogfeld **Datenbank wiederherstellen** die Protokollsicherungen zusammen mit den Datensicherungen und den differenziellen Sicherungen aus.  
   
-#### So stellen Sie eine Transaktionsprotokollsicherung wieder her  
+#### <a name="to-restore-a-transaction-log-backup"></a>So stellen Sie eine Transaktionsprotokollsicherung wieder her  
   
 1.  Klicken Sie im Objekt-Explorer nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]auf den Servernamen, um die Serverstruktur zu erweitern.  
   
@@ -99,14 +103,14 @@ caps.handback.revision: 36
   
     |Header|Wert|  
     |------------|-----------|  
-    |**Restore**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Wiederherstellen**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei** oder \<leer> (bei Transaktionsprotokollen).|  
     |**Datenbank**|Name der an dem Sicherungsvorgang beteiligten Datenbank.|  
     |**Startdatum**|Datum und Uhrzeit des Sicherungsbeginns, entsprechend den Ländereinstellungen des Clients.|  
     |**Beendigungsdatum**|Datum und Uhrzeit des Sicherungsabschlusses, entsprechend den Ländereinstellungen des Clients.|  
     |**Erste LSN**|Protokollsequenznummer der ersten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
-    |**Erste LSN**|Protokollsequenznummer der letzten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
+    |**Letzte LSN**|Protokollsequenznummer der letzten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
     |**Prüfpunkt-LSN**|Protokollsequenznummer des letzten Prüfpunkts zum Zeitpunkt der Erstellung der Sicherung.|  
     |**Vollständige LSN**|Protokollsequenznummer der neuesten vollständigen Datenbanksicherung.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
@@ -133,7 +137,7 @@ caps.handback.revision: 36
         |------------|-----------|  
         |\<leer>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
         |**Transaktionsmarkierung**|Name der markierten Transaktion, der vom Benutzer zugewiesen wurde, als für die Transaktion der Commit ausgeführt wurde.|  
-        |**Datum**|Datum und Uhrzeit, zu der für die Transaktion der Commit ausgeführt wurde. Als Transaktionsdatum und -uhrzeit werden das Datum und die Uhrzeit angezeigt, die in der **msdbgmarkhistory**-Tabelle aufgezeichnet wurden, nicht das Datum und die Uhrzeit des Clientcomputers.|  
+        |**Datum**|Datum und Uhrzeit, zu der für die Transaktion der Commit ausgeführt wurde. Als Transaktionsdatum und -uhrzeit werden das Datum und die Uhrzeit angezeigt, die in der **msdbgmarkhistory** -Tabelle aufgezeichnet wurden, nicht das Datum und die Uhrzeit des Clientcomputers.|  
         |**Beschreibung**|Die Beschreibung der markierten Transaktion, die der Benutzer angegeben hat, als für die Transaktion ein Commit ausgeführt wurde (sofern zutreffend).|  
         |**LSN**|Die Protokollfolgenummer (LSN, Log Sequence Number) der markierten Transaktion.|  
         |**Datenbank**|Der Name der Datenbank, in der für die markierte Transaktion ein Commit ausgeführt wird.|  
@@ -147,9 +151,9 @@ caps.handback.revision: 36
   
          Behält die Replikationseinstellungen bei, wenn eine veröffentlichte Datenbank auf einem Server wiederhergestellt wird, auf dem die Datenbank nicht erstellt wurde.  
   
-         Diese Option ist nur in Verbindung mit der Option **Datenbank betriebsbereit belassen, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird ...** (wird weiter unten beschrieben) verfügbar und entspricht der Wiederherstellung einer Sicherungskopie mit der Option **RECOVERY**.  
+         Diese Option ist nur in Verbindung mit der Option **Datenbank betriebsbereit belassen, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird ...** (wird weiter unten beschrieben) verfügbar und entspricht der Wiederherstellung einer Sicherungskopie mit der Option **RECOVERY** .  
   
-         Das Überprüfen dieser Option entspricht der Verwendung der Option **KEEP_REPLICATION** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**-Anweisung.  
+         Das Überprüfen dieser Option entspricht der Verwendung der Option **KEEP_REPLICATION** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** -Anweisung.  
   
     -   **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung**  
   
@@ -161,9 +165,9 @@ caps.handback.revision: 36
   
     -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
   
-         Gestattet nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
+         Gestattet nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
   
-         Das Überprüfen dieser Option entspricht der Verwendung der Option **RESTRICTED_USER** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**-Anweisung.  
+         Das Überprüfen dieser Option entspricht der Verwendung der Option **RESTRICTED_USER** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** -Anweisung.  
   
 10. Geben Sie für die Optionen zum **Wiederherstellungsstatus** den Status der Datenbank nach dem Wiederherstellungsvorgang an.  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Es ist empfehlenswert, entweder WITH NORECOVERY oder WITH RECOVERY in jeder RESTORE-Anweisung immer explizit anzugeben, um Mehrdeutigkeit zu vermeiden. Dies ist besonders beim Schreiben von Skripts wichtig.  
   
-#### So stellen Sie eine Transaktionsprotokollsicherung wieder her  
+#### <a name="to-restore-a-transaction-log-backup"></a>So stellen Sie eine Transaktionsprotokollsicherung wieder her  
   
 1.  Führen Sie die RESTORE LOG-Anweisung aus, um die Transaktionsprotokollsicherung anzuwenden, und geben Sie dabei Folgendes an:  
   
@@ -236,13 +240,13 @@ caps.handback.revision: 36
     >  Wenn Sie eine Spiegeldatenbank erstellen, lassen Sie den Wiederherstellungsschritt aus. Eine Spiegeldatenbank muss im Status RESTORING verbleiben.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
- Standardmäßig verwendet die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank das einfache Wiederherstellungsmodell. Für die folgenden Beispiele ist es erforderlich, dass die Datenbank folgendermaßen für die Verwendung des vollständigen Wiederherstellungsmodells geändert wird:  
+ Standardmäßig verwendet die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank das einfache Wiederherstellungsmodell. Für die folgenden Beispiele ist es erforderlich, dass die Datenbank folgendermaßen für die Verwendung des vollständigen Wiederherstellungsmodells geändert wird:  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. Anwenden einer einzelnen Transaktionsprotokollsicherung  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Anwenden einer einzelnen Transaktionsprotokollsicherung  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann wird die erste Transaktionsprotokollsicherung angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befindet. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. Anwenden mehrerer Transaktionsprotokollsicherungen  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Anwenden mehrerer Transaktionsprotokollsicherungen  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann werden nacheinander die ersten drei Transaktionsprotokollsicherungen angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befinden. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Wiederherstellen einer Datenbank bis zum Fehlerzeitpunkt im vollständigen Wiederherstellungsmodell &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Wiederherstellen einer Datenbank bis zum Fehlerzeitpunkt im vollständigen Wiederherstellungsmodell &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## Siehe auch  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

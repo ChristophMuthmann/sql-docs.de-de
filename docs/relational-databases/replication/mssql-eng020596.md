@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG020596 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG020596 (Fehler)"
+title: MSSQL_ENG020596 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG020596 error
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eae24c46d8a92eb3906ba83ebac735c1ee563a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG020596
+# <a name="mssqleng020596"></a>MSSQL_ENG020596
     
-## Meldungsdetails  
+## <a name="message-details"></a>Meldungsdetails  
   
 |||  
 |-|-|  
@@ -31,13 +35,13 @@ caps.handback.revision: 14
 |Symbolischer Name||  
 |Meldungstext|Nur '%s' und Mitglieder der db_owner-Rolle können den anonymen Agent löschen.|  
   
-## Erklärung  
- Sie besitzen nicht die erforderlichen Berechtigungen, um den Agent für das anonyme Abonnement zu löschen. Die verwendete Anmeldung beim Aufrufen von [Sp_dropanonymousagent & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropanonymousagent-transact-sql.md) muss ein Mitglied der **Sysadmin** festen Serverrolle auf dem Verteiler oder **Db_owner** -Datenbankrolle in der Verteilungsdatenbank oder der Benutzer muss derjenige sein, der die erste Ausführung des Agents initiiert hat.  
+## <a name="explanation"></a>Erklärung  
+ Sie besitzen nicht die erforderlichen Berechtigungen, um den Agent für das anonyme Abonnement zu löschen. Der Anmeldename, der zum Aufrufen von [sp_dropanonymousagent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropanonymousagent-transact-sql.md) verwendet wird, muss Mitglied der festen **sysadmin**-Serverrolle auf dem Verteiler bzw. Mitglied der festen **db_owner**-Datenbankrolle in der Verteilungsdatenbank sein, oder der Benutzer muss derjenige sein, der die erstmalige Ausführung des Agents initialisiert hat.  
   
-## Benutzeraktion  
- Melden Sie sich mit den entsprechenden Anmeldeinformationen an, und führen Sie **Sp_dropanonymousagent**.  
+## <a name="user-action"></a>Benutzeraktion  
+ Melden Sie sich mit den entsprechenden Anmeldeinformationen an, und führen Sie **sp_dropanonymousagent**aus.  
   
-## Siehe auch  
- [Fehler und Ereignisreferenz & #40; Replikation & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

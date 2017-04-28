@@ -1,25 +1,29 @@
 ---
-title: "Umbenennen von Sichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sichten [SQL Server], umbenennen"
-  - "Umbenennen von Sichten"
+title: Umbenennen von Sichten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Umbenennen von Sichten
+# <a name="rename-views"></a>Umbenennen von Sichten
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Sicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
   
 > [!WARNING]  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:** [Nach dem Umbenennen einer Sicht](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So benennen Sie eine Sicht um  
+#### <a name="to-rename-a-view"></a>So benennen Sie eine Sicht um  
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank mit der Sicht, die Sie umbenennen möchten, und erweitern Sie dann den Ordner **Sicht** .  
   

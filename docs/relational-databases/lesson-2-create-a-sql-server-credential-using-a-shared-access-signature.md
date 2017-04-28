@@ -1,33 +1,37 @@
 ---
-title: "Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS) | Microsoft-Dokumentation'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
-In dieser Lektion erstellen Sie Anmeldeinformationen zum Speichern der Sicherheitsinformationen, die von SQL Server verwendet wird, um in einen Azure-Container zu schreiben und aus diesem zu lesen, den Sie in [Lektion 1: Erstellen einer Richtlinie und einer Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) erstellt haben.  
+# <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
+In dieser Lektion erstellen Sie Anmeldeinformationen zum Speichern der Sicherheitsinformationen, die von SQL Server verwendet wird, um in einen Azure-Container zu schreiben und aus diesem zu lesen, den Sie in [Lektion 1: Erstellen einer Richtlinie und einer Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)erstellt haben.  
   
-SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature für diesen Container gespeichert.  
+SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature für diesen Container gespeichert.  
   
 > [!NOTE]  
 > Wenn Sie eine SQL Server 2012 SP1 CU2 oder höhere Datenbank oder eine SQL Server 2014-Datenbank in diesem Azure-Container sichern möchten, können Sie die hier dokumentierte [veraltete Syntax](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) verwenden, um SQL Server-Anmeldeinformationen basierend auf Ihrem Schlüssel für das Speicherkonto zu erstellen.  
   
-## Erstellen von SQL Server-Anmeldeinformationen  
+## <a name="create-sql-server-credential"></a>Erstellen von SQL Server-Anmeldeinformationen  
 Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
@@ -64,8 +68,10 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
   
 [Lektion 3: Datenbanksicherung über URLs](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Anmeldeinformationen &#40;Datenbankmodul&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
+
+

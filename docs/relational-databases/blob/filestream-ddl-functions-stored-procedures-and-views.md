@@ -1,23 +1,27 @@
 ---
-title: "FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e466ba3d4cb053cb59959710f3ad4249ea2d349
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten
-  Listet die Transact-SQL-Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankobjekte auf, die FILESTREAM unterstützen.  
+# <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten
+  Listet die Transact-SQL-Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die FILESTREAM unterstützen.  
   
  Die Liste der Datenbankobjekte, die die FileTable-Funktion unterstützen, finden Sie unter [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md).  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
--   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../Topic/sp_filestream_force_garbage_collection%20\(Transact-SQL\).md)  
+-   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
 ##  <a name="cat"></a> Systemsichten – Katalogsichten  
   

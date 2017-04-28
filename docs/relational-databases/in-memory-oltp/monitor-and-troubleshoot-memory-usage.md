@@ -1,27 +1,31 @@
 ---
-title: "&#220;berwachung und Fehlerbehebung f&#252;r die Arbeitsspeicherauslastung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachung und Fehlerbehebung f&#252;r die Arbeitsspeicherauslastung
+# <a name="monitor-and-troubleshoot-memory-usage"></a>Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] nutzt Arbeitsspeicher auf andere Weise als datenträgerbasierte Tabellen. Sie können die Größe des von speicheroptimierten Tabellen und Indizes belegten und verwendeten Arbeitsspeichers in der Datenbank mit den DMVs oder Leistungsindikatoren überwachen, die für den Arbeitsspeicher und das Garbage Collection-Subsystem bereitgestellt werden.  Auf diese Weise behalten Sie den Überblick auf System- und Datenbankebene und können Probleme aufgrund einer zu hohen Arbeitsspeicherauslastung vermeiden.  
   
  In diesem Thema wird das Überwachen der [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Speicherauslastung behandelt.  
   
-## Abschnitte in diesem Thema  
+## <a name="sections-in-this-topic"></a>Abschnitte in diesem Thema  
   
 -   [Erstellen einer Beispieldatenbank mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
@@ -127,14 +131,14 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingSSMS"></a> Bei Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen, wie [hier](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)erläutert. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.  
   
-#### Verbrauch auf Datenbankebene  
+#### <a name="consumption-at-the-database-level"></a>Verbrauch auf Datenbankebene  
  Sie können die Arbeitsspeicherauslastung auf Datenbankebene wie folgt überwachen.  
   
-1.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und stellen eine Verbindung mit einem Server her.  
+1.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen eine Verbindung mit einem Server her.  
   
 2.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, für die Berichte abgerufen werden sollen.  
   
-3.  Wählen Sie im Kontextmenü **Berichte** -> **Standardberichte** -> **Speicherauslastung nach speicheroptimierten Objekten** aus.  
+3.  Wählen Sie im Kontextmenü **Berichte** -> **Standard Berichte** -> **Speicherauslastung nach speicheroptimierten Objekten**aus.  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingDMVs"></a> Verwenden von DMVs  
  Es gibt mehrere DMVs zum Überwachen des durch speicheroptimierte Tabellen, Indizes, Systemobjekte und Laufzeitstrukturen verwendeten Arbeitsspeichers.  
   
-#### Arbeitsspeichernutzung durch speicheroptimierte Tabellen und Indizes  
+#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Arbeitsspeichernutzung durch speicheroptimierte Tabellen und Indizes  
  Sie können die Arbeitsspeichernutzung für alle Benutzertabellen, Indizes und Systemobjekte ermitteln, indem Sie `sys.dm_db_xtp_table_memory_stats` wie hier dargestellt abfragen.  
   
 ```tsql  
@@ -171,8 +175,8 @@ NULL       -2          192                           25                      16 
   
  Weitere Informationen finden Sie unter [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
-#### Arbeitsspeichernutzung durch interne Systemstrukturen  
- Arbeitsspeicher wird auch durch Systemobjekte beansprucht, z. B. Transaktionsstrukturen, Puffer für Daten- und Änderungsdateien, Garbage Collection-Strukturen usw. Sie können den für diese Systemobjekte verwendeten Arbeitsspeicher abrufen, indem Sie `sys.dm_xtp_system_memory_consumers` wie hier dargestellt abfragen.  
+#### <a name="memory-consumption-by-internal-system-structures"></a>Arbeitsspeichernutzung durch interne Systemstrukturen  
+ Arbeitsspeicher wird auch durch Systemobjekte beansprucht, z. B. Transaktionsstrukturen, Puffer für Daten- und Änderungsdateien, Garbage Collection-Strukturen usw. Sie können den für diese Systemobjekte verwendeten Arbeitsspeicher abrufen, indem Sie `sys.dm_xtp_system_memory_consumers` wie hier dargestellt abfragen.  
   
 ```tsql  
 SELECT memory_consumer_desc  
@@ -210,7 +214,7 @@ PGPOOL:  4K               0                    0                    0
   
  Weitere Informationen finden Sie unter [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
-#### Arbeitsspeichernutzung zur Laufzeit beim Zugriff auf speicheroptimierte Tabellen  
+#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Arbeitsspeichernutzung zur Laufzeit beim Zugriff auf speicheroptimierte Tabellen  
  Mit der folgenden Abfrage können Sie den von Laufzeitstrukturen wie dem Prozedurcache beanspruchten Arbeitsspeicher bestimmen. Führen Sie diese Abfrage aus, um den von Laufzeitstrukturen wie dem Prozedurcache beanspruchten Arbeitsspeicher abzurufen. Alle Laufzeitstrukturen werden mit XTP markiert.  
   
 ```tsql  
@@ -243,8 +247,8 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Weitere Informationen finden Sie unter [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### Arbeitsspeichernutzung durch das [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul in der Instanz  
- Der vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul und den speicheroptimierten Objekten belegte Arbeitsspeicher wird auf dieselbe Weise wie jeder andere Arbeitsspeicherconsumer innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwaltet. Der gesamte vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul belegte Arbeitsspeicher wird von Clerks des Typs MEMORYCLERK_XTP nachverfolgt. Rufen Sie mit der folgenden Abfrage den gesamten vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul verwendeten Arbeitsspeicher ab.  
+#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Arbeitsspeichernutzung durch das [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul in der Instanz  
+ Der vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul und den speicheroptimierten Objekten belegte Arbeitsspeicher wird auf dieselbe Weise wie jeder andere Arbeitsspeicherconsumer innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwaltet. Der gesamte vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul belegte Arbeitsspeicher wird von Clerks des Typs MEMORYCLERK_XTP nachverfolgt. Rufen Sie mit der folgenden Abfrage den gesamten vom [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul verwendeten Arbeitsspeicher ab.  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -255,7 +259,7 @@ SELECT type
    FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
- Die Beispielausgabe zeigt, dass 18 MB des insgesamt zugeordneten Arbeitsspeichers auf die Arbeitsspeichernutzung auf Systemebene und 1.358 MB auf die Datenbank mit der ID 5 entfallen. Da diese Datenbank einem dedizierten Ressourcenpool zugeordnet ist, wird dieser Arbeitsspeicher auf diesen Ressourcenpool angerechnet.  
+ Die Beispielausgabe zeigt, dass 18 MB des insgesamt zugeordneten Arbeitsspeichers auf die Arbeitsspeichernutzung auf Systemebene und 1.358 MB auf die Datenbank mit der ID 5 entfallen. Da diese Datenbank einem dedizierten Ressourcenpool zugeordnet ist, wird dieser Arbeitsspeicher auf diesen Ressourcenpool angerechnet.  
   
  **Beispielausgabe**  
   
@@ -270,18 +274,18 @@ MEMORYCLERK_XTP      Default    64             0
  Weitere Informationen finden Sie unter [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
 ##  <a name="bkmk_MemOptObjects"></a> Verwalten des von speicheroptimierten Objekten beanspruchten Arbeitsspeichers  
- Sie können den insgesamt von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher steuern, indem Sie ihn an einen benannten Ressourcenpool binden, wie im Thema [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) beschrieben.  
+ Sie können den insgesamt von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher steuern, indem Sie ihn an einen benannten Ressourcenpool binden, wie im Thema [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)beschrieben.  
   
 ##  <a name="bkmk_Troubleshooting"></a> Problembehandlung bei Arbeitsspeicherproblemen  
  Die Problembehandlung für den Arbeitsspeicher besteht aus drei Schritten:  
   
 1.  Identifizieren Sie, wie viel Arbeitsspeicher von den Objekten in der Datenbank oder Instanz beansprucht wird. Wie oben beschrieben, können Sie eine Vielzahl von Überwachungstools verwenden, die für speicheroptimierte Tabellen verfügbar sind.  Dies sind beispielsweise die DMVs `sys.dm_db_xtp_table_memory_stats` und `sys.dm_os_memory_clerks`.  
   
-2.  Bestimmen Sie, wie die Arbeitsspeichernutzung zunimmt und wie viel Spielraum noch vorhanden ist. Durch die regelmäßige Überwachung der Arbeitsspeichernutzung können Sie beurteilen, in welchem Maße die Arbeitsspeicherauslastung zunimmt. Wenn Sie die Datenbank z. B. einem benannten Ressourcenpool zugeordnet haben, können Sie mit dem Leistungsindikator "Verwendeter Arbeitsspeicher (KB)" überwachen, wie die Speicherauslastung zunimmt.  
+2.  Bestimmen Sie, wie die Arbeitsspeichernutzung zunimmt und wie viel Spielraum noch vorhanden ist. Durch die regelmäßige Überwachung der Arbeitsspeichernutzung können Sie beurteilen, in welchem Maße die Arbeitsspeicherauslastung zunimmt. Wenn Sie die Datenbank z. B. einem benannten Ressourcenpool zugeordnet haben, können Sie mit dem Leistungsindikator "Verwendeter Arbeitsspeicher (KB)" überwachen, wie die Speicherauslastung zunimmt.  
   
 3.  Ergreifen Sie entsprechende Maßnahmen, um mögliche Probleme mit dem Arbeitsspeicher zu vermeiden. Weitere Informationen finden Sie unter [Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Ändern von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT für einen vorhandenen Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

@@ -1,28 +1,32 @@
 ---
-title: "Erteilen von Berechtigungen f&#252;r eine XML-Schemaauflistung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erteilen von Berechtigungen [SQL Server], XML-Schemaauflistungen"
-  - "ALTER-Berechtigung"
+title: "Erteilen von Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erteilen von Berechtigungen f&#252;r eine XML-Schemaauflistung
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>Erteilen von Berechtigungen für eine XML-Schemaauflistung
   Sie können Berechtigungen zum Erstellen von XML-Schemaauflistungen sowie Berechtigungen für ein XML-Schemaauflistungsobjekt erteilen.  
   
-##  Berechtigung zum Erstellen einer XML-Schemaauflistung  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Berechtigung zum Erstellen einer XML-Schemaauflistung  
  Zum Erstellen einer XML-Schemaauflistung sind die folgenden Berechtigungen erforderlich:  
   
 -   Der Prinzipal benötigt die CREATE XML SCHEMA COLLECTION-Berechtigung auf Datenbankebene.  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  Der Besitzer des relationalen Schemas wird zum Besitzer der XML-Schemaauflistung, die in diesem Schema erstellt wird. Dieser Besitzer besitzt die vollständige Kontrolle über die XML-Schemaauflistung. Aus diesem Grund kann dieser Besitzer die XML-Schemaauflistung ändern, eine xml-Spalte typisieren oder die XML-Schemaauflistung löschen.  
   
-## Erteilen von Berechtigungen für ein XML-Schemaauflistungsobjekt  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>Erteilen von Berechtigungen für ein XML-Schemaauflistungsobjekt  
  Die folgenden Berechtigungen sind für die XML-Schemaauflistung zulässig:  
   
 -   Die ALTER-Berechtigung ist erforderlich, wenn der Inhalt einer vorhandenen XML-Schemaauflistung mithilfe der ALTER XML SCHEMA COLLECTION-Anweisung geändert wird.  
@@ -62,10 +66,10 @@ caps.handback.revision: 32
   
 -   Die EXECUTE-Berechtigung ist zum Überprüfen von Werten erforderlich, die vom Prinzipal für die XML-Schemaauflistung eingefügt oder aktualisiert werden, durch die Spalten, Variablen und Parameter vom Typ **xml** typisiert oder einschränkt werden. Sie benötigen diese Berechtigung auch, wenn Sie das in diesen Spalten und Variablen gespeicherte XML abfragen.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Die Szenarien in den folgenden Beispielen veranschaulichen, wie XML-Schemaberechtigungen funktionieren. Jedes dieser Beispiele erstellt die erforderliche Testdatenbank, die relationalen Schemas und Anmeldungen. Diesen Anmeldenamen werden die erforderlichen Berechtigungen für XML-Schemaauflistungen erteilt. Jedes der Beispiele führt am Ende den erforderlichen Cleanup aus.  
   
-### A. Erteilen der Berechtigungen zum Erstellen einer XML-Schemaauflistung  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Erteilen der Berechtigungen zum Erstellen einer XML-Schemaauflistung  
  Im folgenden Beispiel wird gezeigt, wie Berechtigungen erteilt werden, damit ein Prinzipal eine XML-Schemaauflistung erstellen kann. Dieses Beispiel erstellt eine Beispieldatenbank und den Testbenutzer `TestLogin1`. `TestLogin1` wird anschließend die `ALTER` -Berechtigung für das relationale Schema und die `CREATE XML SCHEMA COLLECTION` -Berechtigung für die Datenbank erteilt. Mit diesen Berechtigungen kann `TestLogin1` erfolgreich eine XML-Beispielschemaauflistung erstellen.  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Erteilen der Berechtigungen zum Verwenden einer vorhandenen XML-Schemaauflistung  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Erteilen der Berechtigungen zum Verwenden einer vorhandenen XML-Schemaauflistung  
  Das folgende Beispiel veranschaulicht das Berechtigungsmodell für die XML-Schemaauflistung. Es veranschaulicht die verschiedenen Berechtigungen, die zum Erstellen und Verwenden der XML-Schemaauflistung erforderlich sind.  
   
  Das Beispiel erstellt eine Testdatenbank und den Anmeldenamen `TestLogin1`. `TestLogin1` erstellt eine XML-Schemaauflistung in der Datenbank. Der Anmeldename erstellt anschließend eine Tabelle und verwendet die XML-Schemaauflistung zum Erstellen einer typisierten xml-Spalte. Der Benutzer fügt anschließend Daten ein und fragt diese ab. Für diese verschiedenen Schritte sind die jeweiligen Schemaberechtigungen wie im Code gezeigt erforderlich.  
@@ -236,7 +240,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. Erteilen der ALTER-Berechtigung für eine XML-Schemaauflistung  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. Erteilen der ALTER-Berechtigung für eine XML-Schemaauflistung  
  Ein Benutzer benötigt die ALTER-Berechtigung, um eine vorhandene XML-Schemaauflistung in der Datenbank ändern zu können. Im folgenden Beispiel wird veranschaulicht, wie die `ALTER` -Berechtigung erteilt wird.  
   
 ```  
@@ -311,7 +315,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. Erteilen der TAKE OWNERSHIP-Berechtigung für eine XML-Schemaauflistung  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. Erteilen der TAKE OWNERSHIP-Berechtigung für eine XML-Schemaauflistung  
  Im folgenden Beispiel wird veranschaulicht, wie der Besitz des XML-Schemas von einem Benutzer an einen anderen übertragen werden kann. Damit das Beispiel interessanter wird, arbeiten die Benutzer in diesem Beispiel in verschiedenen relationalen Standardschemas.  
   
  In diesem Beispiel werden die folgenden Aufgaben ausgeführt:  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. Erteilen der VIEW DEFINITION-Berechtigung für eine XML-Schemaauflistung  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. Erteilen der VIEW DEFINITION-Berechtigung für eine XML-Schemaauflistung  
  Im folgenden Beispiel wird gezeigt, wie VIEW DEFINITION-Berechtigungen für eine XML-Schemaauflistung erteilt werden.  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

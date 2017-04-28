@@ -1,44 +1,48 @@
 ---
-title: "Extrahieren einer DAC aus einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.extractdacwizard.validationandsummary.f1"
-  - "sql13.swb.extractdacwizard.introduction.f1"
-  - "sql13.swb.extractdacwizard.selectdatapage.f1"
-  - "sql13.swb.extractdacwizard.setdacproperties.f1"
-  - "sql13.swb.extractdacwizard.buildandsave.f1"
-helpviewer_keywords: 
-  - "Extrahieren einer DAC"
-  - "Vorgehensweise [DAC], extrahieren"
-  - "Datenebenenanwendung [SQL Server], extrahieren"
-  - "wizard [DAC], extract"
+title: Extrahieren einer DAC aus einer Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.extractdacwizard.validationandsummary.f1
+- sql13.swb.extractdacwizard.introduction.f1
+- sql13.swb.extractdacwizard.selectdatapage.f1
+- sql13.swb.extractdacwizard.setdacproperties.f1
+- sql13.swb.extractdacwizard.buildandsave.f1
+helpviewer_keywords:
+- extract DAC
+- How to [DAC], extract
+- data-tier application [SQL Server], extract
+- wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: faeab1963609f5563f31e13b2ee965fdac8a43b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Extrahieren einer DAC aus einer Datenbank
-  Verwenden Sie entweder den **Assistenten zum Extrahieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um ein Datenebenenanwendungs-Paket (DAC) aus einer vorhandenen SQL Server-Datenbank zu extrahieren. Bei der Extraktion wird eine DAC-Paketdatei erstellt, die Definitionen der Datenbankobjekte und ihrer verwandten Elemente auf Instanzebene enthält. Eine DAC-Paketdatei enthält z. B. die Datenbanktabellen, gespeicherten Prozeduren, Sichten und Benutzer zusammen mit den Anmeldenamen, die den Datenbankbenutzern zugeordnet sind.  
+# <a name="extract-a-dac-from-a-database"></a>Extrahieren einer DAC aus einer Datenbank
+  Verwenden Sie entweder den **Assistenten zum Extrahieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um ein Datenebenenanwendungs-Paket (DAC) aus einer vorhandenen SQL Server-Datenbank zu extrahieren. Bei der Extraktion wird eine DAC-Paketdatei erstellt, die Definitionen der Datenbankobjekte und ihrer verwandten Elemente auf Instanzebene enthält. Eine DAC-Paketdatei enthält z. B. die Datenbanktabellen, gespeicherten Prozeduren, Sichten und Benutzer zusammen mit den Anmeldenamen, die den Datenbankbenutzern zugeordnet sind.  
   
  
-## Vorbereitungen  
- Sie können DAC aus Datenbanken extrahieren, die sich auf Instanzen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) oder höher befinden. Wenn der Extrahierungsprozess für eine Datenbank ausgeführt wird, die über eine DAC bereitgestellt wurde, werden nur die Definitionen der Objekte in der Datenbank extrahiert. Der Prozess verweist nicht auf die in **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) registrierte DAC. Der Extrahierungsprozess registriert die DAC-Definition nicht in der aktuellen Instanz des Datenbankmoduls. Weitere Informationen zum Registrieren einer DAC finden Sie unter [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
+## <a name="before-you-begin"></a>Vorbereitungen  
+ Sie können DAC aus Datenbanken extrahieren, die sich auf Instanzen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) oder höher befinden. Wenn der Extrahierungsprozess für eine Datenbank ausgeführt wird, die über eine DAC bereitgestellt wurde, werden nur die Definitionen der Objekte in der Datenbank extrahiert. Der Prozess verweist nicht auf die in **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) registrierte DAC. Der Extrahierungsprozess registriert die DAC-Definition nicht in der aktuellen Instanz des Datenbankmoduls. Weitere Informationen zum Registrieren einer DAC finden Sie unter [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="LimitationsRestrictions"></a> Einschränkungen  
- Eine DAC kann nur aus einer Datenbank in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher extrahiert werden. Eine DAC kann nicht registriert werden, wenn die Datenbank in einer DAC nicht unterstützte Objekte oder enthaltene Benutzer enthält. Weitere Informationen zu den in einer DAC unterstützten Objekttypen finden Sie unter [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ Eine DAC kann nur aus einer Datenbank in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher extrahiert werden. Eine DAC kann nicht registriert werden, wenn die Datenbank in einer DAC nicht unterstützte Objekte oder enthaltene Benutzer enthält. Weitere Informationen zu den in einer DAC unterstützten Objekttypen finden Sie unter [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ##  <a name="Permissions"></a> Berechtigungen  
- Zum Registrieren einer DAC sind mindestens die ALTER ANY LOGIN-Berechtigung und die VIEW DEFINITION-Berechtigung auf Datenbankebene sowie SELECT-Berechtigungen für **sys.sql_expression_dependencies** erforderlich. Zum Extrahieren einer DAC sind nur Mitglieder der festen Serverrolle securityadmin berechtigt, die ebenfalls Mitglieder der festen Datenbankrolle database_owner in der Datenbank waren, aus der die DAC extrahiert wird. Mitglieder der festen Serverrolle „sysadmin“ oder das integrierte SQL Server-Systemadministratorkonto **sa** sind ebenfalls berechtigt, eine DAC zu extrahieren.  
+ Zum Registrieren einer DAC sind mindestens die ALTER ANY LOGIN-Berechtigung und die VIEW DEFINITION-Berechtigung auf Datenbankebene sowie SELECT-Berechtigungen für **sys.sql_expression_dependencies**erforderlich. Zum Extrahieren einer DAC sind nur Mitglieder der festen Serverrolle securityadmin berechtigt, die ebenfalls Mitglieder der festen Datenbankrolle database_owner in der Datenbank waren, aus der die DAC extrahiert wird. Mitglieder der festen Serverrolle „sysadmin“ oder das integrierte SQL Server-Systemadministratorkonto **sa** sind ebenfalls berechtigt, eine DAC zu extrahieren.  
   
 ##  <a name="UsingDACExtractWizard"></a> Verwenden des Assistenten zum Extrahieren von Datenebenenanwendungen  
  **So extrahieren Sie eine DAC mithilfe eines Assistenten**  
@@ -47,7 +51,7 @@ caps.handback.revision: 21
   
 2.  Erweitern Sie den Knoten **Datenbanken** .  
   
-3.  Klicken die mit der rechten Maustaste auf den Knoten für die Datenbank, aus der die DAC extrahiert werden soll, zeigen Sie auf **Tasks**, und wählen Sie dann **Datenebenenanwendung extrahieren** aus.  
+3.  Klicken die mit der rechten Maustaste auf den Knoten für die Datenbank, aus der die DAC extrahiert werden soll, zeigen Sie auf **Tasks**, und wählen Sie dann **Datenebenenanwendung extrahieren**aus.  
   
 4.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   
@@ -72,34 +76,34 @@ caps.handback.revision: 21
   
  [&#91;Assistent zum Extrahieren&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SelectData"></a> Seite „Daten auswählen“  
+###  <a name="SelectData"></a> Select data page  
 Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwendung (DAC) einschließen möchten. Das Einschließen von Daten in das DAC-Paket ist optional. Das DAC-Paket enthält bereits das Schema aller unterstützten Datenbankobjekte und Instanzobjekte für die Datenbank.  
   
- In die DAC-Paketdatei können Sie bis zu 10 MB Verweisdaten einschließen. Bei Tabellen, die in der DAC eingeschlossen werden sollen, dürfen in den Paketen keine Blobdatentypen (Binary Large Object) enthalten sein, z.B. **image** oder **varchar(max)**. Wenn Sie zum Übertragen in eine andere Datenbank größere Datenmengen extrahieren möchten, verwenden Sie SQL Server Integration Services, das Hilfsprogramm zum Massenkopieren oder eines der zahlreichen weiteren Datenmigrationsverfahren.  
+ In die DAC-Paketdatei können Sie bis zu 10 MB Verweisdaten einschließen. Bei Tabellen, die in der DAC eingeschlossen werden sollen, dürfen in den Paketen keine Blobdatentypen (Binary Large Object) enthalten sein, z.B. **image** oder **varchar(max)**. Wenn Sie zum Übertragen in eine andere Datenbank größere Datenmengen extrahieren möchten, verwenden Sie SQL Server Integration Services, das Hilfsprogramm zum Massenkopieren oder eines der zahlreichen weiteren Datenmigrationsverfahren.  
   
  **Datenbanktabelle:** Aktivieren Sie das Kontrollkästchen neben den Datenbanktabellen mit den Daten, die Sie in das DAC-Paket einschließen möchten. Sie können bis zu zehn Tabellen mit jeweils maximal 10.000 Zeilen auswählen.  
   
  [&#91;Assistent zum Extrahieren&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SetProperties"></a> Seite „Eigenschaften festlegen“  
+###  <a name="SetProperties"></a> Set properties page  
  Mithilfe dieser Seite des Assistenten können Sie die Datenebenenanwendung (DAC) beschreiben. Diese Eigenschaften werden verwendet, um die DAC zu identifizieren und sie von anderen zu unterscheiden.  
   
- **Name:** Dieser Name identifiziert die DAC. Er kann sich vom Namen der DAC-Paketdatei unterscheiden und sollte die Anwendung beschreiben. Wenn die Datenbank z. B. für eine Finanzanwendung verwendet wird, möchten Sie sie möglicherweise "DAC Finanzen" nennen.  
+ **Name:** Dieser Name identifiziert die DAC. Er kann sich vom Namen der DAC-Paketdatei unterscheiden und sollte die Anwendung beschreiben. Wenn die Datenbank z. B. für eine Finanzanwendung verwendet wird, möchten Sie sie möglicherweise "DAC Finanzen" nennen.  
   
- **Version (xx.xx.xx.xx verwenden, wobei 'x' einer Zahl entspricht):** Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Bei der Bereitstellung einer DAC wird die Version in der **msdb**-Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden.  
+ **Version (xx.xx.xx.xx verwenden, wobei 'x' einer Zahl entspricht):** Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Bei der Bereitstellung einer DAC wird die Version in der **msdb** -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden.  
   
- **Beschreibung:** Optional. Beschreibt die DAC. Bei der Bereitstellung einer DAC wird die Beschreibung in einer **msdb**-Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] angezeigt werden.  
+ **Beschreibung:** Optional. Beschreibt die DAC. Bei der Bereitstellung einer DAC wird die Beschreibung in einer **msdb** -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt werden.  
   
  **In DAC-Paketdatei speichern (Erweiterung „.dacpac“ in den Dateinamen aufnehmen):** Speichert die DAC in einer DAC-Paketdatei mit .dacpac-Erweiterung. Klicken Sie auf die Schaltfläche **Durchsuchen** , um Namen und Speicherort für die Datei anzugeben.  
   
  **Vorhandene Datei überschreiben:** Aktivieren Sie dieses Kontrollkästchen, um die DAC-Paketdatei zu ersetzen, wenn bereits eine Datei mit demselben Namen vorhanden ist.  
   
-###  <a name="ValidateSummary"></a> Seite „Überprüfung und Zusammenfassung“  
+###  <a name="ValidateSummary"></a> Validation and summary page  
  Auf dieser Seite überprüft der Assistent, ob alle Datenbankobjekte von einer Datenebenenanwendung (DAC) unterstützt werden. Er überprüft auch Abhängigkeiten über Datenbankobjekte hinweg, um den Satz von Objekten zu bestimmen, die in DAC enthalten sein können. Anschließend zeigt er den Überprüfungsbericht an und fasst die Optionen zusammen, die Sie in diesem Assistenten aktiviert haben. Um eine Option zu ändern, klicken Sie auf **Zurück**. Um mit dem Extrahieren einer DAC zu beginnen, klicken Sie auf **Weiter**.  
   
 > **HINWEIS!**: Wenn ein oder mehrere Objekte nicht von einer DAC unterstützt werden, wird die Schaltfläche **Weiter** deaktiviert, und der Extrahierungsprozess wird möglicherweise nicht fortgesetzt. In solchen Fällen wird empfohlen, die nicht unterstützten Objekte zu entfernen und diesen Assistenten anschließend erneut auszuführen.  
   
- **Zusammenfassung:** Unter **DAC-Eigenschaften** wird eine Übersicht zu den von Ihnen ausgewählten Optionen aufgeführt. Die Ergebnisse der Überprüfung sind unter **DAC-Objekte**aufgeführt. Es gibt drei Typen von Überprüfungsergebnissen:  
+ **Zusammenfassung:** Unter **DAC-Eigenschaften**wird eine Übersicht zu den von Ihnen ausgewählten Optionen aufgeführt. Die Ergebnisse der Überprüfung sind unter **DAC-Objekte**aufgeführt. Es gibt drei Typen von Überprüfungsergebnissen:  
   
 -   **Objekte, die erfolgreich in die DAC eingeschlossen wurden:**Diese Objekte und ihre Abhängigkeiten werden unterstützt und können erfolgreich in die DAC eingeschlossen werden.  
   
@@ -113,7 +117,7 @@ Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwen
   
  **Bericht speichern:** Ermöglicht Ihnen das Speichern einer HTML-basierten Datei, in der alle Objekte unter dem Knoten **DAC-Objekte** in der Zusammenfassung aufgeführt sind. Dieser Bericht kann nützlich sein, wenn einige der Datenbankobjekte nicht in einer DAC unterstützt werden. Mithilfe des Berichts können Sie nicht unterstützte Objekte ändern oder entfernen, bevor Sie erneut versuchen, die DAC zu extrahieren.  
   
- ###  <a name="BuildPackage"></a> Seite „Paket erstellen“  
+ ###  <a name="BuildPackage"></a> Build package page  
  Verwenden Sie diese Seite, um den Status des Assistenten zu überwachen, während die Datenebenenanwendung (DAC) extrahiert wird.  
   
  **Aktion:** Während der Aktion **DAC-Paketdatei erstellen und speichern** extrahiert der Assistent eine DAC aus der SQL Server-Datenbank. Anschließend wird ein DAC-Paket im Arbeitsspeicher erstellt und am von Ihnen angegebenen Speicherort gespeichert. Klicken Sie auf die Links in der Spalte **Ergebnis** , um das Ergebnis des entsprechenden Schritts anzuzeigen.  
@@ -129,13 +133,13 @@ Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwen
   
 2.  Fügen Sie eine Variable hinzu, die den Namen der Datenbank angibt.  
   
-3.  Geben Sie die Metadaten für die DAC an, z. B. DAC-Namen, Version und Beschreibung.  
+3.  Geben Sie die Metadaten für die DAC an, z. B. DAC-Namen, Version und Beschreibung.  
   
 4.  Geben Sie den Pfad und den Dateinamen für die extrahierte DAC-Paketdatei an.  
   
 5.  Führen Sie die Extract-Methode mit den oben angegebenen Informationen aus.  
   
-### Beispiel (PowerShell)  
+### <a name="example-powershell"></a>Beispiel (PowerShell)  
  Im folgenden Beispiel wird eine DAC mit dem Namen MyApplication aus einer Datenbank mit dem Namen MyDB extrahiert.  
   
 ```  
@@ -160,7 +164,8 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
+

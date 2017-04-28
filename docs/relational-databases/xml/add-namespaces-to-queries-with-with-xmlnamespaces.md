@@ -1,40 +1,44 @@
 ---
-title: "Hinzuf&#252;gen von Namespaces zu Abfragen mit WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL-Direktive"
-  - "Hinzufügen von Namespaces"
-  - "XSINIL-Direktive"
-  - "Standardnamespaces"
-  - "Abfragen [XML in SQL Server], WITH XMLNAMESPACES-Klausel"
-  - "Vordefinierte Namespaces [XML bei SQL Server]"
-  - "FOR XML-Klausel, WITH XMLNAMESPACES-Klausel"
-  - "Namespaces [XML in SQL Server]"
-  - "XML-Datentyp [SQL Server], WITH XMLNAMESPACES-Klausel"
-  - "WITH XMLNAMESPACES-Klausel"
+title: "Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hinzuf&#252;gen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) bietet folgende Namespace-URI-Unterstützung:  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) bietet folgende Namespace-URI-Unterstützung:  
   
 -   Macht das Namespacepräfix für die URI-Zuordnung bei Abfragen mit [Erstellen von XML mit FOR XML](../../relational-databases/xml/for-xml-sql-server.md) verfügbar.  
   
 -   Macht die Namespace-URI-Zuordnung für den statischen Namespacekontext für [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)verfügbar.  
   
-## Verwenden von WITH XMLNAMESPACES in FOR XML-Abfragen  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Verwenden von WITH XMLNAMESPACES in FOR XML-Abfragen  
  Mit WITH XMLNAMESPACES können Sie XML-Namespaces in FOR XML-Abfragen einbeziehen. Nehmen Sie beispielsweise folgende FOR XML-Abfrage:  
   
 ```  
@@ -52,7 +56,7 @@ FOR XML RAW
   
 ```  
   
- Um Namespaces zu dem durch die FOR XML-Abfrage erstellten XML hinzuzufügen, legen Sie zuerst mit der WITH NAMESPACES-Klausel die Zuordnungen der Namespacepräfixe zu URIs fest. Verwenden Sie anschließend in der folgenden geänderten Abfrage die Namespacepräfixe, um die in der Abfrage verwendeten Namen festzulegen. Die WITH XMLNAMESPACES-Klausel legt die Zuordnung des Namespacepräfixes (`ns1`) zum URI (`uri`) fest. Das `ns1`-Präfix wird dann beim Festlegen der Element- und Attributnamen verwendet, die durch die FOR XML-Abfrage erstellt werden sollen.  
+ Um Namespaces zu dem durch die FOR XML-Abfrage erstellten XML hinzuzufügen, legen Sie zuerst mit der WITH NAMESPACES-Klausel die Zuordnungen der Namespacepräfixe zu URIs fest. Verwenden Sie anschließend in der folgenden geänderten Abfrage die Namespacepräfixe, um die in der Abfrage verwendeten Namen festzulegen. Die WITH XMLNAMESPACES-Klausel legt die Zuordnung des Namespacepräfixes (`ns1`) zum URI (`uri`) fest. Das `ns1` -Präfix wird dann beim Festlegen der Element- und Attributnamen verwendet, die durch die FOR XML-Abfrage erstellt werden sollen.  
   
 ```  
 WITH XMLNAMESPACES ('uri' as ns1)  
@@ -95,8 +99,8 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Verwenden der XSINIL-Direktive  
- Wenn Sie die ELEMENTS XSINIL-Direktive verwenden, können Sie das xsi-Präfix nicht in der WITH XMLNAMESPACES-Klausel definieren. Es wird stattdessen automatisch hinzugefügt, wenn Sie ELEMENTS XSINIL verwenden. Die folgende Abfrage verwendet ELEMENTS XSINIL, die elementzentriertes XML generiert, wo Elementen, deren **xsi:nil**-Attribut auf TRUE festgelegt ist, Nullwerte zugeordnet werden.  
+## <a name="using-the-xsinil-directive"></a>Verwenden der XSINIL-Direktive  
+ Wenn Sie die ELEMENTS XSINIL-Direktive verwenden, können Sie das xsi-Präfix nicht in der WITH XMLNAMESPACES-Klausel definieren. Es wird stattdessen automatisch hinzugefügt, wenn Sie ELEMENTS XSINIL verwenden. Die folgende Abfrage verwendet ELEMENTS XSINIL, die elementzentriertes XML generiert, wo Elementen, deren **xsi:nil** -Attribut auf TRUE festgelegt ist, Nullwerte zugeordnet werden.  
   
 ```  
 WITH XMLNAMESPACES ('uri' as ns1)  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Angeben von Standardnamespaces  
+## <a name="specifying-default-namespaces"></a>Angeben von Standardnamespaces  
  Statt ein Namespacepräfix zu deklarieren, können Sie mit dem DEFAULT-Schlüsselwort einen Standardnamespace deklarieren. In der FOR XML-Abfrage wird der Standardnamespace mit den XML-Knoten des resultierenden XML verbunden. Im folgenden Beispiel definiert WITH XMLNAMESPACES zwei Namespacepräfixe, die gemeinsam über einen Standardnamespace definiert sind.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Verwenden vordefinierter Namespaces  
+## <a name="using-predefined-namespaces"></a>Verwenden vordefinierter Namespaces  
  Wenn Sie vordefinierte Namespaces verwenden, müssen Sie (mit Ausnahme von xml-Namespace und xsi-Namespace, wenn ELEMENTS XSINIL verwendet wird) die Namespacebindung mit  WITH XMLNAMESPACES explizit festlegen. Die folgende Abfrage definiert explizit den Namespacepräfix für die URI-Bindung für den vordefinierten Namespace (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -189,7 +193,7 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- Die @xml:lang-Attribute verwenden den vordefinierten xml-Namespace. Da in XML Version 1.0 keine explizite Deklaration der xml-Namespacebindung notwendig ist, enthält das Ergebnis keine explizite Deklaration der Namespacebindung.  
+ Die @xml:lang-Attribute verwenden den vordefinierten XML-Namespace. Da in XML Version 1.0 keine explizite Deklaration der xml-Namespacebindung notwendig ist, enthält das Ergebnis keine explizite Deklaration der Namespacebindung.  
   
  Dies ist das Ergebnis:  
   
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Verwenden von WITH XMLNAMESPACES mit den xml-Datentypmethoden  
- Alle in einer SELECT-Abfrage oder in UPDATE (bei der **modify()**-Methode) festgelegten [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) müssen die Namespacedeklaration in ihrem Prolog wiederholen. Dies kann einige Zeit in Anspruch nehmen. Die folgende Abfrage ruft beispielsweise Produktmodell-IDs ab, deren Katalogbeschreibungen eine Spezifikation enthalten. Dies geschieht, wenn das Element <`Specifications`> vorhanden ist.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Verwenden von WITH XMLNAMESPACES mit den xml-Datentypmethoden  
+ Alle in einer SELECT-Abfrage oder in UPDATE (bei der [modify()](../../t-sql/xml/xml-data-type-methods.md) -Methode) festgelegten **xml-Datentypmethoden** müssen die Namespacedeklaration in ihrem Prolog wiederholen. Dies kann einige Zeit in Anspruch nehmen. Die folgende Abfrage ruft beispielsweise Produktmodell-IDs ab, deren Katalogbeschreibungen eine Spezifikation enthalten. Dies geschieht, wenn das Element <`Specifications`> vorhanden ist.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +227,7 @@ WHERE CatalogDescription.exist('
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
- Alternativ können Sie zuerst WITH XMLNAMESPACES deklarieren und in der Abfrage dann die Namespacepräfixe verwenden. In diesem Fall enthalten die **query()**- und die **exist()**-Methode im Prolog keine Namespacedeklaration.  
+ Alternativ können Sie zuerst WITH XMLNAMESPACES deklarieren und in der Abfrage dann die Namespacepräfixe verwenden. In diesem Fall enthalten die **query()** - und die **exist()** -Methode im Prolog keine Namespacedeklaration.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -241,10 +245,10 @@ Go
   
  Eine explizite Deklaration im XQuery-Prolog überschreibt das in der WITH-Klausel definierte Namespacepräfix und den Standardelementnamespace.  
   
-## Siehe auch  
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>Siehe auch  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

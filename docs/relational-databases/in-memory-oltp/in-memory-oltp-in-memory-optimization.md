@@ -1,30 +1,34 @@
 ---
-title: "In-Memory OLTP (Arbeitsspeicheroptimierung) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "In-Memory OLTP"
-  - "Speicheroptimierte Tabellen"
+title: In-Memory OLTP (Arbeitsspeicheroptimierung) | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- In-Memory OLTP
+- memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 106
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 105
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b377f0c359751a5c970ceef2e1d7fa6bc556e3d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# In-Memory OLTP (Arbeitsspeicheroptimierung)
+# <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] kann die Leistung beim Verarbeiten von Transaktionen, Erfassen und Laden von Daten sowie in vorübergehenden Datenszenarien erheblich verbessern.  Informationen zum grundlegenden Code und Wissen, den bzw. das Sie für einen schnellen Test Ihrer eigenen speicheroptimierten Tabelle und nativ kompilierten gespeicherten Prozedur benötigen, finden Sie unter
- -  [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/quick-start-1-in-memory-oltp-technologies-for-faster-transact-sql-performance.md).  
+ -  [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
 Ein 17-minütiges Video, in dem In-Memory-OLTP erläutert wird und Leistungsvorteile veranschaulicht werden:
 
@@ -38,9 +42,9 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
 
 - [Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
  
- Beachten Sie, dass [!INCLUDE[hek_2](../../includes/hek-2-md.md)] die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Technologie zur Verbesserung der Leistung der Transaktionsverarbeitung ist. Zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Technologie, die die Leistung von Berichts- und Analyseabfragen verbessert, siehe [Beschreibung von Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Guide.md).
+ Beachten Sie, dass [!INCLUDE[hek_2](../../includes/hek-2-md.md)] die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologie zur Verbesserung der Leistung der Transaktionsverarbeitung ist. Zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologie, die die Leistung von Berichts- und Analyseabfragen verbessert, siehe [Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Mehrere Verbesserungen wurden an In-Memory-OLTP sowohl in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] als auch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vorgenommen. Die Transact-SQL-Oberfläche wurde verbessert, um das Migrieren von Datenbanken zu vereinfachen. Unterstützung für die Ausführung von ALTER-Vorgängen für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren wurde hinzugefügt, um Anwendungen einfacher zu verwalten. Informationen zu den neuen Funktionen in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] finden Sie unter [Neuigkeiten im Datenbankmodul](../Topic/What's%20New%20in%20Database%20Engine.md).  
+ Mehrere Verbesserungen wurden an In-Memory-OLTP sowohl in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] als auch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]vorgenommen. Die Transact-SQL-Oberfläche wurde verbessert, um das Migrieren von Datenbanken zu vereinfachen. Unterstützung für die Ausführung von ALTER-Vorgängen für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren wurde hinzugefügt, um Anwendungen einfacher zu verwalten. Informationen zu den neuen Funktionen in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] finden Sie unter [Neuigkeiten im Datenbankmodul](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
   
 > [!NOTE]  
 >  **Probieren Sie es aus**  
@@ -53,17 +57,17 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/quick-start-1-in-memory-oltp-technologies-for-faster-transact-sql-performance.md)|Tauchen Sie direkt in In-Memory-OLTP ein.|
+|[Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Tauchen Sie direkt in In-Memory-OLTP ein.|
 |[Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Übersicht über die Aufgaben von In-Memory-OLTP und die Szenarien, die hinsichtlich Leistung davon profitieren.|
 |[Anforderungen für die Verwendung speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|  
 |[Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Enthält Codebeispiele, die das Erstellen und Verwenden einer speicheroptimierten Tabelle veranschaulichen.|  
 |[Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|  
-|[Speicheroptimierte Tabellenvariablen](../Topic/Memory-Optimized%20Table%20Variables.md)|Ein Codebeispiel, das veranschaulicht, wie eine speicheroptimierte Tabellenvariable anstelle einer herkömmlichen Tabellenvariable verwendet wird, um die Verwendung von tempdb zu reduzieren.|  
-|[Indizes für speicheroptimierte Tabellen](../Topic/Indexes%20on%20Memory-Optimized%20Tables.md)|Bietet eine Einführung in speicheroptimierte Indizes.|  
+|[Speicheroptimierte Tabellenvariablen](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Ein Codebeispiel, das veranschaulicht, wie eine speicheroptimierte Tabellenvariable anstelle einer herkömmlichen Tabellenvariable verwendet wird, um die Verwendung von tempdb zu reduzieren.|  
+|[Indizes für speicheroptimierte Tabellen](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Bietet eine Einführung in speicheroptimierte Indizes.|  
 |[Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Führt systemintern kompilierte gespeicherte Prozeduren ein.|  
-|[Verwalten des Arbeitsspeichers für In-Memory-OLTP](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)|Erläutert die Funktionsweise und Verwaltung der Speicherverwendung im System.|  
+|[Verwalten des Arbeitsspeichers für In-Memory-OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Erläutert die Funktionsweise und Verwaltung der Speicherverwendung im System.|  
 |[Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Erläutert Daten- und Änderungsdateien, die Informationen zu Transaktionen in speicheroptimierten Tabellen speichern.|  
-|[Sichern und Wiederherstellen speicheroptimierter Tabellen](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)|Erläutert die Sicherung und Wiederherstellung von speicheroptimierten Tabellen.|  
+|[Sichern und Wiederherstellen speicheroptimierter Tabellen](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Erläutert die Sicherung und Wiederherstellung von speicheroptimierten Tabellen.|  
 |[Transact-SQL-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Erläutert die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Unterstützung für [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Unterstützung für Hochverfügbarkeit für In-Memory-OLTP-Datenbanken](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Erläutert Verfügbarkeitsgruppen und Failoverclustering in [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[SQL Server-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Listet neue und aktualisierte Syntax und Funktionen auf, die speicheroptimierte Tabellen unterstützen.|  
@@ -89,3 +93,4 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
  [Datenbankfunktionen](../../relational-databases/database-features.md)  
   
   
+

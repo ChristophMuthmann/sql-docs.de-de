@@ -1,26 +1,30 @@
 ---
-title: "Umbenennen einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbanken [SQL Server], Umbenennen"
-  - "Umbenennen von Datenbanken"
+title: Umbenennen einer Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], renaming
+- renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.lasthandoff: 04/11/2017
+
 ---
-# Umbenennen einer Datenbank
-  In diesem Thema wird beschrieben, wie eine benutzerdefinierte Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] umbenannt wird. Der Name der Datenbank kann alle Zeichen enthalten, die den Regeln für Bezeichner entsprechen.  
+# <a name="rename-a-database"></a>Umbenennen einer Datenbank
+  In diesem Thema wird beschrieben, wie eine benutzerdefinierte Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Der Name der Datenbank kann alle Zeichen enthalten, die den Regeln für Bezeichner entsprechen.  
   
  **In diesem Thema**  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:** [Nach dem Umbenennen einer Datenbank](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -51,11 +55,11 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So benennen Sie eine Datenbank um  
+#### <a name="to-rename-a-database"></a>So benennen Sie eine Datenbank um  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
   
-2.  Stellen Sie sicher, dass die Datenbank zurzeit nicht verwendet wird, und fahren Sie dann mit der [Festlegung des Einzelbenutzermodus für die Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md) fort.  
+2.  Stellen Sie sicher, dass die Datenbank zurzeit nicht verwendet wird, und fahren Sie dann mit der [Festlegung des Einzelbenutzermodus für die Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md)fort.  
   
 3.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die Datenbank, die umbenannt werden soll, und klicken Sie anschließend auf **Umbenennen**.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So benennen Sie eine Datenbank um  
+#### <a name="to-rename-a-database"></a>So benennen Sie eine Datenbank um  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -83,7 +87,7 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Umbenennen einer Datenbank  
  Sichern Sie die **master** -Datenbank nach jedem Umbenennen einer Datenbank.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)  
   

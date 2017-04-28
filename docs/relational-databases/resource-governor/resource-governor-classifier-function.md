@@ -1,30 +1,34 @@
 ---
-title: "Klassifizierungsfunktion der Ressourcenkontrolle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ressourcenkontrolle, Klassifizierungsfunktion"
-  - "Benutzerdefinierte Funktionen [SQL Server], Klassifizierungsfunktion"
-  - "Klassifizierungsfunktion [SQL Server]"
-  - "Klassifizierungsfunktion [SQL Server], Übersicht"
+title: Klassifizierungsfunktion der Ressourcenkontrolle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Klassifizierungsfunktion der Ressourcenkontrolle
-  Beim Klassifizierungsprozess der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenkontrolle werden eingehende Sitzungen auf Grundlage der Eigenschaften der Sitzung einer Arbeitsauslastungsgruppe zugewiesen. Sie können die Klassifizierungslogik anpassen, indem Sie eine benutzerdefinierte Funktion schreiben, die als Klassifizierungsfunktion bezeichnet wird.  
+# <a name="resource-governor-classifier-function"></a>Klassifizierungsfunktion der Ressourcenkontrolle
+  Beim Klassifizierungsprozess der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle werden eingehende Sitzungen auf Grundlage der Eigenschaften der Sitzung einer Arbeitsauslastungsgruppe zugewiesen. Sie können die Klassifizierungslogik anpassen, indem Sie eine benutzerdefinierte Funktion schreiben, die als Klassifizierungsfunktion bezeichnet wird.  
   
-## Klassifizierung  
+## <a name="classification"></a>Klassifizierung  
  Die Ressourcenkontrolle unterstützt die Klassifikation eingehender Sitzungen. Die Klassifikation basiert auf einer Reihe von benutzerspezifischen Kriterien, die in einer Funktion enthalten sind. Anhand der Ergebnisse der Funktionslogik kann die Ressourcenkontrolle Sitzungen in vorhandene Arbeitsauslastungsgruppen klassifizieren.  
   
 > [!NOTE]  
@@ -59,12 +63,12 @@ caps.handback.revision: 7
   
 -   Falls keine benutzerdefinierte Klassifizierungsfunktion ausgewiesen wurde, werden alle Sitzungen der Standardgruppe zugeordnet.  
   
--   Die von der Klassifizierungsfunktion zurückgegebene Arbeitsauslastungsgruppe liegt außerhalb des Bereichs der Schemabindungseinschränkung. So können Sie z. B. keine Tabelle löschen, aber Sie können eine Arbeitsauslastungsgruppe löschen.  
+-   Die von der Klassifizierungsfunktion zurückgegebene Arbeitsauslastungsgruppe liegt außerhalb des Bereichs der Schemabindungseinschränkung. So können Sie z. B. keine Tabelle löschen, aber Sie können eine Arbeitsauslastungsgruppe löschen.  
   
 > [!IMPORTANT]  
 >  Es wird empfohlen, die dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) auf dem Server zu aktivieren. Die DAC unterliegt nicht der Klassifizierung der Ressourcenkontrolle und kann daher zum Überwachen einer Klassifizierungsfunktion und für die entsprechende Problembehandlung verwendet werden. Weitere Informationen finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Wenn keine DAC für die Problembehandlung verfügbar ist, können Sie alternativ das System im Einzelbenutzermodus neu starten. Der Einzelbenutzermodus unterliegt zwar nicht der Klassifizierung, allerdings haben Sie in diesem Modus nicht die Möglichkeit, die Klassifizierung der Ressourcenkontrolle während der Ausführung zu diagnostizieren.  
   
-### Klassifizierungsprozess  
+### <a name="classification-process"></a>Klassifizierungsprozess  
  Im Kontext der Ressourcenkontrolle besteht der Anmeldevorgang für eine Sitzung aus den folgenden Schritten:  
   
 1.  Anmeldeauthentifizierung  
@@ -76,16 +80,16 @@ caps.handback.revision: 7
  Wenn die Klassifizierung gestartet wird, führt die Ressourcenkontrolle die Klassifizierungsfunktion aus und verwendet den von der Funktion zurückgegebenen Wert, um Anforderungen an die entsprechende Arbeitsauslastungsgruppe zu senden.  
   
 > [!NOTE]  
->  Informationen zum Ausführen der Klassifizierungsfunktion und der LOGON-Trigger werden in [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) und [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) verfügbar gemacht.  
+>  Informationen zum Ausführen der Klassifizierungsfunktion und der LOGON-Trigger werden in [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) und [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)verfügbar gemacht.  
   
-## Tasks der Klassifizierungsfunktion  
+## <a name="classification-function-tasks"></a>Tasks der Klassifizierungsfunktion  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie benutzerdefinierte Klassifizierungsfunktionen erstellt und getestet werden.|[Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## Siehe auch  
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Arbeitsauslastungsgruppe der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

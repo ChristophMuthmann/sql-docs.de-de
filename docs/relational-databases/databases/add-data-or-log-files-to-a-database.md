@@ -1,30 +1,34 @@
 ---
-title: "Hinzuf&#252;gen von Daten- oder Protokolldateien zu einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Protokolle [SQL Server], Dateien"
-  - "Hinzufügen von Datendateien"
-  - "Hinzufügen von Dateien"
-  - "Hinzufügen von Protokolldateien"
-  - "Hinzufügen von Dateien [SQL Server], Schritte"
-  - "Dateien [SQL Server], hinzufügen"
-  - "Datenergänzungen [SQL Server]"
+title: "Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- adding data files
+- adding files
+- adding log files
+- file additions [SQL Server], steps
+- files [SQL Server], adding
+- data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hinzuf&#252;gen von Daten- oder Protokolldateien zu einer Datenbank
+# <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
   In diesem Thema wird beschrieben, wie Daten- oder Protokolldateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer Datenbank hinzugefügt werden.  
   
  **In diesem Thema**  
@@ -47,7 +51,7 @@ caps.handback.revision: 25
   
 -   Sie können keine Dateien hinzufügen oder entfernen, während eine BACKUP-Anweisung ausgeführt wird.  
   
--   Für jede Datenbank können maximal 32.767 Dateien und 32.767 Dateigruppen angegeben werden.  
+-   Für jede Datenbank können maximal 32.767 Dateien und 32.767 Dateigruppen angegeben werden.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 25
   
 8.  Geben Sie die Anfangsgröße der Datei an. Legen Sie die Datendatei so groß wie möglich aus. Orientieren Sie sich dabei an dem maximal zu erwartenden Umfang der Datei, die in der Datenbank gespeichert werden soll.  
   
-9. Um anzugeben, wie die Datei wachsen soll, klicken Sie auf (**…**) in der Spalte **Automatische Vergrößerung**. Wählen Sie eine der folgenden Optionen aus:  
+9. Um anzugeben, wie die Datei wachsen soll, klicken Sie auf (**…**) in der Spalte **Automatische Vergrößerung** . Wählen Sie eine der folgenden Optionen aus:  
   
     1.  Um ein Anwachsen der aktuell ausgewählten Datei zuzulassen, wenn mehr Datenspeicherplatz benötigt wird, aktivieren Sie das Kontrollkästchen **Automatische Vergrößerung aktivieren** , und wählen Sie dann eine der folgenden Optionen aus:  
   
@@ -102,20 +106,20 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine Dateigruppe mit zwei Dateien einer Datenbank hinzugefügt. Im Beispiel wird die Dateigruppe `Test1FG1` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt, und der Dateigruppe werden zwei 5-MB-Dateien hinzugefügt.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine Dateigruppe mit zwei Dateien einer Datenbank hinzugefügt. Im Beispiel wird die Dateigruppe `Test1FG1` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank erstellt, und der Dateigruppe werden zwei 5-MB-Dateien hinzugefügt.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- Weitere Beispiele finden Sie unter [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ Weitere Beispiele finden Sie unter [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## Siehe auch  
- [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Löschen von Daten- oder Protokolldateien aus einer Datenbank](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Erhöhen der Größe einer Datenbank](../../relational-databases/databases/increase-the-size-of-a-database.md)  
   

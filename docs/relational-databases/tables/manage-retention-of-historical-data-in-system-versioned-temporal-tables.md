@@ -1,23 +1,27 @@
 ---
-title: "Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Durch temporale Tabellen mit Systemversionsverwaltung kann die Verlaufstabelle die Datenbank stärker vergrößern als reguläre Tabellen, insbesondere in den folgenden Situationen:  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  Eine große und ständig wachsende Verlaufstabelle kann zu einem Problem werden, sowohl aufgrund der reinen Speicherkosten als auch durch Leistungsbeeinträchtigungen aufgrund von temporalen Abfragen. Daher ist die Entwicklung einer Datenbeibehaltungsrichtlinie für die Verwaltung von Daten in der Verlaufstabelle ein wichtiger Aspekt der Planung und Verwaltung des Lebenszyklus aller temporalen Tabellen.  
   
-## Verwaltung der Datenbeibehaltung für die Verlaufstabelle  
+## <a name="data-retention-management-for-history-table"></a>Verwaltung der Datenbeibehaltung für die Verlaufstabelle  
  Das Verwalten der Datenbeibehaltung für temporale Tabellen beginnt damit, die Beibehaltungsdauer für jede temporale Tabelle zu bestimmen. Ihrer Beibehaltungsrichtlinie sollte in den meisten Fällen als Teil der Geschäftslogik der Anwendung betrachtet werden, die die temporalen Tabellen verwendet. Für Anwendungen in Datenüberwachungs- und Zeitreiseszenarien gelten beispielsweise feste Anforderungen dafür, wie lange Verlaufsdaten für Onlineabfragen verfügbar sein müssen.  
   
  Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, einen Plan für die Verwaltung von Verlaufsdaten zu entwickeln. Dazu gehört, wie und wo Sie Verlaufsdaten speichern und wie Sie Verlaufsdaten löschen, die älter sind, als die Beibehaltungsanforderungen vorsehen. Mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]stehen Ihnen die folgenden drei Ansätze für die Verwaltung von Verlaufsdaten der temporalen Verlaufstabelle zur Verfügung:  
@@ -41,11 +45,11 @@ caps.handback.revision: 23
   
  Bei jedem dieser Ansätze basiert die Logik für die Migration oder Bereinigung von Verlaufsdaten auf der Spalte, die dem Ende der Dauer in der aktuellen Tabelle entspricht. Der Wert für das Ende der Dauer für jede Zeile bestimmt den Moment, an dem die Zeilenversion „geschlossen“ wird, an dem sie also in die Verlaufstabelle aufgenommen wird. Beispielsweise gibt die Bedingung `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` an, dass Verlaufsdaten, die älter als einen Monat sind, aus der Verlaufstabelle entfernt oder verschoben werden müssen.  
   
-> **HINWEIS:** In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](https://msdn.microsoft.com/library/mt590957.aspx) verwendet.  
+> **HINWEIS:**  In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](https://msdn.microsoft.com/library/mt590957.aspx)verwendet.  
   
-## Verwenden des Ansatzes mit Stretch-Datenbank  
+## <a name="using-stretch-database-approach"></a>Verwenden des Ansatzes mit Stretch-Datenbank  
   
-> **HINWEIS:** Der Ansatz mit Stretch-Datenbank kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **HINWEIS:**  Der Ansatz mit Stretch-Datenbank kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch-Datenbank verwenden.  
   
@@ -54,34 +58,34 @@ caps.handback.revision: 23
 -   **Strecken der gesamten Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank für die gesamte Verlaufstabelle, wenn das wichtigste Szenario die Datenüberwachung in einer Umgebung mit häufigen Datenänderungen und relativ seltenen Abfragen von Verlaufsdaten ist.  Verwenden Sie diesen Ansatz also, wenn die Leistung temporaler Abfragen nicht entscheidend ist. In diesem Fall kann die von Azure bereitgestellte Kosteneffizienz interessant sein.   
     Beim Strecken der gesamten Verlaufstabelle können Sie den Stretch-Assistenten oder Transact-SQL verwenden. Beispiele für beides sind weiter unten aufgeführt.  
   
--   **Strecken eines Teils der Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
+-   **Strecken eines Teils der Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
     Wenn Sie eine deterministische Prädikatfunktion verwenden, können Sie einen Teil des Verlaufs in derselben Datenbank zusammen mit den aktuellen Daten behalten, während der Rest zu Azure migriert wird.    
     Beispiele und Informationen zu Einschränkungen finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](https://msdn.microsoft.com/library/mt613432.aspx) Da nicht deterministische Funktionen nicht gültig sind, wenn Sie Verlaufsdaten in der Form eines gleitendes Fensters übertragen möchten, müssten Sie die Definition der Inlineprädikatfunktion regelmäßig ändern, damit das Fenster von Zeilen, das Sie lokal speichern, im Hinblick auf das Alter konstant ist. Mit einem gleitenden Fenster können Sie Verlaufsdaten, die älter als ein Monat sind, kontinuierlich nach Azure verschieben. Ein Beispiel dieses Ansatzes ist weiter unten dargestellt.  
   
-> **HINWEIS:** Stretch-Datenbank migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) an.  
+> **HINWEIS:** Stretch-Datenbank migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/)an.  
   
- Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON** festgelegt ist. Ein Strecken der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, die aktuelle Tabelle zu strecken.  
+ Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Strecken der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, die aktuelle Tabelle zu strecken.  
   
-### Verwenden des Stretch-Assistenten zum Strecken der gesamten Verlaufstabelle  
- Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um das Strecken für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Verwenden des Stretch-Assistenten zum Strecken der gesamten Verlaufstabelle  
+ Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um das Strecken für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren**, um den Assistenten zu starten.  
+1.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.  
   
 2.  Aktivieren Sie im Fenster **Tabellen auswählen** das Kontrollkästchen für die temporale Verlaufstabelle, und klicken Sie auf „Weiter“.  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Auswählen der Verlaufstabelle auf der Seite „Tabellen auswählen“")  
   
 3.  Geben Sie im Fenster **Azure konfigurieren** Ihre Anmeldeinformationen an. Melden Sie sich bei Microsoft Azure an, oder registrieren Sie sich für ein Konto. Wählen Sie das zu verwendende Abonnement und die Azure-Region aus. Erstellen Sie dann einen neuen Server, oder wählen Sie einen vorhandenen Server aus. Klicken Sie auf **Weiter**.  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![Erstellen neuer Azure-Server – Stretch-Datenbank-Assistent](../../relational-databases/tables/media/stretch-wizard-4.png "Erstellen neuer Azure-Server – Stretch-Datenbank-Assistent")  
   
 4.  Geben Sie im Fenster **Sichere Anmeldeinformationen** ein Kennwort für den Datenbankhauptschlüssel an, um Ihre Anmeldeinformationen für die SQL Server-Quelldatenbank zu schützen, und klicken Sie dann auf „Weiter“.  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten")  
   
-5.  Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie auf **Weiter** dann auf **Fertig stellen**, um Stretch-Datenbank zu aktivieren und die temporale Verlaufstabelle zu strecken.  
+5.  Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie auf **Weiter** dann auf **Fertig stellen** , um Stretch-Datenbank zu aktivieren und die temporale Verlaufstabelle zu strecken.  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten")  
   
 6.  Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass die Datenbank gestreckt wurde.  
   
@@ -95,16 +99,16 @@ caps.handback.revision: 23
   
 -   [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Verwenden von Transact-SQL zum Strecken der gesamten Verlaufstabelle  
- Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch-Datenbank für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann [Transact-SQL verwenden, um Stretch-Datenbank für eine Tabelle zu aktivieren](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Führen Sie mit einer Datenbank, die zuvor für Stretch-Datenbank aktiviert wurde, das folgende Transact-SQL-Skript aus, um eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung zu strecken:  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Verwenden von Transact-SQL zum Strecken der gesamten Verlaufstabelle  
+ Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch-Datenbank für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann  [Transact-SQL verwenden, um Stretch-Datenbank für eine Tabelle zu aktivieren](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Führen Sie mit einer Datenbank, die zuvor für Stretch-Datenbank aktiviert wurde, das folgende Transact-SQL-Skript aus, um eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung zu strecken:  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Verwenden von Transact-SQL zum Strecken eines Teils der Verlaufstabelle  
- Um nur einen Teil der Verlaufstabelle zu strecken, erstellen Sie zunächst eine [Inlineprädikatfunktion](https://msdn.microsoft.com/library/mt613432.aspx). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass alle Verlaufsdaten, die älter als der 1. November 2015 sind, auf Azure gestreckt werden sollen. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Verwenden von Transact-SQL zum Strecken eines Teils der Verlaufstabelle  
+ Um nur einen Teil der Verlaufstabelle zu strecken, erstellen Sie zunächst eine [Inlineprädikatfunktion](https://msdn.microsoft.com/library/mt613432.aspx). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass alle Verlaufsdaten, die älter als der 1. November 2015 sind, auf Azure gestreckt werden sollen. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -129,7 +133,7 @@ SET (
 ;  
 ```  
   
- Um ein gleitendes Fenster beizubehalten, muss die Prädikatfunktion täglich exakt sein (ändern Sie also die Filterzeilenbedingung jeden Tag um einen Tag). Das folgende Skript ist das Skript, dass Sie am 2. Dezember 2015 ausführen müssten:  
+ Um ein gleitendes Fenster beizubehalten, muss die Prädikatfunktion täglich exakt sein (ändern Sie also die Filterzeilenbedingung jeden Tag um einen Tag). Das folgende Skript ist das Skript, dass Sie am 2. Dezember 2015 ausführen müssten:  
   
 ```  
 BEGIN TRAN  
@@ -157,7 +161,7 @@ COMMIT ;
   
  Verwenden Sie den SQL Server-Agent oder einen anderen Planungsmechanismus, damit eine gültige Definition der Prädikatfunktion immer sichergestellt ist.  
   
-## Verwenden des Ansatzes mit Tabellenpartitionierung  
+## <a name="using-table-partitioning-approach"></a>Verwenden des Ansatzes mit Tabellenpartitionierung  
  Die[Tabellenpartitionierung](https://msdn.microsoft.com/library/ms188730.aspx) kann bewirken, dass sich große Tabellen besser verwalten und skalieren lassen. Wenn Sie den Ansatz mit Tabellenpartitionierung verwenden, können Sie Verlaufstabellenpartitionen nutzen, um eine angepasste Datenbereinigung oder Offlinearchivierung basierend auf einer Zeitbedingung zu implementieren. Durch Tabellenpartitionierung erhalten Sie über die Partitionsentfernung auch Leistungsvorteile beim Abfragen von temporalen Tabellen für einen Teil des Datenverlaufs.  
   
  Mit der Tabellenpartitionierung können Sie den Ansatz mit einem gleitenden Fenster implementieren, um den ältesten Teil der Verlaufsdaten aus der Verlaufstabelle zu verschieben und die Größe des beibehaltenen Teils im Hinblick auf das Alter konstant zu halten. So verwalten Sie die Daten in der Verlaufstabelle entsprechend der erforderlichen Beibehaltungsdauer. Der Vorgang des Austauschens von Daten aus der Verlaufstabelle wird unterstützt, wenn SYSTEM_VERSIONING auf ON festgelegt ist. Dies bedeutet, dass ein Teil der Verlaufsdaten bereinigt werden kann, ohne ein Wartungsfenster einzurichten oder normale Arbeitsauslastungen zu blockieren.  
@@ -176,7 +180,7 @@ COMMIT ;
   
  Die folgende Abbildung zeigt die erste Partitionierungskonfiguration, mit der Daten von 6 Monaten beibehalten werden.  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![Partitionierung](../../relational-databases/tables/media/partitioning.png "Partitionierung")  
   
 > **HINWEIS:** Unter „Überlegungen zur Leistung bei der Tabellenpartitionierung“ weiter unten finden Sie Informationen zu Leistungseinbußen bei der Verwendung von RANGE LEFT oder RANGE RIGHT beim Konfigurieren der Partitionierung.  
   
@@ -185,7 +189,7 @@ Im Laufe der Zeit werden neue Zeilen in der Verlaufstabelle in höhere Partition
   
  Die folgende Abbildung veranschaulicht die Aufgabe für die wiederholte Partitionswartung (die genauen Schritte werden im Folgenden erläutert).  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![Partitionierung2](../../relational-databases/tables/media/partitioning2.png "Partitionierung2")  
   
  Die genauen Schritte für die Aufgabe für die wiederholte Partitionswartung:  
   
@@ -201,7 +205,7 @@ Im Laufe der Zeit werden neue Zeilen in der Verlaufstabelle in höhere Partition
   
 3.  SPLIT RANGE: Erstellen Sie eine neue leere Partition 7. Verwenden Sie dazu [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) mit SPLIT RANGE (siehe Beispiel A). Durch das Hinzufügen einer neuen oberen Grenze mit dieser Funktion erstellen Sie effektiv eine separate Partition für den kommenden Monat.  
   
-### Verwenden von Transact-SQL zum Erstellen von Partitionen in der Verlaufstabelle  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Verwenden von Transact-SQL zum Erstellen von Partitionen in der Verlaufstabelle  
  Verwenden Sie das Transact-SQL-Skript im folgenden Codefenster, um die Partitionsfunktion und das Partitionsschema zu erstellen, und erstellen Sie den gruppierten Indexes so neu, dass die Partitionierung am Partitionsschema und den Partitionen ausgerichtet ist. In diesem Beispiel erstellen wir ein gleitendes Fenster für sechs Monate mit monatlichen Partitionen ab September 2015.  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Verwenden von Transact-SQL zum Verwalten von Partitionen im Szenario mit gleitendem Fenster  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Verwenden von Transact-SQL zum Verwalten von Partitionen im Szenario mit gleitendem Fenster  
  Verwenden Sie das Transact-SQL-Skript im folgenden Codefenster, um Partitionen im Szenario mit gleitendem Fenster zu verwalten. In diesem Beispiel lagern wir die Partition für September 2015 mit MERGE RANGE aus und fügen dann eine neue Partition für März 2016 mit SPLIT RANGE hinzu.  
   
 ```  
@@ -326,12 +330,12 @@ COMMIT TRANSACTION
   
  Die optimale Lösung wäre jedoch, regelmäßig ein generisches Transact-SQL-Skript auszuführen, das die entsprechende Aktion monatlich ohne Skriptänderungen durchführen kann. Es ist möglich, das oben angeführte Skript zu verallgemeinern, um die bereitgestellten Parameter zu bearbeiten (die untere Grenze, die zusammengeführt werden muss, und die neue Grenze, die durch Teilen der Partition erstellt wird). Um zu vermeiden, dass jeden Monat Stagingtabellen erstellt werden, können Sie eine Stagingtabelle im Voraus erstellen und wiederverwenden, indem Sie die CHECK-Einschränkung entsprechend der Partition ändern, die ausgelagert wird. Sehen Sie sich die folgenden Seiten an, um Ideen für [die vollständige Automatisierung eines gleitenden Fensters](https://msdn.microsoft.com/library/aa964122.aspx) mithilfe eines Transact-SQL-Skripts zu bekommen.  
   
-### Überlegungen zur Leistung bei der Tabellenpartitionierung  
+### <a name="performance-considerations-with-table-partitioning"></a>Überlegungen zur Leistung bei der Tabellenpartitionierung  
  Es ist äußerst wichtig, MERGE und SPLIT RANGE-Vorgänge durchzuführen, um das Verschieben von Daten zu vermeiden, da dies einen erheblichen Verarbeitungsaufwand verursachen kann. Weitere Informationen finden Sie unter [Ändern einer Partitionsfunktion](../../relational-databases/partitions/modify-a-partition-function.md). Verwenden Sie dazu RANGE LEFT statt RANGE RIGHT, wenn Sie [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md) verwenden.  
   
  Lassen Sie mich zuerst visuell die Bedeutung der Optionen RANGE LEFT und RANGE RIGHT erläutern:  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![Partitionierung3](../../relational-databases/tables/media/partitioning3.png "Partitionierung3")  
   
  Beim Definieren einer Partitionsfunktion als RANGE LEFT sind die angegebenen Werte die oberen Grenzen der Partitionen. Wenn Sie RANGE RIGHT verwenden, sind die angegebenen Werte die unteren Grenzen der Partitionen. Wenn Sie den MERGE RANGE-Vorgang verwenden, um eine Grenze aus der Definition der Partitionsfunktion zu entfernen, entfernt die zugrunde liegende Implementierung auch die Partition, die die Grenze enthält. Wenn diese Partition nicht leer ist, werden Daten in die Partition verschoben, die das Ergebnis des MERGE RANGE-Vorgangs ist.  
   
@@ -343,8 +347,8 @@ COMMIT TRANSACTION
   
  Fazit: Die Verwendung von RANGE LEFT in einer gleitenden Partition ist viel einfacher für die Partitionsverwaltung und vermeidet Datenverschiebungen. Das Definieren der Partitionsgrenzen mit RANGE RIGHT ist jedoch etwas einfacher, da Sie sich nicht um Probleme mit dem datetime-Zeittakt kümmern müssen.  
   
-## Verwenden des Ansatzes mit einem benutzerdefiniertem Bereinigungsskript  
- In Fällen, in denen Stretch-Datenbank und Tabellenpartitionierung keine geeigneten Optionen sind, besteht der dritte Ansatz darin, die Daten mit dem benutzerdefinierten Bereinigungsskript aus der Verlaufstabelle zu löschen. Das Löschen von Daten aus einer Verlaufstabelle ist nur möglich, wenn **SYSTEM_VERSIONING = OFF** gilt. Um Dateninkonsistenz zu vermeiden, führen Sie die Bereinigung während des Wartungsfensters (wenn Arbeitsauslastungen, bei denen Daten geändert werden, nicht aktiv sind) oder innerhalb einer Transaktion (sodass andere Arbeitsauslastungen blockiert sind) durch.  Dieser Vorgang erfordert die **CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen.  
+## <a name="using-custom-cleanup-script-approach"></a>Verwenden des Ansatzes mit einem benutzerdefiniertem Bereinigungsskript  
+ In Fällen, in denen Stretch-Datenbank und Tabellenpartitionierung keine geeigneten Optionen sind, besteht der dritte Ansatz darin, die Daten mit dem benutzerdefinierten Bereinigungsskript aus der Verlaufstabelle zu löschen. Das Löschen von Daten aus einer Verlaufstabelle ist nur möglich, wenn **SYSTEM_VERSIONING = OFF**gilt. Um Dateninkonsistenz zu vermeiden, führen Sie die Bereinigung während des Wartungsfensters (wenn Arbeitsauslastungen, bei denen Daten geändert werden, nicht aktiv sind) oder innerhalb einer Transaktion (sodass andere Arbeitsauslastungen blockiert sind) durch.  Dieser Vorgang erfordert die **CONTROL** -Berechtigung für aktuelle Tabellen und Verlaufstabellen.  
   
  Um reguläre Anwendungen und Benutzerabfragen in möglichst geringem Umfang zu blockieren, löschen Sie Daten in kleineren Blöcken mit einer Verzögerung, wenn Sie das Bereinigungsskript innerhalb einer Transaktion ausführen. Es gibt zwar keine optimale Größe für jeden zu löschenden Datenblock für alle Szenarien, aber das Löschen von mehr als 10.000 Zeilen in einer einzigen Transaktion kann erhebliche Auswirkungen haben.  
   
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

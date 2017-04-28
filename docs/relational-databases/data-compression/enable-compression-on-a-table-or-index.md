@@ -1,34 +1,38 @@
 ---
-title: "Aktivieren der Komprimierung f&#252;r eine Tabelle oder einen Index | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.compwiz.compressiontype.f1"
-  - "sql13.swb.compwiz.outputoptions.f1"
-  - "sql13.swb.compwiz.summary.f1"
-  - "sql13.swb.compwiz.scriptfileoption.f1"
-  - "sql13.swb.compwiz.progress.f1"
-  - "sql13.swb.compwiz.welcome.f1"
-  - "sql13.swb.compwiz.createjob.f1"
-  - "sql13.swb.compwiz.selectaction.f1"
-helpviewer_keywords: 
-  - "Datenkomprimierungs-Assistent"
-  - "Komprimierung [SQL Server], aktivieren"
+title: "Aktivieren der Komprimierung für eine Tabelle oder einen Index | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.compwiz.compressiontype.f1
+- sql13.swb.compwiz.outputoptions.f1
+- sql13.swb.compwiz.summary.f1
+- sql13.swb.compwiz.scriptfileoption.f1
+- sql13.swb.compwiz.progress.f1
+- sql13.swb.compwiz.welcome.f1
+- sql13.swb.compwiz.createjob.f1
+- sql13.swb.compwiz.selectaction.f1
+helpviewer_keywords:
+- data compression wizard
+- compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7eb93de0ce823f0f7efe02dc1c69b590a317237f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren der Komprimierung f&#252;r eine Tabelle oder einen Index
+# <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
   In diesem Thema wird beschrieben, wie die Komprimierung für eine Tabelle oder einen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktiviert wird.  
   
  **In diesem Thema**  
@@ -62,13 +66,13 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index  
+#### <a name="to-enable-compression-on-a-table-or-index"></a>So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, die Sie komprimieren möchten, und erweitern Sie dann den Ordner **Tabellen** .  
   
 2.  Um einen Index zu komprimieren, erweitern Sie die Tabelle mit dem Index, den Sie komprimieren möchten, und erweitern Sie dann den Ordner **Indizes** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, die bzw. den Sie komprimieren möchten, zeigen Sie auf **Speicher**, und wählen Sie **Komprimierung verwalten…** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, die bzw. den Sie komprimieren möchten, zeigen Sie auf **Speicher** , und wählen Sie **Komprimierung verwalten…**aus.  
   
 4.  Klicken Sie auf der Seite **Willkommen** des Datenkomprimierungs-Assistenten auf **Weiter**.  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 10
      Zeigt den aktuell von dieser Partition belegten Speicherplatz in Megabytes (MB) an. Diese Spalte ist schreibgeschützt.  
   
      **Angeforderter komprimierter Speicherplatz**  
-     Nachdem Sie auf **Berechnen** geklickt haben, wird in dieser Spalte die geschätzte Größe der einzelnen Partitionen nach der Komprimierung angezeigt. Dabei wird die in der Spalte **Komprimierungstyp** angegebene Einstellung zugrunde gelegt. Diese Spalte ist schreibgeschützt.  
+     Nachdem Sie auf **Berechnen**geklickt haben, wird in dieser Spalte die geschätzte Größe der einzelnen Partitionen nach der Komprimierung angezeigt. Dabei wird die in der Spalte **Komprimierungstyp** angegebene Einstellung zugrunde gelegt. Diese Spalte ist schreibgeschützt.  
   
      **Berechnen**  
      Klicken Sie auf diese Option, um die Größe der einzelnen Partitionen nach der Komprimierung auf Grundlage der in der Spalte **Komprimierungstyp** angegebenen Einstellung zu schätzen.  
@@ -141,19 +145,19 @@ caps.handback.revision: 10
   
                 -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld "15" und in das zweite Feld "2" ein. Beachten Sie, dass die größte im zweiten Feld zugelassene Zahl "99" ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter** oder **vierter** sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
             -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)**auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
         3.  Geben Sie unter **Dauer**in **Startdatum**das Datum ein, an dem die Ausführung des Auftragszeitplans beginnen soll. Wählen Sie **Enddatum** oder **Kein Enddatum** aus, um anzugeben, wann die Ausführung des Auftragszeitplans beendet werden soll. Wenn Sie **Enddatum**auswählen, geben Sie das Datum ein, an dem die Ausführung des Auftragszeitplans beendet werden soll.  
   
-    5.  Wenn Sie **Einmal** auswählen, geben Sie unter **Einmalig** in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
+    5.  Wenn Sie **Einmal**auswählen, geben Sie unter **Einmalig**in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
     6.  Überprüfen Sie unter **Zusammenfassung**im Feld **Beschreibung**, ob alle Auftragszeitplaneinstellungen richtig sind.  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 10
      Gibt den Typ und den Namen jeder Aktion an.  
   
      **Status**  
-     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler** zurückgegeben wurde.  
+     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
      **MessageBox**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
@@ -183,10 +187,10 @@ caps.handback.revision: 10
      Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  
-     Öffnet das Dialogfeld **Bericht anzeigen**, das einen Textbericht zum Fortschritt des Assistenten zum Erstellen von Partitionen enthält.  
+     Öffnet das Dialogfeld **Bericht anzeigen** , das einen Textbericht zum Fortschritt des Assistenten zum Erstellen von Partitionen enthält.  
   
      **Bericht in Datei speichern**  
-     Öffnet das Dialogfeld **Bericht speichern unter**.  
+     Öffnet das Dialogfeld **Bericht speichern unter** .  
   
      **Bericht in Zwischenablage kopieren**  
      Kopiert die Ergebnisse aus dem Statusbericht des Assistenten in die Zwischenablage.  
@@ -198,9 +202,9 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So aktivieren Sie die Komprimierung für eine Tabelle  
+#### <a name="to-enable-compression-on-a-table"></a>So aktivieren Sie die Komprimierung für eine Tabelle  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -216,9 +220,9 @@ caps.handback.revision: 10
     GO  
     ```  
   
-#### So aktivieren Sie die Komprimierung für einen Index  
+#### <a name="to-enable-compression-on-an-index"></a>So aktivieren Sie die Komprimierung für einen Index  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -244,7 +248,7 @@ caps.handback.revision: 10
   
  Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) und [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

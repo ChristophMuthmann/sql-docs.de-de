@@ -1,29 +1,33 @@
 ---
-title: "Feststellen, welche Abfragen Sperren enthalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abfragen [SQL Server], erweiterte Ereignisse"
-  - "Abfragen [SQL Server], mit Sperren"
-  - "xe"
-  - "Erweiterte Ereignisse [SQL Server], Sperren"
-  - "Erweiterte Ereignisse [SQL Server], mit Sperren"
+title: Feststellen, welche Abfragen Sperren enthalten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Feststellen, welche Abfragen Sperren enthalten
+# <a name="determine-which-queries-are-holding-locks"></a>Feststellen, welche Abfragen Sperren enthalten
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Datenbankadministratoren müssen oft die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.  
@@ -39,7 +43,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  In diesem Beispiel wird die AdventureWorks-Datenbank verwendet.  
   
-### So stellen Sie fest, welche Abfragen Sperren enthalten  
+### <a name="to-determine-which-queries-are-holding-locks"></a>So stellen Sie fest, welche Abfragen Sperren enthalten  
   
 1.  Führen Sie im Abfrage-Editor die folgenden Anweisungen aus.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

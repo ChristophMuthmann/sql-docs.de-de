@@ -1,27 +1,31 @@
 ---
-title: "Umbenennen von Tabellen (Datenbankmodul) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Tabellenumbenennung [SQL Server]"
-  - "Tabellennamen [SQL Server]"
-  - "Tabellen [SQL Server], Visual Database Tools"
-  - "Umbenennen von Tabellen"
+title: Umbenennen von Tabellen (Datenbankmodul) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table renaming [SQL Server]
+- table names [SQL Server]
+- tables [SQL Server], Visual Database Tools
+- renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d65c475509d57577f691e656157c7754c7d8549f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Umbenennen von Tabellen (Datenbankmodul)
+# <a name="rename-tables-database-engine"></a>Umbenennen von Tabellen (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Tabelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
 -   **So benennen Sie eine Tabelle um mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So benennen Sie eine Tabelle um  
+#### <a name="to-rename-a-table"></a>So benennen Sie eine Tabelle um  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, die umbenannt werden soll, und wählen Sie im Kontextmenü **Entwerfen** aus.  
   
@@ -69,9 +73,9 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So benennen Sie eine Tabelle um  
+#### <a name="to-rename-a-table"></a>So benennen Sie eine Tabelle um  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

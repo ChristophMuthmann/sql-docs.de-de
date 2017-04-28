@@ -1,29 +1,33 @@
 ---
-title: "Wartungsplan (Registerkarte Entwurf) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.optimizations.f1"
-  - "sql13.swb.maint.planeditor.f1"
-  - "sql13.swb.maint.subplaneditor.f1"
+title: "Wartungsplan (Registerkarte „Entwurf“) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.optimizations.f1
+- sql13.swb.maint.planeditor.f1
+- sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wartungsplan (Registerkarte Entwurf)
-  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)**, um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents ausgeführt werden.  
+# <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
+  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Unterplan hinzufügen**  
  Mit dieser Option fügen Sie einen Unterplan hinzu, den Sie konfigurieren können.  
   
@@ -40,13 +44,13 @@ caps.handback.revision: 27
  Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
  **Verbindungen verwalten**  
- Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzverbindungen hinzuzufügen. Jeder Wartungstask im Unterplan-Editor kann beliebige dieser Verbindungen nutzen. Bei der Ausführung stellt der Wartungsplan eine Verbindung vom Wartungsplanserver zu den angegebenen Servern mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, wobei die Anmeldeinformationen der Verbindungen verwendet werden.  
+ Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Jeder Wartungstask im Unterplan-Editor kann beliebige dieser Verbindungen nutzen. Bei der Ausführung stellt der Wartungsplan eine Verbindung vom Wartungsplanserver zu den angegebenen Servern mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, wobei die Anmeldeinformationen der Verbindungen verwendet werden.  
   
  **Berichterstellung und Protokollierung**  
  Hiermit zeigen Sie das Dialogfeld **Berichterstellung und Protokollierung** an, das zur Verwaltung von Berichten bezüglich der Wartungsplanaktivitäten und zur Konfigurierung der Protokollierung auf dem lokalen Server oder auf einem Remoteserver verwendet wird.  
   
  **Server**  
- Mit dieser Option zeigen Sie das Dialogfeld **Server** an, das zum Auswählen der Server verwendet wird, auf denen die Unterplantasks ausgeführt werden. Diese Option ist nur auf Masterservern in Umgebungen mit mehreren Servern aktiviert. Weitere Informationen finden Sie unter [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md).  
+ Mit dieser Option zeigen Sie das Dialogfeld **Server** an, das zum Auswählen der Server verwendet wird, auf denen die Unterplantasks ausgeführt werden. Diese Option ist nur auf Masterservern in Umgebungen mit mehreren Servern aktiviert. Weitere Informationen finden Sie unter [Erstellen einer Multiserverumgebung](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6).  
   
  **Name**  
  Hier zeigen Sie den Namen für den Wartungsplan an. Bei neuen Wartungsplänen wird der Name in einem Dialogfeld angegeben, bevor der Designer für den Wartungsplan geöffnet wird. Wenn Sie einen Wartungsplan umbenennen möchten, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Plan, und klicken Sie anschließend auf **Umbenennen**.  
@@ -69,17 +73,17 @@ caps.handback.revision: 27
   
  Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Wenn die im Menü **Wartungsplantasks** nicht sichtbar ist, wählen Sie in **im Menü** Ansicht [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Toolbox** aus. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
- Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF**-TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
+ Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   
  Wenn Sie Rangfolgenlinks zwischen zwei Tasks angeben möchten, ziehen Sie die Tasks zunächst auf die Entwurfsoberfläche, klicken Sie anschließend auf den zuerst auftretenden Task (den Vorgängertask), und ziehen Sie anschließend den Pfeil auf den abhängigen Task. Wenn ein Rangfolgenlink eingerichtet wurde, zeigt der Designer einen Pfeil an, der die beiden Tasks miteinander verbindet, wobei der Vorgängertask auf den abhängigen Task zeigt. Wenn ein Link erstmalig eingerichtet wird, sind die Einschränkungen für den Link so festgelegt, dass der abhängige Task nur ausgeführt wird, wenn das Ausführungsergebnis des Vorgängertasks **Erfolg**ist.  
   
- Um die Eigenschaften eines Rangfolgenlinks zu ändern, doppelklicken Sie auf den Link, um den **Rangfolgeneinschränkungs-Editor** zu starten. Hier werden viele Optionen für das Festlegen logischer Bedingungen bereitgestellt, die bestimmen, ob der abhängige Task ausgeführt wird. Das **Ausführungsergebnis** kann z. B. auf **Fehler**festgelegt werden, wodurch der abhängige Task nur ausgeführt wird, wenn der Vorgängertask fehlschlägt. Die Änderung der Ausführungsergebnis-Eigenschaft eines Links in **Erfolg**, **Fehler** oder **Beendigung** kann auch vorgenommen werden, indem Sie mit der rechten Maustaste auf den Link klicken und dann die entsprechende Option im Kontextmenü auswählen.  
+ Um die Eigenschaften eines Rangfolgenlinks zu ändern, doppelklicken Sie auf den Link, um den **Rangfolgeneinschränkungs-Editor**zu starten. Hier werden viele Optionen für das Festlegen logischer Bedingungen bereitgestellt, die bestimmen, ob der abhängige Task ausgeführt wird. Das **Ausführungsergebnis** kann z. B. auf **Fehler**festgelegt werden, wodurch der abhängige Task nur ausgeführt wird, wenn der Vorgängertask fehlschlägt. Die Änderung der Ausführungsergebnis-Eigenschaft eines Links in **Erfolg**, **Fehler**oder **Beendigung**kann auch vorgenommen werden, indem Sie mit der rechten Maustaste auf den Link klicken und dann die entsprechende Option im Kontextmenü auswählen.  
   
- Um eine Taskverzweigung festzulegen, erstellen Sie zunächst Rangfolgenlinks zwischen zwei Tasks. Platzieren Sie dann einen weiteren abhängigen Task auf der Entwurfsoberfläche, der bei einem anderen Ergebnis als der erste abhängige Task ausgeführt werden soll. Klicken Sie auf den Vorgängertask, und ziehen Sie den zweiten Pfeil vom Vorgängertask auf den abhängigen Task. Wenn Sie das Ausführungsergebnis (**Erfolg**, **Fehler**, **Beendigung**), das zur Ausführung eines abhängigen Tasks führt, ändern möchten, doppelklicken Sie auf den Linkpfeil, und ändern Sie das Feld **Ausführungsergebnis**. Alternativ dazu können Sie auch mit der rechten Maustaste auf den Link klicken und den gewünschten Ausführungsergebniswert aus dem Kontextmenü auswählen.  
+ Um eine Taskverzweigung festzulegen, erstellen Sie zunächst Rangfolgenlinks zwischen zwei Tasks. Platzieren Sie dann einen weiteren abhängigen Task auf der Entwurfsoberfläche, der bei einem anderen Ergebnis als der erste abhängige Task ausgeführt werden soll. Klicken Sie auf den Vorgängertask, und ziehen Sie den zweiten Pfeil vom Vorgängertask auf den abhängigen Task. Wenn Sie das Ausführungsergebnis (**Erfolg**, **Fehler**, **Beendigung**), das zur Ausführung eines abhängigen Tasks führt, ändern möchten, doppelklicken Sie auf den Linkpfeil, und ändern Sie das Feld **Ausführungsergebnis** . Alternativ dazu können Sie auch mit der rechten Maustaste auf den Link klicken und den gewünschten Ausführungsergebniswert aus dem Kontextmenü auswählen.  
   
  Um Taskparallelitäten festzulegen, verknüpfen Sie mehrere abhängige Tasks mit einem einzelnen Vorgängertask. Ändern Sie die Eigenschaften der Rangfolgenlinks so, dass diejenigen, die auf die parallel auszuführenden abhängigen Tasks zeigen, denselben Wert in den Ausführungsergebnisfeldern haben.  
   
-## Zusätzlich verfügbare Funktionen im Kontextmenü  
+## <a name="additional-features-available-from-the-shortcut-menu"></a>Zusätzlich verfügbare Funktionen im Kontextmenü  
  Um zusätzliche Optionen anzuzeigen, wählen Sie einen oder mehrere Tasks auf der Entwurfsoberfläche aus, und klicken Sie mit der rechten Maustaste auf die Auswahl, um das Kontextmenü zu öffnen. Zusätzlich zu den üblichen Optionen **Ausschneiden**, **Kopieren**, **Einfügen**, **Löschen**und **Alles auswählen**sind folgende besondere Optionen für einige Tasks verfügbar.  
   
  **Anmerkung hinzufügen**  
@@ -107,12 +111,12 @@ caps.handback.revision: 27
  Blendet Tasks innerhalb einer Gruppe aus.  
   
  **Erweitern**  
- Zeigt die Tasks in einer Gruppe an, die zuvor mithilfe der Option **Reduzieren** ausgeblendet wurden.  
+ Zeigt die Tasks in einer Gruppe an, die zuvor mithilfe der Option **Reduzieren**ausgeblendet wurden.  
   
  **Zoom**  
  Ändert die Größe der Tasks auf der Entwurfsoberfläche.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

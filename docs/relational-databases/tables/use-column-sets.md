@@ -1,25 +1,29 @@
 ---
-title: "Verwenden von Spaltens&#228;tzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Spalten mit geringer Dichte, Spaltensätze"
-  - "Spaltensätze"
+title: "Verwenden von Spaltensätzen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 07/30/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, column sets
+- column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden von Spaltens&#228;tzen
+# <a name="use-column-sets"></a>Verwenden von Spaltensätzen
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Für Tabellen, die Spalten mit geringer Dichte aufweisen, können Sie einen Spaltensatz festlegen, der alle Spalten in der Tabelle mit geringer Dichte zurückgibt. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Tabellenspalten mit geringer Dichte in einer strukturierten Ausgabe kombiniert. Wie auch berechnete Spalten werden Spaltensätze nicht physisch in der Tabelle gespeichert. Der Unterschied zwischen einem Spaltensatz und einer berechneten Spalte besteht darin, dass der Spaltensatz direkt aktualisiert werden kann.  
@@ -28,7 +32,7 @@ caps.handback.revision: 28
   
  Zum Definieren eines Spaltensatzes verwenden Sie die Schlüsselwörter *<Spaltensatzname>* FOR ALL_SPARSE_COLUMNS in der [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)-Anweisung oder in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung.  
   
-## Richtlinien zum Verwenden von Spaltensätzen  
+## <a name="guidelines-for-using-column-sets"></a>Richtlinien zum Verwenden von Spaltensätzen  
  Wenn Sie Spaltensätze verwenden, beachten Sie die folgenden Richtlinien:  
   
 -   Spalten mit geringer Dichte und ein Spaltensatz können als Teil der gleichen Anweisung hinzugefügt werden.  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
 -   Informationen zu den Daten, die von der Funktion COLUMNS_UPDATED zurückgegeben werden, finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Richtlinien zum Auswählen von Daten aus einem Spaltensatz  
+## <a name="guidelines-for-selecting-data-from-a-column-set"></a>Richtlinien zum Auswählen von Daten aus einem Spaltensatz  
  Beim Auswählen von Daten aus einem Spaltensatz sind die folgenden Richtlinien zu beachten:  
   
 -   Grundsätzlich handelt es sich bei einem Spaltensatz um eine aktualisierbare, berechnete XML-Spalte, die einen Satz zugrunde liegender relationaler Spalten in einer XML-Darstellung zusammenfasst. Der Spaltensatz unterstützt nur die ALL_SPARSE_COLUMNS-Eigenschaft. Diese Eigenschaft dient zur Zusammenfassung aller Werte ungleich NULL in allen Spalten mit geringer Dichte für eine bestimmte Zeile.  
@@ -91,7 +95,7 @@ caps.handback.revision: 28
 > [!WARNING]  
 >  Durch das Hinzufügen eines Spaltensatzes ändert sich das Verhalten von SELECT *-Abfragen. Statt der einzelnen Spalten mit geringer Dichte wird der Spaltensatz als XML-Spalte zurückgegeben. Schema-Designer und Softwareentwickler müssen darauf achten, dass der Code vorhandener Anwendungen hierdurch nicht gestört wird.  
   
-## Einfügen und Ändern von Daten in einem Spaltensatz  
+## <a name="inserting-or-modifying-data-in-a-column-set"></a>Einfügen und Ändern von Daten in einem Spaltensatz  
  Zur Änderung von Daten in einem Spaltensatz verwenden Sie die Namen der einzelnen Spalten. Sie können auch auf den Namen des Spaltensatzes verweisen und die Werte des Spaltensatzes angeben, indem Sie das XML-Format des Spaltensatzes verwenden. Spalten mit geringer Dichte können in der XML-Spalte in beliebiger Reihenfolge angezeigt werden.  
   
  Wenn Sie die Werte von Spalten mit geringer Dichte mit dem XML-Spaltensatz einfügen bzw. aktualisieren, werden die Werte, die in die zugrunde liegenden Spalten mit geringer Dichte eingefügt werden, automatisch vom **xml** -Datentyp konvertiert. Bei numerischen Spalten werden leere Werte im XML-Format in leere Zeichenfolgen konvertiert. Hierdurch wird der Wert 0 in die numerische Spalte eingefügt, wie im folgenden Beispiel gezeigt.  
@@ -105,28 +109,28 @@ SELECT i FROM t;
 GO  
 ```  
   
- In diesem Beispiel wurde kein Wert für die Spalte `i` angegeben, und der Wert `0` wurde eingefügt.  
+ In diesem Beispiel wurde kein Wert für die Spalte `i`angegeben, und der Wert `0` wurde eingefügt.  
   
-## Verwenden des sql_variant-Datentyps  
- Der **sql_variant**-Datentyp kann mehrere unterschiedliche Datentypen speichern, z.B. **int**, **char** und **date**. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem **sql_variant**-Wert verknüpft sind, in der generierten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
+## <a name="using-the-sqlvariant-data-type"></a>Verwenden des sql_variant-Datentyps  
+ Der **sql_variant** -Datentyp kann mehrere unterschiedliche Datentypen speichern, z.B. **int**, **char**und **date**. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem **sql_variant** -Wert verknüpft sind, in der generierten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
   
 |Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Dezimalstellen|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8000|Nicht zutreffend**|Nicht zutreffend|  
-|**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht verfügbar|Nicht verfügbar|  
-|**decimal**, **float**, **real**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|18|0|  
-|**integer**, **bigint**, **tinyint**, **smallint**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht zutreffend|  
-|**datetime2**|Nicht zutreffend|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
-|**datetime offset**|Nicht zutreffend|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
-|**datetime**, **date**, **smalldatetime**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
-|**money**, **smallmoney**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht zutreffend|  
-|**Uhrzeit**|Nicht zutreffend|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
+|**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht zutreffend|Nicht zutreffend|  
+|**decimal**, **float**, **real**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|18|0|  
+|**integer**, **bigint**, **tinyint**, **smallint**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
+|**datetime2**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
+|**datetime offset**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
+|**datetime**, **date**, **smalldatetime**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
+|**money**, **smallmoney**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
+|**Uhrzeit**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
   
  \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
   
  **  Nicht zutreffend = Bei einem SELECT-Vorgang für den Spaltensatz werden für diese Attribute keine Werte ausgegeben. Gibt eine Fehlermeldung zurück, wenn für dieses Attribut von dem Aufrufer in der für einen Spaltensatz in einem INSERT- oder UPDATE-Vorgang bereitgestellten XML-Darstellung ein Wert angegeben wird.  
   
-## Sicherheit  
+## <a name="security"></a>Sicherheit  
  Das Sicherheitsmodell für Spaltensätze funktioniert ähnlich wie das Sicherheitsmodell zwischen Tabellen und Spalten. Spaltensätze können als Minitabellen visualisiert werden, und die SELECT-Vorgänge entsprechen den SELECT *-Vorgängen für diese Minitabellen. Bei der Beziehung zwischen Spaltensatz und Spalten mit geringer Dichte handelt es sich jedoch nicht um einen Container, sondern um eine Gruppenbeziehung. Das Sicherheitsmodell prüft die Sicherheit der Spaltensatz-Spalte, wobei die DENY-Vorgänge für die zugrunde liegenden Spalten mit geringer Dichte berücksichtigt werden. Für das Sicherheitsmodell gelten die folgenden zusätzlichen Eigenschaften:  
   
 -   Wie bei anderen Spalten in der Tabelle können Sicherheitsberechtigungen für den Spaltensatz erteilt und aufgehoben werden.  
@@ -137,10 +141,10 @@ GO
   
 -   Durch die Ausführung einer REVOKE-Anweisung für eine Spalte mit geringer Dichte bzw. einen Spaltensatz wird die Sicherheitseinstellung auf die Einstellung des übergeordneten Objekts zurückgesetzt.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen enthält eine Dokumenttabelle die gemeinsamen Spalten `DocID` und `Title`. Die Produktionsgruppe möchte eine `ProductionSpecification` -Spalte und eine `ProductionLocation` -Spalte für alle Produktionsdokumente. Die Marketinggruppe möchte eine `MarketingSurveyGroup` -Spalte für Marketingdokumente.  
   
-### A. Erstellen einer Tabelle mit einem Spaltensatz  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Erstellen einer Tabelle mit einem Spaltensatz  
  Im folgenden Beispiel wird eine Tabelle erstellt, die Spalten mit geringer Dichte und den Spaltensatz `SpecialPurposeColumns`enthält. Im Beispiel werden zwei Zeilen in die Tabelle eingefügt, und anschließend werden Daten aus der Tabelle ausgewählt.  
   
 > [!NOTE]  
@@ -161,7 +165,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. Einfügen von Daten in eine Tabelle anhand der Namen der Spalten mit geringer Dichte  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Einfügen von Daten in eine Tabelle anhand der Namen der Spalten mit geringer Dichte  
  In den folgenden Beispielen werden zwei Zeilen in die in Beispiel A erstellte Tabelle eingefügt. Hierzu werden die Namen der Spalten mit geringer Dichte verwendet, und auf den Spaltensatz wird nicht verwiesen.  
   
 ```  
@@ -174,7 +178,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. Einfügen von Daten in eine Tabelle anhand des Spaltensatznamens  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Einfügen von Daten in eine Tabelle anhand des Spaltensatznamens  
  Im folgenden Beispiel wird eine dritte Zeile in die in Beispiel A erstellte Tabelle eingefügt. Diesmal werden die Namen der Spalten mit geringer Dichte nicht verwendet. Stattdessen wird der Name des Spaltensatzes verwendet, und der INSERT-Vorgang gibt die Werte für zwei der vier Spalten mit geringer Dichte im XML-Format zurück.  
   
 ```  
@@ -183,7 +187,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
  Im folgenden Beispiel werden alle Spalten der Tabelle ausgewählt, die einen Spaltensatz enthält. Es wird eine XML-Spalte mit den kombinierten Werten der Spalten mit geringer Dichte zurückgegeben. Die Spalten mit geringer Dichte werden nicht einzeln zurückgegeben.  
   
 ```  
@@ -200,7 +204,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### E. Prüfen der Ergebnisse der Auswahl des Spaltensatzes nach Name  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Prüfen der Ergebnisse der Auswahl des Spaltensatzes nach Name  
  Da die Produktionsabteilung nicht an den Marketingdaten interessiert ist, wird in diesem Beispiel eine `WHERE` -Klausel zur Einschränkung der Ausgabe hinzugefügt. In diesem Beispiel wird der Name des Spaltensatzes verwendet.  
   
 ```  
@@ -217,7 +221,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### F. Prüfen der Ergebnisse der Auswahl von Spalten mit geringer Dichte nach Name  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Prüfen der Ergebnisse der Auswahl von Spalten mit geringer Dichte nach Name  
  Auch wenn eine Tabelle einen Spaltensatz enthält, können Sie eine Abfrage anhand der einzelnen Spaltennamen durchführen, wie im folgenden Beispiel gezeigt.  
   
 ```  
@@ -234,7 +238,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### G. Aktualisieren einer Tabelle mithilfe eines Spaltensatzes  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Aktualisieren einer Tabelle mithilfe eines Spaltensatzes  
  Im folgenden Beispiel wird der dritte Datensatz mit neuen Werten für beide Spalten mit geringer Dichte aktualisiert, die von der Zeile verwendet werden.  
   
 ```  
@@ -247,7 +251,7 @@ GO
 > [!IMPORTANT]  
 >  Mit einer UPDATE-Anweisung, die einen Spaltensatz verwendet, werden alle Spalten mit geringer Dichte in der Tabelle aktualisiert. Spalten mit geringer Dichte, auf die nicht verwiesen wird, werden auf NULL festgelegt.  
   
- Im folgenden Beispiel wird der dritte Datensatz aktualisiert, es wird jedoch nur der Wert für eine der beiden Spalten mit Werten angegeben. Die zweite Spalte `ProductionLocation` ist nicht in der `UPDATE`-Anweisung enthalten und wird auf NULL aktualisiert.  
+ Im folgenden Beispiel wird der dritte Datensatz aktualisiert, es wird jedoch nur der Wert für eine der beiden Spalten mit Werten angegeben. Die zweite Spalte `ProductionLocation` ist nicht in der `UPDATE` -Anweisung enthalten und wird auf NULL aktualisiert.  
   
 ```  
 UPDATE DocumentStoreWithColumnSet  
@@ -256,7 +260,8 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

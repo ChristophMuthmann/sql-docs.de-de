@@ -1,29 +1,33 @@
 ---
-title: "Umbenennen von Indizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Umbenennen von Indizes"
-  - "Indexnamen [SQL Server]"
-  - "Indizes [SQL Server], umbenennen"
+title: Umbenennen von Indizes | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming indexes
+- index names [SQL Server]
+- indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59c77e43b02e26626c280f6325cdb67a11021db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Umbenennen von Indizes
+# <a name="rename-indexes"></a>Umbenennen von Indizes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Wenn Sie einen Index umbenennen, wird der aktuelle Name des Indexes durch den neuen Namen ersetzt, den Sie bereitstellen. Der angegebene Name muss innerhalb der Tabelle oder Sicht eindeutig sein. So können z.B. zwei Tabellen über einen Index mit dem Namen **XPK_1** verfügen; innerhalb derselben Tabelle können jedoch nicht zwei Indizes mit dem Namen **XPK_1** verwendet werden. Sie können keinen Index mit dem gleichen Namen erstellen, den ein vorhandener deaktivierter Index aufweist. Das Umbenennen eines Indexes bewirkt nicht, dass der Index neu erstellt wird.  
+  In diesem Thema wird beschrieben, wie ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Wenn Sie einen Index umbenennen, wird der aktuelle Name des Indexes durch den neuen Namen ersetzt, den Sie bereitstellen. Der angegebene Name muss innerhalb der Tabelle oder Sicht eindeutig sein. So können z.B. zwei Tabellen über einen Index mit dem Namen **XPK_1**verfügen; innerhalb derselben Tabelle können jedoch nicht zwei Indizes mit dem Namen **XPK_1**verwendet werden. Sie können keinen Index mit dem gleichen Namen erstellen, den ein vorhandener deaktivierter Index aufweist. Das Umbenennen eines Indexes bewirkt nicht, dass der Index neu erstellt wird.  
   
  **In diesem Thema**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So benennen Sie einen Index mit dem Tabellen-Designer um  
+#### <a name="to-rename-an-index-by-using-the-table-designer"></a>So benennen Sie einen Index mit dem Tabellen-Designer um  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie einen Index umbenennen möchten.  
   
@@ -67,9 +71,9 @@ caps.handback.revision: 27
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Speichern** *table_name*.  
+8.  Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
   
-#### So benennen Sie einen Index mit dem Objekt-Explorer um  
+#### <a name="to-rename-an-index-by-using-object-explorer"></a>So benennen Sie einen Index mit dem Objekt-Explorer um  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie einen Index umbenennen möchten.  
   
@@ -85,9 +89,9 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So benennen Sie einen Index um  
+#### <a name="to-rename-an-index"></a>So benennen Sie einen Index um  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -105,3 +109,4 @@ caps.handback.revision: 27
  Weitere Informationen finden Sie unter [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Verleger hinzuf&#252;gen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.addpublisher.f1"
-helpviewer_keywords: 
-  - "Verleger hinzufügen (Dialogfeld)"
+title: "Verleger hinzufügen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.addpublisher.f1
+helpviewer_keywords:
+- Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 86d2654bba26b7bcd1a5c758b8d609d6e2df0286
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verleger hinzuf&#252;gen
+# <a name="add-publisher"></a>Verleger hinzufügen
   Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Hinzufügen**  
- Klicken Sie, um den Typ des hinzuzufügenden Verlegers auszuwählen startet die **Verbindung mit Server herstellen** im Dialogfeld. Folgende Optionen sind verfügbar:  
+ Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Folgende Optionen sind verfügbar:  
   
 -   **SQL Server-Verleger hinzufügen...**  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 23
   
 -   **Oracle-Verleger hinzufügen...**  
   
-     Stellen Sie mithilfe des Dialogfelds [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit dem **Verbindung mit Server herstellen** gestartet.  
+     Stellen Sie mithilfe des Dialogfelds [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
 -   **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu…**  
   
@@ -42,19 +46,19 @@ caps.handback.revision: 23
  Nach einer erfolgreichen Verbindungsherstellung mit dem Verleger oder Verteiler werden die Namen aller Verleger und ihrer Verteiler in dem Raster im oberen Bereich des Dialogfelds angezeigt.  
   
 > [!NOTE]  
->  Verteiler und Verleger werden oft auf derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, aber der Verteiler kann auch auf einer anderen Instanz ausgeführt werden (diese Konfiguration wird als Remoteverteiler bezeichnet).  
+>  Verteiler und Verleger werden oft auf derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt, aber der Verteiler kann auch auf einer anderen Instanz ausgeführt werden (diese Konfiguration wird als Remoteverteiler bezeichnet).  
   
  **Entfernen**  
- Wählen Sie einen Verleger in das Raster im oberen Bereich des Dialogfelds, und klicken Sie auf **Entfernen** auf den Verleger aus der Liste der hinzuzufügenden Verleger zu entfernen.  
+ Wählen Sie einen Verleger in dem Raster im oberen Bereich des Dialogfelds aus, und klicken Sie auf **Entfernen** , um den Verleger aus der Liste der hinzuzufügenden Verleger zu entfernen.  
   
 > [!NOTE]  
->  Diese Schaltfläche kann nicht verwendet werden, um einen Verleger zu entfernen, der bereits im Replikationsmonitor angezeigt wird. So entfernen Sie ein Verleger, der bereits angezeigt wird mit der rechten Maustaste des Verlegers im linken Bereich des Replikationsmonitors, und klicken Sie auf **Entfernen**.  
+>  Diese Schaltfläche kann nicht verwendet werden, um einen Verleger zu entfernen, der bereits im Replikationsmonitor angezeigt wird. Klicken Sie zum Entfernen eines Verteilers, der bereits im linken Bereich des Replikationsmonitors angezeigt wird, mit der rechten Maustaste auf den Verleger, und klicken Sie dann auf **Entfernen**.  
   
  **Beim Starten des Replikationsmonitors automatisch Verbindung herstellen**  
- Wählen Sie diese Option aus, damit der Replikationsmonitor automatisch eine Verbindung mit dem Verteiler herstellt und Statusinformationen für den Verleger abruft, der im Raster im oberen Bereich des Dialogfelds ausgewählt ist. Wenn dieses Kontrollkästchen deaktiviert ist, Sie müssen nach dem Starten des Replikationsmonitors manuell zu verbinden: auf dem Verleger im linken Bereich des Replikationsmonitors, und auf **Verbinden**.  
+ Wählen Sie diese Option aus, damit der Replikationsmonitor automatisch eine Verbindung mit dem Verteiler herstellt und Statusinformationen für den Verleger abruft, der im Raster im oberen Bereich des Dialogfelds ausgewählt ist. Wenn dieses Kontrollkästchen deaktiviert ist, müssen Sie nach dem Starten des Replikationsmonitors manuell eine Verbindung herstellen: Klicken Sie dazu mit der rechten Maustaste auf den Verleger im linken Bereich des Replikationsmonitors, und klicken Sie dann auf **Verbinden**.  
   
  **Status dieses Verlegers und seiner Veröffentlichungen automatisch aktualisieren**  
- Wählen Sie diese Option aus, damit der Replikationsmonitor automatisch den Status für den Verleger aktualisiert, der im Raster im oberen Bereich des Dialogfelds ausgewählt ist. Wenn diese Option ausgewählt ist, ruft der Replikationsmonitor die Statusinformationen für den Verleger und seine Veröffentlichungen über den Verteiler ab. Das Abrufintervall wird durch die Option **Aktualisierungsrate** festgelegt. Weitere Informationen zum Aktualisieren im Replikationsmonitor finden Sie unter [Zwischenspeichern, aktualisieren und Leistung des Replikationsmonitors](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
+ Wählen Sie diese Option aus, damit der Replikationsmonitor automatisch den Status für den Verleger aktualisiert, der im Raster im oberen Bereich des Dialogfelds ausgewählt ist. Wenn diese Option ausgewählt ist, ruft der Replikationsmonitor die Statusinformationen für den Verleger und seine Veröffentlichungen über den Verteiler ab. Das Abrufintervall wird durch die Option **Aktualisierungsrate** festgelegt. Weitere Informationen zum Aktualisieren im Replikationsmonitor finden Sie unter [Zwischenspeichern, Aktualisieren und Leistung des Replikationsmonitors](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
  **Aktualisierungsrate**  
  Geben Sie einen Wert (in Sekunden) ein, um anzugeben, wie oft der Replikationsmonitor Statusinformationen über den Verteiler abrufen soll. Geringere Werte führen zu einem häufigeren Abruf, was die Leistung des Verteilers beeinträchtigen kann, wenn eine große Anzahl von Verlegern überwacht wird. Es wird empfohlen, das eigene System zu testen, um einen angemessenen Wert zu bestimmen. Die Einstellung **Aktualisierungsrate** wird ebenfalls verwendet, wenn Sie in einem der Detailfenster des Replikationsmonitors die Option **Automatisch aktualisieren** ausgewählt haben.  
@@ -65,8 +69,8 @@ caps.handback.revision: 23
  **Neue Gruppe**  
  Klicken Sie auf diese Option, um eine neue Verlegergruppe zu erstellen. Eine Verlegergruppe stellt eine einfache Möglichkeit dar, um die Verleger innerhalb des Replikationsmonitors zu organisieren. Gruppen haben keinen Einfluss auf die Replikation der Daten oder die Beziehungen zwischen den Servern in der Replikationstopologie.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen (Replikation)](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

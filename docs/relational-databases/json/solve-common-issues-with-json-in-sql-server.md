@@ -1,37 +1,41 @@
 ---
-title: "H&#228;ufig gestellte Fragen zu JSON in SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JSON, Häufig gestellte Fragen"
+title: "Lösen häufiger Probleme mit JSON in SQL Server | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abae3fc5a3d8edab6e4b465ce4cae038e45222d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# H&#228;ufig gestellte Fragen zu JSON in SQL Server
+# <a name="solve-common-issues-with-json-in-sql-server"></a>Lösen häufiger Probleme mit JSON in SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Hier finden Sie Antworten auf einige häufig gestellte Fragen zu der integrierten JSON-Unterstützung in SQL Server.  
  
-## FOR JSON- und JSON-Ausgabe
+## <a name="for-json-and-json-output"></a>FOR JSON- und JSON-Ausgabe
 
-### FOR JSON PATH oder FOR JSON AUTO?  
+### <a name="for-json-path-or-for-json-auto"></a>FOR JSON PATH oder FOR JSON AUTO?  
  **Frage:** Ich muss das JSON-Textergebnis aus einer einfachen SQL-Abfrage auf einer einzelnen Tabelle erstellen. FOR JSON PATH und FOR JSON AUTO erzeugen dieselbe Ausgabe. Welche dieser beiden Optionen sollte ich verwenden?  
   
  **Antwort:** Verwenden Sie FOR JSON PATH. Obwohl kein Unterschied in der JSON-Ausgabe besteht, besitzt AUTO-Modus zusätzliche Logik, die überprüft, ob Spalten geschachtelt werden sollen. Betrachten Sie PATH als Standardoption.  
 
-### Erstellen einer geschachtelten JSON-Struktur  
+### <a name="create-a-nested-json-structure"></a>Erstellen einer geschachtelten JSON-Struktur  
  **Frage:** Ich muss mit mehreren Arrays auf der gleichen Ebene komplexe JSON-Objekte erstellen. FOR JSON PATH kann geschachtelter Objekte mithilfe von Pfaden erstellen.FOR JSON AUTO erstellt eine zusätzliche Schachtelungsebene für jede Tabelle. Mit keiner dieser beiden Optionen kann ich die gewünschte Ausgabe generieren. Wie kann ich ein benutzerdefiniertes JSON-Format erstellen, das die vorhandenen Optionen nicht direkt unterstützen?  
   
  **Antwort:** Erstellen Sie eine beliebige Datenstruktur, indem Sie FOR JSON-Abfragen als Spaltenausdrücke hinzufügen, die JSON-Text zurückgeben. Sie können JSON auch manuell mithilfe der Funktion JSON_QUERY erstellen, wie im folgenden Beispiel gezeigt.  
@@ -48,7 +52,7 @@ FOR JSON PATH
   
 Jedes Ergebnis einer FOR JSON-Abfrage oder die Funktion JSON_QUERY in den Spaltenausdrücken wird als separates geschachteltes JSON-Unterobjekt formatiert und im Hauptergebnis aufgenommen.  
 
-### Verhindern von doppelt geschütztem JSON in der FOR JSON-Ausgabe  
+### <a name="prevent-double-escaped-json-in-for-json-output"></a>Verhindern von doppelt geschütztem JSON in der FOR JSON-Ausgabe  
  **Frage:** Ich habe einen JSON-Text, der in einer Tabellenspalte gespeichert ist. Ich möchte ihn in der Ausgabe von FOR JSON einschließen. FOR JSON schützt alle Zeichen in JSON, also erhalte ich eine JSON-Zeichenfolge anstelle eines geschachtelten-Objekts, wie im folgenden Beispiel gezeigt.  
   
 ```tsql  
@@ -74,7 +78,7 @@ FOR JSON PATH
   
  JSON_QUERY ohne den optionalen zweiten Parameter gibt nur das erste Argument als Ergebnis zurück. Da JSON_QUERY valides JSON zurückgibt, weiß FOR JSON, dass dieses Ergebnis nicht geschützt werden muss.
 
-### Ein mit der WITHOUT_ARRAY_WRAPPER-Klausel generiertes JSON wird in der FOR JSON-Ausgabe geschützt  
+### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>Ein mit der WITHOUT_ARRAY_WRAPPER-Klausel generiertes JSON wird in der FOR JSON-Ausgabe geschützt  
  **Frage:** Ich versuche, einen Spaltenausdruck mit FOR JSON und der Option WITHOUT_ARRAY_WRAPPER zu formatieren.  
   
 ```tsql  
@@ -93,9 +97,9 @@ SELECT 'Text' as myText,
 FOR JSON PATH    
 ```  
 
-## OPENJSON und JSON-Eingabe
+## <a name="openjson-and-json-input"></a>OPENJSON und JSON-Eingabe
 
-### Zurückgeben eines geschachtelten untergeordneten JSON-Objekts aus dem JSON-Text mit OPENJSON  
+### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Zurückgeben eines geschachtelten untergeordneten JSON-Objekts aus dem JSON-Text mit OPENJSON  
  **Frage:** Ich kann kein Array komplexer JSON-Objekte öffnen, das sowohl skalare Werte als auch Objekte und Arrays enthält, die OPENJSON mit einem expliziten Schema verwenden. Wenn ich auf einen Schlüssel in der WITH-Klausel verweise, werden nur skalare Werte zurückgegeben. Objekte und Arrays werden als NULL-Werte zurückgegeben. Wie kann ich Objekte oder Arrays in JSON-Objekten extrahieren?  
   
  **Antwort:** Wenn Sie ein Objekt oder Array als eine Spalte zurückgeben möchten, verwenden Sie die Option AS JSON in der Spaltendefinition, wie im folgenden Beispiel gezeigt.  
@@ -110,7 +114,7 @@ FROM OPENJSON(@json)
                           arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### Verwenden von OPENJSON anstelle von JSON_VALUE zur Rückgabe lange Textwerte  
+### <a name="use-openjson-instead-of-jsonvalue-to-return-long-text-values"></a>Verwenden von OPENJSON anstelle von JSON_VALUE zur Rückgabe lange Textwerte  
  **Frage:** Ich habe einen Beschreibungsschlüssel im JSON-Text, der langen Text enthält. `JSON_VALUE(@json, '$.description')` gibt NULL zurück, statt eines Werts.  
   
  **Antwort:** JSON_VALUE ist dafür konzipiert, kleine skalare Werte zurückzugeben. Im Allgemeinen gibt die Funktion NULL zurück, statt eines Überlauffehlers. Wenn längere Werte zurückgegeben werden sollen, verwenden Sie OPENJSON, das NVARCHAR(MAX)-Werte unterstützt, wie im folgenden Beispiel gezeigt.  
@@ -119,7 +123,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### Verwenden von OPENJSON anstelle von JSON_VALUE zur Behandlung doppelter Schlüssel  
+### <a name="use-openjson-instead-of-jsonvalue-to-handle-duplicate-keys"></a>Verwenden von OPENJSON anstelle von JSON_VALUE zur Behandlung doppelter Schlüssel  
  **Frage:** Ich habe doppelte Schlüssel im JSON-Text. JSON_VALUE gibt nur den ersten Schlüssel zurück, der im Pfad gefunden wird. Wie kann ich alle Schlüssel zurückgeben, die den gleichen Namen haben?  
   
  **Antwort:** Die integrierten Skalarfunktionen von JSON geben nur das erste Vorkommen des Objekts, auf das verwiesen wird, zurück. Wenn Sie mehr als einen Schlüssel benötigen, verwenden Sie die OPENJSON-Tabellenwertfunktion, wie im folgenden Beispiel gezeigt.  
@@ -129,17 +133,18 @@ SELECT value FROM OPENJSON(@json, '$.info.settings')
 WHERE [key] = 'color'  
 ```  
 
-### OPENJSON erfordert Kompatibilitätsgrad 130  
+### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON erfordert Kompatibilitätsgrad 130  
  **Frage:** Ich versuche, OPENJSON in SQL Server 2016 auszuführen, und erhalte die folgende Fehlermeldung.  
   
  `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
   
  **Antwort:** Die OPENJSON-Funktion steht nur für Kompatibilitätsgrad 130 zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer DB kleiner als 130 ist, wird OPENJSON ausgeblendet. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.  
  
-## Andere Fragen
+## <a name="other-questions"></a>Andere Fragen
 
-### Referenzschlüssel, die nicht-alphanumerische Zeichen in JSON-Text enthalten  
+### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>Referenzschlüssel, die nicht-alphanumerische Zeichen in JSON-Text enthalten  
  **Frage:** Schlüssel in meinem JSON-Text enthalten nicht-alphanumerische Zeichen. Wie kann ich diese Eigenschaften verweisen?  
   
  **Antwort:** In JSON-Pfaden müssen Sie diese in Anführungszeichen einschließen. Beispiel: `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
+

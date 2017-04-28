@@ -1,28 +1,32 @@
 ---
-title: "Verschieben eines vorhandenen Indexes in eine andere Dateigruppe | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verschieben von Tabellen"
-  - "Wechseln von Dateigruppen für Indizes"
-  - "Verschieben von Indizes"
-  - "Indizes [SQL Server], verschieben"
-  - "Dateigruppen [SQL Server], wechseln"
+title: Verschieben eines vorhandenen Indexes in eine andere Dateigruppe | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie einen vorhandenen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]von der aktuellen Dateigruppe in eine andere verschieben.  
@@ -47,7 +51,7 @@ caps.handback.revision: 44
   
 -   Bei Tabellen mit gruppiertem Index wird beim Verschieben des gruppierten Index in eine neue Dateigruppe auch die Tabelle in diese Dateigruppe verschoben.  
   
--   Mit einer UNIQUE- oder PRIMARY KEY-Einschränkung mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] erstellte Indizes können nicht verschoben werden. Verwenden Sie zum Verschieben dieser Indizes die [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)-Anweisung mit der Option (DROP_EXISTING=ON) in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   Mit einer UNIQUE- oder PRIMARY KEY-Einschränkung mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte Indizes können nicht verschoben werden. Verwenden Sie zum Verschieben dieser Indizes die [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) -Anweisung mit der Option (DROP_EXISTING=ON) in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -56,13 +60,13 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle mit dem zu verschiebenden Index enthält.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Tabellen** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle mit dem zu verschiebenden Index, und wählen Sie **Entwurf** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle mit dem zu verschiebenden Index, und wählen Sie **Entwurf**aus.  
   
 4.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 44
   
 8.  Klicken Sie auf **Schließen**.  
   
-9. Klicken Sie im Menü **Datei** auf **Speichern von** *<Tabellenname>*.  
+9. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
   
-#### So verschieben Sie einen vorhandenen Index im Objekt-Explorer in eine andere Dateigruppe  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>So verschieben Sie einen vorhandenen Index im Objekt-Explorer in eine andere Dateigruppe  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle mit dem zu verschiebenden Index enthält.  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 44
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie verschieben möchten, und wählen Sie **Eigenschaften** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie verschieben möchten, und wählen Sie **Eigenschaften**aus.  
   
 6.  Wählen Sie unter **Seite auswählen**die Option **Speicher**aus.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 44
   
      Für das Verschieben von gruppierten Indizes können Sie die Onlineverarbeitung verwenden. Die Onlineverarbeitung ermöglicht, dass Benutzer während des Verschiebungsvorgangs des Indexes auf die dem Index zugrunde liegenden Daten sowie auf nicht gruppierte Indizes zugreifen können. Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     Auf Multiprozessorcomputern mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die Anzahl der zum Ausführen der Indexanweisung verwendeten Prozessoren mit einem maximalen Grad an Parallelität konfigurieren. Die Funktion für parallele Indexvorgänge ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Weitere Informationen zu parallelen Indexvorgängen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     Auf Multiprozessorcomputern mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Anzahl der zum Ausführen der Indexanweisung verwendeten Prozessoren mit einem maximalen Grad an Parallelität konfigurieren. Die Funktion für parallele Indexvorgänge ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter „Von den SQL Server 2016-Editionen unterstützte Funktionen“. Weitere Informationen zu parallelen Indexvorgängen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Klicken Sie auf **OK**.  
   
@@ -144,9 +148,9 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So verschieben Sie einen vorhandenen Index in eine andere Dateigruppe  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>So verschieben Sie einen vorhandenen Index in eine andere Dateigruppe  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

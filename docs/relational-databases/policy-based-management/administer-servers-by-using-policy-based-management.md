@@ -1,32 +1,36 @@
 ---
-title: "Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Facet siehe Facets"
-  - "Declarative Management Framework siehe Richtlinienbasierte Verwaltung"
-  - "Oberflächenkonfiguration [SQL Server], richtlinienbasierte Verwaltung"
-  - "Richtlinienbasierte Verwaltung"
-  - "Facets [Richtlinienbasierte Verwaltung]"
-  - "Richtlinienbasierte Verwaltung, verwalten"
-  - "Bedingungen [Richtlinienbasierte Verwaltung]"
-  - "Facets [Richtlinienbasierte Verwaltung], Informationen zu Facets"
-  - "PolicyAdministratorRole-Rolle"
+title: Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten von Servern mit der richtlinienbasierten Verwaltung
+# <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
    Die richtlinienbasierte Verwaltung ist ein richtlinienbasiertes System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese, um Bedingungen zu erstellen, die Bedingungsausdrücke enthalten. Erstellen Sie dann Richtlinien, die die Bedingungen für Datenbankzielobjekte übernehmen.  
 
 Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstellen möchten, dass für bestimmte Server Datenbank-E-Mail nicht aktiviert ist. Also erstellen Sie eine Bedingung und eine Richtlinie, die diese Serveroption festgelegt. 
@@ -45,9 +49,9 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
  Für Fehler bei Richtlinien wird im Objekt-Explorer eine kritische Zustandswarnung in Form eines roten Symbols neben dem Ziel und den übergeordneten Knoten in der Strukturansicht des Objekt-Explorers angezeigt.  
   
-> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Drei Komponenten für richtlinienbasierte Verwaltung  
+## <a name="three-policy-based-management-components"></a>Drei Komponenten für richtlinienbasierte Verwaltung  
  Die richtlinienbasierte Verwaltung besteht aus drei Komponenten:  
   
 -   Richtlinienverwaltung. Richtlinienadministratoren erstellen Richtlinien.  
@@ -64,11 +68,11 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
     -   **Bei Änderung: Nur protokollieren**. Dieser automatisierte Modus verwendet die Ereignisbenachrichtigung, um eine Richtlinie auszuwerten, wenn eine relevante Änderung vorgenommen wurde.  
   
-    -   **Nach Zeitplan**. Dieser automatisierte Modus verwendet einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag, um eine Richtlinie in regelmäßigen Abständen auszuwerten.  
+    -   **Nach Zeitplan**. Dieser automatisierte Modus verwendet einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag, um eine Richtlinie in regelmäßigen Abständen auszuwerten.  
   
      Wenn keine automatisierten Richtlinien aktiviert sind, hat die richtlinienbasierte Verwaltung keine Auswirkungen auf die Systemleistung.  
   
-## Begriffe  
+## <a name="terms"></a>Begriffe  
  **Verwaltetes Ziel der richtlinienbasierten Verwaltung** 
  Entitäten, die durch die richtlinienbasierte Verwaltung verwaltet werden, beispielsweise eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz, eine Datenbank, eine Tabelle oder ein Index. Alle Ziele in einer Serverinstanz bilden eine Zielhierarchie. Ein Zielsatz ist der Satz der Ziele, der sich aus der Anwendung eines Satzes von Zielfiltern auf die Zielhierarchie ergibt, z. B. alle Tabellen in der Datenbank, die im Besitz des HumanResources-Schemas sind.  
   
@@ -76,7 +80,7 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
  Ein Satz logischer Eigenschaften, die das Verhalten oder die Eigenschaften bestimmter Typen von verwalteten Zielen modellieren. Die Anzahl und die Merkmale der Eigenschaften sind in das Facet integriert und können nur durch den Ersteller des Facets hinzugefügt oder entfernt werden. Ein Zieltyp kann ein oder mehrere Verwaltungsfacets implementieren, und ein Verwaltungsfacet kann von einem oder mehreren Zieltypen implementiert werden. Bestimmte Eigenschaften eines Facets können nur für eine bestimmte Version gelten.  
   
  **Bedingung der richtlinienbasierten Verwaltung**  
- Ein boolescher Ausdruck, der einen Satz zulässiger Zustände eines durch die richtlinienbasierte Verwaltung verwalteten Ziels für ein Verwaltungsfacet angibt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Sortierungen beizubehalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen den Windows-Sortierungen nicht genau entsprechen, testen Sie die Bedingung, um zu ermitteln, wie Konflikte vom Algorithmus aufgelöst werden.  
+ Ein boolescher Ausdruck, der einen Satz zulässiger Zustände eines durch die richtlinienbasierte Verwaltung verwalteten Ziels für ein Verwaltungsfacet angibt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Sortierungen beizubehalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen den Windows-Sortierungen nicht genau entsprechen, testen Sie die Bedingung, um zu ermitteln, wie Konflikte vom Algorithmus aufgelöst werden.  
   
  **Richtlinie der richtlinienbasierten Verwaltung**  
  Eine Bedingung der richtlinienbasierten Verwaltung und das erwartete Verhalten, wie z. B. Auswertungsmodus, Zielfilter und Zeitplan. Eine Richtlinie kann nur eine einzige Bedingung enthalten. Richtlinien können aktiviert oder deaktiviert sein. Richtlinien werden in der msdb-Datenbank gespeichert.  
@@ -101,7 +105,7 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
 -   Für das Ziel oder einen der Vorgänger des Ziels ist die Richtliniengruppe abonniert, die diese Richtlinie enthält.  
   
-## Links zu bestimmten Aufgaben 
+## <a name="links-to-specific-tasks"></a>Links zu bestimmten Aufgaben 
 
  - [Speichern von Richtlinien zur richtlinienbasierten Verwaltung](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
  - [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Beispiele
+ ## <a name="examples"></a>Beispiele
  - [Erstellen der Richtlinie 'Standardmäßig aus'](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'](https://msdn.microsoft.com/library/bb522470.aspx)
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

@@ -1,68 +1,72 @@
 ---
-title: "&#220;berwachen und Optimieren der Leistung | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Instanzen von SQL Server, Überwachen der Leistung"
-  - "Überwachen der Serverleistung [SQL Server]"
-  - "Datenbankmodul [SQL Server], Leistung"
-  - "Überwachen der Leistung [SQL Server], Informationen zu Leistung"
-  - "Serverleistung [SQL Server]"
-  - "Überwachen der Leistung [SQL Server]"
-  - "Datenbankleistung [SQL Server], Informationen zu Leistung"
-  - "Optimierung von Datenbanken [SQL Server], Informationen zu Leistung"
-  - "Statusinformationen [SQL Server], Leistungsüberwachung"
-  - "Datenbanküberwachung [SQL Server], Informationen zu Leistung"
-  - "Überwachen [SQL Server], Abfrageleistung"
-  - "Serverleistung [SQL Server], Informationen zu Leistung"
-  - "Optimieren von Datenbanken [SQL Server]"
-  - "Datenbankleistung [SQL Server]"
-  - "Überwachen [SQL Server], Serverleistung"
-  - "Datenbanküberwachung [SQL Server]"
-  - "Überwachen der Serverleistung [SQL Server], Informationen zu Überwachung der Serverleistung"
+title: "Überwachen und Optimieren der Leistung | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of SQL Server, monitoring performance
+- monitoring server performance [SQL Server]
+- Database Engine [SQL Server], performance
+- monitoring performance [SQL Server], about performance
+- server performance [SQL Server]
+- monitoring performance [SQL Server]
+- database performance [SQL Server], about performance
+- tuning databases [SQL Server], about performance
+- status information [SQL Server], performance monitoring
+- database monitoring [SQL Server], about performance
+- monitoring [SQL Server], queries performance
+- server performance [SQL Server], about performance
+- tuning databases [SQL Server]
+- database performance [SQL Server]
+- monitoring [SQL Server], server performance
+- database monitoring [SQL Server]
+- monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c60b3ef8e0eb43ea64e898d8198c0a9fd725acc
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen und Optimieren der Leistung
+# <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
   Ziel der Überwachung von Datenbanken ist es, die Leistung eines Servers zu bewerten. Eine effektive Überwachung umfasst die regelmäßige Erstellung von Momentaufnahmen der aktuellen Leistung, um problematische Prozesse zu isolieren, und die kontinuierliche Sammlung von Daten, um Leistungstrends über längere Zeit zu verfolgen.  
   
  Durch die fortlaufende Auswertung der Datenbankleistung können Sie die Antwortzeiten minimieren und den Durchsatz maximieren, um so die optimale Leistung zu erzielen. Die effiziente Netzwerklast, Datenträger-E/A und CPU-Nutzung sind der Schlüssel zu Höchstleistungen. Hierzu müssen Sie die Anwendungsanforderungen gründlich analysieren, die logische und physische Struktur der Daten kennen, die Datenbanknutzung bewerten und Kompromisse zwischen gegensätzlichen Nutzungen, wie etwa OLTP (Online Transaction Processing) im Gegensatz zur Entscheidungsunterstützung, aushandeln.  
   
-## Überwachen und Optimieren von Datenbanken für die Leistung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Microsoft Windows stellen Hilfsprogramme bereit, mit denen der aktuelle Zustand der Datenbank angezeigt und die Leistung unter veränderten Bedingungen nachverfolgt werden kann. Es gibt eine Reihe von Tools und Methoden, mit denen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwachen können. Überwachen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Ihnen Folgendes:  
+## <a name="monitoring-and-tuning-databases-for-performance"></a>Überwachen und Optimieren von Datenbanken für die Leistung  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Microsoft Windows stellen Hilfsprogramme bereit, mit denen der aktuelle Zustand der Datenbank angezeigt und die Leistung unter veränderten Bedingungen nachverfolgt werden kann. Es gibt eine Reihe von Tools und Methoden, mit denen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überwachen können. Überwachen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Ihnen Folgendes:  
   
 -   Ermitteln, ob die Leistung verbessert werden kann. Indem Sie beispielsweise die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind.  
   
--   Analysieren der Benutzeraktivität. Wenn Sie beispielsweise überwachen, wie Benutzer versuchen, eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, können Sie ermitteln, ob die Sicherheit adäquat eingerichtet ist, und Anwendungen oder Entwicklungssysteme testen. Sie können beispielsweise durch Überwachen von SQL-Abfragen während der Ausführung ermitteln, ob sie richtig geschrieben sind und zu den erwarteten Ergebnissen führen.  
+-   Analysieren der Benutzeraktivität. Wenn Sie beispielsweise überwachen, wie Benutzer versuchen, eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen, können Sie ermitteln, ob die Sicherheit adäquat eingerichtet ist, und Anwendungen oder Entwicklungssysteme testen. Sie können beispielsweise durch Überwachen von SQL-Abfragen während der Ausführung ermitteln, ob sie richtig geschrieben sind und zu den erwarteten Ergebnissen führen.  
   
--   Beheben von Problemen oder Debuggen von Anwendungskomponenten, z. B. gespeicherte Prozeduren.  
+-   Beheben von Problemen oder Debuggen von Anwendungskomponenten, z. B. gespeicherte Prozeduren.  
   
-## Überwachen in einer dynamischen Umgebung  
+## <a name="monitoring-in-a-dynamic-environment"></a>Überwachen in einer dynamischen Umgebung  
 Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehen Sie Leistungsänderungen, wenn die Anzahl der Benutzer steigt, wenn die Benutzer andere Zugriffs- und Verbindungsmethoden verwenden, wenn die Datenbank wächst, wenn andere Clientanwendungen genutzt werden, wenn sich die Daten in den Anwendungen ändern, wenn die Abfragen komplexer werden und wenn die Netzwerkbelastung ansteigt. Verwenden von Tools für die Leistungsüberwachung ermöglicht es Ihnen, Änderungen in der Leistung mit geänderten Bedingungen und komplexen Abfragen zu verknüpfen. **Beispiele:**:  
   
 -   Wenn Sie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen, in denen die Abfragen ausgeführt werden, notwendig sind.  
   
--   Sie können durch Überwachen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen während der Ausführung ermitteln, ob die Abfragen richtig geschrieben sind und zu den erwarteten Ergebnissen führen.  
+-   Sie können durch Überwachen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen während der Ausführung ermitteln, ob die Abfragen richtig geschrieben sind und zu den erwarteten Ergebnissen führen.  
   
--   Wenn Sie überwachen, wie Benutzer versuchen, eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, können Sie ermitteln, ob die Sicherheit adäquat eingerichtet ist, und Anwendungen und Entwicklungssysteme testen.  
+-   Wenn Sie überwachen, wie Benutzer versuchen, eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen, können Sie ermitteln, ob die Sicherheit adäquat eingerichtet ist, und Anwendungen und Entwicklungssysteme testen.  
   
  Die Antwortzeit ist die Zeitdauer, die benötigt wird, um die erste Zeile des Resultsets in Form einer optischen Bestätigung, dass eine Abfrage verarbeitet wird, an den Benutzer zurückzugeben. Der Durchsatz ist die Gesamtzahl der Abfragen, die vom Server während eines bestimmten Zeitraums bearbeitet werden.  
   
  Mit steigender Benutzerzahl nimmt auch der Wettstreit um die Ressourcen eines Servers zu, was wiederum zu einer erhöhten Antwortzeit und einem insgesamt reduzierten Durchsatz führt.  
   
-## Überwachungs- und Leistungsoptimierungstasks  
+## <a name="monitoring-and-performance-tuning-tasks"></a>Überwachungs- und Leistungsoptimierungstasks  
   
 |Thema| Task|  
 |-----------|----------------------|  
@@ -78,10 +82,11 @@ Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehe
 |[Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Überlegungen zu speicheroptimierten Tabellen|  
 |[Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)|Hinweise zur Verwendung des Abfragespeichers|  
   
-## Siehe auch  
- [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Automatisierte Verwaltung in einem Unternehmen](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

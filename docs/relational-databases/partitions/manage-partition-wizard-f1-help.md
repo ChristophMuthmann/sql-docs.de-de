@@ -1,40 +1,44 @@
 ---
-title: "Assistent zum Verwalten von Partitionen (F1-Hilfe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.managepartition.createjob.f1"
-  - "sql13.swb.managepartition.progress.f1"
-  - "sql13.swb.managepartition.getstart.f1"
-  - "sql13.swb.managepartition.selectswitchtables.f1"
-  - "sql13.swb.managepartition.stagingtable.f1"
-  - "sql13.swb.managepartition.switchin.f1"
-  - "sql13.swb.managepartition.switchout.f1"
-  - "sql13.swb.managepartition.partitionaction.f1"
-  - "sql13.swb.managepartition.summary.f1"
-  - "sql13.swb.managepartition.selectoutput.f1"
-helpviewer_keywords: 
-  - "Assistenten [SQL Server Management Studio] siehe Assistent zum Verwalten von Partitionen"
+title: Assistent zum Verwalten von Partitionen (F1-Hilfe) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.managepartition.createjob.f1
+- sql13.swb.managepartition.progress.f1
+- sql13.swb.managepartition.getstart.f1
+- sql13.swb.managepartition.selectswitchtables.f1
+- sql13.swb.managepartition.stagingtable.f1
+- sql13.swb.managepartition.switchin.f1
+- sql13.swb.managepartition.switchout.f1
+- sql13.swb.managepartition.partitionaction.f1
+- sql13.swb.managepartition.summary.f1
+- sql13.swb.managepartition.selectoutput.f1
+helpviewer_keywords:
+- wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Assistent zum Verwalten von Partitionen (F1-Hilfe)
+# <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
   Mit dem **Assistenten zum Verwalten von Partitionen** können Sie vorhandene partitionierte Tabellen durch Partitionswechsel oder Implementierung eines Szenarios mit gleitendem Fenster verwalten und ändern. Dieser Assistent vereinfacht die Verwaltung von Partitionen und die Migration von Daten in die und aus den Tabellen.  
   
-### So starten Sie den Assistenten zum Verwalten von Partitionen  
+### <a name="to-start-the-manage-partition-wizard"></a>So starten Sie den Assistenten zum Verwalten von Partitionen  
   
--   Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Datenbank aus, klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie Partitionen erstellen möchten, zeigen Sie auf **Speicher**, und klicken Sie anschließend auf **Partition verwalten**.  
+-   Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Datenbank aus, klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie Partitionen erstellen möchten, zeigen Sie auf **Speicher**, und klicken Sie anschließend auf **Partition verwalten**.  
   
      **Note** Wenn **Partition verwalten** nicht verfügbar ist, haben Sie möglicherweise eine Tabelle ohne Partitionen ausgewählt. Klicken Sie im Untermenü **Speicher** auf **Partition erstellen** , und erstellen Sie mit dem **Assistenten zum Erstellen von Partitionen** Partitionen in der Tabelle.  
   
@@ -64,17 +68,17 @@ caps.handback.revision: 12
 ##  <a name="SelectPartitionAction"></a> Partitionsaktion auswählen (Seite)  
  Auf der Seite **Partitionsaktion auswählen** können Sie die Aktion auswählen, die Sie für die Partition ausführen möchten.  
   
-### Erstellen einer Stagingtabelle  
+### <a name="create-a-staging-table"></a>Erstellen einer Stagingtabelle  
  Der Partitionswechsel ist ein gängiger Partitionstask, wenn Sie über eine partitionierte Tabelle verfügen, in die bzw. aus der Sie regelmäßig Daten migrieren. Beispiel: Sie verfügen über eine partitionierte Tabelle, in der aktuelle vierteljährliche Daten gespeichert sind, und müssen zum Ende jedes Quartals alte Daten auslagern und neue Daten einfügen.  
   
  Mithilfe des Assistenten können Sie die Stagingtabelle mit der gleichen Partitionsspalte, Tabelle und Spaltenstruktur sowie Indizes entwerfen. Die neue Tabelle wird in der Dateigruppe gespeichert, in der sich auch die Quellpartition befindet.  
   
  Wählen Sie **Stagingtabelle für den Partitionswechsel erstellen**, um eine Stagingtabelle zum Einfügen und Auslagern von Partitionsdaten zu erstellen.  
   
-### Szenario mit gleitendem Fenster  
+### <a name="sliding-window-scenario"></a>Szenario mit gleitendem Fenster  
  Um die Partitionen in einem flexiblen Fenster zu verwalten, wählen Sie **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Stagingtabelle für den Partitionswechsel erstellen**  
  Erstellt eine Stagingtabelle für die Daten, die Sie aus der vorhandenen partitionierten Tabelle auslagern bzw. darin einfügen.  
   
@@ -87,29 +91,29 @@ caps.handback.revision: 12
  **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**  
  Fügt eine leere Partition an die vorhandene Tabelle an, die zum Einfügen und Auslagern von Daten verwendet werden kann. Der Assistent unterstützt derzeit das Einfügen in die letzte Partition und das Auslagern aus der ersten Partition.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
  Auf der Seite **Partitionseinfügeoptionen auswählen** können Sie die Stagingtabelle erstellen, die Sie in die partitionierte Tabelle einfügen.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Alle Partitionen anzeigen**  
  Wählen Sie diese Option zum Anzeigen aller Partitionen aus, einschließlich der Partitionen, die sich gegenwärtig in der partitionierten Tabelle befinden.  
   
  **Partitionsschema**  
- Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe** und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
+ Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
  **Einzufügende Tabelle**  
- Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen** einfügen können.  
+ Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen**einfügen können.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
  Auf der Seite **Partitionsauslagerungsoptionen auswählen** können Sie die Partition und die Stagingtabelle für die partitionierten Daten auswählen, die aus der partitionierten Tabelle ausgelagert werden.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Partitionsschema**  
- Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe** und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
+ Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
  **Tabelle auslagern**  
  Wählen Sie eine neue oder vorhandene Tabelle aus, in die Sie die Daten auslagern.  
@@ -120,7 +124,7 @@ caps.handback.revision: 12
  **Vorhanden**  
  Wählen Sie die vorhandene Stagingtabelle aus, die zum Auslagern der Partition aus der aktuellen Quelltabelle verwendet werden soll. Wenn die vorhandene Tabelle Daten enthält, werden diese mit den Daten überschrieben, die Sie auslagern.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Stagingtabellenoptionen auswählen (Seite)  
  Auf der Seite **Stagingtabellenoptionen auswählen** können Sie die Stagingtabelle erstellen, die zum Verschieben der partitionierten Daten verwendet werden soll.  
@@ -129,7 +133,7 @@ caps.handback.revision: 12
   
  Sie können auch in der Stagingtabelle die gleichen Indizes erstellen, die in der Quellpartition vorhanden ist. Die Stagingtabelle enthält automatisch eine Einschränkung auf Grundlage der Elemente der Quellpartition. Diese Einschränkung wird i. d. R. aus dem Begrenzungswert der Quellpartition generiert.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Stagingtabellenname**  
  Erstellen Sie einen Namen für die Stagingtabelle, oder übernehmen Sie den im Eingabefeld angezeigten Standardnamen.  
   
@@ -142,12 +146,12 @@ caps.handback.revision: 12
  **Dateigruppe**  
  Wählen Sie eine Dateigruppe für die neue Tabelle aus.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="OutputOption"></a> Ausgabeoption auswählen (Seite)  
  Geben Sie auf der Seite **Ausgabeoption auswählen** an, wie Sie die Änderungen für Ihre Partitionen abschließen möchten.  
   
-### Erstellen von Skripts  
+### <a name="create-script"></a>Erstellen von Skripts  
  Bei Abschluss des Assistenten wird im Abfrage-Editor ein Skript zum Ändern der Partitionen in der Tabelle erstellt. Wählen Sie **Skript erstellen** aus, wenn Sie das Skript überprüfen möchten, und führen Sie das Skript dann manuell aus.  
   
  **Skript in Datei schreiben**  
@@ -159,23 +163,23 @@ caps.handback.revision: 12
  **Skript in Fenster "Neue Abfrage" schreiben**  
  Generiert das Skript in einem Abfrage-Editor-Fenster. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
   
-### Sofort ausführen  
- **Sofort ausführen**  
- Wenn Sie auf **Weiter** oder **Fertig stellen** klicken, schließt der Assistent die Änderungen an den Partitionen ab.  
+### <a name="run-immediately"></a>Sofort ausführen  
+ **Run immediately**  
+ Wenn Sie auf **Weiter** oder **Fertig stellen**klicken, schließt der Assistent die Änderungen an den Partitionen ab.  
   
-### Zeitplan  
+### <a name="schedule"></a>Zeitplan  
  Wählen Sie diese Option aus, um die Tabellenpartitionen zu einem geplanten Datum und einer geplanten Uhrzeit zu ändern.  
   
  **Zeitplan ändern**  
  Hiermit wird das Dialogfeld **Neuer Auftragszeitplan** geöffnet, in dem Sie die Eigenschaften des geplanten Auftrags auswählen, ändern oder anzeigen können.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
   
-### Optionen  
- Wählen Sie den Typ des gewünschten Zeitplans für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag aus.  
+### <a name="options"></a>Optionen  
+ Wählen Sie den Typ des gewünschten Zeitplans für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag aus.  
   
  **Name**  
  Geben Sie einen neuen Namen für den Zeitplan ein.  
@@ -189,7 +193,7 @@ caps.handback.revision: 12
  **Aktiviert**  
  Aktivieren oder deaktivieren Sie den Zeitplan.  
   
-### Zeitplantypoptionen für wiederkehrende Aufträge  
+### <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
  Wählen Sie die Häufigkeit des geplanten Auftrags aus.  
   
  **Tritt auf**  
@@ -243,7 +247,7 @@ caps.handback.revision: 12
  **Kein Enddatum**  
  Geben Sie an, dass der Zeitplan für unbestimmte Zeit gültig bleibt.  
   
-### Zeitplantypoptionen für einmalige Aufträge  
+### <a name="one-time-schedule-types-options"></a>Zeitplantypoptionen für einmalige Aufträge  
  Wenn ein Zeitplan nur einmalig ausgeführt werden soll, müssen Sie ein Datum und eine Uhrzeit in der Zukunft auswählen.  
   
  **Datum**  
@@ -252,21 +256,21 @@ caps.handback.revision: 12
  **Zeit**  
  Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="Summary"></a> Seite "Zusammenfassung"  
  Mithilfe der Seite **Zusammenfassung** können Sie die Optionen überprüfen, die Sie auf den vorherigen Seiten ausgewählt haben.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Überprüfen Sie Ihre Auswahl**  
  Zeigt die auf den einzelnen Seiten des Assistenten getroffene Auswahl an. Klicken Sie auf einen Knoten, um diesen zu erweitern und die ausgewählten Optionen anzuzeigen.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
 ##  <a name="Progress"></a> Status (Seite)  
  Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
-### Optionen  
+### <a name="options"></a>Optionen  
  **Details**  
  Stellt für jede vom Assistenten ausgeführte Aktion Informationen zur Aktion, zum Status und zu den zurückgegebenen Meldungen bereit.  
   
@@ -274,7 +278,7 @@ caps.handback.revision: 12
  Gibt den Typ und den Namen jeder Aktion an.  
   
  **Status**  
- Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler** zurückgegeben wurde.  
+ Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
  **MessageBox**  
  Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
@@ -294,14 +298,14 @@ caps.handback.revision: 12
 -   **Bericht als E-Mail senden**  
   
  **Bericht anzeigen**  
- Öffnet das Dialogfeld **Bericht anzeigen**. Dieses Dialogfeld enthält einen Textbericht zum Status des **Assistenten zum Verwalten von Partitionen**.  
+ Öffnet das Dialogfeld **Bericht anzeigen** . Dieses Dialogfeld enthält einen Textbericht zum Status des **Assistenten zum Verwalten von Partitionen**.  
   
  **Schließen**  
  Schließen Sie den Assistenten.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
-## Siehe auch  
- [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

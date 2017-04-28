@@ -1,25 +1,29 @@
 ---
-title: "Lektion 6: Generate activity and backup log using file-snapshot backup (Generieren von Aktivit&#228;t und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lektion 6: Generieren von Aktivität und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lektion 6: Generate activity and backup log using file-snapshot backup (Generieren von Aktivit&#228;t und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung)
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lektion 6: Generate activity and backup log using file-snapshot backup (Generieren von Aktivität und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung)
 In dieser Lektion generieren Sie Aktivität in der AdventureWorks2014-Datenbank und erstellen regelmäßig Transaktionsprotokollsicherungen mithilfe von Dateimomentaufnahme-Sicherungen. Weitere Informationen zur Verwendung von Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Um Aktivität in der AdventureWorks2014-Datenbank zu generieren und regelmäßig Transaktionsprotokollsicherungen mithilfe von Dateimomentaufnahme-Sicherungen zu erstellen, befolgen Sie folgende Schritte:  
@@ -77,21 +81,21 @@ Um Aktivität in der AdventureWorks2014-Datenbank zu generieren und regelmäßig
   
 5.  Überprüfen Sie die Ausgabe des ersten Skripts, und beachten Sie, dass die endgültige Zeilenanzahl jetzt 29.939 beträgt.  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![Zeilenanzahl 29,939 wird angezeigt](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Zeilenanzahl 29,939 wird angezeigt")  
   
 6.  Überprüfen Sie die Ausgabe des zweiten Skripts und beachten Sie, dass jedes Mal, wenn die BACKUP LOG-Anweisung ausgeführt wird, zwei neue Dateimomentaufnahmen erstellt werden: eine Dateimomentaufnahme der Protokolldatei und eine Dateimomentaufnahme der Datendatei – insgesamt also zwei Dateimomentaufnahmen für jede Datenbankdatei. Wenn das zweite Skript abgeschlossen ist, beachten Sie, dass es jetzt insgesamt 16 Dateimomentaufnahmen gibt, also 8 für jede Datenbankdatei: eine von der BACKUP DATABASE-Anweisung und eine für jede Ausführung der BACKUP LOG-Anweisung.  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![Bereich „Ergebnisse“ zeigt Dateimomentaufnahmen von Daten- und Protokolldateien, wenn eine Protokollsicherung ausgeführt wird](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "Bereich „Ergebnisse“ zeigt Dateimomentaufnahmen von Daten- und Protokolldateien, wenn eine Protokollsicherung ausgeführt wird")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![Vier Dateimomentaufnahmen werden angezeigt](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "Vier Dateimomentaufnahmen werden angezeigt")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![Bereich „Ergebnisse“ zeigt insgesamt 16 Dateimomentaufnahmen](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "Bereich „Ergebnisse“ zeigt insgesamt 16 Dateimomentaufnahmen")  
   
 7.  Stellen Sie im Objekt-Explorer eine Verbindung mit dem Azure-Speicher her.  
   
 8.  Erweitern Sie „Container“, erweitern Sie den Container, den Sie in Lektion 1 erstellt haben, und überprüfen Sie, ob 7 neue Sicherungsdateien zusammen mit den Blobs der vorangegangenen Lektionen erscheinen (Aktualisieren Sie, falls notwendig).  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Azure-Container zeigt 7 Protokollsicherungblobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
   
 **Nächste Lektion:**  
   
@@ -99,3 +103,4 @@ Um Aktivität in der AdventureWorks2014-Datenbank zu generieren und regelmäßig
   
   
   
+

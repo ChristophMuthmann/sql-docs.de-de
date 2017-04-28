@@ -1,26 +1,30 @@
 ---
-title: "&#220;berwachen der Replikation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Überwachen der Leistung [SQL Server-Replikation], Replikationsmonitor"
-  - "Replikationsmonitor, Informationen zum Replikationsmonitor"
+title: "Übersicht über den Replikationsmonitor | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen der Replikation
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ist ein grafisches Tool, mit dem Sie die allgemeine Integrität der Replikationstopologie überwachen können. Der Replikationsmonitor stellt detaillierte Informationen zum Status und der Leistung von Veröffentlichungen und Abonnements bereit und unterstützt Sie bei der Beantwortung allgemeiner Fragen:  
+# <a name="monitoring-replication-overview"></a>Übersicht über den Replikationsmonitor
+  Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ist ein grafisches Tool, mit dem Sie die allgemeine Integrität der Replikationstopologie überwachen können. Der Replikationsmonitor stellt detaillierte Informationen zum Status und der Leistung von Veröffentlichungen und Abonnements bereit und unterstützt Sie bei der Beantwortung allgemeiner Fragen:  
   
 -   Arbeitet das System fehlerfrei?  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 37
   
  Zum Überwachen der Replikation muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** auf dem Verteiler oder Mitglied der festen Datenbankrolle **replmonitor** in der Verteilungsdatenbank sein. Ein Systemadministrator kann jeden Benutzer zur **replmonitor** -Rolle hinzufügen. Anhand dieser Rolle kann ein Benutzer die Replikationsaktivität im Replikationsmonitor anzeigen. Er kann die Replikation jedoch nicht verwalten.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  In den folgenden Themen finden Sie Informationen zu den Funktionen des Replikationsmonitors.  
   
  [Übersicht über die Benutzeroberfläche des Replikationsmonitors](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -48,10 +52,10 @@ caps.handback.revision: 37
  [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](../../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
  Beschreibt, wie Nicht-Administratoren Berechtigungen zugewiesen werden, damit sie Replikationsmonitor verwenden können.  
   
- [Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)  
+ [Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)  
  Beschreibt das Hinzufügen und Entfernen von Verlegern zum/aus dem Replikationsmonitor.  
   
- [Aktualisieren von Daten in Replikationsmonitor](../../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
+ [Aktualisieren von Daten im Replikationsmonitor](../../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
  Beschreibt das Aktualisieren von Daten im Replikationsmonitor.  
   
  [Überwachen der Leistung mit dem Replikationsmonitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
@@ -72,19 +76,19 @@ caps.handback.revision: 37
  [Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor](../../../relational-databases/replication/monitor/view-publication-and-subscription-status-in-replication-monitor.md)  
  Beschreibt, wie Statusinformationen einer Veröffentlichung oder eines Abonnements mithilfe des Replikationsmonitors angezeigt werden.  
   
- [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger mithilfe des Replikationsmonitors.  
   
- [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung mithilfe des Replikationsmonitors.  
   
- [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung & #40 zugeordneten Agents; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents mithilfe des Replikationsmonitors.  
   
- [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement mithilfe des Replikationsmonitors.  
   
- [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement & #40 zugeordneten Agents; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents mithilfe des Replikationsmonitors.  
   
   

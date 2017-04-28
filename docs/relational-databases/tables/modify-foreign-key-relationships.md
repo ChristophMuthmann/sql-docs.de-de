@@ -1,28 +1,32 @@
 ---
-title: "&#196;ndern von Fremdschl&#252;sselbeziehungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "Fremdschlüssel [SQL Server], ändern"
-  - "Ändern von Fremdschlüsseln"
+title: "Ändern von Fremdschlüsselbeziehungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern von Fremdschl&#252;sselbeziehungen
+# <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Sie können die Fremdschlüsselseite einer Beziehung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Wenn Sie den Fremdschlüssel einer Tabelle ändern, wird entsprechend angepasst, welche Spalten mit den Spalten in der Primärschlüsseltabelle verknüpft sind.  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So ändern Sie einen Fremdschlüssel  
+#### <a name="to-modify-a-foreign-key"></a>So ändern Sie einen Fremdschlüssel  
   
 1.  Erweitern Sie im **Objekt-Explorer**die Tabelle mit dem Fremdschlüssel, und erweitern Sie dann die Option **Schlüssel**.  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 20
      Löscht die in der Liste **ausgewählte Beziehung** ausgewählte Beziehung. Verwenden Sie diese Schaltfläche zum Entfernen der Beziehung, um das Hinzufügen einer Beziehung abzubrechen.  
   
      **Kategorie Allgemein**  
-     Wenn die Kategorie erweitert ist, werden **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Tabellen- und Spaltenspezifikation** angezeigt.  
+     Wenn die Kategorie erweitert ist, werden **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Tabellen- und Spaltenspezifikation**angezeigt.  
   
-     **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen**  
+     **Check Existing Data on Creation or Re-Enabling**  
      Überprüft alle Daten, die vor der Erstellung oder Reaktivierung der Einschränkung in der Tabelle vorhandenen sind, auf die Einschränkung hin.  
   
      **Kategorie Tabellen- und Spaltenspezifikation**  
@@ -98,18 +102,18 @@ caps.handback.revision: 20
      Zeigt an, welche Spalte in der ausgewählten Beziehung als Primärschlüssel oder eindeutiger Schlüssel fungiert.  
   
      **Kategorie Identität**  
-     Wenn die Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name** und **Beschreibung** angezeigt.  
+     Wenn die Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name** und **Beschreibung**angezeigt.  
   
      **Name**  
      Zeigt den Namen der Beziehung an. Wenn eine neue Beziehung erstellt wird, erhält sie einen Standardnamen, der auf der Tabelle im aktiven Fenster im Tabellen-Designer ****basiert. Sie können den Namen jederzeit ändern.  
   
      **Beschreibung**  
-     Beschreibt die Beziehung. Um eine detailliertere Beschreibung zu erstellen, klicken Sie auf **Beschreibung**, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+     Beschreibt die Beziehung. Um eine detailliertere Beschreibung zu erstellen, klicken Sie auf **Beschreibung** , und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
      **Kategorie Tabellen-Designer**  
-     Wenn die Kategorie erweitert ist, werden Informationen über **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Für Replikation erzwingen** angezeigt.  
+     Wenn die Kategorie erweitert ist, werden Informationen über **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Für Replikation erzwingen**angezeigt.  
   
-     **Für Replikation erzwingen**  
+     **Enforce For Replication**  
      Gibt an, ob die Einschränkung erzwungen wird, wenn durch den Replikations-Agent in der Tabelle eine INSERT-, ein UPDATE- oder DELETE-Anweisung ausgeführt wird.  
   
      **Fremdschlüsseleinschränkung erzwingen**  
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie einen Fremdschlüssel**  
   
- Um eine FOREIGN KEY-Einschränkung mit Transact-SQL zu ändern, müssen Sie zuerst die vorhandene FOREIGN KEY-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) und [Create Foreign Key Relationships](../../relational-databases/tables/erstellen-von-fremdschlüssel-beziehungen.md).  
+ Um eine FOREIGN KEY-Einschränkung mit Transact-SQL zu ändern, müssen Sie zuerst die vorhandene FOREIGN KEY-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) und [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
 ###  <a name="TsqlExample"></a>  

@@ -1,61 +1,65 @@
 ---
-title: "Assistent zum Generieren und Ver&#246;ffentlichen von Skripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql9.swb.generatescriptswizard.chooseviews.f1"
-  - "sql13.swb.generatescriptswizard.manageproviders.f1"
-  - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
-  - "sql9.swb.generatescriptswizard.choosedefaults.f1"
-  - "sql13.swb.generatescriptswizard.summarypage.f1"
-  - "sql13.swb.generatescriptswizard.providerconfiguration.f1"
-  - "sql9.swb.generatescriptswizard.chooseuddt.f1"
-  - "sql9.swb.generatescriptswizard.chooserules.f1"
-  - "sql13.swb.generatescriptswizard.introduction.f1"
-  - "sql13.swb.generatescriptswizard.setscriptingoptions.f1"
-  - "sql13.swb.generatescriptswizard.saveorpublishscripts.f1"
-  - "sql9.swb.generatescriptswizard.progress.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql9.swb.generatescriptswizard.welcome.f1"
-  - "sql9.swb.generatescriptswizard.scriptfileoption.f1"
-  - "sql13.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql13.swb.generatescriptswizard.advancedpublishingoptions.f1"
-  - "sql9.swb.generatescriptswizard.selectdatabase.f1"
-  - "sql9.swb.generatescriptswizard.choosetables.f1"
-  - "sql9.swb.generatescriptswizard.choosestoredprocedures.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjecttypes.f1"
-  - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
-  - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
-  - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
-  - "Datenbanken [SQL Server], veröffentlichen"
-  - "Veröffentlichen von Datenbanken"
-  - "Skripts [SQL Server], generieren"
-  - "Skripts [SQL Server], veröffentlichen"
-  - "Datenbanken [SQL Server], Generieren von Skripts"
-  - "Datenbankveröffentlichungs-Assistent"
+title: "Assistenten zum Generieren und Veröffentlichen von Skripts | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql9.swb.generatescriptswizard.chooseviews.f1
+- sql13.swb.generatescriptswizard.manageproviders.f1
+- sql9.swb.generatescriptswizard.scriptwizarddescription.f1
+- sql9.swb.generatescriptswizard.choosedefaults.f1
+- sql13.swb.generatescriptswizard.summarypage.f1
+- sql13.swb.generatescriptswizard.providerconfiguration.f1
+- sql9.swb.generatescriptswizard.chooseuddt.f1
+- sql9.swb.generatescriptswizard.chooserules.f1
+- sql13.swb.generatescriptswizard.introduction.f1
+- sql13.swb.generatescriptswizard.setscriptingoptions.f1
+- sql13.swb.generatescriptswizard.saveorpublishscripts.f1
+- sql9.swb.generatescriptswizard.progress.f1
+- sql9.swb.generatescriptswizard.chooseobjects.f1
+- sql9.swb.generatescriptswizard.welcome.f1
+- sql9.swb.generatescriptswizard.scriptfileoption.f1
+- sql13.swb.generatescriptswizard.chooseobjects.f1
+- sql13.swb.generatescriptswizard.advancedpublishingoptions.f1
+- sql9.swb.generatescriptswizard.selectdatabase.f1
+- sql9.swb.generatescriptswizard.choosetables.f1
+- sql9.swb.generatescriptswizard.choosestoredprocedures.f1
+- sql9.swb.generatescriptswizard.chooseobjecttypes.f1
+- sql13.swb.generatescriptswizard.advancedscriptingoptions.f1
+- sql9.swb.generatescriptswizard.choosescriptoptions.f1
+- sql9.swb.generatescriptswizard.chooseudf.f1
+helpviewer_keywords:
+- databases [SQL Server], publishing
+- publishing databases
+- scripts [SQL Server], generating
+- scripts [SQL Server], publishing
+- databases [SQL Server], generating scripts
+- Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
+ms.lasthandoff: 04/11/2017
+
 ---
-# Assistent zum Generieren und Ver&#246;ffentlichen von Skripts
-  Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] erstellen. Sie können Skripts für eine Datenbank auf einer Datenbankmodul-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus generieren. Die generierten Skripts können auf einer anderen Datenbankmodul-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
+# <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
+  Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbankmodul-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus generieren. Die generierten Skripts können auf einer anderen Datenbankmodul-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
   
-1.  **Vorbereitungen:**  [Veröffentlichen in einem gehosteten Dienst](#PubHostSvc), [Berechtigungen](#Permissions)  
+1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
-2.  **Generieren oder Veröffentlichen eines Skripts mithilfe von:**  [Der Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz)  
+2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
-## Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Die Quell- und Zieldatenbank können sich auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] befinden, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
   
 ###  <a name="PubHostSvc"></a> Veröffentlichen in einem gehosteten Dienst  
@@ -120,7 +124,7 @@ caps.handback.revision: 45
 ###  <a name="SetScriptOpt"></a> Seite "Skripterstellungsoptionen festlegen"  
  Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählten Speicherort gespeichert werden, oder ob damit Datenbankobjekte bei einem Remotewebhostinganbieter veröffentlicht werden. Für die Veröffentlichung müssen Sie Zugriff auf einen Webdienst haben, der mithilfe des Webdiensts "Datenbank-Veröffentlichungsdienste" installiert wird.  
   
- **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern** aus. Sie können die Skripts später für eine Datenbankmodul-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
+ **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbankmodul-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
   
  **Skripts an einem bestimmten Speicherort speichern** – Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.  
   
@@ -151,21 +155,21 @@ caps.handback.revision: 45
   
 -   **ANSI-Auffüllung** – schließt **ANSI PADDING ON** in das Skript ein. Der Standardwert ist **True**.  
   
--   **An Datei anfügen** – Im Falle von **True** wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen**. Im Falle von **False**überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.  
+-   **An Datei anfügen** – Im Falle von **True**wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen** . Im Falle von **False**überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.  
   
--   **Skripterstellung bei einem Fehler fortsetzen** – Im Falle von **True** wird die Skripterstellung bei Auftreten eines Fehlers beendet. Im Falle von **False**wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.  
+-   **Skripterstellung bei einem Fehler fortsetzen** – Im Falle von **True**wird die Skripterstellung bei Auftreten eines Fehlers beendet. Im Falle von **False**wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.  
   
--   **UDDTs in Basistypen konvertieren** – Im Falle von **True** werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
+-   **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
   
 -   **Skript für abhängige Objekte generieren** – Generiert ein Skript für jedes Objekt, das vorhanden sein muss, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert ist **True**.  
   
--   **Beschreibende Header einschließen** – Im Falle von **True** werden dem Skript beschreibende Kommentare hinzugefügt, mit denen das Skript für jedes Objekt in Abschnitte unterteilt wird. Der Standardwert ist **False**.  
+-   **Beschreibende Header einschließen** – Im Falle von **True**werden dem Skript beschreibende Kommentare hinzugefügt, mit denen das Skript für jedes Objekt in Abschnitte unterteilt wird. Der Standardwert ist **False**.  
   
--   **„IF NOT EXISTS“ einschließen** – Im Falle von **True** enthält das Skript eine Anweisung, um zu überprüfen, ob das Objekt bereits in der Datenbank vorhanden ist, und versucht nicht, ein neues Objekt zu erstellen, wenn das Objekt bereits vorhanden ist. Der Standardwert ist **False**.  
+-   **„IF NOT EXISTS“ einschließen** – Im Falle von **True**enthält das Skript eine Anweisung, um zu überprüfen, ob das Objekt bereits in der Datenbank vorhanden ist, und versucht nicht, ein neues Objekt zu erstellen, wenn das Objekt bereits vorhanden ist. Der Standardwert ist **False**.  
   
--   **Einschränkungsnamen des Systems einschließen** – Im Falle von **False** (Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.  
+-   **Einschränkungsnamen des Systems einschließen** – Im Falle von **False**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.  
   
--   **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False** enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Modultyp nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Modultyp ausgeführt werden kann. Der Standardwert ist **False**.  
+-   **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Modultyp nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Modultyp ausgeführt werden kann. Der Standardwert ist **False**.  
   
 -   **Objektnamen mit Schema qualifizieren** – Schließt den Schemanamen im Namen der erstellten Objekte ein. Der Standardwert ist **True**.  
   
@@ -181,13 +185,13 @@ caps.handback.revision: 45
   
 -   **Skripterstellung für Modultyp** – Erstellt ein Skript, das für den ausgewählten Typ von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bzw. den ausgewählten Typ einer Instanz des SQL Server-Datenbankmoduls ausgeführt werden kann. Für den angegebenen Typ nicht unterstützte Objekte werden nicht in das Skript eingeschlossen. Der Standardwert ist der Typ des Ursprungsservers.  
   
--   **Skripterstellung für Serverversion** – Erstellt ein Skript, das für die ausgewählte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
+-   **Skripterstellung für Serverversion** – Erstellt ein Skript, das für die ausgewählte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
   
 -   **Skripterstellung für Anmeldungen** – Wenn das Objekt, für das ein Skript erstellt werden soll, ein Datenbankbenutzer ist, werden mit dieser Option die Anmeldungen erstellt, von denen der Benutzer abhängig ist. Der Standardwert ist **False**.  
   
--   **Skripterstellung für Berechtigungen auf Objektebene**– Schließt Skripts ein, um die Berechtigung für Objekte in der Datenbank festzulegen. Der Standardwert ist **False**.  
+-   **Skripterstellung für Berechtigungen auf Objektebene** – Schließt Skripts ein, um die Berechtigung für Objekte in der Datenbank festzulegen. Der Standardwert ist **False**.  
   
--   **Skripterstellung für Statistiken** – Wenn **Skripterstellung für Statistiken** festgelegt ist, schließt diese Option die **CREATE STATISTICS**-Anweisung zum erneuten Erstellen der Statistiken für das Objekt ein. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+-   **Skripterstellung für Statistiken** – Wenn **Skripterstellung für Statistiken**festgelegt ist, schließt diese Option die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt ein. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
 -   **Skripterstellung für USE DATABASE** – Fügt dem Skript die **USE DATABASE**-Anweisung hinzu. Die **USE DATABASE** -Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **False** aus, um die **USE DATABASE** -Anweisung auszulassen. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
@@ -237,7 +241,7 @@ caps.handback.revision: 45
   
  **Allgemein** – Die folgenden Optionen gelten für die gesamte Veröffentlichung:  
   
-1.  **UDDTs in Basistypen konvertieren** – Im Falle von **True** werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
+1.  **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
   
 2.  **Sortierung veröffentlichen** – Enthält Sortierungsinformationen für Tabellenspalten. Der Standardwert ist **False**. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -247,11 +251,11 @@ caps.handback.revision: 45
   
 5.  **Erweiterte Eigenschaften veröffentlichen** – Schließt erweiterte Eigenschaften in das Skript ein, das zur Veröffentlichung an den Anbieter gesendet wird, wenn das Objekt erweiterte Eigenschaften hat. Der Standardwert ist **True**.  
   
-6.  **Für Serverversion veröffentlichen** – Erstellt ein Skript, das zur Veröffentlichung an den Remoteanbieter gesendet wird, sodass es auf der ausgewählten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
+6.  **Für Serverversion veröffentlichen** – Erstellt ein Skript, das zur Veröffentlichung an den Remoteanbieter gesendet wird, sodass es auf der ausgewählten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
   
 7.  **Berechtigungen auf Objektebene veröffentlichen** – Schließt die Berechtigungen für die ausgewählten Objekte in der Datenbank ein. Der Standardwert ist **False**.  
   
-8.  **Statistiken veröffentlichen** – Wenn **Statistiken veröffentlichen** festgelegt ist, ist die **CREATE STATISTICS**-Anweisung zum erneuten Erstellen der Statistiken für das Objekt enthalten. Mithilfe der Option **Statistiken und Histogramme veröffentlichen** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Statistiken nicht veröffentlichen**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+8.  **Statistiken veröffentlichen** – Wenn **Statistiken veröffentlichen**festgelegt ist, ist die **CREATE STATISTICS** -Anweisung zum erneuten Erstellen der Statistiken für das Objekt enthalten. Mithilfe der Option **Statistiken und Histogramme veröffentlichen** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Statistiken nicht veröffentlichen**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
 9. **VarDecimal-Optionen veröffentlichen** – Aktiviert das **vardecimal**-Tabellenformat in der Zieldatenbanktabelle, wenn es in der Ursprungsdatenbanktabelle aktiviert ist. Der Standardwert ist **True**.  
   
@@ -267,7 +271,7 @@ caps.handback.revision: 45
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Tabellen oder Sichten.  
   
-1.  **CHECK-Einschränkungen veröffentlichen** – Schließt die Erstellung von **CHECK**-Einschränkungen im Veröffentlichungsprozess ein. Der Standardwert ist **True**. Für**CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+1.  **CHECK-Einschränkungen veröffentlichen** – Schließt die Erstellung von **CHECK** -Einschränkungen im Veröffentlichungsprozess ein. Der Standardwert ist **True**. Für**CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Fremdschlüssel veröffentlichen** – Schließt die Erstellung von Fremdschlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist **True**. Mit Fremdschlüsseln können Beziehungen zwischen Tabellen angezeigt und erzwungen werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
@@ -334,13 +338,13 @@ caps.handback.revision: 45
   
  **Fertig stellen** – Klicken Sie hier, um den Assistenten nach der Verarbeitung oder bei Auftreten eines Fehlers zu schließen.  
  
-## Generieren von Skripts in Azure SQL Data Warehouse  
+## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generieren von Skripts in Azure SQL Data Warehouse  
 
-Wenn die bei der Verwendung von „Skripterstellung als...“ generierte Syntax nicht wie die [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]-Syntax aussieht, oder wenn Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise Ihre Optionen für die Skripterstellung in SQL Server Management Studio auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] festlegen.  
+Wenn die bei der Verwendung von „Skripterstellung als...“ generierte Syntax nicht wie die [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] -Syntax aussieht, oder wenn Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise Ihre Optionen für die Skripterstellung in SQL Server Management Studio auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]festlegen.  
 
-### Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse  
+### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse  
 
-Damit Sie Skripts für Objekte mit der [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]-Syntax erstellen können, legen Sie die Standardoption für die Skripterstellung wie folgt auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] fest:  
+Damit Sie Skripts für Objekte mit der [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] -Syntax erstellen können, legen Sie die Standardoption für die Skripterstellung wie folgt auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] fest:  
 
 1. Klicken Sie auf **Tools** und dann auf **Optionen**.  
 2. Legen Sie unter **Allgemeine Skripterstellungsoptionen** Folgendes fest:  
@@ -348,21 +352,21 @@ Damit Sie Skripts für Objekte mit der [!INCLUDE[ssSDW_md](../../includes/sssdw-
     2. Skript für die Datenbankmoduledition: **Microsoft Azure SQL Data Warehouse Edition**.  
 3. Klicken Sie auf **OK**.
 
-### Generieren von Skripts für SQL Data Warehouse, wenn es nicht die Standardoption für die Skripterstellung ist  
+### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Generieren von Skripts für SQL Data Warehouse, wenn es nicht die Standardoption für die Skripterstellung ist  
 
-Wenn Sie [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] wie oben gezeigt als Standardoption für die Skripterstellung festlegen, können diese Anweisungen ignoriert werden. Wenn Sie jedoch andere Standardoptionen für die Skripterstellung verwenden, könnte ein Fehler auftreten. Um Fehler zu vermeiden, führen Sie folgende Schritte aus, um Skripts für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] zu generieren und zu veröffentlichen:  
+Wenn Sie [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] wie oben gezeigt als Standardoption für die Skripterstellung festlegen, können diese Anweisungen ignoriert werden. Wenn Sie jedoch andere Standardoptionen für die Skripterstellung verwenden, könnte ein Fehler auftreten. Um Fehler zu vermeiden, führen Sie folgende Schritte aus, um Skripts für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]zu generieren und zu veröffentlichen:  
 
 1. Klicken Sie mit der rechten Maustaste auf Ihre SQL Data Warehouse-Datenbank.  
-2. Wählen Sie **Skripts generieren...** aus.  
+2. Wählen Sie **Skripts generieren...**aus.  
 3. Wählen Sie die Objekte aus, für die Sie Skripts erstellen möchten.  
-4. Klicken Sie in **Skripterstellungsoptionen** auf **Erweitert**. Legen Sie unter **Allgemein** Folgendes fest:  
+4. Klicken Sie in **Skripterstellungsoptionen**auf **Erweitert**. Legen Sie unter **Allgemein** Folgendes fest:  
     1. Skript für den Datenbankmodultyp: **Microsoft Azure SQL-Datenbank**.  
     2. Skript für die Datenbankmoduledition: **Microsoft Azure SQL Data Warehouse Edition**.  
 5. Klicken Sie auf **Skripts speichern oder veröffentlichen** und dann auf **Fertig stellen**.  
 
 Die in Schritt 4 festgelegten Optionen werden nicht gespeichert. Wenn Sie diese Optionen speichern möchten, befolgen Sie die Anweisungen in **Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Installieren von SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

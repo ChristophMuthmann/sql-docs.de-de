@@ -1,42 +1,46 @@
 ---
-title: "Verwalten und &#220;berwachen der Volltextsuche auf einer Serverinstanz | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Volltextsuche [SQL Server], Informationen zu"
-  - "Volltextsuche [SQL Server], Serververwaltung"
+title: "Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten und &#220;berwachen der Volltextsuche auf einer Serverinstanz
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
   Die Volltextverwaltung für eine Serverinstanz enthält Folgendes:  
   
--   Die Systemverwaltungsaufgaben wie z. B. das Verwalten des FDHOST-Startprogrammdiensts (MSSQLFDLauncher), das Neustarten des Filterdaemonhost-Prozesses nach dem Ändern der Dienstkontoinformationen, das Konfigurieren der serverweiten Volltexteigenschaften und das Sichern des Volltextkatalogs. Auf der Serverebene können Sie beispielsweise eine Standardvolltextsprache festlegen, die sich vollständig von der Standardsprache der Serverinstanz unterscheidet.  
+-   Die Systemverwaltungsaufgaben wie z. B. das Verwalten des FDHOST-Startprogrammdiensts (MSSQLFDLauncher), das Neustarten des Filterdaemonhost-Prozesses nach dem Ändern der Dienstkontoinformationen, das Konfigurieren der serverweiten Volltexteigenschaften und das Sichern des Volltextkatalogs. Auf der Serverebene können Sie beispielsweise eine Standardvolltextsprache festlegen, die sich vollständig von der Standardsprache der Serverinstanz unterscheidet.  
   
 -   Konfigurieren von linguistischen Volltextkomponenten (Wörtertrennung, Stammerkennung, Thesaurusdatei, Stoppwörter und Stoplisten).  
   
 -   Konfigurieren einer Benutzerdatenbank für die Volltextsuche. Dies beinhaltet das Erstellen von Volltextkatalogen für die Datenbank und die Definition eines Volltextindexes für jede Tabelle oder indizierte Sicht, für die Volltextabfragen ausgeführt werden sollen.  
   
 ##  <a name="props"></a> Anzeigen oder Ändern von Servereigenschaften für die Volltextsuche  
- Sie können die Eigenschaften für die Volltextsuche einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen.  
+ Sie können die Eigenschaften für die Volltextsuche einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
   
-#### So zeigen Sie Servereigenschaften für die Volltextsuche an und ändern diese  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>So zeigen Sie Servereigenschaften für die Volltextsuche an und ändern diese  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und klicken Sie dann auf **Eigenschaften**.  
   
-2.  Klicken Sie im Dialogfeld **Servereigenschaften** auf die Seite **Erweitert**, um Serverinformationen zur Volltextsuche anzuzeigen. Hierbei handelt es sich um die folgenden Eigenschaften:  
+2.  Klicken Sie im Dialogfeld **Servereigenschaften** auf die Seite **Erweitert** , um Serverinformationen zur Volltextsuche anzuzeigen. Hierbei handelt es sich um die folgenden Eigenschaften:  
   
     -   **Volltext-Standardsprache**  
   
@@ -49,12 +53,12 @@ caps.handback.revision: 19
          Die Alternativen lauten folgendermaßen:  
   
          **Importieren**  
-         Volltextkataloge werden importiert. Normalerweise ist der Import bedeutend schneller als eine Neuerstellung. Wenn Sie zum Beispiel nur eine CPU verwenden, läuft ein Import etwa zehnmal schneller ab als eine Neuerstellung. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Wörtertrennungen. Aus diesem Grund sollten Sie zu einem späteren Zeitpunkt eine Neuerstellung der Volltextkataloge durchführen.  
+         Volltextkataloge werden importiert. Normalerweise ist der Import bedeutend schneller als eine Neuerstellung. Wenn Sie zum Beispiel nur eine CPU verwenden, läuft ein Import etwa zehnmal schneller ab als eine Neuerstellung. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]eingeführten Wörtertrennungen. Aus diesem Grund sollten Sie zu einem späteren Zeitpunkt eine Neuerstellung der Volltextkataloge durchführen.  
   
         > [!NOTE]  
-        >  Sie können die Neuerstellung im Multithreadmodus ausführen. Wenn mehr als 10 CPUs verfügbar sind, ist die Neuerstellung ggf. schneller als der Import, falls dabei alle CPUs genutzt werden können.  
+        >  Sie können die Neuerstellung im Multithreadmodus ausführen. Wenn mehr als 10 CPUs verfügbar sind, ist die Neuerstellung ggf. schneller als der Import, falls dabei alle CPUs genutzt werden können.  
   
-         Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbanken verfügbar.  
+         Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.  
   
          **Neu erstellen**  
          Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
@@ -62,21 +66,21 @@ caps.handback.revision: 19
          **Zurücksetzen**  
          Volltextkataloge werden zurückgesetzt. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Volltextkatalogdateien werden entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.  
   
-         Informationen zum Auswählen einer Option für das Volltextupgrade finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
+         Informationen zum Auswählen einer Option für das Volltextupgrade finden Sie unter[Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  Die Option für das Volltextupgrade kann auch mit der [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option**-Aktion festgelegt werden.  
+        >  Die Option für das Volltextupgrade kann auch mit der [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** -Aktion festgelegt werden.  
   
 ##  <a name="metadata"></a> Anzeigen zusätzlicher Volltextservereigenschaften  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen können verwendet werden, um die Werte verschiedener Eigenschaften der Volltextsuche auf Serverebene abzurufen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche hilfreich.  
   
- In der folgenden Tabelle werden die Volltexteigenschaften einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Serverinstanz und die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen aufgeführt.  
+ In der folgenden Tabelle werden die Volltexteigenschaften einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz und die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen aufgeführt.  
   
 |Eigenschaft|Beschreibung|Funktion|  
 |--------------|-----------------|--------------|  
-|**IsFullTextInstalled**|Gibt an, ob die Volltextkomponente mit der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurde.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
+|**IsFullTextInstalled**|Gibt an, ob die Volltextkomponente mit der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert wurde.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  
-|**LoadOSResources**|Gibt an, ob Wörtertrennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert und verwendet werden.|FULLTEXTSERVICEPROPERTY|  
+|**LoadOSResources**|Gibt an, ob Wörtertrennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert und verwendet werden.|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Gibt an, ob ausschließlich signierte Binärdateien vom Volltextmodul geladen werden.|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> Überwachen der Volltextsuchaktivität  

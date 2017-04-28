@@ -1,31 +1,35 @@
 ---
-title: "Aktivieren, Deaktivieren und L&#246;schen von Breakpoints | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aktivieren, Deaktivieren und Löschen von Breakpoints | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren, Deaktivieren und L&#246;schen von Breakpoints
+# <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
   Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **Breakpoints** verwenden. Mithilfe des Fensters können Sie Informationen zu Breakpoints anzeigen und Aktionen ausführen, z. B. Löschen, Deaktivieren und Aktivieren von Breakpoints.  
   
-## Fenster "Breakpoints"  
- Das Fenster **Breakpoints** enthält Informationen, z. B. auf welcher Codezeile sich der Breakpoint befindet. Außerdem können Sie im Fenster **Breakpoints** Breakpoints löschen, deaktivieren und aktivieren. Weitere Informationen zum Fenster **Breakpoints** finden Sie unter [Breakpoints Window](../../relational-databases/scripting/breakpoints-window.md).  
+## <a name="the-breakpoints-window"></a>Fenster "Breakpoints"  
+ Das Fenster **Breakpoints** enthält Informationen, z. B. auf welcher Codezeile sich der Breakpoint befindet. Außerdem können Sie im Fenster **Breakpoints** Breakpoints löschen, deaktivieren und aktivieren. Weitere Informationen zum Fenster **Breakpoints** finden Sie unter [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
   
  Durch das Deaktivieren von Breakpoints wird verhindert, dass der Breakpoint die Ausführung anhält, wobei die Definition jedoch beibehalten wird, falls Sie den Breakpoint später aktivieren möchten. Durch das Löschen von Breakpoints werden sie endgültig gelöscht. Sie müssen einen neuen Breakpoint umschalten, um die Ausführung für die Anweisung anzuhalten.  
   
-## So öffnen Sie das Fenster "Breakpoints"  
- **So öffnen Sie das Fenster "Breakpoints"**  
+## <a name="to-open-the-breakpoints-window"></a>So öffnen Sie das Fenster "Breakpoints"  
+ **To open the Breakpoints window**  
   
  Zum Öffnen des Fensters **Breakpoints** haben Sie folgende Möglichkeiten:  
   
@@ -35,8 +39,8 @@ caps.handback.revision: 5
   
 -   Drücken Sie STRG+ALT+B.  
   
-## So deaktivieren Sie einen einzelnen Breakpoint  
- **So deaktivieren Sie einen einzelnen Breakpoint**  
+## <a name="to-disable-a-single-breakpoint"></a>So deaktivieren Sie einen einzelnen Breakpoint  
+ **To disable a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen deaktivieren:  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 5
   
 -   Deaktivieren Sie im Fenster "Breakpoints" das Kontrollkästchen links neben dem Breakpoint.  
   
-## So deaktivieren Sie alle Breakpoints  
- **So deaktivieren Sie alle Breakpoints**  
+## <a name="to-disable-all-breakpoints"></a>So deaktivieren Sie alle Breakpoints  
+ **To disable all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen deaktivieren:  
   
@@ -53,8 +57,8 @@ caps.handback.revision: 5
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints deaktivieren** .  
   
-## So aktivieren Sie einen einzelnen Breakpoint  
- **So aktivieren Sie einen einzelnen Breakpoint**  
+## <a name="to-enable-a-single-breakpoint"></a>So aktivieren Sie einen einzelnen Breakpoint  
+ **To enable a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen aktivieren:  
   
@@ -62,8 +66,8 @@ caps.handback.revision: 5
   
 -   Aktivieren Sie im Fenster "Breakpoints" das Kontrollkästchen links neben dem Breakpoint.  
   
-## So aktivieren Sie alle Breakpoints  
- **So aktivieren Sie alle Breakpoints**  
+## <a name="to-enable-all-breakpoints"></a>So aktivieren Sie alle Breakpoints  
+ **To enable all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen aktivieren:  
   
@@ -71,19 +75,19 @@ caps.handback.revision: 5
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints aktivieren** .  
   
-## So löschen Sie einen einzelnen Breakpoint  
- **So löschen Sie einen einzelnen Breakpoint**  
+## <a name="to-delete-a-single-breakpoint"></a>So löschen Sie einen einzelnen Breakpoint  
+ **To delete a single breakpoint**  
   
  Sie können einen einzelnen Breakpoint folgendermaßen löschen:  
   
 -   Klicken Sie im Fenster „Abfrage-Editor“ mit der rechten Maustaste auf den Breakpoint, und klicken Sie anschließend auf **Breakpoint löschen**.  
   
--   Klicken Sie im Fenster „Breakpoints“ mit der rechten Maustaste auf den Breakpoint, und klicken Sie anschließend im Kontextmenü auf **Löschen**.  
+-   Klicken Sie im Fenster „Breakpoints“ mit der rechten Maustaste auf den Breakpoint, und klicken Sie anschließend im Kontextmenü auf **Löschen** .  
   
 -   Wählen Sie im Fenster "Breakpoints" den Breakpoint aus, und drücken Sie dann ENTF.  
   
-## So löschen Sie alle Breakpoints  
- **So löschen Sie alle Breakpoints**  
+## <a name="to-delete-all-breakpoints"></a>So löschen Sie alle Breakpoints  
+ **To delete all breakpoints**  
   
  Sie können alle Breakpoints folgendermaßen löschen:  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 5
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ein- und Ausschalten eines Breakpoints](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Als veraltetet markierte Funktionen [Volltextsuche]"
-  - "Volltextsuche [SQL Server], als veraltet markierte Funktionen"
-  - "Volltextabfragen [SQL Server], Näherung"
+title: Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [full-text search]
+- full-text search [SQL Server], deprecated features
+- full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016
-  In diesem Thema werden die als veraltet markierten Funktionen der Volltextsuche beschrieben, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie in neuen Anwendungen keine veralteten Funktionen.  
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016
+  In diesem Thema werden die als veraltet markierten Funktionen der Volltextsuche beschrieben, die in SQL Server noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version entfernt. Verwenden Sie in neuen Anwendungen keine veralteten Funktionen.  
   
- Sie können die Nutzung von als veraltet markierten Funktionen mithilfe des Objektleistungsindikators **SQL Server:Als veraltet markierte Funktionen** und mithilfe von Ablaufverfolgungsereignissen überwachen. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
+Sie können die Nutzung von als veralteten Funktionen mithilfe des Objektleistungsindikators **SQL Server: Als veraltet markierte Funktionen** und mithilfe von Ablaufverfolgungsereignissen überwachen. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-## Funktionen, die in der nächsten Version von SQL Server nicht unterstützt werden  
+## <a name="features-no-longer-supported"></a>Funktionen werden nicht mehr unterstützt  
 
   
-|Als veraltet markierte Funktion|Ersatz|Funktionsname|Funktions-ID|  
+|Als veraltet markierte Funktion|Ersatz|Feature name|Funktions-ID|  
 |------------------------|-----------------|------------------|----------------|  
 |FULLTEXTCATALOGPROPERTY-Eigenschaft: LogSize|Keine.|FULLTEXTCATALOGPROPERTY**('LogSize')**|211|  
 |FULLTEXTSERVICEPROPERTY-Eigenschaft:<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Keine.|FULLTEXTSERVICEPROPERTY**('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY**('DataTimeout'**)|210<br /><br /> 209|  
@@ -40,19 +44,20 @@ caps.handback.revision: 32
 |sys.dm_fts_memory_buffers-Spalte:<br /><br /> row_count|Keine.|dm_fts_memory_buffers.row_count|225|  
 |sys.fulltext_catalogs-Spalten:<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id-Spalten|Keine.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
-## Funktionen, die in einer zukünftigen Version von SQL Server nicht unterstützt werden  
- Die folgenden Funktionen der Volltextsuche werden in der nächsten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noch unterstützt, aber in einer zukünftigen Version entfernt. Die betreffende Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde noch nicht festgelegt.  
+## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Funktionen, die in einer zukünftigen Version von SQL Server nicht unterstützt werden  
+ Die folgenden Funktionen der Volltextsuche werden in der nächsten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]noch unterstützt, aber in einer zukünftigen Version entfernt. Die betreffende Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde noch nicht festgelegt.  
   
- Der **Feature name**-Wert wird in Ablaufverfolgungsereignissen als ObjectName und in Leistungsindikatoren sowie sys.dm_os_performance_counters als Instanzname angezeigt. Der **Feature ID**-Wert wird in Ablaufverfolgungsereignissen als ObjectId angezeigt.  
+ Der **Feature name** -Wert wird in Ablaufverfolgungsereignissen als ObjectName und in Leistungsindikatoren sowie sys.dm_os_performance_counters als Instanzname angezeigt. Der **Feature ID** -Wert wird in Ablaufverfolgungsereignissen als ObjectId angezeigt.  
   
-|Als veraltet markierte Funktion|Ersatz|Funktionsname|Funktions-ID|  
+|Als veraltet markierte Funktion|Ersatz|Feature name|Funktions-ID|  
 |------------------------|-----------------|------------------|----------------|  
-|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG (Option):<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Keine.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Keine.<sup>*</sup>|237<br /><br /> Keine.*|  
 |DATABASEPROPERTYEX-Eigenschaft: IsFullTextEnabled|Keine.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db-Option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Keine.|sp_detach_db @keepfulltextindexfile|226|  
-|sp_fulltext_service action-Werte: resource_usage hat keine Funktion.|Keine|sp_fulltext_service @ action=resource_usage|200|  
+|sp_fulltext_service action-Werte: resource_usage hat keine Funktion.|Keine|sp_fulltext_service @action= resource_usage|200|  
   
- \*Das Objekt **SQL Server:Als veraltet markierte Funktionen** überwacht keine Vorkommen der *Dateigruppe* CREATE FULLTEXT CATALOG ON FILEGROUP.  
+ *Das Objekt **SQL Server: Als veraltet markierte Funktionen**  überwacht keine Vorkommen der *filegroup* CREATE FULLTEXT CATALOG ON FILEGROUP.  
   
   
+

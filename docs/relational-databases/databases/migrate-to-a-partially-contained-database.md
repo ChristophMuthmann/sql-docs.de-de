@@ -1,24 +1,28 @@
 ---
-title: "Migrieren zu einer partiell eigenst&#228;ndigen Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Eigenständige Datenbank, migrieren zu"
+title: "Migrieren zu einer partiell eigenständigen Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrieren zu einer partiell eigenst&#228;ndigen Datenbank
+# <a name="migrate-to-a-partially-contained-database"></a>Migrieren zu einer partiell eigenständigen Datenbank
   In diesem Thema wird beschrieben, wie die Umstellung auf das teilweise eigenständige Datenbankmodell vorbereitet wird. Anschließend werden die Migrationsschritte erläutert.  
   
  **In diesem Thema:**  
@@ -44,12 +48,12 @@ caps.handback.revision: 17
   
 -   Fragen Sie [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) ab, um nicht enthaltene Objekte oder Funktionen in der Datenbank zu suchen. Weitere Informationen finden Sie weiter oben unter  
   
--   Überwachen Sie das **database_uncontained_usage**-XEvent, um festzustellen, ob nicht enthaltene Funktionen verwendet werden.  
+-   Überwachen Sie das **database_uncontained_usage** -XEvent, um festzustellen, ob nicht enthaltene Funktionen verwendet werden.  
   
 ##  <a name="enable"></a> Aktivieren enthaltener Datenbanken  
  Enthaltene Datenbanken müssen für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert sein, bevor sie erstellt werden können.  
   
-### Aktivieren von enthaltenen Datenbanken mit Transact-SQL  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Aktivieren von enthaltenen Datenbanken mit Transact-SQL  
  Im folgenden Beispiel werden enthaltene Datenbanken für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert.  
   
 ```tsql  
@@ -59,7 +63,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Aktivieren von enthaltenen Datenbanken mit Management Studio  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Aktivieren von enthaltenen Datenbanken mit Management Studio  
  Im folgenden Beispiel werden enthaltene Datenbanken für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert.  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**.  
@@ -71,7 +75,7 @@ GO
 ##  <a name="convert"></a> Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank  
  Eine Datenbank wird in eine enthaltene Datenbank konvertiert, indem die **CONTAINMENT** -Option geändert wird.  
   
-### Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank mit Transact-SQL  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank mit Transact-SQL  
  Im folgenden Beispiel wird die Datenbank `Accounting` in eine teilweise eigenständige Datenbank konvertiert.  
   
 ```tsql  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Konvertieren einer Datenbank in die teilweise eigenständige Datenbank mit Management Studio  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Konvertieren einer Datenbank in die teilweise eigenständige Datenbank mit Management Studio  
  Im folgenden Beispiel wird die Datenbank in eine teilweise eigenständige Datenbank konvertiert.  
   
 1.  Erweitern Sie im Objekt-Explorer **Datenbanken**, klicken Sie mit der rechten Maustaste auf die zu konvertierende Datenbank, und klicken Sie anschließend auf **Eigenschaften**.  
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## Siehe auch  
- [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

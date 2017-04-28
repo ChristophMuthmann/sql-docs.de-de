@@ -1,33 +1,37 @@
 ---
-title: "Abrufen von Informationen zu einer Sicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "Sichtenl [SQL Server], Statusinformationen"
-  - "Metadaten [SQL Server], Sichten"
-  - "Abhängigkeiten [SQL Server], Sichten"
-  - "Anzeigen von Sichtinformationen"
-  - "Sichten [SQL Server], Metadaten"
-  - "Ansehen von Sichtinformationen"
-  - "Statusinformationen [SQL Server], Sichten"
-  - "Abhängigkeiten anzeigen"
+title: Abrufen von Informationen zu einer Sicht | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abrufen von Informationen zu einer Sicht
+# <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
   Sie erhalten Informationen zur Definition oder den Eigenschaften einer Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Manchmal ist es erforderlich, die Definition einer Sicht anzuzeigen, um zu verstehen, wie die Daten in der Sicht aus den Quelltabellen abgeleitet werden, oder um die durch die Sicht definierten Daten anzuzeigen.  
   
 > [!IMPORTANT]  
@@ -54,11 +58,11 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### Abrufen von Sichteigenschaften mit Objekt-Explorer  
+#### <a name="get-view-properties-by-using-object-explorer"></a>Abrufen von Sichteigenschaften mit Objekt-Explorer  
   
 1.  Klicken Sie in **Objekt-Explorer**auf das Pluszeichen neben der Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Sichten** zu erweitern.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
      Die folgenden Eigenschaften werden im Dialogfeld **Sichteigenschaften** angezeigt.  
   
@@ -95,11 +99,11 @@ caps.handback.revision: 30
      **Schema-gebunden**  
      Gibt an, ob die Sicht Schema-gebunden ist. Die Werte sind True und False. Informationen zu Schema-gebundenen Sichten finden Sie im Abschnitt SCHEMABINDING von [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Abrufen von Sichteigenschaften mit dem Tool Sicht-Designer  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Abrufen von Sichteigenschaften mit dem Tool Sicht-Designer  
   
 1.  Erweitern Sie in **Objekt-Explorer**die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Entwurf** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Entwurf**aus.  
   
 3.  Klicken Sie mit der rechten Maustaste in den Leerraum des Diagrammbereichs, und klicken Sie auf **Eigenschaften**.  
   
@@ -139,19 +143,19 @@ caps.handback.revision: 30
      Zeigt eine Beschreibung der SQL-Anweisungen an. Klicken Sie auf die Beschreibung, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben der Eigenschaft, um die ganze Beschreibung anzuzeigen oder sie zu bearbeiten. Kommentare können Informationen darüber enthalten, wer die Sicht verwendet und wann sie verwendet wird.  
   
      **Oberste Angabe**  
-     Erweitert das Element, um die Eigenschaften für **Oben**, **Ausdruck**, **Prozent** und **WITH TIES** anzuzeigen.  
+     Erweitert das Element, um die Eigenschaften für **Oben**, **Ausdruck**, **Prozent**und **WITH TIES** anzuzeigen.  
   
      **(Nach oben)**  
      Gibt an, dass die Sicht eine TOP-Klausel enthält, die bewirkt, dass nur die ersten N Zeilen oder ersten N Prozent der Zeilen im Resultset zurückgegeben werden. In der Standardeinstellung gibt die Sicht die ersten 10 Zeilen im Resultset zurück. Verwenden Sie dies, um die Anzahl der zurückzugebenden Zeilen zu ändern oder einen anderen Prozentwert anzugeben.  
   
-     **expression**  
-     Zeigt an, welchen Prozentsatz (wenn **Prozent** auf **Ja** festgelegt ist) oder welche Datensätze (wenn **Prozent** auf **Nein** festgelegt wird) die Sicht zurückgegeben wird.  
+     **Ausdruck**  
+     Zeigt an, welchen Prozentsatz (wenn **Prozent** auf **Ja**festgelegt ist) oder welche Datensätze (wenn **Prozent** auf **Nein**festgelegt wird) die Sicht zurückgegeben wird.  
   
      **Prozent**  
-     Gibt an, dass die Abfrage eine **TOP**-Klausel enthält, von der nur die ersten N Prozent der Zeilen im Resultset zurückgegeben werden.  
+     Gibt an, dass die Abfrage eine **TOP** -Klausel enthält, von der nur die ersten N Prozent der Zeilen im Resultset zurückgegeben werden.  
   
      **WITH TIES**  
-     Gibt an, dass die Sicht eine **WITH TIES**-Klausel enthält. **WITH TIES** ist hilfreich, wenn eine Sicht sowohl eine **ORDER BY** -Klausel als auch eine **TOP** -Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der **ORDER BY** -Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert.  
+     Gibt an, dass die Sicht eine **WITH TIES** -Klausel enthält. **WITH TIES** ist hilfreich, wenn eine Sicht sowohl eine **ORDER BY** -Klausel als auch eine **TOP** -Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der **ORDER BY** -Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert.  
   
      **Spezifikation aktualisieren**  
      Erweitert, um Eigenschaften für die Eigenschaften **Aktualisieren mit Sichtregeln** und **Überprüfungsoption** anzuzeigen.  
@@ -164,11 +168,11 @@ caps.handback.revision: 30
      **Überprüfungsoption**  
      Gibt an, dass beim Öffnen dieser Sicht und Ändern des Bereichs **Ergebnisse** die Datenquelle überprüft, ob die hinzugefügten oder geänderten Daten die **WHERE-Klausel** der Sichtdefinition erfüllen. Wenn die Änderung die **WHERE** -Klausel nicht erfüllt, erhalten Sie eine Fehlermeldung mit weiteren Informationen.  
   
-#### So rufen Sie Abhängigkeiten für die Sicht ab  
+#### <a name="to-get-dependencies-on-the-view"></a>So rufen Sie Abhängigkeiten für die Sicht ab  
   
 1.  Erweitern Sie in **Objekt-Explorer**die Datenbank, die die Sicht enthält, deren Eigenschaften Sie anzeigen möchten, und erweitern Sie dann den Ordner **Sichten** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Abhängigkeiten anzeigen** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Abhängigkeiten anzeigen**aus.  
   
 3.  Wählen Sie **Objekte, die von [Sichtname] abhängig sind** aus, um die Objekte anzuzeigen, die auf die Sicht verweisen.  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So rufen Sie die Definition und die Eigenschaften einer Sicht ab  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>So rufen Sie die Definition und die Eigenschaften einer Sicht ab  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  Weitere Informationen finden Sie unter [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) und [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-#### So rufen Sie die Abhängigkeiten einer Sicht ab  
+#### <a name="to-get-the-dependencies-of-a-view"></a>So rufen Sie die Abhängigkeiten einer Sicht ab  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -231,6 +235,6 @@ caps.handback.revision: 30
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) and [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ Weitere Informationen finden Sie unter [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) und [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
   

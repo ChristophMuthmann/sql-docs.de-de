@@ -1,24 +1,28 @@
 ---
-title: "Aktivieren der erforderlichen Komponenten f&#252;r FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], erforderliche Komponenten"
+title: "Aktivieren der erforderlichen Komponenten für FileTable | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren der erforderlichen Komponenten f&#252;r FileTable
+# <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
   Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von FileTables aktiviert werden.  
   
 ##  <a name="EnablePrereq"></a> Aktivieren der erforderlichen Komponenten für FileTable  
@@ -51,7 +55,7 @@ caps.handback.revision: 25
  Bevor Sie FileTables in einer Datenbank erstellen können, muss die Datenbank eine FILESTREAM-Dateigruppe haben. Weitere Informationen zu dieser Voraussetzung finden Sie unter [Erstellen einer FILESTREAM-aktivierten Datenbank](../../relational-databases/blob/create-a-filestream-enabled-database.md).  
   
 ##  <a name="BasicsNTAccess"></a> Aktivieren des nicht transaktionalen Zugriffs auf Datenbankebene  
- Über FileTables können Windows-Anwendungen ein Windows-Dateihandle für FILESTREAM-Daten abrufen, ohne dass hierfür eine Transaktion erforderlich ist. Um diesen nicht transaktionalen Zugriff auf in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Dateien zuzulassen, müssen Sie die gewünschte Ebene des nicht transaktionalen Zugriffs auf Datenbankebene für jede Datenbank angeben, die FileTables enthält.  
+ Über FileTables können Windows-Anwendungen ein Windows-Dateihandle für FILESTREAM-Daten abrufen, ohne dass hierfür eine Transaktion erforderlich ist. Um diesen nicht transaktionalen Zugriff auf in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Dateien zuzulassen, müssen Sie die gewünschte Ebene des nicht transaktionalen Zugriffs auf Datenbankebene für jede Datenbank angeben, die FileTables enthält.  
   
 ###  <a name="HowToCheckAccess"></a> Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
  Fragen Sie die Katalogsicht [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) ab, und überprüfen Sie die Spalten **non_transacted_access** und **non_transacted_access_desc**.  
@@ -84,7 +88,7 @@ GO
  Sie können die Ebene des nicht transaktionalen Zugriffs im Feld **FILESTREAM Nicht durchgeführter Zugriff** der Seite **Optionen** des Dialogfelds **Datenbankeigenschaften** angeben. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Datenbankeigenschaften &#40;Seite Optionen&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ##  <a name="BasicsDirectory"></a> Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
- Wenn Sie nicht transaktionalen Zugriff auf Dateien auf Datenbankebene aktivieren, können Sie gleichzeitig optional einen Verzeichnisnamen mit der **DIRECTORY_NAME**-Option angeben. Wenn Sie keinen Verzeichnisnamen angeben, wenn Sie nicht transaktionalen Zugriff aktivieren, müssen Sie diesen später angeben, bevor Sie FileTables in der Datenbank erstellen können.  
+ Wenn Sie nicht transaktionalen Zugriff auf Dateien auf Datenbankebene aktivieren, können Sie gleichzeitig optional einen Verzeichnisnamen mit der **DIRECTORY_NAME** -Option angeben. Wenn Sie keinen Verzeichnisnamen angeben, wenn Sie nicht transaktionalen Zugriff aktivieren, müssen Sie diesen später angeben, bevor Sie FileTables in der Datenbank erstellen können.  
   
  In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Datenbankebene das untergeordnete Element des Freigabenamens, das für FILESTREAM auf Instanzebene angegeben wurde, und das übergeordnete Element von den in der Datenbank erstellten FileTables. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   Wenn Sie **eine Datenbank wiederherstellen**, rufen Sie die [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
+-   Wenn Sie **eine Datenbank wiederherstellen**, rufen Sie die [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -138,15 +142,15 @@ GO
   
 ###  <a name="ReqDirectory"></a> Anforderungen und Einschränkungen für das Verzeichnis auf Datenbankebene  
   
--   Das Festlegen von **DIRECTORY_NAME** ist beim Aufrufen von **CREATE DATABASE** oder **ALTER DATABASE** optional. Wenn Sie keinen Wert für **DIRECTORY_NAME** angeben, bleibt der Verzeichnisname NULL. Sie können jedoch erst FileTables in der Datenbank erstellen, wenn Sie einen Wert für **DIRECTORY_NAME** auf Datenbankebene angeben.  
+-   Das Festlegen von **DIRECTORY_NAME** ist beim Aufrufen von **CREATE DATABASE** oder **ALTER DATABASE**optional. Wenn Sie keinen Wert für **DIRECTORY_NAME**angeben, bleibt der Verzeichnisname NULL. Sie können jedoch erst FileTables in der Datenbank erstellen, wenn Sie einen Wert für **DIRECTORY_NAME** auf Datenbankebene angeben.  
   
 -   Der Verzeichnisname, den Sie angeben, muss den Anforderungen des Dateisystems im Hinblick auf einen gültigen Verzeichnisnamen entsprechen.  
   
 -   Wenn die Datenbank FileTables enthält, können Sie den **DIRECTORY_NAME** nicht auf einen NULL-Wert zurücksetzen.  
   
--   Wenn Sie eine Datenbank anfügen oder wiederherstellen, schlägt der Vorgang fehl, wenn die neue Datenbank über einen Wert für **DIRECTORY_NAME** verfügt, der bereits in der Zielinstanz vorhanden ist. Geben Sie einen eindeutigen Wert für **DIRECTORY_NAME** an, wenn Sie **CREATE DATABASE FOR ATTACH** oder **RESTORE DATABASE** aufrufen.  
+-   Wenn Sie eine Datenbank anfügen oder wiederherstellen, schlägt der Vorgang fehl, wenn die neue Datenbank über einen Wert für **DIRECTORY_NAME** verfügt, der bereits in der Zielinstanz vorhanden ist. Geben Sie einen eindeutigen Wert für **DIRECTORY_NAME** an, wenn Sie **CREATE DATABASE FOR ATTACH** oder **RESTORE DATABASE**aufrufen.  
   
--   Wenn Sie eine vorhandene Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren, ist der Wert von **DIRECTORY_NAME** NULL.  
+-   Wenn Sie eine vorhandene Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, ist der Wert von **DIRECTORY_NAME** NULL.  
   
 -   Wenn Sie nicht transaktionalen Zugriff auf Datenbankebene aktivieren oder deaktivieren, wird nicht überprüft, ob der Verzeichnisname angegeben wurde oder ob er eindeutig ist.  
   

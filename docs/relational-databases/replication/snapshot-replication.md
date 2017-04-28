@@ -1,25 +1,29 @@
 ---
-title: "Momentaufnahmereplikation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Momentaufnahmereplikation [SQL Server], Informationen zur Momentaufnahmereplikation"
-  - "Momentaufnahmenreplikation [SQL Server]"
+title: Momentaufnahmereplikation | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# Momentaufnahmereplikation
+# <a name="snapshot-replication"></a>Momentaufnahmereplikation
   Die Momentaufnahmereplikation verteilt Daten exakt wie angezeigt zu einem bestimmten Zeitpunkt, ohne Aktualisierungen an den Daten zu überwachen. Bei der Synchronisierung wird die gesamte Momentaufnahmen generiert und an Abonnenten gesendet.  
   
 > [!NOTE]  
@@ -56,10 +60,10 @@ caps.handback.revision: 34
   
  Die folgende Abbildung zeigt die wichtigsten Komponenten der Momentaufnahmereplikation.  
   
- ![Komponenten und Datenfluss für Momentaufnahmereplikation](../../relational-databases/replication/media/snapshot.gif "Komponenten und Datenfluss für Momentaufnahmereplikation")  
+ ![Komponenten und Datenfluss der Momentaufnahmereplikation](../../relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
   
 ##  <a name="SnapshotAgent"></a> Momentaufnahme-Agent  
- Bei der Mergereplikation wird jedes Mal eine Momentaufnahme generiert, wenn der Momentaufnahme-Agent ausgeführt wird. Für die Transaktionsreplikation, momentaufnahmegenerierung hängt von der Einstellung der Eigenschaft der Veröffentlichung **Immediate_sync**. Ist die Eigenschaft auf TRUE festgelegt (die Standardeinstellung bei der Verwendung des Assistenten für neue Veröffentlichung), wird bei jedem Ausführen des Momentaufnahme-Agents eine Momentaufnahme generiert, der jederzeit auf einen Abonnenten angewendet werden kann. Wenn die Eigenschaft auf FALSE festgelegt ist (die Standardeinstellung bei Verwendung **Sp_addpublication**), die Momentaufnahme wird nur generiert, wenn ein neues Abonnement hinzugefügt wurde, seit der letzten Snapshot-Agent ausgeführt wird. Abonnenten müssen warten, für den Snapshot-Agent durchführen, bevor sie synchronisiert werden können.  
+ Bei der Mergereplikation wird jedes Mal eine Momentaufnahme generiert, wenn der Momentaufnahme-Agent ausgeführt wird. Bei der Transaktionsreplikation hängt die Momentaufnahmegenerierung von der Einstellung der **immediate_sync**-Veröffentlichungseigenschaft ab. Ist die Eigenschaft auf TRUE festgelegt (die Standardeinstellung bei der Verwendung des Assistenten für neue Veröffentlichung), wird bei jedem Ausführen des Momentaufnahme-Agents eine Momentaufnahme generiert, der jederzeit auf einen Abonnenten angewendet werden kann. Ist die Eigenschaft auf FALSE festgelegt (die Standardeinstellung bei der Verwendung von **sp_addpublication**), wird die Momentaufnahme nur dann generiert, wenn seit dem letzten Ausführen des Momentaufnahme-Agents ein neues Abonnement hinzugefügt wurde. Abonnenten können erst synchronisiert werden, nachdem der Momentaufnahme-Agent abgeschlossen ist.  
   
  Der Momentaufnahme-Agent führt die folgenden Schritte aus:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  Kopieren der Daten in der veröffentlichten Tabelle auf dem Verleger und Schreiben der Daten in den Momentaufnahmeordner. Die Momentaufnahme wird als ein Satz BCP-Dateien (Bulk Copy Program, Massenkopierprogramm) generiert.  
   
-4.  Für Momentaufnahme- und transaktionsveröffentlichungen fügt der Snapshot-Agent Zeilen, die die **MSrepl_commands** und **MSrepl_transactions** Tabellen in der Verteilungsdatenbank. Die Einträge in der **MSrepl_commands** -Tabelle sind Befehle, die den Speicherort der SCH- und BCP-Dateien, sonstige momentaufnahmedateien sowie Verweise zu Skripts vor und nach-Momentaufnahme. Die Einträge in der **MSrepl_transactions** -Tabelle sind Befehle, die für die Synchronisierung des Abonnenten relevant.  
+4.  Bei Momentaufnahme- und Transaktionsveröffentlichungen fügt der Momentaufnahme-Agent den Tabellen **MSrepl_commands** und **MSrepl_transactions** Zeilen in der Verteilungsdatenbank hinzu. Die Einträge in der **MSrepl_commands** -Tabelle sind Befehle, die den Speicherort der SCH- und BCP-Dateien, sonstige Momentaufnahmedateien sowie Verweise auf alle Vor- und Nach-Momentaufnahme-Skripts angeben. Die Einträge in der **MSrepl_transactions** -Tabelle sind Befehle, die sich auf die Synchronisierung des Abonnenten beziehen.  
   
      Bei Mergeveröffentlichungen führt der Momentaufnahme-Agent zusätzliche Schritte aus.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  Herstellen einer Verbindung mit dem Verteiler.  
   
-2.  Überprüft die **MSrepl_commands** und **MSrepl_transactions** Tabellen in der Verteilungsdatenbank auf dem Verteiler. Der Agent liest den Speicherort der Momentaufnahme-Dateien aus der ersten Tabelle und die Synchronisierungsbefehle des Abonnenten aus beiden Tabellen.  
+2.  Untersuchen der Tabellen **MSrepl_commands** und **MSrepl_transactions** in der Verteilungsdatenbank auf dem Verteiler. Der Agent liest den Speicherort der Momentaufnahme-Dateien aus der ersten Tabelle und die Synchronisierungsbefehle des Abonnenten aus beiden Tabellen.  
   
 3.  Anwenden des Schemas und der Befehle auf die Abonnementdatenbank.  
   

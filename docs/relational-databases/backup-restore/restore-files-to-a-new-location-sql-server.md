@@ -1,29 +1,33 @@
 ---
-title: "Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wiederherstellen von Dateien [SQL Server Express], Themen zur Vorgehensweise"
-  - "Wiederherstellen von Datenbanken [SQL Server], verschieben"
-  - "Wiederherstellen von Dateien [SQL Server], Schritte"
-  - "Dateiwiederherstellungen [SQL Server], Themen zur Vorgehensweise"
-  - "Dateigruppen [SQL Server], wiederherstellen"
-  - "Wiederherstellen von Dateigruppen [SQL Server]"
+title: Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring databases [SQL Server], moving
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab3848bfaca90609138cacb7493a52b00251cac3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server)
+# <a name="restore-files-to-a-new-location-sql-server"></a>Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie Dateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]auf einem neuen Speicherort wiederherstellen können.  
@@ -50,7 +54,7 @@ caps.handback.revision: 26
   
 -   RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
--   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)wiederherstellen können.  
   
 -   Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So stellen Sie Dateien an einem neuen Speicherort wieder her  
+#### <a name="to-restore-files-to-a-new-location"></a>So stellen Sie Dateien an einem neuen Speicherort wieder her  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
   
@@ -87,9 +91,9 @@ caps.handback.revision: 26
   
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
-    |**Restore**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Wiederherstellen**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten**-Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Logischer Name der Datei**|Der logische Name der Datei.|  
@@ -106,14 +110,14 @@ caps.handback.revision: 26
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
     |**Originaldateiname**|Der vollständige Pfad einer Quellsicherungsdatei.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten**-Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Wiederherstellen als**|Der vollständige Pfad der wiederherzustellenden Datenbankdatei. Um eine neue Wiederherstellungsdatei anzugeben, klicken Sie auf das Textfeld, und bearbeiten Sie den vorgeschlagenen Pfad und Dateinamen. Das Ändern des Pfads oder des Dateinamens in der Spalte **Wiederherstellen als** entspricht der Option MOVE in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE-Anweisung.|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So stellen Sie Dateien an einem neuen Speicherort wieder her  
+#### <a name="to-restore-files-to-a-new-location"></a>So stellen Sie Dateien an einem neuen Speicherort wieder her  
   
 1.  Führen Sie optional die RESTORE FILELISTONLY-Anweisung aus, um Anzahl und Namen der Dateien in der vollständigen Datenbanksicherung zu bestimmen.  
   
@@ -138,7 +142,7 @@ caps.handback.revision: 26
          Die gegebenenfalls angewendeten Transaktionsprotokollsicherungen müssen den Zeitpunkt einschließen, zu dem die Dateien und Dateigruppen gesichert wurden.  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
- In diesem Beispiel werden zwei der Dateien für die `MyNwind` -Datenbank, die sich ursprünglich auf Laufwerk C befanden, an neuen Speicherorten auf Laufwerk D wiederhergestellt. Zwei Transaktionsprotokolle werden ebenfalls angewendet, um die Datenbank bis zum aktuellen Zeitpunkt wiederherzustellen. Die `RESTORE FILELISTONLY`-Anweisung wird verwendet, um die Anzahl der logischen und physischen Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden.  
+ In diesem Beispiel werden zwei der Dateien für die `MyNwind` -Datenbank, die sich ursprünglich auf Laufwerk C befanden, an neuen Speicherorten auf Laufwerk D wiederhergestellt. Zwei Transaktionsprotokolle werden ebenfalls angewendet, um die Datenbank bis zum aktuellen Zeitpunkt wiederherzustellen. Die `RESTORE FILELISTONLY` -Anweisung wird verwendet, um die Anzahl der logischen und physischen Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden.  
   
 ```tsql  
 USE master;  
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Wiederherstellen von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

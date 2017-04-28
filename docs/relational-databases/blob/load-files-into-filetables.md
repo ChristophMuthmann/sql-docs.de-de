@@ -1,26 +1,30 @@
 ---
-title: "Laden von Dateien in FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], Migrieren von Dateien"
-  - "FileTables [SQL Server], Massenladen"
-  - "FileTables [SQL Server], Laden von Dateien"
+title: Laden von Dateien in FileTables | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Laden von Dateien in FileTables
+# <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
   
 ##  <a name="BasicsLoadNew"></a> Laden oder Migrieren von Dateien in FileTables  
@@ -36,9 +40,9 @@ caps.handback.revision: 23
   
 -   Drag & Drop von Dateien aus den Quellordnern in den neuen FileTable-Ordner in Windows-Explorer.  
   
--   Verwenden Sie Befehlszeilenoptionen, z. B. MOVE, COPY, XCOPY oder ROBOCOPY, an der Eingabeaufforderung oder in einer Batchdatei oder einem Skript.  
+-   Verwenden Sie Befehlszeilenoptionen, z. B. MOVE, COPY, XCOPY oder ROBOCOPY, an der Eingabeaufforderung oder in einer Batchdatei oder einem Skript.  
   
--   Schreiben Sie eine benutzerdefinierte Anwendung in C# oder Visual Basic .NET, die Methoden aus dem **System.IO**-Namespace verwendet, um die Dateien zu verschieben oder zu kopieren.  
+-   Schreiben Sie eine benutzerdefinierte Anwendung in C# oder Visual Basic .NET, die Methoden aus dem **System.IO** -Namespace verwendet, um die Dateien zu verschieben oder zu kopieren.  
   
 ###  <a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) hilft Ihnen, dieses Ziel zu erreichen.  
@@ -101,28 +105,28 @@ UPDATE PhotoMetadata
   
 -   **bcp**  
   
-    -   Aufruf mit der **CHECK_CONSTRAINTS**-Klausel.  
+    -   Aufruf mit der **CHECK_CONSTRAINTS** -Klausel.  
   
-    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS**-Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
+    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS** -Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
   
 -   **BULK INSERT**  
   
-    -   Aufruf mit der **CHECK_CONSTRAINTS**-Klausel.  
+    -   Aufruf mit der **CHECK_CONSTRAINTS** -Klausel.  
   
-    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS**-Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
+    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS** -Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
   
 -   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
-    -   Aufruf mit der **IGNORE_CONSTRAINTS**-Klausel.  
+    -   Aufruf mit der **IGNORE_CONSTRAINTS** -Klausel.  
   
-    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **IGNORE_CONSTRAINTS**-Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
+    -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **IGNORE_CONSTRAINTS** -Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
   
  Informationen zum Deaktivieren der FileTable-Einschränkungen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ###  <a name="disabling"></a> Vorgehensweise: Deaktivieren von FileTable-Einschränkungen zum Massenladen  
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

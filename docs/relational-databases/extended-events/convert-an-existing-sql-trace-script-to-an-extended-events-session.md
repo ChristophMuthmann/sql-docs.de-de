@@ -1,26 +1,30 @@
 ---
-title: "Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung f&#252;r erweiterte Ereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Trace konvertiert ein Skripts in erweiterte Ereignisse"
-  - "Erweiterte Ereignisse [SQL Server], Konvertiert ein Skript für die SQL-Ablaufverfolgung"
+title: "Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung f&#252;r erweiterte Ereignisse
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Wenn Sie ein vorhandenes SQL-Ablaufverfolgungsskript haben, das Sie in eine Sitzung für erweiterte Ereignisse konvertieren möchten, können Sie die Vorgehensweisen in diesem Thema verwenden, um eine entsprechende Sitzung für erweiterte Ereignisse zu erstellen. Mit den Informationen in den Systemtabellen „trace_xe_action_map“ und „trace_xe_event_map“ können Sie die Informationen sammeln, die für die Konvertierung erforderlich sind.  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  Erstellen Sie mithilfe der entsprechenden Ereignisse, Aktionen und Prädikate (Filter) für erweiterte Ereignisse manuell eine Sitzung für erweiterte Ereignisse.  
   
-## So rufen Sie die Ablaufverfolgungs-ID ab  
+## <a name="to-obtain-the-trace-id"></a>So rufen Sie die Ablaufverfolgungs-ID ab  
   
 1.  Öffnen Sie das SQL-Ablaufverfolgungsskript im Abfrage-Editor, und führen Sie dann das Skript aus, um die Ablaufverfolgungssitzung zu erstellen. Die Ablaufverfolgungssitzung muss nicht ausgeführt werden, um diese Vorgehensweise auszuführen.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  Die Ablaufverfolgungs-ID 1 gibt in der Regel die Standardablaufverfolgung an.  
   
-## So bestimmen Sie die Entsprechungen für erweiterte Ereignisse  
+## <a name="to-determine-the-extended-events-equivalents"></a>So bestimmen Sie die Entsprechungen für erweiterte Ereignisse  
   
 1.  Führen Sie die folgende Abfrage aus, wobei *trace_id* auf den Wert der Ablaufverfolgungs-ID festgelegt wird, die Sie in der vorherigen Prozedur abgerufen haben, um die entsprechenden Ereignisse und Aktionen für „Erweiterte Ereignisse“ zu bestimmen.  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          Beispielsweise ist die Ereignisklasse „SP:StmtCompleted“ dem erweiterten Ereignis „sp_statement_completed“ zugeordnet. Wenn Sie „sp_statement_completed“ in der Abfrage als Ereignisnamen angeben, werden in der Spalte „event_field“ die Felder angezeigt, die standardmäßig in dem Ereignis enthalten sind. Wenn Sie sich die Felder ansehen, werden Sie sehen, dass es ein Feld "duration" gibt. Um den Filter in der entsprechenden Sitzung für erweiterte Ereignisse zu erstellen, würden Sie ein Prädikat, z. B. "WHERE duration > 0" hinzufügen. Ein Beispiel finden Sie in der Vorgehensweise "So erstellen Sie die Sitzung für erweiterte Ereignisse" weiter unten in diesem Thema.  
   
-## So erstellen Sie die Sitzung für erweiterte Ereignisse  
+## <a name="to-create-the-extended-events-session"></a>So erstellen Sie die Sitzung für erweiterte Ereignisse  
  Verwenden Sie den Abfrage-Editor, um die Sitzung für erweiterte Ereignisse zu erstellen und die Ausgabe in eine Dateiziel zu schreiben. Die folgenden Schritte beschreiben eine einzelne Abfrage, mit Erklärungen, um Ihnen zu zeigen, wie die Abfrage erstellt wird. Die vollständige Beispielabfrage finden Sie im Abschnitt "Beispiel" dieses Themas.  
   
-1.  Fügen Sie Anweisungen hinzu, um die Ereignissitzung zu erstellen, und ersetzten Sie *Sitzungsname* durch den Namen, den Sie für die Sitzung für erweiterte Ereignisse verwenden möchten.  
+1.  Fügen Sie Anweisungen hinzu, um die Ereignissitzung zu erstellen, und ersetzten Sie*Sitzungsname* durch den Namen, den Sie für die Sitzung für erweiterte Ereignisse verwenden möchten.  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## So zeigen Sie die Ergebnisse an  
+## <a name="to-view-the-results"></a>So zeigen Sie die Ergebnisse an  
   
 1.  Sie können die Funktion „sys.fn_xe_file_target_read_file“ verwenden, um die Ausgabe anzuzeigen. Führen Sie hierzu die folgende Abfrage aus, und ersetzen Sie dabei die Dateipfade durch die angegebenen Pfade:  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

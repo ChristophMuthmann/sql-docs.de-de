@@ -1,31 +1,35 @@
 ---
-title: "Einschr&#228;nken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherungskomprimierung [SQL Server], Ressourcenkontrolle"
-  - "Sicherungskomprimierung [SQL Server], CPU-Nutzung"
-  - "Komprimierung [SQL Server], Sicherungskomprimierung"
-  - "Sicherungen [SQL Server], Komprimierung"
-  - "Ressourcenkontrolle, Sicherungskomprimierung"
+title: "Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Einschr&#228;nken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
+  Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
   
 > [!IMPORTANT]  
 >  In einem Szenario für Ressourcenkontrolle kann die Klassifizierung der Sitzungen auf einem Benutzernamen, einem Anwendungsnamen oder einem beliebigen anderen Element basieren, anhand dessen Verbindungen voneinander unterschieden werden können. Weitere Informationen finden Sie unter [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) und [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
@@ -41,13 +45,13 @@ caps.handback.revision: 25
 4.  [Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert](#creating_compressed_backup)  
   
 ##  <a name="setup_login_and_user"></a> Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität  
- Für das Szenario in diesem Thema sind eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung und ein zugehöriger Benutzer für Vorgänge mit niedriger Priorität erforderlich. Mithilfe des Benutzernamens werden die in der Anmeldung ausgeführten Sitzungen klassifiziert und an eine Arbeitsauslastungsgruppe der Ressourcenkontrolle weitergeleitet, die die CPU-Nutzung einschränkt.  
+ Für das Szenario in diesem Thema sind eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und ein zugehöriger Benutzer für Vorgänge mit niedriger Priorität erforderlich. Mithilfe des Benutzernamens werden die in der Anmeldung ausgeführten Sitzungen klassifiziert und an eine Arbeitsauslastungsgruppe der Ressourcenkontrolle weitergeleitet, die die CPU-Nutzung einschränkt.  
   
- Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispiel "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)".  
+ Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Beispiel "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)".  
   
-### So richten Sie eine Anmeldung und einen Datenbankbenutzer zum Klassifizieren von Sitzungen ein  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>So richten Sie eine Anmeldung und einen Datenbankbenutzer zum Klassifizieren von Sitzungen ein  
   
-1.  Erstellen Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zum Erstellen komprimierter Sicherungen mit niedriger Priorität.  
+1.  Erstellen Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung zum Erstellen komprimierter Sicherungen mit niedriger Priorität.  
   
      **So erstellen Sie eine Anmeldung**  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 25
   
      Weitere Informationen finden Sie unter [GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-3.  Erstellen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer für diese Anmeldung.  
+3.  Erstellen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer für diese Anmeldung.  
   
      **So erstellen Sie einen Benutzer**  
   
@@ -77,13 +81,13 @@ caps.handback.revision: 25
   
      Weitere Informationen finden Sie unter [GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)  
- Das folgende Beispiel ist nur dann relevant, wenn Sie eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung und einen zugehörigen Benutzer für Sicherungen mit niedriger Priorität erstellen möchten. Alternativ können Sie eine vorhandene Anmeldung und einen vorhandenen Benutzer verwenden, wenn entsprechende vorhanden sind.  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)  
+ Das folgende Beispiel ist nur dann relevant, wenn Sie eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und einen zugehörigen Benutzer für Sicherungen mit niedriger Priorität erstellen möchten. Alternativ können Sie eine vorhandene Anmeldung und einen vorhandenen Benutzer verwenden, wenn entsprechende vorhanden sind.  
   
 > [!IMPORTANT]  
->  Im folgenden Beispiel werden eine Beispielanmeldung und ein Beispielbenutzername, *domain_name*`\MAX_CPU`, verwendet. Ersetzen Sie diese durch die Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung und des zugehörigen Benutzers, die beim Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden sollen.  
+>  Im folgenden Beispiel werden eine Beispielanmeldung und ein Beispielbenutzername, *domain_name*`\MAX_CPU`, verwendet. Ersetzen Sie diese durch die Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und des zugehörigen Benutzers, die beim Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden sollen.  
   
- In diesem Beispiel wird eine Anmeldung für das Windows-Konto *domain_name*`\MAX_CPU` erstellt, und dieser wird anschließend die VIEW SERVER STATE-Berechtigung erteilt. Mit dieser Berechtigung können Sie die Klassifizierung der Sitzungen der Anmeldung durch die Ressourcenkontrolle überprüfen. Im Beispiel wird anschließend ein Benutzer für *domain_name*`\MAX_CPU` erstellt, und dieser wird der festen Datenbankrolle db_backupoperator für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank hinzugefügt. Dieser Benutzername wird von der Klassifizierungsfunktion der Ressourcenkontrolle verwendet.  
+ In diesem Beispiel wird eine Anmeldung für das Windows-Konto *domain_name*`\MAX_CPU` erstellt, und dieser wird anschließend die VIEW SERVER STATE-Berechtigung erteilt. Mit dieser Berechtigung können Sie die Klassifizierung der Sitzungen der Anmeldung durch die Ressourcenkontrolle überprüfen. Im Beispiel wird anschließend ein Benutzer für *domain_name*`\MAX_CPU` erstellt, und dieser wird der festen Datenbankrolle db_backupoperator für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank hinzugefügt. Dieser Benutzername wird von der Klassifizierungsfunktion der Ressourcenkontrolle verwendet.  
   
 ```tsql  
 -- Create a SQL Server login for low-priority operations  
@@ -131,7 +135,7 @@ GO
   
 -   [Erstellen einer Arbeitsauslastungsgruppe](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### So konfigurieren Sie die Ressourcenkontrolle zum Einschränken der CPU-Nutzung (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>So konfigurieren Sie die Ressourcenkontrolle zum Einschränken der CPU-Nutzung (Transact-SQL)  
   
 1.  Geben Sie eine [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) -Anweisung aus, um einen Ressourcenpool zu erstellen. Im Beispiel für diese Vorgehensweise wird die folgende Syntax verwendet:  
   
@@ -139,11 +143,11 @@ GO
   
      *Value* ist ein ganzzahliger Wert zwischen 1 und 100, der den Prozentsatz der maximalen durchschnittlichen CPU-Bandbreite angibt. Der korrekte Wert hängt von der Umgebung ab. Zur Veranschaulichung wird im Beispiel in diesem Thema der Wert 20 % (MAX_CPU_PERCENT = 20) verwendet.  
   
-2.  Geben Sie eine [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md)-Anweisung aus, um eine Arbeitsauslastungsgruppe für Vorgänge mit niedriger Priorität zu erstellen, deren CPU-Nutzung kontrolliert werden soll. Im Beispiel für diese Vorgehensweise wird die folgende Syntax verwendet:  
+2.  Geben Sie eine [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) -Anweisung aus, um eine Arbeitsauslastungsgruppe für Vorgänge mit niedriger Priorität zu erstellen, deren CPU-Nutzung kontrolliert werden soll. Im Beispiel für diese Vorgehensweise wird die folgende Syntax verwendet:  
   
      CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
   
-3.  Geben Sie eine [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)-Anweisung aus, um eine Klassifizierungsfunktion zu erstellen, die die im vorherigen Schritt erstellte Arbeitsauslastungsgruppe dem Benutzer mit der Anmeldung mit niedriger Priorität zuordnet. Im Beispiel für diese Vorgehensweise wird die folgende Syntax verwendet:  
+3.  Geben Sie eine [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) -Anweisung aus, um eine Klassifizierungsfunktion zu erstellen, die die im vorherigen Schritt erstellte Arbeitsauslastungsgruppe dem Benutzer mit der Anmeldung mit niedriger Priorität zuordnet. Im Beispiel für diese Vorgehensweise wird die folgende Syntax verwendet:  
   
      CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
   
@@ -153,19 +157,19 @@ GO
   
      BEGIN  
   
-     DECLARE @workload_group_name AS *sysname*  
+     DEKLARIEREN SIE @workload_group_name ALS *sysname*  
   
      IF (SUSER_NAME() = '*user_of_low_priority_login*')  
   
      SET @workload_group_name = '*workload_group_name*'  
   
-     RETURN @workload_group_name  
+     RÜCKGABEWERT @workload_group_name  
   
      END  
   
      Informationen zu den Komponenten dieser CREATE FUNCTION-Anweisung finden Sie unter:  
   
-    -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+    -   [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
     -   [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### Beispiel B: Konfigurieren der Ressourcenkontrolle (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Beispiel B: Konfigurieren der Ressourcenkontrolle (Transact-SQL)  
  Im folgenden Beispiel werden die folgenden Schritte in einer einzelnen Transaktion ausgeführt:  
   
 1.  Der `pMAX_CPU_PERCENT_20` -Ressourcenpool wird erstellt.  
@@ -198,7 +202,7 @@ GO
  Nachdem für die Transaktion ein Commit ausgeführt wurde, werden im Beispiel alle Konfigurationsänderungen angewendet, die in der ALTER WORKLOAD GROUP-Anweisung oder der ALTER RESOURCE POOL-Anweisung angefordert wurden.  
   
 > [!IMPORTANT]  
->  Im folgenden Beispiel wird der Benutzername des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispielbenutzers *domain_name*`\MAX_CPU` verwendet, der unter "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)" erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
+>  Im folgenden Beispiel wird der Benutzername des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispielbenutzers *domain_name*`\MAX_CPU`verwendet, der unter "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)" erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
   
 ```tsql  
 -- Configure Resource Governor.  
@@ -262,7 +266,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert  
  Melden Sie sich zum Erstellen einer komprimierten Sicherung in einer Sitzung mit maximalem CPU-Grenzwert als der Benutzer an, der in der Klassifizierungsfunktion angegeben ist. Geben Sie im Sicherungsbefehl entweder WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) an, oder wählen Sie **Sicherung komprimieren** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) aus. Informationen zum Erstellen einer komprimierten Datenbanksicherung finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  
  Im folgenden [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Beispiel wird eine komprimierte, vollständige Sicherung der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank in der neu formatierten Sicherungsdatei `Z:\SQLServerBackups\AdvWorksData.bak`erstellt.  
   
 ```tsql  
@@ -278,8 +282,8 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

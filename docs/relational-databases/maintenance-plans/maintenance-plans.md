@@ -1,34 +1,38 @@
 ---
-title: "Wartungspl&#228;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
-  - "Wartungspläne [SQL Server-Agent], Informationen zu Datenbank-Wartungsplänen"
-  - "Wartungspläne [SQL Server], im Designer angezeigter Datenbank-Kompatibilitätsgrad"
-  - "Wartungspläne [SQL Server]"
+title: "Wartungspläne| Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.AG.MAINTPLAN.LEGACY.F1
+helpviewer_keywords:
+- maintenance plans [SQL Server], about database maintenance plans
+- maintenance plans [SQL Server], database compatibility level displayed in designer
+- maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wartungspl&#228;ne
+# <a name="maintenance-plans"></a>Wartungspläne
   Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
   
-## Vorteile von Wartungsplänen  
+## <a name="benefits-of-maintenance-plans"></a>Vorteile von Wartungsplänen  
  In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Wartungspläne bieten folgende Funktionen:  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Wartungspläne bieten folgende Funktionen:  
   
 -   Workflowerstellung mithilfe einer Reihe typischer Wartungstasks. Außerdem können Sie benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erstellen.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   Windows-Authentifizierung und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung werden unterstützt. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## Funktionalität von Wartungsplänen  
+## <a name="maintenance-plan-functionality"></a>Funktionalität von Wartungsplänen  
  Wartungspläne können zum Ausführen der folgenden Tasks erstellt werden:  
   
 -   Erneutes Organisieren der Daten auf den Daten- und Indexseiten durch erneutes Erstellen von Indizes mit einem neuen Füllfaktor. Durch das erneute Erstellen von Indizes mit einem neuen Füllfaktor wird sichergestellt, dass für den Inhalt von Datenbankseiten das Verhältnis zwischen der Menge an Daten und freiem Speicherplatz ausgewogen ist. Darüber hinaus wird das zukünftige Wachstum beschleunigt. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -57,15 +61,16 @@ caps.handback.revision: 44
   
  Die von den Wartungstasks generierten Ergebnisse können als Bericht in eine Textdatei oder in die Wartungsplantabellen (**sysmaintplan_log** und **sysmaintplan_logdetail**) in **msdb** geschrieben werden. Um die Ergebnisse im Protokolldatei-Viewer anzuzeigen, klicken Sie mit der rechten Maustaste auf **Wartungspläne**, und klicken Sie anschließend auf **Verlauf anzeigen**.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Erste Schritte mit Wartungsplänen mithilfe der folgenden Themen:  
   
 |||  
 |-|-|  
-|**Beschreibung**|**Thema**|  
+|**Description**|**Thema**|  
 |Konfigurieren der **Agent XPs**-Serverkonfigurationsoption, um erweiterte gespeicherte Prozeduren für SQL Server Agent zu aktivieren.|[Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Beschreibt, wie ein Wartungsplan mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird.|[Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Beschreibt, wie ein Wartungsplan mithilfe der Wartungsplan-Entwurfsbenutzeroberfläche erstellt wird.|[Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |Dokumentiert die Funktionalität von Wartungsplänen im Objekt-Explorer.|[Knoten Wartungspläne &#40;Objekt-Explorer&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "Verwalten der Triggersicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Trigger [SQL Server], Sicherheit"
+title: Verwalten der Triggersicherheit | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten der Triggersicherheit
-  Standardmäßig werden sowohl DML- als auch DDL-Trigger im Kontext des Benutzers ausgeführt, der den Trigger aufruft. Genauer ist der Benutzer, der den Trigger aufruft, derjenige Benutzer, der die Anweisung ausführt, die zum Ausführen des Triggers führt. Wenn die Benutzerin **Mary** beispielsweise eine DELETE-Anweisung ausführt, die dazu führt, dass der DML-Trigger **DML_trigMary** ausgeführt wird, wird der Code in **DML_trigMary** im Kontext der Privilegien für **Mary** ausgeführt. Dieses Standardverhalten kann von Benutzern ausgenutzt werden, die bösartigen Code in die Datenbank oder Serverinstanz einschleusen möchten. Beispielsweise wird der folgende DDL-Trigger vom Benutzer `JohnDoe`erstellt:  
+# <a name="manage-trigger-security"></a>Verwalten der Triggersicherheit
+  Standardmäßig werden sowohl DML- als auch DDL-Trigger im Kontext des Benutzers ausgeführt, der den Trigger aufruft. Genauer ist der Benutzer, der den Trigger aufruft, derjenige Benutzer, der die Anweisung ausführt, die zum Ausführen des Triggers führt. Wenn die Benutzerin **Mary** beispielsweise eine DELETE-Anweisung ausführt, die dazu führt, dass der DML-Trigger **DML_trigMary** ausgeführt wird, wird der Code in **DML_trigMary** im Kontext der Privilegien für **Mary**ausgeführt. Dieses Standardverhalten kann von Benutzern ausgenutzt werden, die bösartigen Code in die Datenbank oder Serverinstanz einschleusen möchten. Beispielsweise wird der folgende DDL-Trigger vom Benutzer `JohnDoe`erstellt:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
   
  Dieser Trigger bewirkt Folgendes: Sobald ein Benutzer mit der Berechtigung, `GRANT CONTROL SERVER` -Anweisungen auszuführen, wie z. B. ein Mitglied der festen Serverrolle **sysadmin** , eine `ALTER TABLE` -Anweisung ausführt, wird `JohnDoe` die `CONTROL SERVER` -Berechtigung erteilt. Mit anderen Worten heißt dies, dass `JohnDoe` zwar die `CONTROL SERVER` -Berechtigung nicht sich selbst erteilen darf, jedoch den Triggercode aktivieren kann, der ihm diese Berechtigung verschafft. Sowohl DML- als auch DDL-Trigger sind diesen Sicherheitsrisiken ausgesetzt.  
   
-## Bewährte Methoden für die Triggersicherheit  
+## <a name="trigger-security-best-practices"></a>Bewährte Methoden für die Triggersicherheit  
  Sie können folgende Maßnahmen ergreifen, um zu vermeiden, dass Triggercode mit ausgeweiteten Privilegien ausgeführt wird:  
   
 -   Eruieren Sie die in der Datenbank und der Serverinstanz vorhandenen DML- und DDL-Trigger, indem Sie die Katalogsichten [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) und [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) abfragen. Die folgende Abfrage gibt alle DML-Trigger und DDL-Trigger auf Datenbankebene der aktuellen Datenbank zurück, sowie alle DDL-Trigger auf Serverebene der Serverinstanz:  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)  

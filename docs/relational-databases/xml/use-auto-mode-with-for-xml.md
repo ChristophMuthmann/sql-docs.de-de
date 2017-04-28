@@ -1,28 +1,32 @@
 ---
-title: "Verwenden des AUTO-Modus mit FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML-Klausel, AUTO-Modus"
-  - "ELEMENTS-Option"
-  - "FOR XML AUTO-Modus"
-  - "AUTO FOR XML-Modus"
+title: Verwenden des AUTO-Modus mit FOR XML | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden des AUTO-Modus mit FOR XML
-  Wie in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md) beschrieben, gibt der AUTO-Modus Abfrageergebnisse als geschachtelte XML-Elemente zurück. Damit ist jedoch keine genaue Steuerungsmöglichkeit über die Form des XML-Codes gegeben, der aus einem Abfrageergebnis generiert wird. Die AUTO-Modusabfragen sind nützlich, wenn Sie einfache Hierarchien generieren möchten. Allerdings können Sie durch [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) und [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) bessere Steuerungsmöglichkeiten und eine höhere Flexibilität in Bezug auf die Form des aus einem Abfrageergebnis generierten XML-Codes erzielen.  
+# <a name="use-auto-mode-with-for-xml"></a>Verwenden des AUTO-Modus mit FOR XML
+  Wie in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)beschrieben, gibt der AUTO-Modus Abfrageergebnisse als geschachtelte XML-Elemente zurück. Damit ist jedoch keine genaue Steuerungsmöglichkeit über die Form des XML-Codes gegeben, der aus einem Abfrageergebnis generiert wird. Die AUTO-Modusabfragen sind nützlich, wenn Sie einfache Hierarchien generieren möchten. Allerdings können Sie durch [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) und [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) bessere Steuerungsmöglichkeiten und eine höhere Flexibilität in Bezug auf die Form des aus einem Abfrageergebnis generierten XML-Codes erzielen.  
   
  Jede Tabelle in der FROM-Klausel, aus der mindestens eine Spalte in der SELECT-Klausel aufgeführt ist, wird als ein XML-Element dargestellt. Die in der SELECT-Klausel aufgelisteten Spalten werden den entsprechenden Attributen oder Unterelementen zugeordnet, wenn die wahlweise Option ELEMENTS in der FOR XML-Klausel angegeben wurde.  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 31
   
  Falls ein in der SELECT-Klausel aufgeführter Spaltenname aus einer Tabelle stammt, die bereits durch eine zuvor angegebene Spalte in der SELECT-Klausel identifiziert wird, wird die Spalte als Attribut zu dem bereits erstellten Element hinzugefügt. Es wird also keine neue Ebene der Hierarchie geöffnet. Wenn die Option ELEMENTS angegeben ist, wird die Spalte als Attribut hinzugefügt.  
   
- Führen Sie z. B. die folgende Abfrage aus:  
+ Führen Sie z. B. die folgende Abfrage aus:  
   
 ```  
 SELECT Cust.CustomerID,   
@@ -128,7 +132,7 @@ FOR XML AUTO, ELEMENTS
   
  Wenn das Platzhalterzeichen (*) in der SELECT-Klausel angegeben wurde, wird die Schachtelung auf die gleiche Art wie oben beschrieben bestimmt (d. h. auf der Grundlage der Reihenfolge, in der die Zeilen vom Abfragemodul zurückgegeben werden).  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zum AUTO-Modus:  
   
 -   [Verwenden der Option BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Beispiele: Verwenden des AUTO-Modus](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

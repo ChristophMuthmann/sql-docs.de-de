@@ -1,29 +1,31 @@
 ---
-title: "Suchen von &#228;hnlichen und verwandten Dokumenten mit semantischer Suche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Semantische Suche [SQL Server], Dokumentähnlichkeitsabfragen"
+title: "Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suchen von &#228;hnlichen und verwandten Dokumenten mit semantischer Suche
+# <a name="find-similar-and-related-documents-with-semantic-search"></a>Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
   Beschreibt, wie ähnliche oder verwandte Dokumente oder Textwerte sowie Informationen zur Ähnlichkeit oder Verwandtschaft über Spalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
-  
-##  <a name="BasicsQuerySimilar"></a> Suchen von ähnlichen oder verwandten Dokumenten  
-  
-###  <a name="HowToQuerySimilar"></a> Vorgehensweise: Suchen von ähnlichen oder verwandten Dokumenten mit SEMANTICSIMILARITYTABLE  
+   
+##  <a name="HowToQuerySimilar"></a> Suchen von ähnlichen oder verwandten Dokumenten mit SEMANTICSIMILARITYTABLE  
  Fragen Sie zum Identifizieren ähnlicher oder verwandter Dokumente in einer bestimmten Spalte die Funktion [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md) ab.  
   
  **SEMANTICSIMILARITYTABLE** gibt eine Tabelle mit keiner Zeile, einer Zeile oder mehreren Zeilen zurück, deren Inhalt in der angegebenen Spalte dem angegebenen Dokument semantisch ähnelt. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung wie auf einen regulären Tabellennamen verwiesen werden.  
@@ -35,7 +37,7 @@ caps.handback.revision: 17
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToIdentifySimilar"></a> Beispiel: Suchen der wichtigsten Dokumente, die einem anderen Dokument ähnlich sind  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  Im folgenden Beispiel werden die ersten zehn Kandidaten abgerufen, die dem mit *@CandidateID* angegebenen Kandidaten aus der HumanResources.JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
   
 ```scr  
@@ -50,9 +52,7 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a> Suchen von Informationen zur Ähnlichkeit oder Verwandtschaft von Dokumenten  
-  
-###  <a name="HowToQuerySimilarity"></a> Vorgehensweise: Suchen von Informationen zur Ähnlichkeit oder Verwandtschaft von Dokumenten mit SEMANTICSIMILARITYDETAILSTABLE  
+##  <a name="HowToQuerySimilarity"></a> Suchen von Informationen zur Ähnlichkeit oder Verwandtschaft von Dokumenten mit SEMANTICSIMILARITYDETAILSTABLE  
  Um weitere Informationen zu den Schlüsselausdrücken abzurufen, die bewirken, dass Dokumente ähnlich oder verwandt sind, können Sie die Funktion [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) abfragen.  
   
  **SEMANTICSIMILARITYDETAILSTABLE** gibt eine Tabelle mit keiner, einer oder mehreren Zeilen von Schlüsselausdrücken zurück, die in zwei Dokumenten (einem Quelldokument und einem verglichenen Dokument) vorkommen, deren Inhalt semantisch ähnlich ist. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung wie auf einen regulären Tabellennamen verwiesen werden.  
@@ -62,7 +62,7 @@ GO
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToSimilarPhrases"></a> Beispiel: Suchen der wichtigsten Schlüsselausdrücke, die zwischen Dokumenten ähnlich sind  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  Im folgenden Beispiel werden die fünf Schlüsselausdrücke mit der größten Ähnlichkeit zwischen den in der **HumanResources.JobCandidate** -Tabelle angegebenen Kandidaten der AdventureWorks2012-Beispieldatenbank abgerufen.  
   
 ```tsql  

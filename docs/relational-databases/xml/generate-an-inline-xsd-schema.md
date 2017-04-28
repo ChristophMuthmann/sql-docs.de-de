@@ -1,30 +1,34 @@
 ---
-title: "Generieren eines XSD-Inlineschemas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD-Schemas [SQL Server]"
-  - "XMLSCHEMA (Option)"
-  - "Schemas [SQL Server], XML"
-  - "XDR-Schemas"
-  - "FOR XML-Klausel, XSD-Inlineschemagenerierung"
-  - "XSD-Inlineschemagenerierung [SQL Server]"
-  - "XMLDATA-Option"
+title: Generieren eines XSD-Inlineschemas | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# Generieren eines XSD-Inlineschemas
+# <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
   In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  
   
  Dieses Thema beschreibt das XMLSCHEMA-Schlüsselwort und erläutert die Struktur des sich ergebenden XSD-Inlineschemas. Die folgenden Einschränkungen gelten beim Anfordern von Inlineschemas:  
@@ -81,7 +85,7 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## Entitätselemente  
+## <a name="entity-elements"></a>Entitätselemente  
  Um die Einzelheiten der XSD-Schemastruktur behandeln zu können, die für das Abfrageergebnis generiert wird, muss zuerst das Entitätselement beschrieben werden.  
   
  Ein Entitätselement in den XML-Daten, die durch eine FOR XML-Abfrage zurückgegeben werden, ist ein Element, das aus einer Tabelle und nicht aus einer Spalte generiert wird. Die folgende FOR XML-Abfrage gibt z. B. Kontaktinformationen aus der `Person` -Tabelle in der `AdventureWorks2012` -Datenbank zurück.  
@@ -159,7 +163,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>, <`ProductID`> und <`OrderQty`> sind keine Entitätselemente, da sie Spalten zugeordnet sind. Die Spaltendaten werden aufgrund der ELEMENTS-Direktive als Elemente im XML zurückgegeben. Diese werden lokalen Elementen des complex-Typs des Entitätselements zugeordnet. Beachten Sie, dass die `SalesOrderID`-, `ProductID` - und `OrderQty` -Werte lokalen Attributen des entsprechenden complex-Typs des Entitätselements zugeordnet werden, wenn die ELEMENTS-Direktive nicht angegeben wird.  
   
-## Attributnamenkollisionen  
+## <a name="attribute-name-clashes"></a>Attributnamenkollisionen  
  Die folgende Diskussion basiert auf den Tabellen `CustOrder` und `CustOrderDetail` . Wenn Sie die folgenden Beispiele testen möchten, erstellen Sie diese Tabellen und fügen eigene Beispieldaten hinzu:  
   
 ```  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## Elementnamenkollisionen  
+## <a name="element-name-clashes"></a>Elementnamenkollisionen  
  In FOR XML kann der gleiche Name zum Angeben von zwei Unterelementen verwendet werden. Die folgende Abfrage ruft z. B. die ListPrice- und DealerPrice-Werte von Produkten ab; die Abfrage gibt jedoch den gleichen Alias (Price) für diese beiden Spalten an. Aus diesem Grund besitzt das sich ergebende Rowset zwei Spalten mit dem gleichen Namen.  
   
-### Fall 1: Beide Unterelemente sind Nichtschlüsselspalten des gleichen Typs und können den Wert NULL besitzen  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Fall 1: Beide Unterelemente sind Nichtschlüsselspalten des gleichen Typs und können den Wert NULL besitzen  
  In der folgenden Abfrage sind beide Unterelemente Nichtschlüsselspalten des gleichen Typs und können den Wert NULL besitzen.  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### Fall 2: Eine Schlüssel- und eine Nichtschlüsselspalte des gleichen Typs  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Fall 2: Eine Schlüssel- und eine Nichtschlüsselspalte des gleichen Typs  
  Die folgende Abfrage zeigt eine Schlüssel- und eine Nichtschlüsselspalte des gleichen Typs.  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Beachten Sie im XSD-Inlineschema, dass für das <`Col`>-Element, das Col2 entspricht, minOccurs auf 0 festgelegt wurde.  
   
-### Fall 3: Beide Elemente eines unterschiedlichen Typs und entsprechender Spalten dürfen NULL sein  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Fall 3: Beide Elemente eines unterschiedlichen Typs und entsprechender Spalten dürfen NULL sein  
  Die folgende Abfrage wird für die gleiche Tabelle angegeben, die auch in Fall 2 gezeigt wurde:  
   
 ```  

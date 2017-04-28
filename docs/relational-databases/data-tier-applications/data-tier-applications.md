@@ -1,33 +1,37 @@
 ---
-title: "Datenebenenanwendungen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Entwerfen von DACs"
-  - "Vorgehensweise [DAC]"
-  - "Datenebenenanwendung [SQL Server], entwerfen"
-  - "Assistent [DAC]"
+title: Datenebenenanwendungen| Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designing DACs
+- How to [DAC]
+- data-tier application [SQL Server], designing
+- wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenebenenanwendungen
+# <a name="data-tier-applications"></a>Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
   
  Ein BACPAC ist ein verwandtes Artefakt, das das Datenbankschema sowie die in der Datenbank gespeicherten Daten kapselt.  
   
-## Vorteile von Datenebenenanwendungen  
+## <a name="benefits-of-data-tier-applications"></a>Vorteile von Datenebenenanwendungen  
  Der Lebenszyklus der meisten Datenbankanwendungen zwingt Entwickler und Datenbankadministratoren dazu, Skripts und Ad-hoc-Integrationsbenachrichtigungen für Anwendungsaktualisierungen und Wartungsaktivitäten freizugeben und auszutauschen. Dies stellt bei wenigen Datenbanken kein Problem dar. Es kann jedoch schnell dazu führen, dass sie nicht mehr skalierbar sind, wenn die Datenbanken in puncto Anzahl, Größe und Komplexität wachsen.  
   
  Eine DAC ist ein Datenbank-Lebenszyklusverwaltungs- und Produktivitätstool, womit die Entwicklung deklarativer Datenbanken ermöglicht wird, um Entwicklung und Verwaltung zu vereinfachen. Ein Entwickler kann eine Datenbank in einem SQL Server Data Tools-Datenbankprojekt erstellen und die Datenbank anschließend in einem DACPAC erstellen, um sie an einen Datenbankadministrator zu übergeben. Der Datenbankadministrator kann die DAC mit SQL Server Management Studio auf einer Test- oder Produktionsinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] bereitstellen. Der Datenbankadministrator kann alternativ mit SQL Server Management Studio mithilfe des DACPAC eine zuvor bereitgestellte Datenbank aktualisieren. Zum Abschließen des Lebenszyklus kann der Datenbankadministrator die Datenbank in einen DACPAC extrahieren und sie einem Entwickler übergeben, damit entweder Test- oder Produktionsanpassungen reflektiert werden oder weitere Datenbankentwurfsänderungen als Reaktion auf Änderungen in der Anwendung ermöglicht werden können.  
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  Der DAC unterstützt auch die Versionsverwaltung, um dem Entwickler und dem Datenbankadministrator zu helfen, die Datenbankherkunft während des Lebenszyklus zu warten und zu verwalten.  
   
-## Konzepte von DAC  
+## <a name="dac-concepts"></a>Konzepte von DAC  
  Eine DAC vereinfacht die Entwicklung, Bereitstellung und Verwaltung der Datenebenenelemente, die eine Anwendung unterstützen:  
   
 -   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle SQL Server-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Sie ist eine in sich geschlossene Einheit der SQL Server-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren SQL Server-Objekte in ein portables Artefakt, das sog. "DAC-Paket" oder die sog. DACPAC-Datei, packen können.  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
 -   Der Benutzer muss ein Mitglied der dbmanager-Rolle sein, oder er muss der CREATE DATABASE-Berechtigung zugeordnet sein, um eine Datenbank zu erstellen, einschließlich dem Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss ein Mitglied der dbmanager-Rolle sein, oder er muss der DROP DATABASE-Berechtigung zugeordnet sein, um eine Datenbank löschen zu können.  
   
-## DAC-Tools  
+## <a name="dac-tools"></a>DAC-Tools  
  Ein DACPAC kann nahtlos von mehreren Tools, die im Lieferumfang von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten sind, verwendet werden. Diese Tools erfüllen die Anforderungen verschiedener physischer Benutzer, indem DACPAC als interoperable Einheit verwendet wird.  
   
 -   Anwendungsentwickler:  
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, clientseitige Datenbankanwendungsentwicklung. Der Entwickler kann eine Momentaufnahme dieser lokalen Datenbank erstellen, um in einer DACPAC-Datei enthaltenen DACPAC zu erstellen.  
   
-    -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
+    -   Unabhängig davon kann der Entwickler ein Datenbankprojekt direkt in einer Datenbank veröffentlichen, und zwar ohne ein DACPAC zu generieren. Der Veröffentlichungsvorgang weist ein ähnliches Verwalten auf wie der Bereitstellungsvorgang anderer Tools.  
   
 -   Datenbankadministratoren:  
   
@@ -82,7 +86,7 @@ SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, cli
   
     -   IT-Systemintegratoren und -Administratoren können das Befehlszeilentool "SqlPackage.exe" für DAC-Vorgänge verwenden.  
   
-## DAC-Vorgänge  
+## <a name="dac-operations"></a>DAC-Vorgänge  
  Ein DAC unterstützt die folgenden Vorgänge:  
   
 -   **EXTRACT**: Der Benutzer kann eine Datenbank in eine DACPAC-Datei extrahieren.  
@@ -95,7 +99,7 @@ SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, cli
   
 -   **UPGRADE**: Eine Datenbank kann mit einer DACPAC-Datei aktualisiert werden. Ein Upgrade wird sogar auf Datenbanken, die zuvor nicht als Datenebenenanwendungen registriert waren, unterstützt, doch aufgrund des Upgrades wird die Datenbank implizit registriert.  
   
-## BACPAC  
+## <a name="bacpac"></a>BACPAC  
  Eine BACPAC-Datei ist eine Windows-Datei mit der Erweiterung ".bacpac", die das Schema und die Daten einer Datenbank kapselt. Der Hauptzweck einer BACPAC-Datei besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder eine [Datenbank von einem lokalen Server zur Cloud zu migrieren](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
   
  Das BACPAC-Dateiformat ist ein offenes Dateiformat (vergleichbar mit DACPAC). Die Schemainhalte von BACPAC sind mit DACPAC identisch. Die Daten in einer BACPAC-Datei werden im JSON-Format gespeichert.  
@@ -110,10 +114,10 @@ SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, cli
   
  Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: SQL Server Management Studio, das Azure-Portal und die DACFx-API.  
   
-## Berechtigungen  
+## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **CREATE DATABASE**-Berechtigungen erhalten haben, um eine Datenbank erstellen zu können. Dies gilt auch für das Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  
   
-## Tasks der Datenebenenanwendung  
+## <a name="data-tier-application-tasks"></a>Tasks der Datenebenenanwendung  
   
 |Task|Themenlink|  
 |----------------------|-----------|  
@@ -124,12 +128,13 @@ SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, cli
 |Beschreibt, wie eine BACPAC-Datei erstellt wird, die ein Archiv der Daten und Metadaten einer DAC enthält.|[Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
 |Beschreibt, wie mit einer DAC-Archivdatei (.bacpac) entweder eine logische Wiederherstellung einer DAC ausgeführt wird oder die DAC auf einer anderen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] migriert wird.|[Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Beschreibt, wie eine BACPAC-Datei importiert wird, um eine neue Benutzerdatenbank innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erstellen.|[Extrahieren einer DAC aus einer Datenbank](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
-|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als eine DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
+|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
 |Beschreibt, wie vor der Verwendung eines DAC-Pakets in einem Produktionssystem sein Inhalt und die Aktionen überprüft werden, die bei einem DAC-Upgrade ausgeführt werden.|[Überprüfen eines DAC-Pakets](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
 |Beschreibt, wie der Inhalt eines DAC-Pakets in einem Ordner abgelegt wird, in dem ein Datenbankadministrator vor der Bereitstellung auf einem Produktionsserver überprüfen kann, was die DAC bewirkt.|[Entpacken eines DAC-Pakets](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mit DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
+

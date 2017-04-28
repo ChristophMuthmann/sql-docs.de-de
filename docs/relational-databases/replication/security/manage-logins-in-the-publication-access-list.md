@@ -1,28 +1,32 @@
 ---
-title: "Verwalten von Anmeldungen in der Ver&#246;ffentlichungszugriffsliste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anmeldungen [SQL Server-Replikation], Veröffentlichungszugriffsliste"
-  - "Veröffentlichungen [SQL Server-Replikation], Veröffentlichungszugriffslisten"
-  - "Veröffentlichungszugriffsliste (PAL)"
-  - "PAL (Publication Access List, Veröffentlichungszugriffsliste)"
-  - "Anmeldungen [SQL Server-Replikation], verwalten"
+title: "Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste| Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37eda878d5d67b697ae69d8e81d025c3629033b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten von Anmeldungen in der Ver&#246;ffentlichungszugriffsliste
+# <a name="manage-logins-in-the-publication-access-list"></a>Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste
   In diesem Thema wird beschrieben, wie Anmeldungen in der Veröffentlichungszugriffsliste in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]verwaltet werden. Der Zugriff auf eine Veröffentlichung wird von der Veröffentlichungszugriffsliste (Publication Access List, PAL) gesteuert. Anmeldungen und Gruppen können hinzugefügt und aus PAL entfernt werden.  
   
  **In diesem Thema**  
@@ -44,11 +48,11 @@ caps.handback.revision: 45
 -   Sie müssen einem Datenbankbenutzer in der Veröffentlichungsdatenbank die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung zuordnen, bevor Sie die Anmeldung PAL hinzufügen.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Sie verwenden die veröffentlichungszugriffsliste (PAL) auf den **Publikationszugriffsliste** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** Dialogfeld zum Verwalten der Anmeldenamen. Weitere Informationen dazu, wie Sie dieses Dialogfelds finden Sie unter [anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Sie verwenden die Veröffentlichungszugriffsliste (Publication Access List, PAL) auf der Seite **Veröffentlichungszugriffsliste** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zum Verwalten der Anmeldenamen. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### So verwalten Sie Anmeldenamen in der Veröffentlichungszugriffsliste  
+#### <a name="to-manage-logins-in-the-pal"></a>So verwalten Sie Anmeldenamen in der Veröffentlichungszugriffsliste  
   
-1.  Auf der **Publikationszugriffsliste** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** Verwenden Sie im Dialogfeld die **Hinzufügen**, **Entfernen**, und **Alle entfernen** Schaltflächen hinzufügen und Entfernen von Anmeldungen und Gruppen aus der PAL. Entfernen Sie nicht **Distributor_admin** aus der PAL. Dieses Konto wird für die Replikation verwendet.  
+1.  Die Seite **Veröffentlichungszugriffsliste** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** enthält die Schaltflächen **Hinzufügen**, **Entfernen** und **Alle entfernen**, mit denen Sie Benutzer (Anmeldenamen) und Gruppen in die Veröffentlichungszugriffsliste aufnehmen bzw. entfernen können. Sie dürfen **distributor_admin** nicht aus der PAL entfernen. Dieses Konto wird für die Replikation verwendet.  
   
     > [!NOTE]  
     >  Wenn ein Remoteverteiler verwendet wird, müssen Konten in der PAL sowohl beim Verleger als auch beim Verteiler verfügbar sein. Das Konto muss entweder ein Domänenkonto oder ein lokales Konto sein, das auf beiden Servern definiert ist. Die den Anmeldenamen zugehörigen Kennwörter müssen übereinstimmen.  
@@ -57,19 +61,19 @@ caps.handback.revision: 45
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So zeigen Sie Gruppen und Anmeldungen an, die zur PAL gehören  
+#### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>So zeigen Sie Gruppen und Anmeldungen an, die zur PAL gehören  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Geben Sie für **@publication**den Veröffentlichungsnamen an. Dadurch werden Informationen über die Gruppen und Anmeldungen in der PAL angezeigt.  
+1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)aus. Geben Sie für **@publication**den Veröffentlichungsnamen an. Dadurch werden Informationen über die Gruppen und Anmeldungen in der PAL angezeigt.  
   
-#### So fügen Sie der PAL Gruppen und Anmeldungen hinzu  
+#### <a name="to-add-groups-and-logins-to-the-pal"></a>So fügen Sie der PAL Gruppen und Anmeldungen hinzu  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Geben Sie den Veröffentlichungsnamen für **@publication**an. Geben Sie den Namen der Anmeldung oder Gruppe, die hinzugefügt wird, für **@login**an.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)aus. Geben Sie für **@publication**an. Geben Sie den Namen der Anmeldung oder Gruppe, die hinzugefügt wird, für **@login**an.  
   
-#### So entfernen Sie Gruppen und Anmeldungen aus der PAL  
+#### <a name="to-remove-groups-and-logins-from-the-pal"></a>So entfernen Sie Gruppen und Anmeldungen aus der PAL  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Geben Sie den Veröffentlichungsnamen für **@publication**an. Geben Sie den Namen der Anmeldung oder Gruppe, die entfernt wird, für **@login**an.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)aus. Geben Sie für **@publication**an. Geben Sie den Namen der Anmeldung oder Gruppe, die hinzugefügt wird, für **@login**an.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Sichern einer Replikationstopologie](../../../relational-databases/replication/security/secure-a-replication-topology.md)   

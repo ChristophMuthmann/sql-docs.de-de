@@ -1,27 +1,31 @@
 ---
-title: "Audit Broker Conversation (Ereignisklasse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation-Ereignisklasse"
+title: Audit Broker Conversation-Ereignisklasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker Conversation (Ereignisklasse)
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Broker Conversation** -Ereignis, um Überwachungsmeldungen in Bezug auf die Dialogsicherheit von Service Broker zu melden.  
   
-## Datenspalten der Audit Broker Conversation-Ereignisklasse  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Datenspalten der Audit Broker Conversation-Ereignisklasse  
   
 |Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -34,7 +38,7 @@ caps.handback.revision: 25
 |**EventSubClass**|**int**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. In der folgenden Tabelle sind die Ereignisunterklassen-Werte für dieses Ereignis aufgeführt.|21|ja|  
 |**FileName**|**nvarchar**|Der Grund für den Anmeldefehler. Wenn die Anmeldung erfolgreich war, ist diese Spalte leer.|36|Nein|  
 |**GUID**|**uniqueidentifier**|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|Nein|  
-|**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Verwenden Sie die **HOST_NAME**-Funktion, um den Hostnamen zu bestimmen.|8|ja|  
+|**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Verwenden Sie die **HOST_NAME** -Funktion, um den Hostnamen zu bestimmen.|8|ja|  
 |**IntegerData**|**int**|Die Fragmentnummer der Nachricht.|25|Nein|  
 |**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|ja|  
 |**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|ja|  
@@ -45,7 +49,7 @@ caps.handback.revision: 25
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|ja|  
 |**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
-|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> <br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel.**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel.**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel.**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel.**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|ja|  
+|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> <br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|ja|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Ungültige Signatur|Broker konnte die vom Sender bereitgestellte Nachrichtensignatur mithilfe des öffentlichen Schlüssels im Zertifikat des Senders nicht überprüfen. Dies kann darauf hinweisen, dass die Nachricht beschädigt ist, manipuliert wurde, der Remotedienst und der lokale Dienst nicht mit dem gleichen Zertifikat konfiguriert sind oder das Zertifikat veraltet ist.|  
 |4|Ausführung als Zielfehler|Der Zielbenutzer besitzt keine Empfangsberechtigungen für die Zielwarteschlange. Damit verhindert wird, dass nicht autorisierte Benutzer Nachrichten empfangen, speichert Service Broker unabhängig davon, ob der initiierende Benutzer Berechtigungen zum Einreihen von Nachrichten in Warteschlangen besitzt, keine Nachrichten in Warteschlangen, die einen Zielbenutzer aufweisen, der keine Nachrichten aus der Warteschlange empfangen kann.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

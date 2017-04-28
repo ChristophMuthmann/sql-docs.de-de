@@ -1,22 +1,26 @@
 ---
-title: "Schnellere tempor&#228;re Tabellen und Tabellenvariablen durch Speicheroptimierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Schnellere tempor&#228;re Tabellen und Tabellenvariablen durch Speicheroptimierung
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ Dieser Artikel beschreibt:
 - Ein Codebeispiel, das die Leistungsvorteile der Speicheroptimierung hervorhebt.
   
   
-## A. Grundlagen von speicheroptimierten Tabellenvariablen  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Grundlagen von speicheroptimierten Tabellenvariablen  
   
 Eine speicheroptimierte Tabellenvariable ist höchst effizient bei der Verwendung des gleichen speicheroptimierten Algorithmus und der gleichen Datenstrukturen, die von speicheroptimierten Tabellen verwendet werden. Die Effizienz wird maximiert, wenn innerhalb eines nativ kompilierten Moduls auf die Tabellenvariable zugegriffen werden kann.  
   
@@ -42,11 +46,11 @@ Eine speicheroptimierte Tabellenvariable:
 - Umfasst keine tempdb-Nutzung oder -Konflikte.  
 - Kann an eine gespeicherte Prozedur als ein Tabellenwertparameter (TVP) übergeben werden.  
 - Benötigt mindestens einen Index, entweder einen Hashindex oder einen nicht gruppierten Index.  
-  - Für einen Hash-Index sollte die Bucketanzahl idealerweise auf einen Wert zwischen der einfachen und doppelten Anzahl von Indexschlüsselwerten festgelegt werden. Ein zu hoher Wert (ein bis zu zehnfacher Wert) stellt in der Regel aber auch kein Problem dar. Weitere Informationen finden Sie unter [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) (Indizes für speicheroptimierte Tabellen).  
+  - Für einen Hash-Index sollte die Bucketanzahl idealerweise auf einen Wert zwischen der einfachen und doppelten Anzahl von Indexschlüsselwerten festgelegt werden. Ein zu hoher Wert (ein bis zu zehnfacher Wert) stellt in der Regel aber auch kein Problem dar. Weitere Informationen finden Sie unter [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)(Indizes für speicheroptimierte Tabellen).  
 
   
   
-#### Objekttypen  
+#### <a name="object-types"></a>Objekttypen  
   
 In-Memory-OLTP stellt die folgenden Objekte bereit, die für speicheroptimierte temporäre Tabellen und Tabellenvariablen verwendet werden können.  
   
@@ -55,10 +59,10 @@ In-Memory-OLTP stellt die folgenden Objekte bereit, die für speicheroptimierte 
 - Speicheroptimierte Tabellenvariablen  
   - Muss in zwei Schritten (statt inline) deklariert werden:  
     - `CREATE TYPE my_type AS TABLE ...;` , dann  
-    - `DECLARE @mytablevariable my_type;`.  
+    - `DECLARE @mytablevariable my_type;`(Indizes für speicheroptimierte Tabellen).  
   
   
-## B. Szenario: Ersetzen von globaler tempd &#x23;&#x23;table  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Szenario: Ersetzen von globaler tempd &#x23;&#x23;table  
   
 Angenommen, Sie verfügen über die folgende globale temporäre Tabelle.  
   
@@ -91,7 +95,7 @@ Ersetzen Sie die globale temporäre Tabelle mit der folgenden speicheroptimierte
   
   
   
-#### B.1 Schritte  
+#### <a name="b1-steps"></a>B.1 Schritte  
   
 Die folgenden Schritte beschreiben die Konvertierung von globalen temporären Tabellen zu SCHEMA_ONLY.  
   
@@ -101,7 +105,7 @@ Die folgenden Schritte beschreiben die Konvertierung von globalen temporären Ta
 3. Ersetzen Sie in T-SQL alle Erwähnungen von **&#x23;&#x23;tempGlobalB** mit **dbo.soGlobalB**.  
   
   
-## C. Szenario: Ersetzen der tempd &#x23;Sitzungstabelle  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Szenario: Ersetzen der tempd &#x23;Sitzungstabelle  
   
 Die erforderlichen Schritte zum Ersetzen einer Sitzung temporäre Tabelle umfassen zusätzliches T-SQL als für die globale temporäre Tabelle Szenario. Zusätzliches T-SQL bedeutet glücklicherweise nicht, dass mehr Arbeit für die Ausführung der Konvertierung nötig ist.  
   
@@ -159,7 +163,7 @@ Beachten Sie, dass jede speicheroptimierte Tabelle mindestens einen Index besitz
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     )  
-        WITH  
+        mit  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ Beachten Sie, dass jede speicheroptimierte Tabelle mindestens einen Index besitz
   
 Drittens: Im allgemeinen T-SQL-Code:  
   
-1. Löschen Sie alle CREATE TABLE-Anweisungen für die alte temporäre Sitzungstabelle.  
-2. Ersetzen Sie den alten Tabellennamen mit dem neuen Namen:  
-  - _Alt:_ &#x23;tempSessionC  
-  - _Neu:_ dbo.soSessionC  
+1. Ändern Sie alle Verweise auf die temporäre Tabelle in den Transact-SQL-Anweisungen in die neue speicheroptimierte Tabelle:
+    - _Alt:_ &#x23;tempSessionC  
+    - _Neu:_ dbo.soSessionC  
+2. Ersetzen Sie die `CREATE TABLE #tempSessionC`-Anweisungen in Ihrem Code durch `DELETE FROM dbo.soSessionC`, um sicherzustellen, dass eine Sitzung keinen Tabelleninhalten ausgesetzt ist, die von einer vorherigen Sitzung mit der gleichen session_id eingefügt wurden.
+3. Entfernen Sie die `DROP TABLE #tempSessionC`-Anweisungen aus dem Code – Optional können Sie eine `DELETE FROM dbo.soSessionC`-Anweisung einfügen, wenn Speichergröße ein potenzielles Problem ist.
   
   
   
-## D. Szenario: Eine Tabellenvariable kann die WITH-Klausel MEMORY_OPTIMIZED=ON enthalten.  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Szenario: Eine Tabellenvariable kann die WITH-Klausel MEMORY_OPTIMIZED=ON enthalten.  
   
   
 Eine herkömmliche Tabellenvariable stellt eine Tabelle in der tempdb-Datenbank dar. Für eine schnellere Leistung können Sie den Speicher Ihrer Tabellenvariable optimieren.  
@@ -200,11 +206,11 @@ Hier ist das T-SQL für eine herkömmliche Tabellenvariablen. Der Bereich endet,
   
   
   
-#### D.1 Konvertieren von Inline zu Explicit  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 Konvertieren von Inline zu Explicit  
   
-Die vorherigen Syntax soll die Tabellenvariable *inline* erstellen. Die Inline-Syntax unterstützt keine Speicheroptimierung. Lassen Sie uns also die Inline-Syntax zur Explicit-Syntax für TYPE konvertieren.  
+Die vorherigen Syntax soll die Tabellenvariable *inline*erstellen. Die Inline-Syntax unterstützt keine Speicheroptimierung. Lassen Sie uns also die Inline-Syntax zur Explicit-Syntax für TYPE konvertieren.  
   
-*Bereich:* Die TYPE-Definition, die vom ersten „go“-unterteilten Batch erstellt wurde, bleibt auch nach dem Herunterfahren und Neustart des Servers bestehen. Nach dem ersten „go“-unterteilten Batch, bleibt die deklarierte Tabelle „@tvTableC“ nur bis zum nächsten „go“-unterteilten Batch bestehen und bis der Batch endet.  
+*Bereich:* Die TYPE-Definition, die vom ersten „go“-unterteilten Batch erstellt wurde, bleibt auch nach dem Herunterfahren und Neustart des Servers bestehen. Nach dem ersten „go“-unterteilten Batch bleibt die deklarierte Tabelle @tvTableC nur bis zum nächsten „go“-unterteilten Batch bestehen und der Batch endet.  
   
   
   
@@ -228,7 +234,7 @@ Die vorherigen Syntax soll die Tabellenvariable *inline* erstellen. Die Inline-S
   
   
   
-#### D.2 Konvertieren einer explizit auf dem Datenträger gespeicherten Tabellenvariable in eine speicheroptimierte Tabellenvariable  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 Konvertieren einer explizit auf dem Datenträger gespeicherten Tabellenvariable in eine speicheroptimierte Tabellenvariable  
   
 Es befindet sich keine speicheroptimierte Tabellenvariable in tempdb. Die Speicheroptimierung führt zu einer Zunahme der Geschwindigkeit, die zehnmal schneller ist oder sogar noch schneller.  
   
@@ -246,7 +252,7 @@ Die Konvertierung in eine speicheroptimierte Tabelle erfolgt in nur einem Schrit
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         )  
-        WITH  
+        mit  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,9 +261,9 @@ Die Konvertierung in eine speicheroptimierte Tabelle erfolgt in nur einem Schrit
 Fertig.  
   
   
-## E. FILEGROUP als Voraussetzung für SQL Server  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. FILEGROUP als Voraussetzung für SQL Server  
   
-Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möchten, muss Ihre Datenbank über FILEGROUP verfügen, die mit **MEMORY_OPTIMIZED_DATA** deklariert ist.  
+Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möchten, muss Ihre Datenbank über FILEGROUP verfügen, die mit **MEMORY_OPTIMIZED_DATA**deklariert ist.  
   
 - In der Azure SQL-Datenbank ist die Erstellung von FILEGROUP nicht nötig.  
   
@@ -294,11 +300,11 @@ Das folgende Skript erstellt eine Dateigruppe für Sie und konfiguriert empfohle
   
 Weitere Informationen zu `ALTER DATABASE ... ADD` FILE und FILEGROUP finden Sie unter:  
   
-- [ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [Die speicheroptimierte Dateigruppe](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## F. Schnelltest zum Beweisen der Verbesserung der Geschwindigkeit  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. Schnelltest zum Beweisen der Verbesserung der Geschwindigkeit  
   
   
 Dieser Abschnitt enthält Transact-SQL-Code, der ausgeführt werden kann, um zu vergleichen, welcher Geschwindigkeitszuwachs bei INSERT-DELETE durch die Verwendung speicheroptimierter Tabellen erreicht werden kann. Der Code besteht aus zwei Hälften, die nahezu identisch sind. In der ersten Hälfte ist der Tabellentyp jedoch speicheroptimiert.  
@@ -407,7 +413,7 @@ Wenn Sie das Skript in einer Azure SQL-Datenbank ausführen, stellen Sie sicher,
   
   
   
-## G. Vorhersagen von aktiver Arbeitsspeichernutzung  
+## <a name="g-predict-active-memory-consumption"></a>G. Vorhersagen von aktiver Arbeitsspeichernutzung  
   
 Sie können lernen, wie sie die Bedürfnisse des aktiven Arbeitsspeichers für Ihre speicheroptimierten Tabellen mit den folgenden Ressourcen vorhersagen können:  
   
@@ -418,43 +424,45 @@ Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspe
   
 Wenn auf die speicheroptimierten Tabellenvariablen nur mit einem exakten Schlüsselwert pro Zugriff zugegriffen wird, sollten Sie eher ein Hashindex als einen nicht gruppierten Index verwenden. Wenn Sie den erforderlichen BUCKET_COUNT-Wert nicht abschätzen können, wäre ein NONCLUSTERED-Index eine gute zweite Wahl.  
   
-## H. Siehe auch  
+## <a name="h-see-also"></a>H. Siehe auch  
   
-- [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Definieren von Dauerhaftigkeit für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+CAPS-Titel: "Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[Die speicheroptimierte Dateigruppe](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[Ressourcenpool für die Ressourcenkontrolle](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[Ratgeber für die Speicheroptimierung](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielrechnung](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[Dauerhaftigkeit für speicheroptimierte Tabellen](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[Definieren von Dauerhaftigkeit für speicheroptimierte Objekte](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi, Montag, 2.5.2016, 18:40 Uhr  
 -->  
   
   
   
+
+

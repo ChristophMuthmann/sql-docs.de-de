@@ -1,22 +1,26 @@
 ---
-title: "Aufrufen von systemintern kompilierten gespeicherten Prozeduren &#252;ber Datenzugriffsanwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aufrufen von systemintern kompilierten gespeicherten Prozeduren &#252;ber Datenzugriffsanwendungen
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
   Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
   
  Cursor können keine systemintern kompilierte gespeicherte Prozedur durchlaufen.  
@@ -35,7 +39,7 @@ caps.handback.revision: 10
   
  Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von **SQLExecDirect** und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**-Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
+ Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von **SQLExecDirect** und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** -Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
   
  Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:  
   
@@ -79,7 +83,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Ausführen einer nativ kompilierten gespeicherten Prozedur mithilfe von ODBC  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Ausführen einer nativ kompilierten gespeicherten Prozedur mithilfe von ODBC  
  In diesem Beispiel wird veranschaulicht, wie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers Parameter gebunden und gespeicherte Prozeduren ausgeführt werden.  Das Beispiel wird zu einer Konsolenanwendung kompiliert, die mithilfe der direkten Ausführung einen einzelnen Auftrag einfügt und mithilfe der vorbereiteten Ausführung die Auftragsdetails einfügt.  
   
  So führen Sie dieses Beispiel aus:  
@@ -88,7 +92,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
   
-3.  Führen Sie das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript (unten) in der Beispieldatenbank aus.  
+3.  Führen Sie das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript (unten) in der Beispieldatenbank aus.  
   
 4.  Kompilieren Sie das Beispiel, und führen Sie es aus.  
   
@@ -102,7 +106,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
     SELECT * FROM dbo.Item  
     ```  
   
- Der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code erstellt die speicheroptimierten Datenbankobjekte.  
+ Der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code erstellt die speicheroptimierten Datenbankobjekte.  
   
 ```  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

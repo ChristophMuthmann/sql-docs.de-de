@@ -1,24 +1,28 @@
 ---
-title: "Erteilen einer Berechtigung f&#252;r einen Prinzipal | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erteilen einer Berechtigung für einen Prinzipal"
+title: "Erteilen einer Berechtigung für einen Prinzipal | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erteilen einer Berechtigung f&#252;r einen Prinzipal
+# <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
   In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Berechtigungen für einen Prinzipal in [!INCLUDE[tsql](../../../includes/tsql-md.md)]gewähren können.  
   
  **In diesem Thema**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So erteilen Sie eine Berechtigung für einen Prinzipal  
+#### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank, die das Objekt enthält, dem Sie Berechtigungen gewähren möchten.  
   
@@ -62,17 +66,17 @@ caps.handback.revision: 12
   
 3.  Erweitern Sie den Ordner **Gespeicherte Prozeduren** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf eine gespeicherte Prozedur, und wählen Sie **Eigenschaften** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf eine gespeicherte Prozedur, und wählen Sie **Eigenschaften**aus.  
   
-5.  Wählen Sie im Dialogfeld **Eigenschaften der gespeicherten Prozedur –***stored_procedure_name* unter „Seite auswählen“ die Option **Berechtigungen** aus. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
+5.  Wählen Sie im Dialogfeld **Eigenschaften der gespeicherten Prozedur –***stored_procedure_name* unter „Seite auswählen“ die Option **Berechtigungen**aus. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So erteilen Sie eine Berechtigung für einen Prinzipal  
+#### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) und [GRANT (Objektberechtigungen)&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Prinzipale &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -1,23 +1,27 @@
 ---
-title: "&#196;ndern benutzerdefinierter Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ändern von benutzerdefinierten Funktionen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern benutzerdefinierter Funktionen
-  Sie können benutzerdefinierte Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] ändern. Durch die Änderung von benutzerdefinierten Funktionen wie unten beschrieben werden die Funktionsberechtigungen nicht geändert. Es ergeben sich auch keine Auswirkungen auf abhängige Funktionen, gespeicherte Prozeduren oder Trigger.  
+# <a name="modify-user-defined-functions"></a>Ändern benutzerdefinierter Funktionen
+  Sie können benutzerdefinierte Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Durch die Änderung von benutzerdefinierten Funktionen wie unten beschrieben werden die Funktionsberechtigungen nicht geändert. Es ergeben sich auch keine Auswirkungen auf abhängige Funktionen, gespeicherte Prozeduren oder Trigger.  
   
  **In diesem Thema**  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 7
   
 -   **So ändern Sie eine benutzerdefinierte Funktion mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So ändern Sie eine benutzerdefinierte Funktion  
+#### <a name="to-modify-a-user-defined-function"></a>So ändern Sie eine benutzerdefinierte Funktion  
   
 1.  Klicken Sie neben der Datenbank, die die Funktion enthält, die Sie ändern möchten, auf das Pluszeichen.  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So ändern Sie eine benutzerdefinierte Funktion  
+#### <a name="to-modify-a-user-defined-function"></a>So ändern Sie eine benutzerdefinierte Funktion  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

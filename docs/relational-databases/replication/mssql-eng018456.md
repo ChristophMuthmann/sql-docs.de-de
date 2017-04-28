@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG018456 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG018456 (Fehler)"
+title: MSSQL_ENG018456 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG018456 error
 ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03184d93644598527b76f054051c66f92ecc6d3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG018456
+# <a name="mssqleng018456"></a>MSSQL_ENG018456
     
-## Meldungsdetails  
+## <a name="message-details"></a>Meldungsdetails  
   
 |||  
 |-|-|  
@@ -29,15 +33,15 @@ caps.handback.revision: 15
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name||  
-|Meldungstext|Fehler bei der Anmeldung für Benutzer ' %. * ls'.%.\*ls|  
+|Meldungstext|Fehler bei der Anmeldung für den Benutzer '%.*ls'.%.\*ls|  
   
-## Erklärung  
- Der Fehler MSSQL_ENG018456 wird ausgelöst, wenn ein Anmeldeversuch einen Fehler erzeugt. Wenn die Fehlermeldung das Konto enthält **Distributor_admin** (Fehler bei der Anmeldung für den Benutzer 'Distributor_admin'.), liegt ein Problem mit einem Konto, das von der Replikation verwendet. Die Replikation erstellt einen Remoteserver **Repl_distributor**, wodurch die Kommunikation zwischen dem Verteiler und Verleger. Die Anmeldung **Distributor_admin** wird diesem Remoteserver zugeordnet und muss ein gültiges Kennwort besitzen.  
+## <a name="explanation"></a>Erklärung  
+ Der Fehler MSSQL_ENG018456 wird ausgelöst, wenn ein Anmeldeversuch einen Fehler erzeugt. Enthält die Fehlermeldung das Konto **distributor_admin** (Fehler bei der Anmeldung des Benutzers 'distributor_admin'.), liegt das Problem an einem Konto, das durch die Replikation verwendet wird. Die Replikation erstellt einen Remoteserver **repl_distributor**, der die Kommunikation zwischen dem Verteiler und dem Verleger ermöglicht. Die Anmeldung **distributor_admin** wird diesem Remoteserver zugeordnet und muss ein gültiges Kennwort besitzen.  
   
-## Benutzeraktion  
+## <a name="user-action"></a>Benutzeraktion  
  Stellen Sie sicher, dass Sie ein Kennwort für dieses Konto angegeben haben. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).  
   
-## Siehe auch  
- [Fehler und Ereignisreferenz & #40; Replikation & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

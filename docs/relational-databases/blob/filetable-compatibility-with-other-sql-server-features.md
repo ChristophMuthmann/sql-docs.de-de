@@ -1,24 +1,28 @@
 ---
-title: "FileTable-Kompatibilit&#228;t mit anderen SQL Server-Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], verwenden mit anderen Funktionen"
+title: "FileTable-Kompatibilität mit anderen SQL Server-Funktionen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable-Kompatibilit&#228;t mit anderen SQL Server-Funktionen
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen
   Beschreibt, wie FileTables mit anderen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten.  
   
 ##  <a name="alwayson"></a> AlwaysOn-Verfügbarkeitsgruppen und FileTables  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   Die FileTable-Funktionalität wird teilweise von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]unterstützt. Nach einem Failover kann auf dem primären Replikat auf FileTable-Daten zugegriffen werden, nicht jedoch auf FileTable-Daten auf lesbaren sekundären Replikaten.  
   
-    > **HINWEIS:** Beachten Sie, dass alle FILESTREAM-Funktionen nach einem Failover unterstützt werden. Sowohl auf lesbaren sekundären Replikaten als auch auf dem neuen primären Replikat kann auf FILESTREAM-Daten zugegriffen werden.  
+    > **HINWEIS:**  Beachten Sie, dass alle FILESTREAM-Funktionen nach einem Failover unterstützt werden. Sowohl auf lesbaren sekundären Replikaten als auch auf dem neuen primären Replikat kann auf FILESTREAM-Daten zugegriffen werden.  
   
 -   Die FILESTREAM-Funktion und die FileTable-Funktion akzeptieren oder geben virtuelle Netzwerknamen (VNNs) statt Computernamen zurück. Weitere Informationen zu diesen Funktionen finden Sie unter [Filestream- und FileTable-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 19
 -   In einer FileTable definierte Trigger können keine FileTables (einschließlich der übergeordneten FileTable) aktualisieren. Diese Einschränkung verhindert hauptsächlich, dass ein Trigger in einen Sperrkonflikt mit den vom Dateisystem verhängten Sperren in derselben Transaktion gerät.  
   
  **Nicht transaktionaler Zugriff und Auswirkungen auf Trigger**  
- -   Wenn der nicht transaktionale Updatezugriff in einer Datenbank zulässig ist, können direkte Updates der FILESTREAM-Daten in beliebigen Tabellen ausgeführt werden, u. a. auch für FileTable in dieser Datenbank. Aufgrund dieser Möglichkeit ist das BEFORE-Image des FILESTREAM-Inhalts für den Trigger möglicherweise nicht verfügbar.  
+ -   Wenn der nicht transaktionale Updatezugriff in einer Datenbank zulässig ist, können direkte Updates der FILESTREAM-Daten in beliebigen Tabellen ausgeführt werden, u. a. auch für FileTable in dieser Datenbank. Aufgrund dieser Möglichkeit ist das BEFORE-Image des FILESTREAM-Inhalts für den Trigger möglicherweise nicht verfügbar.  
   
 -   Für nicht transaktionale Updatevorgänge durch das Dateisystem erstellt SQL Server eine interne Transaktion, um den CloseHandle-Vorgang aufzuzeichnen, und alle definierten DML-Trigger werden möglicherweise als Teil dieser Transaktion ausgelöst. Ein Rollback auf eine Transaktion im Triggertext wird nicht verhindert, es erfolgt jedoch kein Rollback der am FILESTREAM vorgenommenen Änderungen.  Ein solcher Rollback kann ebenfalls verhindern, dass die UPDATE-Trigger ausgelöst werden, selbst wenn der FILESTREAM-Inhalt geändert wurde.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
  **Sichten**  
  Eine Sicht kann in einer FileTable genau wie in einer anderen Tabelle erstellt werden. Die folgenden Überlegungen gelten jedoch für eine in einer FileTable erstellten Sicht:  
   
--   Die Sicht weist keine FileTable-Semantik auf. Die Spalten in der Sicht (einschließlich Dateiattributspalten) verhalten sich z. B. wie normale Sichtspalten ohne besondere Semantik. Das gleiche gilt für Zeilen, die Dateien/Verzeichnisse darstellen.  
+-   Die Sicht weist keine FileTable-Semantik auf. Die Spalten in der Sicht (einschließlich Dateiattributspalten) verhalten sich z. B. wie normale Sichtspalten ohne besondere Semantik. Das gleiche gilt für Zeilen, die Dateien/Verzeichnisse darstellen.  
   
 -   Die Sicht kann möglicherweise auf Grundlage der Semantik für eine aktualisierbare Sicht aktualisiert werden, die Updates können jedoch wie in der Tabelle aufgrund der zugrunde liegenden Tabelleneinschränkungen abgelehnt werden.  
   
@@ -99,9 +103,9 @@ caps.handback.revision: 19
   
 -   Wenn der nicht transaktionale Zugriff für die Datenbank auf FULL festgelegt wird, wird eine Transaktion unter RCSI ausgeführt, oder SI weist das folgende Verhalten auf:  
   
-    -   Alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Lesevorgänge der FileTable-file_stream-Spalte sind fehlerhaft. INSERT und UPDATE für die Spalte wären immer noch erfolgreich, solange kein Lesevorgang aus der file_stream-Spalte versucht wird.  
+    -   Alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Lesevorgänge der FileTable-file_stream-Spalte sind fehlerhaft. INSERT und UPDATE für die Spalte wären immer noch erfolgreich, solange kein Lesevorgang aus der file_stream-Spalte versucht wird.  
   
-    -   Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung READCOMMITTEDLOCK-Tabellenhinweise angibt, sind Lesevorgänge erfolgreich, und anstelle der Zeilenversionsverwaltung werden Sperren für die Zeilen vorgenommen.  
+    -   Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung READCOMMITTEDLOCK-Tabellenhinweise angibt, sind Lesevorgänge erfolgreich, und anstelle der Zeilenversionsverwaltung werden Sperren für die Zeilen vorgenommen.  
   
     -   Transaktive Win32 FileStream-Öffnungsanforderungen sind ebenfalls fehlerhaft.  
   
@@ -115,9 +119,10 @@ caps.handback.revision: 19
 ##  <a name="CDB"></a> Eigenständige Datenbanken und FileTables  
  Die FILESTREAM-Funktion, von der die FileTable-Funktion abhängt, erfordert einen gewissen Konfigurationsaufwand außerhalb der Datenbank. Daher sind Datenbanken, die FILESTREAM oder FileTable verwenden, nicht vollständig eigenständig.  
   
- Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
+ Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
+

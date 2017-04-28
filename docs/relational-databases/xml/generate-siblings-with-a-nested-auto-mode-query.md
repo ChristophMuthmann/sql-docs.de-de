@@ -1,28 +1,32 @@
 ---
-title: "Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abfragen [XML in SQL Server], geschachtelte AUTO-Modus-"
-  - "Geschachtelte AUTO-Modusabfrage"
+title: Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
   Im folgenden Beispiel wird das Generieren von gleichgeordneten Elementen durch Verwenden einer geschachtelten Abfrage im AUTO-Modus dargestellt. Die einzige Möglichkeit zum Generieren von derartigem XML-Code besteht im Verwenden des EXPLICIT-Modus. Dies kann jedoch sehr aufwändig sein.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Diese Abfrage konstruiert XML-Code, der Bestellinformationen bereitstellt. Dazu gehören:  
   
 -   Auftragskopfzeileninformationen, `SalesOrderID`, `SalesPersonID`und `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] speichert diese Informationen in der `SalesOrderHeader` -Tabelle.  
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Sie fragt das Rowset `SalesOrder` ab, das in der `FROM`-Klausel angegeben ist. Das Ergebnis ist ein XML-Code mit einem oder mehreren <`SalesOrder`>-Elementen.  
   
--   Gibt den `AUTO`-Modus und die `TYPE`-Direktive an. `AUTO` -Modus wird das Abfrageergebnis in XML umgewandelt, und von der `TYPE` -Direktive wird das Ergebnis als **xml** -Typ zurückgegeben.  
+-   Gibt den `AUTO` -Modus und die `TYPE` -Direktive an. `AUTO` -Modus wird das Abfrageergebnis in XML umgewandelt, und von der `TYPE` -Direktive wird das Ergebnis als **xml** -Typ zurückgegeben.  
   
--   Sie schließt zwei geschachtelte `SELECT` -Anweisungen ein, die durch ein Komma voneinander getrennt sind. Die erste geschachtelte `SELECT`-Anweisung ruft die Bestellinformationen (Kopfzeile und Details) ab, und die zweite geschachtelte `SELECT`-Anweisung ruft die Informationen zum Vertriebsmitarbeiter ab.  
+-   Sie schließt zwei geschachtelte `SELECT` -Anweisungen ein, die durch ein Komma voneinander getrennt sind. Die erste geschachtelte `SELECT` -Anweisung ruft die Bestellinformationen (Kopfzeile und Details) ab, und die zweite geschachtelte `SELECT` -Anweisung ruft die Informationen zum Vertriebsmitarbeiter ab.  
   
-    -   Die `SELECT`-Anweisung, die `SalesOrderID`, `SalesPersonID` und `CustomerID` abruft, enthält eine weitere geschachtelte `SELECT ... FOR XML`-Anweisung (mit `AUTO`-Modus und `TYPE`-Direktive), die Detailinformationen zur Bestellung zurückgibt.  
+    -   Die `SELECT` -Anweisung, die `SalesOrderID`, `SalesPersonID`und `CustomerID` abruft, enthält eine weitere geschachtelte `SELECT ... FOR XML` -Anweisung (mit `AUTO` -Modus und `TYPE` -Direktive), die Detailinformationen zur Bestellung zurückgibt.  
   
- Die `SELECT`-Anweisung, mit der die Informationen zum Vertriebsmitarbeiter abgerufen werden, fragt ein Rowset (`SalesPerson`) ab, das in der `FROM`-Klausel erstellt wird. Damit `FOR XML` -Abfragen funktionsfähig sind, müssen Sie einen Namen für das anonyme Rowset bereitstellen, das in der `FROM` -Klausel generiert wird. In diesem Fall ist der bereitgestellte Name `SalesPerson`.  
+ Die `SELECT` -Anweisung, mit der die Informationen zum Vertriebsmitarbeiter abgerufen werden, fragt ein Rowset ( `SalesPerson`) ab, das in der `FROM` -Klausel erstellt wird. Damit `FOR XML` -Abfragen funktionsfähig sind, müssen Sie einen Namen für das anonyme Rowset bereitstellen, das in der `FROM` -Klausel generiert wird. In diesem Fall ist der bereitgestellte Name `SalesPerson`.  
   
  Dies ist das Teilergebnis:  
   
@@ -143,7 +147,7 @@ FOR XML AUTO, TYPE
   
 -   Die vorherige Abfrage wird in der `FROM` -Klausel hinzugefügt. Das Abfrageergebnis wird als Tabelle zurückgegeben. Beachten Sie den hinzugefügten `XmlCol` -Alias.  
   
--   Die `SELECT`-Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM`-Klausel zurückgegeben wird. Die Methode **query()** des Datentyps **xml** wird zum Angeben der XQuery verwendet. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+-   Die `SELECT` -Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM` -Klausel zurückgegeben wird. Die Methode **query()** des Datentyps **xml** wird zum Angeben der XQuery verwendet. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von geschachtelten FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

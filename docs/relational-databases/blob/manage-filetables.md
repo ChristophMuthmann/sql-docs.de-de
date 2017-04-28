@@ -1,25 +1,29 @@
 ---
-title: "Verwalten von FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], Sicherheit"
-  - "FileTables [SQL Server], Verwalten des Zugriffs"
+title: Verwalten von FileTables | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwalten von FileTables
+# <a name="manage-filetables"></a>Verwalten von FileTables
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
 ##  <a name="HowToEnumerate"></a> Vorgehensweise: Abrufen einer Liste von FileTables und verbundenen Objekten  
@@ -61,7 +65,7 @@ GO
   
      Wenn der ALTER DATABASE-Befehl abgebrochen wird oder mit einem Timeout endet, wird die Ebene des transaktionalen Zugriffs nicht geändert.  
   
--   Wenn Sie die ALTER DATABASE-Anweisung mit einer WITH-\<termination>-Klausel aufrufen (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), werden alle geöffneten nicht transaktionalen Dateihandles abgebrochen.  
+-   Wenn Sie die ALTER DATABASE-Anweisung mit einer WITH-\<Termination>-Klausel aufrufen (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), werden alle geöffneten nicht transaktionalen Dateihandles abgebrochen.  
   
 > [!WARNING]  
 >  Durch das Abbrechen geöffneter Dateihandles verlieren Benutzer möglicherweise nicht gespeicherte Daten. Dieses Verhalten ist mit dem Verhalten des Dateisystems selbst konsistent.  
@@ -72,17 +76,17 @@ GO
   
 -   Wenn der Zugriff auf **NONE**festgelegt ist, kann auf alle FileTable-Verzeichnisse und ihre Inhalte nicht mehr zugegriffen werden. Zudem sind sie nicht mehr sichtbar.  
   
--   Wenn der Zugriff auf **READ_ONLY** festgelegt ist, sind alle FileTable-Verzeichnisse und ihre Inhalte ebenfalls schreibgeschützt.  
+-   Wenn der Zugriff auf **READ_ONLY**festgelegt ist, sind alle FileTable-Verzeichnisse und ihre Inhalte ebenfalls schreibgeschützt.  
   
  Das Deaktivieren von FILESTREAM auf Instanzebene hat die folgenden Auswirkungen auf Verzeichnisse auf Datenbankebene in dieser Instanz und die FileTable-Verzeichnisse darunter:  
   
 -   Keines der Verzeichnisse auf Datenbankebene auf der Instanz ist sichtbar, wenn FILESTREAM auf Instanzebene deaktiviert ist.  
   
 ###  <a name="HowToDisable"></a> Vorgehensweise: Deaktivieren und erneutes Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
- Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **So deaktivieren Sie vollständigen nicht transaktionalen Zugriff**  
- Rufen Sie die **ALTER DATABASE**-Anweisung auf, und legen Sie den Wert von **NON_TRANSACTED_ACCESS** auf **READ_ONLY** oder **OFF** fest.  
+ Rufen Sie die **ALTER DATABASE** -Anweisung auf, und legen Sie den Wert von **NON_TRANSACTED_ACCESS** auf **READ_ONLY** oder **OFF**fest.  
   
 ```tsql  
 -- Disable write access.  
@@ -97,7 +101,7 @@ GO
 ```  
   
  **So aktivieren Sie vollständigen nicht transaktionalen Zugriff erneut**  
- Rufen Sie die **ALTER DATABASE**-Anweisung auf, und legen Sie den Wert von **NON_TRANSACTED_ACCESS** auf **FULL** fest.  
+ Rufen Sie die **ALTER DATABASE** -Anweisung auf, und legen Sie den Wert von **NON_TRANSACTED_ACCESS** auf **FULL**fest.  
   
 ```tsql  
 ALTER DATABASE database_name  
@@ -115,7 +119,7 @@ GO
 3.  Ein gültiges Verzeichnis wurde auf Datenbankebene angegeben.  
   
 ##  <a name="BasicsEnabling"></a> Deaktivieren und erneutes Aktivieren des FileTable-Namespaces auf Tabellenebene  
- Durch Deaktivieren des FileTable-Namespaces werden alle systemdefinierten Einschränkungen und Trigger deaktiviert, die mit der FileTable erstellt wurden. Dies ist in Situationen hilfreich, in denen eine FileTable in großem Umfang mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Vorgängen ohne den Aufwand der FileTable-Semantikerzwingung neu organisiert werden müssen. Durch diese Vorgänge kann die FileTable jedoch in einem inkonsistenten Status belassen werden, und das erneute Aktivieren des FileTable-Namespaces kann verhindert werden.  
+ Durch Deaktivieren des FileTable-Namespaces werden alle systemdefinierten Einschränkungen und Trigger deaktiviert, die mit der FileTable erstellt wurden. Dies ist in Situationen hilfreich, in denen eine FileTable in großem Umfang mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Vorgängen ohne den Aufwand der FileTable-Semantikerzwingung neu organisiert werden müssen. Durch diese Vorgänge kann die FileTable jedoch in einem inkonsistenten Status belassen werden, und das erneute Aktivieren des FileTable-Namespaces kann verhindert werden.  
   
  Das Deaktivieren eines FileTable-Namespaces führt zu folgenden Ergebnissen:  
   
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einer FileTable zugeordneten offenen Dateihandles  
- Rufen Sie die gespeicherte Prozedur [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) mit den entsprechenden Argumenten auf, um alle offenen Dateihandles in der Datenbank oder FileTable oder ein bestimmtes Handle abzubrechen.  
+ Rufen Sie die gespeicherte Prozedur [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) mit den entsprechenden Argumenten auf, um alle offenen Dateihandles in der Datenbank oder FileTable oder ein bestimmtes Handle abzubrechen.  
   
 ```  
 USE database_name;  
@@ -202,7 +206,7 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> FileTable-Sicherheit  
- Die in FileTables gespeicherten Dateien und Verzeichnisse werden nur von SQL Server-Sicherheit gesichert. Tabellen- und spaltenbasierte Sicherheit wird für Dateisystemzugriff sowie [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zugriff erzwungen. Windows-Dateisystemsicherheits-APIs und ACL-Einstellungen werden nicht unterstützt.  
+ Die in FileTables gespeicherten Dateien und Verzeichnisse werden nur von SQL Server-Sicherheit gesichert. Tabellen- und spaltenbasierte Sicherheit wird für Dateisystemzugriff sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff erzwungen. Windows-Dateisystemsicherheits-APIs und ACL-Einstellungen werden nicht unterstützt.  
   
  Die für FILESTREAM-Dateigruppen und -Container geltenden Sicherheits- und Zugriffsberechtigungen gelten auch für FileTables, da die Dateidaten als FILESTREAM-Spalte in der FileTable gespeichert werden.  
   
@@ -210,7 +214,7 @@ GO
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Zugriff auf Daten in FileTables wird auf dieselbe Weise wie eine beliebige andere Tabelle gesichert. Entsprechende Sicherheitsüberprüfungen auf Tabellen- und Spaltenebene werden für alle Vorgänge ausgeführt, die auf die Daten zugreifen oder sie ändern.  
   
  **FileTable-Sicherheit und Dateisystemzugriff**  
- Zum Öffnen eines Handles für eine Datei oder ein Verzeichnis, die bzw. das in der FileTable gespeichert ist, sind für Dateisystem-APIs entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigungen für die gesamte Zeile in der FileTable (Tabellenebenenberechtigung) erforderlich. Wenn der Benutzer nicht über die entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für eine Spalte in der FileTable verfügt, wird der Dateisystemzugriff verweigert.  
+ Zum Öffnen eines Handles für eine Datei oder ein Verzeichnis, die bzw. das in der FileTable gespeichert ist, sind für Dateisystem-APIs entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen für die gesamte Zeile in der FileTable (Tabellenebenenberechtigung) erforderlich. Wenn der Benutzer nicht über die entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigung für eine Spalte in der FileTable verfügt, wird der Dateisystemzugriff verweigert.  
   
 ##  <a name="OtherBackup"></a> Sicherung und FileTables  
  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Sichern einer FileTable verwenden, werden die FILESTREAM-Daten zusammen mit den strukturierten Daten in der Datenbank gesichert Wenn Sie die FILESTREAM-Daten nicht zusammen mit relationalen Daten sichern möchten, können Sie eine Teilsicherung durchführen, um die FILESTREAM-Dateigruppen auszuschließen.  
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC und FileTables  
  Sie können die Einschränkungen für eine FileTable, einschließlich systemdefinierter Einschränkungen, mithilfe von DBCC CHECKCONSTRAINTS überprüfen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

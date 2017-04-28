@@ -1,26 +1,30 @@
 ---
-title: "Verschieben einer TDE-gesch&#252;tzten Datenbank auf einen anderen SQL-Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transparente Datenverschlüsselung, verschieben"
-  - "TDE, Verschieben einer Datenbank"
+title: "Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verschieben einer TDE-gesch&#252;tzten Datenbank auf einen anderen SQL-Server
-  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand transparenter Datenverschlüsselung (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der **master** -Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
+  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand transparenter Datenverschlüsselung (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der **master** -Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
   
  **In diesem Thema**  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 -   Bewahren Sie Kopien der Zertifikatdatei und der Datei mit dem privaten Schlüssel auf, um das Zertifikat wiederherzustellen. Das Kennwort für den privaten Schlüssel muss nicht mit dem Kennwort für den Datenbank-Hauptschlüssel übereinstimmen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server speichert die hier erstellten Dateien standardmäßig in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA**. Die Dateinamen und -orte können individuell abweichen.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server speichert die hier erstellten Dateien standardmäßig in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** . Die Dateinamen und -orte können individuell abweichen.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSCreate"></a> Verwendung von SQL Server Management Studio  
   
-1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der **master** -Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL**.  
+1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der **master** -Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-2.  Erstellen Sie eine Sicherung des Serverzertifikats in der **Masterdatenbank** . Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL**.  
+2.  Erstellen Sie eine Sicherung des Serverzertifikats in der **Masterdatenbank** . Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-3.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie dann auf **Neue Datenbank**.  
+3.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Ordner **Datenbanken** , und klicken Sie dann auf **Neue Datenbank**.  
   
 4.  Geben Sie im Dialogfeld **Neue Datenbank** in das Feld **Datenbankname** den Namen der neuen Datenbank ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Datenbank** zu erweitern.  
   
-7.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie erstellt haben, zeigen Sie auf **Tasks**, und wählen Sie **Datenbankverschlüsselung verwalten** aus.  
+7.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie erstellt haben, zeigen Sie auf **Tasks**, und wählen Sie **Datenbankverschlüsselung verwalten**aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbankverschlüsselung verwalten** verfügbar.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 18
   
 ###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -160,14 +164,14 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSMove"></a> Verwendung von SQL Server Management Studio  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste, auf die oben verschlüsselte Datenbank, zeigen Sie auf **Tasks**, und wählen Sie **Trennen** aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste, auf die oben verschlüsselte Datenbank, zeigen Sie auf **Tasks** , und wählen Sie **Trennen**aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank trennen** verfügbar.  
   
      **Zu trennende Datenbanken**  
      Führt die zu trennenden Datenbanken auf.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der zu trennenden Datenbank an.  
   
      **Verbindungen löschen**  
@@ -180,7 +184,7 @@ caps.handback.revision: 18
      Standardmäßig werden durch den Trennvorgang beim Trennen der Datenbank die veralteten Optimierungsstatistiken beibehalten. Um die vorhandenen Optimierungsstatistiken zu aktualisieren, aktivieren Sie dieses Kontrollkästchen.  
   
      **Volltextkataloge beibehalten**  
-     Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten**. Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] angezeigt.  
+     Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
      Zeigt für den Status einen der folgenden Werte an: **Bereit** oder **Nicht bereit**.  
@@ -200,11 +204,11 @@ caps.handback.revision: 18
   
 4.  Verwenden Sie Windows-Explorer, um die Sicherung des Serverzertifikats und die Datei mit dem privaten Schlüssel vom Quellserver an den gleichen Ort auf dem Zielserver zu verschieben oder zu kopieren.  
   
-5.  Erstellen Sie für die Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einen Datenbank-Hauptschlüssel. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL**.  
+5.  Erstellen Sie für die Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]einen Datenbank-Hauptschlüssel. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-6.  Erstellen Sie anhand der entsprechenden Sicherungsdatei das Serverzertifikat neu. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL**.  
+6.  Erstellen Sie anhand der entsprechenden Sicherungsdatei das Serverzertifikat neu. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie dann auf **Anfügen**.  
+7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Ordner **Datenbanken** , und klicken Sie dann auf **Anfügen**.  
   
 8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
   
@@ -215,13 +219,13 @@ caps.handback.revision: 18
      **Anzufügende Datenbanken**  
      Zeigt Informationen zu den ausgewählten Datenbanken an.  
   
-     \<kein Spaltenheader>  
+     \<Keine Spaltenüberschrift>  
      Zeigt ein Symbol an, das den Status des Anfügevorgangs angibt. Die möglichen Symbole werden in der unten stehenden Beschreibung von **Status** beschrieben.  
   
      **Speicherort für MDF-Datei**  
      Zeigt den Pfad und den Dateinamen der ausgewählten MDF-Datei an.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der Datenbank an.  
   
      **Anfügen als**  
@@ -249,9 +253,9 @@ caps.handback.revision: 18
      Suchen Sie die erforderlichen Hauptdatenbankdateien. Wenn der Benutzer eine MDF-Datei auswählt, werden entsprechende Informationen automatisch in die jeweiligen Felder des Rasters **Anzufügende Datenbank** eingetragen.  
   
      **Entfernen**  
-     Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank**.  
+     Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **„** *<Datenbankname>* **“ Datenbankdetails**  
+     **"** *<database_name>* **" Datenbankdetails für**  
      Zeigt die Namen der anzufügenden Dateien an. Um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern, klicken Sie auf die Schaltfläche **Durchsuchen** (**…**).  
   
     > [!NOTE]  
@@ -271,7 +275,7 @@ caps.handback.revision: 18
   
 ###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

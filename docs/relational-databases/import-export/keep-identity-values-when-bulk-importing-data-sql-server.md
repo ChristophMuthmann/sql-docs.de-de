@@ -1,33 +1,37 @@
 ---
-title: "Beibehalten von Identit&#228;tswerten beim Massenimport von Daten (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Identitätswerte [SQL Server-Replikation], Massenimportvorgänge"
-  - "Datenformate [SQL Server], Identitätswerte"
-  - "Massenimport [SQL Server], Identitätswerte"
+title: "Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 09/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identity values [SQL Server], bulk imports
+- data formats [SQL Server], identity values
+- bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beibehalten von Identit&#228;tswerten beim Massenimport von Daten (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
 Datendateien, die Identitätswerte enthalten, können per Massenimport in eine Instanz von Microsoft SQL Server übertragen werden.  Standardmäßig werden die Werte für die Identitätsspalte in der importierten Datendatei ignoriert, und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden automatisch eindeutige Werte zugewiesen.  Die eindeutigen Werte basieren auf dem Ausgangswert und den inkrementellen Werten, die bei der Tabellenerstellung angegeben werden.
 
-Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthält, sollten Sie eine Formatdatei verwenden, um anzugeben, dass die Bezeichnerspalte beim Importieren von Daten ausgelassen werden soll.  Weitere Informationen finden Sie unter [Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md).
+Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthält, sollten Sie eine Formatdatei verwenden, um anzugeben, dass die Bezeichnerspalte beim Importieren von Daten ausgelassen werden soll.  Weitere Informationen finden Sie unter [Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) .
 
 |Outline|
 |---|
-|[Beibehalten von Identitätswerten](#keep_identity)<br />[Beispiel-Testbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />&emsp;&#9679;&emsp;[Beispiel einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />[Beispiele](#examples)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und Beibehalten der Identitätswerte ohne Formatdatei](#bcp_identity)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und generierten Identitätswerten ohne Formatdatei](#bcp_default)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten der Identitätswerte ohne Formatdatei](#bulk_identity)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und generierten Identitätswerten ohne Formatdatei](#bulk_default)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
+|[Beibehalten von Identitätswerten](#keep_identity)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />&emsp;&#9679;&emsp;[Beispiel einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />[Beispiele](#examples)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten der Identitätswerte ohne Formatdatei](#bcp_identity)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und generierten Identitätswerten ohne Formatdatei](#bcp_default)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten der Identitätswerte ohne Formatdatei](#bulk_identity)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und generierten Identitätswerten ohne Formatdatei](#bulk_default)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und Beibehalten der Identitätswerte mit einer Nicht-XML-Formatdatei](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und generierten Identitätswerten mit einer Nicht-XML-Formatdatei](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## Beibehalten von Identitätswerten <a name="keep_identity"></a>  
 Um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Massenimport von Datenzeilen in eine Tabelle Identitätswerte zuweist, verwenden Sie den entsprechenden Qualifizierer für den Befehl zur Identitätsbeibehaltung (keepidentity).  Wenn Sie einen Qualifizierer zur Identitätsbeibehaltung angeben, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Identitätswerte in der Datendatei.  Nachfolgend sind diese Qualifizierer aufgeführt:
@@ -38,7 +42,7 @@ Um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |BULK INSERT|KEEPIDENTITY|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Tabellenhinweis|  
    
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) und [Tabellenhinweise &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) und [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 > [!NOTE]
 >  Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).
@@ -62,7 +66,7 @@ CREATE TABLE dbo.myIdentity (
 ```
  
 ### **Beispieldatendatei**<a name="sample_data_file"></a>
-Erstellen Sie im Editor die leere Datei `D:\BCP\myIdentity.bcp`, und fügen Sie die nachstehenden Daten ein.  
+Erstellen Sie im Editor die leere Datei `D:\BCP\myIdentity.bcp` , und fügen Sie die nachstehenden Daten ein.  
 ```
 3,Anthony,Grosse,1980-02-23
 2,Alica,Fatnowna,1963-11-14
@@ -100,7 +104,7 @@ Invoke-Item $bcpFile;
 ```
 
 ### **Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
-SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myIdentity.fmt` zu erstellen, die auf dem Schema von `myIdentity` basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md)-Befehls zum Erstellen einer Formatdatei das **format**-Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f**.  Zusätzlich werden folgende Qualifizierer verwendet: **c**, um Zeichendaten anzugeben, **t**, um ein Komma als [Feldabschlusszeichen](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) anzugeben, und **T**, um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myIdentity.fmt`zu erstellen, die auf dem Schema von `myIdentity`basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md) -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich werden folgende Qualifizierer verwendet: **c** , um Zeichendaten anzugeben, **t** , um ein Komma als [Feldabschlusszeichen](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
   
 ```
 bcp TestDatabase.dbo.myIdentity format nul -c -f D:\BCP\myIdentity.fmt -t, -T
@@ -119,7 +123,7 @@ Notepad D:\BCP\myIdentity.fmt
 Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei und Formatdatei.
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten der Identitätswerte ohne Formatdatei**<a name="bcp_identity"></a>
-Schalter **-E**.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Schalter**-E** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -132,7 +136,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten der Identitätswerte mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
-Schalter **-E** und **-f**.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Schalter**-E** und **-f** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -158,7 +162,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und generierten Identitätswerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
-Verwenden Sie die Standardeinstellungen und den Schalter **-f**.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Verwenden Sie die Standardeinstellungen und den Schalter **-f** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -171,7 +175,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Beibehalten der Identitätswerte ohne Formatdatei**<a name="bulk_identity"></a>
-Argument **KEEPIDENTITY**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argument**KEEPIDENTITY** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 USE TestDatabase;
 GO
@@ -190,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Beibehalten der Identitätswerte mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
-Argumente **KEEPIDENTITY** und **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argumente**KEEPIDENTITY** und **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 USE TestDatabase;
 GO
@@ -226,7 +230,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und generierten Identitätswerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
-Verwenden Sie die Standardwerte und das Argument **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Verwenden Sie die Standardwerte und das Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 USE TestDatabase;
 GO
@@ -243,7 +247,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und Beibehalten der Identitätswerte mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
-Tabellenhinweis **KEEPIDENTITY** und Argument **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Tabellenhinweis**KEEPIDENTITY** und Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 USE TestDatabase;
 GO
@@ -263,7 +267,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
 ### **Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und generierten Identitätswerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
-Verwenden Sie die Standardwerte und das Argument **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Verwenden Sie die Standardwerte und das Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 USE TestDatabase;
 GO
@@ -319,11 +323,12 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Tabellenhinweise &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
 [Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
+

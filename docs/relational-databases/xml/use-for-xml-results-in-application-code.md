@@ -1,30 +1,34 @@
 ---
-title: "Verwenden von FOR XML-Ergebnissen in Anwendungscode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML-Klausel, Anwendungscodeverwendung"
-  - "XML [SQL Server], FOR XML-Klausel"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], FOR XML-Daten"
-  - "ADO [SQL Server]"
-  - "XML-Dateninseln [SQL Server]"
-  - "Dateninseln [SQL Server]"
+title: Verwenden von FOR XML-Ergebnissen in Anwendungscode | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden von FOR XML-Ergebnissen in Anwendungscode
+# <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
   
 -   Abfragen von SQL-Tabellen für Instanzen von Werten von [XML-Daten&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -33,8 +37,8 @@ caps.handback.revision: 23
   
  Dieses Thema enthält Beispiele und veranschaulicht diese Vorgehensweisen.  
   
-## Abrufen von FOR XML-Daten mit ADO und XML-Dateninseln  
- Beim Arbeiten mit FOR XML-Abfragen kann das ADO-Objekt **Stream** oder andere Objekte, die die **IStream**-COM-Schnittstelle unterstützen, wie z.B. die ASP-Objekte (Active Server Pages) **Request** und **Response**, zum Aufnehmen der Ergebnisse verwendet werden.  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Abrufen von FOR XML-Daten mit ADO und XML-Dateninseln  
+ Beim Arbeiten mit FOR XML-Abfragen kann das ADO-Objekt **Stream** oder andere Objekte, die die **IStream** -COM-Schnittstelle unterstützen, wie z.B. die ASP-Objekte (Active Server Pages) **Request** und **Response** , zum Aufnehmen der Ergebnisse verwendet werden.  
   
  Der folgende ASP-Code zeigt z. B. die Ergebnisse der Abfrage der **xml** -Datentypspalte Demographics in der Sales.Store-Tabelle der AdventureWorks-Beispieldatenbank. Insbesondere sucht die Abfrage nach dem Instanzwert dieser Spalte für die Zeile, in der die CustomerID gleich 3 ist.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  Diese ASP-Beispielseite enthält serverseitiges VBScript, das ADO zum Ausführen der FOR XML-Abfrage und zum Zurückgeben der XML-Ergebnisse in einer XML-Dateninsel (MyDataIsle) verwendet. Diese XML-Dateninsel wird dann an den Browser zurückgegeben und zur weiteren clientseitigen Verarbeitung bereitgestellt. Anschließend wird zusätzlicher clientseitiger VBScript-Code verwendet, um den Inhalt der XML-Dateninsel zu verarbeiten. Dieser Vorgang wird durchgeführt, bevor der Inhalt als Teil des resultierenden DHTML-Codes angezeigt und ein Meldungsfeld geöffnet wird, das den vorverarbeiteten Inhalt der XML-Dateninsel zeigt.  
   
-#### So testen Sie dieses Beispiel  
+#### <a name="to-test-this-example"></a>So testen Sie dieses Beispiel  
   
 1.  Überprüfen Sie, dass IIS installiert ist und dass die AdventureWorks-Beispieldatenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurde.  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  Die generierten HTML-Seitenergebnisse, die angezeigt werden, ähneln der folgenden Beispielausgabe:  
   
-##### Serverseitiges Verarbeiten  
+##### <a name="server-side-processing"></a>Serverseitiges Verarbeiten  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Pushen von XML an Client zum Verarbeiten  
   
-##### Clientseitiges Verarbeiten von XML-Dokument MyDataIsle  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Clientseitiges Verarbeiten von XML-Dokument MyDataIsle  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## Abrufen der FOR XML-Daten mit ASP.NET und .Net Framework  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>Abrufen der FOR XML-Daten mit ASP.NET und .Net Framework  
  Wie im vorherigen Beispiel zeigt auch der folgende ASP-Code die Ergebnisse der Abfrage der **xml** -Datentypspalte Demographics in der Sales.Store-Tabelle der AdventureWorks-Beispieldatenbank. Und wie im vorherigen Beispiel sucht die Abfrage nach dem Instanzwert dieser Spalte für die Zeile, in der die CustomerID gleich 3 ist.  
   
  In diesem Beispiel werden jedoch die folgenden verwalteten APIs von Microsoft .NET Framework verwendet, um das Zurückgeben und das Rendering der Ergebnisse der FOR XML-Abfrage zu erzielen.  
@@ -206,7 +210,7 @@ caps.handback.revision: 23
   
 3.  Nach dem Ausführen der Abfrage wird die **SqlDataAdapter.Fill** -Methode aufgerufen und an eine Instanz eines **DataSet,** MyDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
   
-4.  Anschließend wird die **DataSet.GetXml**-Methode aufgerufen, um die Abfrageergebnisse als eine Zeichenfolge zurückzugeben, die in der vom Server generierten HTML-Seite angezeigt werden kann.  
+4.  Anschließend wird die **DataSet.GetXml** -Methode aufgerufen, um die Abfrageergebnisse als eine Zeichenfolge zurückzugeben, die in der vom Server generierten HTML-Seite angezeigt werden kann.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### So testen Sie dieses Beispiel  
+#### <a name="to-test-this-example"></a>So testen Sie dieses Beispiel  
   
 1.  Überprüfen Sie, dass IIS installiert ist und dass die AdventureWorks-Beispieldatenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurde.  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  Die generierten HTML-Seitenergebnisse, die angezeigt werden, ähneln der folgenden Beispielausgabe:  
   
-##### Serverseitiges Verarbeiten  
+##### <a name="server-side-processing"></a>Serverseitiges Verarbeiten  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -289,9 +293,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml**-Datentyp-Unterstützung, können Sie fordern, dass das Ergebnis einer FOR XML-Abfrage nicht als typisierte Zeichenfolgen- oder Imagedaten zurückgegeben wird, sondern als **xml**-Datentyp. Dazu müssen Sie die [TYPE-Direktive](../../relational-databases/xml/type-directive-in-for-xml-queries.md) angeben. Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](../../relational-databases/xml/use-xml-data-in-applications.md) gezeigt wird.  
+>  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** -Datentyp-Unterstützung, können Sie fordern, dass das Ergebnis einer FOR XML-Abfrage nicht als typisierte Zeichenfolgen- oder Imagedaten zurückgegeben wird, sondern als **xml** -Datentyp. Dazu müssen Sie die [TYPE-Direktive](../../relational-databases/xml/type-directive-in-for-xml-queries.md)angeben. Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](../../relational-databases/xml/use-xml-data-in-applications.md)gezeigt wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

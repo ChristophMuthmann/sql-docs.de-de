@@ -1,22 +1,26 @@
 ---
-title: "Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ Dieser Artikel veranschaulicht, wie Sie die erweiterten Funktionen von SQL Serve
 
 
 
-### Voraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Ereignissitzung erstellen und starten. Die Erstellung einer Ereignissitzung wird in folgendem Artikel demonstriert:
 
@@ -42,7 +46,7 @@ In diesem Artikel wird ebenfalls davon ausgegangen, dass Sie eine möglichst akt
 
 
 
-### Unterschiede zu Azure SQL-Datenbank
+### <a name="differences-with-azure-sql-database"></a>Unterschiede zu Azure SQL-Datenbank
 
 
 Die Implementierung und die Funktionen der erweiterten Ereignisse in den beiden Produkten Microsoft SQL Server und Azure SQL-Datenbank sind sich in vielerlei Hinsicht sehr ähnlich. Es gibt jedoch einige Unterschiede, die die SSMS-Benutzeroberfläche betreffen.
@@ -66,7 +70,7 @@ Eine Dokumentation der erweiterten Ereignissen, die nur für Azure SQL-Datenbank
 
 
 
-## A. Allgemeine Optionen
+## <a name="a-general-options"></a>A. Allgemeine Optionen
 
 
 Im Allgemeinen erfolgt der Zugriff auf die erweiterten Optionen mit einer der folgenden Methoden:
@@ -74,12 +78,12 @@ Im Allgemeinen erfolgt der Zugriff auf die erweiterten Optionen mit einer der fo
 
 - Das reguläre Menü **Datei** > **Öffnen** > **Datei**.
 - Rechtsklick im **Objekt-Explorer** unter **Verwaltung** > **Erweiterte Ereignisse**.
-- Das spezielle Menü **Erweiterte Ereignisse** und die spezielle Symbolleiste für erweiterte Ereignisse.
+- Das spezielle Menü **Erweiterte Ereignisse**und die spezielle Symbolleiste für erweiterte Ereignisse.
 - Rechtsklick in den Bereich im Registerkartenformat, in dem die Zieldaten angezeigt werden.
 
 
 
-## B. Einfügen von Zieldaten zur Anzeige in SSMS
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. Einfügen von Zieldaten zur Anzeige in SSMS
 
 
 Es gibt verschiedene Möglichkeiten event_file-Zieldaten in die SSMS-Benutzeroberfläche einzufügen. Wenn Sie ein event_file-Ziel angeben, legen Sie den Dateipfad und den Namen für das Ziel fest:
@@ -92,7 +96,7 @@ Es gibt verschiedene Möglichkeiten event_file-Zieldaten in die SSMS-Benutzerobe
 
 
 - Die Inhalte einer XEL-Datei liegen nicht im Nur-Text-Format vor, das mit dem Text-Editor angezeigt werden kann.
-  - Wenn Sie möchten, können Sie über das Menü **Datei** > **Öffnen** > **Dateien für erweiterte Ereignisse zusammenführen** mehrere XEL-Dateien aneinanderfügen.
+  - Wenn Sie möchten, können Sie über das Menü **Datei** > **Öffnen** > **Dateien für erweiterte Ereignisse zusammenführen**mehrere XEL-Dateien aneinanderfügen.
 
 
 
@@ -112,7 +116,7 @@ SSMS kann Daten aus jedem Ziel anzeigen. Die Ansichten unterscheiden sich jedoch
 
 
 
-### B.1 Öffnen einer .XEL-Datei über das Menü „Datei“ > „Öffnen“ > „Datei“
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Öffnen einer .XEL-Datei über das Menü „Datei“ > „Öffnen“ > „Datei“
 
 
 Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei** öffnen.
@@ -121,7 +125,7 @@ Sie können auch eine .XEL-Datei per Drag & Drop auf die Registerkartenleiste in
 
 
 
-### B.2 Anzeigen von Zieldaten
+### <a name="b2-view-target-data"></a>B.2 Anzeigen von Zieldaten
 
 
 Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
@@ -138,11 +142,12 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 ![Ihr Ziel > Zieldaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **Zieldaten anzeigen** zeigt die *kumulierten Daten aus mehreren .XEL-Dateien* der angegebenen Ereignissitzung an. Jeder **Start**-**Stopp**-Zyklus erstellt eine Datei mit einer von einem späteren Zeitpunkt abgeleiteten Ganzzahl im Namen. Der Stammname ist jedoch für alle Dateien gleich.
+> [!NOTE] 
+> **Zieldaten anzeigen** zeigt die *kumulierten Daten aus mehreren .XEL-Dateien* der angegebenen Ereignissitzung an. Jeder **Start**-**Stopp** -Zyklus erstellt eine Datei mit einer von einem späteren Zeitpunkt abgeleiteten Ganzzahl im Namen. Der Stammname ist jedoch für alle Dateien gleich.
 
 
 
-#### B.3 Anzeigen von Livedaten
+#### <a name="b3-watch-live-data"></a>B.3 Anzeigen von Livedaten
 
 
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
@@ -156,11 +161,11 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**.
+- **Extended Events** > **Sessions** > *[your-session]* > **Properties** > **Advanced** > **Maximum dispatch latency**
 
 
 
-### B.4 Anzeigen von .XEL mit der sys.fn_xe_file_target_read_file-Funktion
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Anzeigen von .XEL mit der sys.fn_xe_file_target_read_file-Funktion
 
 
 Für die Batchverarbeitung kann die folgende Systemfunktion die Datensätze in einer .XEL-Datei im XML-Format generieren:
@@ -169,7 +174,7 @@ Für die Batchverarbeitung kann die folgende Systemfunktion die Datensätze in e
 
 
 
-## C. Exportieren der Zieldaten
+## <a name="c-export-the-target-data"></a>C. Exportieren der Zieldaten
 
 
 Wenn die Zieldaten in SSMS vorhanden sind, können Sie die Daten mit folgenden Schritten in verschiedene Formate exportieren:
@@ -185,61 +190,61 @@ Wenn die Zieldaten in SSMS vorhanden sind, können Sie die Daten mit folgenden S
 
 
 
-## D. Bearbeiten von Daten in der Anzeige
+## <a name="d-manipulate-data-in-the-display"></a>D. Bearbeiten von Daten in der Anzeige
 
 
 Die SSMS-Benutzeroberfläche bietet verschiedene Möglichkeiten zum Bearbeiten der Daten – weit mehr als nur die reine Anzeige der Daten.
 
 
 
-### D.1 Kontextmenüs in der Datenanzeige
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 Kontextmenüs in der Datenanzeige
 
 
 Verschiedene Stellen in der Datenanzeige bieten verschiedene Kontextmenüs, wenn Sie mit der rechten Maustaste klicken.
 
 
 
-#### D.1.1 Rechtsklick auf eine Datenzelle
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 Rechtsklick auf eine Datenzelle
 
 
-Der folgende Screenshot zeigt das Kontextmenü, das geöffnet wird, wenn Sie mit der rechten Maustaste auf eine Zelle in der Datenanzeige klicken. Der Screenshot zeigt auch die Erweiterung des Menüelements **Kopieren**.
+Der folgende Screenshot zeigt das Kontextmenü, das geöffnet wird, wenn Sie mit der rechten Maustaste auf eine Zelle in der Datenanzeige klicken. Der Screenshot zeigt auch die Erweiterung des Menüelements **Kopieren** .
 
 
 ![Rechtsklick auf eine Zelle in der Datenanzeige](../../relational-databases/extended-events/media/xevents-ssms-ui25-rightclickcell.png)
 
 
 
-#### D.1.2 Rechtsklick auf eine Spaltenüberschrift
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 Rechtsklick auf eine Spaltenüberschrift
 
 
-Der folgende Screenshot zeigt das Kontextmenü nach einem Rechtsklick auf die Spaltenüberschrift **Zeitstempel**.
+Der folgende Screenshot zeigt das Kontextmenü nach einem Rechtsklick auf die Spaltenüberschrift **Zeitstempel** .
 
 
 ![Rechtsklick auf eine Spaltenüberschrift in der Datenanzeige plus Detailanzeige](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
 
 
-Der obige Screenshot zeigt auch die spezielle Symbolleiste für erweiterte Ereignisse. Da die Schaltfläche „Details“ nicht abgeblendet dargestellt wird, ist die Schaltfläche aktiv. Aus diesem Grund zeigt die Abbildung auch die Registerkarte **Details**, und die Detailanzeige ist als zweiter Bereich der Datenanzeige vorhanden.
+Der obige Screenshot zeigt auch die spezielle Symbolleiste für erweiterte Ereignisse. Da die Schaltfläche „Details“ nicht abgeblendet dargestellt wird, ist die Schaltfläche aktiv. Aus diesem Grund zeigt die Abbildung auch die Registerkarte **Details** , und die Detailanzeige ist als zweiter Bereich der Datenanzeige vorhanden.
 
 
 
-### D.2 Auswählen und Zusammenführen von Spalten
+### <a name="d2-choose-columns-merge-columns"></a>D.2 Auswählen und Zusammenführen von Spalten
 
 
 Mit der Option **Spalten auswählen** können Sie steuern, welche Datenspalten angezeigt werden und welche nicht. Sie finden das Menüelement **Spalten auswählen** an verschiedenen Stellen:
 
-- Im Menü **Erweiterte Ereignisse**.
+- Im Menü **Erweiterte Ereignisse** .
 - Auf der Symbolleiste für erweiterte Ereignisse.
 - Im Kontextmenü einer Überschrift in der Datenanzeige.
 
 
-Wenn Sie auf **Spalten auswählen** klicken, wird das gleichnamige Dialogfeld angezeigt.
+Wenn Sie auf **Spalten auswählen**klicken, wird das gleichnamige Dialogfeld angezeigt.
 
 
 ![Dialogfeld „Spalten auswählen“ mit Optionen „Spalten zusammenführen“](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
 
 
 
-#### D.2.1 Zusammenführen von Spalten
+#### <a name="d21-merge-columns"></a>D.2.1 Zusammenführen von Spalten
 
 
 Das Dialogfeld **Spalten auswählen** bietet einen Bereich, in dem Sie zu folgenden Zwecken mehrere Spalten zu einer zusammenführen können:
@@ -249,37 +254,37 @@ Das Dialogfeld **Spalten auswählen** bietet einen Bereich, in dem Sie zu folgen
 
 
 
-### D.3 Filter
+### <a name="d3-filters"></a>D.3 Filter
 
 
 Im Bereich der erweiterten Ereignisse gibt es zwei Hauptarten von Filtern, die Sie angeben können:
 
 - *Filter vor Erfassen der Zieldaten:* Diese Filter reduzieren die Datenmenge, die vom Ereignismodul an Ihr Ziel gesendet werden.
 
-- *Filter nach Erfassen der Zieldaten*: Diese Filter können Sie in der SSMS-Benutzeroberfläche auswählen, um einige Zieldatensätze von der Anzeige auszuschließen.
+- *Filter nach Erfassen der Zieldaten* : Diese Filter können Sie in der SSMS-Benutzeroberfläche auswählen, um einige Zieldatensätze von der Anzeige auszuschließen.
 
 
 Folgende SSMS-Anzeigefilter stehen zur Verfügung:
 
-- Ein Filter für den *Zeitraum*, der die Spalte **Zeitstempel** untersucht.
-- Ein Filter für *Spaltenwerte*.
+- Ein Filter für den *Zeitraum* , der die Spalte **Zeitstempel** untersucht.
+- Ein Filter für *Spaltenwerte* .
 
 
-Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches *AND*.
+Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches*AND*.
 
 
 ![Filter für Zeitraum und Spalten im Dialogfeld „Filter“](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
 
 
 
-### D.4 Gruppierung und Aggregation
+### <a name="d4-grouping-and-aggregation"></a>D.4 Gruppierung und Aggregation
 
 
 Die Gruppierung von Zeilen durch Abgleichen von Werten in einer bestimmten Spalte ist der erste Schritt für eine zusammenfassende Aggregation von Daten.
 
 
 
-#### D.4.1 Gruppierung
+#### <a name="d41-grouping"></a>D.4.1 Gruppierung
 
 
 Mit der Schaltfläche **Gruppierung** auf der Symbolleiste der erweiterten Ereignisse starten Sie ein Dialogfeld, in dem Sie die angezeigten Daten nach einer bestimmten Spalte gruppieren können. Der nächste Screenshot zeigt ein Dialogfeld, das zum Gruppieren nach der Spalte *Name* verwendet wird.
@@ -292,7 +297,7 @@ Nachdem die Gruppierung durchgeführt wurde, ändert sich die Anzeige, wie in de
 
 
 
-#### D.4.2 Aggregation
+#### <a name="d42-aggregation"></a>D.4.2 Aggregation
 
 
 Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl* aggregiert werden.
@@ -305,11 +310,13 @@ Nachdem die Aggregation durchgeführt wurde, ändert sich die Anzeige, wie in de
 
 
 
-### D.5 Anzeigen des Runtimeabfrageplans
+### <a name="d5-view-run-time-query-plan"></a>D.5 Anzeigen des Runtimeabfrageplans
 
 
 Das Ereignis **query_post_execution_showplan** ermöglicht Ihnen die Anzeige des tatsächlichen Abfrageplans in der SSMS-Benutzeroberfläche. Wenn der Bereich **Details** angezeigt wird, können Sie auf der Registerkarte **Abfrageplan** ein Diagramm des Abfrageplans sehen. Indem Sie die Maus über einen Knoten im Abfrageplan bewegen, können Sie eine Liste der Eigenschaftennamen und der zugehörigen Werte für den Knoten anzeigen.
 
 
 ![Abfrageplan mit Eigenschaftenliste für einen Knoten](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

@@ -1,28 +1,32 @@
 ---
-title: "Aktivieren von TDE in SQL Server mithilfe von EKM | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verschlüsselung [SQL Server], TDE unter Verwendung von EKM"
-  - "TDE, EKM (Vorgehensweise)"
-  - "EKM, TDE (Vorgehensweise)"
-  - "Transparent Data Encryption, Verwenden von EKM"
+title: Aktivieren von TDE in SQL Server mithilfe von EKM | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 04/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], TDE using an EKM
+- TDE, EKM how to
+- EKM, TDE how to
+- Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8c98c5335ab148d1d36f56c1375ec1f89219908
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren von TDE in SQL Server mithilfe von EKM
-  In diesem Thema wird beschrieben, wie die transparente Datenverschlüsselung (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aktiviert wird, um einen Verschlüsselungsschlüssel für die Datenbank mithilfe eines asymmetrischen in einem erweiterbaren Schlüsselverwaltungsmodul mit (EKM) [!INCLUDE[tsql](../../../includes/tsql-md.md)] gespeicherten Schlüssels zu aktivieren.  
+# <a name="enable-tde-on-sql-server-using-ekm"></a>Aktivieren von TDE in SQL Server mithilfe von EKM
+  In diesem Thema wird beschrieben, wie die transparente Datenverschlüsselung (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aktiviert wird, um einen Verschlüsselungsschlüssel für die Datenbank mithilfe eines asymmetrischen in einem erweiterbaren Schlüsselverwaltungsmodul mit (EKM) [!INCLUDE[tsql](../../../includes/tsql-md.md)]gespeicherten Schlüssels zu aktivieren.  
   
  TDE verschlüsselt den Speicher einer ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank kann auch mithilfe eines Zertifikats geschützt werden, das mit dem Datenbank-Hauptschlüssel der Masterdatenbank geschützt wird. Weitere Informationen über das Schützen des Verschlüsselungsschlüssels für die Datenbank mit dem Datenbank-Hauptschlüssel finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md). Informationen zum Konfigurieren von TDE, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer ausgeführt wird, finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Informationen zum Konfigurieren von TDE mithilfe eines Schlüssels im Azure-Schlüsseltresor finden Sie unter [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
@@ -56,9 +60,9 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So aktivieren Sie TDE unter Verwendung von EKM  
+#### <a name="to-enable-tde-using-ekm"></a>So aktivieren Sie TDE unter Verwendung von EKM  
   
-1.  Kopieren Sie die Dateien, die vom Anbieter für erweiterbare Schlüsselverwaltung bereitgestellt wurden, an einen geeigneten Speicherort auf dem Computer mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In diesem Beispiel wird der Ordner **C:\EKM** verwendet.  
+1.  Kopieren Sie die Dateien, die vom Anbieter für erweiterbare Schlüsselverwaltung bereitgestellt wurden, an einen geeigneten Speicherort auf dem Computer mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In diesem Beispiel wird der Ordner **C:\EKM** verwendet.  
   
 2.  Installieren Sie Zertifikate auf dem Computer, die ggf. vom Anbieter für erweiterbare Schlüsselverwaltung benötigt werden.  
   
@@ -155,7 +159,8 @@ caps.handback.revision: 26
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   
   
+

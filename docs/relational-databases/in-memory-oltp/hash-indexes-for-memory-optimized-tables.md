@@ -1,25 +1,29 @@
 ---
-title: "Hashindizes f&#252;r speicheroptimierte Tabellen | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hashindizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hashindizes f&#252;r speicheroptimierte Tabellen
+# <a name="hash-indexes-for-memory-optimized-tables"></a>Hashindizes für speicheroptimierte Tabellen
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -31,7 +35,7 @@ Dieser Artikel beschreibt die *Hashindextypen*, die für eine speicheroptimierte
 - Beschreibung des Designs und der Verwaltung Ihrer Hashindizes  
   
   
-#### Voraussetzung  
+#### <a name="prerequisite"></a>Voraussetzung  
   
 Wichtige Kontextinformationen für das Verständnis dieser Artikel sind verfügbar unter:  
   
@@ -39,15 +43,15 @@ Wichtige Kontextinformationen für das Verständnis dieser Artikel sind verfügb
   
   
   
-## A. Syntax für speicheroptimierte Indizes  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Syntax für speicheroptimierte Indizes  
   
   
-### A.1 Codebeispiel für Syntax  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Codebeispiel für Syntax  
   
 Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die verfügbare Syntax zum Erstellen eines Hashindexes für eine speicheroptimierte Tabelle darstellt:  
   
 - Das Beispiel zeigt, dass der Hashindex in der CREATE TABLE-Anweisung deklariert wird.  
-  - Sie können den Hashindex stattdessen in einer separaten [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations)-Anweisung deklarieren.  
+  - Sie können den Hashindex stattdessen in einer separaten [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) -Anweisung deklarieren.  
   
   
   
@@ -73,12 +77,12 @@ Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die verfügbare
     go  
   
 
-Informationen, wie Sie den richtigen `BUCKET_COUNT`-Wert für Ihre Daten ermitteln, finden Sie unter [Konfigurieren der Hashindex-Bucketanzahl](#configuring_bucket_count). 
+Informationen, wie Sie den richtigen `BUCKET_COUNT` -Wert für Ihre Daten ermitteln, finden Sie unter [Konfigurieren der Hashindex-Bucketanzahl](#configuring_bucket_count). 
   
-## B. Hashindizes  
+## <a name="b-hash-indexes"></a>B. Hashindizes  
   
   
-### B.1 Grundlagen zur Leistung  
+### <a name="b1-performance-basics"></a>B.1 Grundlagen zur Leistung  
   
 Die Leistung eines Hash-Indexes ist:  
   
@@ -89,7 +93,7 @@ Die Leistung eines Hash-Indexes ist:
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 Deklarationseinschränkungen  
+### <a name="b2-declaration-limitations"></a>B.2 Deklarationseinschränkungen  
   
 Ein Hashindex kann nur für eine speicheroptimierte Tabelle vorhanden sein. Er kann nicht in einer datenträgerbasierten Tabelle vorhanden sein.  
   
@@ -108,9 +112,9 @@ Hier ist ein Beispiel der Syntax zum Erstellen eines Hashindexes außerhalb der 
   
   
   
-### B.3 Buckets und Hashfunktion  
+### <a name="b3-buckets-and-hash-function"></a>B.3 Buckets und Hashfunktion  
   
-Ein Hashindex verankert seine Schlüsselwerte in einem sogenannten *Bucket*-Array:  
+Ein Hashindex verankert seine Schlüsselwerte in einem sogenannten *Bucket* -Array:  
   
 - Jeder Bucket umfasst 8 Bytes, die zum Speichern der Arbeitsspeicheradresse einer Linkliste von Schlüsseleinträgen verwendet werden.  
 - Jeder Eintrag ist ein Wert für einen Indexschlüssel zuzüglich der Adresse für die entsprechende Zeile in der zugrunde liegenden speicheroptimierten Tabelle.  
@@ -119,7 +123,7 @@ Ein Hashindex verankert seine Schlüsselwerte in einem sogenannten *Bucket*-Arra
   
 Der Hashalgorithmus versucht, alle eindeutigen Schlüsselwerte gleichmäßig auf seine Buckets zu verteilen, doch das Ideal vollkommener Gleichmäßigkeit wird nicht erreicht. Alle Instanzen eines bestimmten Schlüsselwerts werden mit dem gleichen Bucket verkettet. Der Bucket könnte auch in allen Instanzen eines anderen Schlüsselwerts gemischt worden sein.  
   
-- Diese Mischung wird als *Hashkonflikt* bezeichnet. Konflikte sind häufig, jedoch nicht ideal.  
+- Diese Mischung wird als *Hashkonflikt*bezeichnet. Konflikte sind häufig, jedoch nicht ideal.  
 - Ein realistisches Ziel wäre es, wenn 30 % der Buckets zwei verschiedene Schlüsselwerte enthalten.  
   
   
@@ -138,11 +142,11 @@ SQL Server hat eine Hashfunktion, die für alle Hashindizes verwendet wird.
 Die Interaktion zwischen dem Hashindex und den Buckets wird im folgenden Bild zusammengefasst.  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Indexschlüssel, in die Hash-Funktion eingegeben, die Ausgabe ist die Adresse eines Hashbuckets, der auf den Anfang der Kette verweist.")  
   
   
   
-### B.4 Zeilenversionen und automatische Speicherbereinigung  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 Zeilenversionen und automatische Speicherbereinigung  
   
   
 In einer speicheroptimierten Tabelle mit einer Zeile, die von einem SQL UPDATE betroffen ist, erstellt die Tabelle eine aktualisierte Version der Zeile. Während der Updatetransaktion können andere Sitzungen möglicherweise die ältere Version der Zeile lesen und so den Leistungsabfall vermeiden, der mit einer Zeilensperre einhergeht.  
@@ -153,12 +157,12 @@ Wenn die älteren Versionen später nicht mehr erforderlich sind, durchsucht ein
   
 <a name="configuring_bucket_count"></a>
   
-## C. Konfigurieren der Hashindex-Bucketanzahl  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>C. Konfigurieren der Hashindex-Bucketanzahl  
   
 Die Hashindex-Bucketanzahl wird während der Indexerstellung angegeben und kann mit der ALTER TABLE... ALTER INDEX REBUILD-Syntax geändert werden.  
   
 In den meisten Fällen sollte die Bucketanzahl das Ein- bis Zweifache der Anzahl eindeutiger Werte im Indexschlüssel betragen.   
-Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Die Leistung ist in der Regel dennoch gut, falls der **BUCKET_COUNT**-Wert im Rahmen des 10-fachen der tatsächlichen Anzahl der Schlüsselwerte liegt, und die Überschätzung ist im Allgemeinen besser als die Unterschätzung.  
+Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Die Leistung ist in der Regel dennoch gut, falls der **BUCKET_COUNT** -Wert im Rahmen des 10-fachen der tatsächlichen Anzahl der Schlüsselwerte liegt, und die Überschätzung ist im Allgemeinen besser als die Unterschätzung.  
   
 Zu *wenige* Buckets hat die folgenden Nachteile:  
   
@@ -174,15 +178,16 @@ Zu *viele* Buckets hat die folgenden Nachteile:
   - Leere Buckets belegen Speicher, wobei jeder Bucket allerdings nur 8 Bytes belegt.  
     
   
-> [AZURE.NOTE] Das Hinzufügen von weiteren Buckets trägt nichts zur Reduzierung der Verkettung von Einträgen bei, die sich einen duplizierten Wert teilen. Die Rate der Wertduplizierung wird verwendet, um zu entscheiden, ob ein Hash den entsprechenden Indextyp hat, nicht um die Bucketanzahl zu berechnen.  
+> [!NOTE]
+> Das Hinzufügen von weiteren Buckets trägt nichts zur Reduzierung der Verkettung von Einträgen bei, die sich einen duplizierten Wert teilen. Die Rate der Wertduplizierung wird verwendet, um zu entscheiden, ob ein Hash den entsprechenden Indextyp hat, nicht um die Bucketanzahl zu berechnen.  
   
   
   
-### C.1 Praktische Zahlen  
+### <a name="c1-practical-numbers"></a>C.1 Praktische Zahlen  
   
 Auch wenn die **BUCKET_COUNT** geringfügig unter oder über dem bevorzugten Bereich liegt, ist die Leistung des Hashindexes wahrscheinlich tolerierbar oder akzeptabel. Es kommt zu keiner Krise.  
   
-Geben Sie Ihrem Hashindex eine **BUCKET_COUNT**, die in etwa der Anzahl der Zeilen entspricht, die nach Ihrer Vorhersage die speicheroptimierte Tabelle haben wird.  
+Geben Sie Ihrem Hashindex eine **BUCKET_COUNT** , die in etwa der Anzahl der Zeilen entspricht, die nach Ihrer Vorhersage die speicheroptimierte Tabelle haben wird.  
   
 Angenommen, Ihre wachsende Tabelle verfügt über 2.000.000 Zeilen, Sie sagen jedoch vorher, dass die Anzahl auf das 10-Fache, sprich 20.000.000 Zeilen, anwachsen wird. Beginnen Sie mit einer Bucketanzahl, die dem 10-Fachen der Zeilenanzahl in der Tabelle entspricht. Dieses bietet Ihnen Raum für eine größere Anzahl von Zeilen.  
   
@@ -193,7 +198,7 @@ Angenommen, ein Hashindex verfügt über 10.000.000 eindeutige Schlüsselwerte.
   
 - Die Bucketanzahl von 2.000.000 wäre der niedrigste akzeptable Wert. Das Ausmaß der Leistungseinbußen könnte tolerierbar sein.  
   
-### C.2 Zu viele duplizierte Werte im Index?  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 Zu viele duplizierte Werte im Index?  
   
 Wenn die Hash-indizierten Werte einen hohen Anteil von Duplikaten aufweisen, werden die Hashbuckets durch längere Ketten beeinträchtigt.  
   
@@ -214,11 +219,11 @@ Angenommen, Sie nutzen die gleiche SupportEvent-Tabelle aus dem früheren T-SQL-
   
 - Ein Verhältnis von 10,0 oder höher bedeutet, dass ein Hash ein schlechter Indextyp sein würde. Verwenden Sie stattdessen einen nicht gruppierten Index.   
   
-## D. Problembehandlung bei Hashindex-Bucketanzahl  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>D. Problembehandlung bei Hashindex-Bucketanzahl  
   
 Dieser Abschnitt beschreibt die Problembehandlung hinsichtlich der Bucketanzahl für Ihren Hashindex.  
   
-### D.1 Überwachen der Statistiken für Ketten und leere Buckets  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 Überwachen der Statistiken für Ketten und leere Buckets  
   
 Sie können die statistische Integrität Ihrer Hashindizes überwachen, indem Sie die folgende T-SQL SELECT-Anweisung ausführen. Die SELECT-Anweisung verwendet die Datenverwaltungsansicht (DMV, Data Management View) mit dem Namen **sys.dm_db_xtp_hash_index_stats**.  
   
@@ -260,7 +265,7 @@ Vergleichen Sie die SELECT-Ergebnisse mit den folgenden statistischen Richtlinie
   
 
   
-### D.2 Demonstration von Ketten und leeren Buckets  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 Demonstration von Ketten und leeren Buckets  
   
   
 Der folgende T-SQL-Codeblock bietet Ihnen eine einfache Möglichkeit zum Testen von `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`. Der Codeblock wird in einer Minute ausgeführt. Hier sind die Phasen des folgenden Codeblocks:  
@@ -268,9 +273,9 @@ Der folgende T-SQL-Codeblock bietet Ihnen eine einfache Möglichkeit zum Testen 
   
 1. Erstellen einer speicheroptimiertem Tabelle mit wenigen Hashindizes.  
 2. Ausfüllen der Tabelle mit Tausenden von Zeilen.  
-    a. Es wird ein modulo-Operator verwendet, um die Rate der duplizierten Werte in der StatusCode-Spalte zu konfigurieren.  
-    b. Die Schleife fügt 262144 Zeilen in etwa einer Minute ein.  
-3. Ausdrucken einer Meldung (PRINT), mit der Sie aufgefordert werden, die frühere SELECT-Anweisung aus **sys.dm_db_xtp_hash_index_stats** auszuführen.  
+    A. Es wird ein modulo-Operator verwendet, um die Rate der duplizierten Werte in der StatusCode-Spalte zu konfigurieren.  
+    B. Die Schleife fügt 262144 Zeilen in etwa einer Minute ein.  
+3. Ausdrucken einer Meldung (PRINT), mit der Sie aufgefordert werden, die frühere SELECT-Anweisung aus **sys.dm_db_xtp_hash_index_stats**auszuführen.  
   
   
 ```t-sql
@@ -381,7 +386,7 @@ Untersuchen Sie die oben stehenden Ergebnistabellen auf die drei Hashindizes:
 - Die durchschnittliche Kettenlänge beträgt 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
   
   
-### D.3 Ausgleichen des Trade-Offs  
+### <a name="d3-balancing-the-trade-off"></a>D.3 Ausgleichen des Trade-Offs  
   
 OLTP-Arbeitsauslastungen konzentrieren sich auf einzelne Zeilen. Vollständige Tabellenscans befinden sich normalerweise nicht im leistungskritischen Pfad für OLTP-Arbeitsauslastungen. Daher müssen Sie den Trade-Off zwischen Folgendem ausgleichen:  
   
@@ -405,7 +410,7 @@ OLTP-Arbeitsauslastungen konzentrieren sich auf einzelne Zeilen. Vollständige T
   
   
   
-## E. Stärken von Hashindizes  
+## <a name="e-strengths-of-hash-indexes"></a>E. Stärken von Hashindizes  
   
   
 Ein Hashindex ist gegenüber einem nicht gruppierten Index zu bevorzugen, wenn:  
@@ -419,7 +424,7 @@ Ein Hashindex ist gegenüber einem nicht gruppierten Index zu bevorzugen, wenn:
   
   
   
-### E.1 Mehrspaltige Hashindexschlüssel  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 Mehrspaltige Hashindexschlüssel  
   
   
 Ihr Zweispaltenindex könnte ein nicht gruppierter Index oder ein Hashindex sein. Nehmen wir an, die Indexspalten sind „col1“ und „col2“. Gemäß der folgenden SQL-SELECT-Anweisung wäre nur der nicht gruppierte Index für den Abfrageoptimierer nützlich:  
@@ -437,9 +442,9 @@ Genauso wenig ist der Indextyp nützlich, wenn die WHERE-Klausel nur die zweite 
   
   
 \<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+Hash_Indexes_for_Memory-Optimized_Tables.md, also....  
+CAPS-Guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
+CAPS-Guid des übergeordneten Elements: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
   
   
   
@@ -453,8 +458,10 @@ CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}
   
   
   
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
+GeneMi, Donnerstag, 5.5.2016, 15:01 Uhr  
 -->  
   
   
   
+
+

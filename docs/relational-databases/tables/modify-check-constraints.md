@@ -1,27 +1,31 @@
 ---
-title: "&#196;ndern von CHECK-Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Check-Einschränkungen, ändern"
-  - "Ändern von Einschränkungen"
-  - "Einschränkungen [SQL Server], CHECK"
-  - "Einschränkungen [SQL Server], ändern"
+title: "Ändern von Check-Einschränkungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, modifying
+- modifying constraints
+- constraints [SQL Server], check
+- constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern von CHECK-Einschr&#228;nkungen
+# <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Sie können eine CHECK-Einschränkung mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)] ändern, wenn Sie entweder den Einschränkungsausdruck oder die Optionen ändern möchten, mit denen die Einschränkung unter bestimmten Bedingungen aktiviert bzw. deaktiviert werden.  
@@ -47,9 +51,9 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So ändern Sie eine CHECK-Einschränkung  
+#### <a name="to-modify-a-check-constraint"></a>So ändern Sie eine CHECK-Einschränkung  
   
-1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle mit der CHECK-Einschränkung, und wählen Sie dann **Entwerfen** aus.  
+1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle mit der CHECK-Einschränkung, und wählen Sie dann **Entwerfen**aus.  
   
 2.  Klicken Sie im Menü **Tabellen-Designer** auf **CHECK-Einschränkungen...**.  
   
@@ -75,6 +79,6 @@ caps.handback.revision: 18
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie eine CHECK-Einschränkung**  
   
- Um eine `CHECK`-Einschränkung mit [!INCLUDE[tsql](../../includes/tsql-md.md)] zu ändern, müssen Sie zuerst die vorhandene `CHECK`-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Löschen von CHECK-Einschränkungen](../../relational-databases/tables/delete-check-constraints.md) und [Erstellen von CHECK-Einschränkungen](../../relational-databases/tables/create-check-constraints.md).  
+ Um eine `CHECK` -Einschränkung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]zu ändern, müssen Sie zuerst die vorhandene `CHECK` -Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Löschen von CHECK-Einschränkungen](../../relational-databases/tables/delete-check-constraints.md) und [Erstellen von CHECK-Einschränkungen](../../relational-databases/tables/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  

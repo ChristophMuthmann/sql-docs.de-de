@@ -1,22 +1,26 @@
 ---
-title: "&#220;berwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a8e4d946a7d5943c8edb1d07a7e6c85cea2fde
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm
+# <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm
   
   
 |Thema|Informationen|  
@@ -26,7 +30,7 @@ caps.handback.revision: 6
 |[Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|Erläutert, wie das Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms und die Listenansicht im SSMS-Hilfsprogramm-Explorer angezeigt werden.|  
 |[Ändern der Definition von Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|Erläutert, wie Definitionen von Ressourcenintegritätsrichtlinien des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt oder geändert werden.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

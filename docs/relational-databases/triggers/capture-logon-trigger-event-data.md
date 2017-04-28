@@ -1,22 +1,26 @@
 ---
-title: "Erfassen von Ereignisdaten f&#252;r Logon-Trigger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erfassen von Ereignisdaten für Logon-Trigger | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 790a086c90eeeeb606a86056f239853d805cb091
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erfassen von Ereignisdaten f&#252;r Logon-Trigger
+# <a name="capture-logon-trigger-event-data"></a>Erfassen von Ereignisdaten für Logon-Trigger
   Wenn Sie XML-Daten zu LOGON-Ereignissen für die Verwendung in Logon-Triggern erfassen möchten, verwenden Sie die [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) -Funktion. Mit dem LOGON-Ereignis wird das folgende Ereignisdatenschema zurückgegeben:  
   
  `<EVENT_INSTANCE>`  

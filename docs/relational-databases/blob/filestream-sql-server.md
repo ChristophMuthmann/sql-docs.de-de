@@ -1,37 +1,41 @@
 ---
-title: "FILESTREAM (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server]"
-  - "FILESTREAM [SQL Server], Informationen zu"
-  - "FILESTREAM [SQL Server], Übersicht"
+title: FILESTREAM (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server]
+- FILESTREAM [SQL Server], about
+- FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb0bdc4185b028693111c74c94a14d74b8c4c583
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM (SQL Server)
+# <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen, nicht strukturierte Daten wie beispielsweise Dokumente und Bilder im Dateisystem zu speichern. Anwendungen können die umfassenden Streaming-APIs und die Leistung des Dateisystems nutzen und dabei die Transaktionskonsistenz zwischen den nicht strukturierten Daten und den entsprechenden strukturierten Daten erhalten.  
   
  FILESTREAM integriert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in ein NTFS- oder ReFS-Dateisystem, indem Blobdaten (Binary Large Object) vom Typ **varbinary(max)** als Dateien im Dateisystem gespeichert werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen können FILESTREAM-Daten eingefügt, aktualisiert, abgefragt, gesucht und gesichert werden. Die Win32-Dateisystemschnittstellen stellen Streamingzugriff auf die Daten bereit.  
   
  FILESTREAM verwendet den NT-Systemcache zum Zwischenspeichern von Dateidaten. Dies wirkt allen negativen Auswirkungen entgegen, die FILESTREAM-Daten auf die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Leistung haben könnten. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Pufferpool wird nicht verwendet, deshalb steht dieser Arbeitsspeicher für die Abfragebearbeitung zur Verfügung.  
   
- FILESTREAM wird bei der Installation oder beim Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht automatisch aktiviert. Sie müssen FILESTREAM mit dem SQL Server-Konfigurations-Manager und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktivieren. Um FILESTREAM zu verwenden, müssen Sie eine Datenbank mit einer bestimmten Dateigruppe erstellen bzw. ändern, sodass sie diese Dateigruppe enthält. Erstellen bzw. ändern Sie dann eine Tabelle, sodass diese eine **varbinary(max)**-Spalte mit dem FILESTREAM-Attribut enthält. Anschließend können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] und Win32 zur Verwaltung der FILESTREAM-Daten verwenden.  
+ FILESTREAM wird bei der Installation oder beim Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht automatisch aktiviert. Sie müssen FILESTREAM mit dem SQL Server-Konfigurations-Manager und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktivieren. Um FILESTREAM zu verwenden, müssen Sie eine Datenbank mit einer bestimmten Dateigruppe erstellen bzw. ändern, sodass sie diese Dateigruppe enthält. Erstellen bzw. ändern Sie dann eine Tabelle, sodass diese eine **varbinary(max)** -Spalte mit dem FILESTREAM-Attribut enthält. Anschließend können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] und Win32 zur Verwaltung der FILESTREAM-Daten verwenden.  
   
 
-##  Verwendungsbereiche von FILESTREAM  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann es sich bei Blobs um Standarddaten des Typs **varbinary(max)** handeln, die in Tabellen gespeichert werden, oder um FILESTREAM-Objekte des Typs **varbinary(max)**, deren Daten im Dateisystem gespeichert werden. Größe und Verwendung der Daten bestimmen, ob Sie sie in einer Datenbank oder im Dateisystem speichern sollten. Wenn die folgenden Bedingungen zutreffen, sollten Sie die Verwendung von FILESTREAM in Betracht ziehen:  
+##  <a name="when-to-use-filestream"></a>Verwendungsbereiche von FILESTREAM  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann es sich bei Blobs um Standarddaten des Typs **varbinary(max)** handeln, die in Tabellen gespeichert werden, oder um FILESTREAM-Objekte des Typs **varbinary(max)** , deren Daten im Dateisystem gespeichert werden. Größe und Verwendung der Daten bestimmen, ob Sie sie in einer Datenbank oder im Dateisystem speichern sollten. Wenn die folgenden Bedingungen zutreffen, sollten Sie die Verwendung von FILESTREAM in Betracht ziehen:  
   
 -   Die Objekte, die gespeichert werden, sind im Durchschnitt größer als 1 MB.  
   
@@ -39,14 +43,14 @@ caps.handback.revision: 13
   
 -   Sie entwickeln Anwendungen, die eine mittlere Ebene für die Anwendungslogik nutzen.  
   
- Bei kleineren Objekte ist die Streamingleistung oft besser, wenn **varbinary(max)**-Blobs in der Datenbank gespeichert werden.  
+ Bei kleineren Objekte ist die Streamingleistung oft besser, wenn **varbinary(max)** -Blobs in der Datenbank gespeichert werden.  
   
 
   
-##  FILESTREAM-Speicherung  
- Die FILESTREAM-Speicherung wird als **varbinary(max)**-Spalte implementiert, deren Daten als Blobs im Dateisystem gespeichert werden. Die Größe der BLOBs wird nur durch die Volumegröße des Dateisystems beschränkt. Die für **varbinary(max)** definierte standardmäßige Dateigrößenbeschränkung von 2 GB gilt nicht für Blobs, die im Dateisystem gespeichert werden.  
+##  <a name="filestream-storage"></a>FILESTREAM-Speicherung  
+ Die FILESTREAM-Speicherung wird als **varbinary(max)** -Spalte implementiert, deren Daten als Blobs im Dateisystem gespeichert werden. Die Größe der BLOBs wird nur durch die Volumegröße des Dateisystems beschränkt. Die für **varbinary(max)** definierte standardmäßige Dateigrößenbeschränkung von 2 GB gilt nicht für Blobs, die im Dateisystem gespeichert werden.  
   
- Um anzugeben, dass die Daten einer Spalte im Dateisystem gespeichert werden sollten, geben Sie das FILESTREAM-Attribut für eine **varbinary(max)**-Spalte an. Dies bewirkt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten der betreffenden Spalte im Dateisystem, aber nicht in der Datenbankdatei speichert..  
+ Um anzugeben, dass die Daten einer Spalte im Dateisystem gespeichert werden sollten, geben Sie das FILESTREAM-Attribut für eine **varbinary(max)** -Spalte an. Dies bewirkt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten der betreffenden Spalte im Dateisystem, aber nicht in der Datenbankdatei speichert.  
   
  FILESTREAM-Daten müssen in FILESTREAM-Dateigruppen gespeichert werden. Eine FILESTREAM-Dateigruppe ist eine besondere Dateigruppe, die Dateisystemverzeichnisse statt der Dateien selbst enthält. Diese Dateisystemverzeichnisse werden als *Datencontainer*bezeichnet. Datencontainer bilden die Schnittstelle zwischen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Speicherung und der Dateisystemspeicherung.  
   
@@ -62,17 +66,17 @@ caps.handback.revision: 13
   
 -   FILESTREAM-Dateigruppen können auf komprimierten Volumes erstellt werden.  
   
-### Integrierte Verwaltung  
- Weil FILESTREAM als **varbinary(max)-Spalte** implementiert und direkt in [!INCLUDE[ssDE](../../includes/ssde-md.md)] integriert ist, können die meisten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungstools und -Funktionen ohne Änderung für FILESTREAM-Daten eingesetzt werden. Beispielsweise können Sie alle Sicherungs- und Wiederherstellungsmodelle mit FILESTREAM-Daten verwenden, und die FILESTREAM-Daten werden zusammen mit den strukturierten Daten in der Datenbank gesichert. Wenn Sie die FILESTREAM-Daten nicht zusammen mit relationalen Daten sichern möchten, können Sie eine Teilsicherung durchführen, um die FILESTREAM-Dateigruppen auszuschließen.  
+### <a name="integrated-management"></a>Integrierte Verwaltung  
+ Weil FILESTREAM als **varbinary(max)-Spalte** implementiert und direkt in [!INCLUDE[ssDE](../../includes/ssde-md.md)]integriert ist, können die meisten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools und -Funktionen ohne Änderung für FILESTREAM-Daten eingesetzt werden. Beispielsweise können Sie alle Sicherungs- und Wiederherstellungsmodelle mit FILESTREAM-Daten verwenden, und die FILESTREAM-Daten werden zusammen mit den strukturierten Daten in der Datenbank gesichert. Wenn Sie die FILESTREAM-Daten nicht zusammen mit relationalen Daten sichern möchten, können Sie eine Teilsicherung durchführen, um die FILESTREAM-Dateigruppen auszuschließen.  
   
  
-### Integrierte Sicherheit  
+### <a name="integrated-security"></a>Integrierte Sicherheit  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden FILESTREAM-Daten wie alle anderen Daten geschützt: indem Berechtigungen auf der Tabellen- oder Spaltenebene gewährt werden. Wenn ein Benutzer über Berechtigungen zum Öffnen der FILESTREAM-Spalte einer Tabelle verfügt, dann er die zugehörigen Dateien öffnen.  
   
 > [!NOTE]  
 >  FILESTREAM-Daten können nicht verschlüsselt werden.  
   
- Nur das Konto, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto ausgeführt wird, erhält Berechtigungen für den FILESTREAM-Container. Wir empfehlen, dass keinem anderen Konto Berechtigungen für den Datencontainer gewährt werden.  
+ Nur das Konto, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto ausgeführt wird, erhält Berechtigungen für den FILESTREAM-Container. Wir empfehlen, dass keinem anderen Konto Berechtigungen für den Datencontainer gewährt werden.  
   
 > [!NOTE]  
 >  SQL-Anmeldungen funktionieren nicht mit FILESTREAM-Containern. Nur NTFS- oder ReFS-Authentifizierung funktioniert mit FILESTREAM-Containern.  
@@ -80,16 +84,16 @@ caps.handback.revision: 13
 ##  <a name="dual"></a> Zugreifen auf BLOB-Daten mit Transact-SQL und Dateisystem-Streamingzugriff  
  Nachdem Daten in einer FILESTREAM-Spalte gespeichert wurden, können Sie über [!INCLUDE[tsql](../../includes/tsql-md.md)] -Transaktionen oder mithilfe von Win32-APIs auf die Dateien zugreifen.  
   
-### Zugriff über Transact-SQL  
- Mit [!INCLUDE[tsql](../../includes/tsql-md.md)] können Sie FILESTREAM-Daten einfügen, aktualisieren und löschen:  
+### <a name="transact-sql-access"></a>Zugriff über Transact-SQL  
+ Mit [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie FILESTREAM-Daten einfügen, aktualisieren und löschen:  
   
 -   Mit einem Einfügevorgang können Sie ein FILESTREAM-Feld vorab mit einem Nullwert, einem leeren Wert oder relativ kurzen Inlinedaten füllen. Große Datenmengen lassen sich jedoch effizienter in eine Datei streamen, wenn Win32-Schnittstellen verwendet werden.  
   
--   Wenn Sie ein FILESTREAM-Feld aktualisieren, ändern Sie die zugrunde liegenden BLOB-Daten im Dateisystem. Wenn ein FILESTREAM-Feld auf NULL festgelegt wird, werden die dem Feld zugeordneten BLOB-Daten gelöscht. Ein segmentiertes Update in [!INCLUDE[tsql](../../includes/tsql-md.md)], das als UPDATE**.**Write() implementiert wird, kann nicht zur Ausführung von partiellen Updates der Daten eingesetzt werden.  
+-   Wenn Sie ein FILESTREAM-Feld aktualisieren, ändern Sie die zugrunde liegenden BLOB-Daten im Dateisystem. Wenn ein FILESTREAM-Feld auf NULL festgelegt wird, werden die dem Feld zugeordneten BLOB-Daten gelöscht. Ein segmentiertes Update in [!INCLUDE[tsql](../../includes/tsql-md.md)] , das als UPDATE**.**Write() implementiert wird, kann nicht zur Ausführung von partiellen Updates der Daten eingesetzt werden.  
   
 -   Wenn Sie eine Zeile löschen oder eine Tabelle, die FILESTREAM-Daten enthält, löschen oder abschneiden, löschen Sie auch die zugrunde liegenden BLOB-Daten im Dateisystem.  
   
-### Dateisystem-Streamingzugriff  
+### <a name="file-system-streaming-access"></a>Dateisystem-Streamingzugriff  
  Die Win32-Streamingunterstützung funktioniert im Kontext von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionen. Im Rahmen einer Transaktion können Sie mithilfe von FILESTREAM-Funktionen, einen logischen UNC-Pfad für eine Datei ermitteln. Sie verwenden dann die OpenSqlFilestream-API, um ein Dateihandle abzurufen. Dieses Handle kann dann von Win32-Dateistreamingschnittstellen, wie ReadFile() und WriteFile(), verwendet werden, um über das Dateisystem auf die Datei zuzugreifen und diese zu aktualisieren.  
   
  Weil Dateivorgänge transaktionsgebunden sind, können Sie FILESTREAM-Dateien nicht über das Dateisystem löschen oder umbenennen.  
@@ -104,7 +108,7 @@ caps.handback.revision: 13
   
  **Transaktiver Dateisystemzugriff**  
   
- Die neue systeminterne Funktion [GET_FILESTREAM_TRANSACTION_CONTEXT ()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) gibt das Token zurück, das die aktuelle Transaktion darstellt, mit der die Sitzung verknüpft ist. Die Transaktion muss bereits gestartet, aber noch nicht abgebrochen oder eingetragen worden sein. Durch den Bezug eines Tokens bindet die Anwendung die FILESTREAM-Dateisystem-Streamingvorgänge an eine gestartete Transaktion. Die Funktion gibt NULL zurück, wenn keine explizit gestartete Transaktion vorliegt.  
+ Die neue systeminterne Funktion [GET_FILESTREAM_TRANSACTION_CONTEXT ()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)gibt das Token zurück, das die aktuelle Transaktion darstellt, mit der die Sitzung verknüpft ist. Die Transaktion muss bereits gestartet, aber noch nicht abgebrochen oder eingetragen worden sein. Durch den Bezug eines Tokens bindet die Anwendung die FILESTREAM-Dateisystem-Streamingvorgänge an eine gestartete Transaktion. Die Funktion gibt NULL zurück, wenn keine explizit gestartete Transaktion vorliegt.  
   
  Alle Dateihandles müssen geschlossen werden, bevor die Transaktion abgebrochen oder eingetragen wird. Wenn ein Handle nach Abschluss einer Transaktion geöffnet bleibt, verursachen weitere Lesevorgänge unter Verwendung des Handles einen Fehler. Weitere Schreibvorgänge unter Verwendung des Handles werden zwar ausgeführt, aber die Daten werden nicht auf den Datenträger geschrieben. Wenn die Datenbank oder die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz geschlossen wird, werden alle geöffneten Handles ungültig.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 13
   
  **Isolationssemantik**  
   
- Die Isolationssemantik wird durch die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Transaktionsisolationsstufen bestimmt. Für den [!INCLUDE[tsql](../../includes/tsql-md.md)]- und den Dateisystemzugriff wird nur die Read Committed-Isolationsstufe unterstützt. Wiederholbare Lesevorgänge und auch serialisierbare sowie Momentaufnahmeisolationen werden unterstützt. Das Lesen von geänderten Daten, für die kein Commit ausgeführt wurde, wird nicht unterstützt.  
+ Die Isolationssemantik wird durch die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Transaktionsisolationsstufen bestimmt. Für den [!INCLUDE[tsql](../../includes/tsql-md.md)] - und den Dateisystemzugriff wird nur die Read Committed-Isolationsstufe unterstützt. Wiederholbare Lesevorgänge und auch serialisierbare sowie Momentaufnahmeisolationen werden unterstützt. Das Lesen von geänderten Daten, für die kein Commit ausgeführt wurde, wird nicht unterstützt.  
   
  Bei Dateisystemzugriffvorgängen zum Öffnen von Dateien wird auf keine Sperren gewartet. Stattdessen schlagen die Öffnungsvorgänge sofort fehl, wenn wegen der Transaktionsisolation nicht auf die Daten zugegriffen werden kann. Die Streaming-API-Aufrufe schlagen mit dem Ergebnis ERROR_SHARING_VIOLATION fehl, wenn der Öffnungsvorgang wegen einer Isolationsverletzung nicht fortgesetzt werden kann.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 13
  Die Erstellung von Speicherabbildern (E/A mit Speicherabbildern) mit einem FILESTREAM-Handle wird nicht unterstützt. Wenn Speicherabbilder für FILESTREAM-Daten verwendet werden, kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] weder die Konsistenz und Dauerhaftigkeit der Daten noch die Datenbankintegrität garantieren.  
  
   
-##  Verwandte Aufgaben  
+##  <a name="related-tasks"></a>Verwandte Aufgaben  
  [Aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   [Erstellen einer FILESTREAM-aktivierten Datenbank](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
   [Erstellen einer Tabelle zum Speichern von FILESTREAM-Daten](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
@@ -164,6 +168,7 @@ caps.handback.revision: 13
   [Konfigurieren einer Firewall für FILESTREAM-Zugriff](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 
   
-##  Verwandte Inhalte  
+##  <a name="related-content"></a>Verwandte Inhalte  
  [FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   
+

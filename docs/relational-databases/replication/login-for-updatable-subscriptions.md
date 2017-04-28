@@ -1,29 +1,33 @@
 ---
-title: "Anmeldename f&#252;r aktualisierbare Abonnements | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
+title: "Anmeldename für aktualisierbare Abonnements | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a8e5888afba843d601f6dc85395c52b08b9b597
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anmeldename f&#252;r aktualisierbare Abonnements
-  Für sofortige Aktualisierung, sofern Sie **replizieren** auf die **aktualisierbare Abonnements** Seite dieses Assistenten müssen Sie ein Konto angeben, mit dem Abonnenten, unter denen Verbindungen mit dem Verleger hergestellt werden. 
+# <a name="login-for-updatable-subscriptions"></a>Anmeldename für aktualisierbare Abonnements
+  Wenn Sie im Assistenten auf der Seite **Aktualisierbare Abonnements** die Option **Replizieren** ausgewählt haben, müssen Sie mit dem Abonnenten ein Konto angeben, unter dem die Verbindungen mit dem Verleger für das sofortige Update hergestellt werden. 
   
- Verbindungen werden von den Triggern verwendet, die auf dem Abonnenten auslösen und Änderungen an den Verleger weitergegeben. Dieses Konto ist erforderlich, auch wenn Sie **in die Warteschlange ändert und Commit baldmöglichst ausführen** auf die **aktualisierbare Abonnements** Seite. Assistenten für neue Abonnements standardmäßig konfiguriert Aktualisieren über eine Warteschlange mit der Möglichkeit, zur sofortigen Aktualisierung zu wechseln.  
+ Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Dieses Konto ist erforderlich, auch wenn Sie **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen** auf der Seite **Aktualisierbare Abonnements** ausgewählt haben. Der Assistent für neue Abonnements konfiguriert standardmäßig verzögerte Updates über eine Warteschlange mit der Möglichkeit, zur sofortigen Aktualisierung zu wechseln.  
   
-> **WICHTIG!** Das Konto angegeben, für die Verbindung nur sollte Berechtigung zum Einfügen, aktualisieren und Löschen von Daten auf die Ansichten, die die Replikation in der Veröffentlichungsdatenbank erstellt. Es sollten keine weiteren Berechtigungen erhalten. Erteilen von Berechtigungen für Sichten in der Publikationsdatenbank mit dem Namen in der Form **Syncobj_***\< HexadecimalNumber>* für das Konto, das Sie auf den einzelnen Abonnenten konfiguriert.  
+> **WICHTIG!** Dem für die Verbindung angegebenen Konto sollten nur die Berechtigung zum Einfügen, Aktualisieren und Löschen der Daten in den durch die Replikation in der Veröffentlichungsdatenbank erstellten Sichten erteilt werden. Darüber hinaus sollte das Konto über keine weiteren Berechtigungen verfügen. Erteilen Sie dem von Ihnen auf den einzelnen Abonnenten konfigurierten Konto Berechtigungen für Sichten in der Veröffentlichungsdatenbank, deren Namen das Format **syncobj_***\<HexadecimalNumber>* aufweisen.  
   
  Für den Typ der Verbindung gibt es drei Optionen:  
   
@@ -33,25 +37,26 @@ caps.handback.revision: 18
   
 -   Ein durch die Replikation erstellter Verbindungsserver. Die Verbindung wird mit den Anmeldeinformationen des Benutzers hergestellt, der die Änderung auf dem Abonnenten vornimmt.  
   
- Die ersten beiden Optionen können im Assistenten angegeben werden. Die letzte Option kann nur angegeben werden mit [Sp_link_publication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); Geben Sie den Wert **1** für den Parameter **@security_mode**.  
+ Die ersten beiden Optionen können im Assistenten angegeben werden. Die letzte Option kann nur mithilfe von [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) angegeben werden. Geben Sie für den Parameter **@security_mode** den Wert **1** an.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Erstellen Sie einen Verbindungsserver, der die Verbindung mithilfe des folgenden Anmeldenamens für die SQL Server-Authentifizierung herstellt:**  
- Die Replikation erstellt einen Verbindungsserver mithilfe der Anmeldeinformationen in der **Anmeldung** und **Kennwort** Felder.  
+ Durch die Replikation wird ein Verbindungsserver mithilfe der in den Feldern **Anmeldename** und **Kennwort** angegebenen Anmeldeinformationen erstellt.  
   
  **Anmeldename**  
- Geben Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, die nur die in diesem Thema beschriebenen Berechtigungen aufweist.  
+ Geben Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen ein, der nur die in diesem Thema beschriebenen Berechtigungen aufweist.  
   
  **Kennwort**  
- Geben Sie ein sicheres Kennwort für die Anmeldung, die im angegebenen **Anmeldung**.  
+ Geben Sie ein sicheres Kennwort für den in **Anmeldename**angegebenen Anmeldenamen ein.  
     
  **Vordefinierten Verbindungsserver oder Remoteserver verwenden**  
- Bei dieser Option ist ein bereits von Ihnen definierter Verbindungsserver oder Remoteserver erforderlich. Weitere Informationen finden Sie unter [Verbindungsserver &#40; Datenbankmodul &#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) und [Remoteserver](../../database-engine/configure-windows/remote-servers.md). Stellen Sie sicher, dass der für den Verbindungsserver oder Remoteserver verwendete Anmeldename ein sicheres Kennwort sowie ausschließlich die in diesem Thema beschriebenen Berechtigungen aufweist.  
+ Bei dieser Option ist ein bereits von Ihnen definierter Verbindungsserver oder Remoteserver erforderlich. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) und [Remoteserver](../../database-engine/configure-windows/remote-servers.md). Stellen Sie sicher, dass der für den Verbindungsserver oder Remoteserver verwendete Anmeldename ein sicheres Kennwort sowie ausschließlich die in diesem Thema beschriebenen Berechtigungen aufweist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](https://msdn.microsoft.com/library/ms152769.aspx)   
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Aktualisierbare Abonnements für die Transaktionsreplikation](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

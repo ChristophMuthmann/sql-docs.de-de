@@ -1,27 +1,31 @@
 ---
-title: "msdb-Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Agent, msdb-Datenbank"
-  - "Warnungen [SQL Server], msdb-Datenbank"
-  - "Aufträge [SQL Server], msdb-Datenbank"
-  - "msdb-Datenbank [SQL Server]"
+title: msdb-Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# msdb-Datenbank
+# <a name="msdb-database"></a>msdb-Datenbank
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **msdb** -Datenbank wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Planen von Warnungen und Aufträgen sowie von weiteren Funktionen (z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] und Datenbank-E-Mail) verwendet.  
@@ -63,7 +67,7 @@ caps.handback.revision: 46
 |CONCAT_NULL_YIELDS_NULL|OFF|ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
 |CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Benutzerkontensteuerung<br /><br /> ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> ja<br /><br /> ja|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
 |DB_CHAINING|ON|ja|  
 |ENCRYPTION|OFF|Nein|  
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

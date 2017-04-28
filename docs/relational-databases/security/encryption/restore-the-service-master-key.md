@@ -1,25 +1,29 @@
 ---
-title: "Wiederherstellen des Diensthauptschl&#252;ssels | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Diensthauptschlüssel [SQL Server], importieren"
-  - "Diensthauptschlüssel [SQL Server], wiederherstellen"
+title: "Wiederherstellen des Diensthauptschlüssels | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], importing
+- service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 341662ff65d44b63738b869999ab78191f991a6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen des Diensthauptschl&#252;ssels
+# <a name="restore-the-service-master-key"></a>Wiederherstellen des Diensthauptschlüssels
   In diesem Thema wird beschrieben, wie der Diensthauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]wiederhergestellt wird.  
   
 > [!WARNING]  
@@ -55,11 +59,11 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Verwenden von Transact-SQL  
   
-#### So stellen Sie den Diensthauptschlüssel wieder her  
+#### <a name="to-restore-the-service-master-key"></a>So stellen Sie den Diensthauptschlüssel wieder her  
   
 1.  Rufen Sie entweder von einem physischen Sicherungsmedium oder einem Verzeichnis im lokalen Dateisystem eine Kopie des gesicherten Diensthauptschlüssels ab.  
   
-2.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+2.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 3.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

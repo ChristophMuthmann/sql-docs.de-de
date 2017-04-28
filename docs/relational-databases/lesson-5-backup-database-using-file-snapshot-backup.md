@@ -1,25 +1,29 @@
 ---
-title: "Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung | Microsoft-Dokumentation'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung
+# <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung
 In dieser Lektion werden Sie in Ihrem virtuellen Azure-Computer Ihre AdventureWorks2014-Datenbank per Dateimomentaufnahme-Sicherung zum Ausführen einer nahezu sofortigen Sicherung mithilfe von Azure-Momentaufnahmen sichern. Weitere Informationen zu Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 So sichern Sie die AdventureWorks2014-Datenbank mithilfe der Dateimomentaufnahme-Sicherung:  
@@ -48,7 +52,7 @@ So sichern Sie die AdventureWorks2014-Datenbank mithilfe der Dateimomentaufnahme
   
     ```  
   
-    ![results pane showing file snapshots of each database file](../relational-databases/media/2a9320e0-067a-485a-8e0e-636660005e5c.JPG "results pane showing file snapshots of each database file")  
+    ![Bereich „Ergebnisse“ mit Dateimomentaufnahmen der einzelnen Datenbankdateien](../relational-databases/media/2a9320e0-067a-485a-8e0e-636660005e5c.JPG "results pane showing file snapshots of each database file")  
   
 5.  Nachdem Sie überprüft haben, dass das Skript in Schritt 4 erfolgreich ausgeführt wurde, führen Sie das folgende Skript erneut aus. Beachten Sie, dass die Dateimomentaufnahme-Sicherung in Schritt 4 Dateimomentaufnahmen der Daten und der Protokolldatei generiert hat.  
   
@@ -59,7 +63,7 @@ So sichern Sie die AdventureWorks2014-Datenbank mithilfe der Dateimomentaufnahme
   
     ```  
   
-    ![results of the sys.fn_db_backup_file_snapshots function showing 2 snapshots](../relational-databases/media/fca1436e-9607-4432-97ee-f66ac2f2108d.JPG "results of the sys.fn_db_backup_file_snapshots function showing 2 snapshots")  
+    ![Ergebnisse der sys.fn_db_backup_file_snapshots-Funktion mit 2 Momentaufnahmen](../relational-databases/media/fca1436e-9607-4432-97ee-f66ac2f2108d.JPG "results of the sys.fn_db_backup_file_snapshots function showing 2 snapshots")  
   
 6.  Im Objekt-Explorer in Ihrer SQL Server 2016-Instanz in Ihrem virtuellen Azure-Computer erweitern Sie den Knoten Datenbanken, und überprüfen Sie, ob die AdventureWorks2014-Datenbank in dieser Instanz wiederhergestellt wurde (aktualisieren Sie den Knoten nach Bedarf).  
   
@@ -67,15 +71,16 @@ So sichern Sie die AdventureWorks2014-Datenbank mithilfe der Dateimomentaufnahme
   
 8.  Container erweitern – erweitern Sie den Container, den Sie in Lektion 1 erstellt haben, und überprüfen Sie, ob die AdventureWorks2014_Azure.bak aus Schritt 4 oben in diesem Container erscheint, zusammen mit der Backup-Datei aus Lektion 3 und den Datenbank-Dateien aus Lektion 4 (aktualisieren Sie den Knoten nach Bedarf).  
   
-    ![File snapshot backup appears in the Azure container](../relational-databases/media/181bc970-4af7-4272-a9ae-4bef674f2e02.JPG "File snapshot backup appears in the Azure container")  
+    ![Dateimomentaufnahmesicherung wird im Azure-Container angezeigt](../relational-databases/media/181bc970-4af7-4272-a9ae-4bef674f2e02.JPG "File snapshot backup appears in the Azure container")  
   
 **Nächste Lektion:**  
   
 [Lektion 6: Generate activity and backup log using file-snapshot backup (Generieren von Aktivität und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung)](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
   
   
   
+

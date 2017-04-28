@@ -1,43 +1,47 @@
 ---
-title: "Einschr&#228;nken von Suchergebnissen mit RANK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zeilenrangfolge [Volltextsuche]"
-  - "Rangwerte nach Relevanz [Volltextsuche]"
-  - "Volltextsuche [SQL Server], Rangfolgen"
-  - "Index-Rangberechnungen [Volltextsuche]"
-  - "Ergebnisse nach Rang [Volltextsuche]"
-  - "Rangfolgen [Volltextsuche]"
-  - "Rangwerte nach Zeilen [Volltextsuche]"
+title: "Einschränken von Suchergebnissen mit RANK | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row ranking [full-text search]
+- relevance ranking values [full-text search]
+- full-text search [SQL Server], rankings
+- index rankings [full-text search]
+- ranked results [full-text search]
+- rankings [full-text search]
+- per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Einschr&#228;nken von Suchergebnissen mit RANK
-  Die Funktionen [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
+# <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
+  Die Funktionen [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
   
 > [!NOTE]  
 >  Die CONTAINS- und FREETEXT-Prädikate geben keine Rangwerte zurück.  
   
- Die Anzahl der Elemente, die eine Suchbedingung erfüllen, ist oft sehr groß. Damit CONTAINSTABLE- oder FREETEXTTABLE-Abfragen nicht zu viele Übereinstimmungen zurückgeben, können Sie den optionalen *top_n_by_rank*-Parameter verwenden, mit dem nur eine Teilmenge der Zeilen zurückgegeben wird. *top_n_by_rank* ist ein Integer-Wert (*n*) mit dem festgelegt wird, dass nur die *n* höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen.  
+ Die Anzahl der Elemente, die eine Suchbedingung erfüllen, ist oft sehr groß. Damit CONTAINSTABLE- oder FREETEXTTABLE-Abfragen nicht zu viele Übereinstimmungen zurückgeben, können Sie den optionalen *top_n_by_rank* -Parameter verwenden, mit dem nur eine Teilmenge der Zeilen zurückgegeben wird. *top_n_by_rank* ist ein Integer-Wert ( *n*) mit dem festgelegt wird, dass nur die *n* höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordnet die Übereinstimmungen nach Rang und gibt nur die angegebene Anzahl Zeilen zurück. Diese Einschränkung kann zu einer deutlichen Leistungssteigerung führen. So wird z. B. eine Abfrage, die normalerweise 100.000 Zeilen aus einer Tabelle mit 1 Million Zeilen zurückgeben würde, bedeutend schneller verarbeitet, wenn nur die obersten 100 Zeilen angefordert werden.  
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
- Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
+ Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
 USE AdventureWorks2012  
@@ -66,10 +70,9 @@ RANK        Address                          City
 (3 row(s) affected)  
 ```  
   
- [In diesem Thema](#top)  
   
-### Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
- Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description`-Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
+ Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
 USE AdventureWorks2012  
@@ -89,12 +92,11 @@ FROM Production.ProductDescription AS FT_TBL INNER JOIN
 GO  
 ```  
   
- [In diesem Thema](#top)  
   
 ##  <a name="how"></a> Ordnen von Suchabfrageergebnissen nach Rang  
- Die Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine optionale Bewertung (einen Rangwert) generieren, die die Relevanz der von einer Volltextabfrage zurückgegebenen Daten angibt. Dieser Rangwert wird für jede Zeile berechnet und als Sortierkriterium verwendet, um das Resultset einer bestimmten Abfrage nach Relevanz zu sortieren. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage. Der Rangwert hat keinerlei abfrageüberschreitende Bedeutung.  
+ Die Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine optionale Bewertung (einen Rangwert) generieren, die die Relevanz der von einer Volltextabfrage zurückgegebenen Daten angibt. Dieser Rangwert wird für jede Zeile berechnet und als Sortierkriterium verwendet, um das Resultset einer bestimmten Abfrage nach Relevanz zu sortieren. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage. Der Rangwert hat keinerlei abfrageüberschreitende Bedeutung.  
   
-### Statistiken für die Rangfolge  
+### <a name="statistics-for-ranking"></a>Statistiken für die Rangfolge  
  Beim Erstellen eines Indexes werden Statistiken für die Reihenfolgebestimmung gesammelt. Der Vorgang der Erstellung eines Volltextkatalogs führt nicht direkt zu einer einzelnen Indexstruktur. Stattdessen erstellt das Volltextsuchmodul für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Indizieren der Daten Zwischenindizes. Anschließend werden diese Indizes vom Volltextsuchmodul bei Bedarf in einen größeren Index zusammengeführt. Dieser Vorgang kann mehrfach wiederholt werden. Das Volltextsuchmodul führt einen "Mastermergeprozess" aus, bei dem alle Zwischenindizes zu einem größeren Masterindex kombiniert werden.  
   
  Auf jeder Zwischenstufe werden Statistiken erhoben. Die Statistiken werden beim Zusammenführen der Indizes zusammengeführt. Einige statistische Werte können nur während des Mastermergeprozesses generiert werden.  
@@ -115,7 +117,7 @@ GO
  Ein einzelner invertierter Index mindestens eines Dokuments. Er kann sich vollständig im Arbeitsspeicher oder auf dem Datenträger befinden. Viele Abfragestatistiken sind relativ zu dem jeweiligen Index, mit dem der Vergleich ausgeführt wurde.  
   
  Volltextkatalog  
- Eine Auflistung von Zwischenindizes, die für Abfragen als eine Entität behandelt wird. Kataloge sind die Organisationseinheit, die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administrator sichtbar ist.  
+ Eine Auflistung von Zwischenindizes, die für Abfragen als eine Entität behandelt wird. Kataloge sind die Organisationseinheit, die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator sichtbar ist.  
   
  Wort, Token oder Element  
  Die Vergleichseinheit im Volltextmodul. Textströme aus Dokumenten werden durch eine sprachspezifische Wörtertrennung in Wörter oder Token zerlegt.  
@@ -138,9 +140,8 @@ GO
  MaxQueryRank  
  Der maximale Rang, 1000, der vom Volltextsuchmodul zurückgegeben wird.  
   
- [In diesem Thema](#top)  
   
-### Gesichtspunkte bei der Rangberechnung  
+### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
  Der Vorgang der Rangberechnung hängt von mehreren Faktoren ab.  Die Wörtererkennung für unterschiedliche Sprachen zerlegt Text unterschiedlich in Wörter. So könnte z. B. die Zeichenfolge "dog-house" von einer Wörtererkennung in "dog" "house" und von einer anderen in "dog-house" zerlegt werden. Dies bedeutet, dass Vergleiche und Rangfolgenberechnung je nach der angegebenen Sprache unterschiedliche Ergebnisse liefern, da nicht nur die Wörter unterschiedlich sind, sondern auch die Dokumentlänge. Die unterschiedliche Dokumentlänge kann sich auf die Rangfolgenberechnung für alle Abfragen auswirken.  
   
  Statistiken wie **IndexRowCount** können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch vom Volltextsuchmodul zusammengeführt.  
@@ -154,9 +155,8 @@ GO
   
 ```  
   
- [In diesem Thema](#top)  
   
-### Rangfolge von CONTAINSTABLE  
+### <a name="ranking-of-containstable"></a>Rangfolge von CONTAINSTABLE  
  Beim Generieren der Rangfolge für[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) wird der folgende Algorithmus verwendet:  
   
 ```  
@@ -168,9 +168,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
   
  **Rangfolge von NEAR**  
   
- CONTAINSTABLE unterstützt das Abfragen von zwei oder mehr Suchbegriffen mithilfe der NEAR-Option hinsichtlich ihrer Nähe zueinander. Der Rangwert der einzelnen zurückgegebenen Zeilen basiert auf mehreren Parametern. Ein Hauptrangfaktor ist die Gesamtzahl der Übereinstimmungen (oder *Treffer*) in Bezug auf die Länge des Dokuments. Wenn beispielsweise ein Dokument mit 100 Wörtern und ein Dokument mit 900 Wörtern identische Übereinstimmungen enthalten, wird dem Dokument mit 100 Wörtern ein höherer Rangwert zugewiesen.  
+ CONTAINSTABLE unterstützt das Abfragen von zwei oder mehr Suchbegriffen mithilfe der NEAR-Option hinsichtlich ihrer Nähe zueinander. Der Rangwert der einzelnen zurückgegebenen Zeilen basiert auf mehreren Parametern. Ein Hauptrangfaktor ist die Gesamtzahl der Übereinstimmungen (oder *Treffer*) in Bezug auf die Länge des Dokuments. Wenn beispielsweise ein Dokument mit 100 Wörtern und ein Dokument mit 900 Wörtern identische Übereinstimmungen enthalten, wird dem Dokument mit 100 Wörtern ein höherer Rangwert zugewiesen.  
   
- Die Gesamtlänge der einzelnen Treffer in einer Zeile trägt ebenfalls zum Rangwert der betreffenden Zeile bei, wobei die Entfernung zwischen dem ersten und dem letzten Suchbegriff des jeweiligen Treffers zugrunde gelegt wird. Je kleiner die Entfernung, desto relevanter ist der Treffer für den Rangwert der Zeile. Wenn eine Volltextabfrage keine ganze Zahl angibt (z. B. die maximale Entfernung), weist ein Dokument, das nur Treffer enthält, deren Entfernungen weiter als 100 logische Begriffe auseinander liegen, einen Rang von 0 (null) auf.  
+ Die Gesamtlänge der einzelnen Treffer in einer Zeile trägt ebenfalls zum Rangwert der betreffenden Zeile bei, wobei die Entfernung zwischen dem ersten und dem letzten Suchbegriff des jeweiligen Treffers zugrunde gelegt wird. Je kleiner die Entfernung, desto relevanter ist der Treffer für den Rangwert der Zeile. Wenn eine Volltextabfrage keine ganze Zahl angibt (z. B. die maximale Entfernung), weist ein Dokument, das nur Treffer enthält, deren Entfernungen weiter als 100 logische Begriffe auseinander liegen, einen Rang von 0 (null) auf.  
   
  **Rangfolge von ISABOUT**  
   
@@ -185,9 +185,8 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
 ```  
   
- [In diesem Thema](#top)  
   
-### Rangfolge von FREETEXTTABLE  
+### <a name="ranking-of-freetexttable"></a>Rangfolge von FREETEXTTABLE  
  Die Rangfolgenberechnung für[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) basiert auf der OKAPI BM25-Rangfolgenformel. Bei FREETEXTTABLE-Abfragen werden der Abfrage durch Wortformengenerierung Flexionsformen der ursprünglichen Abfragewörter hinzugefügt; diese Wörter werden als separate Wörter ohne besondere Beziehung zu den Wörtern behandelt, aus denen sie generiert wurden. Aus der Thesaurus-Funktion generierte Synonyme werden als separate, gleich gewichtete Begriffe behandelt. Jedes Wort in der Abfrage wird bei der Rangberechnung einbezogen.  
   
 ```  
@@ -206,9 +205,8 @@ tf is the frequency of the word in the queried property in a specific row.
 qtf is the frequency of the term in the query.   
 ```  
   
- [In diesem Thema](#top)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)  
   
   

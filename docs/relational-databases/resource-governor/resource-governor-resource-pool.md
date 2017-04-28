@@ -1,54 +1,58 @@
 ---
-title: "Ressourcenpool f&#252;r die Ressourcenkontrolle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ressourcenkontrolle, Ressourcenpool"
-  - "Ressourcenpool [SQL Server], Übersicht"
-  - "Ressourcenpool [SQL Server]"
+title: "Ressourcenpool für die Ressourcenkontrolle | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ressourcenpool f&#252;r die Ressourcenkontrolle
+# <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenkontrolle stellt ein Ressourcenpool eine Teilmenge der physischen Ressourcen einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s dar. Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher festlegen, d. h. Ressourcen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. Jeder Ressourcenpool kann eine oder mehrere Arbeitsauslastungsgruppen enthalten. Wenn eine Sitzung gestartet wird, weist die Klassifizierungsfunktion der Ressourcenkontrolle die Sitzung einer bestimmten Arbeitsauslastungsgruppe zu, und die Sitzung muss mit den der Arbeitsauslastungsgruppe zugewiesenen Ressourcen ausgeführt werden.  
+  In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle stellt ein Ressourcenpool eine Teilmenge der physischen Ressourcen einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s dar. Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher festlegen, d. h. Ressourcen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. Jeder Ressourcenpool kann eine oder mehrere Arbeitsauslastungsgruppen enthalten. Wenn eine Sitzung gestartet wird, weist die Klassifizierungsfunktion der Ressourcenkontrolle die Sitzung einer bestimmten Arbeitsauslastungsgruppe zu, und die Sitzung muss mit den der Arbeitsauslastungsgruppe zugewiesenen Ressourcen ausgeführt werden.  
   
-## Konzepte von Ressourcenpools  
- Ein Ressourcenpool (Pool) stellt die physischen Ressourcen des Servers dar. Stellen Sie sich einen Pool als virtuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz vor. Ein Pool besteht aus zwei Teilen. Ein Teil überschneidet sich nicht mit anderen Pools, wodurch eine minimale Reservierung von Ressourcen ermöglicht wird. Der andere Teil wird gemeinsam mit anderen Pools verwendet, wodurch eine maximale Ressourcenauslastung ermöglicht wird. Die Poolressourcen werden definiert, indem mindestens eine der folgenden Einstellungen für jede Ressource (CPU, Arbeitsspeicher und physische E/A) festgelegt wird:  
+## <a name="resource-pool-concepts"></a>Konzepte von Ressourcenpools  
+ Ein Ressourcenpool (Pool) stellt die physischen Ressourcen des Servers dar. Stellen Sie sich einen Pool als virtuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz vor. Ein Pool besteht aus zwei Teilen. Ein Teil überschneidet sich nicht mit anderen Pools, wodurch eine minimale Reservierung von Ressourcen ermöglicht wird. Der andere Teil wird gemeinsam mit anderen Pools verwendet, wodurch eine maximale Ressourcenauslastung ermöglicht wird. Die Poolressourcen werden definiert, indem mindestens eine der folgenden Einstellungen für jede Ressource (CPU, Arbeitsspeicher und physische E/A) festgelegt wird:  
   
 -   **MIN_CPU_PERCENT und MAX_CPU_PERCENT**  
   
-     Falls ein CPU-Konflikt auftreten sollte, entsprechen diese Einstellungen dem Mindest- und Höchstwert der garantierten durchschnittlichen CPU-Bandbreite für alle Anforderungen im Ressourcenpool. Sie können diese Einstellungen festlegen, um eine vorhersagbare CPU-Ressourcenverwendung für mehrere Arbeitsauslastungen einzurichten, die auf den Anforderungen der einzelnen Arbeitsauslastungen basiert. Angenommen, die Vertriebs- und Marketingabteilung eines Unternehmens verwenden dieselbe Datenbank. Die Vertriebsabteilung verfügt über eine CPU-intensive Arbeitsauslastung mit Abfragen hoher Priorität. Die Marketingabteilung verfügt ebenfalls über eine CPU-intensive Arbeitsauslastung, führt jedoch Abfragen mit niedrigerer Priorität aus. Indem Sie einen separaten Ressourcenpool für jede Abteilung erstellen, können Sie einen *minimalen* CPU-Prozentsatz von 70 % für den Ressourcenpool der Vertriebsabteilung und einen *maximalen* CPU-Prozentsatz von 30 % für den Ressourcenpool der Marketingabteilung zuweisen. Dadurch wird sichergestellt, dass der Arbeitsauslastung der Vertriebsabteilung die erforderlichen CPU-Ressourcen zur Verfügung stehen und dass die Arbeitsauslastung der Marketingabteilung von den CPU-Anforderungen des Vertriebs isoliert ist. Beachten Sie, dass der maximale CPU-Prozentsatz ein opportunistischer Maximalwert ist. Wenn CPU-Kapazität verfügbar ist, wird diese von der Arbeitsauslastung bis zu 100 % genutzt. Der Maximalwert gilt nur bei einem CPU-Ressourcenkonflikt. Wenn die Arbeitsauslastung der Vertriebsabteilung beispielsweise heruntergefahren wird, kann die Marketingabteilung die CPU bei Bedarf zu 100 % nutzen.  
+     Falls ein CPU-Konflikt auftreten sollte, entsprechen diese Einstellungen dem Mindest- und Höchstwert der garantierten durchschnittlichen CPU-Bandbreite für alle Anforderungen im Ressourcenpool. Sie können diese Einstellungen festlegen, um eine vorhersagbare CPU-Ressourcenverwendung für mehrere Arbeitsauslastungen einzurichten, die auf den Anforderungen der einzelnen Arbeitsauslastungen basiert. Angenommen, die Vertriebs- und Marketingabteilung eines Unternehmens verwenden dieselbe Datenbank. Die Vertriebsabteilung verfügt über eine CPU-intensive Arbeitsauslastung mit Abfragen hoher Priorität. Die Marketingabteilung verfügt ebenfalls über eine CPU-intensive Arbeitsauslastung, führt jedoch Abfragen mit niedrigerer Priorität aus. Indem Sie einen separaten Ressourcenpool für jede Abteilung erstellen, können Sie einen *minimalen* CPU-Prozentsatz von 70 % für den Ressourcenpool der Vertriebsabteilung und einen *maximalen* CPU-Prozentsatz von 30 % für den Ressourcenpool der Marketingabteilung zuweisen. Dadurch wird sichergestellt, dass der Arbeitsauslastung der Vertriebsabteilung die erforderlichen CPU-Ressourcen zur Verfügung stehen und dass die Arbeitsauslastung der Marketingabteilung von den CPU-Anforderungen des Vertriebs isoliert ist. Beachten Sie, dass der maximale CPU-Prozentsatz ein opportunistischer Maximalwert ist. Wenn CPU-Kapazität verfügbar ist, wird diese von der Arbeitsauslastung bis zu 100 % genutzt. Der Maximalwert gilt nur bei einem CPU-Ressourcenkonflikt. Wenn die Arbeitsauslastung der Vertriebsabteilung beispielsweise heruntergefahren wird, kann die Marketingabteilung die CPU bei Bedarf zu 100 % nutzen.  
   
 -   **CAP_CPU_PERCENT**  
   
-     Diese Einstellung ist eine feste Obergrenze für die CPU-Bandbreite aller Anforderungen im Ressourcenpool. Die dem Pool zugeordneten Arbeitsauslastungen können eine CPU-Kapazität nutzen, die ggf. über den Wert MAX_CPU_PERCENT, nicht aber über den Wert CAP_CPU_PERCENT hinausgeht. Wir bleiben beim vorangehenden Beispiel und gehen davon aus, dass die genutzten Ressourcen der Marketingabteilung als Kosten angerechnet werden. Zur besseren Voraussagbarkeit der Kosten soll die CPU-Nutzung bei maximal 30 % gedeckelt werden. Dies lässt sich erreichen, indem die CAP_CPU_PERCENT-Einstellung für den Ressourcenpool "Marketing" auf 30 festgelegt wird.  
+     Diese Einstellung ist eine feste Obergrenze für die CPU-Bandbreite aller Anforderungen im Ressourcenpool. Die dem Pool zugeordneten Arbeitsauslastungen können eine CPU-Kapazität nutzen, die ggf. über den Wert MAX_CPU_PERCENT, nicht aber über den Wert CAP_CPU_PERCENT hinausgeht. Wir bleiben beim vorangehenden Beispiel und gehen davon aus, dass die genutzten Ressourcen der Marketingabteilung als Kosten angerechnet werden. Zur besseren Voraussagbarkeit der Kosten soll die CPU-Nutzung bei maximal 30 % gedeckelt werden. Dies lässt sich erreichen, indem die CAP_CPU_PERCENT-Einstellung für den Ressourcenpool "Marketing" auf 30 festgelegt wird.  
   
 -   **MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT**  
   
-     Diese Einstellungen geben die minimale und maximale Kapazität des für den Ressourcenpool reservierten Arbeitsspeichers an, der nicht gemeinsam mit anderen Ressourcenpools verwendet werden kann. Dieser reservierte Arbeitsspeicher ist der für die Abfrageausführung gewährte Arbeitsspeicher und kein Pufferpoolarbeitsspeicher (z. B. Daten- und Indexseiten). Durch das Festlegen eines Mindestarbeitsspeichers für einen Pool stellen Sie sicher, dass der angegebene prozentuale Arbeitsspeicher für alle Anforderungen verfügbar ist, die in diesem Ressourcenpool ausgeführt werden. Dies ist ein wichtiges Unterscheidungsmerkmal zu MIN_CPU_PERCENT, da der Arbeitsspeicher in diesem Fall im jeweiligen Ressourcenpool verbleibt, auch wenn der Pool keine Anforderungen für die zugehörigen Arbeitsauslastungsgruppen enthält. Daher sollte die Einstellung mit besonderer Vorsicht eingesetzt werden, weil dieser Arbeitsspeicher keinem anderen Pool zur Verfügung steht – auch dann nicht, wenn keine aktiven Anforderungen vorliegen. Das Festlegen eines maximalen Arbeitsspeicherwerts für einen Pool bewirkt, dass den in diesem Pool ausgeführten Anforderungen nie mehr Gesamtarbeitsspeicher zur Verfügung steht als durch diesen Prozentsatz angegeben.  
+     Diese Einstellungen geben die minimale und maximale Kapazität des für den Ressourcenpool reservierten Arbeitsspeichers an, der nicht gemeinsam mit anderen Ressourcenpools verwendet werden kann. Dieser reservierte Arbeitsspeicher ist der für die Abfrageausführung gewährte Arbeitsspeicher und kein Pufferpoolarbeitsspeicher (z. B. Daten- und Indexseiten). Durch das Festlegen eines Mindestarbeitsspeichers für einen Pool stellen Sie sicher, dass der angegebene prozentuale Arbeitsspeicher für alle Anforderungen verfügbar ist, die in diesem Ressourcenpool ausgeführt werden. Dies ist ein wichtiges Unterscheidungsmerkmal zu MIN_CPU_PERCENT, da der Arbeitsspeicher in diesem Fall im jeweiligen Ressourcenpool verbleibt, auch wenn der Pool keine Anforderungen für die zugehörigen Arbeitsauslastungsgruppen enthält. Daher sollte die Einstellung mit besonderer Vorsicht eingesetzt werden, weil dieser Arbeitsspeicher keinem anderen Pool zur Verfügung steht – auch dann nicht, wenn keine aktiven Anforderungen vorliegen. Das Festlegen eines maximalen Arbeitsspeicherwerts für einen Pool bewirkt, dass den in diesem Pool ausgeführten Anforderungen nie mehr Gesamtarbeitsspeicher zur Verfügung steht als durch diesen Prozentsatz angegeben.  
   
 -   **AFFINITY**  
   
-     Mit dieser Einstellung können Sie einen Ressourcenpool einem oder mehreren Zeitplanungsmodulen oder NUMA-Knoten zuordnen, um eine stärkere Isolierung von CPU-Ressourcen zu erzielen. Ausgehend vom obigen Beispiel setzen wir voraus, dass die Vertriebsabteilung eine stärker isolierte Umgebung benötigt und einen CPU-Kern durchgehend zu 100 % nutzen will. Durch die AFFINITY-Option können die Arbeitsauslastungen "Vertrieb" und "Marketing" für unterschiedliche CPUs geplant werden. Wenn die CAP_CPU_PERCENT-Einstellung für den Marketingpool immer noch wirksam ist, verwendet die Arbeitsauslastung "Marketing" weiterhin maximal 30 % eines Kerns, während die Arbeitsauslastung "Vertrieb" 100 % des anderen Kerns nutzt. Für die Arbeitsauslastungen der Vertriebs- und Marketingabteilung bedeutet das, dass sie quasi auf zwei isolierten Computern ausgeführt werden.  
+     Mit dieser Einstellung können Sie einen Ressourcenpool einem oder mehreren Zeitplanungsmodulen oder NUMA-Knoten zuordnen, um eine stärkere Isolierung von CPU-Ressourcen zu erzielen. Ausgehend vom obigen Beispiel setzen wir voraus, dass die Vertriebsabteilung eine stärker isolierte Umgebung benötigt und einen CPU-Kern durchgehend zu 100 % nutzen will. Durch die AFFINITY-Option können die Arbeitsauslastungen "Vertrieb" und "Marketing" für unterschiedliche CPUs geplant werden. Wenn die CAP_CPU_PERCENT-Einstellung für den Marketingpool immer noch wirksam ist, verwendet die Arbeitsauslastung "Marketing" weiterhin maximal 30 % eines Kerns, während die Arbeitsauslastung "Vertrieb" 100 % des anderen Kerns nutzt. Für die Arbeitsauslastungen der Vertriebs- und Marketingabteilung bedeutet das, dass sie quasi auf zwei isolierten Computern ausgeführt werden.  
   
 -   **MIN_IOPS_PER_VOLUME und MAX_IOPS_PER_VOLUME**  
   
      Diese Einstellungen entsprechen den minimalen und maximalen physischen E/A-Vorgängen, die pro Sekunde und pro Datenträgervolume für einen Ressourcenpool ausgeführt werden. Über diese Einstellungen können Sie die physischen E/A-Befehle steuern, die für Benutzerthreads eines bestimmten Ressourcenpools ausgegeben werden. Beispielsweise generiert die Vertriebsabteilung mehrere Monatsabschlussberichte in großen Batches. Die in diesen Batches enthaltenen Abfragen können E/A-Vorgänge erzeugen, die das Datenträgervolume vollständig beanspruchen und die Leistung anderer Arbeitsauslastungen mit höherer Priorität in der Datenbank beeinträchtigen. Um diese Arbeitsauslastung zu isolieren, wird MIN_IOPS_PER_VOLUME auf 20 und MAX_IOPS_PER_VOLUME auf 100 für den Ressourcenpool der Vertriebsabteilung festgelegt, der die Anzahl der für die Arbeitsauslastung ausgegebenen E/A-Befehle steuert.  
   
- Bei der CPU- oder Arbeitsspeicherkonfiguration darf die Summe der MIN-Werte für alle Pools 100 Prozent der Serverressourcen nicht überschreiten. Außerdem können beim Konfigurieren der CPU oder des Arbeitsspeichers MAX und CAP auf beliebige Werte im Bereich zwischen MIN und 100 Prozent festgelegt werden.  
+ Bei der CPU- oder Arbeitsspeicherkonfiguration darf die Summe der MIN-Werte für alle Pools 100 Prozent der Serverressourcen nicht überschreiten. Außerdem können beim Konfigurieren der CPU oder des Arbeitsspeichers MAX und CAP auf beliebige Werte im Bereich zwischen MIN und 100 Prozent festgelegt werden.  
   
  Wenn bei einem Pool ein MIN-Wert definiert ist, der nicht 0 (null) entspricht, wird der effektive MAX-Wert anderer Pools erneut angepasst. Das Minimum des konfigurierten MAX-Werts eines Pool sowie die Summe der MIN-Werte der anderen Pools wird von 100 Prozent subtrahiert.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  Benutzerdefinierte Ressourcenpools sind Pools, die Sie für bestimmte Arbeitsauslastungen in der Umgebung erstellen. Die Ressourcenkontrolle stellt DDL-Anweisungen zum Erstellen, Ändern und Löschen von Ressourcenpools bereit.  
   
-## Aufgaben in Verbindung mit Ressourcenpools  
+## <a name="resource-pool-tasks"></a>Aufgaben in Verbindung mit Ressourcenpools  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |Beschreibt, wie Ressourcenpooleinstellungen geändert werden.|[Ändern der Einstellungen für den Ressourcenpool](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Beschreibt, wie ein Ressourcenpool gelöscht wird.|[Löschen eines Ressourcenpools](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
  [Arbeitsauslastungsgruppe der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Klassifizierungsfunktion der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [Anzeigen der Eigenschaften der Ressourcenkontrolle](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Abrufen von Informationen zu DML-Triggern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Metadaten [SQL Server], Trigger"
-  - "Betrachten von DML-Triggern"
-  - "DML-Trigger, Metadaten"
-  - "Anzeigen von DML-Triggern"
-  - "Statusinformationen [SQL Server], Trigger"
-  - "DML-Trigger, anzeigen"
+title: Abrufen von Informationen zu DML-Triggern | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abrufen von Informationen zu DML-Triggern
+# <a name="get-information-about-dml-triggers"></a>Abrufen von Informationen zu DML-Triggern
   In diesem Thema wird beschrieben, wie Sie Informationen zu DML-Triggern in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Zu diesen Informationen können die Triggertypen für eine Tabelle, der Name eines Triggers, sein Besitzer und das Erstellungs- oder Änderungsdatum zählen. Wenn der Trigger bei der Erstellung nicht verschlüsselt wurde, erhalten Sie die Definition des Triggers. Die Definition gibt Aufschluss darüber, wie sich ein Trigger auf die Tabelle auswirkt, für die er definiert ist. Zudem können Sie die Objekte feststellen, die von einem bestimmten Trigger verwendet werden. Mithilfe dieser Informationen können Sie die Objekte identifizieren, deren Änderung oder Löschung in der Datenbank sich auf den Trigger auswirkt.  
   
  **In diesem Thema**  
@@ -47,14 +51,14 @@ caps.handback.revision: 31
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin** und **db_securityadmin** verfügen implizit über diese Berechtigungen.  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** verfügen implizit über diese Berechtigungen.  
   
  **sys.sql_expression_dependencies**  
  Erfordert die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT für **sys.sql_expression_dependencies** für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So zeigen Sie die Definition eines DML-Triggers an  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>So zeigen Sie die Definition eines DML-Triggers an  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Ändern**. Die Definition des DML-Triggers wird im Abfragefenster angezeigt.  
   
-#### So zeigen Sie die Abhängigkeiten eines DML-Triggers an  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>So zeigen Sie die Abhängigkeiten eines DML-Triggers an  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 31
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Abhängigkeiten anzeigen**.  
   
-4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, abhängig von \<DML-Triggername>** im Fenster **Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
+4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von \<DML-Triggernamen> abhängig sind** im Fenster **Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
   
-     Wählen Sie zum Anzeigen der Objekte, von denen die DML abhängt, wählen Sie **Objekte, von denen \< DML-Triggername> abhängt**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
+     Wählen Sie zum Anzeigen der Objekte, von denen die DML abhängt **Objekte, von denen der \< DML-Triggername> abhängt**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
   
 5.  Wenn Sie Informationen zu einem im Bereich **Abhängigkeiten** angezeigten Objekt anzeigen möchten, klicken Sie auf das Objekt. Im Feld **Ausgewähltes Objekt** sind Informationen in den Feldern **Name**, **Typ**und **Abhängigkeitstyp** verfügbar.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So zeigen Sie die Definition eines DML-Triggers an  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>So zeigen Sie die Definition eines DML-Triggers an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### So zeigen Sie die Abhängigkeiten eines DML-Triggers an  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>So zeigen Sie die Abhängigkeiten eines DML-Triggers an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### So zeigen Sie Informationen zu DML-Triggern in der Datenbank an  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>So zeigen Sie Informationen zu DML-Triggern in der Datenbank an  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### So zeigen Sie Informationen zu Ereignissen an, die einen DML-Trigger auslösen  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>So zeigen Sie Informationen zu Ereignissen an, die einen DML-Trigger auslösen  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie eines der folgenden Beispiele, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In den Beispielen wird gezeigt, wie Sie die Ereignisse anzeigen können, die den `iuPerson`-Trigger auslösen.  
+3.  Kopieren Sie eines der folgenden Beispiele, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In den Beispielen wird gezeigt, wie Sie die Ereignisse anzeigen können, die den `iuPerson` -Trigger auslösen.  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

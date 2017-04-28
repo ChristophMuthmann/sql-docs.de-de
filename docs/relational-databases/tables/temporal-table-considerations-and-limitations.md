@@ -1,23 +1,27 @@
 ---
-title: "&#220;berlegungen und Einschr&#228;nkungen zu temporalen Tabellen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überlegungen und Einschränkungen zu temporalen Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berlegungen und Einschr&#228;nkungen zu temporalen Tabellen
+# <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Aufgrund der Eigenschaften der Systemversionsverwaltung gibt es einige Überlegungen und Einschränkungen, derer Sie sich bei der Arbeit mit temporalen Tabellen bewusst sein müssen.  
@@ -42,17 +46,17 @@ caps.handback.revision: 17
   
 -   Die Verlaufstabelle darf keine Einschränkungen aufweisen (Primärschlüssel, Fremdschlüssel, Tabellen- oder Spalteneinschränkungen).  
   
--   Indizierte Sichten, die temporale Abfragen (Abfragen, die die **FOR SYSTEM_TIME**-Klausel verwenden) überlagern, werden nicht unterstützt.  
+-   Indizierte Sichten, die temporale Abfragen (Abfragen, die die **FOR SYSTEM_TIME** -Klausel verwenden) überlagern, werden nicht unterstützt.  
   
--   Die Onlineoption (**WITH (ONLINE = ON**) hat keine Auswirkungen auf **ALTER TABLE ALTER COLUMN**, wenn es sich um eine temporale Tabelle mit Systemversionsverwaltung handelt. Die Operation ALTER COLUMN wird nicht im Modus „online“ durchgeführt. Dies gilt unabhängig vom Wert, der für die Option ONLINE festgelegt wurde.  
+-   Die Onlineoption (**WITH (ONLINE = ON**) hat keine Auswirkungen auf **ALTER TABLE ALTER COLUMN** , wenn es sich um eine temporale Tabelle mit Systemversionsverwaltung handelt. Die Operation ALTER COLUMN wird nicht im Modus „online“ durchgeführt. Dies gilt unabhängig vom Wert, der für die Option ONLINE festgelegt wurde.  
   
--   **INSERT**- und **UPDATE** -Anweisungen können nicht auf die SYSTEM_TIME-Zeitraumspalten verweisen. Jeder Versuch, Werte direkt in diese Spalten einzufügen, wird blockiert.  
+-   **INSERT** - und **UPDATE** -Anweisungen können nicht auf die SYSTEM_TIME-Zeitraumspalten verweisen. Jeder Versuch, Werte direkt in diese Spalten einzufügen, wird blockiert.  
   
--   **TRUNCATE TABLE** wird nicht unterstützt, während **SYSTEM_VERSIONING** auf **ON** gesetzt ist.  
+-   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
 -   Die direkte Änderung von Daten in einer Verlaufstabelle ist nicht zulässig.  
   
--   **ON DELETE CASCADE** und **ON UPDATE CASCADE** sind in der aktuellen Tabelle nicht zulässig. Das heißt, dass in den Fällen, wenn die temporale Tabelle als verweisende Tabelle in der Fremdschlüsselbeziehung (entspricht *parent_object_id* in sys.foreign_keys) fungiert, keine CASCADE-Optionen zulässig sind. Verwenden Sie Anwendungslogik oder AFTER-Trigger, um die Konsistenz beim Löschen in der Primärschlüsseltabelle (entspricht *referenced_object_id* in sys.foreign_keys) beizubehalten, um diese Einschränkung zu umgehen. Falls die Primärschlüsseltabelle temporal und die verweisende Tabelle nicht-temporal ist, gibt es keine entsprechende Einschränkung.  
+-   **ON DELETE CASCADE** und **ON UPDATE CASCADE** sind in der aktuellen Tabelle nicht zulässig. Das heißt, dass in den Fällen, wenn die temporale Tabelle als verweisende Tabelle in der Fremdschlüsselbeziehung (entspricht *parent_object_id* in sys.foreign_keys) fungiert, keine CASCADE-Optionen zulässig sind. Verwenden Sie Anwendungslogik oder AFTER-Trigger, um die Konsistenz beim Löschen in der Primärschlüsseltabelle (entspricht  *referenced_object_id* in sys.foreign_keys) beizubehalten, um diese Einschränkung zu umgehen. Falls die Primärschlüsseltabelle temporal und die verweisende Tabelle nicht-temporal ist, gibt es keine entsprechende Einschränkung.  
   
 -   **INSTEAD OF** -Trigger sind weder bei der aktuellen noch bei der Verlaufstabelle zulässig, um zu verhindern, dass die DML-Logik ungültig wird. **AFTER** -Trigger sind nur in der aktuellen Tabelle zulässig. In der Verlaufstabelle werden sie blockiert, um zu vermeiden, dass die DML-Logik blockiert wird.  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   Eine Verlaufstabelle kann nicht als aktuelle Tabelle in einer Kette von Verlaufstabellen konfiguriert werden.  
   
-## Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
+## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

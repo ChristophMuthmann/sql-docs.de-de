@@ -1,29 +1,33 @@
 ---
-title: "Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysieren, Migrieren, Berichten"
-  - "AMR"
+title: Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Mit dem Bericht zur Transaktionsleistungsanalyse in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie einschätzen, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern kann. Der Bericht gibt darüber hinaus an, welchen Arbeitsaufwand Sie leisten müssen, um In-Memory-OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur. Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+  Mit dem Bericht zur Transaktionsleistungsanalyse in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie einschätzen, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern kann. Der Bericht gibt darüber hinaus an, welchen Arbeitsaufwand Sie leisten müssen, um In-Memory-OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur. Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Der Bericht zur Transaktionsleistungsanalyse wird direkt gegen die Produktionsdatenbank oder eine Testdatenbank ausgeführt, deren aktive Arbeitsauslastung der Arbeitsauslastung der Produktion ähnelt.  
   
@@ -38,10 +42,10 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  Die Leistung eines Datenbanksystems hängt von verschiedenen Faktoren ab, die jedoch nicht alle durch den Transaktionsleistungssammler beobachtet und gemessen werden können. Daher gewährleistet der Transaktionsleistungsanalysebericht nicht, dass die tatsächlichen Leistungssteigerungen den ggf. getroffenen Vorhersagen entsprechen.  
   
- Der Bericht zur Transaktionsleistungsanalyse und die Migrationsratgeber werden im Rahmen von SQL Server Management Studio (SSMS) installiert, wenn Sie bei der Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **Verwaltungstools – Einfach** oder **Verwaltungstools – Erweitert** auswählen, oder wenn Sie [SQL Server Management Studio herunterladen](https://msdn.microsoft.com/library/mt238290.aspx).  
+ Der Bericht zur Transaktionsleistungsanalyse und die Migrationsratgeber werden im Rahmen von SQL Server Management Studio (SSMS) installiert, wenn Sie bei der Installation von ****  Verwaltungstools – Einfach **oder** Verwaltungstools – Erweitert [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]auswählen, oder wenn Sie [SQL Server Management Studio herunterladen](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## Berichte zur Transaktionsleistungsanalyse  
- Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte** und **Übersicht der Transaktionsleistungsanalyse** auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  
+## <a name="transaction-performance-analysis-reports"></a>Berichte zur Transaktionsleistungsanalyse  
+ Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte**und **Übersicht der Transaktionsleistungsanalyse**auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  
   
  Der Detailbericht für eine Tabelle umfasst drei Abschnitte:  
   
@@ -97,14 +101,14 @@ caps.handback.revision: 39
   
  Verwenden Sie den Ratgeber für native Kompilierung, um Details zum Konvertieren einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur anzuzeigen.  
   
-## Prüflisten für die In-Memory-OLTP-Migration erstellen  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>Prüflisten für die In-Memory-OLTP-Migration erstellen  
  Prüflisten für die Migration identifizieren alle Funktionen einer Tabelle oder gespeicherten Prozedur, die nicht mit speicheroptimierten Tabellen oder nativ kompilierten gespeicherten Prozeduren unterstützt werden. Die Speicheroptimierung und der native Kompilierungsratgeber können eine Prüfliste für eine einzelne datenträgerbasierte Tabelle oder mit T-SQL interpretierte gespeicherte Prozedur. Es besteht außerdem die Möglichkeit, Prüflisten für die Migration mehrerer Tabellen und gespeicherter Prozeduren in einer Datenbank zu generieren.  
   
  Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Migrationsprüfliste mithilfe des Befehls **Prüflisten für die Migration zum In-Memory-OLTP erstellen** oder mithilfe von PowerShell generieren.  
   
  **So generieren Sie eine Migrationsprüfliste über die Benutzeroberfläche**  
   
-1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf eine Datenbank, die nicht die Systemdatenbank ist. Klicken Sie auf **Aufgaben** und anschließend auf **Prüflisten für die Migration zum In-Memory-OLTP erstellen**.  
+1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf eine Datenbank, die nicht die Systemdatenbank ist. Klicken Sie auf **Aufgaben**und anschließend auf **Prüflisten für die Migration zum In-Memory-OLTP erstellen**.  
   
 2.  Klicken Sie im Dialogfeld „Prüflisten für die Migration zum In-Memory-OLTP erstellen“ auf „Weiter“, um zur Seite **Optionen für die Prüflistenerstellung konfigurieren** zu navigieren. Führen Sie auf dieser Seite die folgenden Aktionen aus.  
   
@@ -112,11 +116,11 @@ caps.handback.revision: 39
   
     2.  Überprüfen Sie, ob **Prüflisten für bestimmte Tabellen und gespeicherte Prozeduren erstellen** ausgewählt ist.  
   
-    3.  Erweitern Sie im Auswahlbereich die Knoten **Tabelle** und **Gespeicherte Prozedur**.  
+    3.  Erweitern Sie im Auswahlbereich die Knoten **Tabelle** und **Gespeicherte Prozedur** .  
   
     4.  Wählen Sie einige Objekte im Auswahlbereich aus.  
   
-3.  Klicken Sie auf **Weiter**, und bestätigen Sie, dass die Liste der Aufgaben Ihren Einstellungen auf der Seite **Optionen für die Prüflistenerstellung konfigurieren** entspricht.  
+3.  Klicken Sie auf **Weiter** , und bestätigen Sie, dass die Liste der Aufgaben Ihren Einstellungen auf der Seite **Optionen für die Prüflistenerstellung konfigurieren** entspricht.  
   
 4.  Klicken Sie auf **Fertig stellen**, und bestätigen Sie, dass die Migrationsprüflistenberichte nur für die von Ihnen ausgewählten Objekte generiert wurden.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 39
   
  **So generieren Sie eine Migrationsprüfliste mithilfe von SQL Server PowerShell**  
   
-1.  Klicken Sie im **Objekt-Explorer** auf eine Datenbank und anschließend auf **PowerShell starten**. Überprüfen Sie, ob die folgende Eingabeaufforderung angezeigt wird.  
+1.  Klicken Sie im **Objekt-Explorer**auf eine Datenbank und anschließend auf **PowerShell starten**. Überprüfen Sie, ob die folgende Eingabeaufforderung angezeigt wird.  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   Ein Migrationsprüflistenbericht für <Objekt_Name> ist der einzige Bericht an dem von „folder_path2“ angegebenen Speicherort.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

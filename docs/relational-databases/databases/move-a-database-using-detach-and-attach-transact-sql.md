@@ -1,37 +1,41 @@
 ---
-title: "Verschieben einer Datenbank durch Trennen und Anf&#252;gen (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbankanfügung [SQL Server]"
-  - "Verschieben von Datenbanken [SQL Server]"
-  - "Datenbanktrennung [SQL Server]"
-  - "Versetzen von Datenbanken [SQL Server]"
-  - "Trennen von Datenbanken [SQL Server]"
-  - "Anfügen von Datenbanken [SQL Server]"
+title: "Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- moving databases [SQL Server]
+- database detaching [SQL Server]
+- relocating databases [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4604a9d4da9360607e31d31b3f160bc0bff2eac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verschieben einer Datenbank durch Trennen und Anf&#252;gen (Transact-SQL)
-  In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
+  In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
->  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
+>  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
   
-## Verfahren  
+## <a name="procedure"></a>Verfahren  
   
-#### So verschieben Sie eine Datenbank durch Trennen und Anfügen  
+#### <a name="to-move-a-database-by-using-detach-and-attach"></a>So verschieben Sie eine Datenbank durch Trennen und Anfügen  
   
 1.  Trennen Sie die Datenbank. Weitere Informationen finden Sie unter [Trennen einer Datenbank](../../relational-databases/databases/detach-a-database.md).  
   
@@ -47,10 +51,10 @@ caps.handback.revision: 47
   
 3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Kopie der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank mit dem Namen `MyAdventureWorks`erstellt. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einem Abfrage-Editorfenster ausgeführt, das mit der Serverinstanz verbunden ist, an die es angefügt ist.  
   
-1.  Führen Sie die folgenden [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Anweisungen aus, um die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank zu trennen:  
+1.  Führen Sie die folgenden [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Anweisungen aus, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Datenbank zu trennen:  
   
     ```  
     USE master;  
@@ -80,7 +84,7 @@ caps.handback.revision: 47
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ist eine neu angefügte Datenbank nicht sofort im Objekt-Explorer sichtbar. Um die Datenbank anzuzeigen, klicken Sie im Objekt-Explorer im Menü **Ansicht** auf **Aktualisieren**. Wenn der **Datenbanken** -Knoten im Objekt-Explorer erweitert wird, wird nun die neu angefügte Datenbank in der Liste der Datenbanken angezeigt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

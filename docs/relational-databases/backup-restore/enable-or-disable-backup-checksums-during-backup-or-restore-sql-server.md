@@ -1,26 +1,30 @@
 ---
-title: "Aktivieren oder deaktivieren von Sicherungspr&#252;fsummen w&#228;hrend der Sicherung oder Wiederherstellung (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherungsprüfsummen [SQL Server]"
-  - "Deaktivieren von Prüfsummen"
-  - "Prüfsummen [SQL Server]"
+title: "Aktivieren oder Deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup checksums [SQL Server]
+- disabling checksums
+- checksums [SQL Server]
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4b8ac7919f5f6fb191a5636e119e16abce782428
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aktivieren oder deaktivieren von Sicherungspr&#252;fsummen w&#228;hrend der Sicherung oder Wiederherstellung (SQL Server)
+# <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Aktivieren oder deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie Sicherungsprüfsummen aktivieren oder deaktivieren, wenn Sie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]sichern oder wiederherstellen.  
@@ -54,7 +58,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So aktivieren oder deaktivieren Sie Prüfsummen bei einem Sicherungsvorgang  
+#### <a name="to-enable-or-disable-checksums-during-a-backup-operation"></a>So aktivieren oder deaktivieren Sie Prüfsummen bei einem Sicherungsvorgang  
   
 1.  Führen Sie die Schritte aus, [um eine Datenbanksicherung zu erstellen](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So aktivieren oder deaktivieren Sie Sicherungsprüfsummen bei einem Sicherungsvorgang  
+#### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>So aktivieren oder deaktivieren Sie Sicherungsprüfsummen bei einem Sicherungsvorgang  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -77,13 +81,13 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### So aktivieren oder deaktivieren Sie Sicherungsprüfsummen bei einem Wiederherstellungsvorgang  
+#### <a name="to-enable-or-disable-backup-checksum-for-a-restore-operation"></a>So aktivieren oder deaktivieren Sie Sicherungsprüfsummen bei einem Wiederherstellungsvorgang  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie die Option WITH CHECKSUM an, um die Sicherungsprüfsummen in einer [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) -Anweisung zu aktivieren. Dies ist das Standardverhalten bei einer komprimierten Sicherung. Geben Sie die Option WITH NO_CHECKSUM an, um Sicherungsprüfsummen zu deaktivieren. Dies ist das Standardverhalten, außer bei einer komprimierten Sicherung. Im folgenden Beispiel wird angegeben, dass Sicherungsprüfsummen ausgeführt werden.  
+3.  Geben Sie die Option WITH CHECKSUM an, um die Sicherungsprüfsummen in einer [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung zu aktivieren. Dies ist das Standardverhalten bei einer komprimierten Sicherung. Geben Sie die Option WITH NO_CHECKSUM an, um Sicherungsprüfsummen zu deaktivieren. Dies ist das Standardverhalten, außer bei einer komprimierten Sicherung. Im folgenden Beispiel wird angegeben, dass Sicherungsprüfsummen ausgeführt werden.  
   
 ```tsql  
 RESTORE DATABASE AdventureWorks2012   
@@ -95,15 +99,15 @@ GO
 > [!WARNING]  
 >  Wenn Sie ausdrücklich CHECKSUM für einen Wiederherstellungsvorgang anfordern und die Sicherung Sicherungsprüfsummen enthält, werden sowohl die Sicherungsprüfsummen als auch die Seitenprüfsummen wie beim Standardfall überprüft. Wenn allerdings im Sicherungssatz keine Sicherungsprüfsummen vorhanden sind, wird vom Wiederherstellungsvorgang eine entsprechende Fehlermeldung ausgelöst.  
   
-## Siehe auch  
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
+ [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+ [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
   

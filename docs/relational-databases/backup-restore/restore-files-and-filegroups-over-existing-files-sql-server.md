@@ -1,30 +1,34 @@
 ---
-title: "Wiederherstellen von Dateien und Dateigruppen &#252;ber vorhandene Dateien (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wiederherstellen von Dateien [SQL Server], Themen zur Vorgehensweise"
-  - "Wiederherstellen von Dateien [SQL Server], Schritte"
-  - "Dateiwiederherstellungen [SQL Server], Themen zur Vorgehensweise"
-  - "Dateigruppen [SQL Server], wiederherstellen"
-  - "Wiederherstellen von Dateigruppen [SQL Server]"
-  - "Überschreiben von Dateigruppen"
-  - "Überschreiben von Dateien"
+title: "Wiederherstellen von Dateien und Dateigruppen über vorhandene Dateien (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
+- overwriting filegroups
+- overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen von Dateien und Dateigruppen &#252;ber vorhandene Dateien (SQL Server)
+# <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Wiederherstellen von Dateien und Dateigruppen über vorhandene Dateien (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie Daten und Dateigruppen über vorhandene Dateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen können.  
@@ -51,7 +55,7 @@ caps.handback.revision: 29
   
 -   RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
--   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)wiederherstellen können.  
   
 -   Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -60,11 +64,11 @@ caps.handback.revision: 29
 ####  <a name="Permissions"></a> Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
- RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
+ RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur geprüft werden kann, wenn die Datenbank unbeschädigt ist und auf sie zugegriffen werden kann, was beim Ausführen von RESTORE nicht immer der Fall ist, verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So stellen Sie Dateien und Dateigruppen über vorhandene Dateien her  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>So stellen Sie Dateien und Dateigruppen über vorhandene Dateien her  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, erweitern Sie diese Instanz und dann **Datenbanken**.  
   
@@ -88,9 +92,9 @@ caps.handback.revision: 29
   
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
-    |**Restore**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Wiederherstellen**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Binary Large Object-Daten (BLOB), die im Dateisystem gespeichert werden, befinden sich in **Filestream-Daten**-Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Logischer Name der Datei**|Der logische Name der Datei.|  
@@ -102,13 +106,13 @@ caps.handback.revision: 29
   
 6.  Klicken Sie im Bereich **Seite auswählen** auf die Seite **Optionen** .  
   
-7.  Wählen Sie im Bereich **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** aus. Der Wiederherstellungsvorgang überschreibt alle vorhandenen Datenbanken und die dazugehörigen Dateien, selbst wenn bereits eine Datenbank oder Datei mit demselben Namen vorhanden ist.  
+7.  Wählen Sie im Bereich **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**aus. Der Wiederherstellungsvorgang überschreibt alle vorhandenen Datenbanken und die dazugehörigen Dateien, selbst wenn bereits eine Datenbank oder Datei mit demselben Namen vorhanden ist.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So stellen Sie Dateien und Dateigruppen über vorhandene Dateien her  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>So stellen Sie Dateien und Dateigruppen über vorhandene Dateien her  
   
 1.  Führen Sie die RESTORE DATABASE-Anweisung aus, um die Datei- und Dateigruppensicherung wiederherzustellen, und geben Sie dabei Folgendes an:  
   
@@ -138,7 +142,7 @@ caps.handback.revision: 29
          Die gegebenenfalls angewendeten Transaktionsprotokollsicherungen müssen den Zeitpunkt einschließen, zu dem die Dateien und Dateigruppen gesichert wurden.  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
- Im folgenden Beispiel werden die Dateien und Dateigruppen der `MyNwind`-Datenbank wiederhergestellt und alle vorhandenen Dateien mit demselben Namen ersetzt. Darüber hinaus werden zwei Transaktionsprotokolle angewendet, um die Datenbank zur aktuellen Zeit wiederherzustellen.  
+ Im folgenden Beispiel werden die Dateien und Dateigruppen der `MyNwind` -Datenbank wiederhergestellt und alle vorhandenen Dateien mit demselben Namen ersetzt. Darüber hinaus werden zwei Transaktionsprotokolle angewendet, um die Datenbank zur aktuellen Zeit wiederherzustellen.  
   
 ```tsql  
 USE master;  
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Wiederherstellen von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   

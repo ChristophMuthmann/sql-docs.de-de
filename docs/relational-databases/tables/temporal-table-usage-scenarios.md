@@ -1,23 +1,27 @@
 ---
-title: "Verwendungsszenarien f&#252;r temporale Tabellen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verwendungsszenarios für temporale Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwendungsszenarien f&#252;r temporale Tabellen
+# <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarien für temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Temporale Tabellen sind im Allgemeinen in Szenarien nützlich, in denen der Verlauf von Datenänderungen nachverfolgt werden muss.    
@@ -33,8 +37,8 @@ Für maßgebliche Produktivitätsvorteile empfehlen wir Ihnen, temporale Tabelle
   
 -   [Reparieren von Datenbeschädigungen auf Zeilenebene](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## Datenüberwachung  
- Verwenden Sie die temporale Systemversionsverwaltung für Tabellen, in denen wichtige Informationen gespeichert werden, für die Sie nachverfolgen müssen, was sich wann geändert hat und von wem es geändert wurde, und um Datenforensik zu einem beliebigen Zeitpunkt durchzuführen.    
+## <a name="data-audit"></a>Datenüberwachung  
+ Verwenden Sie die temporale Systemversionsverwaltung für Tabellen, in denen wichtige Informationen gespeichert werden, für die Sie nachverfolgen müssen, was sich wann geändert hat, und um Datenforensik zu einem beliebigen Zeitpunkt durchzuführen.    
 Temporale Tabellen mit Systemversionsverwaltung ermöglichen es Ihnen, Datenüberwachungsszenarien in den frühen Phasen des Entwicklungszyklus zu planen oder vorhandenen Anwendungen oder Lösungen bei Bedarf eine Datenüberwachung hinzuzufügen.  
   
  Das folgende Diagramm zeigt ein Szenario mit einer Mitarbeitertabelle (Employee) mit dem Datenbeispiel, einschließlich der Versionen für Zeilen mit aktuellen Daten (blau markiert) und mit Verlaufsdaten (grau markiert).   
@@ -42,7 +46,7 @@ Der rechte Bereich des Diagramms stellt die Zeilenversionen auf einer Zeitachse 
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### Aktivieren der Systemversionsverwaltung für eine neue Tabelle zur Datenüberwachung  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Aktivieren der Systemversionsverwaltung für eine neue Tabelle zur Datenüberwachung  
  Wenn Sie Informationen angegeben haben, für die eine Datenüberwachung durchgeführt werden soll, erstellen Sie die Datenbanktabellen als temporal mit Systemversionsverwaltung. Das folgende einfache Beispiel veranschaulicht ein Szenario mit Mitarbeiterinformationen in einer hypothetischen Personaldatenbank:  
   
 ```  
@@ -61,10 +65,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- Verschiedene Optionen zum Erstellen von temporalen Tabellen mit Systemversionsverwaltung werden unter [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md) beschrieben.  
+ Verschiedene Optionen zum Erstellen von temporalen Tabellen mit Systemversionsverwaltung werden unter [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)beschrieben.  
   
-### Aktivieren der Systemversionsverwaltung für eine vorhandene Tabelle zur Datenüberwachung  
- Wenn Sie in vorhandenen Datenbanken eine Datenüberwachung durchführen müssen, verwenden Sie ALTER TABLE, um nicht temporale Tabellen mit der Systemversionsverwaltung zu erweitern. Um zu vermeiden, dass Änderungen in Ihrer Anwendung unterbrochen werden, fügen Sie Zeitraumspalten als verborgen (HIDDEN) hinzu, wie unter [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3) (Ändern von nicht temporalen Tabelle in eine temporale Tabelle mit Systemversionsverwaltung) beschrieben. Das folgende Beispiel veranschaulicht die Aktivierung der Systemversionsverwaltung für eine vorhandene Mitarbeitertabelle in einer hypothetischen Personaldatenbank:  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Aktivieren der Systemversionsverwaltung für eine vorhandene Tabelle zur Datenüberwachung  
+ Wenn Sie in vorhandenen Datenbanken eine Datenüberwachung durchführen müssen, verwenden Sie ALTER TABLE, um nicht temporale Tabellen mit der Systemversionsverwaltung zu erweitern. Um zu vermeiden, dass Änderungen in Ihrer Anwendung unterbrochen werden, fügen Sie Zeitraumspalten als verborgen (HIDDEN) hinzu, wie unter [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)(Ändern von nicht temporalen Tabelle in eine temporale Tabelle mit Systemversionsverwaltung) beschrieben. Das folgende Beispiel veranschaulicht die Aktivierung der Systemversionsverwaltung für eine vorhandene Mitarbeitertabelle in einer hypothetischen Personaldatenbank:  
   
 ```  
 /*   
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  Nach dem Ausführen des obigen Skripts, werden alle Datenänderungen transparent in der Verlaufstabelle gesammelt.    
 In einem typischen Szenario für die Datenüberwachung fragen Sie alle Datenänderungen ab, die innerhalb eines gewünschten Zeitraums auf eine einzelne Zeile angewendet wurden. Die Standardverlaufstabelle wird mit gruppiertem B-Struktur-Zeilenspeicher erstellt, um diesen Anwendungsfall effizient zu bearbeiten.  
   
-### Durchführen der Datenanalyse  
+### <a name="performing-data-analysis"></a>Durchführen der Datenanalyse  
  Nach dem Aktivieren der Systemversionsverwaltung mithilfe einem der oben genannten Ansätze, ist die Datenüberwachung nur eine Abfrage entfernt. Die folgende Abfrage sucht nach Zeilenversionen für den Mitarbeiterdatensatz mit EmployeeID = 1000, die mindestens eine Zeit lang zwischen dem 1. Januar 2014 und dem 1. Januar 2015 (einschließlich der oberen Grenze) aktiv waren:  
   
 ```  
@@ -145,24 +149,24 @@ FROM Employee
   
 > [!TIP]  
 >  Filterbedingungen, die in temporalen Klauseln mit FOR SYSTEM_TIME angegeben werden, sind SARG-fähig (SQL Server kann den zugrunde liegenden gruppierten Index verwenden, um einen Suchvorgang statt eines Scanvorgangs auszuführen.   
-> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter in Form von \<Zeitraumspalte>  {\< | > | =, …} date_condition AT TIME ZONE 'UTC' angeben.  
+> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter in Form von \<Zeitraumspalte  {< | > | =, …} festlegen date_condition AT TIME ZONE 'UTC' angeben.  
 > Wenn Sie AT TIME ZONE auf Zeitraumspalten anwenden, führt SQL Server einen Tabellen-/Indexscanvorgang durch, der sehr teuer sein kann. Vermeiden Sie folgenden Bedingungstyp in Ihren Abfragen:  
-> \<Zeitraumspalte>  AT TIME ZONE ‘\<Ihre Zeitzone>’  >  {\< | > | =, …} date_condition.  
+> \<Zeitraumspalte>  AT ZEIT ZONE ‘\<Ihre Zeitzone>’  >  {< | > | =, …} date_condition.  
   
  Weitere Informationen finden Sie unter [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-## Zeitpunktanalyse (Zeitreise)  
+## <a name="point-in-time-analysis-time-travel"></a>Zeitpunktanalyse (Zeitreise)  
  Im Gegensatz zur Datenüberwachung, bei der der Schwerpunkt in der Regel auf Änderungen liegt, die an einem einzelnen Datensatz vorgenommen wurden, möchten Benutzer in Zeitreiseszenarien sehen, wie sich der gesamte Dataset im Verlauf der Zeit geändert hat. Zeitreisen umfassen gelegentlich mehrere verknüpfte temporale Tabellen, die sich alle in unterschiedlichem Tempo ändern, die Sie analysieren möchten:  
   
 -   Trends für wichtige Indikatoren in den Verlaufsdaten und aktuellen Daten  
   
 -   Exakte Momentaufnahme der gesamten Daten „ab“ (as of) einem beliebigen Zeitpunkt in der Vergangenheit (gestern, vor einem Monat usw.)  
   
--   Unterschiede zwischen zwei interessanten Zeitpunkten (z. B. vor einem Monat im Vergleich zu vor drei Monaten)  
+-   Unterschiede zwischen zwei interessanten Zeitpunkten (z. B. vor einem Monat im Vergleich zu vor drei Monaten)  
   
  Es gibt viele reale Szenarien, in denen eine Zeitreiseanalyse erforderlich ist. Um dieses Verwendungsszenario zu veranschaulichen, sehen Sie sich OLTP mit einem automatisch generierten Verlauf an.  
   
-### OLTP mit automatisch generiertem Datenverlauf  
+### <a name="oltp-with-auto-generated-data-history"></a>OLTP mit automatisch generiertem Datenverlauf  
  In Transaktionsverarbeitungssystemen ist es nicht ungewöhnlich, die Änderung von wichtigen Metriken im Verlauf der Zeit zu analysieren. Die Analyse des Verlaufs sollte idealerweise nicht die Leistung der OLTP-Anwendung beeinträchtigen, bei der der Zugriff auf den aktuellen Zustand der Daten mit minimaler Wartezeit und Datensperre erfolgen muss.  Temporale Tabellen mit Systemversionsverwaltung wurden so konzipiert, dass Benutzer den vollständigen Änderungsverlauf für eine spätere Analyse getrennt von den aktuellen Daten transparent behalten können, und das bei minimalen Auswirkungen auf die OLTP-Hauptarbeitsauslastung.  
 Bei hohen Transaktionsverarbeitungsarbeitsauslastungen empfehlen wir die Verwendung von [temporalen Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), sodass Sie aktuelle Daten und den vollständigen Änderungsverlauf auf dem Datenträger auf kostengünstige Weise speichern können.  
   
@@ -175,7 +179,7 @@ Bei hohen Transaktionsverarbeitungsarbeitsauslastungen empfehlen wir die Verwend
 -   Ein gruppierter Columnstore-Index bietet eine hervorragende Komprimierung, besonders in Szenarien, in denen nicht alle Spalten gleichzeitig geändert werden.  
   
  Bei temporalen Tabellen mit In-Memory OLTP ist es weniger notwendig, den gesamten Dataset im Arbeitsspeicher zu behalten. Zudem haben Sie die Möglichkeit, mühelos zwischen heißen und kalten Daten zu unterscheiden.  
-Beispiele für reale Szenarien, die gut in diese Kategorie passen, sind u. a. die Bestandsverwaltung oder der Devisenhandel.  
+Beispiele für reale Szenarien, die gut in diese Kategorie passen, sind u. a. die Bestandsverwaltung oder der Devisenhandel.  
   
  Das folgende Diagramm zeigt ein vereinfachtes Datenmodell für die Bestandsverwaltung:  
   
@@ -301,7 +305,7 @@ SELECT * FROM vw_GetProductInventoryHistory
   
  ![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")  
   
- Temporale Tabellen können in diesem Szenario verwendet werden, um andere Arten von Zeitreiseanalysen durchzuführen, z. B. Rekonstruktion des Bestandszustands ab (AS OF) einem bestimmten Zeitpunkt in der Vergangenheit oder Vergleich von Momentaufnahmen, die sich auf verschiedene Momente beziehen.  
+ Temporale Tabellen können in diesem Szenario verwendet werden, um andere Arten von Zeitreiseanalysen durchzuführen, z. B. Rekonstruktion des Bestandszustands ab (AS OF) einem bestimmten Zeitpunkt in der Vergangenheit oder Vergleich von Momentaufnahmen, die sich auf verschiedene Momente beziehen.  
   
  Für dieses Nutzungsszenario können Sie auch die Produkt- und Standorttabellen als temporale Tabellen erweitern, sodass Sie den Änderungsverlauf für UnitPrice und NumberOfEmployee später analysieren können.  
   
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## Erkennung von Anomalien  
+## <a name="anomaly-detection"></a>Erkennung von Anomalien  
  Bei der Erkennung von Anomalien (oder Ausreißererkennung) werden Elemente identifiziert, die einem erwarteten Muster oder anderen Elementen in einem Dataset nicht entsprechen.   
 Sie können temporale Tabellen mit Systemversionsverwaltung verwenden, um Anomalien zu erkennen, die in regelmäßigen Abständen oder unregelmäßig auftreten, da Sie mit temporalen Abfragen schnell bestimmte Muster auffinden können.  
 Die Form der Anomalie hängt von der Art von Daten ab, die Sie sammeln, sowie von Ihrer Geschäftslogik.  
@@ -431,8 +435,8 @@ FROM CTE
 > [!NOTE]  
 >  Dieses Beispiel wurde absichtlich vereinfacht. In den Produktionsszenarien verwenden Sie wahrscheinlich statistische Methoden, um die Proben zu ermitteln, die nicht dem allgemeinen Muster folgen.  
   
-## Langsam veränderliche Dimensionen  
- Dimensionen beim Data Warehousing enthalten i. d. R. relativ statische Daten zu Entitäten wie z. B. geografische Standorte, Kunden oder Produkte. Einige Szenarien erfordern jedoch ebenfalls das Nachverfolgen von Datenänderungen in Dimensionstabellen. Da Änderungen an Dimensionen sehr viel seltener, auf unvorhersehbare Weise und außerhalb des regulären Zeitplans für Faktentabellen auftreten, werden diese Typen von Dimensionstabellen als langsam veränderliche Dimensionen (SCD) bezeichnet.  
+## <a name="slowly-changing-dimensions"></a>Langsam veränderliche Dimensionen  
+ Dimensionen beim Data Warehousing enthalten i. d. R. relativ statische Daten zu Entitäten wie z. B. geografische Standorte, Kunden oder Produkte. Einige Szenarien erfordern jedoch ebenfalls das Nachverfolgen von Datenänderungen in Dimensionstabellen. Da Änderungen an Dimensionen sehr viel seltener, auf unvorhersehbare Weise und außerhalb des regulären Zeitplans für Faktentabellen auftreten, werden diese Typen von Dimensionstabellen als langsam veränderliche Dimensionen (SCD) bezeichnet.  
   
  Es gibt verschiedene Kategorien von langsam veränderlichen Dimensionen basierend darauf, wie der Änderungsverlauf beibehalten wird:  
   
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   Wenn Sie eine erhebliche Anzahl von Zeilen mit Verlaufsdaten in SCD-Tabellen erwarten, ziehen Sie den Einsatz eines gruppierten Columnstore-Indexes als Hauptspeicheroption für die Verlaufstabelle in Betracht. Dies reduziert den Platzbedarf für die Verlaufstabelle und beschleunigt die Durchführung von analytischen Abfragen.  
   
-## Reparieren von Datenbeschädigungen auf Zeilenebene  
+## <a name="repairing-row-level-data-corruption"></a>Reparieren von Datenbeschädigungen auf Zeilenebene  
  Sie können Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung  verwenden, um schnell einzelne Zeilen anhand eines der zuvor erfassten Zustände zu reparieren. Diese Eigenschaft von temporalen Tabellen ist sehr nützlich, wenn Sie die betroffenen Zeilen ermitteln können und/oder den Zeitpunkt der unerwünschten Datenänderung kennen, sodass Sie die Reparatur effizient und ohne die Nutzung von Sicherungen durchführen können.  
   
  Dieser Ansatz hat mehrere Vorteile:  
@@ -549,7 +553,7 @@ UPDATE Employee
   
 ```  
   
- Diese gespeicherte Prozedur übernimmt @EmployeeID und @versionNumber als Eingabeparameter. Dieses Verfahren stellt den Zeilenzustand standardmäßig auf die letzte Version des Verlaufs (@versionNumber = 1) wieder her.  
+ Diese gespeicherte Prozedur nimmt @EmployeeID und @versionNumber als Eingabeparameter. Dieses Verfahren stellt den Zeilenzustand standardmäßig auf die letzte Version des Verlaufs (@versionNumber= 1) wieder her.  
   
  Das folgende Bild zeigt den Zustand der Zeile vor und nach dem Prozeduraufruf. Das rote Rechteck markiert die aktuelle Zeilenversion, die falsch ist; das grüne Rechteck kennzeichnet die richtige Version aus dem Verlauf.  
   
@@ -561,7 +565,7 @@ EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
   
  ![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")  
   
- Diese gespeicherte Reparaturprozedur kann so definiert werden, dass anstelle einer Zeilenversion ein genauer Zeitstempel akzeptiert wird. Die Zeile wird auf eine beliebige Version wiederhergestellt, die zum angegebenen Zeitpunkt aktiv war (d. h. AS OF-Zeitpunkt).  
+ Diese gespeicherte Reparaturprozedur kann so definiert werden, dass anstelle einer Zeilenversion ein genauer Zeitstempel akzeptiert wird. Die Zeile wird auf eine beliebige Version wiederhergestellt, die zum angegebenen Zeitpunkt aktiv war (d. h. AS OF-Zeitpunkt).  
   
 ```  
 DROP PROCEDURE IF EXISTS sp_RepairEmployeeRecordAsOf;  
@@ -589,7 +593,7 @@ Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung de
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung de
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

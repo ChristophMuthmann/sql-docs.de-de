@@ -1,28 +1,32 @@
 ---
-title: "Anforderungen f&#252;r die Verwendung von speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Anforderungen für die Verwendung speicheroptimierter Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anforderungen f&#252;r die Verwendung von speicheroptimierten Tabellen
+# <a name="requirements-for-using-memory-optimized-tables"></a>Anforderungen für die Verwendung von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Informationen zum Verwenden von In-Memory-OLTP in Azure-Datenbanken finden Sie unter [Erste Schritte mit In-Memory in SQL-Datenbanken](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- Zusätzlich zu den [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)gilt für die Verwendung von In-Memory-OLTP Folgendes:  
+ Zusätzlich zu den [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)gilt für die Verwendung von In-Memory-OLTP Folgendes:  
   
 -   SQL Server 2016 SP1( oder höher), jede Edition. Für SQL Server 2014 und SQL Server 2016 RTM (vor SP1) benötigen Sie die Enterprise, Developer oder Evaluation Edition.
     - Hinweis: In-Memory-OLTP erfordert die 64-Bit-Version von SQL Server.  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      Zum Installieren der Berichtgenerierung ([Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory-OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (um In-Memory-OLTP über den Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu verwalten) gehen Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   Beim Start von SQL Server 2016 ist die Größe für speicheroptimierte Tabellen unbeschränkt. Dies gilt jedoch nicht für den verfügbaren Arbeitsspeicher. Die Gesamtgröße aller dauerhaften Tabellen in einer Datenbank in SQL Server 2014 sollte im Arbeitsspeicher maximal 250 GB für SQL Server 2014-Datenbanken betragen. Weitere Informationen finden Sie unter [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Hinweis: Ab SQL Server 2016 SP1 unterstützen Standard und Express Edition In-Memory OLTP, aber sie bedingen Kontingente für die Menge an Arbeitsspeicher, die Sie für speicheroptimierte Tabellen in einer bestimmten Datenbank verwenden können. In Standard Edition sind dies 32 GB pro Datenbank. In Express Edition sind dies 352 MB pro Datenbank. 
@@ -52,3 +56,4 @@ caps.handback.revision: 65
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

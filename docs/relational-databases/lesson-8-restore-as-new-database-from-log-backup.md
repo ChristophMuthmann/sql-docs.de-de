@@ -1,25 +1,29 @@
 ---
-title: "Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung | Microsoft-Dokumentation'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung
+# <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung
 In dieser Lektion stellen Sie eine AdventureWorks2014-Datenbank als eine neue Datenbank aus einer Sicherung einer Protokolldatei für Datei-Momentaufnahmen wieder her.  
   
 In diesem Szenario führen Sie eine Wiederherstellung auf eine SQL Server-Instanz auf einem anderen virtuellen Computer für Geschäftsanalysen und Berichterstellung aus. Die Wiederherstellung auf eine andere Instanz auf einem anderen virtuellen Computer verlagert die Arbeitsauslastung auf einen virtuellen Computer, der für diesen Zweck dediziert und der Größe angepasst ist und entfernt dessen Ressourcenanforderungen vom Transaktionssystem.  
@@ -33,7 +37,7 @@ Befolgen Sie folgende Schritte, um eine Datenbank auf eine neue Datenbank einer 
 2.  Öffnen Sie ein neues Abfragefenster, und stellen Sie eine Verbinden mit der SQL Server 2016-Instanz des Datenbankmoduls auf einem virtuellen Azure-Computer her.  
   
     > [!NOTE]  
-    > Wenn es sich hierbei um einen anderen virtuellen Azure-Computer handelt, als denjenigen, den Sie für die vorherigen Lektionen verwendet haben, stellen Sie sicher, dass Sie die Schritte in [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) befolgt haben. Wenn Sie eine Wiederherstellung in einen anderen Container durchführen möchten, befolgen Sie die Schritte in [Lektion 1: Erstellen einer Richtlinie und eine Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) und [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) für den neuen Container.  
+    > Wenn es sich hierbei um einen anderen virtuellen Azure-Computer handelt, als denjenigen, den Sie für die vorherigen Lektionen verwendet haben, stellen Sie sicher, dass Sie die Schritte in [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)befolgt haben. Wenn Sie eine Wiederherstellung in einen anderen Container durchführen möchten, befolgen Sie die Schritte in [Lektion 1: Erstellen einer Richtlinie und eine Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) und [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) für den neuen Container.  
   
 3.  Kopieren Sie das folgende Transact-SQL-Skript in das Abfragefenster. Wählen Sie die Protokollsicherungsdatei aus, die Sie verwenden möchten. Ändern Sie die URL gemäß Ihres Speicherkontonamens und des Containers, den Sie in Lektion 1 angegeben haben, geben Sie den Namen der Protokollsicherungsdatei an, und führen Sie dieses Skript anschließend aus.  
   
@@ -55,9 +59,10 @@ Befolgen Sie folgende Schritte, um eine Datenbank auf eine neue Datenbank einer 
   
 6.  Erweitern Sie „Container“, erweitern Sie den Container, den Sie in Lektion 1 erstellt haben (aktualisieren Sie, falls notwendig), und überprüfen Sie, ob die neuen Daten- und Protokolldateien zusammen mit den Blobs der vorangegangenen Lektionen im Container erscheinen.  
   
-    ![Azure container showing the data and log files for the new database](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure container showing the data and log files for the new database")  
+    ![Azure-Container zeigt die Daten- und Protokolldateien für die neue Datenbank](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure-Container zeigt die Daten- und Protokolldateien für die neue Datenbank")  
   
 [Lektion 9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
   
   
   
+

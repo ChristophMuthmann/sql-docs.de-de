@@ -1,28 +1,32 @@
 ---
-title: "master-Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "master-Datenbank [SQL Server], Informationen zu"
-  - "master-Datenbank [SQL Server]"
+title: Master-Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# master-Datenbank
-  In der **master**-Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
+# <a name="master-database"></a>master-Datenbank
+  In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
   
-## physische Eigenschaften der master-Datenbank  
+## <a name="physical-properties-of-master"></a>physische Eigenschaften der master-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **master** -Daten und -Protokolldateien. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
   
 |File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
@@ -30,9 +34,9 @@ caps.handback.revision: 50
 |Primäre Daten|master|master.mdf|Automatische Vergrößerung um 10 Prozent, bis der Speicherplatz auf dem Datenträger erschöpft ist.|  
 |Log|mastlog|mastlog.ldf|Automatische Vergrößerung um 10 %, bis der Maximalwert von 2 TB erreicht wird.|  
   
- Informationen zum Verschieben der **master**-Daten und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md).  
+ Informationen zum Verschieben der **master** -Daten und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md).  
   
-### Datenbankoptionen  
+### <a name="database-options"></a>Datenbankoptionen  
  Die folgende Tabelle zeigt den Standardwert jeder Datenbankoption in der **master** -Datenbank und gibt an, ob die Option geändert werden kann. Zum Anzeigen der aktuellen Einstellungen dieser Optionen verwenden Sie die Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Einschränkungen  
+## <a name="restrictions"></a>Einschränkungen  
  Die folgenden Operationen können an der **master** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Versetzen der Datenbank oder der primären Dateigruppe in den READ_ONLY-Modus.  
   
-## Empfehlungen  
+## <a name="recommendations"></a>Empfehlungen  
  Beim Arbeiten mit der **master** -Datenbank sollten Sie die folgenden Empfehlungen beachten:  
   
 -   Stellen Sie sicher, dass Sie jederzeit über eine aktuelle Sicherungskopie der **master** -Datenbank verfügen.  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   Legen Sie die Option TRUSTWORTHY für die **master** -Datenbank nicht auf ON fest.  
   
-## Erforderliche Aktionen, wenn "master" nicht mehr verwendbar ist  
+## <a name="what-to-do-if-master-becomes-unusable"></a>Erforderliche Aktionen, wenn "master" nicht mehr verwendbar ist  
  Wenn **master** nicht mehr verwendet werden kann, gibt es mehrere Methoden, um sie in einen verwendbaren Zustand zurückzuversetzen:  
   
 -   Wiederherstellen der **master** -Datenbank von einer aktuellen Datenbanksicherung.  
@@ -127,9 +131,9 @@ caps.handback.revision: 50
      Falls ernsthafte Schäden an der **master** -Datenbank das Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhindern, müssen Sie die **master**-Datenbank neu erstellen. Weitere Informationen finden Sie unter [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
-    >  Beim Neuerstellen der **master**-Datenbank werden alle Systemdatenbanken neu erstellt.  
+    >  Beim Neuerstellen der **master** -Datenbank werden alle Systemdatenbanken neu erstellt.  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)  
   
   
+

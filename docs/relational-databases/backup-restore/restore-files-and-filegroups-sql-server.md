@@ -1,29 +1,33 @@
 ---
-title: "Wiederherstellen von Dateien und Dateigruppen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorefilesandfilegrps.general.f1"
-  - "sql13.swb.bselectfilegrpsfiles.f1"
-  - "sql13.swb.restorefilesandfilegrps.options.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], Wiederherstellen von Dateien und Dateigruppen"
-  - "Wiederherstellen [SQL Server], Dateien"
+title: Wiederherstellen von Dateien und Dateigruppen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorefilesandfilegrps.general.f1
+- sql13.swb.bselectfilegrpsfiles.f1
+- sql13.swb.restorefilesandfilegrps.options.f1
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], restoring files and filegroups
+- restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen von Dateien und Dateigruppen (SQL Server)
+# <a name="restore-files-and-filegroups-sql-server"></a>Wiederherstellen von Dateien und Dateigruppen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie Daten und Dateigruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen können.  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
 -   Die Datei muss im Rahmen des Modells der einfachen Wiederherstellung zu einer schreibgeschützten Dateigruppe gehören.  
   
--   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Bevor Sie mit dem vollständigen oder dem massenprotokollierten Wiederherstellungsmodell Dateien wiederherstellen können, müssen Sie das Protokoll der aktiven Transaktion (das sog. Protokollfragment) sichern. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)wiederherstellen können.  
   
 -   Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So stellen Sie Dateien und Dateigruppen wieder her  
+#### <a name="to-restore-files-and-filegroups"></a>So stellen Sie Dateien und Dateigruppen wieder her  
   
 1.  Stellen Sie eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und klicken Sie danach im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
@@ -93,9 +97,9 @@ caps.handback.revision: 25
   
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
-    |**Restore**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Wiederherstellen**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. BLOB-Daten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten**-Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Logischer Name der Datei**|Der logische Name der Datei.|  
@@ -123,7 +127,7 @@ caps.handback.revision: 25
      Diese Option ist insbesondere dann hilfreich, wenn Sie Bänder für verschiedene Mediensätze wechseln müssen, beispielsweise wenn der Server nur ein Bandgerät besitzt.  
   
      **Zugriff auf die wiederhergestellte Datenbank einschränken**  
-     Gestattet nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
+     Gestattet nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
   
      Das Auswählen dieser Option entspricht der Verwendung der Option RESTRICTED_USER in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE-Anweisung.  
   
@@ -132,7 +136,7 @@ caps.handback.revision: 25
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
     |**Originaldateiname**|Der vollständige Pfad einer Quellsicherungsdatei.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. BLOB-Daten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten**-Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Wiederherstellen als**|Der vollständige Pfad der wiederherzustellenden Datenbankdatei. Um eine neue Wiederherstellungsdatei anzugeben, klicken Sie auf das Textfeld, und bearbeiten Sie den vorgeschlagenen Pfad und Dateinamen. Das Ändern des Pfads oder des Dateinamens in der Spalte **Wiederherstellen als** entspricht der Option MOVE in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE-Anweisung.|  
   
 11. Die Optionen im Bereich **Wiederherstellungsstatus** bestimmen den Status der Datenbank nach dem Wiederherstellungsvorgang.  
@@ -155,7 +159,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So stellen Sie Dateien und Dateigruppen wieder her  
+#### <a name="to-restore-files-and-filegroups"></a>So stellen Sie Dateien und Dateigruppen wieder her  
   
 1.  Führen Sie die RESTORE DATABASE-Anweisung aus, um die Datei- und Dateigruppensicherung wiederherzustellen, und geben Sie dabei Folgendes an:  
   
@@ -180,7 +184,7 @@ caps.handback.revision: 25
          Die gegebenenfalls angewendeten Transaktionsprotokollsicherungen müssen den Zeitpunkt, zu dem die Dateien und Dateigruppen gesichert wurden, bis hin zum Protokollende abdecken (es sei denn, ALLE Datenbankdateien werden wiederhergestellt).  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
- In diesem Beispiel werden die Dateien und Dateigruppen der `MyDatabase`-Datenbank wiederhergestellt. Zur Wiederherstellung der Datenbank zur aktuellen Zeit werden zwei Transaktionsprotokolle übernommen.  
+ In diesem Beispiel werden die Dateien und Dateigruppen der `MyDatabase` -Datenbank wiederhergestellt. Zur Wiederherstellung der Datenbank zur aktuellen Zeit werden zwei Transaktionsprotokolle übernommen.  
   
 ```tsql  
 USE master;  
@@ -206,12 +210,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

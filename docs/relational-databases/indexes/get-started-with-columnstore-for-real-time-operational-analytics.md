@@ -1,28 +1,32 @@
 ---
-title: "Erste Schritte mit Columnstore f&#252;r operative Echtzeitanalyse | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Erste Schritte mit Columnstore für operative Echtzeitanalyse | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erste Schritte mit Columnstore f&#252;r operative Echtzeitanalyse
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für operative Echtzeitanalyse
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Mit SQL Server 2016 wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Arbeitsauslastungen zugleich auf den gleichen Datenbanktabellen auszuführen. Abgesehen vom Ausführen von Analysen in Echtzeit kann auch das Erfordernis für ETL und ein Data Warehouse entfallen.  
   
-## Grundlagen der operativen Echtzeitanalyse  
+## <a name="real-time-operational-analytics-explained"></a>Grundlagen der operativen Echtzeitanalyse  
  Bisher verwendeten Unternehmen separate Systeme für betriebsbedingte (d.h. OLTP) und analysebedingte Arbeitsauslastungen. Bei derartigen Systemen verschieben ETL-Aufträge (Extrahieren, Transformieren, Laden) die Daten aus dem Betriebs- in den Analysespeicher. Die Analysedaten sind normalerweise in einem Data Warehouse oder Data Mart gespeichert, die dediziert für die Ausführung von Analyseabfragen verwendet werden. Diese Lösung hat sich zwar als Standard etabliert, sie sieht sich jedoch diesen drei Herausforderungen gegenüber:  
   
 -   **Komplexität.** Für das Implementieren von ETL kann Codeerstellung in erheblichem Umfang erforderlich werden, insbesondere, um nur geänderte Zeilen zu laden. Es kann schwierig sein, die geänderten Zeilen zu bestimmen.  
@@ -31,7 +35,7 @@ caps.handback.revision: 39
   
 -   **Datenlatenz.** Die Implementierung von ETL bringt eine zeitliche Verzögerung mit sich, die durch die Ausführung der Analyse bedingt ist. Wenn der ETL-Auftrag beispielsweise am Ende jedes Geschäftstags ausgeführt wird, werden die Analyseabfragen auf Daten ausgeführt, die mindestens einen Tag alt sind. Für viele Unternehmen ist diese Verzögerung nicht akzeptabel, da das Unternehmen von der Analyse der Daten in Echtzeit abhängig ist. Beispielsweise ist für die Erkennung von Betrugsversuchen eine Echtzeitanalyse der Betriebsdaten erforderlich.  
   
- ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![Übersicht über operative Echtzeitanalysen](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
   
  Die operative Echtzeitanalyse stellt eine Lösung für diese Herausforderungen bereit.   
         Wenn Analyse- und OLTP-Arbeitsauslastungen auf der gleichen zugrundeliegenden Tabelle ausgeführt werden, tritt keine Zeitverzögerung ein.   In Szenarien, die Echtzeitanalyse verwenden können, lassen sich Kosten und Komplexität stark verringern, da die Notwendigkeit von ETL sowie von Erwerb und Wartung eines separaten Data Warehouses entfallen.  
@@ -41,7 +45,7 @@ caps.handback.revision: 39
   
  Echtzeitanalysen verwenden einen aktualisierbaren Columnstore-Index in einer Rowstore-Tabelle.  Der Columnstore-Index unterhält eine Kopie der Daten, sodass die OLTP- und Analysearbeitsauslastungen auf separaten Kopien der Daten ausgeführt werden. Dadurch wird die Leistungseinbuße durch die gleichzeitige Ausführung beider Arbeitsauslastungen minimiert.  SQL Server verwaltet Indexänderungen automatisch, sodass OLTP-Änderungen jederzeit für die Analyse auf dem aktuellen Stand verfügbar sind. Mit diesem Entwurf ist es möglich und praktikabel, die Analyse in Echtzeit auf aktuellen Daten auszuführen. Dies funktioniert sowohl für datenträgerbasierte als auch für speicheroptimierte Tabellen.  
   
-## Beispiel für den Einstieg  
+## <a name="get-started-example"></a>Beispiel für den Einstieg  
  So steigen Sie in die Echtzeitanalyse ein:  
   
 1.  Bestimmen Sie die Tabellen in Ihrem operationalen Schema, die Daten enthalten, die für die Analyse benötigt werden.  
@@ -85,7 +89,7 @@ caps.handback.revision: 39
   
  Sie können jetzt operative Echtzeitanalyse ausführen, ohne Änderungen an Ihrer Anwendung vornehmen zu müssen.  Die Analyseabfragen werden auf dem Columnstore-Index ausgeführt, während die OLTP-Operationen auch weiterhin auf den OLTP-B-Strukturindizes ausgeführt werden. Die OLTP-Arbeitsauslastungen werden auch weiterhin mit hoher Leistung ausgeführt, bringen jedoch einen gewissen Mehraufwand für die Wartung des Columnstore-Index mit sich. Informationen über Leistungsoptimierungen finden Sie im nächsten Abschnitt.  
   
-## Blogbeiträge  
+## <a name="blog-posts"></a>Blogbeiträge  
  Aus den Blogbeiträgen von Sunil Agarwal können Sie mehr über die operative Echtzeitanalyse erfahren.  Möglicherweise sind die Abschnitte zu Leistungstipps leichter zu verstehen, wenn Sie sich zuerst die Blogbeiträge ansehen.  
   
 -   [Business Case für operative Echtzeitanalyse (Business case for real-time operational analytics)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
@@ -108,7 +112,7 @@ caps.handback.revision: 39
   
 -   [Columnstore-Index und die Zusammenführungsrichtlinie für Zeilengruppen (Columnstore index and the merge policy for rowgroups)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## Leistungstipp Nr. 1: Verwenden von gefilterten Indizes zum Verbessern der Abfrageleistung  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Leistungstipp Nr. 1: Verwenden von gefilterten Indizes zum Verbessern der Abfrageleistung  
  Das Ausführen der operativen Echtzeitanalyse kann die Leistung der OLTP-Arbeitsauslastung beeinträchtigen.  Dieser Einfluss sollte so klein wie möglich sein. Dieses Beispiel zeigt, wie gefilterte Indizes verwendet werden können, um den Einfluss eines nicht gruppierten Columnstore-Index auf die transaktionale Arbeitsauslastung zu minimieren, während zugleich Echtzeitanalyse bereitgestellt wird.  
   
  Um den Mehraufwand für die Wartung eines nicht gruppierten Columnstore-Index für eine Betriebsarbeitsauslastung zu minimieren, können Sie eine gefilterte Bedingung verwenden, um einen nicht gruppierten Columnstore-Index nur für die *warmen* oder sich langsam ändernden Daten zu erstellen. Beispielsweise können Sie in einer Anwendung zur Bestellungsverwaltung einen nicht gruppierten Columnstore-Index für die bereits versendeten Bestellungen erstellen. Nach dem Versand ändert sich eine Bestellung in der Regel nicht mehr, daher können diese Daten als „warm“ angesehen werden. Bei einem gefilterten Index erfordern die Daten im nicht gruppierten Columnstore-Index weniger Aktualisierungen, wodurch sich der Einfluss auf die Transaktionsarbeitsauslastung verringert.  
@@ -118,10 +122,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Ein gefilterter nicht gruppierter Columnstore-Index wird nur für datenträgerbasierte Tabellen unterstützt. Für speicheroptimierte Tabellen wird er nicht unterstützt  
   
-### Beispiel A: Zugriff auf „heiße“ Daten über einen B-Strukturindex, auf „warme“ Daten über einen Columnstore-Index  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Beispiel A: Zugriff auf „heiße“ Daten über einen B-Strukturindex, auf „warme“ Daten über einen Columnstore-Index  
  In diesem Beispiel wird eine gefilterte Bedingung (accountkey > 0) verwendet, um festzulegen, welche Zeilen im Columnstore-Index enthalten sind. Dies hat den Zweck, die Filterbedingung und die nachfolgenden Abfragen so zu gestalten, dass auf sich häufig ändernde „heiße“ Daten über den B-Strukturindex, auf die stabileren „warmen“ Daten über den Columnstore-Index zugegriffen wird.  
   
- ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![Kombinierte Indizes für „warme“ und „heiße“ Daten](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
   
 > [!NOTE]  
 >  Der Abfrageoptimierer zieht den Columnstore-Index für den Abfrageplan in Betracht, wählt ihn aber nicht in jedem Fall. Wenn der Abfrageoptimierer den gefilterten Columnstore-Index wählt, kombiniert er transparent die Zeilen aus dem Columnstore-Index mit den Zeilen, die der Filterbedingung nicht entsprechen, um Echtzeitanalyse zu ermöglichen. Dies unterscheidet sich von einem gewöhnlichen nicht gruppierten gefilterten Index, der nur in Abfragen verwendet werden kann, die sich auf die im Index vorhandenen Zeilen beschränken.  
@@ -164,14 +168,14 @@ Group By customername
   
  Die Analyseabfrage wird mit dem folgenden Abfrageplan ausgeführt. Es ist zu sehen, dass der Zugriff auf die Zeilen, die der Filterbedingung nicht entsprechen, über den gruppierten B-Strukturindex erfolgt.  
   
- ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![Abfrageplan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   
- Weitere Informationen zu [gefilterten, nicht gruppierten Columnstore-Indizes](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/) finden Sie im Blog.  
+ Weitere Informationen zu [gefilterten, nicht gruppierten Columnstore-Indizes](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)finden Sie im Blog.  
   
-## Leistungstipp Nr. 2: Auslagern der Analyse auf eine schreibgeschützte sekundäre Always On-Datenbank  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Leistungstipp Nr. 2: Auslagern der Analyse auf eine schreibgeschützte sekundäre Always On-Datenbank  
  Zwar kann der Wartungsaufwand für den Columnstore-Index durch Verwendung eines gefilterten Columnstore-Index minimiert werden, die Analyseabfragen können jedoch trotzdem erhebliche Computerressoucen (CPU, E/A, Arbeitsspeicher) in Anspruch nehmen, was sich negativ auf die für die Betriebsarbeitsauslastung verfügbare Leistung auswirkt. Für die meisten unternehmenswichtigen Arbeitsauslastungen ergibt sich als unsere Empfehlung die Always On-Konfiguration. In dieser Konfiguration kann der Einfluss der Ausführung der Analyse beseitigt werden, indem sie in eine schreibgeschützte sekundäre Datenbank ausgelagert wird.  
   
-## Leistungstipp Nr. 3: Reduzierung der Indexfragmentierung durch Speicherung der „heißen“ Daten in Deltazeilengruppen  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Leistungstipp Nr. 3: Reduzierung der Indexfragmentierung durch Speicherung der „heißen“ Daten in Deltazeilengruppen  
  Tabellen mit Columnstore-Index können stark fragmentiert werden (in Form von gelöschten Zeilen) , wenn durch die Arbeitsauslastung Zeilen aktualisiert/gelöscht werden, die komprimiert wurden. Ein fragmentierter Columnstore-Index führt zu einer ineffizienten Auslastung von Arbeitsspeicher/Speicherplatz. Neben dem ineffizienten Ressourceneinsatz wirkt er sich auch negativ auf die Analyseabfrageleistung aus, da zusätzliche E/A-Vorgänge anfallen und es erforderlich ist, die gelöschten Zeilen aus dem Resultset zu filtern.  
   
  Die gelöschten Zeilen werden physisch erst beim Ausführen der Indexdefragmentierung mit dem Befehl NEU ORGANISIEREN oder durch Neuerstellung des Columnstore-Index für die gesamte Tabelle oder die betroffene(n) Partition(en) entfernt. Sowohl NEU ORGANISIEREN als auch NEU ERSTELLEN sind aufwändige Vorgänge, die Ressourcen beanspruchen, die andernfalls für die Arbeitsauslastung zur Verfügung stünden. Ferner kann ein zu frühes Komprimieren von Zeilen dazu führen, dass sie aufgrund von Aktualisierungen mehrfach erneut komprimiert werden müssen, was einen unnützen Mehraufwand für die Komprimierung verursacht.  
@@ -198,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  Hier finden Sie die empfohlenen bewährten Methoden  
   
--   **Einfüge-/Abfragearbeitsauslastung:** Wenn Ihre Arbeitsauslastung in erster Linie Daten einfügt und sie abfragt, stellt der Standardwert 0 für COMPRESSION_DELAY die empfohlene Option dar. Die neu eingefügten Zeilen werden komprimiert, sobald eine Million Zeilen in eine einzelne Deltazeilengruppe eingefügt wurden.  
+-   **Einfüge-/Abfragearbeitsauslastung:**Wenn Ihre Arbeitsauslastung in erster Linie Daten einfügt und sie abfragt, stellt der Standardwert 0 für COMPRESSION_DELAY die empfohlene Option dar. Die neu eingefügten Zeilen werden komprimiert, sobald eine Million Zeilen in eine einzelne Deltazeilengruppe eingefügt wurden.  
     Beispiele für eine solche Arbeitsauslastung sind (a) traditionelle DW-Arbeitsauslastung (b) Klickdatenstrom-Analyse, bei der das Klickmuster in einer Webanwendung analysiert werden soll.  
   
 -   **OLTP-Arbeitsauslastung:** Wenn die Arbeitsauslastung stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d.h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
@@ -218,12 +222,12 @@ ORDER BY created_time DESC
   
  Wenn die Anzahl der gelöschten Zeilen in komprimierten Zeilengruppen mehr als 20 % beträgt, mit einer Häufung in älteren Zeilengruppen mit weniger als 5 % Variation (die als „kalte“ Zeilengruppen bezeichnet werden), legen Sie COMPRESSION_DELAY = (Erstellungszeit_der_jüngsten_Zeilengruppe – aktuelle_Zeit) fest. Beachten Sie, dass dieser Ansatz sich besonders für eine stabile und relativ homogene Arbeitslast eignet.  
   
-## Siehe auch  
- [Beschreibung von Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Laden von Daten für Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Columnstore-Indizes, Zusammenfassung der Funktionen nach Version](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)   
+ [Laden von Daten für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Columnstore-Indizes für Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

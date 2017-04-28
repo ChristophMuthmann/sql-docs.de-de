@@ -1,27 +1,31 @@
 ---
-title: "Wartungsplan (Dialogfeld &#39;Berichterstellung und Protokollierung&#39;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.reportinglogging.f1"
+title: "Wartungsplan (Dialogfeld „Berichterstellung und Protokollierung“) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc79574632edb6fa550c81d66c95616a452ddf38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wartungsplan (Dialogfeld &#39;Berichterstellung und Protokollierung&#39;)
+# <a name="maintenance-plan-reporting-and-logging-page"></a>Wartungsplan (Dialogfeld 'Berichterstellung und Protokollierung')
   Mit dem Dialogfeld **Berichterstellung und Protokollierung** können Sie die Berichte und Protokolle konfigurieren, die beim Ausführen von Wartungsplänen generiert werden.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Textdateibericht generieren**  
  Geben Sie an, ob von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Textdateibericht geschrieben werden soll.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 22
  **Neu**  
  Zeigt das Dialogfeld **Verbindungseigenschaften** an. Dient dem Konfigurieren neuer Verbindungsinformationen zum Protokollieren auf einem Remoteserver.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)  
   

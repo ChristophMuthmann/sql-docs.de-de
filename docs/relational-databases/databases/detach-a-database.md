@@ -1,28 +1,32 @@
 ---
-title: "Trennen einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "Datenbanktrennung [SQL Server]"
-  - "Trennen von Datenbanken [SQL Server]"
+title: Trennen einer Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.detachdatabase.f1
+helpviewer_keywords:
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trennen einer Datenbank
-  In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] getrennt wird. Die getrennten Dateien bleiben gespeichert und können mithilfe von CREATE DATABASE (mit der FOR ATTACH- oder FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
+# <a name="detach-a-database"></a>Trennen einer Datenbank
+  In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]getrennt wird. Die getrennten Dateien bleiben gespeichert und können mithilfe von CREATE DATABASE (mit der FOR ATTACH- oder FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
   
  **In diesem Thema**  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
- Eine Liste der Einschränkungen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Eine Liste der Einschränkungen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)getrennt wird.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 36
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So trennen Sie eine Datenbank  
+#### <a name="to-detach-a-database"></a>So trennen Sie eine Datenbank  
   
 1.  Stellen Sie im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung zu der Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann die Instanz.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
      **Zu trennende Datenbanken**  
      Führt die zu trennenden Datenbanken auf.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der zu trennenden Datenbank an.  
   
      **Verbindungen löschen**  
@@ -74,7 +78,7 @@ caps.handback.revision: 36
      Standardmäßig werden durch den Trennvorgang beim Trennen der Datenbank die veralteten Optimierungsstatistiken beibehalten. Um die vorhandenen Optimierungsstatistiken zu aktualisieren, aktivieren Sie dieses Kontrollkästchen.  
   
      **Volltextkataloge beibehalten**  
-     Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten**. Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] angezeigt.  
+     Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
      Zeigt für den Status einen der folgenden Werte an: **Bereit** oder **Nicht bereit**.  
@@ -95,7 +99,7 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So trennen Sie eine Datenbank  
+#### <a name="to-detach-a-database"></a>So trennen Sie eine Datenbank  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 36
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

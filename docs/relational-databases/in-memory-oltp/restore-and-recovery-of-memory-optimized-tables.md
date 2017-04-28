@@ -1,22 +1,26 @@
 ---
-title: "Wiederherstellen von speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Wiederherstellen von speicheroptimierten Tabellen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen von speicheroptimierten Tabellen
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Wiederherstellen von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Der grundlegende Mechanismus zum Wiederherstellen einer Datenbank mit speicheroptimierten Tabellen ist ähnlich wie bei Datenbanken, die nur datenträgerbasierte Tabellen enthalten. Anders als datenträgerbasierte Tabellen müssen speicheroptimierte Tabellen jedoch in den Arbeitsspeicher geladen werden, bevor die Benutzer auf die Datenbank zugreifen können. Hierdurch wird ein neuer Schritt bei der Datenbankwiederherstellung hinzugefügt.  
@@ -51,7 +55,7 @@ caps.handback.revision: 10
   
 -   Streaming der Datendateien.  Sobald der Änderungszuordnungsfilter erstellt wurde, werden Datendateien mit so vielen Threads gelesen wie logische CPUs vorhanden sind. Jeder Thread, der die Datendatei liest, liest die Datenzeilen, überprüft die zugeordnete Änderungszuordnung und fügt die Zeile nur dann in der Tabelle ein, wenn diese Zeile nicht als gelöscht markiert wurde. Dieser Teil der Wiederherstellung kann in einigen Fällen CPU-gebunden sein, wie unten aufgeführt.  
   
- ![Speicheroptimierte Tabellen.](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Speicheroptimierte Tabellen.")  
+ ![Speicheroptimierte Tabellen.](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Memory-optimized tables.")  
   
  Speicheroptimierte Tabellen können generell mit der Geschwindigkeit des E/A-Vorgangs in den Arbeitsspeicher geladen werden, in einigen Situationen dauert das Laden von Datenzeilen in den Arbeitsspeicher jedoch länger. Dies ist insbesondere in folgenden Situationen der Fall:  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   Große speicheroptimierte Tabellen mit einem oder mehreren nicht gruppierten Indizes. Anders als bei einem Hashindex, bei dem die Bucketanzahl beim Erstellen festgelegt wird, wachsen nicht gruppierte Indizes dynamisch, was zu einer hohe CPU-Auslastung führt.  
   
-## Siehe auch  
- [Sichern und Wiederherstellen speicheroptimierter Tabellen](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Sichern und Wiederherstellen speicheroptimierter Tabellen](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

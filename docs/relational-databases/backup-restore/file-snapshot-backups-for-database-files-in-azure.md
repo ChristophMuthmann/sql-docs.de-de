@@ -1,42 +1,46 @@
 ---
-title: "Dateimomentaufnahme-Sicherungen f&#252;r Datenbankdateien in Azure | Microsoft Docs"
-ms.custom: 
-  - "IAAS"
-  - "SQL2016_New_Updated"
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure | Microsoft-Dokumentation"
+ms.custom:
+- IAAS
+- SQL2016_New_Updated
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dateimomentaufnahme-Sicherungen f&#252;r Datenbankdateien in Azure
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Diese Funktion ermöglicht es Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo) (in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+# <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Diese Funktion ermöglicht es Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
- ![snapshot backup architectural diagram](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
+ ![Momentaufnahme Backup Architekturdiagramm](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   
  **Download**  
   
--   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] zum **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
+-   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016ctp3evaluationwindowsserver2012r2/?wt.mc_id=sqL16_vm)**, um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereits installiert ist.  
+-   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereits installiert ist.  
   
-## Verwenden von Azure-Momentaufnahmen zum Sichern von in Azure gespeicherten Datenbankdateien  
+## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Verwenden von Azure-Momentaufnahmen zum Sichern von in Azure gespeicherten Datenbankdateien  
   
-### Was ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateimomentaufnahme-Sicherung?  
+### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>Was ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherung?  
  Eine Dateimomentaufnahme-Sicherung besteht aus einem Satz von Azure-Momentaufnahmen der BLOBs, die die Datenbankdateien enthalten, und einer Sicherungsdatei mit Zeigern auf diese Dateimomentaufnahmen. Jede Dateimomentaufnahme wird im Container mit dem Basis-BLOB gespeichert. Sie können angeben, dass die Sicherungsdatei selbst über URL, auf Datenträger oder auf Band geschrieben wird. Sicherung über URL wird empfohlen. Weitere Informationen zur Sicherung finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) und zur Sicherung über URLs unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
- ![architecture of snapshot feature](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture of snapshot feature")  
+ ![Architektur der Snapshot-Funktion](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture of snapshot feature")  
   
- Durch das Löschen des Basis-BLOBs wird der Sicherungssatz ungültig, und Sie werden daran gehindert, ein BLOB zu löschen, das Dateimomentaufnahmen enthält (es sei denn, Sie entscheiden ausdrücklich, ein BLOB mit allen zugehörigen Dateimomentaufnahmen zu löschen). Durch Löschen einer Datenbank oder einer Datei wird zudem weder das Basis-BLOB noch eine seiner Dateimomentaufnahmen gelöscht. Darüber hinaus werden durch das Löschen der Sicherungsdatei keine Dateimomentaufnahmen aus dem Sicherungssatz gelöscht. Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup**.  
+ Durch das Löschen des Basis-BLOBs wird der Sicherungssatz ungültig, und Sie werden daran gehindert, ein BLOB zu löschen, das Dateimomentaufnahmen enthält (es sei denn, Sie entscheiden ausdrücklich, ein BLOB mit allen zugehörigen Dateimomentaufnahmen zu löschen). Durch Löschen einer Datenbank oder einer Datei wird zudem weder das Basis-BLOB noch eine seiner Dateimomentaufnahmen gelöscht. Darüber hinaus werden durch das Löschen der Sicherungsdatei keine Dateimomentaufnahmen aus dem Sicherungssatz gelöscht. Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup** .  
   
  **Vollständige Datenbanksicherung:** Durch Ausführen einer vollständigen Datenbanksicherung mithilfe einer Dateimomentaufnahme-Sicherung wird eine Azure-Momentaufnahme aller Daten- und Protokolldateien der Datenbank erstellt, die Transaktionsprotokoll-Sicherungskette erzeugt und der Speicherort der Dateimomentaufnahmen in die Sicherungsdatei geschrieben.  
   
@@ -48,19 +52,19 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  Ein Tutorial zur Verwendung von SQL Server 2016 mit Microsoft Azure Blob Storage finden Sie unter [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](https://msdn.microsoft.com/library/dn466438.aspx)  
   
-### Wiederherstellung mithilfe von Dateimomentaufnahme-Sicherungen  
+### <a name="restore-using-file-snapshot-backups"></a>Wiederherstellung mithilfe von Dateimomentaufnahme-Sicherungen  
  Da jeder Dateimomentaufnahme-Sicherungssatz eine Dateimomentaufnahme jeder einzelnen Datenbankdatei enthält, erfordert ein Wiederherstellungsvorgang höchstens zwei aufeinander folgende Dateimomentaufnahme-Sicherungssätze. Dies gilt unabhängig davon, ob der Sicherungssatz aus einer vollständigen Sicherung oder einer Protokollsicherung stammt. Dies unterscheidet sich wesentlich vom Wiederherstellungsvorgang unter Verwendung herkömmlicher Streamingsicherungsdateien. Bei der herkömmlichen Streamingsicherung ist für den Wiederherstellungsvorgang eine vollständige Kette von Sicherungssätzen erforderlich: die vollständige Sicherung, eine differenzielle Sicherung und eine oder mehrere Transaktionsprotokollsicherungen. Der Wiederherstellungsteil Wiederherstellungsvorgangs ist identisch, unabhängig davon, ob von der Wiederherstellung ein Dateimomentaufnahme-Sicherungs- oder ein Streamingsicherungssatz verwendet wird.  
   
  **Auf den Zeitpunkt eines beliebigen Sicherungssatzes:** Um einen RESTORE DATABASE-Vorgang zum Wiederherstellen einer Datenbank auf den Zeitpunkt einer bestimmten Dateimomentaufnahme-Sicherungssatzes auszuführen, werden nur der entsprechende Sicherungssatz und des Basis-Blobs selbst benötigt. Da Sie einen Dateimomentaufnahme-Sicherungssatz des Transaktionsprotokolls verwenden können, um einen RESTORE DATABASE-Vorgang auszuführen, verwenden Sie zum Ausführen dieser Art von RESTORE DATABASE-Vorgang in der Regel einen Sicherungssatz des Transaktionsprotokolls und selten einen vollständigen Sicherungssatz der Datenbank. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren.  
   
- **Auf einen bestimmten Zeitpunkt zwischen zwei Dateimomentaufnahme-Sicherungssätzen:** Um einen RESTORE DATABASE-Vorgang auszuführen, der eine Datenbank auf einen bestimmten Zeitpunkt zwischen zwei aufeinander folgenden Transaktionsprotokoll-Sicherungssätzen wiederherstellt, werden nur zwei Transaktionsprotokoll-Sicherungssätze benötigt: ein Sicherungssatz vor und ein Sicherungssatz nach dem Zeitpunkt, auf den Sie die Datenbank wiederherstellen möchten. Um dies zu erreichen, führen Sie einen RESTORE DATABASE-Vorgang WITH NORECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des früheren Zeitpunkts sowie einen RESTORE LOG-Vorgang WITH RECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des späteren Zeitpunkt aus und verwenden das STOPAT-Argument, um den Zeitpunkt anzugeben, an dem die Wiederherstellung aus der Transaktionsprotokollsicherung angehalten werden soll. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo) (in englischer Sprache).  
+ **Auf einen bestimmten Zeitpunkt zwischen zwei Dateimomentaufnahme-Sicherungssätzen:** Um einen RESTORE DATABASE-Vorgang auszuführen, der eine Datenbank auf einen bestimmten Zeitpunkt zwischen zwei aufeinander folgenden Transaktionsprotokoll-Sicherungssätzen wiederherstellt, werden nur zwei Transaktionsprotokoll-Sicherungssätze benötigt: ein Sicherungssatz vor und ein Sicherungssatz nach dem Zeitpunkt, auf den Sie die Datenbank wiederherstellen möchten. Um dies zu erreichen, führen Sie einen RESTORE DATABASE-Vorgang WITH NORECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des früheren Zeitpunkts sowie einen RESTORE LOG-Vorgang WITH RECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des späteren Zeitpunkt aus und verwenden das STOPAT-Argument, um den Zeitpunkt anzugeben, an dem die Wiederherstellung aus der Transaktionsprotokollsicherung angehalten werden soll. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache).  
   
-### Wartung eines Dateimomentaufnahme-Sicherungssatzes  
- **Löschen eines Dateimomentaufnahme-Sicherungssatzes:** Ein Dateimomentaufnahme-Sicherungssatz kann nicht mit dem FORMAT-Argument überschrieben werden. Das Argument FORMAT ist nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup**. Diese gespeicherte Prozedur löscht die Sicherungsdatei und die Dateimomentaufnahmen, die den Sicherungssatz bilden. Bei Verwendung einer anderen Methode zum Löschen eines Dateimomentaufnahme-Sicherungssatzes kann die Sicherungsdatei gelöscht werden, ohne dass die Dateimomentaufnahmen im Sicherungssatz gelöscht werden.  
+### <a name="file-backup-set-maintenance"></a>Wartung eines Dateimomentaufnahme-Sicherungssatzes  
+ **Löschen eines Dateimomentaufnahme-Sicherungssatzes:** Ein Dateimomentaufnahme-Sicherungssatz kann nicht mit dem FORMAT-Argument überschrieben werden. Das Argument FORMAT ist nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup** . Diese gespeicherte Prozedur löscht die Sicherungsdatei und die Dateimomentaufnahmen, die den Sicherungssatz bilden. Bei Verwendung einer anderen Methode zum Löschen eines Dateimomentaufnahme-Sicherungssatzes kann die Sicherungsdatei gelöscht werden, ohne dass die Dateimomentaufnahmen im Sicherungssatz gelöscht werden.  
   
- **Löschen verwaister Sicherungsdatei-Momentaufnahmen:** Möglicherweise sind verwaiste Dateimomentaufnahmen vorhanden, weil die Sicherungsdatei nicht mit der gespeicherten Systemprozedur **sys.sp_delete_backup** gelöscht wurde. Auch die Löschung einer Datenbank oder Datenbankdatei kann zu diesem Problem führen, wenn dem bzw. den Blob(s), zu dem bzw. denen die Datenbank(datei) gehörte, Sicherungsdatei-Momentaufnahmen zugeordnet waren. Verwenden Sie die Systemfunktion **sys.fn_db_backup_file_snapshots** zum Auflisten aller Dateimomentaufnahmen der Datenbankdateien, um mögliche verwaiste Dateimomentaufnahmen zu ausfindig zu machen. Um die Dateimomentaufnahmen zu suchen, die Teil eines bestimmten Dateimomentaufnahme-Sicherungssatzes sind, verwenden Sie die gespeicherte Systemprozedur RESTORE FILELISTONLY. Anschließend können Sie mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** einzelne verwaiste Sicherungsdatei-Momentaufnahmen löschen. Beispiele für die Verwendung dieser Systemfunktion und dieser gespeicherten Systemprozeduren finden Sie am Ende dieses Themas. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20\(Transact-SQL\).md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20\(Transact-SQL\).md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+ **Löschen verwaister Sicherungsdatei-Momentaufnahmen:** Möglicherweise sind verwaiste Dateimomentaufnahmen vorhanden, weil die Sicherungsdatei nicht mit der gespeicherten Systemprozedur **sys.sp_delete_backup** gelöscht wurde. Auch die Löschung einer Datenbank oder Datenbankdatei kann zu diesem Problem führen, wenn dem bzw. den Blob(s), zu dem bzw. denen die Datenbank(datei) gehörte, Sicherungsdatei-Momentaufnahmen zugeordnet waren. Verwenden Sie die Systemfunktion **sys.fn_db_backup_file_snapshots** zum Auflisten aller Dateimomentaufnahmen der Datenbankdateien, um mögliche verwaiste Dateimomentaufnahmen zu ausfindig zu machen. Um die Dateimomentaufnahmen zu suchen, die Teil eines bestimmten Dateimomentaufnahme-Sicherungssatzes sind, verwenden Sie die gespeicherte Systemprozedur RESTORE FILELISTONLY. Anschließend können Sie mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** einzelne verwaiste Sicherungsdatei-Momentaufnahmen löschen. Beispiele für die Verwendung dieser Systemfunktion und dieser gespeicherten Systemprozeduren finden Sie am Ende dieses Themas. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
-### Überlegungen und Einschränkungen  
+### <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen  
  **Storage Premium:** Bei Verwendung von Storage Premium gelten die folgenden Einschränkungen:  
   
 -   Die Sicherungsdatei selbst kann nicht unter Verwendung von Premium-Speicher gespeichert werden.  
@@ -86,7 +90,7 @@ caps.handback.revision: 33
 > [!IMPORTANT]  
 >  Beim Verwalten mehrerer Dateimomentaufnahme-Sicherungen fällt nur ein geringer Leistungsmehraufwand an. Allerdings kann eine übermäßige Anzahl von Dateimomentaufnahme-Sicherungen die E/A-Leistung für die Datenbank beeinträchtigen. Wir empfehlen, nur die Dateimomentaufnahme-Sicherungen aufbewahren, die zur Unterstützung Ihres Ziels hinsichtlich der Wiederherstellungspunkte erforderlich sind.  
   
-## Sichern von Datenbank und Protokoll unter Verwendung einer Dateimomentaufnahme-Sicherung  
+## <a name="backing-up-the-database-and-log-using-a-file-snapshot-backup"></a>Sichern von Datenbank und Protokoll unter Verwendung einer Dateimomentaufnahme-Sicherung  
  Im folgenden Beispiel wird die AdventureWorks2016-Beispieldatenbank mithilfe einer Dateimomentaufnahme-Sicherung über URL gesichert.  
   
 ```  
@@ -111,7 +115,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## Wiederherstellen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateimomentaufnahme-Sicherung  
+## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>Wiederherstellen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherung  
  Im folgende Beispiel wird die AdventureWorks2016-Datenbank unter Verwendung eines Dateimomentaufnahme -Sicherungssatzes des Transaktionsprotokolls wiederhergestellt und ein Wiederherstellungsvorgang veranschaulicht. Beachten Sie, dass Sie eine Datenbank aus einem einzigen Dateimomentaufnahme -Sicherungssatzes des Transaktionsprotokolls wiederherstellen können.  
   
 ```  
@@ -120,7 +124,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## Wiederherstellen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateimomentaufnahme-Sicherung auf einen bestimmten Zeitpunkt  
+## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>Wiederherstellen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherung auf einen bestimmten Zeitpunkt  
  Im folgende Beispiel wird die AdventureWorks2016-Datenbank unter Verwendung von zwei Dateimomentaufnahme -Sicherungssätzen des Transaktionsprotokolls in den Zustand zu einem bestimmten Zeitpunkt wiederhergestellt und ein Wiederherstellungsvorgang veranschaulicht.  
   
 ```  
@@ -133,11 +137,11 @@ WITH RECOVERY,STOPAT = 'May 18, 2015 5:35 PM';
 GO  
 ```  
   
-## Löschen eines Dateimomentaufnahme-Sicherungssatzes der Datenbank  
- Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup**. Geben Sie den Datenbanknamen an, damit das System überprüft, ob der angegebene Dateimomentaufnahme Sicherungssatz tatsächlich eine Sicherung für die angegebene Datenbank ist. Wenn kein Datenbankname angegeben ist, wird der angegebene Sicherungssatz mit seinen Dateimomentaufnahmen ohne eine solche Überprüfung gelöscht. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20\(Transact-SQL\).md).  
+## <a name="deleting-a-database-file-snapshot-backup-set"></a>Löschen eines Dateimomentaufnahme-Sicherungssatzes der Datenbank  
+ Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup** . Geben Sie den Datenbanknamen an, damit das System überprüft, ob der angegebene Dateimomentaufnahme Sicherungssatz tatsächlich eine Sicherung für die angegebene Datenbank ist. Wenn kein Datenbankname angegeben ist, wird der angegebene Sicherungssatz mit seinen Dateimomentaufnahmen ohne eine solche Überprüfung gelöscht. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md).  
   
 > [!WARNING]  
->  Beim Versuch, einen Dateimomentaufnahmen-Sicherungssatz mit einer anderen Methode zu löschen, z. B. dem Microsoft Azure-Verwaltungsportal oder dem Azure-Speicher-Viewer in SQL Server Management Studio, werden die Dateimomentaufnahmen im Sicherungssatz nicht gelöscht. Durch diese Tools wird nur die Sicherungsdatei gelöscht, die die Zeiger auf die Dateimomentaufnahmen im Dateimomentaufnahme-Sicherungssatz enthält. Verwenden Sie zum Suchen der Sicherungsdatei-Momentaufnahmen, die zurückbleiben, wenn eine Sicherungsdatei nicht ordnungsgemäß gelöscht wurde, die Systemfunktion **sys.fn_db_backup_file_snapshots** und anschließend die gespeicherte Systemprozedur **sys.sp_delete_backup_file_snapshot**, um einzelne Sicherungsdatei-Momentaufnahmen zu löschen.  
+>  Beim Versuch, einen Dateimomentaufnahmen-Sicherungssatz mit einer anderen Methode zu löschen, z. B. dem Microsoft Azure-Verwaltungsportal oder dem Azure-Speicher-Viewer in SQL Server Management Studio, werden die Dateimomentaufnahmen im Sicherungssatz nicht gelöscht. Durch diese Tools wird nur die Sicherungsdatei gelöscht, die die Zeiger auf die Dateimomentaufnahmen im Dateimomentaufnahme-Sicherungssatz enthält. Verwenden Sie zum Suchen der Sicherungsdatei-Momentaufnahmen, die zurückbleiben, wenn eine Sicherungsdatei nicht ordnungsgemäß gelöscht wurde, die Systemfunktion **sys.fn_db_backup_file_snapshots** und anschließend die gespeicherte Systemprozedur **sys.sp_delete_backup_file_snapshot** , um einzelne Sicherungsdatei-Momentaufnahmen zu löschen.  
   
  Das folgende Beispiel löscht den angegebenen Dateimomentaufnahme-Sicherungssatz, einschließlich der Sicherungsdatei und der Dateimomentaufnahmen, die den angegebenen Sicherungssatz bilden.  
   
@@ -147,8 +151,8 @@ GO
   
 ```  
   
-## Anzeigen der Datenbanksicherungs-Dateimomentaufnahmen  
- Verwenden Sie zum Anzeigen der Dateimomentaufnahmen des Basis-Blobs für jede Datenbankdatei die Systemfunktion **sys.fn_db_backup_file_snapshots**. Mit dieser Systemfunktion können Sie alle Sicherungsdatei-Momentaufnahmen der einzelnen Basis-BLOBs für eine Datenbank anzeigen, die mit dem Azure-BLOB-Speicherdienst gespeichert wurden. Ein primärer Anwendungsfall für diese Funktion ist Suche nach Sicherungsdatei-Momentaufnahmen einer Datenbank, die zurückbleiben, wenn die Sicherungsdatei für einen Dateimomentaufnahme-Sicherungssatz gelöscht wurde und für die Löschung nicht die gespeicherten Systemprozedur **sys.sp_delete_backup** verwendet wurde. Verwenden Sie die gespeicherte Systemprozedur **RESTORE FILELISTONLY**, um zu ermitteln, welche Sicherungsdatei-Momentaufnahmen Teil von intakten und welche Teil von nicht intakten Sicherungssätzen sind. Die Systemprozedur listet die Datei-Momentaufnahmen für jede Sicherungsdatei auf. Weitere Informationen finden Sie unter [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+## <a name="viewing-database-backup-file-snapshots"></a>Anzeigen der Datenbanksicherungs-Dateimomentaufnahmen  
+ Verwenden Sie zum Anzeigen der Dateimomentaufnahmen des Basis-Blobs für jede Datenbankdatei die Systemfunktion **sys.fn_db_backup_file_snapshots** . Mit dieser Systemfunktion können Sie alle Sicherungsdatei-Momentaufnahmen der einzelnen Basis-BLOBs für eine Datenbank anzeigen, die mit dem Azure-BLOB-Speicherdienst gespeichert wurden. Ein primärer Anwendungsfall für diese Funktion ist Suche nach Sicherungsdatei-Momentaufnahmen einer Datenbank, die zurückbleiben, wenn die Sicherungsdatei für einen Dateimomentaufnahme-Sicherungssatz gelöscht wurde und für die Löschung nicht die gespeicherten Systemprozedur **sys.sp_delete_backup** verwendet wurde. Verwenden Sie die gespeicherte Systemprozedur **RESTORE FILELISTONLY**, um zu ermitteln, welche Sicherungsdatei-Momentaufnahmen Teil von intakten und welche Teil von nicht intakten Sicherungssätzen sind. Die Systemprozedur listet die Datei-Momentaufnahmen für jede Sicherungsdatei auf. Weitere Informationen finden Sie unter [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Das folgende Beispiel gibt die Liste aller Sicherungsdatei-Momentaufnahmen für die angegebene Datenbank zurück.  
   
@@ -162,8 +166,8 @@ GO
   
 ```  
   
-## Löschen einer einzelnen Sicherungsdatei-Momentaufnahme einer Datenbank  
- Mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** können Sie eine einzelne Sicherungsdatei-Momentaufnahme des Basis-Blobs einer Datenbank löschen. Eine primäre Anwendungsfall für diese gespeicherte Systemprozedur ist die Löschung verwaister Dateimomentaufnahme-Dateien, die nach dem Löschen einer Sicherungsdatei zurückbleiben, wenn für die Löschung nicht die gespeicherte Systemprozedur **sys.sp_delete_backup** verwendet wurde. Weitere Informationen finden Sie unter [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20\(Transact-SQL\).md).  
+## <a name="deleting-an-individual-database-backup-file-snapshot"></a>Löschen einer einzelnen Sicherungsdatei-Momentaufnahme einer Datenbank  
+ Mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** können Sie eine einzelne Sicherungsdatei-Momentaufnahme des Basis-Blobs einer Datenbank löschen. Eine primäre Anwendungsfall für diese gespeicherte Systemprozedur ist die Löschung verwaister Dateimomentaufnahme-Dateien, die nach dem Löschen einer Sicherungsdatei zurückbleiben, wenn für die Löschung nicht die gespeicherte Systemprozedur **sys.sp_delete_backup** verwendet wurde. Weitere Informationen finden Sie unter [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  Wird eine einzelne Dateimomentaufnahme gelöscht, die Bestandteil eines Dateimomentaufnahme-Sicherungssatzes ist, wird der Sicherungssatz ungültig.  
@@ -175,10 +179,11 @@ sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageac
 GO  
 ```  
   
-## Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
+ Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
-## Siehe auch  
- [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken](https://msdn.microsoft.com/library/dn466438.aspx)  
+## <a name="see-also"></a>Siehe auch  
+ [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](https://msdn.microsoft.com/library/dn466438.aspx)  
   
   
+

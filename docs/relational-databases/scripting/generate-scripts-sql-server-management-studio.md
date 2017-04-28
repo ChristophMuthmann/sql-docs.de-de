@@ -1,29 +1,33 @@
 ---
-title: "Erstellen von Skripts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen von Skripts (SQL Server Management Studio) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen von Skripts (SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
   
-1.  **Auswählen einer Methode:**  [Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz), [Objekt-Explorer-Menü "Skript für Objekttyp als"](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **So verwenden Sie das Menü "Skript für":**  [Erstellen eines Skripts für ein einzelnes Objekt](#ScriptSingleObject), [Erstellen eines Skripts für zwei Objekte mithilfe des Objekt-Explorers](#ScriptTwoObjectsOE), [Erstellen eines Skripts für zwei Objekte mithilfe von "Details zum Objekt-Explorer"](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Wählen Sie den Mechanismus aus, der Ihre Anforderungen am besten erfüllt.  
   
 ###  <a name="GenPubScriptWiz"></a> Assistent zum Generieren und Veröffentlichen von Skripts  
@@ -41,22 +45,22 @@ caps.handback.revision: 6
   
 3.  Erweitern Sie die Kategorie des Objekts. Beispiel: Erweitern Sie den Knoten **Tabellen** oder **Sichten** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf das Objekt, und zeigen Sie auf **Skript für \<Objekttyp> als**. Zeigen Sie z.B. auf **Skript für Tabelle als**.  
+4.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**. Zeigen Sie z.B. auf **Skripttabelle als**.  
   
 5.  Zeigen Sie auf den Skripttyp, z. B. **CREATE in** oder **ALTER in**.  
   
 6.  Wählen Sie den Speicherort zum Speichern des Skripts aus, z. B. **Neues Abfrage-Editor-Fenster** oder **Zwischenablage**.  
   
 ##  <a name="ScriptTwoObjectsOE"></a> So generieren Sie mithilfe des Objekt-Explorers ein Skript für zwei Objekte  
- **So erstellen Sie ein Skript für zwei Objekte mithilfe des Objekt-Explorers**  
+ **So erstellen Sie ein Skript für zwei Objekte mithilfe des Objekt-Explorers**  
   
- Möglicherweise benötigen Sie in einigen Fällen ein Skript mit mehreren Optionen, z. B. zum Löschen und anschließenden Erstellen einer Prozedur oder zum Erstellen und anschließenden Ändern einer Tabelle. Die folgenden Verfahren zum Generieren von Skripts für mehrere Objekte sind auch erfolgreich, wenn Sie ein Skript erstellen müssen, das auf verschiedene Objekttypen verweist, z. B. Tabellen, Sichten und gespeicherte Prozeduren.  
+ Möglicherweise benötigen Sie in einigen Fällen ein Skript mit mehreren Optionen, z. B. zum Löschen und anschließenden Erstellen einer Prozedur oder zum Erstellen und anschließenden Ändern einer Tabelle. Die folgenden Verfahren zum Generieren von Skripts für mehrere Objekte sind auch erfolgreich, wenn Sie ein Skript erstellen müssen, das auf verschiedene Objekttypen verweist, z. B. Tabellen, Sichten und gespeicherte Prozeduren.  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, und erweitern Sie dann die Datenbank, die die Objekte enthält, die geschrieben werden sollen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das erste zu schreibende Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Neues Abfrage-Editor-Fenster** als Ausgabeziel aus.  
+3.  Klicken Sie mit der rechten Maustaste auf das erste zu schreibende Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Neues Fenster für den Abfrageeditor** als Ausgabeziel aus.  
   
 4.  Navigieren Sie zum zweiten Objekt, für das Sie ein Skript erstellen möchten.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 6
   
 6.  Fügen Sie in dem für das erste Objekt geöffneten Abfrage-Editor-Fenster das Skript für das zweite Objekt aus der Zwischenablage ein.  
   
-##  <a name="ScriptTwoObjectsOED"></a> So generieren Sie mit "Details zum Objekt-Explorer" ein Skript für zwei Objekte  
+##  <a name="ScriptTwoObjectsOED"></a> So generieren Sie mit "Details zum Objekt-Explorer" ein Skript für zwei Objekte  
  **So erstellen Sie ein Skript für zwei Objekte mithilfe von "Details zum Objekt-Explorer"**  
   
  Sie können den Bereich **Details zum Objekt-Explorer** verwenden, um ein Skript für mehrere Objekte der gleichen Kategorie zu generieren.  

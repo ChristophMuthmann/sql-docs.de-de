@@ -1,33 +1,37 @@
 ---
-title: "&#220;berwachen der Systemaktivit&#228;t mit erweiterten Ereignisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "Erweiterte Ereignisse [SQL Server], Überwachung der Systemaktivität"
+title: "Überwachen der Systemaktivität mit erweiterten Ereignissen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berwachen der Systemaktivit&#228;t mit erweiterten Ereignisses
+# <a name="monitor-system-activity-using-extended-events"></a>Überwachen der Systemaktivität mit erweiterten Ereignisses
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Das folgende Verfahren veranschaulicht, wie Extended Events mit der Ereignisablaufverfolgung für Windows (ETW) zum Überwachen der Systemaktivität verwendet werden kann. Außerdem wird gezeigt, wie die Anweisungen CREATE EVENT SESSION, ALTER EVENT SESSION und DROP EVENT SESSION verwendet werden.  
   
  Das Ausführen dieser Tasks umfasst die Verwendung des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um den folgenden Vorgang durchzuführen. Das Verfahren erfordert außerdem, mithilfe der Eingabeaufforderung ETW-Befehle auszuführen.  
   
-### So überwachen Sie die Systemaktivität mit erweiterten Ereignissen  
+### <a name="to-monitor-system-activity-using-extended-events"></a>So überwachen Sie die Systemaktivität mit erweiterten Ereignissen  
   
 1.  Geben Sie im Abfrage-Editor die folgenden Anweisungen aus, um eine Ereignissitzung zu erstellen und zwei Ereignisse hinzuzufügen. Diese Ereignisse, checkpoint_begin und checkpoint_end, werden am Anfang und am Ende eines Datenbankprüfpunkts ausgelöst.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
 7.  Geben Sie die folgenden Befehle an der Eingabeaufforderung aus, um die ETW-Daten anzuzeigen.  
   
     > [!NOTE]  
-    >  Um Hilfe für den **tracerpt**-Befehl aufzurufen, geben Sie an der Eingabeaufforderung `tracerpt /?` ein.  
+    >  Um Hilfe für den **tracerpt** -Befehl aufzurufen, geben Sie an der Eingabeaufforderung `tracerpt /?`ein.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -117,12 +121,12 @@ caps.handback.revision: 20
     go  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Ziele für erweiterte Ereignisse von SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [Ziele für erweiterte Ereignisse von SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   
