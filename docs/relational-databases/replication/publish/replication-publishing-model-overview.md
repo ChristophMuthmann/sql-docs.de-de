@@ -1,34 +1,38 @@
 ---
-title: "Das Replikationsver&#246;ffentlichungsmodell (&#220;bersicht) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Replikation [SQL Server], Veröffentlichungsmodell"
-  - "Abonnements [SQL Server-Replikation], Informationen zu Abonnements"
-  - "Artikel [SQL Server-Replikation]"
-  - "Veröffentlichungen [SQL Server-Replikation]"
-  - "Verleger [SQL Server-Replikation], Informationen zu Verlegern"
-  - "Abonnenten [SQL Server-Replikation]"
-  - "Verteiler [SQL Server-Replikation], Informationen zu Verteilern"
-  - "Abonnenten [SQL Server-Replikation], Informationen zu Abonnenten"
-  - "Artikel [SQL Server-Replikation], Informationen zu Artikeln"
-  - "Veröffentlichungen [SQL Server-Replikation], Informationen zu Veröffentlichungen"
-  - "Verteiler [SQL Server-Replikation]"
+title: "Das Replikationsveröffentlichungsmodell (Übersicht) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], publishing model
+- subscriptions [SQL Server replication], about subscriptions
+- articles [SQL Server replication]
+- publications [SQL Server replication]
+- Publishers [SQL Server replication], about Publishers
+- Subscribers [SQL Server replication]
+- Distributors [SQL Server replication], about Distributors
+- Subscribers [SQL Server replication], about Subscribers
+- articles [SQL Server replication], about articles
+- publications [SQL Server replication], about publications
+- Distributors [SQL Server replication]
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20a1bcbf0d5a58a3955696d73e85708f86ac551b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Das Replikationsver&#246;ffentlichungsmodell (&#220;bersicht)
+# <a name="replication-publishing-model-overview"></a>Das Replikationsveröffentlichungsmodell (Übersicht)
   Bei der Replikation wird zur Darstellung der Komponenten in einer Replikationstopologie – Verleger, Verteiler, Abonnenten, Veröffentlichungen, Artikel und Abonnements – ein Modell verwendet, das an Bereiche aus dem Verlagswesen angelehnt ist. Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation funktioniert dabei so ähnlich wie ein Zeitschriftenabonnement:  
   
 -   Ein Zeitschriftenverlag (Verleger) stellt eine oder mehrere Zeitschrift(en) (Veröffentlichungen) her.  
@@ -45,28 +49,29 @@ caps.handback.revision: 38
   
  ![Komponenten und Datenfluss für Replikation](../../../relational-databases/replication/publish/media/replintro1.gif "Komponenten und Datenfluss für Replikation")  
   
-## Verleger  
+## <a name="publisher"></a>Verleger  
  Der Verleger ist eine Datenbankinstanz, die anderen Speicherorten per Replikation Daten zur Verfügung stellt. Der Verleger kann eine oder mehrere Veröffentlichungen besitzen, die jeweils einen logisch zusammengehörigen Satz von Objekten und Daten enthalten, der repliziert werden kann.  
   
-## Verteiler  
+## <a name="distributor"></a>Verteiler  
  Der Verteiler ist eine Datenbankinstanz, die als Speicher für replikationsspezifische Daten dient, die mit einem oder mehreren Verlegern verknüpft sind. Jedem Verleger ist beim Verteiler eine einzelne Datenbank (die Verteilungsdatenbank) zugeordnet. Die Verteilungsdatenbank speichert Replikationsstatusdaten und Metadaten zur Veröffentlichung und fungiert in einigen Fällen als Warteschlange für Daten, die vom Verleger an Abonnenten verschoben werden. In vielen Fällen übernimmt ein und dieselbe Datenbankserverinstanz sowohl die Rolle des Verlegers als auch die des Verteilers. Solche Datenbankserverinstanzen werden auch *lokale Verteiler*genannt. Wenn sich der Verleger und der Verteiler auf unterschiedlichen Datenbankserverinstanzen befinden, wird der Verteiler als *Remoteverteiler*bezeichnet.  
   
-## Abonnenten  
+## <a name="subscribers"></a>Abonnenten  
  Ein Abonnent ist eine Datenbankinstanz, die replizierte Daten empfängt. Abonnenten können Daten von mehreren Verlegern und Veröffentlichungen empfangen. Je nach ausgewähltem Replikationstyp kann der Abonnent auch Datenänderungen an den Verleger zurücksenden oder die Daten erneut auf anderen Abonnenten veröffentlichen.  
   
-## Artikel  
+## <a name="article"></a>Artikel  
  Artikel ist die Bezeichnung für die Datenbankobjekte in einer Veröffentlichung. Eine Veröffentlichung kann unterschiedliche Arten von Artikeln enthalten – von Tabellen über Sichten bis hin zu gespeicherten Prozeduren und anderen Objekten. Wenn Tabellen als Artikel veröffentlicht werden, kann mithilfe von Filtern festgelegt werden, welche Spalten und Zeilen der Tabelle an die Abonnenten gesendet werden.  
   
-## Veröffentlichung  
+## <a name="publication"></a>Veröffentlichung  
  Eine Veröffentlichung ist eine Auflistung einer oder mehrerer Artikel aus einer Datenbank. Die Gruppierung mehrerer Artikel zu einer Veröffentlichung erleichtert die Angabe eines logisch zusammengehörigen Satzes von Datenbankobjekten und Daten, die als Einheit repliziert werden.  
   
-## Abonnement  
+## <a name="subscription"></a>Abonnement  
  Unter einem Abonnement wird die Anforderung eines Exemplars einer Veröffentlichung durch einen Abonnenten verstanden. Das Abonnement definiert, welche Veröffentlichung wo und wann empfangen werden soll. Es gibt zwei Arten von Abonnements: Push und Pull. Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md).  
   
-## Siehe auch  
- [Replikations-Agents (Übersicht)](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replikationstypen](../../../relational-databases/replication/types-of-replication.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Replikations-Agents](../../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Warten einer Always On-Veröffentlichungsdatenbank (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   
+

@@ -1,35 +1,39 @@
 ---
-title: "&#220;bersicht &#252;ber die Benutzeroberfl&#228;che des Replikationsmonitors | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Replikationsmonitor"
-  - "Replikationsmonitor, Informationen zum Replikationsmonitor"
+title: "Übersicht über die Benutzeroberfläche des Replikationsmonitors | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;bersicht &#252;ber die Benutzeroberfl&#228;che des Replikationsmonitors
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Replikationsmonitor stellt einen Verleger oder Verteiler ausgerichtete Ansicht aller Replikationsaktivitäten in einem Format mit zwei Bereichen. Im linken Bereich fügen Sie dem Monitor einen Verleger hinzu, und im rechten Bereich zeigt der Monitor die Informationen zum Verleger, dessen Veröffentlichungen, Abonnements für diese Veröffentlichungen und die verschiedenen Replikations-Agents an. Neben der Darstellung der Informationen zur Replikationstopologie ermöglicht der Replikationsmonitor die Ausführung zahlreicher Aufgaben, wie beispielsweise des Startens und Anhaltens von Agents und des Überprüfens von Daten.  
+# <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors
+  Der Replikationsmonitor in[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet eine Sicht aller Replikationsaktivitäten, bei der der Verleger oder der Verteiler im Vordergrund steht, in einem Format mit zwei Bereichen an. Im linken Bereich fügen Sie dem Monitor einen Verleger hinzu, und im rechten Bereich zeigt der Monitor die Informationen zum Verleger, dessen Veröffentlichungen, Abonnements für diese Veröffentlichungen und die verschiedenen Replikations-Agents an. Neben der Darstellung der Informationen zur Replikationstopologie ermöglicht der Replikationsmonitor die Ausführung zahlreicher Aufgaben, wie beispielsweise des Startens und Anhaltens von Agents und des Überprüfens von Daten.  
   
-## Anzeigen von Informationen zur ganzen Topologie  
+## <a name="viewing-information-for-the-entire-topology"></a>Anzeigen von Informationen zur ganzen Topologie  
  Anzeige im linken Bereich des Replikationsmonitors  
   
 -   Verlegergruppen, Verleger und Veröffentlichungen.  
   
 -   Verteiler, Verleger und Veröffentlichungen.  
   
- Um Informationen im Replikationsmonitor anzeigen zu können, müssen Sie zunächst einen Verleger hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
+ Um Informationen im Replikationsmonitor anzeigen zu können, müssen Sie zunächst einen Verleger hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
  Mithilfe des linken Bereichs lassen sich Antworten auf folgende Fragen finden:  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 41
   
      Ein Agent wird zu einem bestimmten Zeitpunkt nicht ausgeführt, weil entweder die Ausführung nicht geplant ist oder weil ein Fehler aufgetreten ist. Wenn ein Fehler aufgetreten ist, wird für die entsprechenden Knoten im linken Bereich ein Fehlersymbol angezeigt. Wenn der Momentaufnahme-Agent für eine Veröffentlichung beispielsweise aufgrund eines Fehlers angehalten wird, wird für die Verlegergruppe, den Verleger und die Veröffentlichungsknoten ein Fehlersymbol angezeigt wird. Die Zusammenfassungsinformationen für den Momentaufnahme-Agent werden für die Veröffentlichung auf der Registerkarte **Agents** angezeigt. Doppelklicken Sie auf dieser Registerkarte auf den Momentaufnahme-Agent, um detaillierte Fehlerinformationen anzuzeigen.  
   
-## Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben für Verteiler  
+## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben für Verteiler  
  Im Replikationsmonitor werden auf drei Registerkarten Informationen zu Verteilern angezeigt:  
   
 -   Registerkarte**Veröffentlichungen**   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
 -   Wechseln Sie zur Sicht für die Verlegergruppe.  
   
-## Anzeigen von Informationen und Ausführen von verlegerbezogenen Aufgaben  
+## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Anzeigen von Informationen und Ausführen von verlegerbezogenen Aufgaben  
  Im Replikationsmonitor werden auf drei Registerkarten Informationen zu Verlegern angezeigt:  
   
 -   Registerkarte**Veröffentlichungen**   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
      Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikationstypen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
   
  Der Replikationsmonitor enthält zudem ein Kontextmenü für den Verlegerknoten. Klicken Sie im linken Bereich mit der rechten Maustaste auf einen Verleger, um Folgendes auszuführen:  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 41
   
 -   Verbinden oder Trennen der Verbindung mit dem Verteiler, auf dem die Informationen zum Verleger gespeichert sind  
   
-## Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben  
+## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Anzeigen von Informationen und Ausführen von veröffentlichungsbezogenen Aufgaben  
  Im Replikationsmonitor werden auf drei Registerkarten und in mehreren Detailfenstern Informationen zu Veröffentlichungen angezeigt:  
   
 -   Registerkarte**Alle Abonnements**   
@@ -148,7 +152,7 @@ caps.handback.revision: 41
   
      Auf dieser Registerkarte können Sie Warnungen für Agents angeben. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   **Überwachungstoken** Registerkarte (nur bei Transaktionsreplikation)  
+-   Registerkarte**Überwachungstoken** (nur für Transaktionsreplikationen)  
   
      Über diese Registerkarte können Sie die Latenzzeit messen, d. h. die Zeitspanne zwischen dem Ausführen des Commit für eine Transaktion auf dem Verleger und dem Ausführen des Commit für die entsprechende Aktion auf dem Abonnenten.  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 41
   
          Zeigen Sie die Gesamtzeit an, die benötigt wird, um eine Transaktion über das System zu übertragen, und vergleichen Sie sie mit älteren Zeiten.  
   
-     Diese Registerkarte wird nicht für Verteiler mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder einer früheren Version angezeigt. Weitere Informationen zur Überwachungstoken finden Sie unter [Measure Latenzzeit und überprüfen Verbindungen bei Transaktionsreplikationen](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+     Diese Registerkarte wird nicht für Verteiler mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder einer früheren Version angezeigt. Weitere Informationen zu Überwachungstoken finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detailfenster für die Agents, die einer Veröffentlichung zugeordnet sind. Folgende Agents sind Veröffentlichungen zugeordnet:  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 41
   
          In den verfügbaren Fehlermeldungen werden detaillierte Informationen dazu angegeben, warum ein Agent nicht ausgeführt wird. Sie bilden einen Ausgangspunkt für die Behebung von Problemen in Agents, die einer Veröffentlichung zugeordnet sind.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) und [Informationen anzeigen und Ausführen von Aufgaben für eine Veröffentlichung & #40; zugeordneten Agents Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents, die mit einer Veröffentlichung verknüpft sind &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
  Der Replikationsmonitor enthält zudem ein Kontextmenü für den Veröffentlichungsknoten. Klicken Sie im linken Bereich mit der rechten Maustaste auf eine Veröffentlichung, um Folgendes auszuführen:  
   
@@ -188,26 +192,26 @@ caps.handback.revision: 41
   
 -   Anzeigen und Bearbeiten von Veröffentlichungseigenschaften  
   
-## Anzeigen von Informationen und Ausführen von abonnementbezogenen Aufgaben  
+## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Anzeigen von Informationen und Ausführen von abonnementbezogenen Aufgaben  
  Im Replikationsmonitor werden auf mehreren verschiedenen Registerkarten Informationen zu Abonnements angezeigt. Doppelklicken Sie im Replikationsmonitor auf ein Abonnement, um auf die entsprechenden Registerkarten in einem Detailfenster zuzugreifen. Alle Registerkarte sind hilfreich, um die Frage "Warum wird ein Agent nicht ausgeführt?" zu beantworten. In den verfügbaren Fehlermeldungen werden detaillierte Informationen dazu angegeben, warum ein Agent nicht ausgeführt wird. Sie bilden einen Ausgangspunkt für die Behebung von Problemen in Agents, die einem Abonnement zugeordnet sind.  
   
 -   Registerkarten**Alle Abonnements** und **Überwachungsliste für Abonnements**.  
   
      Diese Registerkarten werden weiter oben in diesem Thema beschrieben.  
   
--   **Verlauf Verleger zu Verteiler** Registerkarte (nur bei Transaktionsreplikation)  
+-   Registerkarte**Verlauf Verleger zu Verteiler** (nur für Transaktionsreplikationen)  
   
      Auf dieser Registerkarte werden Informationen zum Protokolllese-Agent für eine Veröffentlichung angezeigt (diese Registerkarte entspricht dem Detailfenster Protokolllese-Agent).  
   
--   **Verlauf Verteiler zu Abonnent** Registerkarte (momentaufnahmereplikation und Transaktionsreplikation)  
+-   Registerkarte**Verlauf Verteiler zu Abonnent** (Momentaufnahmereplikation und Transaktionsreplikation)  
   
      Auf dieser Registerkarte werden Informationen zum Verteilungs-Agent für ein Abonnement angezeigt.  
   
--   **Nicht verteilte Befehle** Registerkarte (nur bei Transaktionsreplikation)  
+-   Registerkarte**Nicht verteilte Befehle** (nur für Transaktionsreplikationen)  
   
      Auf diese Registerkarte werden Informationen zur Anzahl der Befehle in der Verteilungsdatenbank angezeigt, die nicht an den ausgewählten Abonnenten übermittelt wurden. Zudem wird die geschätzte Zeit angegeben, die die Übermittlung dieser Befehle in Anspruch nimmt. Mithilfe dieser Registerkarte kann die Frage "Wie weit ist mein Abonnement in Verzug?" beantwortet werden. Diese Registerkarte wird nicht für Verteiler angezeigt, auf denen niedrigere Versionen als SQL Server 2005 ausgeführt werden.  
   
--   **Synchronisierungsverlauf** Registerkarte (nur Mergereplikation)  
+-   Registerkarte**Synchronisierungsverlauf** (nur für Mergereplikationen)  
   
      Auf dieser Registerkarte werden Informationen zum Merge-Agent für ein Abonnement angezeigt. Mithilfe dieser Registerkarte können Sie folgende Frage beantworten:  
   
@@ -215,16 +219,16 @@ caps.handback.revision: 41
   
          Diese Registerkarte zeigt detaillierte Statistiken für jeden während der Synchronisierung verarbeiteten Artikel an, einschließlich der aufgewendeten Zeit in jeder Verarbeitungsphase (Hochladen von Änderungen, Herunterladen von Änderungen usw.) Dadurch kann genau festgestellt werden, welche Tabellen zu einer Verlangsamung führen. Darüber hinaus bieten diese Statistiken eine optimale Plattform, Leistungsprobleme bei Mergeabonnements zu beheben.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement & #40; Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) und [Informationen anzeigen und Ausführen von Aufgaben für ein Abonnement & #40; zugeordneten Agents Der Replikationsmonitor & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents, die einem Abonnement zugeordnet sind &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Anzeigen von Informationen und Ausführen von Aufgaben, die sich auf Agentprofile beziehen  
+## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Anzeigen von Informationen und Ausführen von Aufgaben, die sich auf Agentprofile beziehen  
  Der Replikationsmonitor enthält mehrere Dialogfelder zum Verwalten von Agentprofilen. Bei Agentprofilen handelt es sich um Parametersätze für einen Agent, mit denen das Verhalten des Agents festgelegt wird. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Die Dialogfelder lauten wie folgt:  
   
 -   **Agentprofile**  
   
      In diesem Dialogfeld können Sie die Eigenschaften von Profilen ändern, Profile erstellen und löschen, ein Standardprofil angeben und angeben, dass alle Agents eines bestimmten Typs (beispielsweise Momentaufnahme-Agents) ein bestimmtes Profil verwenden sollen.  
   
--   **\< AgentProfileName> Eigenschaften**  
+-   **\<AgentProfileName> Eigenschaften**  
   
      In diesem Dialogfeld können Sie die Parametereinstellungen in einem Profil anzeigen und bearbeiten.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 41
   
      In diesem Dialogfeld können Sie ein neues Profil erstellen und dabei optional die Werte eines vorhandenen Profils aufnehmen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

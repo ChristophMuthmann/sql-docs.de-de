@@ -1,25 +1,29 @@
 ---
-title: "Datenbank sichern (Seite &#39;Medienoptionen&#39;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+title: "Datenbank sichern (Seite „Medienoptionen“) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenbank sichern (Seite &#39;Medienoptionen&#39;)
+# <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
   Auf der Seite  **Medienoptionen** des Dialogfelds **Datenbank sichern** können Sie Medienoptionen zur Sicherung der Datenbank anzeigen oder ändern.  
   
  **So erstellen Sie eine Sicherung mithilfe von SQL Server Management Studio**  
@@ -32,17 +36,17 @@ caps.handback.revision: 7
 >  Sie können einen Datenbank-Wartungsplan definieren, um Datenbanksicherungen zu erstellen. Weitere Informationen finden Sie unter [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md) und [Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
   
-### Medium überschreiben  
- Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL.. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+### <a name="overwrite-media"></a>Medium überschreiben  
+ Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  Nur die Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen** wird mit Verschlüsselungsoptionen unterstützt. Wenn Sie die Optionen im Abschnitt **Auf vorhandenen Mediensatz sichern** auswählen, werden die Verschlüsselungsoptionen auf der Seite **Sicherungsoptionen** deaktiviert.  
   
 > [!NOTE]  
->  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)ausgeführt wird.  
   
  **Auf vorhandenen Mediensatz sichern**  
  Sichert eine Datenbank auf einen vorhandenen Mediensatz. Durch Auswahl dieser Option werden drei weitere Optionen aktiviert.  
@@ -72,7 +76,7 @@ caps.handback.revision: 7
  **Beschreibung für neuen Mediensatz**  
  Geben Sie optional eine aussagekräftige Beschreibung für den neuen Mediensatz ein. Die Beschreibung sollte genau genug sein, um den Inhalt akkurat zu vermitteln.  
   
-### Zuverlässigkeit  
+### <a name="reliability"></a>Zuverlässigkeit  
  Mit den Optionen des Bereichs **Transaktionsprotokoll** wird die Fehlerverwaltung durch den Sicherungsvorgang gesteuert.  
   
  **Sicherung nach dem Abschluss überprüfen**  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
  **Bei Fehler fortsetzen**  
  Der Sicherungsvorgang wird auch nach Auftreten eines oder mehrerer Fehler fortgesetzt.  
   
-### Transaktionsprotokoll  
+### <a name="transaction-log"></a>Transaktionsprotokoll  
  Mit den Optionen des Bereichs **Transaktionsprotokoll** wird das Verhalten einer Transaktionsprotokollsicherung gesteuert. Diese Optionen sind nur beim vollständigen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell relevant. Sie sind nur aktiviert, wenn im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** im Feld [Sicherungstyp](../../relational-databases/backup-restore/back-up-database-general-page.md) die Option **Transaktionsprotokoll** ausgewählt ist.  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ caps.handback.revision: 7
   
  Das Auswählen dieser Option entspricht der Angabe von WITH NO_TRUNCATE und NORECOVERY in einer [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-### Bandlaufwerk  
+### <a name="tape-drive"></a>Bandlaufwerk  
  Mit den Optionen des Bereichs **Bandlaufwerk** wird die Bandverwaltung während des Sicherungsvorgangs gesteuert. Diese Optionen sind nur aktiviert, wenn im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** im Feld [Ziel](../../relational-databases/backup-restore/back-up-database-general-page.md) die Option **Band** ausgewählt ist.  
   
 > [!NOTE]  
@@ -110,7 +114,7 @@ caps.handback.revision: 7
  **Band vor dem Entladen zurückspulen**  
  Das Band wird vor dem Entladen freigegeben und zurückgespult. Diese Option ist nur aktiviert, wenn **Band nach dem Sichern entladen** ausgewählt ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

@@ -1,41 +1,45 @@
 ---
-title: "Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "Data Warehouse [SQL Server], mehrere Instanzen"
-  - "Data Warehouse [SQL Server], konfigurieren"
-  - "Assistent für die Konfiguration des Verwaltungs-Data Warehouses"
-  - "Verwaltungs-Data Warehouse, konfigurieren"
+title: Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio) | Microsoft Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie das Verwaltungs-Data Warehouse für die Unterstützung der Datenspeicherung für einzelne oder mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, die den Datensammler verwenden, konfigurieren müssen Diese Instanzen können sich auf dem gleichen Server oder auf verschiedenen Servern befinden. In diesem Thema sind auch Beschreibungen der Benutzeroberfläche des Dialogfelds [Assistent für die Konfiguration des Verwaltungs-Data Warehouses](#Wizard) enthalten. Weitere Informationen zum Konfigurieren eines Datensammlers finden Sie unter [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
->  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent für die Verwendung eines der Systemdienstkonten (Lokales System, Netzwerkdienst oder Lokaler Dienst) konfiguriert ist und das Verwaltungs-Data Warehouse auf einer anderen Instanz als der Datensammler erstellt wird, müssen Sie die Sammlungssätze so konfigurieren, dass sie einen Proxy zum Hochladen von Daten in das Verwaltungs-Data Warehouse verwenden.  
+>  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die Verwendung eines der Systemdienstkonten (Lokales System, Netzwerkdienst oder Lokaler Dienst) konfiguriert ist und das Verwaltungs-Data Warehouse auf einer anderen Instanz als der Datensammler erstellt wird, müssen Sie die Sammlungssätze so konfigurieren, dass sie einen Proxy zum Hochladen von Daten in das Verwaltungs-Data Warehouse verwenden.  
   
-### Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 28
   
     -   Verwenden Sie den Assistenten für die Konfiguration des Verwaltungs-Data Warehouses, um die Datensammlung für das vorhandene Verwaltungs-Data Warehouse zu konfigurieren.  
   
-    -   Klicken Sie mit der rechten Maustaste auf **Datensammlung** und dann auf **Eigenschaften**. Geben Sie auf der Registerkarte **Allgemein** das vorhandene Verwaltungs-Data Warehouse und den Server an, auf dem es installiert ist.  
+    -   Klicken Sie mit der rechten Maustaste auf **Datensammlung**und dann auf **Eigenschaften**. Geben Sie auf der Registerkarte **Allgemein** das vorhandene Verwaltungs-Data Warehouse und den Server an, auf dem es installiert ist.  
   
 6.  Wiederholen Sie Schritt 5, bis alle Datenbankinstanzen, die den Datensammler verwenden, so konfiguriert sind, dass sie Daten in das gemeinsam verwendete Verwaltungs-Data Warehouse hochladen.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  Geben Sie eine Anmeldung durch Aktivieren des Kontrollkästchens **Zuordnen** für die Anmeldung an.  
   
- **Mitgliedschaft in Datenbankrolle für:** *\<Data Warehouse-Name>*  
+ **Mitgliedschaft in Datenbankrolle für:**  *\<Data Warehouse-Name>*  
  Wählen Sie die Verwaltungs-Data Warehouse-Rolle aus, der der Anmeldenamen zugeordnet ist. Aktivieren Sie zu diesem Zweck das bzw. die entsprechenden Kontrollkästchen:  
   
 -   **mdw_admin**  
@@ -102,7 +106,7 @@ caps.handback.revision: 28
 -   **mdw_writer**  
   
  **Neue Anmeldung**  
- Öffnen Sie das Dialogfeld **Anmeldung – Neu**, und erstellen Sie eine neue Anmeldung für das Verwaltungs-Data Warehouse.  
+ Öffnen Sie das Dialogfeld **Anmeldung – Neu** , und erstellen Sie eine neue Anmeldung für das Verwaltungs-Data Warehouse.  
   
  **Seite "Assistenten abschließen"**  
   
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **Schließen**  
  Schließen Sie den Assistenten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   

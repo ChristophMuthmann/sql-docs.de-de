@@ -1,36 +1,40 @@
 ---
-title: "Implementierung von Unicode-Komprimierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unicode-Datenkomprimierung"
-  - "Komprimierung [SQL Server], Unicode-Daten"
+title: Implementierung von Unicode-Komprimierung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode data compression
+- compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27117e609effaa3ded124a33d742ac9a0b374d6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementierung von Unicode-Komprimierung
+# <a name="unicode-compression-implementation"></a>Implementierung von Unicode-Komprimierung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet eine Implementierung des Algorithmus „Standardkomprimierungsschema für Unicode (SCSU)“, um Unicode-Werte zu komprimieren, die in zeilen- oder seitenkomprimierten Objekten gespeichert werden. Für diese komprimierten Objekte erfolgt die Unicode-Komprimierung für **nchar(n)**- und **nvarchar(n)**-Spalten automatisch. [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert Unicode-Daten als 2 Bytes, unabhängig vom Gebietsschema. Dies wird UCS-2-Codierung genannt. Bei einigen Gebietsschemas kann durch die Implementierung der SCSU-Komprimierung in SQL Server bis zu 50 Prozent des Speicherplatzes eingespart werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet eine Implementierung des Algorithmus „Standardkomprimierungsschema für Unicode (SCSU)“, um Unicode-Werte zu komprimieren, die in zeilen- oder seitenkomprimierten Objekten gespeichert werden. Für diese komprimierten Objekte erfolgt die Unicode-Komprimierung für **nchar(n)** - und **nvarchar(n)** -Spalten automatisch. [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert Unicode-Daten als 2 Bytes, unabhängig vom Gebietsschema. Dies wird UCS-2-Codierung genannt. Bei einigen Gebietsschemas kann durch die Implementierung der SCSU-Komprimierung in SQL Server bis zu 50 Prozent des Speicherplatzes eingespart werden.  
   
-## Unterstützte Datentypen  
- Unicode-Komprimierung unterstützt den **nchar(n)**-Datentyp mit fester Länge und den **nvarchar(n)**-Datentyp. Datenwerte, die außerhalb von Zeilen oder in **nvarchar(max)**-Spalten gespeichert werden, werden nicht komprimiert.  
+## <a name="supported-data-types"></a>Unterstützte Datentypen  
+ Unicode-Komprimierung unterstützt den **nchar(n)** -Datentyp mit fester Länge und den **nvarchar(n)** -Datentyp. Datenwerte, die außerhalb von Zeilen oder in **nvarchar(max)** -Spalten gespeichert werden, werden nicht komprimiert.  
   
 > [!NOTE]  
->  Unicode-Komprimierung wird nicht für **nvarchar(max)**-Daten unterstützt, auch wenn sie in Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
+>  Unicode-Komprimierung wird nicht für **nvarchar(max)** -Daten unterstützt, auch wenn sie in Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
   
-## Aktualisieren von früheren Versionen von SQL Server  
+## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Aktualisieren von früheren Versionen von SQL Server  
  Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder unkomprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  
   
 -   Wenn das Objekt nicht komprimiert ist, werden keine Änderungen durchgeführt, und das Objekt funktioniert wie bisher.  
@@ -42,7 +46,7 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  Um die Vorteile der Unicode-Komprimierung in vollem Umfang zu nutzen, muss das Objekt mit Seiten- oder Zeilenkomprimierung neu erstellt werden.  
   
-## Auswirkungen der Unicode-Komprimierung auf Datenspeicher  
+## <a name="how-unicode-compression-affects-data-storage"></a>Auswirkungen der Unicode-Komprimierung auf Datenspeicher  
  Wenn ein Index erstellt wird oder neu erstellt wird oder wenn ein Wert in einer Tabelle geändert wird, die mit Zeilen- oder Seitenkomprimierung komprimiert wurde, wird der betroffene Index oder Wert nur dann komprimiert gespeichert, wenn die komprimierte Größe kleiner als die aktuelle Größe ist. Dies verhindert, dass Zeilen in einer Tabelle oder in einem Index aufgrund der Unicode-Komprimierung an Größe zunehmen.  
   
  Der Speicherplatz, der durch die Komprimierung eingespart wird, ist von den Eigenschaften der Daten abhängig, die komprimiert werden, und vom Gebietsschema der Daten. In der folgenden Tabelle werden die Speicherplatzeinsparungen aufgelistet, die für verschiedene Gebietsschemas erreicht werden können.  
@@ -56,7 +60,7 @@ caps.handback.revision: 7
 |Vietnamesisch|39%|  
 |Japanisch|15%|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)   
  [Implementierung von Seitenkomprimierung](../../relational-databases/data-compression/page-compression-implementation.md)   

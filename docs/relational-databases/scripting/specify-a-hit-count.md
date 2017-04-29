@@ -1,29 +1,33 @@
 ---
-title: "Angeben einer Trefferanzahl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.hitcount"
-helpviewer_keywords: 
-  - "Transact-SQL-Debugger, Breakpoint-Trefferanzahl"
+title: Angeben einer Trefferanzahl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.hitcount
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Angeben einer Trefferanzahl
+# <a name="specify-a-hit-count"></a>Angeben einer Trefferanzahl
   Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
   
-## Überlegungen zur Trefferanzahl  
+## <a name="hit-count-considerations"></a>Überlegungen zur Trefferanzahl  
  Standardmäßig wird die Ausführung stets unterbrochen, wenn ein Breakpoint erreicht wird. Folgende Optionen sind verfügbar:  
   
 -   Immer anhalten (Standard).  
@@ -40,13 +44,13 @@ caps.handback.revision: 6
   
  Die Standardaktion für einen Breakpoint besteht darin, die Ausführung zu unterbrechen, wenn die Trefferanzahl- und die Breakpointbedingung erfüllt sind. Informationen zum Angeben anderer Aktionen finden Sie unter [Angeben einer Breakpointaktion](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
   
-#### So geben Sie eine Trefferanzahl an  
+#### <a name="to-specify-a-hit-count"></a>So geben Sie eine Trefferanzahl an  
   
-1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
      -oder-  
   
-     Klicken Sie im Fenster **Breakpoints**mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+     Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
 2.  Wählen Sie im Dialogfeld **Trefferanzahl für Haltepunkt** im Feld **Wenn der Haltepunkt erreicht wird** das gewünschte Verhalten aus.  
   
@@ -54,13 +58,13 @@ caps.handback.revision: 6
   
 3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
   
-#### So zeigen Sie die aktuelle Trefferanzahl an oder setzen diese zurück  
+#### <a name="to-view-or-reset-the-current-hit-count"></a>So zeigen Sie die aktuelle Trefferanzahl an oder setzen diese zurück  
   
-1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
      -oder-  
   
-     Klicken Sie im Fenster **Breakpoints**mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl**.  
+     Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
 2.  Im Dialogfeld **Trefferanzahl für Haltepunkt** wird direkt über der Schaltfläche **Zurücksetzen** der Wert **Aktuelle Trefferanzahl** angezeigt.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 6
   
 4.  Klicken Sie auf **OK** oder **Abbrechen** , um das Dialogfeld zu schließen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Angeben einer Breakpointbedingung](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
   
   

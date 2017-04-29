@@ -1,28 +1,32 @@
 ---
-title: "&#196;ndern von speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ändern von speicheroptimierten Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern von speicheroptimierten Tabellen
+# <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Änderungen des Schemas und des Indizes in speicheroptimierten Tabellen können mithilfe der Anweisung ALTER TABLE durchgeführt werden. Die Datenbankanwendung kann weiterhin ausgeführt werden, und jeder Vorgang, der auf die Tabellen zugreift, wird blockiert bis der Änderungsprozess abgeschlossen ist.  
   
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 Die ALTER TABLE-Syntax wird für die Änderung des Tabellenschemas sowie zum Hinzufügen, Löschen und Neuerstellen von Indizes verwendet. Indizes werden als Teil der Tabellendefinition berücksichtigt:  
   
@@ -75,12 +79,12 @@ Die ALTER TABLE-Syntax wird für die Änderung des Tabellenschemas sowie zum Hin
   
  Weitere Informationen zu ALTER TABLE-Funktionen und die vollständige Syntax finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## Schemagebundene Abhängigkeit  
- Systemintern kompilierte gespeicherte Prozeduren müssen schemagebunden sein, d. h., sie haben eine schemagebundene Abhängigkeit zu den speicheroptimierten Tabellen, auf die sie zugreifen, und zu den Spalten, auf die sie verweisen. Eine schemagebundene Abhängigkeit ist eine Beziehung zwischen zwei Entitäten, mit der verhindert wird, dass die Entität, auf die verwiesen wird, gelöscht oder in einer inkompatiblen Art geändert wird, solange die verweisende Entität vorhanden ist.  
+## <a name="schema-bound-dependency"></a>Schemagebundene Abhängigkeit  
+ Systemintern kompilierte gespeicherte Prozeduren müssen schemagebunden sein, d. h., sie haben eine schemagebundene Abhängigkeit zu den speicheroptimierten Tabellen, auf die sie zugreifen, und zu den Spalten, auf die sie verweisen. Eine schemagebundene Abhängigkeit ist eine Beziehung zwischen zwei Entitäten, mit der verhindert wird, dass die Entität, auf die verwiesen wird, gelöscht oder in einer inkompatiblen Art geändert wird, solange die verweisende Entität vorhanden ist.  
   
- Wird beispielsweise in einer schemagebundenen systemintern kompilierten gespeicherten Prozedur auf die Spalte *c1* aus der Tabelle *mytable* verwiesen, kann die Spalte *c1* nicht gelöscht werden. Entsprechend kann, wenn es eine solche Prozedur mit einer INSERT-Anweisung ohne Spaltenliste gibt (z. B. `INSERT INTO dbo.mytable VALUES (...)`) keine Spalte aus der Tabelle gelöscht werden.  
+ Wird beispielsweise in einer schemagebundenen systemintern kompilierten gespeicherten Prozedur auf die Spalte *c1* aus der Tabelle *mytable*verwiesen, kann die Spalte *c1* nicht gelöscht werden. Entsprechend kann, wenn es eine solche Prozedur mit einer INSERT-Anweisung ohne Spaltenliste gibt (z. B. `INSERT INTO dbo.mytable VALUES (...)`) keine Spalte aus der Tabelle gelöscht werden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ändert sich die Bucketanzahl eines vorhandenen Hashindexes. Dadurch wird der Hashindex mit der neuen Bucketanzahl neu erstellt, während andere Eigenschaften des Hashindexes unverändert bleiben.  
   
 ```tsql
@@ -145,7 +149,7 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## Protokollieren von ALTER TABLE bei speicheroptimierten Tabellen
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Protokollieren von ALTER TABLE bei speicheroptimierten Tabellen
 
 
 Bei einer speicheroptimierten Tabelle werden die meisten ALTER TABLE-Szenarios nun parallel ausgeführt und tragen zu einer Optimierung der Schreibvorgänge in das Transaktionsprotokoll bei. Zur Optimierung werden nur die Metadatenänderungen in das Transaktionsprotokoll geschrieben. Die folgenden ALTER TABLE-Vorgänge werden als Singlethread ausgeführt und sind nicht protokolloptimiert.
@@ -156,7 +160,7 @@ Für die Singlethread-Vorgänge muss der gesamte Inhalt der geänderten Tabelle 
 
 - Hinzufügen oder Löschen eines Columnstore-Indexes.
 
-- Fast jeder Vorgang, der sich auf eine [zeilenüberragende Spalte (off-row column)](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) auswirkt.
+- Fast jeder Vorgang, der sich auf eine [zeilenüberragende Spalte (off-row column)](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)auswirkt.
 
     - Sorgen Sie dafür, dass eine Spalte in der Zeile aus der Zeile verschoben wird.
 
@@ -167,7 +171,9 @@ Für die Singlethread-Vorgänge muss der gesamte Inhalt der geänderten Tabelle 
     - *Ausnahme:* Ein Verlängern einer bereits zeilenüberragenden Spalte wird in der optimierten Weise protokolliert.
 
 
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 
 [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
+

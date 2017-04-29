@@ -1,32 +1,36 @@
 ---
-title: "Erstellen von geschachtelten Triggern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Rekursive DML-Trigger [SQL Server]"
-  - "DML-Trigger, geschachtelte"
-  - "Trigger [SQL Server], geschachtelte"
-  - "Direkte Rekursion [SQL Server]"
-  - "Trigger [SQL Server], rekursive"
-  - "DML-Trigger, rekursive"
-  - "RECURSIVE_TRIGGERS (Option)"
-  - "Indirekte Rekursion [SQL Server]"
-  - "Geschachtelte DML-Trigger"
+title: Erstellen von geschachtelten Triggern | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen von geschachtelten Triggern
+# <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
   Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  Da Trigger innerhalb einer Transaktion ausgeführt werden, führt ein Fehler auf einer beliebigen Ebene einer Reihe geschachtelter Trigger zum Abbruch der gesamten Transaktion und zum Rollback für alle Datenänderungen. Fügen Sie PRINT-Anweisungen in die Trigger ein, sodass Sie ermitteln können, wo der Fehler aufgetreten ist.  
   
-## Rekursive Trigger  
+## <a name="recursive-triggers"></a>Rekursive Trigger  
  Ein AFTER-Trigger kann sich nur dann rekursiv aufrufen, wenn die Datenbankoption RECURSIVE_TRIGGERS festgelegt wurde.  
   
  Die folgenden zwei Rekursionsarten stehen zur Verfügung:  
@@ -67,8 +71,8 @@ AS
   
  Es wird nur die direkte Rekursion von AFTER-Triggern verhindert, wenn die Datenbankoption RECURSIVE_TRIGGERS auf OFF festgelegt ist. Sie müssen auch die **Geschachtelte Trigger** -Serveroption auf **0**festlegen, um die indirekte Rekursion von AFTER-Triggern zu deaktivieren.  
   
-## Beispiele  
- Das folgende Beispiel zeigt die Verwendung rekursiver Trigger zum Auflösen einer auf sich selbst verweisenden Beziehung (auch als transitiver Abschluss bezeichnet). Die `emp_mgr`-Tabelle definiert z. B. Folgendes:  
+## <a name="examples"></a>Beispiele  
+ Das folgende Beispiel zeigt die Verwendung rekursiver Trigger zum Auflösen einer auf sich selbst verweisenden Beziehung (auch als transitiver Abschluss bezeichnet). Die `emp_mgr` -Tabelle definiert z. B. Folgendes:  
   
 -   Einen Angestellten (`emp`) in einem Unternehmen.  
   
@@ -76,7 +80,7 @@ AS
   
 -   Die Gesamtzahl der Angestellten in der Hierarchie, die jedem einzelnen Vorgesetzten unterstellt sind (`NoOfReports`).  
   
- Mithilfe eines rekursiven UPDATE-Triggers kann die `NoOfReports`-Spalte auf dem aktuellen Stand gehalten werden, wenn neue Angestelltendatensätze eingefügt werden. Der INSERT-Trigger aktualisiert die `NoOfReports`-Spalte für den Datensatz des Vorgesetzten, wodurch rekursiv die `NoOfReports`-Spalte anderer Datensätze auf den höheren Hierarchieebenen aktualisiert wird.  
+ Mithilfe eines rekursiven UPDATE-Triggers kann die `NoOfReports` -Spalte auf dem aktuellen Stand gehalten werden, wenn neue Angestelltendatensätze eingefügt werden. Der INSERT-Trigger aktualisiert die `NoOfReports` -Spalte für den Datensatz des Vorgesetzten, wodurch rekursiv die `NoOfReports` -Spalte anderer Datensätze auf den höheren Hierarchieebenen aktualisiert wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **So legen Sie die Datenbankoption RECURSIVE_TRIGGERS fest**  
   
--   [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

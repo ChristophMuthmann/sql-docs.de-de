@@ -1,41 +1,45 @@
 ---
-title: "Erstellen eines Profils f&#252;r Datenbank-E-Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbank-E-Mail [SQL Server], öffentliche Profile"
-  - "Profile [SQL Server], Datenbank-E-Mail"
-  - "Öffentliche Profile [Datenbank-E-Mail]"
+title: "Erstellen eines Profils für Datenbank-E-Mail | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], public profiles
+- profiles [SQL Server], Database Mail
+- public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen eines Profils f&#252;r Datenbank-E-Mail
+# <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen. Weitere Informationen über E-Mail-Profile finden Sie unter [Profile für Datenbank-E-Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
--   **Vorbereitungen:** [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
+-   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
   
--   **So erstellen Sie private Profile für Datenbank-E-Mail mit:** [dem Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **So erstellen Sie öffentliche Profile für Datenbank-E-Mail mit:** [dem Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Erstellen Sie mindestens ein Datenbank-E-Mail-Konto für das Profil. Weitere Informationen zum Erstellen von Datenbank-E-Mail-Konten finden Sie unter [Erstellen eines Kontos für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
 ###  <a name="Security"></a> Sicherheit  
- Mit einem öffentlichen Profil kann jeder Benutzer mit Zugriff auf die **msdb**-Datenbank E-Mail mithilfe dieses Profils senden. Ein privates Profil kann von einem Benutzer oder einer Rolle verwendet werden. Durch Gewähren des Rollenzugriffs auf Profile wird eine leichter zu verwaltende Architektur geschaffen. Um E-Mail zu senden, müssen Sie Mitglied der **DatabaseMailUserRole** in der **msdb** -Datenbank sein und Zugriff auf mindestens ein Datenbankprofil besitzen.  
+ Mit einem öffentlichen Profil kann jeder Benutzer mit Zugriff auf die **msdb** -Datenbank E-Mail mithilfe dieses Profils senden. Ein privates Profil kann von einem Benutzer oder einer Rolle verwendet werden. Durch Gewähren des Rollenzugriffs auf Profile wird eine leichter zu verwaltende Architektur geschaffen. Um E-Mail zu senden, müssen Sie Mitglied der **DatabaseMailUserRole** in der **msdb** -Datenbank sein und Zugriff auf mindestens ein Datenbankprofil besitzen.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Der Benutzer, der die Profilkonten erstellt und gespeicherte Prozeduren ausführt, sollte Mitglied der festen Serverrolle "sysadmin" sein.  
@@ -81,11 +85,11 @@ caps.handback.revision: 34
   
     -   Überprüfen Sie auf der Seite **Assistenten abschließen** die auszuführenden Aktionen, und klicken Sie auf **Fertig stellen** , um die Konfiguration des Profils abzuschließen.  
   
-## Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
 ###  <a name="PrivateProfile"></a> So erstellen Sie private Profile für Datenbank-E-Mail  
   
--   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz her.  
+-   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her.  
   
 -   Führen Sie die gespeicherte Systemprozedur [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) wie folgt durch, um ein neues Profil zu erstellen.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 34
   
      *@ principal_name* = '*Name des Datenbankbenutzers oder der Rolle*'  
   
-     *@is_default* = '*Standardprofilstatus*'  
+     *@is_default* = '*Standardprofilstatus* '  
   
      Dabei steht *@profile_name* für den Namen des Profils und *@principal_name* für den Datenbankbenutzer oder die Datenbankrolle. *@is_default* legt fest, ob dieses Profil das Standardprofil für den Datenbankbenutzer oder die Datenbankrolle darstellt.  
   
@@ -153,7 +157,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ###  <a name="PublicProfile"></a> So erstellen Sie öffentliches Profil für Datenbank-E-Mail  
   
--   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz her.  
+-   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her.  
   
 -   Führen Sie die gespeicherte Systemprozedur [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) wie folgt durch, um ein neues Profil zu erstellen.  
   
@@ -185,9 +189,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@ principal_name* = '**öffentlich** oder **0**'  
   
-     *@is_default* = '*Standardprofilstatus*'  
+     *@is_default* = '*Standardprofilstatus* '  
   
-     Dabei steht *@profile_name* für den Namen des Profils, und *@principal_name* weist darauf hin, dass es sich um ein öffentliches Profil handelt. *@is_default* legt fest, ob dieses Profil das Standardprofil für den Datenbankbenutzer oder die Datenbankrolle darstellt.  
+     Dabei steht *@profile_name* für den Namen des Profils und *@principal_name* weist darauf hin, dass es sich um ein öffentliches Profil handelt. *@is_default* legt fest, ob dieses Profil das Standardprofil für den Datenbankbenutzer oder die Datenbankrolle darstellt.  
   
  Im folgenden Beispiel werden ein Datenbank-E-Mail-Konto und ein privates Profil für Datenbank-E-Mail erstellt. Anschließend wird das Konto zum Profil hinzugefügt und öffentlicher Zugriff auf das Profil erteilt.  
   
@@ -224,3 +228,4 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
+

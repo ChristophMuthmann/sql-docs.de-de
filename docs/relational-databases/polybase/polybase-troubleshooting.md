@@ -1,33 +1,37 @@
 ---
-title: "Problembehandlung in PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, Problembehandlung"
+title: Problembehandlung in PolyBase | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Problembehandlung in PolyBase
+# <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.  
   
-## Katalogsichten  
+## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu verwalten.  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
   
-## Dynamische Verwaltungssichten  
+## <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## So überwachen Sie PolyBase-Abfragen mit DMVs  
+  PolyBase-Abfragen werden in eine Reihe von Schritten innerhalb von sys.dm_exec_distributed_request_steps unterteilt. Die folgende Tabelle enthält eine Zuordnung zwischen der Bezeichnung des jeweiligen Schritts und der DMV.
+  
+ |PolyBase-Schritt|Zugeordnete DMV|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>So überwachen Sie PolyBase-Abfragen mit DMVs  
  Sie können PolyBase-Abfragen mithilfe der folgenden DMVs überwachen und eine Problembehandlung durchführen.  
   
 1.  **Suchen der am längsten ausgeführten Abfrage**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## So zeigen Sie den PolyBase-Abfrageplan an  
+## <a name="to-view-the--polybase-query-plan"></a>So zeigen Sie den PolyBase-Abfrageplan an  
   
 1.  Aktivieren Sie in SSMS **Tatsächlichen Ausführungsplan einschließen** (STRG+M), und führen Sie die Abfrage aus.  
   
 2.  Klicken Sie auf die Registerkarte **Ausführungsplan** .  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase-Abfrageplan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Operator **Remote Query** (Remoteabfrage), und wählen Sie **Eigenschaften**.  
   
@@ -196,7 +211,7 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## So überwachen Sie Knoten in einer PolyBase-Gruppe  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>So überwachen Sie Knoten in einer PolyBase-Gruppe  
  Nachdem Sie eine Gruppe von Computern als Teil einer PolyBase-Erweiterungsgruppe konfiguriert haben, können Sie den Status der Computer überwachen. Weitere Informationen zum Erstellen einer Erweiterungsgruppe finden Sie unter [PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 1.  Stellen Sie auf dem Hauptknoten einer Gruppe eine Verbindung mit SQL Server her.  
@@ -205,12 +220,15 @@ caps.handback.revision: 18
   
 3.  Führen Sie die DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) zur Anzeige des Status aller Knoten in der PolyBase-Gruppe aus.  
   
- ## Bekannte Einschränkungen
+ ## <a name="known-limitations"></a>Bekannte Einschränkungen
  
  PolyBase weist folgende Einschränkungen auf: 
- - Die maximal mögliche Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, kann 32.767 Bytes nicht überschreiten.
+ - Die maximal mögliche Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, kann 1 MB nicht überschreiten. 
  - PolyBase unterstützt Hive 0.12 und Datentypen (z.B. Char(), VarChar()) nicht.   
+ - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Spalten auf höchstens 50 Spalten wegen Java-Fehlermeldungen aufgrund von nicht genügend Arbeitsspeicher begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
+- [PolyBase wird nicht installiert, wenn Sie einem SQL Server 2016-Failovercluster einen Knoten hinzufügen.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
-## Fehlermeldungen und mögliche Lösungen
+## <a name="error-messages-and-possible-solutions"></a>Fehlermeldungen und mögliche Lösungen
 
 Wie Sie Fehler in externen Tabellen beheben, erfahren Sie in diesem Blog von Murshed Zaman: [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/] (https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (PolyBase-Setupfehler und mögliche Lösungen).
+

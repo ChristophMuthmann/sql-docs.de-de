@@ -1,27 +1,31 @@
 ---
-title: "Beispiele: Verwenden des AUTO-Modus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AUTO FOR XML-Modus, Beispiele"
+title: 'Beispiele: Verwenden des AUTO-Modus | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiele: Verwenden des AUTO-Modus
+# <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
   Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
   
-## Beispiel: Abrufen von Kunden-, Bestell- und Bestelldetailinformationen  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Beispiel: Abrufen von Kunden-, Bestell- und Bestelldetailinformationen  
  Mit dieser Abfrage werden die Kunden-, Bestell- und Bestelldetailinformationen für einen bestimmten Kunden abgerufen.  
   
 ```  
@@ -92,7 +96,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## Beispiel: Angeben von GROUP BY- und Aggregatfunktionen  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Beispiel: Angeben von GROUP BY- und Aggregatfunktionen  
  Die folgende Abfrage gibt individuelle Kunden-IDs sowie die Anzahl der Bestellungen zurück, die der Kunde jeweils angefordert hat.  
   
 ```  
@@ -112,7 +116,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## Beispiel: Angeben von berechneten Spalten im AUTO-Modus  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Beispiel: Angeben von berechneten Spalten im AUTO-Modus  
  Diese Abfrage gibt verkettete Namen einzelner Kunden sowie die Bestellinformationen zurück. Das liegt daran, dass die berechnete Spalte der innersten Ebene zugeordnet ist, die an dieser Stelle entdeckt wird, was in diesem Beispiel das <`SOH`>-Element ist. Die verketteten Kundennamen werden als Attribute des <`SOH`>-Elements dem Resultset hinzugefügt.  
   
 ```  
@@ -165,8 +169,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## Beispiel: Zurückgeben von Binärdaten  
- Diese Abfrage gibt ein Produktfoto aus der Tabelle `ProductPhoto` zurück. `ThumbNailPhoto` ist eine **varbinary (max)**-Spalte in der `ProductPhoto`-Tabelle. Der `AUTO`-Modus gibt standardmäßig einen Verweis (eine relative URL auf das virtuelle Stammverzeichnis der Datenbank, in der die Abfrage ausgeführt wird) auf die Binärdaten zurück. Das `ProductPhotoID` -Schlüsselattribut muss angegeben werden, damit das Bild später identifiziert werden kann. Beim Abrufen eines Bildverweises wie in diesem Beispiel muss der Primärschlüssel der Tabelle ebenfalls in der `SELECT` -Klausel angegeben werden, damit eine Zeile eindeutig identifiziert wird.  
+## <a name="example-returning-binary-data"></a>Beispiel: Zurückgeben von Binärdaten  
+ Diese Abfrage gibt ein Produktfoto aus der Tabelle `ProductPhoto` zurück. `ThumbNailPhoto` ist eine **varbinary (max)** -Spalte in der `ProductPhoto` -Tabelle. Der `AUTO` -Modus gibt standardmäßig einen Verweis (eine relative URL auf das virtuelle Stammverzeichnis der Datenbank, in der die Abfrage ausgeführt wird) auf die Binärdaten zurück. Das `ProductPhotoID` -Schlüsselattribut muss angegeben werden, damit das Bild später identifiziert werden kann. Beim Abrufen eines Bildverweises wie in diesem Beispiel muss der Primärschlüssel der Tabelle ebenfalls in der `SELECT` -Klausel angegeben werden, damit eine Zeile eindeutig identifiziert wird.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -221,7 +225,7 @@ FOR XML AUTO;
   
  Das kann insbesondere dann ein Problem darstellen, wenn dbobject-Abfragen für eine Datenbank mit Unterscheidung zwischen Groß- und Kleinschreibung ausgeführt werden. Um dieses Problem zu vermeiden, sollte die Groß-/Kleinschreibung des in Abfragen angegebenen Tabellen- oder Spaltennamens mit der Groß-/Kleinschreibung des Tabellen- oder Spaltennamens in der Datenbank übereinstimmen.  
   
-## Beispiel: Grundlegendes zur Codierung  
+## <a name="example-understanding-the-encoding"></a>Beispiel: Grundlegendes zur Codierung  
  Dieses Beispiel zeigt mehrere Codierungen, die in dem Resultset auftreten.  
   
  Erstellen Sie die folgende Tabelle:  
@@ -266,9 +270,9 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Falls die Werte der Elemente oder Attribute einen der fünf standardmäßigen XML-Zeichenentitäten (', "", \<, > und &) enthalten, werden diese XML-Sonderzeichen immer mithilfe der XML-Zeichencodierung codiert. Im vorherigen Resultset wird der Wert `&` im Wert des Attributs <`Col1`> als `&` codiert. Das #-Zeichen bleibt jedoch unverändert, da es sich hierbei um ein gültiges XML-Zeichen und kein XML-Sonderzeichen handelt.  
   
--   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#`-Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL` codiert.  
+-   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

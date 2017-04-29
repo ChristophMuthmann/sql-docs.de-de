@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Zugriffsmethoden-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zugriffsmethoden-Objekt"
-  - "SQLServer:Zugriffsmethoden"
+title: SQL Server, Zugriffsmethoden-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Zugriffsmethoden-Objekt
+# <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
   Das **Zugriffsmethoden** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen des Zugriffs auf die logischen Daten in der Datenbank bereit. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
   
  Einzelheiten über Datenmengen, Fragmentierung und Auslastung finden Sie in den folgenden dynamischen Verwaltungssichten:  
@@ -55,8 +59,8 @@ caps.handback.revision: 36
 |**Zurückgestellte gelöschte Rowsets**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets gelöscht werden sollen.|  
 |**Cleanup für gelöschte Rowsets/Sekunde**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets pro Sekunde erfolgreich gelöscht wurden.|  
 |**Gelöschte Rowsets ausgelassen/Sekunde**|Anzahl der Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets ausgelassen wurden.|  
-|**Aufgehobene Blockzuordnungen/Sekunde**|Anzahl der Blöcke, deren Zuordnung in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgehoben wurde.|  
-|**Zugeordnete Blöcke/Sekunde**|Anzahl der Blöcke, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wurden.|  
+|**Aufgehobene Blockzuordnungen/Sekunde**|Anzahl der Blöcke, deren Zuordnung in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgehoben wurde.|  
+|**Zugeordnete Blöcke/Sekunde**|Anzahl der Blöcke, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet wurden.|  
 |**Fehler in Cleanupbatches von AUs/Sekunde**|Anzahl der Batches pro Sekunde, die fehlgeschlagen sind und für die ein erneuter Versuch durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erforderlich war. Der Fehler kann auf nicht genügend Arbeits- oder Datenträgerspeicher zurückzuführen sein, aber auch auf Hardwarefehler und andere Gründe.|  
 |**Fehler beim Verwenden des Blattseitencookies**|Häufigkeit, mit der ein Blattseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf der Blattseite vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
 |**Fehler beim Verwenden von Strukturseitencookie**|Häufigkeit, mit der ein Strukturseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf den übergeordneten Seiten dieser Strukturseiten vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
@@ -72,11 +76,11 @@ caps.handback.revision: 36
 |**Anzahl der gelöschten LobSS-Anbieter**|Anzahl der LobSS-Anbieter, die gelöscht wurden.|  
 |**Anzahl der abgeschnittenen LobSS-Anbieter**|Anzahl der LobSS-Anbieter, die abgeschnitten wurden.|  
 |**Zuordnungen gemischter Seiten/Sekunde**|Anzahl der Seiten, die in gemischten Blöcken pro Sekunde zugeordnet wurden. Diese können verwendet werden, um die IAM-Seiten und die ersten acht einer Zuordnungseinheit zugeordneten Seiten zu speichern.|  
-|**Seitenkomprimierungsversuche/Sekunde**|Anzahl an Seiten, die zur Komprimierung auf Seitenebene ausgewertet werden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen erreicht werden konnten. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
-|**Aufgehobene Seitenzuordnungen/Sekunde**|Anzahl der Seiten, deren Zuordnung pro Sekunde in allen Datenbanken in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgehoben wurde. Darin enthalten sind Seiten aus sowohl gemischten als auch gleichartigen Blöcken.|  
+|**Seitenkomprimierungsversuche/Sekunde**|Anzahl an Seiten, die zur Komprimierung auf Seitenebene ausgewertet werden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen erreicht werden konnten. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)aufgehoben wurde.|  
+|**Aufgehobene Seitenzuordnungen/Sekunde**|Anzahl der Seiten, deren Zuordnung pro Sekunde in allen Datenbanken in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgehoben wurde. Darin enthalten sind Seiten aus sowohl gemischten als auch gleichartigen Blöcken.|  
 |**Seitenteilungen/Sekunde**|Anzahl der Seitenteilungen pro Sekunde, die das Ergebnis eines Überlaufs von Indexseiten sind.|  
-|**Zugeordnete Seiten/Sekunde**|Anzahl der Seiten, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wurden. Hierzu zählen auch Seitenzuordnungen aus gemischten sowie aus einheitlichen Blöcken.|  
-|**Komprimierte Seiten/Sekunde**|Anzahl an Datenseiten, die mit PAGE-Komprimierung komprimiert werden. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Zugeordnete Seiten/Sekunde**|Anzahl der Seiten, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet wurden. Hierzu zählen auch Seitenzuordnungen aus gemischten sowie aus einheitlichen Blöcken.|  
+|**Komprimierte Seiten/Sekunde**|Anzahl an Datenseiten, die mit PAGE-Komprimierung komprimiert werden. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)aufgehoben wurde.|  
 |**Untersuchungsscans/Sekunde**|Anzahl der Untersuchungsscans pro Sekunde, mit denen höchstens eine einzelne gekennzeichnete Zeile in einem Index oder einer Basistabelle gesucht wird.|  
 |**Bereichsscans/Sekunde**|Anzahl der eingeschränkten Bereichsscans mithilfe von Indizes pro Sekunde.|  
 |**Scanpunktüberprüfungen/Sekunde**|Häufigkeit pro Sekunde, mit der der Scanpunkt erneut überprüft werden musste, um den Scan fortsetzen zu können.|  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Basis für Arbeitstabellen aus Cache**|Nur zur internen Verwendung.|  
 |**Quote der Arbeitstabellen aus Cache**|Prozentsatz der erstellten Arbeitstabellen, bei denen die ersten zwei Seiten der Arbeitstabelle nicht zugeordnet wurden, sondern im Arbeitstabellencache verfügbar waren. (Wenn eine Arbeitstabelle gelöscht wird, kann die Zuordnung von zwei Seiten beibehalten werden, die an den Arbeitstabellencache zurückgegeben werden. Hierdurch wird die Leistung erhöht.)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

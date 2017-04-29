@@ -1,27 +1,31 @@
 ---
-title: "Beispiele: Verwenden des PATH-Modus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PATH FOR XML-Modus, Beispiele"
+title: 'Beispiele: Verwenden des PATH-Modus | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiele: Verwenden des PATH-Modus
+# <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
   Diese Beispiele veranschaulichen die Verwendung des PATH-Modus beim Generieren von XML-Code aus einer SELECT-Abfrage. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradfertigungsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle gespeichert sind.  
   
-## Angeben einer einfachen Abfrage im PATH-Modus  
+## <a name="specifying-a-simple-path-mode-query"></a>Angeben einer einfachen Abfrage im PATH-Modus  
  Diese Abfrage gibt einen FOR XML PATH-Modus an.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Angeben von XPath-ähnlichen Spaltennamen  
+## <a name="specifying-xpath-like-column-names"></a>Angeben von XPath-ähnlichen Spaltennamen  
  In der folgenden Abfrage beginnt der für `ProductModelID` angegebene Spaltenname mit dem @-Zeichen und enthält keinen Schrägstrich (/). Daher wird im XML-Ergebnis für das <`row`>-Element mit dem entsprechenden Spaltenwert ein Attribut erstellt.  
   
 ```  
@@ -148,7 +152,7 @@ GO
   
  `</ ProductModelData >`  
   
- Sie können ein einzelnes Element auf höchster Ebene hinzufügen, indem Sie in `root` die Option `FOR XML` angeben.  
+ Sie können ein einzelnes Element auf höchster Ebene hinzufügen, indem Sie in `root` die Option `FOR XML`angeben.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -159,7 +163,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Um eine Hierarchie zu generieren, können Sie eine PATH-ähnliche Syntax einfügen. Wenn Sie beispielsweise den Spaltennamen für die `Name`-Spalte zu "SomeChild/ModelName" ändern, erhalten Sie ein hierarchisiertes XML-Ergebnis, wie im Folgenden gezeigt:  
+ Um eine Hierarchie zu generieren, können Sie eine PATH-ähnliche Syntax einfügen. Wenn Sie beispielsweise den Spaltennamen für die `Name` -Spalte zu "SomeChild/ModelName" ändern, erhalten Sie ein hierarchisiertes XML-Ergebnis, wie im Folgenden gezeigt:  
   
  `<Root>`  
   
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Außer der ID und dem Namen des Produktmodells ruft die folgende Abfrage die Speicherorte der Fertigungsanweisungen dieses Produktmodells ab. Da die Spalte „Instructions“ den Typ **XML** aufweist, wird die **query()**-Methode des **XML**-Datentyps angegeben, um den Speicherort abzurufen.  
+ Außer der ID und dem Namen des Produktmodells ruft die folgende Abfrage die Speicherorte der Fertigungsanweisungen dieses Produktmodells ab. Da die Spalte „Instructions“ den Typ **XML** aufweist, wird die **query()** -Methode des **XML** -Datentyps angegeben, um den Speicherort abzurufen.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -243,7 +247,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Beachten Sie, dass das `MI`-Präfix auch in `WITH XMLNAMESPACES` definiert ist. Folglich definiert die **query()**-Methode des angegebenen **XML**-Typs das Präfix nicht im Abfrageprolog. Dies ist das Ergebnis:  
+ Beachten Sie, dass das `MI` -Präfix auch in `WITH XMLNAMESPACES`definiert ist. Folglich definiert die **query()** -Methode des angegebenen **XML** -Typs das Präfix nicht im Abfrageprolog. Dies ist das Ergebnis:  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Generieren einer Wertliste mithilfe des PATH-Modus  
+## <a name="generating-a-value-list-using-path-mode"></a>Generieren einer Wertliste mithilfe des PATH-Modus  
  Diese Abfrage konstruiert für jedes Produktmodell eine Wertliste mit Produkt-IDs. Außerdem konstruiert die Abfrage für jede Produkt-ID geschachtelte <`ProductName`>-Elemente, wie im folgenden XML-Fragment gezeigt:  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -354,7 +358,7 @@ FOR XML PATH('ProductModelData');
   
  `</ProductModelData>`  
   
- Die die Produktnamen konstruierende Unterabfrage gibt das Ergebnis als Zeichenfolge zurück, die in eine Entität geändert und anschließend dem XML-Code hinzugefügt wird. Wenn Sie die TYPE-Direktive `FOR XML PATH (''), type` hinzufügen, gibt die Unterabfrage das Ergebnis als **XML**-Typ zurück, und es erfolgt keine Änderung in Entitäten.  
+ Die die Produktnamen konstruierende Unterabfrage gibt das Ergebnis als Zeichenfolge zurück, die in eine Entität geändert und anschließend dem XML-Code hinzugefügt wird. Wenn Sie die TYPE-Direktive `FOR XML PATH (''), type`hinzufügen, gibt die Unterabfrage das Ergebnis als **XML** -Typ zurück, und es erfolgt keine Änderung in Entitäten.  
   
 ```  
 USE AdventureWorks2012;  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Hinzufügen von Namespaces zu XML-Ergebnissen  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Hinzufügen von Namespaces zu XML-Ergebnissen  
  Wie unter [Hinzufügen von Namespaces mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)beschrieben, können Sie WITH XMLNAMESPACES verwenden, um Namespaces in Abfragen im PATH-Modus aufzunehmen. Angenommen, die in der SELECT-Klausel angegebenen Namen enthalten Namespacepräfixe. Die folgende Abfrage im `PATH`-Modus konstruiert dieses XML-Ergebnis mit Namespaces.  
   
 ```  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

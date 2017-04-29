@@ -1,24 +1,28 @@
 ---
-title: "Erstellen eines Wartungsplans (Entwurfsoberfl&#228;che f&#252;r Wartungspl&#228;ne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Entwurfsoberfläche für Wartungspläne"
+title: "Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen eines Wartungsplans (Entwurfsoberfl&#228;che f&#252;r Wartungspl&#228;ne)
+# <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
   In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Entwurfsoberfläche für Wartungspläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  
   
  **In diesem Thema**  
@@ -37,7 +41,7 @@ caps.handback.revision: 10
   
 -   Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
--   Mitglieder der **db_ssisadmin**-Rolle und **dc_admin**-Rolle können ihre Berechtigungen möglicherweise auf **sysadmin** erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin**-Rolle und der **dc_admin**-Rolle nur **sysadmin**-Mitglieder hinzu.  
+-   Mitglieder der **db_ssisadmin** -Rolle und **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -46,15 +50,15 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Verwendung der Entwurfsoberfläche für Wartungspläne  
   
-#### So erstellen Sie einen Wartungsplan  
+#### <a name="to-create-a-maintenance-plan"></a>So erstellen Sie einen Wartungsplan  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Server zu erweitern, auf dem Sie einen Wartungsplan erstellen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne**, und klicken Sie anschließend auf **Neuer Wartungsplan**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und klicken Sie anschließend auf **Neuer Wartungsplan**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Die Toolbox und die *maintenance_plan_name* **[Entwurf]**-Oberfläche mit dem **Unterplan_1** im Hauptraster wird angezeigt.  
+4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Die Toolbox und die *maintenance_plan_name* **[Entwurf]** -Oberfläche mit dem **Unterplan_1** im Hauptraster wird angezeigt.  
   
      Die folgenden Optionen sind in der Kopfzeile des Entwurfsbereichs verfügbar.  
   
@@ -74,13 +78,13 @@ caps.handback.revision: 10
      Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
      **Verbindungen verwalten**  
-     Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzverbindungen hinzuzufügen. Weitere Informationen zu diesem Dialogfeld finden Sie unten.  
+     Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Weitere Informationen zu diesem Dialogfeld finden Sie unten.  
   
      **Berichterstellung und Protokollierung**  
      Zeigt das Dialogfeld **Berichterstellung und Protokollierung** an. Weitere Informationen zu diesem Dialogfeld finden Sie unten.  
   
      **Server**  
-     Mit dieser Option zeigen Sie das Dialogfeld **Server** an, das zum Auswählen der Server verwendet wird, auf denen die Unterplantasks ausgeführt werden. Diese Option ist nur auf Masterservern in Umgebungen mit mehreren Servern aktiviert. Weitere Informationen finden Sie unter [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md) und [Wartungsplan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Mit dieser Option zeigen Sie das Dialogfeld **Server** an, das zum Auswählen der Server verwendet wird, auf denen die Unterplantasks ausgeführt werden. Diese Option ist nur auf Masterservern in Umgebungen mit mehreren Servern aktiviert. Weitere Informationen finden Sie unter [Erstellen einer Multiserverumgebung](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) und [Wartungsplan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Name**  
      Hier zeigen Sie den Namen für den Wartungsplan an. Bei neuen Wartungsplänen wird der Name in einem Dialogfeld angegeben, bevor der Designer für den Wartungsplan geöffnet wird. Wenn Sie einen Wartungsplan umbenennen möchten, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Plan, und klicken Sie anschließend auf **Umbenennen**.  
@@ -93,7 +97,7 @@ caps.handback.revision: 10
   
      Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Weitere Informationen finden Sie unter Schritt **8** .  
   
-5.  Doppelklicken Sie in der Kopfzeile des Entwurfsbereichs auf **Unterplan_1**, und geben Sie im Dialogfeld **Unterplaneigenschaften** einen Namen sowie eine Beschreibung für den Unterplan ein.  
+5.  Doppelklicken Sie in der Kopfzeile des Entwurfsbereichs auf **Unterplan_1** , und geben Sie im Dialogfeld **Unterplaneigenschaften** einen Namen sowie eine Beschreibung für den Unterplan ein.  
   
      Die folgenden Optionen sind im Dialogfeld **Unterplaneigenschaften** verfügbar.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 10
      **Zeitplan**  
      Gibt an, nach welchem Zeitplan der Unterplan ausgeführt wird. Klicken Sie auf **Zeitplan des Unterplans** , um das Dialogfeld **Neuer Auftragszeitplan** zu öffnen. Klicken Sie auf **Zeitplan entfernen** , um den Zeitplan aus dem Unterplan zu löschen.  
   
-     Liste **Ausführen als**  
+     Liste**Ausführen als**   
      Wählen Sie das Konto aus, das zum Ausführen dieser Unteraufgabe verwendet werden soll.  
   
 6.  Klicken Sie auf **Zeitplan des Unterplans** , um die Details zum Zeitplan in das Dialogfeld **Neuer Auftragszeitplan** einzugeben.  
@@ -147,7 +151,7 @@ caps.handback.revision: 10
   
 8.  So definieren Sie einen Workflow zwischen Tasks:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf den Vorgängertask, und wählen Sie **Rangfolgeneinschränkung hinzufügen** aus.  
+    1.  Klicken Sie mit der rechten Maustaste auf den Vorgängertask, und wählen Sie **Rangfolgeneinschränkung hinzufügen**aus.  
   
     2.  Wählen Sie im Dialogfeld **Ablaufsteuerung** in der Liste **Zu** den abhängigen Task aus, und klicken Sie auf **OK**.  
   
@@ -158,17 +162,17 @@ caps.handback.revision: 10
          **Einschränkungsoption**  
          Definiert, wie eine Einschränkung zwischen zwei Tasks angewendet wird.  
   
-         Liste **Auswertungsvorgang**  
+         Liste**Auswertungsvorgang**    
          Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
-         Liste **Wert**  
-         Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler** oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
+         Liste**Wert**   
+         Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
   
         > [!NOTE]  
-        >  Die Rangfolgeneinschränkungszeile wird für **Erfolg** grün, für **Fehler** rot und für **Beendigung** blau angezeigt.  
+        >  Die Rangfolgeneinschränkungszeile wird für **Erfolg**grün, für **Fehler**rot und für **Beendigung**blau angezeigt.  
   
-         **expression**  
-         Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung** oder **Ausdruck oder Einschränkung** verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
+         **Ausdruck**  
+         Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
          **Test**  
          Überprüfen Sie den Ausdruck.  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
     3.  Geben Sie im Dialogfeld **Verbindungseigenschaften** im Feld **Verbindungsname** den Namen der Verbindung ein, die Sie erstellen.  
   
-    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)**, und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
+    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an**im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)** , und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
   
     5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein**die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden**aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
   
@@ -227,7 +231,7 @@ caps.handback.revision: 10
   
     5.  Klicken Sie im Dialogfeld **Berichterstellung und Protokollierung** auf **OK**.  
   
-12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer** mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
+12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
      Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer –***server_name* verfügbar.  
   
@@ -241,13 +245,13 @@ caps.handback.revision: 10
      Aktualisieren Sie die Anzeige der ausgewählten Protokolle. Beim Übernehmen von Filtereinstellungen werden mithilfe der Schaltfläche **Aktualisieren** die ausgewählten Protokolle erneut vom Zielserver gelesen.  
   
      **Filter**  
-     Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum** oder **Allgemein**.  
+     Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum**oder **Allgemein** .  
   
      **Suchen**  
      Durchsuchen Sie die Protokolldatei nach bestimmtem Text. Das Suchen mit Platzhalterzeichen wird nicht unterstützt.  
   
      **Beenden**  
-     Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
+     Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
   
      **Protokolldateizusammenfassung**  
      In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:**\<Filterkriterien>.  
@@ -256,7 +260,7 @@ caps.handback.revision: 10
      Zeigt das Datum des Ereignisses an.  
   
      **Quelle**  
-     Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
+     Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
   
      **MessageBox**  
      Zeigt die Meldungen an, die dem Ereignis zugeordnet sind.  

@@ -1,31 +1,35 @@
 ---
-title: "MultiPolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geometry-Untertyp Multipolygon [SQL Server]"
-  - "geometry-Untertypen [SQL Server]"
+title: MultiPolygon | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiPolygon geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06a27579c5e54406093daf4eb318c2e004a9763b
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiPolygon
+# <a name="multipolygon"></a>MultiPolygon
   Eine **MultiPolygon** -Instanz ist eine Sammlung von null oder mehr **Polygon** -Instanzen.  
   
-## Polygon-Instanzen  
+## <a name="polygon-instances"></a>Polygon-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für **MultiPolygon** -Instanzen.  
   
- ![Beispiele für MultiPolygon-Geometrieinstanzen](../../relational-databases/spatial/media/multipolygon.png "Beispiele für MultiPolygon-Geometrieinstanzen")  
+ ![Beispiele für MultiPolygon-Geometrieinstanzen](../../relational-databases/spatial/media/multipolygon.gif "Examples of geometry MultiPolygon instances")  
   
  Folgendes wird dargestellt:  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 20
   
 -   Abbildung 2 zeigt eine **MultiPolygon** -Instanz mit zwei **Polygon** -Elementen. Die Begrenzung wird durch die beiden äußeren Ringe und die drei inneren Ringe definiert. Die beiden **Polygon** -Elemente überschneiden sich an einem Tangentenpunkt.  
   
-### Akzeptierte Instanzen  
+### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Eine **MultiPolygon** -Instanz ist akzeptiert, wenn eine der folgenden Bedingungen erfüllt ist.  
   
 -   Es handelt sich um eine leere **MultiPolygon** -Instanz.  
@@ -56,7 +60,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
  Die zweite Instanz im MultiPolygon ist eine LineString-Instanz und keine akzeptierte Polygon-Instanz.  
   
-### Gültige Instanzen  
+### <a name="valid-instances"></a>Gültige Instanzen  
  Eine **MultiPolygon** -Instanz ist gültig, wenn es sich um eine leere **MultiPolygon** -Instanz handelt bzw. wenn die folgenden Kriterien erfüllt werden.  
   
 1.  Alle Instanzen, aus denen die **MultiPolygon** -Instanz besteht, sind gültige **Polygon** -Instanzen. Informationen über gültige **Polygon** -Instanzen finden Sie unter [Polygon](../../relational-databases/spatial/polygon.md).  
@@ -72,10 +76,10 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` ist gültig, da sich die zwei **Polygon**-Instanzen nur an einem Tangenspunkt berühren. `@g3` ist ungültig, da sich die Innenbereiche der zwei **Polygon**-Instanzen überlappen.  
+ `@g2` ist gültig, da sich die zwei **Polygon** -Instanzen nur an einem Tangenspunkt berühren. `@g3` ist ungültig, da sich die Innenbereiche der zwei **Polygon** -Instanzen überlappen.  
   
-## Beispiele  
- Im folgenden Beispiel wird die Erstellung einer `geometry``MultiPolygon`-Instanz veranschaulicht und das WKT-Format (Well-Known Text) der zweiten Komponente zurückgegeben.  
+## <a name="examples"></a>Beispiele  
+ Im folgenden Beispiel wird die Erstellung einer `geometry``MultiPolygon` -Instanz veranschaulicht und das WKT-Format (Well-Known Text) der zweiten Komponente zurückgegeben.  
   
 ```  
 DECLARE @g geometry;  
@@ -83,14 +87,14 @@ SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- In diesem Beispiel wird eine leere `MultiPolygon`-Instanz instantiiert.  
+ In diesem Beispiel wird eine leere `MultiPolygon` -Instanz instantiiert.  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [STArea &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   

@@ -1,29 +1,33 @@
 ---
-title: "Sichern des Verlegers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anmeldungen [SQL Server-Replikation], Veröffentlichungszugriffsliste"
-  - "Veröffentlichungen [SQL Server-Replikation], Veröffentlichungszugriffslisten"
-  - "Veröffentlichungszugriffsliste (PAL)"
-  - "PAL (Publication Access List, Veröffentlichungszugriffsliste)"
-  - "Verleger [SQL Server-Replikation], Sicherheit"
-  - "Veröffentlichungen [SQL Server-Replikation], Sicherheit"
+title: Sichern des Verlegers | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- Publishers [SQL Server replication], security
+- publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e04431c75b87188f6b476b9d23e5b482730881
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sichern des Verlegers
+# <a name="secure-the-publisher"></a>Sichern des Verlegers
   Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
   
 -   Protokolllese-Agent  
@@ -38,13 +42,13 @@ caps.handback.revision: 48
   
  Neben der angemessenen Verwaltung von Anmeldungen und Kennwörtern sollten Sie auch über die Rolle der Veröffentlichungszugriffsliste (Publication Access List oder PAL) im Klaren sein. Die PAL wird verwendet, um Anmeldungen den Zugriff auf Veröffentlichungsdaten zu ermöglichen, während gleichzeitig der Ad-hoc-Zugriff auf die Datenbank beim Verleger eingeschränkt wird.  
   
-## Veröffentlichungszugriffsliste  
+## <a name="publication-access-list"></a>Veröffentlichungszugriffsliste  
  Die PAL ist der primäre Mechanismus für die Sicherung von Veröffentlichungen beim Verleger. Die PAL funktioniert ähnlich wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Zugriffssteuerungsliste. Wenn Sie eine Veröffentlichung erstellen, wird von der Replikation eine PAL für diese Veröffentlichung erstellt. Die PAL kann so konfiguriert werden, dass Sie eine Liste mit Anmeldungen und Gruppen enthält, denen Zugriff auf die Veröffentlichung gewährt wird. Wenn ein Agent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, werden die Authentifizierungsinformationen in der PAL mit der vom Agent bereitgestellten Verlegeranmeldung verglichen. Dieser Vorgang bietet zusätzliche Sicherheit für den Verleger, da die Anmeldung bei Verleger und Verteiler vor einer Verwendung durch ein Clienttool geschützt ist, das direkt beim Verleger Änderungen ausführen könnte.  
   
 > [!NOTE]  
->  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Die Rolle verfügt über einen Namen im Format **Msmerge_***\< PublicationID>* für die Mergereplikation und **MSReplPAL_***\< PublicationDatabaseID>***_***\< PublicationID>* für die Transaktions- und Replikation.  
+>  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Für die Mergereplikation weist die Rolle einen Namen im Format **Msmerge_***\<PublicationID>* auf, für die Transaktionsreplikation und die Momentaufnahmenreplikation im Format **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>*.  
   
- Folgende Anmeldungen sind in der PAL standardmäßig enthalten: die Mitglieder der festen **sysadmin** -Serverrolle zum Zeitpunkt der Veröffentlichungserstellung sowie die Anmeldung, die zur Veröffentlichungserstellung verwendet wurde. Alle Anmeldungen, sind standardmäßig Mitglieder der **Sysadmin** festen Serverrolle oder die **Db_owner** festen Datenbankrolle für die Veröffentlichungsdatenbank, eine Veröffentlichung abonnieren, ohne der PAL explizit hinzugefügt wird.  
+ Folgende Anmeldungen sind in der PAL standardmäßig enthalten: die Mitglieder der festen **sysadmin** -Serverrolle zum Zeitpunkt der Veröffentlichungserstellung sowie die Anmeldung, die zur Veröffentlichungserstellung verwendet wurde. Standardmäßig können sämtliche Anmeldungen, die Mitglied der festen **sysadmin** -Serverrolle oder der festen **db_owner** -Datenbankrolle in der Veröffentlichungsdatenbank sind, eine Veröffentlichung abonnieren, ohne der PAL explizit hinzugefügt worden zu sein.  
   
  Wenn Sie die PAL verwenden, beachten Sie die folgenden Richtlinien:  
   
@@ -56,23 +60,23 @@ caps.handback.revision: 48
   
 -   Wenn die PAL Windows-Konten enthält und von der Domäne Active Directory verwendet wird, muss das Konto, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, zum Lesen aus Active Directory berechtigt sein. Wenn es hinsichtlich Windows-Konten zu Problemen kommt, stellen Sie sicher, dass das Konto, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, über ausreichende Berechtigungen verfügt. Weitere Informationen finden Sie in der Windows-Dokumentation.  
   
- Zum Verwalten von PAL finden Sie unter [Verwalten von Anmeldenamen in der Publikationszugriffsliste](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
+ Informationen zum Verwalten der Veröffentlichungszugriffsliste finden Sie unter [Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
   
-## Momentaufnahme-Agent  
+## <a name="snapshot-agent"></a>Momentaufnahme-Agent  
  Es gibt einen Momentaufnahme-Agent pro Veröffentlichung. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-## Momentaufnahmeübermittlung per FTP  
- Wenn Sie angeben, dass Momentaufnahmen über eine FTP-Freigabe verfügbar gemacht werden sollen, nicht über eine UNC-Freigabe, müssen Sie beim Konfigurieren des FTP-Zugriffs eine Anmeldung und ein Kennwort angeben. Weitere Informationen finden Sie unter [liefern eine Momentaufnahme über FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
+## <a name="ftp-snapshot-delivery"></a>Momentaufnahmeübermittlung per FTP  
+ Wenn Sie angeben, dass Momentaufnahmen über eine FTP-Freigabe verfügbar gemacht werden sollen, nicht über eine UNC-Freigabe, müssen Sie beim Konfigurieren des FTP-Zugriffs eine Anmeldung und ein Kennwort angeben. Weitere Informationen finden Sie unter [Übermitteln einer Momentaufnahme über FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
-## Protokolllese-Agent  
+## <a name="log-reader-agent"></a>Protokolllese-Agent  
  Es gibt einen Protokolllese-Agent für jede Datenbank, die zur Transaktionsreplikation veröffentlicht wird. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-## Warteschlangenlese-Agent  
- Für sämtliche Verleger und Veröffentlichungen (die Abonnements mit verzögerten Updates über eine Warteschlange zulassen), die einem bestimmten Verleger zugeordnet sind, gibt es einen Warteschlangenlese-Agent. Weitere Informationen finden Sie unter [Aktivieren Sie aktualisierbare Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
+## <a name="queue-reader-agent"></a>Warteschlangenlese-Agent  
+ Für sämtliche Verleger und Veröffentlichungen (die Abonnements mit verzögerten Updates über eine Warteschlange zulassen), die einem bestimmten Verleger zugeordnet sind, gibt es einen Warteschlangenlese-Agent. Weitere Informationen finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## Siehe auch  
- [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul & #40; SQL Server-Konfigurations-Manager & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
- [Bewährte Methoden für die Replikationssicherheit](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sicherheit und Schutz & #40; Replikation & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

@@ -1,59 +1,63 @@
 ---
-title: "Konfigurieren des Datenbank-E-Mail-Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+title: Konfigurieren des Datenbank-E-Mail-Features | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren des Datenbank-E-Mail-Features
+# <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **So konfigurieren Sie Datenbank-E-Mails mit folgenden Komponenten:**  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
- Verwenden Sie die Option **DatabaseMail XPs**, um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md).  
+ Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Zum Aktivieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in einer Datenbank ist eine Datenbanksperrung erforderlich. Wurde Service Broker in **msdb**deaktiviert, müssen Sie zum Aktivieren von Datenbank-E-Mails zuerst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beenden, damit Service Broker die erforderliche Sperre abrufen kann.  
@@ -103,7 +107,7 @@ caps.handback.revision: 13
   
  **Diese Seite nicht mehr anzeigen** – Aktivieren Sie diese Option, um die Willkommensseite künftig nicht mehr anzuzeigen.  
   
- **Weiter** – Wechselt zur Seite **Konfigurationsaufgabe auswählen**.  
+ **Weiter** – Wechselt zur Seite **Konfigurationsaufgabe auswählen** .  
   
  **Abbrechen** – Beendet den Assistenten ohne Konfiguration der Datenbank-E-Mails.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 13
  Geben Sie auf der Seite **Konfigurationsaufgabe auswählen** die Aufgabe an, die Sie bei jeder Verwendung des Assistenten ausführen. Wenn Sie Ihre Entscheidung vor dem Beenden des Assistenten ändern, können Sie mithilfe der Schaltfläche **Zurück** zu dieser Seite zurückkehren und eine andere Aufgabe auswählen.  
   
 > [!NOTE]  
->  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja** entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)-Option der gespeicherten Systemprozedur **sp_configure**.  
+>  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
   
  **Datenbank-E-Mail durch Ausführen der folgenden Aufgaben einrichten**  
  Führt alle Aufgaben durch, die zum ersten Einrichten der Datenbank-E-Mails erforderlich sind. Diese Option umfasst alle anderen drei Optionen.  
@@ -134,7 +138,7 @@ caps.handback.revision: 13
   
  Ein Konto für Datenbank-E-Mails enthält Informationen, mit deren Hilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] E-Mail-Nachrichten an einen SMTP-Server gesendet werden. Jedes Konto enthält Informationen für einen E-Mail-Server.  
   
- Ein Konto für Datenbank-E-Mail wird nur für Datenbank-E-Mail verwendet. Ein Konto für Datenbank-E-Mail entspricht nicht einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto oder einem Microsoft Windows-Konto. Datenbank-E-Mail kann mit den Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mit von Ihnen angegebenen Anmeldeinformationen oder anonym gesendet werden. Bei Verwendung der Standardauthentifizierung werden der Benutzername und das Kennwort in einem Konto für Datenbank-E-Mail nur für die Authentifizierung beim E-Mail-Server verwendet. Ein Konto muss keinem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer oder einem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+ Ein Konto für Datenbank-E-Mail wird nur für Datenbank-E-Mail verwendet. Ein Konto für Datenbank-E-Mail entspricht nicht einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto oder einem Microsoft Windows-Konto. Datenbank-E-Mail kann mit den Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mit von Ihnen angegebenen Anmeldeinformationen oder anonym gesendet werden. Bei Verwendung der Standardauthentifizierung werden der Benutzername und das Kennwort in einem Konto für Datenbank-E-Mail nur für die Authentifizierung beim E-Mail-Server verwendet. Ein Konto muss keinem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer oder einem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.  
   
  **Kontoname**  
  Geben Sie den Namen des neuen Kontos ein.  
@@ -143,13 +147,13 @@ caps.handback.revision: 13
  Geben Sie eine Beschreibung des Kontos ein. Die Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
- Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte E-Mails beispielsweise von der Adresse SqlAgent@Adventure-Works.com aus versenden.  
+ Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnte E-Mails beispielsweise von der Adresse SqlAgent@Adventure-Works.com aus versenden.  
   
  **Anzeigename**  
  Geben Sie den Namen ein, der in den von diesem Konto aus versendeten E-Mail-Nachrichten angezeigt wird. Der angezeigte Name ist optional. Es handelt sich dabei um den Namen, der in den von diesem Konto versendeten Nachrichten angezeigt wird. Ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte beispielsweise den Namen "SQL Server Agent Automated Mailer" in den E-Mail-Nachrichten anzeigen.  
   
  **Antwort-E-Mail**  
- Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen (danw@Adventure-Works.com).  
+ Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen, danw@Adventure-Works.com.  
   
  **Servername**  
  Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.***<Ihr_Unternehmen>***.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
@@ -193,7 +197,7 @@ caps.handback.revision: 13
  In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
- Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent@Adventure-Works.com** aus versenden.  
+ Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent@Adventure-Works.com**.  
   
  **Anzeigename**  
  Hier können Sie den Namen anzeigen oder bearbeiten, der in den von diesem Konto aus versendeten E-Mail-Nachrichten angezeigt wird. Der angezeigte Name ist optional. Es handelt sich dabei um den Namen, der in den von diesem Konto versendeten Nachrichten angezeigt wird. Ein Konto für SQL Server Agent könnte beispielsweise den Namen **SQL Server Agent Automated Mailer** in den E-Mails anzeigen.  
@@ -233,7 +237,7 @@ caps.handback.revision: 13
 ###  <a name="NewProfile"></a> Seite "Neues Profil"  
  Auf dieser Seite können Sie ein Profil für Datenbank-E-Mails erstellen. Ein Datenbank-E-Mail-Profil ist eine Auflistung von Datenbank-E-Mail-Konten. In Fällen, wo ein E-Mail-Server nicht erreichbar ist, sorgen Profile für mehr Zuverlässigkeit, indem sie alternative Datenbank-E-Mail-Konten bereitstellen. Es ist mindestens ein Datenbank-E-Mail-Konto erforderlich. Weitere Informationen zum Festlegen der Prioritäten von Datenbank-E-Mail-Konten im Profil finden Sie unter [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
- Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts**-Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
+ Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts** -Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
   
  **Profilname**  
  Geben Sie einen Namen für das neue Profil ein. Das Profil wird mit diesem Namen erstellt. Verwenden Sie nicht den Namen eines bereits vorhandenen Profils.  
@@ -261,7 +265,7 @@ caps.handback.revision: 13
 ###  <a name="ExistingProfile"></a> Seite "Vorhandenes Profil verwalten"  
  Mit dieser Seite können Sie ein vorhandenes Datenbank-E-Mail-Profil verwalten. Ein Datenbank-E-Mail-Profil ist eine Auflistung von Datenbank-E-Mail-Konten. In Fällen, wo ein E-Mail-Server nicht erreichbar ist, sorgen Profile für mehr Zuverlässigkeit, indem sie alternative Datenbank-E-Mail-Konten bereitstellen. Es ist mindestens ein Datenbank-E-Mail-Konto erforderlich. Weitere Informationen zum Festlegen der Prioritäten von Datenbank-E-Mail-Konten im Profil finden Sie unter [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
- Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts**-Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
+ Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts** -Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
   
  **Profilname**  
  Wählen Sie den Namen des zu verwaltenden Profils aus.  
@@ -293,12 +297,12 @@ caps.handback.revision: 13
  **Kontoname**  
  Anzeigen des Namens des Kontos.  
   
- **E-Mail-Adresse**  
+ **E-mail Address**  
  Anzeigen der E-Mail-Adresse des Kontos.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="AddAccount"></a> Seite "Konto zum Profil hinzufügen"  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  Verwenden Sie diese Seite, um das dem Profil hinzuzufügende Konto auszuwählen. Wählen Sie ein vorhandenes Konto aus dem Feld **Kontoname** , oder klicken Sie auf **Neues Konto**.  
   
  **Kontoname**  
@@ -327,7 +331,7 @@ caps.handback.revision: 13
  **Neues Profil erstellen**  
  Erstellt ein neues Profil.  
   
- **Ein vorhandenes Profil anzeigen, ändern oder löschen. Sie können außerdem Konten für das Profil verwalten.**  
+ **Vorhandenes Konto anzeigen, ändern oder löschen. Sie können außerdem Konten für das Profil verwalten.**  
  Aktualisiert oder löscht ein vorhandenes Profil. Mit dieser Option können Sie außerdem Konten verwalten, die dem Profil zugeordnet sind.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
@@ -337,12 +341,12 @@ caps.handback.revision: 13
   
  Profile sind entweder öffentlich oder privat. Auf ein privates Profil können nur bestimmte Benutzer oder Rollen zugreifen. Mit einem öffentlichen Profil kann jeder Benutzer oder jede Rolle mit Zugriff auf die Mailhostdatenbank (**msdb**) E-Mails mithilfe dieses Profils senden.  
   
- Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb**-Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück. Nur ein Profil kann als Standardprofil gekennzeichnet werden.  
+ Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb** -Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück. Nur ein Profil kann als Standardprofil gekennzeichnet werden.  
   
  **Öffentlich**  
  Wählen Sie diese Option aus, um das angegebene Profil als öffentliches Profil festzulegen.  
   
- **Profilname**  
+ **Profile Name**  
  Zeigt den Namen des Profils an.  
   
  **Standardprofil**  
@@ -358,10 +362,10 @@ caps.handback.revision: 13
   
  Profile sind entweder öffentlich oder privat. Auf ein privates Profil können nur bestimmte Benutzer oder Rollen zugreifen. Mit einem öffentlichen Profil kann jeder Benutzer oder jede Rolle mit Zugriff auf die Mailhostdatenbank (**msdb**) E-Mails mithilfe dieses Profils senden.  
   
- Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb**-Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück.  
+ Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb** -Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück.  
   
  **Benutzername**  
- Wählen Sie in der **msdb**-Datenbank einen Benutzer oder eine Rolle aus.  
+ Wählen Sie in der **msdb** -Datenbank einen Benutzer oder eine Rolle aus.  
   
  **Zugriff**  
  Wählen Sie aus, ob der Benutzer oder die Rolle Zugriff auf das angegebene Profil hat.  
@@ -416,7 +420,7 @@ caps.handback.revision: 13
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="TestEmail"></a> Seite "Test-E-Mail senden"  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
  Verwenden Sie die Seite **Test-E-Mail senden von***<Instanzname>*, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
  **Datenbank-E-Mail-Profil**  
@@ -437,11 +441,11 @@ caps.handback.revision: 13
  Die **mailitem_id** der Test-E-Mail.  
   
  **Problembehandlung**  
- Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](http://msdn.microsoft.com/library/ms188663.aspx) zu öffnen.  
+ Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](http://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-##  <a name="Template"></a> Verwenden von Vorlagen  
+##  <a name="Template"></a> Vorlagen  
  **So erstellen Sie ein Datenbank-E-Mail-Konfigurationsskript**  
   
 1.  Wählen Sie im Menü **Ansicht** den **Vorlagen-Explorer**aus.  
@@ -452,7 +456,7 @@ caps.handback.revision: 13
   
 4.  Wählen Sie im Menü **Abfrage** die Option **Werte für Vorlagenparameter angeben**aus. Das Fenster **Vorlagenparameter ersetzen** wird geöffnet.  
   
-5.  Geben Sie die Werte für **profile_name**, **account_name**, **SMTP_servername**, **email_address** und **display_name** ein. SQL Server Management Studio füllt die Vorlage mit den von Ihnen angegebenen Werten aus.  
+5.  Geben Sie die Werte für **profile_name**, **account_name**, **SMTP_servername**, **email_address**und **display_name**ein. SQL Server Management Studio füllt die Vorlage mit den von Ihnen angegebenen Werten aus.  
   
 6.  Führen Sie das Skript aus, damit die Konfiguration erstellt wird.  
   

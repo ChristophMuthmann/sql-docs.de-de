@@ -1,23 +1,27 @@
 ---
-title: "Ziele f&#252;r erweiterte Ereignisse in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 66e1984acfa86bea31f2cedbea70dbac5195a090
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ziele f&#252;r erweiterte Ereignisse in SQL Server
+# <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -27,32 +31,32 @@ Dieser Artikel erläutert Zweck und Art der Verwendung von package0-Zielen für 
 - dessen Parameter, es sei denn, der Parameter ist selbsterklärend
 
 
-#### XQuery-Beispiel
+#### <a name="xquery-example"></a>XQuery-Beispiel
 
 
 Der [ring_buffer-Abschnitt](#h2_target_ring_buffer) enthält ein Beispiel zur Verwendung von [XQuery in Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) zum Kopieren einer XML-Zeichenfolge in ein relationales Rowset.
 
 
-### Erforderliche Komponenten
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 
-- Allgemeine Kenntnisse der Grundlagen von erweiterten Ereignissen, wie in [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) beschrieben.
+- Allgemeine Kenntnisse der Grundlagen von erweiterten Ereignissen, wie in [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)beschrieben.
 
 
 - Vorhandene Installation einer neueren Version des häufig aktualisierten Hilfsprogramms SQL Server Management Studio (SSMS.exe). Einzelheiten dazu finden Sie unter:
     - [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
-- In SSMS.exe sollte die Verwendung des **Objekt-Explorers** bekannt sein, um mit der rechten Maustaste auf den Zielknoten für die Ereignissitzung zu klicken, um die [bequeme Anzeige der Ausgabedaten](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md) zu erreichen.
+- In SSMS.exe sollte die Verwendung des **Objekt-Explorers** bekannt sein, um mit der rechten Maustaste auf den Zielknoten für die Ereignissitzung zu klicken, um die [bequeme Anzeige der Ausgabedaten](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)zu erreichen.
     - Die Ereignisdaten werden als XML-Zeichenfolge erfasst. Hingegen werden die Daten in diesem Artikel als relationale Zeilen angezeigt. SSMS wurde zum Anzeigen der Daten verwendet, daraus wurden sie kopiert und in diesen Artikel eingefügt.
-    - Die alternative T-SQL-Technik zum Generieren von Rowsets aus XML wird im [ring_buffer-Abschnitt](#h2_target_ring_buffer) erläutert. Sie umfasst den Einsatz von XQuery.
+    - Die alternative T-SQL-Technik zum Generieren von Rowsets aus XML wird im [ring_buffer-Abschnitt](#h2_target_ring_buffer)erläutert. Sie umfasst den Einsatz von XQuery.
 
 
 
-## Parameter, Aktionen und Felder
+## <a name="parameters-actions-and-fields"></a>Parameter, Aktionen und Felder
 
 
-In Transact-SQL spielt die Anweisung [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) die zentrale Rolle bei erweiterten Ereignissen. Zum Erstellen der Anweisung benötigen Sie in vielen Fällen eine Liste und eine Beschreibung folgender Punkte:
+In Transact-SQL spielt die Anweisung [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) die zentrale Rolle bei erweiterten Ereignissen. Zum Erstellen der Anweisung benötigen Sie in vielen Fällen eine Liste und eine Beschreibung folgender Punkte:
 
 - die dem ausgewählten Ereignis zugeordneten Felder
 - die dem ausgewählten Ziel zugeordneten Parameter
@@ -65,13 +69,13 @@ SELECT-Anweisungen, die solche Listen aus Systemansichten zurückgeben, können 
     - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT von Aktionen
 
 
-Sie können die im Kontext einer realen CREATE EVENT SESSION-Anweisung verwendeten Parameter, Felder und Aktionen über [diesen Link](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective) anzeigen.
+Sie können die im Kontext einer realen CREATE EVENT SESSION-Anweisung verwendeten Parameter, Felder und Aktionen über [diesen Link](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective)anzeigen.
 
 
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## etw_classic_sync_target-Ziel
+## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target-Ziel
 
 
 Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) zusammenwirken, um die Systemaktivität zu überwachen. Weitere Informationen finden Sie in den folgenden Themen:
@@ -80,18 +84,17 @@ Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung f�
 - [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron*, während die meisten Ziele *asynchrone* Verarbeitung aufweisen.
+Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron* , während die meisten Ziele *asynchrone*Verarbeitung aufweisen.
 
 
-\<!--
-Revisit this ETW section later.
+\<! – Rufen Sie diesen ETW-Abschnitt später erneut auf.
 -->
 
 
 
 <a name="h2_target_event_counter"></a>
 
-## event_counter-Ziel
+## <a name="eventcounter-target"></a>event_counter-Ziel
 
 
 Das event_counter-Ziel zählt lediglich, wie oft jedes angegebene Ereignis eintritt.
@@ -104,10 +107,10 @@ Im Gegensatz zu den meisten anderen Zielen:
 
 - Im Gegensatz zu den meisten Zielen verarbeitet das event_counter-Ziel die empfangenen Daten *synchron*
     - Die synchrone Verarbeitung ist für den einfachen event_counter akzeptabel, da event_counter sehr wenig Verarbeitungsleitung beansprucht
-    - Das Datenbankmodul bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung des Datenbankmoduls zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone* Verarbeitung aufweisen.
+    - Das Datenbankmodul bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung des Datenbankmoduls zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone*Verarbeitung aufweisen.
 
 
-#### Von event_counter erfasste Beispielausgabe
+#### <a name="example-output-captured-by-eventcounter"></a>Von event_counter erfasste Beispielausgabe
 
 
 ```
@@ -139,20 +142,20 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## event_file-Ziel
+## <a name="eventfile-target"></a>event_file-Ziel
 
 
 Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Datenträgerdatei:
 
 
 - Sie geben den Parameter *filename=* in der ADD TARGET-Klausel an.
-    - Die Erweiterung der Datei muss **.xel** lauten.
+    - Die Erweiterung der Datei muss**.xel** lauten.
 
 
 - Der gewählte Dateiname wird vom System als Präfix verwendet, an das eine auf Datum-/Uhrzeit basierende Ganzzahl vom Typ long integer angehängt wird, gefolgt von der XEL-Erweiterung.
 
 
-#### CREATE EVENT SESSION mit **event_file**
+#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION mit **event_file**
 
 
 Nun folgt die CREATE EVENT SESSION, die wir für den Test verwendet haben. Eine der ADD TARGET-Klauseln gibt eine event_file-Datei an.
@@ -204,7 +207,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### sys.fn_xe_file_target_read_file-Funktion
+#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file-Funktion
 
 
 Das event_file-Ziel speichert die empfangenen Daten in einem binären Format, das für Menschen nicht lesbar ist. Transact-SQL kann den Inhalt der XEL-Datei mithilfe von SELECT FROM aus der Funktion [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) melden.
@@ -223,7 +226,7 @@ SELECT f.*
 ```
 
 
-Für SQL Server **2014** würde eine SELECT-Anweisung ähnlich der folgenden die Meldung der Daten übernehmen. Nach SQL Server 2014 werden keine XEM-Dateien mehr verwendet.
+Für SQL Server **2014**würde eine SELECT-Anweisung ähnlich der folgenden die Meldung der Daten übernehmen. Nach SQL Server 2014 werden keine XEM-Dateien mehr verwendet.
 
 
 ```
@@ -240,27 +243,27 @@ SELECT f.*
 Natürlich können Sie die XEL-Daten auch manuell auf der SSMS-Benutzeroberfläche anzeigen:
 
 
-#### Im event_file-Ziel gespeicherte Daten
+#### <a name="data-stored-in-the-eventfile-target"></a>Im event_file-Ziel gespeicherte Daten
 
 
-Der nächste Punkt ist der Bericht, der sich durch den SELECT aus **sys.fn_xe_file_target_read_file** in SQL Server 2016 ergibt.
+Der nächste Punkt ist der Bericht, der sich durch den SELECT aus **sys.fn_xe_file_target_read_file**in SQL Server 2016 ergibt.
 
 
 ```
 module_guid                            package_guid                           object_name     event_data                                                                                                                                                                                                                                                                                          file_name                                                      file_offset
 -----------                            ------------                           -----------     ----------                                                                                                                                                                                                                                                                                          ---------                                                      -----------
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
 
 
 
 <a name="h2_target_histogram"></a>
 
-## histogram-Ziel
+## <a name="histogram-target"></a>histogram-Ziel
 
 
-Das **histogram**-Ziel ist cooler als das event_counter-Ziel. histogram kann Folgendes:
+Das **histogram** -Ziel ist cooler als das event_counter-Ziel. histogram kann Folgendes:
 
 - Vorkommen für mehrere Elemente separat zählen
 - Vorkommen von verschiedenen Elementtypen zählen
@@ -270,8 +273,8 @@ Das **histogram**-Ziel ist cooler als das event_counter-Ziel. histogram kann Fol
 
 Der Parameter **source_type** bildet den Schlüssel bei der Steuerung des histogram-Ziels:
 
-- **source_type=0**: Sammeln von Daten für *Ereignisfelder*
-- **source_type=1**: Sammeln von Daten für *Aktionen*
+- **source_type=0** : Sammeln von Daten für *Ereignisfelder*
+- **source_type=1** : Sammeln von Daten für *Aktionen*
     - 1 ist der Standardwert
 
 
@@ -280,12 +283,12 @@ Der Standardwert des Parameters „slots“ ist 256. Wenn Sie einen anderen Wert
 - Beispielsweise würde „slots=59“ auf „=64“ aufgerundet.
 
 
-### *Action*-Beispiel für histogram
+### <a name="action-example-for-histogram"></a>*Action* -Beispiel für histogram
 
 
-In der TARGET...SET-Klausel legt die folgende Transact-SQL CREATE EVENT SESSION-Anweisung die Zielparameterzuweisung als **source_type=1** fest. Die 1 bedeutet, dass das histogram-Ziel eine Aktion nachverfolgt.
+In der TARGET...SET-Klausel legt die folgende Transact-SQL CREATE EVENT SESSION-Anweisung die Zielparameterzuweisung als **source_type=1**fest. Die 1 bedeutet, dass das histogram-Ziel eine Aktion nachverfolgt.
 
-Im aktuellen Beispiel bietet die Klausel EVENT...ACTION dem Ziel zufällig nur eine Aktion zur Auswahl an, nämlich **sqlos.system_thread_id**. In der TARGET...SET-Klausel sehen wir die Zuweisung **source=N'sqlos.system_thread_id'**.
+Im aktuellen Beispiel bietet die Klausel EVENT...ACTION dem Ziel zufällig nur eine Aktion zur Auswahl an, nämlich **sqlos.system_thread_id**. In der TARGET...SET-Klausel sehen wir die Zuweisung **source=N'sqlos.system_thread_id'** .
 
 - Um mehr als eine Quellaktion nachzuverfolgen, können Sie der CREATE EVENT SESSION-Anweisung ein zweites histogram-Ziel hinzufügen.
 
@@ -310,7 +313,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         )
     WITH
         (
-        <.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
+        \<.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
         );
 ```
 
@@ -330,7 +333,7 @@ value   count
 ```
 
 
-#### Verwenden von SELECT zum Entdecken der verfügbaren Aktionen
+#### <a name="select-to-discover-available-actions"></a>Verwenden von SELECT zum Entdecken der verfügbaren Aktionen
 
 
 Die [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT-Anweisung kann die Aktionen finden, die Ihnen im System zur Angabe in Ihrer CREATE EVENT SESSION-Anweisung zur Verfügung stehen. In der WHERE-Klausel müssten Sie dazu zuerst den Filter **o.name LIKE** bearbeiten, sodass er den Aktionen entspricht, die Sie interessieren.
@@ -349,10 +352,10 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### *Ereignisfeld*-Beispiel für histogram
+### <a name="event-field-example-for-histogram"></a>*Ereignisfeld* -Beispiel für histogram
 
 
-Im folgenden Beispiel ist **source_type=0** festgelegt. Der **source=** zugewiesene Wert ist ein Ereignisfeld (keine Aktion).
+Im folgenden Beispiel ist **source_type=0**festgelegt. Der **source=** zugewiesene Wert ist ein Ereignisfeld (keine Aktion).
 
 
 
@@ -368,7 +371,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
         source_type          = (0)
     )
     WITH
-    ( <....> );
+    ( \<....> );
 ```
 
 
@@ -384,7 +387,7 @@ value   count
 ```
 
 
-#### Verwenden von SELECT zum Ermitteln der für das ausgewählte Ereignis verfügbaren Felder
+#### <a name="select-to-discover-available-fields-on-your-chosen-event"></a>Verwenden von SELECT zum Ermitteln der für das ausgewählte Ereignis verfügbaren Felder
 
 
 Die [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT-Anweisung zeigt Ereignisfelder an, unter denen Sie wählen können. Sie müssten hier zunächst den Filter **o.name LIKE** bearbeiten, um ihn auf den Namen des ausgewählten Ereignisses festzulegen.
@@ -403,7 +406,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## pair_matching-Ziel
+## <a name="pairmatching-target"></a>pair_matching-Ziel
 
 
 Mithilfe des pair_matching-Ziels können Sie aufgetretene Startereignisse ermitteln, denen kein Endeereignis entspricht. Es kann beispielsweise auf ein Problem hinweisen, wenn ein lock_acquired-Ereignis eintritt, dem kein entsprechendes lock_released-Ereignis in angemessener Zeit folgt.
@@ -412,10 +415,10 @@ Mithilfe des pair_matching-Ziels können Sie aufgetretene Startereignisse ermitt
 Das System ordnet Start- und Endeereignisse nicht automatisch zu. Vielmehr müssen Sie dem System die Zuordnung mithilfe Ihrer CREATE EVENT SESSION-Anweisung erläutern. Wenn ein Start- und ein Endeereignis zugeordnet wurden, wird das Paar verworfen, damit die Konzentration ganz auf den nicht zugeordneten Startereignissen liegt.
 
 
-#### Suchen von zuzuordnenden Feldern für das Start- und Endeereignispaar
+#### <a name="finding-matchable-fields-for-the-start-and-end-event-pair"></a>Suchen von zuzuordnenden Feldern für das Start- und Endeereignispaar
 
 
-Mithilfe von [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) sehen wir im folgenden Rowset, dass etwa 16 Felder für das lock_acquired-Ereignis vorhanden sind. Das hier angezeigte Rowset wurde manuell geteilt, um zu zeigen, welche Felder in unserem Beispiel zugeordnet wurden. Bei einigen Feldern wäre der Versuch der Zuordnung unsinnig, wie etwa für **duration** bei beiden Ereignissen.
+Mithilfe von [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)sehen wir im folgenden Rowset, dass etwa 16 Felder für das lock_acquired-Ereignis vorhanden sind. Das hier angezeigte Rowset wurde manuell geteilt, um zu zeigen, welche Felder in unserem Beispiel zugeordnet wurden. Bei einigen Feldern wäre der Versuch der Zuordnung unsinnig, wie etwa für **duration** bei beiden Ereignissen.
 
 
 ```
@@ -441,7 +444,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### Beispiel für pair_matching
+### <a name="example-of-pairmatching"></a>Beispiel für pair_matching
 
 
 Die folgende CREATE EVENT SESSION-Anweisung gibt zwei Ereignisse und zwei Ziele an. Das pair_matching-Ziel gibt zwei Mengen von Feldern für die Zuordnung der Ereignisse zu Paaren an. Die Reihenfolge der durch Trennzeichen getrennten Felder, die **begin_matching_columns=** und **end_matching_columns=** zugewiesen werden, muss übereinstimmen. Zwischen den durch Trennzeichen getrennten Feldern sind keine Tabstopp- oder Zeilenvorschubzeichen zulässig, jedoch Leerzeichen.
@@ -512,7 +515,7 @@ Zum Testen der Ereignissitzung haben wir absichtlich die Freigabe von erworbenen
 4. Später, nach den Tests, haben wir ein COMMIT TRANSACTION ausgegeben.
 
 
-Das einfache **event_counter**-Ziel hat die folgenden Ausgabezeilen bereitgestellt. Da 52-50=2, erfahren wir aus der Ausgabe, dass wir 2 nicht gepaarte lock_acquired-Ereignisse sehen sollten, wenn wir die Ausgabe aus dem pair-matching-Ziel untersuchen.
+Das einfache **event_counter** -Ziel hat die folgenden Ausgabezeilen bereitgestellt. Da 52-50=2, erfahren wir aus der Ausgabe, dass wir 2 nicht gepaarte lock_acquired-Ereignisse sehen sollten, wenn wir die Ausgabe aus dem pair-matching-Ziel untersuchen.
 
 
 ```
@@ -523,7 +526,7 @@ sqlserver      lock_released   50
 ```
 
 
-Das **pair_matching**-Ziel hat die folgende Ausgabe bereitgestellt. Wie aus der event_counter-Ausgabe bereits zu erfahren war, sehen wir tatsächlich 2 lock_acquired-Zeilen. Die Tatsache, dass wir diese zwei Zeilen überhaupt finden, bedeutet, dass diese zwei lock_acquired-Ereignisse nicht gepaart wurden.
+Das **pair_matching** -Ziel hat die folgende Ausgabe bereitgestellt. Wie aus der event_counter-Ausgabe bereits zu erfahren war, sehen wir tatsächlich 2 lock_acquired-Zeilen. Die Tatsache, dass wir diese zwei Zeilen überhaupt finden, bedeutet, dass diese zwei lock_acquired-Ereignisse nicht gepaart wurden.
 
 
 ```
@@ -534,12 +537,12 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 ```
 
 
-Die Zeilen für die nicht gepaarten lock_acquired-Ereignisse könnten den T-SQL-Text oder **sqlserver.sql_text** aus der Sperranforderung enthalten. Allerdings wollten wir die Ausgabe schlank halten.
+Die Zeilen für die nicht gepaarten lock_acquired-Ereignisse könnten den T-SQL-Text oder **sqlserver.sql_text**aus der Sperranforderung enthalten. Allerdings wollten wir die Ausgabe schlank halten.
 
 
 <a name="h2_target_ring_buffer"></a>
 
-## ring_buffer-Ziel
+## <a name="ringbuffer-target"></a>ring_buffer-Ziel
 
 
 Das ring_buffer-Ziel ist praktisch für schnelle und einfache Ereignistests. Beim Beenden der Ereignissitzung wird die gespeicherte Ausgabe verworfen.
@@ -547,7 +550,7 @@ Das ring_buffer-Ziel ist praktisch für schnelle und einfache Ereignistests. Bei
 In diesem ring_buffer-Abschnitt zeigen wir Ihnen außerdem, wie Sie die Transact-SQL-Implementierung von XQuery verwenden können, um den XML-Inhalt von ring_buffer in ein besser lesbares relationales Rowset zu kopieren.
 
 
-#### CREATE EVENT SESSION mit ring_buffer
+#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION mit ring_buffer
 
 
 Diese CREATE EVENT SESSION-Anweisung, die das ring_buffer-Ziel verwendet, hat nichts Bemerkenswertes.
@@ -581,7 +584,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### Für lock_acquired von ring_buffer empfangene XML-Ausgabe
+### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Für lock_acquired von ring_buffer empfangene XML-Ausgabe
 
 
 Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form einer XML-Zeichenfolge vor. Die folgende Abbildung zeigt die XML-Zeichenfolge, die vom ring_buffer-Ziel in unserem Test gespeichert wurde. Um die folgende XML-Ausgabe halbwegs kurz zu halten, wurden jedoch alle &#x3c;event&#x3e;-Elemente bis auf zwei gelöscht. Und innerhalb der einzelnen &#x3c;event&#x3e;s wurde eine Reihe von überflüssigen &#x3c;data&#x3e;-Elementen gelöscht.
@@ -593,7 +596,7 @@ Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -617,18 +620,18 @@ Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-05T23:59:56.012Z">
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -652,18 +655,18 @@ Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
 </RingBufferTarget>
 ```
 
 
-Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisung ausgeben, während die Ereignissitzung aktiv ist. Die aktiven XML-Daten werden aus der Systemansicht **sys.dm_xe_session_targets** abgerufen.
+Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisung ausgeben, während die Ereignissitzung aktiv ist. Die aktiven XML-Daten werden aus der Systemansicht **sys.dm_xe_session_targets**abgerufen.
 
 
 ```tsql
@@ -692,7 +695,7 @@ SELECT * FROM #XmlAsTable;
 ```
 
 
-### XQuery zur Ausgabe des XML-Codes als Rowset
+### <a name="xquery-to-see-the-xml-as-a-rowset"></a>XQuery zur Ausgabe des XML-Codes als Rowset
 
 
 Um den vorstehenden XML-Code als relationales Rowset darzustellen, fahren Sie nach der vorstehenden SELECT-Anweisung durch Ausgeben der folgenden T-SQL-Anweisung fort. In den kommentierten Zeilen ist jede Verwendung von XQuery erläutert.
@@ -723,7 +726,7 @@ SELECT
 ```
 
 
-#### XQuery-Anmerkungen zur vorstehenden SELECT-Anweisung
+#### <a name="xquery-notes-from-preceding-select"></a>XQuery-Anmerkungen zur vorstehenden SELECT-Anweisung
 
 
 (A)
@@ -749,7 +752,7 @@ SELECT
 - Dies gilt für den von der vorherigen FROM-Klausel zurückgegebenen XML-Code.
 
 
-#### Ausgabe von XQuery SELECT
+#### <a name="output-from-xquery-select"></a>Ausgabe von XQuery SELECT
 
 
 Die nächste Abbildung zeigt das vom vorhergehenden T-SQL-Code, des XQuery enthält, generierte Rowset.
@@ -764,7 +767,7 @@ OccurredDtTm              Mode    DatabaseName
 
 
 
-## XEvent .NET-Namespaces und C&#x23;
+## <a name="xevent-net-namespaces-and-cx23"></a>XEvent .NET-Namespaces und C&#x23;
 
 
 Package0 weist zwei weitere Ziele auf, die aber in Transact-SQL nicht verwendet werden können:
@@ -778,13 +781,16 @@ Ein Grund, warum wir wissen, dass diese beiden Ziele in T-SQL nicht verwendet we
 
 Das event_stream-Ziel kann in .NET-Programmen verwendet werden, die in Sprachen wie C# erstellt wurden. C#- und andere .NET-Entwickler können auf einen Ereignisstream mithilfe einer .NET Framework-Klasse zugreifen, wie etwa im Namespace Microsoft.SqlServer.XEvents.Linq.
 
-Wenn er auftritt, bedeutet Fehler **25726**, dass der Ereignisstream sich schneller mit Daten gefüllt hat, als der Client die Daten nutzen konnte. Dadurch wurde die Verbindung des Datenbankmoduls mit dem Ereignisstream getrennt, um eine Beeinträchtigung der Serverleistung zu vermeiden.
+Wenn er auftritt, bedeutet Fehler **25726** , dass der Ereignisstream sich schneller mit Daten gefüllt hat, als der Client die Daten nutzen konnte. Dadurch wurde die Verbindung des Datenbankmoduls mit dem Ereignisstream getrennt, um eine Beeinträchtigung der Serverleistung zu vermeiden.
 
 
-### XEvent-Namespaces
+### <a name="xevent-namespaces"></a>XEvent-Namespaces
 
 
 - [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
+
+
 

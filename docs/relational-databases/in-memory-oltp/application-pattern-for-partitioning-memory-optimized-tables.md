@@ -1,29 +1,33 @@
 ---
-title: "Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] unterstützt ein Muster, bei dem eine begrenzte Menge aktiver Daten in einer speicheroptimierten Tabelle gespeichert wird, während Daten, auf die seltener zugegriffen wird, auf dem Datenträger verarbeitet werden. In einem typischen Szenario würden Daten auf Grundlage eines **datetime** -Schlüssels gespeichert.  
   
  Sie können partitionierte Tabellen mit speicheroptimierten Tabellen emulieren, indem Sie eine partitionierte Tabelle und eine speicheroptimierte Tabelle mit einem gemeinsamen Schema verwalten. Aktuelle Daten würden in die speicheroptimierte Tabelle eingefügt und aktualisiert, während Daten, auf die weniger häufig zugegriffen wird, in der herkömmlichen partitionierten Tabelle verwaltet würden.  
   
- Eine Anwendung, die weiß, dass sich die aktiven Daten in einer speicheroptimierten Tabelle befinden, kann systemintern kompilierte gespeicherte Prozeduren verwenden, um auf die Daten zuzugreifen. Vorgänge, die auf alle Daten zugreifen müssen oder die nicht wissen, welche Tabelle relevante Daten enthält, verwenden interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)], um die speicheroptimierte Tabelle mit der partitionierten Tabelle zu verknüpfen.  
+ Eine Anwendung, die weiß, dass sich die aktiven Daten in einer speicheroptimierten Tabelle befinden, kann systemintern kompilierte gespeicherte Prozeduren verwenden, um auf die Daten zuzugreifen. Vorgänge, die auf alle Daten zugreifen müssen oder die nicht wissen, welche Tabelle relevante Daten enthält, verwenden interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] , um die speicheroptimierte Tabelle mit der partitionierten Tabelle zu verknüpfen.  
   
  Dieser Partitionswechsel wird folgendermaßen beschrieben:  
   
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   Fügen Sie die aktive Partition hinzu.  
   
- ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partitionswechsel.")  
+ ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 Pflege aktiver Daten  
   
  Die Aktionen ab dem Löschen von "ActiveOrders" müssen während eines Wartungsfensters durchgeführt werden, damit Abfragen im Zeitraum zwischen der Datenlöschung und Übertragung in die Stagingtabelle immer auf alle Daten zugreifen können.  
   
  Ein Beispiel dazu finden Sie unter [Partitionierung auf Anwendungsebene](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
-## Codebeispiel  
+## <a name="code-sample"></a>Codebeispiel  
  Im folgenden Beispiel wird gezeigt, wie eine speicheroptimierte Tabelle mit einer partitionierten datenträgerbasierten Tabelle verwendet wird. Häufig verwendete Daten werden im Arbeitsspeicher gespeichert. Um die Daten auf dem Datenträger zu speichern, erstellen Sie eine neue Partition, und kopieren Sie die Daten in die partitionierte Tabelle.  
   
  Im ersten Teil dieses Beispiels werden die Datenbank und die erforderlichen Objekte erstellt. Im zweiten Teil des Beispiels wird gezeigt, wie Daten aus einer speicheroptimierten Tabelle in eine partitionierte Tabelle verschoben werden.  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

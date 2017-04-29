@@ -1,30 +1,34 @@
 ---
-title: "Indexeigenschaften (F1-Hilfe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: Indexeigenschaften (F1-Hilfe) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indexeigenschaften (F1-Hilfe)
+# <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In den Abschnitten dieses Themas werden verschiedene Indexeigenschaften beschrieben, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Dialogfeldern verfügbar sind.  
@@ -76,7 +80,7 @@ caps.handback.revision: 38
  Gibt die Sortierreihenfolge der ausgewählten Indexspalte an, entweder **Aufsteigend** oder **Absteigend**.  
   
 > [!NOTE]  
->  Wenn der Indextyp **Primär-XML** oder **Räumlich** ist, wird diese Spalte nicht in der Tabelle aufgeführt.  
+>  Wenn der Indextyp **Primär-XML** oder **Räumlich**ist, wird diese Spalte nicht in der Tabelle aufgeführt.  
   
  **Datentyp**  
  Zeigt die Datentypinformationen an.  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  Zeigt an, ob in der am Indexschlüssel beteiligten Spalte NULL-Werte in der Tabellen- oder Sichtspalte gespeichert werden dürfen.  
   
  **Hinzufügen**  
- Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie im Dialogfeld **Spalten auswählen aus** *<table name>\>* Tabellenspalten aus. Dieses Dialogfeld wird angezeigt, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
+ Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie im Dialogfeld **Select Columns from** (Spalten auswählen aus) *\<table name>* Tabellenspalten aus. Dieses Dialogfeld wird angezeigt, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
   
  **Entfernen**  
  Entfernt die ausgewählte Spalte aus der Beteiligung am Indexschlüssel.  
@@ -106,7 +110,7 @@ caps.handback.revision: 38
  Verschiebt die ausgewählte Spalte im Indexschlüsselraster nach unten.  
   
  **columnstore-Spalten**  
- Klicken Sie auf **Hinzufügen**, um Spalten für den columnstore-Index auszuwählen. Einschränkungen für einen Columnstore-Index finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).  
+ Klicken Sie auf **Hinzufügen** , um Spalten für den columnstore-Index auszuwählen. Einschränkungen für einen Columnstore-Index finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).  
   
  **Eingeschlossene Spalten**  
  Nimmt Nichtschlüsselspalten in den nicht gruppierten Index auf. Mit dieser Option können Sie die aktuellen Indexgrenzwerte hinsichtlich der Gesamtgröße eines Indexschlüssels und der maximalen Anzahl der Spalten in einem Indexschlüssel umgehen, indem Sie Spalten auf Blattebene eines nicht gruppierten Indexes als Nichtschlüsselspalten hinzufügen. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identität**  
  Zeigt bei Identitätsspalten **Ja** an. Wenn die Spalte keine Identitätsspalte ist, wird **Nein** angezeigt.  
   
- **NULL-Werte zulassen**  
+ **Allow Nulls**  
  Zeigt **Ja** an, wenn die Tabellendefinition für die Spalte NULL-Werte zulässt. Zeigt **Nein** an, wenn die Tabellendefinition für die Spalte keine NULL-Werte zulässt.  
   
 ##  <a name="Storage"></a> Optionen auf der Seite "Speicher"  
@@ -178,24 +182,24 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> Indexoptionen auf der Seite "Räumlich"  
  Auf der Seite **Räumlich** können Sie die Werte der räumlichen Eigenschaften anzeigen oder angeben. Weitere Informationen finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-### Umgebendes Feld  
+### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
  In dem Bereich werden die Koordinaten **(***X-min***,***Y-min***)** und **(***X-max***,***Y-max***)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
   
- **Minimaler X-Wert**  
+ **X-min**  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
   
- **Minimaler Y-Wert**  
+ **Y-min**  
  Die Y-Koordinate der unteren linken Ecke des umgebenden Felds.  
   
- **Maximaler X-Wert**  
+ **X-max**  
  Die X-Koordinate der oberen rechten Ecke des umgebenden Felds.  
   
- **Maximaler Y-Wert**  
+ **Y-max**  
  Die Y-Koordinate der oberen rechten Ecke des umgebenden Felds.  
   
-### Allgemein  
+### <a name="general"></a>Allgemein  
  **Mosaikschema**  
  Gibt das Mosaikschema für den Index an. Folgende Mosaikschemas werden unterstützt.  
   
@@ -216,9 +220,9 @@ caps.handback.revision: 38
  **Zellen pro Objekt**  
  Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die für ein einzelnes räumliches Objekt im Index verwendet werden können. Bei dieser Zahl kann es sich um jede ganze Zahl von 1 bis 8192 handeln. Der Standardwert ist 16. Der Wert lautet 8 für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn der Datenbank-Kompatibilitätsgrad auf 110 oder höher festgelegt wird.  
   
- Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n* angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte der **Ebene 1** abhängt.  
+ Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n*angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte der **Ebene 1** abhängt.  
   
-### Raster  
+### <a name="grids"></a>Raster  
  In diesem Bereich wird die Dichte des Rasters auf jeder Ebene des Mosaikschemas angezeigt. Die Dichte wird als **Niedrig**, **Mittel**oder **Hoch**angegeben. Der Standardwert ist **Mittel**. **Niedrig** stellt ein Raster aus 4x4, also 16 Zellen, **Mittel** ein Raster aus 8x8, also 64 Zellen, und **Hoch** ein Raster aus 16x16, also 256 Zellen, dar. Diese Optionen sind nicht verfügbar, wenn die Mosaikoptionen **Automatisches Geometrieraster** oder **Automatisches Geografieraster** nicht ausgewählt sind.  
   
  **Ebene 1**  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **Filterausdruck**  
  Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

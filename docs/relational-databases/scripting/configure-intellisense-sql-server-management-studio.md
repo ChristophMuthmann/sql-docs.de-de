@@ -1,40 +1,44 @@
 ---
-title: "Konfigurieren von IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Optionen [SQL Server Management Studio], IntelliSense"
-  - "Ändern von IntelliSense-Optionen"
-  - "IntelliSense [SQL Server], Ändern von Optionen"
+title: Konfigurieren von IntelliSense (SQL Server Management Studio) | Microsoft Dokumentation
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Options [SQL Server Management Studio], IntelliSense
+- modifying IntelliSense options
+- IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11849de0164d10de523450897b7a106078b8f2be
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren von IntelliSense (SQL Server Management Studio)
+# <a name="configure-intellisense-sql-server-management-studio"></a>Konfigurieren von IntelliSense (SQL Server Management Studio)
   Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
   
 > [!IMPORTANT]  
 >  Einige Änderungen werden in Ihrer aktuellen Editor-Sitzung nicht wirksam.  Sie müssen eine neue Transact-SQL-Editor-Sitzung öffnen, um die Änderung anzeigen zu können.
   
-### Standardmäßiges Deaktivieren der Anweisungsvervollständigungsoptionen  
+### <a name="to-turn-statement-completion-options-off-by-default"></a>Standardmäßiges Deaktivieren der Anweisungsvervollständigungsoptionen  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
-2.  Erweitern Sie **Text-Editor**, erweitern Sie entweder **Alle Sprachen**, **Transact-SQL** oder **XML**, und klicken Sie dann auf **Allgemein**.  
+2.  Erweitern Sie **Text-Editor**, erweitern Sie entweder **Alle Sprachen**, **Transact-SQL**oder **XML**, und klicken Sie dann auf **Allgemein**.  
   
 3.  Deaktivieren Sie die Kontrollkästchen für die nicht gewünschten Anweisungsvervollständigungsoptionen, und klicken Sie dann auf **OK**.  
   
-### So ändern Sie IntelliSense-Optionen für Transact-SQL  
+### <a name="to-modify-transact-sql-intellisense-options"></a>So ändern Sie IntelliSense-Optionen für Transact-SQL  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
@@ -49,3 +53,4 @@ caps.handback.revision: 30
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
+

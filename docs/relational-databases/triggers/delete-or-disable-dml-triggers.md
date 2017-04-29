@@ -1,29 +1,33 @@
 ---
-title: "L&#246;schen oder Deaktivieren von DML-Triggern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DML-Trigger, deaktivieren"
-  - "Entfernen von DML-Triggern"
-  - "Deaktivieren von DML-Triggern"
-  - "Verwerfen von DML-Triggern"
-  - "Löschen von DML-Triggern"
-  - "DML-Trigger, entfernen"
+title: "Löschen oder Deaktivieren von DML-Triggern | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# L&#246;schen oder Deaktivieren von DML-Triggern
+# <a name="delete-or-disable-dml-triggers"></a>Löschen oder Deaktivieren von DML-Triggern
   In diesem Thema wird beschrieben, wie Sie einen DML-Trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen oder deaktivieren.  
   
  **In diesem Thema**  
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So löschen Sie einen DML-Trigger  
+#### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 4.  Überprüfen Sie im Dialogfeld **Objekt löschen** , ob der richtige Trigger ausgewählt ist, und klicken Sie dann auf **OK**.  
   
-#### So deaktivieren und aktivieren Sie einen DML-Trigger  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>So deaktivieren und aktivieren Sie einen DML-Trigger  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So löschen Sie einen DML-Trigger  
+#### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### So deaktivieren und aktivieren Sie einen DML-Trigger  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>So deaktivieren und aktivieren Sie einen DML-Trigger  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

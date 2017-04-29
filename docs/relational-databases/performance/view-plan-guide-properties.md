@@ -1,27 +1,31 @@
 ---
-title: "Anzeigen der Eigenschaften der Planhinweisliste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "Planhinweisliste, [SQL Server] Anzeigen der Eigenschaften der Planhinweisliste"
-  - "Anzeigen der Eigenschaften der Planhinweisliste"
+title: Anzeigen der Eigenschaften der Planhinweisliste | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anzeigen der Eigenschaften der Planhinweisliste
+# <a name="view-plan-guide-properties"></a>Anzeigen der Eigenschaften der Planhinweisliste
   Sie können die Eigenschaften von Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **In diesem Thema**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So zeigen Sie die Eigenschaften einer Planhinweisliste an  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>So zeigen Sie die Eigenschaften einer Planhinweisliste an  
   
 1.  Klicken Sie auf das Pluszeichen, um die Datenbank zu erweitern, in der Sie die Eigenschaften einer Planhinweisliste anzeigen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      Die folgenden Eigenschaften werden im Dialogfeld **Die Eigenschaften der Planhinweisliste** angezeigt.  
   
      **Hinweise**  
-     Zeigt die Abfragehinweise oder den Abfrageplan zur Anwendung auf die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an. Wenn ein Abfrageplan als Hinweis gekennzeichnet ist, wird die XML-Showplanausgabe für den Plan angezeigt.  
+     Zeigt die Abfragehinweise oder den Abfrageplan zur Anwendung auf die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an. Wenn ein Abfrageplan als Hinweis gekennzeichnet ist, wird die XML-Showplanausgabe für den Plan angezeigt.  
   
      **Ist deaktiviert**  
      Zeigt den Status der Planhinweisliste an. Mögliche Werte sind **True** und **False**.  
@@ -65,30 +69,30 @@ caps.handback.revision: 19
      Zeigt den Namen der Planhinweisliste an.  
   
      **Parameter**  
-     Wenn es sich beim Bereichstyp um SQL oder TEMPLATE handelt, wird hiermit der Name und Datentyp aller Parameter angezeigt, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung eingebettet sind.  
+     Wenn es sich beim Bereichstyp um SQL oder TEMPLATE handelt, wird hiermit der Name und Datentyp aller Parameter angezeigt, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung eingebettet sind.  
   
      **Bereichsbatch**  
-     Zeigt den Batchtext an, in dem die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung enthalten ist.  
+     Zeigt den Batchtext an, in dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung enthalten ist.  
   
      **Name von Bereichsobjekt**  
-     Wenn es sich beim Bereichstyp um OBJECT handelt, wird hiermit der Name der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, benutzerdefinierten Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder des DML-Triggers angezeigt, die bzw. der die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung enthält.  
+     Wenn es sich beim Bereichstyp um OBJECT handelt, wird hiermit der Name der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur, benutzerdefinierten Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder des DML-Triggers angezeigt, die bzw. der die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung enthält.  
   
      **Name von Bereichsschema**  
      Wenn es sich beim Bereichstyp um OBJECT handelt, wird hiermit der Name des Schemas angezeigt, in dem sich das Objekt befindet.  
   
      **Bereichstyp**  
-     Zeigt den Typ der Entität an, in dem die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung enthalten ist. Dies gibt den Kontext zum Abgleich der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mit der Planhinweisliste an. Mögliche Werte sind **OBJECT**, **SQL**und **TEMPLATE**.  
+     Zeigt den Typ der Entität an, in dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung enthalten ist. Dies gibt den Kontext zum Abgleich der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste an. Mögliche Werte sind **OBJECT**, **SQL**und **TEMPLATE**.  
   
      **Statement**  
-     Zeigt die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an, auf die die Planhinweisliste angewendet wird.  
+     Zeigt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an, auf die die Planhinweisliste angewendet wird.  
   
 4.  Klicken Sie auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So zeigen Sie die Eigenschaften einer Planhinweisliste an  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>So zeigen Sie die Eigenschaften einer Planhinweisliste an  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

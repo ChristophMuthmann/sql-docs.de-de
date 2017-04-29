@@ -1,22 +1,26 @@
 ---
-title: "Selektive XML-Indizes (SXI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Selektive XML-Indizes (SXI) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Selektive XML-Indizes (SXI)
+# <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
   Selektive XML-Indizes sind ein weiterer Typ von XML-Index, der Ihnen zusätzlich zu den herkömmlichen XML-Indizes zur Verfügung steht. Die Ziele der selektiven XML-Indexfunktion sind Folgende:  
   
 -   Verbessern der Leistung von Abfragen zu XML-Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind.  
@@ -25,7 +29,7 @@ caps.handback.revision: 8
   
 -   Verbessern der Skalierbarkeit durch das Reduzieren der Speicherkosten für XML-Indizes.  
   
- Die Haupteinschränkung bei herkömmlichen XML-Indizes liegt darin, dass sie das gesamte XML-Dokument indizieren. Dies führt zu mehreren bedeutenden Nachteilen, z. B. verringerter Abfrageleistung und höheren Kosten für die Indexwartung, die sich in der Regel auf die Indexspeicherkosten beziehen.  
+ Die Haupteinschränkung bei herkömmlichen XML-Indizes liegt darin, dass sie das gesamte XML-Dokument indizieren. Dies führt zu mehreren bedeutenden Nachteilen, z. B. verringerter Abfrageleistung und höheren Kosten für die Indexwartung, die sich in der Regel auf die Indexspeicherkosten beziehen.  
   
  Mit der selektiven XML-Indexfunktion können Sie nur bestimmte Pfade aus den XML-Dokumenten zum Index höherstufen. Bei der Indexerstellung werden diese Pfade ausgewertet, und die Knoten, auf die sie verweisen, werden aufgeteilt und in einer relationalen Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert. Diese Funktion verwendet einen effizienten Zuordnungsalgorithmus, der in Zusammenarbeit mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Produktteam von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Research entwickelt wurde. Dieser Algorithmus ordnet die XML-Knoten einer einzelnen relationalen Tabelle zu und erzielt eine herausragende Leistung bei sehr geringem Speicherbedarf.  
   
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  Anwendungen müssen nicht aktualisiert werden, um die Vorteile selektiver XML-Indizes nutzen zu können.  
   
- [In diesem Thema](#top)  
   
 ##  <a name="compare"></a> Selektive XML-Indizes und primäre XML-Indizes  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   Sie unterstützen Abfragen für unbekannte Elemente oder Elemente in einer unbekannten Position in der Dokumentstruktur.  
   
- [In diesem Thema](#top)  
   
 ##  <a name="example"></a> Einfaches Beispiel für einen selektiven XML-Index  
  Betrachten Sie das folgende XML-Fragment, das ein XML-Dokument in einer Tabelle mit ungefähr 500.000 Zeilen darstellt:  
@@ -98,9 +100,8 @@ FOR
   
  Weitere Informationen zu diesen Elementen finden Sie unter [Verwandte Aufgaben](#reltasks).  
   
- [In diesem Thema](#top)  
   
-## Unterstützte Funktionen, Voraussetzungen und Einschränkungen  
+## <a name="supported-features-prerequisites-and-limitations"></a>Unterstützte Funktionen, Voraussetzungen und Einschränkungen  
   
 ###  <a name="features"></a> Unterstützte XML-Funktionen  
  Selektive XML-Indizes unterstützen die XQuery, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in den exist()-, value()- und nodes()-Methoden unterstützt werden.  
@@ -113,7 +114,6 @@ FOR
   
 -   Für die modify()-Methode werden selektive XML-Indizes nicht zum Aktualisieren von XML-Dokumenten verwendet.  
   
- [In diesem Thema](#top)  
   
 ###  <a name="unsupported"></a> Nicht unterstützte XML-Funktionen  
  Selektive XML-Indizes unterstützen nicht die folgenden Funktionen, die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Implementierung von XML unterstützt werden:  
@@ -130,18 +130,16 @@ FOR
   
 -   Angeben und Abrufen des Bezeichners für einen Knoten mit der id()-Funktion.  
   
- [In diesem Thema](#top)  
   
 ###  <a name="prereq"></a> Erforderliche Komponenten  
  Die folgenden Voraussetzungen müssen erfüllt sein, bevor Sie einen selektiven XML-Index für eine XML-Spalte in einer Benutzertabelle erstellen können:  
   
 -   Für den Primärschlüssel der Benutzertabelle muss ein gruppierter Index vorhanden sein.  
   
--   Der Primärschlüssel der Benutzertabelle ist auf eine Größe von 128 Byte beschränkt, wenn er zusammen mit selektiven XML-Indizes verwendet wird.  
+-   Der Primärschlüssel der Benutzertabelle ist auf eine Größe von 128 Byte beschränkt, wenn er zusammen mit selektiven XML-Indizes verwendet wird.  
   
 -   Der Gruppierungsschlüssel der Benutzertabelle ist auf 15 Spalten beschränkt, wenn er zusammen mit selektiven XML-Indizes verwendet wird.  
   
- [In diesem Thema](#top)  
   
 ###  <a name="limits"></a> Einschränkungen  
  **Allgemeine Anforderungen und Einschränkungen**  
@@ -152,7 +150,7 @@ FOR
   
 -   Jede XML-Spalte in einer Tabelle kann nur über einen selektiven XML-Index verfügen.  
   
--   Jede Tabelle kann bis zu 249 selektive XML-Indizes enthalten.  
+-   Jede Tabelle kann bis zu 249 selektive XML-Indizes enthalten.  
   
  **Einschränkungen für unterstützte Objekte**  
   
@@ -166,17 +164,17 @@ FOR
   
 4.  Berechnete XML Spalten.  
   
-5.  XML-Spalten mit einer Tiefe von mehr als 128 geschachtelten Knoten.  
+5.  XML-Spalten mit einer Tiefe von mehr als 128 geschachtelten Knoten.  
   
  **Auf Speicher bezogene Einschränkungen**  
   
- Die Anzahl der Knoten aus dem XML-Dokument, die dem Index hinzugefügt werden können, ist beschränkt. Ein selektiver XML-Index ordnet XML-Dokumente einer einzelnen relationalen Tabelle zu. Daher kann er nicht mehr als 1024 Spalten mit Nicht-NULL-Werten in den Spalten der Tabelle aufweisen. Weiterhin gelten viele der Einschränkungen von Spalten mit geringer Dichte auch für selektive XML-Indizes, da die Indizes Spalten mit geringer Dichte zum Speichern verwenden.  
+ Die Anzahl der Knoten aus dem XML-Dokument, die dem Index hinzugefügt werden können, ist beschränkt. Ein selektiver XML-Index ordnet XML-Dokumente einer einzelnen relationalen Tabelle zu. Daher kann er nicht mehr als 1024 Spalten mit Nicht-NULL-Werten in den Spalten der Tabelle aufweisen. Weiterhin gelten viele der Einschränkungen von Spalten mit geringer Dichte auch für selektive XML-Indizes, da die Indizes Spalten mit geringer Dichte zum Speichern verwenden.  
   
  Die maximale Anzahl von Nicht-NULL-Spalten, die in einer Zeile unterstützt werden, hängt von der Größe der Daten in den Spalten ab:  
   
--   Im besten Fall werden 1024 Nicht-NULL-Spalten unterstützt, wenn alle Spalten den Typ **bit** haben.  
+-   Im besten Fall werden 1024 Nicht-NULL-Spalten unterstützt, wenn alle Spalten den Typ **bit**haben.  
   
--   Im schlimmsten Fall werden nur 236 Nicht-NULL-Spalten unterstützt, wenn alle Spalten große Objekte des Typs **varchar** sind.  
+-   Im schlimmsten Fall werden nur 236 Nicht-NULL-Spalten unterstützt, wenn alle Spalten große Objekte des Typs **varchar**sind.  
   
  Selektive XML-Indizes verwenden intern ein bis vier Spalten für jeden Knotenpfad, der indiziert wird. Die Gesamtzahl der Knoten, die indizierte werden können, reicht von 60 bis zu mehreren hundert Knoten, abhängig von der tatsächlichen Größe der Daten in den indizierten Pfaden.  
   
@@ -194,7 +192,6 @@ FOR
   
 -   Selektive XML-Indizes und sekundäre selektive XML-Indizes werden nicht vom Datenbankoptimierungsratgeber unterstützt.  
   
- [In diesem Thema](#top)  
   
 ##  <a name="reltasks"></a> Verwandte Aufgaben  
   
@@ -205,6 +202,5 @@ FOR
 |Erstellen, Ändern oder Löschen eines selektiven XML-Indexes.|[Erstellen, Ändern und Löschen selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Erstellen, Ändern oder Löschen eines sekundären selektiven XML-Indexes.|[Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [In diesem Thema](#top)  
   
   

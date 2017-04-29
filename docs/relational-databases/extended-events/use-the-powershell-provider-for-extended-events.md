@@ -1,39 +1,43 @@
 ---
-title: "Verwenden des PowerShell-Anbieters f&#252;r erweiterte Ereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], XEvent"
-  - "Erweiterte Ereignisse [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], erweiterte Ereignisse"
+title: "Verwenden des PowerShell-Anbieters für erweiterte Ereignisse | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden des PowerShell-Anbieters f&#252;r erweiterte Ereignisse
+# <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-PowerShell-Anbieters verwalten. Der Unterordner XEvent ist auf dem SQLSERVER-Laufwerk verfügbar. Auf diesen Ordner können Sie mit einer der folgenden Methoden zugreifen:  
+  Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieters verwalten. Der Unterordner XEvent ist auf dem SQLSERVER-Laufwerk verfügbar. Auf diesen Ordner können Sie mit einer der folgenden Methoden zugreifen:  
   
--   Geben Sie an einer Eingabeaufforderung **sqlps** ein, und drücken Sie anschließend die EINGABETASTE. Geben Sie **cd xevent** ein, und drücken Sie anschließend die EINGABETASTE. Von dort aus können Sie mit den Befehlen **cd** und **dir** (oder mit den Cmdlets **Set-Location** und **Get-Childitem**) zum Servernamen und Instanznamen wechseln.  
+-   Geben Sie an einer Eingabeaufforderung **sqlps**ein, und drücken Sie anschließend die EINGABETASTE. Geben Sie **cd xevent**ein, und drücken Sie anschließend die EINGABETASTE. Von dort aus können Sie mit den Befehlen **cd** und **dir** (oder mit den Cmdlets **Set-Location** und **Get-Childitem** ) zum Servernamen und Instanznamen wechseln.  
   
 -   Erweitern Sie im Objekt-Explorer den Instanznamen, erweitern Sie **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Erweiterte Ereignisse**, und klicken Sie anschließend auf **PowerShell starten**. Damit wird PowerShell unter dem folgenden Pfad gestartet:  
   
      PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*>  
   
     > [!NOTE]  
-    >  PowerShell können Sie unter **Erweiterte Ereignisse** von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen** klicken und anschließend auf **PowerShell starten** klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
+    >  PowerShell können Sie unter **Erweiterte Ereignisse**von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen**klicken und anschließend auf **PowerShell starten**klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
   
  Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie zum Beispiel unter dem Pfad PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*> den Befehl **cd sessions** eingeben, die EINGABETASTE drücken, **dir** eingeben und anschließend erneut die EINGABETASTE drücken, zeigen Sie die Liste der in dieser Instanz gespeicherten Sitzungen an. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-PowerShell-Anbieter ist ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Der folgende Abschnitt enthält einige einfache Beispiele für die Verwendung von PowerShell-Skripts mit erweiterten Ereignissen.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Achten Sie in den folgenden Beispielen auf Folgendes:  
   
 -   Die Skripts müssen an der Eingabeaufforderung von PS SQLSERVER:\\> ausgeführt werden (verfügbar, wenn Sie an einer Eingabeaufforderung **sqlps** eingeben).  
@@ -50,7 +54,7 @@ caps.handback.revision: 14
   
 -   Die Skripts müssen mit der Erweiterung .ps1 gespeichert werden.  
   
--   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy**, um die Ausführungsrichtlinie festzulegen. (Weitere Informationen erhalten Sie, wenn Sie **get-help set-executionpolicy -detailed** eingeben und anschließend die EINGABETASTE drücken.)  
+-   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy** , um die Ausführungsrichtlinie festzulegen. (Weitere Informationen erhalten Sie, wenn Sie **get-help set-executionpolicy -detailed**eingeben und anschließend die EINGABETASTE drücken.)  
   
  Mit dem folgenden Skript erstellen Sie die neue Sitzung "TestSession".  
   
@@ -68,7 +72,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- Das folgende Skript fügt der im vorherigen Beispiel erstellten Sitzung das Ringpufferziel hinzu. (In diesem Beispiel wird die Verwendung der **Alter**-Methode veranschaulicht. Sie können das Ziel beim Erstellen der Sitzung hinzufügen.)  
+ Das folgende Skript fügt der im vorherigen Beispiel erstellten Sitzung das Ringpufferziel hinzu. (In diesem Beispiel wird die Verwendung der **Alter** -Methode veranschaulicht. Sie können das Ziel beim Erstellen der Sitzung hinzufügen.)  
   
 ```  
 #Script to alter a session.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## Sicherheit  
+## <a name="security"></a>Sicherheit  
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Verwenden der system_health-Sitzung](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Tools für erweiterte Ereignisse](../../relational-databases/extended-events/extended-events-tools.md)  

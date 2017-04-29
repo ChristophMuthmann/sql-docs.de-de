@@ -1,24 +1,28 @@
 ---
-title: "Verlegerinformationen, Agents | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: Verteilerinformationen, Agents | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verlegerinformationen, Agents
+# <a name="publisher-information-agents"></a>Verlegerinformationen, Agents
   Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungsaufträgen angezeigt, die dem Verleger zugeordnet sind:  
   
 -   Momentaufnahme-Agent, der für alle Veröffentlichungen angezeigt wird  
@@ -43,8 +47,8 @@ caps.handback.revision: 26
   
  Weitere Informationen zu diesen Aufträgen finden Sie unter [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## Optionen  
- Um Informationen zu einem Agent oder Auftrag anzuzeigen, wählen Sie aus der **Agent- und Auftragstypen** Dropdown-Menü. Ausführliche Informationen und die Tasks für einen Agent oder Auftrag können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents oder Auftrags klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
+## <a name="options"></a>enthalten  
+ Wählen Sie zum Anzeigen von Informationen zu einem Agent oder Auftrag eine Option im Dropdownmenü **Agent- und Auftragstypen** aus. Ausführliche Informationen und die Tasks für einen Agent oder Auftrag können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents oder Auftrags klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
 -   **Sortieren**: Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren** .  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  In den folgenden Abschnitten werden in den Daten beschrieben, die auf dieser Registerkarte für jeden Agent oder Auftrag angezeigt werden.  
   
-### Momentaufnahme-Agent  
+### <a name="snapshot-agent"></a>Momentaufnahme-Agent  
  **Status**  
  Der Status des Agents. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
@@ -88,10 +92,10 @@ caps.handback.revision: 26
  **#Trans**  
  Die Anzahl von Transaktionen, für die bei der letzten Ausführung des Agents ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **#Befehle**  
+ **#Cmds**  
  Die Anzahl von Befehlen, für die bei der letzten Ausführung des Agents ein Commit in der Verteilungsdatenbank ausgeführt wurde. Ein Befehl entspricht einer Datenänderung, z. B. einem Update.  
   
-### Protokolllese-Agent  
+### <a name="log-reader-agent"></a>Protokolllese-Agent  
  **Status**  
  Der Status des Agents. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
@@ -124,13 +128,13 @@ caps.handback.revision: 26
  **#Trans**  
  Die Anzahl von Transaktionen, für die bei der letzten Ausführung des Agents ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **#Befehle**  
+ **#Cmds**  
  Die Anzahl von Befehlen, für die bei der letzten Ausführung des Agents ein Commit in der Verteilungsdatenbank ausgeführt wurde. Ein Befehl entspricht einer Datenänderung, z. B. einem Update.  
   
- **Durchschn. #Befehle**  
+ **Durchschn. Anzahl der Befehle**  
  Die durchschnittliche Anzahl von Befehlen pro Transaktion bei der letzten Ausführung des Agents.  
   
-### Warteschlangenlese-Agent  
+### <a name="queue-reader-agent"></a>Warteschlangenlese-Agent  
  **Status**  
  Der Status des Agents. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
@@ -163,13 +167,13 @@ caps.handback.revision: 26
  **#Trans**  
  Die Anzahl von Transaktionen, für die bei der letzten Ausführung des Agents ein Commit in der Veröffentlichungsdatenbank ausgeführt wurde.  
   
- **#Befehle**  
+ **#Cmds**  
  Die Anzahl von Befehlen, für die bei der letzten Ausführung des Agents ein Commit in der Veröffentlichungsdatenbank ausgeführt wurde. Ein Befehl entspricht einer Datenänderung, z. B. einem Update.  
   
- **Durchschn. #Befehle**  
+ **Durchschn. Anzahl der Befehle**  
  Die durchschnittliche Anzahl von Befehlen pro Transaktion bei der letzten Ausführung des Agents.  
   
-### Wartungsaufträge  
+### <a name="maintenance-jobs"></a>Wartungsaufträge  
  **Status**  
  Status des jeweilige Auftrags. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **Letzte Aktion**  
  Die letzte Aktion, die bei der letzten Ausführung des Auftrags ausgeführt wurde.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger & #40; Der Replikationsmonitor & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung & #40 zugeordneten Agents; Der Replikationsmonitor & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

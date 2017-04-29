@@ -1,31 +1,35 @@
 ---
-title: "Kopieren von Datenbanken auf andere Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Server [SQL Server], Kopieren von Datenbanken zwischen Servern"
-  - "Massenexport [SQL Server], zwischen Servern"
-  - "Datenbank kopieren [SQL Server]"
-  - "Migrieren von Datenbanken [SQL Server]"
-  - "Verschieben von Datenbanken"
-  - "Kopieren von Datenbanken"
-  - "Massenimport [SQL Server], zwischen Servern"
+title: Kopieren von Datenbanken auf andere Server | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- servers [SQL Server], copying databases between
+- bulk exporting [SQL Server], between servers
+- database copying [SQL Server]
+- migrating databases [SQL Server]
+- moving databases
+- copying databases
+- bulk importing [SQL Server], between servers
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Kopieren von Datenbanken auf andere Server
-  Es ist manchmal hilfreich, eine Datenbank von einem Computer zum anderen zu kopieren, z. B. für Tests, das Überprüfen von Konsistenz, das Entwickeln von Software, das Ausführen von Berichten, das Erstellen einer Spiegeldatenbank oder eventuell zum Verfügbarmachen der Datenbank für externe Niederlassungen.  
+# <a name="copy-databases-to-other-servers"></a>Kopieren von Datenbanken auf andere Server
+  Es ist manchmal hilfreich, eine Datenbank von einem Computer zum anderen zu kopieren, z. B. für Tests, das Überprüfen von Konsistenz, das Entwickeln von Software, das Ausführen von Berichten, das Erstellen einer Spiegeldatenbank oder eventuell zum Verfügbarmachen der Datenbank für externe Niederlassungen.  
   
  Es gibt mehrere Möglichkeiten, eine Datenbank zu kopieren:  
   

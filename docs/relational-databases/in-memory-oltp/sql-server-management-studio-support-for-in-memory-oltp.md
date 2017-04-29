@@ -1,55 +1,59 @@
 ---
-title: "SQL Server Management Studio-Unterst&#252;tzung f&#252;r In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Management Studio-Unterstützung für In-Memory OLTP | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Management Studio-Unterst&#252;tzung f&#252;r In-Memory OLTP
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md).  
+# <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
  In den Tasks in diesem Thema wird beschrieben, wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet wird, um speicheroptimierte Tabellen, Indizes für speicheroptimierte Tabellen, systemintern kompilierte gespeicherte Prozeduren und benutzerdefinierte speicheroptimierte Tabellentypen zu verwalten.  
   
  Informationen zum programmgesteuerten Erstellen speicheroptimierter Tabellen finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-### So erstellen Sie eine Datenbank mit einer speicheroptimierten Datendateigruppe  
+### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>So erstellen Sie eine Datenbank mit einer speicheroptimierten Datendateigruppe  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmoduls her, und erweitern Sie dann diese Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **Neue Datenbank**.  
   
-3.  Klicken Sie zum Hinzufügen einer neuen speicheroptimierten Datendateigruppe auf die Seite **Dateigruppen**. Klicken Sie unter **MEMORY OPTIMIZED DATA** auf **Dateigruppe hinzufügen**, und geben Sie dann den Namen der speicheroptimierten Datendateigruppe ein.  Die Spalte mit der Bezeichnung **FILESTREAM-Dateien** stellt die Anzahl der Container in der Dateigruppe dar. Container werden auf der Seite **Allgemein** hinzugefügt.  
+3.  Klicken Sie zum Hinzufügen einer neuen speicheroptimierten Datendateigruppe auf die Seite **Dateigruppen** . Klicken Sie unter **MEMORY OPTIMIZED DATA**auf **Dateigruppe hinzufügen** , und geben Sie dann den Namen der speicheroptimierten Datendateigruppe ein.  Die Spalte mit der Bezeichnung **FILESTREAM-Dateien** stellt die Anzahl der Container in der Dateigruppe dar. Container werden auf der Seite **Allgemein** hinzugefügt.  
   
-4.  Um der Dateigruppe eine Datei (Container) hinzuzufügen, klicken Sie auf die Seite **Allgemein**. Klicken Sie unter **Datenbankdateien**auf **Hinzufügen**. Wählen Sie als **Dateityp** **FILESTREAM-Daten** aus, geben Sie den logischen Namen des Containers an, wählen Sie die speicheroptimierte Dateigruppe aus, und stellen Sie sicher, dass **Automatische Vergrößerung/Maximale Größe** auf **Unbegrenzt** festgelegt ist.  
+4.  Um der Dateigruppe eine Datei (Container) hinzuzufügen, klicken Sie auf die Seite **Allgemein** . Klicken Sie unter **Datenbankdateien**auf **Hinzufügen**. Wählen Sie als **Dateityp** **FILESTREAM-Daten**aus, geben Sie den logischen Namen des Containers an, wählen Sie die speicheroptimierte Dateigruppe aus, und stellen Sie sicher, dass **Automatische Vergrößerung/Maximale Größe** auf **Unbegrenzt**festgelegt ist.  
   
-     Weitere Informationen zum Erstellen einer neuen Datenbank mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).  
+     Weitere Informationen zum Erstellen einer neuen Datenbank mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).  
   
-### So erstellen Sie eine speicheroptimierte Tabelle  
+### <a name="to-create-a-memory-optimized-table"></a>So erstellen Sie eine speicheroptimierte Tabelle  
   
-1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf den Datenbankknoten **Tabellen**, klicken Sie auf **Neu** und dann auf **Speicheroptimierte Tabelle**.  
+1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf den Datenbankknoten **Tabellen** , klicken Sie auf **Neu**und dann auf **Speicheroptimierte Tabelle**.  
   
      Eine Vorlage zum Erstellen von speicheroptimierten Tabellen wird angezeigt.  
   
 2.  Um die Vorlagenparameter zu ersetzen, klicken Sie auf **Werte für Vorlagenparameter angeben** im Menü **Abfrage** .  
   
-     Weitere Informationen zur Verwendung von Vorlagen finden Sie unter [Template Explorer](../../ssms/template/template-explorer.md).  
+     Weitere Informationen zur Verwendung von Vorlagen finden Sie unter [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
   
-3.  Im **Objekt-Explorer** werden Tabellen zuerst nach datenträgerbasierten Tabellen und dann nach speicheroptimierten Tabellen angeordnet. Verwenden Sie **Details zum Objekt-Explorer** , um alle Tabellen nach dem Namen geordnet anzuzeigen.  
+3.  Im **Objekt-Explorer**werden Tabellen zuerst nach datenträgerbasierten Tabellen und dann nach speicheroptimierten Tabellen angeordnet. Verwenden Sie **Details zum Objekt-Explorer** , um alle Tabellen nach dem Namen geordnet anzuzeigen.  
   
-### So erstellen Sie eine systemintern kompilierte gespeicherte Prozedur  
+### <a name="to-create-a-natively-compiled-stored-procedure"></a>So erstellen Sie eine systemintern kompilierte gespeicherte Prozedur  
   
-1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf den Datenbankknoten **Gespeicherte Prozeduren**, klicken Sie auf **Neu** und dann auf **Systemintern kompilierte gespeicherte Prozedur**.  
+1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf den Datenbankknoten **Gespeicherte Prozeduren** , klicken Sie auf **Neu**und dann auf **Systemintern kompilierte gespeicherte Prozedur**.  
   
      Eine Vorlage zum Erstellen von systemintern kompilierten gespeicherten Prozeduren wird angezeigt.  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 31
   
      Weitere Informationen zum Erstellen einer neuen gespeicherten Prozedur finden Sie unter [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md).  
   
-### So erstellen Sie einen benutzerdefinierten speicheroptimierten Tabellentyp  
+### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>So erstellen Sie einen benutzerdefinierten speicheroptimierten Tabellentyp  
   
-1.  Erweitern Sie im **Objekt-Explorer** den Datenbankknoten **Typen**, klicken Sie mit der rechten Maustaste auf den Knoten **Benutzerdefinierte Tabellentypen,** klicken Sie auf **Neu** und anschließend auf **Benutzerdefinierter speicheroptimierter Tabellentyp**.  
+1.  Erweitern Sie im **Objekt-Explorer**den Datenbankknoten **Typen** , klicken Sie mit der rechten Maustaste auf den Knoten **Benutzerdefinierte Tabellentypen,** klicken Sie auf **Neu**und anschließend auf **Benutzerdefinierter speicheroptimierter Tabellentyp**.  
   
      Es wird eine Vorlage zum Erstellen eines benutzerdefinierten speicheroptimierten Tabellentyps angezeigt.  
   
@@ -67,26 +71,26 @@ caps.handback.revision: 31
   
      Weitere Informationen zum Erstellen einer neuen gespeicherten Prozedur finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
-## Arbeitsspeicher-Überwachung  
+## <a name="memory-monitoring"></a>Arbeitsspeicher-Überwachung  
   
-#### Anzeigen der Speicherauslastung durch den Bericht für speicheroptimierte Objekte  
+#### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Anzeigen der Speicherauslastung durch den Bericht für speicheroptimierte Objekte  
   
--   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Berichte**, auf **Standardberichte** und dann auf **Speicherauslastung nach speicheroptimierten Objekten**.  
+-   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Berichte**, auf **Standardberichte**und dann auf **Speicherauslastung nach speicheroptimierten Objekten**.  
   
      Dieser Bericht stellt detaillierte Daten zur Verwendung des Speicherplatzes durch speicheroptimierte Objekte in der Datenbank bereit.  
   
-#### Anzeigen von Eigenschaften für zugeordneten und verwendeten Arbeitsspeicher für eine Tabelle oder eine Datenbank  
+#### <a name="view-properties-for-allocated-and-used-memory-for-a-table-database"></a>Anzeigen von Eigenschaften für zugeordneten und verwendeten Arbeitsspeicher für eine Tabelle oder eine Datenbank  
   
 1.  So erhalten Sie Informationen zur Speicherauslastung:  
   
-    -   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die speicheroptimierte Tabelle, klicken Sie auf **Eigenschaften** und dann auf die Seite **Speicher**. Der Wert für die Eigenschaft **Datenspeicher** gibt die Menge an Arbeitsspeicher an, die durch die Daten in der Tabelle verwendet wird. Der Wert für die Eigenschaft **Indexspeicher** gibt den Arbeitsspeicher an, der von Indizes in der Tabelle verwendet wird.  
+    -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die speicheroptimierte Tabelle, klicken Sie auf **Eigenschaften**und dann auf die Seite **Speicher** . Der Wert für die Eigenschaft **Datenspeicher** gibt die Menge an Arbeitsspeicher an, die durch die Daten in der Tabelle verwendet wird. Der Wert für die Eigenschaft **Indexspeicher** gibt den Arbeitsspeicher an, der von Indizes in der Tabelle verwendet wird.  
   
-    -   Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften** und dann auf die Seite **Allgemein**. Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
+    -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften**und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
   
-## Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die vom Datenbankmodul in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
   
- Für Datenbank-, Tabellen-, gespeicherte Prozedur-, benutzerdefinierte Tabellentyp- oder Indexobjekte wurden die folgenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Funktionen aktualisiert oder erweitert, um In-Memory OLTP zu unterstützen.  
+ Für Datenbank-, Tabellen-, gespeicherte Prozedur-, benutzerdefinierte Tabellentyp- oder Indexobjekte wurden die folgenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Funktionen aktualisiert oder erweitert, um In-Memory OLTP zu unterstützen.  
   
 -   Objekt-Explorer  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 31
   
         -   Kopieren von Datenbanken. Bei Datenbanken mit speicheroptimierten Objekten werden die Erstellung der Datenbank auf dem Zielserver und die Übertragung von Daten nicht in einer Transaktion ausgeführt.  
   
-        -   Importieren und Exportieren von Daten. Verwenden Sie die Option **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent > Daten aus mindestens einer Tabelle oder Sicht** kopieren. Wenn die Zieltabelle eine speicheroptimierte Tabelle ist, die nicht in der Zieldatenbank vorhanden ist:  
+        -   Importieren und Exportieren von Daten. Verwenden Sie die Option **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent &gt; Daten aus mindestens einer Tabelle oder Sicht** kopieren. Wenn die Zieltabelle eine speicheroptimierte Tabelle ist, die nicht in der Zieldatenbank vorhanden ist:  
   
             1.  Wählen Sie im **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent**im Bildschirm **Tabelle kopieren oder Datenbank abfragen** die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren**aus. Klicken Sie dann auf **Weiter**.  
   
@@ -143,18 +147,18 @@ caps.handback.revision: 31
   
         -   Wartungspläne. Die Wartungsaufgaben "Index neu organisieren" und "Index neu erstellen" werden in speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn ein Wartungsplan zur Neuerstellung und Neuorganisation des Indexes ausgeführt wird, werden die speicheroptimierten Tabellen und deren Indizes in den ausgewählten Datenbanken daher ausgelassen.  
   
-             Der Wartungstask Statistiken aktualisieren wird für Stichprobenscans von speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn also ein Wartungsplan für Statistiken aktualisieren ausgeführt wird, werden die Statistiken für speicheroptimierte Tabellen und deren Indizes immer auf **WITH FULLSCAN, NORECOMPUTE** aktualisiert.  
+             Der Wartungstask Statistiken aktualisieren wird für Stichprobenscans von speicheroptimierten Tabellen und deren Indizes nicht unterstützt. Wenn also ein Wartungsplan für Statistiken aktualisieren ausgeführt wird, werden die Statistiken für speicheroptimierte Tabellen und deren Indizes immer auf **WITH FULLSCAN, NORECOMPUTE**aktualisiert.  
   
 -   Bereich mit Details zum Objekt-Explorer  
   
--   Vorlagen-Explorer  
+-   Template Explorer  
   
-## Nicht unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Nicht unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Für In-Memory OLTP-Objekte unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keine Funktionen und Vorgänge, die auch nicht vom Datenbankmodul unterstützt werden.  
   
- Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

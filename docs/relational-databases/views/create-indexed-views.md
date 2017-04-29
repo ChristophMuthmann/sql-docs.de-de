@@ -1,29 +1,33 @@
 ---
-title: "Erstellen von indizierten Sichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Indizierte Sichten [SQL Server], erstellen"
-  - "gruppierte Indizes, Sichten"
-  - "CREATE INDEX-Anweisung"
-  - "large_value_types_out_of_row (Option)"
-  - "Indizierte Sichten [SQL Server]"
-  - "Sichten [SQL Server], indizierte Sichten"
+title: Erstellen von indizierten Sichten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen von indizierten Sichten
+# <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  Es wird dringend empfohlen, die Benutzeroption ARITHABORT serverweit auf ON festzulegen, sobald in einer Datenbank auf dem Server die erste indizierte Sicht oder der erste Index für eine berechnete Spalte erstellt wird.  
   
-### Deterministische Sichten  
+### <a name="deterministic-views"></a>Deterministische Sichten  
  Die Definition einer indizierten Sicht muss deterministisch sein. Eine Sicht ist deterministisch, wenn alle Ausdrücke in der Auswahlliste sowie die WHERE-Klausel und die GROUP BY-Klausel deterministisch sind. Deterministische Ausdrücke geben stets dasselbe Ergebnis zurück, wenn sie mit einer bestimmten Gruppe von Eingabewerten ausgewertet werden. Nur deterministische Funktionen können Teil von deterministischen Ausdrücken sein. Beispielsweise ist die DATEADD-Funktion deterministisch, weil sie für eine bestimmte Gruppe von Argumentwerten stets dasselbe Ergebnis für die drei Parameter zurückgibt. GETDATE ist nicht deterministisch, da diese Funktion immer mit demselben Argument aufgerufen wird, der zurückgegebene Wert jedoch bei jeder Ausführung unterschiedlich ist.  
   
  Um zu bestimmen, ob eine Sichtspalte deterministisch ist, verwenden Sie die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) -Funktion. Mithilfe der **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion können Sie bestimmen, ob eine deterministische Spalte in einer Sicht mit Schemabindung präzise ist. COLUMNPROPERTY gibt den Wert 1 für TRUE, den Wert 0 für FALSE und NULL für ungültige Eingaben zurück. Dies bedeutet, dass die Spalte nicht deterministisch oder nicht präzise ist.  
@@ -77,9 +81,9 @@ caps.handback.revision: 79
  Auch wenn ein Ausdruck deterministisch ist, kann das exakte Ergebnis von der Prozessorarchitektur oder der Version des Microcodes abhängen, wenn dieser Ausdruck float-Ausdrücke enthält. Um die Datenintegrität sicherzustellen, können solche Ausdrücke nur als Nichtschlüsselspalten von indizierten Sichten verwendet werden. Deterministische Ausdrücke, die keine float-Ausdrücke enthalten, werden als präzise bezeichnet. Nur präzise deterministische Ausdrücke können in indizierten Sichten Teile von Schlüsselspalten und von WHERE-Klauseln oder GROUP BY-Klauseln sein.  
   
 > [!NOTE]  
->  Indizierte Sichten, die temporale Abfragen (Abfragen, die die **FOR SYSTEM_TIME**-Klausel verwenden) überlagern, werden nicht unterstützt.  
+>  Indizierte Sichten, die temporale Abfragen (Abfragen, die die **FOR SYSTEM_TIME** -Klausel verwenden) überlagern, werden nicht unterstützt.  
   
-### Zusätzliche Anforderungen  
+### <a name="additional-requirements"></a>Zusätzliche Anforderungen  
  Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funktionen müssen die folgenden Anforderungen erfüllt werden:  
   
 -   Der Benutzer, der die CREATE INDEX-Anweisung ausführt, muss der Besitzer der Sicht sein.  
@@ -90,7 +94,7 @@ caps.handback.revision: 79
   
 -   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option WITH SCHEMABINDING erstellt werden.  
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema***.***Funktion* verwiesen werden.  
+-   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema***.***Funktion*verwiesen werden.  
   
 -   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss NO SQL lauten, und die Eigenschaft für den externen Zugriff muss NO lauten.  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 79
     |COUNT|ROWSET-Funktionen (OPENDATASOURCE, OPENQUERY, OPENROWSET UND OPENXML)|OUTER-Joins (LEFT, RIGHT oder FULL)|  
     |Abgeleitete Tabelle (durch Angabe einer SELECT-Anweisung in der FROM-Klausel definiert)|Selbstjoins|Durch Angeben von Spalten mit SELECT \* oder SELECT *Tabellenname*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP oder AVG|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
-    |**float**\*-, **text**-, **ntext**-, **image**-, **XML**- oder **filestream**-Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
+    |**float**\*-, **text**-, **ntext**-, **image**-, **XML**- oder **filestream** -Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
     |Volltextprädikate (CONTAIN, FREETEXT)|Eine SUM-Funktion, die auf einen Ausdruck verweist, der NULL zulässt.|ORDER BY|  
     |CLR-benutzerdefinierte Aggregatfunktion|NACH OBEN|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
     |MIN, MAX|Die Operatoren UNION, EXCEPT oder INTERSECT|TABLESAMPLE|  
@@ -128,15 +132,15 @@ caps.handback.revision: 79
   
 -   Wenn GROUP BY vorhanden ist, muss die VIEW-Definition COUNT_BIG(*) enthalten, während HAVING nicht enthalten sein darf. Diese GROUP BY-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese GROUP BY-Einschränkungen nicht erfüllt.  
   
--   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
+-   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
- Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in dem Ausdruck `DATEADD(mm,3,'2000-12-01')` die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
+ Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
   
  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   
 ###  <a name="Considerations"></a> Weitere Überlegungen  
- Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md) festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
+ Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
   
  Indizierte Sichten können für eine partitionierte Tabelle erstellt werden und selbst partitioniert werden.  
   
@@ -153,9 +157,9 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So erstellen Sie eine indizierte Sicht  
+#### <a name="to-create-an-indexed-view"></a>So erstellen Sie eine indizierte Sicht  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

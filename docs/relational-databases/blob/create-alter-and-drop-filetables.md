@@ -1,32 +1,36 @@
 ---
-title: "Erstellen, &#196;ndern und L&#246;schen von FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], ändern"
-  - "FileTables [SQL Server], löschen"
-  - "FileTables [SQL Server], erstellen"
+title: "Erstellen, Ändern und Löschen von FileTables | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen, &#196;ndern und L&#246;schen von FileTables
+# <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
   Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
   
 ##  <a name="BasicsCreate"></a> Erstellen einer FileTable  
  Eine FileTable ist eine spezialisierte Benutzertabelle, die ein vordefiniertes und festes Schema aufweist. Dieses Schema speichert FILESTREAM-Daten, Datei- und Verzeichnisinformationen sowie Dateiattribute. Weitere Informationen zum FileTable-Beispielschema finden Sie unter [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
- Sie können mit Transact-SQL oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine neue FileTable erstellen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Mit der einfachen Syntax zum Erstellen einer FileTable können Sie Folgendes angeben:  
+ Sie können mit Transact-SQL oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine neue FileTable erstellen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Mit der einfachen Syntax zum Erstellen einer FileTable können Sie Folgendes angeben:  
   
 -   Einen Verzeichnisnamen. In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Tabellenebene das untergeordnete Element des Datenbankverzeichnisses, das auf Datenbankebene angegeben wurde, und das übergeordnete Element der in der Tabelle gespeicherten Dateien oder Verzeichnisse.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
     1.  Zur Einhaltung der Windows-Dateinamensemantik darf bei der angegebenen Sortierung die **Groß-/Kleinschreibung** nicht beachtet werden.  
   
-    2.  Wenn Sie keinen Wert für **FILETABLE_COLLATE_FILENAME** oder **database_default** angeben, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn bei der aktuellen Datenbanksortierung die Groß-/Kleinschreibung beachtet wird, wird ein Fehler ausgelöst, und der **CREATE TABLE**-Vorgang schlägt fehl.  
+    2.  Wenn Sie keinen Wert für **FILETABLE_COLLATE_FILENAME**oder **database_default**angeben, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn bei der aktuellen Datenbanksortierung die Groß-/Kleinschreibung beachtet wird, wird ein Fehler ausgelöst, und der **CREATE TABLE** -Vorgang schlägt fehl.  
   
 3.  Sie können auch die Namen angeben, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen. Wenn Sie keine Namen angeben, dann werden diese vom System generiert, wie weiter unten in diesem Thema beschrieben.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 25
   
  **Beispiele**  
   
- Im folgenden Beispiel wird eine neue FileTable erstellt, und für **FILETABLE_DIRECTORY** und **FILETABLE_COLLATE_FILENAME** werden benutzerdefinierte Werte angegeben.  
+ Im folgenden Beispiel wird eine neue FileTable erstellt, und für **FILETABLE_DIRECTORY** und **FILETABLE_COLLATE_FILENAME**werden benutzerdefinierte Werte angegeben.  
   
 ```tsql  
 CREATE TABLE DocumentStore AS FileTable  
@@ -83,7 +87,7 @@ GO
 ```  
   
  **Erstellen einer FileTable mithilfe von SQL Server Management Studio**  
- Erweitern Sie im Objekt-Explorer unter der ausgewählten Datenbank die Objekte, klicken Sie dann mit der rechten Maustaste auf den Ordner **Tabellen**, und wählen Sie dann **Neue FileTable** aus.  
+ Erweitern Sie im Objekt-Explorer unter der ausgewählten Datenbank die Objekte, klicken Sie dann mit der rechten Maustaste auf den Ordner **Tabellen** , und wählen Sie dann **Neue FileTable**aus.  
   
  Mit dieser Option wird ein neues Skriptfenster geöffnet, das eine Transact-SQL-Skriptvorlage enthält, die Sie zum Erstellen einer FileTable anpassen und ausführen können. Passen Sie das Skript einfach mit der Option **Werte für Vorlagenparameter angeben** im Menü **Abfrage** an.  
   
@@ -123,7 +127,7 @@ GO
   
 ###  <a name="ReqAlter"></a> Anforderungen und Einschränkungen beim Ändern einer FileTable  
   
--   Sie können den Wert von **FILETABLE_COLLATE_FILENAME** nicht ändern.  
+-   Sie können den Wert von **FILETABLE_COLLATE_FILENAME**nicht ändern.  
   
 -   Die systemdefinierten Spalten einer FileTable können nicht geändert, gelöscht oder deaktiviert werden.  
   
@@ -134,7 +138,7 @@ GO
   
  Beim Löschen einer FileTable werden auch die folgenden Objekte gelöscht:  
   
--   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
+-   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
   
 -   Das FileTable-Verzeichnis und die Unterverzeichnisse, die es enthielt, aus der FILESTREAM-Datei und der Verzeichnishierarchie der Datenbank.  
   
@@ -180,7 +184,7 @@ GO
   
 -   *\<uniquifier>* ist eine vom System generierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

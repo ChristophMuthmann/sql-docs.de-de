@@ -1,27 +1,31 @@
 ---
-title: "&#39;SQL Server:Als veraltet markierte Funktionen&#39;-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server:Als veraltet markierte Funktionen"
-  - "Leistungsindikatoren [SQL Server], als veraltet markierte Funktionen"
-  - "Veraltung [SQL Server], Leistungsindikatoren"
-  - "'Als veraltet markierte Funktionen'-Objekt"
+title: '&quot;SQL Server:Als veraltet markierte Funktionen&quot;-Objekt | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#39;SQL Server:Als veraltet markierte Funktionen&#39;-Objekt
+# <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
@@ -41,11 +45,11 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
-|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit @ oder @@ beginnt. @ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
+|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner|Ein Bezeichner wurde gefunden, der mit @ oder @@ beginnt. @ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen sp_addumpdevice '**tape**' wurde gefunden. Verwenden Sie stattdessen sp_addumpdevice '**disk**'. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
@@ -60,7 +64,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |CREATE TRIGGER WITH APPEND|Eine CREATE TRIGGER-Anweisung mit der WITH APPEND-Klausel wurde gefunden. Erstellen Sie stattdessen den ganzen Trigger neu. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
 |CREATE_DROP_DEFAULT|Die Syntax CREATE DEFAULT oder DROP DEFAULT wurde gefunden. Schreiben Sie den Befehl unter Verwendung der DEFAULT-Option von CREATE TABLE oder ALTER TABLE um. Tritt einmal pro Kompilierung auf.|  
 |CREATE_DROP_RULE|Die Syntax CREATE RULE wurde gefunden. Schreiben Sie den Befehl unter Verwendung von Einschränkungen um. Tritt einmal pro Kompilierung auf.|  
-|Datentypen: 'text', 'ntext' oder 'image'|Ein **Text**-, **Ntext**- oder **Image**-Datentyp wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|Datentypen: 'text', 'ntext' oder 'image'|Ein **Text**-, **Ntext**- oder **Image** -Datentyp wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
 ||Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank auf den Wert 80. Planen Sie, vor der nächsten Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit dem Kompatibilitätsgrad 80 gestartet wird.|  
 |Datenbank-Kompatibilitätsgrad 100, 110. 120|Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank. Planen Sie, in einer zukünftigen Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit veraltetem Kompatibilitätsgrad gestartet wird.|  
 |DATABASE_MIRRORING|Es wurden Verweise für die Datenbankspiegelungsfunktion gefunden. Planen Sie, auf Always On-Verfügbarkeitsgruppen zu aktualisieren. Planen Sie alternativ, zu Protokollversand zu migrieren, wenn Sie eine Edition von SQL Server ausführen, die Always On-Verfügbarkeitsgruppen nicht unterstützt.|  
@@ -85,7 +89,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |dm_fts_active_catalogs.worker_count|Die worker_count-Spalte der dynamischen Verwaltungssicht sys.dm_fts_active_catalogs wurde gefunden. Vermeiden Sie die Verwendung dieser Spalte. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
 |dm_fts_memory_buffers|Der dm_fts_memory_buffers-Leistungsindikator bleibt immer auf dem Wert 0, da die meisten Spalten der sys.dm_fts_memory_buffers-Sicht nicht als veraltet markiert werden. Um die veraltete Spalte zu überwachen, verwenden Sie den spaltenspezifischen Leistungsindikator: dm_fts_memory_buffers.row_count.|  
 |dm_fts_memory_buffers.row_count|Die row_count-Spalte der dynamischen Verwaltungssicht [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) wurde gefunden. Vermeiden Sie die Verwendung dieser Spalte. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
-|DROP INDEX mit zweiteiligem Namen|Die DROP INDEX-Syntax enthielt die Formatsyntax *table_name.index_name* in DROP INDEX. Ersetzen Sie die Syntax in der DROP INDEX-Anweisung durch die Syntax *index_name* ON *table_name*. Tritt einmal pro Kompilierung auf.|  
+|DROP INDEX mit zweiteiligem Namen|Die DROP INDEX-Syntax enthielt die Formatsyntax *table_name.index_name* in DROP INDEX. Ersetzen Sie die Syntax in der DROP INDEX-Anweisung durch die Syntax *index_name* ON *table_name* . Tritt einmal pro Kompilierung auf.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|Die CREATE- oder ALTER ENDPOINT-Anweisung mit der FOR SOAP-Option wurde gefunden. Systemeigene XML-Webdienste sind als veraltet markiert. Verwenden Sie stattdessen Windows Communications Foundation (WCF) oder ASP.NET.|  
 |EXT_endpoint_webmethods|sys.endpoint_webmethods wurde gefunden. Systemeigene XML-Webdienste sind als veraltet markiert. Verwenden Sie stattdessen Windows Communications Foundation (WCF) oder ASP.NET.|  
 |EXT_soap_endpoints|sys.soap_endpoints wurde gefunden. Systemeigene XML-Webdienste sind als veraltet markiert. Verwenden Sie stattdessen Windows Communications Foundation (WCF) oder ASP.NET.|  
@@ -97,7 +101,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |fn_servershareddrives|Die fn_servershareddrives-Funktion wurde kompiliert. Verwenden Sie stattdessen sys.dm_io_cluster_shared_drives. Tritt einmal pro Kompilierung auf.|  
 |fn_virtualservernodes|Die fn_virtualservernodes-Funktion wurde kompiliert. Verwenden Sie stattdessen sys.dm_os_cluster_nodes. Tritt einmal pro Kompilierung auf.|  
 |fulltext_catalogs|Der fulltext_catalogs-Leistungsindikator bleibt immer auf dem Wert 0, da einige Spalten der sys.fulltext_catalogs-Sicht nicht als veraltet markiert werden. Um eine veraltete Spalte zu überwachen, verwenden Sie deren spaltenspezifischen Leistungsindikator, wie z.B. fulltext_catalogs.data_space_id. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
-|fulltext_catalogs.data_space_id|Die data_space_id-Spalte der [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)-Katalogsicht wurde gefunden. Verwenden Sie diese Spalte nicht. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
+|fulltext_catalogs.data_space_id|Die data_space_id-Spalte der [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) -Katalogsicht wurde gefunden. Verwenden Sie diese Spalte nicht. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
 |fulltext_catalogs.file_id|Die file_id-Spalte der sys.fulltext_catalogs-Katalogsicht wurde gefunden. Verwenden Sie diese Spalte nicht. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
 |fulltext_catalogs.path|Die path-Spalte der sys.fulltext_catalogs-Katalogsicht wurde gefunden. Verwenden Sie diese Spalte nicht. Tritt jedes Mal auf, wenn die Serverinstanz einen Verweis auf die Spalte erkennt.|  
 |FULLTEXTCATALOGPROPERTY('LogSize')|Die LogSize-Eigenschaft der FULLTEXTCATALOGPROPERTY-Funktion wurde gefunden. Vermeiden Sie die Verwendung dieser Eigenschaft.|  
@@ -112,7 +116,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |Indexsicht-Auswahlliste ohne COUNT_BIG(*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (*) enthalten.|  
 |INDEX_OPTION|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen gefunden. Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet. Tritt einmal pro Abfrage auf.|  
 |INDEXKEY_PROPERTY|Die Syntax INDEXKEY_PROPERTY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie sys.index_columns abfragen. Tritt einmal pro Kompilierung auf.|  
-|Indirekte TVF-Hinweise|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt.|  
+|Indirekte TVF-Hinweise|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr unterstützt.|  
 |INSERT NULL in TIMESTAMP-Spalten|Ein NULL-Wert wurde in eine TIMESTAMP-Spalte eingefügt. Verwenden Sie stattdessen einen Standardwert. Tritt einmal pro Kompilierung auf.|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden.|  
@@ -123,7 +127,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |Mehr als zweiteiliger Spaltenname|Eine Abfrage hat in der Spaltenliste einen drei- oder vierteiligen Namen verwendet. Ändern Sie die Abfrage so, dass sie die mit dem Standard kompatiblen zweiteiligen Namen verwendet. Tritt einmal pro Kompilierung auf.|  
 |Mehrere Tabellenhinweise ohne Komma|Als Trennzeichen zwischen Tabellenhinweisen wurde ein Leerzeichen verwendet. Verwenden Sie stattdessen ein Komma. Tritt einmal pro Kompilierung auf.|  
 |NOLOCK oder READUNCOMMITTED in UPDATE oder DELETE|In der FROM-Klausel einer UPDATE- oder DELETE-Anweisung wurden NOLOCK oder READUNCOMMITTED gefunden. Entfernen Sie die NOLOCK- oder READUNCOMMITTED-Tabellenhinweise aus der FROM-Klausel.|  
-|Nicht-ANSI-Operatoren '*=' oder '=\*' für äußere Joins|Eine Anweisung, die die Joinsyntax '*=' oder '=\*' verwendet, wurde gefunden. Schreiben Sie Anweisung so um, dass sie die ANSI-Joinsyntax verwendet. Tritt einmal pro Kompilierung auf.|  
+|Nicht-ANSI-Operatoren '*=' oder '=\* ' für äußere Joins|Eine Anweisung, die die Joinsyntax '*=' oder '=\* ' verwendet, wurde gefunden. Schreiben Sie Anweisung so um, dass sie die ANSI-Joinsyntax verwendet. Tritt einmal pro Kompilierung auf.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
@@ -185,7 +189,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sp_defaultlanguage|Die Prozedur sp_defaultlanguage wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN. Tritt einmal pro Kompilierung auf.|  
 |sp_denylogin|Die Prozedur sp_denylogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE. Tritt einmal pro Abfrage auf.|  
 |sp_depends|Die Prozedur sp_depends wurde gefunden. Verwenden Sie stattdessen sys.dm_sql_referencing_entities und sys.dm_sql_referenced_entities. Tritt einmal pro Abfrage auf.|  
-|sp_detach_db @keepfulltextindexfile|In einer sp_detach_db-Anweisung wurde das @keepfulltextindexfile-Argument gefunden. Verwenden Sie dieses Argument nicht.|  
+|sp_detach_db @keepfulltextindexfile|Das @keepfulltextindexfile-Argument wurde in einer sp_detach_db-Anweisung gefunden. Verwenden Sie dieses Argument nicht.|  
 |sp_dropalias|Die Prozedur sp_dropalias wurde gefunden. Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwenden Sie sp_dropalias, um Aliase in aktualisierten Datenbanken zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |sp_dropapprole|Die Prozedur sp_dropapprole wurde gefunden. Verwenden Sie stattdessen DROP APPLICATION ROLE. Tritt einmal pro Abfrage auf.|  
 |sp_dropextendedproc|Die Prozedur sp_dropextendedproc wurde gefunden. Verwenden Sie stattdessen CLR. Tritt einmal pro Kompilierung auf.|  
@@ -198,10 +202,10 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sp_fulltext_catalog|Die Prozedur sp_fulltext_catalog wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT CATALOG. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_column|Die Prozedur sp_fulltext_column wurde gefunden. Verwenden Sie stattdessen ALTER FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_database|Die Prozedur sp_fulltext_database wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE. Tritt einmal pro Kompilierung auf.|  
-|sp_fulltext_service @action=clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|Sp_fulltext_service @action= Clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
 |sp_fulltext_service @action=connect_timeout|Die Option connect_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
 |sp_fulltext_service @action=data_timeout|Die Option data_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @ action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service @action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
 |sp_fulltext_table|Die Prozedur sp_fulltext_table wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_getbindtoken|Die Prozedur sp_getbindtoken wurde gefunden. Verwenden Sie stattdessen MARS (Multiple Active Results Sets) oder verteilte Transaktionen. Tritt einmal pro Kompilierung auf.|  
 |sp_grantdbaccess|Die Prozedur sp_grantdbaccess wurde gefunden. Verwenden Sie stattdessen CREATE USER. Tritt einmal pro Abfrage auf.|  
@@ -264,10 +268,10 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sysusers|Verweise auf sysusers wurden gefunden. Verwenden Sie stattdessen sys.database_principals. Tritt einmal pro Kompilierung auf.|  
 |Tabellenhinweis ohne WITH|Eine Anweisung wurde gefunden, die Tabellenhinweise verwendet, jedoch nicht das WITH-Schlüsselwort. Ändern Sie Anweisungen so, dass sie das Wort WITH einschließen. Tritt einmal pro Kompilierung auf.|  
 |Tabellenoption 'text in row'|Verweise auf die Tabellenoption text in row wurden gefunden. Verwenden Sie stattdessen die „large value types out of row“-Option von sp_tableoption. Tritt einmal pro Abfrage auf.|  
-|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
-|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
-|TIMESTAMP|Gesamtanzahl der gefundenen Vorkommnisse des veralteten **timestamp**-Datentyps in einer DDL-Anweisung. Verwenden Sie stattdessen den **rowversion**-Datentyp .|  
-|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext** und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TIMESTAMP|Gesamtanzahl der gefundenen Vorkommnisse des veralteten **timestamp** -Datentyps in einer DDL-Anweisung. Verwenden Sie stattdessen den **rowversion** -Datentyp .|  
+|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text**, **ntext**und **image** entfernt wird. Tritt einmal pro Abfrage auf.|  
 |USER_ID|Verweise auf die USER_ID-Funktion wurden gefunden. Verwenden Sie stattdessen die DATABASE_PRINCIPAL_ID-Funktion. Tritt einmal pro Kompilierung auf.|  
 |Verwenden von OLEDB für Verbindungsserver||  
 |Vardecimal-Speicherformat|Die Verwendung des Speicherformats **vardecimal** wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
@@ -277,13 +281,14 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |xp_loginconfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement-Ereignisklasse](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (Ereignisklasse)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Nicht mehr unterstützte Funktionen der Volltextsuche in SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [Nicht mehr unterstützte Funktionen der Volltextsuche in SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

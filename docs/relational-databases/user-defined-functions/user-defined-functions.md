@@ -1,25 +1,29 @@
 ---
-title: "Benutzerdefinierte Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Funktionen [SQL Server], Komponenten"
-  - "user-defined functions [SQL Server], about user-defined functions"
+title: Benutzerdefinierte Funktionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Benutzerdefinierte Funktionen
+# <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
   Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
    
 ##  <a name="Benefits"></a> Benutzerdefinierte Funktionen  
@@ -31,9 +35,9 @@ Warum diese verwenden?
   
 -   Schnellere Ausführung.  
   
-     Ähnlich wie gespeicherte Prozeduren verringern auch benutzerdefinierte Funktionen von [!INCLUDE[tsql](../../includes/tsql-md.md)] die Kompilierungskosten von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code, da die Pläne zwischengespeichert und für wiederholte Ausführungen erneut verwendet werden. Dies bedeutet, dass die benutzerdefinierte Funktion nicht für jede Verwendung neu analysiert und optimiert werden muss; aus diesem Umstand ergeben sich wesentlich schnellere Ausführungszeiten.  
+     Ähnlich wie gespeicherte Prozeduren verringern auch benutzerdefinierte Funktionen von [!INCLUDE[tsql](../../includes/tsql-md.md)] die Kompilierungskosten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code, da die Pläne zwischengespeichert und für wiederholte Ausführungen erneut verwendet werden. Dies bedeutet, dass die benutzerdefinierte Funktion nicht für jede Verwendung neu analysiert und optimiert werden muss; aus diesem Umstand ergeben sich wesentlich schnellere Ausführungszeiten.  
   
-     CLR-Funktionen bieten gegenüber [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen für Berechnungsaufgaben, Zeichenfolgebearbeitung und Geschäftslogik erhebliche Leistungsvorteile. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen sind besser für datenzugriffsintensive Programmlogik geeignet.  
+     CLR-Funktionen bieten gegenüber [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen für Berechnungsaufgaben, Zeichenfolgebearbeitung und Geschäftslogik erhebliche Leistungsvorteile. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind besser für datenzugriffsintensive Programmlogik geeignet.  
   
 -   Reduzierung der Netzwerkverkehrs.  
   
@@ -47,13 +51,13 @@ Warum diese verwenden?
  **[Beispiele.](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
   
 **Tabellenwertfunktionen**  
- Benutzerdefinierte Tabellenwertfunktionen geben einen **table**-Datentyp zurück. Bei einer Inlinefunktion mit Tabellenrückgabe gibt es keinen Funktionshauptteil; die Tabelle ist das Resultset einer einzelnen SELECT-Anweisung. **[Beispiele.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
+ Benutzerdefinierte Tabellenwertfunktionen geben einen **table** -Datentyp zurück. Bei einer Inlinefunktion mit Tabellenrückgabe gibt es keinen Funktionshauptteil; die Tabelle ist das Resultset einer einzelnen SELECT-Anweisung. **[Beispiele.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **Systemfunktionen**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt viele Systemfunktionen bereit, mit denen Sie eine Vielzahl von Vorgängen ausführen können. Sie können nicht geändert werden. Weitere Informationen finden Sie unter [Integrierte Funktionen &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md), [Systemgespeicherte Funktionen &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md) und [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt viele Systemfunktionen bereit, mit denen Sie eine Vielzahl von Vorgängen ausführen können. Sie können nicht geändert werden. Weitere Informationen finden Sie unter [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Systemgespeicherte Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) und [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Richtlinien  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Fehler, die dazu führen, dass eine Anweisung abgebrochen und mit der nächsten Anweisung fortgefahren wird (z.B. Trigger oder gespeicherte Prozeduren), werden innerhalb einer Funktion anders behandelt. In Funktionen bewirken solche Fehler, dass die Ausführung der Funktion beendet wird. Dies hat wiederum zur Folge, dass die Anweisung abgebrochen wird, die die Funktion aufgerufen hat.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehler, die dazu führen, dass eine Anweisung abgebrochen und mit der nächsten Anweisung fortgefahren wird (z.B. Trigger oder gespeicherte Prozeduren), werden innerhalb einer Funktion anders behandelt. In Funktionen bewirken solche Fehler, dass die Ausführung der Funktion beendet wird. Dies hat wiederum zur Folge, dass die Anweisung abgebrochen wird, die die Funktion aufgerufen hat.  
   
  Die Anweisungen in einem BEGIN…END-Block dürfen keine Nebeneffekte haben. Nebeneffekte von Funktionen sind dauerhafte Änderungen am Status einer Ressource, deren Gültigkeitsbereich außerhalb der Funktion liegt, wie z. B. Änderungen an einer Datenbanktabelle. Die einzigen Änderungen, die von den Anweisungen in der Funktion vorgenommen werden dürfen, sind Änderungen an lokalen Objekten der Funktion, wie z. B. lokale Cursor oder Variablen. Änderungen an Datenbanktabellen, Cursorvorgänge außerhalb der Funktion, das Senden von E-Mails, das Ausführen einer Katalogänderung und das Generieren eines Resultsets, das an den Benutzer zurückgegeben wird, sind Beispiele für Aktionen, die in einer Funktion nicht ausgeführt werden können.  
   
@@ -78,7 +82,7 @@ Warum diese verwenden?
   
 -   EXECUTE-Anweisungen, die eine erweiterte gespeicherte Prozedur aufrufen.  
   
-### Integrierte Systemfunktionen  
+### <a name="built-in-system-functions"></a>Integrierte Systemfunktionen  
  Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten Transact-SQL-Funktionen verwendet werden.  
   
 |||  
@@ -118,7 +122,7 @@ Warum diese verwenden?
 ##  <a name="Parameters"></a> Angeben von Parametern  
  Eine benutzerdefinierte Funktion verwendet null oder mehr Eingabeparameter und gibt einen Skalarwert oder eine Tabelle zurück. Eine Funktion kann maximal 1024 Eingabeparameter haben. Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert zu erhalten. In diesem Punkt gibt es einen Unterschied zu den Parametern einer benutzerdefinierten gespeicherten Prozedur. Fehlt im Aufruf einer benutzerdefinierten gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet. Benutzerdefinierte Funktionen unterstützen keine Ausgabeparameter.  
   
-##  <a name="Tasks"></a> Weitere Beispiele.  
+##  <a name="Tasks"></a> Weitere Beispiele!  
   
 |||  
 |-|-|  
@@ -133,3 +137,7 @@ Warum diese verwenden?
 |Beschreibt, wie die Definition einer benutzerdefinierten Funktion angezeigt wird.|[Anzeigen benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

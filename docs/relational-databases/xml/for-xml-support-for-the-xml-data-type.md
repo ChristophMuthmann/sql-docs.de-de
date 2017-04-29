@@ -1,28 +1,32 @@
 ---
-title: "FOR XML-Unterst&#252;tzung f&#252;r den xml-Datentyp | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Funktionen [SQL Server], XML"
-  - "XML-Datentyp [SQL Server], FOR XML-Klausel"
+title: "FOR XML-Unterstützung für den xml-Datentyp | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML-Unterst&#252;tzung f&#252;r den xml-Datentyp
+# <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
   Wenn eine FOR XML-Abfrage eine Spalte vom **xml** -Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des **xml** -Typs werden nicht serialisiert.  
   
- Die folgende Abfrage ruft z.B. Kundenkontaktinformationen, wie etwa die `BusinessEntityID`-, `FirstName`- und `LastName`-Spalten, und die Rufnummern aus der `AdditionalContactInfo`-Spalte ab, die vom Typ **XML** ist.  
+ Die folgende Abfrage ruft z.B. Kundenkontaktinformationen, wie etwa die `BusinessEntityID`-, `FirstName`- und `LastName` -Spalten, und die Rufnummern aus der `AdditionalContactInfo` -Spalte ab, die vom Typ **XML** ist.  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,7 +144,7 @@ for xml auto;
 </root>  
 ```  
   
-## Zurückgeben von XML aus einer benutzerdefinierten Funktion  
+## <a name="returning-xml-from-a-user-defined-function"></a>Zurückgeben von XML aus einer benutzerdefinierten Funktion  
  FOR XML-Abfragen können zum Zurückgeben von XML aus einer benutzerdefinierten Funktion verwendet werden, die eines der folgenden Objekte zurückgibt:  
   
 -   Eine Tabelle mit einer einzelnen Spalte des Typs **xml** .  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Das folgende Beispiel zeigt eine weitere benutzerdefinierte Funktion. Diese benutzerdefinierte Funktion gibt eine Instanz des **XML**-Typs zurück. In diesem Beispiel gibt die benutzerdefinierte Funktion eine typisierte XML-Instanz zurück, weil der Schemanamespace angegeben wird.  
+ Das folgende Beispiel zeigt eine weitere benutzerdefinierte Funktion. Diese benutzerdefinierte Funktion gibt eine Instanz des **XML** -Typs zurück. In diesem Beispiel gibt die benutzerdefinierte Funktion eine typisierte XML-Instanz zurück, weil der Schemanamespace angegeben wird.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -194,7 +198,7 @@ BEGIN
 END;  
 ```  
   
- Das durch die benutzerdefinierte Funktion zurückgegebene XML kann einer Variablen des **XML**-Typs wie folgt zugewiesen werden:  
+ Das durch die benutzerdefinierte Funktion zurückgegebene XML kann einer Variablen des **XML** -Typs wie folgt zugewiesen werden:  
   
 ```  
 declare @x xml;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [FOR XML-Unterstützung für verschiedene SQL Server-Datentypen](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

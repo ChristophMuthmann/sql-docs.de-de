@@ -1,44 +1,31 @@
 ---
-title: "Verschl&#252;sseln der Sicherung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verschlüsseln der Sicherung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verschl&#252;sseln der Sicherung
+# <a name="backup-encryption"></a>Verschlüsseln der Sicherung
   Dieses Thema bietet eine Übersicht über die Verschlüsselungsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen. Es enthält Details zur Verwendung, zu den Vorteilen und empfohlenen Vorgehensweisen beim Verschlüsseln bei der Sicherung.  
   
- **In diesem Thema:**  
-  
--   [Übersicht](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [Vorteile](#Benefits)  
-  
--   [Voraussetzungen](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [Einschränkungen](#Restrictions)  
-  
--   [Berechtigungen](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [Methoden zur Sicherungsverschlüsselung](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [Empfohlene Vorgehensweisen](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Übersicht  
- Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verfügt SQL Server über die Möglichkeit, die Daten beim Erstellen einer Sicherung zu verschlüsseln. Durch das Angeben des Verschlüsselungsalgorithmus und der Verschlüsselung (ein Zertifikat oder ein asymmetrischer Schlüssel) beim Erstellen einer Sicherung können Sie eine verschlüsselte Sicherungsdatei anlegen. Alle Speicherziele − lokaler und Windows Azure-Speicher − werden unterstützt. Außerdem können Verschlüsselungsoptionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Vorgänge konfiguriert werden. Dies ist eine neue Funktion, die in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eingeführt wurde.  
+ Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]verfügt SQL Server über die Möglichkeit, die Daten beim Erstellen einer Sicherung zu verschlüsseln. Durch das Angeben des Verschlüsselungsalgorithmus und der Verschlüsselung (ein Zertifikat oder ein asymmetrischer Schlüssel) beim Erstellen einer Sicherung können Sie eine verschlüsselte Sicherungsdatei anlegen. Alle Speicherziele − lokaler und Windows Azure-Speicher − werden unterstützt. Außerdem können Verschlüsselungsoptionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] -Vorgänge konfiguriert werden. Dies ist eine neue Funktion, die in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]eingeführt wurde.  
   
  Um während der Sicherung eine Verschlüsselung durchzuführen, müssen Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsmethode angeben, um den Verschlüsselungsschlüssel zu sichern. Folgende Verschlüsselungsoptionen werden unterstützt:  
   
@@ -59,13 +46,12 @@ caps.handback.revision: 16
   
 2.  Verschlüsselung kann auch für Datenbanken verwendet werden, die mithilfe von TDE verschlüsselt werden.  
   
-3.  Die Verschlüsselung wird für Sicherungen unterstützt, die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durchgeführt werden, was zusätzliche Sicherheit für externe Sicherungen bereitstellt.  
+3.  Die Verschlüsselung wird für Sicherungen unterstützt, die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]durchgeführt werden, was zusätzliche Sicherheit für externe Sicherungen bereitstellt.  
   
 4.  Diese Funktion unterstützt mehrere Verschlüsselungsalgorithmen bis zu AES 256 Bit. So können Sie einen Algorithmus auswählen, der Ihren Anforderungen entspricht.  
   
 5.  Sie können Verschlüsselungsschlüssel in EKM-Anbieter (Extended Key Management) integrieren.  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Voraussetzungen  
  Voraussetzungen zum Verschlüsseln einer Sicherung:  
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   Das Anfügen an einen vorhandenen Sicherungssatz wird für verschlüsselte Sicherungen nicht unterstützt.  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="Permissions"></a> Berechtigungen  
  **So verschlüsseln Sie eine Sicherung oder stellen Daten aus einer verschlüsselten Sicherung wieder her:**  
@@ -101,14 +86,14 @@ caps.handback.revision: 16
 ##  <a name="Methods"></a> Methoden zur Sicherungsverschlüsselung  
  Die folgenden Abschnitte enthalten eine kurze Einführung in die Schritte zum Verschlüsseln der Daten während der Sicherung. Eine vollständige exemplarische Vorgehensweise der einzelnen Schritte, die Sie beim Verschlüsseln der Sicherung mithilfe von Transact-SQL ausführen, finden Sie unter [Erstellen einer verschlüsselten Sicherung](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### Verwendung von SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio  
  Sie können eine Sicherung verschlüsseln, wenn Sie die Datenbanksicherung in einem der folgenden Dialogfelder erstellen:  
   
 1.  [Datenbank sichern &#40;Seite 'Sicherungsoptionen'&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) – Auf der Seite **Sicherungsoptionen** können Sie **Verschlüsselung** auswählen und den Verschlüsselungsalgorithmus und das Zertifikat oder den asymmetrischen Schlüssel angeben, der für die Verschlüsselung verwendet werden soll.  
   
 2.  [Verwendung des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) – Wenn Sie einen Sicherungstask auswählen, können Sie auf der Registerkarte **Optionen** der Seite **Define Backup ()Task** (Sicherungstask () definieren) die Option **Sicherungsverschlüsselung** auswählen und den Verschlüsselungsalgorithmus und das Zertifikat oder den Schlüssel angeben, das bzw. der für die Verschlüsselung verwendet werden soll.  
   
-### Transact-SQL  
+### <a name="using-transact-sql"></a>Transact-SQL  
  Es folgt eine Transact-SQL-Beispielanweisung zum Verschlüsseln der Sicherungsdatei:  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  Die vollständige Syntax der Transact-SQL-Anweisung finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-### PowerShell  
+### <a name="using-powershell"></a>PowerShell  
  In diesem Beispiel werden die Verschlüsselungsoptionen erstellt und als Parameterwert im Cmdlet **Backup-SqlDatabase** verwendet, um eine verschlüsselte Sicherung zu erstellen.  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[Erstellen einer verschlüsselten Sicherung](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um eine verschlüsselte Sicherung zu erstellen.|  
 |[Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Enthält ein Beispiel zum Erstellen einer verschlüsselten Sicherung, die durch Schlüssel im Azure-Schlüsseltresor geschützt ist.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

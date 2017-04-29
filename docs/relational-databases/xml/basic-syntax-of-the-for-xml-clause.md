@@ -1,34 +1,38 @@
 ---
-title: "Basissyntax der FOR XML-Klausel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BINARY BASE64-Direktive"
-  - "ROOT-Direktive"
-  - "FOR XML-Klausel, BINARY BASE64-Direktive"
-  - "FOR XML-Klausel, Syntax"
-  - "FOR XML-Klausel, ROOT-Direktive"
+title: Basissyntax der FOR XML-Klausel | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BINARY BASE64 directive
+- ROOT directive
+- FOR XML clause, BINARY BASE64 directive
+- FOR XML clause, syntax
+- FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55ad10ef334f0e5f754060c5abb619db6e837e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Basissyntax der FOR XML-Klausel
+# <a name="basic-syntax-of-the-for-xml-clause"></a>Basissyntax der FOR XML-Klausel
   Der FOR XML-Modus kann RAW, AUTO, EXPLICIT oder PATH lauten. Er bestimmt die Form des erhaltenen XML.  
   
 > [!IMPORTANT]  
 >  Die XMLDATA-Direktive zur FOR XML-Option ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Im Folgenden wird die Basissyntax der [FOR-Klausel (Transact-SQL) beschrieben](../Topic/FOR%20Clause%20\(Transact-SQL\).md):  
+ Im Folgenden wird die Basissyntax der [FOR-Klausel (Transact-SQL) beschrieben](../../t-sql/queries/select-for-clause-transact-sql.md):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -59,7 +63,7 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  RAW[('*ElementName*')]  
  Verwendet das Abfrageergebnis und wandelt jede Zeile im Resultset in ein XML-Element mit einem generischen Bezeichner (\<row />) als Elementtag um. Sie können optional einen Namen für das Zeilenelement angeben, wenn Sie diese Direktive verwenden. Das sich ergebende XML verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
@@ -85,12 +89,12 @@ XML
  Wenn die Option BINARY Base64 angegeben ist, werden alle von der Abfrage zurückgegebenen Binärdaten im Base64-codierten Format dargestellt. Zum Abrufen von Binärdaten mithilfe des Modus RAW oder EXPLICIT muss diese Option angegeben werden. Standardmäßig werden Binärdaten im AUTO-Modus als Verweis zurückgegeben. Ein funktionierendes Beispiel finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  TYPE  
- Gibt an, dass die Abfrage die Ergebnisse als **xml**-Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
+ Gibt an, dass die Abfrage die Ergebnisse als **xml** -Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
  ROOT [('*RootName*')]  
  Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Der Standardwert lautet "root".  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

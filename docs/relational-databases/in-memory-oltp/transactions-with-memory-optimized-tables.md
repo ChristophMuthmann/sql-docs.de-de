@@ -1,25 +1,29 @@
 ---
-title: "Transaktionen mit speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transaktionen mit speicheroptimierten Tabellen | Microsoft-Dokumentation
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transaktionen mit speicheroptimierten Tabellen
+# <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -33,7 +37,7 @@ Allgemeine Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL (Tran
   
   
   
-#### Kapitel in diesem Artikel:  
+#### <a name="sections-in-this-article"></a>Kapitel in diesem Artikel:  
   
 - [Pessimistisch und optimistisch](#pessvoptim22ni)  
 - [Transaktionseinleitungsmodi](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ Allgemeine Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL (Tran
   
 <a name="pessvoptim22ni"/>  
   
-## Pessimistisch und optimistisch  
+## <a name="pessimistic-versus-optimistic"></a>Pessimistisch und optimistisch  
   
 Die funktionalen Unterschiede ergeben sich aufgrund von pessimistischen und optimistischen Ansätzen hinsichtlich der Transaktionsintegrität. Speicheroptimierte Tabellen verwenden den optimistischen Ansatz:  
   
@@ -65,23 +69,23 @@ Der optimistische Ansatz bedeutet weniger Aufwand und ist in der Regel effizient
   
 <a name="txninitmodes24ni"/>  
   
-## Transaktionseinleitungsmodi  
+## <a name="transaction-initiation-modes"></a>Transaktionseinleitungsmodi  
   
 SQL Server verfügt über die folgenden Modi für den Start einer Transaktion:  
   
-- **Autocommit**: Das Starten einer einfachen Abfrage oder DML-Anweisung öffnet eine Transaktion implizit, und das Ende der Anweisung führt den Commit für die Transaktion implizit aus. Dies ist die Standardeinstellung.  
+- **Autocommit** : Das Starten einer einfachen Abfrage oder DML-Anweisung öffnet eine Transaktion implizit, und das Ende der Anweisung führt den Commit für die Transaktion implizit aus. Dies ist die Standardeinstellung.  
   - Im Autocommitmodus muss ein Tabellenhinweis zur Transaktionsisolationsstufe für die speicheroptimierte Tabelle in der FROM-Klausel in der Regel nicht codiert werden.  
   
-- **Explizit**: Ihr Transact-SQL enthält den Code BEGIN TRANSACTION zusammen mit einem eventuellen COMMIT TRANSACTION. Mindestens zwei Anweisungen können in derselben Transaktion eingeschlossen werden.  
+- **Explizit** : Ihr Transact-SQL enthält den Code BEGIN TRANSACTION zusammen mit einem eventuellen COMMIT TRANSACTION. Mindestens zwei Anweisungen können in derselben Transaktion eingeschlossen werden.  
   - Im expliziten Modus müssen Sie entweder die Datenbankoption MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT verwenden oder einen Tabellenhinweis zur Transaktionsisolationsstufe in der speicheroptimierten Tabelle in die FROM-Klausel schreiben.  
   
-- **Implizit**: Wenn SET IMPLICIT_TRANSACTION ON aktiv ist. Ein besserer Name wäre wahrscheinlich IMPLICIT_BEGIN_TRANSACTION gewesen, da diese Option lediglich das Äquivalent einer expliziten BEGIN TRANSACTION vor jeder UPDATE-Anweisung implizit ausführt, wenn „ 0 = @@trancount“ gilt. Daher muss Ihr T-SQL-Code ggf. ein explizites COMMIT TRANSACTION ausgeben.   
+- **Implizit** : Wenn SET IMPLICIT_TRANSACTION ON aktiv ist. Ein besserer Name wäre wahrscheinlich IMPLICIT_BEGIN_TRANSACTION gewesen, da diese Option lediglich das Äquivalent einer expliziten BEGIN TRANSACTION vor jeder UPDATE-Anweisung implizit ausführt, wenn „ 0 = @@trancount“ gilt. Daher muss Ihr T-SQL-Code ggf. ein explizites COMMIT TRANSACTION ausgeben.   
   
-- **ATOMIC-BLOCK**: Alle Anweisungen in ATOMIC-Blöcken, die bei nativ kompilierten gespeicherten Prozeduren erforderlich sind, werden immer als Teil einer einzelnen Transaktion ausgeführt – entweder werden die Aktionen des ATOMIC-Blocks als Ganzes per Commit ausgeführt, oder es wird bei einem Fehler für alle Aktionen ein Rollback ausgeführt.  
+- **ATOMIC-BLOCK** : Alle Anweisungen in ATOMIC-Blöcken, die bei nativ kompilierten gespeicherten Prozeduren erforderlich sind, werden immer als Teil einer einzelnen Transaktion ausgeführt – entweder werden die Aktionen des ATOMIC-Blocks als Ganzes per Commit ausgeführt, oder es wird bei einem Fehler für alle Aktionen ein Rollback ausgeführt.  
   
 <a name="codeexamexpmode25ni"/>  
   
-### Codebeispiel im Explicit-Modus  
+### <a name="code-example-with-explicit-mode"></a>Codebeispiel im Explicit-Modus  
   
 Das folgende interpretierte Transact-SQL-Skript verwendet Folgendes:  
   
@@ -110,13 +114,13 @@ Aus diesem Grund ist es erforderlich, einen Tabellenhinweis auf die speicheropti
       
     COMMIT TRANSACTION;  
   
-Beachten Sie, dass der `WITH (SNAPSHOT)`-Hinweis durch Verwendung der Datenbankoption `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` vermieden werden kann. Wenn diese Option auf `ON` festgelegt ist, wird der Zugriff auf eine speicheroptimierte Tabelle einer niedrigeren Isolationsstufe automatisch auf die SNAPSHOT-Isolation hochgestuft.  
+Beachten Sie, dass der `WITH (SNAPSHOT)` -Hinweis durch Verwendung der Datenbankoption `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`vermieden werden kann. Wenn diese Option auf `ON`festgelegt ist, wird der Zugriff auf eine speicheroptimierte Tabelle einer niedrigeren Isolationsstufe automatisch auf die SNAPSHOT-Isolation hochgestuft.  
   
     ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
   
 <a name="rowver28ni"/>  
   
-## Zeilenversionsverwaltung  
+## <a name="row-versioning"></a>Zeilenversionsverwaltung  
   
 Speicheroptimierte Tabellen verwenden ein sehr komplexes System zur Zeilenversionsverwaltung, das den optimistischen Ansatz sogar auf der strengsten Isolationsstufe SERIALIZABLE effizient gestaltet. Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -124,7 +128,7 @@ Datenträgerbasierte Tabellen weisen indirekt ein System zur Zeilenversionsverwa
   
 <a name="confdegreeiso30ni"/>  
   
-## Isolationsstufen 
+## <a name="isolation-levels"></a>Isolationsstufen 
   
 Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, wobei mit der niedrigsten Isolationsstufe begonnen wird. Informationen zu möglichen Konflikten und der Wiederholungslogik zum Beheben dieser Konflikte finden Sie unter [Konflikterkennung und Wiederholungslogik](#confdetretry34ni). 
   
@@ -141,7 +145,7 @@ Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, w
 
 <a name="txnphaslife32ni"/>  
   
-## Transaktionsphasen und Lebensdauer  
+## <a name="transaction-phases-and-lifetime"></a>Transaktionsphasen und Lebensdauer  
   
 Wenn eine speicheroptimierte Tabelle einbezogen ist, durchläuft die Lebensdauer einer Transaktion die in der folgenden Abbildung veranschaulichten Phasen.  
   
@@ -149,17 +153,17 @@ Wenn eine speicheroptimierte Tabelle einbezogen ist, durchläuft die Lebensdauer
   
 Beschreibungen der Phasen folgen.  
   
-#### Reguläre Verarbeitung: Phase 1 (von 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Reguläre Verarbeitung: Phase 1 (von 3)  
   
 - Diese Phase besteht aus der Ausführung aller Abfragen und DML-Anweisungen in der Abfrage.  
 - Während dieser Phase betrachten die Anweisungen die Version der speicheroptimierten Tabellen als die Version, die zur logischen Startzeit der Transaktion gültig war.  
   
-#### Überprüfung: Phase 2 (von 3)  
+#### <a name="validation-phase-2-of-3"></a>Überprüfung: Phase 2 (von 3)  
   
 - Die Überprüfungsphase beginnt durch Zuweisen der Beendigungszeit, wodurch die Transaktion als logisch abgeschlossen markiert wird. Damit werden alle Änderungen der Transaktion für andere Transaktionen sichtbar, wodurch eine Abhängigkeit anderer Transaktionen von dieser Transaktion entsteht und ein Commit anderer Transaktionen erst zulässig ist, wenn der Commit für diese Transaktion erfolgreich ausgeführt wurde. Darüber hinaus dürfen Transaktionen, für die solche Abhängigkeiten bestehen, keine Resultsets an den Client zurückgeben, um sicherzustellen, dass dem Client nur Daten angezeigt werden, für die ein erfolgreicher Commit in die Datenbank ausgeführt wurde.  
-- Diese Phase umfasst die REPEATABLE READ- und SERIALIZABLE-Überprüfung. Bei der REPEATABLE READ-Überprüfung wird geprüft, ob eine Zeile aktualisiert wurde, nachdem sie von der Transaktion gelesen wurde. Bei der SERIALIZABLE-Überprüfung wird geprüft, ob Zeilen in einen von dieser Transaktion gescannten Datenbereich eingefügt wurden. Beachten Sie, dass gemäß der Tabelle im Abschnitt [Isolationsstufen](#confdegreeiso30ni) sowohl die REPEATABLE READ- als auch die SERIALIZABLE-Überprüfung bei der SNAPSHOT-Isolation auftreten können, um die Konsistenz von UNIQUE- und FOREIGN KEY-Einschränkungen zu überprüfen.  
+- Diese Phase umfasst die REPEATABLE READ- und SERIALIZABLE-Überprüfung. Bei der REPEATABLE READ-Überprüfung wird geprüft, ob eine Zeile aktualisiert wurde, nachdem sie von der Transaktion gelesen wurde. Bei der SERIALIZABLE-Überprüfung wird geprüft, ob Zeilen in einen von dieser Transaktion gescannten Datenbereich eingefügt wurden. Beachten Sie, dass gemäß der Tabelle im Abschnitt [Isolationsstufen](#confdegreeiso30ni)sowohl die REPEATABLE READ- als auch die SERIALIZABLE-Überprüfung bei der SNAPSHOT-Isolation auftreten können, um die Konsistenz von UNIQUE- und FOREIGN KEY-Einschränkungen zu überprüfen.  
   
-#### Commitverarbeitung: Phase 3 (von 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Commitverarbeitung: Phase 3 (von 3)  
   
 - Während der Commitphase werden die Änderungen an dauerhaften Tabellen in das Protokoll und das Protokoll auf die Datenträger geschrieben. Anschließend wird die Steuerung wieder an den Client übergeben.  
 - Nach Abschluss der Commitverarbeitung werden alle abhängigen Transaktionen benachrichtigt, dass sie die Commits ausführen können.  
@@ -168,7 +172,7 @@ Wie immer sollten Sie Ihre Transaktionsarbeitseinheiten so minimal und kurz halt
   
 <a name="confdetretry34ni"/>  
   
-## Konflikterkennung und Wiederholungslogik 
+## <a name="conflict-detection-and-retry-logic"></a>Konflikterkennung und Wiederholungslogik 
 
 Es gibt zwei Arten von transaktionsbezogenen Fehlerbedingungen, die einen Fehler und ein Rollback für eine Transaktion verursachen können. In den meisten Fällen muss die Transaktion nach dem Auftreten eines solchen Fehlers wiederholt werden – ähnlich wie bei einem Deadlock.
 - Konflikte zwischen gleichzeitigen Transaktionen. Hierbei handelt es sich um Updatekonflikte und Überprüfungsfehler, die durch Verletzungen der Transaktionsisolationsstufe oder durch Einschränkungsverletzungen verursacht werden können.
@@ -182,10 +186,10 @@ Im Folgenden finden Sie die Fehlerbedingungen, die dazu führen können, dass Tr
 | **41305**| REPEATABLE READ-Überprüfungsfehler. Eine Zeile einer speicheroptimierten Tabelle, die von dieser Transaktion gelesen wird, wurde von einer anderen Transaktion aktualisiert, für die vor dem Commit dieser Transaktion ein Commit ausgeführt wurde. | Dieser Fehler kann bei Verwendung der REPEATABLE READ- oder SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine FOREIGN KEY-Einschränkung verletzen. <br/><br/>Solche Verletzungen von FOREIGN KEY-Einschränkungen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Dieser Fehler kann allerdings auch auftreten, wenn in den Spalten, die an der FOREIGN KEY-Einschränkung beteiligt sind, kein Index vorhanden ist. Es empfiehlt sich daher, in FOREIGN KEY-Spalten einer speicheroptimierten Tabelle immer einen Index zu erstellen. <br/><br/> Ausführlichere Überlegungen zu Überprüfungsfehlern, die durch FOREIGN KEY-Verletzungen verursacht werden, finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) des SQL Server-Kundenberatungsteams. |  
 | **41325** | SERIALIZABLE-Überprüfungsfehler. Eine Zeile wurde in einen Bereich eingefügt, der zuvor von der aktuellen Transaktion gescannt wurde. Dies wird als Phantomzeile bezeichnet | Dieser Fehler kann bei Verwendung der SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine PRIMARY KEY-, UNIQUE- oder FOREIGN KEY-Einschränkung verletzen. <br/><br/> Solche Einschränkungsverletzungen durch gleichzeitige Transaktionen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Ähnlich wie bei REPEATABLE READ-Überprüfungsfehlern kann dieser Fehler auch auftreten, wenn für die an einer FOREIGN KEY-Einschränkung beteiligten Spalten kein Index vorhanden ist. |  
 | **41301** | Abhängigkeitsfehler: Es besteht eine Abhängigkeit von einer anderen Transaktion, bei der später ein Commitfehler auftritt. | Für diese Transaktion (Tx1) entstand eine Abhängigkeit von einer anderen Transaktion (Tx2), während die Transaktion (Tx2) sich in der Überprüfungs- oder Commitverarbeitungsphase befand. Der Grund: Tx1 hat Daten gelesen, die von Tx2 geschrieben wurden. Bei Tx2 trat anschließend ein Fehler beim Commit auf. Die häufigsten Ursachen für Fehler beim Commit von Tx2 sind REPEATABLE READ-Überprüfungsfehler (41305) und SERIALIZABLE-Überprüfungsfehler (41325). Eine weniger häufige Ursache ist ein Protokoll-E/A-Fehler. |
-| **41839** | Die Transaktion hat die maximale Anzahl von Commitabhängigkeiten überschritten. | Eine bestimmte Transaktion (Tx1) kann nur von einer bestimmten Anzahl von Transaktionen abhängig sein – dies sind die ausgehenden Abhängigkeiten. Darüber hinaus kann nur eine bestimmte Anzahl von Transaktionen von einer bestimmten Transaktion (Tx1) abhängig sein – dies sind die eingehenden Abhängigkeiten. Der Grenzwert für beide Arten lautet 8. <br/><br/> Dieser Fehler tritt am häufigsten dann auf, wenn eine große Anzahl von Lesetransaktionen auf Daten zugreift, die von einer einzigen Schreibtransaktion geschrieben werden. Die Wahrscheinlichkeit, dass diese Bedingung eintritt, steigt, wenn die Lesetransaktionen umfangreiche Scans der gleichen Daten durchführen und die Überprüfung oder Commitverarbeitung der Schreibtransaktion lange dauert. Beispiele: Die Schreibtransaktion führt in der SERIALIZABLE-Isolation umfangreiche Scans durch (dies verlängert die Überprüfungsphase), oder das Transaktionsprotokoll ist auf einem langsamen Protokoll-E/A-Gerät platziert (dies verlängert die Commitverarbeitung). Wenn die Lesetransaktionen umfangreiche Scans durchführen und nur auf einige wenige Zeilen zugreifen sollen, kann dies auf einen fehlenden Index hinweisen. Gleiches gilt, wenn die Schreibtransaktion die SERIALIZABLE-Isolation verwendet und umfangreiche Scans durchführt, aber nur auf einige wenige Zeilen zugreifen soll. Auch dies kann ein Hinweis auf einen fehlenden Index sein. <br/><br/> Die maximale Anzahl von Commitabhängigkeiten kann durch Verwendung des Ablaufverfolgungsflags **9926** erhöht werden. Verwenden Sie dieses Flag nur, wenn die Fehlerbedingung weiterhin auftritt, nachdem Sie sichergestellt haben, dass keine Indizes fehlen. Ansonsten könnte dieses Flag die Fehler in den oben genannten Fällen verbergen. Eine weitere wichtige Überlegung: Komplexe Abhängigkeitsdiagramme, in denen für jede Transaktion eine Vielzahl von eingehenden und ausgehenden Abhängigkeiten besteht und in denen einzelne Transaktionen Abhängigkeiten auf vielen Ebenen aufweisen, können zu Ineffizienzen im System führen.  |
+| **41839** | Die Transaktion hat die maximale Anzahl von Commitabhängigkeiten überschritten. | Eine bestimmte Transaktion (Tx1) kann nur von einer bestimmten Anzahl von Transaktionen abhängig sein – dies sind die ausgehenden Abhängigkeiten. Darüber hinaus kann nur eine bestimmte Anzahl von Transaktionen von einer bestimmten Transaktion (Tx1) abhängig sein – dies sind die eingehenden Abhängigkeiten. Der Grenzwert für beide Arten lautet 8. <br/><br/> Dieser Fehler tritt am häufigsten dann auf, wenn eine große Anzahl von Lesetransaktionen auf Daten zugreift, die von einer einzigen Schreibtransaktion geschrieben werden. Die Wahrscheinlichkeit, dass diese Bedingung eintritt, steigt, wenn die Lesetransaktionen umfangreiche Scans der gleichen Daten durchführen und die Überprüfung oder Commitverarbeitung der Schreibtransaktion lange dauert. Beispiele: Die Schreibtransaktion führt in der SERIALIZABLE-Isolation umfangreiche Scans durch (dies verlängert die Überprüfungsphase), oder das Transaktionsprotokoll ist auf einem langsamen Protokoll-E/A-Gerät platziert (dies verlängert die Commitverarbeitung). Wenn die Lesetransaktionen umfangreiche Scans durchführen und nur auf einige wenige Zeilen zugreifen sollen, kann dies auf einen fehlenden Index hinweisen. Gleiches gilt, wenn die Schreibtransaktion die SERIALIZABLE-Isolation verwendet und umfangreiche Scans durchführt, aber nur auf einige wenige Zeilen zugreifen soll. Auch dies kann ein Hinweis auf einen fehlenden Index sein. <br/><br/> Die maximale Anzahl von Commitabhängigkeiten kann durch Verwendung des Ablaufverfolgungsflags **9926**erhöht werden. Verwenden Sie dieses Flag nur, wenn die Fehlerbedingung weiterhin auftritt, nachdem Sie sichergestellt haben, dass keine Indizes fehlen. Ansonsten könnte dieses Flag die Fehler in den oben genannten Fällen verbergen. Eine weitere wichtige Überlegung: Komplexe Abhängigkeitsdiagramme, in denen für jede Transaktion eine Vielzahl von eingehenden und ausgehenden Abhängigkeiten besteht und in denen einzelne Transaktionen Abhängigkeiten auf vielen Ebenen aufweisen, können zu Ineffizienzen im System führen.  |
  
   
-### Wiederholungslogik 
+### <a name="retry-logic"></a>Wiederholungslogik 
 
 Wenn aufgrund einer der oben genannten Bedingungen bei einer Transaktion ein Fehler auftritt, sollte die Transaktion wiederholt werden.
   
@@ -193,7 +197,7 @@ Die Wiederholungslogik kann Client- oder Serverseite implementiert werden. Im Al
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### Beispiel zum Wiederholen von T-SQL-Code  
+#### <a name="retry-t-sql-code-example"></a>Beispiel zum Wiederholen von T-SQL-Code  
   
 Eine serverseitige Wiederholungslogik mit T-SQL sollte nur für Transaktionen verwendet werden, die keine Resultsets an den Client zurückgeben, da Wiederholungen dazu führen können, dass weitere, unerwartete Resultsets an den Client zurückgegeben werden.  
   
@@ -254,7 +258,7 @@ Das folgende interpretierte T-SQL-Skript veranschaulicht, wie die Wiederholungsl
   
 <a name="crossconttxn38ni"/>  
   
-## Containerübergreifende Transaktion  
+## <a name="cross-container-transaction"></a>Containerübergreifende Transaktion  
   
   
 Eine Transaktion wird als containerübergreifende Transaktion bezeichnet, wenn Folgendes auf sie zutrifft:  
@@ -278,7 +282,7 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## Einschränkungen  
+## <a name="limitations"></a>Einschränkungen  
   
   
 - Datenbankübergreifende Transaktionen werden für speicheroptimierte Tabellen nicht unterstützt. Wenn eine Transaktion auf eine speicheroptimierte Tabelle zugreift, kann die Transaktion nicht auf eine andere Datenbank zugreifen. Ausnahme:  
@@ -314,7 +318,7 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
   
 <a name="natcompstorprocs42ni"/>  
   
-## Systemintern kompilierte gespeicherte Prozeduren  
+## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
   
 - In einer systemeigenen Prozedur muss der ATOMISCHE BLOCK die Transaktionsisolationsstufe für den gesamten Block deklarieren. Beispiel:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
@@ -325,7 +329,7 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
   
 <a name="othertxnlinks44ni"/>  
   
-## Andere Transaktionslinks  
+## <a name="other-transaction-links"></a>Andere Transaktionslinks  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -336,27 +340,29 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
 - [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
   
 \<!--  
-Link Guids:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
+Link-GUIDS:  
+016fb05e-a702-484b-bd2a-a6eabd0d76fd, ms173763.aspx, „SET TRANSACTION ISOLATION LEVEL (Transact-SQL)“  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac dn511014 (v=sql.130,d=robot) .aspx, „Einführung in speicheroptimierte Tabellen“  
   
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
+a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , „SET IMPLICIT_TRANSACTIONS (Transact-SQL)“  
   
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
+e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , „sp_getapplock (Transact-SQL)“  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , „Steuern der Transaktionsdauerhaftigkeit“  
   
-Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+Bild: „hekaton_transactions“ , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
+Weitere Informationen finden Sie in den XMetal-Artikeln: dn133169.aspx „Lebensdauer von Transaktionen“  
   
-Transactions with In-Memory Tables and Procedures  
+Transaktionen mit In-Memory-Tabellen und -Prozeduren  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
+Ersetzt möglicherweise: 06075248-705e-4563-9371-b64cd609793c, dn479429.aspx, „Grundlegendes zu Transaktionen in speicheroptimierten Tabellen“  
   
-GeneMi , 2016-03-28 11:40am  
+GeneMi, 28.3.2016 11:40 Uhr  
 -->  
   
   
   
   
+
+

@@ -1,40 +1,44 @@
 ---
-title: "L&#246;schen einer Datenebenenanwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deletedacwizard.deletedac.f1"
-  - "sql13.swb.deletedacwizard.summary.f1"
-  - "sql13.swb.deletedacwizard.introduction.f1"
-  - "sql13.swb.deletedacwizard.choosemethod.f1"
-helpviewer_keywords: 
-  - "Vorgehensweise [DAC], löschen"
-  - "Datenebenenanwendung [SQL Server], löschen"
-  - "Assistent [DAC], löschen"
-  - "Löschen einer DAC"
+title: "Löschen einer Datenebenenanwendung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deletedacwizard.deletedac.f1
+- sql13.swb.deletedacwizard.summary.f1
+- sql13.swb.deletedacwizard.introduction.f1
+- sql13.swb.deletedacwizard.choosemethod.f1
+helpviewer_keywords:
+- How to [DAC], delete
+- data-tier application [SQL Server], delete
+- wizard [DAC], delete
+- delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
+ms.lasthandoff: 04/11/2017
+
 ---
-# L&#246;schen einer Datenebenenanwendung
+# <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
   Sie können eine Datenebenenanwendung entweder mit dem Assistenten zum Löschen von Datenebenenanwendungen oder mit einem Windows PowerShell-Skript löschen. Sie können angeben, ob die zugeordnete Datenbank beibehalten, getrennt oder gelöscht wird.  
   
--   **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **So aktualisieren Sie eine DAC mit:** [dem Assistenten zum Registrieren von Datenebenenanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## Vorbereitungen  
- Wenn Sie eine Instanz einer Datenebenenanwendung (Data-Tier Application, DAC) löschen, legen Sie mit einer von drei Optionen fest, wie mit der der Datenebenenanwendung zugeordneten Datenbank verfahren werden soll. Durch alle drei Optionen werden die Metadaten der DAC-Definition gelöscht. Die Optionen unterscheiden sich in der Art, wie mit der Datenbank, die der Datenebenenanwendung zugeordnet ist, verfahren wird. Der Assistent löscht keine der Objekte auf Instanzebene, wie Anmeldenamen, die der DAC oder Datenbank zugeordnet sind.  
+## <a name="before-you-begin"></a>Vorbereitungen  
+ Wenn Sie eine Instanz einer Datenebenenanwendung (Data-Tier Application, DAC) löschen, legen Sie mit einer von drei Optionen fest, wie mit der der Datenebenenanwendung zugeordneten Datenbank verfahren werden soll. Durch alle drei Optionen werden die Metadaten der DAC-Definition gelöscht. Die Optionen unterscheiden sich in der Art, wie mit der Datenbank, die der Datenebenenanwendung zugeordnet ist, verfahren wird. Der Assistent löscht keine der Objekte auf Instanzebene, wie Anmeldenamen, die der DAC oder Datenbank zugeordnet sind.  
   
 |Option|Datenbankaktionen|  
 |------------|----------------------|  
@@ -48,14 +52,14 @@ caps.handback.revision: 16
 |Option|Wiederherstellen der DAC-Instanz|  
 |------------|-------------------------------------|  
 |Registrierung löschen|Registrieren Sie eine DAC von der Datenbank, die nicht gelöscht wurde.|  
-|Datenbank trennen|Fügen Sie die Datenbank erneut mit **sp_attachdb** oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] an, und registrieren Sie anschließend eine neue DAC-Instanz von der Datenbank.|  
+|Datenbank trennen|Fügen Sie die Datenbank erneut mit **sp_attachdb** oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]an, und registrieren Sie anschließend eine neue DAC-Instanz von der Datenbank.|  
 |Datenbank löschen|Stellen Sie die Datenbank von einer vollständigen Sicherung, die vor dem Löschen der DAC erstellt wurde, wieder her, und registrieren Sie dann eine neue DAC-Instanz von der Datenbank.|  
   
 > [!WARNING]  
->  Wenn Sie eine DAC-Instanz wiederherstellen, indem Sie eine DAC von einer wiederhergestellten oder erneut angefügten Datenbank registrieren, werden einige Teile der ursprünglichen DAC, z. B. die Richtlinie zur Serverauswahl, nicht neu erstellt.  
+>  Wenn Sie eine DAC-Instanz wiederherstellen, indem Sie eine DAC von einer wiederhergestellten oder erneut angefügten Datenbank registrieren, werden einige Teile der ursprünglichen DAC, z. B. die Richtlinie zur Serverauswahl, nicht neu erstellt.  
   
 ###  <a name="Permissions"></a> Berechtigungen  
- Eine DAC kann nur von Mitgliedern der festen Serverrollen **sysadmin** bzw. **serveradmin** oder vom Datenbankbesitzer gelöscht werden. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemadministratorkonto mit der Bezeichnung **sa** zum Starten des Assistenten verwendet werden.  
+ Eine DAC kann nur von Mitgliedern der festen Serverrollen **sysadmin** bzw. **serveradmin** oder vom Datenbankbesitzer gelöscht werden. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung **sa** zum Starten des Assistenten verwendet werden.  
   
 ##  <a name="UsingDeleteDACWizard"></a> Verwenden des Assistenten zum Löschen von Datenebenenanwendungen  
  **So löschen Sie eine DAC mithilfe eines Assistenten**  
@@ -64,9 +68,9 @@ caps.handback.revision: 16
   
 2.  Erweitern Sie den Knoten **Verwaltung** .  
   
-3.  Erweitern Sie den Knoten **Datenebenenanwendungen**.  
+3.  Erweitern Sie den Knoten **Datenebenenanwendungen** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf die zu löschende DAC, und wählen Sie anschließend **Datenebenenanwendung löschen...** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die zu löschende DAC, und wählen Sie anschließend **Datenebenenanwendung löschen...**aus.  
   
 5.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 16
   
  Die Daten und Protokolldateien für die Datenbank werden dauerhaft gelöscht.  
   
- **\< Zurück** – Kehrt zur Seite **Einführung** zurück.  
+ **< Zurück** – Kehrt zur Seite **Einführung** zurück.  
   
  **Weiter >** – Geht zur Seite **Zusammenfassung** über.  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 16
   
  **Überprüfen Sie Ihre Auswahl** – Überprüfen Sie die DAC, Datenbank und Löschmethode, die im Feld angezeigt werden. Wenn die Informationen richtig sind, wählen Sie entweder **Weiter** oder **Fertig stellen** aus, um die DAC zu löschen. Falls die DAC und die Datenbankinformationen nicht richtig sind, klicken Sie auf **Abbrechen** und wählen dann die richtige DAC aus. Wenn die Löschmethode nicht richtig ist, wählen Sie **Zurück** aus, um zur Seite **Methode auswählen** zurückzukehren, und wählen eine andere Methode aus.  
   
- **\< Zurück** – Kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen.  
+ **< Zurück** – Kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen.  
   
  **Weiter >** – Löscht die DAC-Instanz unter Verwendung der auf der vorherigen Seite ausgewählten Methode und geht zur Seite **Datenebenenanwendung löschen** über.  
   
@@ -141,20 +145,20 @@ caps.handback.revision: 16
   
 2.  Öffnen Sie ein **ServerConnection** -Objekt, und stellen Sie eine Verbindung mit derselben Instanz her.  
   
-3.  Verwenden Sie **add_DacActionStarted** und **add_DacActionFinished**, um die DAC-Aktualisierungsereignisse zu abonnieren.  
+3.  Verwenden Sie **add_DacActionStarted** und **add_DacActionFinished** , um die DAC-Aktualisierungsereignisse zu abonnieren.  
   
 4.  Geben Sie die zu löschende DAC an.  
   
-5.  Verwenden Sie je nach geeigneter Löschoption einen dieser drei Codesätze:  
+5.  Verwenden Sie je nach geeigneter Löschoption einen dieser drei Codesätze:  
   
-    -   Verwenden Sie die **Unmanage()**-Methode, um die DAC-Registrierung zu löschen, während die Datenbank intakt bleibt.  
+    -   Verwenden Sie die **Unmanage()** -Methode, um die DAC-Registrierung zu löschen, während die Datenbank intakt bleibt.  
   
-    -   Verwenden Sie die Methode **Uninstall()**, und geben Sie **DetachDatabase** an, um die DAC-Registrierung zu löschen und die Datenbank zu trennen.  
+    -   Verwenden Sie die Methode **Uninstall()** , und geben Sie **DetachDatabase**an, um die DAC-Registrierung zu löschen und die Datenbank zu trennen.  
   
-    -   Verwenden Sie die **Uninstall()**-Methode, und geben Sie **DropDatabase** an, um die DAC-Registrierung zu löschen und die Datenbank zu löschen.  
+    -   Verwenden Sie die **Uninstall()** -Methode, und geben Sie **DropDatabase**an, um die DAC-Registrierung zu löschen und die Datenbank zu löschen.  
   
-### Beispiel für das Löschen der DAC und Belassen der Datenbank (PowerShell)  
- Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Unmanage()**-Methode gelöscht. Dabei wird die DAC gelöscht, die Datenbank bleibt jedoch intakt.  
+### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Beispiel für das Löschen der DAC und Belassen der Datenbank (PowerShell)  
+ Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Unmanage()** -Methode gelöscht. Dabei wird die DAC gelöscht, die Datenbank bleibt jedoch intakt.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -179,8 +183,8 @@ $dacstore.Unmanage($dacName)
   
  [Löschen einer DAC mit PowerShell](#DeleteDACPowerShell)  
   
-### Beispiel für das Löschen einer DAC und Trennen der Datenbank (PowerShell)  
- Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Uninstall()**-Methode gelöscht und die Datenbank getrennt.  
+### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Beispiel für das Löschen einer DAC und Trennen der Datenbank (PowerShell)  
+ Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Uninstall()** -Methode gelöscht und die Datenbank getrennt.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -205,8 +209,8 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
   
  [Löschen einer DAC mit PowerShell](#DeleteDACPowerShell)  
   
-### Beispiel für das Löschen einer DAC und Löschen der Datenbank (PowerShell)  
- Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Uninstall()**-Methode gelöscht und die Datenbank gelöscht.  
+### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Beispiel für das Löschen einer DAC und Löschen der Datenbank (PowerShell)  
+ Im folgenden Beispiel wird die DAC „MyApplication“ mithilfe der **Uninstall()** -Methode gelöscht und die Datenbank gelöscht.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -231,7 +235,7 @@ $dacName  = "MyApplication"
   
  [Löschen einer DAC mit PowerShell](#DeleteDACPowerShell)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
@@ -240,3 +244,4 @@ $dacName  = "MyApplication"
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
+

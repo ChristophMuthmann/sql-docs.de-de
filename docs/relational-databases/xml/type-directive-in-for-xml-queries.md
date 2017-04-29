@@ -1,35 +1,39 @@
 ---
-title: "TYPE-Direktive in FOR XML-Abfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML-Klausel, TYPE-Direktive"
-  - "TYPE-Direktive"
+title: TYPE-Direktive in FOR XML-Abfragen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, TYPE directive
+- TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e060f93c4aa26d86fbd6683099a66821c38e9b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# TYPE-Direktive in FOR XML-Abfragen
+# <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) und ermöglicht es Ihnen damit, durch Angeben der TYPE-Direktive optional anzufordern, dass das Ergebnis einer FOR XML-Abfrage als **xml**-Datentyp zurückgegeben wird. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. So können Sie beispielsweise eine XQuery dafür angeben, das Ergebnis einer Variablen vom Typ **xml** zuweisen oder [geschachtelte FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)dafür schreiben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Instanzdaten des xml-Datentyps als Ergebnis verschiedener Serverkonstrukte wie FOR XML-Abfragen mit Verwendung der TYPE-Direktive an den Client zurück. Wenn der **xml**-Datentyp verwendet wird, gibt SQL Server XML-Instanzdatenwerte aus SQL-Tabellenspalten und -Ausgabeparametern zurück. Im Code der Clientanwendung erfordert der ADO.NET-Anbieter, dass die Informationen vom XML-Datentyp im Binärcode vom Server gesendet werden. Wenn Sie jedoch FOR XML ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgesendet. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten. Beachten Sie, dass FOR XML der obersten Ebene ohne die TYPE-Direktive nicht mit Cursorn verwendet werden kann.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Instanzdaten des xml-Datentyps als Ergebnis verschiedener Serverkonstrukte wie FOR XML-Abfragen mit Verwendung der TYPE-Direktive an den Client zurück. Wenn der **xml** -Datentyp verwendet wird, gibt SQL Server XML-Instanzdatenwerte aus SQL-Tabellenspalten und -Ausgabeparametern zurück. Im Code der Clientanwendung erfordert der ADO.NET-Anbieter, dass die Informationen vom XML-Datentyp im Binärcode vom Server gesendet werden. Wenn Sie jedoch FOR XML ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgesendet. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten. Beachten Sie, dass FOR XML der obersten Ebene ohne die TYPE-Direktive nicht mit Cursorn verwendet werden kann.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen die Verwendung der TYPE-Direktive für FOR XML-Abfragen.  
   
-### Abrufen von FOR XML-Abfrageergebnissen als XML-Typ  
- Die folgende Abfrage ruft Informationen zu Kundenkontakten aus der `Contacts`-Tabelle auf. Da die `TYPE`-Direktive in `FOR XML` angegeben ist, wird das Ergebnis als **xml**-Typ zurückgegeben.  
+### <a name="retrieving-for-xml-query-results-as-xml-type"></a>Abrufen von FOR XML-Abfrageergebnissen als XML-Typ  
+ Die folgende Abfrage ruft Informationen zu Kundenkontakten aus der `Contacts` -Tabelle auf. Da die `TYPE` -Direktive in `FOR XML`angegeben ist, wird das Ergebnis als **xml** -Typ zurückgegeben.  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,7 @@ FOR XML AUTO, TYPE;
   
  `...`  
   
-### Zuweisen von FOR XML-Abfrageergebnissen zu einer Variablen vom Typ XML  
+### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Zuweisen von FOR XML-Abfrageergebnissen zu einer Variablen vom Typ XML  
  Im folgenden Beispiel wird das Ergebnis einer FOR XML-Abfrage `@x` zugewiesen, einer Variablen vom Typ **xml**. Die Abfrage ruft Kontaktinformationen wie z.B. `BusinessEntityID`, `FirstName`, `LastName` sowie zusätzliche Telefonnummern aus der `AdditionalContactInfo`-Spalte mit `TYPE` **xml** ab. Da die `FOR XML`-Klausel die `TYPE`-Direktive angibt, werden die XML-Daten als **xml**-Typ zurückgegeben und einer Variablen zugewiesen.  
   
 ```  
@@ -69,8 +73,8 @@ SELECT @x;
 GO  
 ```  
   
-### Abfragen von Ergebnissen einer FOR XML-Abfrage  
- FOR XML-Abfragen geben XML-Daten zurück. Folglich können Sie Methoden vom Typ **xml** wie **query()** und **value()** auf das von FOR XML-Abfragen zurückgegebene XML-Ergebnis anwenden.  
+### <a name="querying-results-of-a-for-xml-query"></a>Abfragen von Ergebnissen einer FOR XML-Abfrage  
+ FOR XML-Abfragen geben XML-Daten zurück. Folglich können Sie Methoden vom Typ **xml** wie **query()** und **value()**auf das von FOR XML-Abfragen zurückgegebene XML-Ergebnis anwenden.  
   
  In der folgenden Abfrage wird die `query()`-Methode des **xml**-Datentyps verwendet, um das Ergebnis der `FOR XML`-Abfrage abzufragen. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -86,7 +90,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- Die innere `SELECT … FOR XML`-Abfrage gibt ein Ergebnis vom Typ **xml** zurück, auf das die äußere `SELECT`-Abfrage die `query()`-Methode vom Typ **xml** anwendet. Beachten Sie, dass die `TYPE`-Direktive angegeben ist.  
+ Die innere `SELECT … FOR XML`-Abfrage gibt ein Ergebnis vom Typ **xml** zurück, auf das die äußere `SELECT`-Abfrage die `query()`-Methode vom Typ **xml** anwendet. Beachten Sie, dass die `TYPE` -Direktive angegeben ist.  
   
  Dies ist das Ergebnis:  
   
@@ -125,10 +129,10 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  Der XQuery-Pfadausdruck in der `value()`-Methode ruft die erste Telefonnummer des Kundenkontakts mit der `BusinessEntityID` `1` ab.  
   
 > [!NOTE]  
->  Wenn die TYPE-Direktive nicht angegeben ist, wird das Ergebnis der FOR XML-Abfrage als **nvarchar(max)** zurückgegeben.  
+>  Wenn die TYPE-Direktive nicht angegeben ist, wird das Ergebnis der FOR XML-Abfrage als **nvarchar(max)**zurückgegeben.  
   
-### Verwenden von FOR XML-Abfrageergebnissen in INSERT-, UPDATE- und DELETE-Anweisungen (Transact-SQL-DML)  
- Das folgende Beispiel stellt dar, wie FOR XML-Abfragen in DML-Anweisungen (DML, Data Manipulation Language) verwendet werden können. In diesem Beispiel gibt die `FOR XML`-Abfrage eine Instanz vom Typ **xml** zurück. Die `INSERT`-Anweisung fügt diese XML-Daten in eine Tabelle ein.  
+### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Verwenden von FOR XML-Abfrageergebnissen in INSERT-, UPDATE- und DELETE-Anweisungen (Transact-SQL-DML)  
+ Das folgende Beispiel stellt dar, wie FOR XML-Abfragen in DML-Anweisungen (DML, Data Manipulation Language) verwendet werden können. In diesem Beispiel gibt die `FOR XML` -Abfrage eine Instanz vom Typ **xml** zurück. Die `INSERT` -Anweisung fügt diese XML-Daten in eine Tabelle ein.  
   
 ```  
 CREATE TABLE T1(intCol int, XmlCol xml);  
@@ -146,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

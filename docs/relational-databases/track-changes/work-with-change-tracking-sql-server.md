@@ -1,33 +1,37 @@
 ---
-title: "Verwenden der &#196;nderungsnachverfolgung (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Änderungsnachverfolgung [SQL Server], Vornehmen von Änderungen"
-  - "Änderungsnachverfolgung [SQL Server], Problembehandlung"
-  - "Aktualisieren von Daten [SQL Server]"
-  - "Problembehandlung [SQL Server], Änderungsnachverfolgung"
-  - "Datenänderungen [SQL Server]"
-  - "Nachverfolgen von Datenänderungen [SQL Server]"
-  - "Daten [SQL Server], ändern"
-  - "Änderungsnachverfolgung [SQL Server], Wiederherstellung von Daten"
-  - "Änderungsnachverfolgung [SQL Server], Sicherstellen von konsistenten Ergebnissen"
-  - "Änderungsnachverfolgung [SQL Server], Behandlung von Änderungen"
+title: "Verwenden der Änderungsnachverfolgung (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden der &#196;nderungsnachverfolgung (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Anwendungen, die die Änderungsnachverfolgung verwenden, müssen in der Lage sein,  Überarbeitungen abzurufen, diese auf einen anderen Datenspeicher anzuwenden und die Quelldatenbank zu aktualisieren. In diesem Thema wird beschrieben, wie diese Tasks ausgeführt werden. Zudem wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.  
@@ -35,13 +39,13 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> Abrufen von Änderungen mithilfe der Änderungsnachverfolgungsfunktionen  
  Beschreibt, wie mithilfe der Änderungsnachverfolgungsfunktionen Änderungen und Informationen zu den in einer Datenbank vorgenommenen Änderungen abgerufen werden können.  
   
-### Informationen zu Änderungsnachverfolgungsfunktionen  
+### <a name="about-the-change-tracking-functions"></a>Informationen zu Änderungsnachverfolgungsfunktionen  
  Anwendungen können mit den folgenden Funktionen die in einer Datenbank vorgenommenen Änderungen sowie die Informationen zu diesen Änderungen abrufen:  
   
  CHANGETABLE(CHANGES …)-Funktion  
  Diese Rowsetfunktion wird verwendet, um Änderungsinformationen abzufragen. Die Funktion fragt die in den internen Änderungsnachverfolgungstabellen gespeicherten Daten ab. Die Funktion gibt ein Resultset zurück, das die Primärschlüssel der Zeilen enthält, die sich geändert haben. Außerdem werden weitere Informationen zurückgegeben, z. B. der Vorgang, die aktualisierten Spalten und die Version der Zeile.  
   
- CHANGETABLE(CHANGES …) verwendet die letzte Synchronisierungsversion als Argument. Die letzte Synchronisierungsversion wird mit der `@last_synchronization_version`-Variablen abgerufen. Die Semantik der letzten Synchronisierungsversion lautet wie folgt:  
+ CHANGETABLE(CHANGES …) verwendet die letzte Synchronisierungsversion als Argument. Die letzte Synchronisierungsversion wird mit der `@last_synchronization_version` -Variablen abgerufen. Die Semantik der letzten Synchronisierungsversion lautet wie folgt:  
   
 -   Der aufrufende Client hat alle Änderungen bis zur letzten Synchronisierungsversion (einschließlich) abgerufen.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
      Die folgende Abbildung zeigt, wie CHANGETABLE (CHANGES.) verwendet wird, um Änderungen abzurufen.  
   
-     ![Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage](../../relational-databases/track-changes/media/queryoutput.gif "Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage")  
+     ![Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung](../../relational-databases/track-changes/media/queryoutput.gif "Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung")  
   
  CHANGE_TRACKING_CURRENT_VERSION()-Funktion  
  Diese Funktion wird zum Abrufen der aktuellen Version verwendet. Diese wird das nächste Mal verwendet, wenn Änderungen abgerufen werden. Diese Version stellt die Version der letzten Transaktion dar, für die ein Commit ausgeführt wurde.  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  CHANGE_TRACKING_MIN_VALID_VERSION()-Funktion  
  Diese Funktion wird verwendet, um die minimal gültige Version abzurufen, über die ein Client verfügen muss, damit CHANGETABLE() gültige Ergebnisse zurückgibt. Der Client muss die Version der letzten Synchronisierung mit dem Wert abgleichen, der von dieser Funktion zurückgegeben wird. Wenn die Version der letzten Synchronisierung niedriger ist als die von dieser Funktion zurückgegebene Version, kann der Client keine gültigen Ergebnisse von CHANGETABLE() abrufen und muss neu initialisiert werden.  
   
-### Abrufen der Anfangsdaten  
+### <a name="obtaining-initial-data"></a>Abrufen der Anfangsdaten  
  Damit eine Anwendung Änderungen abrufen kann, muss sie zunächst die Anfangsdaten und die Synchronisierungsversion abfragen. Die Anwendung muss die entsprechenden Daten direkt aus der Tabelle abrufen und dann CHANGE_TRACKING_CURRENT_VERSION() zum Abrufen der Anfangsversion verwenden. Diese Version wird beim ersten Abrufen von Änderungen an CHANGETABLE (CHANGES.) übergeben.  
   
  Das folgende Beispiel zeigt, wie die Anfangsversion der Synchronisierung und das Anfangsdataset abgerufen werden.  
@@ -73,8 +77,8 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### Verwenden der Änderungsnachverfolgungsfunktionen zum Abrufen von Änderungen  
- Verwenden Sie die Funktion CHANGETABLE(CHANGES…), um die geänderten Zeilen einer Tabelle und die zugehörigen Änderungsinformationen abzurufen. Beispielsweise werden mit der folgenden Abfrage die Änderungen für die `SalesLT.Product`-Tabelle abgerufen.  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Verwenden der Änderungsnachverfolgungsfunktionen zum Abrufen von Änderungen  
+ Verwenden Sie die Funktion CHANGETABLE(CHANGES…), um die geänderten Zeilen einer Tabelle und die zugehörigen Änderungsinformationen abzurufen. Beispielsweise werden mit der folgenden Abfrage die Änderungen für die `SalesLT.Product` -Tabelle abgerufen.  
   
 ```tsql  
 SELECT  
@@ -85,7 +89,7 @@ FROM
   
 ```  
   
- In der Regel möchte ein Client nicht nur die Primärschlüssel, sondern die neuesten Daten für eine Zeile abrufen. In diesem Fall führt eine Anwendung die Ergebnisse der CHANGETABLE(CHANGES …)-Funktion mit den Daten in der Benutzertabelle zusammen. Beispiel: Bei der folgenden Abfrage wird die Funktion mit der `SalesLT.Product`-Tabelle verknüpft, um die Werte der `Name`-Spalte und der `ListPrice`-Spalte abzurufen. Beachten Sie, dass `OUTER JOIN`verwendet wird. Dies ist erforderlich, um sicherzustellen, dass die Änderungsinformationen für die Zeilen zurückgegeben werden, die aus der Benutzertabelle gelöscht wurden.  
+ In der Regel möchte ein Client nicht nur die Primärschlüssel, sondern die neuesten Daten für eine Zeile abrufen. In diesem Fall führt eine Anwendung die Ergebnisse der CHANGETABLE(CHANGES …)-Funktion mit den Daten in der Benutzertabelle zusammen. Beispiel: Bei der folgenden Abfrage wird die Funktion mit der `SalesLT.Product` -Tabelle verknüpft, um die Werte der `Name` -Spalte und der `ListPrice` -Spalte abzurufen. Beachten Sie, dass `OUTER JOIN`verwendet wird. Dies ist erforderlich, um sicherzustellen, dass die Änderungsinformationen für die Zeilen zurückgegeben werden, die aus der Benutzertabelle gelöscht wurden.  
   
 ```tsql  
 SELECT  
@@ -125,15 +129,15 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### Versionsnummern  
+### <a name="version-numbers"></a>Versionsnummern  
  Eine Datenbank mit aktivierter Änderungsnachverfolgung verfügt über einen Versionszähler, der hochgezählt wird, wenn Änderungen an den nachverfolgten Tabellen vorgenommen werden. Jede geänderte Zeile verfügt über eine ihr zugeordnete Versionsnummer. Wenn eine Anforderung zur Abfrage von Änderungen an eine Anwendung gesendet wird, wird eine Funktion aufgerufen, die eine Versionsnummer angibt. Die Funktion gibt Informationen über alle Änderungen zurück, die ab dieser Version vorgenommen wurden. In gewisser Hinsicht entspricht die Änderungsnachverfolgungsversion dem Konzept des **rowversion** -Datentyps.  
   
-### Überprüfen der letzten Synchronisierungsversion  
+### <a name="validating-the-last-synchronized-version"></a>Überprüfen der letzten Synchronisierungsversion  
  Informationen über Änderungen werden für einen beschränkten Zeitraum beibehalten. Dieser Zeitraum wird mit dem CHANGE_RETENTION-Parameter festgelegt, der als Teil von ALTER DATABASE angegeben werden kann.  
   
- Beachten Sie, dass der mit CHANGE_RETENTION angegebene Zeitraum festlegt, wie häufig alle Anwendungen Änderungen von der Datenbank anfordern müssen. Wenn der Wert für *last_synchronization_version* einer Anwendung älter ist als die minimal gültige Synchronisierungsversion für eine Tabelle, kann diese Anwendung keine gültige Änderungsenumeration ausführen. Das liegt daran, dass einige Änderungsinformationen möglicherweise bereinigt wurden. Vor dem Abrufen von Änderungen mit CHANGETABLE(CHANGES …) muss eine Anwendung also den Wert von *last_synchronization_version*, der an CHANGETABLE(CHANGES …) übergeben werden soll, überprüfen. Wenn der Wert von *last_synchronization_version* nicht gültig ist, müssen alle Daten von der Anwendung neu initialisiert werden.  
+ Beachten Sie, dass der mit CHANGE_RETENTION angegebene Zeitraum festlegt, wie häufig alle Anwendungen Änderungen von der Datenbank anfordern müssen. Wenn der Wert für *last_synchronization_version* einer Anwendung älter ist als die minimal gültige Synchronisierungsversion für eine Tabelle, kann diese Anwendung keine gültige Änderungsenumeration ausführen. Das liegt daran, dass einige Änderungsinformationen möglicherweise bereinigt wurden. Vor dem Abrufen von Änderungen mit CHANGETABLE(CHANGES …) muss eine Anwendung also den Wert von *last_synchronization_version* , der an CHANGETABLE(CHANGES …) übergeben werden soll, überprüfen. Wenn der Wert von *last_synchronization_version* nicht gültig ist, müssen alle Daten von der Anwendung neu initialisiert werden.  
   
- Im folgenden Beispiel wird gezeigt, wie die Gültigkeit des `last_synchronization_version`-Werts für die einzelnen Tabellen überprüft wird.  
+ Im folgenden Beispiel wird gezeigt, wie die Gültigkeit des `last_synchronization_version` -Werts für die einzelnen Tabellen überprüft wird.  
   
 ```tsql  
 -- Check individual table.  
@@ -158,7 +162,7 @@ BEGIN
 END  
 ```  
   
-### Verwenden der Spaltennachverfolgung  
+### <a name="using-column-tracking"></a>Verwenden der Spaltennachverfolgung  
  Die Spaltennachverfolgung ermöglicht Anwendungen, Daten statt für die gesamte Zeile nur für die Spalten abzurufen, die geändert wurden. Nehmen Sie z. B. an, eine Tabelle hat ein oder mehrere große Spalten, in denen selten Änderungen vorgenommen werden, sowie andere Spalten, in denen häufig Änderungen vorgenommen werden. Ohne die Spaltennachverfolgung kann eine Anwendung nur die Änderung einer Zeile erkennen, sodass alle Daten, einschließlich der Daten in den großen Spalten, synchronisiert werden müssten. Mit der Spaltennachverfolgung kann eine Anwendung ermitteln, in welcher Spalte Daten geändert wurden, und nur die geänderten Daten synchronisieren.  
   
  Die Spaltennachverfolgungsinformationen sind in der SYS_CHANGE_COLUMNS-Spalte enthalten, die von der CHANGETABLE(CHANGES …)-Funktion zurückgegeben wird.  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### Abrufen von konsistenten und richtigen Ergebnissen  
+### <a name="obtaining-consistent-and-correct-results"></a>Abrufen von konsistenten und richtigen Ergebnissen  
  Zum Abrufen der Änderungsdaten für eine Tabelle sind mehrere Schritte erforderlich. Beachten Sie, dass möglicherweise inkonsistente oder falsche Ergebnisse zurückgegeben werden, wenn Sie bestimmte Vorgänge nicht berücksichtigen.  
   
  Beispiel: Zum Abrufen der Änderungen in einer Tabelle mit dem Namen Sales und einer Tabelle mit dem Namen SalesOrders führt eine Anwendung die folgenden Schritte aus:  
@@ -220,7 +224,7 @@ ON
   
  Zur Handhabung dieser aufgelisteten Fälle wird die Verwendung der Momentaufnahmeisolation empfohlen. Hierdurch können Sie die Konsistenz der Änderungsinformationen sicherstellen und Racebedingungen im Zusammenhang mit dem im Hintergrund ausgeführten Cleanupprozess vermeiden. Ohne die Verwendung von Momentaufnahmetransaktionen ist die Entwicklung einer Anwendung, die die Änderungsnachverfolgung verwendet, mit erheblich mehr Aufwand verbunden.  
   
-#### Verwenden der Momentaufnahmeisolation  
+#### <a name="using-snapshot-isolation"></a>Verwenden der Momentaufnahmeisolation  
  Die Änderungsnachverfolgung wurde für die Verwendung mit der Momentaufnahmeisolation optimiert. Die Momentaufnahmeisolation muss für die Datenbank aktiviert werden. Alle zum Abrufen von Änderungen erforderlichen Schritte müssen in eine Momentaufnahmetransaktion eingeschlossen werden. Hierdurch können Sie sicherstellen, dass die während des Abrufens von Änderungen an den Daten vorgenommenen Änderungen für die Abfragen in der Momentaufnahmetransaktion nicht sichtbar sind.  
   
  Führen Sie die folgenden Schritte aus, um Daten in einer Momentaufnahmetransaktion abzurufen:  
@@ -264,7 +268,7 @@ COMMIT TRAN
   
  Weitere Informationen über Momentaufnahmentransaktion finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
-#### Alternativen zur Verwendung der Momentaufnahmeisolation  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativen zur Verwendung der Momentaufnahmeisolation  
  Es gibt Alternativen zur Verwendung der Momentaufnahmeisolation, die jedoch einen größeren Aufwand erfordern, um sicherzustellen, dass alle Anwendungsanforderungen erfüllt werden. Gehen Sie wie folgt vor, um sicherzustellen, dass der Wert *last_synchronization_version* gültig ist und dass vor dem Abrufen der Änderungen keine Daten durch den Cleanupprozess entfernt werden:  
   
 1.  Überprüfen Sie den Wert *last_synchronization_version* nach dem Aufrufen der CHANGETABLE()-Funktion.  
@@ -287,7 +291,7 @@ COMMIT TRAN
 >  Zur Auswahl des richtigen Ansatzes für die Anwendung, wenn Sie die Änderungsnachverfolgung (oder benutzerdefinierte Nachverfolgungsmechanismen) verwenden, sind umfangreiche Analysen erforderlich. Aus diesem Grund ist es viel einfacher, die Momentaufnahmeisolation zu verwenden.  
   
 ##  <a name="Handles"></a> Handhabung der Änderungen an einer Datenbank durch die Änderungsnachverfolgung  
- Einige Anwendungen, die die Änderungsnachverfolgung verwenden, führen die bidirektionale Synchronisierung mit einem anderen Datenspeicher aus. Das heißt, der andere Datenspeicher wird mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank vorgenommenen Änderungen aktualisiert, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank wird mit den in dem anderen Datenspeicher vorgenommenen Änderungen aktualisiert.  
+ Einige Anwendungen, die die Änderungsnachverfolgung verwenden, führen die bidirektionale Synchronisierung mit einem anderen Datenspeicher aus. Das heißt, der andere Datenspeicher wird mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank vorgenommenen Änderungen aktualisiert, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank wird mit den in dem anderen Datenspeicher vorgenommenen Änderungen aktualisiert.  
   
  Zur Aktualisierung der lokalen Datenbank mit Änderungen von einem anderen Datenspeicher muss die Anwendung die folgenden Vorgänge ausführen:  
   
@@ -309,10 +313,10 @@ COMMIT TRAN
   
      Eine Anwendung kann diese Klausel verwenden, um Kontextdaten zu speichern.  
   
-### Überprüfung auf Konflikte  
+### <a name="checking-for-conflicts"></a>Überprüfung auf Konflikte  
  Bei der bidirektionalen Synchronisierung muss die Clientanwendung ermitteln, ob eine Zeile seit dem letzten Abrufen der Änderungen durch die Anwendung aktualisiert wurde.  
   
- Das folgende Beispiel zeigt, wie die Überprüfung auf Konflikte mit der CHANGETABLE(VERSION …)-Funktion effizient und ohne separate Abfrage ausgeführt wird. Im Beispiel wird von `CHANGETABLE(VERSION …)` die `SYS_CHANGE_VERSION` für die von `@product id` bestimmte Zeile angegeben. `CHANGETABLE(CHANGES …)` kann die gleichen Informationen abrufen, aber das wäre weniger effizient. Wenn der Wert von `SYS_CHANGE_VERSION` für die Zeile größer ist als der Wert von `@last_sync_version`, liegt ein Konflikt vor. Wenn ein Konflikt vorliegt, wird die Zeile nicht aktualisiert. Die `ISNULL()` -Prüfung ist erforderlich, da möglicherweise keine Änderungsinformationen für die Zeile verfügbar sind. Es sind keine Änderungsinformationen vorhanden, wenn die Zeile seit der Aktivierung der Änderungsverfolgung oder seit der Bereinigung der Änderungsinformationen nicht aktualisiert wurde.  
+ Das folgende Beispiel zeigt, wie die Überprüfung auf Konflikte mit der CHANGETABLE(VERSION …)-Funktion effizient und ohne separate Abfrage ausgeführt wird. Im Beispiel wird von `CHANGETABLE(VERSION …)` die `SYS_CHANGE_VERSION` für die von `@product id`bestimmte Zeile angegeben. `CHANGETABLE(CHANGES …)` kann die gleichen Informationen abrufen, aber das wäre weniger effizient. Wenn der Wert von `SYS_CHANGE_VERSION` für die Zeile größer ist als der Wert von `@last_sync_version`, liegt ein Konflikt vor. Wenn ein Konflikt vorliegt, wird die Zeile nicht aktualisiert. Die `ISNULL()` -Prüfung ist erforderlich, da möglicherweise keine Änderungsinformationen für die Zeile verfügbar sind. Es sind keine Änderungsinformationen vorhanden, wenn die Zeile seit der Aktivierung der Änderungsverfolgung oder seit der Bereinigung der Änderungsinformationen nicht aktualisiert wurde.  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### Speichern von Kontextinformationen  
+### <a name="setting-context-information"></a>Speichern von Kontextinformationen  
  Die WITH CHANGE_TRACKING_CONTEXT-Klausel ermöglicht die Speicherung von Kontextinformationen zusammen mit den Änderungsinformationen. Diese Informationen können dann aus der Spalte SYS_CHANGE_CONTEXT abgerufen werden, die von CHANGETABLE(CHANGES …) zurückgegeben wird.  
   
  Kontextinformationen werden in der Regel verwendet, um die Quelle der Änderungen zu identifizieren. Wenn die Quelle einer Änderung identifiziert werden kann, können diese Informationen von einem Datenspeicher verwendet werden, um das Abrufen von Änderungen bei der nächsten Synchronisierung zu vermeiden.  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### Sicherstellen von konsistenten und richtigen Ergebnissen  
+### <a name="ensuring-consistent-and-correct-results"></a>Sicherstellen von konsistenten und richtigen Ergebnissen  
  Eine Anwendung muss bei der Überprüfung des Werts von @last_sync_version den Cleanupprozess berücksichtigen. Grund hierfür ist, dass Daten möglicherweise nach dem Aufruf von CHANGE_TRACKING_MIN_VALID_VERSION(), jedoch vor Durchführung des Updates entfernt werden.  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   Zeichnen Sie die Versionsnummer der letzten Synchronisierung auf dem Server auf, wenn ein Client Änderungen abfragt. Wenn ein Problem mit den Daten vorliegt, stimmen die Versionsnummern der letzten Synchronisierung nicht überein. Dies weist darauf hin, dass eine Neuinitialisierung erforderlich ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

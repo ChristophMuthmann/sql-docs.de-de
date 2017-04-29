@@ -1,23 +1,27 @@
 ---
-title: "Implementieren von UPDATE mit FROM oder Unterabfragen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Implementieren von UPDATE mit FROM oder Unterabfragen | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementieren von UPDATE mit FROM oder Unterabfragen
+# <a name="implementing-update-with-from-or-subqueries"></a>Implementieren von UPDATE mit FROM oder Unterabfragen
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Nativ kompilierte T-SQL-Module bieten keine Unterstützung für die FROM-Klausel und unterstützen keine Unterabfragen in UPDATE-Anweisungen (sie werden in SELECT unterstützt). UPDATE-Anweisungen mit der FROM-Klausel werden normalerweise verwendet, um Informationen in einer Tabelle, die auf einem Tabellenwertparameter (table-valued parameter; TVP) basiert, oder Spalten in einer Tabelle in einem AFTER-Trigger zu aktualisieren. 
@@ -96,7 +100,7 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
           SELECT Id FROM Inserted;  
     
       DECLARE  
-          @i INT = 1, @Id INT,  
+          @i INT = 1,  @Id INT,  
           @max INT = SCOPE_IDENTITY();  
     
       ---- Schleife als Problemumgehung, um einen Cursor zu simulieren.
@@ -157,3 +161,4 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
   
   
   
+

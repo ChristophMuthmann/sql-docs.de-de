@@ -1,29 +1,33 @@
 ---
-title: "Einstellungen f&#252;r die sekund&#228;re Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "Einstellungen für die sekundäre Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Einstellungen f&#252;r die sekund&#228;re Datenbank
+# <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
   Mithilfe dieses Dialogfelds konfigurieren und ändern Sie die Eigenschaften einer sekundären Datenbank in der Protokollversandkonfiguration.  
   
  Eine Erläuterung zu den Konzepten des Protokollversands finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Sekundäre Serverinstanz**  
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die in der Protokollversandkonfiguration derzeit als sekundärer Server konfiguriert ist.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 32
  Veranlassen Sie, dass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für die Initialisierung der sekundären Datenbank eine vorhandene Sicherung der primären Datenbank verwendet. Geben Sie den Speicherort dieser Sicherung in das Feld **Sicherungsdatei** ein. Wenn Sie in das Feld Sekundäre Datenbank den Namen einer neuen Datenbank eingegeben haben, wird die Datenbank im Verlauf des Wiederherstellungsvorgangs erstellt.  
   
  **Sicherungsdatei**  
- Geben Sie den Pfad und den Dateinamen der vollständigen Datenbanksicherung ein, die für die Initialisierung der sekundären Datenbank verwendet werden soll, wenn Sie die Option **Ja, eine vorhandene Sicherung der primären Datenbank in der sekundären Datenbank wiederherstellen** ausgewählt haben.  
+ Geben Sie den Pfad und den Dateinamen der vollständigen Datenbanksicherung ein, die für die Initialisierung der sekundären Datenbank verwendet werden soll, wenn Sie die Option **Ja, eine vorhandene Sicherung der primären Datenbank in der sekundären Datenbank wiederherstellen**ausgewählt haben.  
   
  **Wiederherstellungsoptionen**  
  Siehe dazu die Beschreibung dieser Schaltfläche an einer früheren Stelle dieses Themas.  
@@ -70,7 +74,7 @@ caps.handback.revision: 32
  Legt fest, wie lange die kopierten Sicherungsdateien der Transaktionsprotokolle im Zielordner verbleiben, bevor sie gelöscht werden.  
   
  **Auftragsname**  
- Zeigt den Namen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrags an, der verwendet wird, um Sicherungsdateien des Transaktionsprotokolls vom primären Server auf den sekundären Server zu kopieren. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
+ Zeigt den Namen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrags an, der verwendet wird, um Sicherungsdateien des Transaktionsprotokolls vom primären Server auf den sekundären Server zu kopieren. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
  Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
@@ -94,7 +98,7 @@ caps.handback.revision: 32
  Belässt die sekundäre Datenbank im STANDBY-Modus. In diesem Modus können schreibgeschützte Vorgänge in der Datenbank ausgeführt werden.  
   
 > [!IMPORTANT]  
->  Wenn Sie den Wiederherstellungsmodus für eine vorhandene sekundäre Datenbank von beispielsweise **Kein Wiederherstellungsmodus** in **Standbymodus** ändern, wird diese Änderung erst umgesetzt, nachdem die nächste Protokollsicherung in der Datenbank wiederhergestellt wurde.  
+>  Wenn Sie den Wiederherstellungsmodus für eine vorhandene sekundäre Datenbank von beispielsweise **Kein Wiederherstellungsmodus** in **Standbymodus**ändern, wird diese Änderung erst umgesetzt, nachdem die nächste Protokollsicherung in der Datenbank wiederhergestellt wurde.  
   
  **Wiederherstellen von Sicherungen verzögern um mindestens**  
  Wählen Sie ggf. die Wartezeit vor der Wiederherstellung von Transaktionsprotokollsicherungen in der sekundären Datenbank.  
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **Diesen Auftrag deaktivieren**  
  Unterdrückt Wiederherstellungsvorgänge in der sekundären Datenbank.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

@@ -1,75 +1,65 @@
 ---
-title: "Konfigurationsobjekte f&#252;r Datenbank-E-Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.sqlmailconfiguration.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-helpviewer_keywords: 
-  - "Datenbank-E-Mail [SQL Server], Konfigurationsobjekte"
-  - "Datenbank-E-Mail [SQL Server], Konten"
-  - "Konfigurationsobjekte [Datenbank-E-Mail]"
-  - "Datenbank-E-Mail [SQL Server], Profile"
-  - "Profile [SQL Server], Datenbank-E-Mail"
-  - "Konten [Datenbank-E-Mail]"
+title: "Konfigurationsobjekte für Datenbank-E-Mail | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.sqlmailconfiguration.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.sqlimail.configuresystem.f1
+helpviewer_keywords:
+- Database Mail [SQL Server], configuration objects
+- Database Mail [SQL Server], accounts
+- configuration objects [Database Mail]
+- Database Mail [SQL Server], profiles
+- profiles [SQL Server], Database Mail
+- accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6e1d52d52ca029e7643634442c5d87446e0c410
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurationsobjekte f&#252;r Datenbank-E-Mail
+# <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
   Datenbank-E-Mail verfügt über zwei Konfigurationsobjekte: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet werden sollen.  
   
 -   Datenbank-E-Mail-Konten  
   
 -   Datenbank-E-Mail-Profile  
   
- **In diesem Thema:**  
-  
--   [Beziehung der Konfigurationsobjekte für Datenbank-E-Mail](#VisualElement)  
-  
--   [Datenbank-E-Mail-Konto](#DBAccount)  
-  
--   [Datenbank-E-Mail-Profil](#DBProfile)  
-  
--   [Konfigurationstasks von Datenbank-E-Mail](#RelatedTasks)  
-  
--   [Zusätzliche Konfigurationstasks von Datenbank-E-Mail (gespeicherte Systemprozedur)](#Add_Tasks)  
-  
--   [Zusätzliche Referenzen](#RelatedContent)  
   
 ##  <a name="VisualElement"></a> Beziehung der Konfigurationsobjekte für Datenbank-E-Mail  
- In der Abbildung werden zwei Profile, drei Konten und drei Benutzer veranschaulicht. Benutzer 1 kann auf Profil 1 zugreifen. Dieses Profil verwendet Konto 1 und Konto 2. Benutzer 3 kann auf Profil 2 zugreifen. Dieses Profil verwendet Konto 2 und Konto 3. Benutzer 2 kann auf Profil 1 und Profil 2 zugreifen.  
+ In der Abbildung werden zwei Profile, drei Konten und drei Benutzer veranschaulicht. Benutzer 1 kann auf Profil 1 zugreifen. Dieses Profil verwendet Konto 1 und Konto 2. Benutzer 3 kann auf Profil 2 zugreifen. Dieses Profil verwendet Konto 2 und Konto 3. Benutzer 2 kann auf Profil 1 und Profil 2 zugreifen.  
   
- ![Beziehung von Benutzern, Profilen und Konten](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Beziehung von Benutzern, Profilen und Konten")  
+ ![Beziehung von Benutzern, Profilen und Konten](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relationship of users, profiles, and accounts")  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="DBAccount"></a> Datenbank-E-Mail-Konto  
  Ein Datenbank-E-Mail-Konto enthält die Informationen, die Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Senden von E-Mail-Nachrichten an einen SMTP-Server verwendet. Jedes Konto enthält Informationen für einen E-Mail-Server.  
   
- Datenbank-E-Mail unterstützt drei Methoden der Authentifizierung für die Kommunikation mit einem SMTP-Server:  
+ Datenbank-E-Mail unterstützt drei Methoden der Authentifizierung für die Kommunikation mit einem SMTP-Server:  
   
 -   Windows-Authentifizierung: Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung auf dem SMTP-Server.  
   
@@ -91,13 +81,13 @@ caps.handback.revision: 33
   
 -   Der Name des E-Mail-Servers.  
   
--   Der Typ des E-Mail-Servers. Bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich dabei immer um Simple Mail Transfer Protocol (SMTP).  
+-   Der Typ des E-Mail-Servers. Bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]handelt es sich dabei immer um Simple Mail Transfer Protocol (SMTP).  
   
 -   Die Portnummer des E-Mail-Servers  
   
 -   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Mailserver mithilfe von SSL (Secure Sockets Layer) hergestellt wird.  
   
--   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Server mithilfe der für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] konfigurierten Anmeldeinformationen hergestellt wird.  
+-   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Server mithilfe der für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]konfigurierten Anmeldeinformationen hergestellt wird.  
   
 -   Der Benutzername für die Authentifizierung beim E-Mail-Server, wenn der E-Mail-Server eine Authentifizierung erfordert.  
   
@@ -105,7 +95,6 @@ caps.handback.revision: 33
   
  Der Assistent zum Konfigurieren von Datenbank-E-Mail bietet bequeme Möglichkeiten zum Erstellen und Verwalten von Konten. Sie können auch die gespeicherten Konfigurationsprozeduren in **msdb** zum Erstellen und Verwalten von Konten verwenden.  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="DBProfile"></a> Datenbank-E-Mail-Profil  
  Ein Datenbank-E-Mail-Profil ist eine sortierte Sammlung zusammengehöriger Datenbank-E-Mail-Konten. In Anwendungen, mit denen E-Mails mithilfe von Datenbank-E-Mail gesendet werden, werden Profile angegeben und Konten nicht direkt verwendet. Das Trennen der Informationen zu den einzelnen E-Mail-Servern von den Objekten, die die Anwendung verwendet, verbessert die Flexibilität und Zuverlässigkeit: Profile stellen automatisches Failover bereit; wenn ein E-Mail-Server nicht reagiert, kann Datenbank-E-Mail E-Mails automatisch an einen anderen E-Mail-Server senden. Datenbankadministratoren können Konten hinzufügen, entfernen oder neu konfigurieren, ohne dass Änderungen am Anwendungscode oder den Auftragsschritten erforderlich sind.  
@@ -116,13 +105,12 @@ caps.handback.revision: 33
   
  **Öffentliche Profile** sind für alle Mitglieder der Datenbankrolle **DatabaseMailUserRole** in der **msdb** -Datenbank verfügbar. Damit können Mitglieder der Datenbankrolle **DatabaseMailUserRole** mithilfe des Profils E-Mails versenden.  
   
- **Private Profile** werden für Sicherheitsprinzipale in der **msdb** -Datenbank definiert. Sie ermöglichen nur bestimmten Datenbankbenutzern, -rollen und Mitgliedern der festen Serverrolle **sysadmin** das Senden von E-Mail mithilfe des Profils. Standardmäßig ist ein Profil privat, und der Zugriff darauf kann nur durch Mitglieder der festen Serverrolle **sysadmin** erfolgen. Um ein privates Profil zu verwenden, muss **sysadmin** Benutzern die Berechtigung zum Verwenden des Profils erteilen. Darüber hinaus wird die EXECUTE-Berechtigung für die gespeicherte Prozedur **sp_send_dbmail** nur Mitgliedern von **DatabaseMailUserRole** erteilt. Ein Systemadministrator muss der Datenbankrolle **DatabaseMailUserRole** den Benutzer hinzufügen, damit der Benutzer E-Mail-Nachrichten senden kann.  
+ **Private Profile** werden für Sicherheitsprinzipale in der **msdb** -Datenbank definiert. Sie ermöglichen nur bestimmten Datenbankbenutzern, -rollen und Mitgliedern der festen Serverrolle **sysadmin** das Senden von E-Mail mithilfe des Profils. Standardmäßig ist ein Profil privat, und der Zugriff darauf kann nur durch Mitglieder der festen Serverrolle **sysadmin** erfolgen. Um ein privates Profil zu verwenden, muss **sysadmin** Benutzern die Berechtigung zum Verwenden des Profils erteilen. Darüber hinaus wird die EXECUTE-Berechtigung für die gespeicherte Prozedur **sp_send_dbmail** nur Mitgliedern von **DatabaseMailUserRole**erteilt. Ein Systemadministrator muss der Datenbankrolle **DatabaseMailUserRole** den Benutzer hinzufügen, damit der Benutzer E-Mail-Nachrichten senden kann.  
   
- Profile verbessern die Zuverlässigkeit in Fällen, in denen ein E-Mail-Server nicht erreichbar ist oder die Nachrichten nicht verarbeiten kann. Jedes im Profil enthaltene Konto besitzt eine Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Bei einer neuen E-Mail-Nachricht verwendet Datenbank-E-Mail das letzte Konto, über das eine Nachricht erfolgreich gesendet wurde, oder – falls noch keine Nachricht gesendet wurde – das Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht die Datenbank-E-Mail die Versuche zum Senden der E-Mail für den Zeitraum, der im **AccountRetryDelay**-Parameter von **sysmail_configure_sp** konfiguriert ist. Danach wird das Senden der E-Mail erneut gestartet, wobei mit der niedrigsten Sequenznummer begonnen wird. Verwenden Sie den **AccountRetryAttempts**-Parameter von **sysmail_configure_sp**, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail-Nachricht mithilfe der einzelnen Konten im angegebenen Profil zu senden.  
+ Profile verbessern die Zuverlässigkeit in Fällen, in denen ein E-Mail-Server nicht erreichbar ist oder die Nachrichten nicht verarbeiten kann. Jedes im Profil enthaltene Konto besitzt eine Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Bei einer neuen E-Mail-Nachricht verwendet Datenbank-E-Mail das letzte Konto, über das eine Nachricht erfolgreich gesendet wurde, oder – falls noch keine Nachricht gesendet wurde – das Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht die Datenbank-E-Mail die Versuche zum Senden der E-Mail für den Zeitraum, der im **AccountRetryDelay** -Parameter von **sysmail_configure_sp**konfiguriert ist. Danach wird das Senden der E-Mail erneut gestartet, wobei mit der niedrigsten Sequenznummer begonnen wird. Verwenden Sie den **AccountRetryAttempts** -Parameter von **sysmail_configure_sp**, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail-Nachricht mithilfe der einzelnen Konten im angegebenen Profil zu senden.  
   
  Sind mehrere Konten mit der gleichen Sequenznummer vorhanden, verwendet Datenbank-E-Mail nur eines dieser Konten für eine bestimmte E-Mail-Nachricht. In diesem Fall kann Datenbank-E-Mail nicht sicherstellen, welches der Konten für diese Sequenznummer verwendet wird oder dass für die einzelnen Nachrichten jeweils dasselbe Konto verwendet wird.  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Konfigurationstasks von Datenbank-E-Mail  
  In der folgenden Tabelle werden die Konfigurationstasks von Datenbank-E-Mail beschrieben.  
@@ -134,21 +122,20 @@ caps.handback.revision: 33
 |Beschreibt, wie Datenbank-E-Mail konfiguriert wird|[Konfigurieren des Datenbank-E-Mail-Features](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Beschreibt, wie ein Konfigurationsskript für Datenbank-E-Mail anhand von Vorlagen erstellt wird||  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="Add_Tasks"></a> Zusätzliche Datenbankkonfigurationstasks (gespeicherte Systemprozeduren)  
  Die gespeicherten Prozeduren für das Konfigurieren von Datenbank-E-Mail befinden sich in der **msdb** -Datenbank.  
   
  In den folgenden Tabellen sind die gespeicherten Prozeduren aufgelistet, die zum Konfigurieren und Verwalten von Datenbank-E-Mail verwendet werden.  
   
-### Datenbank-E-Mail-Einstellungen  
+### <a name="database-mail-settings"></a>Datenbank-E-Mail-Einstellungen  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Ändert Konfigurationseinstellungen für Datenbank-E-Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.|  
   
-### Konten und Profile  
+### <a name="accounts-and-profiles"></a>Konten und Profile  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
@@ -163,7 +150,7 @@ caps.handback.revision: 33
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Ändert die Beschreibung oder den Namen eines Datenbank-E-Mail-Profils.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Aktualisiert die Sequenznummer eines Kontos innerhalb eines Datenbank-E-Mail-Profils.|  
   
-### Sicherheit  
+### <a name="security"></a>Sicherheit  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
@@ -172,7 +159,7 @@ caps.handback.revision: 33
 |[sysmail_help_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|Listet Informationen zum Datenbank-E-Mail-Profil für einen bestimmten Datenbankbenutzer auf.|  
 |[sysmail_update_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|Aktualisiert die Berechtigungsinformationen für einen bestimmten Datenbankbenutzer.|  
   
-### Systemstatus  
+### <a name="system-state"></a>Systemstatus  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
@@ -184,6 +171,5 @@ caps.handback.revision: 33
   
 -   [Datenbank-E-Mail-Protokoll und -Überwachung](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
- [&#91;Nach oben&#93;](#Top)  
   
   

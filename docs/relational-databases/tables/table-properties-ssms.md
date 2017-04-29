@@ -1,31 +1,35 @@
 ---
-title: "Table Properties - SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tableproperties.storage.f1"
-  - "sql13.swb.tableproperties.changetracking.f1"
-  - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
-  - "sql13.swb.tableproperties.filetable.f1"
+title: "Tabelleneigenschaften – SSMS | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tableproperties.storage.f1
+- sql13.swb.tableproperties.changetracking.f1
+- sql13.swb.tableproperties.general.f1
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
+ms.lasthandoff: 04/11/2017
+
 ---
-# Table Properties - SSMS
+# <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md).  
+  In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md).  
   
  **In diesem Thema**  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 43
 ##  <a name="Storage"></a> Seite "Speicher"  
  Zeigt die speicherbezogenen Eigenschaften der ausgewählten Tabelle an.  
   
-### Komprimierung  
+### <a name="compression"></a>Komprimierung  
  **Komprimierungstyp**  
  Der Komprimierungstyp der Tabelle. Diese Eigenschaft ist nur für nicht partitionierte Tabellen verfügbar. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 43
  **Partitionen mit Zeilenkomprimierung**  
  Die Nummern der Partitionen, für die die Zeilenkomprimierung verwendet wird. Diese Eigenschaft ist nur für partitionierte Tabellen verfügbar.  
   
-### Dateigruppe  
+### <a name="filegroup"></a>Dateigruppe  
  **Textdateigruppe**  
  Name der Dateigruppe, die die Textdaten für die Tabelle enthält.  
   
@@ -136,16 +140,16 @@ caps.handback.revision: 43
  Mögliche Werte sind **True** und **False**.  
   
  **FILESTREAM-Dateigruppe**  
- Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine **varbinary(max)**-Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
+ Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine **varbinary(max)** -Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
   
  Wenn die Tabelle keine FILESTREAM-Daten enthält, ist das Feld leer.  
   
-### Allgemein  
+### <a name="general"></a>Allgemein  
  **Das VarDecimal-Speicherformat ist aktiviert.**  
- Bei **True** wird durch diesen schreibgeschützten Wert angegeben, dass die Datentypen **dezimal** und **numerisch** mithilfe des vardecimal-Speicherformats gespeichert werden. Um diese Option zu ändern, verwenden Sie die Option **vardecimal-Speicherformat** von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
+ Bei **True**wird durch diesen schreibgeschützten Wert angegeben, dass die Datentypen **dezimal** und **numerisch** mithilfe des vardecimal-Speicherformats gespeichert werden. Um diese Option zu ändern, verwenden Sie die Option **vardecimal-Speicherformat** von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
   
  **Indexspeicher**  
- Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md), wenn XML-Indizes zur Tabelle gehören.  
+ Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) , wenn XML-Indizes zur Tabelle gehören.  
   
  **Zeilenanzahl**  
  Anzahl der Zeilen in der Tabelle.  
@@ -153,7 +157,7 @@ caps.handback.revision: 43
  **Datenspeicher**  
  Der Speicherplatz in Megabytes, der von den Daten in der Tabelle belegt wird.  
   
-### Partitionierung  
+### <a name="partitioning"></a>Partitionierung  
  Dieser Abschnitt ist nur verfügbar, wenn die Tabelle partitioniert ist. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Partitionsspalte**  
@@ -170,7 +174,7 @@ caps.handback.revision: 43
   
  Das FILESTREAM-Partitionsschema muss mit dem Schema symmetrisch sein, das in der Option **Partitionsschema** angegeben ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md)   
  [Ändern von Spalten &#40;Datenbankmodul&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

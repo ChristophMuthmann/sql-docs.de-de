@@ -1,31 +1,35 @@
 ---
-title: "Angeben der Pr&#228;fixl&#228;nge in Datendateien mittels bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp-Hilfsprogramm [SQL Server], Präfixlänge"
-  - "Präfixlänge [SQL Server]"
-  - "Längen [SQL Server], Präfixzeichen"
-  - "Datenformate [SQL Server], Präfixlänge"
+title: "Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 07/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], prefix length
+- prefix length [SQL Server]
+- lengths [SQL Server], prefix characters
+- data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
+ms.lasthandoff: 04/11/2017
+
 ---
-# Angeben der Pr&#228;fixl&#228;nge in Datendateien mittels bcp (SQL Server)
-  Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im systemeigenen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen*bezeichnet.  
+# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
+  Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im nativen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen*bezeichnet.  
   
-## bcp-Eingabeaufforderung für die Präfixlänge  
- Wenn ein interaktiver **bcp**-Befehl die Option **in** oder **out**, jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Präfixlänge für jedes Datenfeld auf:  
+## <a name="the-bcp-prompt-for-prefix-length"></a>bcp-Eingabeaufforderung für die Präfixlänge  
+ Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Präfixlänge für jedes Datenfeld auf:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -34,8 +38,8 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Nachdem Sie interaktiv alle Felder in einem Befehl **bcp** angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## Übersicht über die Präfixlänge  
- Zum Speichern der Präfixlänge eines Felds muss eine ausreichende Anzahl von Bytes vorhanden sein, um die maximale Länge des Felds darzustellen. Die erforderliche Anzahl von Byte hängt auch ab vom Dateispeichertyp, der NULL-Zulässigkeit einer Spalte und davon, ob die Daten in der Datendatei im systemeigenen Format oder im Zeichenformat gespeichert werden. Beispielsweise erfordert der Datentyp **text** oder **image** vier Präfixzeichen, um die Feldlänge zu speichern, während der Datentyp **varchar** zwei Zeichen erfordert. In der Datendatei werden diese Längenpräfixzeichen im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert.  
+## <a name="overview-of-prefix-length"></a>Übersicht über die Präfixlänge  
+ Zum Speichern der Präfixlänge eines Felds muss eine ausreichende Anzahl von Bytes vorhanden sein, um die maximale Länge des Felds darzustellen. Die erforderliche Anzahl von Byte hängt auch ab vom Dateispeichertyp, der NULL-Zulässigkeit einer Spalte und davon, ob die Daten in der Datendatei im systemeigenen Format oder im Zeichenformat gespeichert werden. Beispielsweise erfordert der Datentyp **text** oder **image** vier Präfixzeichen, um die Feldlänge zu speichern, während der Datentyp **varchar** zwei Zeichen erfordert. In der Datendatei werden diese Längenpräfixzeichen im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert.  
   
 > [!IMPORTANT]  
 >  Beim Verwenden des systemeigenen Formats sollten Sie anstelle von Feldabschlusszeichen eher Längenpräfixe verwenden. Systemeigene Formatdaten können zu Konflikten mit Abschlusszeichen führen, weil eine Datendatei im systemeigenen Format im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert wird.  
@@ -45,7 +49,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Der Standardwert, der beim Exportieren eines Felds an der Eingabeaufforderung für die Präfixlänge bereitgestellt wird, bezeichnet die effizienteste Präfixlänge für das Feld.  
   
- NULL-Werte werden als leeres Feld dargestellt. Um anzuzeigen, dass das Feld leer ist (NULL darstellt), enthält das Feldpräfix den Wert -1. Das heißt, es ist mindestens 1 Byte erforderlich. Beachten Sie, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellenspalte, wenn sie NULL-Werte zulässt, je nach Dateispeichertyp eine Präfixlänge von 1 oder höher benötigt.  
+ NULL-Werte werden als leeres Feld dargestellt. Um anzuzeigen, dass das Feld leer ist (NULL darstellt), enthält das Feldpräfix den Wert -1. Das heißt, es ist mindestens 1 Byte erforderlich. Beachten Sie, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellenspalte, wenn sie NULL-Werte zulässt, je nach Dateispeichertyp eine Präfixlänge von 1 oder höher benötigt.  
   
  Verwenden Sie die in der folgenden Tabelle gezeigten Präfixlängen, wenn Sie einen Massenexport von Daten vornehmen und diese in systemeigenen Datentypen oder im Zeichenformat speichern.  
   
@@ -81,15 +85,15 @@ caps.handback.revision: 30
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)**, **varchar(max)** und **varbinary(max)**.  
+ \*Die Datentypen **ntext**, **text**und **image** werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)**, **varchar(max)**und **varbinary(max)** .  
   
 ##  <a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
  Wenn Daten massenimportiert werden, entspricht die Präfixlänge dem Wert, der beim ursprünglichen Erstellen der Datendatei angegeben wurde. Wenn die Datendatei nicht mit einem **bcp** -Befehl erstellt wurde, sind wahrscheinlich keine Längenpräfixzeichen vorhanden. In diesem Fall sollten Sie 0 als Präfixlänge angeben.  
   
 > [!NOTE]  
->  Verwenden Sie die weiter oben in diesem Thema unter [Präfixlängen für den Massenexport](#PrefixLengthsExport) bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von **bcp** erstellt wurde.  
+>  Verwenden Sie die weiter oben in diesem Thema unter **Präfixlängen für den Massenexport**bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von [bcp](#PrefixLengthsExport)erstellt wurde.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -97,3 +101,4 @@ caps.handback.revision: 30
  [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

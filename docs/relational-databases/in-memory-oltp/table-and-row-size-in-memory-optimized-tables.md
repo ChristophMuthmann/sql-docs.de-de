@@ -1,22 +1,26 @@
 ---
-title: "Tabellen- und Zeilengr&#246;&#223;e in speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tabellen- und Zeilengröße in speicheroptimierten Tabellen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabellen- und Zeilengr&#246;&#223;e in speicheroptimierten Tabellen
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Daten in Zeilen maximal 8060 Bytes lang sein. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist es jedoch möglich, eine Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max)-, varchar(max)- und nvarchar(max)-Spalten) zu erstellen. Spalten, die die maximale Größe für Daten in Zeilen überschreiten, werden außerhalb von Zeilen in besonderen internen Tabellen platziert. Informationen zu diesen internen Tabellen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
@@ -31,13 +35,13 @@ caps.handback.revision: 28
   
     -   Da die Berechnung der Arbeitsspeicherverwendung bestenfalls eine Näherung darstellt, ist es ratsam, auch eine Kapazitätsplanung in den Bereitstellungsplänen vorzusehen.  
   
--   Die Datengröße einer Zeile und die Frage, ob die maximale Zeilengröße von 8.060 Bytes eingehalten wird. Um diese Fragen zu beantworten, verwenden Sie die Berechnung von [row body size], wie unten erläutert.  
+-   Die Datengröße einer Zeile und die Frage, ob die maximale Zeilengröße von 8.060 Bytes eingehalten wird. Um diese Fragen zu beantworten, verwenden Sie die Berechnung von [row body size], wie unten erläutert.  
 
 Spalten, die nicht in das Zeilenlimit von 8060 Bytes passen, werden außerhalb der Zeile in einer separaten internen Tabelle platziert. Jede Spalte außerhalb einer Zeile verfügt über eine entsprechende interne Tabelle, die wiederum über einen einzelnen, nicht gruppierten Index verfügt. Informationen zu internen Tabellen für Spalten außerhalb von Zeilen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
   
  Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
- ![Speicheroptimierte Tabelle.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle.")  
+ ![Speicheroptimierte Tabelle.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
   
  Die Größe einer Tabelle im Arbeitsspeicher in Bytes wird wie folgt berechnet:  
@@ -96,13 +100,13 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Die folgende Abbildung veranschaulicht die Zeilenstruktur für eine Tabelle mit zwei Indizes:  
   
- ![Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst.")  
+ ![Zeilenstruktur für eine Tabelle mit zwei Indizes.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
   
  Die Zeitstempel für Beginn und Ende geben den Zeitraum an, in dem eine bestimmte Zeilenversion gültig ist. Für Transaktionen, die in diesem Intervall beginnen, ist diese Zeilenversion sichtbar. Weitere Informationen finden Sie unter [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
  Die Indexzeiger zeigen auf die nächste Zeile in der Kette, die dem Hashbucket angehört. Die folgende Abbildung veranschaulicht die Struktur einer Tabelle mit zwei Spalten (Name, Ort) und mit zwei Indizes: einem für den Spaltennamen und einen für den Spaltenort.  
   
- ![Struktur einer Tabelle mit zwei Spalten und Indizes.](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Struktur einer Tabelle mit zwei Spalten und Indizes.")  
+ ![Die Struktur einer Tabelle mit zwei Spalten und Indizes.](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
   
  In dieser Abbildung werden die Namen John und Jane zum ersten Hashbucket hinzugefügt. Susan wird dem zweiten Hashbucket hinzugefügt. Die Städte Beijing (Peking) und Bogota werden dem ersten Hashbucket hinzugefügt. Paris und Prag werden dem zweiten Hashbucket hinzugefügt.  
   
@@ -218,7 +222,7 @@ GO
 [table size] = 8 * 16384 + 212 * 8379 = 131072 + 1776348 = 1907420  
 ```  
   
- Die gesamte Tabellengröße im Arbeitsspeicher entspricht daher ungefähr 2 MB. Dabei wird weder der mögliche Mehraufwand durch die Speicherbelegung noch die Zeilenversionsverwaltung berücksichtigt, die für die Transaktionen benötigt wird, die auf diese Tabelle zugreifen.  
+ Die gesamte Tabellengröße im Arbeitsspeicher entspricht daher ungefähr 2 MB. Dabei wird weder der mögliche Mehraufwand durch die Speicherbelegung noch die Zeilenversionsverwaltung berücksichtigt, die für die Transaktionen benötigt wird, die auf diese Tabelle zugreifen.  
   
  Der tatsächliche Arbeitsspeicher, der dieser Tabelle zugeordnet ist und von ihr und den zugehörigen Indizes verwendet wird, kann über die folgende Abfrage abgerufen werden:  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Angeben von berechneten Spalten in einer Tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berechnete Spalten, definieren"
+title: Angeben von berechneten Spalten in einer Tabelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Angeben von berechneten Spalten in einer Tabelle
+# <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Ausdruck für eine berechnete Spalte in [!INCLUDE[tsql](../../includes/tsql-md.md)]angeben.  
@@ -54,13 +58,13 @@ caps.handback.revision: 19
   
 ###  <a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu  
   
-1.  Erweitern Sie in **Objekt-Explorer**die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten**, und wählen Sie **Neue Spalte** aus.  
+1.  Erweitern Sie in **Objekt-Explorer**die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten** , und wählen Sie **Neue Spalte**aus.  
   
 2.  Geben Sie den Spaltennamen ein, und akzeptieren Sie den Standarddatentyp (**nchar**(10)). [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt den Datentyp der berechneten Spalte, indem die Regeln zur Rangfolge von Datentypen auf Ausdrücke angewendet werden, die in der Formel angegeben wurden. Wenn die Formel beispielsweise auf eine Spalte vom Typ **money** und eine Spalte vom Typ **int**verweist, weist die berechnete Spalte den Typ **money** auf, da dieser Datentyp die höhere Rangfolge hat. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 3.  Erweitern Sie auf der Registerkarte **Spalteneigenschaften** die **BerechneteSpalteSpezifikation** -Eigenschaft.  
   
-4.  Geben Sie für die untergeordnete Eigenschaft **(Formel)** in der Datenblattzelle auf der rechten Seite den Ausdruck für diese Spalte ein. In einer `SalesTotal`-Spalte kann die eingegebene Formel z. B. `SubTotal+TaxAmt+Freight` lauten, wodurch für jede Tabellenzeile der Wert in diesen Spalten hinzugefügt wird.  
+4.  Geben Sie für die untergeordnete Eigenschaft **(Formel)** in der Datenblattzelle auf der rechten Seite den Ausdruck für diese Spalte ein. In einer `SalesTotal` -Spalte kann die eingegebene Formel z. B. `SubTotal+TaxAmt+Freight`lauten, wodurch für jede Tabellenzeile der Wert in diesen Spalten hinzugefügt wird.  
   
     > [!IMPORTANT]  
     >  Wenn in einer Formel zwei Ausdrücke verschiedener Datentypen kombiniert sind, geben die Rangfolgeregeln für Datentypen an, dass der Datentyp mit der niedrigeren Rangfolge in den Datentyp mit der höheren Rangfolge konvertiert wird. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, wird der Fehler "`Error validating the formula for column column_name.`" zurückgegeben. Verwenden Sie die CAST-Funktion oder CONVERT-Funktion, um den Datentypkonflikt aufzulösen. Wenn beispielsweise eine Spalte vom Typ **nvarchar** mit einer Spalte vom Typ **int**kombiniert wird, muss der ganzzahlige Typ in **nvarchar** konvertiert werden, wie in der folgenden Formel `('Prod'+CONVERT(nvarchar(23),ProductID))`dargestellt. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -69,7 +73,7 @@ caps.handback.revision: 19
   
 6.  Klicken Sie im Menü **Datei** auf **Speichern***table name*.  
   
-#### So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu  
   
 1.  Klicken Sie im ****Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit der Spalte, für die Sie den Ordner **Spalten** ändern und erweitern möchten.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So fügen Sie eine berechnete Spalte beim Erstellen einer Tabelle hinzu  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>So fügen Sie eine berechnete Spalte beim Erstellen einer Tabelle hinzu  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### So fügen Sie einer vorhandenen Tabelle eine neue berechnete Spalte hinzu  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>So fügen Sie einer vorhandenen Tabelle eine neue berechnete Spalte hinzu  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### So ändern Sie eine vorhandene Spalte in eine berechnete Spalte  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>So ändern Sie eine vorhandene Spalte in eine berechnete Spalte  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   

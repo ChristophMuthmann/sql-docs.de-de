@@ -1,47 +1,44 @@
 ---
-title: "M&#246;gliche Medienfehler w&#228;hrend der Sicherung und Wiederherstellung (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Medienfehler [SQL Server]"
-  - "CONTINUE_AFTER_ERROR (Option)"
-  - "Fehler [SQL Server], Sicherungen"
-  - "Sicherungen [SQL Server], Fehler"
-  - "RESTORE VERIFYONLY-Anweisung"
-  - "Sicherungsmedien [SQL Server], Fehlerverwaltung"
-  - "Seitenprüfsummen [SQL Server]"
-  - "Sicherungsprüfsummen [SQL Server]"
-  - "Sichern [SQL Server], Medienfehler"
-  - "RESTORE-Anweisung, Medienfehler"
-  - "NO_CHECKSUM (Option)"
-  - "Prüfsummen [SQL Server]"
+title: "Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media errors [SQL Server]
+- CONTINUE_AFTER_ERROR option
+- errors [SQL Server], backups
+- backups [SQL Server], errors
+- RESTORE VERIFYONLY statement
+- backup media [SQL Server], error management
+- page checksums [SQL Server]
+- backup checksums [SQL Server]
+- backing up [SQL Server], media errors
+- RESTORE statement, media errors
+- NO_CHECKSUM option
+- checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
+ms.lasthandoff: 04/11/2017
+
 ---
-# M&#246;gliche Medienfehler w&#228;hrend der Sicherung und Wiederherstellung (SQL Server)
+# <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] haben Sie die Möglichkeit, trotz erkannter Fehler eine Datenbank wiederherzustellen. Ein wichtiger neuer Fehlererkennungsmechanismus ist die optionale Erstellung einer Sicherungsprüfsumme, die von einem Sicherungsvorgang erstellt und von einem Wiederherstellungsvorgang überprüft wird. Sie können steuern, ob vom Vorgang auf Fehler geprüft wird, und ob der Vorgang beim Auftreten eines Fehlers beendet oder fortgesetzt wird. Wenn eine Sicherung eine Sicherungsprüfsumme enthält, kann mithilfe von RESTORE- und RESTORE VERIFYONLY-Anweisungen auf Fehler hin geprüft werden.  
   
 > [!NOTE]  
 >  Gespiegelte Sicherungen bieten bis zu fünf Kopien (Spiegel) eines Mediensatzes, womit alternative Kopien für die Wiederherstellung zur Verfügung gestellt werden, die durch beschädigte Medien ausgelöst wurden. Weitere Informationen finden Sie unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- **In diesem Thema:**  
-  
--   [Sicherungsprüfsummen](#BckChecksums)  
-  
--   [Antwort auf Fehler bei der Seitenprüfsumme während einer Sicherung oder eines Wiederherstellungsvorgangs](#ResponsetoPageChecksumErrors)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="BckChecksums"></a> Sicherungsprüfsummen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden drei Prüfsummentypen unterstützt: eine Prüfsumme auf Seiten, eine Prüfsumme in Protokollblöcken und eine Sicherungsprüfsumme. Beim Generieren einer Sicherungsprüfsumme wird von BACKUP überprüft, ob die aus der Datenbank gelesenen Daten mit Prüfsummen oder Indikatoren für zerrissene Seiten konsistent sind, die möglicherweise in der Datenbank vorhanden sind.  
@@ -59,15 +56,15 @@ caps.handback.revision: 36
      Wenn vom Sicherungsvorgang während der Überprüfung ein Seitenfehler festgestellt wird, tritt bei der Sicherung ein Fehler auf.  
   
     > [!NOTE]  
-    >  Weitere Informationen zu Seitenprüfsummen und dem Erkennen von zerrissenen Seiten finden Sie in der PAGE_VERIFY-Option der ALTER DATABASE-Anweisung. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+    >  Weitere Informationen zu Seitenprüfsummen und dem Erkennen von zerrissenen Seiten finden Sie in der PAGE_VERIFY-Option der ALTER DATABASE-Anweisung. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 2.  Unabhängig davon, ob Seitenprüfsummen vorhanden sind, generiert BACKUP eine separate Sicherungsprüfsumme für den Sicherungsdatenstrom. Bei den Wiederherstellungsvorgängen kann optional die Sicherungsprüfsumme verwendet werden, um zu überprüfen, ob die Sicherung beschädigt ist. Die Sicherungsprüfsumme wird auf den Sicherungsmedien gespeichert, nicht in den Datenbankseiten. Die Sicherungsprüfsumme kann bei der Wiederherstellung optional verwendet werden.  
   
-3.  Der Sicherungssatz erhält die Markierung, dass er Sicherungsprüfsummen enthält (in der **has_backup_checksums**-Spalte von **msdb..backupset**). Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
+3.  Der Sicherungssatz erhält die Markierung, dass er Sicherungsprüfsummen enthält (in der **has_backup_checksums** -Spalte von **msdb..backupset**). Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
   
  Wenn bei einem Sicherungsvorgang auf dem Sicherungsmedium Sicherungsprüfsummen vorhanden sind, werden standardmäßig die Sicherungsprüfsummen und Seitenprüfsummen von RESTORE- und RESTORE VERIFYONLY-Anweisungen überprüft. Wenn keine Sicherungsprüfsummen vorhanden sind, werden beide Wiederherstellungsvorgänge ohne Überprüfung fortgesetzt, weil ohne Sicherungsprüfsumme vom Wiederherstellungsvorgang keine Seitenprüfsummen verlässlich überprüft werden können.  
   
-## Antwort auf Fehler bei der Seitenprüfsumme während einer Sicherung oder eines Wiederherstellungsvorgangs  
+## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Antwort auf Fehler bei der Seitenprüfsumme während einer Sicherung oder eines Wiederherstellungsvorgangs  
  Nach dem Auftreten eines Fehlers bei der Seitenprüfsumme treten beim BACKUP- oder RESTORE-Vorgang standardmäßig Fehler auf, und ein RESTORE VERIFYONLY-Vorgang wird fortgesetzt. Sie können jedoch steuern, ob ein angegebener Vorgang fehlerhaft ist, wenn ein Fehler gefunden wird, oder ob er weiterhin so gut wie möglich fortgesetzt wird.  
   
  Wenn ein BACKUP-Vorgang nach dem Finden von Fehler fortgesetzt wird, werden vom Vorgang die folgenden Schritte ausgeführt:  
@@ -76,7 +73,7 @@ caps.handback.revision: 36
   
 2.  Der Fehler wird im SQL Server-Fehlerprotokoll protokolliert.  
   
-3.  Der Sicherungssatz wird mit diesem Fehlertyp in der **is_damaged**-Spalte von **msdb.backupset** markiert. Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
+3.  Der Sicherungssatz wird mit diesem Fehlertyp in der **is_damaged** -Spalte von **msdb.backupset**markiert. Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
   
 4.  Es wird eine Meldung ausgegeben, dass die Sicherung erfolgreich generiert wurde, aber Seitenfehler enthält.  
   
@@ -87,14 +84,14 @@ caps.handback.revision: 36
   
  **So steuern Sie die Antwort auf einen Fehler während eines Sicherungsvorgangs**  
   
--   [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

@@ -1,35 +1,39 @@
 ---
-title: "Pakete f&#252;r erweiterte Ereignisse von SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erweiterte Ereignisse [SQL Server], Pakete"
-  - "xe"
+title: "Pakete für erweiterte Ereignisse von SQL Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pakete f&#252;r erweiterte Ereignisse von SQL Server
+# <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Ein Paket ist ein Container für Objekte für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es gibt drei Arten von Paketen für erweiterte Ereignisse, dazu zählen die folgenden:  
   
 -   package0 - Extended Events-Systemobjekte. Dies ist das Standardpaket.  
   
--   sqlserver - Objekte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   sqlserver - Objekte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   sqlos - Objekte für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Betriebssystem (SQLOS).  
+-   sqlos - Objekte für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Betriebssystem (SQLOS).  
   
 > [!NOTE]  
 >  Das SecAudit-Paket wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit verwendet. Kein Objekt im Paket ist über die Datendefinitionssprache (Data Definition Language, DDL) für erweiterte Ereignisse verfügbar.  
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  Objekte aus verschiedenen Paketen können in einer Ereignissitzung gemischt werden. Weitere Informationen finden Sie unter [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
-## Paketinhalt  
+## <a name="package-contents"></a>Paketinhalt  
  In der folgenden Abbildung werden die Objekte dargestellt, die in den in einem Modul enthaltenen Paketen vorhanden sein können. Bei einem Modul kann es sich um eine ausführbare Datei oder eine DLL (Dynamic Link Library) handeln.  
   
  ![Die Beziehung zwischen einem Modul, Paketen und einem Objekt](../../relational-databases/extended-events/media/xepackagesobjects.gif "Die Beziehung zwischen einem Modul, Paketen und einem Objekt")  
   
-### Ereignisse  
+### <a name="events"></a>Ereignisse  
  Mithilfe von Ereignissen werden relevante Punkte im Ausführungspfad eines Programms überwacht, z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das Auslösen eines Ereignisses bedeutet immer auch, dass der relevante Punkt erreicht wurde, und liefert Informationen über den Status zu dem Zeitpunkt, an dem das Ereignis ausgelöst wurde.  
   
  Ereignisse können ausschließlich für Ablaufverfolgungszwecke oder auslösende Aktionen verwendet werden. Diese Aktionen können synchron oder asynchron sein.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  Alle Ereignisse weisen ein versionsspezifisches Schema auf, mit dem der Inhalt definiert wird. Dieses Schema besteht aus Ereignisspalten mit wohldefinierten Typen. Ein Ereignis eines bestimmten Typs muss seine Daten stets in genau der Reihenfolge bereitstellen, die im Schema angegeben ist. Allerdings muss ein Ereignisziel nicht alle Daten verarbeiten, die bereitgestellt werden.  
   
-#### Ereigniskategorisierung  
+#### <a name="event-categorization"></a>Ereigniskategorisierung  
  Extended Events verwendet ein Ereigniskategorisierungsmodell ähnlich der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW). Zwei Ereigniseigenschaften werden für die Kategorisierung verwendet, und zwar Kanal und Schlüsselwort. Durch die Verwendung dieser Eigenschaften wird die Integration von Extended Events in ETW und die zugehörigen Tools unterstützt.  
   
  **Channel**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Schlüsselwörter weisen eine hohe Übereinstimmung mit der aktuellen Gruppierung von Ereignissen der SQL-Ablaufverfolgung auf.  
   
-### Ziele  
- Ziele sind Ereignisconsumer. Ziele verarbeiten Ereignisse entweder synchron für den Thread, der das Ereignis auslöst, oder asynchron für einen vom System bereitgestellten Thread. Erweiterte Ereignisse stellt mehrere Ziele zur Verfügung, mit denen Sie die Ereignisausgabe lenken können. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+### <a name="targets"></a>Ziele  
+ Ziele sind Ereignisconsumer. Ziele verarbeiten Ereignisse entweder synchron für den Thread, der das Ereignis auslöst, oder asynchron für einen vom System bereitgestellten Thread. Erweiterte Ereignisse stellt mehrere Ziele zur Verfügung, mit denen Sie die Ereignisausgabe lenken können. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
-### Aktionen  
+### <a name="actions"></a>Aktionen  
  Eine Aktion ist eine programmgesteuerte Reaktion oder Folge von Reaktionen auf ein Ereignis. Aktionen sind an ein Ereignis gebunden, und jedes Ereignis kann eine eindeutige Gruppe von Aktionen aufweisen.  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   Stapeldumper  
   
--   Ausführungsplanerkennung (nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   Ausführungsplanerkennung (nur[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Stapelauflistung (nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Stapelauflistung (nur[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   Ausführen von Zeitstatistikberechnungen  
   
 -   Sammeln von Benutzereingaben bei Ausnahmen  
   
-### Prädikate  
+### <a name="predicates"></a>Prädikate  
  Prädikate sind eine Gruppe logischer Regeln, mit denen Ereignisse während ihrer Verarbeitung ausgewertet werden. Dadurch kann der Extended Events-Benutzer anhand bestimmter Kriterien ausgewählte Ereignisdaten erfassen.  
   
  Prädikate können Daten in einem lokalen Kontext speichern, mit dem Prädikate erstellt werden können, die alle *n* Minuten oder alle *n* Male, dass ein Ereignis ausgelöst wird, den Wert TRUE zurückgeben. Durch das Speichern in lokalem Kontext kann das Prädikat zudem dynamisch aktualisiert werden, wodurch ein zukünftiges Auslösen von Ereignissen unterdrückt werden kann, wenn die Ereignisse ähnliche Daten aufweisen.  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Prädikate mit Nebeneffekten können ggf. nicht ausgewertet werden, wenn bei einer vorherigen Prädikatüberprüfung ein Fehler auftritt.  
   
-### Typen  
+### <a name="types"></a>Typen  
  Da es sich bei Daten um eine Auflistung aneinandergereihter Bytes handelt, werden zum Interpretieren der Daten die Länge und die Eigenschaften der Byte-Auflistung benötigt. Diese Informationen werden im Typ-Objekt gekapselt. Die folgenden Typen werden für Paketobjekte bereitgestellt:  
   
 -   Ereignis  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  Weitere Informationen finden Sie unter [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### Karten  
+### <a name="maps"></a>Karten  
  In einer Zuordnungstabelle wird ein interner Wert einer Zeichenfolge zugeordnet, sodass der Benutzer erkennt, was durch den Wert dargestellt wird. Statt lediglich eines numerischen Werts erhält der Benutzer eine aussagekräftige Beschreibung des internen Werts. In der folgenden Abfrage wird dargestellt, wie Zuordnungswerte abgerufen werden.  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  Ausgehend von dieser Tabelle wird als Beispiel eine Spalte mit dem Namen mode und dem Wert 5 angenommen. Die Tabelle gibt an, dass 5 zu X zugeordnet wird. Das bedeutet, dass der Sperrentyp Exclusive ist.  
   
-## Siehe auch  
- [Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Modul für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Ziele für erweiterte Ereignisse von SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

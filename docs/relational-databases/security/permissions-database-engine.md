@@ -1,50 +1,51 @@
 ---
-title: "Berechtigungen (Datenbankmodul) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES-Berechtigung"
-  - "Berechtigungen [SQL Server]"
-  - "Sicherheit [SQL Server], Berechtigungen"
-  - "Benennungskonventionen [SQL Server]"
+title: Berechtigungen (Datenbankmodul) | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Berechtigungen (Datenbankmodul)
+# <a name="permissions-database-engine"></a>Berechtigungen (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+  Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] beträgt 236. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können in SQL-Datenbank keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] sinnvoll. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind. Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt.
+Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] beträgt 237. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können in SQL-Datenbank keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]sinnvoll. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind. Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. Klicken Sie auf das Bild, um das **Poster zu den Datenbankmodulberechtigungen** im PDF-Format herunterzuladen.  
   
-![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> Als Bestandteil dieses Themas ist das Poster viel zu klein zum Lesen. Laden Sie daher das Poster zu den Datenbankmodul-Berechtigungen unter [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)herunter.  
-
-Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md) und [DENY](../../t-sql/statements/deny-transact-sql.md), um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
+Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)und [DENY](../../t-sql/statements/deny-transact-sql.md) , um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> Benennungskonventionen für Berechtigungen  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  Im Folgenden werden die allgemeinen Konventionen beschrieben, die beim Benennen von Berechtigungen befolgt werden:  
   
 -   CONTROL  
@@ -55,11 +56,11 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
      Überträgt die Berechtigung, die Eigenschaften, mit Ausnahme des Besitzes, eines bestimmten sicherungsfähigen Elements zu ändern. Wenn ALTER für einen Gültigkeitsbereich erteilt wird, wird damit auch die Berechtigung zum Ändern, Erstellen oder Löschen eines sicherungsfähigen Elements erteilt, das in diesen Bereich fällt. So beinhaltet die Berechtigung ALTER für ein Schema auch die Berechtigung zum Erstellen, Ändern und Löschen von Objekten aus dem Schema.  
   
--   ALTER ANY \<*Sicherungsfähiger Server*>, wobei es sich bei *Sicherungsfähiger Server* um jedes beliebige sicherungsfähige Element auf Serverebene handeln kann.  
+-   ALTER ANY \<*Server Securable*>, wobei es sich bei *Server Securable* um jeden beliebigen sicherungsfähigen Server handeln kann.  
   
      Überträgt die Berechtigung zum Erstellen, Ändern oder Löschen einzelner Instanzen des *Server Securable*. So überträgt z. B. ALTER ANY LOGIN die Berechtigung zum Erstellen, Ändern oder Löschen einer beliebigen Anmeldung in der Instanz.  
   
--   ALTER ANY \<*Sicherungsfähige Datenbank*>, wobei *Sicherungsfähige Datenbank* jedes beliebige sicherungsfähige Element auf Datenbankebene sein kann.  
+-   ALTER ANY \<*Database Securable*>, wobei *Database Securable* jedes beliebige sicherungsfähige Element auf Datenbankebene sein kann.  
   
      Überträgt die Berechtigung zum Erstellen, Ändern oder Löschen (CREATE, ALTER oder DROP) einzelner Instanzen des *Database Securable*. So überträgt z. B. ALTER ANY SCHEMA die Berechtigung zum Erstellen, Ändern oder Löschen eines beliebigen Schemas in der Datenbank.  
   
@@ -75,15 +76,15 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
      Ermöglicht dem Empfänger, die Identität des Benutzers anzunehmen.  
   
--   CREATE \<*Sicherungsfähiger Server*>  
+-   CREATE \<*Server Securable*>  
   
      Überträgt dem Empfänger die Berechtigung zum Erstellen des *Server Securable*.  
   
--   CREATE \<*Sicherungsfähige Datenbank*>  
+-   CREATE \<*Database Securable*>  
   
      Überträgt dem Berechtigten die Berechtigung zum Erstellen des *Database Securable*.  
   
--   CREATE \<*Im Schema enthaltenes sicherungsfähiges Element*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      Überträgt die Berechtigung zum Erstellen des im Schema enthaltenen sicherungsfähigen Elements. Es wird jedoch die Berechtigung ALTER für das Schema benötigt, um das sicherungsfähige Element in einem bestimmten Schema zu erstellen.  
   
@@ -100,7 +101,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
  Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] http://go.microsoft.com/fwlink/?LinkId=229142 [, um ein Diagramm aller](http://go.microsoft.com/fwlink/?LinkId=229142)-Berechtigungen in Postergröße im PDF-Format abzurufen.  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
   
 |Berechtigung|Gilt für|  
@@ -111,7 +112,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |EXECUTE|CLR-Typen, externe Skripts, Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) und Synonyme|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
 |INSERT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlangen|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW und<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
 |TAKE OWNERSHIP|Alle Objektklassen außer DATABASE SCOPED CONFIGURATION, LOGIN, SERVER und USER.|  
@@ -122,8 +123,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 > [!CAUTION]  
 >  Die Standardberechtigungen, die Systemobjekten zum Zeitpunkt der Installation erteilt wurden, werden sorgfältig bezüglich möglicher Bedrohungen ausgewertet und müssen nicht im Rahmen der Härtung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation geändert werden. Alle Änderungen an den Berechtigungen für Systemobjekte können die Funktionalität einschränken oder unterbrechen und potenziell dazu führen, dass Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation einen nicht unterstützten Zustand aufweist.  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> SQL Server-Berechtigungen  
- Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
+##  <a name="_permissions"></a> SQL Server Permissions  
+ Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
   
 |Sicherungsfähiges Basiselement|Spezifische Berechtigungen für sicherungsfähiges Basiselement|Berechtigungstypcode|Sicherungsfähiges Element, das sicherungsfähiges Basiselement enthält|Berechtigung für sicherungsfähiges Containerelement mit spezifischer Berechtigung für sicherungsfähiges Basiselement|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -160,14 +161,14 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Gilt für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
@@ -178,7 +179,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -226,8 +227,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |DATABASE|UNMASK|UMSK<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version).|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version) und für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -250,10 +251,10 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Anmeldung|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|Anmeldung|CONTROL|CL|SERVER|CONTROL SERVER|  
+|Anmeldung|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|Anmeldung|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -353,10 +354,10 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|User|ALTER|AL|DATABASE|ALTER ANY USER|  
-|User|CONTROL|CL|DATABASE|CONTROL|  
-|User|IMPERSONATE|IM|DATABASE|CONTROL|  
-|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|Benutzer|ALTER|AL|DATABASE|ALTER ANY USER|  
+|Benutzer|CONTROL|CL|DATABASE|CONTROL|  
+|Benutzer|IMPERSONATE|IM|DATABASE|CONTROL|  
+|Benutzer|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
@@ -364,7 +365,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderliche Berechtigung**.  
   
 > [!NOTE]  
@@ -426,7 +427,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Ein DENY auf der Tabelle wird mit einem GRANT auf einer Spalte überschrieben. Ein nachfolgendes DENY auf der Tabelle entfernt jedoch das GRANT auf der Spalte. 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> Beispiele  
+##  <a name="_examples"></a> Examples  
  In den Beispielen dieses Abschnitts wird veranschaulicht, wie Berechtigungsinformationen abgerufen werden.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Zurückgeben der vollständigen Liste erteilbarer Berechtigungen  
@@ -454,7 +455,7 @@ GO
 ```  
   
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
- Im folgenden Beispiel werden Berechtigungen für ein Objekt namens `Yttrium`zurückgegeben. Beachten Sie, dass die integrierte `OBJECT_ID`-Funktion zum Abrufen der ID des `Yttrium`-Objekts verwendet wird.  
+ Im folgenden Beispiel werden Berechtigungen für ein Objekt namens `Yttrium`zurückgegeben. Beachten Sie, dass die integrierte `OBJECT_ID` -Funktion zum Abrufen der ID des `Yttrium`-Objekts verwendet wird.  
   
 ```tsql  
 SELECT * FROM sys.database_permissions   
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "Sicherheit auf Zeilenebene | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zugriffssteuerungsprädikate"
-  - "Sicherheit auf Zeilenebene"
-  - "Sicherheit [SQL Server], Prädikat-basierte Zugriffssteuerung"
-  - "Sicherheit auf Zeilenebene beschrieben"
-  - "Prädikatbasierte Sicherheit"
+title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sicherheit auf Zeilenebene
+# <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
  Mithilfe der Sicherheit auf Zeilenbene können Kunden den Zugriff auf die Zeilen in einer Datenbanktabelle auf Grundlage der Merkmale des Benutzers steuern, der eine Abfrage ausführt (z. B. Gruppenmitgliedschaft oder Ausführungskontext).  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  Implementieren Sie RLS, indem Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
   
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], ([hier beziehen](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , ([hier beziehen](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> In diesem Thema  
-  
--   [Beschreibung](#Description)  
-  
--   [Einsatzgebiete](#UseCases)  
-  
--   [Berechtigungen](#Permissions)  
-  
--   [Bewährte Methoden](#Best)  
-  
--   [Sicherheitshinweis: Seitenkanalangriffe](#SecNote)  
-  
--   [Featureübergreifende Kompatibilität](#Limitations)  
-  
--   [Codebeispiele](#CodeExamples)  
-  
-    -   [A. Szenario für direkt verbundene Benutzer](#Typical)  
-  
-    -   [B. Szenario für die Anwendung der mittleren Ebene](#MidTier)  
-  
+
 ##  <a name="Description"></a> Beschreibung  
  RLS unterstützt zwei Arten von Sicherheitsprädikaten.  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  Der Zugriff auf Daten auf Zeilenebene in einer Tabelle wird durch ein Sicherheitsprädikat beschränkt, das als Inline-Tabellenwertfunktion definiert ist. Die Funktion wird dann aufgerufen und durch eine Sicherheitsrichtlinie erzwungen. Für FILTER-Prädikate gilt: Es gibt keinen Hinweis für die Anwendung, dass Zeilen aus dem Resultset gefiltert wurden. Wenn alle Zeilen gefiltert werden, wird ein Nullsatz zurückgegeben. Für BLOCK-Prädikate gilt: Alle Vorgänge, die gegen das Prädikat verstoßen, misslingen mit einem Fehler.  
   
- Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet, das betrifft alle Abrufvorgänge: **SELECT**, **DELETE** (d. h. Benutzer kann keine Zeilen löschen, die gefiltert werden), und**UPDATE** (d. h. Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
+ Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet, das betrifft alle Abrufvorgänge: **SELECT**, **DELETE** (d. h. Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE** (d. h. Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
   
 -   Die Prädikate AFTER INSERT und AFTER UPDATE können Benutzer am Ändern von Zeilen in Werte hindern, die gegen das Prädikat verstoßen.  
   
@@ -79,13 +62,13 @@ caps.handback.revision: 47
   
  FILTER- und BLOCK-Prädikate und Sicherheitsrichtlinien weisen folgendes Verhalten auf:  
   
--   Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON` erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF` erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle **SELECT**- oder **EXECUTE**-Berechtigungen für diese zusätzlichen Tabellen und Funktionen.  
+-   Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON`erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle **SELECT** - oder **EXECUTE** -Berechtigungen für diese zusätzlichen Tabellen und Funktionen.  
   
      Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Die Verknüpfungsfunktion ist über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen.  
   
 -   Sie können eine Abfrage auf eine Tabelle anwenden, für die ein Sicherheitsprädikat zwar definiert, jedoch deaktiviert ist. Alle Zeilen, die gefiltert oder blockiert worden wären, sind nicht betroffen.  
   
--   Wenn der Benutzer „dbo“, ein Mitglied der **db_owner**-Rolle oder der Tabellenbesitzer eine Tabelle abfragt, für die eine Sicherheitsrichtlinie definiert und aktiviert ist, werden die Zeilen gemäß Definition durch die Sicherheitsrichtlinie gefiltert oder blockiert.  
+-   Wenn der Benutzer „dbo“, ein Mitglied der **db_owner** -Rolle oder der Tabellenbesitzer eine Tabelle abfragt, für die eine Sicherheitsrichtlinie definiert und aktiviert ist, werden die Zeilen gemäß Definition durch die Sicherheitsrichtlinie gefiltert oder blockiert.  
   
 -   Versuche, das Schema einer Tabelle zu ändern, die durch eine Sicherheitsrichtlinie an ein Schema gebunden ist, führen zu einem Fehler. Allerdings können vom Prädikat nicht referenzierte Spalten geändert werden.  
   
@@ -97,7 +80,7 @@ caps.handback.revision: 47
   
  FILTER-Prädikate weisen folgendes Verhalten auf:  
   
--   Definieren Sie eine Sicherheitsrichtlinie, die die Zeilen einer Tabelle filtert. Der Anwendung ist nicht bekannt, dass Zeilen nach **SELECT**-, **UPDATE**- und **DELETE**-Vorgängen gefiltert wurden, einschließlich Situationen, in denen alle Zeilen gefiltert wurden. Die Anwendung kann eine beliebige Anzahl von Zeilen mit **INSERT** einfügen, unabhängig davon, ob sie bei einem anderen Vorgang gefiltert werden.  
+-   Definieren Sie eine Sicherheitsrichtlinie, die die Zeilen einer Tabelle filtert. Der Anwendung ist nicht bekannt, dass Zeilen nach **SELECT**-, **UPDATE**- und **DELETE** -Vorgängen gefiltert wurden, einschließlich Situationen, in denen alle Zeilen gefiltert wurden. Die Anwendung kann eine beliebige Anzahl von Zeilen mit **INSERT** einfügen, unabhängig davon, ob sie bei einem anderen Vorgang gefiltert werden.  
   
  BLOCK-Prädikate weisen folgendes Verhalten auf:  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   An den APIs für Massenvorgänge, einschließlich BULK INSERT, sind keine Änderungen erfolgt. Dies bedeutet, dass BLOCK-Prädikate des Typs AFTER INSERT für Masseneinfügevorgänge genauso wie für herkömmliche Einfügevorgänge gelten.  
   
- [Nach oben](#Top)  
   
 ##  <a name="UseCases"></a> Einsatzgebiete  
  Hier sind Entwurfsbeispiele dazu, wie RLS verwendet werden kann:  
@@ -118,34 +100,32 @@ caps.handback.revision: 47
   
 -   Eine Anwendung mit mehreren Mandanten kann eine Richtlinie zum Erzwingen einer logischen Trennung der einzelnen Datenzeilen der Mandanten aus jeder anderen Mandanten-Zeile erstellen. Effizienzen werden durch den Datenspeicher für viele Mandanten in einer einzelnen Tabelle erreicht. Natürlich kann jeder Mandant nur die eigenen Datenzeilen anzeigen.  
   
- RLS-Filterprädikate sind funktional äquivalent zum Anhängen einer **WHERE**-Klausel. Bei dem Prädikat kann es sich um komplexe Geschäftsabläufe handeln oder die Klausel kann so einfach sein wie das `WHERE TenantId = 42`.  
+ RLS-Filterprädikate sind funktional äquivalent zum Anhängen einer **WHERE** -Klausel. Bei dem Prädikat kann es sich um komplexe Geschäftsabläufe handeln oder die Klausel kann so einfach sein wie das `WHERE TenantId = 42`.  
   
  Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Es bietet eine flexible, zentrale und prädikatbasierte Bewertung, die Metadaten oder andere Kriterien berücksichtigt, die der Administrator nach Bedarf bestimmt. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer den entsprechenden Zugriff auf die Daten anhand von Benutzerattributen verfügt. Die bezeichnungsbasierte Zugriffssteuerung kann mithilfe der prädikatbasierten Zugriffssteuerung implementiert werden.  
   
- [Nach oben](#Top)  
   
 ##  <a name="Permissions"></a> Berechtigungen  
- Für das Erstellen, Ändern oder Löschen von Sicherheitsrichtlinien ist die **ALTER ANY SECURITY POLICY**-Berechtigung erforderlich. Für das Erstellen oder Löschen einer Sicherheitsrichtlinie ist bei dem Schema die **ALTER**-Berechtigung erforderlich.  
+ Für das Erstellen, Ändern oder Löschen von Sicherheitsrichtlinien ist die **ALTER ANY SECURITY POLICY** -Berechtigung erforderlich. Für das Erstellen oder Löschen einer Sicherheitsrichtlinie ist bei dem Schema die **ALTER** -Berechtigung erforderlich.  
   
  Darüber hinaus sind die folgenden Berechtigungen für jedes hinzugefügte Prädikat erforderlich:  
   
--   **SELECT**- und **REFERENCES**-Berechtigungen für die Funktion, die als Prädikat verwendet wird.  
+-   **SELECT** - und **REFERENCES** -Berechtigungen für die Funktion, die als Prädikat verwendet wird.  
   
--   **REFERENCES**-Berechtigung für die Zieltabelle, die an die Richtlinie gebunden wird.  
+-   **REFERENCES** -Berechtigung für die Zieltabelle, die an die Richtlinie gebunden wird.  
   
--   **REFERENCES**-Berechtigung für jede Spalte in der Zieltabelle, die als Argument verwendet wird.  
+-   **REFERENCES** -Berechtigung für jede Spalte in der Zieltabelle, die als Argument verwendet wird.  
   
  Sicherheitsrichtlinien gelten für alle Benutzer, einschließlich der Dbo-Benutzer in der Datenbank. Dbo-Benutzer können Sicherheitsrichtlinien ändern oder löschen, ihre Änderungen an Sicherheitsrichtlinien können jedoch überwacht werden. Wenn Benutzer mit hohen Berechtigungen (z. B. sysadmin oder db_owner) alle Zeilen sehen müssen, um Probleme mit Daten zu beheben oder Daten zu überprüfen, muss die Sicherheitsrichtlinie entsprechend geschrieben werden.  
   
- Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = OFF` erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle die **SELECT**- oder **EXECUTE**-Berechtigung für die Prädikatfunktion und alle weiteren Tabellen, Sichten oder Funktionen, die innerhalb der Prädikatfunktion verwendet werden. Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = ON` erstellt wird (Standard), werden diese Berechtigungsprüfungen umgangen, wenn Benutzer die Zieltabelle abfragen.  
+ Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle die  **SELECT** - oder **EXECUTE** -Berechtigung für die Prädikatfunktion und alle weiteren Tabellen, Sichten oder Funktionen, die innerhalb der Prädikatfunktion verwendet werden. Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = ON` erstellt wird (Standard), werden diese Berechtigungsprüfungen umgangen, wenn Benutzer die Zieltabelle abfragen.  
   
- [top](#Top)  
   
 ##  <a name="Best"></a> Bewährte Methoden  
   
 -   Es wird dringend empfohlen, ein separates Schema für die RLS-Objekte zu erstellen (Prädikatfunktion und Sicherheitsrichtlinie).  
   
--   Die **ALTER ANY SECURITY POLICY**-Berechtigung richtet sich an hoch privilegierte Benutzer (z. B. ein Sicherheitsrichtlinienmanager). Die Sicherheitsrichtlinienmanager erfordert keine **SELECT**-Berechtigung für die Tabellen, die sie schützen.  
+-   Die **ALTER ANY SECURITY POLICY** -Berechtigung richtet sich an hoch privilegierte Benutzer (z. B. ein Sicherheitsrichtlinienmanager). Die Sicherheitsrichtlinienmanager erfordert keine **SELECT** -Berechtigung für die Tabellen, die sie schützen.  
   
 -   Vermeiden Sie Konvertierungen in Prädikatfunktionen, um potenzielle Laufzeitfehler zu vermeiden.  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   Vermeiden Sie übermäßige Tabellenverknüpfungen Prädikatfunktionen, um die Leistung zu maximieren.  
   
- Vermeiden Sie Prädikatlogik, die von sitzungsspezifischen [SET](../../t-sql/statements/set-statements-transact-sql.md)-Optionen abhängt: Wenngleich ihre Verwendung in der Praxis eher unwahrscheinlich ist, können Prädikatfunktionen, deren Logik von bestimmten sitzungsspezifischen **SET**-Optionen abhängt, Informationen preisgeben, wenn Benutzer in der Lage sind, beliebige Abfragen auszuführen. Beispiel: Eine Prädikatfunktion, die eine Zeichenfolge implizit in **datetime** konvertiert, kann unterschiedliche Zeilen basierend auf der Option **SET DATEFORMAT** für die aktuelle Sitzung filtern. Im Allgemeinen sollten Prädikatfunktionen die folgenden Regeln einhalten:  
+ Vermeiden Sie Prädikatlogik, die von sitzungsspezifischen [SET](../../t-sql/statements/set-statements-transact-sql.md)-Optionen abhängt: Wenngleich ihre Verwendung in der Praxis eher unwahrscheinlich ist, können Prädikatfunktionen, deren Logik von bestimmten sitzungsspezifischen **SET** -Optionen abhängt, Informationen preisgeben, wenn Benutzer in der Lage sind, beliebige Abfragen auszuführen. Beispiel: Eine Prädikatfunktion, die eine Zeichenfolge implizit in **datetime** konvertiert, kann unterschiedliche Zeilen basierend auf der Option **SET DATEFORMAT** für die aktuelle Sitzung filtern. Im Allgemeinen sollten Prädikatfunktionen die folgenden Regeln einhalten:  
   
 -   Prädikatfunktionen dürfen Zeichenfolgen nicht implizit in **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset** bzw. umgekehrt konvertieren, da diese Konvertierungen von den Optionen [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) und [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) beeinflusst werden. Verwenden Sie stattdessen die **CONVERT**-Funktion, und geben Sie den „style“-Parameter explizit an.  
   
@@ -162,15 +142,13 @@ caps.handback.revision: 47
 -   Prädikatfunktionen dürfen nicht von arithmetischen oder Aggregationsausdrücken abhängig sein, die bei einem Fehler (wie z. B. Überlauf oder Division durch null) **NULL** zurückgeben, da dieses Verhalten von den Optionen [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) und [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) beeinflusst wird.  
   
 -   Prädikatfunktionen dürfen verkettete Zeichenfolgen nicht mit **NULL** vergleichen, da dieses Verhalten von der Option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) beeinflusst wird.  
-  
- [top](#Top)  
+   
   
 ##  <a name="SecNote"></a> Sicherheitshinweis: Seitenkanalangriffe  
  **Schädlicher Manager für Sicherheitsrichtlinien:** Es ist wichtig zu beachten, dass ein schädlicher Manager für Sicherheitsrichtlinien mit ausreichenden Berechtigungen zum Erstellen einer Sicherheitsrichtlinie für eine vertrauliche Spalte und der Berechtigung zum Erstellen oder Ändern von Inline-Tabellenwertfunktionen mit einem anderen Benutzer zusammenwirken kann, der SELECT-Berechtigungen für eine Tabelle hat. Es kann dann eine Datenexfiltration erfolgen, indem schädliche Inline-Tabellenwertfunktionen mit dem Zweck erstellt werden, Seitenkanalangriffe zum Ableiten von Daten zu verwenden. Solche Angriffe bedürfen der Absprache (oder übermäßig erteilte Berechtigungen bei einem schädlichen Benutzer), und sie erfordern wahrscheinlich mehrere Iterationen zum Ändern der Richtlinie (erfordert die Berechtigung zum Entfernen des Prädikats, um die Schemabindung aufzuheben), zum Ändern der Inline-Tabellenwertfunktionen und zum wiederholen Ausführen ausgewählter Anweisungen für die Zieltabelle. Es wird dringend empfohlen, Berechtigungen nach Bedarf zu beschränken, und sie nach verdächtigen Aktivitäten wie dem konstanten Ändern von Richtlinien und Inline-Tabellenwertfunktionen im Zusammenhang mit der zeilenbasierter Sicherheit zu überwachen.  
   
  **Sorgfältig erstellte Abfragen:** Es ist möglich, die Offenlegung von Informationen durch die Verwendung sorgfältig erstellter Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
-  
- [Nach oben](#Top)  
+   
   
 ##  <a name="Limitations"></a> Featureübergreifende Kompatibilität  
  Im Allgemeinen funktioniert Sicherheit auf Zeilenebene featureübergreifend wie erwartet. Es gibt jedoch einige Ausnahmen. In diesem Abschnitt finden Sie verschiedene Hinweise und Vorsichtsmaßnahmen bei Verwenden von Sicherheit auf Zeilenebene mit bestimmten anderen Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -181,7 +159,7 @@ caps.handback.revision: 47
   
 -   **Polybase** RLS ist nicht kompatibel mit Polybase.  
   
--   **Speicheroptimierte Tabellen** Die Inline-Tabellenwertfunktion, die für ein Sicherheitsprädikat für eine speicheroptimierte Tabelle verwendet wird, muss mit der Option `WITH NATIVE_COMPILATION` definiert werden. Bei dieser Option werden von speicheroptimierten Tabellen nicht unterstützte Sprachfeatures gesperrt, und zur Erstellungszeit wird der entsprechende Fehler ausgelöst. Weitere Informationen finden Sie im Abschnitt **Sicherheit auf Zeilenebene** in [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **Speicheroptimierte Tabellen**Die Inline-Tabellenwertfunktion, die für ein Sicherheitsprädikat für eine speicheroptimierte Tabelle verwendet wird, muss mit der Option `WITH NATIVE_COMPILATION` definiert werden. Bei dieser Option werden von speicheroptimierten Tabellen nicht unterstützte Sprachfeatures gesperrt, und zur Erstellungszeit wird der entsprechende Fehler ausgelöst. Weitere Informationen finden Sie im Abschnitt **Sicherheit auf Zeilenebene** in [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Indizierte Sichten** Im allgemeinen können Sicherheitsrichtlinien basierend auf Sichten erstellt werden. Sichten können basierend auf Tabellen erstellt werden, die durch Sicherheitsrichtlinien gebunden sind. Allerdings können indizierte Sichten nicht basierend auf Tabellen erstellt werden, für die eine Sicherheitsrichtlinie gilt, da die Richtlinie bei Zeilensuchvorgängen über den Index umgangen würde.  
   
@@ -197,7 +175,6 @@ caps.handback.revision: 47
   
 -   **Temporale Tabellen** sind mit RLS kompatibel. Sicherheitsprädikate für die aktuelle Tabelle werden jedoch nicht automatisch in die Verlaufstabelle repliziert. Um eine Sicherheitsrichtlinie auf die aktuellen und Verlaufstabellen anzuwenden, müssen Sie für jede Tabelle ein Sicherheitsprädikat einzeln hinzufügen.  
   
- [Nach oben](#Top)  
   
 ##  <a name="CodeExamples"></a> Beispiele  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  Erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten vorgeführt werden.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,10 +273,9 @@ WITH (STATE = OFF);
   
  Jetzt werden den Benutzern Sales1 und Sales2 alle 6 Zeilen angezeigt.  
   
- [Nach oben](#Top)  
   
 ###  <a name="MidTier"></a> B. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden  
- Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
+ Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
   
  Erstellen Sie eine einfache Tabelle zum Speichern von Daten.  
   
@@ -352,7 +328,7 @@ AS
 GO  
 ```  
   
- Erstellen Sie eine Sicherheitsrichtlinie, die diese Funktion als FILTER-Prädikat und BLOCK-Prädikat für `Sales` hinzufügt. Das BLOCK-Prädikat benötigt nur **AFTER INSERT**, da **BEFORE UPDATE** und **BEFORE DELETE** bereits gefiltert sind und **AFTER UPDATE** unnötig ist, da die Spalte `AppUserId` aufgrund von zuvor festgelegten Spaltenberechtigungen nicht in andere Werte geändert werden kann.  
+ Erstellen Sie eine Sicherheitsrichtlinie, die diese Funktion als FILTER-Prädikat und BLOCK-Prädikat für `Sales`hinzufügt. Das BLOCK-Prädikat benötigt nur **AFTER INSERT**, da **BEFORE UPDATE** und **BEFORE DELETE** bereits gefiltert sind und **AFTER UPDATE** unnötig ist, da die Spalte `AppUserId` aufgrund von zuvor festgelegten Spaltenberechtigungen nicht in andere Werte geändert werden kann.  
   
 ```  
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- Nun können wir die Verbindungsfilterung durch Auswahl der Tabelle `Sales` simulieren, nachdem in **SESSION_CONTEXT** andere Benutzer-IDs festgelegt wurden. In der Praxis ist die Anwendung nach Öffnen einer Verbindung zuständig für das Festlegen der aktuellen Benutzer-ID in **SESSION_CONTEXT**.  
+ Nun können wir die Verbindungsfilterung durch Auswahl der Tabelle `Sales` simulieren, nachdem in **SESSION_CONTEXT**andere Benutzer-IDs festgelegt wurden. In der Praxis ist die Anwendung nach Öffnen einer Verbindung zuständig für das Festlegen der aktuellen Benutzer-ID in **SESSION_CONTEXT** .  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [Erstellen benutzerdefinierter Funktionen &#40;Datenbankmodul&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

@@ -1,34 +1,38 @@
 ---
-title: "Sch&#228;tzen der Gr&#246;&#223;e eines gruppierten Indexes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Speicherplatzreservierung [SQL Server], Indexgröße"
-  - "Größe [SQL Server], Tabellen"
-  - "Speicherplatz auf dem Datenträger [SQL Server], Indizes"
-  - "Vorhersagen der Tabellengröße [SQL Server]"
-  - "Tabellengröße [SQL Server]"
-  - "Schätzen der Tabellengröße"
-  - "Speicherplatz [SQL Server], Indizes"
-  - "Gruppierte Indizes, Tabellengröße"
-  - "Nicht gruppierte Indizes [SQL Server], Tabellengröße"
-  - "Entwerfen von Datenbanken [SQL Server], Schätzen der Größe"
-  - "Berechnen der Tabellengröße"
+title: "Schätzen der Größe eines gruppierten Indexes | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- disk space [SQL Server], indexes
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- space [SQL Server], indexes
+- clustered indexes, table size
+- nonclustered indexes [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sch&#228;tzen der Gr&#246;&#223;e eines gruppierten Indexes
+# <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern eines gruppierten Indexes erforderlich ist:  
   
 1.  Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene des gruppierten Indexes erforderlich ist.  
@@ -37,25 +41,25 @@ caps.handback.revision: 49
   
 3.  Addieren Sie die berechneten Werte.  
   
-## Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
   
 1.  Geben Sie die Anzahl der Zeilen an, die die Tabelle enthalten wird:  
   
-     ***Num_Rows*** = Anzahl der Zeilen in der Tabelle  
+     ***Num_Rows***  = Anzahl der Zeilen in der Tabelle  
   
 2.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
   
      Berechnen Sie den Speicherplatz, der zum Speichern jeder dieser Spaltengruppen innerhalb der Datenzeile erforderlich ist. Die Größe einer Spalte hängt von der Angabe für Datentyp und -länge ab.  
   
-     ***Num_Cols*** = Gesamtanzahl der Spalten (mit fester und variabler Länge)  
+     ***Num_Cols***  = Gesamtanzahl der Spalten (mit fester und variabler Länge)  
   
-     ***Fixed_Data_Size*** = Gesamtzahl der Bytes in allen Spalten fester Länge  
+     ***Fixed_Data_Size***  = Gesamtzahl der Bytes in allen Spalten fester Länge  
   
-     ***Num_Variable_Cols*** = Anzahl der Spalten variabler Länge  
+     ***Num_Variable_Cols***  = Anzahl der Spalten variabler Länge  
   
-     ***Max_Var_Size*** = Maximale Bytegröße aller Spalten variabler Länge  
+     ***Max_Var_Size***  = Maximale Bytegröße aller Spalten variabler Länge  
   
-3.  Wenn der gruppierte Index nicht eindeutig ist, berücksichtigen Sie die *uniqueifier*-Spalte:  
+3.  Wenn der gruppierte Index nicht eindeutig ist, berücksichtigen Sie die *uniqueifier* -Spalte:  
   
      Die Uniqueifier-Spalte ist eine Spalte variabler Länge mit NULL-Zulässigkeit. Sie ist in Spalten Nicht-NULL und 4 Byte lang, deren Schlüsselwerte nicht eindeutig sind. Dieser Wert ist Teil des Indexschlüssels und für die Sicherstellung erforderlich, dass jede Zeile über einen eindeutigen Schlüsselwert verfügt.  
   
@@ -79,10 +83,10 @@ caps.handback.revision: 49
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen variablen Spalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size***-Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
+     Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen variablen Spalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können **varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant**-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine **varchar**-, **varbinary**- oder **sql_variant**-Spalte und von 4.000 Byte für **nvarchar**-Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können **varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant** -Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8000 Bytes für eine **varchar**-, **varbinary**- oder **sql_variant** -Spalte und von 4000 Bytes für **nvarchar** -Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
   
@@ -114,20 +118,20 @@ caps.handback.revision: 49
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der oberen Ebenen des Indexes erforderlich ist:  
   
 1.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge im Indexschlüssel an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
   
      Die Schlüsselspalten eines Indexes können Spalten fester und variabler Länge enthalten. Um die Größe der Indexzeilen auf der inneren Ebene zu schätzen, müssen Sie den Speicherplatz berechnen, der von jeder dieser Spaltengruppen innerhalb der Indexzeile belegt wird. Die Größe einer Spalte hängt von der Angabe für Datentyp und -länge ab.  
   
-     ***Num_Key_Cols*** = Gesamtanzahl der Schlüsselspalten (fester und variabler Länge)  
+     ***Num_Key_Cols***  = Gesamtanzahl der Schlüsselspalten (fester und variabler Länge)  
   
-     ***Fixed_Key_Size*** = Gesamtzahl der Bytes in allen Schlüsselspalten fester Länge  
+     ***Fixed_Key_Size***  = Gesamtzahl der Bytes in allen Schlüsselspalten fester Länge  
   
-     ***Num_Variable_Key_Cols*** = Anzahl der Schlüsselspalten variabler Länge  
+     ***Num_Variable_Key_Cols***  = Anzahl der Schlüsselspalten variabler Länge  
   
-     ***Max_Var_Key_Size*** = Maximale Bytegröße aller Schlüsselspalten variabler Länge  
+     ***Max_Var_Key_Size***  = Maximale Bytegröße aller Schlüsselspalten variabler Länge  
   
 2.  Berücksichtigen Sie ggf. den Uniqueifier, der erforderlich ist, wenn der Index nicht eindeutig ist:  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 49
   
      Wenn der Index Spalten mit NULL-Zulässigkeit enthält, ist ein Teil der Indexzeile dem NULL-Bitmuster zugeordnet. Berechnen Sie dessen Größe:  
   
-     ***Index_Null_Bitmap*** = 2 + ((Anzahl der Spalten in der Indexzeile + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((Anzahl der Spalten in der Indexzeile + 7) / 8)  
   
      Nur der ganzzahlige Teil des vorherigen Ausdrucks darf verwendet werden. Der Rest wird verworfen.  
   
@@ -157,7 +161,7 @@ caps.handback.revision: 49
   
      ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
-     Die zu ***Max_Var_Key_Size*** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Key_Size***-Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
+     Die zu ***Max_Var_Key_Size*** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Key_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Key_Size*** auf 0 fest.  
   
@@ -183,17 +187,17 @@ caps.handback.revision: 49
   
      wobei 1 <= Level <= ***Non-leaf_Levels***  
   
-     Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem ***Num_Leaf_Pages*** = 1000 und ***Index_Rows_Per_Page*** = 25. gilt. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass 2 Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, ergibt sich Folgendes:  
+     Runden Sie jeden Summanden auf die nächste ganze Zahl auf. Stellen Sie sich als einfaches Beispiel einen Index vor, bei dem ***Num_Leaf_Pages*** = 1000 und ***Index_Rows_Per_Page*** = 25 gilt. Die erste Indexebene über der Blattebene speichert 1.000 Indexzeilen, dies bedeutet eine Indexzeile pro Blattseite. Dabei passen 25 Indexzeilen auf eine Seite. Dies bedeutet, dass 40 Seiten zum Speichern dieser 1.000 Indexzeilen erforderlich sind. Die nächste Ebene des Indexes muss 40 Zeilen speichern. Dies bedeutet, dass 2 Seiten erforderlich sind. Die letzte Ebene des Indexes muss zwei Zeilen speichern. Dies bedeutet, dass eine Seite erforderlich ist. Daraus ergeben sich 43 innere Knotenseiten im Index. Wenn Sie diese Werte in den oben genannten Formeln verwenden, ergibt sich Folgendes:  
   
      ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
-     ***Num_Index_Pages***= 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, was der Anzahl der Seiten im Beispiel entspricht.  
+     ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, was der Anzahl der Seiten im Beispiel entspricht.  
   
 9. Berechnen Sie die Größe des Indexes (insgesamt 8.192 Byte pro Seite):  
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Schritt 3: Addieren der berechneten Werte  
+## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
  Addieren Sie die Werte, die in den beiden vorherigen Schritten erzielt wurden:  
   
  Größe des gruppierten Indexes (in Bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -210,7 +214,7 @@ caps.handback.revision: 49
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**, and **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows*** zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**, and **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
   
 -   Komprimierung  
   
@@ -220,7 +224,7 @@ caps.handback.revision: 49
   
      Informationen zu den Speicherplatzanforderungen von Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Schätzen der Größe einer Tabelle](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   

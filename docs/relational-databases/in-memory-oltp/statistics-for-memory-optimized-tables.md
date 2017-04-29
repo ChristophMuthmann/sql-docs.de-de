@@ -1,22 +1,26 @@
 ---
-title: "Statistiken f&#252;r speicheroptimierte Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Statistiken für speicheroptimierte Tabellen | Microsoft Dokumentation"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Statistiken f&#252;r speicheroptimierte Tabellen
+# <a name="statistics-for-memory-optimized-tables"></a>Statistiken für speicheroptimierte Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Der Abfrageoptimierer verwendet Statistiken zu Spalten zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Die Statistiken werden aus den Tabellen in der Datenbank gesammelt und in den Datenbankmetadaten gespeichert.  
@@ -27,13 +31,13 @@ caps.handback.revision: 18
   
  Überlegungen zu Statistiken für speicheroptimierte Tabellen:  
   
--   Ab SQL Server 2016 und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wird bei Verwendung eines Datenbank-Kompatibilitätsgrads von mindestens 130 die automatische Aktualisierung von Statistiken für speicheroptimierte Tabellen unterstützt. Siehe [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md). Wenn eine Datenbank Tabellen enthält, die zuvor mit einem niedrigeren Kompatibilitätsgrad erstellt wurden, müssen die Statistiken einmal manuell aktualisiert werden, um die zukünftige automatische Aktualisierung von Statistiken zu aktivieren.
+-   Ab SQL Server 2016 und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]wird bei Verwendung eines Datenbank-Kompatibilitätsgrads von mindestens 130 die automatische Aktualisierung von Statistiken für speicheroptimierte Tabellen unterstützt. Siehe [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine Datenbank Tabellen enthält, die zuvor mit einem niedrigeren Kompatibilitätsgrad erstellt wurden, müssen die Statistiken einmal manuell aktualisiert werden, um die zukünftige automatische Aktualisierung von Statistiken zu aktivieren.
   
 -   Für systemintern kompilierte gespeicherte Prozeduren werden Ausführungspläne für Abfragen in der Prozedur optimiert, wenn die Prozedur kompiliert wird, was bei der Erstellung geschieht. Sie werden nicht automatisch erneut kompiliert, wenn Statistiken aktualisiert werden. Daher müssen die Tabellen eine repräsentative Menge von Daten enthalten, bevor die Prozeduren erstellt werden.  
   
--   Systemintern kompilierte gespeicherte Prozeduren können mit [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) manuell neu kompiliert werden, und sie werden automatisch neu kompiliert, wenn die Datenbank offline und dann wieder online geschaltet wird, oder falls ein Datenbank-Failover oder ein Serverneustart stattfindet.  
+-   Systemintern kompilierte gespeicherte Prozeduren können mit [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)manuell neu kompiliert werden, und sie werden automatisch neu kompiliert, wenn die Datenbank offline und dann wieder online geschaltet wird, oder falls ein Datenbank-Failover oder ein Serverneustart stattfindet.  
   
-## Aktivieren der automatischen Aktualisierung von Statistiken in bestehenden Tabellen
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>Aktivieren der automatischen Aktualisierung von Statistiken in bestehenden Tabellen
 
 Wenn Tabellen in einer Datenbank erstellt werden, deren Kompatibilitätsgrad mindestens 130 beträgt, wird die automatische Aktualisierung von Statistiken für alle Statistiken dieser Tabelle aktiviert, und keine weitere Aktion ist erforderlich.
 
@@ -83,10 +87,10 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## Richtlinien für die Bereitstellung von Tabellen und Prozeduren  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>Richtlinien für die Bereitstellung von Tabellen und Prozeduren  
  Um sicherzustellen, dass der Abfrageoptimierer beim Erstellen von Abfrageplänen über aktuelle Statistiken verfügt, führen Sie die folgenden vier Schritte aus, um speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren bereitzustellen:  
   
-1.  Stellen Sie sicher, dass der Kompatibilitätsgrad der Datenbank mindestens 130 beträgt. Siehe [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md).
+1.  Stellen Sie sicher, dass der Kompatibilitätsgrad der Datenbank mindestens 130 beträgt. Siehe [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 2.  Erstellen Sie Tabellen und Indizes. Indizes müssen inline in den **CREATE TABLE** -Anweisungen angegeben werden.  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  Indem Sie systemintern kompilierte gespeicherten Prozeduren erstellen, nachdem die Daten geladen wurden, wird sichergestellt, dass der Abfrageoptimierer über die für die speicheroptimierten Tabellen erforderlichen Statistiken verfügt. Damit liegen effiziente Abfragepläne vor, wenn die Prozedur kompiliert wird.  
 
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

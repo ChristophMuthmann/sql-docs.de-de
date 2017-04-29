@@ -1,33 +1,37 @@
 ---
-title: "SQL Server Audit-Aktionsgruppen und -Aktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "Überwachungsaktionen [SQL Server]"
-  - "Überwachungen [SQL Server], Gruppen"
-  - "Überwachungsaktionen auf Serverebene [SQL Server]"
-  - "SQL Server Audit"
-  - "Überwachungsaktionen auf Überwachungsebene [SQL Server]"
-  - "Überwachungsaktionen auf Datenbankebene [SQL Server]"
-  - "Überwachungsaktionsgruppen [SQL Server]"
-  - "Überwachungen [SQL Server], Aktionen"
+title: SQL Server Audit-Aktionsgruppen und -Aktionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit-Aktionsgruppen und -Aktionen
+# <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  Sämtliche Überwachungen werden nach dem ersten Erstellen deaktiviert.  
   
-## Überwachungsaktionsgruppen auf Serverebene  
+## <a name="server-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Serverebene  
  Überwachungsaktionsgruppen auf Serverebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen finden Sie unter [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Serverebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Das Ereignis wird immer dann ausgelöst, wenn das Kennwort des Benutzers einer eigenständigen Datenbank mit der ALTER USER-Anweisung geändert wird.|  
 |USER_DEFINED_AUDIT_GROUP|Diese Gruppe überwacht ausgelöste Ereignisse mithilfe von [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). In der Regel schließen Trigger oder gespeicherte Prozeduren Aufrufe von **sp_audit_write** ein, um das Überwachen von wichtigen Ereignissen zu aktivieren.|  
   
-### Weitere Überlegungen  
+### <a name="considerations"></a>Weitere Überlegungen  
  Aktionsgruppen auf Serverebene umfassen Aktionen auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz. Das Einchecken eines Schemaobjektszugriffs auf eine Datenbank wird beispielsweise aufgezeichnet, wenn die entsprechende Aktionsgruppe der Serverüberwachungsspezifikation hinzugefügt wird. In einer Datenbank-Überwachungsspezifikation werden nur Schemaobjektzugriffe in dieser Datenbank aufgezeichnet.  
   
  Aktionen auf Serverebene ermöglichen keine ausführliche Filterung für Aktionen auf Datenbankebene. Eine Überwachung auf Datenbankebene, z. B. eine Überwachung der SELECT-Aktionen in der Customers-Tabelle für Anmeldedaten in der Employee-Gruppe, ist für die Implementierung einer ausführlichen Aktionsfilterung notwendig. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
   
-## Überwachungsaktionsgruppen auf Datenbankebene  
+## <a name="database-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Datenbankebene  
  Überwachungsaktionsgruppen auf Datenbankebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen zu Ereignisklassen finden Sie unter [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Datenbankebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Das Ereignis wird immer dann ausgelöst, wenn das Kennwort des Benutzers einer eigenständigen Datenbank mit der ALTER USER-Anweisung geändert wird.|  
 |USER_DEFINED_AUDIT_GROUP|Diese Gruppe überwacht ausgelöste Ereignisse mithilfe von [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
   
-## Überwachungsaktionen auf Datenbankebene  
+## <a name="database-level-audit-actions"></a>Überwachungsaktionen auf Datenbankebene  
  Aktionen auf Datenbankebene unterstützen die direkte Überwachung von spezifischen Aktionen für Datenbankenschema- und Schemaobjekte, z. B. Tabellen, Sichten, gespeicherte Prozeduren, Funktionen, erweiterte gespeicherte Prozeduren, Warteschlangen, Synonyme. Typen, XML-Schemaauflistung, Datenbank und Schema werden nicht überwacht. Die Überwachung von Schemaobjekten kann für Schema und Datenbank konfiguriert werden, d. h., es werden alle Ereignisse für alle Schemaobjekte im angegebenen Schema oder in der angegebenen Datenbank überwacht. In der folgenden Tabelle werden Überwachungsaktionen auf Datenbankebene beschrieben.  
   
 |Aktion|Beschreibung|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|Dieses Ereignis wird immer dann ausgelöst, wenn RECEIVE ausgegeben wird.|  
 |REFERENCES|Dieses Ereignis wird immer dann ausgelöst, wenn eine REFERENCES-Berechtigung überprüft wird.|  
   
-### Weitere Überlegungen  
+### <a name="considerations"></a>Weitere Überlegungen  
 *  Überwachungsaktionen auf Datenbankebene gelten nicht für Spalten.  
   
 *  Wenn der Abfrageprozessor die Abfrage parametrisiert, wird der Parameter unter Umständen im Überwachungsereignisprotokoll und nicht in den Spaltenwerten der Abfrage angezeigt. 
  
 *  RPC-Anweisungen werden nicht protokolliert. 
   
-## Überwachungsaktionsgruppen auf Überwachungsebene  
+## <a name="audit-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Überwachungsebene  
  Sie können auch die Aktionen im Überwachungsprozess überwachen. Dies kann im Serverbereich oder im Datenbankbereich durchgeführt werden. Im Datenbankbereich tritt dies nur bei Datenbank-Überwachungsspezifikationen auf. In der folgenden Tabelle werden Überwachungsaktionsgruppen auf Überwachungsebene beschrieben.  
   
 |Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

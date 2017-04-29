@@ -1,45 +1,49 @@
 ---
-title: "Anzeigen der Gr&#246;&#223;e der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL) | Microsoft Docs"
-ms.date: "07/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Momentaufnahmen [SQL Server-Datenbank-Momentaufnahmen], Dateien mit geringer Dichte"
-  - "Speicherplatz [SQL Server], Dateien mit geringer Dichte"
-  - "Dateien mit geringer Dichte [SQL Server]"
-  - "Größe [SQL Server], Dateien mit geringer Dichte"
-  - "Maximale Größe von Dateien mit geringer Dichte"
-  - "Datenbank-Momentaufnahmen [SQL Server], Dateien mit geringer Dichte"
-  - "Speicherplatz [SQL Server], Datenbank-Momentaufnahmen"
+title: "Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL) | Microsoft-Dokumentation"
+ms.date: 07/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server database snapshots], sparse files
+- space [SQL Server], sparse files
+- sparse files [SQL Server]
+- size [SQL Server], sparse files
+- maximum sparse file size
+- database snapshots [SQL Server], sparse files
+- space [SQL Server], database snapshots
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76e79c5662019c197c2cb11785ca250ac4ba2d0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anzeigen der Gr&#246;&#223;e der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL)
+# <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL)
   In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] überprüfen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdatei eine Datei mit geringer Dichte ist, und wie Sie die tatsächliche und maximale Größe ermitteln. Dateien mit geringer Dichte, die in Verbindung mit dem NTFS-Dateisystem vorkommen, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmomentaufnahmen verwendet.  
   
 > [!NOTE]  
 >  Beim Erstellen von Datenbankmomentaufnahmen werden Dateien mit geringer Dichte mithilfe der Dateinamen in der CREATE DATABASE-Anweisung erstellt. Diese Dateinamen werden in der Spalte **physical_name** in **sys.master_files** gespeichert. In **sys.database_files** (sowohl in der Quelldatenbank wie auch in einer Momentaufnahme) enthält die Spalte **physical_name** immer die Namen der Quelldatenbankdateien.  
   
-## Überprüfen, ob eine Datenbankdatei eine Datei mit geringer Dichte ist  
+## <a name="verify-that-a-database-file-is-a-sparse-file"></a>Überprüfen, ob eine Datenbankdatei eine Datei mit geringer Dichte ist  
   
 1.  Auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-     Wählen Sie entweder in der Datenbank-Momentaufnahme unter **sys.database_files** oder in **sys.master_files** die Spalte **is_sparse** aus. Der Wert gibt wie folgt an, ob die Datei eine Datei mit geringer Dichte ist:  
+     Wählen Sie entweder in der Datenbank-Momentaufnahme unter **sys.database_files** oder in **sys.master_files** die Spalte **is_sparse**aus. Der Wert gibt wie folgt an, ob die Datei eine Datei mit geringer Dichte ist:  
   
      1 = Die Datei ist eine Datei mit geringer Dichte.  
   
      0 = Die Datei ist keine Datei mit geringer Dichte.  
   
-## Ermitteln der tatsächlichen Größe einer Datei mit geringer Dichte  
+## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Ermitteln der tatsächlichen Größe einer Datei mit geringer Dichte  
   
 > [!NOTE]  
 >  Dateien mit geringer Dichte wachsen in 64-KB-Schritten, weshalb die Größe einer Datei mit geringer Dichte auf dem Datenträger immer einem Vielfachen von 64 KB entspricht.  
@@ -48,7 +52,7 @@ caps.handback.revision: 41
   
  Zum Anzeigen des Speicherplatzes, der durch eine Datei mit geringer Dichte in Anspruch genommen wird, klicken Sie in Microsoft Windows mit der rechten Maustaste auf **Eigenschaften**, und lesen Sie den Wert unter **Größe auf Datenträger** ab.  
   
-## Ermitteln der maximalen Größe einer Datei mit geringer Dichte  
+## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Ermitteln der maximalen Größe einer Datei mit geringer Dichte  
  Eine Datei mit geringer Dichte kann maximal die Größe der Quelldatenbankdatei erreichen, die zum Zeitpunkt der Momentaufnahmeerstellung festgelegt wurde. Zur Ermittlung dieser Größe stehen Ihnen die folgenden Alternativen zur Auswahl:  
   
 -   Verwenden der Windows-Eingabeaufforderung:  
@@ -63,8 +67,8 @@ caps.handback.revision: 41
   
      ( *Seitenanzahl* * 8192)  
 
-## Beispiel
-Das folgende Skript zeigt für jede Datei mit geringer Dichte die Größe auf dem Datenträger in KB an.  Das Skript zeigt außerdem die maximale Größe in MB an, auf die eine Datei mit geringer Dichte anwachsen kann.  Führen Sie das Transact-SQL-Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus.
+## <a name="example"></a>Beispiel
+Das folgende Skript zeigt für jede Datei mit geringer Dichte die Größe auf dem Datenträger in KB an.  Das Skript zeigt außerdem die maximale Größe in MB an, auf die eine Datei mit geringer Dichte anwachsen kann.  Führen Sie das Transact-SQL-Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 
 ```tsql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
@@ -84,10 +88,11 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

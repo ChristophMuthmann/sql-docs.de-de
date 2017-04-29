@@ -1,31 +1,35 @@
 ---
-title: "Nicht deterministische Inhaltsmodelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Nicht deterministische Inhaltsmodelle"
-  - "Inhaltsmodelle [XML in SQL Server]"
+title: Nicht deterministische Inhaltsmodelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-deterministic content models
+- content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b0f88c06eea8c1b15ead500eb365ac4fce8d5c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nicht deterministische Inhaltsmodelle
+# <a name="non-deterministic-content-models"></a>Nicht deterministische Inhaltsmodelle
   Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) lehnte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML-Schemas ab, die nicht deterministische Inhaltsmodelle enthielten.  
   
  Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 werden nicht deterministische Inhaltsmodelle jedoch akzeptiert, wenn die Vorkommenseinschränkungen „0,1“ oder „unbegrenzt“ lauten.  
   
-## Beispiel: Nicht deterministisches Inhaltsmodell abgelehnt  
- Im folgenden Beispiel wird versucht, ein XML-Schema mit einem nicht deterministischen Inhaltsmodell zu erstellen. Der Code schlägt fehl, da unklar ist, ob das `<root>`-Element eine Sequenz mit zwei `<a>`-Elementen oder ob das `<root>`-Element zwei Sequenzen mit jeweils einem `<a>`-Element haben sollte.  
+## <a name="example-non-deterministic-content-model-rejected"></a>Beispiel: Nicht deterministisches Inhaltsmodell abgelehnt  
+ Im folgenden Beispiel wird versucht, ein XML-Schema mit einem nicht deterministischen Inhaltsmodell zu erstellen. Der Code schlägt fehl, da unklar ist, ob das `<root>` -Element eine Sequenz mit zwei `<a>` -Elementen oder ob das `<root>` -Element zwei Sequenzen mit jeweils einem `<a>` -Element haben sollte.  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
@@ -58,7 +62,7 @@ GO
 </sequence>  
 ```  
   
-## Beispiel: Nicht deterministisches Inhaltsmodell akzeptiert  
+## <a name="example-non-deterministic-content-model-accepted"></a>Beispiel: Nicht deterministisches Inhaltsmodell akzeptiert  
  Das folgende Schema würde in Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 sind, abgelehnt werden.  
   
 ```  
@@ -77,7 +81,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS '
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

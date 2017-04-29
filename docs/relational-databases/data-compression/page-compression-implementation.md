@@ -1,25 +1,29 @@
 ---
-title: "Implementierung von Seitenkomprimierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Seitenkomprimierung [Datenbankmodul]"
-  - "Komprimierung [SQL Server], Seite"
+title: Implementierung von Seitenkomprimierung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 06/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20038dcaae2d0d33e2a38e1d0fcd1567b2520c03
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementierung von Seitenkomprimierung
+# <a name="page-compression-implementation"></a>Implementierung von Seitenkomprimierung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird zusammengefasst, wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] Seitenkomprimierung implementiert. Diese Zusammenfassung enthält grundlegende Informationen, die Ihnen bei der Planung des Speicherplatzes helfen, den Sie für Ihre Daten benötigten.  
@@ -36,7 +40,7 @@ caps.handback.revision: 21
   
  Wenn Sie Seitenkomprimierung verwenden, werden Seiten auf Nichtblattebene von Indizes lediglich mit der Zeilenkomprimierung komprimiert. Weitere Informationen zur Zeilenkomprimierung finden Sie unter [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
-## Präfixkomprimierung  
+## <a name="prefix-compression"></a>Präfixkomprimierung  
  Für jede Seite, die komprimiert wird, verwendet die Präfixkomprimierung die folgenden Schritte:  
   
 1.  Für jede Spalte wird ein Wert identifiziert, mit dem der Speicherplatz für die Werte in jeder Spalte verringert werden kann.  
@@ -53,22 +57,23 @@ caps.handback.revision: 21
   
  ![Seite nach der Präfixkomprimierung](../../relational-databases/data-compression/media/tblcompression2.gif "Seite nach der Präfixkomprimierung")  
   
- Der Wert 4b in der ersten Spalte der ersten Zeile zeigt an, dass die ersten vier Zeichen des Präfixes (aaab) sowie das Zeichen b für diese Zeile vorhanden sind. Daraus resultiert der Wert aaabb, welcher der ursprüngliche Wert ist.  
+ Der Wert 4b in der ersten Spalte der ersten Zeile zeigt an, dass die ersten vier Zeichen des Präfixes (aaab) sowie das Zeichen b für diese Zeile vorhanden sind. Daraus resultiert der Wert aaabb, welcher der ursprüngliche Wert ist.  
   
-## Wörterbuchkomprimierung  
+## <a name="dictionary-compression"></a>Wörterbuchkomprimierung  
  Nach dem Abschluss der Präfixkomprimierung wird die Wörterbuchkomprimierung angewendet. Die Wörterbuchkomprimierung sucht nach wiederholten Werten auf der Seite und speichert diese im CI-Bereich. Im Gegensatz zur Präfixkomprimierung ist die Wörterbuchkomprimierung nicht auf eine Spalte beschränkt. Die Wörterbuchkomprimierung kann wiederholte Werte ersetzen, die an einer beliebigen Stelle auf einer Seite auftreten. Die folgende Abbildung zeigt dieselbe Seite nach der Wörterbuchkomprimierung.  
   
  ![Seite nach der Wörterbuchkomprimierung](../../relational-databases/data-compression/media/tblcompression3.gif "Seite nach der Wörterbuchkomprimierung")  
   
  Beachten Sie, dass auf den Wert 4b von anderen Spalten der Seite verwiesen wurde.  
   
-## Wenn Seitenkomprimierung auftritt  
+## <a name="when-page-compression-occurs"></a>Wenn Seitenkomprimierung auftritt  
  Wenn eine neue Tabelle mit Seitenkomprimierung erstellt wird, tritt keine Komprimierung auf. Die Metadaten für die Tabelle geben jedoch an, dass Seitenkomprimierung verwendet werden sollte. Wenn Sie auf der ersten Datenseite Daten hinzufügen, wird Zeilenkomprimierung auf die Daten angewendet. Da die Seite nicht voll ist, werden mit der Seitenkomprimierung keine Vorteile erzielt. Wenn die Seite voll ist, löst die nächste Zeile, die hinzugefügt wird, den Seitenkomprimierungsvorgang aus. Die gesamte Seite wird überprüft. Jede Spalte wird für die Präfixkomprimierung bewertet, und anschließend werden alle Spalten für die Wörterbuchkomprimierung bewertet. Wenn die Seitenkomprimierung auf der Seite ausreichend Platz für eine weitere Zeile geschaffen hat, wird die Zeile hinzugefügt. Auf die Daten wird Zeilen- und Seitenkomprimierung angewendet. Wenn der durch Seitenkomprimierung erzielte Platzgewinn abzüglich des für die CI-Struktur benötigten Platzes unbedeutend ist, wird für diese Seite keine Seitenkomprimierung verwendet. Wenn zukünftige Zeilen nicht mehr auf diese neue Seite passen, wird der Tabelle eine neue Seite hinzugefügt. Wie bei der ersten Seite wird auf diese neue Seite keine Seitenkomprimierung angewendet.  
   
  Wenn auf eine vorhandene Tabelle, die Daten enthält, Seitenkomprimierung angewendet wird, wird jede Seite neu erstellt und bewertet. Das Neuerstellen aller Seiten hat die Neuerstellung der Tabelle, des Indexes oder der Partition zur Folge.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
- [Implementierung von Zeilenkomprimierung](../../relational-databases/data-compression/row-compression-implementation.md)  
+ [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   
+

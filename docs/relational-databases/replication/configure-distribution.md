@@ -1,32 +1,36 @@
 ---
-title: "Konfigurieren der Verteilung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Replikation [SQL Server], Verteilung"
-  - "Verteilungskonfiguration [SQL Server-Replikation]"
-  - "Remoteverteiler [SQL Server-Replikation]"
-  - "Transaktionsreplikation, Konfigurieren der Verteilung"
-  - "Verteilungsdatenbanken [SQL Server-Replikation], dimensionieren"
-  - "Verteiler [SQL Server-Replikation], konfigurieren"
-  - "Verteilungsdatenbanken [SQL Server-Replikation], Informationen zu Verteilungsdatenbanken"
-  - "Verteilungsdatenbanken [SQL Server-Replikation]"
-  - "Mergereplikation [SQL Server-Replikation], Konfigurieren der Verteilung"
+title: Konfigurieren der Verteilung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], distribution
+- distribution configuration [SQL Server replication]
+- remote Distributors [SQL Server replication]
+- transactional replication, configuring distribution
+- distribution databases [SQL Server replication], sizing
+- Distributors [SQL Server replication], configuring
+- distribution databases [SQL Server replication], about distribution databases
+- distribution databases [SQL Server replication]
+- merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc7ddc90a9592cd62c50b31a2d5b8220c85e3f83
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren der Verteilung
+# <a name="configure-distribution"></a>Konfigurieren der Verteilung
   Bei dem Verteiler handelt es sich um einen Server, der die Verteilungsdatenbank enthält. In der Datenbank sind Metadaten und Verlaufsdaten für alle Replikations- und Transaktionstypen der Transaktionsreplikation gespeichert. Zum Einrichten der Replikation müssen Sie einen Verteiler konfigurieren. Jeder Verleger kann nur einer einzigen Verteilerinstanz zugewiesen werden, es kann jedoch für mehrere ein Verteiler freigegeben werden. Der Verteiler verwendet die folgenden zusätzlichen Ressourcen auf dem Server, auf dem er sich befindet:  
   
 -   Zusätzlichen Speicherplatz, falls die Momentaufnahmedateien für die Veröffentlichung auf dem Verteiler gespeichert werden (was in der Regel der Fall ist).  
@@ -45,11 +49,11 @@ caps.handback.revision: 44
   
  Führen Sie bei der Transaktionsreplikation nach dem Konfigurieren der Verteilung folgende Aktionen aus:  
   
--   Richten Sie eine angemessene Größe für die Verteilungsdatenbank ein. Testen Sie die Replikation unter der typischen Auslastung des Systems, um den Speicherbedarf für Befehle zu ermitteln. Stellen Sie sicher, dass die Datenbank ausreichend Speicherkapazität für Befehle aufweist, um die häufige automatische Vergrößerung zu verhindern. Weitere Informationen zum Ändern der Größe einer Datenbank finden Sie unter [ALTER DATABASE & #40; Transact-SQL & #41;](../../t-sql/statements/alter-database-transact-sql.md).  
+-   Richten Sie eine angemessene Größe für die Verteilungsdatenbank ein. Testen Sie die Replikation unter der typischen Auslastung des Systems, um den Speicherbedarf für Befehle zu ermitteln. Stellen Sie sicher, dass die Datenbank ausreichend Speicherkapazität für Befehle aufweist, um die häufige automatische Vergrößerung zu verhindern. Weitere Informationen zum Ändern der Größe einer Datenbank finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
--   Legen Sie die Option **sync with backup** für die Verteilungsdatenbank fest. Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) und [Aktivieren koordinierter Sicherungen für Transaktionsreplikation & #40; Replikationsprogrammierung mit Transact-SQL & #41;](../../relational-databases/replication/administration/enable coordinated backups for transactional replication.md).  
+-   Legen Sie die Option **sync with backup** für die Verteilungsdatenbank fest. Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) und [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).  
   
-## Lokale und Remoteverteiler  
+## <a name="local-and-remote-distributors"></a>Lokale und Remoteverteiler  
  Standardmäßig handelt es sich beim Verteiler um den gleichen Server wie beim Verleger (ein lokaler Verteiler), der Verteiler kann jedoch auch ein anderer Server sein als der Verleger (ein Remoteverteiler). In der Regel verwenden Sie in den folgenden Fällen einen Remoteverteiler:  
   
 -   Zum Auslagern der Verarbeitung auf einen anderen Computer, wenn sich die Replikation so wenig wie möglich auf den Verleger auswirken soll (z. B. wenn der Verleger ein OLTP-Server ist).  
@@ -60,13 +64,13 @@ caps.handback.revision: 44
   
 -   Der Verteiler spielt bei der Transaktionsreplikation eine größere Rolle, da alle replizierten Transaktionen in die Verteilungsdatenbank geschrieben werden oder daraus gelesen werden.  
   
--   Mergereplikationstoplogien verwenden im Allgemeinen Pullabonnements. Deshalb werden Agents jeweils auf einzelnen Abonnenten und nicht alle auf dem Verteiler ausgeführt. Weitere Informationen finden Sie unter [abonnieren Publikationen](../../relational-databases/replication/subscribe-to-publications.md). In den meisten Fällen sollten Sie einen lokalen Verteiler für die Mergereplikation verwenden.  
+-   Mergereplikationstoplogien verwenden im Allgemeinen Pullabonnements. Deshalb werden Agents jeweils auf einzelnen Abonnenten und nicht alle auf dem Verteiler ausgeführt. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md). In den meisten Fällen sollten Sie einen lokalen Verteiler für die Mergereplikation verwenden.  
   
  Informationen zum Konfigurieren Sie der Veröffentlichung und Verteilung finden Sie unter [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
  Informationen zum Ändern der Verleger- und Verteilereigenschaften finden Sie unter [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md)  
   

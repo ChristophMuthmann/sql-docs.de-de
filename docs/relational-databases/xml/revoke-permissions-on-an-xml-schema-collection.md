@@ -1,24 +1,28 @@
 ---
-title: "Aufheben der Berechtigungen f&#252;r eine XML-Schemaauflistung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aufheben von Berechtigungen [SQL Server]"
+title: "Aufheben der Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aufheben der Berechtigungen f&#252;r eine XML-Schemaauflistung
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>Aufheben der Berechtigungen für eine XML-Schemaauflistung
   Die Berechtigung zum Erstellen einer XML-Schemaauflistung kann mithilfe eines der folgenden Verfahren aufgehoben werden:  
   
 -   Aufheben der ALTER-Berechtigung für das relationale Schema. Der Prinzipal kann in diesem Fall keine XML-Schemaauflistung im relationalen Schema erstellen. Der Prinzipal kann dies jedoch auch weiterhin in anderen relationalen Schemas in der gleichen Datenbank.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   Aufheben der CREATE XML SCHEMA COLLECTION- oder ALTER XML SCHEMA COLLECTION-Berechtigung für die Datenbank für den Prinzipal. Dies verhindert, dass der Prinzipal eine XML-Schemaauflistung innerhalb der Datenbank importieren kann. Das Aufheben der ALTER- oder CONTROL-Berechtigung für die Datenbank besitzt die gleichen Auswirkungen.  
   
-## Aufheben der Berechtigungen für ein vorhandenes XML-Schemaauflistungsobjekt  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>Aufheben der Berechtigungen für ein vorhandenes XML-Schemaauflistungsobjekt  
  Im Folgenden finden Sie die Berechtigungen, die für eine XML-Schemaauflistung aufgehoben werden können, sowie die Ergebnisse:  
   
 -   Durch das Aufheben der ALTER-Berechtigung wird die Fähigkeit eines Prinzipals zum Ändern des Inhalts der XML-Schemaauflistung aufgehoben.  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   Durch das Aufheben der EXECUTE-Berechtigung wird die Fähigkeit eines Prinzipals zum Einfügen oder Aktualisieren von Werten in Spalten, Variablen und Parametern aufgehoben, die durch die XML-Auflistung typisiert oder eingeschränkt werden. Außerdem wird die Fähigkeit zum Abfragen solcher Spalten, Variablen oder Parameter vom Typ **xml** aufgehoben.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Die Szenarien in den folgenden Beispielen veranschaulichen, wie XML-Schemaberechtigungen funktionieren. Jedes dieser Beispiele erstellt die erforderliche Testdatenbank, die relationalen Schemas und Anmeldungen. Diesen Anmeldenamen werden die erforderlichen Berechtigungen für XML-Schemaauflistungen erteilt. Jedes der Beispiele führt am Ende den erforderlichen Cleanup aus.  
   
-### A. Aufheben der Berechtigungen zum Erstellen einer XML-Schemaauflistung  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Aufheben der Berechtigungen zum Erstellen einer XML-Schemaauflistung  
  Dieses Beispiel erstellt eine Anmeldung und eine Beispieldatenbank. Darüber hinaus wird in der Datenbank ein relationales Schema hinzugefügt. Anfangs werden dem Anmeldenamen die ALTER-Berechtigung für relationale Schemas und andere erforderliche Berechtigungen zum Erstellen von XML-Schemaauflistungen erteilt. Das Beispiel hebt dann die ALTER-Berechtigung für eines der relationalen Schemas in der Datenbank auf. Dies verhindert, dass der Anmeldename eine XML-Schemaauflistung erstellen kann.  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

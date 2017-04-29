@@ -1,30 +1,34 @@
 ---
-title: "PolyBase-Installation | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase, Installation"
+title: PolyBase-Installation | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
 caps.latest.revision: 25
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase-Installation
+# <a name="polybase-installation"></a>PolyBase-Installation
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Besuchen Sie [SQL Server Evaluierungsversionen](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), um eine Testversion von SQL Server zu installieren. 
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 -   Eine 64-Bit-Evaluierungs-Edition von SQL Server  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 23
   
 -   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit) (Sowohl [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) als auch [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktionieren). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm löst einen Fehler aus, wenn JRE nicht vorhanden ist.  
   
--   Mindestens erforderlicher Arbeitsspeicher: 4 GB  
+-   Mindestens erforderlicher Arbeitsspeicher: 4 GB  
   
 -   Mindestfestplattenspeicher: 2 GB  
   
@@ -42,9 +46,17 @@ caps.handback.revision: 23
   
  PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.  
   
-## Installieren mithilfe des Installations-Assistenten  
+## <a name="single-node-or-polybase-scaleout-group"></a>Einzelknoten oder PolyBase-Erweiterungsgruppe
+Planen Sie vor der Installation von PolyBase auf den SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine PolyBase-Erweiterungsgruppe möchten. Vergewissern Sie sich für eine PolyBase-Erweiterungsgruppe, dass folgende Anforderungen erfüllt sind: 
+- Alle Computer befinden sich in derselben Domäne.
+- Sie verwenden während der Installation dasselbe Dienstkonto und Kennwort.
+- Die SQL Server-Instanzen können über das Netzwerk miteinander kommunizieren.
+
+Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installiert wurde, können Sie dies nicht mehr ändern. Sie müssen die Funktion deinstallieren und wieder neu installieren, um diese Einstellung zu ändern.
+
+## <a name="install-using-the-installation-wizard"></a>Installieren mithilfe des Installations-Assistenten  
   
-1.  Führen Sie das **SQL Server-Installationscenter** aus. Legen Sie die SQL Server-Installationsmedien ein, und doppelklicken Sie auf **Setup.exe**.  
+1.  Führen Sie das **SQL Server-Installationscenter**aus. Legen Sie die SQL Server-Installationsmedien ein, und doppelklicken Sie auf **Setup.exe**.  
   
 2.  Klicken Sie auf **Installation**, dann auf **New Standalone SQL Server installation or add features**(Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen).  
   
@@ -76,9 +88,9 @@ caps.handback.revision: 23
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Moduldienstkonto an.|  
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
-|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Gibt das Konto für den Datenverschiebungsdienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Gibt das Kennwort für das Datenverschiebungskonto an.|  
-|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Gibt den Startmodus für den Datenverschiebungsdienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Gibt das Konto für den Datenverschiebungsdienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Gibt das Kennwort für das Datenverschiebungskonto an.|  
+|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Gibt den Startmodus für den Datenverschiebungsdienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Gibt an, ob die SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe aus Computeknoten verwendet wird. <br />Unterstützte Werte: **True**, **False**|  
 |PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
@@ -89,7 +101,7 @@ caps.handback.revision: 23
 ```  
   
 Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
-/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<fabric-domain>\Administrator"   
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"   
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
 /PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
 /PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<StrongPassword>"   
@@ -97,17 +109,17 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
   
 ```  
   
-## Hinweise zur Installationsnachbereitung  
+## <a name="post-installation-notes"></a>Hinweise zur Installationsnachbereitung  
  PolyBase installiert drei Benutzerdatenbanken, und zwar DWConfiguration, DWDiagnostics und DWQueue.   Diese sind für die Verwendung von PolyBase gedacht und dürfen nicht verändert oder gelöscht werden.  
   
-### So bestätigen Sie die Installation  
+### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie den folgenden Befehl aus. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  
   
 ```tsql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-### Firewallregeln  
+### <a name="firewall-rules"></a>Firewallregeln  
  SQL Server PolyBase-Setup erstellt die folgenden Firewallregeln auf dem Computer.  
   
 -   SQL Server PolyBase – Datenbankmodul – \<SQL Server-Instanzname> (eingehendes TCP)  
@@ -118,7 +130,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
  Wenn Sie auswählen, dass die SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwendet werden soll, werden diese Regeln bei der Installation aktiviert und die Firewall wird für eingehende Verbindungen mit den Diensten SQL Server-Datenbankmodul, SQL Server PolyBase-Modul und SQL Server PolyBase-Datenverschiebung sowie dem SQL-Browser geöffnet. Wenn der Firewalldienst des Computers während der Installation jedoch nicht ausgeführt wird, kann SQL Server-Setup diese Regeln nicht aktivieren. In diesem Fall müssen Sie den Firewalldienst des Computers starten und diese Regeln nach der Installation aktivieren.  
   
-#### So aktivieren Sie die Firewallregeln  
+#### <a name="to-enable-the-firewall-rules"></a>So aktivieren Sie die Firewallregeln  
   
 -   Öffnen Sie die **Systemsteuerung**.  
   
@@ -128,10 +140,11 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Klicken Sie mit der rechten Maustaste auf die deaktivierte Regel, und klicken Sie dann **Regel aktivieren**.  
   
-### PolyBase-Dienstkonten
+### <a name="polybase-service-accounts"></a>PolyBase-Dienstkonten
 Deinstallieren Sie die PolyBase-Funktion, und installieren Sie sie erneut, um die Dienstkonten für das PolyBase-Modul und die PolyBase-Datenverschiebungsdienste zu ändern.
    
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
  Siehe [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
   
+

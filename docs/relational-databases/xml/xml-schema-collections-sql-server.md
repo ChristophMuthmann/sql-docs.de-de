@@ -1,40 +1,44 @@
 ---
-title: "XML-Schemaauflistungen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD-Schemas [SQL Server]"
-  - "xml_schema_namespace-Funktion"
-  - "XML-Schemasammlungen [SQL Server], Informationen zu XML-Schemasammlungen"
-  - "Metadaten [SQL Server], XML-Schemasammlungen"
-  - "Abfragen [XML in SQL Server], XML-Schemasammlungen"
-  - "Schemaauflistungen [SQL Server]"
-  - "Schemas [SQL Server], XML"
-  - "XML [SQL Server], Schemasammlungen"
-  - "XML-Schemaauflistungen [SQL Server]"
-  - "Schemasammlungen [SQL Server], Informationen zu XML-Schemasammlungen"
+title: XML-Schemaauflistungen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- xml_schema_namespace function
+- XML schema collections [SQL Server], about XML schema collections
+- metadata [SQL Server], XML schema collections
+- queries [XML in SQL Server], XML schema collections
+- schema collections [SQL Server]
+- schemas [SQL Server], XML
+- XML [SQL Server], schema collections
+- XML schema collections [SQL Server]
+- schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML-Schemaauflistungen (SQL Server)
+# <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
   Wie im Thema [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) beschrieben wird, ermöglicht SQL Server eine systemeigene Speicherung von XML-Daten mithilfe des **xml**-Datentyps. Optional können Sie über eine XML-Schemaauflistung einer Variablen oder einer Spalte vom **xml** -Typ XSD-Schemas zuordnen. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  
   
 -   Überprüfen von XML-Instanzen  
   
 -   Typisierung der in der Datenbank gespeicherten XML-Daten  
   
- Beachten Sie, dass die XML-Schemaauflistung wie eine Tabelle in der Datenbank eine Metadatenentität ist. Sie können sie erstellen, ändern und löschen. In einer [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)-Anweisung angegebene Schemas werden automatisch in das neu erstellte XML-Schemaauflistungsobjekt importiert. Mit der [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)-Anweisung können Sie zusätzliche Schemas oder Schemakomponenten in ein in der Datenbank vorhandenes Auflistungsobjekt importieren.  
+ Beachten Sie, dass die XML-Schemaauflistung wie eine Tabelle in der Datenbank eine Metadatenentität ist. Sie können sie erstellen, ändern und löschen. In einer [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) -Anweisung angegebene Schemas werden automatisch in das neu erstellte XML-Schemaauflistungsobjekt importiert. Mit der [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)-Anweisung können Sie zusätzliche Schemas oder Schemakomponenten in ein in der Datenbank vorhandenes Auflistungsobjekt importieren.  
   
  Wie im Thema [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) beschrieben wird, wird der XML-Code, der in einer Spalte oder in einer Variablen mit zugeordnetem Schema gespeichert ist, als **typisiertes** XML bezeichnet, weil das Schema die für die Instanzendaten benötigten Datentypinformationen bereitstellt. SQL Server verwendet diese Typinformationen für die Optimierung des Datenspeichers.  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 31
   
  Das obige Schema zeigt die verschiedenen Attributtypen von Komponenten, die in der Datenbank gespeichert werden können. Hierzu zählen `SomeAttribute`, `SomeType`, `OrderType`, `CustomerType`, `Customer`, `Order`, `CustomerID`, `OrderID`, `OrderDate`, `RequiredDate`und `ShippedDate`.  
   
-### Komponentenkategorien  
+### <a name="component-categories"></a>Komponentenkategorien  
  Die in der Datenbank gespeicherten Schemakomponenten fallen in folgende Kategorien:  
   
 -   ELEMENT  
@@ -160,7 +164,7 @@ caps.handback.revision: 31
 ##  <a name="info"></a> Abrufen von Informationen zu XML-Schemas und -Schemaauflistungen  
  XML-Schemaauflistungen sind in der Katalogsicht sys.xml_schema_collections aufgeführt. Die XML-Schemaauflistung "sys" wird durch das System definiert. Sie enthält die vordefinierten Namespaces, die in allen benutzerdefinierten XML-Schemaauflistungen verwendet werden können, ohne dass sie explizit geladen werden müssen. Diese Auflistung enthält die Namespaces für xml, xs, xsi, fn und xdt. Zwei weitere Katalogsichten sind sys.xml_schema_namespaces, die alle Namespaces innerhalb jeder Schemaauflistung aufführt, und sys.xml_components, die alle XML-Schemakomponenten innerhalb jedes XML-Schemas aufführt.  
   
- Die integrierte Funktion **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, ergibt eine **xml**-Datentypinstanz. Diese Instanz enthält XML-Schemafragmente für Schemas, die in einer XML-Schemaauflistung enthalten sind, mit Ausnahme der vordefinierten XML-Schemas.  
+ Die integrierte Funktion **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, ergibt eine **xml** -Datentypinstanz. Diese Instanz enthält XML-Schemafragmente für Schemas, die in einer XML-Schemaauflistung enthalten sind, mit Ausnahme der vordefinierten XML-Schemas.  
   
  Es gibt folgende Möglichkeiten, um den Inhalt einer XML-Schemaauflistung aufzuführen:  
   
@@ -170,7 +174,7 @@ caps.handback.revision: 31
   
  Diese Möglichkeiten werden in den folgenden Beispielen veranschaulicht.  
   
-### Beispiel: Aufführen der XML-Namespaces in einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Aufführen der XML-Namespaces in einer XML-Schemaauflistung  
  Verwenden Sie die folgende Abfrage für die XML-Schemaauflistung "myCollection":  
   
 ```  
@@ -180,16 +184,16 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### Beispiel: Aufführen des Inhalts einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Aufführen des Inhalts einer XML-Schemaauflistung  
  Mit der folgenden Anweisung wird der Inhalt der XML-Schemaauflistung "myCollection" innerhalb des relationalen Schemas dbo aufgeführt.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Einzelne XML-Schemas innerhalb der Auflistung können als **xml**-Datentypinstanzen abgerufen werden, indem der Zielnamespace als drittes Argument für **XML_SCHEMA_NAMESPACE()** angegeben wird. Dies wird im folgenden Beispiel gezeigt.  
+ Einzelne XML-Schemas innerhalb der Auflistung können als **xml** -Datentypinstanzen abgerufen werden, indem der Zielnamespace als drittes Argument für **XML_SCHEMA_NAMESPACE()**angegeben wird. Dies wird im folgenden Beispiel gezeigt.  
   
-### Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
  Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace "http://www.microsoft.com/books" aus der XML-Schemaauflistung "myCollection" innerhalb dem relationalen Schema dbo ausgegeben.  
   
 ```  
@@ -197,14 +201,14 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',
 N'http://www.microsoft.com/books')  
 ```  
   
-### Abfragen von XML-Schemas  
+### <a name="querying-xml-schemas"></a>Abfragen von XML-Schemas  
  Es gibt folgende Möglichkeiten, um XML-Schemas, die Sie in XML-Schemaauflistungen geladen haben, abzufragen:  
   
 -   Schreiben Sie Transact-SQL-Abfragen zu Katalogsichten für XML-Schemaauflistungen.  
   
 -   Erstellen Sie eine Tabelle, die eine **xml** -Datentypspalte enthält, um die XML-Schemas zu speichern, und laden Sie diese auch in das XML-Typsystem. Sie können dann diese XML-Spalte abfragen, indem Sie **xml** -Datentypmethoden verwenden. Für diese Spalte können Sie auch einen XML-Index erstellen. Allerdings muss die Anwendung für diese Vorgehensweise die Konsistenz zwischen den in der XML-Spalte gespeicherten XML-Schemas und dem XML-Typsystem beibehalten. Wenn Sie z. B. den XML-Schemanamespace aus dem XML-Typsystem löschen, müssen Sie ihn auch aus der Tabelle löschen, damit die Konsistenz beibehalten wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen einer gespeicherten XML-Schemaauflistung](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

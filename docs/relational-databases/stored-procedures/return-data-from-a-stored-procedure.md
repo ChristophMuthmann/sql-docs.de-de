@@ -1,31 +1,35 @@
 ---
-title: "Zur&#252;ckgeben von Daten von einer gespeicherten Prozedur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gespeicherte Prozeduren [SQL Server], Rückgabe von Daten"
-  - "Zurückgeben von Daten von einer gespeicherten Prozedur"
+title: "Zurückgeben von Daten von einer gespeicherten Prozedur | Microsoft Dokumentation"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], returning data
+- returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.lasthandoff: 04/11/2017
+
 ---
-# Zur&#252;ckgeben von Daten von einer gespeicherten Prozedur
+# <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
   Es gibt zwei Methoden, Resultsets oder Daten von einer Prozedur an ein aufrufendes Programm zurückzugeben: Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu beiden Ansätzen.  
   
-## Zurückgeben von Daten mithilfe eines OUTPUT-Parameters  
+## <a name="returning-data-using-an-output-parameter"></a>Zurückgeben von Daten mithilfe eines OUTPUT-Parameters  
  Wenn Sie in der Prozedurdefinition für einen Parameter das Schlüsselwort OUTPUT angeben, kann die Prozedur den aktuellen Wert des Parameters an das aufrufende Programm zurückgeben, wenn die Prozedur beendet wird. Um den Wert des Parameters in einer Variablen zu speichern, die in dem aufrufenden Programm verwendet werden kann, muss das aufrufende Programm beim Ausführen der Prozedur das Schlüsselwort OUTPUT verwenden. Weitere Informationen dazu, welche Datentypen als Ausgabeparameter verwendet werden können, finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
-### Beispiele für Ausgabeparameter  
+### <a name="examples-of-output-parameter"></a>Beispiele für Ausgabeparameter  
  Das folgende Beispiel zeigt eine Prozedur mit einem Eingabe- und einem Ausgabeparameter. Der `@SalesPerson` -Parameter würde einen vom aufrufenden Programm angegebenen Eingabewert empfangen. Die SELECT-Anweisung verwendet den im Eingabeparameter übergebenen Wert, um den richtigen `SalesYTD` -Wert abzurufen. Die SELECT-Anweisung weist den Wert auch dem `@SalesYTD` -Ausgabeparameter zu, der den Wert an das aufrufende Programm zurückgibt, wenn die Prozedur beendet wird.  
   
 ```  
@@ -69,13 +73,13 @@ GO
   
  Wenn beim Aufruf einer Prozedur OUTPUT für einen Parameter angegeben wird und dieser Parameter in der Prozedurdefinition nicht mithilfe von OUTPUT definiert worden ist, dann wird eine Fehlermeldung ausgegeben. Sie können eine Prozedur mit Ausgabeparameter ausführen, ohne OUTPUT beim Ausführen der Prozedur anzugeben. In diesem Fall wird kein Fehler zurückgegeben; der Ausgabewert kann jedoch nicht in dem aufrufenden Programm verwendet werden.  
   
-### Verwenden des Cursor-Datentyps in OUTPUT-Parametern  
+### <a name="using-the-cursor-data-type-in-output-parameters"></a>Verwenden des Cursor-Datentyps in OUTPUT-Parametern  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozeduren können den Datentyp **cursor** nur für OUTPUT-Parameter verwenden. Wenn der **cursor** -Datentyp für einen Parameter angegeben wird, müssen in der Prozedurdefinition sowohl das Schlüsselwort VARYING als auch das Schlüsselwort OUTPUT für diesen Parameter angegeben werden. Für einen Parameter kann nur das Schlüsselwort OUTPUT angegeben werden. Wenn allerdings das Schlüsselwort VARYING in der Parameterdeklaration angegeben worden ist, müssen der Datentyp **cursor** verwendet und zudem das Schlüsselwort OUTPUT angegeben werden.  
   
 > [!NOTE]  
->  Der Datentyp **cursor** kann nicht durch Datenbank-APIs, wie z. B. OLE DB, ODBC, ADO und DB-Library, an Anwendungsvariablen gebunden werden. Da OUTPUT-Parameter gebunden werden müssen, bevor eine Anwendung eine Prozedur ausführen kann, können Prozeduren mit **cursor** -OUTPUT-Parametern nicht aus den Datenbank-APIs heraus aufgerufen werden. Diese Prozeduren können von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, Prozeduren oder Triggern heraus aufgerufen werden, wenn die **cursor**-OUTPUT-Variable einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-**cursor**-Variablen zugewiesen wird.  
+>  Der Datentyp **cursor** kann nicht durch Datenbank-APIs, wie z. B. OLE DB, ODBC, ADO und DB-Library, an Anwendungsvariablen gebunden werden. Da OUTPUT-Parameter gebunden werden müssen, bevor eine Anwendung eine Prozedur ausführen kann, können Prozeduren mit **cursor** -OUTPUT-Parametern nicht aus den Datenbank-APIs heraus aufgerufen werden. Diese Prozeduren können von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches, Prozeduren oder Triggern heraus aufgerufen werden, wenn die **cursor** -OUTPUT-Variable einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)] - **cursor** -Variablen zugewiesen wird.  
   
-### Regeln für Cursorausgabeparameter  
+### <a name="rules-for-cursor-output-parameters"></a>Regeln für Cursorausgabeparameter  
  Folgende Regeln gelten für Ausgabeparameter vom **cursor** -Datentyp, wenn die Prozedur ausgeführt wird:  
   
 -   Bei einem Vorwärtscursor werden im Resultset des Cursors nur die Zeilen zurückgegeben, die sich am Ende der Ausführung der Prozedur an und hinter der Cursorposition befinden. Beispiel:  
@@ -102,7 +106,7 @@ GO
     > [!NOTE]  
     >  Der geschlossene Status ist nur zum Zeitpunkt der Rückgabe relevant. Beispielsweise ist es zulässig, einen Cursor während eines Teils der Prozedur zu schließen, ihn zu einem späteren Zeitpunkt in der Prozedur wieder zu öffnen und das Resultset dieses Cursors an den aufrufenden Batch, die aufrufende Prozedur oder den aufrufenden Trigger zurückzugeben.  
   
-### Beispiele für Cursorausgabeparameter  
+### <a name="examples-of-cursor-output-parameters"></a>Beispiele für Cursorausgabeparameter  
  Im folgenden Beispiel wird eine gespeicherte Prozedur mit einem Ausgabeparameter `@currency`_`cursor` vom Datentyp **cursor** erstellt. Die Prozedur wird anschließend in einem Batch aufgerufen.  
   
  Zuerst wird die Prozedur erstellt, die einen Cursor für die Currency-Tabelle deklariert und dann öffnet.  
@@ -143,17 +147,17 @@ GO
   
 ```  
   
-## Zurückgeben von Daten mithilfe eines Rückgabecodes  
- Eine Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Sie geben den Rückgabecode für eine Prozedur mithilfe der RETURN-Anweisung an. Wie schon die OUTPUT-Parameter müssen Sie auch den Rückgabecode in einer Variablen speichern, wenn die Prozedur ausgeführt wird, damit der Wert des Rückgabecodes in dem aufrufenden Programm verwendet werden kann. So wird z. B. in den folgenden Codezeilen die Zuweisungsvariable `@result` vom Datentyp **int** verwendet, um den Rückgabecode der Prozedur `my_proc` zu speichern:  
+## <a name="returning-data-using-a-return-code"></a>Zurückgeben von Daten mithilfe eines Rückgabecodes  
+ Eine Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Sie geben den Rückgabecode für eine Prozedur mithilfe der RETURN-Anweisung an. Wie schon die OUTPUT-Parameter müssen Sie auch den Rückgabecode in einer Variablen speichern, wenn die Prozedur ausgeführt wird, damit der Wert des Rückgabecodes in dem aufrufenden Programm verwendet werden kann. So wird z. B. in den folgenden Codezeilen die Zuweisungsvariable `@result` vom Datentyp **int** verwendet, um den Rückgabecode der Prozedur `my_proc`zu speichern:  
   
 ```  
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  
+ Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  
   
-### Beispiele für Rückgabecodes  
+### <a name="examples-of-return-codes"></a>Beispiele für Rückgabecodes  
  Das folgende Beispiel zeigt die `usp_GetSalesYTD` -Prozedur mit Fehlerbehandlung, in der für verschiedene Fehler spezielle Rückgabecodewerte festgelegt sind. In der Tabelle werden die ganzzahligen Werte aufgeführt, die die Prozedur den einzelnen möglichen Fehlern zuweist, sowie die Bedeutung der einzelnen Werte.  
   
 |Rückgabecodewert|Bedeutung|  
@@ -222,7 +226,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
 ```  
   
- Im folgenden Beispiel wird ein Programm erstellt, das die von der `usp_GetSalesYTD`-Prozedur zurückgegebenen Rückgabecodes verarbeitet.  
+ Im folgenden Beispiel wird ein Programm erstellt, das die von der `usp_GetSalesYTD` -Prozedur zurückgegebenen Rückgabecodes verarbeitet.  
   
 ```  
 -- Declare the variables to receive the output value and return code   
@@ -252,8 +256,8 @@ GO
   
 ```  
   
-## Siehe auch  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
  [Cursor](../../relational-databases/cursors.md)   

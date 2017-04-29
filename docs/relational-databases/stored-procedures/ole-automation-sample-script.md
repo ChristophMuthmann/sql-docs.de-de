@@ -1,25 +1,29 @@
 ---
-title: "OLE-Automatisierungsbeispielskript | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLE-Automatisierung [SQL Server], Beispiele"
+title: OLE-Automatisierungsbeispielskript | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE-Automatisierungsbeispielskript
-  Dieses Thema enthält ein Beispiel für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatch, der mithilfe von gespeicherten OLE-Automatisierungsprozeduren ein SQL-DMO SQLServer-Objekt in der lokalen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt und verwendet. Teile des Codes werden als Beispiele in den Referenzthemen zu den gespeicherten Systemprozeduren der OLE-Automatisierung verwendet.  
+# <a name="ole-automation-sample-script"></a>OLE-Automatisierungsbeispielskript
+  Dieses Thema enthält ein Beispiel für einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsbatch, der mithilfe von gespeicherten OLE-Automatisierungsprozeduren ein SQL-DMO SQLServer-Objekt in der lokalen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt und verwendet. Teile des Codes werden als Beispiele in den Referenzthemen zu den gespeicherten Systemprozeduren der OLE-Automatisierung verwendet.  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,7 +141,7 @@ RETURN;
 GO  
 ```  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [OLE-Automatisierungsobjekte in Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

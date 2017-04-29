@@ -1,31 +1,35 @@
 ---
-title: "Datenbank-Momentaufnahmen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Statische Datenbanksichten"
-  - "Momentaufnahmen [SQL Server-Datenbank-Momentaufnahmen]"
-  - "Quelldatenbanken [SQL Server]"
-  - "Momentaufnahmen [SQL Server-Datenbankmomentaufnahmen], Informationen zu Datenbankmomentaufnahmen"
-  - "Datenbankmomentaufnahmen [SQL Server]"
-  - "Schreibgeschützte Datenbanksichten"
-  - "Datenbankmomentaufnahmen [SQL Server], über Datenbankmomentaufnahmen"
+title: Datenbank-Momentaufnahmen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenbank-Momentaufnahmen (SQL Server)
-  Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
+# <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
+  Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
   
  In einer bestimmten Quelldatenbank können mehrere Momentaufnahmen vorhanden sein. Jede Datenbankmomentaufnahme ist so lange vorhanden, bis sie explizit vom Datenbankbesitzer gelöscht wird.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 54
 ##  <a name="FeatureOverview"></a> Übersicht über die Funktionen  
  Datenbankmomentaufnahmen arbeiten auf der Ebene der Datenseiten. Bevor eine Seite der Quellendatenbank zum ersten Mal geändert wird, wird die Originalseite der Quellendatenbank auf die Momentaufnahme kopiert. In der Momentaufnahme wird die Originalseite gespeichert, wodurch die Datensätze in dem Zustand erhalten werden, wie sie zum Zeitpunkt der Momentaufnahmeerstellung vorhanden waren. Der gleiche Vorgang wird für jede Seite wiederholt, die zum ersten Mal geändert wird. Für den Benutzer scheint sich eine Datenbankmomentaufnahme niemals zu ändern, weil von Lesevorgängen auf einer Datenbankmomentaufnahme immer auf die Originaldatenseiten zugegriffen wird, unabhängig von deren Speicherort.  
   
- Um die kopierten Originalseiten zu speichern, wird von der Momentaufnahme mindestens eine *Datei mit geringer Dichte*verwendet. Ursprünglich ist eine Datei mit geringer Dichte im Wesentlichen eine leere Datei, die keine Benutzerdaten enthält und für die noch kein Speicherplatz für Benutzerdaten auf einem Speichermedium zugeordnet worden ist. Je mehr Seiten in der Quellendatenbank aktualisiert werden, desto größer wird die Datei. Die folgende Abbildung veranschaulicht die Auswirkungen zweier unterschiedlicher Updatemuster auf die Größe einer Momentaufnahme. Das Updatemuster A spiegelt eine Umgebung wider, in der nur 30 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden. Das Updatemuster B spiegelt eine Umgebung wider, in der 80 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden.  
+ Um die kopierten Originalseiten zu speichern, wird von der Momentaufnahme mindestens eine *Datei mit geringer Dichte*verwendet. Ursprünglich ist eine Datei mit geringer Dichte im Wesentlichen eine leere Datei, die keine Benutzerdaten enthält und für die noch kein Speicherplatz für Benutzerdaten auf einem Speichermedium zugeordnet worden ist. Je mehr Seiten in der Quellendatenbank aktualisiert werden, desto größer wird die Datei. Die folgende Abbildung veranschaulicht die Auswirkungen zweier unterschiedlicher Updatemuster auf die Größe einer Momentaufnahme. Das Updatemuster A spiegelt eine Umgebung wider, in der nur 30 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden. Das Updatemuster B spiegelt eine Umgebung wider, in der 80 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden.  
   
  ![Alternative Updatemuster und Momentaufnahmegrößen](../../relational-databases/databases/media/dbview-04.gif "Alternative Updatemuster und Momentaufnahmegrößen")  
   
@@ -59,11 +63,11 @@ caps.handback.revision: 54
   
 -   Verwalten von Vergangenheitsdaten zur Berichterstellung.  
   
-     Eine Momentaufnahme kann Benutzerzugriff auf Daten eines bestimmten Zeitpunkts erweitern. Beispielsweise können Sie eine Datenbankmomentaufnahme am Ende einer bestimmten Periode (z. B. ein Geschäftsquartal) erstellen, um später auf dieser Grundlage einen Bericht zu generieren. Auf diese Weise können Sie Quartalsabschlussberichte in der Momentaufnahme ausführen. Bei ausreichendem Speicherplatz können Sie diese Quartalsabschluss-Momentaufnahmen für unbestimmte Zeit aufbewahren. Darüber hinaus können Sie zu den Ergebnissen dieser Quartale Abfragen ausführen, z. B. um die Leistung des Unternehmens zu ermitteln.  
+     Eine Momentaufnahme kann Benutzerzugriff auf Daten eines bestimmten Zeitpunkts erweitern. Beispielsweise können Sie eine Datenbankmomentaufnahme am Ende einer bestimmten Periode (z. B. ein Geschäftsquartal) erstellen, um später auf dieser Grundlage einen Bericht zu generieren. Auf diese Weise können Sie Quartalsabschlussberichte in der Momentaufnahme ausführen. Bei ausreichendem Speicherplatz können Sie diese Quartalsabschluss-Momentaufnahmen für unbestimmte Zeit aufbewahren. Darüber hinaus können Sie zu den Ergebnissen dieser Quartale Abfragen ausführen, z. B. um die Leistung des Unternehmens zu ermitteln.  
   
 -   Verwenden einer Spiegeldatenbank, die aus Gründen der Verfügbarkeit verwaltet wird, für die ausgelagerte Berichterstellung.  
   
-     Wenn Sie Datenbankmomentaufnahmen mit Datenbankspiegelungen verwenden, können Sie die auf dem Spiegelserver gespeicherten Daten für die Berichterstellung zugreifbar machen. Darüber hinaus können Sie in der Spiegeldatenbank Abfragen ausführen und so auf dem Prinzipal Ressourcen freigeben. Weitere Informationen finden Sie unter [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md).  
+     Wenn Sie Datenbankmomentaufnahmen mit Datenbankspiegelungen verwenden, können Sie die auf dem Spiegelserver gespeicherten Daten für die Berichterstellung zugreifbar machen. Darüber hinaus können Sie in der Spiegeldatenbank Abfragen ausführen und so auf dem Prinzipal Ressourcen freigeben. Weitere Informationen finden Sie unter [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)verwendet.  
   
 -   Schützen der Daten vor administrativen Fehlern.  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Die Quelldatenbank, die ein Wiederherstellungsmodell verwenden kann, muss die folgenden Voraussetzungen erfüllen:  
   
--   Die Serverinstanz muss auf einer Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, die Datenbankmomentaufnahmen unterstützt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Die Serverinstanz muss auf einer Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, die Datenbankmomentaufnahmen unterstützt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Die Quelldatenbank muss online sein, es sei denn, bei der Datenbank handelt es sich um eine Spiegeldatenbank innerhalb einer Datenbank-Spiegelungssitzung.  
   
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

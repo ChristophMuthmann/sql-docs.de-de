@@ -1,38 +1,42 @@
 ---
-title: "Datenkomprimierung | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Seitenkomprimierung [Datenbankmodul]"
-  - "Indizes [SQL Server], komprimiert"
-  - "Komprimierte Indizes [SQL Server]"
-  - "Speicherkomprimierung [Datenbankmodul]"
-  - "Tabellen [SQL Server], komprimiert"
-  - "Speicher [SQL Server], komprimiert"
-  - "Komprimierung [SQL Server]"
-  - "Zeilenkomprimierung [Datenbankmodul]"
-  - "Komprimierung [SQL Server], Komprimierte Tabellen und Indizes"
-  - "Datenkomprimierung [Datenbankmodul]"
-  - "Komprimierte Tabellen [SQL Server]"
+title: Datenkomprimierung | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenkomprimierung
+# <a name="data-compression"></a>Datenkomprimierung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützen die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die columnstore-Archivierungskomprimierung für columnstore-Tabellen und -Indizes.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützen die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die Columnstore-Archivierungskomprimierung für Columnstore-Tabellen und -Indizes.  
   
  Verwenden Sie für rowstore-Tabellen und -Indizes die Datenkomprimierungsfunktion, um die Größe der Datenbank zu reduzieren. Zusätzlich zum Sparen von Speicherplatz kann mithilfe der Datenkomprimierung auch die Leistung von E/A-intensiven Arbeitsauslastungen verbessert werden, da die Daten auf weniger Seiten gespeichert werden und Abfragen weniger Seiten vom Datenträger lesen müssen. Zusätzliche CPU-Ressourcen sind jedoch auf dem Datenbankserver erforderlich, um die Daten zu komprimieren und dekomprimieren, während Daten mit der Anwendung ausgetauscht werden. Sie können die Zeilen- und Seitenkomprimierung für die folgenden Datenbankobjekte konfigurieren:  
   
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  Daten können außerdem im Format des GZIP-Algorithmus komprimiert werden. Dies stellt einen zusätzlichen Schritt dar und ist insbesondere geeignet, um Teile der Daten für die Archivierung alter Daten für die Langzeitaufbewahrung zu komprimieren. Mithilfe der Funktion COMPRESS komprimierte Daten können nicht indiziert werden. Weitere Informationen finden Sie unter [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
-## Überlegungen zur Verwendung von Zeilen- und Seitenkomprimierung  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Überlegungen zur Verwendung von Zeilen- und Seitenkomprimierung  
  Beachten Sie die folgenden Punkte, wenn Sie die Zeilen- und Seitenkomprimierung verwenden:  
   
 -   Die Details der Datenkomprimierung können ohne vorherige Ankündigung in Service Packs oder nachfolgenden Versionen geändert werden.
 
 -   Die Komprimierung ist verfügbar in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
--   Komprimierungsfunktionen sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Komprimierungsfunktionen sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Für Systemtabellen ist die Komprimierung nicht verfügbar.  
   
@@ -111,16 +115,16 @@ caps.handback.revision: 60
     > [!NOTE]  
     >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt das vardecimal-Speicherformat. Da mit der Zeilenkomprimierung jedoch dasselbe Ergebnis erzielt wird, wurde das vardecimal-Speicherformat als veraltet markiert. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Verwenden von Columnstore und der Columnstore-Archivierungskomprimierung  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>Verwenden von Columnstore und der Columnstore-Archivierungskomprimierung  
   
 ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
-### Grundlagen  
+### <a name="basics"></a>Grundlagen  
  Columnstore-Tabellen und -Indizes werden immer mit columnstore-Komprimierung gespeichert. Sie können die Größe von columnstore-Daten weiter reduzieren, indem Sie eine zusätzliche Komprimierung, die so genannte Archivierungskomprimierung, konfigurieren.  Zur Archivierungskomprimierung führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Microsoft XPRESS-Komprimierungsalgorithmus für die Daten aus. Die Archivierungskomprimierung kann mithilfe der folgenden Datenkomprimierungstypen aktiviert bzw. deaktiviert werden:  
   
--   Verwenden Sie die **COLUMNSTORE_ARCHIVE**-Datenkomprimierung, um columnstore-Daten mit der Archivierungskomprimierung zu komprimieren.  
+-   Verwenden Sie die **COLUMNSTORE_ARCHIVE** -Datenkomprimierung, um columnstore-Daten mit der Archivierungskomprimierung zu komprimieren.  
   
 -   Verwenden Sie die **COLUMNSTORE** -Datenkomprimierung, um mit der Archivierungskomprimierung komprimierte Daten zu dekomprimieren. Die resultierenden Daten sind weiterhin mit der columnstore-Komprimierung komprimiert.  
   
@@ -140,7 +144,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- Um die Archivierungskomprimierung zu deaktivieren und die Daten wieder mit der columnstore-Komprimierung zu komprimieren, verwenden Sie [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) oder [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) mit der REBUILD-Option und DATA COMPRESSION = COLUMNSTORE.  
+ Um die Archivierungskomprimierung zu deaktivieren und die Daten wieder mit der columnstodere-Komprimierung zu komprimieren, verwenden Sie [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) oder [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) mit der REBUILD-Option sowie DATA COMPRESSION = COLUMNSTORE.  
   
  Beispiele:  
   
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### Leistung  
+### <a name="performance"></a>Leistung  
  Mit der Archivierungskomprimierung komprimierte columnstore-Indizes werden langsamer ausgeführt als columnstore-Indizes ohne Archivierungskomprimierung.  Die Archivierungskomprimierung sollte nur verwendet werden, wenn zusätzliche Zeit und CPU-Ressourcen zum Komprimieren und Abrufen der Daten aufgewendet werden können.  
   
  Einerseits wird zwar die Leistung gemindert, andererseits aber weniger Speicher beansprucht, was bei Daten von Vorteil ist, auf die nicht häufig zugegriffen wird. Beispiel: Wenn Sie für die monatlich anfallenden Daten jeweils eine Partition verwenden und sich Ihre Aktivitäten meist auf die letzten Monate beschränken, könnten Sie die Daten weiter zurückliegender Monate archivieren, um den Speicherbedarf zu reduzieren.  
   
-### Metadaten  
+### <a name="metadata"></a>Metadaten  
  Die folgenden Systemsichten enthalten Informationen zur Datenkomprimierung für gruppierte Indizes:  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) – Die Spalten **type** und **type_desc** enthalten CLUSTERED COLUMNSTORE und NONCLUSTERED COLUMNSTORE.  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  Die Prozedur [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) gilt nicht für columnstore-Indizes.  
   
-## Auswirkungen der Komprimierung auf partitionierte Tabellen und Indizes  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Auswirkungen der Komprimierung auf partitionierte Tabellen und Indizes  
  Wenn Sie die Datenkomprimierung mit partitionierten Tabellen und Indizes verwenden, beachten Sie Folgendes:  
   
 -   Wenn Sie Partitionen mit der ALTER PARTITION-Anweisung teilen, erben die geteilten Partitionen das Datenkomprimierungsattribut der ursprünglichen Partition.  
@@ -217,7 +221,7 @@ REBUILD PARTITION = ALL WITH (
   
      OFFLINE können Sie einen gruppierten Index sehr schnell löschen, da lediglich die oberen Ebenen des gruppierten Indexes entfernt werden. Wenn ein gruppierter Index ONLINE gelöscht wird, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Heap zwei Mal neu erstellen, ein Mal für Schritt 1 und ein Mal für Schritt 2.  
   
-## Auswirkungen der Komprimierung auf die Replikation 
+## <a name="how-compression-affects-replication"></a>Auswirkungen der Komprimierung auf die Replikation 
 ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
@@ -242,7 +246,7 @@ REBUILD PARTITION = ALL WITH (
 |Keine Replikation des Partitionsschemas und keine Komprimierung der Daten auf dem Abonnenten.|Falsch|Falsch|Weder für die Partition noch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
 |Zur Komprimierung der Tabelle auf dem Abonnenten, wenn alle Partitionen auf dem Verleger komprimiert sind, ohne Replikation des Partitionsschemas.|Falsch|Wahr|Überprüft, ob alle Partitionen für die Komprimierung aktiviert wurden.<br /><br /> Skriptausgabe der Komprimierung auf Tabellenebene.|  
   
-## Auswirkungen der Komprimierung auf andere SQL Server-Komponenten 
+## <a name="how-compression-affects-other-sql-server-components"></a>Auswirkungen der Komprimierung auf andere SQL Server-Komponenten 
 ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   Die Aktivierung der Komprimierung kann bewirken, dass sich Abfragepläne ändern, da die Daten mit einer anderen Anzahl von Seiten und Zeilen pro Seite gespeichert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Implementierung von Zeilenkomprimierung](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementierung von Seitenkomprimierung](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementierung von Unicode-Komprimierung](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

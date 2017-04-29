@@ -1,25 +1,29 @@
 ---
-title: "Onlinewiederherstellungen [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Onlinewiederherstellungen [SQL Server]"
-  - "Onlinewiederherstellungen [SQL Server], Informationen zu Onlinewiederherstellungen"
+title: Onlinewiederherstellungen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Onlinewiederherstellungen [SQL Server]
+# <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
   Die Onlinewiederherstellung wird nur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition unterstützt. In dieser Edition erfolgen Datei- und Seitenwiederherstellungen sowie schrittweise Wiederherstellungen standardmäßig online. Dieses Thema ist nur für Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten (und unter dem einfachen Wiederherstellungsmodell nur für schreibgeschützte Dateigruppen).  
   
  Die Wiederherstellung von Daten, während die Datenbank online ist, wird als *Onlinewiederherstellung*bezeichnet. Eine Datenbank gilt immer als online, wenn die primäre Dateigruppe online ist, selbst wenn eine oder mehrere der sekundären Dateigruppen offline sind. Bei jedem Wiederherstellungsmodell ist es möglich, eine Datei wiederherzustellen, die offline ist, während die Datenbank online ist. Im vollständigen Wiederherstellungsmodell können Sie auch Seiten wiederherstellen, während die Datenbank online ist.  
@@ -46,7 +50,7 @@ caps.handback.revision: 45
 > [!CAUTION]  
 >  Bei der Verwendung von Momentaufnahmesicherungen kann keine **Online Restore**ausgeführt werden. Weitere Informationen zu **Momentaufnahme-Sicherungen**finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-## Protokollsicherungen für die Onlinewiederherstellung  
+## <a name="log-backups-for-online-restore"></a>Protokollsicherungen für die Onlinewiederherstellung  
  Bei einer Onlinewiederherstellung ist der Wiederherstellungspunkt der Punkt, an dem die wiederhergestellten Daten offline geschaltet oder zum letzten Mal mit einem Schreibschutz versehen wurden. Alle Transaktionsprotokollsicherungen, die zu diesem Wiederherstellungspunkt führen und diesen beinhalten, müssen verfügbar sein. Im Allgemeinen ist nach diesem Punkt eine Protokollsicherung erforderlich, damit der Wiederherstellungspunkt für die Datei abgedeckt ist. Die einzige Ausnahme stellt eine Onlinewiederherstellung schreibgeschützter Daten aus einer Datensicherung dar, die ausgeführt wurde, nachdem die Daten schreibgeschützt wurden. In diesem Fall müssen Sie nicht über eine Protokollsicherung verfügen.  
   
  Im Allgemeinen können Sie Transaktionsprotokollsicherungen ausführen, während die Datenbank online ist, selbst nach dem Start der Wiederherstellungssequenz. Der Ausführungszeitpunkt der letzten Protokollsicherung hängt von den Eigenschaften der wiederhergestellten Datei ab:  
@@ -74,7 +78,7 @@ caps.handback.revision: 45
   
  Solange eine Datenbank offline bleibt, sind alle Wiederherstellungsvorgänge Offlinewiederherstellungen.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
   
 > [!NOTE]  
 >  Die Syntax für eine Onlinewiederherstellungssequenz ist dieselbe wie bei einer Offlinewiederherstellungssequenz.  
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

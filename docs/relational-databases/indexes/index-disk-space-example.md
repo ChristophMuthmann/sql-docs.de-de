@@ -1,29 +1,33 @@
 ---
-title: "Beispiel f&#252;r den zum Speichern eines Indexes belegten Speicherplatz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Speicherplatz für Onlineindizes"
-  - "Speicherplatz auf dem Datenträger [SQL Server], Indizes"
-  - "Speicherplatz für Indizes [SQL Server]"
-  - "Speicherplatz [SQL Server], Indizes"
-  - "Indizes [SQL Server], Speicherplatzanforderungen"
-  - "Speicherplatz für Offlineindizes [SQL Server]"
+title: "Beispiel für den zum Speichern eines Indexes belegten Speicherplatz | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index disk space
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiel f&#252;r den zum Speichern eines Indexes belegten Speicherplatz
+# <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
   Für jeden Erstellungs-, Neuerstellungs- oder Löschvorgang eines Indexes ist Speicherplatz für die alten (Quellindex) und neuen (Zielindex) Strukturen in den entsprechenden Dateien und Dateigruppen erforderlich. Die Zuordnung der alten Struktur wird erst aufgehoben, nachdem die Indexerstellungstransaktion den Commitvorgang ausgeführt hat. Außerdem ist möglicherweise weiterer temporärer Speicherplatz auf dem Datenträger für Sortiervorgänge erforderlich. Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  Im folgenden Beispiel werden die Speicherplatzanforderungen beim Erstellen eines gruppierten Indexes ermittelt.  
@@ -43,7 +47,7 @@ caps.handback.revision: 30
     > [!NOTE]  
     >  Als Ergebnis der Erstellung eines gruppierten Indexes müssen die beiden nicht gruppierten Indizes neu erstellt werden, um den Zeilenindikator durch den neuen Schlüssel des gruppierten Indexes zu ersetzen.  
   
-## Speicherplatzberechnungen für einen Offlineindexvorgang  
+## <a name="disk-space-calculations-for-an-offline-index-operation"></a>Speicherplatzberechnungen für einen Offlineindexvorgang  
  In den folgenden Schritten werden der temporäre Speicherplatz, der während des Indexvorgangs verwendet werden soll, sowie der dauerhafte Speicherplatz berechnet, der für das Speichern neuer Indizes erforderlich ist. Die gezeigten Berechnungen geben Näherungswerte an. Die Ergebnisse werden aufgerundet, und es wird nur die Größe der Indexblattebene berücksichtigt. Die Tilde (~) wird zum Angeben von Näherungswerten verwendet.  
   
 1.  Ermitteln der Größe der Quellstrukturen  
@@ -74,7 +78,7 @@ caps.handback.revision: 30
   
     1.  Wenn SORT_IN_TEMPDB auf ON festgelegt wurde, muss für **tempdb** ausreichend Speicherplatz zum Speichern des größten Indexes vorhanden sein (1 Million * 200 Byte ~ 200 MB). Der Füllfaktor wird bei der Sortieroperation nicht berücksichtigt.  
   
-         Zusätzlicher Speicherplatz (am Speicherort von **tempdb**), der dem Wert von [Konfigurieren der Serverkonfigurationsoption „Speicher für Indexerstellung“](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) entspricht (= 2 MB).  
+         Zusätzlicher Speicherplatz (am Speicherort von **tempdb** ), der dem Wert von [Konfigurieren der Serverkonfigurationsoption „Speicher für Indexerstellung“](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) entspricht (= 2 MB).  
   
          Gesamtgröße des temporären Speicherplatzes, wenn SORT_IN_TEMPDB auf ON festgelegt wurde ~ 202 MB.  
   
@@ -84,11 +88,11 @@ caps.handback.revision: 30
   
          Gesamtgröße des temporären Speicherplatzes, wenn SORT_IN_TEMPDB auf OFF festgelegt wurde = 2 MB.  
   
- Wenn **tempdb** verwendet wird, sind insgesamt 1018 MB (816 + 202) zum Erstellen des gruppierten Indexes und der nicht gruppierten Indizes erforderlich. Obwohl durch die Verwendung von **tempdb** die Menge des temporären Speicherplatzes erhöht wird, die zur Indexerstellung verwendet wird, kann sich die Zeitspanne verringern, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zur Verwendung von **tempdb**, finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
+ Wenn **tempdb**verwendet wird, sind insgesamt 1018 MB (816 + 202) zum Erstellen des gruppierten Indexes und der nicht gruppierten Indizes erforderlich. Obwohl durch die Verwendung von **tempdb** die Menge des temporären Speicherplatzes erhöht wird, die zur Indexerstellung verwendet wird, kann sich die Zeitspanne verringern, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zur Verwendung von **tempdb**, finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- Wenn **tempdb** nicht verwendet wird, sind insgesamt 818 MB (816 + 2) zum Erstellen des gruppierten Indexes und der nicht gruppierten Indizes erforderlich.  
+ Wenn **tempdb**nicht verwendet wird, sind insgesamt 818 MB (816 + 2) zum Erstellen des gruppierten Indexes und der nicht gruppierten Indizes erforderlich.  
   
-## Speicherplatzberechnungen für eine Onlineoperation mit einem gruppierten Index  
+## <a name="disk-space-calculations-for-an-online-clustered-index-operation"></a>Speicherplatzberechnungen für eine Onlineoperation mit einem gruppierten Index  
  Wenn Sie einen gruppierten Index online erstellen, löschen oder neu erstellen, ist zusätzlicher Speicherplatz zum Erstellen und Verwalten eines temporären Zuordnungsindexes erforderlich. Dieser temporäre Zuordnungsindex enthält einen Datensatz für jede Zeile in der Tabelle, und sein Inhalt ist die Vereinigung der alten und der neuen Lesezeichenspalten.  
   
  Wenn Sie den erforderlichen Speicherplatz für eine Onlineoperation mit einem gruppierten Index berechnen möchten, verwenden Sie die für einen Offlineindexvorgang beschriebenen Schritte und addieren dann diese Ergebnisse zu den Ergebnissen des folgenden Schritts.  
@@ -99,11 +103,11 @@ caps.handback.revision: 30
   
      Größe des temporären Zuordnungsindexes = 1 Million * (8 Byte + 24 Byte) / 80% ~ 40 MB.  
   
-     Dieser Speicherplatz muss zum erforderlichen Speicherplatz am Zielspeicherort addiert werden, wenn SORT_IN_TEMPDB auf OFF festgelegt ist, oder zu **tempdb**, wenn SORT_IN_TEMPDB auf ON festgelegt ist.  
+     Dieser Speicherplatz muss zum erforderlichen Speicherplatz am Zielspeicherort addiert werden, wenn SORT_IN_TEMPDB auf OFF festgelegt ist, oder zu **tempdb** , wenn SORT_IN_TEMPDB auf ON festgelegt ist.  
   
  Weitere Informationen finden Sie unter [Speicherplatzanforderungen für Index-DDL-Vorgänge](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## Zusammenfassung der Speicherplatzüberlegungen  
+## <a name="disk-space-summary"></a>Zusammenfassung der Speicherplatzüberlegungen  
  Die folgende Tabelle fasst die Ergebnisse der Speicherplatzberechnungen zusammen.  
   
 |Indexvorgang|Speicherplatzanforderungen für die Speicherorte der folgenden Strukturen|  
@@ -117,8 +121,8 @@ caps.handback.revision: 30
   
  Dieses Beispiel berücksichtigt keinen zusätzlichen temporären Speicherplatz, der in **tempdb** für Versionsdatensätze erforderlich ist, die durch gleichzeitige Update- und Löschvorgänge von Benutzern erstellt werden.  
   
-## Verwandte Inhalte  
- [Speicherplatzanforderungen für Index-DDL-Vorgänge](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+## <a name="related-content"></a>Verwandte Inhalte  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Transaktionsprotokollspeicherplatz für Indexvorgänge](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

@@ -1,41 +1,45 @@
 ---
-title: "tempdb-Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Temporäre Tabellen [SQL Server], tempdb-Datenbank"
-  - "tempdb-Datenbank [SQL Server], Informationen zu tempdb"
-  - "Temporäre gespeicherte Prozeduren [SQL Server]"
-  - "tempdb-Datenbank [SQL Server]"
+title: tempdb-Datenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary tables [SQL Server], tempdb database
+- tempdb database [SQL Server], about tempdb
+- temporary stored procedures [SQL Server]
+- tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.lasthandoff: 04/11/2017
+
 ---
-# tempdb-Datenbank
-  Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
+# <a name="tempdb-database"></a>tempdb-Datenbank
+  Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
   
 -   Temporäre Benutzerobjekte, die explizit erstellt werden, z. B. globale oder lokale temporäre Tabellen, temporäre gespeicherte Prozeduren, Tabellenvariablen oder Cursor.  
   
--   Interne Objekte, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt werden, z. B. Arbeitstabellen zum Speichern von Zwischenergebnissen für Spool- und Sortiervorgänge.  
+-   Interne Objekte, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]erstellt werden, z. B. Arbeitstabellen zum Speichern von Zwischenergebnissen für Spool- und Sortiervorgänge.  
   
 -   Zeilenversionen, die von Datenänderungstransaktionen in einer Datenbank generiert werden, die READ COMMITTED mit Zeilenversionsverwaltung oder Transaktionen der Momentaufnahmeisolation verwendet.  
   
 -   Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
- Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nichts in **tempdb** gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb** nicht zulässig.  
+ Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von **nichts in** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb**nicht zulässig.  
   
-## physische Eigenschaften von tempdb  
- Die folgende Tabelle listet die anfänglichen Konfigurationswerte der **tempdb**-Daten- und Protokolldateien auf. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geringfügig unterscheiden.  
+## <a name="physical-properties-of-tempdb"></a>physische Eigenschaften von tempdb  
+ Die folgende Tabelle listet die anfänglichen Konfigurationswerte der **tempdb** -Daten- und Protokolldateien auf. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
   
 |File|Logischer Name (logical name)|Physischer Name (physical name)|Anfangsgröße|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|------------------|-----------------|  
@@ -46,28 +50,28 @@ caps.handback.revision: 66
  \* Die Anzahl der Dateien hängt von der Anzahl der (logischen) Kerne auf dem Computer ab. Der Wert ist die Anzahl der Kerne oder 8, je nachdem, welcher Wert niedriger ist.   
 Der Standardwert für die Anzahl der Datendateien basiert auf den allgemeinen Richtlinien in [KB 2154845](https://support.microsoft.com/en-us/kb/2154845/).  
   
-## Leistungsverbesserungen in tempdb  
- Die Leistung von **tempdb** wurde in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] folgendermaßen verbessert:  
+## <a name="performance-improvements-in-tempdb"></a>Leistungsverbesserungen in tempdb  
+ Die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tempdb **wurde in** folgendermaßen verbessert:  
   
 -   Temporäre Tabellen und Tabellenvariablen können zwischengespeichert werden. Das Zwischenspeichern ermöglicht das sehr schnelle Ausführen von Vorgängen zum Löschen und Erstellen der temporären Objekte und reduziert das Auftreten von Seitenzuordnungskonflikten.  
   
 -   Das Latchprotokoll für Seitenzuordnungen wurde verbessert. Dadurch wird die Anzahl der verwendeten UP-Latches (Update) reduziert.  
   
--   Der Protokollierungsaufwand für **tempdb** wurde reduziert. Dadurch wird die für die **tempdb**-Protokolldatei verwendete Datenträger-E/A-Bandbreite reduziert.  
+-   Der Protokollierungsaufwand für **tempdb** wurde reduziert. Dadurch wird die für die **tempdb** -Protokolldatei verwendete Datenträger-E/A-Bandbreite reduziert.  
   
 -   Das Setup fügt während der Installation einer neuen Instanz mehrere tempdb-Datendateien hinzu. Diese Aufgabe kann mit der neuen Eingabesteuerung der Benutzeroberfläche im Bereich **Datenbankmodulkonfiguration** und einem Befehlszeilenparameter /SQLTEMPDBFILECOUNT durchgeführt werden. Standardmäßig fügt das Setup genau so viele tempdb-Dateien hinzu wie die CPU-Anzahl oder 8, je nachdem, welcher Wert niedriger ist.  
   
--   Wenn mehrere **tempdb**-Datenbankdateien vorhanden sind, werden alle Dateien gleichzeitig und im selben Umfang je nach Wachstumseinstellungen automatisch vergrößert.  Ablaufverfolgungsflag 1117 ist nicht mehr erforderlich.  
+-   Wenn mehrere **tempdb** -Datenbankdateien vorhanden sind, werden alle Dateien gleichzeitig und im selben Umfang je nach Wachstumseinstellungen automatisch vergrößert.  Ablaufverfolgungsflag 1117 ist nicht mehr erforderlich.  
   
 -   Alle Zuordnungen in **tempdb** verwenden gleichartige Blöcke. Ablaufverfolgungsflag 1118 ist nicht mehr erforderlich.  
   
 -   Für die primäre Dateigruppe ist die AUTOGROW_ALL_FILES-Eigenschaft aktiviert und kann nicht geändert werden.  
   
-### Verschieben der tempdb-Daten- und -Protokolldateien  
- Weitere Informationen zum Verschieben der **tempdb**-Daten- und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md).  
+### <a name="moving-the-tempdb-data-and-log-files"></a>Verschieben der tempdb-Daten- und -Protokolldateien  
+ Weitere Informationen zum Verschieben der **tempdb** -Daten- und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md).  
   
-### Datenbankoptionen  
- Die folgende Tabelle nennt die Standardwerte für die einzelnen Datenbankoptionen in der **tempdb**-Datenbank und gibt an, ob die entsprechende Option geändert werden kann. Zum Anzeigen der aktuellen Einstellungen dieser Optionen verwenden Sie die Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+### <a name="database-options"></a>Datenbankoptionen  
+ Die folgende Tabelle nennt die Standardwerte für die einzelnen Datenbankoptionen in der **tempdb** -Datenbank und gibt an, ob die entsprechende Option geändert werden kann. Zum Anzeigen der aktuellen Einstellungen dieser Optionen verwenden Sie die Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
@@ -92,19 +96,19 @@ Der Standardwert für die Anzahl der Datendateien basiert auf den allgemeinen Ri
 |ENCRYPTION|OFF|Nein|  
 |MIXED_PAGE_ALLOCATION|OFF|Nein|  
 |NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Ja|  
+|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|ja|  
 |PARAMETERIZATION|SIMPLE|ja|  
 |QUOTED_IDENTIFIER|OFF|ja|  
 |READ_COMMITTED_SNAPSHOT|OFF|Nein|  
 |RECOVERY|SIMPLE|Nein|  
 |RECURSIVE_TRIGGERS|OFF|ja|  
-|Service Broker-Optionen|ENABLE_BROKER|Ja|  
+|Service Broker-Optionen|ENABLE_BROKER|ja|  
 |TRUSTWORTHY|OFF|Nein|  
   
- Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## Einschränkungen  
- Die folgenden Operationen können mit der **tempdb**-Datenbank nicht ausgeführt werden:  
+## <a name="restrictions"></a>Einschränkungen  
+ Die folgenden Operationen können mit der **tempdb** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateigruppen.  
   
@@ -112,7 +116,7 @@ Der Standardwert für die Anzahl der Datendateien basiert auf den allgemeinen Ri
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers Der Besitzer von **tempdb** ist **sa**.  
+-   Ändern des Datenbankbesitzers Der Besitzer von**tempdb** ist **sa**.  
   
 -   Erstellen einer Datenbankmomentaufnahme.  
   
@@ -136,10 +140,10 @@ Der Standardwert für die Anzahl der Datendateien basiert auf den allgemeinen Ri
   
 -   Versetzen der Datenbank oder der primären Dateigruppe in den READ_ONLY-Modus.  
   
-## Berechtigungen  
+## <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer ist berechtigt, temporäre Objekte in tempdb zu erstellen. Benutzer haben nur Zugriff auf ihre eigenen Objekte, es sei denn, ihnen wurden zusätzliche Berechtigungen zugewiesen. Die CONNECT-Berechtigung für tempdb kann widerrufen werden, um Benutzer daran zu hindern, die tempdb-Datenbank zu verwenden. Von diesem Schritt wird jedoch abgeraten, da einige Routinevorgänge auf die Verwendung von tempdb angewiesen sind.  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
   
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
@@ -150,7 +154,8 @@ Der Standardwert für die Anzahl der Datendateien basiert auf den allgemeinen Ri
   
  [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
+

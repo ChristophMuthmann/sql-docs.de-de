@@ -1,24 +1,28 @@
 ---
-title: "Beispiel: Angeben der ELEMENT-Direktive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENT-Direktive"
+title: 'Beispiel: Angeben der ELEMENT-Direktive | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09cafc5549257ccb614627316541f0d4f3142ad0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiel: Angeben der ELEMENT-Direktive
+# <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
   Dadurch werden Mitarbeiterinformationen abgerufen und wird elementzentriertes XML generiert, wie nachfolgend zu sehen ist:  
   
 ```  
@@ -82,7 +86,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

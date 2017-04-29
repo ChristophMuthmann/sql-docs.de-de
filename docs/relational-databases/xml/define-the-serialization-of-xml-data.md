@@ -1,33 +1,37 @@
 ---
-title: "Definieren der Serialisierung von XML-Daten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Regeln zur Entitätserstellung [XML in SQL Server]"
-  - "Serialisierung"
-  - "Erneutes Analysieren von serialisierten XML-Strukturen"
-  - "Codierung [XML bei SQL Server]"
-  - "XML [SQL Server], Serialisierung"
-  - "XML-Datentyp [SQL Server], Serialisierung"
-  - "Typisiertes XML"
+title: Definieren der Serialisierung von XML-Daten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entitization rules [XML in SQL Server]
+- serialization
+- reparsing serialized XML structures
+- encoding [XML in SQL Server]
+- XML [SQL Server], serialization
+- xml data type [SQL Server], serialization
+- typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definieren der Serialisierung von XML-Daten
+# <a name="define-the-serialization-of-xml-data"></a>Definieren der Serialisierung von XML-Daten
   Beim expliziten oder impliziten Umwandeln des XML-Datentyps in eine SQL-Zeichenfolge oder einen Binärtyp wird der Inhalt des XML-Datentyps entsprechend der in diesem Thema beschriebenen Regeln serialisiert.  
   
-## Serialisierungscodierung  
+## <a name="serialization-encoding"></a>Serialisierungscodierung  
  Wenn der SQL-Zieltyp VARBINARY ist, erfolgt die Serialisierung des Ergebnisses in UTF-16 mit einer UTF-16-Markierung für die Bytereihenfolge am Anfang, jedoch ohne eine XML-Deklaration. Wenn der Zieltyp zu klein ist, wird ein Fehler ausgelöst.  
   
  Beispiel:  
@@ -68,13 +72,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  Beim Zurückgeben der XML-Ergebnisse an die Clientseite werden die Daten in UTF-16-Codierung gesendet. Der clientseitige Anbieter macht die Daten dann entsprechend seinen API-Regeln verfügbar.  
   
-## Serialisierung der XML-Strukturen  
+## <a name="serialization-of-the-xml-structures"></a>Serialisierung der XML-Strukturen  
  Der Inhalt eines **xml** -Datentyps wird auf die herkömmliche Art und Weise serialisiert. Das heißt konkret, dass Elementknoten dem Elementmarkup zugeordnet und Textknoten dem Textinhalt zugeordnet werden. Die Umstände, unter denen die Zeichen in Entitäten geändert werden, und die Modalitäten beim Serialisieren von atomaren Werten werden in den folgenden Abschnitten beschrieben.  
   
-## Ändern von XML-Zeichen in Entitäten bei der Serialisierung  
+## <a name="entitization-of-xml-characters-during-serialization"></a>Ändern von XML-Zeichen in Entitäten bei der Serialisierung  
  Jede serialisierte XML-Struktur muss in der Lage sein, neu analysiert zu werden. Deshalb müssen einige Zeichen so serialisiert werden, dass sie in eine Entität geändert werden, damit die Roundtripfähigkeit der Zeichen in der gesamten Normalisierungsphase des XML-Parsers erhalten bleibt. Allerdings müssen einige Zeichen so in Entitäten geändert werden, dass das Dokument wohlgeformt ist und somit analysiert werden kann. Im Folgenden sind die bei der Serialisierung geltenden Regeln für das Ändern in Entitäten aufgeführt:  
   
--   Die Zeichen &, \< und > werden beim Ändern in Entitäten immer zu &amp;, &lt; bzw. &gt;, wenn sie innerhalb eines Attributwertes oder Elementinhalts auftreten.  
+-   Die Zeichen „&“, „\<“, und „>“ werden immer in Entitäten geändert &amp;, &lt;, und &gt; bzw. wenn sie in einem Attribut oder Elementinhalt auftreten.  
   
 -   Da SQL Server ein Anführungszeichen (U+0022) zum Einschließen von Attributwerten verwendet, wird das Anführungszeichen in Attributwerten bei der Änderung in Entitäten zu &quot;.  
   
@@ -109,7 +113,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- Beachten Sie, dass die [query()-Methode (xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) eine xml-Datentypinstanz ergibt. Deshalb wird jedes Ergebnis der **query()**-Methode, das in einen Zeichenfolgen- oder Binärtyp umgewandelt wird, entsprechend den zuvor beschriebenen Regeln in Entitäten geändert. Wenn Sie Zeichenfolgenwerte erhalten wollen, die nicht in Entitäten geändert wurden, sollten Sie stattdessen die [value()-Methode (xml-Datentyp)](../../t-sql/xml/value-method-xml-data-type.md) verwenden. Es folgt ein Beispiel zum Verwenden der **query()**-Methode:  
+ Beachten Sie, dass die [query()-Methode (xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) eine xml-Datentypinstanz ergibt. Deshalb wird jedes Ergebnis der **query()** -Methode, das in einen Zeichenfolgen- oder Binärtyp umgewandelt wird, entsprechend den zuvor beschriebenen Regeln in Entitäten geändert. Wenn Sie Zeichenfolgenwerte erhalten wollen, die nicht in Entitäten geändert wurden, sollten Sie stattdessen die [value()-Methode (xml-Datentyp)](../../t-sql/xml/value-method-xml-data-type.md) verwenden. Es folgt ein Beispiel zum Verwenden der **query()** -Methode:  
   
 ```  
 declare @x xml  
@@ -123,7 +127,7 @@ select @x.query('/a/text()')
 This example contains an entitized char: <.  
 ```  
   
- Es folgt ein Beispiel zum Verwenden der **query(**)-Methode:  
+ Es folgt ein Beispiel zum Verwenden der **query(** )-Methode:  
   
 ```  
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
@@ -135,7 +139,7 @@ select @x.value('(/a/text())[1]', 'nvarchar(100)')
 This example contains an entitized char: <.  
 ```  
   
-## Serialisieren eines typisierten xml-Datentyps  
+## <a name="serializing-a-typed-xml-data-type"></a>Serialisieren eines typisierten xml-Datentyps  
  Eine typisierte **xml** -Datentypinstanz enthält Werte, die entsprechend ihren XML-Schematypen typisiert sind. Diese Werte werden entsprechend ihrem XML-Schematyp in dasselbe Format serialisiert, wie es bei der XQuery-Umwandlung in xs:string entsteht. Weitere Informationen finden Sie unter [Typumwandlungsregeln in XQuery](../../xquery/type-casting-rules-in-xquery.md).  
   
  So wird z. B. der xs:double-Wert 1.34e1 zu 13.4 serialisiert, wie das im folgenden Beispiel gezeigt wird.  
@@ -148,7 +152,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Es wird der Zeichenfolgenwert 13.4 zurückgegeben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Typumwandlungsregeln in XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

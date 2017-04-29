@@ -1,34 +1,38 @@
 ---
-title: "Funktionsweise von Onlineindexvorg&#228;ngen | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Onlineindexvorgänge"
-  - "Quellindizes [SQL Server]"
-  - "Bereits vorhandene Indizes [SQL Server]"
-  - "Zielindizes [SQL Server]"
-  - "Temporärer Zuordnungsindex [SQL Server]"
-  - "Indizieren temporärer Zuordnungen [SQL Server]"
+title: "Funktionsweise von Onlineindexvorgängen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funktionsweise von Onlineindexvorg&#228;ngen
+# <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema werden die während eines Onlineindexvorgangs vorhandenen Strukturen definiert und die mit diesen Strukturen verbundenen Aktivitäten aufgezeigt.  
   
-## Onlineindexstrukturen  
+## <a name="online-index-structures"></a>Onlineindexstrukturen  
  Um gleichzeitige Benutzeraktivitäten während eines Index-DLL-Vorgangs (Data Definition Language, Datendefinitionssprache) zu ermöglichen, werden folgende Strukturen im Rahmen des Onlineindexvorgangs verwendet: Quellindizes und bereits vorhandene Indizes, Zielindizes sowie ein temporärer Zuordnungsindex zum Neuerstellen eines Heaps oder Löschen eines gruppierten Indexes im Onlinemodus.  
   
 -   **Quellindizes und bereits vorhandene Indizes**  
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      Onlineindexvorgänge, die einen gruppierten Index erstellen, löschen oder neu erstellen, benötigen auch einen temporären Zuordnungsindex. Dieser temporäre Index wird von gleichzeitigen Transaktionen verwendet, um zu bestimmen, welche Datensätze in den neuen Indizes gelöscht werden sollen, die erstellt werden, wenn Zeilen in der zugrunde liegenden Tabelle aktualisiert oder gelöscht werden. Dieser nicht gruppierte Index wird im gleichen Schritt erstellt wie der neue gruppierte Index (oder Heap) und erfordert keinen separaten Sortiervorgang. Gleichzeitige Transaktionen behalten zudem den temporären Zuordnungsindex in all ihren Einfüge-, Update- und Löschvorgängen bei.  
   
-## Onlineindexaktivitäten  
+## <a name="online-index-activities"></a>Onlineindexaktivitäten  
  Während eines einfachen Onlineindexvorgangs, wie beispielsweise der Erstellung eines gruppierten Indexes für eine nicht gruppierte Tabelle (Heap), durchlaufen die Quelle und das Ziel drei Phasen: Vorbereitung, Erstellung und Endphase.  
   
  Die folgende Abbildung zeigt den Prozess der Onlineerstellung eines anfänglichen gruppierten Indexes. Das Quellobjekt (der Heap) weist keine anderen Indizes auf. Die Aktivitäten der Quell- und Zielstrukturen werden für die einzelnen Phasen dargestellt. Außerdem werden gleichzeitige Auswahl-, Einfüge-, Update- und Löschvorgänge von Benutzern angezeigt. Die Vorbereitungs-, Erstellungs- und Endphase werden zusammen mit dem in der jeweiligen Phase verwendeten Sperrmodus angezeigt.  
   
- ![Während eines Onlineindexvorgangs ausgeführte Aktionen](../../relational-databases/indexes/media/online-index.gif "Während eines Onlineindexvorgangs ausgeführte Aktionen")  
+ ![Während eines Onlineindexvorgangs ausgeführte Aktionen](../../relational-databases/indexes/media/online-index.gif "Activities performed during online index operation")  
   
-## Quellstrukturaktivitäten  
+## <a name="source-structure-activities"></a>Quellstrukturaktivitäten  
  Die folgende Tabelle enthält die Aktivitäten in Bezug auf die Quellstrukturen während der einzelnen Phasen des Indexvorgangs und die entsprechende Sperrstrategie.  
   
 |Phase|Quellaktivität|Quellsperren|  
@@ -67,9 +71,9 @@ caps.handback.revision: 28
   
  ** Die Ressourcensperre INDEX_BUILD_INTERNAL_RESOURCE verhindert die Ausführung gleichzeitiger DDL-Vorgänge (Datendefinitionssprache) für die Quelle und bereits vorhandene Strukturen, während der Indexvorgang ausgeführt wird. Diese Sperre verhindert beispielsweise die gleichzeitige Neuerstellung zweier Indizes für dieselbe Tabelle. Obwohl diese Ressourcensperre der Sch-M-Sperre zugeordnet ist, verhindert sie keine Datenbearbeitungsanweisungen.  
   
- Die vorherige Tabelle zeigt eine einzelne freigegebene Sperre (Shared, S) an, die während der Erstellungsphase eines Onlineindexvorgangs, der einen einzelnen Index einschließt, eingerichtet wurde. Wenn gruppierte und nicht gruppierte Indizes erstellt oder neu erstellt werden, werden bei einem einzelnen Onlineindexvorgang (z. B. während der anfänglichen Erstellung eines gruppierten Indexes für eine Tabelle, die einen oder mehrere nicht gruppierte Indizes enthält) zwei kurzfristige S-Sperren gefolgt von langfristigen beabsichtigten gemeinsamen Sperren (IS-Sperren) während der Erstellungsphase eingerichtet. Eine S-Sperre wird zunächst für die Erstellung des gruppierten Indexes eingerichtet, und wenn die Erstellung des gruppierten Indexes abgeschlossen ist, wird eine zweite kurzfristige S-Sperre für die Erstellung der nicht gruppierten Indizes eingerichtet. Nachdem die nicht gruppierten Indizes erstellt wurden, wird die S-Sperre bis zur Endphase des Onlineindexvorgangs auf eine IS-Sperre herabgestuft.  
+ Die vorherige Tabelle zeigt eine einzelne freigegebene Sperre (Shared, S) an, die während der Erstellungsphase eines Onlineindexvorgangs, der einen einzelnen Index einschließt, eingerichtet wurde. Wenn gruppierte und nicht gruppierte Indizes erstellt oder neu erstellt werden, werden bei einem einzelnen Onlineindexvorgang (z. B. während der anfänglichen Erstellung eines gruppierten Indexes für eine Tabelle, die einen oder mehrere nicht gruppierte Indizes enthält) zwei kurzfristige S-Sperren gefolgt von langfristigen beabsichtigten gemeinsamen Sperren (IS-Sperren) während der Erstellungsphase eingerichtet. Eine S-Sperre wird zunächst für die Erstellung des gruppierten Indexes eingerichtet, und wenn die Erstellung des gruppierten Indexes abgeschlossen ist, wird eine zweite kurzfristige S-Sperre für die Erstellung der nicht gruppierten Indizes eingerichtet. Nachdem die nicht gruppierten Indizes erstellt wurden, wird die S-Sperre bis zur Endphase des Onlineindexvorgangs auf eine IS-Sperre herabgestuft.  
   
-### Zielstrukturaktivitäten  
+### <a name="target-structure-activities"></a>Zielstrukturaktivitäten  
  Die folgende Tabelle enthält die Aktivitäten in Bezug auf die Zielstrukturen während der einzelnen Phasen des Indexvorgangs und die entsprechende Sperrstrategie.  
   
 |Phase|Zielaktivität|Zielsperren|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  Die Lebensdauer eines Cursors, der für eine Tabelle deklariert wurde, die an einem Onlineindexvorgang beteiligt ist, wird durch die Onlineindexphasen begrenzt. Updatecursor werden in den einzelnen Phasen für ungültig erklärt. Schreibgeschützte Cursor werden nur nach der Endphase für ungültig erklärt.  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

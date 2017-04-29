@@ -1,27 +1,31 @@
 ---
-title: "Konfigurieren der Dialogsicherheit f&#252;r Ereignisbenachrichtigungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ereignisbenachrichtigungen [SQL Server], Sicherheit"
+title: "Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren der Dialogsicherheit f&#252;r Ereignisbenachrichtigungen
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogsicherheit sollte für Ereignisbenachrichtigungen konfiguriert werden, die Meldungen an einen Service Broker auf einem Remoteserver senden. Die Dialogsicherheit muss entsprechend dem Modell für die vollständige Sicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dialogen manuell konfiguriert werden. Das Modell für vollständige Sicherheit ermöglicht die Ver- und Entschlüsselung von Nachrichten, die an und von Remoteservern gesendet werden. Obwohl Ereignisbenachrichtigungen nur in eine Richtung gesendet werden, werden andere Nachrichten, z. B. Fehlermeldungen, auch in die Gegenrichtung zurückgegeben.  
+# <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogsicherheit sollte für Ereignisbenachrichtigungen konfiguriert werden, die Meldungen an einen Service Broker auf einem Remoteserver senden. Die Dialogsicherheit muss entsprechend dem Modell für die vollständige Sicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogen manuell konfiguriert werden. Das Modell für vollständige Sicherheit ermöglicht die Ver- und Entschlüsselung von Nachrichten, die an und von Remoteservern gesendet werden. Obwohl Ereignisbenachrichtigungen nur in eine Richtung gesendet werden, werden andere Nachrichten, z. B. Fehlermeldungen, auch in die Gegenrichtung zurückgegeben.  
   
-## Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen  
+## <a name="configuring-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen  
  Der zum Implementieren der Dialogsicherheit für die Ereignisbenachrichtigung erforderliche Vorgang wird in den folgenden Schritten beschrieben. Diese Schritte schließen Aktionen ein, die sowohl auf dem Quellserver als auch auf dem Zielserver ausgeführt werden müssen. Der Quellserver ist der Server, auf dem die Ereignisbenachrichtigung erstellt wird. Der Zielserver ist der Server, der die Ereignisbenachrichtigungsmitteilung empfängt. Sie müssen die Aktionen in den einzelnen Schritten sowohl für den Quellserver als auch für den Zielserver abschließen, bevor Sie den Vorgang mit dem nächsten Schritt fortsetzen.  
   
 > [!IMPORTANT]  
@@ -56,7 +60,7 @@ caps.handback.revision: 23
 ||Wenn Sie als Zieldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|  
 ||[Erstellen Sie eine Warteschlange](../../t-sql/statements/create-queue-transact-sql.md) für den Empfang der Ereignisbenachrichtigungen, und [erstellen Sie einen Dienst](../../t-sql/statements/create-service-transact-sql.md) für die Übermittlung der Nachrichten.|  
 ||[Erteilen Sie dem Quelldatenbankbenutzer die SEND-Berechtigung](../../t-sql/statements/grant-transact-sql.md) für den Zieldienst.|  
-|Stellen Sie dem Zielserver den Service Broker-Bezeichner der Quelldatenbank zur Verfügung. Dieser Bezeichner kann durch Abfragen der **service_broker_guid**-Spalte der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht abgerufen werden. Verwenden Sie für eine Ereignisbenachrichtigung auf Serverebene den Service Broker-Bezeichner von **msdb**.|Stellen Sie dem Quellserver den Service Broker-Bezeichner der Zieldatenbank zur Verfügung.|  
+|Stellen Sie dem Zielserver den Service Broker-Bezeichner der Quelldatenbank zur Verfügung. Dieser Bezeichner kann durch Abfragen der **service_broker_guid** -Spalte der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgerufen werden. Verwenden Sie für eine Ereignisbenachrichtigung auf Serverebene den Service Broker-Bezeichner von **msdb**.|Stellen Sie dem Quellserver den Service Broker-Bezeichner der Zieldatenbank zur Verfügung.|  
   
  **Schritt 4: Erstellen Sie Routen, und richten Sie die Authentifizierung auf Serverebene ein.**  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 23
 |Quellserver|Zielserver|  
 |-------------------|-------------------|  
 |[Erstellen Sie eine Route](../../t-sql/statements/create-route-transact-sql.md) zum Zieldienst, und geben Sie den Service Broker-Bezeichner der Zieldatenbank und die zu verwendende TCP-Portnummer an.|Erstellen Sie eine Route zum Quelldienst, und geben Sie den Service Broker-Bezeichner der Quelldatenbank und die zu verwendende TCP-Portnummer an. Geben Sie den Quelldienst mithilfe des folgenden bereitgestellten Dienstes an: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
-|Wechseln Sie zur **master**-Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|Wechseln Sie zur **master**-Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|  
+|Wechseln Sie zur **master** -Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|Wechseln Sie zur **master** -Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|  
 |Wenn für die **master** -Datenbank kein Hauptschlüssel vorhanden ist, müssen Sie [einen Hauptschlüssel erstellen](../../t-sql/statements/create-master-key-transact-sql.md).|Wenn für die **master** -Datenbank kein Hauptschlüssel vorhanden ist, müssen Sie einen Hauptschlüssel erstellen.|  
 |[Erstellen Sie ein Zertifikat](../../t-sql/statements/create-certificate-transact-sql.md) , mit dem die Datenbank authentifiziert wird.|Erstellen Sie ein Zertifikat, mit dem die Datenbank authentifiziert wird.|  
 |[Sichern Sie das Zertifikat](../../t-sql/statements/backup-certificate-transact-sql.md) in einer Datei, auf die der Zielserver zugreifen kann.|Sichern Sie das Zertifikat in einer Datei, auf die der Quellserver zugreifen kann.|  
@@ -84,7 +88,7 @@ caps.handback.revision: 23
 |Wechseln Sie zu der Quelldatenbank, auf der die Ereignisbenachrichtigung erstellt werden soll. Wenn Sie als Quelldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|Wechseln Sie zur Zieldatenbank, um Ereignisbenachrichtigungen zu empfangen.|  
 |[Erstellen Sie die Ereignisbenachrichtigung](../../t-sql/statements/create-event-notification-transact-sql.md), und geben Sie den Broker-Dienst und den Bezeichner der Zieldatenbank an.||  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

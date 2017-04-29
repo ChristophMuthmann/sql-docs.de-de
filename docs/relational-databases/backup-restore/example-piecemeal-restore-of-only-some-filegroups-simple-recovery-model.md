@@ -1,37 +1,41 @@
 ---
-title: "Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (einfaches Wiederherstellungsmodell) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Schrittweise Wiederherstellung [SQL Server], einfaches Wiederherstellungsmodell"
-  - "Wiederherstellungssequenzen [SQL Server], schrittweise"
-  - "Einfaches Wiederherstellungsmodell [SQL Server], Beispiele für RESTORE"
+title: 'Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (einfaches Wiederherstellungsmodell) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- piecemeal restores [SQL Server], simple recovery model
+- restore sequences [SQL Server], piecemeal
+- simple recovery model [SQL Server], RESTORE examples
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fdc0ea6d5523f397a2e3b38d021b046260c32d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (einfaches Wiederherstellungsmodell)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (einfaches Wiederherstellungsmodell)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, für die ein einfaches Wiederherstellungsmodell mit einer schreibgeschützten Dateigruppe verwendet wird.  
+  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, für die ein einfaches Wiederherstellungsmodell mit einer schreibgeschützten Dateigruppe verwendet wird.  
   
  Mit einer schrittweisen Wiederherstellungssequenz wird eine Datenbank phasenweise auf Dateigruppenebene wiederhergestellt, beginnend mit der primären Dateigruppe und allen sekundären Dateigruppen mit Lese-/Schreibzugriff.  
   
  In diesem Beispiel sind in der Datenbank `adb`, für die das einfache Wiederherstellungsmodell verwendet wird, drei Dateigruppen enthalten. Die Dateigruppe `A` weist Lese-/Schreibzugriff auf, die Dateigruppen `B` und `C` sind schreibgeschützt. Zu Beginn sind alle Dateigruppen online.  
   
- Die primäre Dateigruppe und die Dateigruppe `B` der `adb`-Datenbank scheinen beschädigt zu sein. Der Datenbankadministrator beschließt, sie mithilfe einer schrittweisen Wiederherstellungssequenz wiederherzustellen. Beim einfachen Wiederherstellungsmodell müssen alle Dateigruppen mit Lese-/Schreibzugriff von derselben Teilsicherung wiederhergestellt werden. Obwohl die Dateigruppe `A` intakt ist, muss sie mit der primären Dateigruppe wiederhergestellt werden, um sicherzustellen, dass beide konsistent sind (die Datenbank wird bis zu dem Zeitpunkt wiederhergestellt, der zum Ende der letzten Teilsicherung definiert wurde). Die Dateigruppe `C` ist intakt, muss jedoch wiederhergestellt werden, damit sie online geschaltet werden kann. Die Dateigruppe `B`ist zwar beschädigt, es sind darin jedoch keine so wichtigen Daten wie in Dateigruppe `C`enthalten. Deshalb wird die Dateigruppe `B` zuletzt wiederhergestellt.  
+ Die primäre Dateigruppe und die Dateigruppe `B` der `adb` -Datenbank scheinen beschädigt zu sein. Der Datenbankadministrator beschließt, sie mithilfe einer schrittweisen Wiederherstellungssequenz wiederherzustellen. Beim einfachen Wiederherstellungsmodell müssen alle Dateigruppen mit Lese-/Schreibzugriff von derselben Teilsicherung wiederhergestellt werden. Obwohl die Dateigruppe `A` intakt ist, muss sie mit der primären Dateigruppe wiederhergestellt werden, um sicherzustellen, dass beide konsistent sind (die Datenbank wird bis zu dem Zeitpunkt wiederhergestellt, der zum Ende der letzten Teilsicherung definiert wurde). Die Dateigruppe `C` ist intakt, muss jedoch wiederhergestellt werden, damit sie online geschaltet werden kann. Die Dateigruppe `B`ist zwar beschädigt, es sind darin jedoch keine so wichtigen Daten wie in Dateigruppe `C`enthalten. Deshalb wird die Dateigruppe `B` zuletzt wiederhergestellt.  
   
-## Wiederherstellen von Sequenzen  
+## <a name="restore-sequences"></a>Wiederherstellen von Sequenzen  
   
 > [!NOTE]  
 >  Die Syntax für eine Onlinewiederherstellungssequenz ist dieselbe wie bei einer Offlinewiederherstellungssequenz.  
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 2.  Onlinewiederherstellung der Dateigruppe `C`.  
   
-     Dateigruppe `C` ist konsistent, weil die Teilsicherung, die weiter oben wiederhergestellt wurde, nach dem Kennzeichnen der Dateigruppe `C` als schreibgeschützt erstellt wurde, obwohl für die Datenbank ein früherer Status wiederhergestellt wurde. Der Datenbankadministrator stellt die Dateigruppe `C` wieder her, ohne die Sicherung wiederherzustellen, um sie online zu schalten.  
+     Dateigruppe `C` ist konsistent, weil die Teilsicherung, die weiter oben wiederhergestellt wurde, nach dem Kennzeichnen der Dateigruppe `C` als schreibgeschützt erstellt wurde, obwohl für die Datenbank ein früherer Status wiederhergestellt wurde. Der Datenbankadministrator stellt die Dateigruppe `C`wieder her, ohne die Sicherung wiederherzustellen, um sie online zu schalten.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='C' WITH RECOVERY  
@@ -66,7 +70,7 @@ caps.handback.revision: 28
   
      Alle Dateigruppen sind nun online.  
   
-## Zusätzliche Beispiele  
+## <a name="additional-examples"></a>Zusätzliche Beispiele  
   
 -   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -80,10 +84,10 @@ caps.handback.revision: 28
   
 -   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Onlinewiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

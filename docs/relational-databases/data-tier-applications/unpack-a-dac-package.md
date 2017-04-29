@@ -1,44 +1,48 @@
 ---
-title: "Entpacken eines DAC-Pakets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assistent [DAC], entpacken"
-  - "Datenschichtanwendung [SQL Server], entpacken"
-  - "Vorgehensweise [DAC], entpacken"
-  - "Entpacken einer DAC"
+title: Entpacken eines DAC-Pakets | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# Entpacken eines DAC-Pakets
+# <a name="unpack-a-dac-package"></a>Entpacken eines DAC-Pakets
   Verwenden Sie das Dialogfeld Datenebenenanwendung entpacken, um die Skripts und die Dateien aus einem Datenebenenanwendungs-Paket (DAC) zu entzippen. Die Skripts und Dateien werden in einem Ordner abgelegt, in dem sie überprüft werden können, bevor das Paket für die Bereitstellung der DAC in einem Produktionssystem verwendet wird. Der Inhalt einer DAC kann auch mit dem Inhalt eines anderen Pakets verglichen werden, das in einen anderen Ordner entpackt wurde.  
   
-1.  **Vorbereitungen:**  [Sicherheit](#Security)  
+1.  **Before you begin:**  [Security](#Security)  
   
-2.  **So entpacken Sie eine DAC mit:** dem Dialogfeld [Datenebenenanwendung entpacken](#UnpackDACDial), [Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
+2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sicherheit  
- Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, sollten Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereitstellen, die DAC entpacken und den Code, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, untersuchen.  
+ Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, sollten Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereitstellen, die DAC entpacken und den Code, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, untersuchen.  
   
-##  <a name="UnpackDACDial"></a> Dialogfeld "Datenebenenanwendung entpacken"  
+##  <a name="UnpackDACDial"></a> Datenebenenanwendung entpacken  
  **So entpacken Sie eine DAC-Paketdatei**  
   
--   Navigieren Sie im **Windows-Explorer** zum Speicherort einer DAC-Paketdatei (.dacpac).  
+-   Navigieren Sie im **Windows-Explorer**zum Speicherort einer DAC-Paketdatei (.dacpac).  
   
 -   Öffnen Sie das Dialogfeld "Datenebenenanwendung entpacken" mit einer dieser beiden Methoden:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf die DAC-Paketdatei (.dacpac), und wählen Sie **Entpacken** aus.  
+    1.  Klicken Sie mit der rechten Maustaste auf die DAC-Paketdatei (.dacpac), und wählen Sie **Entpacken**aus.  
   
     2.  Doppelklicken Sie auf die DAC-Paketdatei.  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 11
   
  **Dateien werden in diesen Ordner entpackt:** – Geben Sie den vollständigen Pfad zum Ordner der entpackten Dateien an. Wenn der Ordner vorhanden ist und Sie den vollständigen Pfad kennen, geben Sie den Pfad im Feld ein. Klicken Sie andernfalls auf die Schaltfläche **Durchsuchen** , um zu einem Ordner zu navigieren oder einen neuen Ordner zu erstellen.  
   
- **Durchsuchen** – Öffnet die Seite **Nach Ordner suchen**, wo Sie einen Ordner auswählen können, indem Sie in der Dateihierarchie navigieren oder einen neuen Ordner erstellen.  
+ **Durchsuchen** – Öffnet die Seite **Nach Ordner suchen** , wo Sie einen Ordner auswählen können, indem Sie in der Dateihierarchie navigieren oder einen neuen Ordner erstellen.  
   
  **Entpacken** – Startet den Entpackungsvorgang.  
   
@@ -70,18 +74,18 @@ caps.handback.revision: 11
   
  **Abbrechen** – Schließt das Dialogfeld, ohne einen Ordner auszuwählen.  
   
-##  <a name="ExamDACPack"></a> Den Inhalt eines DAC-Pakets untersuchen  
+##  <a name="ExamDACPack"></a> Untersuchen des Inhalts eines DAC-Pakets  
  Nachdem Sie das Paket entpackt haben, können Sie die vom Dialogfeld **Datenebenenanwendung entpacken** erzeugten Dateien untersuchen. Das Dialogfeld erstellt die folgenden Dateien im ausgewählten Zielordner:  
   
 1.  Ein Transact-SQL-Skript, das die Anweisungen zum Erstellen der in der DAC definierten Objekte enthält. Der Dateiname ist *DACName*.sql, wobei *DACName* der Name der DAC ist.  
   
 2.  Alle XML-Dateien aus dem Paket.  
   
-3.  Alle Dateien, die sich im Bereich für zusätzliche Dateien der DAC befinden, z. B. vor oder nach der Bereitstellung der DAC auszuführende Dateien.  
+3.  Alle Dateien, die sich im Bereich für zusätzliche Dateien der DAC befinden, z. B. vor oder nach der Bereitstellung der DAC auszuführende Dateien.  
   
  Weitere Informationen finden Sie unter [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Upgrade einer Datenebenenanwendung](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

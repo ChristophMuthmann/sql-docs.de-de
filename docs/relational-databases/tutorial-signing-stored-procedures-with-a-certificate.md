@@ -1,26 +1,30 @@
 ---
-title: "Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "Lernprogramm: Signieren von gespeicherten Prozeduren [SQL Server]"
+title: 'Tutorial: Signieren von gespeicherten Prozeduren mit einem Zertifikat | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat
 In diesem Lernprogramm wird erläutert, wie gespeicherte Prozeduren mit einem Zertifikat signiert werden können, das von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]generiert wurde.  
   
 > [!NOTE]  
@@ -48,7 +52,7 @@ In diesem Szenario erstellen Sie zunächst ein Datenbankzertifikat, eine gespeic
   
 Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.  
   
-## 1. Konfigurieren der Umgebung  
+## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
 Zum Festlegen des Anfangskontexts für das Beispiel öffnen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] eine neue Abfrage und führen den folgenden Code aus, um die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank zu öffnen. Dieser Code ändert den Datenbankkontext zu `AdventureWorks2012` und erstellt eine neue Serveranmeldung sowie ein neues Datenbank-Benutzerkonto (`TestCreditRatingUser`), wobei ein Kennwort verwendet wird.  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 Weitere Informationen zur CREATE USER-Anweisung finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Weitere Informationen zur CREATE LOGIN-Anweisung finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-## 2. Erstellen eines Zertifikats  
+## <a name="2-create-a-certificate"></a>2. Erstellen eines Zertifikats  
 Zertifikate können Sie auf dem Server erstellen, indem Sie die master-Datenbank, eine Benutzerdatenbank oder beide als Kontext verwenden. Für das Sichern eines Zertifikats gibt es mehrere Optionen. Weitere Informationen zum Erstellen eines Zertifikats finden Sie unter [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md).  
   
 Führen Sie den folgenden Code aus, um ein Datenbankzertifikat zu erstellen und mit einem Kennwort zu sichern.  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3. Erstellen einer gespeicherten Prozedur und Signieren der Prozedur mithilfe des Zertifikats  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Erstellen einer gespeicherten Prozedur und Signieren der Prozedur mithilfe des Zertifikats  
 Erstellen Sie mit dem folgenden Code eine gespeicherte Prozedur, die Daten aus der `Vendor` -Tabelle `Purchasing` -Datenbankschema auswählt, wobei der Zugriff auf Unternehmen beschränkt wird, die die Bonität (CreditRating) 1 haben. Der erste Abschnitt der gespeicherten Prozedur zeigt den Kontext des Benutzerkontos an, unter dem die gespeicherte Prozedur ausgeführt wird. Hiermit sollen lediglich die Konzepte verdeutlicht werden. Es ist nicht erforderlich, die Anforderungen zu erfüllen.  
   
 ```  
@@ -114,7 +118,7 @@ Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter
   
 Weitere Informationen zum Signieren von gespeicherten Prozeduren finden Sie unter [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
-## 4. Erstellen eines Zertifikatkontos mithilfe des Zertifikats  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Erstellen eines Zertifikatkontos mithilfe des Zertifikats  
 Führen Sie den folgenden Code aus, um über das Zertifikat einen Datenbankbenutzer (`TestCreditRatingcertificateAccount`) zu erstellen. Das Konto hat keine Serveranmeldung und steuert ausschließlich den Zugriff auf die zugrunde liegenden Tabellen.  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5. Erteilen der Datenbankberechtigungen für das Zertifikatkonto  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5. Erteilen der Datenbankberechtigungen für das Zertifikatkonto  
 Führen Sie den folgenden Code aus, damit `TestCreditRatingcertificateAccount` die Berechtigungen für die Basistabellen und die gespeicherte Prozedur erteilt werden.  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 Weitere Informationen zum Erteilen von Berechtigungen für Objekte finden Sie unter [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
-## 6. Anzeigen des Zugriffskontexts  
+## <a name="6-display-the-access-context"></a>6. Anzeigen des Zugriffskontexts  
 Damit die Berechtigungen angezeigt werden können, die mit dem Zugriff über die gespeicherte Prozedur verknüpft sind, führen Sie den folgenden Code aus. Der Code erteilt dem Benutzer `TestCreditRatingUser` die Berechtigung, die gespeicherte Prozedur auszuführen.  
   
 ```  
@@ -173,7 +177,7 @@ Auf diese Weise wird die Überwachung demonstriert, die verfügbar ist, weil Sie
 > [!NOTE]  
 > Verwenden Sie EXECUTE AS zum Wechseln des Kontexts in einer Datenbank.  
   
-## 7. Zurücksetzen der Umgebung  
+## <a name="7-reset-the-environment"></a>7. Zurücksetzen der Umgebung  
 Im folgenden Code wird die `REVERT`-Anweisung verwendet, um den Kontext des aktuellen Kontos auf dbo zurückzusetzen, und dann die Umgebung zurückgesetzt.  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

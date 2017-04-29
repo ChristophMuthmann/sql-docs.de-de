@@ -1,26 +1,30 @@
 ---
-title: "Anzeigen von Informationen und Ausf&#252;hren von Aufgaben f&#252;r einen Verleger (Replikationsmonitor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verleger [SQL Server-Replikation], Replikationsmonitortasks"
-  - "Anzeigen von Verlegerinformationen"
-  - "Verleger [SQL Server-Replikation], Anzeigen von Informationen"
+title: "Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger (Replikationsmonitor) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], Replication Monitor tasks
+- viewing Publisher information
+- Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anzeigen von Informationen und Ausf&#252;hren von Aufgaben f&#252;r einen Verleger (Replikationsmonitor)
+# <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger (Replikationsmonitor)
   Der Replikationsmonitor bietet folgende Registerkarten, auf denen Informationen zu dem ausgewählten Verleger angezeigt werden:  
   
 -   **Veröffentlichungen**  
@@ -37,7 +41,7 @@ caps.handback.revision: 37
   
  Wenn Sie weitere Informationen zu den Optionen auf den einzelnen Registerkarten anzeigen möchten, klicken Sie im rechten Bereich auf die Registerkarte, und klicken Sie anschließend auf der Menüleiste auf **Hilfe** . Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-### So zeigen Sie Informationen für einen Verleger an und führen Aufgaben aus  
+### <a name="to-view-information-and-perform-tasks-for-a-publisher"></a>So zeigen Sie Informationen für einen Verleger an und führen Aufgaben aus  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, und klicken Sie dann auf einen Verleger.  
   
@@ -45,28 +49,28 @@ caps.handback.revision: 37
   
 3.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** . Über diese Registerkarte können Sie auch auf ausführliche Informationen zugreifen und Aufgaben ausführen:  
   
-    -   Um ausführliche Informationen zu den einem Abonnement zugeordneten Agent anzeigen, mit der rechten Maustaste des Abonnements, und klicken Sie dann auf **Details zum**.  
+    -   Wenn Sie detaillierte Informationen zum Agent angezeigt bekommen möchten, der dem jeweiligen Abonnement zugeordnet ist, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.  
   
-    -   Zum Anzeigen der Eigenschaften eines Abonnements mit der rechten Maustaste des Abonnements, und klicken Sie dann auf **Eigenschaften**.  
+    -   Wenn Sie die Eigenschaften eines Abonnements anzeigen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie anschließend auf **Eigenschaften**.  
   
-    -   Um ein Pushabonnement zu synchronisieren, mit der rechten Maustaste des Abonnements, und klicken Sie dann auf **Synchronisierung starten**.  
+    -   Wenn Sie ein Pushabonnement synchronisieren möchten, klicken Sie mit der rechten Maustaste auf das betreffende Abonnement, und klicken Sie dann auf **Synchronisierung starten**.  
   
-    -   Um ein Abonnement erneut zu initialisieren, mit der rechten Maustaste des Abonnements, und klicken Sie dann auf **Abonnement erneut initialisieren**.  
+    -   Wenn Sie ein Abonnement erneut initialisieren möchten, klicken Sie mit der rechten Maustaste auf das betreffende Abonnement, und klicken Sie dann auf **Abonnement erneut initialisieren**.  
   
 4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Sie können von dieser Registerkarte aus auch auf detailliertere Informationen zugreifen und Aufgaben ausführen:  
   
-    -   Detaillierte Informationen zu einem Agent (z. B. informationsmeldungen und Fehlermeldungen) anzeigen, mit der rechten Maustaste des Agents, und klicken Sie auf **Details zum**.  
+    -   Wenn Sie ausführliche Informationen zu einem Agent (z. B. Informationsmeldungen und Fehlermeldungen) anzeigen möchten, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Details anzeigen**.  
   
-    -   Um ausführliche Informationen zum Auftrag anzuzeigen, die der Agent (z. B. Zeitplan, Auftragsschrittdetails usw.) ausgeführt wird, mit der rechten Maustaste des Agents, und klicken Sie dann auf **Eigenschaften**.  
+    -   Wenn Sie detaillierte Informationen zu dem Auftrag anzeigen möchten, durch den der Agent ausgeführt wird (z. B. Zeitplan, Details zu den Auftragsschritten usw.), klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie anschließend auf **Eigenschaften**.  
   
-    -   Um Profile für den Agent zu verwalten, mit der rechten Maustaste des Agents, und klicken Sie dann auf **Agentprofil**. Weitere Informationen finden Sie unter [Arbeiten mit Replikations-Agentprofile](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
+    -   Wenn Sie die Profile für den Agent verwalten möchten, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agentprofil**. Weitere Informationen finden Sie unter [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
   
-    -   Um einen Agent zu starten, die nicht ausgeführt wird, mit der rechten Maustaste des Agents, und klicken Sie dann auf **Agent starten**.  
+    -   Um einen Agent zu starten, der nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent starten**.  
   
-    -   Um einen Agent zu beenden, die ausgeführt wird, mit der rechten Maustaste des Agents, und klicken Sie dann auf **Agent beenden**.  
+    -   Um einen Agent zu beenden, der ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent beenden**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

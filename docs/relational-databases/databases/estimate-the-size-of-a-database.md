@@ -1,31 +1,35 @@
 ---
-title: "Sch&#228;tzen der Gr&#246;&#223;e einer Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Speicherplatzzuordnung [SQL Server], Datenbankgröße"
-  - "Berechnen der Größe einer Datenbank"
-  - "Vergrößern von Datenbanken"
-  - "Datenbankgröße [SQL Server], schätzen"
-  - "Vorhersagen der Datenbankgröße"
-  - "Größe [SQL Server], Datenbanken"
-  - "Schätzen der Datenbankgröße"
-  - "Entwerfen von Datenbanken [SQL Server], Schätzen der Größe"
+title: "Schätzen der Größe einer Datenbank | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sch&#228;tzen der Gr&#246;&#223;e einer Datenbank
+# <a name="estimate-the-size-of-a-database"></a>Schätzen der Größe einer Datenbank
   Wenn Sie eine Datenbank entwerfen, müssen Sie möglicherweise die Größe der Datenbank schätzen, wenn diese mit Daten aufgefüllt ist. Das Schätzen der Datenbankgröße kann Ihnen helfen, die Hardwarekonfiguration zu bestimmen, die für Folgendes benötigt wird:  
   
 -   Erzielen der Leistung, die von den Anwendungen benötigt wird.  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  Um die Größe einer Datenbank zu schätzen, sollten Sie die Größe jeder einzelnen Tabelle schätzen und dann die ermittelten Werte addieren. Die Größe einer Tabelle hängt davon ab, ob die Tabelle über Indizes verfügt und, wenn dies der Fall ist, welcher Typ von Indizes verwendet wird.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  

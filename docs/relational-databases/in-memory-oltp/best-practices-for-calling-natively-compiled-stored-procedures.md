@@ -1,22 +1,26 @@
 ---
-title: "Bew&#228;hrte Vorgehensweisen f&#252;r den Aufruf von systemintern kompilierten gespeicherten Prozeduren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ecd5bafd4a2092ea51556b898284456d8abf2d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bew&#228;hrte Vorgehensweisen f&#252;r den Aufruf von systemintern kompilierten gespeicherten Prozeduren
+# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren
   Für systemintern kompilierte gespeicherte Prozeduren gilt Folgendes:  
   
 -   Sie werden üblicherweise in leistungskritischen Anwendungskomponenten verwendet.  
@@ -37,7 +41,7 @@ caps.handback.revision: 8
   
 -   Prozedurale Logik, wie Bedingungsanweisungen und Schleifen.  
   
- Wenn Sie nur eine einzelne Zeile verarbeiten müssen, bietet eine systemintern kompilierte gespeicherte Prozedur u. U. keinen Leistungsvorteil.  
+ Wenn Sie nur eine einzelne Zeile verarbeiten müssen, bietet eine systemintern kompilierte gespeicherte Prozedur u. U. keinen Leistungsvorteil.  
   
  So vermeiden Sie, dass der Server Parameternamen zuordnen und Typen konvertieren muss:  
   
@@ -45,13 +49,11 @@ caps.handback.revision: 8
   
 -   Verwenden Sie Ordnungszahlparameter (namenlos), wenn Sie systemintern kompilierte gespeicherte Prozeduren aufrufen. Verwenden Sie für die effizienteste Ausführung keine benannten Parameter.  
   
- Die Verwendung von (ineffizienten) benannten Parametern mit systemintern kompilierten gespeicherten Prozeduren kann über das XEvent **hekaton_slow_parameter_passing** mit **reason=named_parameters** erkannt werden.  
+ Ineffizienz in Parametern mit nativen kompilierten gespeicherten Prozeduren kann über das XEvent **natively_compiled_proc_slow_parameter_passing** erkannt werden:
+ - Nicht übereinstimmende Typen: **reason=parameter_conversion**
+ - Benannte Parameter: **reason=named_parameters**
+ - Standardwerte: **reason=default** 
   
- Auf ähnliche Weise können Sie die Verwendung von nicht übereinstimmenden Typen mit dem gleichen XEvent **hekaton_slow_parameter_passing** mit **reason=parameter_conversion** erkennen.  
-  
- Da Sie bei der Verwendung speicheroptimierter Tabellen (in vielen Fällen) Wiederholungslogik implementieren und bestimmte Funktionseinschränkungen umgehen müssen, können Sie eine von einem Wrapper interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur erstellen. Ein Beispiel finden Sie unter [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  
+

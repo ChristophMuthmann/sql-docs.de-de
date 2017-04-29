@@ -1,35 +1,39 @@
 ---
-title: "Deaktivieren von Indizes und Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "Deaktivierte Indizes [SQL Server], Indexvorgänge"
-  - "Nicht gruppierte Indizes [SQL Server], deaktivieren"
-  - "Deaktivierte Indizes [SQL Server], Richtlinien"
-  - "Gruppierte Indizes, deaktivieren"
-  - "Einschränkungen [SQL Server], deaktivieren"
-  - "Deaktivierte Indizes [SQL Server], anzeigen"
-  - "FOREIGN KEY-Einschränkungen, deaktivieren"
-  - "Statistische Informationen [SQL Server], Indizes"
-  - "Indexdeaktivierung [SQL Server]"
-  - "indizierte Sichten [SQL Server], deaktivierte Indizes"
+title: "Deaktivieren von Indizes und Einschränkungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deaktivieren von Indizes und Einschr&#228;nkungen
+# <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie ein Index oder Einschränkungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktiviert werden. Wenn Indizes deaktiviert werden, können Benutzer nicht mehr darauf zugreifen, und bei gruppierten Indizes können sie auch nicht mehr auf die dem Index zugrunde liegenden Tabellendaten zugreifen. Die Indexdefinition verbleibt jedoch in den Metadaten, und bei nicht gruppierten Indizes werden die Indexstatistiken beibehalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Das Deaktivieren eines gruppierten Indexes für eine Tabelle verhindert lediglich das Zugreifen auf die Daten; diese verbleiben in der Tabelle, sind jedoch erst für DML-Vorgänge (Datenbearbeitungssprache) verfügbar, wenn der Index gelöscht oder neu erstellt wurde.  
@@ -44,7 +48,7 @@ caps.handback.revision: 28
   
 -   **So deaktivieren Sie einen Index mithilfe von:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So deaktivieren Sie einen Index  
+#### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
 1.  Klicken Sie in Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie einen Index deaktivieren möchten.  
   
@@ -103,11 +107,11 @@ caps.handback.revision: 28
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Indizes** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie deaktivieren möchten, und wählen Sie **Deaktivieren** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie deaktivieren möchten, und wählen Sie **Deaktivieren**aus.  
   
 6.  Überprüfen Sie im Dialogfeld **Index deaktivieren** , dass der richtige Index im Raster **Zu deaktivierende Indizes** ausgewählt ist, und klicken sie auf **OK**.  
   
-#### So deaktivieren Sie alle Indizes in einer Tabelle  
+#### <a name="to-disable-all-indexes-on-a-table"></a>So deaktivieren Sie alle Indizes in einer Tabelle  
   
 1.  Klicken Sie in Objekt-Explorer auf das Pluszeichen, um die Datenbank zu erweitern, die die Tabelle enthält, in der Sie die Indizes deaktivieren möchten.  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 28
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie die Indizes deaktivieren möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, und wählen Sie **Alle deaktivieren** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , und wählen Sie **Alle deaktivieren**aus.  
   
 5.  Überprüfen Sie im Dialogfeld **Indizes deaktivieren** , dass die richtigen Indizes im Raster **Zu deaktivierende Indizes** ausgewählt sind, und klicken sie auf **OK**. Um einen Index aus dem Raster **Zu deaktivierende Indizes** zu entfernen, wählen Sie den Index aus, und drücken Sie die ENTF-Taste.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 28
  Zeigt den Namen der Tabelle oder Sicht an, für die der Index erstellt wurde.  
   
  **Indextyp**  
- Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich** oder **XML**.  
+ Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich**oder **XML**.  
   
  **Status**  
  Zeigt den Status des Deaktivierungsvorgangs an. Mögliche Werte nach der Ausführung:  
@@ -162,9 +166,9 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So deaktivieren Sie einen Index  
+#### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -179,9 +183,9 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### So deaktivieren Sie alle Indizes in einer Tabelle  
+#### <a name="to-disable-all-indexes-on-a-table"></a>So deaktivieren Sie alle Indizes in einer Tabelle  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

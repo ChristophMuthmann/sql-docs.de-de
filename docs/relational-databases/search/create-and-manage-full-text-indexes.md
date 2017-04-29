@@ -1,131 +1,205 @@
 ---
-title: "Erstellen und Verwalten von Volltextindizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Volltextindizes [SQL Server], Informationen zu"
+title: Erstellen und Verwalten von Volltextindizes | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen und Verwalten von Volltextindizes
-  Die Informationen in Volltextindizes werden vom Volltextmodul verwendet, um Volltextabfragen zu kompilieren, die eine Tabelle schnell nach bestimmten Wörtern oder Wortkombination durchsuchen können. In einem Volltextindex werden Informationen zu signifikanten Wörtern und ihre Position innerhalb einer oder mehreren Spalte einer Datenbanktabelle gespeichert. Ein Volltextindex ist besonderer Typ eines tokenbasierten funktionellen Index, der durch das Volltextmodul für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwaltet wird. Der Vorgang der Erstellung eines Volltextindexes unterscheidet sich vom Erstellen anderer Indextypen. Statt eine B-Struktur basierend auf einem Wert in einer bestimmten Zeile aufzubauen, erstellt das Volltextsuchmodul eine invertierte, gestapelte, komprimierte Indexstruktur basierend auf einzelnen Token aus dem zu indizierenden Text.  Die Größe des Volltextindexes wird nur durch den verfügbaren Speicherplatz des Computers eingeschränkt, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+# <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
+Dieses Thema beschreibt das Erstellen, Auffüllen und Verwalten von Volltextindizes in SQL Server.
   
- Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Volltextindizes in das Datenbankmodul integriert und befinden sich nicht mehr im Dateisystem, wie dies in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Fall war. Bei einer neuen Datenbank ist ein Volltextkatalog jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist lediglich ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Beachten Sie jedoch, dass während des Upgrades einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank für alle Volltextkataloge, die Datendateien enthalten, eine neue Dateigruppe erstellt wird. Weitere Information finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
+## <a name="prerequisite---create-a-full-text-catalog"></a>Voraussetzung: Erstellen eines Volltextkatalogs
+Bevor Sie einen Volltextindex erstellen können, müssen Sie einen Volltextkatalog erstellen. Der Katalog ist ein virtueller Container für ein oder mehrere Volltextindizes. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-> [!NOTE]  
->  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen befindet sich das Volltextmodul im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess, anstatt in einem separaten Dienst. Durch die Integration des Volltextmoduls in das Datenbankmodul konnte die Verwaltbarkeit verbessert und die Leistung bei gemischten Abfragen sowie die Leistung insgesamt optimiert werden.  
-  
- Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für eine Tabelle erstellt werden kann, muss die Tabelle eine einzelne eindeutige Spalte aufweisen, die keine NULL-Werte enthält. Sie können einen Volltextindex für die Volltextsuche für alle Spalten vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** und **varbinary(max)** erstellen. Beim Erstellen eines Volltextindex für eine Spalte, dessen Datentyp **varbinary**, **varbinary(max)**, **image** oder **xml** lautet, müssen Sie eine Typspalte angeben. Eine *Typspalte* ist eine Tabellenspalte, in der die Dateierweiterung (DOC, PDF, XLS usw.) für das Dokument in der betreffenden Zeile gespeichert wird.  
-  
- Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Auffüllung* (oder *Durchforstung*) bezeichnet. Es gibt drei Auffüllungstypen für Volltextindizes: vollständige Auffüllungen, Auffüllungen mithilfe der Änderungsnachverfolgung sowie inkrementelle, auf Timestamps basierende Auffüllungen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
-  
-##  <a name="tasks"></a> Allgemeine Aufgaben  
- **So erstellen Sie einen Volltextindex**  
+##  <a name="tasks"></a> Erstellen, Ändern oder Löschen eines Volltextindexes  
+### <a name="create-a-full-text-index"></a>Erstellen eines Volltextindexes  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
   
- **So ändern Sie einen Volltextindex**  
+### <a name="alter-a-full-text-index"></a>Ändern eines Volltextindexes
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
- **So löschen Sie einen Volltextindex**  
+### <a name="drop-a-full-text-index"></a>Löschen eines Volltextindexes 
   
--   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)  
+-   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
+
+## <a name="populate-a-full-text-index"></a>Auffüllen eines Volltextindexes
+Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Auffüllung* (oder *Durchforstung*) bezeichnet. Es gibt drei Typen der Auffüllung eines Volltextindexes:
+-   Vollständige Auffüllung
+-   Auffüllung basierend auf der Änderungsnachverfolgung
+-   Inkrementelle Auffüllung basierend auf einem Zeitstempel
+
+Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).
+
+##  <a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
+### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Transact-SQL
+|Katalogsicht oder dynamische Verwaltungssicht|Description|  
+|----------------------------------------|-----------------|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Gibt eine Zeile für jeden Verweis zwischen Volltextkatalog und Volltextindex zurück.|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Enthält eine Zeile für jede Spalte, die Teil eines Volltextindexes ist.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)|Ein Volltextindex verwendet interne Tabellen, die als Volltextindexfragmente bezeichnet werden, um die umgekehrten Indexdaten zu speichern. Diese Sicht kann verwendet werden, um die Metadaten zu diesen Fragmenten abzufragen. Diese Sicht enthält eine Zeile für jedes Volltextindexfragment in jeder Tabelle, die einen Volltextindex enthält.|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)|Enthält eine Zeile pro Volltextindex eines Tabellenobjekts.|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)|Gibt Informationen zum Inhalt eines Volltextindex für die angegebene Tabelle zurück.|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)|Gibt Informationen zum Inhalt auf Dokumentebene eines Volltextindex für die angegebene Tabelle zurück. Ein Schlüsselwort kann in mehreren Dokumenten angezeigt werden.|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|Gibt Informationen zu den aktuell ausgeführten Volltextindexauffüllungen zurück.|  
+ 
+### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Management Studio 
+1.  Erweitern Sie in Management Studio im Objekt-Explorer den Server.  
   
- [In diesem Thema](#top)  
+2.  Erweitern Sie **Datenbanken**, und erweitern Sie dann die Datenbank, die den Volltextindex enthält.  
   
-##  <a name="structure"></a> Struktur der Volltextindizes  
- Die Kenntnis der Struktur eines Volltextindex hilft Ihnen dabei, die Funktionsweise des Volltextsuchmoduls zu verstehen. In diesem Thema wird der folgende Auszug der Tabelle **Dokument** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] als Beispieltabelle verwendet. Der Auszug enthält nur zwei Spalten, **DocumentID** und **Title** , und drei Zeilen der Tabelle.  
+3.  Erweitern Sie **Tabellen**.  
   
- Für dieses Beispiel wird davon ausgegangen, dass ein Volltextindex für die **Title**-Spalte erstellt wurde.  
+4.  Klicken Sie mit der rechten Maustaste auf die Tabelle, für die der Volltextindex definiert ist. Wählen Sie **Volltextindex**, und klicken Sie dann im Kontextmenü **Volltextindex** auf **Eigenschaften**. Das Dialogfeld **Volltextindexeigenschaften** wird geöffnet.  
   
-|DocumentID|Titel|  
-|----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
-|2|Front Reflector Bracket and Reflector Assembly 3|  
-|3|Front Reflector Bracket Installation|  
+5.  Im Bereich **Seite auswählen** können Sie eine der folgenden Seiten auswählen:  
   
- Die folgende Tabelle, in der Fragment 1 enthalten ist, zeigt den Inhalt des Volltextindex, der für die **Title**-Spalte der **Document**-Tabelle erstellt wurde. Volltextindizes enthalten mehr Informationen als die in dieser Tabelle dargestellten. Die Tabelle ist eine logische Darstellung eines Volltextindex und wird nur zu Demonstrationszwecken bereitgestellt. Die Zeilen werden in einem komprimierten Format gespeichert, um die Datenträgernutzung zu optimieren.  
+    |Page|Description|  
+    |----------|-----------------|  
+    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite „Spalten“&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
   
- Beachten Sie, dass die Daten gegenüber den Originaldokumenten umgekehrt wurden. Die Umkehrung tritt auf, da die Schlüsselwörter den Dokument-IDs zugeordnet sind. Aus diesem Grund wird ein Volltextindex häufig als invertierter Index bezeichnet.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
- Beachten Sie auch, dass das Schlüsselwort "and" aus dem Volltextindex entfernt wurde. Dies ist der Fall, weil "and" ein Stoppwort ist und das Entfernen von Stoppwörtern aus einem Volltextindex zu beträchtlichen Einsparungen beim Datenträgerspeicher führen kann, wodurch die Abfrageleistung verbessert wird. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+##  <a name="props"></a> Anzeigen der Eigenschaften von indizierten Tabellen und Spalten  
+ Mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen, z. B. OBJECTPROPERTYEX, können verwendet werden, um den Wert verschiedener Eigenschaften der Volltextindizierung abzurufen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche hilfreich.  
   
- **Fragment 1**  
+ Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
   
-|Schlüsselwort|ColId|DocId|Vorkommen|  
-|-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Verwaltung|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
-|Installation|1|3|4|  
+|Eigenschaft|Beschreibung|Funktion|  
+|--------------|-----------------|--------------|  
+|**FullTextTypeColumn**|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
+|**IsFulltextIndexed**|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  
+|**IsFulltextKey**|Gibt an, ob der Index der Volltextschlüssel für eine Tabelle ist.|[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)|  
+|**TableFulltextBackgroundUpdateIndexOn**|Gibt an, ob für eine Tabelle das Update von Volltextindizes im Hintergrund aktiviert wurde.|[OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)|  
+|**TableFulltextCatalogId**|ID des Volltextkatalogs, in dem die Daten des Volltextindex für die Tabelle gespeichert sind.|OBJECTPROPERTYEX|  
+|**TableFulltextChangeTrackingOn**|Gibt an, ob für eine Tabelle die Volltext-Änderungsnachverfolgung aktiviert ist.|OBJECTPROPERTYEX|  
+|**TableFulltextDocsProcessed**|Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen.|OBJECTPROPERTYEX|  
+|**TableFulltextFailCount**|Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.|OBJECTPROPERTYEX|  
+|**TableFulltextItemCount**|Die Anzahl von Zeilen, für die ein Volltextindex erfolgreich erstellt wurde.|OBJECTPROPERTYEX|  
+|**TableFulltextKeyColumn**|Die Spalten-ID der Volltextspalte für den eindeutigen Schlüssel.|OBJECTPROPERTYEX|  
+|**TableFullTextMergeStatus**|Gibt an, ob eine Tabelle über einen Volltextindex verfügt, der gerade zusammengeführt wird.|OBJECTPROPERTYEX|  
+|**TableFulltextPendingChanges**|Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.|OBJECTPROPERTYEX|  
+|**TableFulltextPopulateStatus**|Der Auffüllungsstatus einer Volltexttabelle.|OBJECTPROPERTYEX|  
+|**TableHasActiveFulltextIndex**|Gibt an, ob eine Tabelle über einen aktiven Volltextindex verfügt.|OBJECTPROPERTYEX|  
   
- Die **Keyword** -Spalte enthält eine Darstellung eines einzelnen Tokens, das zum Zeitpunkt der Indizierung extrahiert wurde. Woraus ein Token besteht, wird durch die Wörtertrennung bestimmt.  
+##  <a name="key"></a> Abrufen von Informationen zur Volltextschlüsselspalte  
+ Normalerweise müssen die Ergebnisse von CONTAINSTABLE- oder FREETEXTTABLE-Rowsetwertfunktionen mit der Basistabelle verknüpft werden. In solchen Fällen müssen Sie den Namen der eindeutigen Schlüsselspalte kennen. Sie können abfragen, ob ein bestimmter eindeutiger Index als Volltextschlüssel verwendet wird, und anschließend den Bezeichner der Volltextschlüsselspalte abrufen.  
   
- Die **ColId**-Spalte enthält einen Wert, der einer bestimmten volltextindizierten Spalte entspricht.  
+### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Überprüfen, ob ein bestimmter eindeutiger Index als Volltextschlüsselspalte verwendet wird  
   
- Die **DocId**-Spalte enthält Werte für eine aus acht Bytes bestehende ganze Zahl, die einem bestimmten Volltextschlüsselwert in einer volltextindizierten Tabelle zugeordnet ist. Diese Zuordnung ist notwendig, wenn der Volltextschlüssel kein ganzzahliger Datentyp ist. In diesen Fällen werden Zuordnungen zwischen Volltextschlüsselwerten und **DocId**-Werten in einer separaten Tabelle mit der Bezeichnung DocId-Zuordnungstabelle verwaltet. Um diese Zuordnungen abzufragen, verwenden Sie die gespeicherte Systemprozedur [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Um eine Suchbedingung zu erfüllen, müssen DocId-Werte aus der obigen Tabelle mit der DocId-Zuordnungstabelle verknüpft werden, um Zeilen aus der abgefragten Basistabelle abzurufen. Wenn der Volltextschlüsselwert der Basistabelle ein ganzzahliger Typ ist, wird der Wert direkt als DocID verwendet, und es ist keine Zuordnung erforderlich. Die Verwendung von ganzzahligen Volltextschlüsselwerten kann also zur Optimierung von Volltextabfragen beitragen.  
+Verwenden Sie eine [SELECT](../../t-sql/queries/select-transact-sql.md)-Anweisung, um die [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)-Funktion aufzurufen. Geben Sie im Funktionsaufruf die OBJECT_ID-Funktion an, um den Namen der Tabelle (*table_name*) in die Tabellen-ID umzuwandeln. Geben Sie den Namen eines eindeutigen Indexes der Tabelle und die **IsFulltextKey** -Indexeigenschaft an, wie im folgenden Beispiel gezeigt:  
   
- Die Spalte **Vorkommen** enthält einen ganzzahligen Wert. Für jeden DocId-Wert ist eine Liste von Vorkommenwerten vorhanden, die den relativen Wortoffsets des betreffenden Schlüsselworts innerhalb dieser DocId entsprechen. Die Vorkommenwerte sind zum Ermitteln von Ausdrucks- oder NEAR-Übereinstimmungen hilfreich, da z. B. Ausdrücke numerisch aufeinander folgende Vorkommenwerte besitzen. Zum Berechnen von Relevanzbewertungen erfüllen sie ebenfalls eine hilfreiche Funktion. So kann z. B. die Anzahl der Vorkommen eines Schlüsselworts in einer DocId zur Rangfolgenberechnung verwendet werden.  
+```  
+SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
+```  
   
- [In diesem Thema](#top)  
+ Diese Anweisung gibt den Wert 1 zurück, wenn der Index verwendet wird, um die Eindeutigkeit für die Spalte des Volltextschlüssels zu erzwingen, oder den Wert 0, wenn dies nicht der Fall ist.  
   
-##  <a name="fragments"></a> Volltextindexfragmente  
- Der logische Volltextindex wird normalerweise auf mehrere interne Tabellen aufgeteilt. Jede interne Tabelle wird als Volltextindexfragment bezeichnet. Einige dieser Fragmente enthalten ggf. aktuellere Daten als andere. Wenn Benutzer z. B. die folgende Zeile aktualisieren, deren DocId den Wert 3 hat, und für die Tabelle die automatische Änderungsnachverfolgung verwendet wird, wird ein neues Fragment erstellt.  
+ **Beispiel**  
   
-|DocumentID|Titel|  
-|----------------|-----------|  
-|3|Rear Reflector|  
+ Im folgenden Beispiel wird abgefragt, ob der `PK_Document_DocumentID` -Index zum Erzwingen der Eindeutigkeit der Volltextschlüsselspalte verwendet wird:  
   
- Im folgenden Beispiel, das Fragment 2 zeigt, enthält das Fragment im Vergleich zu Fragment 1 für DocId 3 aktuellere Daten. Wenn Benutzer eine Abfrage für "Rear Reflector" ausführen, werden daher für DocId 3 die Daten aus Fragment 2 verwendet. Jedes Fragment ist mit einem Erstellungszeitstempel gekennzeichnet, der abgefragt werden kann, indem die Katalogsicht [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) verwendet wird.  
+```  
+USE AdventureWorks  
+GO  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+```  
   
- **Fragment 2**  
+ Dieses Beispiel gibt den Wert 1 zurück, wenn der `PK_Document_DocumentID` -Index verwendet wird, um die Eindeutigkeit der Volltextschlüsselspalte zu erzwingen. Andernfalls wird 0 oder NULL zurückgegeben. NULL impliziert, dass ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
   
-|Schlüsselwort|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+### <a name="find-the-identifier-of-the-full-text-key-column"></a>Suchen des Bezeichners der Volltextschlüsselspalte  
   
- Wie Sie in Fragment 2 sehen, müssen Volltextabfragen jedes Fragment intern abfragen und ältere Einträge verwerfen. Daher können zu viele Volltextindexfragmente im Volltextindex zu einer beträchtlichen Verringerung der Abfrageleistung führen. Um die Anzahl der Fragmente zu reduzieren, organisieren Sie den Volltextkatalog neu, indem Sie die REORGANIZE-Option der [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden. Diese Anweisung führt eine *Hauptzusammenführung* aus, sodass die Fragmente zu einem einzigen größeren Fragment zusammengeführt werden, und entfernt alle veralteten Einträge aus dem Volltextindex.  
+Jede volltextfähige Tabelle beinhaltet eine Spalte, über die die Eindeutigkeit aller Tabellenzeilen erzwungen wird (die *eindeutige**Schlüsselspalte*). Die **TableFulltextKeyColumn** -Eigenschaft, die mit der OBJECTPROPERTYEX-Funktion ermittelt werden kann, enthält die Spalten-ID der eindeutigen Schlüsselspalte.  
+ 
+Um diesen Bezeichner abzurufen, können Sie mit einer SELECT-Anweisung die OBJECTPROPERTYEX-Funktion aufrufen. Verwenden Sie die OBJECT_ID-Funktion, um den Namen der Tabelle (*table_name*) in die Tabellen-ID umzuwandeln, und geben Sie die **TableFulltextKeyColumn** -Eigenschaft wie folgt an:  
   
- Nach dem erneuten Organisieren würde der Beispielindex die folgenden Zeilen enthalten:  
+```  
+SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
+```  
   
-|Schlüsselwort|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Verwaltung|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
+ **Beispiele**  
   
- [In diesem Thema](#top)  
+ Im folgenden Beispiel wird der Bezeichner der Volltextschlüsselspalte oder NULL zurückgegeben. NULL impliziert, dass ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
+  
+```  
+USE AdventureWorks;  
+GO  
+SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
+GO  
+```  
+  
+ Das folgende Beispiel zeigt, wie der Bezeichner der eindeutigen Schlüsselspalte verwendet werden kann, um den Namen der Spalte zu ermitteln.  
+  
+```  
+USE AdventureWorks;  
+GO  
+DECLARE @key_column sysname  
+SET @key_column = Col_Name(Object_Id('Production.Document'),  
+ObjectProperty(Object_id('Production.Document'),  
+'TableFulltextKeyColumn')   
+)  
+SELECT @key_column AS 'Unique Key Column';  
+GO  
+```  
+  
+ Dieses Beispiel gibt eine Resultsetspalte mit dem Namen `Unique Key Column`zurück, die eine einzelne Zeile mit dem Namen der eindeutigen Schlüsselspalte (DocumentID) der Document-Tabelle enthält. Beachten Sie, dass diese Abfrage NULL zurückgibt, wenn ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
+
+## <a name="index-varbinarymax-and-xml-columns"></a>Indizieren von varbinary(max)- und xml-Spalten  
+ Wenn ein Volltextindex einer **varbinary(max)**-, **varbinary**- oder **xml** -Spalte erstellt wird, kann die Spalte mit den Volltextprädikaten (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE) wie jede andere volltextindizierte Spalte durchsucht werden.
+   
+### <a name="index-varbinarymax-or-varbinary-data"></a>Indizieren von varbinary(max)- oder varbinary-Daten  
+ In einer einzelnen **varbinary(max)** - oder **varbinary** -Spalte können viele Dokumenttypen gespeichert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt jeden Dokumenttyp, für den ein Filter im Betriebssystem installiert und verfügbar ist. Der Dokumenttyp jedes Dokuments wird durch die Dateierweiterung des Dokuments identifiziert. Zum Beispiel verwendet die Volltextsuche für die Dateierweiterung .doc den Filter für Microsoft Word-Dokumente. Eine Liste der verfügbaren Dokumenttypen erhalten Sie, indem Sie die [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) -Katalogsicht abfragen.  
+  
+Beachten Sie, dass das Volltextmodul vorhandene Filter nutzen kann, die im Betriebssystem installiert sind. Bevor die Filter, Wörtertrennungen und Wortstammerkennungen des Betriebssystems verwendet werden können, müssen Sie diese in der Serverinstanz laden. Dies wird im Folgenden beschrieben:  
+  
+```tsql  
+EXEC sp_fulltext_service @action='load_os_resources', @value=1  
+```  
+  
+Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benötigt das Volltextmodul Zugriff auf die Dateierweiterungen der Dokumente in der **varbinary(max)** -Spalte. Diese Informationen müssen in einer Tabellenspalte, der so genannten Typspalte, gespeichert werden. Die Spalte muss der **varbinary(max)** -Spalte im Volltextindex zugeordnet sein. Beim Indizieren eines Dokuments verwendet das Volltextmodul die Dateierweiterung in der Typspalte, um den richtigen Filter zu ermitteln.  
+   
+### <a name="index-xml-data"></a>Indizieren von XML-Daten  
+ In einer **xml** -Datentypspalte werden ausschließlich XML-Dokumente und -Fragmente gespeichert. Für die Dokumente wird immer der XML-Filter verwendet. Ein Typspalte ist daher nicht erforderlich. Bei **xml** -Spalten indiziert der Volltextindex den Inhalt der XML-Elemente und ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  
+  
+ Weitere Informationen zum Indizieren und Abfragen einer **xml**-Spalte finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+  
+##  <a name="disable"></a> Deaktivieren oder erneutes Aktivieren der Volltextindizierung für eine Tabelle   
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind standardmäßig alle von Benutzern erstellten Datenbanken volltextfähig. Zudem wird eine einzelne Tabelle automatisch für die Volltextindizierung aktiviert, sobald ein Volltextindex für die Tabelle erstellt wird und dem Index eine Spalte hinzugefügt wird. Eine Tabelle wird für die Volltextindizierung automatisch deaktiviert, wenn die letzte Spalte aus dem Volltextindex der Tabelle entfernt wird.  
+  
+ Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  
+
+1.  Erweitern Sie die Servergruppe, erweitern Sie **Datenbanken**, und erweitern Sie die Datenbank, die die Tabelle enthält, die für Volltextindizierung aktiviert werden soll.  
+  
+2.  Erweitern Sie **Tabellen**, und klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie deaktivieren oder für Volltextindizierung erneut aktivieren möchten.  
+  
+3.  Wählen Sie **Volltextindex**aus, und klicken Sie anschließend auf **Volltextindizierung deaktivieren** oder **Volltextindizierung aktivieren**.  
+  
+##  <a name="remove"></a> Entfernen eines Volltextindexes aus einer Tabelle  
+  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit dem Volltextindex, den Sie löschen möchten  
+  
+2.  Wählen Sie **Volltextindex löschen**aus.  
+  
+3.  Klicken Sie auf **OK** , wenn Sie aufgefordert werden, das Löschen des Volltextindexes zu bestätigen.  
   
   

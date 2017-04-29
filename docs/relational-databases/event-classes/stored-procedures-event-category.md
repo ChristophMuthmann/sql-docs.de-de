@@ -1,29 +1,33 @@
 ---
-title: "Gespeicherte Prozeduren (Ereigniskategorie) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gespeicherte Prozeduren (Ereigniskategorie) [SQL Server]"
-  - "SQL Server-Ereignisklassen, gespeicherte Prozeduren (Ereigniskategorie)"
-  - "Ereignisklassen [SQL Server], gespeicherte Prozeduren (Ereigniskategorie)"
+title: Gespeicherte Prozeduren (Ereigniskategorie) | Microsoft Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stored Procedures event category [SQL Server]
+- SQL Server event classes, Stored Procedures event category
+- event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1c72514c72b06b9fea644848df952879619d43c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gespeicherte Prozeduren (Ereigniskategorie)
+# <a name="stored-procedures-event-category"></a>Gespeicherte Prozeduren (Ereigniskategorie)
   Die **Gespeicherte Prozeduren** -Ereigniskategorie enthält allgemeine Ereignisse für gespeicherte Prozeduren.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
@@ -39,10 +43,10 @@ caps.handback.revision: 29
 |[SP:Completed (Ereignisklasse)](../../relational-databases/event-classes/sp-completed-event-class.md)|Gibt an, dass die Ausführung der gespeicherten Prozedur abgeschlossen wurde.|  
 |[SP:Recompile-Ereignisklasse](../../relational-databases/event-classes/sp-recompile-event-class.md)|Gibt an, dass die gespeicherte Prozedur neu kompiliert wurde.|  
 |[SP:Starting (Ereignisklasse)](../../relational-databases/event-classes/sp-starting-event-class.md)|Gibt an, dass die Ausführung der gespeicherten Prozedur beginnt.|  
-|[SP:StmtCompleted (Ereignisklasse)](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung in einer gespeicherten Prozedur abgeschlossen wurde.|  
-|[SP:StmtStarting (Ereignisklasse)](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung in einer gespeicherten Prozedur gestartet wurde.|  
+|[SP:StmtCompleted (Ereignisklasse)](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einer gespeicherten Prozedur abgeschlossen wurde.|  
+|[SP:StmtStarting (Ereignisklasse)](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einer gespeicherten Prozedur gestartet wurde.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -1,31 +1,35 @@
 ---
-title: "Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
+# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Hier sehen Sie ein Beispiel für eine Tabelle mit einer **SQL_VARIANT**-Spalte:  
+  Hier sehen Sie ein Beispiel für eine Tabelle mit einer **SQL_VARIANT** -Spalte:  
   
 ```tsql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- Angenommen, die Schlüsselspalte kann nur vom Datentyp **BIGINT** oder **NVARCHAR(300)** sein. Sie können diese Tabelle wie folgt modellieren:  
+ Angenommen, die Schlüsselspalte kann nur vom Datentyp **BIGINT** oder **NVARCHAR(300)**sein. Sie können diese Tabelle wie folgt modellieren:  
   
 ```tsql  
 -- original disk-based table  
@@ -121,7 +125,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

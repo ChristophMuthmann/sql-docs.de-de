@@ -1,31 +1,35 @@
 ---
-title: "Markierte Transaktionen [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "E/A [SQL Server], Datenbankwiederherstellung"
-  - "Wiederherstellen von Seiten [SQL Server]"
-  - "Verzögerte Transaktionen"
-  - "Ändern des verzögerten Zustands einer Transaktion"
+title: "Verzögerte Transaktionen (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Markierte Transaktionen [SQL Server]
+# <a name="deferred-transactions-sql-server"></a>Markierte Transaktionen [SQL Server]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise kann eine beschädigte Transaktion verzögert werden, wenn für das Rollback (Rückgängig machen) erforderliche Daten während des Starts der Datenbank offline sind. Bei einer *verzögerten Transaktion* handelt es sich um eine Transaktion, für die kein Commit ausgeführt wird, wenn die Rollforwardphase beendet wird, und bei der ein Fehler auftritt, sodass für die Transaktion kein Rollback ausgeführt werden kann. Da kein Rollback ausgeführt werden kann, wird die Transaktion verzögert.  
   
 > [!NOTE]  
->  Beschädigte Transaktionen werden nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise verzögert. In anderen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine beschädigte Transaktion nicht gestartet werden.  
+>  Beschädigte Transaktionen werden nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise verzögert. In anderen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann eine beschädigte Transaktion nicht gestartet werden.  
   
  Eine verzögerte Transaktion tritt normalerweise dann auf, wenn für eine Datenbank ein Rollforward ausgeführt wird und durch einen E/A-Fehler verhindert wird, dass eine Seite, die für die Transaktion erforderlich ist, gelesen werden kann. Doch auch ein Fehler auf Dateiebene kann verzögerte Transaktionen zur Folge haben. Eine verzögerte Transaktion kann auch auftreten, wenn eine Teilwiederherstellungssequenz an einem Punkt angehalten wird, an dem ein Transaktionsrollback erforderlich ist und für eine Transaktion Daten erforderlich sind, die offline sind.  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 45
   
 |Aktion|Lösung (bei E/A-Fehlern oder wenn erforderliche Daten offline sind)|  
 |------------|-----------------------------------------------------------------------|  
-|Serverstart|Verzögerte Transaktion|  
-|Wiederherstellung|Verzögerte Transaktion|  
+|Serverstart|verzögerten Transaktion|  
+|Wiederherstellung|verzögerten Transaktion|  
 |Anfügen|Anfügen erzeugt einen Fehler|  
-|AutoNeustart|Verzögerte Transaktion|  
+|AutoNeustart|verzögerten Transaktion|  
 |Erstellen einer Datenbank oder einer Datenbankmomentaufnahme|Erstellen erzeugt einen Fehler|  
-|Wiederholen bei Datenbankspiegelung|Verzögerte Transaktion|  
-|Dateigruppe ist offline|Verzögerte Transaktion|  
+|Wiederholen bei Datenbankspiegelung|verzögerten Transaktion|  
+|Dateigruppe ist offline|verzögerten Transaktion|  
   
-## Beenden des VERZÖGERTEN Zustands einer Transaktion  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Beenden des VERZÖGERTEN Zustands einer Transaktion  
   
 > [!IMPORTANT]  
 >  Das Transaktionsprotokoll bleibt bei verzögerten Transaktionen aktiv. Eine virtuelle Protokolldatei, in der verzögerte Transaktionen enthalten sind, kann erst abgeschnitten werden, wenn sich diese Transaktionen nicht mehr im Verzögerungsmodus befinden. Weitere Informationen zu Protokollkürzung finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -73,7 +77,7 @@ caps.handback.revision: 45
   
      Weitere Informationen finden Sie unter [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md).  
   
--   Wenn Transaktionen aufgrund einer beschädigten Seite verzögert wurden und keine gute Sicherung der Datenbank vorhanden ist, müssen Sie zum Reparieren der Datenbank wie folgt vorgehen:   
+-   Wenn Transaktionen aufgrund einer beschädigten Seite verzögert wurden und keine gute Sicherung der Datenbank vorhanden ist, müssen Sie zum Reparieren der Datenbank wie folgt vorgehen:  
   
     -   Versetzen Sie die Datenbank zunächst in den Notfallmodus. Führen Sie dazu die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus:  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          Informationen zum Notfallmodus finden Sie unter [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Reparieren Sie anschließend die Datenbank, indem Sie die Option DBCC REPAIR_ALLOW_DATA_LOSS in einer der folgenden DBCC-Anweisungen verwenden: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) oder [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Reparieren Sie anschließend die Datenbank, indem Sie die Option DBCC REPAIR_ALLOW_DATA_LOSS in einer der folgenden DBCC-Anweisungen verwenden: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)oder [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Sobald DBCC auf die beschädigte Seite stößt, wird ihre Zuordnung aufgehoben, und es werden alle damit verbundenen Fehler repariert. Durch diesen Ansatz kann die Datenbank in einem physisch konsistenten Status wieder online geschaltet werden. Allerdings können dabei weitere Daten verloren gehen. Aus diesem Grund sollte dieser Ansatz nur als letzte Möglichkeit verwendet werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

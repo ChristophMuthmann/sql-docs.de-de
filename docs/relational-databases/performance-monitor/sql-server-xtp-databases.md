@@ -1,32 +1,36 @@
 ---
-title: "SQL Server XTP-Datenbanken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP-Datenbanken"
+title: SQL Server XTP-Datenbanken | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP-Datenbanken
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP-Datenbanken
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Das Leistungsobjekt **SQL Server XTP-Datenbanken**spezifische In-Memory-OLTP-Datenbanken bereit.
+Das Leistungsobjekt **SQL Server XTP-Datenbanken** spezifische In-Memory-OLTP-Datenbanken bereit.
 
 > [!NOTE]
->  Die SQL Server XTP-Datenbanken-Indikatoren sind aktuell in „sys.dm_os_performance_counters“ nicht sichtbar.  Die Indikatoren können im [System-Monitor](../../relational-databases/performance/start-system-monitor-windows.md) angezeigt werden.
+>  Die SQL Server XTP-Datenbanken-Indikatoren sind aktuell in „sys.dm_os_performance_counters“ nicht sichtbar.  Die Indikatoren können im [System-Monitor](../../relational-databases/performance/start-system-monitor-windows.md)angezeigt werden.
 
-Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken**-Leistungsindikatoren.
+Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatoren.
 
 |Leistungsindikator|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken**-Leistungsindikatoren
 |**Spitzenwert der Seitenanzahl im Endsegmentcache**|Größte Anzahl Seiten, die im Endsegmentcache zugewiesen wurden. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 
 
-## Siehe auch  
-[Leistungsindikatoren für SQL Server XTP &#40;In-Memory-OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+## <a name="see-also"></a>Siehe auch  
+[Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

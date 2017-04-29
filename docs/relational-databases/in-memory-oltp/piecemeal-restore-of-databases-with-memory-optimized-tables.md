@@ -1,23 +1,27 @@
 ---
-title: "Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
-  Die schrittweise Wiederherstellung wird für Datenbanken mit speicheroptimierten Tabellen unterstützt, allerdings mit der im Folgenden beschriebenen Einschränkung. Weitere Informationen zur schrittweisen Sicherung und Wiederherstellung finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) und [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
+  Die schrittweise Wiederherstellung wird für Datenbanken mit speicheroptimierten Tabellen unterstützt, allerdings mit der im Folgenden beschriebenen Einschränkung. Weitere Informationen zur schrittweisen Sicherung und Wiederherstellung finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) und [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  Eine speicheroptimierte Dateigruppe muss zusammen mit der primären Dateigruppe gesichert und wiederhergestellt werden:  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 16
   
 -   Mithilfe der schrittweisen Sicherung lässt sich die Größe der Sicherung reduzieren. Einige Beispiele:  
   
-    -   Konfigurieren Sie die Datenbanksicherung für unterschiedliche Uhrzeiten oder Tage, um die Auswirkungen auf die Arbeitsauslastung zu minimieren. Ein Beispiel hierfür ist eine sehr umfangreiche Datenbank (größer als 1 TB), bei der eine vollständige Datenbanksicherung nicht innerhalb des für die Datenbankwartung vorgesehenen Zeitraums abgeschlossen werden kann. In diesem Fall können Sie die schrittweise Sicherung verwenden, um die vollständige Datenbank in mehreren schrittweisen Sicherungen zu sichern.  
+    -   Konfigurieren Sie die Datenbanksicherung für unterschiedliche Uhrzeiten oder Tage, um die Auswirkungen auf die Arbeitsauslastung zu minimieren. Ein Beispiel hierfür ist eine sehr umfangreiche Datenbank (größer als 1 TB), bei der eine vollständige Datenbanksicherung nicht innerhalb des für die Datenbankwartung vorgesehenen Zeitraums abgeschlossen werden kann. In diesem Fall können Sie die schrittweise Sicherung verwenden, um die vollständige Datenbank in mehreren schrittweisen Sicherungen zu sichern.  
   
     -   Wenn eine Dateigruppe als schreibgeschützt gekennzeichnet ist, erfordert sie keine Transaktionsprotokollsicherung, nachdem sie als schreibgeschützt gekennzeichnet wurde. Nachdem Sie die Dateigruppe als schreibgeschützt gekennzeichnet haben, können Sie sie optional nur einmal sichern.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   Mithilfe der Seitenreparatur können Sie eine Seitenbeschädigung beheben, indem Sie die jeweilige Seite wiederherstellen. Weitere Informationen finden Sie unter [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
-## Beispiele  
+## <a name="samples"></a>Beispiele  
  In den Beispielen wird das folgende Schema verwendet:  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### Sicherung  
+### <a name="backup"></a>Sicherung  
  Dieses Beispiel veranschaulicht, wie die primäre Dateigruppe und die speicheroptimierte Dateigruppe gesichert werden. Sie müssen die primäre und speicheroptimierte Dateigruppe zusammen angeben.  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### Wiederherstellung  
+### <a name="restore"></a>Wiederherstellung  
  Im folgenden Beispiel wird gezeigt, wie die primäre Dateigruppe und speicheroptimierte Dateigruppe zusammen wiederhergestellt werden.  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## Siehe auch  
- [Sichern und Wiederherstellen speicheroptimierter Tabellen](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Sichern und Wiederherstellen speicheroptimierter Tabellen](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

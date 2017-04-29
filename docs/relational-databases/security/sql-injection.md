@@ -1,28 +1,32 @@
 ---
-title: "SQL Injection | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Injection"
+title: SQL Injection | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Injection
+# <a name="sql-injection"></a>SQL Injection
   Bei einem SQL-Injection-Angriff wird ein bösartiger Code in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  
   
-## Funktionsweise von SQL Injection  
+## <a name="how-sql-injection-works"></a>Funktionsweise von SQL Injection  
  Die Primärform von SQL-Injection besteht aus dem direkten Einfügen des Codes in Benutzereingabevariablen, die mit SQL-Befehlen verkettet und ausgeführt werden. Bei einem weniger direkten Angriff wird bösartiger Code in Zeichenfolgen eingefügt, die in einer Tabelle oder als Metadaten gespeichert werden sollen. Wenn die gespeicherten Zeichenfolgen später in einem dynamischen SQL-Befehl verkettet werden, wird der bösartige Code ausgeführt.  
   
  Die Funktionalität des Injection-Prozesses besteht in der vorzeitigen Beendigung einer Textzeichenfolge und dem Anhängen eines neuen Befehls. Da vor der Ausführung des eingefügten Befehls möglicherweise weitere Zeichenfolgen daran angehängt wurden, beendet der Missetäter die eingefügte Zeichenfolge durch eine Kommentarmarkierung "--". Nachfolgender Text wird zur Ausführungszeit ignoriert.  
@@ -35,7 +39,7 @@ ShipCity = Request.form ("ShipCity");
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
 ```  
   
- Der Benutzer wird aufgefordert, den Namen einer Stadt einzugeben. Bei der Eingabe `Redmond` sieht die vom Skript erstellt Abfrage ungefähr wie die folgende aus:  
+ Der Benutzer wird aufgefordert, den Namen einer Stadt einzugeben. Bei der Eingabe `Redmond`sieht die vom Skript erstellt Abfrage ungefähr wie die folgende aus:  
   
 ```  
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
@@ -53,18 +57,18 @@ Redmond'; drop table OrdersTable--
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
- Das Semikolon (;) bezeichnet das Ende der einen Abfrage und den Start einer anderen. Der doppelte Bindestrich (--) zeigt an, dass es sich beim restlichen Teil der aktuellen Zeile um einen Kommentar handelt, und die Zeile sollte ignoriert werden. Wenn der geänderte Code syntaktisch richtig ist, wird er vom Server ausgeführt. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisung verarbeitet, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuerst alle Datensätze in `OrdersTable` auswählen, wobei für `ShipCity` der Wert `Redmond` gilt. Anschließend wird `OrdersTable` von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht.  
+ Das Semikolon (;) bezeichnet das Ende der einen Abfrage und den Start einer anderen. Der doppelte Bindestrich (--) zeigt an, dass es sich beim restlichen Teil der aktuellen Zeile um einen Kommentar handelt, und die Zeile sollte ignoriert werden. Wenn der geänderte Code syntaktisch richtig ist, wird er vom Server ausgeführt. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisung verarbeitet, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuerst alle Datensätze in `OrdersTable` auswählen, wobei für `ShipCity` der Wert `Redmond`gilt. Anschließend wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von `OrdersTable`gelöscht.  
   
  Solange der eingefügte SQL-Code syntaktisch richtig ist, kann eine Manipulation nicht programmgesteuert erkannt werden. Aus diesem Grund müssen Sie die Gültigkeit aller Benutzereingaben überprüfen und sorgfältig den Code überprüfen, der in dem von Ihnen verwendeten Server die erstellten SQL-Befehle ausführt. Die bewährten Methoden zum Schreiben von Code werden in den nachfolgenden Abschnitten in diesem Thema beschrieben.  
   
-## Überprüfen aller Eingaben  
- Überprüfen Sie immer alle Benutzereingaben, indem Sie Typ, Länge, Format und Bereich testen. Bei der Implementierung von Vorsichtsmaßnahmen gegen böswillige Eingaben sollten Sie die Architektur und die Bereitstellungsszenarien Ihrer Anwendung berücksichtigen. Denken Sie daran, dass Programme, die zur Ausführung in einer sicheren Umgebung entworfen wurden, in eine nicht sichere Umgebung kopiert werden können. Die folgenden Vorschläge sollten als bewährte Methoden angesehen werden:     
+## <a name="validate-all-input"></a>Überprüfen aller Eingaben  
+ Überprüfen Sie immer alle Benutzereingaben, indem Sie Typ, Länge, Format und Bereich testen. Bei der Implementierung von Vorsichtsmaßnahmen gegen böswillige Eingaben sollten Sie die Architektur und die Bereitstellungsszenarien Ihrer Anwendung berücksichtigen. Denken Sie daran, dass Programme, die zur Ausführung in einer sicheren Umgebung entworfen wurden, in eine nicht sichere Umgebung kopiert werden können. Die folgenden Vorschläge sollten als bewährte Methoden angesehen werden:  
   
 -   Machen Sie keine Annahmen über Größe, Typ oder Inhalt der Daten, die von der Anwendung empfangen wurden. Beispielsweise sollten Sie die folgende Auswertung vornehmen:  
   
     -   Wie verhält sich Ihre Anwendung, wenn ein fehlgeleiteter oder böswilliger Benutzer eine 10 MB große MPEG-Datei an einer Stelle eingibt, an der die Anwendung eine Postleitzahl erwartet?  
   
-    -   Wie verhält sich die Anwendung bei einer eingebetteten `DROP TABLE`-Anweisung in einem Textfeld?  
+    -   Wie verhält sich die Anwendung bei einer eingebetteten `DROP TABLE` -Anweisung in einem Textfeld?  
   
 -   Testen Sie Größe und Datentyp der Eingaben, und erzwingen Sie entsprechende Grenzwerte. Dies kann bei der Vermeidung absichtlicher Pufferüberläufe hilfreich sein.  
   
@@ -72,7 +76,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Überprüfen Sie alle Daten bei der Eingabe gegen das Schema, wenn Sie mit XML-Dokumenten arbeiten.  
   
--   Erstellen Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen direkt aus den Benutzereingaben.  
+-   Erstellen Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen direkt aus den Benutzereingaben.  
   
 -   Verwenden Sie gespeicherte Prozeduren, um Benutzereingaben zu überprüfen.  
   
@@ -91,12 +95,12 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Abfragetrennzeichen|  
 |**'**|Trennzeichen für Datenzeichenfolgen.|  
-|**--**|Trennzeichen für Datenzeichenfolgen.<br />.|  
+|**--**|Trennzeichen für Datenzeichenfolgen.<br />gilt.|  
 |**/\*** ... **\*/**|Kommentartrennzeichen. Text zwischen **/\*** und **\*/** wird vom Server nicht ausgewertet.|  
 |**xp_**|Wird am Anfang des Namens von erweiterten gespeicherten Katalogprozeduren verwendet, wie z.B. `xp_cmdshell`.|  
   
-### Verwenden von typsicheren SQL-Parametern  
- Die **Parameters**-Sammlung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Überprüfung von Typ und Länge bereit. Wenn Sie die **Parameters**-Sammlung verwenden, werden Eingaben als Literalwert und nicht als ausführbarer Code behandelt. Ein weiterer Vorteil beim Verwenden der **Parameters**-Sammlung besteht im Erzwingen von Typ- und Längenprüfungen. Werte außerhalb des Bereichs lösen eine Ausnahme aus. Das folgende Codefragment zeigt die Verwendung der **Parameters**-Sammlung:  
+### <a name="use-type-safe-sql-parameters"></a>Verwenden von typsicheren SQL-Parametern  
+ Die **Parameters** -Sammlung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Überprüfung von Typ und Länge bereit. Wenn Sie die **Parameters** -Sammlung verwenden, werden Eingaben als Literalwert und nicht als ausführbarer Code behandelt. Ein weiterer Vorteil beim Verwenden der **Parameters** -Sammlung besteht im Erzwingen von Typ- und Längenprüfungen. Werte außerhalb des Bereichs lösen eine Ausnahme aus. Das folgende Codefragment zeigt die Verwendung der **Parameters** -Sammlung:  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -106,9 +110,9 @@ SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 parm.Value = Login.Text;  
 ```  
   
- In diesem Beispiel wird der `@au_id`-Parameter als Literalwert und nicht als ausführbarer Code behandelt. Bei diesem Wert werden Typ und Länge überprüft. Wenn der Wert `@au_id` keiner der angegebenen Typ- und Längeneinschränkungen entspricht, wird eine Ausnahme zurückgegeben.  
+ In diesem Beispiel wird der `@au_id` -Parameter als Literalwert und nicht als ausführbarer Code behandelt. Bei diesem Wert werden Typ und Länge überprüft. Wenn der Wert `@au_id` keiner der angegebenen Typ- und Längeneinschränkungen entspricht, wird eine Ausnahme zurückgegeben.  
   
-### Verwenden von parametrisierten Eingaben mit gespeicherten Prozeduren  
+### <a name="use-parameterized-input-with-stored-procedures"></a>Verwenden von parametrisierten Eingaben mit gespeicherten Prozeduren  
  Wenn gespeicherte Prozeduren ungefilterte Eingaben verwenden, sind sie möglicherweise anfällig für SQL Injection. Der folgende Code ist z. B. nicht gegen Angriffe geschützt:  
   
 ```  
@@ -119,7 +123,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
   
  Wenn Sie gespeicherte Prozeduren verwenden, sollten Sie Parameter als Eingaben verwenden.  
   
-### Verwenden der Parameterauflistung mit Dynamic SQL  
+### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Verwenden der Parameterauflistung mit Dynamic SQL  
  Wenn die Verwendung von gespeicherten Prozeduren nicht möglich ist, können Sie weiterhin Parameter verwenden, wie in dem nachfolgenden Codebeispiel gezeigt wird.  
   
 ```  
@@ -130,7 +134,7 @@ SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 Parm.Value = Login.Text;  
 ```  
   
-### Filtern von Eingaben  
+### <a name="filtering-input"></a>Filtern von Eingaben  
  Auch das Filtern von Eingaben kann sich beim Schutz vor SQL-Injection als hilfreich erweisen. Bei dieser Methode werden Escapezeichen entfernt. Die große Zeichenmenge kann aber möglicherweise Probleme verursachen, die dazu führen, dass diese Verteidigungsmaßnahme nicht verlässlich ist. Das folgende Beispiel sucht nach Zeichenfolgentrennzeichen.  
   
 ```  
@@ -140,8 +144,8 @@ private string SafeSqlLiteral(string inputSQL)
 }  
 ```  
   
-### LIKE-Klauseln  
- Beachten Sie beim Verwenden einer `LIKE`-Klausel, dass Platzhalterzeichen weiterhin mit Escapezeichen versehen werden müssen:  
+### <a name="like-clauses"></a>LIKE-Klauseln  
+ Beachten Sie beim Verwenden einer `LIKE` -Klausel, dass Platzhalterzeichen weiterhin mit Escapezeichen versehen werden müssen:  
   
 ```  
 s = s.Replace("[", "[[]");  
@@ -149,8 +153,8 @@ s = s.Replace("%", "[%]");
 s = s.Replace("_", "[_]");  
 ```  
   
-## Überprüfen von Code gegen SQL-Injection  
- Sie sollten sämtlichen Code überprüfen, der `EXECUTE`, `EXEC` oder `sp_executesql` aufruft. Mithilfe von Abfragen, die den folgenden ähnlich sind, können Sie Prozeduren identifizieren, die diese Anweisungen enthalten. Diese Abfrage überprüft 1, 2, 3 oder 4 Leerzeichen nach den Wörtern `EXECUTE` und `EXEC`.  
+## <a name="reviewing-code-for-sql-injection"></a>Überprüfen von Code gegen SQL-Injection  
+ Sie sollten sämtlichen Code überprüfen, der `EXECUTE`, `EXEC`oder `sp_executesql`aufruft. Mithilfe von Abfragen, die den folgenden ähnlich sind, können Sie Prozeduren identifizieren, die diese Anweisungen enthalten. Diese Abfrage überprüft 1, 2, 3 oder 4 Leerzeichen nach den Wörtern `EXECUTE` und `EXEC`.  
   
 ```  
 SELECT object_Name(id) FROM syscomments  
@@ -165,7 +169,7 @@ OR UPPER(text) LIKE '%EXEC    (%'
 OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
 ```  
   
-### Einzuschließende Parameter mit QUOTENAME() und REPLACE()  
+### <a name="wrapping-parameters-with-quotename-and-replace"></a>Einzuschließende Parameter mit QUOTENAME() und REPLACE()  
  Überprüfen Sie für jede ausgewählte gespeicherte Prozedur, ob alle Variablen richtig behandelt werden, die in dynamischem Transact-SQL verwendet werden. Daten aus den Eingabeparametern der gespeicherten Prozedur oder Daten, die aus der Tabelle gelesen werden, sollten in QUOTENAME() oder REPLACE() eingeschlossen werden. Beachten Sie, dass der @variable-Wert, der an QUOTENAME() übergeben wird, zu „sysname“ gehört. Er hat eine maximale Länge von 128 Zeichen.  
   
 |@variable|Empfohlener Wrapper|  
@@ -186,8 +190,8 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
   
-### Aktivieren von SQL-Injection durch das Abschneiden von Daten  
- Jede dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die einer Variablen zugewiesen ist, wird abgeschnitten, falls sie größer als der für die Variable zugewiesene Puffer ist. Ein Angreifer, der in der Lage ist, das Abschneiden der Anweisungen durch das Übergeben von unerwartet langen Zeichenfolgen an eine gespeicherte Prozedur zu erzwingen, kann das Ergebnis verändern. Beispielsweise ist die gespeicherte Prozedur, die von dem folgenden Skript erstellt wurde, anfällig für SQL-Injection durch aktiviertes Abschneiden.  
+### <a name="injection-enabled-by-data-truncation"></a>Aktivieren von SQL-Injection durch das Abschneiden von Daten  
+ Jede dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die einer Variablen zugewiesen ist, wird abgeschnitten, falls sie größer als der für die Variable zugewiesene Puffer ist. Ein Angreifer, der in der Lage ist, das Abschneiden der Anweisungen durch das Übergeben von unerwartet langen Zeichenfolgen an eine gespeicherte Prozedur zu erzwingen, kann das Ergebnis verändern. Beispielsweise ist die gespeicherte Prozedur, die von dem folgenden Skript erstellt wurde, anfällig für SQL-Injection durch aktiviertes Abschneiden.  
   
 ```  
 CREATE PROCEDURE sp_MySetPassword  
@@ -224,9 +228,9 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
   
- Aus diesem Grund sollten Sie einen großen Puffer für eine Befehlsvariable verwenden oder dynamisches [!INCLUDE[tsql](../../includes/tsql-md.md)] direkt in der `EXECUTE`-Anweisung ausführen.  
+ Aus diesem Grund sollten Sie einen großen Puffer für eine Befehlsvariable verwenden oder dynamisches [!INCLUDE[tsql](../../includes/tsql-md.md)] direkt in der `EXECUTE` -Anweisung ausführen.  
   
-### Abschneiden beim Verwenden von QUOTENAME(@variable, '''') und REPLACE()  
+### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Abschneiden beim Verwenden von QUOTENAME(@variable, '''') und REPLACE()  
  Zeichenfolgen, die von QUOTENAME() und REPLACE() zurückgegeben werden, werden automatisch abgeschnitten, falls Sie über dem zugewiesenen Speicherplatz liegen. Die im folgenden Beispiel erstellte, gespeicherte Prozedur zeigt, was in den Fällen passieren kann.  
   
 ```  
@@ -307,7 +311,7 @@ EXEC (@command);
 GO  
 ```  
   
- Wie bei QUOTENAME() kann das Abschneiden der Zeichenfolge durch REPLACE() vermieden werden, indem temporäre Variablen deklariert werden, die für alle Fälle groß genug sind. Falls möglich, sollten Sie QUOTENAME() oder REPLACE() direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)] aufrufen. Andernfalls können Sie den erforderlichen Puffer wie folgt berechnen. Für `@outbuffer = QUOTENAME(@input)` sollte die Größe von `@outbuffer` gleich dem Wert `2*(len(@input)+1)` sein. Wenn Sie wie in dem vorherigen Beispiel `REPLACE()` und doppelte Anführungszeichen verwenden, reicht ein Puffer von `2*len(@input)` aus.  
+ Wie bei QUOTENAME() kann das Abschneiden der Zeichenfolge durch REPLACE() vermieden werden, indem temporäre Variablen deklariert werden, die für alle Fälle groß genug sind. Falls möglich, sollten Sie QUOTENAME() oder REPLACE() direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)]aufrufen. Andernfalls können Sie den erforderlichen Puffer wie folgt berechnen. Für `@outbuffer = QUOTENAME(@input)`sollte die Größe von `@outbuffer` gleich dem Wert `2*(len(@input)+1)`sein. Wenn Sie wie in dem vorherigen Beispiel `REPLACE()` und doppelte Anführungszeichen verwenden, reicht ein Puffer von `2*len(@input)` aus.  
   
  Die folgende Berechnung deckt alle Fälle ab:  
   
@@ -317,8 +321,8 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
  + (LEN(@input) % LEN(@find_string))  
 ```  
   
-### Abschneiden beim Verwenden von QUOTENAME(@variable, ']')  
- Ein Abschneiden ist möglich, wenn der Name eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicherungsfähigen Elements an Anweisungen übergeben wird, die das Format `QUOTENAME(@variable, ']')` verwenden. Im folgenden Beispiel wird dies veranschaulicht.  
+### <a name="truncation-when-quotenamevariable--is-used"></a>Abschneiden beim Verwenden von QUOTENAME(@variable, ']')  
+ Ein Abschneiden ist möglich, wenn der Name eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicherungsfähigen Elements an Anweisungen übergeben wird, die das Format `QUOTENAME(@variable, ']')`verwenden. Im folgenden Beispiel wird dies veranschaulicht.  
   
 ```  
 CREATE PROCEDURE sp_MyProc  
@@ -334,9 +338,9 @@ SET @objectname = QUOTENAME(@schemaname)+'.'+ QUOTENAME(@tablename)
 GO  
 ```  
   
- Wenn Sie Werte vom Typ „sysname“ verketten, sollten Sie temporäre Variablen verwenden, die groß genug sind, um die maximale Anzahl von 128 Zeichen pro Wert aufzunehmen. Falls möglich, sollten Sie `QUOTENAME()` direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)] aufrufen. Andernfalls können Sie die erforderliche Puffergröße so berechnen, wie es im vorherigen Abschnitt beschrieben wird.  
+ Wenn Sie Werte vom Typ „sysname“ verketten, sollten Sie temporäre Variablen verwenden, die groß genug sind, um die maximale Anzahl von 128 Zeichen pro Wert aufzunehmen. Falls möglich, sollten Sie `QUOTENAME()` direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)]aufrufen. Andernfalls können Sie die erforderliche Puffergröße so berechnen, wie es im vorherigen Abschnitt beschrieben wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

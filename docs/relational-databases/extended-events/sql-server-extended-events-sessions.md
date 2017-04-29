@@ -1,27 +1,31 @@
 ---
-title: "Sitzungen f&#252;r erweiterte Ereignisse von SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "Sitzungen"
-  - "Erweiterte Ereignisse [SQL Server]"
+title: "Sitzungen für erweiterte Ereignisse von SQL Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sitzungen f&#252;r erweiterte Ereignisse von SQL Server
+# <a name="sql-server-extended-events-sessions"></a>Sitzungen für erweiterte Ereignisse von SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse wird in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess erstellt, der das Modul für erweiterte Ereignisse hostet. Die folgenden Aspekte einer Sitzung für erweiterte Ereignisse bieten grundlegende Informationen zur Extended Events-Infrastruktur und zur allgemeinen Verarbeitung, die stattfindet:  
@@ -30,10 +34,10 @@ caps.handback.revision: 20
   
 -   Sitzungsinhalt und -eigenschaften. Der Inhalt einer Sitzung für erweiterte Ereignisse, z. B. Ziele und Ereignisse, und wie die Objekte in einer Sitzung oder zwischen Sitzungen miteinander verbunden sind.  
   
-## Sitzungsstatus  
+## <a name="session-states"></a>Sitzungsstatus  
  Im Folgenden werden die verschiedenen Status einer Sitzung für erweiterte Ereignisse veranschaulicht.  
   
- ![Sitzung für erweiterte Ereignisse – Status](../../relational-databases/extended-events/media/xesessionstate.gif "Sitzung für erweiterte Ereignisse – Status")  
+ ![Sitzung für erweiterte Ereignisse - Status](../../relational-databases/extended-events/media/xesessionstate.gif "Extended event session state")  
   
  In Bezug auf die vorangehende Abbildung müssen Sie beachten, dass sich der Sitzungsstatus ändert, wenn die verschiedenen DDL-Befehle für eine Ereignissitzung ausgegeben werden. Eine Beschreibung dieser Statusänderungen finden Sie in der folgenden Tabelle.  
   
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Sowohl ALTER EVENT SESSION als auch DROP EVENT SESSION können auf die Metadaten oder auf eine aktive Sitzung und die Metadaten angewendet werden.  
   
-## Sitzungsinhalt und -eigenschaften  
+## <a name="session-content-and-characteristics"></a>Sitzungsinhalt und -eigenschaften  
  Extended Event-Sitzungen weisen insofern implizite Grenzen auf, als durch die Konfiguration einer Sitzung nicht die Konfiguration einer anderen Sitzung geändert wird. Allerdings kann dadurch nicht verhindert werden, dass ein Ereignis oder ein Ziel in mehr als einer Sitzung verwendet wird.  
   
  In der folgenden Abbildung werden der Sitzungsinhalt und die Beziehung zwischen Paketen und Sitzungen veranschaulicht.  
   
- ![Objektkoexistenz und -freigabe in Sitzungen](../../relational-databases/extended-events/media/xesessions.gif "Objektkoexistenz und -freigabe in Sitzungen")  
+ ![Objektkoexistenz und -freigabe in Sitzungen. ](../../relational-databases/extended-events/media/xesessions.gif "Object co-existance and sharing in sessions.")  
   
  Beachten Sie in Bezug auf die vorangegangene Abbildung Folgendes:  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  Die Architektur für erweiterte Ereignisse stellt ein flexibles System bereit, in dem eine Vielzahl von Objekten zusammen verwendet werden kann, um bestimmte Probleme zu beheben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

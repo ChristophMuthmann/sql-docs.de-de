@@ -1,22 +1,26 @@
 ---
-title: "Planen der &#220;bernahme von In-Memory-OLTP-Funktionen in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planen der &#220;bernahme von In-Memory-OLTP-Funktionen in SQL Server
+# <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -24,7 +28,7 @@ Dieser Artikel beschreibt, auf welche Weise sich die Übernahme von In-Memory-Fu
 
 
 
-## A. Übernahme von In-Memory-OLTP-Funktionen
+## <a name="a-adoption-of-in-memory-oltp-features"></a>A. Übernahme von In-Memory-OLTP-Funktionen
 
 
 In den folgenden Unterabschnitten werden die Faktoren erläutert, die Sie berücksichtigen müssen, wenn Sie planen, In-Memory-Funktionen zu übernehmen und zu implementieren. Viele erläuternde Informationen finden Sie unter:
@@ -33,7 +37,7 @@ In den folgenden Unterabschnitten werden die Faktoren erläutert, die Sie berüc
 
 
 
-### A.1 Erforderliche Komponenten
+### <a name="a1-prerequisites"></a>A.1 Erforderliche Komponenten
 
 Eine erforderliche Komponente für die Verwendung der In-Memory-Funktionen kann die Edition oder Dienstebene des SQL-Produkts umfassen. Diese und andere erforderliche Komponenten finden Sie unter:
 
@@ -42,31 +46,31 @@ Eine erforderliche Komponente für die Verwendung der In-Memory-Funktionen kann 
     - [SQL-Datenbank-Tarifempfehlungen](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
-### A.2 Prognose der Menge an aktivem Arbeitsspeicher
+### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Prognose der Menge an aktivem Arbeitsspeicher
 
 Verfügt Ihr System über genügend Arbeitsspeicher zur Unterstützung einer neuen speicheroptimierten Tabelle?
 
-#### Microsoft SQL Server
+#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
 Eine speicheroptimierte Tabelle mit 200 GB Daten erfordert mehr als 200 GB aktiven Arbeitsspeicher für deren Unterstützung. Vor der Implementierung einer speicheroptimierten Tabelle, die eine große Datenmenge enthält, müssen Sie die Menge an zusätzlichem aktiven Arbeitsspeicher prognostizieren, den Sie Ihrem Servercomputer möglicherweise hinzufügen müssen. Einen Leitfaden für die Schätzung finden Sie unter:
 
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### Azure SQL-Datenbank
+#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
 Bei einer Datenbank, die im Clouddienst von Azure SQL-Datenbank gehostet wird, wirkt sich die ausgewählte Dienstebene auf die Menge an aktivem Arbeitsspeicher aus, die Ihre Datenbank verwenden darf. Sie sollten planen, die Speicherverwendung Ihrer Datenbank mithilfe einer Warnung zu überwachen. Einzelheiten dazu finden Sie unter:
 
 - [Überwachen des In-Memory-OLTP-Speichers](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
-#### Speicheroptimierte Tabellenvariablen
+#### <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
 
 Eine Tabellenvariable, die als speicheroptimiert gilt, wird manchmal vor einer herkömmlichen #TempTable bevorzugt, die sich in der Datenbank **tempdb** befindet. Solche Tabellenvariablen können ohne das Verwenden signifikanter Mengen an aktivem Arbeitsspeicher erhebliche Leistungssteigerungen bieten.
 
-### A.3 Die Tabelle muss offline sein, um in „speicheroptimiert“ konvertiert zu werden
+### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 Die Tabelle muss offline sein, um in „speicheroptimiert“ konvertiert zu werden
 
 Einige Funktionen von ALTER TABLE sind für speicheroptimierte Tabellen verfügbar. Sie können jedoch keine ALTER TABLE-Anweisung ausgeben, um eine datenträgerbasierte Tabelle in eine speicheroptimierte Tabelle zu konvertieren. Stattdessen müssen Sie eine manuellere Vorgehensweise verwenden. Im Folgenden werden verschiedene Methoden zum Konvertieren Ihrer datenträgerbasierenden Tabelle in eine speicheroptimierte Tabelle beschrieben.
 
-#### Manuelle Skripterstellung
+#### <a name="manual-scripting"></a>Manuelle Skripterstellung
 
 Eine Möglichkeit, Ihre datenträgerbasierte Tabelle in eine speicheroptimierte Tabelle zu konvertieren, besteht darin, die erforderlichen Transact-SQL-Schritte selbst zu codieren.
 
@@ -88,7 +92,7 @@ Eine Möglichkeit, Ihre datenträgerbasierte Tabelle in eine speicheroptimierte 
 8. Setzen Sie die Aktivität der Anwendung fort.
 
 
-#### Ratgeber für die Speicheroptimierung
+#### <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
 
 Das Tool „Ratgeber für die Speicheroptimierung“ kann ein Skript generieren, um bei der Implementierung der Umkehrung einer datenträgerbasierten Tabelle in eine speicheroptimierte Tabelle zu helfen. Das Tool ist als Teil der SQL Server Data Tools (SSDT) installiert.
 
@@ -96,7 +100,7 @@ Das Tool „Ratgeber für die Speicheroptimierung“ kann ein Skript generieren,
 - [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
 
 
-#### DACPAC-Datei
+#### <a name="dacpac-file"></a>DACPAC-Datei
 
 Sie können Ihre Datenbank direkt mithilfe einer von SSDT verwalteten DACPAC-Datei aktualisieren. In SSDT können Sie Änderungen an dem Schema angeben, das in der DACPAC-Datei codiert ist.
 
@@ -106,7 +110,7 @@ Sie arbeiten mit DACPAC-Dateien im Kontext eines Visual Studio-Projekts vom Typ 
 
 
 
-### A.4 Leitfaden, um herauszufinden, ob In-Memory-OLTP-Funktionen für Ihre Anwendung geeignet sind
+### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Leitfaden, um herauszufinden, ob In-Memory-OLTP-Funktionen für Ihre Anwendung geeignet sind
 
 Einen Leitfaden, um herauszufinden, ob In-Memory-Funktionen die Leistung Ihrer bestimmten Anwendung verbessern können, finden Sie unter:
 
@@ -114,7 +118,7 @@ Einen Leitfaden, um herauszufinden, ob In-Memory-Funktionen die Leistung Ihrer b
 
 
 
-## B. Nicht unterstützte Funktionen
+## <a name="b-unsupported-features"></a>B. Nicht unterstützte Funktionen
 
 Funktionen, die in bestimmten In-Memory-Szenarios nicht unterstützt werden, werden folgendermaßen beschrieben:
 
@@ -124,7 +128,7 @@ Funktionen, die in bestimmten In-Memory-Szenarios nicht unterstützt werden, wer
 In den folgenden Unterabschnitten werden einige der wichtigeren, nicht unterstützten Funktionen hervorgehoben.
 
 
-### B.1 SNAPSHOT einer Datenbank
+### <a name="b1-snapshot-of-a-database"></a>B.1 SNAPSHOT einer Datenbank
 
 Nachdem eine speicheroptimierte Tabelle oder ein speicheroptimiertes Modul zum ersten Mal in einer gegebenen Datenbank erstellt wurde, kann niemals ein [SNAPSHOT](../../relational-databases/databases/database-snapshots-sql-server.md) (Momentaufnahme) der Datenbank erstellt werden. Der spezifische Grund dafür ist der folgende:
 
@@ -134,47 +138,47 @@ Nachdem eine speicheroptimierte Tabelle oder ein speicheroptimiertes Modul zum e
 Normalerweise kann ein SNAPSHOT für schnelle Testiterationen praktisch sein.
 
 
-### B.2 Datenbankübergreifende Abfragen
+### <a name="b2-cross-database-queries"></a>B.2 Datenbankübergreifende Abfragen
 
 Speicheroptimierte Tabellen bieten keine Unterstützung für [datenbankübergreifende](../../relational-databases/in-memory-oltp/cross-database-queries.md) Transaktionen. Innerhalb einer Transaktion oder Abfrage, die auf eine speicheroptimierte Tabelle zugreift, können Sie nicht gleichzeitig auf eine andere Datenbank zugreifen.
 
 Tabellenvariablen sind nicht transaktional. Aus diesem Grund können [speicheroptimierte Tabellenvariablen](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) in datenbankübergreifenden Abfragen verwendet werden.
 
 
-### B.3 READPAST-Tabellenhinweis
+### <a name="b3-readpast-table-hint"></a>B.3 READPAST-Tabellenhinweis
 
-Keine Abfrage kann den READPAST-[Tabellenhinweis](Table%20Hints%20%28Transact-SQL%29.md) auf speicheroptimierte Tabellen anwenden.
+Keine Abfrage kann den READPAST- [Tabellenhinweis](../../t-sql/queries/hints-transact-sql-table.md) auf speicheroptimierte Tabellen anwenden.
 
 Der READPAST-Hinweis ist hilfreich bei Szenarios, in denen mehrere Sitzungen jeweils auf den gleichen Satz von Zeilen zugreifen und diesen bearbeiten, sowie bei der Verarbeitung einer Warteschlange.
 
 
-### B.4 RowVersion, Sequence
+### <a name="b4-rowversion-sequence"></a>B.4 RowVersion, Sequence
 
 - In einer speicheroptimierten Tabelle kann keine Spalte für [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) markiert werden.
 
 
-- Ein [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)-Objekt kann nicht mit einer speicheroptimierten Tabelle verwendet werden.
+- Ein [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) -Objekt kann nicht mit einer speicheroptimierten Tabelle verwendet werden.
 
 
-## C. Administrative Wartung
+## <a name="c-administrative-maintenance"></a>C. Administrative Wartung
 
 
 Dieser Abschnitt beschreibt die Unterschiede in der Datenbankverwaltung bei der Verwendung von speicheroptimierten Tabellen.
 
 
-### C.1 Zurücksetzen des ID-Startwerts, Inkrementwert > 1
+### <a name="c1-identity-seed-reset-increment--1"></a>C.1 Zurücksetzen des ID-Startwerts, Inkrementwert > 1
 
 [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md), um den Startwert einer IDENTITY-Spalte zu korrigieren, kann nicht für eine speicheroptimierte Tabelle verwendet werden.
 
 Der Inkrementwert wird für eine IDENTITÄTSSPALTE in einer speicheroptimierten Tabelle auf genau 1 beschränkt.
 
 
-### C.2 DBCC CHECKDB kann keine speicheroptimierten Tabellen überprüfen
+### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB kann keine speicheroptimierten Tabellen überprüfen
 
 Der Befehl [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) tut nichts, wenn sein Ziel eine speicheroptimierte Tabelle ist. Dies können Sie mithilfe der folgenden Schritte umgehen:
 
 
-1. [Sichern Sie das Transaktionsprotokoll](Back%20Up%20a%20Transaction%20Log%20%28SQL Server%29.md).
+1. [Sichern Sie das Transaktionsprotokoll](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).
 
 2. Sichern Sie die Dateien in der speicheroptimierten FILEGROUP auf einem NULL-Gerät. Der Sicherungsvorgang ruft die Prüfsummenverifizierung auf.
 
@@ -190,12 +194,12 @@ Der Befehl [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tra
 
 
 
-## D. Leistung
+## <a name="d-performance"></a>D. Leistung
 
 Dieser Abschnitt beschreibt Situationen, in denen die ausgezeichnete Leistung von speicheroptimierten Tabellen unterhalb des Gesamtpotenzials bleiben kann.
 
 
-### D.1 Index-Überlegungen
+### <a name="d1-index-considerations"></a>D.1 Index-Überlegungen
 
 Alle Indizes für eine speicheroptimierte Tabelle werden von den tabellenbezogenen Anweisungen CREATE TABLE und ALTER TABLE erstellt und verwaltet. Sie können keine CREATE INDEX-Anweisung auf speicheroptimierte Tabellen anwenden.
 
@@ -208,7 +212,7 @@ Eine Übersicht über Indizes bei speicheroptimierten Tabellen finden Sie unter:
 - [Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 
 
-#### Hashindizes
+#### <a name="hash-indexes"></a>Hashindizes
 
 Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeile mit ihrem exakten Primärschlüssel zuzugreifen, indem der „**=**“-Operator verwendet wird.
 
@@ -220,12 +224,12 @@ Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeil
     - [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
-#### Nicht gruppierte Columnstore-Indizes
+#### <a name="nonclustered-columnstore-indexes"></a>Nicht gruppierte Columnstore-Indizes
 
-Speicheroptimierte Tabellen bieten einen hohen Durchsatz von typischen Geschäftstransaktionsdaten, die wir im Paradigma als *Onlinetransaktionsverarbeitung* oder *OLTP* bezeichnen. Columnstore-Indizes bieten einen hohen Durchsatz von Aggregationen und ähnlichen Verarbeitungen, die wir als *Analysen* bezeichnen. In den vergangenen Jahren bestand die bestmögliche Methode, dem Bedarf von sowohl OLTP als auch Analysen gerecht zu werden, darin, über getrennte Tabellen mit intensiver Datenverschiebung und mit einem gewissen Grad an Datenduplizierung zu verfügen. Heutzutage ist eine einfachere **Hybridlösung** verfügbar, und zwar das Verfügen über einen Columnstore-Index in einer speicheroptimierten Tabelle.
+Speicheroptimierte Tabellen bieten einen hohen Durchsatz von typischen Geschäftstransaktionsdaten, die wir im Paradigma als *Onlinetransaktionsverarbeitung* oder *OLTP*bezeichnen. Columnstore-Indizes bieten einen hohen Durchsatz von Aggregationen und ähnlichen Verarbeitungen, die wir als *Analysen*bezeichnen. In den vergangenen Jahren bestand die bestmögliche Methode, dem Bedarf von sowohl OLTP als auch Analysen gerecht zu werden, darin, über getrennte Tabellen mit intensiver Datenverschiebung und mit einem gewissen Grad an Datenduplizierung zu verfügen. Heutzutage ist eine einfachere **Hybridlösung** verfügbar, und zwar das Verfügen über einen Columnstore-Index in einer speicheroptimierten Tabelle.
 
 
-- Ein [Columnstore-Index](Columnstore%20Indexes%20Guide.md) kann in einer datenträgerbasierten Tabelle erstellt werden, sogar als gruppierter Index. In einer speicheroptimierten Tabelle kann ein Columnstore-Index jedoch nicht gruppiert werden.
+- Ein [Columnstore-Index](../../relational-databases/indexes/columnstore-indexes-overview.md) kann in einer datenträgerbasierten Tabelle erstellt werden, sogar als gruppierter Index. In einer speicheroptimierten Tabelle kann ein Columnstore-Index jedoch nicht gruppiert werden.
 
 
 - LOB-Spalten oder Spalten außerhalb von Zeilen verhindern in einer speicheroptimierten Tabelle die Erstellung eines Columnstore-Indizes in der Tabelle.
@@ -236,7 +240,7 @@ Speicheroptimierte Tabellen bieten einen hohen Durchsatz von typischen Geschäft
 
 
 
-### D.2 LOB-Spalten und Spalten außerhalb von Zeilen
+### <a name="d2-lob-and-off-row-columns"></a>D.2 LOB-Spalten und Spalten außerhalb von Zeilen
 
 Large Objects (LOBs) sind Spalten von z.B. dem Typ varchar (**max**). Das Verfügen über eine Reihe von LOB-Spalten in einer speicheroptimierten Tabelle beeinträchtigt die Leistung wahrscheinlich nicht so sehr, dass es eine Rolle spielt. Verhindern Sie jedoch, mehr LOB-Spalten zu haben, als Ihre Daten benötigen. Der gleiche Rat gilt für Spalten außerhalb von Zeilen. Definieren Sie eine Spalte nicht als nvarchar(3072), wenn varchar(512) ausreichen würde.
 
@@ -248,7 +252,7 @@ Weitere Informationen zu LOB-Spalten und Spalten außerhalb von Zeilen finden Si
 
 
 
-## E. Einschränkungen von nativen Prozeduren
+## <a name="e-limitations-of-native-procs"></a>E. Einschränkungen von nativen Prozeduren
 
 
 Bestimmte Elemente von Transact-SQL werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt.
@@ -258,14 +262,14 @@ Bestimmte Elemente von Transact-SQL werden in nativ kompilierten gespeicherten P
 - [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 
-### E.1 Kein CASE-Ausdruck in einer nativen Prozedur
+### <a name="e1-no-case-in-a-native-proc"></a>E.1 Kein CASE-Ausdruck in einer nativen Prozedur
 
 Der CASE-Ausdruck in Transact-SQL kann nicht innerhalb einer nativen Prozedur verwendet werden. Sie können dies umgehen:
 
 - [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
 
 
-### E.2 Keine MERGE-Anweisung in einer nativen Prozedur
+### <a name="e2-no-merge-in-a-native-proc"></a>E.2 Keine MERGE-Anweisung in einer nativen Prozedur
 
 
 Die [MERGE-Anweisung](../../t-sql/statements/merge-transact-sql.md) von Transact-SQL ähnelt der oft als *UPSERT* bezeichneten Funktion. Eine native Prozedur kann die MERGE-Anweisung nicht verwenden. Sie können jedoch die gleiche Funktion wie MERGE erreichen, indem Sie eine Kombination aus den Anweisungen SELECT, UPDATE und INSERT verwenden. Ein Codebeispiel finden Sie unter:
@@ -274,7 +278,7 @@ Die [MERGE-Anweisung](../../t-sql/statements/merge-transact-sql.md) von Transact
 
 
 
-### E.3 Keine Joins in UPDATE- oder DELETE-Anweisungen in einer nativen Prozedur
+### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 Keine Joins in UPDATE- oder DELETE-Anweisungen in einer nativen Prozedur
 
 Transact-SQL-Anweisungen in einer nativen Prozedur können nur auf speicheroptimierte Tabellen zugreifen. In UPDATE- und DELETE-Anweisungen können Sie keine Tabellen verknüpfen. Bei Versuchen in einer nativen Prozedur tritt ein Fehler mit einer Meldung wie z.B. Meldung 12319 auf, die Folgendes erklärt:
 
@@ -290,7 +294,7 @@ Dies kann mit keinem Unterabfragentyp umgangen werden. Sie können eine speicher
 *Szenario:* Die Tabelle TabProjectEmployee besitzt einen eindeutigen Schlüssel von zwei Spalten: ProjectId und EmployeeId. Jede Zeile gibt die Zuordnung eines Mitarbeiters zu einem aktiven Projekt an. Wenn ein Mitarbeiter das Unternehmen verlässt, muss der Mitarbeiter aus der Tabelle TabProjectEmployee gelöscht werden.
 
 
-#### Ungültige T-SQL-, DELETE...JOIN-Anweisungen
+#### <a name="invalid-t-sql-deletejoin"></a>Ungültige T-SQL-, DELETE...JOIN-Anweisungen
 
 
 Eine native Prozedur kann über keine DELETE...JOIN-Anweisung wie die folgende verfügen.
@@ -309,7 +313,7 @@ DELETE pe
 ```
 
 
-#### Gültige Umgehung, manuelles Ausführen von DELETE...JOIN
+#### <a name="valid-work-around-manual-deletejoin"></a>Gültige Umgehung, manuelles Ausführen von DELETE...JOIN
 
 Als Nächstes folgt das Codebeispiel für die Umgehung in zwei Teilen:
 
@@ -364,7 +368,7 @@ END;
 ```
 
 
-### E.4 Abfrageplaneinschränkungen für native Prozeduren
+### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 Abfrageplaneinschränkungen für native Prozeduren
 
 
 Einige Typen von Abfrageplänen sind für native Prozeduren nicht verfügbar. Viele Details werden im folgenden Artikel erläutert:
@@ -372,18 +376,18 @@ Einige Typen von Abfrageplänen sind für native Prozeduren nicht verfügbar. Vi
 - [Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 
-#### Keine parallele Verarbeitung in einer nativen Prozedur
+#### <a name="no-parallel-processing-in-a-native-proc"></a>Keine parallele Verarbeitung in einer nativen Prozedur
 
 Die Parallele Verarbeitung kann nicht Teil eines Abfrageplans für eine native Prozedur sein. Native Prozeduren sind immer auf einen Thread beschränkt.
 
 
-#### Join-Typen
+#### <a name="join-types"></a>Join-Typen
 
 
 Weder ein Hashjoin noch ein Zusammenführungsjoin kann Teil eines Abfrageplans für eine native Prozedur sein. Joins geschachtelter Schleifen werden verwendet.
 
 
-#### Keine Hashaggregation
+#### <a name="no-hash-aggregation"></a>Keine Hashaggregation
 
 Wenn der Abfrageplan für eine native Prozedur eine Aggregationsphase erfordert, steht nur die Stream-Aggregation zur Verfügung. Die Hashaggregation wird in einem Abfrageplan für eine native Prozedur nicht unterstützt.
 
@@ -391,7 +395,7 @@ Wenn der Abfrageplan für eine native Prozedur eine Aggregationsphase erfordert,
 
 
 
-## F. Anwendungsentwurf: Transaktionen und Wiederholungslogik
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Anwendungsentwurf: Transaktionen und Wiederholungslogik
 
 Eine Transaktion, die eine speicheroptimierte Tabelle umfasst, kann von einer anderen Transaktion abhängig werden, die die gleiche Tabelle umfasst. Wenn die Anzahl von abhängigen Transaktionen den zulässigen Höchstwert überschreitet, tritt bei allen abhängigen Transaktionen ein Fehler auf.
 
@@ -408,7 +412,9 @@ Sie können die Transact-SQL-Skripts stabiler gegenüber einem möglichen Transa
 
 
 
-## Verwandte Links
+## <a name="related-links"></a>Verwandte Links
 
 - [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
+
 

@@ -1,44 +1,48 @@
 ---
-title: "R&#228;umliche Daten (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography-Datentyp [SQL Server], räumlicher Speicherentwurf"
-  - "Planare räumliche Daten [SQL Server], entwerfen"
-  - "Räumliche Datentypen [SQL Server]"
-  - "Geodätische räumliche Daten [SQL Server]"
-  - "geometry-Datentyp [SQL Server], räumlicher Speicherentwurf"
-  - "Räumliche Speicherung [SQL Server]"
-  - "Geodätische räumliche Daten [SQL Server], entwerfen"
+title: "Räumliche Daten (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server], spatial storage design
+- planar spatial data [SQL Server], designing
+- spatial data types [SQL Server]
+- geodetic spatial data [SQL Server]
+- geometry data type [SQL Server], spatial storage design
+- spatial storage [SQL Server]
+- geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#228;umliche Daten (SQL Server)
+# <a name="spatial-data-sql-server"></a>Räumliche Daten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Räumliche Daten stellen Informationen über die physische Position und die Form geometrischer Objekte dar. Bei diesen Objekten kann es sich um Punktpositionen oder komplexere Objekte handeln, z.&nbsp;B. Länder, Straßen oder Seen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von räumlichen Daten: den Datentyp **geometry** und den Datentyp **geography**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von räumlichen Daten: den Datentyp **geometry** und den Datentyp **geography** .  
   
--   Der **geometry**-Datentyp stellt Daten in einem euklidischen (flachen) Koordinatensystem dar.  
+-   Der **geometry** -Datentyp stellt Daten in einem euklidischen (flachen) Koordinatensystem dar.  
   
--   Der **geography**-Datentyp stellt Daten in einem Erdkugel-Koordinatensystem dar.  
+-   Der **geography** -Datentyp stellt Daten in einem Erdkugel-Koordinatensystem dar.  
   
- Beide Datentypen werden als .NET CLR (Common Language Runtime)-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert.  
+ Beide Datentypen werden als .NET CLR (Common Language Runtime)-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementiert.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführten räumlichen Funktionen das Whitepaper [Neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407) herunter.  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen das Whitepaper [Neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
 ##  <a name="reltasks"></a> Verwandte Aufgaben  
  [Erstellen, Aufbauen und Abfragen von geometry-Instanzen](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
  [Erstellen, Ändern und Löschen von räumlichen Indizes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Stellt Informationen zum Erstellen, Ändern und Löschen eines räumlichen Indexes bereit.  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Bietet eine Einführung in die räumlichen Datentypen.  
   

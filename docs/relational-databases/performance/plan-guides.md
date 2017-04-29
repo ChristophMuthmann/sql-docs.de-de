@@ -1,46 +1,50 @@
 ---
-title: "Planhinweislisten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TEMPLATE (Planhinweisliste)"
-  - "SQL-Planhinweislisten"
-  - "OPTIMIZE FOR-Abfragehinweis"
-  - "RECOMPILE-Abfragehinweis"
-  - "OBJECT-Planhinweisliste"
-  - "Planhinweislisten [SQL Server], Informationen zu Planhinweislisten"
-  - "OPTION-Klausel"
-  - "Planhinweislisten [SQL Server]"
-  - "USE PLAN-Abfragehinweis"
+title: Planhinweislisten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planhinweislisten
+# <a name="plan-guides"></a>Planhinweislisten
   Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
   
  Die maximale Anzahl der erstellbaren Planhinweislisten ist lediglich durch die verfügbaren Systemressourcen begrenzt. Planhinweislisten sollten jedoch nur begrenzt für unternehmenswichtige Abfragen verwendet werden, deren Leistung verbessert oder stabilisiert werden soll. Planhinweislisten sollten nicht verwendet werden, um die überwiegende Abfragelast einer bereitgestellten Anwendung zu beeinflussen.  
   
 > [!NOTE]  
->  Planhinweislisten können nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Planhinweislisten sind in jeder Edition sichtbar. Sie können auch in allen Versionen eine Datenbank anfügen, die Planhinweislisten enthält. Planhinweislisten bleiben beim Wiederherstellen oder Anfügen einer Datenbank in einer aktualisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten.  
+>  Planhinweislisten können nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Planhinweislisten sind in jeder Edition sichtbar. Sie können auch in allen Versionen eine Datenbank anfügen, die Planhinweislisten enthält. Planhinweislisten bleiben beim Wiederherstellen oder Anfügen einer Datenbank in einer aktualisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten.  
   
-## Typen von Planhinweislisten  
+## <a name="types-of-plan-guides"></a>Typen von Planhinweislisten  
  Die folgenden Typen von Planhinweislisten können erstellt werden.  
   
  OBJECT-Planhinweisliste  
- OBJECT-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren, benutzerdefinierten Skalarfunktionen, benutzerdefinierten Tabellenwertfunktionen mit mehreren Anweisungen und von DML-Triggern ausgeführt werden.  
+ OBJECT-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, benutzerdefinierten Skalarfunktionen, benutzerdefinierten Tabellenwertfunktionen mit mehreren Anweisungen und von DML-Triggern ausgeführt werden.  
   
- Angenommen, die folgende gespeicherte Prozedur, die den `@Country`_`region`-Parameter annimmt, existiert in einer Datenbankanwendung, die in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank bereitgestellt wird:  
+ Angenommen, die folgende gespeicherte Prozedur, die den `@Country`_`region` -Parameter annimmt, existiert in einer Datenbankanwendung, die in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank bereitgestellt wird:  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -74,16 +78,16 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- Wenn die in der `sp_create_plan_guide`-Anweisung angegebene Abfrage ausgeführt wird, wird sie vor der Optimierung so geändert, dass sie die `OPTIMIZE FOR (@Country = N''US'')`-Klausel enthält.  
+ Wenn die in der `sp_create_plan_guide` -Anweisung angegebene Abfrage ausgeführt wird, wird sie vor der Optimierung so geändert, dass sie die `OPTIMIZE FOR (@Country = N''US'')` -Klausel enthält.  
   
  SQL-Planhinweisliste  
- SQL-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von eigenständigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches, die nicht Teil eines Datenbankobjekts sind, ausgeführt werden. SQL-basierte Planhinweislisten können auch zum Abgleich von Abfragen verwendet werden, die in einer bestimmten Form parametrisiert werden. SQL-Planhinweislisten werden für eigenständige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches verwendet. Diese Anweisungen werden von einer Anwendung häufig mithilfe der gespeicherten Systemprozedur [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) übermittelt. Betrachten Sie beispielsweise den folgenden eigenständigen Batch:  
+ SQL-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von eigenständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches, die nicht Teil eines Datenbankobjekts sind, ausgeführt werden. SQL-basierte Planhinweislisten können auch zum Abgleich von Abfragen verwendet werden, die in einer bestimmten Form parametrisiert werden. SQL-Planhinweislisten werden für eigenständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches verwendet. Diese Anweisungen werden von einer Anwendung häufig mithilfe der gespeicherten Systemprozedur [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) übermittelt. Betrachten Sie beispielsweise den folgenden eigenständigen Batch:  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- Um zu verhindern, dass ein paralleler Ausführungsplan für diese Abfrage generiert wird, erstellen Sie die folgende Planhinweisliste und legen den `MAXDOP`-Abfragehinweis im `1`-Parameter auf `@hints` fest.  
+ Um zu verhindern, dass ein paralleler Ausführungsplan für diese Abfrage generiert wird, erstellen Sie die folgende Planhinweisliste und legen den `MAXDOP` -Abfragehinweis im `1` -Parameter auf `@hints` fest.  
   
 ```  
 sp_create_plan_guide   
@@ -96,7 +100,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  Die für das `@module_or_batch`-Argument und das `@params`-Argument der `sp_create_plan guide`-Anweisung angegebenen Werte müssen mit dem Text übereinstimmen, der in der Abfrage übermittelt wird. Weitere Informationen finden Sie unter [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) und [Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+>  Die für das `@module_or_batch` -Argument und das `@params` -Argument der `sp_create_plan guide` -Anweisung angegebenen Werte müssen mit dem Text übereinstimmen, der in der Abfrage übermittelt wird. Weitere Informationen finden Sie unter [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) -Argument und das [Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)nicht direkt ändern möchten oder können.  
   
  SQL-Planhinweislisten können auch für Abfragen erstellt werden, die in derselben Form parametrisiert werden, wenn die PARAMETERIZATION-Datenbankoption mithilfe von SET auf FORCED festgelegt wird oder wenn eine TEMPLATE-Planhinweisliste erstellt wird, die eine parametrisierte Abfrageklasse angibt.  
   
@@ -109,7 +113,7 @@ sp_create_plan_guide
   
 -   Die Datenbankoption PARAMETERIZATION ist auf SIMPLE festgelegt (die Standardeinstellung), für eine Klasse von Abfragen soll aber eine erzwungene Parametrisierung versucht werden.  
   
-## Voraussetzungen für den Planhinweislistenabgleich  
+## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  
  Planhinweislisten beziehen sich auf die Datenbank, in der sie erstellt werden. Daher können nur die Planhinweislisten gegen die Abfrage geprüft werden, die in der zum Zeitpunkt der Ausführung einer Abfrage aktuellen Datenbank vorhanden sind. Beispiel: Wenn [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die aktuelle Datenbank ist und die folgende Abfrage ausgeführt wird:  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
@@ -120,21 +124,21 @@ sp_create_plan_guide
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- Dann können nur in `DB1` vorhandene Planhinweislisten mit dieser Abfrage verglichen werden, weil die Abfrage im Kontext von `DB1` ausgeführt wird.  
+ Dann können nur in `DB1` vorhandene Planhinweislisten mit dieser Abfrage verglichen werden, weil die Abfrage im Kontext von `DB1`ausgeführt wird.  
   
- Bei SQL- und TEMPLATE-basierten Planhinweislisten vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte der Argumente @module_or_batch und @params mit einer Abfrage, indem die beiden Werte Zeichen für Zeichen abgeglichen werden.  Das bedeutet, dass Sie den Text genau so bereitstellen müssen, wie er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im tatsächlichen Batch empfangen wird.  
+ Bei SQL- und TEMPLATE-basierten Planhinweislisten vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte der Argumente @module_or_batch und @params mit einer Abfrage, indem die beiden Werte Zeichen für Zeichen verglichen werden. Das bedeutet, dass Sie den Text genau so bereitstellen müssen, wie er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im tatsächlichen Batch empfangen wird.  
   
- Wenn @type = 'SQL' festgelegt wurde und @module_or_batch auf NULL gesetzt wird, wird der Wert von @module_or_batch auf den Wert von @stmt eingestellt. Dies bedeutet, dass der Wert für *statement_text* Zeichen für Zeichen in exakt dem gleichen Format bereitgestellt werden muss, in dem er an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt wird. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
+ Wenn @type = 'SQL' und @module_or_batch auf NULL gesetzt wird, wird der Wert von @module_or_batch auf den Wert von @stmt festgelegt. Dies bedeutet, dass der Wert für *statement_text* Zeichen für Zeichen in exakt dem gleichen Format bereitgestellt werden muss, in dem er an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übermittelt wird. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
  Wenn für eine Anweisung sowohl eine reguläre Planhinweisliste (SQL oder OBJECT) als auch eine TEMPLATE-Planhinweisliste gelten können, wird nur die reguläre Planhinweisliste verwendet.  
   
 > [!NOTE]  
->  Der Batch, der die Anweisung enthält, für die Sie eine Planhinweisliste erstellen wollen, darf keine USE *database*-Anweisung enthalten.  
+>  Der Batch, der die Anweisung enthält, für die Sie eine Planhinweisliste erstellen wollen, darf keine USE *database* -Anweisung enthalten.  
   
-## Auswirkungen von Planhinweislisten auf den Plancache  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>Auswirkungen von Planhinweislisten auf den Plancache  
  Wenn Sie eine Planhinweisliste für ein Modul erstellen, wird der Abfrageplan für dieses Modul aus dem Plancache entfernt. Wenn Sie eine Planhinweisliste des Typs OBJECT oder SQL für einen Batch erstellen, wird der Abfrageplan für einen Batch mit demselben Hashwert entfernt. Wenn Sie eine Planhinweisliste des Typs TEMPLATE erstellen, werden alle Batches mit einer Anweisung aus dem Plancache in dieser Datenbank entfernt.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Task|Thema|  
 |----------|-----------|  
@@ -147,7 +151,7 @@ sp_create_plan_guide
 |Beschreibt, wie SQL Server Profiler zum Erstellen und Testen von Testplanhinweislisten verwendet wird.|[Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Beschreibt, wie Planhinweislisten überprüft werden.|[Überprüfen von Planhinweislisten nach einem Upgrade](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

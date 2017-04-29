@@ -1,37 +1,41 @@
 ---
-title: "Angeben von Parametern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Parameter [SQL Server], gespeicherte Prozeduren"
-  - "Gespeicherte Prozeduren [SQL Server], Parameter"
-  - "Ausgabeparameter [SQL Server]"
-  - "Eingabeparameter [SQL Server]"
+title: Angeben von Parameter | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [SQL Server], stored procedures
+- stored procedures [SQL Server], parameters
+- output parameters [SQL Server]
+- input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Angeben von Parametern
+# <a name="specify-parameters"></a>Angeben von Parametern
   Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
   
  Eine Prozedur kann über maximal 2100 Parameter verfügen, denen jeweils ein Name, eine Datentyp und eine Richtung zugewiesen wird. Optional können Parametern Standardwerte zugewiesen werden.  
   
  Der folgende Abschnitt enthält Informationen zur Übergabe von Werten in Parameter und zur Verwendung der verschiedenen Parameterattribute in einem Prozeduraufruf.  
   
-## Übergeben von Werte in Parameter  
- Die mit einem Prozeduraufruf angegebenen Parameterwerte müssen Konstanten oder Variablen sein. Ein Funktionsname kann nicht als Parameterwert verwendet werden. Variablen können benutzerdefiniert oder Systemvariablen (z. B. @@spid) sein.  
+## <a name="passing-values-into-parameters"></a>Übergeben von Werte in Parameter  
+ Die mit einem Prozeduraufruf angegebenen Parameterwerte müssen Konstanten oder Variablen sein. Ein Funktionsname kann nicht als Parameterwert verwendet werden. Variablen können benutzerdefiniert oder Systemvariablen (z.B. @@spid) sein.  
   
- Die folgenden Beispiele zeigen, wie Parameterwerte an die Prozedur `uspGetWhereUsedProductID` übergeben werden. Sie zeigen, wie Parameter als Konstanten und Variablen übergeben werden, sowie die Verwendung einer Variablen, um den Wert einer Funktion zu übergeben.  
+ Die folgenden Beispiele zeigen, wie Parameterwerte an die Prozedur `uspGetWhereUsedProductID`übergeben werden. Sie zeigen, wie Parameter als Konstanten und Variablen übergeben werden, sowie die Verwendung einer Variablen, um den Wert einer Funktion zu übergeben.  
   
 ```  
 USE AdventureWorks2012;  
@@ -56,10 +60,10 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-## Angeben von Parameternamen  
+## <a name="specifying-parameter-names"></a>Angeben von Parameternamen  
  Wenn eine Prozedur erstellt und ein Parameternamen deklariert wird, muss ein Parametername gewählt werden, der mit einem einzelnen @-Zeichen beginnt und im Bereich der Prozedur eindeutig ist.  
   
- Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die gespeicherte Prozedur **my_proc** drei Parameter mit den Namen **@first**, **@second** und **@third** erwartet, können die Werte, die an die gespeicherte Prozedur übergeben werden, wie den Parameternamen, wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die gespeicherte Prozedur **my_proc** drei Parameter mit den Namen **@first**, **@second**und **@third**erwartet, können die Werte, die an die gespeicherte Prozedur übergeben werden, wie den Parameternamen, wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
 >  Wenn ein Parameterwert im Format **@parameter =***value* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **@parameter =***value* übergeben werden, dann müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
@@ -67,10 +71,10 @@ GO
 > [!WARNING]  
 >  Jeder Parameter, der im Format **@parameter =***value* übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
-## Angeben von Parameterdatentypen  
- Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem **tinyint**-Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
+## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
+ Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem **tinyint** -Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
   
-## Angeben von Standardwerten für Parameter  
+## <a name="specifying-parameter-default-values"></a>Angeben von Standardwerten für Parameter  
  Ein Parameter, für den in der Parameterdeklaration ein Standardwert angeben wird, wird als optional betrachtet. Es ist nicht notwendig, in einem Prozeduraufruf einen Wert für einen optionalen Parameter bereitzustellen.  
   
  Der Standardwert eines Parameters wird verwendet, wenn:  
@@ -84,7 +88,7 @@ GO
   
  Wenn kein entsprechender Wert als Standardwert für den Parameter angegeben werden kann, geben Sie NULL als Standardwert an. Es empfiehlt sich, die Prozedur eine benutzerdefinierte Meldung zurückgeben zu lassen, wenn sie ohne Wertangabe für den Parameter ausgeführt wird.  
   
- Im folgenden Beispiel wird die gespeicherte Prozedur `usp_GetSalesYTD` mit einem Eingabeparameter (`@SalesPerson`) ausgeführt. NULL wird als Standardwert für den Parameter zugewiesen und in Fehlerbehandlungsanweisungen zum Zurückgeben einer benutzerdefinierten Fehlermeldung verwendet, wenn die Prozedur ohne einen Wert für den Parameter `@SalesPerson` ausgeführt wird.  
+ Im folgenden Beispiel wird die gespeicherte Prozedur `usp_GetSalesYTD` mit einem Eingabeparameter ( `@SalesPerson`) ausgeführt. NULL wird als Standardwert für den Parameter zugewiesen und in Fehlerbehandlungsanweisungen zum Zurückgeben einer benutzerdefinierten Fehlermeldung verwendet, wenn die Prozedur ohne einen Wert für den Parameter `@SalesPerson` ausgeführt wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,14 +129,14 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht weggelassen werden, solange der fünfte Parameter angegeben wird, außer wenn die Parameter im Format **@parameter =***value* angegeben werden.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht weggelassen werden, solange der fünfte Parameter angegeben wird, außer wenn die Parameter im Format **@parameter =***value* angegeben werden.  
   
-## Angeben der Parameterrichtung  
- Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
+## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
+ Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
   
  Um einen Ausgabeparameter anzugeben müssen Sie das OUTPUT-Schlüsselwort in der Definition des Parameters in der CREATE PROCEDURE-Anweisung angeben. Die Prozedur gibt den aktuellen Wert des Ausgabeparameters an das aufrufende Programm zurück, wenn die Prozedur beendet wird. Um den Wert des Parameters in einer Variablen zu speichern, die in dem aufrufenden Programm verwendet werden kann, muss das aufrufende Programm beim Ausführen der Prozedur ebenfalls das Schlüsselwort OUTPUT verwenden.  
   
- Im nachfolgenden Beispiel wird die `Production.usp`_`GetList`-Prozedur erstellt, von der eine Liste der Produkte zurückgegeben wird, deren Preis einen angegebenen Betrag nicht übersteigt. In dem Beispiel wird die Verwendung mehrerer SELECT-Anweisungen und mehrerer OUTPUT-Parameter dargestellt. OUTPUT-Parameter ermöglichen einer externen Prozedur, einem Batch oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen während dem Ausführen der Prozedur den Zugriff auf einen Satz von Werten.  
+ Im nachfolgenden Beispiel wird die `Production.usp`_`GetList` -Prozedur erstellt, von der eine Liste der Produkte zurückgegeben wird, deren Preis einen angegebenen Betrag nicht übersteigt. In dem Beispiel wird die Verwendung mehrerer SELECT-Anweisungen und mehrerer OUTPUT-Parameter dargestellt. OUTPUT-Parameter ermöglichen einer externen Prozedur, einem Batch oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen während dem Ausführen der Prozedur den Zugriff auf einen Satz von Werten.  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +167,7 @@ GO
   
 ```  
   
- Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]-Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter **@cost** und **@compareprices** werden mit einer Ablaufsteuerungssprache verwendet, um eine Meldung an das Fenster **Meldungen** zurückzugeben.  
+ Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter **@cost** und **@compareprices** werden mit einer Ablaufsteuerungssprache verwendet, um eine Meldung an das Fenster **Meldungen** zurückzugeben.  
   
 > [!NOTE]  
 >  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Position des Parameters übereinstimmen, es sei denn, es wird **@listprice=** *variable* verwendet.  
@@ -201,7 +205,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

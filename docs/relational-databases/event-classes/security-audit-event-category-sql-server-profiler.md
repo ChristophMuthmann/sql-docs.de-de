@@ -1,29 +1,33 @@
 ---
-title: "Sicherheits&#252;berwachung-Ereigniskategorie (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheitsüberwachung-Ereigniskategorie [SQL Server]"
-  - "Ereignisklassen [SQL Server Profiler], Sicherheitsüberwachung (Ereigniskategorie)"
-  - "SQL Server-Ereignisklassen, Sicherheitsüberwachung (Ereigniskategorie)"
+title: "Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sicherheits&#252;berwachung-Ereigniskategorie (SQL Server Profiler)
+# <a name="security-audit-event-category-sql-server-profiler"></a>Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler)
   Die **Sicherheitsüberwachung** -Ereigniskategorie enthält Sicherheitsüberwachungsereignisse.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
@@ -46,19 +50,19 @@ caps.handback.revision: 36
 |[Audit Database Object Take Ownership (Ereignisklasse)](../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md)|Gibt an, dass eine Änderung des Besitzers für Objekte im Datenbankbereich erfolgt ist.|  
 |[Audit Database Operation-Ereignisklasse](../../relational-databases/event-classes/audit-database-operation-event-class.md)|Gibt an, dass verschiedene Vorgänge, wie z.B. CHECKPOINT oder SUBSCRIBE QUERY NOTIFICATIONS, aufgetreten sind.|  
 |[Audit Database Principal Impersonation (Ereignisklasse)](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|Gibt an, dass ein Identitätswechsel innerhalb des Datenbankumfangs aufgetreten ist.|  
-|[Audit Database Principal Management-Ereignisklasse](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|Gibt an, dass Prinzipale aus einer Datenbank erstellt, in einer Datenbank geändert oder gelöscht wurden..|  
+|[Audit Database Principal Management-Ereignisklasse](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|Gibt an, dass Prinzipale aus einer Datenbank erstellt, in einer Datenbank geändert oder gelöscht wurden.|  
 |[Audit Database Scope GDR (Ereignisklasse)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Gibt an, dass eine GRANT-, REVOKE- oder DENY-Anweisung von Anweisungsberechtigungen durch den Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgelöst wurde.|  
 |[Audit DBCC (Ereignisklasse)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Gibt an, dass ein DBCC-Befehl ausgegeben wurde.|  
 |[Überwachungsvolltextereignisklasse](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Gibt an, dass ein Volltextereignis aufgetreten ist.|  
-|[Audit Login Change Password-Ereignisklasse](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Gibt an, dass ein Benutzer sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldekennwort geändert hat.|  
-|[Audit Login Change Property (Ereignisklasse)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Gibt an, dass **sp_defaultdb**, **sp_defaultlanguage** oder ALTER LOGIN zum Ändern einer Eigenschaft bei einer Anmeldung verwendet wurden.|  
-|[Audit Login (Ereignisklasse)](../../relational-databases/event-classes/audit-login-event-class.md)|Gibt an, dass ein Benutzer sich erfolgreich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet hat.|  
+|[Audit Login Change Password-Ereignisklasse](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Gibt an, dass ein Benutzer sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekennwort geändert hat.|  
+|[Audit Login Change Property (Ereignisklasse)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Gibt an, dass **sp_defaultdb**, **sp_defaultlanguage**oder ALTER LOGIN zum Ändern einer Eigenschaft bei einer Anmeldung verwendet wurden.|  
+|[Audit Login (Ereignisklasse)](../../relational-databases/event-classes/audit-login-event-class.md)|Gibt an, dass ein Benutzer sich erfolgreich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angemeldet hat.|  
 |[Audit Login Failed (Ereignisklasse)](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Gibt an, dass ein Benutzer versucht hat, sich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden, und diese Anmeldung einen Fehler erzeugt hat.|  
 |[Audit Login GDR-Ereignisklasse](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Gibt an, dass das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelderecht hinzugefügt oder entfernt wurde.|  
-|[Audit Logout (Ereignisklasse)](../../relational-databases/event-classes/audit-logout-event-class.md)|Gibt an, dass ein Benutzer sich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgemeldet hat.|  
+|[Audit Logout (Ereignisklasse)](../../relational-databases/event-classes/audit-logout-event-class.md)|Gibt an, dass ein Benutzer sich an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abgemeldet hat.|  
 |[Audit Object Derived Permission-Ereignisklasse](../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)|Gibt an, dass eine CREATE-, ALTER- oder DROP-Anweisung für ein Objekt ausgegeben wurde.|  
 |[Audit Schema Object Access (Ereignisklasse)](../../relational-databases/event-classes/audit-schema-object-access-event-class.md)|Gibt an, dass eine Objektberechtigung (wie z.B. SELECT) verwendet wurde.|  
-|[Audit Schema Object GDR (Ereignisklasse)](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|Gibt an, dass eine GRANT-, REVOKE- oder DENY-Anweisung von Schemaobjektberechtigungen durch den Benutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst wurde.|  
+|[Audit Schema Object GDR (Ereignisklasse)](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|Gibt an, dass eine GRANT-, REVOKE- oder DENY-Anweisung von Schemaobjektberechtigungen durch den Benutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgelöst wurde.|  
 |[Audit Schema Object Management (Ereignisklasse)](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)|Gibt an, dass ein Serverobjekt erstellt, geändert oder gelöscht wurde.|  
 |[Audit Schema Object Take Ownership-Ereignisklasse](../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md)|Gibt an, dass die Berechtigungen zum Ändern des Schemaobjektsbesitzers überprüft wurden.|  
 |[Audit Server Alter Trace (Ereignisklasse)](../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)|Gibt an, dass die ALTER TRACE-Berechtigung überprüft wurde.|  
@@ -69,10 +73,10 @@ caps.handback.revision: 36
 |[Audit Server Principal Impersonation-Ereignisklasse](../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)|Gibt an, dass ein Identitätswechsel innerhalb des Serverumfangs aufgetreten ist.|  
 |[Audit Server Principal Management (Ereignisklasse)](../../relational-databases/event-classes/audit-server-principal-management-event-class.md)|Gibt an, dass ein CREATE-, ALTER- oder DROP-Ereignis auf einem Serverprinzipal aufgetreten ist.|  
 |[Audit Server Scope GDR-Ereignisklasse](../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)|Gibt an, dass ein GDR-Ereignis für Serverberechtigungen aufgetreten ist.|  
-|[Audit Server Starts and Stops (Ereignisklasse)](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststatus geändert wurde.|  
+|[Audit Server Starts and Stops (Ereignisklasse)](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienststatus geändert wurde.|  
 |[Audit Statement Permission (Ereignisklasse)](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Gibt an, dass eine Anweisungsberechtigung verwendet wurde.|  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

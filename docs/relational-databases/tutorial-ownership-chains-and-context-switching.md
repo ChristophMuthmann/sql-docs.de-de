@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: 'Tutorial: Besitzketten und Kontextwechsel | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
 > [!NOTE]  
 > Damit Sie den Code ausführen können, der in diesem Lernprogramm enthalten ist, müssen Sie die Sicherheit für den gemischte Modus konfiguriert und die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank installiert haben. Weitere Informationen zur Sicherheit für den gemischte Modus finden Sie unter [Auswählen eines Authentifizierungsmodus](../relational-databases/security/choose-an-authentication-mode.md).  
   
-## Szenario  
+## <a name="scenario"></a>Szenario  
 In diesem Szenario benötigen zwei Benutzer Konten, über die sie auf die Bestellungsdaten zugreifen können, die in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank gespeichert sind. Es gelten folgende Anforderungen:  
   
 -   Über das erste Konto (TestManagerUser) muss es möglich sein, alle Details in jeder Bestellung anzeigen zu können.  
@@ -48,7 +52,7 @@ Damit die Anforderungen dieses Szenarios erfüllt werden können, ist dieses Bei
   
 Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.  
   
-## 1. Konfigurieren der Umgebung  
+## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
 Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die `AdventureWorks2012`-Datenbank zu öffnen. Vergewissern Sie sich mit der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer dbo als Kontext angezeigt wird.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 Weitere Informationen zur CREATE USER-Anweisung finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Weitere Informationen zur CREATE LOGIN-Anweisung finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-Übertragen Sie mit dem folgenden Code den Besitz des `Purchasing` -Schemas auf das Konto `TestManagerUser` . Dadurch wird es ermöglicht, unter diesem Konto mit allen DML-Anweisungen (Data Manipulation Language, z. B. `SELECT`- und `INSERT`-Berechtigungen) auf die Objekte zuzugreifen, die das Schema enthält. `TestManagerUser` wird auch die Berechtigung zum Erstellen gespeicherter Prozeduren erteilt.  
+Übertragen Sie mit dem folgenden Code den Besitz des `Purchasing` -Schemas auf das Konto `TestManagerUser` . Dadurch wird es ermöglicht, unter diesem Konto mit allen DML-Anweisungen (Data Manipulation Language, z. B. `SELECT` - und `INSERT` -Berechtigungen) auf die Objekte zuzugreifen, die das Schema enthält. `TestManagerUser` wird auch die Berechtigung zum Erstellen gespeicherter Prozeduren erteilt.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -98,7 +102,7 @@ GO
   
 Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbankmodul&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Eine Sammlung aller [!INCLUDE[ssDE](../includes/ssde-md.md)]-Berechtigungen als Poster finden Sie unter [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## 2. Erstellen einer gespeicherten Prozedur für Zugriff auf Daten  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Erstellen einer gespeicherten Prozedur für Zugriff auf Daten  
 Um den Kontext innerhalb einer Datenbank zu wechseln, verwenden Sie die EXECUTE AS-Anweisung. EXECUTE AS erfordert IMPERSONATE-Berechtigungen.  
   
 Im folgenden Code wird die `EXECUTE AS` -Anweisung dazu verwendet, einen Kontextwechsel auf `TestManagerUser` vorzunehmen und eine gespeicherte Prozedur zu erstellen, die nur die Daten anzeigt, die von `TestEmployeeUser`benötigt werden. Damit die Anforderungen erfüllt werden, ist die gespeicherte Prozedur wie folgt aufgebaut: Sie nimmt eine Variable für die Bestellnummer entgegen, zeigt keine Finanzinformationen an und enthält eine WHERE-Klausel, die die Ergebnisse auf Teillieferungen beschränkt.  
@@ -125,7 +129,7 @@ END
 GO  
 ```  
   
-Momentan kann `TestEmployeeUser` auf keines der Datenbankobjekte zugreifen. Der folgende Code (nach wie vor im `TestManagerUser`-Kontext) erteilt dem Benutzerkonto die Berechtigung, über die gespeicherte Prozedur Informationen aus den Basistabellen abrufen zu können.  
+Momentan kann `TestEmployeeUser` auf keines der Datenbankobjekte zugreifen. Der folgende Code (nach wie vor im `TestManagerUser` -Kontext) erteilt dem Benutzerkonto die Berechtigung, über die gespeicherte Prozedur Informationen aus den Basistabellen abrufen zu können.  
   
 ```  
 GRANT EXECUTE  
@@ -156,8 +160,8 @@ GO
   
 Weitere Informationen zur REVERT-Anweisung finden Sie unter [REVERT &#40;Transact-SQL&#41;](../t-sql/statements/revert-transact-sql.md).  
   
-## 3. Zugreifen auf Daten über die gespeicherte Prozedur  
-`TestEmployeeUser` hat für die Objekte der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank keine Berechtigungen, die über eine Anmeldung und die Berechtigungen hinausgehen, die der public-Datenbankrolle zugeordnet sind. Der folgende Code gibt einen Fehler zurück, wenn `TestEmployeeUser` versucht, auf eine der Basistabellen zuzugreifen.  
+## <a name="3-access-data-through-the-stored-procedure"></a>3. Zugreifen auf Daten über die gespeicherte Prozedur  
+`TestEmployeeUser` hat für die Objekte der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank keine Berechtigungen, die über eine Anmeldung und die Berechtigungen hinausgehen, die der public-Datenbankrolle zugeordnet sind. Der folgende Code gibt einen Fehler zurück, wenn `TestEmployeeUser` versucht, auf eine der Basistabellen zuzugreifen.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4. Zurücksetzen der Umgebung  
+## <a name="4-reset-the-environment"></a>4. Zurücksetzen der Umgebung  
 Im folgenden Code wird der Befehl `REVERT` verwendet, um den Kontext des aktuellen Kontos auf `dbo`zurückzusetzen, und dann die Umgebung zurückgesetzt.  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

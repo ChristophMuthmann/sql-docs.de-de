@@ -1,41 +1,45 @@
 ---
-title: "Vollst&#228;ndige Dateisicherungen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vollständige Sicherungen [SQL Server]"
-  - "Sichern [SQL Server], Dateien oder Dateigruppen"
-  - "Sicherungen [SQL Server], Dateien oder Dateigruppen"
-  - "Vollständiges Wiederherstellungsmodell [SQL Server], vollständige Dateisicherungen"
-  - "Dateisicherungen [SQL Server], vollständige"
-  - "Dateien [SQL Server], sichern"
-  - "Dateigruppen [SQL Server], sichern"
-  - "Dateisicherungen [SQL Server]"
+title: "Vollständige Dateisicherungen (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vollst&#228;ndige Dateisicherungen (SQL Server)
+# <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten.  
   
- Die Dateien in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank können einzeln gesichert und wiederhergestellt werden. Sie können auch eine ganze Dateigruppe angeben, statt jede in einer Gruppe enthaltene Datei einzeln anzugeben. Beachten Sie Folgendes: Wenn eine Datei in einer Dateigruppe offline ist (z. B. weil die Datei gerade wiederhergestellt wird), ist die gesamte Dateigruppe offline und kann nicht gesichert werden.  
+ Die Dateien in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank können einzeln gesichert und wiederhergestellt werden. Sie können auch eine ganze Dateigruppe angeben, statt jede in einer Gruppe enthaltene Datei einzeln anzugeben. Beachten Sie Folgendes: Wenn eine Datei in einer Dateigruppe offline ist (z. B. weil die Datei gerade wiederhergestellt wird), ist die gesamte Dateigruppe offline und kann nicht gesichert werden.  
   
  Dateisicherungen von schreibgeschützten Dateigruppen können mit Teilsicherungen kombiniert werden. Teilsicherungen schließen alle Dateigruppen mit Lese-/Schreibzugriff und optional mindestens eine schreibgeschützte Dateigruppe ein. Weitere Informationen finden Sie unter [Teilsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
  Eine Dateisicherung kann als *differenzielle Basis* für differenzielle Dateisicherungen dienen. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 > [!NOTE]  
->  Vollständige Dateisicherungen werden in der Regel als *Dateisicherungen bezeichnet*, es sei denn, sie werden ausdrücklich mit *differenziellen Dateisicherungen* verglichen.  
+>  Vollständige Dateisicherungen werden in der Regel als *Dateisicherungen bezeichnet*, es sei denn, sie werden ausdrücklich mit *differenziellen Dateisicherungen*verglichen.  
   
  **In diesem Thema:**  
   
@@ -72,15 +76,15 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Einzelne Dateien können aus einer Datenbanksicherung wiederhergestellt werden, das Suchen und Wiederherstellen einer Datei aus einer Datenbanksicherung dauert jedoch länger als aus einer Dateisicherung.  
   
-### Dateisicherungen und das einfache Wiederherstellungsmodell  
+### <a name="file-backups-and-the-simple-recovery-model"></a>Dateisicherungen und das einfache Wiederherstellungsmodell  
  Im einfachen Wiederherstellungsmodell müssen alle Dateien mit Lese-/Schreibzugriff zusammen gesichert werden. Damit wird sichergestellt, dass die Datenbank bis zu einem bestimmten Zeitpunkt wiederhergestellt werden kann. Verwenden Sie die Option READ_WRITE_FILEGROUPS, statt die Dateien bzw. Dateigruppen mit Lese-/Schreibzugriff einzeln anzugeben. Mit dieser Option werden alle Dateigruppen mit Lese-/Schreibzugriff in der Datenbank gesichert. Eine Sicherung, die durch Angeben von READ_WRITE_FILEGROUPS erstellt wird, wird als Teilsicherung bezeichnet. Weitere Informationen finden Sie unter [Teilsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-### Dateisicherungen und das vollständige Wiederherstellungsmodell  
+### <a name="file-backups-and-the-full-recovery-model"></a>Dateisicherungen und das vollständige Wiederherstellungsmodell  
  Beim vollständigen Wiederherstellungsmodell müssen Sie das Transaktionsprotokoll sichern, unabhängig von Ihrer Sicherungsstrategie. Ein vollständiger Satz vollständiger Dateisicherungen zusammen mit ausreichend vielen Protokollsicherungen, die alle Dateisicherungen umfassen, entspricht einer vollständigen Datenbanksicherung.  
   
  Das Wiederherstellen einer Datenbank unter ausschließlicher Verwendung von Datei- und Protokollsicherungen kann komplex sein. Deshalb ist es eine bewährte Methode, wenn möglich vor der ersten Dateisicherung eine vollständige Datenbanksicherung auszuführen und die Protokollsicherungen zu starten. In der folgenden Abbildung wird eine Strategie veranschaulicht, bei der eine vollständige Datenbanksicherung ausgeführt wird (zum Zeitpunkt t1), kurz nachdem die Datenbank erstellt wurde (zum Zeitpunkt t0). Die erste Datenbanksicherung ermöglicht das Starten von Transaktionsprotokollsicherungen. Transaktionsprotokollsicherungen sind in regelmäßigen Abständen geplant. Dateisicherungen werden in Intervallen durchgeführt, die den Geschäftsanforderungen der Datenbank am ehesten entsprechen. In dieser Abbildung wird veranschaulicht, wie die vier Dateigruppen nacheinander gesichert werden. Die Reihenfolge der Sicherung – A, C, B, A – entspricht den Geschäftsanforderungen der Datenbank.  
   
- ![Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert")  
+ ![Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
   
 > [!NOTE]  
 >  Beim vollständigen Wiederherstellungsmodell müssen Sie beim Wiederherstellen einer Dateisicherung mit Lese-/Schreibzugriff einen Rollforward für das Transaktionsprotokoll ausführen, um die Konsistenz der Datei mit dem Rest der Datenbank sicherzustellen. Um einen Rollforward für viele Transaktionsprotokollsicherungen zu vermeiden, sollten Sie differenzielle Dateisicherungen verwenden. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Dateisicherungen werden nicht vom Wartungsplanungs-Assistenten unterstützt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

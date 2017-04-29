@@ -1,26 +1,30 @@
 ---
-title: "Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbankmomentaufnahmen [SQL Server-Datenbank-Momentaufnahmen], wiederherstellen"
-  - "Wiederherstellen von Datenbanken"
+title: Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
-  Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
+# <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
+  Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
   
 -   **Vorbereitungen:**  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [Sicherheit](#Security)  
   
--   **Wiederherstellen einer Datenbank aus einer Datenbankmomentaufnahme mit:** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -86,9 +90,9 @@ caps.handback.revision: 58
  **So stellen Sie eine Datenbank aus zu einer Datenbank-Momentaufnahme wieder her**  
   
 > [!NOTE]  
->  Ein Beispiel für diese Prozedur finden Sie in [Beispiele (Transact-SQL)](#TsqlExample) an späterer Stelle in diesem Abschnitt.  
+>  Ein Beispiel für diese Prozedur finden Sie in [Beispiele (Transact-SQL)](#TsqlExample)an späterer Stelle in diesem Abschnitt.  
   
-1.  Ermitteln Sie die Datenbank-Momentaufnahme, aus der Sie die Datenbank wiederherstellen möchten. Sie können die Momentaufnahmen für eine Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen (weitere Informationen finden Sie unter [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Zudem können Sie die Quelldatenbank einer Sicht anhand der **source_database_id**-Spalte der [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht identifizieren.  
+1.  Ermitteln Sie die Datenbank-Momentaufnahme, aus der Sie die Datenbank wiederherstellen möchten. Sie können die Momentaufnahmen für eine Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen (weitere Informationen finden Sie unter [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Zudem können Sie die Quelldatenbank einer Sicht anhand der **source_database_id** -Spalte der [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht identifizieren.  
   
 2.  Löschen Sie alle anderen Datenbankmomentaufnahmen.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 58
   
      Dabei ist *database_name* die Quelldatenbank und *database_snapshot_name* der Name der Momentaufnahmen, aus dem die Datenbank wiederhergestellt werden soll. Beachten Sie, dass Sie in dieser Anweisung einen Momentaufnahmenamen statt eines Sicherungsmediums angeben müssen.  
   
-     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  Während des Wiederherstellungsvorgangs stehen weder die Momentaufnahme noch die Quelldatenbank zur Verfügung. Die Quelldatenbank und die Momentaufnahme sind als von einem Wiederherstellungsvorgang betroffen gekennzeichnet. Falls während der Wiederherstellung ein Fehler auftritt, wird beim nächsten Start der Datenbank versucht, die Wiederherstellung abzuschließen.  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   B. [Wiederherstellen einer Momentaufnahme für die Sales-Datenbank](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Wiederherstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
- In diesem Beispiel wird davon ausgegangen, dass derzeit in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank nur eine Momentaufnahme vorhanden ist. Das Beispiel, mit dem die Momentaufnahme erstellt wird, zu dem die Datenbank hier wiederhergestellt wird, finden Sie unter [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ In diesem Beispiel wird davon ausgegangen, dass derzeit in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank nur eine Momentaufnahme vorhanden ist. Das Beispiel, mit dem die Momentaufnahme erstellt wird, zu dem die Datenbank hier wiederhergestellt wird, finden Sie unter [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -135,13 +139,13 @@ GO
 ```  
   
 ####  <a name="Reverting_Sales"></a> B. Wiederherstellen einer Momentaufnahme für die Sales-Datenbank  
- In diesem Beispiel wird davon ausgegangen, dass derzeit zwei Momentaufnahmen für die **Sales**-Datenbank vorhanden sind: **sales_snapshot0600** und **sales_snapshot1200**. Durch dieses Beispiel wird die ältere Momentaufnahme gelöscht und die Datenbank mithilfe der aktuelleren Momentaufnahme wiederhergestellt.  
+ In diesem Beispiel wird davon ausgegangen, dass derzeit zwei Momentaufnahmen für die **Sales** -Datenbank vorhanden sind: **sales_snapshot0600** und **sales_snapshot1200**. Durch dieses Beispiel wird die ältere Momentaufnahme gelöscht und die Datenbank mithilfe der aktuelleren Momentaufnahme wiederhergestellt.  
   
  Den Code zum Erstellen der Beispieldatenbank und der Momentaufnahmen, für die dieses Beispiel gilt, finden Sie wie folgt:  
   
 -   Informationen zur **Sales**-Datenbank und zur **sales_snapshot0600**-Momentaufnahme finden Sie in „Erstellen einer Datenbank mit Dateigruppen“ und „Erstellen einer Datenbankmomentaufnahme“ in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   Informationen zur **sales_snapshot1200**-Momentaufnahme finden Sie unter „Erstellen einer Momentaufnahme für die Sales-Datenbank“ in [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   Informationen zur **sales_snapshot1200** -Momentaufnahme finden Sie unter „Erstellen einer Momentaufnahme für die Sales-Datenbank“ in [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

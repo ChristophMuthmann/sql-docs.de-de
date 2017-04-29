@@ -1,27 +1,31 @@
 ---
-title: "Ereignisablaufverfolgung f&#252;r Windows-Ziel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ereignisablaufverfolgung für Windows-Ziel"
-  - "ETW-Ziel"
-  - "Ziele [Erweiterte Ereignisse von SQL Server], Ereignisablaufverfolgung für Windows-Ziel"
+title: "Ereignisablaufverfolgung für Windows-Ziel | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ereignisablaufverfolgung f&#252;r Windows-Ziel
+# <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  
@@ -33,7 +37,7 @@ caps.handback.revision: 13
  Das ETW-Ziel ist ein Singletonziel, auch wenn es mehreren Sitzungen hinzugefügt werden kann. Auch wenn ein Ereignis in vielen Sitzungen ausgelöst wird, wird das Ereignis nur einmal je aufgetretenem Ereignis an das ETW-Ziel weitergeleitet. Das Modul für erweiterte Ereignisse ist pro Prozess auf eine einzelne Instanz beschränkt.  
   
 > [!IMPORTANT]  
->  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto muss Mitglied der Gruppe der Leistungsprotokollbenutzer sein, damit das ETW-Ziel funktionieren kann.  
+>  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienststartkonto muss Mitglied der Gruppe der Leistungsprotokollbenutzer sein, damit das ETW-Ziel funktionieren kann.  
   
  Die Konfiguration der Ereignisse in einer ETW-Sitzung wird von einem Prozess gesteuert, in dem das Modul für erweiterte Ereignisse gehostet ist. Das Modul steuert, welche Ereignisse ausgelöst werden und welche Bedingungen erfüllt sein müssen, damit ein Ereignis ausgelöst wird.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 13
  Das ETW-Ziel unterstützt keine Steuerung durch externe ETW-Controller, z. B. Logman.exe. Für ETW-Ablaufverfolgungen muss eine Ereignissitzung mit dem ETW-Ziel erstellt werden. Weitere Informationen finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).  
   
 > [!NOTE]  
->  Bei Aktivieren des ETW-Ziels wird eine ETW-Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION erstellt. Wenn eine Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION bereits vorhanden ist, wird diese ohne Änderung der Eigenschaften der vorhandenen Sitzung verwendet. XE_DEFAULT_ETW_SESSION wird von allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemeinsam genutzt. Nachdem Sie XE_DEFAULT_ETW_SESSION gestartet haben, müssen Sie dies mit einem ETW-Controller beenden, z. B. dem Logman-Tool. Sie können zum Beispiel den folgenden Befehl an der Eingabeaufforderung ausführen: **logman stop XE_DEFAULT_ETW_SESSION -ets**.  
+>  Bei Aktivieren des ETW-Ziels wird eine ETW-Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION erstellt. Wenn eine Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION bereits vorhanden ist, wird diese ohne Änderung der Eigenschaften der vorhandenen Sitzung verwendet. XE_DEFAULT_ETW_SESSION wird von allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Nachdem Sie XE_DEFAULT_ETW_SESSION gestartet haben, müssen Sie dies mit einem ETW-Controller beenden, z. B. dem Logman-Tool. Sie können zum Beispiel den folgenden Befehl an der Eingabeaufforderung ausführen: **logman stop XE_DEFAULT_ETW_SESSION -ets**.  
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 13
 |default_etw_session_logfile_path|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Pfad der Protokolldatei für die Sitzung für erweiterte Ereignisse. Standardmäßig ist dies %TEMP%\XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Protokolldateigröße in Megabyte (MB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 20 MB.|  
 |default_etw_session_buffer_size_kb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Größe des Puffers im Arbeitsspeicher in Kilobyte (KB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 128 KB.|  
-|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Die Standardeinstellung ist 0.|  
+|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Die Standardeinstellung ist 0.|  
   
  Die Konfiguration dieser Einstellungen ist optional. Das ETW-Ziel verwendet Standardwerte für diese Einstellungen.  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 13
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   MOF-Dateien(Managed Object Format) befinden sich im Ordner *\<Installationspfad>*\Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<*\Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
-## Hinzufügen des Ziels zu einer Sitzung  
+## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  
   
 ```  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  Weitere Informationen zu einem vollständigen Beispiel, das zeigt, wie das ETW-Ziel verwendet wird und wie die Daten angezeigt werden, finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## Siehe auch  
- [Ziele für erweiterte Ereignisse von SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ziele für erweiterte Ereignisse von SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

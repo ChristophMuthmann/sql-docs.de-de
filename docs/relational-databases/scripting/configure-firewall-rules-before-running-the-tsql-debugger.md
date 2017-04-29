@@ -1,36 +1,40 @@
 ---
-title: "Konfigurieren von Firewallregeln vor dem Ausf&#252;hren des TSQL-Debuggers | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "Transact-SQL-Debugger, Remoteverbindungen"
-  - "Windows-Firewall [Datenbankmodul], Transact-SQL-Debugger"
-  - "Transact-SQL-Debugger, Windows-Firewall"
-  - "Transact-SQL-Debugger, konfigurieren"
-  - "Ports [SQL Server], Transact-SQL-Debugger"
-  - "TCP/IP [SQL Server], Portnummern"
+title: "Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren von Firewallregeln vor dem Ausf&#252;hren des TSQL-Debuggers
-  Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausgeführt wird.  
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
+  Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ausgeführt wird.  
   
-## Konfigurieren des Transact-SQL-Debuggers  
+## <a name="configuring-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers  
  Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger umfasst sowohl serverseitige als auch clientseitige Komponenten. Die serverseitigen Debuggerkomponenten werden mit jeder Instanz des Datenbankmoduls von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher installiert. Die clientseitigen Debuggerkomponenten sind inbegriffen:  
   
 -   Wenn Sie die clientseitigen Tools von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher installieren.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  Wenn Sie Regeln in der Windows-Firewall aktivieren, kann dies dazu führen, dass Ihr Computer Sicherheitsrisiken ausgesetzt ist, die von der Firewall normalerweise geblockt werden. Durch das Aktivieren von Regeln für Remotedebugging wird die Blockierung der in diesem Thema aufgeführten Ports und Programme aufgehoben.  
   
-## Firewallregeln für den Server  
+## <a name="firewall-rules-on-the-server"></a>Firewallregeln für den Server  
  Verwenden Sie auf dem Computer, auf dem die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt wird, **Windows-Firewall mit erweiterter Sicherheit** , um die folgenden Informationen anzugeben:  
   
 -   Fügen Sie eine eingehende Programmregel für sqlservr.exe hinzu. Sie müssen eine Regel für jede Instanz besitzen, die Remotedebugsitzungen unterstützen muss.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Wenn die Domänenrichtlinie eine Netzwerkkommunikation über IPSec erfordert, müssen Sie auch eingehende Regeln für das Öffnen von UDP-Port 4500 und den UDP-Port 500 hinzufügen.  
   
-## Firewallregeln für den Client  
+## <a name="firewall-rules-on-the-client"></a>Firewallregeln für den Client  
  Auf dem Computer, der den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausführt, ist für das SQL Server-Setup oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Setup möglicherweise die Windows-Firewall konfiguriert, um Remotedebugging zu ermöglichen.  
   
  Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt werden, können Sie die Programm- und Portausnahmen manuell mit **Windows-Firewall mit erweiterter Sicherheit** konfigurieren, um Firewallregeln zu konfigurieren:  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. Wählen Sie **TCP** im Feld **Protokolltyp:** aus, wählen Sie **Dynamische RPC-Ports** im Feld **Lokaler Port:** aus, klicken Sie auf **Anwenden**und dann auf **OK**.  
   
-## Anforderungen zum Starten des Debuggers  
+## <a name="requirements-for-starting-the-debugger"></a>Anforderungen zum Starten des Debuggers  
  Beim Starten des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers müssen außerdem immer die folgenden Anforderungen erfüllt sein:  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * Der Server muss über RPC mit dem Client kommunizieren. Das Konto, mit dem der SQL Server-Dienst ausgeführt wird, sollte über Authentifizierungsberechtigungen für den Client verfügen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ausführen des Transact-SQL-Debuggers](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

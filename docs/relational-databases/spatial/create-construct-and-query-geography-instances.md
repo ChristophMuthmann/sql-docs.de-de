@@ -1,34 +1,38 @@
 ---
-title: "Erstellen, Aufbauen und Abfragen von geography-Instanzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography-Datentyp [SQL Server]"
-  - "Geodätische Daten [SQL Server]"
-  - "geography-Datentyp [SQL Server], Informationen zum geography-Datentyp"
+title: Erstellen, Aufbauen und Abfragen von geography-Instanzen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen, Aufbauen und Abfragen von geography-Instanzen
-  Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **geography** speichert Daten zu Ellipsoiden (wie die Erdkugel eines ist), z.B. GPS-Breiten- und Längenkoordinaten.  
+# <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
+  Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
- Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography**-Typs in der gleichen Weise erstellen und **geography**-Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen.  
+ Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography** -Typs in der gleichen Weise erstellen und **geography** -Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen.  
   
 ##  <a name="creating"></a> Erstellen einer neuen geography-Instanz  
   
 ###  <a name="existing"></a> Erstellen einer neuen geography-Instanz anhand einer vorhandenen Instanz  
- Der **geography**-Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen neue **geography**-Instanzen auf der Grundlage vorhandener Instanzen erstellt werden können.  
+ Der **geography** -Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen neue **geography** -Instanzen auf der Grundlage vorhandener Instanzen erstellt werden können.  
   
  **So erstellen Sie einen Puffer um eine geography**  
  [STBuffer &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
@@ -46,7 +50,7 @@ caps.handback.revision: 14
  [STDifference &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
 ###  <a name="wkt"></a> Erstellen einer geography-Instanz anhand einer WKT-Eingabe (Well-Known Text)  
- Der **geography**-Datentyp bietet mehrere integrierte Methoden zur Erstellung einer Geografie anhand der WKT-Darstellung des Open Geospatial Consortium (OGC). Der WKT-Standard ist eine Textzeichenfolge, die den Austausch von Geografiedaten in Textform ermöglicht.  
+ Der **geography** -Datentyp bietet mehrere integrierte Methoden zur Erstellung einer Geografie anhand der WKT-Darstellung des Open Geospatial Consortium (OGC). Der WKT-Standard ist eine Textzeichenfolge, die den Austausch von Geografiedaten in Textform ermöglicht.  
   
  **So erstellen Sie einen beliebigen geography-Instanztyp anhand einer WKT-Eingabe**  
  [STGeomFromText &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> Dimension  
- Eine nicht leere **geographyy**-Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **geography**-Instanzen, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString**, **CompoundCurve** und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, wie z.B. **Polygon, CurvePolygon** und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und eine **GeometryCollection** gibt die maximale Dimension der darin enthaltenen Elemente zurück.  
+ Eine nicht leere **geographyy** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **geography** -Instanzen, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString**, **CompoundCurve**und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, wie z.B. **Polygon, CurvePolygon**und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und eine **GeometryCollection** gibt die maximale Dimension der darin enthaltenen Elemente zurück.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -192,7 +196,7 @@ caps.handback.revision: 14
  [RingN &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
 ###  <a name="srid"></a> SRID (Spatial Reference ID)  
- Die SRID (Spatial Reference ID) ist ein Bezeichner, der das ellipsenförmige Koordinatensystem angibt, in dem die **geography**-Instanz dargestellt wird. Zwei **geography** -Instanzen mit unterschiedlichen SRIDs können nicht verglichen werden.  
+ Die SRID (Spatial Reference ID) ist ein Bezeichner, der das ellipsenförmige Koordinatensystem angibt, in dem die **geography** -Instanz dargestellt wird. Zwei **geography** -Instanzen mit unterschiedlichen SRIDs können nicht verglichen werden.  
   
  **So können Sie die SRID einer Instanz festlegen oder zurückgeben**  
  [STSrid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stsrid-geography-data-type.md)  
@@ -200,7 +204,7 @@ caps.handback.revision: 14
  Diese Eigenschaft kann geändert werden.  
   
 ##  <a name="rel"></a> Bestimmen von Beziehungen zwischen geography-Instanzen  
- Der **geography**-Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen die Beziehungen zwischen zwei **geography**-Instanzen bestimmt werden können.  
+ Der **geography** -Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen die Beziehungen zwischen zwei **geography** -Instanzen bestimmt werden können.  
   
  **So bestimmen Sie, ob zwei Instanzen die gleiche Punktmenge umfassen**  
  [STEquals &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stequals-geometry-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> geography-Instanzen müssen unterstützte SRIDs verwenden  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt SRIDs auf der Grundlage der EPSG-Standards. Wenn Berechnungen mit geografischen räumlichen Daten ausgeführt werden oder Methoden mit geografischen räumlichen Daten verwendet werden, müssen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte SRIDs für **geography** -Instanzen verwendet werden. Die SRID muss mit einer der SRIDs übereinstimmen, die in der **sys.spatial_reference_systems**-Katalogsicht angezeigt werden. Wie bereits erwähnt, hängen die Ergebnisse von Berechnungen mit räumlichen Daten unter Verwendung des **geography**-Datentyps von der Ellipsenform ab, die zur Erstellung der Daten verwendet wurde, da jeder Ellipsenform eine bestimmte SRID zugeordnet wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt SRIDs auf der Grundlage der EPSG-Standards. Wenn Berechnungen mit geografischen räumlichen Daten ausgeführt werden oder Methoden mit geografischen räumlichen Daten verwendet werden, müssen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte SRIDs für **geography** -Instanzen verwendet werden. Die SRID muss mit einer der SRIDs übereinstimmen, die in der **sys.spatial_reference_systems** -Katalogsicht angezeigt werden. Wie bereits erwähnt, hängen die Ergebnisse von Berechnungen mit räumlichen Daten unter Verwendung des **geography** -Datentyps von der Ellipsenform ab, die zur Erstellung der Daten verwendet wurde, da jeder Ellipsenform eine bestimmte SRID zugeordnet wird.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird beim Einsatz von Methoden für **geography** -Instanzen bestimmt werden können. Wenn Sie Daten aus einem anderen räumlichen Referenzsystem als WGS 84 (bzw. SRID 4326) verwenden, müssen Sie die SRID dieser geografischen räumlichen Daten bestimmen.  
   
 ##  <a name="examples"></a> Beispiele  
  Die folgenden Beispiele zeigen, wie Geografiedaten hinzugefügt und abgefragt werden.  
   
--   Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und der `geography`-Spalte `GeogCol1` erstellt. Eine dritte Spalte rendert die `geography`-Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()`-Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString`-Instanz des Typs `geography` und die andere eine `Polygon`-Instanz.  
+-   Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und der `geography` -Spalte `GeogCol1`erstellt. Eine dritte Spalte rendert die `geography` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geography`und die andere eine `Polygon` -Instanz.  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -252,7 +256,7 @@ caps.handback.revision: 14
     GO  
     ```  
   
--   Im zweiten Beispiel werden mithilfe der `STIntersection()`-Methode die Punkte zurückgegeben, an denen die beiden zuvor eingegebenen `geography`-Instanzen sich schneiden.  
+-   Im zweiten Beispiel werden mithilfe der `STIntersection()` -Methode die Punkte zurückgegeben, an denen die beiden zuvor eingegebenen `geography` -Instanzen sich schneiden.  
   
     ```  
     DECLARE @geog1 geography;  
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

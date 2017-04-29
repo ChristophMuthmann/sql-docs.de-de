@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, Datenbanken-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server], überwachen"
-  - "Datenbanken-Objekt"
-  - "SQLServer:Datenbanken"
-  - "Verfügbarkeitsgruppen [SQL Server], Leistungsindikatoren"
+title: SQL Server, Datenbanken-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Datenbanken-Objekt
+# <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
   Das **SQLServer:Datenbanken** -Objekt in SQL Server stellt Leistungsindikatoren bereit, mit denen Sie Massenkopiervorgänge, den Durchsatz von Sicherungs- und Wiederherstellungsvorgängen sowie Transaktionsprotokollaktivitäten überwachen können. Überwachen Sie Transaktionen und das Transaktionsprotokoll, um ermitteln zu können, wie viel Benutzeraktivität in der Datenbank auftritt und in welchem Umfang das Transaktionsprotokoll aufgefüllt wird. Durch den Umfang der Benutzeraktivität kann die Leistung der Datenbank bestimmt werden. Protokollgröße, Sperren und die Replikation können davon betroffen sein. Das Überwachen der Protokollaktivität auf niedriger Ebene zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
   
  Es können mehrere Instanzen des **Datenbanken** -Objekts überwacht werden, von denen jede eine einzelne Datenbank darstellt.  
@@ -35,7 +39,7 @@ caps.handback.revision: 40
 |**Sicherungs-/Wiederherstellungsdurchsatz/Sekunde**|Durchsatz von Lese-/Schreiboperationen bei Sicherungs- und Wiederherstellungsvorgängen für eine Datenbank pro Sekunde. So können Sie beispielsweise messen, wie sich die Leistung des Datenbank-Sicherungsvorgangs ändert, wenn mehr Sicherungsmedien parallel verwendet werden oder wenn schnellere Medien verwendet werden. Der Durchsatz eines Datenbank-Sicherungs- oder -Wiederherstellungsvorgangs ermöglicht es Ihnen, den Fortschritt und die Leistung der gesamten Sicherungs- und Wiederherstellungsvorgänge zu ermitteln.|  
 |**Zeilen für Massenkopieren/Sekunde**|Anzahl von massenkopierten Zeilen pro Sekunde.|  
 |**Durchsatz bei Massenkopieren/Sekunde**|Umfang der pro Sekunde massenkopierten Daten (in KB).|  
-|**Commit-Tabelleneinträge**|Die Größe des speicherinternen Anteils der Commit-Tabelle für die Datenbanken. Weitere Informationen finden Sie unter [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Commit-Tabelleneinträge**|Die Größe des speicherinternen Anteils der Commit-Tabelle für die Datenbanken. Weitere Informationen finden Sie unter [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Größe der Datendatei(en) (KB)**|Die kumulierte Größe (in KB) aller Datendateien in der Datenbank, wobei auch jegliche automatische Vergrößerung berücksichtigt ist. Die Überwachung dieses Leistungsindikators ist z. B: nützlich, wenn die richtige Größe von **tempdb**ermittelt werden soll.|  
 |**DBCC - Rate logischer Scans/Sekunde**|Anzahl an Bytes logischer Lesescans pro Sekunde für DBCC-Anweisungen (Database Console Commands, Datenbankkonsolenbefehle).|  
 |**Commitzeit der Gruppe/s**|Die Verzögerungszeit der Gruppe (Mikrosekunden) pro Sekunde.|
@@ -50,7 +54,7 @@ caps.handback.revision: 40
 |**Wartezeit für Protokollleerung (ms)**|Entspricht der Zeit in Millisekunden zum Ausführen von Schreibvorgängen für Protokollleerungen, die in der letzten Sekunde abgeschlossen wurden.|  
 |**Protokollleerungen/Sekunde**|Anzahl an Protokollleerungen pro Sekunde.|  
 |**Protokollvergrößerungen**|Gesamtanzahl von Vergrößerungen des Transaktionsprotokolls für diese Datenbank.|  
-|**Protokollpool-Cachefehlversuche/Sekunde**|Anzahl an Anforderungen, für die der Protokollblock im Protokollpool nicht verfügbar war. Der *Protokollpool* ist ein arbeitsspeicherinterner Cache für das Transaktionsprotokoll. Dieser Cache wird verwendet, um das Lesen des Protokolls zur Wiederherstellung, Transaktionsreplikation, Rollback und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu optimieren.|  
+|**Protokollpool-Cachefehlversuche/Sekunde**|Anzahl an Anforderungen, für die der Protokollblock im Protokollpool nicht verfügbar war. Der *Protokollpool* ist ein arbeitsspeicherinterner Cache für das Transaktionsprotokoll. Dieser Cache wird verwendet, um das Lesen des Protokolls zur Wiederherstellung, Transaktionsreplikation, Rollback und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]zu optimieren.|  
 |**Protokollpool-Lesevorgänge auf dem Datenträger/Sekunde**|Anzahl an Lesevorgängen auf dem Datenträger, die vom Protokollpool zum Abrufen von Protokollblöcken ausgegeben wurden.|  
 |**Protokollpool-Hashlöschungen/Sek.**|Die Rate der unformatierten Löschungen von Hasheinträgen aus dem Protokollpool.|
 |**Protokollpool-Hasheinfügungen/Sek.**|Die Rate der unformatierten Einfügungen von Hasheinträgen in den Protokollpool.|
@@ -70,7 +74,7 @@ caps.handback.revision: 40
 |**Protokollkürzungen**|Die Anzahl, wie oft das Transaktionsprotokoll verkleinert wurde.|  
 |**Protokoll verwendet (Prozent)**|Der prozentuale Anteil des Speicherplatzes im Protokoll, der verwendet wird.|  
 |**Replikations Replikationstransaktionen**|Anzahl von Transaktionen im Transaktionsprotokoll der Veröffentlichungsdatenbank, die für die Replikation gekennzeichnet sind, jedoch noch nicht an die Verteilungsdatenbank übermittelt wurden.|  
-|**Replikations Trans. ZINS**|Anzahl von Transaktionen, die pro Sekunde aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen und an die Verteilungsdatenbank übermittelt wurden.|  
+|**Replikations Trans. Zins**|Anzahl von Transaktionen, die pro Sekunde aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen und an die Verteilungsdatenbank übermittelt wurden.|  
 |**Verschiebung bei Datenverkleinerung Bytes/Sekunde**|Umfang an Daten, die bei der automatischen Verkleinerung oder der Ausführung von DBCC SHRINKDATABASE oder DBCC SHRINKFILE pro Sekunde verschoben wurden.|  
 |**Nachverfolgte Transaktionen/Sekunde**|Anzahl an Transaktionen, für die ein Commit ausgeführt wurde und die in der Commit-Tabelle für die Datenbank erfasst wurden.|  
 |**Transaktionen/Sekunde**|Anzahl an Transaktionen, die für die Datenbank pro Sekunde gestartet wurden.<br /><br /> **Transaktionen/Sekunde** zählt keine XTP-Transaktionen (d.h. Transaktionen, die durch eine nativ kompilierte gespeicherte Prozedur gestartet wurden).|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**Verarbeitete XTP-Controllerprotokolle/Sekunde**|Die Anzahl von Protokollbytes, die pro Sekunde vom XTP-Controllerthread verarbeitet werden.|
 |**Verwendeter XTP-Speicher (KB)**|Die von XTP in der Datenbank verwendete Speichermenge.| 
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Datenbankreplikat](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

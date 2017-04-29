@@ -1,27 +1,31 @@
 ---
-title: "Datenbankeigenschaften (Seite Dateien) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
+title: Datenbankeigenschaften (Seite Dateien) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenbankeigenschaften (Seite Dateien)
+# <a name="database-properties-files-page"></a>Datenbankeigenschaften (Seite Dateien)
   Auf dieser Seite können Sie eine neue Datenbank erstellen bzw. die Eigenschaften einer ausgewählten Datenbank anzeigen oder ändern. Dieses Thema bezieht sich auf die Option **Datenbankeigenschaften (Seite 'Dateien')** für vorhandene Datenbanken und auf die Option **Neue Datenbank (Seite 'Allgemein')**.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Datenbankname**  
  Fügen Sie den Namen der Datenbank hinzu, oder zeigen Sie ihn an.  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 42
  Geben Sie den Besitzer der Datenbank durch Auswahl aus der Liste an.  
   
  **Volltextindizierung verwenden**  
- Dieses Kontrollkästchen ist mit einem Häkchen versehen und abgeblendet, da die Volltextindizierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] immer aktiviert ist. Weitere Informationen finden Sie unter [Aktualisieren der Volltextsuche](../../relational-databases/search/full-text-search.md).  
+ Dieses Kontrollkästchen ist mit einem Häkchen versehen und abgeblendet, da die Volltextindizierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]immer aktiviert ist. Weitere Informationen finden Sie unter [Aktualisieren der Volltextsuche](../../relational-databases/search/full-text-search.md).  
   
  **Datenbankdateien**  
  Damit können Sie Datenbankdateien für die zugeordnete Datenbank hinzufügen, anzeigen, ändern oder entfernen. Datenbankdateien haben folgende Eigenschaften:  
@@ -61,7 +65,7 @@ caps.handback.revision: 42
   
  Dieses Feld ist für FILESTREAM-Dateien nicht gültig.  
   
- Bei Dateien in speicheroptimierten Dateigruppen sollte dieses Feld **Unbegrenzt** lauten.  
+ Bei Dateien in speicheroptimierten Dateigruppen sollte dieses Feld **Unbegrenzt**lauten.  
   
  **Pfad**  
  Zeigt den Pfad der ausgewählten Datei an. Um einen Pfad für eine neue Datei anzugeben, klicken Sie auf die Bearbeitungsschaltfläche neben dem Pfad für die Datei, und navigieren Sie dann zum Zielordner. Den Pfad einer vorhandenen Datei können Sie nicht ändern.  
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
  Weitere Informationen zu Dateien finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

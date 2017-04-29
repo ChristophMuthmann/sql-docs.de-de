@@ -1,28 +1,32 @@
 ---
-title: "Erstellen von Variablen und Spalten des XML-Datentyps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML-Datentyp [SQL Server], Variablen"
-  - "XML-Datentyp [SQL Server], Spalten"
+title: Erstellen von Variablen und Spalten des XML-Datentyps | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen von Variablen und Spalten des XML-Datentyps
-  Der **xml**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml**-Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) verwenden.  
+# <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
+  Der **xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
   
-## Erstellen von Variablen und Spalten  
+## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  
  Verwenden Sie zur Erstellung einer Spalte des `xml` -Typs als Teil einer Tabelle eine `CREATE TABLE` -Anweisung, wie im folgenden Beispiel gezeigt:  
   
 ```  
@@ -49,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  Zum Abfragen von den in Spalten, Variablen oder Parametern gespeicherten XML-Instanzen können Sie XQuery verwenden. Sie können auch die XML-Datenbearbeitungssprache (XML DML, Data Manipulation Language) verwenden, um Updates an den XML-Instanzen vorzunehmen. Da der XQuery-Standard zum Zeitpunkt der Entwicklung keine Definition der XQuery-DML enthielt, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterungen der [XML Data Modification Language (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md) für XQuery ein. Diese Erweiterungen ermöglichen Einfügungs-, Update- und Löschvorgänge.  
   
-## Zuweisen von Standardeinstellungen  
+## <a name="assigning-defaults"></a>Zuweisen von Standardeinstellungen  
  Sie können einer Spalte vom Typ **xml** in einer Tabelle eine standardmäßige XML-Instanz zuweisen. Sie können das Standard-XML auf zweierlei Weise bereitstellen: durch Verwenden einer XML-Konstante oder durch Verwenden einer expliziten Umwandlung in den **xml** -Typ.  
   
  Um das Standard-XML als XML-Konstante bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax. Beachten Sie, dass die Zeichenfolge implizit in den **xml** -Typ umgewandelt wird (durch CAST).  
@@ -58,20 +62,20 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
 ```  
   
- Um das Standard-XML als explizites `CAST` in `xml` bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax.  
+ Um das Standard-XML als explizites `CAST` in `xml`bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax.  
   
 ```  
 CREATE TABLE T (XmlColumn xml   
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ **xml**. Beispiel:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ **xml** . Beispiel:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## Angeben von Einschränkungen  
+## <a name="specifying-constraints"></a>Angeben von Einschränkungen  
  Beim Erstellen von Spalten vom Typ **xml** können Sie auf Spalten- oder Tabellenebene Einschränkungen definieren. Verwenden Sie Einschränkungen in den folgenden Situationen:  
   
 -   Ihre Geschäftsrichtlinien können nicht in XML-Schemas ausgedrückt werden. Beispielsweise muss sich die Lieferadresse eines Blumenladens in einem Umkreis von 50 Kilometern zum Ladenstandort befinden. Dies kann in Form einer Einschränkung für die XML-Spalte formuliert werden. Die Einschränkung kann **xml** -Datentypmethoden einbeziehen.  
@@ -90,9 +94,9 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Eine Alternative zur Verwendung von Einschränkungen ist die Erstellung eines Wrappers, einer benutzerdefinierten Funktion, um die Methode des **xml**-Datentyps einzubinden und die benutzerdefinierte Funktion in der CHECK-Einschränkung anzugeben, wie im folgenden Beispiel zu sehen ist.  
+ Eine Alternative zur Verwendung von Einschränkungen ist die Erstellung eines Wrappers, einer benutzerdefinierten Funktion, um die Methode des **xml** -Datentyps einzubinden und die benutzerdefinierte Funktion in der CHECK-Einschränkung anzugeben, wie im folgenden Beispiel zu sehen ist.  
   
- Im folgenden Beispiel gibt die Einschränkung für `Col2` an, dass jede der in dieser Spalte gespeicherten XML-Instanzen ein `<ProductDescription>`-Element aufweisen muss, das ein `ProductID`-Attribut enthält. Diese Einschränkung wird durch folgende benutzerdefinierte Funktion erzwungen:  
+ Im folgenden Beispiel gibt die Einschränkung für `Col2` an, dass jede der in dieser Spalte gespeicherten XML-Instanzen ein `<ProductDescription>` -Element aufweisen muss, das ein `ProductID` -Attribut enthält. Diese Einschränkung wird durch folgende benutzerdefinierte Funktion erzwungen:  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- Beachten Sie, dass die `exist()`-Methode des `xml`-Datentyps `1` zurückgibt, wenn das `<ProductDescription>`-Element der Instanz das `ProductID`-Attribut enthält. Andernfalls wird `0` zurückgegeben.  
+ Beachten Sie, dass die `exist()` -Methode des `xml` -Datentyps `1` zurückgibt, wenn das `<ProductDescription>` -Element der Instanz das `ProductID` -Attribut enthält. Andernfalls wird `0`zurückgegeben.  
   
  Jetzt können Sie eine Tabelle mit einer Einschränkung auf Spaltenebene erstellen, wie im Folgenden gezeigt:  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## Gleiche oder unterschiedliche Tabelle  
+## <a name="same-or-different-table"></a>Gleiche oder unterschiedliche Tabelle  
  Eine **xml** -Datentypspalte kann entweder in einer Tabelle erstellt werden, die noch andere relationale Spalten enthält, oder in einer getrennten Tabelle mit einer Fremdschlüsselbeziehung zu einer Haupttabelle.  
   
  Erstellen Sie eine **xml** -Datentypspalte in derselben Tabelle, wenn eine der folgenden Bedingungen zutrifft:  
@@ -136,7 +140,7 @@ INSERT INTO T values(1,'<Product />')
   
  Erstellen Sie die **xml** -Datentypspalte in einer getrennten Tabelle, wenn die folgenden Bedingungen zutreffen:  
   
--   Sie möchten einen XML-Index für die **xml**-Datentypspalte erstellen, der Primärschlüssel der Haupttabelle unterscheidet sich jedoch von ihrem Gruppierungsschlüssel, oder die Haupttabelle besitzt keinen Primärschlüssel, oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
+-   Sie möchten einen XML-Index für die **xml** -Datentypspalte erstellen, der Primärschlüssel der Haupttabelle unterscheidet sich jedoch von ihrem Gruppierungsschlüssel, oder die Haupttabelle besitzt keinen Primärschlüssel, oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
   
 -   Sie wollen vermeiden, dass Tabellenscans verlangsamt werden, weil die XML-Spalte in der Tabelle vorhanden ist. Dies beansprucht Speicherplatz, unabhängig davon, ob die Speicherung innerhalb oder außerhalb der Zeile erfolgt.  
   

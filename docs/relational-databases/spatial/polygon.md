@@ -1,36 +1,40 @@
 ---
-title: "Polygon | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geometry-Untertypen [SQL Server]"
-  - "geometry-Untertyp Polygon [SQL Server]"
+title: Polygon | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# Polygon
+# <a name="polygon"></a>Polygon
   Ein **Polygon** ist eine zweidimensionale Fläche, die als Sequenz von Punkten gespeichert wird, die einen äußeren Begrenzungsring und null oder mehrere innere Ringe definieren.  
   
-## Polygon-Instanzen  
+## <a name="polygon-instances"></a>Polygon-Instanzen  
  Eine **Polygon** -Instanz kann aus einem Ring gebildet werden, der wenigstens drei unterschiedliche Punkte besitzt. Eine **Polygon** -Instanz kann auch leer sein.  
   
  Der äußere und eventuelle innere Ring einer **Polygon** -Instanz definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des **Polygon**s.  
   
  Die nachfolgende Abbildung enthält Beispiele für **Polygon** -Instanzen.  
   
- ![Beispiele von Polygon-Geometrieinstanzen](../../relational-databases/spatial/media/polygon.png "Beispiele von Polygon-Geometrieinstanzen")  
+ ![Beispiele für Polygon-Geometrieinstanzen](../../relational-databases/spatial/media/polygon.gif "Examples of geometry Polygon instances")  
   
  Folgendes wird dargestellt:  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 27
   
 3.  Abbildung 3 ist eine gültige **Polygon** -Instanz, da sich seine inneren Ringe an einem einzelnen Tangentialpunkt schneiden.  
   
-### Akzeptierte Instanzen  
+### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Akzeptierte **Polygon** -Instanzen sind Instanzen, die in einer **geometry** -Variablen oder einer **geography** -Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Bei den folgenden **Polygon** -Instanzen handelt es sich um akzeptierte Instanzen:  
   
 -   Eine leere **Polygon** -Instanz  
@@ -65,22 +69,22 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Wie `@g4` und `@g5` zeigen, ist es möglich, dass eine akzeptierte **Polygon**-Instanz keine gültige **Polygon**-Instanz ist. `@g5` zeigt auch, dass eine Polygon-Instanz nur einen Ring mit vier beliebigen Punkten enthalten muss, um akzeptiert zu werden.  
+ Wie `@g4` und `@g5` zeigen, ist es möglich, dass eine akzeptierte **Polygon** -Instanz keine gültige **Polygon** -Instanz ist. `@g5` zeigt auch, dass eine Polygon-Instanz nur einen Ring mit vier beliebigen Punkten enthalten muss, um akzeptiert zu werden.  
   
- In den folgenden Beispielen wird eine `System.FormatException` ausgelöst, weil die **Polygon**-Instanzen nicht akzeptiert werden.  
+ In den folgenden Beispielen wird eine `System.FormatException` ausgelöst, weil die **Polygon** -Instanzen nicht akzeptiert werden.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` wird nicht akzeptiert, weil die **LineString**-Instanz für den äußeren Ring nicht genug Punkte enthält. `@g2` wird nicht akzeptiert, weil der Ausgangspunkt der **LineString**-Instanz des äußeren Rings nicht gleich dem Endpunkt ist. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.  
+ `@g1` wird nicht akzeptiert, weil die **LineString** -Instanz für den äußeren Ring nicht genug Punkte enthält. `@g2` wird nicht akzeptiert, weil der Ausgangspunkt der **LineString** -Instanz des äußeren Rings nicht gleich dem Endpunkt ist. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### Gültige Instanzen  
+### <a name="valid-instances"></a>Gültige Instanzen  
  Die inneren Ringe eines **Polygon** s können sich selbst und einander an einzelnen Tangentialpunkten berühren; überkreuzen sich die inneren Ringe eines **Polygon** s jedoch, ist die Instanz ungültig.  
   
  Im folgenden Beispiel werden gültige **Polygon** -Instanzen veranschaulicht.  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` ist ungültig, da der innere Ring den äußeren Ring an zwei Stellen berührt. `@g2` ist ungültig, da der zweite innere Ring im Inneren des ersten inneren Rings liegt. `@g3` ist ungültig, da sich die zwei inneren Ringe an mehreren aufeinander folgenden Punkten berühren. `@g4` ist ungültig, da sich das Innere der zwei inneren Ringe überlappt. `@g5` ist ungültig, da der äußere Ring nicht der erste Ring ist. `@g6` ist ungültig, da der Ring nicht mindestens drei unterschiedliche Punkte aufweist.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache `geometry``Polygon` mit einem Loch und dem SRID 10 erstellt.  
   
 ```  
@@ -114,7 +118,7 @@ DECLARE @g geometry;
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- Eine Instanz, die nicht gültig ist, kann eingegeben und in eine gültige `geometry`-Instanz konvertiert werden. Im folgenden Beispiel für ein `Polygon` überlappen die inneren Ringe und der äußere Ring, weshalb die Instanz ungültig ist.  
+ Eine Instanz, die nicht gültig ist, kann eingegeben und in eine gültige `geometry` -Instanz konvertiert werden. Im folgenden Beispiel für ein `Polygon`überlappen die inneren Ringe und der äußere Ring, weshalb die Instanz ungültig ist.  
   
 ```  
 DECLARE @g geometry;  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()` `LINESTRING(1 3, 1 5)` zurück.  
+ Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()` `LINESTRING(1 3, 1 5)`zurück.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [STArea &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

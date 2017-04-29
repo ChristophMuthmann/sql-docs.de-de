@@ -1,23 +1,27 @@
 ---
-title: "Columnstore-Indizes, Zusammenfassung der Funktionen nach Version | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Columnstore-Indizes - Neuigkeiten | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnstore-Indizes, Zusammenfassung der Funktionen nach Version
+# <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Zusammenfassung der für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen und für die neueste Version der Azure SQL-Datenbank Premium Edition, Azure SQL Data Warehouse und Parallel Data Warehouse verfügbaren Columnstore-Funktionen.  
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   Batchverarbeitung bietet eine mindestens doppelt so gute Leistung, ist aber nur für die parallele Abfrageausführung verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beschreibung von Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Laden von Daten für Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Beschreibung von Columnstore-Indizes   
+ Laden von Daten für Columnstore-Indizes   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore-Indizes für Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Columnstore-Indizes für Data Warehousing   
  [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

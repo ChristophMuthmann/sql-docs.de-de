@@ -1,25 +1,29 @@
 ---
-title: "DDL-Trigger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL-Trigger, Informationen zu DDL-Triggern"
+title: DDL-Trigger | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3a47050dc9ba3b157ac37f3fc0646492d231d47
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL-Trigger
-  DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
+# <a name="ddl-triggers"></a>DDL-Trigger
+  DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
   
  Sie können DDL-Trigger für die folgenden Aufgaben verwenden:  
   
@@ -32,12 +36,12 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Testen Sie die DDL-Trigger, um ihre Reaktionen auf ausgeführte, gespeicherte Systemprozeduren zu ermitteln. Beispielsweise wird durch die CREATE TYPE-Anweisung ebenso wie durch die gespeicherte Prozedur **sp_addtype** ein DDL-Trigger ausgelöst, der für ein CREATE_TYPE-Ereignis erstellt wurde.  
   
-## DDL-Triggertypen  
+## <a name="types-of-ddl-triggers"></a>DDL-Triggertypen  
  DDL-Trigger für Transact-SQL  
- Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
+ Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
   
  CLR-DDL-Trigger  
- Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen werden.  
+ Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
   
  DDL-Trigger werden nur ausgelöst, nachdem die DDL-Anweisungen ausgeführt werden, die diese Trigger auslösen. DDL-Trigger können nicht als INSTEAD OF-Trigger verwendet werden. DDL-Trigger werden nicht als Antwort auf Ereignisse ausgelöst, die sich auf lokale oder globale temporäre Tabellen und gespeicherte Prozeduren auswirken.  
   
@@ -54,10 +58,10 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Bösartiger Code innerhalb von Triggern kann unter ausgeweiteten Privilegien ausgeführt werden. Weitere Informationen dazu, wie Sie diese Bedrohung minimieren, finden Sie unter [Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md).  
   
-## DDL-Trigger-Bereich  
+## <a name="ddl-trigger-scope"></a>DDL-Trigger-Bereich  
  DDL-Trigger können als Antwort auf ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ereignis ausgelöst werden, das in der aktuellen Datenbank oder auf dem aktuellen Server verarbeitet wird. Der Bereich des Triggers hängt von dem Ereignis ab. Ein DDL-Trigger, der als Antwort auf ein CREATE_TABLE-Ereignis ausgelöst wird, wird z. B. bei jedem Auftreten eines CREATE_TABLE-Ereignisses in der Datenbank oder der Serverinstanz ausgelöst. Ein DDL-Trigger, der als Antwort auf ein CREATE_LOGIN-Ereignis ausgelöst wird, wird nur bei jedem Auftreten eines CREATE_LOGIN-Ereignisses in der Serverinstanz ausgelöst.  
   
- Im folgenden Beispiel wird der DDL-Trigger `safety` immer dann ausgelöst, wenn ein `DROP_TABLE`-Ereignis oder ein `ALTER_TABLE`-Ereignis in der Datenbank auftritt.  
+ Im folgenden Beispiel wird der DDL-Trigger `safety` immer dann ausgelöst, wenn ein `DROP_TABLE` -Ereignis oder ein `ALTER_TABLE` -Ereignis in der Datenbank auftritt.  
   
 ```  
 CREATE TRIGGER safety   
@@ -68,7 +72,7 @@ AS
    ROLLBACK;  
 ```  
   
- Im nächsten Beispiel wird von einem DDL-Trigger eine Meldung ausgegeben, wenn ein `CREATE_DATABASE` -Ereignis für die aktuelle Serverinstanz auftritt. Für den Trigger wird beispielsweise die `EVENTDATA`-Funktion zum Abrufen des Texts der entsprechenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwendet. Weitere Informationen zum Verwenden von EVENTDATA mit DDL-Triggern finden Sie unter [Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ Im nächsten Beispiel wird von einem DDL-Trigger eine Meldung ausgegeben, wenn ein `CREATE_DATABASE` -Ereignis für die aktuelle Serverinstanz auftritt. Für den Trigger wird beispielsweise die `EVENTDATA` -Funktion zum Abrufen des Texts der entsprechenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwendet. Weitere Informationen zum Verwenden von EVENTDATA mit DDL-Triggern finden Sie unter [Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
 ```  
 IF EXISTS (SELECT * FROM sys.server_triggers  
@@ -89,25 +93,25 @@ GO
   
 ```  
   
- Die Listen, mit denen die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen den Bereichen zugeordnet werden, die für diese angegeben werden können, stehen über die Links im Abschnitt "Auswählen einer bestimmten DDL-Anweisung für das Auslösen eines DDL-Triggers" weiter unten in diesem Thema zur Verfügung.  
+ Die Listen, mit denen die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen den Bereichen zugeordnet werden, die für diese angegeben werden können, stehen über die Links im Abschnitt "Auswählen einer bestimmten DDL-Anweisung für das Auslösen eines DDL-Triggers" weiter unten in diesem Thema zur Verfügung.  
   
- DDL-Trigger im Datenbankbereich werden als Objekte in der Datenbank gespeichert, in der sie erstellt werden. DDL-Trigger können in der **master**-Datenbank erstellt werden und verhalten sich ebenso wie Trigger, die in benutzerdefinierten Datenbanken erstellt wurden. Informationen über DDL-Trigger erhalten Sie, indem Sie die **sys.triggers** -Katalogsicht abfragen. Sie können **sys.triggers** innerhalb des Datenbankkontexts abfragen, in dem sie erstellt werden. Sie können jedoch auch den Datenbanknamen als Bezeichner angeben (z. B. **master.sys.triggers**).  
+ DDL-Trigger im Datenbankbereich werden als Objekte in der Datenbank gespeichert, in der sie erstellt werden. DDL-Trigger können in der **master** -Datenbank erstellt werden und verhalten sich ebenso wie Trigger, die in benutzerdefinierten Datenbanken erstellt wurden. Informationen über DDL-Trigger erhalten Sie, indem Sie die **sys.triggers** -Katalogsicht abfragen. Sie können **sys.triggers** innerhalb des Datenbankkontexts abfragen, in dem sie erstellt werden. Sie können jedoch auch den Datenbanknamen als Bezeichner angeben (z. B. **master.sys.triggers**).  
   
- DDL-Trigger im Gültigkeitsbereich des Servers werden als Objekte in der **master**-Datenbank gespeichert. Informationen zu DDL-Trigger im Gültigkeitsbereich des Servers erhalten Sie durch Abfragen der **sys.server_triggers**-Katalogsicht in jedem beliebigen Datenbankkontext.  
+ DDL-Trigger im Gültigkeitsbereich des Servers werden als Objekte in der **master** -Datenbank gespeichert. Informationen zu DDL-Trigger im Gültigkeitsbereich des Servers erhalten Sie durch Abfragen der **sys.server_triggers** -Katalogsicht in jedem beliebigen Datenbankkontext.  
   
-## Angeben einer Transact-SQL-Anweisung oder Gruppe von Anweisungen  
+## <a name="specifying-a-transact-sql-statement-or-group-of-statements"></a>Angeben einer Transact-SQL-Anweisung oder Gruppe von Anweisungen  
   
-### Auswählen einer bestimmten DDL-Anweisung für das Auslösen eines DDL-Triggers  
- DDL-Trigger können so entworfen werden, dass ihre Auslösung nach der Ausführung einer oder mehrerer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erfolgt. Im vorherigen Beispiel wird der Trigger `safety` nach einem `DROP_TABLE`-Ereignis oder einem `ALTER_TABLE`-Ereignis ausgelöst. Listen der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die für das Auslösen eines DDL-Triggers angegeben werden können, sowie den Bereich, in dem sie ausgelöst werden können, finden Sie unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
+### <a name="selecting-a-particular-ddl-statement-to-fire-a-ddl-trigger"></a>Auswählen einer bestimmten DDL-Anweisung für das Auslösen eines DDL-Triggers  
+ DDL-Trigger können so entworfen werden, dass ihre Auslösung nach der Ausführung einer oder mehrerer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erfolgt. Im vorherigen Beispiel wird der Trigger `safety` nach einem `DROP_TABLE` -Ereignis oder einem `ALTER_TABLE` -Ereignis ausgelöst. Listen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für das Auslösen eines DDL-Triggers angegeben werden können, sowie den Bereich, in dem sie ausgelöst werden können, finden Sie unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
   
-### Auswählen einer vordefinierten Gruppe von DDL-Anweisungen für das Auslösen eines DDL-Triggers  
- Ein DDL-Trigger kann nach der Ausführung eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ereignisses ausgelöst werden, das zu einer vordefinierten Gruppe ähnlicher Ereignisse gehört.  Wenn ein DDL-Trigger z. B. nach jeder Ausführung einer CREATE TABLE-, ALTER TABLE- oder DROP TABLE-Anweisung ausgelöst werden soll, können Sie FOR DDL_TABLE_EVENTS in der CREATE TRIGGER-Anweisung angeben. Nachdem CREATE TRIGGER ausgeführt wurde, werden die von einer Ereignisgruppe abgedeckten Ereignisse der **sys.trigger_events**-Katalogsicht hinzugefügt.  
+### <a name="selecting-a-predefined-group-of-ddl-statements-to-fire-a-ddl-trigger"></a>Auswählen einer vordefinierten Gruppe von DDL-Anweisungen für das Auslösen eines DDL-Triggers  
+ Ein DDL-Trigger kann nach der Ausführung eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ereignisses ausgelöst werden, das zu einer vordefinierten Gruppe ähnlicher Ereignisse gehört. Wenn ein DDL-Trigger z. B. nach jeder Ausführung einer CREATE TABLE-, ALTER TABLE- oder DROP TABLE-Anweisung ausgelöst werden soll, können Sie FOR DDL_TABLE_EVENTS in der CREATE TRIGGER-Anweisung angeben. Nachdem CREATE TRIGGER ausgeführt wurde, werden die von einer Ereignisgruppe abgedeckten Ereignisse der **sys.trigger_events** -Katalogsicht hinzugefügt.  
   
- Wenn in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ein Trigger für eine Ereignisgruppe erstellt wird, enthält **sys.trigger_events** keine Informationen über die Ereignisgruppe. **sys.trigger_events** enthält nur Informationen über die einzelnen von dieser Gruppe abgedeckten Ereignisse. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher speichert **sys.trigger_events** Metadaten über die Ereignisgruppe dauerhaft, für die der Trigger erstellt wird, sowie über die einzelnen Ereignisse, die die Ereignisgruppe abdeckt. Daher gelten Änderungen der von diesen Ereignisgruppen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher abgedeckten Ereignissen nicht für DDL-Trigger, die für diese Ereignisgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erstellt werden.  
+ Wenn in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ein Trigger für eine Ereignisgruppe erstellt wird, enthält **sys.trigger_events** keine Informationen über die Ereignisgruppe. **sys.trigger_events** enthält nur Informationen über die einzelnen von dieser Gruppe abgedeckten Ereignisse. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher speichert **sys.trigger_events** Metadaten über die Ereignisgruppe dauerhaft, für die der Trigger erstellt wird, sowie über die einzelnen Ereignisse, die die Ereignisgruppe abdeckt. Daher gelten Änderungen der von diesen Ereignisgruppen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher abgedeckten Ereignissen nicht für DDL-Trigger, die für diese Ereignisgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erstellt werden.  
   
  Eine Liste der vordefinierten Gruppen von DDL-Anweisungen, die für DDL-Trigger verfügbar sind, die jeweils von den Ereignisgruppen abgedeckten Anweisungen und die Bereiche, für die diese Ereignisgruppen programmiert werden können, finden Sie unter [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Task|Thema|  
 |----------|-----------|  
@@ -117,7 +121,7 @@ GO
 |Beschreibt, wie Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, mithilfe der EVENTDATA-Funktion zurückgegeben werden.|[Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Beschreibt, wie Triggersicherheit verwaltet wird.|[Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

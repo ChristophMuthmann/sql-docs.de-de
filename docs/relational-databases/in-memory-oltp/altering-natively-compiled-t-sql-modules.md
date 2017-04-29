@@ -1,23 +1,27 @@
 ---
-title: "&#196;ndern von nativ kompilierten T-SQL-Modulen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ändern von systemintern kompilierten T-SQL-Modulen | Microsoft-Dokumentation"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#196;ndern von nativ kompilierten T-SQL-Modulen
+# <a name="altering-natively-compiled-t-sql-modules"></a>Ändern von nativ kompilierten T-SQL-Modulen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (und höher) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] können Sie die ALTER-Vorgänge für nativ kompilierte gespeicherte Prozeduren und andere nativ kompilierte T-SQL-Module, z.B. skalare benutzerdefinierte Funktionen und Trigger, mithilfe der ALTER-Anweisung ausführen.  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
  Sie können „sp_recompile“ für ein nativ kompiliertes T-SQL-Modul ausführen, wodurch das Modul bei der nächsten Ausführung erneut kompiliert.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Erstellung einer speicheroptimierten Tabelle (T1) und einer systemintern kompilierten gespeicherten Prozedur (SP1), die alle Spalten von Tabelle T1 auswählt. Anschließend wird SP1 geändert, um die Klausel EXECUTE AS zu entfernen, LANGUAGE zu ändern und nur eine Spalte (C1) von T1 auszuwählen.  
   
 ```  

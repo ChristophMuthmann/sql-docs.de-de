@@ -1,31 +1,35 @@
 ---
-title: "Verwenden der system_health-Sitzung | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erweiterte Ereignisse [SQL Server], Systemintegritätssitzung"
-  - "Erweiterte Ereignisse [SQL Server], system_health-Sitzung"
-  - "system_health-Sitzung [Erweiterte Ereignisse von SQL Server]"
-  - "Systemintegritätssitzung [Erweiterte Ereignisse von SQL Server]"
+title: Verwenden der system_health-Sitzung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 06/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], system health session
+- extended events [SQL Server], system_health session
+- system_health session [SQL Server extended events]
+- system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c64a0a128576a4bbf38f10b70514dbc4def84d11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden der system_health-Sitzung
+# <a name="use-the-systemhealth-session"></a>Verwenden der system_health-Sitzung
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. Daher empfiehlt es sich, die Sitzung nicht zu beenden oder zu löschen.  
+  Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. Daher empfiehlt es sich, die Sitzung nicht zu beenden oder zu löschen.  
   
  In der Sitzung werden u. a. folgende Informationen erfasst:  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 17
   
 -   „sql_text“ und „session_id“ aller Sitzungen, in denen ein arbeitsspeicherbezogener Fehler aufgetreten ist. Zu diesen Fehlern zählen 17803, 701, 802, 8645, 8651, 8657 und 8902.  
   
--   Aufzeichnungen zu allen nicht gelösten Zeitplanungsproblemen. (Diese werden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll als Fehler 17883 angezeigt.)  
+-   Aufzeichnungen zu allen nicht gelösten Zeitplanungsproblemen. (Diese werden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll als Fehler 17883 angezeigt.)  
   
 -   Alle erkannten Deadlocks.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 17
   
 -   Sicherheitsfehler mit security_error_ring_buffer_recorded.  
   
-## Anzeigen der Sitzungsdaten  
+## <a name="viewing-the-session-data"></a>Anzeigen der Sitzungsdaten  
  In der Sitzung werden die Daten im Ringpufferziel gespeichert. Zum Anzeigen der Sitzungsdaten verwenden Sie die folgende Abfrage:  
   
 ```  
@@ -69,14 +73,15 @@ WHERE xe.name = 'system_health'
   
 Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in Management Studio verfügbare Benutzeroberfläche für erweiterte Ereignisse. Weitere Informationen finden Sie unter [Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
   
-## Wiederherstellen der system_health-Sitzung  
- Wenn Sie die system_health-Sitzung gelöscht haben, können Sie diese wiederherstellen, indem Sie die Datei **u_tables.sql** im Abfrage-Editor ausführen. Diese Datei befindet sich im folgenden Ordner, wobei C: dem Laufwerk entspricht, auf dem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Programmdateien installiert haben:  
+## <a name="restoring-the-systemhealth-session"></a>Wiederherstellen der system_health-Sitzung  
+ Wenn Sie die system_health-Sitzung gelöscht haben, können Sie diese wiederherstellen, indem Sie die Datei **u_tables.sql** im Abfrage-Editor ausführen. Diese Datei befindet sich im folgenden Ordner, wobei C: dem Laufwerk entspricht, auf dem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Programmdateien installiert haben:  
   
- C:\Programme\Microsoft SQL Server\MSSQL13.\<*Instanz-ID*>\MSSQL\Install  
+ C:\Programme\Microsoft SQL Server\MSSQL13.\<*Instanz-ID*\MSSQL\Install  
   
- Wenn Sie die Sitzung wiederhergestellt haben, müssen Sie die Sitzung mit der ALTER EVENT SESSION-Anweisung oder über den Knoten **Erweiterte Ereignisse** im Objekt-Explorer starten. Andernfalls wird die Sitzung beim nächsten Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensts automatisch gestartet.  
+ Wenn Sie die Sitzung wiederhergestellt haben, müssen Sie die Sitzung mit der ALTER EVENT SESSION-Anweisung oder über den Knoten **Erweiterte Ereignisse** im Objekt-Explorer starten. Andernfalls wird die Sitzung beim nächsten Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts automatisch gestartet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tools für erweiterte Ereignisse](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
+

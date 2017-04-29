@@ -1,25 +1,29 @@
 ---
-title: "Indizes f&#252;r speicheroptimierte Tabellen | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indizes f&#252;r speicheroptimierte Tabellen
+# <a name="indexes-for-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,13 +34,13 @@ Dieser Artikel beschreibt die Typen von Indizes, die für eine speicheroptimiert
 - Erläuterungen zu den Umständen, wann die einzelnen Typen von speicheroptimierten Indizes am besten geeignet sind  
   
   
-*Hashindizes* werden ausführlicher in einem [eng verwandte Artikel](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) behandelt.  
+*Hashindizes* werden ausführlicher in einem [eng verwandte Artikel](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)behandelt.  
   
   
-[Columnstore](Columnstore%20Indexes%20Guide.xml)-Indizes werden in einem *anderen Artikel* behandelt.  
+*Columnstore* -Indizes werden in einem [anderen Artikel](~/relational-databases/indexes/columnstore-indexes-overview.md)behandelt.  
   
   
-## A. Syntax für speicheroptimierte Indizes  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Syntax für speicheroptimierte Indizes  
   
 Jede CREATE TABLE-Anweisung für eine speicheroptimierte Tabelle muss zwischen 1 und 8 Klauseln zum Deklarieren von Indizes enthalten. Bei dem Index muss es sich um einen der folgenden handeln:  
   
@@ -63,7 +67,7 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA_AND_DATA muss die spe
   
   
   
-### A.1 Codebeispiel für Syntax  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Codebeispiel für Syntax  
   
 Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die Syntax zum Erstellen von verschiedenen Indizes für eine speicheroptimierte Tabelle darstellt. Der Code veranschaulicht Folgendes:  
   
@@ -118,7 +122,7 @@ Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die Syntax zum 
   
   
   
-## B. Die Art von speicheroptimierten Indizes  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. Die Art von speicheroptimierten Indizes  
   
 Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Es gibt verschiedene Methoden, in denen sich ein Index für einen speicheroptimierten Index von einem herkömmlichen Index für eine datenträgerbasierte Tabelle unterscheidet.  
   
@@ -139,13 +143,13 @@ Speicheroptimierte Indizes haben keine fixierten Seiten wie datenträgerbasierte
   
 - Sie lassen nicht den herkömmlichen Fragmentierungstyp innerhalb einer Seite anwachsen, sodass sie keinen Füllfaktor haben.  
   
-## C. Doppelte Indexschlüsselwerte
+## <a name="c-duplicate-index-key-values"></a>C. Doppelte Indexschlüsselwerte
 
 Doppelte Indexschlüsselwerte können die Leistung von Vorgängen an speicheroptimierten Tabellen beeinträchtigen. Eine große Anzahl von Duplikaten (z.B. 100+) macht das Verwalten eines Indexes ineffizient, da für die meisten Indexvorgänge doppelte Ketten durchlaufen werden müssen. Die Beeinträchtigung ist bei INSERT-, UPDATE- und DELETE-Vorgängen an speicheroptimierten Tabellen sichtbar. Dieses Problem ist sowohl aufgrund der niedrigeren Kosten pro Vorgang für Hashindizes als auch der Interferenz großer doppelter Ketten mit der Hashkollisionskette bei Hashindizes stärker sichtbar. Um die Duplizierung in einem Index zu reduzieren, verwenden Sie einen nicht gruppierten Index und fügen am Ende der Indexschlüssel zusätzliche Spalten (z.B. aus dem Primärschlüssel) zum Reduzieren der Anzahl von Duplikaten hinzu.
 
 Nehmen wir als Beispiel eine Tabelle „Customers“ mit einem Primärschlüssel auf „CustomerId“ und einem Index auf der Spalte „CustomerCategoryID“. In der Regel wird es in einer bestimmten Kategorie viele Kunden und damit viele doppelte Werte für einen bestimmten Schlüssel im Index von „CustomerCategoryID“ geben. In diesem Szenario hat sich die Verwendung eines nicht gruppierten Indexes für („CustomerCategoryID“, „CustomerId“) bewährt. Dieser Index kann für Abfragen verwendet werden, die ein „CustomerCategoryID“ einbeziehendes Prädikat verwenden, er enthält keine Duplikate und verursacht darum keine Ineffizienz bei der Indexwartung.
 
-Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers` in der Beispieldatenbank [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx).
+Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx).
 
 ```Transact-SQL
     SELECT AVG(row_count) FROM
@@ -156,7 +160,7 @@ Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsse
 
 Um die durchschnittliche Anzahl der Indexschlüsselduplikate für Ihre eigene Tabelle und den Index zu evaluieren, ersetzen Sie `Sales.Customers` durch Ihren Tabellennamen und `CustomerCategoryID` durch die Liste der Indexschlüsselspalten.
 
-## D. Vergleichen des Verwendungszeitpunkts für jeden Indextyp  
+## <a name="d-comparing-when-to-use-each-index-type"></a>D. Vergleichen des Verwendungszeitpunkts für jeden Indextyp  
   
   
 Die Art Ihrer spezifischen Abfragen bestimmt, welche Art von Index die beste Wahl ist.  
@@ -164,7 +168,7 @@ Die Art Ihrer spezifischen Abfragen bestimmt, welche Art von Index die beste Wah
 Beim Implementieren speicheroptimierter Tabellen in einer vorhandenen Anwendung gilt die allgemeine Empfehlung, mit nicht gruppierten Indizes zu beginnen, da ihre Funktionen mehr den Funktionen herkömmlicher gruppierter und nicht gruppierter Indizes für datenträgerbasierte Tabellen ähneln. 
   
   
-### D.1 Stärken nicht gruppierter Indizes  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 Stärken nicht gruppierter Indizes  
   
   
 Ein nicht gruppierter Index ist gegenüber einem Hashindex zu bevorzugen, wenn:  
@@ -196,7 +200,7 @@ In allen folgenden SELECT-Anweisungen wird ein nicht gruppierter Index gegenübe
   
   
   
-### D.2 Stärken von Hashindizes  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 Stärken von Hashindizes  
   
   
 Ein [Hashindex](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) ist gegenüber einem nicht gruppierten Index zu bevorzugen, wenn:  
@@ -210,19 +214,19 @@ Ein [Hashindex](../../relational-databases/in-memory-oltp/hash-indexes-for-memor
   
   
   
-### D.3 Zusammenfassende Tabelle für den Vergleich der Indexstärken  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 Zusammenfassende Tabelle für den Vergleich der Indexstärken  
   
   
 Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextypen unterstützt werden.  
   
   
-| Vorgang | Speicheroptimiert, <br/> Hash | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
+| Vorgang | Speicheroptimiert, <br/> Hashindizes | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| Indexscan, alle Tabellenzeilen abrufen. | ja | Benutzerkontensteuerung | ja |  
-| Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | Ja  | Ja |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, \<=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | Ja | Ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | Benutzerkontensteuerung | Ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | Ja |  
+| Indexscan, alle Tabellenzeilen abrufen. | ja | ja | ja |  
+| Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | ja  | ja |  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, \<=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | ja | ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | ja | ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | ja |  
   
   
 In dieser Tabelle bedeutet „Ja“, dass der Index die Anforderung effizient bedienen kann, und „Nein“ bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann.  
@@ -231,8 +235,8 @@ In dieser Tabelle bedeutet „Ja“, dass der Index die Anforderung effizient be
   
   
 \<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+Indexes_for_Memory-Optimized_Tables.md , also....  
+CAPS-guid:{eecc5821-152b-4ed5-888f-7c0e6beffed9}  
 mt670614.aspx  
   
 Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
@@ -240,11 +244,14 @@ Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}
 /Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
   
   
-Replaces dn511012.aspx , which is....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
+Ersetzt dn511012.aspx, also....  
+CAPS-Guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
   
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
+GeneMi, 5.5.2016 Donnerstag 17:25 Uhr (Hashinhalt in neuem untergeordneten Artikel, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
 -->  
   
   
   
+
+
+

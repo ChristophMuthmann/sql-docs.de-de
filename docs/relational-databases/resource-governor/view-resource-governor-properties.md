@@ -1,29 +1,33 @@
 ---
-title: "Anzeigen der Eigenschaften der Ressourcenkontrolle | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Ressourcenkontrolle, Eigenschaften"
+title: Anzeigen der Eigenschaften der Ressourcenkontrolle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anzeigen der Eigenschaften der Ressourcenkontrolle
+# <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
+  Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
   
  ##  <a name="BeforeYouBegin"></a> Verwandte Themen 
  Neben dem Anzeigen der Eigenschaften von Ressourcenkontrollentitäten können Sie auf der Seite **Eigenschaften der Ressourcenkontrolle** mehrere Konfigurationstasks ausführen. Weitere Informationen finden Sie in den folgenden Themen:  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Resource Governor**, und klicken Sie dann auf **Eigenschaften**. Damit öffnen Sie die Seite **Eigenschaften der Resource Governor**.  
+2.  Klicken Sie mit der rechten Maustaste auf **Resource Governor** , und klicken Sie dann auf **Eigenschaften**. Damit öffnen Sie die Seite **Eigenschaften der Resource Governor** .  
   
 3.  Beschreibungen der Felder auf der Seite finden Sie unter [Eigenschaften der Ressourcenkontrolle](#RGProp).  
   
 4.  Klicken Sie auf **OK**, um Änderungen zu speichern.  
   
-##  <a name="RGProp"></a> Eigenschaften von Resource Governor  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Der Name der Klassifizierungsfunktion**  
  Geben Sie die Klassifizierungsfunktion durch Auswahl aus der Liste an.  
   
@@ -115,14 +119,14 @@ caps.handback.revision: 28
   
  Weitere Informationen finden Sie unter [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Anzeigen von Resource Governor-Eigenschaften mit Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Anzeigen von Resource Governor-Eigenschaften mit Transact-SQL  
  **Anzeigen von Eigenschaften der Ressourcenkontrolle mit Transact-SQL**  
   
 1.  Um die Definitionen von Resource Governor-Entitäten anzuzeigen, verwenden Sie die [Katalogsichten des Resource Governors &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Um die aktuelle Konfiguration von Resource Governor-Entitäten anzuzeigen, verwenden Sie die [dynamischen Verwaltungssichten in Verbindung mit dem Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Weitere Informationen
+## <a name="more-information"></a>Weitere Informationen
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -130,3 +134,4 @@ caps.handback.revision: 28
  [Klassifizierungsfunktion der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

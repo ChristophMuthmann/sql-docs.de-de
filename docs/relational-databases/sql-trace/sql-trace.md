@@ -1,36 +1,40 @@
 ---
-title: "SQL-Ablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL-Ablaufverfolgung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 037db169bd49c589ca039546dcf13d322e1f1a41
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL-Ablaufverfolgung
-  Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalten.  
+# <a name="sql-trace"></a>SQL-Ablaufverfolgung
+  Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen erweiterte Ereignisse.  
   
-## Vorteile der SQL-Ablaufverfolgung  
+## <a name="benefits-of-sql-trace"></a>Vorteile der SQL-Ablaufverfolgung  
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zum Erstellen von Ablaufverfolgungen für eine Instanz von [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Systemprozeduren zur Verfügung. Sie können aus Ihren Anwendungen heraus diese gespeicherten Systemprozeduren verwenden, um Ablaufverfolgungen statt mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]manuell zu erstellen. Dadurch können Sie benutzerdefinierte Anwendungen schreiben, die den speziellen Anforderungen Ihres Unternehmens entsprechen.  
   
-## Architektur der SQL-Ablaufverfolgung  
+## <a name="sql-trace-architecture"></a>Architektur der SQL-Ablaufverfolgung  
  Bei den Ereignisquellen kann es sich um jede Quelle handeln, die das Ablaufverfolgungsereignis erstellt, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse wie Deadlocks. Weitere Informationen zu Ereignissen finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Wenn ein Ereignis auftritt, werden die Ereignisinformationen von der Ablaufverfolgung gesammelt, sofern die Ereignisklasse in eine Ablaufverfolgungsdefinition aufgenommen wurde. Wenn Filter für die Ereignisklasse in der Ablaufverfolgungsdefinition definiert wurden, werden die Filter angewendet und die Informationen zum Ablaufverfolgungsereignis an eine Warteschlange übergeben. Von der Warteschlange werden die Ablaufverfolgungsinformationen entweder in eine Datei geschrieben oder können von SMO in Anwendungen wie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendet werden. Das folgende Diagramm zeigt, wie die SQL-Ablaufverfolgung Ereignisse während einer Ablaufverfolgung sammelt.  
   
- ![Ereignisablaufverfolgungs-Prozess des Datenbankmoduls](../../relational-databases/sql-trace/media/tracarch.gif "Ereignisablaufverfolgungs-Prozess des Datenbankmoduls")  
+ ![Ereignisablaufverfolgungs-Prozess des Datenbankmoduls](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
   
-## Terminologie zur SQL-Ablaufverfolgung  
+## <a name="sql-trace-terminology"></a>Terminologie zur SQL-Ablaufverfolgung  
  Die folgenden Begriffe beschreiben die Schlüsselkonzepte der SQL-Ablaufverfolgung.  
   
  **Ereignis**  
@@ -46,7 +50,7 @@ caps.handback.revision: 13
  Eine Gruppe von verwandten Ereignisklassen.  
   
  **Ablaufverfolgung** (Nomen)  
- Eine Sammlung von Ereignissen und Daten, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zurückgegeben werden.  
+ Eine Sammlung von Ereignissen und Daten, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zurückgegeben werden.  
   
  **Ablaufverfolgung ausführen** (Verb)  
  Das Sammeln und Überwachen von Ereignissen in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -66,22 +70,22 @@ caps.handback.revision: 13
  **Ablaufverfolgungstabelle**  
  Eine Tabelle in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], die beim Speichern einer Ablaufverfolgung in einer Tabelle erstellt wird.  
   
-## Verwenden von Datenspalten zum Beschreiben zurückgegebener Ereignisse  
+## <a name="use-data-columns-to-describe-returned-events"></a>Verwenden von Datenspalten zum Beschreiben zurückgegebener Ereignisse  
  Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe, um Ereignisse zu beschreiben, die beim Ausführen der Ablaufverfolgung zurückgegeben werden. In der folgenden Tabelle werden die Datenspalten von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beschrieben, die mit den von der SQL-Ablaufverfolgung verwendeten Datenspalten identisch sind. Außerdem wird auf die Spalten verwiesen, die standardmäßig ausgewählt sind.  
   
-|Datenspalte|Spaltennummer|Beschreibung|  
+|Datenspalte|Spaltennummer|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
-|**BigintData1**|52|Ein Wert (Datentyp **bigint**), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
-|**BigintData2**|53|Ein Wert (Datentyp **bigint**), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
+|**BigintData1**|52|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
+|**BigintData2**|53|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  
 |**Binärdaten**|2|Der binäre Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |**ClientProcessID***|9|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|  
 |**ColumnPermissions**|44|Gibt an, ob eine Spaltenberechtigung festgelegt wurde. Sie können den Text der Anweisung analysieren, um zu bestimmen, welche Berechtigungen auf welche Spalten angewendet wurden.|  
 |**CPU**|18|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|**Datenbank-ID***|3|Die ID der Datenbank, die durch die USE *database_name*-Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database_name*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|  
+|**Database ID***|3|Die ID der Datenbank, die durch die USE *database_name* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database_name*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|  
 |**DatabaseName**|35|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|  
 |**DBUserName***|40|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzername des Clients.|  
-|**Dauer**|13|Die Dauer (in Millisekunden) des Ereignisses.<br /><br /> Der Server meldet die Dauer eines Ereignisses in Mikrosekunden (ein Millionstel oder 10<sup>-6</sup> einer Sekunde) und den Umfang der vom Ereignis verbrauchten CPU-Zeit in Millisekunden (ein Tausendstel oder 10<sup>-3</sup> einer Sekunde). In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt die grafische Benutzeroberfläche die **Duration** -Spalte standardmäßig in Millisekunden an. Wird jedoch eine Ablaufverfolgung entweder in einer Datei oder in einer Datenbanktabelle gespeichert, wird der Wert der **Duration** -Spalte in Mikrosekunden aufgezeichnet.|  
+|**Dauer**|13|Die Dauer (in Millisekunden) des Ereignisses.<br /><br /> Der Server meldet die Dauer eines Ereignisses in Mikrosekunden (ein Millionstel oder 10<sup>-6</sup>einer Sekunde) und den Umfang der vom Ereignis verbrauchten CPU-Zeit in Millisekunden (ein Tausendstel oder 10<sup>-3</sup>einer Sekunde). In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt die grafische Benutzeroberfläche die **Duration** -Spalte standardmäßig in Millisekunden an. Wird jedoch eine Ablaufverfolgung entweder in einer Datei oder in einer Datenbanktabelle gespeichert, wird der Wert der **Duration** -Spalte in Mikrosekunden aufgezeichnet.|  
 |**EndTime**|15|Die Beendigungszeit des Ereignisses. Diese Spalte wird nicht für Ereignisklassen, die auf ein startendes Ereignis verweisen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, aufgefüllt.|  
 |**Fehler**|31|Die Fehlernummer eines Ereignisses. Dies ist häufig die in **sysmessages**gespeicherte Fehlernummer.|  
 |**EventClass***|27|Der Typ der aufgezeichneten Ereignisklasse.|  
@@ -98,7 +102,7 @@ caps.handback.revision: 13
 |**LineNumber**|5|Enthält die Nummer der Zeile mit dem Fehler. Für Ereignisse, an denen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen beteiligt sind, wie z. B. **SP:StmtStarting**, enthält der Wert von **LineNumber** die Zeilennummer der Anweisung in der gespeicherten Prozedur oder dem Batch.|  
 |**LinkedServerName**|45|Name des Verbindungsservers|  
 |**LoginName**|11|Anmeldename des Benutzers (Anmeldung der SQL Server-Sicherheit oder Windows-Anmeldeinformationen im Format DOMAIN\Username).|  
-|**LoginSid***|41|Die Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der **sys.server_principals**-Sicht der **master**-Datenbank. Jede Anmeldung am Server weist eine eindeutige ID auf.|  
+|**LoginSid***|41|Die Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der **sys.server_principals** -Sicht der **master** -Datenbank. Jede Anmeldung am Server weist eine eindeutige ID auf.|  
 |**MethodName**|47|Der Name der OLE DB-Methode.|  
 |**Mode**|32|Die ganze Zahl, die von verschiedenen Ereignissen verwendet wird, um einen Status zu beschreiben, den das Ereignis anfordert oder den es empfangen hat.|  
 |**NestLevel**|29|Ganze Zahl, die die von @@NESTLEVEL zurückgegebenen Daten darstellt.|  
@@ -138,14 +142,14 @@ caps.handback.revision: 13
   
  *Diese Datenspalten werden standardmäßig für alle Ereignisse aufgefüllt.  
   
- \*\***Weitere Informationen zur Datenspalte **ObjectType** finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
+ \*\* Weitere Informationen zur Datenspalte **ObjectType** finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
   
-## Tasks der SQL-Ablaufverfolgung  
+## <a name="sql-trace-tasks"></a>Tasks der SQL-Ablaufverfolgung  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie Ablaufverfolgungen mit gespeicherten Transact-SQL-Prozeduren erstellt und ausgeführt werden.|[Erstellen und Ausführen von Ablaufverfolgungen mit gespeicherten Transact-SQL-Prozeduren](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
-|Beschreibt, wie manuelle Ablaufverfolgungen mit gespeicherten Prozeduren auf einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt werden.|[Erstellen manueller Ablaufverfolgungen mit gespeicherten Prozeduren](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
+|Beschreibt, wie manuelle Ablaufverfolgungen mit gespeicherten Prozeduren auf einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]erstellt werden.|[Erstellen manueller Ablaufverfolgungen mit gespeicherten Prozeduren](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
 |Beschreibt, wie Ablaufverfolgungsergebnisse in der Datei gespeichert werden, in die die Ablaufverfolgungsergebnisse geschrieben werden.|[Speichern von Ablaufverfolgungsergebnissen in einer Datei](../../relational-databases/sql-trace/save-trace-results-to-a-file.md)|  
 |Beschreibt, wie Zugriff auf Ablaufverfolgungsdaten durch Verwendung von Speicherplatz im Verzeichnis **temp** verbessert wird.|[Verbessern des Zugriffs auf Ablaufverfolgungsdaten](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  
 |Beschreibt, wie mit gespeicherten Prozeduren eine Ablaufverfolgung erstellt wird.|[Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)|  
@@ -157,10 +161,10 @@ caps.handback.revision: 13
 |Beschreibt, wie die durch eine Ablaufverfolgung verursachte Leistungseinbuße minimiert wird.|[Optimieren der SQL-Ablaufverfolgung](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
 |Beschreibt, wie eine Ablaufverfolgung gefiltert wird, um den während einer Ablaufverfolgung verursachten Aufwand zu minimieren.|[Filtern einer Ablaufverfolgung](../../relational-databases/sql-trace/filter-a-trace.md)|  
 |Beschreibt, wie die von der Ablaufverfolgung gesammelte Datenmenge minimiert wird.|[Beschränken der Größe von Ablaufverfolgungsdatei und -tabelle](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
-|Beschreibt die zwei Möglichkeiten zum Planen der Ablaufverfolgung in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Planen von Ablaufverfolgungen](../../relational-databases/sql-trace/schedule-traces.md)|  
+|Beschreibt die zwei Möglichkeiten zum Planen der Ablaufverfolgung in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Planen von Ablaufverfolgungen](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## Siehe auch  
- [Vorlagen und Berechtigungen in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Programmierungshandbuch für SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

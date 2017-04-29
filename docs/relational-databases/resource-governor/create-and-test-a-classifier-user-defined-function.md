@@ -1,27 +1,31 @@
 ---
-title: "Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ressourcenkontrolle, Erstellen der Klassifizierungsfunktion"
-  - "Klassifizierungsfunktion [SQL Server], testen"
-  - "Klassifizierungsfunktion [SQL Server], erstellen"
-  - "Ressourcenkontrolle, Testen der Klassifizierungsfunktion"
+title: Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
   In diesem Thema wird das Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion (User-Defined Function, UDF) erläutert. Die Schritte umfassen das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
   
  Das in der folgenden Prozedur dargestellte Beispiel veranschaulicht die Möglichkeiten zum Erstellen einer recht komplexen benutzerdefinierten Klassifizierungsfunktion.  
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  Die Klassifizierungsfunktion verlängert die Anmeldezeit. Eine übermäßig komplexe Funktion kann zu einem Timeout bei Anmeldungen oder zur Verlangsamung schneller Verbindungen führen.  
   
-### So erstellen Sie die benutzerdefinierte Klassifizierungsfunktion  
+### <a name="to-create-the-classifier-user-defined-function"></a>So erstellen Sie die benutzerdefinierte Klassifizierungsfunktion  
   
 1.  Erstellen und konfigurieren Sie die neuen Ressourcenpools und Arbeitsauslastungsgruppen. Weisen Sie jeder Arbeitsauslastungsgruppe den entsprechenden Ressourcenpool zu.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### So überprüfen Sie die Ressourcenpools, die Arbeitsauslastungsgruppen und die benutzerdefinierte Klassifizierungsfunktion  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>So überprüfen Sie die Ressourcenpools, die Arbeitsauslastungsgruppen und die benutzerdefinierte Klassifizierungsfunktion  
   
 1.  Ermitteln Sie die Konfiguration von Ressourcenpools und Arbeitsauslastungsgruppen mit der folgenden Abfrage.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen  
   
 1.  Verwenden Sie Nachschlagetabellen nur, wenn es unbedingt notwendig ist. Wenn Sie eine Nachschlagetabelle verwenden müssen, kann diese in die Funktion selbst hartcodiert werden. Dies muss jedoch unter Berücksichtigung der Komplexität und der dynamischen Änderungen der Klassifizierungsfunktion geschehen.  
   
@@ -246,7 +250,7 @@ caps.handback.revision: 25
   
 3.  Verhindern Sie ein Blockieren der Nachschlagetabelle.  
   
-    1.  Verwenden Sie den Hinweis `NOLOCK`, um Blockierungen zu verhindern, oder verwenden Sie in der Funktion die Option `SET LOCK_TIMEOUT` mit einem Maximalwert von 1000 Millisekunden.  
+    1.  Verwenden Sie den Hinweis `NOLOCK` , um Blockierungen zu verhindern, oder verwenden Sie in der Funktion die Option `SET LOCK_TIMEOUT` mit einem Maximalwert von 1000 Millisekunden.  
   
     2.  Die Tabelle(n) muss bzw. müssen in der Masterdatenbank vorhanden sein. (Die Masterdatenbank ist die einzige Datenbank, die mit Sicherheit wiederhergestellt wird, wenn die Clientcomputer versuchen, eine Verbindung herzustellen.)  
   
@@ -261,8 +265,8 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  Es wird dringend empfohlen, diese Best Practices zu befolgen. Wenn Sie die Best Practices aufgrund von Problemen nicht befolgen können, wenden Sie sich an den Microsoft Support, um zukünftigen Problemen vorzubeugen.  
   
-## Siehe auch  
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Arbeitsauslastungsgruppe der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

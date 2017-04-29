@@ -1,26 +1,30 @@
 ---
-title: "Installieren von Master Data Services in einer Always On-Umgebung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Master Data Services – Always On"
+title: Installieren von Master Data Services in einer Always On-Umgebung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+keywords:
+- "Master Data Services – Always On"
 ms.assetid: 6d197569-ed27-41cb-8610-4a707d941875
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3fa6bfbd54ce249a79bd916fae1df4fc39550e0a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Installieren von Master Data Services in einer Always On-Umgebung
+# <a name="installing-master-data-services-in-an-alwayson-environment"></a>Installieren von Master Data Services in einer Always On-Umgebung
 **Zusammenfassung:** Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet in einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 AlwaysOn-Verfügbarkeitsgruppe (availability group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der hohen Verfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.    
   
 **Autor:** Yantao Song  

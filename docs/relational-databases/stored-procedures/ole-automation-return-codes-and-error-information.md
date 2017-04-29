@@ -1,31 +1,35 @@
 ---
-title: "R&#252;ckgabecodes und Fehlerinformationen der OLE-Automatisierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Rückgabecodes [SQL Server]"
-  - "OLE-Automatisierung [SQL Server], Rückgabecodes"
-  - "OLE-Automatisierung [SQL Server], Fehler"
+title: "Rückgabecodes und Fehlerinformationen der OLE-Automatisierung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#252;ckgabecodes und Fehlerinformationen der OLE-Automatisierung
+# <a name="ole-automation-return-codes-and-error-information"></a>Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
   Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen **int** -Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 ist ein OLE-Fehlercode im hexadezimalen Format 0x800*nnnnn*, als **int** -Wert im Rückgabecode einer gespeicherten Prozedur entspricht dies dem Format 214*nnnnnnn*.  
   
- Die Übergabe eines ungültigen Objektnamens (SQLDMO.Xyzzy) an die sp_OACreate-Funktion führt zu einem **int**-HRESULT von 2147221005, was im hexadezimalen Format 0x800401f3 entspricht.  
+ Die Übergabe eines ungültigen Objektnamens (SQLDMO.Xyzzy) an die sp_OACreate-Funktion führt zu einem **int** -HRESULT von 2147221005, was im hexadezimalen Format 0x800401f3 entspricht.  
   
- Sie können `CONVERT(binary(4), @hresult)` verwenden, um ein **int**-HRESULT in einen **binary**-Wert zu konvertieren. Die Verwendung von `CONVERT(char(10), CONVERT(binary(4), @hresult))` ergibt jedoch eine nicht lesbare Zeichenfolge, da jedes Byte von HRESULT in ein einzelnes ASCII-Zeichen konvertiert wird. Sie können die folgende gespeicherte HexToChar-Beispielprozedur verwenden, um ein **int**-HRESULT in einen **char**-Wert zu konvertieren, der eine lesbare hexadezimale Zeichenfolge enthält.  
+ Sie können `CONVERT(binary(4), @hresult)` verwenden, um ein **int** -HRESULT in einen **binary** -Wert zu konvertieren. Die Verwendung von `CONVERT(char(10), CONVERT(binary(4), @hresult))` ergibt jedoch eine nicht lesbare Zeichenfolge, da jedes Byte von HRESULT in ein einzelnes ASCII-Zeichen konvertiert wird. Sie können die folgende gespeicherte HexToChar-Beispielprozedur verwenden, um ein **int** -HRESULT in einen **char** -Wert zu konvertieren, der eine lesbare hexadezimale Zeichenfolge enthält.  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- Sie können auch die folgende gespeicherte **sp_displayoaerrorinfo**-Beispielprozedur verwenden, um Fehlerinformationen der OLE-Automatisierung anzuzeigen, wenn eine dieser Prozeduren einen HRESULT-Rückgabecode ungleich null zurückgibt. Diese gespeicherte Beispielprozedur verwendet **HexToChar**.  
+ Sie können auch die folgende gespeicherte **sp_displayoaerrorinfo** -Beispielprozedur verwenden, um Fehlerinformationen der OLE-Automatisierung anzuzeigen, wenn eine dieser Prozeduren einen HRESULT-Rückgabecode ungleich null zurückgibt. Diese gespeicherte Beispielprozedur verwendet **HexToChar**.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

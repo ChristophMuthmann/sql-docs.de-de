@@ -1,25 +1,29 @@
 ---
-title: "Transaktionsreplikation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transaktionsreplikation, Informationen zur Transaktionsreplikation"
-  - "Transaktionsreplikation"
+title: Transaktionsreplikation | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, about transactional replication
+- transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transaktionsreplikation
+# <a name="transactional-replication"></a>Transaktionsreplikation
   Eine Transaktionsreplikation beginnt in der Regel mit einer Momentaufnahme des Veröffentlichungsdatenbankobjekts und der entsprechenden Daten. Nach der Erstellung der Anfangsmomentaufnahme werden spätere auf dem Verleger vorgenommene Daten- und Schemaänderungen an den Abonnenten übermittelt, wenn sie auftreten (fast in Echtzeit). Die Datenänderungen werden auf dem Abonnenten in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, in der sie auf dem Verleger stattgefunden haben. Auf diese Weise wird die Transaktionskonsistenz innerhalb einer Veröffentlichung sichergestellt.  
   
  Die Transaktionsreplikation wird typischerweise in reinen Serverumgebungen verwendet und ist für die folgenden Fälle geeignet:  
@@ -32,7 +36,7 @@ caps.handback.revision: 38
   
 -   Auf dem Verleger kommt es sehr häufig zu Einfüge-, Update- und Löschaktivitäten.  
   
--   Der Verleger bzw. Abonnent ist keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank, sondern z. B. eine Oracle-Datenbank.  
+-   Der Verleger bzw. Abonnent ist keine[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, sondern z. B. eine Oracle-Datenbank.  
   
  Standardmäßig sollten Abonnenten von Transaktionsreplikationen schreibgeschützt sein, da Änderungen nicht an den Verleger zurückgegeben werden. Die Transaktionsreplikation bietet aber auch Optionen, die Updates auf dem Abonnenten ermöglichen.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
  Wenn Momentaufnahmen an Abonnenten verteilt und auf Abonnenten angewendet werden, sind nur die Abonnenten betroffen, die auf eine Anfangsmomentaufnahme warten. Andere Abonnenten für diese Veröffentlichung (diejenigen, die bereits initialisiert wurden) sind nicht betroffen.  
   
-## Gleichzeitige Momentaufnahmeverarbeitung  
+## <a name="concurrent-snapshot-processing"></a>Gleichzeitige Momentaufnahmeverarbeitung  
  Bei der Momentaufnahmegenerierung werden für die Dauer der Momentaufnahmegenerierung freigegebene Sperren auf allen Tabellen platziert, die als Teil der Replikation veröffentlicht werden. So kann verhindert werden, dass Updates in den veröffentlichten Tabellen ausgeführt werden. Bei der gleichzeitigen Momentaufnahmeverarbeitung, die Standardeinstellung für die Transaktionsreplikation, werden die freigegebenen Sperren nicht während der gesamten Momentaufnahmegenerierung beibehalten. Deshalb können Benutzer ohne Unterbrechung weiter arbeiten, während Anfangsmomentaufnahmedateien durch die Replikation erstellt werden.  
   
 ##  <a name="SnapshotAgent"></a> Momentaufnahme-Agent  
@@ -73,9 +77,9 @@ caps.handback.revision: 38
  Nach dem Generieren der Momentaufnahmedateien können Sie sie mithilfe von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Explorer im Momentaufnahmeordner anzeigen.  
   
 ##  <a name="LogReaderAgent"></a> Ändern von Daten und der Protokolllese-Agent  
- Der Protokolllese-Agent wird auf dem Verteiler ausgeführt. In der Regel wird er fortlaufend ausgeführt, Sie können jedoch auch einen Zeitplan für die Ausführung festlegen. Beim Ausführen liest der Protokolllese-Agent zunächst das Transaktionsprotokoll der Veröffentlichung (dasselbe Datenbankprotokoll, das auch für die Transaktionsprotokollierung und -wiederherstellung während regulärer Vorgänge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbankmoduls verwendet wird) und identifiziert alle INSERT-, UPDATE- und DELETE-Anweisungen und andere Änderungen, die an den für die Replikation markierten Daten vorgenommen wurden. Danach kopiert der Agent diese Transaktionen als Batch in die Verteilungsdatenbank auf dem Verteiler. Der Protokolllese-Agent verwendet die interne gespeicherte Prozedur **Sp_replcmds** zum Abrufen des nächsten Satzes von Befehlen, die von dem Protokoll für die Replikation markiert. Die Verteilungsdatenbank wird dann zur Warteschlange zum Speichern und Weiterleiten, von der aus Änderungen an die Abonnenten gesendet werden. Nur Transaktionen, für die ein Commit ausgeführt wurde, werden an die Verteilungsdatenbank gesendet.  
+ Der Protokolllese-Agent wird auf dem Verteiler ausgeführt. In der Regel wird er fortlaufend ausgeführt, Sie können jedoch auch einen Zeitplan für die Ausführung festlegen. Beim Ausführen liest der Protokolllese-Agent zunächst das Transaktionsprotokoll der Veröffentlichung (dasselbe Datenbankprotokoll, das auch für die Transaktionsprotokollierung und -wiederherstellung während regulärer Vorgänge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankmoduls verwendet wird) und identifiziert alle INSERT-, UPDATE- und DELETE-Anweisungen und andere Änderungen, die an den für die Replikation markierten Daten vorgenommen wurden. Danach kopiert der Agent diese Transaktionen als Batch in die Verteilungsdatenbank auf dem Verteiler. Der Protokolllese-Agent verwendet die intern gespeicherte Prozedur **sp_replcmds** zum Abrufen des nächsten Satzes von Befehlen aus dem Protokoll, die für die Replikation markiert wurden. Die Verteilungsdatenbank wird dann zur Warteschlange zum Speichern und Weiterleiten, von der aus Änderungen an die Abonnenten gesendet werden. Nur Transaktionen, für die ein Commit ausgeführt wurde, werden an die Verteilungsdatenbank gesendet.  
   
- Nachdem der gesamte Transaktionsbatch erfolgreich in die Verteilungsdatenbank geschrieben wurde, wird ein Commit ausgeführt. Nach der Ausführung eines Commits für jeden Batch von Befehlen auf dem Verteiler ruft der Protokolllese-Agent **Sp_repldone** markieren, wo die Replikation zuletzt abgeschlossen wurde. Schließlich markiert der Agent die Zeilen im Transaktionsprotokoll, die gelöscht werden können. Zeilen, die noch auf ihre Replikation warten, werden nicht gelöscht.  
+ Nachdem der gesamte Transaktionsbatch erfolgreich in die Verteilungsdatenbank geschrieben wurde, wird ein Commit ausgeführt. Nach der Ausführung eines Commits für jeden Batch von Befehlen auf dem Verteiler ruft der Protokolllese-Agent **sp_repldone** auf, um zu markieren, wo die Replikation zuletzt abgeschlossen wurde. Schließlich markiert der Agent die Zeilen im Transaktionsprotokoll, die gelöscht werden können. Zeilen, die noch auf ihre Replikation warten, werden nicht gelöscht.  
   
  Transaktionsbefehle werden in der Verteilungsdatenbank gespeichert, bis sie an alle Abonnenten weitergegeben werden oder bis die maximale Beibehaltungsdauer für die Verteilung überschritten wird. Abonnenten erhalten Transaktionen in der gleichen Reihenfolge, in der sie auf den Verleger angewendet wurden.  
   

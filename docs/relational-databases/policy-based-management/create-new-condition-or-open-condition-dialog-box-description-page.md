@@ -1,28 +1,32 @@
 ---
-title: "Dialogfeld &#39;Neue Bedingung erstellen&#39; oder &#39;Bedingung &#246;ffnen&#39;, Seite &#39;Beschreibung&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.condition.description.f1"
-  - "sql13.swb.dmf.policy.description.f1"
+title: "Dialogfeld &quot;Neue Bedingung erstellen&quot; oder &quot;Bedingung öffnen&quot;, Seite &quot;Beschreibung&quot; | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.condition.description.f1
+- sql13.swb.dmf.policy.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dialogfeld &#39;Neue Bedingung erstellen&#39; oder &#39;Bedingung &#246;ffnen&#39;, Seite &#39;Beschreibung&#39;
+# <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Beschreibung'
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsbedingung eine Beschreibung hinzufügen.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Beschreibung**  
  Geben Sie eine Beschreibung der Bedingung ein.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 37
  **Geändert von**  
  Der Anmeldename, der die letzte Änderung an der Bedingung vorgenommen hat.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

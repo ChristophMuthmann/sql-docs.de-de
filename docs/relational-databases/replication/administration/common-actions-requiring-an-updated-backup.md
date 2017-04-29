@@ -1,29 +1,33 @@
 ---
-title: "H&#228;ufige Aktionen, die eine aktualisierte Sicherung erfordern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wiederherstellung [SQL Server-Replikation], Aktionen, die eine Sicherung erfordern"
-  - "Wiederherstellung [SQL Server-Replikation], Aktionen, die eine Sicherung erfordern"
-  - "Sicherungen [SQL Server-Replikation], Aktionen, die eine Sicherung erfordern"
+title: "Häufige Aktionen, die eine aktualisierte Sicherung erfordern | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# H&#228;ufige Aktionen, die eine aktualisierte Sicherung erfordern
+# <a name="common-actions-requiring-an-updated-backup"></a>Häufige Aktionen, die eine aktualisierte Sicherung erfordern
   Wenn Sie regelmäßige Protokollsicherungen ausführen, sollten in den Protokollsicherungen auch alle replikationsrelevanten Änderungen erfasst werden. Wenn Sie keine Protokollsicherungen ausführen, sichern Sie die Veröffentlichung, die Verteilung, das Abonnement sowie die Datenbanken **msdb**und **master** nach Änderungen am Replikationsschema oder der Topologie.  
   
-## Veröffentlichungsdatenbank  
+## <a name="publication-database"></a>Veröffentlichungsdatenbank  
  Sichern Sie die Veröffentlichungsdatenbank nach folgenden Aktionen:  
   
 -   Erstellen neuer Veröffentlichungen.  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   Vornehmen einer Schemaänderung an einer veröffentlichten Tabelle.  
   
--   Ausführen einer bedarfsgesteuerten skriptausführung mit [Sp_addscriptexec & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Ausführen einer bedarfsgesteuerten Skriptausführung mit [sp_addscriptexec &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
 -   Ändern von Artikeleigenschaften.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   Deaktivieren der Replikation.  
   
-## Verteilungsdatenbank  
+## <a name="distribution-database"></a>Verteilungsdatenbank  
  Sichern Sie die Verteilungsdatenbank nach folgenden Aktionen:  
   
 -   Erstellen oder Ändern von Replikations-Agentprofilen.  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   Ein neuer Identitätsbereich wird von der Funktion der automatischen Identitätsbereichsverwaltung zugewiesen.  
   
-## Abonnementdatenbank  
+## <a name="subscription-database"></a>Abonnementdatenbank  
  Sichern Sie die Abonnementdatenbank nach folgenden Aktionen:  
   
 -   Ändern von Abonnementeigenschaften.  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
   
 -   Deaktivieren der Replikation.  
   
-## msdb-Datenbank  
+## <a name="msdb-database"></a>msdb-Datenbank  
  Sichern Sie die **msdb** -Systemdatenbank auf dem entsprechenden Knoten nach den folgenden Aktionen:  
   
 -   Aktivieren oder Deaktivieren der Replikation.  
@@ -89,7 +93,7 @@ caps.handback.revision: 32
   
 -   Hinzufügen oder Löschen eines transformierbaren Abonnements (auf dem Verteiler und Abonnementen).  
   
-## master-Datenbank  
+## <a name="master-database"></a>master-Datenbank  
  Sichern Sie die **master** -Systemdatenbank auf dem entsprechenden Knoten nach den folgenden Aktionen:  
   
 -   Aktivieren oder Deaktivieren der Replikation.  
@@ -104,7 +108,7 @@ caps.handback.revision: 32
   
 -   Aktivieren oder Deaktivieren eines Verlegers auf einem Verteilungsverleger (auf dem Verleger und dem Verteiler).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

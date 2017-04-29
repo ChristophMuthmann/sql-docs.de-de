@@ -1,28 +1,32 @@
 ---
-title: "Columnstore-Indizes f&#252;r Data Warehousing | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Columnstore-Indizes - Data Warehouse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnstore-Indizes f&#252;r Data Warehousing
+# <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes - Data Warehouse
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Columnstore-Indizes sind in Verbindung mit der Partitionierung unverzichtbar für die Erstellung eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Data Warehouse.  
   
 ## <a name="whats-new"></a>Neuigkeiten  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
+ In[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
   
 -   AlwaysOn unterstützt das Abfragen eines Columnstore-Indexes auf einem lesbaren sekundären Replikat.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   Momentaufnahmenisolation für den Datenbank-Kompatibilitätsgrad 130  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Verbessern der Leistung durch Kombinieren von nicht gruppierten Indizes und Columnstore-Indizes  
- Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.  
+ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Beispiel: Verbessern der Effizienz von Suchabfragen auf Tabellen mit einem nicht gruppierten Index  
  Sie können einen nicht gruppierten Index erstellen, der Abfragen ausführt, die am besten mit Tabellenvorgängen funktionieren, um die Effizienz von Tabellenvorgängen in einem Data Warehouse zu verbessern. Zum Beispiel erzielen Abfragen, die nach übereinstimmenden Werten suchen oder eine kleine Anzahl von Werten zurückgeben, eine bessere Leistung für einen B-Struktur-Index als für einen Columnstore-Index. Ein vollständiger Tabellenscan durch den Columnstore-Index ist für die Abfragen nicht erforderlich, Sie werden das korrekte Ergebnis durch eine binäre Suche in einem B-Struktur-Index schneller zurückgeben.  
@@ -137,11 +141,12 @@ END TRAN
  Verwenden Sie die Momentaufnahmeisolation (snapshot-isolation; SI), um die Transaktionskonsistenz zu gewährleisten und die Read Committed-Momentaufnahmeisolation (read-committed snapshot isolations; RCSI), um Konsistenz auf Anweisungsebene für Abfragen auf Columnstore-Indizes zu gewährleisten. Dadurch können Abfragen ohne Blockierung von Datenschreibern ausgeführt werden. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen. Weitere Informationen finden Sie unter [Momentaufnahmeisolation in SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) auf MSDN.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beschreibung von Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Laden von Daten für Columnstore-Indizes](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Columnstore-Indizes, Zusammenfassung der Funktionen nach Version](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Beschreibung von Columnstore-Indizes   
+ Laden von Daten für Columnstore-Indizes   
+ Columnstore-Indizes, Zusammenfassung der Funktionen nach Version   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

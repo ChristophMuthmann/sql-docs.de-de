@@ -1,25 +1,29 @@
 ---
-title: "Demo: Leistungsverbesserungen von In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Demo: Leistungsverbesserungen von In-Memory OLTP | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Demo: Leistungsverbesserungen von In-Memory OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Das Codebeispiel in diesem Thema veranschaulicht die hohe Leistung von speicheroptimierten Tabellen. Die Leistungsverbesserung wird ersichtlich, wenn über herkömmliches, interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] auf Daten in einer speicheroptimierten Tabelle zugegriffen wird. Diese Leistungsverbesserung wird noch größer, wenn von einer nativ kompilierten gespeicherten Prozedur (NCSProc) aus auf Daten in einer speicheroptimierten Tabelle zugegriffen werden.  
+  Das Codebeispiel in diesem Thema veranschaulicht die hohe Leistung von speicheroptimierten Tabellen. Die Leistungsverbesserung wird ersichtlich, wenn über herkömmliches, interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)]auf Daten in einer speicheroptimierten Tabelle zugegriffen wird. Diese Leistungsverbesserung wird noch größer, wenn von einer nativ kompilierten gespeicherten Prozedur (NCSProc) aus auf Daten in einer speicheroptimierten Tabelle zugegriffen werden.  
  
 Eine umfassendere Darstellung der potenziellen Leistungssteigerungen von In-Memory OLTP finden Sie unter [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0). 
   
@@ -27,13 +31,13 @@ Eine umfassendere Darstellung der potenziellen Leistungssteigerungen von In-Memo
   
  Die durch speicheroptimierte Tabellen erzielte Leistungsverbesserung wird voll genutzt, wenn auf die Daten in einer speicheroptimierten Tabelle mithilfe einer NCSProc zugegriffen wird.  
   
-## Codebeispiel  
+## <a name="code-example"></a>Codebeispiel  
  Diese jeweiligen Schritte werden in den nächsten Unterabschnitten beschrieben.  
   
-### Schritt 1a: Voraussetzung bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Die Schritte in diesem ersten Unterabschnitt gelten nur, wenn Sie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arbeiten, nicht mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Gehen Sie folgendermaßen vor:  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Schritt 1a: Voraussetzung bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Die Schritte in diesem ersten Unterabschnitt gelten nur, wenn Sie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten, nicht mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Gehen Sie folgendermaßen vor:  
   
-1.  Verwenden Sie SQL Server Management Studio (SSMS.exe), um eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Alternativ können Sie jedes Tool nehmen, das wie „SSMS.exe“ funktioniert.  
+1.  Verwenden Sie SQL Server Management Studio (SSMS.exe), um eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Alternativ können Sie jedes Tool nehmen, das wie „SSMS.exe“ funktioniert.  
   
 2.  Erstellen Sie manuell ein Verzeichnis namens **C:\data\\**. In dem Transact-SQL-Beispielcode wird davon ausgegangen, dass das Verzeichnis bereits vorhanden ist.  
   
@@ -56,16 +60,16 @@ USE imoltp;
 go  
 ```  
   
-### Schritt 1b: Voraussetzung bei Verwendung von [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- Dieser Unterabschnitt gilt nur, wenn Sie [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] verwenden. Gehen Sie folgendermaßen vor:  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Schritt 1b: Voraussetzung bei Verwendung von [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+ Dieser Unterabschnitt gilt nur, wenn Sie [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]verwenden. Gehen Sie folgendermaßen vor:  
   
 1.  Entscheiden Sie, welche vorhandene Testdatenbank Sie für das Codebeispiel verwenden möchten.  
   
-2.  Wenn Sie eine neue Testdatenbank erstellen möchten, verwenden Sie das [Azure-Portal](http://portal.azure.com), und erstellen Sie eine Datenbank namens **imoltp**.  
+2.  Wenn Sie eine neue Testdatenbank erstellen möchten, verwenden Sie das [Azure-Portal](http://portal.azure.com) , und erstellen Sie eine Datenbank namens **imoltp**.  
   
  Wenn Sie Anleitungen zur Erstellung einer Testdatenbank mit dem Azure-Portal suchen, lesen Sie [Erste Schritte mit Azure SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### Schritt 2: Erstellen von speicheroptimierten Tabellen und NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Schritt 2: Erstellen von speicheroptimierten Tabellen und NCSProc  
  In diesem Schritt wird die Erstellung einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur (NCSProc) erläutert. Gehen Sie folgendermaßen vor:  
   
 1.  Verwenden Sie „SSMS.exe“, um sich mit der neuen Datenbank zu verbinden.  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### Schritt 3: Ausführen des Codes  
+### <a name="step-3-run-the-code"></a>Schritt 3: Ausführen des Codes  
  Sie können nun die Abfragen ausführen, die die Leistung von speicheroptimierten Tabellen veranschaulichen. Gehen Sie folgendermaßen vor:  
   
 1.  Verwenden Sie „SSMS.exe“, um die folgende T-SQL-Anweisung in der Datenbank auszuführen,  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

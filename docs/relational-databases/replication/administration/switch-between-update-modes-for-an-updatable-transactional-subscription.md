@@ -1,27 +1,31 @@
 ---
-title: "Umschalten zwischen Updatemodi f&#252;r ein aktualisierbares Transaktionsabonnement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transaktionsreplikation, aktualisierbare Abonnements"
-  - "Aktualisierbare Abonnements, Updatemodi"
-  - "Abonnements [SQL Server-Replikation], aktualisierbar"
+title: "Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement | Microsoft Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, update modes
+- subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.lasthandoff: 04/11/2017
+
 ---
-# Umschalten zwischen Updatemodi f&#252;r ein aktualisierbares Transaktionsabonnement
-  In diesem Thema wird beschrieben, wie zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]umgeschaltet wird. Geben Sie im Assistenten für neue Abonnements den Modus für aktualisierbare Abonnements an. Informationen zum Festlegen des Modus bei der Verwendung dieses Assistenten finden Sie unter [anzeigen und ändern Sie Eigenschaften von Pullabonnement](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+# <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement
+  In diesem Thema wird beschrieben, wie zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]umgeschaltet wird. Geben Sie im Assistenten für neue Abonnements den Modus für aktualisierbare Abonnements an. Weitere Informationen zum Festlegen des Modus bei der Verwendung dieses Assistenten finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  **In diesem Thema**  
   
@@ -45,46 +49,46 @@ caps.handback.revision: 38
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Wenn ein Abonnement mit Aktualisierung mit einer Transaktionsveröffentlichung ein Failover von einem Aktualisierungsmodus zu einem anderen unterstützt, können Sie programmgesteuert den Aktualisierungsmodus wechseln, um Situationen zu bewältigen, in denen sich die Verbindung für eine kurze Zeitdauer ändert. Der Updatemodus kann mithilfe gespeicherter Replikationsprozeduren programm- und bedarfsgesteuert festgelegt werden. Weitere Informationen finden Sie unter [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Wenn ein Abonnement mit Aktualisierung mit einer Transaktionsveröffentlichung ein Failover von einem Aktualisierungsmodus zu einem anderen unterstützt, können Sie programmgesteuert den Aktualisierungsmodus wechseln, um Situationen zu bewältigen, in denen sich die Verbindung für eine kurze Zeitdauer ändert. Der Updatemodus kann mithilfe gespeicherter Replikationsprozeduren programm- und bedarfsgesteuert festgelegt werden. Weitere Informationen finden Sie unter [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)umgeschaltet wird.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 > [!NOTE]  
->  Den Aktualisierungsmodus zu ändern, nachdem das Abonnement erstellt wird, die **Update_mode** Eigenschaft muss festgelegt werden, um **Failover** (wodurch Umschalten vom sofortigen Aktualisieren zum verzögerte Update) oder **in der Warteschlange Failover** (ermöglicht das Umschalten vom verzögerten Aktualisieren zum sofortigen Aktualisieren) Wenn das Abonnement erstellt wird. Diese Eigenschaften werden im Assistenten für neue Abonnements automatisch festgelegt.  
+>  Damit der Updatemodus nach dem Erstellen des Abonnements geändert werden kann, muss beim Erstellen des Abonnements die **update_mode** -Eigenschaft auf **failover** (ermöglicht das Umschalten vom sofortigen Update auf das verzögerte Update) oder auf **queued failover** (ermöglicht das Umschalten vom verzögerten Update auf das sofortige Update) festgelegt werden. Diese Eigenschaften werden im Assistenten für neue Abonnements automatisch festgelegt.  
   
-#### So legen Sie den Update für ein Pushabonnement fest  
+#### <a name="to-set-the-updating-mode-for-a-push-subscription"></a>So legen Sie den Update für ein Pushabonnement fest  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Abonnenten her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Abonnements** .  
   
-3.  Mit der rechten Maustaste des Abonnements für die Sie den Updatemodus festlegen, und klicken Sie dann auf möchten **Updatemethode festlegen**.  
+3.  Klicken Sie mit der rechten Maustaste auf das Abonnement, für das Sie den Updatemodus festlegen möchten, und klicken Sie dann auf **Updatemethode festlegen**.  
   
-4.  In der **Aktualisierungsmethode festlegen - \< Abonnent>: \< SubscriptionDatabase>** Wählen Sie im Dialogfeld **sofortigem** oder **Verzögertes Aktualisieren**.  
+4.  Wählen Sie im Dialogfeld **Updatemethode festlegen - \<Subscriber>: \<SubscriptionDatabase>** die Option **Sofortiges Update** oder **Verzögertes Update** über eine Warteschlange aus.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### So legen Sie den Updatemodus für ein Pullabonnement fest  
+#### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>So legen Sie den Updatemodus für ein Pullabonnement fest  
   
-1.  In der **Abonnementeigenschaften - \< Publisher>: \< PublicationDatabase>** Wert wählen Sie im Dialogfeld **sofort replizieren** oder **ändert sich in die Warteschlange** für die **Aktualisierungsmethode für Abonnent** Option.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Verleger>: \<Veröffentlichungsdatenbank>** für die Option **Updatemethode für Abonnent** den Wert **Änderungen sofort replizieren** oder **Änderungen in Warteschlange einreihen** aus.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Weitere Informationen zum Zugreifen auf die **Abonnementeigenschaften - \< Publisher>: \< PublicationDatabase>** Dialogfeld finden Sie unter [anzeigen und ändern Sie Eigenschaften von Pullabonnement](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Weitere Informationen zum Zugreifen auf das Dialogfeld **Abonnementeigenschaften - \<Verleger>: \<Veröffentlichungsdatenbank>** finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So wechseln Sie den Updatemodus  
+#### <a name="to-switch-between-update-modes"></a>So wechseln Sie den Updatemodus  
   
-1.  Stellen Sie sicher, dass das Abonnement Failover, indem unterstützt [Sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) für ein Pullabonnement oder [Sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) für ein Pushabonnement. Wenn der Wert des **Updatemodus** im Resultset **3** oder **4**ist, wird das Failover unterstützt.  
+1.  Stellen Sie sicher, dass die Veröffentlichung das Failover unterstützt, indem Sie bei Pullabonnements [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) und bei Pushabonnements [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) ausführen. Wenn der Wert des **Updatemodus** im Resultset **3** oder **4**ist, wird das Failover unterstützt.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [Sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Geben Sie **@publisher**, **@publisher_db**, **@publication**, und einen der folgenden Werte für **@failover_mode**:  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**und einen der folgenden Werte für **@failover_mode**an:  
   
-    -   **in der Warteschlange** -Failover zum verzögerten Aktualisieren, wenn die Verbindung vorübergehend unterbrochen wurde.  
+    -   **queued** - Failover zum verzögerten Aktualisieren, wenn die Verbindung vorübergehend unterbrochen wurde.  
   
-    -   **sofortige** -Failover zum sofortigen Aktualisieren, wenn die Verbindung wiederhergestellt wurde.  
+    -   **immediate** - Failover zum sofortigen Aktualisieren, wenn die Verbindung wiederhergestellt wurde.  
   
-## Siehe auch  
- [Aktualisierbare Abonnements für die Transaktionsreplikation](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Sichern und Wiederherstellen von replizierten Datenbanken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherungen [SQL Server-Replikation]"
-  - "Verwalten der Replikation, wiederherstellen"
-  - "Sichern von replizierten Datenbanken"
-  - "Sicherungen [SQL Server-Replikation], Informationen zu Sicherungen"
-  - "Wiederherstellen von replizierten Datenbanken [SQL Server-Replikation]"
-  - "Wiederherstellung [SQL Server-Replikation], Informationen zur Wiederherstellung"
-  - "Wiederherstellen von Datenbanken [SQL Server], replizierte Datenbanken"
-  - "Sichern von Datenbanken [SQL Server], replizierte Datenbanken"
-  - "Wiederherstellen [SQL Server-Replikation], Informationen zur Wiederherstellung"
-  - "Wiederherstellung [SQL Server-Replikation]"
-  - "Replikation [SQL Server], verwalten"
-  - "Verteilungsdatenbanken [SQL Server-Replikation], sichern"
-  - "Wiederherstellen [SQL Server-Replikation]"
-  - "Verwalten der Replikations, sichern"
+title: Sichern und Wiederherstellen von replizierten Datenbanken | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication]
+- administering replication, restoring
+- backing up replicated databases
+- backups [SQL Server replication], about backups
+- restoring replicated databases [SQL Server replication]
+- recovery [SQL Server replication], about recovery
+- restoring databases [SQL Server], replicated databases
+- backing up databases [SQL Server], replicated databases
+- restoring [SQL Server replication], about restoring
+- recovery [SQL Server replication]
+- replication [SQL Server], administering
+- distribution databases [SQL Server replication], backing up
+- restoring [SQL Server replication]
+- administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71772228e0d4f3e20982ed08e1d60b24fae76eb7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sichern und Wiederherstellen von replizierten Datenbanken
+# <a name="back-up-and-restore-replicated-databases"></a>Sichern und Wiederherstellen von replizierten Datenbanken
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Bei replizierten Datenbanken gibt es besondere Aspekte im Hinblick auf das Sichern und Wiederherstellen von Daten. In diesem Thema finden Sie einleitende Informationen sowie Verweise auf weitere Informationen in Bezug auf Sicherungs- und Wiederherstellungsstrategien für die einzelnen Replikationstypen.  
@@ -39,7 +43,7 @@ caps.handback.revision: 40
  Die Replikation ermöglicht das Wiederherstellen replizierter Datenbanken auf dem Server und in die Datenbank, die zum Erstellen der Sicherung herangezogen wurden. Wenn Sie eine Sicherungskopie einer replizierten Datenbank auf einem anderen Server bzw. in einer anderen Datenbank wiederherstellen, können Replikationseinstellungen nicht beibehalten werden. In diesem Fall müssen nach der Wiederherstellung der Sicherungskopien sämtliche Veröffentlichungen und Abonnements neu erstellt werden.  
   
 > [!NOTE]  
->  Wenn der Protokollversand verwendet wird, kann eine replizierte Datenbank auf einem Standbyserver wiederhergestellt werden. Weitere Informationen finden Sie unter [Protokollversand und Replikation & #40; SQL Server & #41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+>  Wenn der Protokollversand verwendet wird, kann eine replizierte Datenbank auf einem Standbyserver wiederhergestellt werden. Weitere Informationen finden Sie unter [Protokollversand und Replikation &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  Replizierte Datenbanken und ihre zugeordneten Systemdatenbanken sollten in regelmäßigen Abständen gesichert werden. Erstellen Sie Sicherungskopien folgender Datenbanken:  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 40
   
  Wenn Sie regelmäßige Protokollsicherungen ausführen, sollten in den Protokollsicherungen auch alle replikationsrelevanten Änderungen erfasst werden. Wenn Sie keine Protokollsicherungen ausführen, sollte immer dann eine Sicherungskopie erstellt werden, wenn eine für die Replikation relevante Einstellung geändert wird. Weitere Informationen finden Sie unter [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
-## Sicherungs- und Wiederherstellungsstrategien  
+## <a name="backup-and-restore-strategies"></a>Sicherungs- und Wiederherstellungsstrategien  
  Die Strategien hinsichtlich der Sicherung und Wiederherstellung der einzelnen Knoten in einer Replikationstopologie variieren je nach verwendetem Replikationstyp. Informationen zu den Sicherungs- und Wiederherstellungsstrategien für die einzelnen Replikationstypen erhalten Sie unter folgenden Themen:  
   
 -   [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
@@ -62,8 +66,8 @@ caps.handback.revision: 40
   
  Fester Bestandteil jeder Wiederherstellungsstrategie sollte sein, immer ein aktuelles Skript der Replikationseinstellungen an einem sicheren Ort aufzubewahren. Wenn ein Server ausfällt oder eine Testumgebung eingerichtet werden muss, können Sie das Skript durch Ändern der Verweise auf Servernamen modifizieren. Im Anschluss kann es zur Wiederherstellung der Replikationseinstellungen verwendet werden. Zusätzlich zum Erstellen eines Skripts für die aktuellen Replikationseinstellungen sollten Sie für das Aktivieren oder Deaktivieren der Replikation ein Skript erstellen. Informationen zur Skripterstellung für Replikationsobjekte finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Bewährte Methoden für die Replikationsverwaltung](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

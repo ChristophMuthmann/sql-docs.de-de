@@ -1,39 +1,34 @@
 ---
-title: "Formatdateien zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Massenexport [SQL Server], Formatdateien"
-  - "Massenimport [SQL Server], Formatdateien"
-  - "Formatdateien [SQL Server]"
+title: Formatdateien zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk exporting [SQL Server], format files
+- bulk importing [SQL Server], format files
+- format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
-  Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle können Sie eine *Formatdatei* verwenden, um alle für den Massenimport oder -export erforderlichen Informationen zu speichern. Dazu zählen Formatinformationen für jedes Feld einer Datendatei in Bezug auf die betreffende Tabelle.  
+# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
+  Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine *Formatdatei* verwenden, um alle für den Massenimport oder -export erforderlichen Informationen zu speichern. Dazu zählen Formatinformationen für jedes Feld einer Datendatei in Bezug auf die betreffende Tabelle.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- **In diesem Thema:**  
-  
--   [Vorteile von Formatdateien](#Benefits)  
-  
--   [Beispiele für Formatdateien](#ExamplesOfFFs)  
-  
--   [Wann ist eine Formatdatei erforderlich?](#WhenFFrequired)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Vorteile von Formatdateien  
   
@@ -42,13 +37,13 @@ caps.handback.revision: 39
 -   Durch Verwenden einer Formatdatei ist es möglich, Daten per Massenimport zu kopieren, ohne überflüssige Daten hinzufügen oder löschen oder vorhandene Daten in der Datendatei neu anordnen zu müssen. Formatdateien sind besonders hilfreich, wenn Felder in der Datendatei und Spalten in der Tabelle nicht übereinstimmen.  
   
 ##  <a name="ExamplesOfFFs"></a> Beispiele für Formatdateien  
- Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title` und `ModifiedDate`.  
+ Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title` und `ModifiedDate`.  
   
 > [!NOTE]  
 >  Informationen zu dieser Tabelle und zum Erstellen der Tabelle finden Sie unter [HumanResources.myTeam-Beispieltabelle &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
-### A. Verwenden einer Nicht-XML-Formatdatei  
- Die folgende Nicht-XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam`. Diese Formatdatei wurde mithilfe des folgenden `bcp`-Befehls erstellt.  
+### <a name="a-using-a-non-xml-format-file"></a>A. Verwenden einer Nicht-XML-Formatdatei  
+ Die folgende Nicht-XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam` . Diese Formatdatei wurde mithilfe des folgenden `bcp` -Befehls erstellt.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -62,10 +57,9 @@ The contents of this format file are as follows: 9.0
   
  Weitere Informationen finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
- [&#91;Nach oben&#93;](#Top)  
   
-### B. Verwenden einer XML-Formatdatei  
- Die folgende XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam`. Diese Formatdatei wurde mithilfe des folgenden `bcp`-Befehls erstellt.  
+### <a name="b-using-an-xml-format-file"></a>B. Verwenden einer XML-Formatdatei  
+ Die folgende XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam` . Diese Formatdatei wurde mithilfe des folgenden `bcp` -Befehls erstellt.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
@@ -93,7 +87,6 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="WhenFFrequired"></a> Wann ist eine Formatdatei erforderlich?  
  Eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung erfordert stets eine Formatdatei.  
@@ -117,9 +110,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   Die abschließenden Zeichen oder Präfixlängen weichen bei den Spalten der Datendatei ab.  
   
 > [!NOTE]  
->  Wenn keine Formatdatei vorhanden und für einen **bcp**-Befehl ein Datenformatschalter angegeben ist (**-n**, **-c**, **-w** oder **-N**) oder für einen BULK INSERT-Vorgang die Option DATAFILETYPE angegeben ist, wird das angegebene Datenformat als Standardmethode zum Interpretieren der Felder der Datendatei verwendet.  
+>  Wenn keine Formatdatei vorhanden und für einen **bcp** -Befehl ein Datenformatschalter angegeben ist (**-n**, **-c**, **-w**oder **-N**) oder für einen BULK INSERT-Vorgang die Option DATAFILETYPE angegeben ist, wird das angegebene Datenformat als Standardmethode zum Interpretieren der Felder der Datendatei verwendet.  
   
- [&#91;Nach oben&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -133,9 +125,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
- [&#91;Nach oben&#93;](#Top)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

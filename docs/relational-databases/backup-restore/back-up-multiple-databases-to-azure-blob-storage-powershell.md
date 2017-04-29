@@ -1,31 +1,35 @@
 ---
-title: "Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Microsoft Azure Blob Storage-Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Sichern mehrerer Datenbanken in Azure BLOB-Speicher – PowerShell | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cda33e54db6382eaee5d4e5343fc2d1873600c8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Microsoft Azure Blob Storage-Dienst
+# <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sichern mehrerer Datenbanken in Azure Blob Storage – PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält Beispielskripts, die verwendet werden können, um Sicherungen im Windows Azure-BLOB-Speicherdienst mit PowerShell-Cmdlets zu automatisieren.  
   
-## Übersicht über PowerShell-Cmdlets für Sicherungen und Wiederherstellungen  
+## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Übersicht über PowerShell-Cmdlets für Sicherungen und Wiederherstellungen  
  Die **Backup_SqlDatabase** und die **Restore-SqlDatabase** sind die beiden wichtigsten Cmdlets, die für Sicherungs- und Wiederherstellungsvorgänge verfügbar sind. Darüber hinaus gibt es andere Cmdlets, die möglicherweise erforderlich sind, um Sicherungen im Windows Azure BLOB-Speicher zu automatisieren, wie den Satz von **SqlCredential** -Cmdlets. Es folgt eine Liste der PowerShell-Cmdlets, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbar sind und die in den Sicherungs- und Wiederherstellungsvorgängen verwendet werden:  
   
- Backup-SqlDatabase  
- Dieses Cmdlet wird verwendet, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung zu erstellen.  
+ Backup_SqlDatabase  
+ Dieses Cmdlet wird verwendet, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung zu erstellen.  
   
  Restore-SqlDatabase  
  Wird zum Wiederherstellen einer Datenbank verwendet.  
@@ -45,20 +49,20 @@ caps.handback.revision: 13
 > [!TIP]  
 >  Die Credential-Cmdlets werden in Szenarien für den Windows Azure BLOB-Speicher bei der Sicherung und Wiederherstellung verwendet.  
   
-### PowerShell für mehrere Datenbanken, Sicherungsvorgänge mit mehreren Instanzen  
+### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell für mehrere Datenbanken, Sicherungsvorgänge mit mehreren Instanzen  
  Die folgenden Abschnitte enthalten die Skripts für verschiedene Vorgänge wie das Erstellen von SQL-Anmeldeinformationen in mehreren SQL Server-Instanzen, das Sichern aller Benutzerdatenbanken in einer Instanz von SQL Server usw. Sie können diese Skripts verwenden, um Sicherungsvorgänge gemäß den Anforderungen Ihrer Umgebung zu automatisieren oder zu planen. Die Skripts, die hier bereitgestellt werden, sind Beispiele und können für Ihre Umgebung geändert oder erweitert werden.  
   
  Folgende Überlegungen sind bei Beispielskripts zu bedenken:  
   
 1.  **Navigieren durch SQL Server PowerShell-Pfade:** Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie der von einem PowerShell-Anbieter unterstützten Objekte darstellt. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
   
-2.  **Get-ChildItem**-Cmdlet: Welche Informationen von **Get-ChildItem** zurückgegeben werden, hängt vom Speicherort in einem SQL Server-PowerShell-Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbankmodul-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das **Get-ChildItem**-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
+2.  **Get-ChildItem** -Cmdlet: Welche Informationen von **Get-ChildItem** zurückgegeben werden, hängt vom Speicherort in einem SQL Server-PowerShell-Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbankmodul-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das **Get-ChildItem** -Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
   
      Weitere Informationen finden Sie unter [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
 3.  Die Codebeispiele können unabhängig voneinander ausprobiert werden, indem die Variablenwerte geändert werden. Die Erstellung des Windows Azure-Speicherkontos und der SQL-Anmeldeinformationen sind aber Voraussetzungen, die für alle Sicherungs- und Wiederherstellungsvorgänge im Windows Azure-BLOB-Speicherdienst erforderlich sind.  
   
-### Erstellen von SQL-Anmeldeinformationen für alle Instanzen von SQL Server  
+### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Erstellen von SQL-Anmeldeinformationen für alle Instanzen von SQL Server  
  Es gibt zwei Beispielskripts, und beide erstellen Anmeldeinformationen mit der Bezeichnung "mybackupToURL" für alle Instanzen von SQL Server auf einem Computer. Das erste Beispiel ist einfach; die Anmeldeinformationen werden erstellt und keine Ausnahmen aufgefangen.  Wenn beispielsweise bereits vorhandene Anmeldeinformationen mit dem gleichen Namen für eine der Instanzen des Computers vorliegen, schlägt das Skript fehl. Im zweiten Beispiel werden Fehler aufgefangen, und das Skript kann fortgesetzt werden.  
   
 ```  
@@ -112,7 +116,7 @@ Catch [Exception]
   
 ```  
   
-### Entfernen von SQL-Anmeldeinformationen für alle Instanzen von SQL Server  
+### <a name="remove-a-sql-credential-from-all-the-instances-of-sql-server"></a>Entfernen von SQL-Anmeldeinformationen für alle Instanzen von SQL Server  
  Dieses Skript kann verwendet werden, um bestimmte Anmeldeinformationen von allen SQL Server-Instanzen auf dem Computer zu entfernen. Wenn das Credential-Objekt in einer bestimmten Instanz nicht vorhanden ist, wird eine Fehlermeldung angezeigt, und das Skript wird fortgesetzt, bis alle Instanzen überprüft sind.  
   
 ```  
@@ -140,7 +144,7 @@ foreach ($instance in $instances)
     }  
 ```  
   
-### Vollständige Sicherung für alle Datenbanken (EINSCHLIESSLICH SYSTEMDATENBANKEN)  
+### <a name="full-database-backup-for-all-databases-including-system-databases"></a>Vollständige Sicherung für alle Datenbanken (EINSCHLIESSLICH SYSTEMDATENBANKEN)  
  Mit dem folgenden Skript erstellen Sie Sicherungen aller Datenbanken auf dem Computer. Dies gilt sowohl für Benutzerdatenbanken als auch für die **msdb** -Systemdatenbank. Das Skript filtert **tempdb** - und **model** -Systemdatenbanken heraus.  
   
 ```  
@@ -168,7 +172,7 @@ $instances = Get-childitem
   
 ```  
   
-### Vollständige Sicherung ALLER Benutzerdatenbanken  
+### <a name="full-database-backup-for-all-user-databases"></a>Vollständige Sicherung ALLER Benutzerdatenbanken  
  Das folgende Skript kann verwendet werden, um alle Benutzerdatenbanken in allen Instanzen von SQL Server auf dem Computer zu sichern.  
   
 ```  
@@ -192,7 +196,7 @@ $instances = Get-childitem
  }  
 ```  
   
-### Vollständige Sicherung für MASTER und MSDB (SYSTEMDATENBANKEN) in allen Instanzen von SQL Server  
+### <a name="full-database-backup-for-master-and-msdb-system-databases-on-all-the-instances-of-sql-server"></a>Vollständige Sicherung für MASTER und MSDB (SYSTEMDATENBANKEN) in allen Instanzen von SQL Server  
  Das folgende Skript kann verwendet werden, um alle **master** - und **msdb** -Datenbanken in allen Instanzen von SQL Server auf dem Computer zu sichern.  
   
 ```  
@@ -218,7 +222,7 @@ Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -Backup
   
 ```  
   
-### Vollständige Sicherung für alle Benutzerdatenbanken in einer Instanz von SQL Server  
+### <a name="full-database-backup-for-all-user-databases-on-an-instance-of-sql-server"></a>Vollständige Sicherung für alle Benutzerdatenbanken in einer Instanz von SQL Server  
  Das folgenden Skript wird verwendet, um nur die Benutzerdatenbanken zu sichern, die in einer benannten Instanz von SQL Server verfügbar sind. Das gleiche Skript kann für die Standardinstanz auf dem Computer verwendet werden, indem der $srvPath-Parameterwert geändert wird.  
   
 ```  
@@ -241,8 +245,8 @@ $databases = dir $srvPath\databases
 $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
 ```  
   
-### Vollständige Sicherung nur für Systemdatenbanken (MASTER UND MSDB) in einer Instanz von SQL Server  
- Das vollständige Skript kann zum Sichern der **master** - und der **msdb** -Datenbanken in einer benannten Instanz von SQL Server verwendet werden. Das gleiche Skript kann für die Standardinstanz auf dem Computer verwendet werden, indem der $srvpath-Parameterwert geändert wird.  
+### <a name="full-database-backup-for-only-system-databases-master-and-msdb-on-an-instance-of-sql-server"></a>Vollständige Sicherung nur für Systemdatenbanken (MASTER UND MSDB) in einer Instanz von SQL Server  
+ Das vollständige Skript kann zum Sichern der **master** - und der **msdb** -Datenbanken in einer benannten Instanz von SQL Server verwendet werden. Das gleiche Skript kann für die Standardinstanz auf dem Computer verwendet werden, indem der $srvPath-Parameterwert geändert wird.  
   
 ```  
   
@@ -265,8 +269,9 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
   
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

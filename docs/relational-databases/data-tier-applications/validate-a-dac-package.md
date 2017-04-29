@@ -1,40 +1,44 @@
 ---
-title: "&#220;berpr&#252;fen eines DAC-Pakets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenschichtanwendung [SQL Server], überprüfen"
-  - "Datenschichtanwendung [SQL Server], vergleichen"
-  - "Überprüfen einer DAC"
-  - "Vergleichen von DACs"
-  - "Datenschichtanwendung [SQL Server], anzeigen"
-  - "Anzeigen einer DAC"
+title: "Überprüfen eines DAC-Pakets | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#220;berpr&#252;fen eines DAC-Pakets
+# <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
   
-1.  **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **So aktualisieren Sie eine DAC mit:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen von Datenbankänderungen](#ViewDBChanges), [Anzeigen von Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  
   
 ##  <a name="ViewDACContents"></a> Anzeigen des Inhalts einer DAC  
- Es gibt zwei Vorgehensweisen, um den Inhalt eines Datenebenenanwendungs-Pakets (DAC) anzuzeigen. Sie können das DAC-Paket in ein DAC-Projekt in SQL Server Developer Tools importieren. Der Inhalt des Pakets kann in einen Ordner entpackt werden.  
+ Es gibt zwei Vorgehensweisen, um den Inhalt eines Datenebenenanwendungs-Pakets (DAC) anzuzeigen. Sie können das DAC-Paket in ein DAC-Projekt in SQL Server Developer Tools importieren. Der Inhalt des Pakets kann in einen Ordner entpackt werden.  
   
  **Anzeigen einer DAC in SQL Server Developer Tools**  
   
@@ -44,11 +48,11 @@ caps.handback.revision: 17
   
 3.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten, und wählen Sie dann **Eigenschaften**.  
   
-4.  Aktivieren Sie auf der Registerkarte **Projekteinstellungen** im Abschnitt **Ausgabetypen** das Kontrollkästchen **Datenebenenanwendung (DACPAC-Datei)**, und schließen Sie dann das Dialogfeld mit den Eigenschaften.  
+4.  Aktivieren Sie auf der Registerkarte **Projekteinstellungen** im Abschnitt **Ausgabetypen** das Kontrollkästchen **Datenebenenanwendung (DACPAC-Datei)** , und schließen Sie dann das Dialogfeld mit den Eigenschaften.  
   
-5.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Datenebenenanwendung importieren** aus.  
+5.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Datenebenenanwendung importieren**aus.  
   
-6.  Öffnen Sie mit dem **Projektmappen-Explorer** alle Dateien in der DAC, z. B. die Richtlinie zur Serverauswahl und die vor und nach der Bereitstellung auszuführenden Skripts.  
+6.  Öffnen Sie mit dem **Projektmappen-Explorer** alle Dateien in der DAC, z. B. die Richtlinie zur Serverauswahl und die vor und nach der Bereitstellung auszuführenden Skripts.  
   
 7.  Überprüfen Sie alle Objekte im Schema mithilfe der **Schemaansicht** , insbesondere auch den Code in Objekten wie Funktionen oder gespeicherten Prozeduren.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 17
   
 -   Zeigen Sie den Inhalt der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts an, indem Sie sie im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]öffnen.  
   
--   Zeigen Sie den Inhalt der Textdateien in Tools an, z. B. im Editor.  
+-   Zeigen Sie den Inhalt der Textdateien in Tools an, z. B. im Editor.  
   
 ##  <a name="ViewDBChanges"></a> Anzeigen von Datenbankänderungen  
  Nach der Bereitstellung der aktuellen Version einer DAC in der Produktionsumgebung wurden möglicherweise Änderungen direkt an der zugeordneten Datenbank vorgenommen, die einen Konflikt mit dem in einer neuen Version der DAC definierten Schema verursachen. Überprüfen Sie vor dem Upgrade auf eine neue Version der DAC, ob solche Änderungen an der Datenbank vorgenommen wurden.  
@@ -81,9 +85,9 @@ caps.handback.revision: 17
   
 3.  Gibt den DAC-Namen in einer Variablen an.  
   
-4.  Rufen Sie mit der Methode **GetDatabaseChanges()** ein **ChangeResults**-Objekt ab, und übergeben Sie das Objekt an eine Textdatei, um einen einfachen Bericht der neuen, gelöschten und geänderten Objekte zu generieren.  
+4.  Rufen Sie mit der Methode **GetDatabaseChanges()** ein **ChangeResults** -Objekt ab, und übergeben Sie das Objekt an eine Textdatei, um einen einfachen Bericht der neuen, gelöschten und geänderten Objekte zu generieren.  
   
-### Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)  
  **Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)**  
   
  Im folgenden Beispiel werden alle Datenbankänderungen gemeldet, die in einer bereitgestellten DAC namens "MyApplicaiton" vorgenommen wurden.  
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Schließen Sie den Dateidatenstrom, der zum Lesen der DAC-Paketdatei verwendet wurde.  
   
-### Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)  
  **Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)**  
   
  Im folgenden Beispiel werden die Transact-SQL-Anweisungen gemeldet, die zum Aktualisieren der DAC "MyApplicaiton" auf das in einer MyApplicationVNext.dacpac-Datei definierte Schema ausgeführt werden würde.  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Vergleichen von DACs  
+##  <a name="CompareDACs"></a> Compare DACs  
  Vor dem Aktualisieren einer DAC empfiehlt es sich, die Unterschiede in der Datenbank und in den Objekten auf Instanzebene zwischen der aktuellen und der neuen DAC zu vergleichen. Wenn Sie über keine Kopie des Pakets für die aktuelle DAC verfügen, können Sie ein Paket aus der aktuellen Datenbank extrahieren.  
   
  Wenn Sie beide DAC-Pakete in DAC-Projekte in SQL Server Developer Tools importieren, können Sie das Tool "Schemavergleich" verwenden, um die Unterschiede zwischen den beiden DACs zu analysieren.  
   
  Entpacken Sie alternativ die DACs in separate Ordner. Anschließend können Sie die Unterschiede mit einem Vergleichstool wie dem Hilfsprogramm "WinDiff" analysieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Upgrade einer Datenebenenanwendung](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

@@ -1,25 +1,29 @@
 ---
-title: "Konfigurieren der Spaltenverschl&#252;sselung mithilfe von PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "powershell"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- powershell
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren der Spaltenverschl&#252;sselung mithilfe von PowerShell
+# <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Dieser Artikel enthält die Schritte zum Festlegen der Always Encrypted-Zielkonfiguration für Datenbankspalten mithilfe des Cmdlet [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) (im PowerShell-Modul *SqlServer*). Das Cmdlet **Set-SqlColumnEncryption** ändert sowohl das Schema der Zieldatenbank sowie die in den ausgewählten Spalten gespeicherten Daten. Die in einer Spalte gespeicherten Daten können verschlüsselt, erneut verschlüsselt oder entschlüsselt werden, je nachdem, welche Zielverschlüsselungseinstellungen für die Spalten angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration aussieht.
+Dieser Artikel enthält die Schritte zum Festlegen der Always Encrypted-Zielkonfiguration für Datenbankspalten mithilfe des Cmdlet [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) (im PowerShell-Modul *SqlServer* ). Das Cmdlet **Set-SqlColumnEncryption** ändert sowohl das Schema der Zieldatenbank sowie die in den ausgewählten Spalten gespeicherten Daten. Die in einer Spalte gespeicherten Daten können verschlüsselt, erneut verschlüsselt oder entschlüsselt werden, je nachdem, welche Zielverschlüsselungseinstellungen für die Spalten angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration aussieht.
 Weitere Informationen zur Unterstützung von Always Encrytped im PowerShell-Modul „SqlServer“ finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
@@ -34,9 +38,9 @@ Zum Anwenden der angegebenen Zielverschlüsselungseinstellungen für die Datenba
 
 Das Cmdlet **Set SqlColumnEncryption** unterstützt zwei Ansätze zum Einrichten der Zielverschlüsselungskonfiguration: online und offline.
 
-Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs nicht für Schreibtransaktionen verfügbar.
+Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs nicht für Schreibtransaktionen verfügbar. Die Semantik von Fremdschlüsseleinschränkungen (**CHECK** oder **NOCHECK**) wird beim Offlineansatz immer beibehalten.
 
-Beim Onlineansatz erfolgt der Vorgang zum Kopieren, Verschlüsseln, Entschlüsseln und erneuten Verschlüsseln der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter „MaxDownTimeInSeconds“ (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das Nachverfolgen von Änderungen in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss.
+Beim Onlineansatz (erfordert das SqlServer PowerShell-Modul aus SSMS 17.0 oder einer höheren Version) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](https://msdn.microsoft.com/library/bb964713.aspx) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
 
 Es folgen die Leitlinien für die Wahl zwischen Offline- und Onlineansatz:
 
@@ -45,8 +49,8 @@ Verwenden Sie den Offlineansatz:
 - Um Spalten in mehreren Tabellen gleichzeitig zu verschlüsseln/entschlüsseln/neu zu verschlüsseln.
 - Wenn die Zieltabelle keinen Primärschlüssel hat.
 
-Verwenden Sie den Offlineansatz:
-- Um die Ausfallzeit/Nichtverfügbarkeit für Anwendungen zu minimieren, die die Datenbank nutzen.
+Verwenden Sie den Onlineansatz:
+- Um die Ausfallzeit/Nichtverfügbarkeit der Datenbank für die Anwendungen zu minimieren.
 
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen
 
@@ -56,9 +60,9 @@ Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift a
 ---|---|---|---
 Schritt 1: Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul. | [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Nein | Nein
 Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | ja
-Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Ja | Nein
+Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | ja | Nein
 Schritt 4. Erstellen Sie ein Array von SqlColumnEncryptionSettings-Objekten – eines für jede Datenbankspalte, die Sie verschlüsseln, erneut verschlüsseln oder entschlüsseln möchten. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | Nein | Nein
-Schritt 5. Legen Sie die gewünschte Verschlüsselungskonfiguration fest, die in dem Array von SqlColumnMasterKeySettings-Objekten angegeben ist, das Sie im vorherigen Schritt erstellt haben. Eine Spalte wird verschlüsselt, erneut verschlüsselt oder entschlüsselt, je nachdem, welche Zieleinstellungen angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration der Spalte aussieht.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs nicht auf die Tabellen oder Teile davon zugreifen. | Ja | ja
+Schritt 5. Legen Sie die gewünschte Verschlüsselungskonfiguration fest, die in dem Array von SqlColumnMasterKeySettings-Objekten angegeben ist, das Sie im vorherigen Schritt erstellt haben. Eine Spalte wird verschlüsselt, erneut verschlüsselt oder entschlüsselt, je nachdem, welche Zieleinstellungen angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration der Spalte aussieht.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs oder nur teilweise nicht auf die Tabellen zugreifen. | Ja | ja
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Verschlüsseln von Spalten mithilfe des Offlineansatzes: Beispiel
 
@@ -150,5 +154,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
+
 
 

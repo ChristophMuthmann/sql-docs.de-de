@@ -1,36 +1,40 @@
 ---
-title: "Handbuch zur Architektur von Seiten und Bl&#246;cken | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Handbuch zur Architektur von Seiten und Blöcken"
-  - "Handbuch, Architektur von Seiten und Blöcken"
+title: "Handbuch zur Architektur von Seiten und Blöcken | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Handbuch zur Architektur von Seiten und Bl&#246;cken
+# <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Die Seite ist die grundlegende Einheit für die Datenspeicherung in SQL Server. Ein Block ist eine Auflistung von acht physisch zusammenhängenden Seiten. Blöcke tragen zu einer effizienten Verwaltung von Seiten bei. In diesem Handbuch werden die Datenstrukturen beschrieben, die zum Verwalten von Seiten und Blöcken in allen Versionen von SQL Server verwendet werden. Kenntnisse der Architektur von Seiten und Blöcken sind Voraussetzung für das Entwerfen und Entwickeln von effizienten Datenbanken.
 
-## Seiten und Blöcke
+## <a name="pages-and-extents"></a>Seiten und Blöcke
 
 Die grundlegende Einheit für die Datenspeicherung in SQL Server ist die Seite. Der Speicherplatz, der einer Datendatei (MDF- oder NDF-Datei) in einer Datenbank zugeordnet wird, ist logisch in Seiten unterteilt, die fortlaufend von 0 bis n nummeriert sind. Datenträger-E/A-Operationen werden auf Seitenebene ausgeführt. Dies bedeutet, dass SQL Server ganze Datenseiten liest oder schreibt.
 
 Blöcke sind Auflistungen von acht physisch zusammenhängenden Seiten; sie werden zum effizienten Verwalten der Seiten verwendet. Alle Seiten werden in Blöcken gespeichert.
 
-### Seiten
+### <a name="pages"></a>Seiten
 
 In SQL Server beträgt die Größe einer Seite 8 KB. Dies bedeutet, dass SQL Server-Datenbanken über 128 Seiten pro 1 MB verfügen. Jede Seite beginnt mit einem 96 Byte umfassenden Header, der zum Speichern von Systeminformationen zu der betreffenden Seite verwendet wird. Diese Informationen umfassen die Seitennummer, den Typ der Seite, den Umfang des freien Speicherplatzes auf der Seite und die ID der Zuordnungseinheit, die Besitzer der Seite ist.
 
@@ -59,7 +63,7 @@ Datenzeilen werden unmittelbar nach dem Header nacheinander auf der Seite gespei
 Zeilen können sich nicht über mehrere Seiten erstrecken, Teile der Zeile können jedoch von der Seite der Zeile verschoben werden; die Zeile kann auf diese Weise sehr umfangreich sein. Die maximale Menge an Daten und Verwaltungsbytes, die in einer einzelnen Zeile auf einer Seite enthalten sein können, beträgt 8.060 Byte (8 KB). Dies schließt jedoch nicht die Daten ein, die im Text/Image-Seitentyp gespeichert werden. Diese Einschränkung wurde für Tabellen gelockert, die varchar-, nvarchar-, varbinary- oder sql_variant-Spalten enthalten. Wenn die Gesamtzeilengröße aller festen und variablen Spalten in einer Tabelle den Grenzwert von 8.060 Bytes übersteigt, verschiebt SQL Server eine oder mehrere Spalten variabler Länge dynamisch auf Seiten in der ROW_OVERFLOW_DATA-Zuordnungseinheit. Dabei wird mit der Spalte mit der größten Breite begonnen. Dieser Vorgang wird immer ausgeführt, wenn die Gesamtgröße der Zeile durch einen Einfüge- oder Updatevorgang den Maximalwert von 8.060 Byte übersteigt. Wenn eine Spalte auf eine Seite in der ROW_OVERFLOW_DATA-Zuordnungseinheit verschoben wird, wird ein 24-Byte-Zeiger auf die ursprüngliche Seite in der IN_ROW_DATA-Zuordnungseinheit verwaltet. Falls eine nachfolgende Operation die Spaltengröße verringert, verschiebt SQL Server die Spalten dynamisch zurück auf die ursprüngliche Datenseite. 
 
 
-### Extents 
+### <a name="extents"></a>Extents 
 
 Blöcke sind die Grundeinheit, in der Speicherplatz verwaltet wird. Ein Block umfasst acht zusammenhängende Seiten, also 64 KB. Dies bedeutet, dass SQL Server-Datenbanken über 16 Blöcke pro 1 MB verfügen.
 
@@ -71,9 +75,9 @@ Um eine effiziente Speicherplatzzuordnung zu erzielen, ordnet SQL Server keine g
 
 Für eine neue Tabelle oder einen neuen Index werden normalerweise Seiten aus gemischten Blöcken zugewiesen. Wenn eine Tabelle oder ein Index so groß geworden ist, dass sie bzw. er acht Seiten umfasst, werden bei nachfolgenden Zuweisungen einheitliche Blöcke zugewiesen. Wenn Sie einen Index für eine vorhandene Tabelle erstellen, die über genügend Zeilen verfügt, um acht Seiten im Index zu generieren, erfolgen alle Zuweisungen für den Index in Form von einheitlichen Blöcken.
 
-![Blöcke](../relational-databases/media/extents.gif)
+![Extents](../relational-databases/media/extents.gif)
 
-## Verwalten von Blockzuordnungen und freiem Speicherplatz 
+## <a name="managing-extent-allocations-and-free-space"></a>Verwalten von Blockzuordnungen und freiem Speicherplatz 
 
 Die SQL Server-Datenstrukturen, die Blockzuordnungen verwalten und freien Speicherplatz nachverfolgen, besitzen eine relativ einfache Struktur. Dies bringt folgende Vorteile mit sich: 
 
@@ -83,7 +87,7 @@ Die SQL Server-Datenstrukturen, die Blockzuordnungen verwalten und freien Speich
 * Der größte Teil der Zuordnungsinformationen ist nicht miteinander verkettet. Hierdurch wird die Verwaltung der Zuordnungsinformationen vereinfacht.    
   Das Zuordnen oder Aufheben der Zuordnung der einzelnen Seiten kann sehr schnell erfolgen. So wird die Anzahl der Konflikte zwischen gleichzeitig ausgeführten Tasks reduziert, die Seiten zuordnen oder die Zuordnung von Seiten aufheben müssen. 
 
-### Verwalten von Blockzuordnungen
+### <a name="managing-extent-allocations"></a>Verwalten von Blockzuordnungen
 
 SQL Server verwendet zwei Arten von Zuordnungstabellen, um die Zuordnung von Blöcken aufzuzeichnen: 
 
@@ -103,7 +107,7 @@ Für jeden Block wird auf der Grundlage der aktuellen Verwendung eines der folge
  
 Dies führt zu einfachen Algorithmen für die Blockverwaltung. Um einen einheitlichen Block zuzuweisen, durchsucht das Datenbankmodul die GAM nach einem Bit mit dem Wert 1 und legt es auf 0 fest. Um einen gemischten Block mit freien Seiten zu finden, durchsucht das Datenbankmodul die SGAM nach einem Bit mit dem Wert 1. Um einen gemischten Block zuzuordnen, durchsucht das Datenbankmodul die GAM nach einem Bit mit dem Wert 1 und legt es auf 0 fest. Anschließend wird das entsprechende Bit in der SGAM auf 1 festgelegt. Um einen Block freizugeben, stellt das Datenbankmodul sicher, dass das GAM-Bit auf 1 und das SGAM-Bit auf 0 festgelegt ist. Die Algorithmen, die vom Datenbankmodul tatsächlich intern verwendet werden, sind komplexer als in diesem Thema beschrieben, da das Datenbankmodul Daten gleichmäßig in der Datenbank verteilt. Aber auch die wirklich verwendeten Algorithmen konnten vereinfacht werden, da nunmehr keine verketteten Blockzuordnungsinformationen verwaltet werden müssen.
 
-### Nachverfolgen von freiem Speicherplatz
+### <a name="tracking-free-space"></a>Nachverfolgen von freiem Speicherplatz
 
 PFS-Seiten (Page Free Space) zeichnen den Zuordnungsstatus der einzelnen Seiten auf, ob eine einzelne Seite zugeordnet wurde und die Menge des freien Speicherplatzes auf den einzelnen Seiten. Der PFS verfügt über ein Byte pro Seite und zeichnet auf, ob die Seite zugeordnet ist, und sofern dies der Fall ist, ob sie leer, 1 bis 50 Prozent voll, 51 bis 80 Prozent voll, 81 bis 95 Prozent voll oder 96 bis 100 Prozent voll ist.
 
@@ -113,7 +117,7 @@ Eine PFS-Seite ist nach der Dateiheaderseite die erste Seite in einer Datendatei
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## Verwalten des von Objekten verwendeten Speicherplatzes 
+## <a name="managing-space-used-by-objects"></a>Verwalten des von Objekten verwendeten Speicherplatzes 
 
 Eine IAM-Seite (Index Allocation Map) enthält die in einem 4-Gigabyte-Teil (GB) einer von einer Zuordnungseinheit verwendeten Datenbankdatei enthaltenen Blöcke. Eine Zuordnungseinheit entspricht einem von drei möglichen Typen:
 
@@ -146,7 +150,7 @@ Wenn vom SQL Server-Datenbankmodul eine neue Zeile eingefügt werden muss und au
 Ein neuer Block wird nur dann vom Datenbankmodul zu einer Zuordnungseinheit zugeordnet, wenn es nicht schnell möglich ist, in einem vorhandenen Block eine Seite zu finden, die ausreichend Speicherplatz bietet, um die eingefügte Zeile aufnehmen zu können. Das Datenbankmodul ordnet Blöcke auf der Basis der verfügbaren Blöcke in der Dateigruppe zu und verwendet dazu einen proportionalen Zuordnungsalgorithmus. Wenn eine Dateigruppe zwei Dateien enthält, von denen die eine über doppelt so viel freien Speicherplatz wie die andere verfügt, werden in der Datei, die über mehr freien Speicherplatz verfügt, zwei Seiten für jede Seite zugeordnet, die in der anderen Datei zugeordnet wird. Dies bedeutet, dass der Anteil des verwendeten Speicherplatzes in allen Dateien einer Dateigruppe ähnlich groß sein sollte. 
 
  
-## Protokollieren geänderter Blöcke 
+## <a name="tracking-modified-extents"></a>Protokollieren geänderter Blöcke 
 
 SQL Server verwendet zwei interne Datenstrukturen zum Nachverfolgen von durch Massenkopiervorgänge geänderten Blöcken sowie von Blöcken, die seit der letzten vollständigen Sicherung geändert wurden. Diese Datenstrukturen beschleunigen differenzielle Sicherungen erheblich. Sie beschleunigen außerdem das Protokollieren von Massenkopiervorgängen, wenn eine Datenbank das Modell der massenprotokollierten Wiederherstellung verwendet. Ähnlich wie bei den GAM-Seiten (Global Allocation Map) und den SGAM-Seiten (Shared Global Allocation Map) handelt es sich bei diesen Strukturen um Bitmuster, wobei jedes Bit einen einzelnen Block darstellt. 
 
@@ -160,3 +164,4 @@ Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

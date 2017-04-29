@@ -1,30 +1,34 @@
 ---
-title: "L&#246;schen von Arbeitsauslastungsgruppen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Arbeitsauslastungsgruppen [SQL Server], löschen"
-  - "Ressourcenkontrolle, Löschen von Arbeitsauslastungsgruppen"
+title: "Löschen von Arbeitsauslastungsgruppen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# L&#246;schen von Arbeitsauslastungsgruppen
+# <a name="delete-a-workload-group"></a>Löschen von Arbeitsauslastungsgruppen
   Eine Arbeitsauslastungsgruppe oder einen Ressourcenpool können Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL löschen.  
   
--   **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Zum Löschen einer Arbeitsauslastungsgruppe:** [Objekt-Explorer](#DelWGObjEx), [Eigenschaften des Resource Governors](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Sie können keine Arbeitsauslastungsgruppe löschen, die aktive Sitzungen enthält.  
@@ -76,11 +80,11 @@ caps.handback.revision: 19
   
     -   Starten Sie den Server neu. Die Arbeitsauslastungsgruppe wird nicht neu erstellt.  
   
-    -   Falls Sie nach Ausgabe der **DROP WORKLOAD GROUP**-Anweisung beschließen, dass Sie Sitzungen nicht explizit anhalten möchten, um die Änderung zu übernehmen, können Sie die Gruppe mit dem gleichen Namen, den sie vor Ausgabe der DROP-Anweisung hatte, neu erstellen und dann in den ursprünglichen Ressourcenpool verschieben.  
+    -   Falls Sie nach Ausgabe der **DROP WORKLOAD GROUP** -Anweisung beschließen, dass Sie Sitzungen nicht explizit anhalten möchten, um die Änderung zu übernehmen, können Sie die Gruppe mit dem gleichen Namen, den sie vor Ausgabe der DROP-Anweisung hatte, neu erstellen und dann in den ursprünglichen Ressourcenpool verschieben.  
   
 3.  Führen Sie die **ALTER RESOURCE GOVERNOR RECONFIGURE** -Anweisung aus.  
   
-### Beispiel (Transact-SQL)  
+### <a name="example-transact-sql"></a>Beispiel (Transact-SQL)  
  Das folgende Beispiel löscht die Arbeitsauslastungsgruppe `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
  [Erstellen eines Ressourcenpools](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Erstellen einer Arbeitsauslastungsgruppe](../../relational-databases/resource-governor/create-a-workload-group.md)   

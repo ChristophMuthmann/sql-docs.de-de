@@ -1,27 +1,31 @@
 ---
-title: "Nicht-XML-Formatdateien (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Nicht-XML-Formatdateien"
-  - "Formatdateien [SQL Server], Nicht-XML-Formatdateien"
-  - "Massenimport [SQL Server], Formatdateien"
+title: Nicht-XML-Formatdateien (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-XML format files
+- format files [SQL Server], non-XML format files
+- bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nicht-XML-Formatdateien (SQL Server)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] werden zwei Typen von Formatdateien zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*.  
+# <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden zwei Typen von Formatdateien zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*.  
   
  **In diesem Thema:**  
   
@@ -35,11 +39,11 @@ caps.handback.revision: 63
   
 ##  <a name="Benefits"></a> Vorteile von Nicht-XML-Formatdateien  
   
--   Sie können eine Nicht-XML-Formatdatei automatisch erstellen, indem Sie die **format**-Option in einem **bcp**-Befehl angeben.  
+-   Sie können eine Nicht-XML-Formatdatei automatisch erstellen, indem Sie die **format** -Option in einem **bcp** -Befehl angeben.  
   
 -   Wenn Sie eine vorhandene Formatdatei in einem **bcp** -Befehl angeben, verwendet der Befehl die in der Formatdatei aufgezeichneten Werte, und Sie werden nicht aufgefordert, Dateispeichertyp, Präfixlänge, Feldlänge oder Feldabschlusszeichen anzugeben.  
   
--   Sie können eine Formatdatei für einen bestimmten Datentyp z. B. Zeichendaten oder systemeigene Daten erstellen.  
+-   Sie können eine Formatdatei für einen bestimmten Datentyp z. B. Zeichendaten oder systemeigene Daten erstellen.  
   
      Sie können Nicht-XML-Formatdateien erstellen, die interaktiv angegebene Attribute für jedes Datenfeld enthalten. Weitere Informationen finden Sie unter [Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 63
   
 |Feld in der Formatdatei|Beschreibung|  
 |------------------------|-----------------|  
-|Version|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp** erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
+|Version|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
 |Anzahl der Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
   
  Die anderen Felder der Formatdatei beschreiben die Datenfelder, die massenimportiert bzw. exportiert werden sollen. Jedes Datenfeld nimmt eine eigene Zeile in der Formatdatei ein. Jede Zeile der Formatdatei enthält Werte für die Felder der Formatdatei. Diese Felder werden in der folgenden Tabelle beschrieben.  
@@ -77,9 +81,9 @@ caps.handback.revision: 63
 >  Sie können eine Formatdatei so ändern, dass Sie einen Massenimport aus einer Datendatei ausführen können, in der die Anzahl oder Reihenfolge der Felder von der Anzahl oder Reihenfolge der Tabellenspalten abweicht. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks) .  
   
 ##  <a name="Examples"></a> Beispiel für eine Nicht-XML-Formatdatei  
- Das folgende Beispiel zeigt eine zuvor erstellte Nicht-XML-Formatdatei (`myDepartmentIdentical-f-c.fmt`). Diese Datei beschreibt ein Zeichendatenfeld für jede Spalte in der `HumanResources.Department`-Tabelle der `AdventureWorks2012`-Beispieldatenbank.  
+ Das folgende Beispiel zeigt eine zuvor erstellte Nicht-XML-Formatdatei (`myDepartmentIdentical-f-c.fmt`). Diese Datei beschreibt ein Zeichendatenfeld für jede Spalte in der `HumanResources.Department` -Tabelle der `AdventureWorks2012` -Beispieldatenbank.  
   
- Die generierte Formatdatei `myDepartmentIdentical-f-c.fmt` enthält die folgenden Informationen:  
+ Die generierte Formatdatei `myDepartmentIdentical-f-c.fmt`enthält die folgenden Informationen:  
   
 ```  
 12.0  
@@ -91,7 +95,7 @@ caps.handback.revision: 63
 ```  
   
 > [!NOTE]  
->  Eine Abbildung der Felder der Formatdatei in Bezug auf diese Nicht-XML-Formatdatei finden Sie unter [Struktur von Nicht-XML-Formatdateien](#Structure) weiter oben in diesem Thema.  
+>  Eine Abbildung der Felder der Formatdatei in Bezug auf diese Nicht-XML-Formatdatei finden Sie unter [Struktur von Nicht-XML-Formatdateien](#Structure)weiter oben in diesem Thema.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 63
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

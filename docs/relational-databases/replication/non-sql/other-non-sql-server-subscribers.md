@@ -1,27 +1,31 @@
 ---
-title: "Andere Nicht-SQL Server-Abonnenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Nicht-SQL Server-Abonnenten, andere Typen"
+title: Andere Nicht-SQL Server-Abonnenten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-SQL Server Subscribers, other types
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7002d1aeae61b16976b9a8230c58fb12f882042
+ms.lasthandoff: 04/11/2017
+
 ---
-# Andere Nicht-SQL Server-Abonnenten
-  Eine Liste der nicht -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von Abonnenten unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)], finden Sie unter [nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
+# <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
+  Eine Liste der von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Nicht- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Abonnenten finden Sie unter [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
   
-## Anforderungen für ODBC-Treiber  
+## <a name="odbc-driver-requirements"></a>Anforderungen für ODBC-Treiber  
  Der ODBC-Treiber muss folgende Voraussetzungen erfüllen:  
   
 -   Er muss ODBC Level-1-kompatibel sein.  
@@ -34,9 +38,9 @@ caps.handback.revision: 31
   
 -   Er darf nicht schreibgeschützt sein.  
   
--   Muss z. B. lange Tabellennamen unterstützen **MSreplication_subscriptions**.  
+-   Er muss lange Tabellennamen unterstützen, wie z. B. **MSreplication_subscriptions**.  
   
-## Replikation mithilfe von OLE DB-Schnittstellen  
+## <a name="replicating-using-ole-db-interfaces"></a>Replikation mithilfe von OLE DB-Schnittstellen  
  OLE DB-Anbieter müssen folgende Objekte für die Transaktionsreplikation unterstützen.  
   
 -   **DataSource** -Objekt  
@@ -49,7 +53,7 @@ caps.handback.revision: 31
   
 -   **Error** -Objekt  
   
-### Schnittstellen für DataSource-Objekte  
+### <a name="datasource-object-interfaces"></a>Schnittstellen für DataSource-Objekte  
  Die folgenden Schnittstellen sind erforderlich, um eine Verbindung mit einer Datenquelle herzustellen:  
   
 -   **IDBInitialize**  
@@ -60,7 +64,7 @@ caps.handback.revision: 31
   
  Wenn der Anbieter die **IDBInfo** -Schnittstelle unterstützt, verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Schnittstelle zum Abrufen von Informationen, wie z. B. des Bezeichners in Anführungszeichen, der maximalen Länge einer SQL-Anweisung und der maximalen Anzahl von Zeichen in Tabellen- und Spaltennamen.  
   
-### Schnittstellen für Session-Objekte  
+### <a name="session-object-interfaces"></a>Schnittstellen für Session-Objekte  
  Die folgenden Schnittstellen sind erforderlich:  
   
 -   **IDBCreateCommand**  
@@ -71,7 +75,7 @@ caps.handback.revision: 31
   
 -   **IDBSchemaRowset**  
   
-### Schnittstellen für Command-Objekte  
+### <a name="command-object-interfaces"></a>Schnittstellen für Command-Objekte  
  Die folgenden Schnittstellen sind erforderlich:  
   
 -   **ICommand**  
@@ -90,7 +94,7 @@ caps.handback.revision: 31
   
  **IAccessor** ist zum Erstellen von Parameterzugriffen erforderlich. Wenn der Anbieter **IColumnRowset**unterstützt, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Schnittstelle, um zu bestimmen, ob eine Spalte eine Identitätsspalte ist.  
   
-### Schnittstellen für Rowset-Objekte  
+### <a name="rowset-object-interfaces"></a>Schnittstellen für Rowset-Objekte  
  Die folgenden Schnittstellen sind erforderlich:  
   
 -   **IRowset**  
@@ -101,7 +105,7 @@ caps.handback.revision: 31
   
  Eine Anwendung sollte ein Rowset für eine replizierte Tabelle öffnen, das in der Abonnementdatenbank erstellt wird. **IColumnsInfo** und **IAccessor** werden zum Zugreifen auf Daten im Rowset benötigt.  
   
-### Schnittstellen für Error-Objekte  
+### <a name="error-object-interfaces"></a>Schnittstellen für Error-Objekte  
  Verwenden Sie die folgenden Schnittstellen zur Verwaltung von Fehlern:  
   
 -   **IErrorRecords**  
@@ -112,7 +116,8 @@ caps.handback.revision: 31
   
  Weitere Informationen zum OLE DB-Anbieter finden Sie in der Dokumentation zum jeweiligen OLE DB-Anbieter.  
   
-## Siehe auch  
- [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   
+

@@ -1,34 +1,38 @@
 ---
-title: "Angeben von Feld- und Zeilenabschlusszeichen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp-Hilfsprogramm [SQL Server], Abschlusszeichen"
-  - "Feldabschlusszeichen [SQL Server]"
-  - "Datenformate [SQL Server], Abschlusszeichen"
-  - "Zeilenabschlusszeichen [SQL Server]"
-  - "Abschlusszeichen [SQL Server]"
+title: Angeben von Feld- und Zeilenabschlusszeichen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], terminators
+- field terminators [SQL Server]
+- data formats [SQL Server], terminators
+- row terminators [SQL Server]
+- terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
+# <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
   Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie beim systemeigenen Format oder systemeigenen Unicode-Format Längenpräfixe anstelle der Feldabschlusszeichen. Bei Daten im nativen Format kann es zu Konflikten mit Abschlusszeichen kommen, weil Datendateien im nativen Format im internen Binärdatenformat von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert werden.  
   
-## Als Abschlusszeichen unterstützte Zeichen  
+## <a name="characters-supported-as-terminators"></a>Als Abschlusszeichen unterstützte Zeichen  
  Von dem Befehl **bcp** , der BULK INSERT-Anweisung und dem OPENROWSET BULK-Rowsetanbieter wird eine Reihe von Zeichen als Feld- oder Zeilenabschlusszeichen unterstützt und in jedem Fall nach der ersten Instanz jedes Abschlusszeichens gesucht. In der folgenden Tabelle sind die als Abschlusszeichen unterstützten Zeichen aufgeführt.  
   
 |Abschlusszeichen|Kennzeichen|  
@@ -48,14 +52,14 @@ caps.handback.revision: 39
 > [!IMPORTANT]  
 >  Wenn ein Abschlusszeichen innerhalb der Daten auftritt, wird es als Abschlusszeichen, nicht als Daten interpretiert, und die Daten nach diesem Zeichen als zum nächsten Feld oder Datensatz zugehörig interpretiert. Wählen Sie deshalb die Abschlusszeichen mit Bedacht aus, um sicherzustellen, dass sie nicht anderweitig in Ihren Daten vorkommen. Beispielsweise ist ein niedriges Ersatzzeichen als Feldabschlusszeichen keine gute Wahl, wenn die Daten dieses niedrige Ersatzzeichen enthalten.  
   
-## Verwenden von Zeilenabschlusszeichen  
+## <a name="using-row-terminators"></a>Verwenden von Zeilenabschlusszeichen  
  Beim Zeilenabschlusszeichen kann es sich um das gleiche Zeichen wie dem Abschlusszeichen für das letzte Feld handeln. Im Allgemeinen ist allerdings ein eigenständiges Zeilenabschlusszeichen nützlich. Bei tabellarischer Ausgabe beenden Sie beispielsweise das letzte Feld in jeder Zeile mit dem Neue-Zeile-Zeichen (\n) und alle anderen Felder mit dem Tabstoppzeichen (\t). Um jeden Datensatz auf eine eigene Zeile in der Datendatei zu platzieren, geben Sie die Kombination \r\n als Zeilenabschlusszeichen an.  
   
 > [!NOTE]  
 >  Wenn Sie **bcp** interaktiv verwenden und \n (Zeilenvorschub) als Zeilenabschlusszeichen angeben, wird dieses Zeichen von **bcp** automatisch mit dem Präfix \r (Wagenrücklauf) versehen, womit als Ergebnis das Zeilenabschlusszeichen \r\n steht.  
   
-## Angeben von Abschlusszeichen für den Massenexport  
- Wenn Sie beim Massenexport von **char** oder **nchar**-Daten ein nicht-standardmäßiges Abschlusszeichen verwenden möchten, müssen Sie das Abschlusszeichen für den Befehl **bcp** angeben. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
+## <a name="specifying-terminators-for-bulk-export"></a>Angeben von Abschlusszeichen für den Massenexport  
+ Wenn Sie beim Massenexport von **char** oder **nchar** -Daten ein nicht-standardmäßiges Abschlusszeichen verwenden möchten, müssen Sie das Abschlusszeichen für den Befehl **bcp** angeben. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
   
 -   Mit einer Formatdatei, in der das Abschlusszeichen Feld für Feld angegeben wird.  
   
@@ -66,12 +70,12 @@ caps.handback.revision: 39
   
     -   Verwenden des Schalters **-t** zum Angeben des Feldabschlusszeichens für alle Felder mit Ausnahme des letzten Felds in einer Zeile, und Verwenden des Schalters **-r** zum Angeben eines Zeilenabschlusszeichens.  
   
-    -   Verwenden eines Zeichenformatschalters (**-c** oder **-w**) ohne den Schalter **-t**, womit als Feldabschlusszeichen das Tabulatorzeichen (\t) festgelegt wird. Dies entspricht der Angabe von **-t**\t.  
+    -   Verwenden eines Zeichenformatschalters (**-c** oder **-w**) ohne den Schalter **-t** , womit als Feldabschlusszeichen das Tabulatorzeichen (\t) festgelegt wird. Dies entspricht der Angabe von **-t**\t.  
   
         > [!NOTE]  
         >  Wenn Sie den Schalter **-n** (native Daten) oder den Schalter **-N** (native Unicode-Daten) angeben, werden keine Abschlusszeichen eingefügt.  
   
-    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter (**-f**) oder einen Datenformatschalter (**-n**, **-c**, **-w** oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
+    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter (**-f**) oder einen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
   
          `Enter field terminator [none]:`  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 39
         > [!NOTE]  
         >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### Richtlinien für die Verwendung von Abschlusszeichen  
+### <a name="guidelines-for-using-terminators"></a>Richtlinien für die Verwendung von Abschlusszeichen  
  In einigen Fällen ist ein Abschlusszeichen für **char** - oder **nchar** -Datenfelder nützlich. Beispiel:  
   
 -   Für eine Datenspalte, die einen NULL-Wert in einer Datendatei enthält, die in ein Programm importiert wird, das die Präfixlängeninformation nicht interpretieren kann.  
@@ -91,8 +95,8 @@ caps.handback.revision: 39
   
      In dieser Situation kann das Angeben eines Abschlusszeichens den Speicherplatz minimieren, sodass das Feld als Feld variabler Länge behandelt werden kann.  
   
-### Beispiele  
- In diesem Beispiel wird ein Massenexport von Daten aus der `AdventureWorks.HumanResources.Department`-Tabelle in die `Department-c-t.txt`-Datendatei mithilfe des Zeichenformats ausgeführt, wobei ein Komma als Feldabschlusszeichen und das Neue-Zeile-Zeichen (\n) als Zeilenabschlusszeichen dient.  
+### <a name="examples"></a>Beispiele  
+ In diesem Beispiel wird ein Massenexport von Daten aus der `AdventureWorks.HumanResources.Department` -Tabelle in die `Department-c-t.txt` -Datendatei mithilfe des Zeichenformats ausgeführt, wobei ein Komma als Feldabschlusszeichen und das Neue-Zeile-Zeichen (\n) als Zeilenabschlusszeichen dient.  
   
  Der Befehl **bcp** verfügt über folgende Schalter.  
   
@@ -113,8 +117,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
  Dadurch wird `Department-c-t.txt`mit 16 Datensätzen zu jeweils vier Feldern erstellt. Die Felder werden durch ein Komma getrennt.  
   
-## Angeben von Abschlusszeichen für den Massenimport  
- Wenn Sie einen Massenimport von **char**- oder **nchar**-Daten ausführen, müssen vom Massenimportbefehl die in der Datendatei verwendeten Abschlusszeichen erkannt werden können. Wie Abschlusszeichen angegeben werden können, hängt vom Massenimportbefehl ab:  
+## <a name="specifying-terminators-for-bulk-import"></a>Angeben von Abschlusszeichen für den Massenimport  
+ Wenn Sie einen Massenimport von **char** - oder **nchar** -Daten ausführen, müssen vom Massenimportbefehl die in der Datendatei verwendeten Abschlusszeichen erkannt werden können. Wie Abschlusszeichen angegeben werden können, hängt vom Massenimportbefehl ab:  
   
 -   **bcp**  
   
@@ -137,7 +141,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  In den Beispielen in diesem Abschnitt wird jeweils ein Massenimport von Zeichendaten aus der `Department-c-t.txt` -Datendatei, die im vorhergehenden Beispiel erstellt wurde, in die `myDepartment` -Tabelle in der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Beispieldatenbank ausgeführt. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie zum Erstellen dieser Tabelle unter dem **dbo** -Schema im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor den folgenden Code aus:  
   
 ```tsql  
@@ -153,7 +157,7 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### A. Verwenden von bcp zum interaktiven Angeben von Abschlusszeichen  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Verwenden von bcp zum interaktiven Angeben von Abschlusszeichen  
  Im folgenden Beispiel wird ein Massenimport der `Department-c-t.txt` -Datendatei mithilfe eines `bcp` -Befehls ausgeführt. Die mit diesem Befehl verwendeten Schalter sind mit den für den Massenexport gültigen identisch. Weitere Informationen finden Sie unter "Angeben von Abschlusszeichen für den Massenexport" weiter oben in diesem Thema.  
   
  Geben Sie an der Windows-Eingabeaufforderung Folgendes ein:  
@@ -162,7 +166,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### B. Verwenden von BULK INSERT zum interaktiven Angeben von Abschlusszeichen  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Verwenden von BULK INSERT zum interaktiven Angeben von Abschlusszeichen  
  Im folgenden Beispiel wird ein Massenimport der `Department-c-t.txt` -Datendatei mithilfe einer `BULK INSERT` -Anweisung ausgeführt, die die in der folgenden Tabelle aufgeführten Qualifizierer verwendet.  
   
 |Option|Attribut|  
@@ -185,8 +189,8 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## Siehe auch  
- [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Siehe auch  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -194,3 +198,4 @@ GO
  [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

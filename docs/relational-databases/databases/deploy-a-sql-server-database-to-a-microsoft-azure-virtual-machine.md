@@ -1,46 +1,50 @@
 ---
-title: "Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "Bereitstellen einer Datenbank"
-  - "Bereitstellen auf Azure VM"
-  - "Migrieren zu Azure"
-  - "Virtueller Windows Azure-Computer"
-  - "Migrieren zu Azure-VM"
-  - "Migrieren zur Cloud"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "Assistent zum Bereitstellen von Datenbanken"
-  - "Bereitstellen einer SQL Server-Datenbank auf Azure"
-  - "Azure VM"
+title: Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer | Microsoft-Dokumentation
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
-  Verwenden Sie den Assistenten **Datenbank auf Microsoft Azure-VM bereitstellen**, um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Microsoft Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
+  Verwenden Sie den Assistenten **Datenbank auf Microsoft Azure-VM bereitstellen** , um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Microsoft Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
   
  Sie können den Assistenten nicht für differenzielle Sicherungen verwenden. Der Assistent überschreibt keine vorhandene Datenbank, die denselben Datenbanknamen hat. Um eine vorhandene Datenbank auf der VM zu ersetzen, müssen Sie zuerst die vorhandene Datenbank löschen oder den Datenbanknamen ändern. Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 30
   
 -   Wenn Sie die Datenbank auf einer vorhandenen virtuellen Maschine bereitstellen, muss die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für das Abhören eines TCP/IP-Ports konfiguriert werden.  
   
--   Für die Microsoft Azure-VM oder das Katalog-Image, das Sie für die Erstellung der VM verwenden möchten, muss der [Cloud-Adapter für SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) konfiguriert sein und ausgeführt werden.  
+-   Für die Microsoft Azure-VM oder das Katalog-Image, das Sie für die Erstellung der VM verwenden möchten, muss der [Cloud-Adapter für SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) konfiguriert sein und ausgeführt werden.  
   
--   Sie müssen einen geöffneten Endpunkt für den [Cloud-Adapter für SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) auf dem Microsoft Azure-Gateway mit privatem Port 11435 festlegen.  
+-   Sie müssen einen geöffneten Endpunkt für den [Cloud-Adapter für SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) auf dem Microsoft Azure-Gateway mit privatem Port 11435 festlegen.  
   
  Wenn Sie planen, Ihre Datenbank in einer vorhandenen Windows Azure-VM bereitzustellen, sind zudem die folgenden Informationen erforderlich:  
   
@@ -127,7 +131,7 @@ Dieses Bereitstellungsfeature funktioniert nur mit einem Azure Storage-Konto, da
   
 -   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
@@ -135,7 +139,7 @@ Dieses Bereitstellungsfeature funktioniert nur mit einem Azure Storage-Konto, da
   
  In einer Windows Azure-VM ausgeführte SQL Server-Datenbankversionen können wie folgt bereitgestellt werden:  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
@@ -162,13 +166,13 @@ Dieses Bereitstellungsfeature funktioniert nur mit einem Azure Storage-Konto, da
  Wenn sich die oben genannten Ressourcen nicht in derselben Region befinden, kann der Assistent nicht erfolgreich abgeschlossen werden.  
   
 ###  <a name="configuration_settings"></a> Konfigurationseinstellungen des Assistenten  
- Verwenden Sie die folgenden Konfigurationsdetails, um die Einstellungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung in einer Azure-VM zu ändern.  
+ Verwenden Sie die folgenden Konfigurationsdetails, um die Einstellungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankbereitstellung in einer Azure-VM zu ändern.  
   
 -   **Standardpfad für die Konfigurationsdatei** – %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **Struktur der Konfigurationsdatei**  
   
-    -   \< DeploymentSettings>  
+    -   \<DeploymentSettings>  
   
         -   <OtherSettings  
   
@@ -202,7 +206,7 @@ Dieses Bereitstellungsfeature funktioniert nur mit einem Azure Storage-Konto, da
   
 2.  Erweitern Sie im **Objekt-Explorer**den Instanznamen und dann den Knoten **Datenbanken** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, wählen Sie **Tasks** und dann **Datenbank in Microsoft Azure-VM bereitstellen** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, wählen Sie **Tasks**und dann **Datenbank in Microsoft Azure-VM bereitstellen**aus.  
   
 ##  <a name="wizard_pages"></a> Assistentenseiten  
  Die folgenden Abschnitte enthalten zusätzliche Informationen zur Bereitstellungseinstellungen und Konfigurationsdetails für diesen Vorgang.  
@@ -247,7 +251,7 @@ Wählen Sie in der Dropdownliste die Datenbank aus, die bereitgestellt werden so
 Geben Sie in dem Feld einen freigegebenen Ordner an, auf den der Microsoft Azure-VM-Dienst zugreifen kann.  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure-Anmeldung  
- Melden Sie sich bei Microsoft Azure mit Ihrem Microsoft-Konto oder Unternehmenskonto an. Ihr Microsoft- oder Unternehmenskonto hat das Format einer E-Mail-Adresse, z. B. "patc@contoso.com". Weitere Informationen zu Azure-Anmeldeinformationen finden Sie unter [Microsoft-Konto für Organisationen – Häufig gestellte Fragen](http://technet.microsoft.com/jj592903) und [Behandeln von Problemen](https://technet.microsoft.com/dn197220).  
+ Melden Sie sich bei Microsoft Azure mit Ihrem Microsoft-Konto oder Unternehmenskonto an. Ihr Microsoft- oder Unternehmenskonto hat das Format einer E-Mail-Adresse wie z.B. patc@contoso.com. Weitere Informationen zu Azure-Anmeldeinformationen finden Sie unter [Microsoft-Konto für Organisationen – Häufig gestellte Fragen](http://technet.microsoft.com/jj592903) und [Behandeln von Problemen](https://technet.microsoft.com/dn197220).  
   
 ##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
@@ -274,7 +278,7 @@ Verbindungsdetails für den Server.
 Bestätigen, oder geben Sie den Namen einer neuen Datenbank an. Wenn der Datenbankname auf der SQL Server-Zielinstanz bereits vorhanden ist, wird empfohlen, einen anderen Datenbanknamen anzugeben.  
   
 ##  <a name="Summary"></a> Zusammenfassung
- Auf dieser Seite können Sie die für den Vorgang angegebenen Einstellungen überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  Durch das Klicken auf **Fertig stellen** wird die Seite **Bereitstellungsstatus** geöffnet.  Sie können den Status auch aus der Protokolldatei unter `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` ersehen.
+ Auf dieser Seite können Sie die für den Vorgang angegebenen Einstellungen überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  Durch das Klicken auf **Fertig stellen** wird die Seite **Bereitstellungsstatus** geöffnet.  Sie können den Status auch aus der Protokolldatei unter `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`ersehen.
   
  Möglicherweise sind manuelle Schritte erforderlich, um Datenbankdetails an die SQL Server-Datenbank auf der Windows Azure-VM bereitzustellen. Diese Schritte werden detailliert für Sie beschriebenen.  
   
@@ -283,8 +287,8 @@ Bestätigen, oder geben Sie den Namen einer neuen Datenbank an. Wenn der Datenba
   
  Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen.  
   
-## Siehe auch  
- [Cloud-Adapter für SQL Server](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Cloud-Adapter für SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Datenbank-Lebenszyklusverwaltung](../../relational-databases/database-lifecycle-management.md)   
  [Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ Bestätigen, oder geben Sie den Namen einer neuen Datenbank an. Wenn der Datenba
  [Vorbereitung auf die Migration zu SQL Server auf Microsoft Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

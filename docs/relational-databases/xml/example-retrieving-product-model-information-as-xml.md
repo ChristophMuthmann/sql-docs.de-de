@@ -1,27 +1,31 @@
 ---
-title: "Beispiel: Abrufen von Produktmodellinformationen als XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW-Modus, Abrufen von XML-Informationen, Beispiel"
+title: 'Beispiel: Abrufen von Produktmodellinformationen als XML | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31022f0351f09c226b5da65455ce5a327b955364
+ms.lasthandoff: 04/11/2017
+
 ---
-# Beispiel: Abrufen von Produktmodellinformationen als XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Beispiel: Abrufen von Produktmodellinformationen als XML
   Die folgende Abfrage gibt Produktmodellinformationen zurück. `RAW` -Modus wird in der `FOR XML` -Klausel angegeben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ GO
   
  `<row ProductModelID="119" Name="Bike Wash" />`  
   
- Sie können elementzentrierte XML-Daten abrufen, indem Sie die `ELEMENTS`-Direktive angeben.  
+ Sie können elementzentrierte XML-Daten abrufen, indem Sie die `ELEMENTS` -Direktive angeben.  
   
 ```  
 USE AdventureWorks2012;  
@@ -64,7 +68,7 @@ GO
 </row>  
 ```  
   
- Optional können Sie die `TYPE`-Direktive angeben, um die Ergebnisse als **XML**-Datentyp abzurufen. Die `TYPE`-Direktive ändert nicht den Inhalt der Ergebnisse. Nur der Datentyp der Ergebnisse wird geändert.  
+ Optional können Sie die `TYPE` -Direktive angeben, um die Ergebnisse als **XML** -Datentyp abzurufen. Die `TYPE` -Direktive ändert nicht den Inhalt der Ergebnisse. Nur der Datentyp der Ergebnisse wird geändert.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +80,7 @@ FOR XML RAW, TYPE ;
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

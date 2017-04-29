@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Puffer-Manager-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Puffer-Manager-Objekt"
-  - "SQLServer:Puffer-Manager"
+title: SQL Server, Puffer-Manager-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Puffer-Manager-Objekt
+# <a name="sql-server-buffer-manager-object"></a>SQL Server, Puffer-Manager-Objekt
   Das **Puffer-Manager** -Objekt stellt Leistungsindikatoren bereit, mit denen die Verwendung folgender Ressourcen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann:  
   
 -   Arbeitsspeicher zum Speichern von Datenseiten.  
@@ -36,7 +40,7 @@ caps.handback.revision: 36
   
 -   Wie oft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten vom Datenträger lesen muss. Verglichen mit anderen Vorgängen, wie z. B. dem Arbeitsspeicherzugriff, beansprucht die physische E/A viel Zeit. Durch Minimieren der physischen E/A kann die Abfrageleistung verbessert werden.  
   
-## Leistungsobjekte für den Puffer-Manager  
+## <a name="buffer-manager-performance-objects"></a>Leistungsobjekte für den Puffer-Manager  
  In dieser Tabelle werden die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Puffer-Manager** beschrieben.  
   
 |Puffer-Manager-Leistungsindikatoren von SQL Server|Description|  
@@ -56,7 +60,7 @@ caps.handback.revision: 36
 |**Erweiterungsseiten-Schreibvorgänge/Sekunde**|Anzahl der Seiten, die in die Pufferpoolerweiterungsdatei pro Sekunde geschrieben wurden.|  
 |**Anhalten der Freiliste/Sekunde**|Gibt die Anzahl der Anforderungen pro Sekunde an, die auf eine freie Seite warten mussten.|  
 |**Steigung des integralen Controllers**|Der vom integralen Controller für den Pufferpool zuletzt verwendete Steigungswert multipliziert mit -10 Milliarden.| 
-|**Verzögerte Schreibvorgänge/Sekunde**|Gibt die Anzahl der Puffer pro Sekunde an, die vom Puffer-Manager verzögert geschrieben wurden. Beim *LAZY WRITER*-Prozess (verzögertes Schreiben) handelt es sich um einen Systemprozess, der Batches mit alten, modifizierten Puffern (die auf den Datenträger zurückgeschrieben werden müssen, bevor der Puffer für eine andere Seite erneut verwendet werden kann) auf den Datenträger schreibt und Benutzerprozessen zur Verfügung stellt. Durch den LAZY WRITER-Prozess ist es nicht mehr nötig, häufig Prüfpunkte auszuführen, um verfügbare Puffer zu erhalten.|  
+|**Verzögerte Schreibvorgänge/Sekunde**|Gibt die Anzahl der Puffer pro Sekunde an, die vom Puffer-Manager verzögert geschrieben wurden. Beim *LAZY WRITER* -Prozess (verzögertes Schreiben) handelt es sich um einen Systemprozess, der Batches mit alten, modifizierten Puffern (die auf den Datenträger zurückgeschrieben werden müssen, bevor der Puffer für eine andere Seite erneut verwendet werden kann) auf den Datenträger schreibt und Benutzerprozessen zur Verfügung stellt. Durch den LAZY WRITER-Prozess ist es nicht mehr nötig, häufig Prüfpunkte auszuführen, um verfügbare Puffer zu erhalten.|  
 |**Lebenserwartung von Seiten**|Gibt die Anzahl der Sekunden an, für die eine Seite ohne Verweise im Pufferpool verbleibt.|  
 |**Suchvorgänge in Seiten/Sekunde**|Gibt die Anzahl der Anforderungen pro Sekunde zum Suchen einer Seite im Pufferpool an.|  
 |**Seitenlesevorgänge/Sekunde**|Gibt die Anzahl der pro Sekunde ausgegebenen Lesevorgänge für physische Datenbankseiten an. Diese Statistik zeigt die Gesamtanzahl der physischen Seitenlesevorgänge aller Datenbanken an. Da die physische E/A aufwendig ist, sind Sie eventuell in der Lage, die Kosten durch einen größeren Datencache, intelligente Indizes oder effizientere Abfragen oder durch Ändern des Datenbankentwurfs zu minimieren.|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Zielseiten**|Die ideale Anzahl von Seiten im Pufferpool.|
 
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQLServer: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

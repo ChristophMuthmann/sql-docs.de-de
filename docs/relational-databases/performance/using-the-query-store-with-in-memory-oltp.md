@@ -1,25 +1,29 @@
 ---
-title: "Verwenden des Abfragespeichers mit In-Memory-OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abfragespeicher, In-Memory"
+title: Verwenden des Abfragespeichers mit In-Memory OLTP | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden des Abfragespeichers mit In-Memory-OLTP
+# <a name="using-the-query-store-with-in-memory-oltp"></a>Verwenden des Abfragespeichers mit In-Memory-OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfragespeicher ermöglicht Ihnen das Überwachen der Leistung nativ kompilierten Codes für In-Memory-OLTP-Arbeitsauslastungen.  
@@ -32,7 +36,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
   
 -   Wenn der Abfragespeicher aktiviert ist, werden Abfragen, Pläne und Kompilierzeitstatistiken standardmäßig erfasst. Die Erfassung von Laufzeitstatistiken ist jedoch nicht aktiviert, sofern Sie diese nicht explizit mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) aktivieren.  
   
--   Wenn Sie *@new_collection_value* auf 0 festlegen, erfasst der Abfragespeicher keine Laufzeitstatistiken mehr für die betroffene Prozedur oder für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
+-   Wenn Sie *@new_collection_value* auf 0 festlegen, erfasst der Abfragespeicher keine Laufzeitstatistiken mehr für die betroffene Prozedur oder für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
   
 -   Der mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) konfigurierte Wert wird nicht beibehalten. Stellen Sie nach dem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicher, dass Sie die Statistikerfassung erneut überprüfen und konfigurieren.  
   
@@ -52,7 +56,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
   
 -   Speicherzuweisungsmetriken in [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) werden für nativ kompilierte Abfragen nicht aufgefüllt; ihre Werte sind immer 0. Die Speicherzuweisungsspalten sind die folgenden: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory und stdev_query_max_used_memory.  
   
-## Aktivieren und Verwenden des Abfragespeichers mit In-Memory-OLTP  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Aktivieren und Verwenden des Abfragespeichers mit In-Memory-OLTP  
  Das folgende einfache Beispiel veranschaulicht die Verwendung des Abfragespeichers mit In-Memory-OLTP in einem End-to-End-Benutzerszenario. In diesem Beispiel wird davon ausgegangen, dass für In-Memory-OLTP eine Datenbank (`MemoryOLTP`) aktiviert ist.  
     Weitere Informationen zu den Voraussetzungen für speicheroptimierte Tabellen finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
+ [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

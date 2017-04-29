@@ -1,36 +1,40 @@
 ---
-title: "Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Archivieren von E-Mail-Nachrichten und -Anlagen [SQL Server]"
-  - "Entfernen von E-Mail-Nachrichten und -Anlagen"
-  - "Datenbank-E-Mail [SQL Server], archivieren"
-  - "Speichern von E-Mail-Nachrichten und -Anlagen"
+title: Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
   Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb** -Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
   
 -   **Vorbereitungen:**  , [Voraussetzungen](#Prerequisites), [Empfehlungen](#Recommendations), [Berechtigungen](#Permissions)  
   
--   **Archivieren von Datenbank-E-Mail-Nachrichten und -Protokollen mithilfe von:**  [SQL Server-Agent](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Die neuen Tabellen zum Speichern der Archivdaten können sich in einer speziellen Archivdatenbank befinden. Alternativ können die Zeilen in eine Textdatei exportiert werden.  
    
 ###  <a name="Recommendations"></a> Empfehlungen  
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   Planen Sie die regelmäßige Ausführung des Auftrags.  
   
   
-## So erstellen Sie einen Auftrag für den SQL Server-Agent  
+## <a name="to-create-a-sql-server-agent-job"></a>So erstellen Sie einen Auftrag für den SQL Server-Agent  
   
-1.  Erweitern Sie im Objekt-Explorer den Knoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, und klicken Sie dann auf **Neuer Auftrag**.  
+1.  Erweitern Sie im Objekt-Explorer den Knoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, und klicken Sie dann auf **Neuer Auftrag**.  
   
 2.  Geben Sie im Dialogfeld **Neuer Auftrag** im Feld **Name** den Namen **Datenbank-E-Mail archivieren**ein.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So erstellen Sie einen Schritt zum Archivieren der Datenbank-E-Mail-Nachrichten  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>So erstellen Sie einen Schritt zum Archivieren der Datenbank-E-Mail-Nachrichten  
   
 1.  Klicken Sie auf der Seite **Schritte** auf **Neu**.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So erstellen Sie einen Schritt zum Archivieren der Datenbank-E-Mail-Anlagen  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>So erstellen Sie einen Schritt zum Archivieren der Datenbank-E-Mail-Anlagen  
   
 1.  Klicken Sie auf der Seite **Schritte** auf **Neu**.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So erstellen Sie einen Schritt zum Archivieren des Datenbank-E-Mail-Protokolls  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>So erstellen Sie einen Schritt zum Archivieren des Datenbank-E-Mail-Protokolls  
   
 1.  Klicken Sie auf der Seite **Schritte** auf **Neu**.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So erstellen Sie einen Schritt zum Entfernen der archivierten Zeilen aus der Datenbank-E-Mail  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>So erstellen Sie einen Schritt zum Entfernen der archivierten Zeilen aus der Datenbank-E-Mail  
   
 1.  Klicken Sie auf der Seite **Schritte** auf **Neu**.  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So erstellen Sie einen Schritt zum Entfernen der archivierten Elemente aus dem Datenbank-E-Mail-Ereignisprotokoll  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>So erstellen Sie einen Schritt zum Entfernen der archivierten Elemente aus dem Datenbank-E-Mail-Ereignisprotokoll  
   
 1.  Klicken Sie auf der Seite **Schritte** auf **Neu**.  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [Übersicht](#Process_Overview)  
   
-## So planen Sie die regelmäßige Ausführung des Auftrags  
+## <a name="to-schedule-the-job-to-run-periodically"></a>So planen Sie die regelmäßige Ausführung des Auftrags  
   
 1.  Klicken Sie im Dialogfeld **Neuer Auftrag** auf **Zeitpläne**.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 19
   
 5.  Wählen Sie im Bereich **Häufigkeit** die Optionen zum regelmäßigen Ausführen des Auftrags, z. B. am ersten Tag eines jeden Monats, aus.  
   
-6.  Klicken Sie im Bereich **Häufigkeit pro Tag** auf **Wird einmal um \<Uhrzeit> ausgeführt**.  
+6.  Klicken Sie im Bereich **Häufigkeit pro Tag** auf **Wird einmal um \<Uhrzeit>** ausgeführt.  
   
 7.  Überprüfen Sie, ob die anderen Optionen wie gewünscht konfiguriert sind, und klicken Sie dann auf **OK** , um den Zeitplan zu speichern.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [Übersicht](#Process_Overview)  
   
   
+

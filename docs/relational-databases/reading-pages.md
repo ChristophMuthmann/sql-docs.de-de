@@ -1,29 +1,33 @@
 ---
-title: "Lesen von Seiten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Seiten"
+title: Lesen von Seiten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lesen von Seiten
+# <a name="reading-pages"></a>Lesen von Seiten
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Die E/A-Aktivitäten einer Instanz von SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Lesevorgänge ein. Ein logischer Lesevorgang erfolgt immer dann, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] eine Seite aus dem [Puffercache](../relational-databases/memory-management-architecture-guide.md) anfordert. Wenn sich die Seite derzeit nicht im Puffercache befindet, wird ein physischer Lesevorgang durchgeführt, um die Seite vom Datenträger in den Puffercache zu kopieren.
+Die E/A-Aktivitäten einer Instanz von SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Lesevorgänge ein. Ein logischer Lesevorgang erfolgt immer dann, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] eine Seite aus dem [Puffercache](../relational-databases/memory-management-architecture-guide.md)anfordert. Wenn sich die Seite derzeit nicht im Puffercache befindet, wird ein physischer Lesevorgang durchgeführt, um die Seite vom Datenträger in den Puffercache zu kopieren.
 
-Die von einer Instanz des [!INCLUDE[ssDE](../includes/ssde-md.md)]s generierten Leseanforderungen werden vom relationalen Modul gesteuert und vom Speichermodul weiter optimiert. Das relationale Modul ermittelt die effizienteste Zugriffsmethode (Tabellenscan, Indexscan oder schlüsselgesteuerter Lesevorgang); die Zugriffsmethoden und Puffer-Manager-Komponenten des Speichermoduls bestimmen das allgemeine Muster der durchzuführenden Lesevorgänge und optimieren die Lesevorgänge, die für die Implementierung der Zugriffsmethode erforderlich sind. Der Thread, der den Batch ausführt, plant die Ausführung der Lesevorgänge.
+Die von einer Instanz des [!INCLUDE[ssDE](../includes/ssde-md.md)] s generierten Leseanforderungen werden vom relationalen Modul gesteuert und vom Speichermodul weiter optimiert. Das relationale Modul ermittelt die effizienteste Zugriffsmethode (Tabellenscan, Indexscan oder schlüsselgesteuerter Lesevorgang); die Zugriffsmethoden und Puffer-Manager-Komponenten des Speichermoduls bestimmen das allgemeine Muster der durchzuführenden Lesevorgänge und optimieren die Lesevorgänge, die für die Implementierung der Zugriffsmethode erforderlich sind. Der Thread, der den Batch ausführt, plant die Ausführung der Lesevorgänge.
 
 ## <a name="read-ahead"></a>Vorauslesen (Read-Ahead)
 Das [!INCLUDE[ssDE](../includes/ssde-md.md)] unterstützt einen Leistungsoptimierungsmechanismus, der als Read-Ahead oder Vorauslesen bekannt ist. Dieser Mechanismus antizipiert die für die Erfüllung eines Abfrageausführungsplans erforderlichen Daten und Indexseiten und platziert diese Seiten in den Puffercache, noch bevor sie von der Abfrage benötigt werden. Dies ermöglicht eine Überlappung von Berechnungs- und E/A-Aktivitäten, sodass sowohl die CPU- als auch die Datenträgerressourcen voll ausgenutzt werden können. 
@@ -33,7 +37,7 @@ Mithilfe des Read-Ahead-Mechanismus kann das [!INCLUDE[ssDE](../includes/ssde-md
 Für Datenseiten und Indexseiten ist je ein unterschiedlicher Read-Ahead-Mechanismus verfügbar.
 
 ### <a name="reading-data-pages"></a>Lesen von Datenseiten
-Tabellenscans, die zum Lesen von Datenseiten verwendet werden, sind in [!INCLUDE[ssDE](../includes/ssde-md.md)] sehr effizient. Die IAM-Seiten (Index Allocation Map) in einer SQL Server-Datenbank listen die von einer Tabelle oder einem Index verwendeten Datenblöcke auf. Das Speichermodul kann die IAM lesen, um eine geordnete Liste der Datenträgeradressen zu erstellen, die gelesen werden müssen. Hierdurch wird dem Speichermodul ermöglicht, E/A-Operationen in Form von langen, sequenziellen Lesevorgängen zu optimieren, die abhängig von ihrem Speicherort auf dem Datenträger nacheinander ausgeführt werden. Weitere Informationen zu IAM-Seiten finden Sie unter [Verwalten des von Objekten verwendeten Speicherplatzes](../relational-databases/pages-and-extents-architecture-guide.md).
+Tabellenscans, die zum Lesen von Datenseiten verwendet werden, sind in [!INCLUDE[ssDE](../includes/ssde-md.md)]sehr effizient. Die IAM-Seiten (Index Allocation Map) in einer SQL Server-Datenbank listen die von einer Tabelle oder einem Index verwendeten Datenblöcke auf. Das Speichermodul kann die IAM lesen, um eine geordnete Liste der Datenträgeradressen zu erstellen, die gelesen werden müssen. Hierdurch wird dem Speichermodul ermöglicht, E/A-Operationen in Form von langen, sequenziellen Lesevorgängen zu optimieren, die abhängig von ihrem Speicherort auf dem Datenträger nacheinander ausgeführt werden. Weitere Informationen zu IAM-Seiten finden Sie unter [Verwalten des von Objekten verwendeten Speicherplatzes](../relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="reading-index-pages"></a>Lesen von Indexseiten
 Im Speichermodul werden Indexseiten nacheinander in der Reihenfolge der Schlüssel gelesen. Diese Abbildung zeigt z. B. eine vereinfachte Darstellung eines Satzes von Blattseiten, die einen Satz von Schlüsseln enthalten, und den Zwischenindexknoten, der eine Zuordnung der Blattseiten vornimmt. Weitere Informationen zur Struktur von Seiten in einem Index finden Sie unter [Gruppierte Indexstrukturen](../relational-databases/pages-and-extents-architecture-guide.md).

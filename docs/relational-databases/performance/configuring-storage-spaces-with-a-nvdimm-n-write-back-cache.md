@@ -1,27 +1,31 @@
 ---
-title: "Konfigurieren von Speicherpl&#228;tzen mit NVDIMM-N-Zur&#252;ckschreibcache | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache | Microsoft Dokumentation"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Konfigurieren von Speicherpl&#228;tzen mit NVDIMM-N-Zur&#252;ckschreibcache
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
   Windows Server 2016 unterstützt NVDIMM-N-Geräte, die extrem schnelle Eingabe-/Ausgabevorgänge (E/A-Vorgänge) ermöglichen. Eine hervorragende Möglichkeit der Verwendung solcher Geräte ist ein Zurückschreibcache, um niedrige Schreiblatenzen zu erreichen. In diesem Thema wird erläutert, wie ein gespiegelter Speicherplatz mit einem gespiegelten NVDIMM-N-Zurücksückschreibcache als virtuelles Laufwerk eingerichtet werden kann, um das SQL Server-Transaktionsprotokoll zu speichern. Wenn Sie den Speicherplatz auch dazu verwenden möchten, Datentabellen oder andere Daten zu speichern, können Sie weitere Datenträger in den Speicherpool aufnehmen oder, wenn Isolation wichtig ist, mehrere Pools erstellen.  
   
  Ein Channel 9-Video zur Nutzung dieser Technik finden Sie unter [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466).  
   
-## Ermitteln der geeigneten Datenträger  
+## <a name="identifying-the-right-disks"></a>Ermitteln der geeigneten Datenträger  
  Ein Einrichten von Speicherplätzen in Windows Server 2016, insbesondere mit erweiterten Funktionen wie Zurückschreibcaches, lässt sich am einfachsten über PowerShell erledigen. Der erste Schritt besteht darin, zu ermitteln, welche Datenträger zu dem Speicherplätzepool gehören sollen, aus dem der virtuelle Datenträger erstellt wird. NVDIMM-Ns haben den Medientyp und Bustyp SCM (Storage Class Memory), der über das PowerShell-Cmdlet „Get-PhysicalDisk“ abgefragt werden kann.  
   
 ```  
@@ -45,9 +49,9 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![Auswählen von FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
-## Erstellen des Speicherpools  
+## <a name="creating-the-storage-pool"></a>Erstellen des Speicherpools  
  Über die Variable „$pd“, die die physischen Datenträger enthält, ist es einfach, den Speicherpool mit dem PowerShell-Cmdlet „New-StoragePool“ zu erstellen.  
   
 ```  
@@ -56,7 +60,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## Erstellen des virtuellen Datenträgers und Volumes  
+## <a name="creating-the-virtual-disk-and-volume"></a>Erstellen des virtuellen Datenträgers und Volumes  
  Nachdem ein Pool erstellt wurde, besteht der nächste Schritt darin, einen virtuellen Datenträger anzulegen und diesen zu formatieren. In diesem Fall wird nur 1 virtueller Datenträger erstellt, und das PowerShell-Cmdlet „New-Volume“ kann verwendet werden, um diesen Prozess zu optimieren:  
   
 ```  
@@ -65,18 +69,18 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
- Der virtuelle Datenträger wurde erstellt, initialisiert und mit NTFS formatiert. Der folgende Screenshot zeigt, dass der Datenträger eine Größe von 300 GB und eine Schreibcachegröße von 1 GB hat, die auf den NVDIMM-Ns gehostet wird.  
+ Der virtuelle Datenträger wurde erstellt, initialisiert und mit NTFS formatiert. Der folgende Screenshot zeigt, dass der Datenträger eine Größe von 300 GB und eine Schreibcachegröße von 1 GB hat, die auf den NVDIMM-Ns gehostet wird.  
   
  ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  Sie können dieses neue Volume jetzt auf dem Server sehen. Dieses Laufwerk können Sie nun für Ihr SQL Server-Transaktionsprotokoll verwenden.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Log_Space-Laufwerk](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicherplätze unter Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Speicherplätze unter Windows 2012 R2](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view or change the default locations for data and log files.md)  
+ [Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

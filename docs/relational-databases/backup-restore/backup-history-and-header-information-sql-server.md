@@ -1,46 +1,50 @@
 ---
-title: "Sicherungsverlauf und Headerinformationen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherungsheader [SQL Server]"
-  - "Verlaufstabellen [SQL Server]"
-  - "Dateiwiederherstellungen [SQL Server], Statusinformationen"
-  - "Sicherungssätze [SQL Server], Statusinformationen"
-  - "Auflisten gesicherter Datenbanken"
-  - "Statusinformationen [SQL Server], Sicherungen"
-  - "Sichern [SQL Server], Anzeigen von Sicherungssätzen"
-  - "Wiederherstellen [SQL Server], Verlaufstabellen"
-  - "Wiederherstellen von Datenbanken [SQL Server], Statusinformationen"
-  - "Sicherungen [SQL Server], Statusinformationen"
-  - "Header [SQL Server]"
-  - "Medienheader [SQL Server]"
-  - "Tabellen mit Sicherungsverläufen [SQL Server]"
-  - "Ansehen von Sicherungsinformationen"
-  - "Wiederherstellen von Dateien [SQL Server], Anzeigen von Sicherungsinformationen"
-  - "Wiederherstellen von Datenbanken [SQL Server], Verlaufstabellen"
-  - "Anzeigen von Sicherungsinformationen"
-  - "Wiederherstellen von Dateien [SQL Server], Statusinformationen"
-  - "Verlaufsinformationen [SQL Server], Sicherungen"
-  - "Datenbankwiederherstellungen [SQL Server], Verlaufstabellen"
-  - "Wiederherstellen von Verlaufstabellen [SQL Server]"
-  - "Auflisten gesicherter Dateien"
+title: Sicherungsverlauf und Headerinformationen (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sicherungsverlauf und Headerinformationen (SQL Server)
-  Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
+# <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
+  Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
   
 > [!IMPORTANT]  
 >  Sichern Sie **msdb** häufig, um das Risiko des Verlusts der aktuellen Änderungen am Sicherungs- und Wiederherstellungsverlauf zu minimieren. Informationen darüber, welche der Systemdatenbanken Sie sichern müssen, finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |Informationsanweisung|Tabelle mit Sicherungsverläufen|Beschreibung|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Gibt ein Resultset mit einer Liste mit Datenbank- und Protokolldateien zurück, die im angegebenen Sicherungssatz enthalten sind.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Auflisten der Datenbank- und Transaktionsprotokolldateien" weiter unten in diesem Thema.|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Ruft alle Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium ab. Das Ergebnis der Ausführung von RESTORE HEADERONLY ist ein Resultset.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Sicherungsheaderinformationen" weiter unten in diesem Thema.|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Gibt ein Resultset mit Informationen zu den Sicherungsmedien für ein angegebenes Sicherungsmedium zurück.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Medienheaderinformationen" weiter unten in diesem Thema.|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Gibt ein Resultset mit einer Liste mit Datenbank- und Protokolldateien zurück, die im angegebenen Sicherungssatz enthalten sind.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Auflisten der Datenbank- und Transaktionsprotokolldateien" weiter unten in diesem Thema.|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Ruft alle Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium ab. Das Ergebnis der Ausführung von RESTORE HEADERONLY ist ein Resultset.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Sicherungsheaderinformationen" weiter unten in diesem Thema.|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Gibt ein Resultset mit Informationen zu den Sicherungsmedien für ein angegebenes Sicherungsmedium zurück.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Medienheaderinformationen" weiter unten in diesem Thema.|  
   
 ##  <a name="ListDbTlogFiles"></a> Datenbank- und Transaktionsprotokolldateien  
  Zu den Informationen, die in den Datenbank- und Transaktionsprotokolldateien in einer Sicherung aufgelistet werden, zählen der logische Name, der physische Name, der Dateityp (Datenbank oder Protokoll), die Mitgliedschaft in Dateigruppen, die Dateigröße (in Bytes), die maximal zulässige Dateigröße und die vordefinierte Größe der Dateivergrößerung (in Bytes). Sie können diese nützlichen Informationen in folgenden Fällen verwenden, um die Namen der Dateien in einer Datenbanksicherung vor dem Wiederherstellen der Datenbanksicherung zu bestimmen:  
@@ -109,27 +113,27 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  Das Anzeigen des Medienheaders dauert nur kurze Zeit.  
   
- Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader) weiter unten in diesem Thema.  
+ Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader)weiter unten in diesem Thema.  
   
 ##  <a name="BackupHeader"></a> Sicherungsheaderinformationen  
- Mit dem Sicherungsheader werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen und zu allen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen auf dem Medium angezeigt. Zu den angezeigten Informationen zählen die Typen der verwendeten Sicherungsmedien, die Sicherungstypen (beispielsweise Datenbank, Transaktion, Datei oder differenzielle Datenbank) sowie Informationen zum Anfangs- und Enddatum als auch zur Anfangs- und Beendigungszeit der Sicherung. Diese Informationen sind dann nützlich, wenn Sie bestimmen müssen, welcher Sicherungssatz auf dem Band wiederhergestellt werden soll oder welche Sicherungen auf dem Medium enthalten sind.  
+ Mit dem Sicherungsheader werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungssätzen und zu allen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungssätzen auf dem Medium angezeigt. Zu den angezeigten Informationen zählen die Typen der verwendeten Sicherungsmedien, die Sicherungstypen (beispielsweise Datenbank, Transaktion, Datei oder differenzielle Datenbank) sowie Informationen zum Anfangs- und Enddatum als auch zur Anfangs- und Beendigungszeit der Sicherung. Diese Informationen sind dann nützlich, wenn Sie bestimmen müssen, welcher Sicherungssatz auf dem Band wiederhergestellt werden soll oder welche Sicherungen auf dem Medium enthalten sind.  
   
 > [!NOTE]  
 >  Das Anzeigen der Sicherungsheaderinformationen kann bei Bändern mit großen Kapazitäten einige Zeit in Anspruch nehmen, da das gesamte Medium gescannt werden muss, damit Informationen zu einzelnen Sicherungen auf dem Medium angezeigt werden können.  
   
- Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader) weiter unten in diesem Thema.  
+ Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader)weiter unten in diesem Thema.  
   
-### Wiederherzustellender Sicherungssatz  
+### <a name="which-backup-set-to-restore"></a>Wiederherzustellender Sicherungssatz  
  Anhand der Informationen im Sicherungsheader können Sie den wiederherzustellenden Sicherungssatz identifizieren. Das Datenbankmodul nummeriert jeden Sicherungssatz auf den Sicherungsmedien. Dadurch können Sie den wiederherzustellenden Sicherungssatz mithilfe seiner Position auf dem Medium identifizieren. Beispielsweise enthalten die folgenden Medien drei Sicherungssätze.  
   
- ![Sicherungsmedien mit SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Sicherungsmedien mit SQL Server-Sicherungssätzen")  
+ ![Sichern von Medien mit SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Backup media containing SQL Server backup sets")  
   
  Um einen bestimmten Sicherungssatz wiederherzustellen, müssen Sie die Positionsnummer des wiederherzustellenden Sicherungssatzes angeben. Geben Sie beispielsweise 2 als wiederherzustellenden Sicherungssatz an, um den zweiten Sicherungssatz wiederherzustellen.  
   
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Vergleich von Medienheader- und Sicherungsheaderinformationen  
  Die folgende Abbildung stellt ein Beispiel für die Unterschiede beim Anzeigen von Sicherungsheader- und Medienheaderinformationen dar. Für das Abrufen des Medienheaders ist lediglich das Auslesen von Informationen vom Anfang des Bands erforderlich. Dagegen ist für das Abrufen des Sicherungsheaders das Scannen des gesamten Bands erforderlich, damit der Header jedes Sicherungssatzes ausgelesen werden kann.  
   
- ![Mediensatz mit drei SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-label.gif "Mediensatz mit drei SQL Server-Sicherungssätzen")  
+ ![Satz von Medien mit drei SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-label.gif "Media set containing three SQL Server backup sets")  
   
 > [!NOTE]  
 >  Beim Verwenden von Mediensätzen mit mehreren Medienfamilien werden die Medienheader- und Sicherungssätze in alle Medienfamilien geschrieben. Darum ist es nur notwendig, eine einzelne Medienfamilie für diese Berichterstellungsvorgänge zur Verfügung zu stellen.  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **So zeigen Sie die Daten und Protokolldateien in einem Sicherungssatz an**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **So zeigen Sie die Medienheaderinformationen an**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **So zeigen Sie die Sicherungsheaderinformationen an**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Anzeigen der Inhalte eines Sicherungsbands oder einer -datei &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **So zeigen Sie die Medienheaderinformationen an**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **So zeigen Sie die Sicherungsheaderinformationen an**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Anzeigen der Inhalte eines Sicherungsbands oder einer -datei &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [Anzeigen der Daten und Protokolldateien in einem Sicherungssatz &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **So überprüfen Sie eine Sicherung**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

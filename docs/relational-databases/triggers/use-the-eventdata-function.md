@@ -1,25 +1,29 @@
 ---
-title: "Verwenden der EVENTDATA-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA-Funktion"
-  - "DDL-Trigger, EVENTDATA-Funktion"
+title: Verwenden der EVENTDATA-Funktion | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden der EVENTDATA-Funktion
+# <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen **xml** -Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
   
 -   Zeitpunkt des Ereignisses.  
@@ -59,7 +63,7 @@ AS
 >   
 >  Ruft die Anwendung die `TSQLCommand`-Daten des CREATE_TABLE-Ereignisses ab, sollten Sie beachten, dass diese Daten möglicherweise doppelt angezeigt werden: einmal, wenn das CREATE_SCHEMA-Ereignis stattfindet, und ein zweites Mal, wenn das CREATE_TABLE-Ereignis stattfindet. Vermeiden Sie das Erstellen von DDL-Triggern sowohl für die CREATE_SCHEMA-Ereignisse als auch für die <schema_element>-Texte entsprechender CREATE SCHEMA-Definitionen, oder integrieren Sie eine Logik in die Anwendung, damit dasselbe Ereignis nicht doppelt verarbeitet wird.  
   
-## ALTER TABLE-Ereignis und ALTER DATABASE-Ereignis  
+## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE-Ereignis und ALTER DATABASE-Ereignis  
  Die Ereignisdaten für das ALTER_TABLE-Ereignis und das ALTER DATABASE-Ereignis umfassen auch die Namen und Typen anderer Objekte, die durch die DDL-Anweisung betroffen sind, sowie die Aktionen, die für diese Objekte ausgeführt werden. Die Daten für das ALTER_TABLE-Ereignis umfassen die Namen der Spalten, Einschränkungen oder Trigger, die durch die ALTER TABLE-Anweisung betroffen sind, sowie die Aktion (Erstellen, Ändern, Löschen, Aktivieren oder Deaktivieren), die für die betroffenen Objekte ausgeführt wurde. Die Daten für das ALTER_DATABASE-Ereignis umfassen die Namen aller Dateien oder Dateigruppen, die durch die ALTER_DATABASE-Anweisung betroffen sind, sowie die Aktion (Erstellen, Ändern oder Löschen), die für die betroffenen Objekte ausgeführt wurde.  
   
  Der folgende DDL-Trigger wird beispielsweise in der AdventureWorks-Beispieldatenbank erstellt:  
@@ -81,9 +85,9 @@ ROLLBACK;
 ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;   
 ```  
   
- Die EVENTDATA()-Anweisung im DDL-Trigger erfasst den Text der `ALTER TABLE`-Anweisung, der nicht zulässig ist.  
+ Die EVENTDATA()-Anweisung im DDL-Trigger erfasst den Text der `ALTER TABLE` -Anweisung, der nicht zulässig ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Mithilfe der EVENTDATA-Funktion können Sie ein Ereignisprotokoll erstellen. Im folgenden Beispiel wird eine Tabelle zum Speichern von Ereignisinformationen erstellt. Anschließend wird ein DDL-Trigger für die aktuelle Datenbank erstellt, die bei jedem Auftreten eines DDL-Ereignisses auf Datenbankebene die Tabelle mit den folgenden Informationen auffüllt:  
   
 -   Zeitpunkt des Ereignisses (mithilfe der GETDATE-Funktion)  
@@ -124,11 +128,11 @@ GO
 ```  
   
 > [!NOTE]  
->  Zum Zurückgeben von Ereignisdaten wird die Verwendung der XQuery **value()**-Methode anstelle der **query()**-Methode empfohlen. Bei der **query()**-Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen (Wagenrücklauf/Zeilenvorschub) in der Ausgabe zurückgegeben, während bei der **value()**-Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
+>  Zum Zurückgeben von Ereignisdaten wird die Verwendung der XQuery **value()** -Methode anstelle der **query()** -Methode empfohlen. Bei der **query()** -Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen (Wagenrücklauf/Zeilenvorschub) in der Ausgabe zurückgegeben, während bei der **value()** -Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
   
- Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabseTriggerLog**, und wählen Sie **Skript für Datenbanktrigger als** aus. Standardmäßig ist der DDL-Trigger **ddlDatabseTriggerLog** deaktiviert.  
+ Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabseTriggerLog** , und wählen Sie **Skript für Datenbanktrigger als**aus. Standardmäßig ist der DDL-Trigger **ddlDatabseTriggerLog** deaktiviert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md)   
  [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md)  
   

@@ -1,28 +1,32 @@
 ---
-title: "Verweisen auf die integrierte XML-Schemaauflistung (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML-Schemaauflistungen (sys) [SQL Server]"
-  - "Schemaauflistungen [SQL Server], vordefiniert"
-  - "Vordefinierte XM-Schemaauflistungen [SQL Server]"
-  - "XML-Schemaauflistungen [SQL Server], vordefiniert"
-  - "Integrierte XML-Schemaauflistungen [SQl Server]"
+title: Verweisen auf die integrierte XML-Schemaauflistung (sys) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verweisen auf die integrierte XML-Schemaauflistung (sys)
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
   Jede Datenbank, die Sie erstellen, besitzt eine vordefinierte **sys** -XML-Schemaauflistung im relationalen **sys** -Schema. Es reserviert diese vordefinierten Schemas, und der Zugriff darauf kann aus einer beliebigen, von einem Benutzer erstellten XML-Schemaauflistung erfolgen. Die in diesen vordefinierten Schemas verwendeten Präfixe sind in XQuery von Bedeutung. Nur **xml** ist ein reserviertes Präfix.  
   
 ```  
@@ -36,7 +40,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- Beachten Sie, dass der **sqltypes**-Namespace Komponenten enthält, auf die aus jeder beliebigen, von einem Benutzer erstellten XML-Schemaauflistung verwiesen werden kann. Sie können das **sqltypes** -Schema von dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=31850)herunterladen. Die folgenden Komponenten sind z. B. integriert:  
+ Beachten Sie, dass der **sqltypes** -Namespace Komponenten enthält, auf die aus jeder beliebigen, von einem Benutzer erstellten XML-Schemaauflistung verwiesen werden kann. Sie können das **sqltypes** -Schema von dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=31850)herunterladen. Die folgenden Komponenten sind z. B. integriert:  
   
 -   XSD-Typen  
   
@@ -148,7 +152,7 @@ GO
   
  Der Ausdruck `instance of sqltypes:varchar?`gibt TRUE zurück, weil der Wert des Elements <`root`> einem Typ entspricht, der gemäß dem Schema, das der `@var`-Variablen zugeordnet ist, von **varchar** abgeleitet wurde.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

@@ -1,35 +1,39 @@
 ---
-title: "Datenbankeigenschaften (Seite Wird gespiegelt) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.mirroring.f1"
+title: Datenbankeigenschaften (Seite Wird gespiegelt) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 86
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c43ec3f97cdf1ddfc325c3a2f7ca75400a54c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datenbankeigenschaften (Seite Wird gespiegelt)
+# <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
   Greifen Sie von der Prinzipaldatenbank aus auf diese Seite zu, und verwenden Sie sie zum Konfigurieren und Ändern der Eigenschaften der Datenbankspiegelung für eine Datenbank. Verwenden Sie die Seite auch, um den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung zu starten, um den Status einer Spiegelungssitzung anzuzeigen und um die Datenbank-Spiegelungssitzung anzuhalten oder zu entfernen.  
   
 > **WICHTIG!** Die Sicherheit muss konfiguriert werden, bevor die Spiegelung gestartet werden kann. Wenn die Spiegelung noch nicht gestartet wurde, müssen Sie zunächst den Assistenten verwenden. Die Textfelder der Seite **Spiegelung** sind deaktiviert, bis der Assistent abgeschlossen wurde.  
   
  **Konfigurieren der Datenbankspiegelung mithilfe von SQL Server Management Studio**  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Sicherheit konfigurieren**  
- Klicken Sie auf diese Schaltfläche, um den **Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung** zu starten.  
+ Klicken Sie auf diese Schaltfläche, um den **Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung**zu starten.  
   
  Wenn der Assistent erfolgreich beendet wird, hängt die durchzuführende Aktion auf folgende Weise davon ab, ob die Spiegelung bereits begonnen wurde:  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 86
 |Wenn die Spiegelung begonnen wurde.|Wenn der Zeugenserver im Assistenten geändert wurde, wird diese Einstellung entsprechend festgelegt.|  
   
  **Server-Netzwerkadressen**  
- Eine entsprechende Option ist für jede Serverinstanz vorhanden: **Prinzipal**, **Spiegel** und **Zeuge**.  
+ Eine entsprechende Option ist für jede Serverinstanz vorhanden: **Prinzipal**, **Spiegel**und **Zeuge**.  
   
  Die Server-Netzwerkadressen der Serverinstanzen werden automatisch angegeben, wenn Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung abschließen. Nach Abschluss des Assistenten können Sie die Netzwerkadressen bei Bedarf manuell ändern.  
   
@@ -53,11 +57,11 @@ caps.handback.revision: 86
   
 -   *port* ist der Port, der dem Endpunkt der Serverinstanz für die Datenbankspiegelung zugewiesen ist.  
   
-     Um an einer Datenbankspiegelung teilnehmen zu können, ist für einen Server ein Datenbankspiegelungs-Endpunkt erforderlich. Wenn Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung verwenden, um die erste Spiegelungssitzung für eine Serverinstanz einzurichten, wird dieser Endpunkt automatisch vom Assistenten erstellt und für die Verwendung der Windows-Authentifizierung konfiguriert. Informationen zum Verwenden des Assistenten mit zertifikatbasierter Authentifizierung finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+     Um an einer Datenbankspiegelung teilnehmen zu können, ist für einen Server ein Datenbankspiegelungs-Endpunkt erforderlich. Wenn Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung verwenden, um die erste Spiegelungssitzung für eine Serverinstanz einzurichten, wird dieser Endpunkt automatisch vom Assistenten erstellt und für die Verwendung der Windows-Authentifizierung konfiguriert. Informationen zum Verwenden des Assistenten mit zertifikatbasierter Authentifizierung finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
     >**WICHTIG!**  Jede Serverinstanz erfordert genau einen Datenbankspiegelungs-Endpunkt, unabhängig von der Anzahl der zu unterstützenden Spiegelungssitzungen.  
   
- Für eine Serverinstanz auf einem Computersystem namens `DBSERVER9`, dessen Endpunkt den Port `7022` verwendet, ist beispielsweise die folgende Netzwerkadresse möglich:  
+ Für eine Serverinstanz auf einem Computersystem namens `DBSERVER9` , dessen Endpunkt den Port `7022`verwendet, ist beispielsweise die folgende Netzwerkadresse möglich:  
   
 ```  
 TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022  
@@ -83,7 +87,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Klicken Sie auf **Spiegeln starten** , um die Sitzung einzuleiten. Vom Datenbankmodul wird versucht, eine automatische Verbindung mit dem Spiegelungspartner herzustellen, um zu überprüfen, ob der Spiegelserver ordnungsgemäß konfiguriert ist, und um die Spiegelungssitzung zu beginnen. Wenn die Spiegelung gestartet werden kann, wird ein Auftrag zum Überwachen der Datenbank erstellt.  
   
  **Anhalten** oder **Fortsetzen**  
- Klicken Sie während einer Datenbank-Spiegelungssitzung auf **Anhalten**, um die Sitzung anzuhalten. Wenn Sie in der Bestätigungsaufforderung auf **Ja**klicken, wird die Sitzung angehalten und die Schaltfläche erhält die Bezeichnung **Fortsetzen**. Klicken Sie zum Fortsetzen der Sitzung auf **Fortsetzen**.  
+ Klicken Sie während einer Datenbank-Spiegelungssitzung auf **Anhalten** , um die Sitzung anzuhalten. Wenn Sie in der Bestätigungsaufforderung auf **Ja**klicken, wird die Sitzung angehalten und die Schaltfläche erhält die Bezeichnung **Fortsetzen**. Klicken Sie zum Fortsetzen der Sitzung auf **Fortsetzen**.  
   
  Informationen über die Auswirkung des Anhaltens einer Sitzung finden Sie unter [Anhalten und Fortsetzen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md).  
   
@@ -92,12 +96,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Spiegeln entfernen**  
  Klicken Sie auf der Prinzipalserverinstanz auf diese Schaltfläche, um die Sitzung zu beenden und die Spiegelungskonfiguration aus den Datenbanken zu entfernen. Sie werden zur Bestätigung aufgefordert. Wenn Sie auf **Ja**klicken, wird die Sitzung beendet und das Spiegeln entfernt. Informationen zu den Auswirkungen des Entfernens der Datenbankspiegelung finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-> **HINWEIS:**Falls es sich um die einzige gespiegelte Datenbank auf der Serverinstanz handelt, wird der Überwachungsauftrag entfernt.  
+> **HINWEIS:** Falls es sich um die einzige gespiegelte Datenbank auf der Serverinstanz handelt, wird der Überwachungsauftrag entfernt.  
   
  **Failover**  
  Klicken Sie hier, um manuell ein Failover der Prinzipaldatenbank zur Spiegeldatenbank ausführen.  
   
-> **HINWEIS:**Wenn die Spiegelungssitzung im Modus für hohe Leistung ausgeführt wird, wird das manuelle Failover nicht unterstützt. Zum Ausführen eines manuellen Failovers müssen Sie zuerst den Betriebsmodus in **Hohe Sicherheit ohne automatisches Failover (synchron)** ändern. Nach Abschluss des Failovers können Sie den Modus auf der neuen Prinzipalserverinstanz wieder in **Hohe Leistung (asynchron)** ändern.  
+> **HINWEIS:** Wenn die Spiegelungssitzung im Modus für hohe Leistung ausgeführt wird, wird das manuelle Failover nicht unterstützt. Zum Ausführen eines manuellen Failovers müssen Sie zuerst den Betriebsmodus in **Hohe Sicherheit ohne automatisches Failover (synchron)**ändern. Nach Abschluss des Failovers können Sie den Modus auf der neuen Prinzipalserverinstanz wieder in **Hohe Leistung (asynchron)** ändern.  
   
  Es wird eine Bestätigungsaufforderung angezeigt. Wenn Sie auf **Ja**klicken, wird versucht, ein Failover auszuführen. Der Prinzipalserver versucht als erstes, mithilfe der Windows-Authentifizierung eine Verbindung mit dem Spiegelserver herzustellen. Wenn die Windows-Authentifizierung nicht funktioniert, zeigt der Prinzipalserver das Dialogfeld **Verbindung mit Server herstellen** an. Wenn der Spiegelserver die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, wählen Sie im Feld **Authentifizierung** die Option **SQL Server-Authentifizierung** aus. Geben Sie im Textfeld **Anmeldename** das Anmeldekonto an, mit dem auf dem Spiegelserver eine Verbindung hergestellt werden soll, und geben Sie im Textfeld **Kennwort** das Kennwort für dieses Konto an.  
   
@@ -137,10 +141,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Aktualisieren**  
  Klicken Sie auf diese Schaltfläche, um das Feld **Status** zu aktualisieren.  
   
-## Hinweise  
- Wenn Sie sich mit Datenbankspiegelung nicht auskennen, finden Sie Informationen unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie sich mit Datenbankspiegelung nicht auskennen, finden Sie Informationen unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-### Hinzufügen eines Zeugen zu einer vorhandenen Sitzung  
+### <a name="adding-a-witness-to-an-existing-session"></a>Hinzufügen eines Zeugen zu einer vorhandenen Sitzung  
  Sie können einer vorhandenen Sitzung einen Zeugen hinzufügen oder einen vorhandenen Zeugen ersetzen. Wenn Sie die Server-Netzwerkadresse des Zeugen kennen, können Sie sie manuell in das Feld **Zeuge** eingeben. Wenn Sie die Server-Netzwerkadresse des Zeugen nicht kennen, verwenden Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung zum Konfigurieren des Zeugen. Nachdem sich die Adresse im Feld befindet, stellen Sie sicher, dass die Option **Hohe Sicherheit mit automatischem Failover (synchron)** ausgewählt ist.  
   
  Nach dem Konfigurieren eines neuen Zeugen müssen Sie auf **OK** klicken, um der Spiegelungssitzung diesen neuen Zeugen hinzuzufügen.  
@@ -149,12 +153,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-### Entfernen eines Zeugen  
+### <a name="removing-a-witness"></a>Entfernen eines Zeugen  
  Löschen Sie die Server-Netzwerkadresse aus dem Feld **Zeuge** , um einen Zeugen zu entfernen. Wenn Sie vom Modus für hohe Sicherheit mit automatischem Failover zum Modus zur hohe Leistung wechseln, wird das Feld **Zeuge** automatisch gelöscht.  
   
  Nach dem Löschen des Zeugen müssen Sie auf **Ok** klicken, um ihn aus der Spiegelungssitzung zu entfernen.  
   
-### Überwachen der Datenbankspiegelung  
+### <a name="monitoring-database-mirroring"></a>Überwachen der Datenbankspiegelung  
  Zum Überwachen der gespiegelten Datenbanken auf einer Serverinstanz können Sie entweder den Datenbankspiegelungs-Monitor oder die gespeicherte Systemprozedur „sp_dbmmonitorresults“ verwenden.  
   
  **So überwachen Sie gespiegelte Datenbanken**  
@@ -169,12 +173,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Siehe auch  
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
@@ -183,3 +187,4 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

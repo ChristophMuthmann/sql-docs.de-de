@@ -1,24 +1,28 @@
 ---
-title: "Spalten mit Namen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Namen [SQL Server], Spalten mit"
+title: Spalten mit Namen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spalten mit Namen
+# <a name="columns-with-a-name"></a>Spalten mit Namen
   Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
   
 -   Der Spaltenname beginnt mit einem @-Zeichen.  
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
-## Der Spaltenname beginnt mit einem @-Zeichen  
+## <a name="column-name-starts-with-an-at-sign-"></a>Der Spaltenname beginnt mit einem @-Zeichen  
  Wenn der Spaltenname mit einem @-Zeichen beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des <`row`>-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## Der Spaltenname beginnt nicht mit einem @-Zeichen  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>Der Spaltenname beginnt nicht mit einem @-Zeichen  
  Wenn der Spaltenname nicht mit einem @-Zeichen beginnt, es sich nicht um einen der XPATH-Knotentests handelt und er keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein Unterelement des Zeilenelements ist, standardmäßig <`row`>.  
   
  Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem <`row`>-Element das untergeordnete <`result`>-Element hinzugefügt.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## Der Spaltenname beginnt nicht mit einem @-Zeichen und enthält einen Schrägstrich (/)  
- Wenn der Spaltenname nicht mit einem @-Zeichen beginnt, jedoch einen Schrägstrich (/) enthält, zeigt der Spaltenname eine XML-Hierarchie. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n***“ lautet, stellt „Name***i***“ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn „Name***n***“ mit „@“ beginnt, wird er einem Attribut des „Name***n-1***“-Elements zugeordnet.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Der Spaltenname beginnt nicht mit einem @-Zeichen und enthält einen Schrägstrich (/)  
+ Wenn der Spaltenname nicht mit einem @-Zeichen beginnt, jedoch einen Schrägstrich (/) enthält, zeigt der Spaltenname eine XML-Hierarchie. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n*** “ lautet, stellt „Name***i*** “ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn „Name***n*** “ mit „@“ beginnt, wird er einem Attribut des „Name***n-1*** “-Elements zugeordnet.  
   
  Die folgende Abfrage gibt beispielsweise die ID und den Namen eines Mitarbeiters als komplexes Element EmpName zurück, welches zwei Vornamen und einen Nachnamen enthält (FirstName, MiddleName, LastName).  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## Mehrere Spalten verwenden dasselbe Pfadpräfix  
+## <a name="several-columns-share-the-same-path-prefix"></a>Mehrere Spalten verwenden dasselbe Pfadpräfix  
  Wenn mehrere aufeinander folgende Spalten dasselbe Pfadpräfix gemeinsam haben, werden sie unter demselben Namen gruppiert. Werden verschiedene Namespacepräfixe verwendet, wird ein Pfad als verschieden betrachtet, auch wenn die Präfixe an denselben Namespace gebunden sind. In der vorherigen Abfrage verfügen die Spalten FirstName, MiddleName und LastName über das gleiche EmpName-Präfix. Daher werden sie als untergeordnete Elemente des <`EmpName`>-Elements hinzugefügt. Dies war auch der Fall, als Sie das <`Address`>-Element im vorherigen Beispiel erstellt haben.  
   
-## Eine Spalte hat einen unterschiedlichen Namen  
+## <a name="one-column-has-a-different-name"></a>Eine Spalte hat einen unterschiedlichen Namen  
  Wenn eine Spalte in einer Reihe von Spalten einen anderen Namen aufweist, wird die Gruppierung unterbrochen, wie in der folgenden, geänderten Abfrage gezeigt. Die Abfrage unterbricht die Gruppierung von FirstName, MiddleName und LastName, die in der vorherigen Abfrage angegeben waren, durch Hinzufügen der Adressspalten zwischen der FirstName- und der MiddleName-Spalte.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

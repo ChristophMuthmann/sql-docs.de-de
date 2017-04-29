@@ -1,36 +1,40 @@
 ---
-title: "Replikation mit Abonnenten von speicheroptimierten Tabellen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Replikation mit Abonnenten von speicheroptimierten Tabellen | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replikation mit Abonnenten von speicheroptimierten Tabellen
+# <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Die Tabellen, die als Momentaufnahmen- und Transaktionsreplikationsabonnenten fungieren, können (mit Ausnahme der Peer-zu-Peer-Transaktionsreplikation) als speicheroptimierte Tabellen konfiguriert werden. Andere Replikationskonfigurationen sind mit speicheroptimierten Tabellen nicht kompatibel. Diese Funktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]verfügbar.  
   
 ## <a name="two-configurations-are-required"></a>Zwei Konfigurationen sind erforderlich.  
   
--   **Konfigurieren der Abonnentendatenbank zur Unterstützung der Replikation in Speicheroptimierte Tabellen**  
+-   **Konfigurieren der Abonnentendatenbank für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
-     Legen Sie die **@memory_optimized** Eigenschaft **"true"**, mithilfe von [Sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [Sp_changesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Legen Sie die **@memory_optimized**-Eigenschaft auf **true** fest, indem Sie [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) verwenden.  
   
--   **Konfigurieren des Artikels für die Replikation in Speicheroptimierte Tabellen unterstützen**  
+-   **Konfigurieren des Artikels für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
-     Legen Sie die `@schema_option = 0x40000000000` Option für den Artikel mit [Sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) oder [Sp_changearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md).  
+     Legen Sie die `@schema_option = 0x40000000000`-Option für den Artikel mit [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) oder [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) fest.  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>So konfigurieren Sie eine speicheroptimierte Tabelle als Abonnent  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 23
   
 2.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Falls Sie die Konfiguration [!INCLUDE[tsql](../../includes/tsql-md.md)] Festlegen der **@schema_option** Parameter von der **Sp_addarticle** gespeicherten Prozedur   
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf   
     **0x40000000000**verfügbar.  
   
 3.  Legen Sie im Fenster mit den Artikeleigenschaften **Enable Memory optimization** auf **true**fest.  
@@ -53,16 +57,16 @@ caps.handback.revision: 23
   
 1.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Abonnementeigenschaften, und legen Sie **Memory Optimized Subscription** auf **true**fest. Die Änderungen werden erst nach der erneuten Initialisierung des Abonnements wirksam.  
   
-     Falls Sie die Konfiguration [!INCLUDE[tsql](../../includes/tsql-md.md)] Legen Sie den neuen **@memory_optimized** Parameter von der **Sp_addsubscription** gespeicherte Prozedur auf "true".  
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vornehmen, legen Sie den neuen **@memory_optimized** der gespeicherten **sp_addsubscription** -Prozedur auf "true" fest.  
   
 2.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Artikeleigenschaften einer Veröffentlichung, und legen Sie **Enable Memory optimization** auf "true" fest.  
   
-     Falls Sie die Konfiguration [!INCLUDE[tsql](../../includes/tsql-md.md)] Festlegen der **@schema_option** Parameter von der **Sp_addarticle** gespeicherten Prozedur   
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf   
     **0x40000000000**verfügbar.  
   
 3.  Speicheroptimierte Tabellen unterstützen keine gruppierten Indizes. Daher müssen gruppierte Indizes bei der Replikation auf dem Ziel in nicht gruppierte Indizes konvertiert werden. Hierzu muss der Parameter **Convert clustered index to nonclustered for memory optimized article** auf "true" festgelegt werden.  
   
-     Falls Sie die Konfiguration [!INCLUDE[tsql](../../includes/tsql-md.md)] Legen Sie die **@schema_option** Parameter von der **Sp_addarticle** gespeicherten Systemprozedur  **0x0000080000000000**.  
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf  **0x0000080000000000**verfügbar.  
   
 4.  Generieren Sie die Momentaufnahme erneut.  
   
@@ -81,15 +85,16 @@ caps.handback.revision: 23
  
 -   Tabellen, die mit speicheroptimierten Tabellen auf Abonnenten repliziert werden, sind auf die Datentypen beschränkt, die für speicheroptimierte Tabellen zulässig sind. Weitere Informationen finden Sie unter [Unterstützte Datentypen für In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Nicht alle Transact-SQL-Funktionen sind mit speicheroptimierten Tabellen unterstützt. Finden Sie unter [Transact-SQL von In-Memory OLTP nicht unterstützte Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) Details.  
+-   Nicht alle Transact-SQL-Funktionen werden von speicheroptimierten Tabellen unterstützt. Weitere Einzelheiten finden Sie unter [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
-##  <a name="a-nameschemaa-modifying-a-schema-file"></a><a name="Schema"></a> Ändern einer Schemadatei  
+##  <a name="Schema"></a> Ändern einer Schemadatei  
   
 -   Bei Verwendung der Option für speicheroptimierte Tabellen `DURABILITY = SCHEMA_AND_DATA` muss die Tabelle einen nicht gruppierten Primärschlüsselindex aufweisen.  
   
 -   ANSI_PADDING muss auf ON festgelegt sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsfunktionen und-Tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
+ [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
+

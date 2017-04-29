@@ -1,34 +1,38 @@
 ---
-title: "Fehler- und Ereignisreferenz (Replikation) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Fehler [SQL Server-Replikation], Problembehandlung"
-  - "Problembehandlung [SQL Server-Replikation], Fehler"
-  - "Replikation [SQL Server], Problembehandlung"
-  - "Fehler [SQL Server-Replikation]"
-  - "Fehler- und Ereignisreferenz [SQL Server-Replikation]"
+title: Fehler- und Ereignisreferenz (Replikation) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fehler- und Ereignisreferenz (Replikation)
+# <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
   Dieser Abschnitt der Dokumentation enthält Informationen zu Ursachen und Lösungen für eine Reihe von Fehlern, die im Zusammenhang mit der Replikation auftreten können.  
   
 |Fehler|MessageBox|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Legen Sie Zeile mit doppeltem Schlüssel kann nicht in Objekt ' %. * ls mit eindeutigen Index ' %.\*ls.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Legen Sie doppelten Schlüssel kann nicht in Objekt ' %.\*ls.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|Die %1!s!-Datenbank wurde wiederhergestellt; beim Wiederherstellen/Entfernen der Replikation wurde jedoch ein Fehler erkannt. Die Datenbank ist offline. Weitere Informationen finden Sie im Thema 'MSSQL_ENG003165' in der SQL Server-Onlinedokumentation.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Das %1!s! von '%3!s!' (%2!s!) ist nicht möglich, da das Objekt für die Replikation verwendet wird.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|Das %1!s!-Objekt '%2!s!' kann nicht geändert werden, da es für die Replikation veröffentlicht wird.|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Fehler bei der Anmeldung für Benutzer ' %. * ls'.%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Fehler bei der Anmeldung für den Benutzer „%.*ls'.%.\*ls“|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|Nur jeweils ein Protokolllese-Agent oder eine protokollbezogene Prozedur (sp_repldone, sp_replcmds oder sp_replshowcmds) kann eine Verbindung mit einer Datenbank herstellen. Falls Sie eine protokollbezogene Prozedur ausgeführt haben, löschen Sie vor dem Starten des Protokolllese-Agents oder dem Ausführen einer weiteren protokollbezogenen Prozedur die Verbindung, über die sie ausgeführt wurde, oder führen Sie 'sp_replflush' über diese Verbindung aus.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|Vom Replikations-Agent wurde in %ld Minuten keine Statusmeldung protokolliert. Möglicherweise reagiert der Agent nicht mehr, oder das System ist stark ausgelastet. Überprüfen Sie, ob Datensätze an das Ziel repliziert werden und ob die Verbindungen mit dem Abonnenten, Verleger und Verteiler noch aktiv sind.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Der Agent wird heruntergefahren. Weitere Informationen finden Sie im Auftragsverlauf des SQL Server-Agents für den Auftrag '%s'.|  

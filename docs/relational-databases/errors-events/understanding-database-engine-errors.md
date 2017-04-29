@@ -1,27 +1,31 @@
 ---
-title: "Grundlegendes zu Datenbankmodulfehlern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Fehler [SQL Server-Agent], Informationen zu Fehlern"
-  - "Fehler [SQL Server], Datenbankmodul"
-  - "Fehler [SQL Server]"
-  - "Datenbankmodul [SQL Server], Fehler"
+title: Grundlegendes zu Datenbankmodulfehlern | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server], about errors
+- errors [SQL Server], Database Engine
+- errors [SQL Server]
+- Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fab32eee7823d80a531503a88b9a58dff06c5b89
+ms.lasthandoff: 04/11/2017
+
 ---
-# Grundlegendes zu Datenbankmodulfehlern
+# <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbankmodulfehlern
   Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöste Fehler weisen die in der folgenden Tabelle beschriebenen Attribute auf.  
   
 |Attribut|Beschreibung|  
@@ -33,14 +37,14 @@ caps.handback.revision: 27
 |Name der Prozedur|Ist der Name der gespeicherten Prozedur oder des Triggers, in der oder in dem der Fehler aufgetreten ist.|  
 |Zeilennummer|Zeigt an, welche Anweisung in einem Batch, einer gespeicherten Prozedur, einem Trigger oder einer Funktion den Fehler generiert hat.|  
   
- Alle System- und benutzerdefinierten Fehlermeldungen in einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz sind in der Katalogsicht **sys.messages** enthalten. Die RAISERROR-Anweisung kann zur Rückgabe von benutzerdefinierten Fehlern an eine Anwendung verwendet werden.  
+ Alle System- und benutzerdefinierten Fehlermeldungen in einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz sind in der Katalogsicht **sys.messages** enthalten. Die RAISERROR-Anweisung kann zur Rückgabe von benutzerdefinierten Fehlern an eine Anwendung verwendet werden.  
   
- Alle Datenbank-APIs, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient**-Namespace, ActiveX Data Objects (ADO), OLE DB und Open Database Connectivity (ODBC) berichten die grundlegenden Fehlerattribute. Diese Information schließt die Fehlernummer und die Meldungszeichenfolge ein. Nicht alle APIs berichten jedoch alle anderen Fehlerattribute.  
+ Alle Datenbank-APIs, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** -Namespace, ActiveX Data Objects (ADO), OLE DB und Open Database Connectivity (ODBC) berichten die grundlegenden Fehlerattribute. Diese Information schließt die Fehlernummer und die Meldungszeichenfolge ein. Nicht alle APIs berichten jedoch alle anderen Fehlerattribute.  
   
- Informationen zu einem Fehler, der innerhalb des Bereichs des TRY-Blocks eines TRY…CATCH-Konstrukts auftritt, können im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe von Funktionen wie z. B. ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE innerhalb des Bereichs des zugehörigen CATCH-Blocks abgerufen werden. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Informationen zu einem Fehler, der innerhalb des Bereichs des TRY-Blocks eines TRY…CATCH-Konstrukts auftritt, können im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code mithilfe von Funktionen wie z. B. ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE innerhalb des Bereichs des zugehörigen CATCH-Blocks abgerufen werden. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
-## Beispiele  
- Im folgenden Beispiel wird die `sys.messages`-Katalogsicht abgefragt, um eine Liste aller system- und benutzerdefinierten Fehlermeldungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zurückzugeben, die über englischen Text verfügen (`1033`).  
+## <a name="examples"></a>Beispiele  
+ Im folgenden Beispiel wird die `sys.messages` -Katalogsicht abgefragt, um eine Liste aller system- und benutzerdefinierten Fehlermeldungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zurückzugeben, die über englischen Text verfügen (`1033`).  
   
 ```  
 SELECT  
@@ -53,10 +57,10 @@ SELECT
   WHERE language_id = 1033;  
 ```  
   
- Weitere Informationen finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md).  
+ Weitere Informationen finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
-## Siehe auch  
- [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

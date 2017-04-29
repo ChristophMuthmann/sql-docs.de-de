@@ -1,28 +1,32 @@
 ---
-title: "Nicht unterst&#252;tzte SQL Server-Funktionen f&#252;r In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nicht unterst&#252;tzte SQL Server-Funktionen f&#252;r In-Memory OLTP
+# <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekten nicht unterstützt wird.  
+  In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekten nicht unterstützt wird.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
- Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen werden in einer Datenbank nicht unterstützt, die speicheroptimierte Objekte (einschließlich einer speicheroptimierten Dateigruppe) enthält.  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
+ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen werden in einer Datenbank nicht unterstützt, die speicheroptimierte Objekte (einschließlich einer speicheroptimierten Dateigruppe) enthält.  
   
 |Nicht unterstützte Funktion|Funktionsbeschreibung|  
 |-------------------------|-------------------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 55
 |Ressourcendatenbank, tempdb|Ja|Es gibt keine Einschränkungen für datenbankübergreifende Transaktionen, die, außer bei einer einzelnen Benutzerdatenbank, nur die Ressourcendatenbank und tempdb verwenden.|  
 |master|Schreibgeschützt|Für datenbankübergreifende Transaktionen, die In-Memory OLTP und die Masterdatenbank betreffen, wird kein Commit ausgeführt, wenn Schreibvorgänge in die Masterdatenbank enthalten sind. Datenbankübergreifende Transaktionen, die nur vom Master lesen und nur eine Benutzerdatenbank verwenden, sind zulässig.|  
   
-## Nicht unterstützte Szenarien  
+## <a name="scenarios-not-supported"></a>Nicht unterstützte Szenarien  
   
 -   Datenbankkapselung ([Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)) wird bei In-Memory-OLTP nicht unterstützt. Die Authentifizierung eigenständiger Datenbanken wird unterstützt. Allerdings werden alle In-Memory OLTP-Objekte in den "dm_db_uncontained_entities" der dynamischen Verwaltungssicht als "breaking containment" gekennzeichnet.  
   
@@ -71,7 +75,8 @@ caps.handback.revision: 55
   
 -   Richtlinienbasierte Verwaltung. Der "Prevent"- und der "Log Only"-Modus der richtlinienbasierten Verwaltung werden nicht unterstützt. Das Vorhandensein solcher Richtlinien auf dem Server verhindert möglicherweise, dass In-Memory OLTP-DDL erfolgreich ausgeführt wird. Der "On Demand"- und der "On Schedule"-Modus werden unterstützt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
+
