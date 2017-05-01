@@ -1,31 +1,35 @@
 ---
-title: "Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Systemeigene Datenformate [SQL Server]"
-  - "Datenformate [SQL Server], nativ"
+title: Verwenden des nativen Formats zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
 Das systemeigene Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei empfohlen, die keinen erweiterten oder Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält.  
 
 > [!NOTE]
 >  Für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei, die erweiterte Zeichen oder DBCS-Zeichen enthält, sollten Sie das systemeigene Unicode-Format verwenden. Weitere Informationen finden Sie unter [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
 
-Das systemeigene Format erhält die systemeigenen Datentypen einer Datenbank. Das systemeigene Format ist für die Hochgeschwindigkeitsübertragung von Daten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen konzipiert. Wenn Sie eine Formatdatei verwenden, müssen Quell- und Zieltabelle nicht identisch sein. Die Datenübertragung besteht aus zwei Schritten:  
+Das systemeigene Format erhält die systemeigenen Datentypen einer Datenbank. Das systemeigene Format ist für die Hochgeschwindigkeitsübertragung von Daten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen konzipiert. Wenn Sie eine Formatdatei verwenden, müssen Quell- und Zieltabelle nicht identisch sein. Die Datenübertragung besteht aus zwei Schritten:  
   
 1.  Massenexportieren der Daten aus einer Quelltabelle in eine Datendatei  
   
@@ -39,7 +43,7 @@ Durch die Verwendung des systemeigenen Formats zwischen identischen Tabellen wir
 |[Behandlung von Daten im systemeigenen Format durch bcp](#considerations)|
 |[Befehlsoptionen für das systemeigene Format](#command_options)|
 |[Beispieltestbedingungen](#etc)<br /><br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispiel einer Nicht-XML-Formatdatei](#nonxml_format_file)|
-|[Beispiele](#examples)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und des nativen Formats zum Exportieren von Daten](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und des nativen Formats zum Importieren von Daten ohne eine Formatdatei](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Verwenden von bcp und des nativen Formats zum Importieren von Daten mit einer Nicht-XML-Formatdatei](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und des nativen Formats ohne eine Formatdatei](#bulk_native)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und des nativen Formats mit einer Nicht-XML-Formatdatei](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und des nativen Formats mit einer Nicht-XML-Formatdatei](#openrowset_native_fmt)|
+|[Beispiele](#examples)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und des nativen Formats zum Exportieren von Daten](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und des nativen Formats zum Importieren von Daten ohne eine Formatdatei](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und des nativen Formats zum Importieren von Daten mit einer Nicht-XML-Formatdatei](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und des nativen Formats ohne eine Formatdatei](#bulk_native)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und des nativen Formats mit einer Nicht-XML-Formatdatei](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET und des nativen Formats mit einer Nicht-XML-Formatdatei](#openrowset_native_fmt)|
 |[Verwandte Aufgaben](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## Einschränkungen<a name="restrictions"></a>  
@@ -61,25 +65,25 @@ Um Daten im systemeigenen Format erfolgreich zu importieren, müssen folgende Pu
   
 -   Nicht auf Zeichen basierende Daten  
   
-     Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) verwendet das interne binäre Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um auf Nichtzeichen basierende Daten aus einer Tabelle in eine Datendatei zu schreiben.  
+     Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) verwendet das interne binäre Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um auf Nichtzeichen basierende Daten aus einer Tabelle in eine Datendatei zu schreiben.  
   
--   Daten vom Typ[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
+-   Daten vom Typ[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      Am Anfang jedes [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) - oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Felds fügt [bcp](../../tools/bcp-utility.md) die Präfixlänge hinzu.  
   
     > [!IMPORTANT]
-    >  Wenn der einheitliche Modus verwendet wird, konvertiert das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) standardmäßig Zeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in OEM-Zeichen, bevor sie in eine Datendatei kopiert werden. Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor der Massenimport der Zeichen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.
+    >  Wenn der einheitliche Modus verwendet wird, konvertiert das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) standardmäßig Zeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in OEM-Zeichen, bevor sie in eine Datendatei kopiert werden. Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor der Massenimport der Zeichen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausgeführt wird. Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.
   
--   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Datentyp  
+-   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Datentyp  
   
-     Wenn [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Daten als SQLVARIANT in einer Datendatei im nativen Format gespeichert werden, behalten die Daten alle Merkmale. Die Metadaten, die den Datentyp jedes Datenwerts aufzeichnen, werden zusammen mit dem Datenwert gespeichert. Diese Metadaten werden verwendet, um den Datenwert mit dem gleichen Datentyp in einer [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Zielspalte neu zu erstellen.  
+     Wenn [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten als SQLVARIANT in einer Datendatei im nativen Format gespeichert werden, behalten die Daten alle Merkmale. Die Metadaten, die den Datentyp jedes Datenwerts aufzeichnen, werden zusammen mit dem Datenwert gespeichert. Diese Metadaten werden verwendet, um den Datenwert mit dem gleichen Datentyp in einer [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Zielspalte neu zu erstellen.  
   
-     Wenn der Datentyp der Zielspalte nicht [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) ist, werden alle Datenwerte unter Einhaltung der üblichen Regeln der impliziten Datenkonvertierung in den Datentyp der Zielspalte konvertiert. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) und [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), die zwischen [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
+     Wenn der Datentyp der Zielspalte nicht [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)ist, werden alle Datenwerte unter Einhaltung der üblichen Regeln der impliziten Datenkonvertierung in den Datentyp der Zielspalte konvertiert. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) und [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), die zwischen [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
   
      Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbankmodul&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## Befehlsoptionen für das systemeigene Format<a name="command_options"></a>  
-Sie können Daten im nativen Format mithilfe von [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ...  SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) in eine Tabelle importieren.  Für einen [bcp](../../tools/bcp-utility.md)-Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)-Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ...  SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
+Sie können Daten im nativen Format importieren, unter Verwendung von [BCP](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Für einen [bcp](../../tools/bcp-utility.md) -Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
 
 Das native Format wird durch die folgenden Befehlsoptionen unterstützt:  
 
@@ -90,7 +94,7 @@ Das native Format wird durch die folgenden Befehlsoptionen unterstützt:
 |OPENROWSET|–|Muss eine Formatdatei verwenden|
 
   
- \*Verwenden Sie zum Laden nativer Daten (**-n**) in ein Format, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clients kompatibel ist, den Schalter **-V**. Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Verwenden Sie zum Laden nativer Daten (**-n**) in ein Format, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients kompatibel ist, den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
-SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myNative.fmt` zu erstellen, die auf dem Schema von `myNative` basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md)-Befehls zum Erstellen einer Formatdatei das **format**-Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f**.  Zusätzlich wird in diesem Beispiel der Qualifizierer **c** verwendet, um Zeichendaten anzugeben, und **T**, um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myNative.fmt`zu erstellen, die auf dem Schema von `myNative`basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md) -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich wird in diesem Beispiel der Qualifizierer **c** verwendet, um Zeichendaten anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -145,7 +149,7 @@ Notepad D:\BCP\myNative.fmt
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
 ### **Verwenden von bcp und des nativen Formats zum Exportieren von Daten**<a name="bcp_native_export"></a>
-Der Schalter **-n** und der **OUT**-Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter**-n** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -154,7 +158,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_native_import"></a>
-Der Schalter **-n** und der **IN**-Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter**-n** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -167,7 +171,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_native_import_fmt"></a>
-Die Schalter **-n** und **-f** und der **IN**-Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Die Schalter**-n** und **-f** switches und **IN** commund.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -180,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Verwenden von BULK INSERT und des nativen Formats ohne eine Formatdatei**<a name="bulk_native"></a>
-**DATAFILETYPE**-Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+**DATAFILETYPE** -Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -194,7 +198,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Verwenden von BULK INSERT und des nativen Formats mit einer Nicht-XML-Formatdatei**<a name="bulk_native_fmt"></a>
-Argument **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -208,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Verwenden von OPENROWSET und des nativen Formats mit einer Nicht-XML-Formatdatei**<a name="openrowset_native_fmt"></a>
-Argument **FORMATFILE**.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
+Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
@@ -225,7 +229,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ## Verwandte Aufgaben<a name="RelatedTasks"></a>
 So verwenden Sie Datenformate für Massenimport oder Massenexport 
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -233,13 +237,14 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
   
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## Siehe auch  
- [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Siehe auch  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
- [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+

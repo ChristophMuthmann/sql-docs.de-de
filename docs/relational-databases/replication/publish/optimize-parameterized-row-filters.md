@@ -1,27 +1,31 @@
 ---
-title: "Optimieren von parametrisierten Zeilenfiltern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorausberechnete Partitionen [SQL Server-Replikation]"
-  - "Filter [SQL Server-Replikation], parametrisierte"
-  - "Vorausberechnete Mergereplikationspartitionen [SQL Server-Replikation], SQL Server Management Studio"
-  - "Parametrisierte Filter [SQL Server-Replikation], optimieren"
+title: Optimieren von parametrisierten Zeilenfiltern |Microsoft Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- precomputed partitions [SQL Server replication]
+- filters [SQL Server replication], parameterized
+- merge replication precomputed partitions [SQL Server replication], SQL Server Management Studio
+- parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Optimieren von parametrisierten Zeilenfiltern
+# <a name="optimize-parameterized-row-filters"></a>Optimieren von parametrisierten Zeilenfiltern
   In diesem Thema wird beschrieben, wie parametrisierte Zeilenfilter in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]optimiert werden.  
   
  **In diesem Thema**  
@@ -40,27 +44,27 @@ caps.handback.revision: 44
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Wenn Sie parametrisierte Filter verwenden, können Sie festlegen, wie die Filter durch die Mergereplikation verarbeitet werden, indem Sie bei der Erstellung der Veröffentlichung entweder die Option **use partition groups** oder die Option **keep partition changes** wählen. Diese Optionen verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Sie können steuern, wie die Daten auf die einzelnen Abonnenten aufgeteilt werden, indem Sie bei der Erstellung eines Artikels **partition options** festlegen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Wenn Sie parametrisierte Filter verwenden, können Sie festlegen, wie die Filter durch die Mergereplikation verarbeitet werden, indem Sie bei der Erstellung der Veröffentlichung entweder die Option **use partition groups** oder die Option **keep partition changes** wählen. Diese Optionen verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Sie können steuern, wie die Daten auf die einzelnen Abonnenten aufgeteilt werden, indem Sie bei der Erstellung eines Artikels **partition options** festlegen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-     Mit [!INCLUDE[ssEW](../../../includes/ssew-md.md)] SQL Server Compact-Abonnenten muss "keep_partition_changes" auf "true" festgelegt werden, um sicherzustellen, dass Löschvorgänge ordnungsgemäß weitergegeben werden. Wenn die Einstellung auf "false" festgelegt ist, erhält der Abonnent möglicherweise mehr Zeilen als erwartet.  
+     Mit [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact-Abonnenten muss "keep_partition_changes" auf "true" festgelegt werden, um sicherzustellen, dass Löschvorgänge ordnungsgemäß weitergegeben werden. Wenn die Einstellung auf "false" festgelegt ist, erhält der Abonnent möglicherweise mehr Zeilen als erwartet.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Folgende Einstellungen können zur Optimierung von parametrisierten Zeilenfiltern verwendet werden:  
   
- **Partitionsoptionen**  
- Legen Sie diese Option auf der **Eigenschaften** auf der Seite der **Artikeleigenschaften - \< Artikel>** im Dialogfeld oder in der **Filter hinzufügen** Dialogfeld. Beide Dialogfelder stehen im Assistenten für neue Veröffentlichung und die **Veröffentlichungseigenschaften - \< Veröffentlichung>** (Dialogfeld). Die **Artikeleigenschaften - \< Artikel>** im Dialogfeld können Sie weitere Werte für diese Option angeben, die nicht verfügbar sind die **Filter hinzufügen** Dialogfeld.  
+ **Partition Options**  
+ Legen Sie diese Option auf der Seite **Eigenschaften** des Dialogfelds **Artikeleigenschaften – \<Artikel>** oder über das Dialogfeld **Filter hinzufügen** fest. Der Zugriff auf beide Dialogfelder ist über den Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Im Dialogfeld **Artikeleigenschaften -.\<Artikel>**, können Sie weitere Werte für diese Option angeben, die im Dialogfeld **Filter hinzufügen** nicht verfügbar sind.  
   
  **Partitionen im Voraus berechnen**  
- Diese Option wird festgelegt, um **True** standardmäßig, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [parametrisierte Filter Leistung mit Vorausberechnete Partitionen optimieren](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md). Ändern Sie diese Option auf der **Abonnementoptionen** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** (Dialogfeld).  
+ Diese Option ist standardmäßig auf **Wahr** festgelegt, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Diese Option können Sie auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** ändern.  
   
  **Synchronisierung optimieren**  
- Diese Option sollte festgelegt werden, um **True** nur, wenn **Partitionen im Voraus berechnen** Wert **False**. Legen Sie diese Option auf der **Abonnementoptionen** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** (Dialogfeld).  
+ Diese Option sollte nur auf **Wahr** festgelegt werden, wenn **Partitionen im Voraus berechnen** auf **Falsch**festgelegt ist. Diese Option können Sie auf der Seite Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** festlegen.  
   
- Weitere Informationen zum Verwenden des Assistenten für neue Veröffentlichung und Zugreifen auf die **Veröffentlichungseigenschaften - \< Veröffentlichung>** im Dialogfeld finden Sie unter [Erstellen Sie eine Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Weitere Informationen zum Assistenten für neue Veröffentlichung sowie zum Zugriff auf das Dialogfeld Veröffentlichungseigenschaften - \<Veröffentlichung>** finden Sie unter [Eine Veröffentlichung erstellen](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### So legen Sie Partitionsoptionen im Dialogfeld Filter hinzufügen bzw. Filter bearbeiten fest  
+#### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>So legen Sie Partitionsoptionen im Dialogfeld Filter hinzufügen bzw. Filter bearbeiten fest  
   
-1.  Auf der **Tabellenzeilen filtern** Seite des Assistenten für neue Veröffentlichung oder **Filterzeilen** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** im Dialogfeld klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Filter hinzufügen**.  
+1.  Klicken Sie auf der Seite Tabellenzeilen filtern** im Assistenten für neue Veröffentlichung bzw. auf der Seite **Zeilen filtern** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** zunächst auf **Hinzufügen** und anschließend auf **Filter hinzufügen**.  
   
 2.  Erstellen Sie einen parametrisierten Filter. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -70,19 +74,19 @@ caps.handback.revision: 44
   
     -   **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**  
   
-     Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**auswählen, kann die Mergereplikation die Leistung optimieren, da weniger Metadaten gespeichert und verarbeitet werden. Sie müssen jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**auswählen, kann die Mergereplikation die Leistung optimieren, da weniger Metadaten gespeichert und verarbeitet werden. Sie müssen jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Wenn Sie haben die **Veröffentlichungseigenschaften - \< Veröffentlichung>** Klicken Sie im Dialogfeld klicken Sie auf **OK** zum Speichern und schließen das Dialogfeld.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** befinden, klicken Sie auf **OK**, um eine Speicherung vorzunehmen und das Dialogfeld zu schließen.  
   
-#### Festlegen von Partitionsoptionen im Artikeleigenschaften - \< Artikel> (Dialogfeld)  
+#### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>So legen Sie Partitionsoptionen im Dialogfeld Artikeleigenschaften - \<Artikel> fest  
   
-1.  Auf der **Artikel** Seite des Assistenten für neue Veröffentlichung oder **Veröffentlichungseigenschaften - \< Veröffentlichung>** Klicken Sie im Dialogfeld Wählen Sie eine Tabelle, und klicken Sie dann auf **Artikeleigenschaften**.  
+1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** eine Tabelle aus, und klicken anschließend auf **Artikeleigenschaften**.  
   
 2.  Klicken Sie auf **Eigenschaften des hervorgehobenen Tabelle-Artikels festlegen** oder **Eigenschaften aller Tabellenartikel festlegen**.  
   
-3.  In der **Zielobjekt** Teil der **Eigenschaften** Registerkarte der **Artikeleigenschaften - \< Artikel>** Dialogfeld geben die folgenden Werte für **Partitionsoptionen**:  
+3.  Geben Sie im Abschnitt **Zielobjekt** der Registerkarte **Eigenschaften** des Dialogfensters **Artikeleigenschaften - \<Artikel>** einen der folgenden Werte für **Partitionsoptionen** an:  
   
     -   **Überlappend**  
   
@@ -92,15 +96,15 @@ caps.handback.revision: 44
   
     -   **Nicht überlappend, für mehrere Abonnements freigegeben**  
   
-     Weitere Informationen zu diesen Optionen und dazu, in welcher Beziehung Sie zu den Optionen stehen, die im Dialogfeld **Filter hinzufügen** und **Filter bearbeiten** verfügbar sind, finden Sie im Abschnitt über das Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     Weitere Informationen zu diesen Optionen und dazu, in welcher Beziehung Sie zu den Optionen stehen, die im Dialogfeld **Filter hinzufügen** und **Filter bearbeiten** verfügbar sind, finden Sie im Abschnitt über das Festlegen von Partitionsoptionen unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Wenn Sie haben die **Veröffentlichungseigenschaften - \< Veröffentlichung>** Klicken Sie im Dialogfeld klicken Sie auf **OK** zum Speichern und schließen das Dialogfeld.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** befinden, klicken Sie auf **OK**, um eine Speicherung vorzunehmen und das Dialogfeld zu schließen.  
   
-#### So legen Sie einen Wert für Partitionen im Voraus berechnen fest  
+#### <a name="to-set-precompute-partitions"></a>So legen Sie einen Wert für Partitionen im Voraus berechnen fest  
   
-1.  Auf der **Abonnementoptionen** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** Dialogfeld Wählen Sie einen Wert für die **Partitionen im Voraus berechnen** Option. Die Eigenschaft ist in folgenden Fällen schreibgeschützt:  
+1.  Wählen Sie auf der Seite **Abonnementoptionen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Wert für die Option **Partitionen im Voraus berechnen** aus. Die Eigenschaft ist in folgenden Fällen schreibgeschützt:  
   
     -   Die Veröffentlichung erfüllt die Anforderungen für im Voraus berechnete Partitionen nicht.  
   
@@ -108,59 +112,59 @@ caps.handback.revision: 44
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### So legen Sie einen Wert für Synchronisierung optimieren fest  
+#### <a name="to-set-optimize-synchronization"></a>So legen Sie einen Wert für Synchronisierung optimieren fest  
   
-1.  Auf der **Abonnementoptionen** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** Wert wählen Sie im Dialogfeld **True** für die **Synchronisierung optimieren** Option.  
+1.  Wählen Sie auf der Seite **Abonnementoptionen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Wert für **Wahr** für die Option **Synchronisierung optimieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Informationen zur Definition der Filteroptionen für **@keep_partition_changes** und **@use_partition_groups**, finden Sie unter [Sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ Informationen zur Definition der Filteroptionen für **@keep_partition_changes** und **@use_partition_groups**finden Sie unter [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)optimiert werden.  
   
-#### So geben Sie die Optimierungen für Mergefilter beim Erstellen einer neuen Veröffentlichung an  
+#### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>So geben Sie die Optimierungen für Mergefilter beim Erstellen einer neuen Veröffentlichung an  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Geben Sie **@publication** und den Wert **true** für einen der folgenden Parameter an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)aus. Geben Sie **@publication** und den Wert **true** für einen der folgenden Parameter an:  
   
-    -   **@use_partition_groups**:-die höchste leistungsoptimierung, vorausgesetzt, dass die Artikel den Anforderungen für Vorausberechnete Partitionen entsprechen. Weitere Informationen finden Sie unter [parametrisierte Filter Leistung mit Vorausberechnete Partitionen optimieren](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
+    -   **@use_partition_groups**: &ndash; die höchste Leistungsoptimierung, vorausgesetzt, dass die Artikel den Anforderungen für vorausberechnete Partitionen entsprechen. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-    -   **@keep_partition_changes** -Verwenden Sie diese Optimierung, wenn Vorausberechnete Partitionen nicht verwendet werden.  
+    -   **@keep_partition_changes** &ndash; verwenden Sie diese Optimierung, wenn vorausberechnete Partitionen nicht verwendet werden können.  
   
-2.  Fügen Sie einen Momentaufnahme-Auftrag für die Veröffentlichung hinzu. Weitere Informationen finden Sie unter [Erstellen einer Publikation](../../../relational-databases/replication/publish/create-a-publication.md).  
+2.  Fügen Sie einen Momentaufnahme-Auftrag für die Veröffentlichung hinzu. Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), geben Sie die folgenden Parameter:  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus, und geben Sie die folgenden Parameter an:  
   
-    -   **@publication** -der Name der Veröffentlichung aus Schritt 1.  
+    -   **@publication** &ndash; der Name der Veröffentlichung aus Schritt 1.  
   
-    -   **@article** -einen Namen für den Artikel  
+    -   **@article** &ndash; ein Name für den Artikel.  
   
-    -   **@source_object** – das Datenbankobjekt, das veröffentlicht wird.  
+    -   **@source_object** &ndash; das Datenbankobjekt, das veröffentlicht wird.  
   
-    -   **@subset_filterclause** -die optionale parametrisierte Filterklausel verwendet, um den Artikel horizontal zu filtern.  
+    -   **@subset_filterclause** &ndash; die optionale parametrisierte Filterklausel, die verwendet wird, um den Artikel horizontal zu filtern.  
   
-    -   **@partition_options** -die Partitionsoptionen für den gefilterten Artikel.  
+    -   **@partition_options** &ndash; die Partitionsoptionen für den gefilterten Artikel.  
   
 4.  Wiederholen Sie Schritt 3 für jeden Artikel in der Veröffentlichung.  
   
-5.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) einen Verknüpfungsfilter zwischen zwei Artikeln zu definieren. Weitere Informationen finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+5.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) aus, um einen Joinfilter zwischen zwei Artikeln zu definieren. Weitere Informationen finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-#### So zeigen Sie das Verhalten von Mergefiltern für eine vorhandene Veröffentlichung an und ändern es  
+#### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>So zeigen Sie das Verhalten von Mergefiltern für eine vorhandene Veröffentlichung an und ändern es  
   
-1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), wobei **@publication**. Beachten Sie den Wert der **Keep_partition_changes** und **Use_partition_groups** im Ergebnis festlegen.  
+1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)unter Angabe von **@publication**optimiert werden. Achten Sie auf den Wert von **keep_partition_changes** und **use_partition_groups** im Resultset.  
   
-2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Geben Sie den Wert **Use_partition_groups** für **@property** und entweder **true** oder **false** für **@value**.  
+2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie den Wert **use_partition_groups** für **@property** und entweder den Wert **true** oder **false** für **@value**optimiert werden.  
   
-3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Geben Sie den Wert **Keep_partition_changes** für **@property** und entweder **true** oder **false** für **@value**.  
+3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie den Wert **keep_partition_changes** für **@property** und entweder den Wert **true** oder **false** für **@value**optimiert werden.  
   
     > [!NOTE]  
-    >  Beim Aktivieren der **Keep_partition_changes**, müssen Sie zuerst deaktivieren **Use_partition_groups** und geben Sie den Wert **1** für **@force_reinit_subscription**.  
+    >  Wenn Sie **keep_partition_changes**aktivieren, müssen Sie zuerst **use_partition_groups** deaktivieren und den Wert **1** für **@force_reinit_subscription**optimiert werden.  
   
-4.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [Sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Geben Sie den Wert **Partition_options** für **@property** und den entsprechenden Wert für **@value**. Finden Sie unter [Sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) zur Definition dieser Filteroptionen.  
+4.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus. Geben Sie den Wert **partition_options** für **@property** und den entsprechenden Wert für **@value**optimiert werden. Informationen zur Definition dieser Filteroptionen finden Sie unter [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
   
-5.  (Optional) Starten Sie den Momentaufnahme-Agent, um, wenn notwendig, die Momentaufnahme erneut zu generieren. Informationen darüber, welche Änderungen erfordern eine neue Momentaufnahme generiert werden, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+5.  (Optional) Starten Sie den Momentaufnahme-Agent, um, wenn notwendig, die Momentaufnahme erneut zu generieren. Informationen dazu, welche Änderungen die Generierung einer neuen Momentaufnahme erforderlich machen, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-## Siehe auch  
- [Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/automatically generate join filters between merge articles.md)   
- [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)   
+ [Definieren und ändern Sie einen parametrisierten Zeilenfilter mit Mergeartikeln](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
