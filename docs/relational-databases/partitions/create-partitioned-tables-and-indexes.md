@@ -1,40 +1,44 @@
 ---
-title: "Erstellen partitionierter Tabellen und Indizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "Partitionierte Indizes [SQL Server], erstellen"
-  - "Partitionsschemas [SQL Server], erstellen"
-  - "Partitionsfunktionen [SQL Server], erstellen"
-  - "Partitionstabellen [SQL Server], erstellen"
-  - "Partitionsfunktionen [SQL Server]"
-  - "Partitionsschemas [SQL Server]"
+title: Erstellen partitionierter Tabellen und Indizes | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen partitionierter Tabellen und Indizes
+# <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]eine partitionierte Tabelle oder einen Index erstellen. Die Daten in partitionierten Tabellen und Indizes werden horizontal in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt werden können. Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
   
  Das Erstellen einer partitionierten Tabelle oder eines Indexes erfolgt in der Regel in vier Teilen:  
@@ -74,7 +78,7 @@ caps.handback.revision: 35
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Erstellen einer partitionierten Tabelle sind die CREATE TABLE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema erforderlich, in dem die Tabelle erstellt wird. Das Erstellen eines partitionierten Indexes erfordert die ALTER-Berechtigung für die Tabelle oder Sicht, in der der Index erstellt wird. Das Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes erfordert eine der folgenden zusätzlichen Berechtigungen:  
   
--   ALTER ANY DATASPACE-Berechtigung. Diese Berechtigung gilt standardmäßig für Mitglieder der festen Serverrolle **sysadmin** und für Mitglieder der festen Datenbankrollen **db_owner** und **db_ddladmin**.  
+-   ALTER ANY DATASPACE-Berechtigung. Diese Berechtigung gilt standardmäßig für Mitglieder der festen Serverrolle **sysadmin** und für Mitglieder der festen Datenbankrollen **db_owner** und **db_ddladmin** .  
   
 -   CONTROL- oder ALTER-Berechtigung für die Datenbank, in der die Partitionsfunktion und das Partitionsschema erstellt werden.  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Führen Sie die Schritte in dieser Prozedur aus, um mindestens eine Dateigruppe, entsprechende Dateien und eine Tabelle zu erstellen. Sie versehen diese Objekte in der nächsten Prozedur mit Verweisen, wenn Sie die partitionierte Tabelle erstellen.  
   
-#### So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften** aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften**aus.  
   
-2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften –** *database_name* unter **Seite auswählen** die Option **Dateigruppen** aus.  
+2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften –** *database_name* unter **Seite auswählen**die Option **Dateigruppen**aus.  
   
 3.  Klicken Sie unter **Zeilen**auf **Hinzufügen**. Geben Sie in der neuen Zeile den Dateigruppennamen ein.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 35
   
 9. Erweitern Sie den Ordner **Tabellen** , und erstellen Sie eine Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/tables/create-tables-database-engine.md). Alternativ können Sie in der nächsten Prozedur eine vorhandene Tabelle angeben.  
   
-#### So erstellen Sie eine partitionierte Tabelle  
+#### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen**.  
   
@@ -200,19 +204,19 @@ caps.handback.revision: 35
   
                 -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld "15" und in das zweite Feld "2" ein. Beachten Sie, dass die größte im zweiten Feld zugelassene Zahl "99" ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter** oder **vierter** sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
             -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)**auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
         3.  Geben Sie unter **Dauer**in **Startdatum**das Datum ein, an dem die Ausführung des Auftragszeitplans beginnen soll. Wählen Sie **Enddatum** oder **Kein Enddatum** aus, um anzugeben, wann die Ausführung des Auftragszeitplans beendet werden soll. Wenn Sie **Enddatum**auswählen, geben Sie das Datum ein, an dem die Ausführung des Auftragszeitplans beendet werden soll.  
   
-    5.  Wenn Sie **Einmal** auswählen, geben Sie unter **Einmalig** in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
+    5.  Wenn Sie **Einmal**auswählen, geben Sie unter **Einmalig**in das Feld **Datum** das Datum ein, an dem der Auftragszeitplan ausgeführt werden soll. Geben Sie im Feld **Uhrzeit** die Zeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
     6.  Überprüfen Sie unter **Zusammenfassung**im Feld **Beschreibung**, ob alle Auftragszeitplaneinstellungen richtig sind.  
   
@@ -233,7 +237,7 @@ caps.handback.revision: 35
      Gibt den Typ und den Namen jeder Aktion an.  
   
      **Status**  
-     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler** zurückgegeben wurde.  
+     Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
      **MessageBox**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
@@ -242,10 +246,10 @@ caps.handback.revision: 35
      Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  
-     Öffnet das Dialogfeld **Bericht anzeigen**, das einen Textbericht zum Fortschritt des Assistenten zum Erstellen von Partitionen enthält.  
+     Öffnet das Dialogfeld **Bericht anzeigen** , das einen Textbericht zum Fortschritt des Assistenten zum Erstellen von Partitionen enthält.  
   
      **Bericht in Datei speichern**  
-     Öffnet das Dialogfeld **Bericht speichern unter**.  
+     Öffnet das Dialogfeld **Bericht speichern unter** .  
   
      **Bericht in Zwischenablage kopieren**  
      Kopiert die Ergebnisse aus dem Statusbericht des Assistenten in die Zwischenablage.  
@@ -255,13 +259,13 @@ caps.handback.revision: 35
   
      Nach Abschluss dieser Schritte klicken Sie auf **Schließen**.  
   
- Vom Assistenten zum Erstellen von Partitionen werden die Partitionsfunktion und das -schema erstellt, und anschließend wird die Partitionierung auf die angegebene Tabelle angewendet. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und wählen Sie **Eigenschaften** aus, um die Tabellenpartitionierung zu überprüfen. Klicken Sie auf die Seite **Speicherung** . Auf der Seite werden Informationen, beispielsweise der Name der Partitionsfunktion und das -schema sowie die Anzahl an Partitionen, angezeigt.  
+ Vom Assistenten zum Erstellen von Partitionen werden die Partitionsfunktion und das -schema erstellt, und anschließend wird die Partitionierung auf die angegebene Tabelle angewendet. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und wählen Sie **Eigenschaften**aus, um die Tabellenpartitionierung zu überprüfen. Klicken Sie auf die Seite **Speicherung** . Auf der Seite werden Informationen, beispielsweise der Name der Partitionsfunktion und das -schema sowie die Anzahl an Partitionen, angezeigt.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So erstellen Sie eine partitionierte Tabelle  
+#### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### So bestimmen Sie, ob eine Tabelle partitioniert ist  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>So bestimmen Sie, ob eine Tabelle partitioniert ist  
   
 1.  Die folgende Abfrage gibt mindestens eine Zeile zurück, wenn die `PartitionTable` -Tabelle partitioniert ist. Wenn die Tabelle nicht partitioniert ist, werden keine Zeilen zurückgegeben.  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Sie definieren Sie Begrenzungswerte für eine partitionierte Tabelle  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>Sie definieren Sie Begrenzungswerte für eine partitionierte Tabelle  
   
 1.  Die folgende Abfrage gibt die Begrenzungswerte für jede Partition in der `PartitionTable` -Tabelle zurück.  
   
@@ -379,9 +383,9 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### So definieren Sie die Partitionsspalte für eine partitionierte Tabelle  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>So definieren Sie die Partitionsspalte für eine partitionierte Tabelle  
   
-1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `PartitionTable`.  
+1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `PartitionTable`eine partitionierte Tabelle oder einen Index erstellen.  
   
     ```  
     SELECT   
@@ -408,7 +412,7 @@ caps.handback.revision: 35
   
  Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

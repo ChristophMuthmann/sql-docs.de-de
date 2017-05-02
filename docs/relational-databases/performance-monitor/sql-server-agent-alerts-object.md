@@ -1,25 +1,29 @@
 ---
-title: "SQL Server-Agent, Warnungen-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Warnungen-Objekt"
-  - "SQLAgent:Warnungen"
+title: SQL Server-Agent, Alerts-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Alerts object
+- SQLAgent:Alerts
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4b477d24172655ff459136bab58af76b5a542f1b
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server-Agent, Warnungen-Objekt
+# <a name="sql-server-agent-alerts-object"></a>SQL Server-Agent, Warnungen-Objekt
   Das Leistungsobjekt **Warnungen** des SQL Server-Agents enthält Leistungsindikatoren mit Informationen über SQL Server-Agent-Warnungen. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
  Die folgende Tabelle enthält die Leistungsindikatoren **SQLAgent:Warnungen** .  
@@ -32,9 +36,9 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Um dieses SQL Server-Agent-Objekt verwenden zu können, muss der Benutzer ein Mitglied der festen Serverrolle **sysadmin** sein.  
   
-## Siehe auch  
- [Warnungen](../../ssms/agent/alerts.md)   
- [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Warnungen](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)   
+ [Verwenden von Leistungsobjekten](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

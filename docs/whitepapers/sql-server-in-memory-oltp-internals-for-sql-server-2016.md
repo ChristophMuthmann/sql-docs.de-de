@@ -1,22 +1,26 @@
 ---
-title: "Merkmale von SQL Server In-Memory-OLTP f&#252;r SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016 | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 09/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 caps.latest.revision: 2
-author: "jodebrui"
-ms.author: "jodebrui"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: jodebrui
+ms.author: jodebrui
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d46e84522acf72865028a6308bf15847ac5e9f42
+ms.lasthandoff: 04/11/2017
+
 ---
-# Merkmale von SQL Server In-Memory-OLTP f&#252;r SQL Server 2016
+# <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **Zusammenfassung:** In-Memory-OLTP, Codename „Hekaton“, wurde in SQL Server 2014 eingeführt.
@@ -31,3 +35,4 @@ Durch diese leistungsfähige Technologie können Sie den Vorteil großer Mengen 
 **Gilt für:** SQL Server 2016  
   
 Um das Dokument zu lesen, laden Sie das Dokument [SQL Server In-Memory OLTP Internals for SQL Server 2016 (Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016)](http://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) herunter.   
+

@@ -1,28 +1,32 @@
 ---
-title: "Erstellen nicht gruppierter Indizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen von Indizes [SQL Server], nicht gruppierte Indizes"
-  - "Nicht gruppierte Indizes [SQL Server], erstellen"
-  - "Nicht gruppierte Indizes [SQL Server], UNIQUE-Einschränkung"
-  - "Indizes [SQL Server], nicht gruppierte"
-  - "Nicht gruppierte Indizes [SQL Server], PRIMARY KEY-Einschränkung"
+title: Erstellen nicht gruppierter Indizes | Microsoft Dokumentation
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen nicht gruppierter Indizes
+# <a name="create-nonclustered-indexes"></a>Erstellen nicht gruppierter Indizes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Sie können nicht gruppierte Indizes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen. Ein nicht gruppierter Index ist eine von den in einer Tabelle gespeicherten Daten getrennte Indexstruktur, durch die ausgewählte Spalten neu angeordnet werden. In vielen Fällen können Daten mithilfe von nicht gruppierten Indizes schneller gefunden werden als mit einer Suche in der zugrunde liegenden Tabelle. Mitunter lassen sich Abfragen vollständig mit den Daten im nicht gruppierten Index beantworten, oder der nicht gruppierte Index kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf die Zeilen in der zugrunde liegenden Tabelle verweisen. Im Allgemeinen werden nicht gruppierte Indizes erstellt, um die Leistung von häufig verwendeten Abfragen zu verbessern, die nicht vom gruppierten Index abgedeckt werden, oder Zeilen in einer Tabelle ohne gruppierten Index (als Heap bezeichnet) zu suchen. Sie können mehrere nicht gruppierte Indizes für eine Tabelle oder eine indizierte Sicht erstellen.  
@@ -52,7 +56,7 @@ caps.handback.revision: 41
   
 -   **Index unabhängig von einer Einschränkung**  
   
-     Wenn der gruppierte Index nicht angegeben wird, wird standardmäßig ein nicht gruppierter Index erstellt. Die maximale Anzahl nicht gruppierter Indizes, die pro Tabelle erstellt werden können, beträgt 999. Dies schließt alle Indizes ein, die durch PRIMARY KEY- oder UNIQUE-Einschränkungen erstellt wurden, jedoch keine XML-Indizes.  
+     Wenn der gruppierte Index nicht angegeben wird, wird standardmäßig ein nicht gruppierter Index erstellt. Die maximale Anzahl nicht gruppierter Indizes, die pro Tabelle erstellt werden können, beträgt 999. Dies schließt alle Indizes ein, die durch PRIMARY KEY- oder UNIQUE-Einschränkungen erstellt wurden, jedoch keine XML-Indizes.  
   
 -   **Nicht gruppierter Index für eine indizierte Sicht**  
   
@@ -65,13 +69,13 @@ caps.handback.revision: 41
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So erstellen Sie einen nicht gruppierten Index mit dem Tabellen-Designer  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>So erstellen Sie einen nicht gruppierten Index mit dem Tabellen-Designer  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten.  
   
 2.  Erweitern Sie den Ordner **Tabellen** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten, und wählen Sie **Entwurf** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten, und wählen Sie **Entwurf**aus.  
   
 4.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   
@@ -79,13 +83,13 @@ caps.handback.revision: 41
   
 6.  Wählen Sie im Textfeld **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** den neuen Index aus.  
   
-7.  Wählen Sie im Raster **Als CLUSTERED erstellen** aus, und wählen Sie in der Dropdownliste rechts neben der Eigenschaft **Nein** aus.  
+7.  Wählen Sie im Raster **Als CLUSTERED erstellen**aus, und wählen Sie in der Dropdownliste rechts neben der Eigenschaft **Nein** aus.  
   
 8.  Klicken Sie auf **Schließen**.  
   
 9. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
   
-#### So erstellen Sie einen nicht gruppierten Index mit dem Objekt-Explorer  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>So erstellen Sie einen nicht gruppierten Index mit dem Objekt-Explorer  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten.  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 41
   
 3.  Erweitern Sie die Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…**aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
@@ -107,9 +111,9 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So erstellen Sie einen nicht gruppierten Index für eine Tabelle  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>So erstellen Sie einen nicht gruppierten Index für eine Tabelle  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

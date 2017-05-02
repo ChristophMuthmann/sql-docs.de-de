@@ -1,32 +1,36 @@
 ---
-title: "SQL Server, Speicher-Manager-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Speicher-Manager"
-  - "Speicher-Manager-Objekt"
+title: SQL Server, Speicher-Manager-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Memory Manager
+- Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Speicher-Manager-Objekt
+# <a name="sql-server-memory-manager-object"></a>SQL Server, Speicher-Manager-Objekt
   Das **Speicher-Manager** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren bereit, mit denen Sie die gesamte Speicherauslastung des Servers überwachen können. Das Überwachen der gesamten Speicherauslastung des Servers zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen. Durch Überwachen des Arbeitsspeichers, der von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, können Sie Folgendes ermitteln:  
   
 -   Ob es zu Engpässen kommt, da nicht genügend Arbeitsspeicher vorhanden ist, um Daten, auf die häufig zugegriffen wird, im Cache zu speichern. In diesem Fall muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten vom Datenträger abrufen.  
   
 -   Ob die Abfrageleistung durch Hinzufügen von Arbeitsspeicher oder durch Zuordnen von zusätzlichem Arbeitsspeicher für den Datencache bzw. für interne Strukturen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbessert werden kann.  
   
-## Speicher-Manager-Leistungsindikatoren  
+## <a name="memory-manager-counters"></a>Speicher-Manager-Leistungsindikatoren  
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Speicher-Manager** beschrieben.  
   
 |Speicher-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
@@ -46,13 +50,13 @@ caps.handback.revision: 29
 |**Ausstehende Speicherzuweisungen**|Gibt die Gesamtanzahl der Prozesse an, die erfolgreich eine Zuweisung für Arbeitsbereichsspeicher erhalten haben.|  
 |**Ausstehende Speicherzuweisungen**|Gibt die Gesamtanzahl der Prozesse an, die auf eine Zuweisung von Arbeitsbereichsspeicher warten.|  
 |**Optimiererspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für die Abfrageoptimierung verwendet.|  
-|**Reservierter Serverarbeitsspeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server für die zukünftige Verwendung reserviert hat. Dieser Leistungsindikator gibt den derzeit nicht verwendeten Umfang des ursprünglich zugewiesenen Arbeitsspeichers an, der in **Erteilter Arbeitsbereichsspeicher (KB)** angezeigt wird.|  
+|**Reservierter Serverarbeitsspeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server für die zukünftige Verwendung reserviert hat. Dieser Leistungsindikator gibt den derzeit nicht verwendeten Umfang des ursprünglich zugewiesenen Arbeitsspeichers an, der in **Erteilter Arbeitsbereichsspeicher (KB)**angezeigt wird.|  
 |**SQL-Cachespeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für den dynamischen SQL-Cache verwendet.|  
 |**Gestohlener Serverarbeitsspeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server derzeit für andere Zwecke als Datenbankseiten verwendet.|  
 |**Zielserverspeicher (KB)**|Gibt den idealen Umfang des Arbeitsspeichers an, den der Server belegen kann.|  
 |**Serverspeicher gesamt (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server mit dem Speicher-Manager zugesichert hat.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Puffer-Manager-Objekt](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

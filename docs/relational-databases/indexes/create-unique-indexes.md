@@ -1,29 +1,33 @@
 ---
-title: "Erstellen eindeutiger Indizes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Eindeutige Indizes"
-  - "Entwerfen von Indizes [SQL Server], eindeutige"
-  - "gruppierte Indizes, eindeutige"
-  - "Indizes [SQL Server], eindeutige"
-  - "Nicht gruppierte Indizes [SQL Server], eindeutige"
-  - "Eindeutige Indizes, Richtlinien zum Entwerfen"
+title: Erstellen eindeutiger Indizes | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen eindeutiger Indizes
+# <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie ein eindeutiger Index auf einer Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Ein eindeutiger Index garantiert, dass der Indexschlüssel keine doppelten Werte enthält und dass deshalb jede Zeile in der Tabelle in gewisser Weise eindeutig ist. Es gibt keine bedeutenden Unterschiede zwischen dem Erstellen einer UNIQUE-Einschränkung und dem Erstellen eines eindeutigen, von Einschränkungen unabhängigen Index. Die Datenüberprüfung erfolgt auf dieselbe Weise, und der Abfrageoptimierer macht keinen Unterschied zwischen einem durch eine Einschränkung erstellten eindeutigen Index und einem manuell erstellten. Das Erstellen einer UNIQUE-Einschränkung auf der Spalte verdeutlicht jedoch die Zielsetzung des Indexes. Weitere Informationen zu UNIQUE-Einschränkungen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -97,15 +101,15 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, für die Sie einen eindeutigen Index erstellen möchten.  
   
 2.  Erweitern Sie den Ordner **Tabellen** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, in der Sie einen eindeutigen Index erstellen möchten, und wählen Sie **Entwurf** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, in der Sie einen eindeutigen Index erstellen möchten, und wählen Sie **Entwurf**aus.  
   
-4.  Wählen Sie im Menü **Tabellen-Designer** **Indizes/Schlüssel** aus.  
+4.  Wählen Sie im Menü **Tabellen-Designer** **Indizes/Schlüssel**aus.  
   
 5.  Klicken Sie im Dialogfeld **Indizes/Schlüssel** auf **Hinzufügen**.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 29
   
 7.  Wählen Sie im Hauptraster unter **(Allgemein)** **Typ** aus, und wählen Sie dann **Index** aus der Liste aus.  
   
-8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)**.  
+8.  Wählen Sie **Spalten**aus, und klicken Sie dann auf die Auslassungspunkte **(...)**.  
   
 9. Wählen Sie im Dialogfeld **Indexspalten** unter **Spaltenname**die Spalten aus, die Sie indizieren möchten. Sie können bis zu 16 Spalten auswählen. Um optimale Ergebnisse zu gewährleisten, sollten Sie für jeden Index höchstens zwei Spalten auswählen. Für jede ausgewählte Spalte können Sie festlegen, ob die darin enthaltenen Werte über den Index in aufsteigender oder absteigender Reihenfolge geordnet werden.  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 29
   
 13. Klicken Sie auf **Schließen**.  
   
-14. Klicken Sie im Menü **Datei** auf **Speichern** *Tabellenname*.  
+14. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
   
-#### Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank mit der Tabelle, für die Sie einen eindeutigen Index erstellen möchten.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 29
   
 3.  Erweitern Sie die Tabelle, für die Sie einen eindeutigen Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…**aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
@@ -151,9 +155,9 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So erstellen Sie einen eindeutigen Index auf einer Tabelle  
+#### <a name="to-create-a-unique-index-on-a-table"></a>So erstellen Sie einen eindeutigen Index auf einer Tabelle  
   
-1.  Stellen Sie im Objekt-Explorer ** **eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

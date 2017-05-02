@@ -1,36 +1,40 @@
 ---
-title: "SQL Server Audit (Datenbankmodul) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server Audit"
-  - "Überwachung [SQL Server], SQL Server Audit"
+title: SQL Server Audit (Datenbankmodul) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/29/2017
+
 ---
-# SQL Server Audit (Datenbankmodul)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
+  Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
   
  Es gibt mehrere Überwachungsebenen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von gesetzlichen oder standardspezifischen Anforderungen für die Installation abhängig sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit enthält die Tools und Prozesse, die Sie zum Aktivieren, Speichern und Anzeigen von Überwachungen auf verschiedenen Server- und Datenbankobjekten benötigen.  
   
  Bei Servern können Sie Überwachungsaktionsgruppen instanzweise aufzeichnen, bei Datenbanken entweder Überwachungsaktionsgruppen oder Überwachungsaktionen jeweils pro Datenbank. Das Überwachungsereignis tritt jedes Mal auf, wenn die überwachbare Aktion erkannt wird.  
   
- Alle Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen Überwachungen auf Serverebene. Alle Editionen ab [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 unterstützen Überwachungen auf Datenbankebene. Zuvor war die Überwachung auf Datenbankebene auf die Editionen Enterprise, Developer und Evaluation beschränkt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Alle Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen Überwachungen auf Serverebene. Alle Editionen ab [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 unterstützen Überwachungen auf Datenbankebene. Zuvor war die Überwachung auf Datenbankebene auf die Editionen Enterprise, Developer und Evaluation beschränkt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Dieses Thema gilt für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie Informationen unter [Erste Schritte mit SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -38,7 +42,7 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>SQL Server Audit-Komponenten  
  Eine *Überwachung* besteht aus mehreren Elementen, die in einem einzelnen Paket für eine bestimmte Gruppe von Server- oder Datenbankaktionen zusammengefasst werden. Die Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit geben zusammen eine Ausgabe aus, die als Überwachung bezeichnet wird, ebenso wie durch die Kombination von Berichtsdefinitionen mit Grafiken und Datenelementen ein Bericht erstellt wird.  
   
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Überwachung verwendet *erweiterte Ereignisse*, um eine Überwachung zu erstellen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [erweiterte Ereignisse](../../../relational-databases/extended-events/extended-events.md).  
+ Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwendet *erweiterte Ereignisse* , um eine Überwachung zu erstellen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [erweiterte Ereignisse](../../../relational-databases/extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  Das *SQL Server Audit* -Objekt listet eine einzelne Instanz an Aktionen oder Aktionsgruppen auf Server- oder Datenbankebene auf, die überwacht werden soll. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen.  
@@ -123,7 +127,7 @@ caps.handback.revision: 58
 ### <a name="database-mirroring-and-sql-server-audit"></a>Datenbankspiegelung und SQL Server Audit  
  Eine Datenbank, für die eine Datenbank-Überwachungsspezifikation definiert wurde und für die Datenbankspiegelung verwendet wird, enthält die Datenbank-Überwachungsspezifikation. Die folgenden Elemente müssen konfiguriert werden, damit sie auf der gespiegelten SQL-Instanz ordnungsgemäß arbeitet:  
   
--   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID**=***> GUID der Quellserverüberwachung*> konfigurieren.  
+-   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID**=***\<> GUID der Quellserverüberwachung*> konfigurieren.  
   
 -   Bei Binärdateizielen muss das Dienstkonto des Spiegelservers über die erforderlichen Berechtigungen für den Speicherort verfügen, an den der Überwachungspfad geschrieben wird.  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 58
  Weitere Informationen über das Gewähren von Rechten und Berechtigungen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md).  
   
 > [!CAUTION]  
->  Prinzipale in der Rolle sysadmin können die Überwachungskomponenten manipulieren; Prinzipale in der Rolle db_owner können Überwachungsspezifikationen in einer Datenbank bearbeiten. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Überwachung überprüft, dass bei der Anmeldung, bei der eine Überwachungsspezifikation erstellt oder geändert wird, mindestens die Berechtigung ALTER ANY DATABASE AUDIT vorliegt. Es wird jedoch keine Überprüfung durchgeführt, wenn Sie eine Datenbank anfügen. Gehen Sie davon aus, dass alle Datenbank-Überwachungsspezifikationen nur so vertrauenswürdig sind wie die Prinzipale in der Rolle sysadmin oder db_owner.  
+>  Prinzipale in der Rolle sysadmin können die Überwachungskomponenten manipulieren; Prinzipale in der Rolle db_owner können Überwachungsspezifikationen in einer Datenbank bearbeiten. Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung überprüft, dass bei der Anmeldung, bei der eine Überwachungsspezifikation erstellt oder geändert wird, mindestens die Berechtigung ALTER ANY DATABASE AUDIT vorliegt. Es wird jedoch keine Überprüfung durchgeführt, wenn Sie eine Datenbank anfügen. Gehen Sie davon aus, dass alle Datenbank-Überwachungsspezifikationen nur so vertrauenswürdig sind wie die Prinzipale in der Rolle sysadmin oder db_owner.  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [SQL Server-Überwachungsdatensätze](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

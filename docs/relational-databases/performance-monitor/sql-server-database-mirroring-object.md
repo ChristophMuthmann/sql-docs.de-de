@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, Datenbankspiegelung (Objekt) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Datenbankspiegelung"
-  - "Datenbankspiegelung [SQL Server], Leistungsindikatoren"
-  - "Leistungsindikatoren [SQL Server], Datenbankspiegelung"
-  - "Datenbankspiegelung (Objekt)"
+title: SQL Server, Datenbankspiegelung (Objekt) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Database Mirroring
+- database mirroring [SQL Server], performance counters
+- performance counters [SQL Server], database mirroring
+- Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Datenbankspiegelung (Objekt)
+# <a name="sql-server-database-mirroring-object"></a>SQL Server, Datenbankspiegelung (Objekt)
   Das **SQLServer:Datenbankspiegelung** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
 |Name|Beschreibung|  
@@ -51,10 +55,10 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Auf jedem Partner wird abhängig von der Rolle, die der Partner derzeit ausführt, für einige der Indikatoren der Wert 0 angezeigt.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Mithilfe der Leistungsindikatoren können Sie die Leistung der Datenbankspiegelung überwachen. Beispielsweise können Sie den Indikator **Transaktionsverzögerung** untersuchen, um festzustellen, ob die Datenbankspiegelung Auswirkungen auf die Leistung des Prinzipalservers hat, oder Sie können die Indikatoren **Wiederholungswarteschlange** und **Protokollsende-Warteschlange** untersuchen, um festzustellen, wie gut die Spiegeldatenbank mit der Prinzipaldatenbank Schritt halten kann. Mit dem Leistungsindikator **Gesendete Protokollbytes/Sekunde** können Sie überwachen, wie viele Protokollbytes pro Sekunde gesendet wurden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

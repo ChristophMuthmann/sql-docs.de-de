@@ -1,27 +1,31 @@
 ---
-title: "Festlegen des Ablaufdatums f&#252;r Abonnements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abonnements [SQL Server-Replikation], Ablauf"
-  - "Ablauf [SQL Server-Replikation]"
-  - "Aufbewahrungsdauer [SQL Server-Replikation]"
-  - "Deaktivieren von Abonnements"
+title: "Festlegen des Ablaufdatums für Abonnements | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [SQL Server replication], expiration
+- expiration [SQL Server replication]
+- retention periods [SQL Server replication]
+- deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95b1733f7b2953f8fc5088c6d0b2a5bbdca3d754
+ms.lasthandoff: 04/11/2017
+
 ---
-# Festlegen des Ablaufdatums f&#252;r Abonnements
+# <a name="set-the-expiration-period-for-subscriptions"></a>Festlegen des Ablaufdatums für Abonnements
   In diesem Thema wird beschrieben, wie der Ablaufzeitraum für Abonnements in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt wird. Der Ablaufzeitraum für Abonnements bestimmt den Zeitraum, bevor ein Abonnement abläuft und entfernt wird. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **In diesem Thema**  
@@ -49,24 +53,24 @@ caps.handback.revision: 36
     -   Es ist möglich, anzugeben, dass Abonnements nie ablaufen. Es wird jedoch nachdrücklich empfohlen, diesen Wert nicht zu verwenden, da sonst kein Cleanup der Metadaten ausgeführt werden kann.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Legen Sie das Ablaufdatum von Abonnements auf den **Allgemeine** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** (Dialogfeld). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Geben Sie das Ablaufdatum von Abonnements im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Allgemein** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### So legen Sie das Ablaufdatum für Abonnements fest  
+#### <a name="to-set-the-expiration-period-for-subscriptions"></a>So legen Sie das Ablaufdatum für Abonnements fest  
   
-1.  In der **Abonnementablauf** Abschnitt der **Allgemeine** auf der Seite der **Veröffentlichungseigenschaften - \< Veröffentlichung>** Dialogfeld geben, ob Abonnements ablaufen sollen.  
+1.  Geben Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Allgemein** im Bereich **Ablaufdatum für das Abonnement** an, ob Abonnements ablaufen sollen.  
   
 2.  Falls dies der Fall ist, geben Sie die Dauer an, nach der Abonnements ablaufen sollen.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können gespeicherte Replikationsprozeduren dazu verwenden, diesen Wert festzulegen, wenn eine Veröffentlichung erstellt wird, und diesen Wert zu einem späteren Zeitpunkt zu ändern.  
   
-#### So legen Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung fest  
+#### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>So legen Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger [Sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Geben Sie den gewünschten Ablaufzeitraum für das Abonnement in Stunden für **@retention**an. Der Standardablaufzeitraum beträgt 336 Stunden. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Führen Sie auf dem Verleger [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)aus. Geben Sie den gewünschten Ablaufzeitraum für das Abonnement in Stunden für **@retention**festgelegt wird. Der Standardablaufzeitraum beträgt 336 Stunden. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-#### So legen Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung fest  
+#### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>So legen Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger [Sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Geben Sie den gewünschten Wert für den Ablaufzeitraum des Abonnements in Stunden für **@retention**an. Geben Sie die Einheiten, in denen der Ablaufzeitraum wird für ausgedrückt **@retention_period_unit**, dies kann einer der folgenden sein:  
+1.  Führen Sie auf dem Verleger [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)aus. Geben Sie den gewünschten Wert für den Ablaufzeitraum des Abonnements in Stunden für **@retention**festgelegt wird. Geben Sie die Einheiten, in denen der Ablaufzeitraum ausgedrückt wird, für **@retention_period_unit**an. Es stehen die folgenden Werte zur Auswahl:  
   
     -   **1** = Woche  
   
@@ -76,13 +80,13 @@ caps.handback.revision: 36
   
      Der Standardablaufzeitraum beträgt 14 Tage. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-#### So ändern Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
+#### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>So ändern Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [Sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum in Stunden für **@value**an.  
+1.  Führen Sie auf dem Verleger [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus. Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum in Stunden für **@value**festgelegt wird.  
   
-#### So ändern Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung  
+#### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>So ändern Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [Sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), wobei **@publication** und **@publisher**. Beachten Sie den Wert der **Retention_period_unit** im Resultset, die der folgenden Werte sind möglich:  
+1.  Führen Sie auf dem Verleger [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)aus, und geben Sie dazu **@publication** und **@publisher**festgelegt wird. Der Wert von **retention_period_unit** im Resultset ist einer der folgenden:  
   
     -   **0** = Tag  
   
@@ -92,12 +96,12 @@ caps.handback.revision: 36
   
     -   **3** = Jahr  
   
-2.  Führen Sie auf dem Verleger [Sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum als Text, der auf der Einheit für die Beibehaltungsdauer aus Schritt 1 basiert, für **@value**an.  
+2.  Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum als Text, der auf der Einheit für die Beibehaltungsdauer aus Schritt 1 basiert, für **@value**festgelegt wird.  
   
-3.  (Optional) Führen Sie auf dem Verleger [Sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Geben Sie **Retention_period_unit** für **@property** und eine neue Einheit für den abonnementablaufzeitraum für **@value**.  
+3.  (Optional) Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention_period_unit** für **@property** und eine neue Einheit für den Abonnementablaufzeitraum für **@value**festgelegt wird.  
   
-## Siehe auch  
- [Konzepte für gespeicherte Systemprozeduren für die Replikation](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Abonnementablauf und -deaktivierung](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

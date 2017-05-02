@@ -1,23 +1,27 @@
 ---
-title: "Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
   Dieses Thema enthält ein Beispiel, das Sie in die Syntax für In-Memory OLTP einführt.  
   
  Um einer Anwendung die Verwendung von In-Memory OLTP zu ermöglichen, müssen folgende Aufgaben ausgeführt werden:  
@@ -32,7 +36,7 @@ caps.handback.revision: 35
   
 -   Migrieren Sie bei Bedarf Daten aus vorhandenen Tabellen zu den speicheroptimierten Tabellen.  
   
- Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um speicheroptimierte Tabellen zu erstellen, finden Sie unter [SQL Server Management Studio-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
+ Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um speicheroptimierte Tabellen zu erstellen, finden Sie unter [SQL Server Management Studio-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
  Im folgenden Codebeispiel ist das Verzeichnis c:\Data erforderlich.  
   
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
