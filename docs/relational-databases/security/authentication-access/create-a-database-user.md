@@ -1,35 +1,40 @@
 ---
-title: "Erstellen eines Datenbankbenutzers | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "Datenbankbenutzer, erstellen"
-  - "Erstellen von Benutzern mit Management Studio"
-  - "Zuordnen von Benutzern"
-  - "Benutzer [SQL Server], erstellen"
-  - "Datenbankbenutzer hinzufügen [SQL Server]"
-  - "Datenbankbenutzer, zuordnen\"
-  - "CREATE USER [Management Studio]"
-  - "Benutzer [SQL Server], hinzufügen"
-  - "Zuordnen von Datenbankbenutzern"
+title: Erstellen eines Datenbankbenutzers | Microsoft Docs
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# Erstellen eines Datenbankbenutzers
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie die am weitesten verbreiteten Typen von Datenbankbenutzern erstellen. Es gibt elf Typen von Benutzern. Eine vollständige Liste finden Sie im Thema [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Alle Ausführungen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen Datenbankbenutzer, aber nicht unbedingt alle Benutzertypen.  
@@ -41,7 +46,7 @@ caps.handback.revision: 31
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### Auswählen des Benutzertypen  
+### <a name="selecting-the-type-of-user"></a>Auswählen des Benutzertypen  
  **Anmeldenamen oder Benutzer, der keinem Anmeldenamen zugeordnet ist**  
   
  Falls [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Sie neu ist, kann es schwer sein, festzustellen, was für einen Benutzertyp Sie erstellen wollen. Fragen Sie sich zunächst, ob die Person oder Gruppe, die Zugriff auf die Datenbank benötigt, über einen Anmeldenamen verfügt. Anmeldenamen in der Masterdatenbank sind weit verbreitet für die Personen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwalten und für Personen, die Zugriff auf viele oder alle Datenbanken auf der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] benötigen. Für diese Situation erstellen Sie einen **SQL-Benutzer mit Anmeldename**. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereits eine Anmeldung vorhanden ist. Informationen zum Erstellen eines Anmeldenamens finden Sie unter [Erstellen eines Anmeldenamens](../../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -64,7 +69,7 @@ caps.handback.revision: 31
 ##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die **ALTER ANY USER** -Berechtigung in der Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Erstellen eines Benutzers ohne Kennwort  
+##  <a name="SSMSProcedure"></a> Erstellen eines Benutzers mit SSMS  
   
  
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Datenbanken** .  
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Zusätzliche Optionen  
+### <a name="additional-options"></a>Zusätzliche Optionen  
  Im Dialogfeld **Datenbankbenutzer - Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente**und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers**die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
@@ -133,7 +138,7 @@ caps.handback.revision: 31
      Zeigt bzw. gibt die erweiterten Eigenschaften für das Objekt an. Jede erweiterte Eigenschaft besteht aus einem aus Name und Wert bestehenden Paar von Metadaten, das dem Objekt zugeordnet ist.  
   
      **Auslassungspunkte (…)**  
-     Klicken Sie auf die Auslassungszeichen **(…)** hinter **Wert**, um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Klicken Sie auf die Auslassungszeichen **(…)** hinter **Wert** , um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](http://msdn.microsoft.com/library/ms189353.aspx).  
   
      **Delete**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  Weitere Informationen finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) Dort finden Sie weitere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Beispiele.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Prinzipale &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Erstellen eines Anmeldenamens](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
