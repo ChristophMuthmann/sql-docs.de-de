@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
+Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
     
- In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](http://msdn.microsoft.com/library/ms175049.aspx).  
+In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](http://msdn.microsoft.com/library/ms175049.aspx).  
   
   
 ##  <a name="Basics"></a> Grundlagen des Indexentwurfs  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Schreiben Sie Abfragen, die möglichst viele Zeilen in einer einzigen Anweisung einfügen oder ändern, anstatt mehrere Abfragen zum Aktualisieren der gleichen Zeilen zu verwenden. Wenn nur eine Anweisung verwendet wird, kann der Index optimal verwaltet werden.  
   
--   Werten Sie den Abfragetyp sowie die Art der Verwendung von Spalten in der Abfrage aus. Eine Spalte, die in einem Abfragetyp für genaue Übereinstimmung verwendet wird, ist z. B. ein guter Kandidat für einen nicht gruppierten oder gruppierten Index.  
+-   Werten Sie den Abfragetyp sowie die Art der Verwendung von Spalten in der Abfrage aus. Eine Spalte, die in einem Abfragetyp für genaue Übereinstimmung verwendet wird, ist z. B. ein guter Kandidat für einen nicht gruppierten oder gruppierten Index.
   
 ### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Spaltenrichtlinien:  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
- [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 
