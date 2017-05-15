@@ -23,9 +23,10 @@ caps.latest.revision: 76
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -99,7 +100,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
      Die REFERENCES-Berechtigung ist für ein Objekt erforderlich, um eine FUNCTION oder VIEW mit der `WITH SCHEMABINDING` -Klausel zu erstellen, die auf das betreffende Objekt verweist.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] http://go.microsoft.com/fwlink/?LinkId=229142 [, um ein Diagramm aller](http://go.microsoft.com/fwlink/?LinkId=229142)-Berechtigungen in Postergröße im PDF-Format abzurufen.  
+ Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142), um ein Diagramm aller-Berechtigungen in Postergröße im PDF-Format abzurufen.  
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
