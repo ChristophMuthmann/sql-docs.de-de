@@ -24,9 +24,10 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f82d446fbbe47be4698ae458704e28fa8ac95c15
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie in der [](../../t-sql/statements/backup-transact-sql.md) BACKUP-Anweisung die Datei oder das Gerät und seinen physischen Namen an. In diesem Beispiel wird die `AdventureWorks2012` -Datenbank in die `Z:\SQLServerBackups\AdventureWorks2012.Bak`-Datenträgerdatei gesichert.  
+3.  Geben Sie in der [BACKUP](../../t-sql/statements/backup-transact-sql.md)  Anweisung die Datei oder das Gerät und seinen physischen Namen an. In diesem Beispiel wird die `AdventureWorks2012` -Datenbank in die `Z:\SQLServerBackups\AdventureWorks2012.Bak`-Datenträgerdatei gesichert.  
   
 ```  
 USE AdventureWorks2012;  
