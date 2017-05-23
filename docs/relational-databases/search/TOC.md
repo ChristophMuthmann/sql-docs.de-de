@@ -16,7 +16,7 @@
 ## [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
 ## [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 ## [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md)  
-## [Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+## [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
 ## [Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
 ## [Anpassen des Verhaltens der Wörtertrennung mit einem Benutzerwörterbuch](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
 ## [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
