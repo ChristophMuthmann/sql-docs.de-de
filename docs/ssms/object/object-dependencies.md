@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a8a21c9fc7ade45f13e055a30f4649af13677af
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, der
 Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
 **Abhängigkeiten**  
-Nach dem Klicken auf **Objekte, die von** *<selected object>* abhängig sind, wird eine hierarchische Ansicht der Objekte angezeigt, die von dem ausgewählten Objekt abhängig sind. Durch Klicken auf **Objekte, von denen** *<selected object>* **abhängt** is clicked, this displays an hierarchical view of objects on which the selected object abhängt.  
+Nach dem Klicken auf **Objekte, die von** *<selected object>* abhängig sind, wird eine hierarchische Ansicht der Objekte angezeigt, die von dem ausgewählten Objekt abhängig sind. Durch Klicken auf **Objekte, von denen** *<selected object>* **abhängt**, wird eine hierarchische Ansicht von Objekten angezeigt, von denen das ausgewählte Objekt abhängig ist.  
   
 **Name**  
 Zeigt den Namen, des oben in der Strukturansicht **Abhängigkeiten** ausgewählten Objekts an.  

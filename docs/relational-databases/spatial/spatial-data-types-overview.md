@@ -19,9 +19,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/11/2017
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist **FullGlobe** ein spezieller Polygontyp, der den gesamten Globus abdeckt. **FullGlobe** verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Äußere und innere Ringe sind beim geography-Datentyp nicht von Bedeutung  
- In der Simple Features for SQL-Spezifikation von OGC werden äußere und innere Ringe erörtert. Diese Unterscheidung ist beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
+ In der Simple Features for SQL-Spezifikation von OGC werden äußere und innere Ringe erörtert. Diese Unterscheidung ist beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** allerdings nicht sinnvoll: Jeder Ring eines Polygons kann als äußerer Ring interpretiert werden.  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
   

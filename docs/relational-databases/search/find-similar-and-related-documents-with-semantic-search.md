@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="HowToIdentifySimilar"></a> Beispiel: Suchen der wichtigsten Dokumente, die einem anderen Dokument ähnlich sind  
  Im folgenden Beispiel werden die ersten zehn Kandidaten abgerufen, die dem mit *@CandidateID* angegebenen Kandidaten aus der HumanResources.JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
   
 ```scr  
@@ -62,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> Beispiel: Suchen der wichtigsten Schlüsselausdrücke, die zwischen Dokumenten ähnlich sind  
  Im folgenden Beispiel werden die fünf Schlüsselausdrücke mit der größten Ähnlichkeit zwischen den in der **HumanResources.JobCandidate** -Tabelle angegebenen Kandidaten der AdventureWorks2012-Beispieldatenbank abgerufen.  
   
 ```tsql  
