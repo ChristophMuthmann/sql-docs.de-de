@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,13 +66,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  Im Dialogfeld **Replikationskennwörter aktualisieren** , das über den Ordner **Replikation** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verfügbar ist. Wenn Sie das Kennwort eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder Windows-Kontos auf einem Server der Replikationstopologie ändern, verwenden Sie am besten dieses Dialogfeld, anstatt die Kennwörter jedes Agents, der dieses Konto verwendet, einzeln zu aktualisieren. Wenn jedoch Agents dasselbe Konto auf mehreren Servern verwenden, müssen Sie mit jedem Server eine Verbindung herstellen und das Kennwort ändern. Das Kennwort wird überall aktualisiert, wo es die Replikation verwendet. Das Kennwort wird nicht an anderen Orten, wie z. B. auf Verbindungsservern, aktualisiert.  
   
-2.  Auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  Auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pushabonnements](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  In den Dialogfeldern **Verteilereigenschaften - \<Distributor>** und **Eigenschaften der Verteilungsdatenbank - \<Database>**. Weitere Informationen zum Zugreifen auf diese Dialogfelder finden Sie unter [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  In den Dialogfeldern **Verteilereigenschaften - \<Distributor>** und **Eigenschaften der Verteilungsdatenbank - \<Database>**. Weitere Informationen zum Zugreifen auf diese Dialogfelder finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  Im Dialogfeld **Verlegereigenschaften - \<Verleger>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  Im Dialogfeld **Verlegereigenschaften - \<Verleger>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>So ändern Sie das Kennwort für ein Konto, das von einem oder mehreren Agent(s) verwendet wird  
   
