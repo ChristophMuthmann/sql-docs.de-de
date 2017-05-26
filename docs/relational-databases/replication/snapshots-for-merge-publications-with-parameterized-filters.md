@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  Beispiel: Die Außendienstmitarbeiter von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]liefern Waren an einzelne Geschäfte aus. Jeder Vertriebsmitarbeiter erhält basierend auf seiner Anmeldung ein Abonnement, das die Daten für das vom jeweiligen Mitarbeiter bediente Geschäft abruft. Der Administrator generiert die Momentaufnahmen vorab und aktualisiert sie jeden Sonntag. Gelegentlich wird dem System ein neuer Benutzer hinzugefügt, der Daten für eine Partition benötigt, für die noch keine Momentaufnahme verfügbar ist. Um zu verhindern, dass ein Abonnent die Veröffentlichung nicht abonnieren kann, weil noch keine Momentaufnahme verfügbar ist, lässt der Administrator vom Abonnenten angeforderte Momentaufnahmen zu. Wenn der neue Abonnent erstmalig eine Verbindung herstellt, wird die Momentaufnahme für die angegebene Partition generiert und auf dem Abonnenten angewendet (der[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent muss auf dem Verleger ausgeführt werden, damit die Momentaufnahme generiert werden kann).  
   
- Informationen zum Erstellen einer Momentaufnahme für eine Veröffentlichung mit parametrisierten Filtern finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Informationen zum Erstellen einer Momentaufnahme für eine Veröffentlichung mit parametrisierten Filtern finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Sicherheitseinstellungen für den Momentaufnahme-Agent  
  Der Momentaufnahme-Agent erstellt für jede Partition Momentaufnahmen. Der Agent wird für vorab generierte Momentaufnahmen und Momentaufnahmen ausgeführt, die vom Abonnenten angefordert werden. Er stellt Verbindungen mit den Anmeldeinformationen her, die beim Erstellen des Auftrags des Momentaufnahme-Agents für die Veröffentlichung angegeben wurden (der Auftrag wird vom Assistenten für neue Veröffentlichung oder von **sp_addpublication_snapshot**erstellt.) Verwenden Sie **sp_changedynamicsnapshot_job**zum Ändern der Anmeldeinformationen. Weitere Informationen finden Sie unter [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

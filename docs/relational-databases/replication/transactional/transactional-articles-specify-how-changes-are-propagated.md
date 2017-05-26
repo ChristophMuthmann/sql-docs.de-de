@@ -16,9 +16,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
  Standardmäßig gibt die Transaktionsreplikation Änderungen an Abonnenten mithilfe einer Reihe gespeicherter Prozeduren weiter, die auf jedem Abonnenten gespeichert sind. Wenn eine Einfügung, ein Update oder eine Löschung an einer Tabelle auf dem Verleger vorgenommen wird, wird der Vorgang in einen Aufruf an eine gespeicherte Prozedur auf dem Abonnenten übersetzt. Die gespeicherte Prozedur akzeptiert Parameter, die den Spalten in der Tabelle zugeordnet sind, und lässt das Ändern dieser Spalten auf dem Abonnenten zu.  
   
- Informationen zum Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln finden Sie unter [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Informationen zum Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln finden Sie unter [Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Standardmäßige und benutzerdefinierte gespeicherte Prozeduren  
  Die folgenden drei Prozeduren werden von der Replikation standardmäßig für jeden Tabellenartikel erstellt:  
