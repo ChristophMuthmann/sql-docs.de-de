@@ -23,9 +23,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  Weitere Informationen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Wenn ein Konflikt erkannt wird, startet der Merge-Agent den ausgewählten Konfliktlöser und verwendet diesen zur Bestimmung des Konfliktgewinners. Die Gewinnerzeile wird auf dem Verleger und auf dem Abonnenten angewendet, und die Daten der verlierenden Zeile werden in eine Konflikttabelle geschrieben. Konflikte werden direkt nach dem Ausführen des Konfliktlösers gelöst, es sei denn, Sie haben angegeben, dass Konflikte interaktiv gelöst werden sollen.  
