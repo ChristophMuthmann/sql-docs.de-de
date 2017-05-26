@@ -18,9 +18,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **@host_name** – wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
-2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>So löschen Sie eine Partition  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
- Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
+ Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
   
 -   Der Wert und die Filterfunktion, auf dem bzw. der die Partition basiert.  
   
