@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  **Lösung 1:**Verwenden Sie anstelle des **/qn** -Schalters den **/qb** -Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problem: SQL Server kann sich nach der Migration auf einen anderen Knoten nicht am Netzwerk anmelden  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Problem 1:** Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkonten kann kein Kontakt mit einem Domänencontroller hergestellt werden.  
   
  **Lösung 1:**Überprüfen Sie die Ereignisprotokolle in Hinblick auf Netzwerkprobleme wie Adapterfehler oder DNS-Probleme. Überprüfen Sie, ob Sie Ihren Domänencontroller pingen können.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Problem 2:** Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
   
  **Lösung 2:** Ändern Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Managers. Andernfalls müssen Sie nach dem Ändern der Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten auf einem Knoten auch die Kennwörter auf allen anderen Knoten ändern. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Konfigurations-Manager führt dies automatisch aus.  
   
@@ -126,7 +127,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
  **Lösung 2:** Verwenden Sie NBTSTAT, um den doppelten Namen zu finden, und beheben Sie dann das Problem.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Problem 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keine Verbindung mithilfe von Named Pipes her.  
   
  **Lösung 3:** Um eine Verbindung mithilfe von Named Pipes herzustellen, erstellen Sie mit dem SQL Server-Konfigurations-Manager einen Alias, der eine Verbindung mit dem entsprechenden Computer herstellt. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (**Knoten A** und **Knoten B**) und eine Failoverclusterinstanz (**Virtsql**) mit einer Standardinstanz verfügen, können Sie die Verbindung mit dem Server, dessen Netzwerknamenressource offline ist, wie folgt herstellen:  
   
