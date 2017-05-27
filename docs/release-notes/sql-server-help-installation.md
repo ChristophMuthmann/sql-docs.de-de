@@ -15,9 +15,10 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fc2435ccea3b01328c3c4623e62fbf12ee53e400
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
