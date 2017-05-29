@@ -139,8 +139,8 @@ ms.lasthandoff: 04/11/2017
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Verknüpfungsfilter](../../../relational-databases/replication/merge/join-filters.md)   
+ [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [So wird`s gemacht: definieren und ändern Sie einen Verknüpfungsfilter zwischen Mergeartikeln (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
