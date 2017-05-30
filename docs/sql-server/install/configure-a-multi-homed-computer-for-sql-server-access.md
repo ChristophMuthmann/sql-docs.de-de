@@ -18,9 +18,10 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
 10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen**und anschließend auf **Weiter**.  
   
     > [!NOTE]  
-    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbankmodul &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbankmodul &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40; SQL Server-Konfigurations-Manager &#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Wählen Sie auf der Seite **Profil** mindestens ein Profil für die Regel aus. Wenn Sie mit Firewallprofilen nicht vertraut sind, klicken Sie im Firewallprogramm auf den Link **Weitere Informationen zu Profilen** .  
   
