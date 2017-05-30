@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Tabelle löschen (Dialogfeld) (Visual Database Tools)
-This dialog box allows you to specify the table from which to delete records. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  
+Mithilfe dieses Dialogfelds können Sie die Tabelle angeben, aus der Datensätze gelöscht werden sollen. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  
   
 Wählen Sie die Tabelle aus, aus der Datensätze gelöscht werden sollen, und klicken Sie auf **OK**.  
   
