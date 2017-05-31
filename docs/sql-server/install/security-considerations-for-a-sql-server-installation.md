@@ -30,9 +30,10 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

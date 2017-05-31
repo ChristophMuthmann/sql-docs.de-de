@@ -22,9 +22,10 @@ caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

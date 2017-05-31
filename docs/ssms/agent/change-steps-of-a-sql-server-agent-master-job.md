@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 599646177ad22cb5131b0c57dc07206db66153a2
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
   
 5.  Wählen Sie im Dialogfeld **Auftragseigenschaften -***Auftragsname* unter **Seite auswählen**die Option **Schritte**aus.  
   
-6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritt-Eigenschaften -***Auftragsschrittname* zu öffnen. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Allgemein“&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) und [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Erweitert“&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritt-Eigenschaften -** *Auftragsschrittname* zu öffnen. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Allgemein“&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) und [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Erweitert“&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

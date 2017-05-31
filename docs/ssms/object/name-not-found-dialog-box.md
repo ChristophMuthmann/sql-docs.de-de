@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e9dfa22d44a1aae2a3d87c85b6520ad52ab22b7f
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Objekttypen auswählen*
 **Geben Sie den Objektnamen ein**  
 Enthält den Namen des Objekts, das nicht gefunden wurde. Korrigieren Sie den Namen des Objekts, oder geben Sie einen neuen Objektnamen ein.  
   
-<object name>**aus der Auswahl** ** **entfernen**  
+<object name> **aus der Auswahl** ** **entfernen**  
 Wählen Sie diese Option aus, um das Dialogfeld **Name nicht gefunden** zu schließen und das Element aus dem Dialogfeld **Objekte auswählen** zu entfernen.  
   
 
