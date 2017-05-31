@@ -20,9 +20,10 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

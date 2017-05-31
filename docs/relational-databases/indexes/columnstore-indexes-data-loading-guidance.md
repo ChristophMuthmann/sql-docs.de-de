@@ -15,9 +15,10 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

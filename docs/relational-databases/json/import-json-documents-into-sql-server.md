@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fafe626643707982162ce03a02b9f707b6be2995
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

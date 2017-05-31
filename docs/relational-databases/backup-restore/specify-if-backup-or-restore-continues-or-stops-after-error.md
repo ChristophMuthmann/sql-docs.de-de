@@ -19,9 +19,10 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96c12312979d6815f9f1fbbcbad2b33db0b53db6
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

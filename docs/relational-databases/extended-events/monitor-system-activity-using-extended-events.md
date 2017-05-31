@@ -18,9 +18,10 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
