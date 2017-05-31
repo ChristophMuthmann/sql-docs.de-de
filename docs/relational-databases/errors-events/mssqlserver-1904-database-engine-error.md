@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f40d48806c181cc12c804bfa5fdf9796f83b77e
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

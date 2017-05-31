@@ -15,9 +15,10 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d67b2ac2eb3f10bd5ecbf973ec97d12566973738
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

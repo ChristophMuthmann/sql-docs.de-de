@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Verwenden Sie die [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  Anweisung. In diesem Beispiel werden Informationen über die Datei `AdventureWorks2012-FullBackup.bak`zurückgegeben:  
+3.  Verwenden Sie die [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) Anweisung. In diesem Beispiel werden Informationen über die Datei `AdventureWorks2012-FullBackup.bak`zurückgegeben:  
   
 ```tsql  
 USE AdventureWorks2012;  

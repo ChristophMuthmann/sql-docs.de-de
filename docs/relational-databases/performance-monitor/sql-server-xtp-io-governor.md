@@ -14,9 +14,10 @@ caps.latest.revision: 2
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dad1b34551ae96587fafdf3f232ce96b33a96846
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
