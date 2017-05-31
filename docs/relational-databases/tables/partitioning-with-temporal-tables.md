@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **Aktuelle Tabelle:**  
   
-    -   **SWITCH IN** to the current table can be used to facilitate data loading and querying while **SYSTEM_VERSIONING** is **ON**  
+    -   **SWITCH IN** für die aktuelle Tabelle kann zum Laden und Abfragen von Daten verwendet werden, solange **SYSTEM_VERSIONING** mit **ON** aktiviert ist.  
   
     -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
   
