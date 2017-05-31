@@ -16,9 +16,10 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 681ad2f6d7aeb88db45dde3f2e695db672b97dbd
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="use-ssdt-in-visual-studio-2017"></a>Verwenden von SSDT in Visual Studio 2017
 
-* [**Visual Studio 2017 herunterladen**](https://www.visualstudio.com/) ([Visual Studio 2017-Features nach Edition vergleichen](https://www.visualstudio.com/vs/compare/))
+* [**Visual Studio 2017 herunterladen** ](https://www.visualstudio.com/) ([Visual Studio 2017-Features nach Edition vergleichen](https://www.visualstudio.com/vs/compare/))
 
 Um relationale Datenbankprojekte zu verwenden, empfehlen wir die Überprüfung der Arbeitsauslastung von **Datenspeicherung und Verarbeitung** während der Installation. Unterstützung für SSDT-Datenbankprojekte ist auch in einigen anderen Arbeitsauslastungen enthalten, darunter *Azure*, *ASP.Net and Web Development* und *.Net Core Cross Platform Development*.
 

@@ -16,9 +16,10 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 091625c7e502ac131bd045546ca4c587b754e366
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

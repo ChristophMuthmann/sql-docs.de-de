@@ -14,9 +14,10 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1eec9ad248be759bdeed5950086ab9e5ec67a991
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

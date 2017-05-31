@@ -23,9 +23,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: be4e79791bad00c268354d91dab4a301a79b5ef4
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

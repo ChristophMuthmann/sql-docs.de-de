@@ -20,9 +20,10 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: afc8d1aa2ae45c901e3fc3d4050f25e02911af51
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -109,7 +110,7 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
  Um den Bereich aller Abfragen von allen Benutzern zu ändern, führen Sie die gespeicherte Prozedur **sys.sp_rda_set_query_mode**aus. Sie können den Bereich eingrenzen, sodass nur lokale Daten abgefragt werden, und Sie können alle Abfragen deaktivieren oder die Standardeinstellung wiederherstellen. Weitere Informationen finden Sie unter [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
  ### <a name="queryHints"></a>Ändern des Bereichs von Abfragen für eine einzelne Abfrage von einem Administrator  
- Zum Ändern des Bereichs einer einzelnen Abfrage von einem Mitglied der Rolle „db_owner“ fügen Sie den Abfragehinweis ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =*value)** zur SELECT-Anweisung hinzu. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
+ Zum Ändern des Bereichs einer einzelnen Abfrage von einem Mitglied der Rolle „db_owner“ fügen Sie den Abfragehinweis ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur SELECT-Anweisung hinzu. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Es werden nur lokale Daten abgefragt.  
    
  -   **REMOTE_ONLY**. Es werden nur Remotedaten abgefragt.  
@@ -126,7 +127,7 @@ GO
 ```  
    
  ## <a name="adminHints"></a>Durchführen administrativer Aktualisierungs- und Löschvorgänge  
- Standardmäßig können Sie Zeilen, die für die Migration geeignet sind oder bereits migriert wurden, in einer Stretch-aktivierten Tabelle nicht aktualisieren oder löschen. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =*value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
+ Standardmäßig können Sie Zeilen, die für die Migration geeignet sind oder bereits migriert wurden, in einer Stretch-aktivierten Tabelle nicht aktualisieren oder löschen. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Aktualisieren oder löschen Sie nur lokale Daten.  
    
  -   **REMOTE_ONLY**. Aktualisieren oder löschen Sie nur Remotedaten.  

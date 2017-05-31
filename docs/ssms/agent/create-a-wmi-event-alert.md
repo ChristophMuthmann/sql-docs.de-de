@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 97694f2029532a172f0b0f895dfc95ebc5a8a729
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die P
   
 3.  Klicken Sie mit der rechten Maustaste auf **Warnungen** , und wählen Sie **Neue Warnung**aus.  
   
-4.  Geben Sie im Dialogfeld **Neue Warnung** einen **** Namen für diese Warnung ein.  
+4.  Geben Sie im Dialogfeld **Neue Warnung** einen ****  Namen für diese Warnung ein.  
   
 5.  Aktivieren Sie das Kontrollkästchen **Aktivieren** , um die Ausführung der Warnung zu ermöglichen. Standardmäßig ist **Aktivieren** aktiviert.  
   

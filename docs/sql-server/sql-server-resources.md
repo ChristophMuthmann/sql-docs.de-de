@@ -19,9 +19,10 @@ caps.latest.revision: 45
 author: sabotta
 ms.author: carlasab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---

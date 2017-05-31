@@ -20,9 +20,10 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.contentlocale: de-de
 ms.lasthandoff: 04/11/2017
 
 ---
