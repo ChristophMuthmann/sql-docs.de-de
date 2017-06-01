@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Wenn Sie die Nachverfolgung auf der Ebene des logischen Datensatzes auswählen, wird ein Konflikt verursacht, wenn Änderungen in beliebigen Zeilen desselben logischen Datensatzes auf mehreren Replikationsknoten vorgenommen wurden (die betroffenen Spalten in den entsprechenden Zeilen müssen identisch sein).  
   
- Weitere Informationen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ Weitere Informationen finden Sie unter [Ermitteln und Lösen von Konflikten in logischen Datensätzen](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 04/11/2017
   
 -   Ein COM-basierter benutzerdefinierter Konfliktlöser  
   
-     Die Mergereplikation stellt eine API bereit, mit der Konfliktlöser als COM-Objekte in Programmiersprachen, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], geschrieben werden können. Weitere Informationen finden Sie unter [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Die Mergereplikation stellt eine API bereit, mit der Konfliktlöser als COM-Objekte in Programmiersprachen, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], geschrieben werden können. Weitere Informationen finden Sie unter [COM-basierte benutzerdefinierte Konfliktlöser](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Ein von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]bereitgestellter COM-basierter Konfliktlöser  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. Weitere Informationen finden Sie unter [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält mehrere COM-basierte Konfliktlöser. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Informationen zum Auswählen des geeigneten Konfliktlösertyps finden Sie unter [Auswählen von Resolvern](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -100,10 +100,10 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Replikations- [!INCLUDE[tsql](../../../includes/tsql-md.md)] - und Replication Management Objects-Programmierung (RMO): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) und [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Replikations- [!INCLUDE[tsql](../../../includes/tsql-md.md)] - und Replication Management Objects-Programmierung (RMO): [Erstellen eines Pullabonnements](../../../relational-databases/replication/create-a-pull-subscription.md) und [Erstellen eines Pushabonnements](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Interaktiver Konfliktlöser  
- Die Replikation stellt eine Benutzeroberfläche für den interaktiven Konfliktlöser bereit, die in Verbindung mit dem prioritätsbasierten Standardkonfliktlöser oder mit einem Artikelkonfliktlöser verwendet werden kann. Bei der Ausführung einer bedarfsgesteuerten Synchronisierung mit der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows zeigt der interaktive Konfliktlöser Konfliktdaten in Laufzeit an und bietet Ihnen die Möglichkeit, die Art der Konfliktlösung auszuwählen. Weitere Informationen zum Aktivieren der interaktiven Konfliktlösung und zum Starten des interaktiven Konfliktlösers finden Sie unter [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Die Replikation stellt eine Benutzeroberfläche für den interaktiven Konfliktlöser bereit, die in Verbindung mit dem prioritätsbasierten Standardkonfliktlöser oder mit einem Artikelkonfliktlöser verwendet werden kann. Bei der Ausführung einer bedarfsgesteuerten Synchronisierung mit der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows zeigt der interaktive Konfliktlöser Konfliktdaten in Laufzeit an und bietet Ihnen die Möglichkeit, die Art der Konfliktlösung auszuwählen. Weitere Informationen zum Aktivieren der interaktiven Konfliktlösung und zum Starten des interaktiven Konfliktlösers finden Sie unter [Interaktive Konfliktlösung](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Anzeigen von Konflikten  
  Die einfachste Möglichkeit zum Anzeigen von Konflikten ist die Verwendung des Replikationskonflikt-Viewers, der in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verfügbar ist ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet ebenfalls gespeicherte Prozeduren, mit denen die Konflikttabellen abgefragt werden können). Der Konflikt-Viewer und die interaktive Konfliktlöser sind ähnliche Tools, im interaktiven Konfliktlöser können Sie jedoch bei der Synchronisierung Konflikte lösen, während der Konflikt-Viewer für die Anzeige von Konflikten nach der Konfliktlösung bestimmt ist. Wenn die Konfliktmetadaten weiterhin in den Systemtabellen verfügbar sind (Konfliktmetadaten werden standardmäßig 14 Tage lang beibehalten), können Sie die Ergebnisse der Konfliktlösung überschreiben. Wenn jedoch regelmäßig ein direktes Eingreifen erforderlich ist, sollten Sie die Verwendung des interaktiven Konfliktlösers in Betracht ziehen.  
