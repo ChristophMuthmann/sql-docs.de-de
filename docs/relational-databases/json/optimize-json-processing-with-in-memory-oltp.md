@@ -29,7 +29,7 @@ SQL Server- und Azure SQL-Datenbanken ermöglichen die Verwendung von JSON-forma
 ## <a name="store-json-in-memory-optimized-tables"></a>Speichern von JSON-Daten in speicheroptimierten Tabellen
 Im folgenden Beispiel wird eine speicheroptimierte `Product`-Tabelle mit zwei JSON-Spalten, `Tags` und `Data`, erstellt:
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ Mithilfe der in SQL Server- und Azure SQL-Datenbanken enthaltenen neuen Funktion
 ## <a name="validate-json-columns"></a>Überprüfen von JSON-Spalten
 Mithilfe von SQL Server- und Azure SQL-Datenbanken können Sie wie im folgenden Beispiel nativ kompilierte CHECK-Einschränkungen hinzufügen, mit denen der in einer Zeichenfolgenspalte gespeicherte Inhalt von JSON-Dokumenten überprüft werden kann.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 Die nativ kompilierte CHECK-Einschränkung kann in vorhandenen Tabellen hinzugefügt werden, die JSON-Spalten enthalten:
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ Im folgenden Beispiel werden die beiden folgenden Werte aus der JSON `Data`-Spal
 -   Das Land, in dem ein Produkt hergestellt wird.
 -   Die Herstellungskosten für das Produkt.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ Die berechneten Spalten `MadeIn` und `Cost` werden jedes Mal aktualisiert, wenn 
 ## <a name="index-values-in-json-columns"></a>Indexwerte in JSON-Spalten
 Bei SQL Server- und Azure SQL-Datenbanken können Sie Werte in JSON-Spalten mithilfe von speicheroptimierten Indizes indizieren. Indizierte JSON-Werte müssen wie im folgenden Beispiel mithilfe von berechneten Spalten verfügbar gemacht und mit einer starken Typisierung versehen werden.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ Werte in JSON-Spalten können sowohl mit standardmäßigen NONCLUSTERED- als auc
 ## <a name="native-compilation-of-json-queries"></a>Native Kompilierung von JSON-Abfragen
 Durch die native Kompilierung von Transact-SQL-Prozeduren, -Funktionen und -Triggern, die Abfragen mit JSON-Funktionen enthalten, wird die Abfrageleistung gesteigert und die zum Ausführen der Prozeduren erforderlichen CPU-Zyklen werden reduziert. Im folgenden Beispiel ist eine nativ kompilierte Prozedur dargestellt, die verschiedene JSON-Funktionen enthält: JSON_VALUE, OPENJSON und JSON_MODIFY.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

@@ -48,7 +48,7 @@ Jede Eigenschaft des JSON-Objekts oder jedes Element des Arrays wird als separat
 Nachstehend finden Sie ein kurzes Beispiel, das **OPENJSON** mit dem Standardschema verwendet und eine Zeile für jede Eigenschaft des JSON-Objekts zurückgibt.  
  
 **Beispiel**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ Hier finden Sie ein kurzes Beispiel, in dem **OPENJSON** mit einem explizit ange
   
 **Beispiel**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

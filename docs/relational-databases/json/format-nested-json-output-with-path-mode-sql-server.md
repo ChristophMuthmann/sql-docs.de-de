@@ -42,7 +42,7 @@ Die Klausel FOR JSON PATH verwendet das Spaltenalias oder einen Spaltennamen, um
 
  **Abfrage**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -93,7 +93,7 @@ SELECT TOP 5
   
  **Abfrage**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---return-each-property-of-an-object"></a>Beispiel: Rückgabe jeder Eigenschaft eines Objekts  
  **Abfrage**  
   
-```tsql  
+```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
@@ -50,7 +50,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 ## <a name="example---return-each-element-of-an-array"></a>Beispiel: Rückgabe jedes Element eines Arrays  
  **Abfrage**  
   
-```tsql  
+```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
@@ -68,7 +68,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 ## <a name="example---convert-json-to-a-temporary-table"></a>Beispiel: Konvertieren von JSON in eine temporäre Tabelle  
  Die folgende Abfrage gibt alle Eigenschaften des **info** -Objekts zurück.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json=N'{  
@@ -99,7 +99,7 @@ FROM OPENJSON(@json,N'lax $.info')
 ## <a name="example---combine-relational-data-and-json-data"></a>Beispiel: Kombinieren relationale Daten und JSON-Daten  
  Im folgenden Beispiel hat die SalesOrderHeader-Tabelle eine SalesReason-Textspalte, die ein Array von SalesOrderReasons im JSON-Format enthält. Die SalesOrderReasons-Objekte enthalten Eigenschaften, z. B. "Manufacturer" und "Quality". Das Beispiel erstellt einen Bericht, der jede Zeile der Bestellung und die zugehörigen Verkaufsgründe verknüpft, indem das JSON-Array von Verkaufsgründe erweitert wird, als wären die Gründe in einer separaten untergeordneten Tabelle gespeichert.  
   
-```tsql  
+```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
 FROM Sales.SalesOrderHeader
 CROSS APPLY OPENJSON(SalesReasons)

@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>Beispiel: Verwenden Sie die WITH-Klausel, um die Ausgabe zu formatieren.  
  Die folgende Abfrage gibt die in der folgenden Tabelle angezeigten Ergebnisse zurück. Beachten Sie, wie die JSON-Klausel dafür sorgt, dass Werte als JSON-Objekte und nicht als Skalarwerten in col5 und Array_element zurückgegeben werden.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Beispiel: Laden von JSON in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
  Im folgenden Beispiel wird ein komplettes JSON-Objekt in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  

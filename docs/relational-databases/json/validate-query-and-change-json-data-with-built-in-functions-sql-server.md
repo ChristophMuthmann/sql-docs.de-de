@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  Im folgenden Beispiel wird der JSON-Text zurückgegeben, falls die Spalte gültige JSON enthält.  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  Das folgende Beispiel extrahiert den Wert einer JSON-Eigenschaft in eine lokale Variable.  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  Im folgenden Beispiel wird gezeigt, wie ein JSON-Fragment in den Abfrageergebnissen zurückgegeben wird.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>Beispiel 1 – Gib sowohl Standardspalten als auch JSON-Daten zurück  
  Die folgende Abfrage gibt sowohl die standardmäßigen relationalen Spalten sowie Werte aus einer JSON-Spalte zurück.  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>Beispiel 2 – Aggregiere und filtere JSON-Werte  
  Die folgende Abfrage aggregiert Teilergebnisse nach Kundennamen (im JSON-Format gespeichert), und Status (gespeichert in einer normalen Spalte). Sie filtert dann die Ergebnisse nach Stadt (im JSON-Format gespeichert) und OrderDate (gespeichert in einer normalen Spalte).  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  Im folgenden Beispiel wird der Wert einer Eigenschaft in einer Variable aktualisiert, die JSON enthält.  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   
