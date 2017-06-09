@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eac6520e46f252855d84dced89d9b79f5f8aed2b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Alternative Speicherorte für Momentaufnahmeordner
@@ -40,9 +40,9 @@ ms.lasthandoff: 04/11/2017
   
  **So geben Sie alternative Momentaufnahmespeicherorte an**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Angeben eines alternativen Speicherortes für den Momentaufnahmeordner &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   
--   Replikation [!INCLUDE[tsql](../../includes/tsql-md.md)] Programmierung: [Konfigurieren von Momentaufnahmeeigenschaften &#40; Transact-SQL für Replikationsprogrammierung&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Replikationsprogrammierung: [Konfigurieren von Momentaufnahmeeigenschaften &#40;Transact-SQL für Replikationsprogrammierung&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   

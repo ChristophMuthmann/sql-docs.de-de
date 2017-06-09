@@ -1,7 +1,7 @@
 ---
 title: "Konfigurieren der Windows-Firewall für den SQL Server-Zugriff | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
+ > Inhalte, die im Zusammenhang mit früheren Versionen von SQL Server stehen, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+
+Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
   
- Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren. Die Firewall ist eine Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sie können auch eine Firewall von einem anderen Unternehmen installieren. In diesem Thema wird erläutert, wie die Windows-Firewall konfiguriert wird. Die Grundprinzipien gelten jedoch auch für andere Firewallprogramme.  
+Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren. Die Firewall ist eine Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sie können auch eine Firewall von einem anderen Unternehmen installieren. In diesem Thema wird erläutert, wie die Windows-Firewall konfiguriert wird. Die Grundprinzipien gelten jedoch auch für andere Firewallprogramme.  
   
 > [!NOTE]  
 >  Dieses Thema bietet einen Überblick über die Firewallkonfiguration und fasst Informationen zusammen, die für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator interessant sind. Weitere Informationen zur Firewall sowie autorisierende Informationen für diese finden Sie in der Dokumentation der Firewall, z. B. in [Windows-Firewall mit erweiterter Sicherheit und IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>In diesem Thema  
- Dieses Thema enthält die folgenden Abschnitte:  
-  
- [Grundlegende Firewallinformationen](#BKMK_basic)  
-  
- [Standardeinstellungen der Firewall](#BKMK_default)  
-  
- [Programme zur Konfiguration der Firewall](#BKMK_programs)  
-  
- [Vom Datenbankmodul verwendete Ports](#BKMK_ssde)  
-  
- [Von Analysis Services verwendete Ports](#BKMK_ssas)  
-  
- [Von Reporting Services verwendete Ports](#BKMK_ssrs)  
-  
- [Von Integration Services verwendete Ports](#BKMK_ssis)  
-  
- [Zusätzliche Ports und Dienste](#BKMK_additional_ports)  
-  
- [Interaktion mit anderen Firewallregeln](#BKMK_other_rules)  
-  
- [Übersicht über Firewallprofile](#BKMK_profiles)  
-  
- [Zusätzliche Firewalleinstellungen mithilfe des Eintrags „Windows-Firewall“ in der Systemsteuerung](#BKMK_additional_settings)  
-  
- [Verwenden des Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“](#BKMK_WF_msc)  
-  
- [Behandeln von Problemen mit Firewalleinstellungen](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> Grundlegende Firewallinformationen  
  Firewalls überprüfen eingehende Pakete und vergleichen diese mit einer Gruppe von Regeln. Wenn die Regeln das Paket zulassen, leitet die Firewall das Paket an das TCP/IP-Protokoll zur zusätzlichen Verarbeitung weiter. Wenn die Regeln das Paket nicht zulassen, verwirft die Firewall das Paket und erstellt, wenn die Protokollierung aktiviert ist, einen Eintrag in der Firewallprotokolldatei.  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  Das Einschalten der Firewall wirkt sich auf andere Programme aus, die auf diesen Computer zugreifen, wie z. B. die Datei- und Druckerfreigabe und Remotedesktopverbindungen. Administratoren sollten vor dem Anpassen der Firewalleinstellungen alle auf dem Computer ausgeführten Anwendungen berücksichtigen.  
   
 ##  <a name="BKMK_programs"></a> Programme zur Konfiguration der Firewall  
- Es gibt drei Möglichkeiten, die Einstellungen der Windows-Firewall zu konfigurieren.  
-  
--   **Das Element Windows-Firewall in der Systemsteuerung**  
-  
-     Das Element **Windows-Firewall** kann in der Systemsteuerung geöffnet werden.  
-  
-    > [!IMPORTANT]  
-    >  Änderungen, die in der Systemsteuerung am Element **Windows-Firewall** vorgenommenen werden, wirken sich nur auf das aktuelle Profil aus. Für mobile Geräte, wie z. B. einen Laptop, sollte das Element **Windows-Firewall** in der Systemsteuerung nicht verwendet werden, da sich das Profil ändern kann, wenn es in einer anderen Konfiguration angeschlossen wird. Dann ist das zuvor konfigurierte Profil nicht wirksam. Weitere Informationen zu Profilen finden Sie unter [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](http://go.microsoft.com/fwlink/?LinkId=116080).  
-  
-     Das Element **Windows-Firewall** in der Systemsteuerung ermöglicht Ihnen die Konfiguration grundlegender Optionen. Dabei handelt es sich z. B. um:  
-  
-    -   Ein- oder Ausschalten des Elements **Windows-Firewall** in der Systemsteuerung  
-  
-    -   Aktivieren und Deaktivieren von Regeln  
-  
-    -   Gewähren von Ausnahmen für Ports und Programme  
-  
-    -   Festlegen einiger Bereichseinschränkungen  
-  
-     Das Element **Windows-Firewall** in der Systemsteuerung eignet sich am besten für Benutzer, die mit der Konfiguration einer Firewall keine Erfahrung haben und grundlegende Firewalloptionen für nicht mobile Computer konfigurieren. Sie können das Element **Windows-Firewall** in der Systemsteuerung auch mit dem Befehl **Ausführen** öffnen. Gehen Sie hierzu wie folgt vor:  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>So öffnen Sie das Element „Windows-Firewall“  
-  
-    1.  Klicken Sie im Menü **Start** auf **Ausführen**, und geben Sie dann `firewall.cpl`ein.  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Microsoft Management Console (MMC)**  
+Konfigurieren Sie die Einstellungen der Windows-Firewall entweder über **Microsoft Management Console (MMC)** oder mit **netsh**.  
+
+-  **Microsoft Management Console (MMC)**  
   
      Mithilfe des MMC-Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“ können Sie erweiterte Firewalleinstellungen konfigurieren. Dieses Snap-In stellt die meisten Firewalloptionen in einer benutzerfreundlichen Form sowie alle Firewallprofile bereit. Weitere Informationen finden Sie unter [Verwenden des Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“](#BKMK_WF_msc) weiter unten in diesem Thema.  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  Eine Alternative zum Konfigurieren einer benannten Instanz für das Lauschen auf einem festen Port ist die Erstellung einer Ausnahme für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Programm wie z.B. **sqlservr.exe** (für [!INCLUDE[ssDE](../../includes/ssde-md.md)]) in der Firewall. Dies kann zwar zweckmäßig sein, aber die Portnummer wird nicht in der Spalte **Lokaler Port** auf der Seite **Eingehende Regeln** angezeigt, wenn Sie das MMC-Snap-In „Windows-Firewall mit erweiterter Sicherheit“ verwenden. Damit kann es schwieriger werden, zu verfolgen, welche Ports geöffnet sind. Ein weiterer Aspekt ist, dass ein Service Pack oder kumulatives Update den Pfad zur ausführbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datei ändern kann, wodurch die Firewallregel ungültig wird.  
   
-> [!NOTE]  
->  Im folgenden Verfahren wird das Element **Windows-Firewall** in der Systemsteuerung verwendet. Mithilfe des MMC-Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“ kann eine komplexere Regel konfiguriert werden. Dazu gehört das Konfigurieren einer Dienstausnahme, was nützlich sein kann, um einen tiefgreifenden Schutz zu ermöglichen. Siehe [Verwenden des Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“](#BKMK_WF_msc) weiter unten.  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>So fügen Sie mithilfe von „Windows-Firewall mit erweiterter Sicherheit“ eine Programmausnahme hinzu
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>So fügen Sie der Firewall mithilfe des Elements „Windows-Firewall“ in der Systemsteuerung eine Programmausnahme hinzu  
-  
-1.  Klicken Sie unter dem Element **Windows-Firewall** in der Systemsteuerung auf der Registerkarte **Ausnahmen** auf **Programm hinzufügen**.  
-  
-2.  Navigieren Sie zum Speicherort der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Sie durch die Firewall zulassen möchten, z.B. **C:\Programme\Microsoft SQL Server\MSSQL13.<Instanzname> \MSSQL\Binn**. Wählen Sie **sqlservr.exe** aus, und klicken Sie dann auf **Öffnen**.  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+1. Klicken Sie im Startmenü auf *wf.msc*. Klicken Sie auf **Windows-Firewall mit erweiterter Sicherheit**.
+
+1. Klicken Sie im linken Bereich auf **Eingehende Regeln**.
+
+1. Klicken Sie im rechten Bereich unter **Aktionen** auf **Neue Regel...**. Daraufhin wird der **Assistent für neue eingehende Regel** geöffnet.
+
+1. Klicken Sie unter **Regeltyp** auf **Programm**. Klicken Sie auf **Weiter**.
+
+1. Klicken Sie unter **Programm** auf **Dieser Programmpfad**. Klicken Sie auf **Durchsuchen**, um Ihre SQL Server-Instanz zu lokalisieren. Das Programm heißt „sqlservr.exe“. Es befindet sich normalerweise unter:
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   Klicken Sie auf **Weiter**.
+
+1. Klicken Sie auf der Seite **Aktion** auf **Verbindung zulassen**.  
+
+1. Profil, einschließlich alle drei Profile. Klicken Sie auf **Weiter**.
+
+1. Geben Sie in **Name**einen Namen für die Regel ein. Klicken Sie auf **Fertig stellen**.
+
+Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Von Analysis Services verwendete Ports  
  In der folgenden Tabelle werden die häufig von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendeten Ports aufgeführt.  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Von Reporting Services verwendete Ports  
- In der folgenden Tabelle werden die häufig von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Ports aufgeführt.  
+In der folgenden Tabelle werden die häufig von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Ports aufgeführt.  
   
 |Funktion|Port|Kommentare|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webdienste|TCP-Port 80|Wird für eine HTTP-Verbindung mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] über eine URL verwendet. Die Verwendung der vorkonfigurierten Regel **WWW-Dienste (HTTP)**wird nicht empfohlen. Weitere Informationen finden Sie im Abschnitt [Interaktion mit anderen Firewallregeln](#BKMK_other_rules) weiter unten.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zur Verwendung durch HTTPS konfiguriert|TCP-Port 443|Wird für eine HTTPS-Verbindung über eine URL verwendet. HTTPS ist eine HTTP-Verbindung, die SSL (Secure Sockets Layer) verwendet. Die Verwendung der vorkonfigurierten Regel **Sichere WWW-Dienste (HTTPS)**wird nicht empfohlen. Weitere Informationen finden Sie im Abschnitt [Interaktion mit anderen Firewallregeln](#BKMK_other_rules) weiter unten.|  
   
- Wenn [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt, müssen Sie auch die entsprechenden Ports für diese Dienste öffnen. Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+Wenn [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt, müssen Sie auch die entsprechenden Ports für diese Dienste öffnen. Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ###  <a name="BKMK_ssis"></a> Von Integration Services verwendete Ports  
  In der folgenden Tabelle werden die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendeten Ports aufgeführt.  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] -Remoteprozeduraufrufe (MS RPC)<br /><br /> Wird von der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit verwendet.|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendet DCOM auf Port 135. Der Dienstkontroll-Manager verwendet Port 135, um Tasks wie z. B. das Starten und Beenden des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts und das Übertragen von Kontrollanforderungen an den laufenden Dienst auszuführen. Die Portnummer kann nicht geändert werden.<br /><br /> Dieser Port muss nur dann geöffnet sein, wenn Sie eine Verbindung mit einer Remoteinstanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder einer benutzerdefinierten Anwendung aus herstellen.|  
   
- Eine ausführliche Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+Eine ausführliche Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ###  <a name="BKMK_additional_ports"></a> Zusätzliche Ports und Dienste  
- Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abhängig sein kann.  
+Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abhängig sein kann.  
   
 |Szenario|Port|Kommentare|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  Mithilfe des Elements **Windows-Firewall** in der Systemsteuerung wird nur das aktuelle Firewallprofil konfiguriert.  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>So ändern Sie den Bereich einer Firewallausnahme mithilfe des Elements „Windows-Firewall“ in der Systemsteuerung  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>So ändern Sie den Bereich einer Firewallausnahme mithilfe des Elements „Windows-Firewall“ in der Systemsteuerung  
   
 1.  Wählen Sie unter dem Element **Windows-Firewall** in der Systemsteuerung auf der Registerkarte **Ausnahmen** ein Programm oder einen Port aus, und klicken Sie dann auf **Eigenschaften** oder **Bearbeiten**.  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Erfordern von IPsec für eingehende Verbindungen  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>So erstellen Sie eine neue Firewallregel mit dem Assistenten für neue Regeln  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>So erstellen Sie eine neue Firewallregel mit dem Assistenten für neue Regeln  
   
 1.  Klicken Sie im Startmenü auf **Ausführen**, geben Sie **WF.msc**ein, und klicken Sie anschließend auf **OK**.  
   
@@ -351,7 +310,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  Geben Sie an der Eingabeaufforderung **netstat -n -a**ein.  
   
-         Mit dem **-n** -Schalter wird **netstat** angewiesen, die Adressen und Portnummern der aktiven TCP-Verbindungen numerisch anzuzeigen. Mit dem **-a** -Schalter wird **netstat** angewiesen, die vom Computer überwachten TCP- und UDP-Ports anzuzeigen.  
+         Mit dem **-n**-Schalter wird **netstat** angewiesen, die Adressen und Portnummern der aktiven TCP-Verbindungen numerisch anzuzeigen. Mit dem **-a** -Schalter wird **netstat** angewiesen, die vom Computer überwachten TCP- und UDP-Ports anzuzeigen.  
   
 -   Mit dem **PortQry**-Hilfsprogramm kann der Status der TCP/IP-Ports als überwacht, nicht überwacht oder gefiltert gemeldet werden. (Der gefilterte Status bedeutet, dass der Port überwacht oder nicht überwacht wird. Dieser Status gibt an, dass das Hilfsprogramm keine Antwort vom Port empfangen hat.) Das Hilfsprogramm **PortQry** steht im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=28590) zum Herunterladen zur Verfügung.  
   

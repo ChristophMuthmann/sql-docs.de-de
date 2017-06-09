@@ -23,13 +23,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbankmodul)
+
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen von Verbindungsservern (SQL Server-Datenbankmodul)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
   
 ##  <a name="Background"></a> Hintergrund  

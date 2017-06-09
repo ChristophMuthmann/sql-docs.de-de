@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
   Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  Die von Ihnen angegebene Website bietet Zugriff auf die von der Websynchronisierung verwendeten Komponenten. Die Website bietet nur dann Zugriff auf andere Daten oder Webseiten, wenn Sie dies entsprechend konfigurieren.  
   
--   Erstellt ein virtuelles Verzeichnis und den zugeordneten Alias. Der Alias wird für den Zugriff auf die Websynchronisierungskomponenten verwendet. Wenn die IIS-Adresse z. B. https://*server.domain.com* heißt und Sie als Alias 'websync1' angeben, lautet die Adresse, über die auf die Komponente replisapi.dll zugegriffen wird, https://*server.domain.com*/websync1/replisapi.dll.  
+-   Erstellt ein virtuelles Verzeichnis und den zugeordneten Alias. Der Alias wird für den Zugriff auf die Websynchronisierungskomponenten verwendet. Wenn die IIS-Adresse z.B. `https://server.domain.com` heißt und Sie als Alias „websync1“ angeben, lautet die Adresse, über die auf die Komponente replisapi.dll zugegriffen wird, `https://server.domain.com/websync1/replisapi.dll`.  
   
 -   Sie verwendet die Standardauthentifizierung. Es empfiehlt sich die Verwendung der Standardauthentifizierung, weil sie es ermöglicht, IIS und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/Verteiler auf separaten Computern (empfohlene Konfiguration) auszuführen, ohne dass eine Kerberos-Delegierung erforderlich ist. Die Verwendung von SSL in Verbindung mit der Standardauthentifizierung stellt sicher, dass Anmeldenamen, Kennwörter und alle Daten bei der Übertragung verschlüsselt werden. (SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich.) Weitere Informationen zu den bewährten Methoden im Zusammenhang mit der Websynchronisierung finden Sie im entsprechenden Abschnitt im Thema [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md).  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  Klicken Sie auf **OK**.  
   
-2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: https://server.domain.com/directory/replisapi.dll? diag.  
+2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`  
   
 3.  Wenn das für IIS angegebene Zertifikat nicht vom Windows-Betriebssystem erkannt wird, wird das Dialogfeld **Sicherheitshinweis** angezeigt. Dieser Hinweis wird möglicherweise angezeigt, weil das Zertifikat ein Testzertifikat ist oder es von einer Zertifizierungsstelle ausgestellt wurde, die von Windows nicht erkannt wird.  
   

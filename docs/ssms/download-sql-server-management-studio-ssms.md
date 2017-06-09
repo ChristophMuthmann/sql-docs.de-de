@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 04/03/2017
+ms.date: 05/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,101 +28,89 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cc827737cec19c11d2102f968dc2b8bc638bda86
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: c74ebd14da64bdb089abe16b4558e0e2d0117de5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
-SQL Server Management Studio (SSMS) ist eine integrierte Umgebung für den Zugriff, die Konfiguration, die Verwaltung und die Entwicklung aller SQL Server-Komponenten. SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf SQL Server zu ermöglichen. Dieses Release bietet verbesserte Kompatibilität mit früheren Releases von SQL Server, ein eigenständiges Webinstallationsprogramm und Popupbenachrichtigungen innerhalb von SSMS, wenn neue Releases verfügbar sind.  
+SQL Server Management Studio (SSMS) ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur SQL-Datenbank. SSMS stellt Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von SQL Server zur Verfügung, wo auch immer Sie SQL Server bereitstellen. Darüber hinaus stellt SSMS Tools zum Bereitstellen, Überwachen und Aktualisieren von Datenebenenkomponenten bereit, z.B. von Ihren Anwendungen verwendete Datenbanken und Data Warehouses, sowie zum Erstellen von Abfragen und Skripts. 
 
+Dieses Release bietet verbesserte Kompatibilität mit früheren Releases von SQL Server, ein eigenständiges Webinstallationsprogramm und Popupbenachrichtigungen innerhalb von SSMS, wenn neue Releases verfügbar sind.  
+
+SSMS ist kostenlos! Laden Sie es herunter!
     
-| ![Download verfügbar ist](../ssdt/media/download.png) Herunterladen von SQL Server Management Studio (SSMS)  |  |
-|:---|:---|
-|**[Hier können Sie SQL Server Management Studio (16.5.3) herunterladen](https://go.microsoft.com/fwlink/?LinkID=840946)**|Aktuelle Version für den Einsatz in der Produktion.|
-|**[SQL Server Management Studio herunterladen – Release Candidate (17.0 RC3)](../ssms/sql-server-management-studio-ssms-release-candidate.md)**|Bietet Unterstützung für SQL Server vNext CTP1.3 und kann parallel zu Version 16.x ausgeführt werden, wird aber für den Einsatz in der Produktion nicht empfohlen.| 
+![Download](../ssdt/media/download.png) **[Herunterladen von SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
 
+![Download](../ssdt/media/download.png) **[Herunterladen des Upgradepakets von SQL Server Management Studio 17.1 (Upgrades 17.0 bis 17.1)](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
-> Der Name der SSMS-Releases umfasst nicht länger eine Monatsangabe, sondern eine Nummer. SSMS ist kostenlos! Eine Lizenz für die Installation und Verwendung ist nicht erforderlich.  
+> SSMS 17.X ist die größte Generation von SQL Server Management Studio und stellt Unterstützung für SQL Server 2017 bereit. 
+
+> [!NOTE]
+> Das SQL Server PowerShell-Modul ist nun eine separate Installation über den PowerShell-Katalog.  Nutzen Sie die [Downloadanweisungen](download-sql-server-ps-module.md) für weitere Informationen.
 
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio   
 **Versionsinformationen**  
   
-Versionsnummer: 16.5.3  
-Buildnummer dieser Version: 13.0.16106.4
+Versionsnummer: 17.1  
+Buildnummer dieser Version: 14.0.17119.0
   
-**Unterstützte SQL Server-Versionen**  
+**Unterstützte SQL-Angebote**  
   
-* Diese Version von SSMS funktioniert mit allen [unterstützten Versionen von SQL Server (SQL Server 2008 – SQL Server 2016)](https://support.microsoft.com/en-us/lifecycle?C2=1044) , und bietet das höchste verfügbare Maß an Unterstützung für die Arbeit mit den neuesten Cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse.  
+* Diese Version von SSMS funktioniert mit allen [unterstützten Versionen von SQL Server (SQL Server 2008 – SQL Server 2017)](https://support.microsoft.com/en-us/lifecycle?C2=1044) und bietet das höchste verfügbare Maß an Unterstützung für die Arbeit mit den neuesten Cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse.  
 * Es besteht keine explizite Sperre für SQL Server 2000 oder SQL Server 2005, jedoch funktionieren einige Features möglicherweise nicht ordnungsgemäß.  
-* Darüber hinaus kann eine SSMS 16.x-Version oder SSMS 2016 parallel zu früheren Versionen von SSMS 2014 und früher installiert werden. 
+* Zusätzlich kann SSMS 17.X zusammen mit SSMS 16.X oder SQL Server 2014 SSMS und früher installiert werden. 
   
 **Unterstützte Betriebssysteme**  
   
 Diese Version von SSMS unterstützt die folgenden Plattformen, wenn sie mit dem aktuellen Servicepack ausgestattet sind:   
- Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2012 (64-Bit), Windows Server 2012 R2 (64-Bit), Windows Server 2008 R2 (64-Bit)  
-   
+Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Windows Server 2012 (64-Bit), Windows Server 2012 R2 (64-Bit), Windows Server 2008 R2 (64-Bit)  
+
+>[!NOTE]
+>SSMS 17.X basiert auf der isolierten Visual Studio 2015-Shell, die vor Windows Server 2016 veröffentlicht wurde. Microsoft nimmt die App-Kompatibilität sehr ernst und stellt sicher, dass bereits versendete Anwendungen weiterhin unter den neuesten Windows-Versionen ausgeführt werden. Dadurch kann vermieden werden, dass SSMS (mit allen neuen angewendeten Updates) auf Probleme stößt, wenn es unter Windows Server 2016 ausgeführt wird. Kunden werden gebeten, den Support zu kontaktieren, wenn Sie Probleme mit SSMS unter Windows Server 2016 feststellen. Der Support arbeiten dann mit den Kunden zusammen, um zu bestimmen, ob das Problem bei SSMS oder Visual Studio liegt oder mit der Windows-Kompatibilität zusammenhängt. Anschließend wird das Problem ordnungsgemäß umgangen.
+
  **Verfügbare Sprachen**  
 > [!NOTE]  
 > In andere Sprachen als Englisch lokalisierte Versionen von SSMS benötigen das [KB 2862966-Sicherheitsupdate-Paket](https://support.microsoft.com/en-us/kb/2862966) für die Installation unter: Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2. 
   
- Diese Version von SSMS kann in folgenden Sprachen installiert werden:  
-[Chinesisch (Volksrepublik China)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinesisch (Taiwan)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Englisch (Vereinigte Staaten)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Französisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)  
-[Deutsch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italienisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Koreanisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portugiesisch (Brasilien)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanisch](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)  
+Diese Version von SSMS kann in folgenden Sprachen installiert werden:
+
+SQL Server Management Studio 17.1:<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [Englisch (USA)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+
+
+Upgradepaket von SQL Server Management Studio 17.1 (Upgrades 17.0 bis 17.1):<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [Englisch (USA)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
 
  
-## <a name="changelog"></a>Änderungsprotokoll  
+## <a name="new-in-this-release"></a>In dieser Version neu  
 
-16.5.3
+SSMS 17.1 ist das erste Update zur Generation 17.X von SQL Server Management Studio.  Die 17.X-Generation bietet Support für beinahe alle Features unter SQL Server 2008 über SQL Server 2017.  Die Version 17.X ist ebenso die Generierung von SSMS, die SQL Analysis Service-PaaS unterstützt.
 
-In dieser Version wurden folgende Probleme behoben:
+Version 17.1 enthält Folgendes:
 
-* Das seit SSMS 16.5.2 auftretende Problem wurde behoben, das die Erweiterung des Knotens „Tabelle“ verursacht hat, wenn die Tabelle mindestens eine Spalte mit geringer Dichte aufwies.
-
-* Benutzer können SSIS-Pakete bereitstellen, die den OData-Verbindungs-Manager enthalten und die eine AX/CRM-Onlineressource von Microsoft Dynamix mit dem SSIS-Katalog verbinden. Weitere Informationen finden Sie unter [OData-Verbindungs-Manager](https://msdn.microsoft.com/library/dn584133.aspx).
-
-* Konfigurieren von „Always Encrypted“ schlägt für eine vorhandene Tabelle fehl mit Fehlern für nicht verknüpfte Objekte. [Connect-ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
-
-* Konfigurieren von „Always Encrypted“ funktioniert nicht für eine vorhandene Datenbank mit mehreren Schemas. [Connect-ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
-
-* Der Assistent für „Always Encrypted“ und „Verschlüsselte Spaltendaten“ versagt, wenn die Datenbank Sichten enthält, die auf Systemsichten verweisen. [Connect-ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
-
-* Bei der Verschlüsselung mit „Always Encrypted“ werden Fehler durch das Aktualisieren von Modulen nach der Verschlüsselung falsch verarbeitet.
-
-* Das Menü *Zuletzt verwendete öffnen* zeigt keine zuletzt gespeicherten Dateien an. [Connect-ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
-
-* SSMS ist sehr langsam, wenn mit der rechten Maustaste auf den Tabellenindex geklickt wurde (über eine Remote(internet)verbindung). [Connect-ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
- 
-* Ein Problem mit der Bildlaufleiste von SQL Designer wurde behoben. [Connect-ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
-
-* Das Tabellenkontextmenü hängt vorübergehend 
- 
-* SSMS löst gelegentlich Ausnahmen auf dem Aktivitätsmonitor aus und stürzt anschließen ab. [Connect-ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
-
-* SSMS 2016 stürzt ab mit der Fehlermeldung „The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506“ (Der Vorgang wurde aufgrund eines internen Fehlers in der .NET-Laufzeit in der IP 71AF8579 (71AE0000) mit dem Exitcode 80131506 beendet).
+* Problembehebungen für einige von Benutzern gemeldete Probleme 
+* Ein neues Integration Services-Verwaltungstool zum horizontalen Hochskalieren
 
 
-
-
-
-Eine vollständige Auflistung der einzelnen Funktionen finden Sie unter   
+Eine vollständige Auflistung der Änderungen finden Sie unter   
                 [SQL Server Management Studio – Änderungsprotokoll (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)  
   
 Eine Liste der bekannten Probleme und Problemumgehungen finden Sie unter   
                 [SQL Server Management Studio – Anmerkungen zu dieser Version](../ssms/sql-server-management-studio-release-notes.md)  
   
 Informationen zur Sammlung von Benutzerdaten finden Sie unter   
-                [SQL Server-Datenschutzerklärung](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+                [SQL Server-Datenschutzerklärung](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)  
   
 ## <a name="previous-releases"></a>Vorgängerversionen  
 [Vorgängerversionen von SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
   
 ## <a name="feedback"></a>Feedback  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Ein Problem bei Microsoft Connect melden oder einen Vorschlag einbringen](https://connect.microsoft.com/SQLServer/Feedback).  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Ein Problem bei Microsoft Connect melden oder einen Vorschlag einbringen](https://connect.microsoft.com/SQLServer/Feedback)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  

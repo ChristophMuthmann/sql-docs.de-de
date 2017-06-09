@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
  Zum Initialisieren eines Abonnements mit einer Sicherung muss diese Option beim Erstellen einer Veröffentlichung zuerst aktiviert werden. Anschließend geben Sie Werte für eine Reihe von Optionen an, wenn Sie ein Abonnement erstellen. Veröffentlichungen können über den Assistenten für neue Veröffentlichung oder programmgesteuert aktiviert werden. Die Werte, die für die Abonnementoptionen erforderlich sind, können jedoch nur programmgesteuert angegeben werden.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Aktivieren der Initialisierung mit einer Sicherung für Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Replikationsprogrammierung mit Transact-SQL: [Initialisieren eines Transaktionsabonnements von einer Sicherung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   

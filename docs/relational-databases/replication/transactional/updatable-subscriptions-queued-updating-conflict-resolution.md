@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Aktualisierbare Abonnements – Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange
@@ -58,13 +58,13 @@ ms.lasthandoff: 04/11/2017
   
  **So legen Sie die Vorgehensweise zur Konfliktlösung für das verzögerte Update über eine Warteschlange fest**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
 -   Replikationsprogrammierung mit Transact-SQL: [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **So zeigen Sie Datenkonflikte an**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>Verleger gewinnt  
  Wenn die Konfliktlösung auf das Gewinnen des Verlegers festgelegt ist, wird die Transaktionskonsistenz basierend auf den Daten auf dem Verleger beibehalten. Es wird ein Rollback für die konfliktverursachende Transaktion auf dem Abonnenten ausgeführt, der die Transaktion initialisiert hat.  
@@ -82,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  Die Konflikterkennung unter der Richtlinie Abonnent gewinnt bedeutet, dass die letzte Abonnententransaktion gewinnt, die den Verleger aktualisiert. Wird ein Konflikt erkannt, wird in diesem Fall die vom Abonnenten gesendete Transaktion weiterhin verwendet, und der Verleger wird aktualisiert. Diese Vorgehensweise eignet sich für Anwendungen, in denen die Datenintegrität durch diese Änderungen nicht gefährdet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisierbare Abonnements für die Transaktionsreplikation](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

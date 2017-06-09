@@ -20,13 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f18989ee04ccb28ab9b37a5912328de60cbde885
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
+
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
   
 >  Informationen zur SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md):  
@@ -256,7 +259,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *Sicherungsmedium* [ **,**...*n* ]  
   
      [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
   

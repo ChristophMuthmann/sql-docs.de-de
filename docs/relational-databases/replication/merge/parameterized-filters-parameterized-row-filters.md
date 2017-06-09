@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
@@ -104,7 +104,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Verwenden Sie zum Überschreiben des Wertes für HOST_NAME() eine der folgenden Methoden:  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: Geben Sie auf der Seite **HOST\_NAME\(\)-Werte** des Assistenten für neue Abonnements einen Wert an. Weitere Informationen zum Erstellen von Abonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 -   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Geben Sie für den **@hostname**-Parameter von [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (bei Pushabonnements) oder von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (bei Pullabonnements) einen Wert an.  
   

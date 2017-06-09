@@ -1,7 +1,7 @@
 ---
 title: Neuorganisieren und Neuerstellen von Indizes | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 04/29/2016
+ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -35,40 +35,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 8f0efc0281809b6547a86d708e4596666f10e0c0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+
   In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]neu organisieren oder neu erstellen. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
   
  Sie können die Indexfragmentierung durch Neuorganisieren oder Neuerstellen eines Indexes beheben. Für partitionierte Indizes, die auf Grundlage eines Partitionsschemas erstellt wurden, können beide Methoden für einen vollständigen Index oder für eine einzelne Partition eines Indexes verwendet werden. Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn ALL angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert.  
   
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Erkennen der Fragmentierung](#Fragmentation)  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Sicherheit](#Security)  
-  
--   **Überprüfen der Fragmentierung eines Indexes mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureFrag)  
-  
-     [Transact-SQL](#TsqlProcedureFrag)  
-  
--   **Neuorganisieren oder Neuerstellen eines Indexes mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureReorg)  
-  
-     [Transact-SQL](#TsqlProcedureReorg)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -188,8 +169,10 @@ ms.lasthandoff: 04/11/2017
     -- Find the average fragmentation percentage of all indexes  
     -- in the HumanResources.Employee table.   
     SELECT a.index_id, name, avg_fragmentation_in_percent  
-    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
-        JOIN sys.indexes AS b ON a.object_id = b.object_id AND a.index_id = b.index_id;   
+    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), 
+          OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
+        JOIN sys.indexes AS b 
+          ON a.object_id = b.object_id AND a.index_id = b.index_id;   
     GO  
     ```  
   
@@ -256,7 +239,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  Erweitern Sie den Ordner **Indizes** .  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu organisieren**aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Index, den Sie neu organisieren möchten, und wählen Sie **Neu erstellen** aus.  
   
 6.  Vergewissern Sie sich im Dialogfeld **Indizes neu erstellen** , dass der richtige Index im Raster **Erneut zu erstellende Indizes** ausgewählt ist, und klicken Sie auf **OK**.  
   
@@ -277,9 +260,11 @@ ms.lasthandoff: 04/11/2017
     ```  
     USE AdventureWorks2012;   
     GO  
-    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode index on the HumanResources.Employee table.   
+    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
+    -- index on the HumanResources.Employee table.   
   
-    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode ON HumanResources.Employee  
+    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode 
+      ON HumanResources.Employee  
     REORGANIZE ;   
     GO  
     ```  
@@ -324,7 +309,6 @@ ms.lasthandoff: 04/11/2017
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bewährte Methoden für die Indexdefragmentierung in Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
-  
+  [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   
   
 

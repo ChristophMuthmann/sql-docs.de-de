@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
+
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Ausführen einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
   
  Zum Ausführen einer gespeicherten Prozedur stehen zwei Möglichkeiten zur Verfügung. Der erste und gebräuchlichste Ansatz besteht darin, dass eine Anwendung oder ein Benutzer die Prozedur aufruft. Der zweite Ansatz ist das Einrichten der Prozedur zur automatischen Ausführung beim Start einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn eine Prozedur von einer Anwendung oder einem Benutzer aufgerufen wird, wird das [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE- oder EXEC-Schlüsselwort explizit im Aufruf angegeben. Falls es sich bei der Prozedur um die erste Anweisung im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch handelt, kann sie alternativ ohne das Schlüsselwort aufgerufen und ausgeführt werden.  
