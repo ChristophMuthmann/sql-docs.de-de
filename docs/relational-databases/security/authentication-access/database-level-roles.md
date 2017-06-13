@@ -2,7 +2,7 @@
 title: Rollen auf Datenbankebene | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
@@ -71,7 +71,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
 
 ## <a name="fixed-database-roles"></a>feste Datenbankrollen
   
- In der folgenden Tabelle sind die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden. Die den festen Datenbankrollen zugewiesenen Berechtigungen können nicht geändert werden.   
+ In der folgenden Tabelle sind die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden. Mit Ausnahme der **öffentlichen** -Datenbankrolle, die den festen Datenbankrollen zugewiesenen Berechtigungen kann nicht geändert werden.   
   
 |Name der festen Datenbankrolle|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
 
 Die den festen Datenbankrollen zugewiesenen Berechtigungen können nicht geändert werden. Die folgende Abbildung zeigt die den festen Datenbankrollen zugewiesenen Berechtigungen:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Besondere Rollen für [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -106,7 +106,7 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
   
 |Name der msdb-Rolle|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Mitglieder dieser Datenbankrollen können [!INCLUDE[ssIS](../../../includes/ssis-md.md)]verwalten und verwenden. Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von einer früheren Version aktualisiert wurden, enthalten möglicherweise eine ältere Version der Rolle, die mit Data Transformation Services (DTS) und nicht mit [!INCLUDE[ssIS](../../../includes/ssis-md.md)] benannt wurde. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Mitglieder dieser Datenbankrollen können [!INCLUDE[ssIS](../../../includes/ssis-md.md)]verwalten und verwenden. Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von einer früheren Version aktualisiert wurden, enthalten möglicherweise eine ältere Version der Rolle, die mit Data Transformation Services (DTS) und nicht mit [!INCLUDE[ssIS](../../../includes/ssis-md.md)] benannt wurde. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Mitglieder dieser Datenbankrollen können den Datensammler verwalten und verwenden. Weitere Informationen finden Sie unter [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Mitglieder der Datenbankrolle **db_PolicyAdministratorRole** können alle Aktivitäten zur Konfiguration und Wartung für Richtlinien und Bedingungen der richtlinienbasierten Verwaltung ausführen. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Mitglieder dieser Datenbankrollen können registrierte Servergruppen verwalten und verwenden.|  

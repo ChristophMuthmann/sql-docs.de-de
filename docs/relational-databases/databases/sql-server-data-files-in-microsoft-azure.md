@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
@@ -126,7 +126,7 @@ ON
  In diesem Abschnitt werden die Tools und Referenzbibliotheken für die Programmierung beschrieben, die beim Speichern von SQL Server-Datendateien im Azure-Speicher verwendet werden können.  
   
 ### <a name="powershell-support"></a>PowerShell-Unterstützung  
- Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Greifen Sie mit folgendem URL-Format auf BLOBs zu:`: http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Mit folgendem URL-Format auf Blobs zugreifen: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Unterstützung von SQL Server-Objekten und -Leistungsindikatoren  
  In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit dem Microsoft Azure-Speicher zu überwachen.  

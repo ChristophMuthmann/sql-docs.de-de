@@ -1,30 +1,35 @@
 ---
-title: "Aktualisieren von Anmeldeinformationen in Berichtsdatenquellen von einer SharePoint-Website | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aktualisieren von Anmeldeinformationen in Berichtsdatenquellen von einer SharePoint-Website | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aktualisieren von Anmeldeinformationen in Berichtsdatenquellen von einer SharePoint-Website
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Aktualisieren von Anmeldeinformationen in Berichtsdatenquellen von einer SharePoint-Website
   In diesem Thema wird beschrieben, wie sich in Berichte eingebettete Datenquellen und freigegebene Datenquellen, die in einer SharePoint-Dokumentbibliothek gespeichert sind, aktualisieren lassen.  
   
  Viele der Berichte können Datenquellen beinhalten oder freigegebene Datenquellen verwenden, die zur Verwendung der Windows-Authentifizierung konfiguriert sind. In einigen Fällen wie bei der Erstellung von Datenwarnungen für in einer SharePoint-Dokumentbibliothek gespeicherte Berichte müssen Sie die Anmeldeinformationen der Datenquelle auf gespeicherte Anmeldeinformationen aktualisieren. Verlangen Sie alternativ keine Anmeldeinformationen.  
   
  Um gespeicherte Anmeldeinformationen in Berichten zu verwenden, erstellen und verwenden Sie ggf. eine neue SQL Server-Anmeldung. Weitere Informationen finden Sie unter [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md).  
   
-### So aktualisieren Sie eine eingebettete Datenquelle zur Verwendung von gespeicherten Anmeldeinformationen  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>So aktualisieren Sie eine eingebettete Datenquelle zur Verwendung von gespeicherten Anmeldeinformationen  
   
 1.  Wechseln Sie zur SharePoint-Dokumentbibliothek, in der Sie den Bericht gespeichert haben.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  Geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und wählen Sie dann **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden** aus.  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben sie im folgenden Format: \<Domäne >\\< Konto\>, und wählen Sie dann **als Windows-Anmeldeinformationen beim Verbinden mit der Datenquelle verwenden**.  
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, wählen Sie ggf. die Option **Ausführungskontext für dieses Konto festlegen**aus.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So aktualisieren Sie eine freigegebene Datenquelle zur Verwendung von gespeicherten Anmeldeinformationen  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>So aktualisieren Sie eine freigegebene Datenquelle zur Verwendung von gespeicherten Anmeldeinformationen  
   
 1.  Wechseln Sie zur SharePoint-Dokumentbibliothek, in der Sie die freigegebene Datenquelle gespeichert haben.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  Geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und wählen Sie dann **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden** aus.  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben sie im folgenden Format: \<Domäne >\\< Konto\>, und wählen Sie dann **als Windows-Anmeldeinformationen beim Verbinden mit der Datenquelle verwenden.**  
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, wählen Sie ggf. die Option **Ausführungskontext für dieses Konto festlegen**aus.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hochladen von Dokumenten in eine SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

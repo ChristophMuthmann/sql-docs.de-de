@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
@@ -166,7 +166,7 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
  Der asymmetrische Schlüssel im Schlüsseltresor dient zum Schutz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsschlüssels. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge, die den asymmetrischen Schlüssel verwenden, erfolgen innerhalb des Azure Key Vault-Diensts und werden durch die Sicherheit des Diensts geschützt.  
   
  **Was ist ein Schlüssel-URI?**  
- Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie zum Abrufen der aktuellen Version das Format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** und zum Abrufen einer bestimmten Version das Format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** .  
+ Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` zum Abrufen der aktuellen Version und verwenden das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` zum Abrufen einer bestimmten Version.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Zur Konfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

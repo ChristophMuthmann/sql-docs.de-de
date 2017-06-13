@@ -1,7 +1,7 @@
 ---
 title: "Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 10/05/2016
+ms.date: 05/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
+ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
@@ -61,6 +61,7 @@ Eine speicheroptimierte Tabelle mit 200 GB Daten erfordert mehr als 200 GB aktiv
 
 Bei einer Datenbank, die im Clouddienst von Azure SQL-Datenbank gehostet wird, wirkt sich die ausgewählte Dienstebene auf die Menge an aktivem Arbeitsspeicher aus, die Ihre Datenbank verwenden darf. Sie sollten planen, die Speicherverwendung Ihrer Datenbank mithilfe einer Warnung zu überwachen. Einzelheiten dazu finden Sie unter:
 
+- Überprüfen Sie die Grenzwerte für In-Memory-OLTP-Speicher für Ihre [Preisstufe](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Überwachen des In-Memory-OLTP-Speichers](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
@@ -113,7 +114,7 @@ Sie arbeiten mit DACPAC-Dateien im Kontext eines Visual Studio-Projekts vom Typ 
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Leitfaden, um herauszufinden, ob In-Memory-OLTP-Funktionen für Ihre Anwendung geeignet sind
 
-Einen Leitfaden, um herauszufinden, ob In-Memory-Funktionen die Leistung Ihrer bestimmten Anwendung verbessern können, finden Sie unter:
+Anleitungen dazu, ob die Leistung für eine bestimmte Anwendung von In-Memory-OLTP-Funktionen verbessert werden können finden Sie unter:
 
 - [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -121,7 +122,7 @@ Einen Leitfaden, um herauszufinden, ob In-Memory-Funktionen die Leistung Ihrer b
 
 ## <a name="b-unsupported-features"></a>B. Nicht unterstützte Funktionen
 
-Funktionen, die in bestimmten In-Memory-Szenarios nicht unterstützt werden, werden folgendermaßen beschrieben:
+Funktionen, die in bestimmten Szenarien In-Memory OLTP nicht unterstützt werden, werden am beschrieben:
 
 - [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -158,7 +159,7 @@ Der READPAST-Hinweis ist hilfreich bei Szenarios, in denen mehrere Sitzungen jew
 - In einer speicheroptimierten Tabelle kann keine Spalte für [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) markiert werden.
 
 
-- Ein [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) -Objekt kann nicht mit einer speicheroptimierten Tabelle verwendet werden.
+- Ein [SEQUENZ](../../t-sql/statements/create-sequence-transact-sql.md) kann nicht mit einer Einschränkung in einer speicheroptimierten Tabelle verwendet werden. Sie können keine z. B. eine DEFAULT-Einschränkung mit einer NEXT VALUE FOR-Klausel erstellen. Sequenzen können mit INSERT und UPDATE-Anweisungen verwendet werden.
 
 
 ## <a name="c-administrative-maintenance"></a>C. Administrative Wartung

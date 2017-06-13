@@ -2,7 +2,7 @@
 title: Always Encrypted (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
@@ -126,33 +126,32 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
 
 -   Führen Sie nach der Änderung der Definition [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) aus, um die Always Encrypted-Metadaten für das Objekt zu aktualisieren.
   
- Always Encrypted wird nicht für Spalten unterstützt, die folgende Merkmale aufweisen (z.B. kann die *verschlüsselte WITH* -Klausel nicht in **CREATE TABLE/ALTER TABLE** für eine Spalte verwendet werden, wenn eine der folgenden Bedingungen auf die Spalte zutrifft):  
+Always Encrypted wird nicht für Spalten unterstützt, die folgende Merkmale aufweisen (z.B. kann die *verschlüsselte WITH* -Klausel nicht in **CREATE TABLE/ALTER TABLE** für eine Spalte verwendet werden, wenn eine der folgenden Bedingungen auf die Spalte zutrifft):  
   
 -   Spalten, die einen der folgenden Datentypen verwenden; **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, Alias, benutzerdefinierte Typen.  
-  
 - FILESTREAM-Spalten  
-  
-- Spalten mit ROWGUIDCOL-Eigenschaft
-- Zeichenfolgenspalten (varchar, char, usw.) mit Nicht-BIN2-Sortierungen
-- Spalten, die Schlüssel für nicht gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)
-- Spalten, die Schlüssel für gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)
-- Spalten, die Schlüssel für die Volltextindizes darstellen, die wiederum sowohl zufallsverschlüsstelte als auch deterministisch verschlüsselte Spalten umfassen
-- Spalten, auf die berechnete Spalten verweisen (wenn der Ausdruck nicht unterstützte Vorgänge für Always Encrypted ausführt)
-- Spaltensätze mit geringer Dichte
-- Spalten, auf die von Statistiken aus verwiesen wird
-- Spalten, die den Aliastyp verwenden
-- Partitionierungsspalten
-- Spalten mit standardmäßigen Einschränkungen
-- Spalten, auf die Unique-Einschränkungen verweisen, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)
-- Primärschlüsselspalten, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)
-- Verweisende Spalten in Fremdschlüsseleinschränkungen bei Verwendung der zufälligen Verschlüsselung oder bei Verwendung der deterministischen Verschlüsselung, falls die referenzierten und die verweisenden Spalten verschiedene Schlüssel oder Algorithmen verwenden
-- Spalten, auf die Check-Einschränkungen verweisen
-- Spalten in Tabellen, die Change Data Capture verwenden
-- Primärschlüsselspalten in Tabellen mit Änderungsnachverfolgung
-- Spalten, die maskiert werden (mithilfe der dynamischen Datenmaskierung)
-- Spalten in Stretch-aktivierten Tabellen (Tabellen mit Spalten, die mit Always Encrypted verschlüsselt sind, können für Stretch aktiviert werden.)
-- Spalten in externen (PolyBase)-Tabellen (Hinweis: Die Verwendung von externen Tabellen und Tabellen mit verschlüsselten Spalten in der gleichen Abfrage wird unterstützt)
-- Tabellenwertparameter, die auf verschlüsselte Spalten ausgerichtet sind, werden nicht unterstützt.
+- Spalten mit der IDENTITY-Eigenschaft  
+- Spalten mit ROWGUIDCOL-Eigenschaft  
+- Zeichenfolgenspalten (varchar, char, usw.) mit Nicht-BIN2-Sortierungen  
+- Spalten, die Schlüssel für nicht gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)  
+- Spalten, die Schlüssel für gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)  
+- Spalten, die Schlüssel für die Volltextindizes darstellen, die wiederum sowohl zufallsverschlüsstelte als auch deterministisch verschlüsselte Spalten umfassen  
+- Spalten, auf die berechnete Spalten verweisen (wenn der Ausdruck nicht unterstützte Vorgänge für Always Encrypted ausführt)  
+- Spaltensätze mit geringer Dichte  
+- Spalten, auf die von Statistiken aus verwiesen wird  
+- Spalten, die den Aliastyp verwenden  
+- Partitionierungsspalten  
+- Spalten mit standardmäßigen Einschränkungen  
+- Spalten, auf die Unique-Einschränkungen verweisen, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)  
+- Primärschlüsselspalten, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)  
+- Verweisende Spalten in Fremdschlüsseleinschränkungen bei Verwendung der zufälligen Verschlüsselung oder bei Verwendung der deterministischen Verschlüsselung, falls die referenzierten und die verweisenden Spalten verschiedene Schlüssel oder Algorithmen verwenden  
+- Spalten, auf die Check-Einschränkungen verweisen  
+- Spalten in Tabellen, die Change Data Capture verwenden  
+- Primärschlüsselspalten in Tabellen mit Änderungsnachverfolgung  
+- Spalten, die maskiert werden (mithilfe der dynamischen Datenmaskierung)  
+- Spalten in Stretch-aktivierten Tabellen (Tabellen mit Spalten, die mit Always Encrypted verschlüsselt sind, können für Stretch aktiviert werden.)  
+- Spalten in externen (PolyBase)-Tabellen (Hinweis: Die Verwendung von externen Tabellen und Tabellen mit verschlüsselten Spalten in der gleichen Abfrage wird unterstützt)  
+- Tabellenwertparameter, die auf verschlüsselte Spalten ausgerichtet sind, werden nicht unterstützt.  
 
 Die folgenden Klauseln dürfen in verschlüsselten Spalten nicht verwendet werden:
 

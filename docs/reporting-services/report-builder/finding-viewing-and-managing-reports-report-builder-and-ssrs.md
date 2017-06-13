@@ -1,23 +1,28 @@
 ---
-title: "Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Suchen, anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
+# <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
   In Berichts-Generator können Sie Ordner auf einem Berichtsserver oder auf einer SharePoint-Website durchsuchen, um Berichte, freigegebene Datenquellen, Modelle und andere zugehörige Berichtselemente zu suchen und auf Ihrem Computer nach lokalen Berichten zu suchen. Um die Suche nach Berichten einfacher zu gestalten, speichert Berichts-Generator eine Liste der zuletzt verwendeten Server und Websites und stellt Direktzugriff auf den Desktop und die Ordner Eigene Dateien und Arbeitsplatz im Dateisystem des Computers bereit.  
   
  In Berichts-Designer können Sie auch den Computer durchsuchen, um lokale Berichte zu suchen. Nach der Bereitstellung von Berichten auf einem Berichtsserver oder einer SharePoint-Website können Sie den Berichtsserver mit dem Berichts-Manager durchsuchen oder auf der SharePoint-Website nach Berichten suchen. Berichte und verwandte Elemente bleiben lokal verfügbar, nachdem sie bereitgestellt wurden.  
@@ -73,25 +78,25 @@ caps.handback.revision: 11
   
  Der Berichts-Manager zeigt Berichte im HTML-Viewer von Reporting Services an. Der HTML-Viewer stellt ein Framework zum Anzeigen von Berichten im HTML-Format bereit und enthält unter anderem eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt für Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste stellt Funktionalität für Seitennavigation, Zoom, Aktualisierung, Suche, Export, Druck und Datenfeeds bereit. Die Berichtssymbolleiste wird auch in einem Browserfenster oben im Bericht angezeigt, wenn Sie über eine URL auf Berichte zugreifen. Die Druckfunktionalität ist optional und muss vom Administrator aktiviert werden. Wenn verfügbar, wird ein Druckersymbol auf der Berichtssymbolleiste angezeigt. Die folgenden Abbildungen enthalten detaillierte Darstellungen der Berichtssymbolleiste in einem Berichts-Manager-Fenster und der Funktionen der Berichtssymbolleiste.  
   
- ![Bericht (Symbolleiste in Berichts-Manager)](../../reporting-services/report-builder/media/hs-reportserver-blowout.png "Bericht (Symbolleiste in Berichts-Manager)")  
+ ![Berichtssymbolleiste in Berichts-Manager](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
 Berichts-Manager-Fenster  
   
- ![Berichtssymbolleiste](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Berichtssymbolleiste")  
+ ![Berichtssymbolleiste](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
 Berichtssymbolleiste  
   
- Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts in ein anderes Dateiformat &#40;Berichts-Generator und SSRS&#41;](../Topic/Export%20a%20Report%20as%20Another%20File%20Type%20\(Report%20Builder%20and%20SSRS\).md).  
+ Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts in ein anderes Dateiformat &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
  Um einen Bericht auf möglichst einfache Weise auszuwählen und auszuführen, öffnen Sie den Berichts-Manager, und suchen Sie nach dem Bericht bzw. navigieren Sie zu dem Bericht, den Sie anzeigen möchten. Eine Schrittanleitung zum Öffnen von Berichten finden Sie unter [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn aktualisieren, um neue Daten anzuzeigen.  
   
-### Aktualisieren von Berichten  
+### <a name="refreshing-reports"></a>Aktualisieren von Berichten  
  Berichtsdaten ändern sich häufig. Deshalb empfiehlt es sich, den Bericht oft zu aktualisieren, um die neuesten Daten anzuzeigen. Es gibt drei verschiedene Möglichkeiten zum Aktualisieren eines Berichts.  
   
 |Option|Ergebnis|  
 |------------|------------|  
 |Schaltfläche**Aktualisieren** im Browserfenster|Zeigt den im Sitzungscache gespeicherten Bericht an. Ein Sitzungscache wird erstellt, wenn ein Benutzer einen Bericht öffnet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um eine konsistente Anzeige sicherzustellen, während ein Bericht geöffnet ist.|  
-|![Browser aktualisieren (Schaltfläche) auf der Berichtsymbolleiste](../../reporting-services/media/htmlviewer-refresh.png "Browser aktualisieren (Schaltfläche) auf der Berichtsymbolleiste")|Wenn Sie auf der Berichtssymbolleiste auf die Schaltfläche **Aktualisieren** klicken, führt der Berichtsserver die Abfrage erneut aus und aktualisiert die Berichtsdaten, falls der Bericht bedarfsgesteuert ausgeführt wird. Falls der Bericht zwischengespeichert ist oder es sich um eine Momentaufnahme handelt, wird der in der Berichtsserver-Datenbank gespeicherte Bericht angezeigt, wenn auf **Aktualisieren** geklickt wird.|  
+|![Aktualisierungsschaltfläche des Webbrowsers auf der Berichtssymbolleiste](../../reporting-services/media/htmlviewer-refresh.GIF "Aktualisierungsschaltfläche des Webbrowsers auf der Berichtssymbolleiste")|Wenn Sie auf der Berichtssymbolleiste auf die Schaltfläche **Aktualisieren** klicken, führt der Berichtsserver die Abfrage erneut aus und aktualisiert die Berichtsdaten, falls der Bericht bedarfsgesteuert ausgeführt wird. Falls der Bericht zwischengespeichert ist oder es sich um eine Momentaufnahme handelt, wird der in der Berichtsserver-Datenbank gespeicherte Bericht angezeigt, wenn auf **Aktualisieren** geklickt wird.|  
 |Tastenkombination STRG+F5|Führt zum selben Ergebnis wie das Klicken auf die Schaltfläche **Aktualisieren** auf der Berichtssymbolleiste.|  
   
   
@@ -102,26 +107,26 @@ Berichtssymbolleiste
   
  Für den Zugriff auf die Anwendungsseiten wählen Sie elementspezifische Aktionen aus einem Dropdownmenü in einem Bericht oder einem anderen Berichtsserverelement aus, das Sie zuvor zu einer SharePoint-Bibliothek hinzugefügt haben. Je nach Element und verfügbaren Berechtigungen kann es Ihnen eventuell auch möglich sein, Berichte im Berichts-Generator zu erstellen, Modelle zu generieren und Einstellungen für die Modellelementsicherheit festzulegen.  
   
- Weitere Informationen zu den Reporting Services- und SharePoint-Technologien finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+ Weitere Informationen zu den Reporting Services- und SharePoint-Technologien finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
-### Suchen von Berichtsserverelementen auf einer SharePoint-Website  
+### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Suchen von Berichtsserverelementen auf einer SharePoint-Website  
  Bevor Sie Eigenschaften festlegen können, müssen Sie zunächst in der Lage sein, das Element zu finden. Berichtsserverelemente werden immer in Bibliotheken oder in einem Ordner innerhalb einer Bibliothek gespeichert.  
   
  Wenn Sie auf die SharePoint-Website zugreifen, sehen Sie die Seite "Durchsuchen" und die Registerkarte "Bibliothekstools". Auf der Seite "Durchsuchen" werden die Bibliotheken und der Inhalt der ausgewählten Bibliothek aufgelistet. Sie können den Bericht, Berichtsmodelle und andere Elemente in der Bibliothek anzeigen, Ordner untersuchen und die Website nach Elementen durchsuchen.  
   
  Zur Unterscheidung der Berichtsserverelemente von anderen Elementen auf einer SharePoint-Website können Sie ein Element anhand des Symbols visuell identifizieren oder den Mauszeiger über den Typ halten, sodass die Dateierweiterung angezeigt wird. Das folgende Bild zeigt Ordner, ein Berichtsmodell und eine Berichtsdefinition in der Bibliothek **Berichte** :  
   
- ![SharePoint-Bibliothek mit Berichtsserverelementen](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "SharePoint-Bibliothek mit Berichtsserverelementen")  
+ ![SharePoint-Bibliothek mit berichtsserverelementen](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint-Bibliothek mit berichtsserverelementen")  
   
-### Anzeigen von Berichten  
+### <a name="viewing-reports"></a>Anzeigen von Berichten  
  Berichtsdefinitionen (RDL-Dateien), die Sie in eine SharePoint-Bibliothek hochladen, werden über ein vom Reporting Services-Add-In installiertes Berichts-Viewer-Webpart angezeigt. Eine RDL-Dateizuordnung wird automatisch beim Installieren des Add-Ins definiert. Wenn Sie einen Bericht auswählen, wird er automatisch im Webpart geöffnet. Nach dem Öffnen des Berichts können Sie die im Webpart enthaltene Berichtssymbolleiste für die Seitennavigation und zum Durchsuchen, Zoomen und Drucken des Berichts verwenden. Die Symbolleiste enthält eine Option zum Exportieren eines Datenfeeds, mit der der Bericht als Atom-Datenfeed exportiert werden kann, und ein Menü **Aktionen** , über das der Bericht gedruckt, abonniert und in andere Formate exportiert werden kann, z. B. PDF, Word und Excel. Über das Menü **Aktionen** kann der Bericht auch im Berichts-Generator geöffnet werden. Das folgende Bild zeigt einen Bericht und die Exportoptionen im Menü **Aktionen** .  
   
- ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
+ ![Rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "Rs_SharePointRunReport")  
   
-### Verwalten von Elementen mithilfe von Aktionen  
+### <a name="managing-items-through-actions"></a>Verwalten von Elementen mithilfe von Aktionen  
  Verwaltungsaufgaben werden durch Aktionen in einem Dropdownmenü für jedes Element unterstützt. Je nach Berechtigungen sind für die einzelnen Elemente allgemeine Aktionen verfügbar, die Standardaktionen für Elemente sind, die in einer SharePoint-Bibliothek gespeichert sind. **Eigenschaften anzeigen** und **Eigenschaften bearbeiten** sind Beispiele für solche allgemeinen Aktionen. Benutzerdefinierte Aktionen stellen elementspezifische Verwaltungsfunktionen bereit. Das folgende Bild zeigt die Aktionen für eine Berichtsdefinition. **Abonnements verwalten** und **Verarbeitungsoptionen verwalten**sind Beispiele für benutzerdefinierte Aktionen für eine Berichtsdefinition:  
   
- ![Menübefehle für Berichtsserverelemente](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menübefehle für Berichtsserverelemente")  
+ ![Menübefehle für berichtsserverelemente](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menübefehle für berichtsserverelemente")  
   
   
 ##  <a name="DeskTop"></a> Anzeigen von Berichten in einer Desktopanwendung  
@@ -153,9 +158,9 @@ Berichtssymbolleiste
  [Anzeigen einer Berichtsvorschau in Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Beschreibt, wie Berichte in der Vorschau angezeigt werden, während sie erstellt oder aktualisiert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Installieren und Deinstallieren von Berichts-Generator](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)  
+ [Installieren und Deinstallieren von Berichts-Generator](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

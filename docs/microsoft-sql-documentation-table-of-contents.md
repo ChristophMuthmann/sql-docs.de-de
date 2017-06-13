@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fbfb58c3cadb58914371a4947426dad5756be9c
+ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
+ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Microsoft SQL-Dokumentation
@@ -25,5 +25,6 @@ Auf dieser Seite erhalten Sie Zugriff auf die gesamte SQL Server-Dokumentation:
 
 - Das Inhaltsverzeichnis auf der linken Seite bezieht sich auf SQL Server und mehrere verwandte Technologien.
 - Das Inhaltsverzeichnis für den größeren Teil von SQL-Technologien einschließlich Azure SQL befindet sich auf der [SQL-Hubseite](sql-hub-menu.md).
+-  Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Produktdokumentation für SQL Server 2014](http://msdn.microsoft.com/library/ms130214(v=sql.120).aspx). 
 
 **Siehe auch**: Zusätzliche Azure-Datenbanktechnologien wie [DocumentDB und Data Factory](/azure/#pivot=services&panel=databases).  

@@ -1,26 +1,31 @@
 ---
-title: "Hinzuf&#252;gen eines Unterberichts und Hinzuf&#252;gen von Parametern (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10093"
-  - "sql13.rtp.rptdesigner.subreportproperties.general.f1"
+title: "Hinzufügen von Unterberichten und Parametern (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10093"
+- sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hinzuf&#252;gen eines Unterberichts und Hinzuf&#252;gen von Parametern (Berichts-Generator und SSRS)
+# <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Unterberichte hinzu, wenn Sie einen Hauptbericht erstellen möchten, der mehrere verwandte Berichte enthält. Ein Unterbericht ist ein Verweis auf einen anderen Bericht. Um die Berichte über Datenwerte zu verbinden (z. B. damit mehrere Berichte Daten für denselben Kunden anzeigen), müssen Sie einen parametrisierten Bericht erstellen (z. B. einen Bericht, der die Details für einen bestimmten Kunden enthält). Wenn Sie dem Hauptbericht einen Unterbericht hinzufügen, können Sie Parameter angeben, die an den Unterbericht übergeben werden sollen.  
   
  Sie können Unterberichte auch dynamischen Zeilen oder Spalten in einer Tabelle oder Matrix hinzufügen. Bei der Verarbeitung des Hauptberichts wird der Unterbericht für jede Zeile verarbeitet. Überlegen Sie in diesem Fall, ob Sie den gewünschten Effekt mit Datenbereichen oder mit geschachtelten Datenbereichen erzielen können.  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So fügen Sie einen Unterbericht hinzu  
+### <a name="to-add-a-subreport"></a>So fügen Sie einen Unterbericht hinzu  
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Unterbericht**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 9
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So geben Sie Parameter an, die an einen Unterbericht übergeben werden  
+### <a name="to-specify-parameters-to-pass-to-a-subreport"></a>So geben Sie Parameter an, die an einen Unterbericht übergeben werden  
   
 1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf den Unterbericht, und klicken Sie anschließend auf **Eigenschaften des Unterberichts**.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 9
     >   
     >  In Berichts-Designer müssen alle Parameter, die vom Unterbericht benötigt werden, in der Liste **Parameter** enthalten sein. Fehlt ein benötigter Parameter, wird der Unterbericht nicht richtig im Hauptbericht angezeigt.  
   
-6.  Wiederholen Sie die Schritte 3 bis 5, um einen Namen und Wert für jeden Unterberichtsparameter anzugeben.  
+6.  Wiederholen Sie die Schritte 3 bis 5, um einen Namen und Wert für jeden Unterberichtsparameter anzugeben.  
   
 7.  Klicken Sie auf den Parameter im Parameterraster, und klicken Sie dann auf **Löschen**, um einen Unterberichtsparameter zu löschen.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 9
   
      Wenn Sie die Reihenfolge eines Unterberichtsparameters ändern, wirkt sich dies nicht auf die Verarbeitung des Unterberichts aus.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

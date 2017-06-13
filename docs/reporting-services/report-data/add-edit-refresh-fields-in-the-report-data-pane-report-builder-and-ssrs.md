@@ -1,23 +1,28 @@
 ---
-title: "Hinzuf&#252;gen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen, bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hinzuf&#252;gen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS)
+# <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS)
   Datasetfelder sind die integrierte Auflistung von Feldnamen, die die Daten darstellen, die zurückgegeben werden, wenn eine Datasetabfrage in einer externen Datenquelle ausgeführt wird.  
   
  Bei einem eingebetteten Dataset sind Datasetfelder die Felder, die erstellt werden, nachdem Sie die Erstellung einer Abfrage abgeschlossen und den Bereich Abfrage-Designer geschlossen haben, und von Ihnen erstellte Felder berechnet werden.  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So fügen Sie ein Abfragefeld hinzu  
+### <a name="to-add-a-query-field"></a>So fügen Sie ein Abfragefeld hinzu  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf das Dataset, und klicken Sie anschließend auf **Abfragefeld hinzufügen**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So fügen Sie ein berechnetes Feld hinzu  
+### <a name="to-add-a-calculated-field"></a>So fügen Sie ein berechnetes Feld hinzu  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf das Dataset, und klicken Sie anschließend auf **Berechnetes Feld hinzufügen**.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So bearbeiten Sie ein Abfragefeld oder ein Datasetfeld  
+### <a name="to-edit-a-query-field-or-a-dataset-field"></a>So bearbeiten Sie ein Abfragefeld oder ein Datasetfeld  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf das Feld, und klicken Sie anschließend auf **Feldeigenschaften**.  
   
@@ -75,13 +80,13 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So löschen Sie ein Abfragefeld oder ein berechnetes Feld  
+### <a name="to-delete-a-query-field-or-a-calculated-field"></a>So löschen Sie ein Abfragefeld oder ein berechnetes Feld  
   
 1.  Erweitern Sie im Berichtsdatenbereich das Dataset, um die Feldauflistung anzuzeigen.  
   
 2.  Klicken Sie mit der rechten Maustaste auf das Feld, das Sie entfernen möchten, und klicken Sie anschließend auf **Löschen**.  
   
-### So aktualisieren Sie die Feldauflistung im Berichtsdatenbereich für ein freigegebenes Dataset  
+### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>So aktualisieren Sie die Feldauflistung im Berichtsdatenbereich für ein freigegebenes Dataset  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf das Dataset, und klicken Sie anschließend auf **Abfrage**.  
   
@@ -89,11 +94,11 @@ caps.handback.revision: 7
   
      Die Abfrage des freigegebenen Datasets wird auf dem Berichtsserver ausgeführt und gibt die aktuelle Feldauflistung zurück.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Abfrage-Designer in Reporting Services](../Topic/Reporting%20Services%20Query%20Designers.md)   
- [Abfrage-Designer &#40;Berichts-Generator&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Abfrage-Designer in Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

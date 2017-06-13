@@ -1,26 +1,31 @@
 ---
-title: "Exporting to Microsoft Excel (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exportieren nach Microsoft Excel (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 28
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 27
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exporting to Microsoft Excel (Report Builder and SSRS)
-  Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]-Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
+  Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
   
- Das Format ist Office Open XML. Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet**, und die Dateierweiterung lautet „.xlsx“.  
+ Das Format ist Office Open XML. Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** , und die Dateierweiterung lautet „.xlsx“.  
   
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
@@ -36,9 +41,11 @@ caps.handback.revision: 27
   
 -   Die maximale Spaltenbreite ist auf 255 Zeichen bzw. 1726,5 Punkte beschränkt. Der Renderer prüft nicht, ob die Spaltenbreite unterhalb der Grenze liegt.  
   
--   Die maximale Zeilenhöhe beträgt 409 Punkte. Falls die Zeilenhöhe aufgrund des Zeileninhalts 409 Punkte überschreitet, wird der Inhalt abgeschnitten.  
-  
 -   Die maximale Anzahl an Zeichen in einer Zeile ist auf 32.767 Zeichen beschränkt. Wenn diese Einschränkung überschritten wird, zeigt der Renderer eine Fehlermeldung an.  
+  
+-   Die maximale Zeilenhöhe beträgt 409 Punkte. Wenn der Inhalt der Zeile dazu führen, die Zeilenhöhe 409 Punkte überschreitet dass, zeigt Excel-Zelle eine partielle Menge an Text bis zu 409 Punkte. Der Rest des Zelleninhalts ist immer noch in der Zelle (bis zu Excel Max. Anzahl von Zeichen von 32.767).
+
+-  Da die maximale Zeilenhöhe 409 Punkte ist, wenn die definierte Höhe der Zelle im Bericht etwas 409 Punkte überschreitet ist, teilt Excel der Zelleninhalt in mehrere Zeilen an.
   
 -   Die maximale Anzahl an Arbeitsblättern wird nicht in Excel definiert. Stattdessen können externe Faktoren wie der Arbeitsspeicher und der Speicherplatz dazu führen, dass Einschränkungen auftreten.  
   
@@ -48,17 +55,17 @@ caps.handback.revision: 27
   
  Weitere Informationen zu Excel-Beschränkungen finden Sie unter [Spezifikationen und Beschränkungen in Excel](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F).  
   
-### Größen von Excel 2003-Dateien (XLS)  
+### <a name="sizes-of-excel-2003-xls-files"></a>Größen von Excel 2003-Dateien (XLS)  
   
 > [!IMPORTANT]  
->  Die [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003-Renderingerweiterung ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  Die [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003-Renderingerweiterung ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Wenn Berichte erstmalig in Excel 2003 exportiert und gespeichert werden, profitieren sie nicht von der Dateioptimierung, die von Excel automatisch für die XLS-Arbeitsmappendateien ausgeführt wird. Die höhere Dateigröße kann Probleme für E-Mail-Abonnements und -Anlagen verursachen. Um die Größe der \*.xls-Datei für exportierte Berichte zu verringern, öffnen Sie die \*.xls-Datei, und speichern Sie die Arbeitsmappen anschließend neu. Durch erneutes Speichern der Arbeitsmappen wird die Dateigröße in der Regel um ca. 40 bis 50 Prozent verringert.  
   
 > [!NOTE]  
 >  In Excel 2003 werden im Arbeitsblatt in einer Excel-Zelle ungefähr 1000 Zeichen angezeigt. Es können jedoch Zeichen bis zur maximalen Anzahl in der Bearbeitungsleiste bearbeitet werden. Diese Einschränkung gilt nicht für aktuelle Excel-Dateien (XLSX).  
   
-### Textfelder und Text  
+### <a name="text-boxes-and-text"></a>Textfelder und Text  
  Die folgenden Einschränkungen gelten für Textfelder und Text:  
   
 -   Textfeldwerte, die Ausdrücke sind, werden nicht in Excel-Formeln konvertiert. Der Wert jedes Textfelds wird während der Berichtsverarbeitung ausgewertet. Der ausgewertete Ausdruck wird als Inhalt jeder Excel-Zelle exportiert.  
@@ -72,19 +79,19 @@ caps.handback.revision: 27
     > [!NOTE]  
     >  Verbreitern Sie das Textfeld im Bericht, um dieses Problem zu umgehen.  
   
-### Bilder  
+### <a name="images"></a>Bilder  
  Für Bilder gelten die folgenden Einschränkungen:  
   
 -   Hintergrundbilder für Berichtselemente werden ignoriert, da Excel keine Hintergrundbilder für einzelne Zellen unterstützt.  
   
 -   Die Excel-Renderingerweiterung unterstützt nur das Hintergrundbild des Hauptteils des Berichts. Falls das Hintergrundbild des Hauptteils eines Berichts im Bericht angezeigt wird, wird das Bild als Arbeitsblatt-Hintergrundbild gerendert.  
   
-### Rechtecke  
+### <a name="rectangles"></a>Rechtecke  
  Für Rechtecke gilt die folgende Einschränkung.  
   
 -   Rechtecke in Berichtsfußzeilen werden nicht in Excel exportiert. Allerdings werden Rechtecke im Berichtstext, in Tablix-Zellen usw. als Bereich von Excel-Zellen gerendert.  
   
-### Berichtskopfzeilen und -fußzeilen  
+### <a name="report-headers-and-footers"></a>Berichtskopfzeilen und -fußzeilen  
  Für Berichtsköpfe und Fußzeilen gelten die folgenden Einschränkungen:  
   
 -   Für Kopf- und -Fußzeilen in Excel werden einschließlich Markup maximal 256 Zeichen unterstützt. Die Renderingerweiterung schneidet die Zeichenfolge bei 256 Zeichen ab.  
@@ -93,7 +100,7 @@ caps.handback.revision: 27
   
 -   Textfelder in einer Kopf- oder Fußzeile behalten beim Export in Excel ihre Formatierung, jedoch nicht ihre Ausrichtung bei. Dies liegt daran, dass führende und nachfolgende Leerzeichen abgeschnitten werden, wenn der Bericht in Excel gerendert wird.  
   
-### Verbinden von Zellen  
+### <a name="merging-cells"></a>Verbinden von Zellen  
  Für das Verbinden von Zellen gelten die folgenden Einschränkungen:  
   
 -   Wenn Zellen verbunden werden, funktioniert der Zeilenumbruch nicht ordnungsgemäß. Falls verbundene Zellen in einer Zeile vorhanden sind, in der ein Textfeld mit der AutoSize-Eigenschaft gerendert wird, funktioniert AutoSize nicht.  
@@ -104,36 +111,36 @@ caps.handback.revision: 27
   
 -   Die fehlende Ausrichtung von Elementen nach links und rechts ist die häufigste Ursache verbundener Zellen. Stellen Sie sicher, dass der linke und rechte Rand aller Berichtselemente korrekt zueinander ausgerichtet sind. Die Ausrichtung von Elementen und die Verwendung der gleichen Breite löst das Problem in den meisten Fällen.  
   
--   Obwohl alle Elemente genau ausgerichtet werden, ist in einigen seltenen Fällen festzustellen, dass manche Spalten weiterhin zusammengeführt werden. Dies kann durch eine interne Einheitenkonvertierung und durch Runden beim Rendern des Excel-Arbeitsblatts verursacht werden. In der Berichtsdefinitionssprache (RDL) können Sie die Position und Größe in unterschiedlichen Maßeinheiten wie z. B. Zoll, Pixel, Zentimeter und Punkte angeben. Intern verwendet Excel Punkte. Um den Umrechungsaufwand und die möglichen Rundungsungenauigkeiten bei der Umrechnung der Zoll- und Zentimeterangaben in Punkte zu verringern, geben Sie ggf. alle Maßeinheiten in ganzen Punkten an, um möglichst direkte Ergebnisse zu erhalten. Ein Zoll entspricht 72 Punkten.  
+-   Obwohl alle Elemente genau ausgerichtet werden, ist in einigen seltenen Fällen festzustellen, dass manche Spalten weiterhin zusammengeführt werden. Dies kann durch eine interne Einheitenkonvertierung und durch Runden beim Rendern des Excel-Arbeitsblatts verursacht werden. In der Berichtsdefinitionssprache (RDL) können Sie die Position und Größe in unterschiedlichen Maßeinheiten wie z. B. Zoll, Pixel, Zentimeter und Punkte angeben. Intern verwendet Excel Punkte. Um den Umrechungsaufwand und die möglichen Rundungsungenauigkeiten bei der Umrechnung der Zoll- und Zentimeterangaben in Punkte zu verringern, geben Sie ggf. alle Maßeinheiten in ganzen Punkten an, um möglichst direkte Ergebnisse zu erhalten. Ein Zoll entspricht 72 Punkten.  
   
-### Zeilen- und Spaltengruppen in Berichten  
+### <a name="report-row-groups-and-column-groups"></a>Zeilen- und Spaltengruppen in Berichten  
  Berichte mit Zeilen- oder Spaltengruppen enthalten beim Export in Excel leere Zellen. Angenommen Sie haben einen Bericht, in dem die Zeilen nach der Entfernung zum Geschäft (Commute Distance) sortiert sind. Jede Entfernungskategorie kann mehr als einen Kunden enthalten. Der Bericht ist im folgenden Bild dargestellt.  
   
- ![Report in the Reporting Services web portal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
+ ![Bericht in der Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Bericht auf dem Reporting Services-Webportal")  
   
  Wenn der Bericht nach Excel exportiert wird, wird die Entfernung zum Geschäft nur in einer Zelle der Spalte „Entfernung zum Geschäft“ angezeigt. Abhängig von der Ausrichtung des Texts im Bericht (oben, Mitte oder unten) befindet sich der Wert in der ersten, mittleren oder letzten Zelle. Die anderen Zellen sind leer. Die Namensspalte mit den Geschäftsnamen enthält keine leeren Zellen. Das folgende Bild zeigt den Bericht nach dem Export in Excel. Die roten Zellrahmen wurden zur Hervorhebung hinzugefügt. Die grauen Felder sind die leeren Zellen. (Weder die roten Linien noch die grauen Felder sind Teil des exportierten Berichts.)  
   
- ![Report exported to Excel, with lines](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
+ ![Bericht nach Excel exportiert, deren Zeilen](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Bericht nach Excel exportiert, deren Zeilen")  
   
  Berichte mit Zeilen- oder Spaltengruppen müssen also nach dem Export in Excel geändert werden, bevor Sie die exportierten Daten als PivotTable anzeigen können. Sie müssen den Gruppenwert in Zellen, in denen er fehlt, hinzufügen, um das Arbeitsblatt zu einer flachen Tabelle mit Werten in allen Zellen zu machen. Die folgende Abbildung zeigt das aktualisierte Arbeitsblatt.  
   
- ![Report exported to Excel, flattened](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, flattened")  
+ ![Bericht nach Excel exportiert, vereinfacht](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Bericht nach Excel exportiert, vereinfacht")  
   
  Wenn Sie einen Bericht erstellen, um ihn zur weiteren Analyse der Berichtsdaten nach Excel zu exportieren, sollten Sie in Ihrem Bericht nicht nach Zeilen oder Spalten gruppieren.  
   
-## Excel-Renderer  
+## <a name="excel-renderer"></a>Excel-Renderer  
   
-### Aktuelle Excel-Datei-Renderer (XLSX)  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist der Standard-Excel-Renderer die mit den aktuellen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]-Dateien (XLSX) kompatible Version. Dies ist die **Excel**-Option in den Menüs **Exportieren**, die in den Listen des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportals und von SharePoint aufgeführt sind.  
+### <a name="current-xlsx-excel-file-renderer"></a>Aktuelle Excel-Datei-Renderer (XLSX)  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ist der Standard-Excel-Renderer die mit den aktuellen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Dateien (XLSX) kompatible Version. Dies ist die **Excel** -Option in den Menüs **Exportieren** , die in den Listen des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportals und von SharePoint aufgeführt sind.  
   
  Wenn Sie den standardmäßigen Excel-Renderer statt des früheren Excel 2003-Renderers (XLS) verwenden, können Sie das Microsoft Office Compatibility Pack für Word, Excel und PowerPoint installieren, damit frühere Versionen von Excel die exportierten Dateien öffnen können.  
   
-### Excel 2003-Renderer (XLS)  
+### <a name="excel-2003-xls-renderer"></a>Excel 2003-Renderer (XLS)  
   
 > [!IMPORTANT]  
->  Die [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003-Renderingerweiterung ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  Die [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003-Renderingerweiterung ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Die frühere, mit Excel 2003 kompatible Version heißt jetzt Excel 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Der Inhaltstyp von Dateien, die von diesem Renderer generiert werden, ist **application/vnd.ms-excel**, und die Dateierweiterung der Dateien lautet „.xls“.  
+ Die frühere, mit Excel 2003 kompatible Version heißt jetzt Excel 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Der Inhaltstyp von Dateien, die von diesem Renderer generiert werden, ist **application/vnd.ms-excel** , und die Dateierweiterung der Dateien lautet „.xls“.  
   
  Standardmäßig ist die Menüoption **Excel 2003** nicht sichtbar. Ein Administrator kann sie unter bestimmten Umständen sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Excel 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei.  
   
@@ -141,7 +148,7 @@ caps.handback.revision: 27
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen.  
   
--   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen finden Sie unter [ Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md).  
+-   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [ Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  Wenn der Renderer der Menüoption **Excel 2003** für Sichtbarkeit konfiguriert ist, sind die Excel-Option und die Excel 2003-Option in den folgenden Szenarien verfügbar:  
   
@@ -163,7 +170,7 @@ caps.handback.revision: 27
   
  Die EXCELOPENXML-Erweiterung definiert den Excel-Renderer für aktuelle Excel-Dateien (XLSX). Die EXCEL-Erweiterung definiert die Excel 2003-Version. `Visible = “false”` gibt an, dass der Excel 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
-### Unterschiede zwischen dem aktuellen Excel-Renderer (XLSX) und den Excel 2003-Renderern  
+### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Unterschiede zwischen dem aktuellen Excel-Renderer (XLSX) und den Excel 2003-Renderern  
  Mit dem aktuellen Excel-Renderer (XLSX) oder dem Excel 2003-Renderer gerenderte Berichte sind in der Regel identisch, und nur in seltenen Fällen bemerken Sie Unterschiede zwischen den beiden Formaten. In der folgenden Tabelle werden der Excel-Renderer und der Excel 2003-Renderer verglichen.  
   
 |Eigenschaft|Excel 2003|Aktuelle Excel-Version|  
@@ -183,11 +190,11 @@ caps.handback.revision: 27
   
  Bilder, Diagramme, Sparklines, Datenbalken, Karten, Messgeräte, Indikatoren und Zeilen werden innerhalb einer Excel-Zelle positioniert, befinden sich jedoch eine Ebene über dem Zellenraster. Linien werden als Zellrahmen gerendert.  
   
- Diagramme, Sparklines, Datenbalken, Karten, Messgeräte und Indikatoren werden als Bilder exportiert. Die von ihnen dargestellten Daten, z. B. die Wert- und Elementbezeichnungen für ein Diagramm, werden nicht exportiert und sind nur in der Excel-Arbeitsmappe verfügbar, wenn sie in einer Spalte oder Zeile in einem Datenbereich innerhalb eines Berichts enthalten sind.  
+ Diagramme, Sparklines, Datenbalken, Karten, Messgeräte und Indikatoren werden als Bilder exportiert. Die von ihnen dargestellten Daten, z. B. die Wert- und Elementbezeichnungen für ein Diagramm, werden nicht exportiert und sind nur in der Excel-Arbeitsmappe verfügbar, wenn sie in einer Spalte oder Zeile in einem Datenbereich innerhalb eines Berichts enthalten sind.  
   
  Wenn Sie Diagramm-, Sparkline-, Datenbalken-, Karten-, Messgerät- und Indikatordaten verwenden möchten, exportieren Sie den Bericht in eine CSV-Datei oder generieren Atom-kompatible Datenfeeds aus dem Bericht. Weitere Informationen finden Sie unter [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-## Anpassen der Seitengröße  
+## <a name="page-sizing"></a>Anpassen der Seitengröße  
  Die Excel-Renderingerweiterung verwendet die Einstellungen zur Seitenhöhe und -breite, um zu ermitteln, welche Papiereinstellung im Excel-Arbeitsblatt definiert werden soll. Excel versucht, die Eigenschaftseinstellungen von „PageHeight“ und „PageWidth“ mit einer der gebräuchlichsten Papiergrößen abzugleichen.  
   
  Wenn keine Übereinstimmungen gefunden werden, verwendet Excel die Standardseitengröße für den Drucker. Falls die Papierbreite kleiner als die Papierhöhe ist, wird die Ausrichtung auf "Hochformat" festgelegt, andernfalls auf "Querformat".  
@@ -218,7 +225,7 @@ caps.handback.revision: 27
   
  Excel-Kopf- und -Fußzeilenabschnitte unterstützen einschließlich Markup ein Maximum von 256 Zeichen. Falls diese Grenze überschritten wird, entfernt der Excel-Renderer vom Ende der Zeichenfolge des Seitenkopfs und/oder Seitenfußes her Markupzeichen, um die Anzahl der Zeichen insgesamt zu verringern. Falls alle Markupzeichen entfernt werden und die Länge noch immer über der maximal zulässigen liegt, wird die Zeichenfolge von rechts her abgeschnitten.  
   
-### SimplePageHeader-Einstellungen  
+### <a name="simplepageheader-settings"></a>SimplePageHeader-Einstellungen  
  Standardmäßig wird die Einstellung der Geräteinformationen SimplePageHeaders auf **false**festgelegt. Daher werden die Seitenköpfe im Bericht auf der Excel-Arbeitsblattoberfläche als Zeilen gerendert. Die Arbeitsblattzeilen, die die Kopfzeilen enthalten, werden gesperrte Zeilen. Sie können den Bereich in Excel fixieren oder die Fixierung des Bereichs aufheben. Bei ausgewählter Option **Drucktitel** wird automatisch festgelegt, dass diese Kopfzeilen auf jeder Arbeitsblattseite ausgedruckt werden.  
   
  Wenn in Excel die Option **Titel drucken** auf der Registerkarte Seitenlayout ausgewählt ist, wird der Seitenkopf außer auf dem Dokumentstrukturdeckblatt oben auf jedem Arbeitsblatt in der Arbeitsmappe wiederholt. Wenn im Dialogfeld Berichtskopfeigenschaften bzw. Berichtsfußeigenschaften die Option **Auf erster Seite drucken** bzw. **Auf letzter Seite drucken** nicht ausgewählt ist, wird die Kopfzeile nicht zur ersten bzw. letzten Seite hinzugefügt.  
@@ -230,7 +237,7 @@ caps.handback.revision: 27
 ##  <a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in Excel unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
-### Einblenden und Ausblenden  
+### <a name="show-and-hide"></a>Einblenden und Ausblenden  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] weist Einschränkungen auf, wie ausgeblendete und angezeigte Berichtselemente beim Exportieren verwaltet werden. Gruppen, Zeilen und Spalten, die Berichtselemente enthalten, die ein- und ausgeschaltet werden können, werden als Excel-Gliederungen gerendert. Excel erstellt Gliederungen, die Zeilen und Spalten über die gesamte Zeile oder Spalte hinweg erweitern oder reduzieren. Dadurch können unter Umständen Berichtselemente reduziert werden, die nicht zum Reduzieren vorgesehen sind. Darüber hinaus können die Gliederungssymbole von Excel übermäßig viele sich überschneidende Gliederungen enthalten. Beim Verwenden der Excel-Renderingerweiterung werden daher die folgenden Gliederungsregeln angewendet, um diese Probleme zu vermeiden:  
   
 -   Das Berichtselement oben links, das ein- und ausgeschaltet werden kann, kann in Excel weiterhin ein- und ausgeschaltet werden. Berichtselemente, die ein- und ausgeschaltet werden können und einen gemeinsamen horizontalen oder vertikalen Bereich mit dem Berichtselement aufweisen, das oben links ein- und ausgeschaltet werden kann, können in Excel nicht ein- und ausgeschaltet werden.  
@@ -241,35 +248,36 @@ caps.handback.revision: 27
   
 -   Aufgrund einer Einschränkung in Excel können geschachtelte Gliederungen nur bis zu 7 Ebenen aufweisen.  
   
-### Dokumentstruktur  
+### <a name="document-map"></a>Dokumentstruktur  
  Wenn im Bericht Dokumentstrukturbezeichnungen vorhanden sind, wird eine Dokumentstruktur gerendert. Die Dokumentstruktur wird als Excel-Deckarbeitsblatt gerendert, das an der Position der ersten Registerkarte in die Arbeitsmappe eingefügt wird. Das Arbeitsblatt wird **Dokumentstruktur**genannt.  
   
  Der in der Dokumentstruktur angezeigte Text wird von der DocumentMapLabel-Eigenschaft des Berichtselements oder der Gruppe bestimmt. Dokumentstrukturbezeichnungen werden in der Reihenfolge aufgeführt, in der sie, angefangen bei der ersten Zeile, in der ersten Spalte im Bericht auftreten. Jede Dokumentstruktur-Bezeichnungszelle wird um die Anzahl der Ebenen eingerückt, an der sie im Bericht auftritt. Jede Einzugsebene wird dargestellt, indem die Bezeichnung in einer nachfolgenden Spalte einfügt wird. Excel unterstützt bis zu 256 Ebenen der Gliederungsschachtelung.  
   
  Die Dokumentstrukturgliederung wird als reduzierbare Excel-Gliederung gerendert. Die Gliederungsstruktur stimmt mit der geschachtelten Struktur der Dokumentstruktur überein. Die Gliederung kann ab der zweiten Ebene erweitert und reduziert werden.  
   
- Der Stammknoten der Struktur entspricht dem Berichtsnamen (\<*Berichtsname*>.rdl), der nicht interaktiv ist. Die Schriftart des Dokumentstrukturlinks ist Arial, 10pt.  
+ Der Stammknoten der Zuordnung entspricht dem Berichtsnamen den \< *Reportname*> RDL- und es ist nicht interaktiv. Die Schriftart des Dokumentstrukturlinks ist Arial, 10pt.  
   
-### Drillthroughlinks  
+### <a name="drillthrough-links"></a>Drillthroughlinks  
  In Textfeldern enthaltene Drillthroughlinks werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Drillthroughlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Beim Klicken auf den Drillthroughlink wird der Standardbrowser des Clients geöffnet und zur HTML-Ansicht des Ziels navigiert.  
   
-### Hyperlinks  
+### <a name="hyperlinks"></a>Hyperlinks  
  In Textfeldern enthaltene Hyperlinks werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Hyperlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Beim Klicken auf den Hyperlink wird der Standardbrowser des Clients geöffnet und zur HTML-Ansicht der Ziel-URL navigiert.  
   
-### Interaktives Sortieren  
+### <a name="interactive-sorting"></a>Interaktives Sortieren  
  Excel unterstützt keine interaktive Sortierung.  
   
-### Lesezeichen  
+### <a name="bookmarks"></a>Lesezeichen  
  Lesezeichenlinks in Textfeldern werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Lesezeichenlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Durch Klicken auf das Lesezeichen wird zur Excel-Zelle gewechselt, in der das mit Lesezeichen versehene Berichtselement gerendert wird.  
   
 ##  <a name="ConditionalFormat"></a> Ändern von Berichten zur Laufzeit  
- Wenn ein Bericht in mehrere Formate gerendert werden muss und kein Berichtslayout erstellt werden kann, das in allen erforderlichen Formaten wunschgemäß Rendervorgänge ausführt, verwenden Sie ggf. das integrierte globale Objekt von "RenderFormat", um die Darstellung des Berichts zur Laufzeit bedingt zu ändern. Dadurch können Berichtselemente abhängig vom verwendeten Renderer ausgeblendet oder angezeigt werden, um die besten Ergebnisse in den einzelnen Formaten zu erhalten. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
+ Wenn ein Bericht in mehrere Formate gerendert werden muss und kein Berichtslayout erstellt werden kann, das in allen erforderlichen Formaten wunschgemäß Rendervorgänge ausführt, verwenden Sie ggf. das integrierte globale Objekt von "RenderFormat", um die Darstellung des Berichts zur Laufzeit bedingt zu ändern. Dadurch können Berichtselemente abhängig vom verwendeten Renderer ausgeblendet oder angezeigt werden, um die besten Ergebnisse in den einzelnen Formaten zu erhalten. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

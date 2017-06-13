@@ -1,0 +1,1 @@
+**GILT für:**![Ja](media/yes.png)SQL Server Analysis Services![keine](media/no.png)Azure Analysis Services

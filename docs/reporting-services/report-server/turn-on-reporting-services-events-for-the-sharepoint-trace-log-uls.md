@@ -1,24 +1,31 @@
 ---
-title: "Aktivieren von Reporting Services-Ereignissen f&#252;r das SharePoint-Ablaufverfolgungsprotokoll (ULS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aktivieren von Reporting Services-Ereignissen f&#252;r das SharePoint-Ablaufverfolgungsprotokoll (ULS)
-  Ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] schreiben [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Server im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Ereignisse in die Ablaufverfolgung des SharePoint Unified Logging Service (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -spezifische Kategorien sind auf der Seite Überwachung der SharePoint-Zentraladministration verfügbar.  
+
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
+
+  Ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]schreiben [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Ereignisse in die Ablaufverfolgung des SharePoint Unified Logging Service (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -spezifische Kategorien sind auf der Seite Überwachung der SharePoint-Zentraladministration verfügbar.  
   
  In diesem Thema:  
   
@@ -57,7 +64,7 @@ caps.handback.revision: 19
   
 4.  Suchen Sie **SQL Server Reporting Services** in der Kategorieliste.  
   
-5.  Klicken Sie auf das Pluszeichen (+), um die Unterkategorien unter **SQL Server Reporting Services** zu erweitern.  
+5.  Klicken Sie auf das Pluszeichen (+), um die Unterkategorien unter **SQL Server Reporting Services**zu erweitern.  
   
 6.  Wählen Sie die Unterkategorien aus, die dem Ablaufverfolgungsprotokoll hinzugefügt werden sollen.  
   
@@ -88,7 +95,7 @@ Get-SPDiagnosticConfig
   
 2.  **Kategorie** : Auf den Server bezogene Ereignisse verfügen über die Zeichenfolge "Berichtsserver", am Anfang des Namens. Beispielsweise "Berichtsserverwarnungs-Laufzeit". Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
   
-3.  **Kategorie**: Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispielsweise "Dienstanwendungsproxy – Laufzeit für Warnungen" (Berichtsserver). Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
+3.  **Kategorie** : Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispielsweise "Dienstanwendungsproxy – Laufzeit für Warnungen" (Berichtsserver). Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
   
 ##  <a name="bkmk_list"></a> Liste der SQL Server Reporting Services-Ereignisse  
  Die folgende Tabelle enthält eine Liste der Ereignisse in der SQL Server Reporting Services-Kategorie:  
@@ -101,7 +108,7 @@ Get-SPDiagnosticConfig
 |Rendering im lokalen Modus||  
 |SOAP-Clientproxy||  
 |Benutzeroberflächenseiten||  
-|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge stammen aus Clientanwendungen, einschließlich [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], einer Funktion des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-Ins für [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der "SQL Server Reporting Services"- **Kategorie** und dem "Power View"- **Bereich** protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem "Power View"-Bereich protokolliert wurde, wird von der Clientanwendung bestimmt.|  
+|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge stammen aus Clientanwendungen, einschließlich der Power View, einer Funktion des SQL Server Reporting Services-Add-Ins.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der "SQL Server Reporting Services"- **Kategorie** und dem "Power View"- **Bereich** protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem "Power View"-Bereich protokolliert wurde, wird von der Clientanwendung bestimmt.|  
 |Laufzeit für Berichtsserverwarnungen||  
 |Berichtsserver-AppDomain-Manager||  
 |Gepufferte Berichtsserverantwort||  
@@ -109,7 +116,7 @@ Get-SPDiagnosticConfig
 |Berichtsserverkatalog||  
 |Berichtsserverausschnitt||  
 |Berichtsservercleanup||  
-|Berichtsserver-Konfigurations-Manager|Beispieleinträge:<br /><br /> Interne URL für MediumUsing-Berichtsserver: http://localhost:80/ReportServer.<br /><br /> UnexpectedMissing- oder ungültige ExtendedProtectionLevel-Einstellung|  
+|Berichtsserver-Konfigurations-Manager|Beispieleinträge:<br /><br /> Interne Server-Url für MediumUsing-Berichtsserver `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing- oder ungültige ExtendedProtectionLevel-Einstellung|  
 |Berichtsserver-Crypto||  
 |Berichtsserver-Datenerweiterung||  
 |Berichtsserver-DB-Abruf||  
@@ -139,7 +146,7 @@ Get-SPDiagnosticConfig
 |Gemeinsamer Dienst|Beispieleinträge:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting-Zugriff auf Inhaltsdatenbanken.<br /><br /> MediumProvisioning-Instanzen für ReportingWebServiceApplication<br /><br /> MediumProcessing-Dienstkontoänderung für ReportingWebServiceApplication<br /><br /> MediumSetting-Datenbankberechtigungen.|  
   
 ##  <a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
- ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell-Inhalt")Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie den folgenden Befehl über die SharePoint 2010-Verwaltungsshell ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die **sql server reporting services** enthalten:  
+ ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")mithilfe von PowerShell eine Liste der zurückzugebenden der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -bezogenen Ereignisse aus einer ULS-Protokolldatei. Geben Sie den folgenden Befehl über die SharePoint 2010-Verwaltungsshell ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die**sql server reporting services**enthalten:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
@@ -150,8 +157,8 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  Weitere Informationen zum Anzeigen von Protokolldaten mithilfe von PowerShell finden Sie unter [Anzeigen von Diagnoseprotokollen (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
   
 ##  <a name="bkmk_trace"></a> Speicherort des Ablaufverfolgungsprotokolls  
- Die Protokolldateien der Ablaufverfolgung befinden sich normalerweise im Ordner **C:\Programme\Common files\Microsoft Shared\Web Server Extensions\14\logs**. Sie können jedoch den Pfad auf der Seite **Diagnoseprotokollierung** der SharePoint-Zentraladministration überprüfen und ggf. ändern.  
+ Die Protokolldateien der Ablaufverfolgung befinden sich normalerweise im Ordner **C:\Programme\Common files\Microsoft Shared\Web Server Extensions\14\logs** . Sie können jedoch den Pfad auf der Seite **Diagnoseprotokollierung** der SharePoint-Zentraladministration überprüfen und ggf. ändern.  
   
  Weitere Informationen und Anweisungen zur Konfiguration der Diagnoseprotokollierung auf einem SharePoint-Server in der SharePoint 2010-Zentraladministration finden Sie unter [Konfigurieren von Einstellungen für die Diagnoseprotokollierung (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
-  
-  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

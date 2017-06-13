@@ -1,28 +1,33 @@
 ---
-title: "Berichtsserver im Management Studio (F1-Hilfe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Objekt-Explorer, Hilfe"
+title: Berichtsserver im Management Studio F1-Hilfe | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 37
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsserver im Management Studio (F1-Hilfe)
+# <a name="report-server-in-management-studio-f1-help"></a>Berichtsserver im Management Studio (F1-Hilfe)
   Dieser Abschnitt enthält die Themen zu den Dialogfeldern in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , die zum Verwalten von Berichtsservern verwendet werden können.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Berichtsserveraufträge abbrechen](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 37
   
 -   [Zeitplaneigenschaften (Registerkarte Berichte)](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
--   [Servereigenschaften (Seite Allgemein)](../../reporting-services/tools/server-properties-general-page.md)  
+-   [Servereigenschaften (Seite Allgemein)](../../reporting-services/tools/report-server-properties-general-page.md)  
   
 -   [Servereigenschaften (Seite Ausführung)](../../reporting-services/tools/server-properties-execution-page.md)  
   
@@ -56,8 +61,9 @@ caps.handback.revision: 37
   
 -   [Benutzerrolleneigenschaften](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
-## Siehe auch  
- [Funktionsreferenz (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)   
- [Einführung in SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionsreferenz (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
+ [Verwenden von SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
+
   
-  
+

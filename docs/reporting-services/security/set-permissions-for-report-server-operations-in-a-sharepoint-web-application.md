@@ -1,30 +1,35 @@
 ---
-title: "Festlegen von Berechtigungen f&#252;r Berichtsservervorg&#228;nge in einer SharePoint-Webanwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berechtigungen [Reporting Services], integrierter SharePoint-Modus"
-  - "SharePoint-Integration [Reporting Services], Berechtigungen"
-  - "SharePoint-Integration [Berichts-Generator]"
-  - "Sicherheit [Reporting Services], integrierter SharePoint-Modus"
-  - "Report Builder 1.0, SharePoint-Integration"
-  - "Modellelementsicherheit [Reporting Services]"
+title: "Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Festlegen von Berechtigungen f&#252;r Berichtsservervorg&#228;nge in einer SharePoint-Webanwendung
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
   Bei einem im integrierten SharePoint-Modus ausgeführten Berichtsserver wird durch die für die SharePoint-Website definierten Sicherheitseinstellungen bestimmt, wie Sie Berichte, Berichtsmodelle und freigegebene Datenquellen anzeigen und verwalten. Wenn Sie die standardmäßigen SharePoint-Gruppen, Berechtigungsebenen und Berechtigungszuweisungen verwenden, können Sie mit Berichten und anderen Dokumenten arbeiten und die aktuellen Sicherheitseinstellungen verwenden.  
   
  Wenn von den standardmäßigen Sicherheitseinstellungen nicht die gewünschte Zugriffsebene bereitgestellt wird, können Sie den Informationen der folgenden Abschnitte entnehmen, welche Berechtigungen für bestimmte Vorgänge erforderlich sind:  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  Wenn Sie vordefinierte Berechtigungsebenen verwenden, ist keine Aktion erforderlich, da die oben genannten Berechtigungen bereits in Full Control, Design, Contribute, Read und Limited Access enthalten sind. Wenn Sie jedoch benutzerdefinierte Berechtigungsebenen verwenden oder die einem bestimmten Benutzer oder einer Gruppe zugewiesenen Berechtigungen bearbeiten, müssen Sie die Berechtigung manuell hinzufügen.  
   
- Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: "SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: "Die dem Benutzer '\<domain>\\\<user\>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus."  
+ Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: "SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler lautet: "die Berechtigungen für Benutzer"\<Domäne >\\< Benutzer\>"zum Ausführen des Vorgangs unzureichend sind."  
   
 ##  <a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
  Berechtigungen für Berichtsdefinitionen werden über Listenberechtigungen für die Bibliothek definiert, die den Bericht enthält. Sie können Berechtigungen jedoch für einzelne Berichte festlegen, wenn Sie den Zugriff einschränken möchten. Die folgende Tabelle enthält eine Liste von Aufgaben und der Berechtigungen, die diese jeweils unterstützen.  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Es sind keine Berechtigungen zum Bearbeiten von Berichtsmodellen vorhanden. Sie können Berichtsmodelle zwar generieren oder löschen, jedoch nicht von einer SharePoint-Website aus bearbeiten. Für das Bearbeiten von Berichtsmodellen ist der Modell-Designer erforderlich, ein Clienterstellungstool, auf das Berechtigungen, die Sie in SharePoint festlegen, keine Auswirkungen haben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

@@ -1,36 +1,41 @@
 ---
-title: "MSReportServer_ConfigurationSetting-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "WMI-Anbieter [Reporting Services], MSReportServer_ConfigurationSetting-Klasse"
-  - "MSReportServer_ConfigurationSetting-Klasse"
+title: MSReportServer_ConfigurationSetting-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# MSReportServer_ConfigurationSetting-Klasse
+# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting-Klasse
   Stellt die Installationsparameter und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Parameter werden in der Konfigurationsdatei für den Berichtsserver gespeichert.  
   
  Eine Liste aller Member dieses Typs finden Sie unter [MSReportServer_ConfigurationSetting Members](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## Threadsicherheit  
+## <a name="thread-safety"></a>Threadsicherheit  
  Alle öffentlichen statischen Member dieses Typs (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) sind für Vorgänge mit mehreren Threads sicher. Für Instanzmember kann nicht gewährleistet werden, dass sie für Threads sicher sind.  
   
-## Beispiel  
- Um den folgenden Code auszuführen, fügen Sie den Servernamen an Stelle jedes \<*servername*> hinzu. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting*-Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
+## <a name="example"></a>Beispiel  
+ Fügen Sie zum Ausführen des folgenden Codes, den Servernamen an Stelle jedes \< *Servername*>. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting* -Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **Plattform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

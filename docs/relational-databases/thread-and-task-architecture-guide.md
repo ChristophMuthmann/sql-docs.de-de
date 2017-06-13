@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
@@ -51,7 +51,6 @@ Das Wechseln zwischen Threadkontexten stellt keinen sehr großen Aufwand dar. F�
 Für diese Systeme kann eventuell eine geringe Leistungssteigerung erzielt werden, indem der Wert für Lightweightpooling auf 1 festgelegt wird.
 
 Es wird empfohlen, die Fibermodusplanung nicht für Routinevorgänge zu verwenden, Der Grund hierfür liegt darin, dass es zu Leistungseinbußen führen kann, wenn die gängigen Vorteile des Kontextwechsels nicht genutzt werden können, und dass einige Komponenten von SQL Server im Fibermodus nicht ordnungsgemäß arbeiten können. Weitere Informationen finden Sie unter „Lightweightpooling“.
-
 
 ## <a name="thread-and-fiber-execution"></a>Thread- und Fiberausführung
 
@@ -94,15 +93,14 @@ Verlassen Sie sich nicht auf automatische Vergrößerung, um die Transaktionspro
 
 Die Leistung von Indexvorgängen, z. B. das Erstellen bzw. das erneute Erstellen von Indizes, kann auf Computern mit vielen CPUs verbessert werden, indem das Wiederherstellungsmodell der Datenbank vorübergehend entweder auf das massenprotokollierte oder auf das einfache Wiederherstellungsmodell festgelegt wird. Diese Indexvorgänge können eine bedeutende Protokollaktivität generieren, und Protokollkonflikte können sich auf den besten Grad an Parallelität (Degree of Parallelism, DOP) von SQL Server auswirken.
 
-Sie sollten außerdem in Erwägung ziehen, die Einstellung für den maximalen Grad an Parallelität (MAXDOP) für diese Vorgänge anzupassen. Die folgenden Richtlinien basieren auf internen Tests und sind allgemeine Empfehlungen. Testen Sie unterschiedliche MAXDOP-Einstellungen, um die optimale Einstellung für die Umgebung zu bestimmen.
+Darüber hinaus sollten Sie Anpassen der **Max. Grad an Parallelität (MAXDOP)** Serverkonfigurationsoption für diese Vorgänge. Die folgenden Richtlinien basieren auf internen Tests und sind allgemeine Empfehlungen. Testen Sie unterschiedliche MAXDOP-Einstellungen, um die optimale Einstellung für die Umgebung zu bestimmen.
 
 * Beschränken Sie den Wert der Option „Max. Grad an Parallelität“ für das vollständige Wiederherstellungsmodell auf acht oder weniger.   
 * Für das massenprotokollierte Modell oder das einfache Wiederherstellungsmodell sollten Sie den Wert der Option „Max. Grad an Parallelität“ auf einen Wert größer als acht festlegen.   
 * Bei Servern, für die NUMA konfiguriert wurde, sollte der maximale Grad an Parallelität nicht die Anzahl von CPUs überschreiten, die den einzelnen NUMA-Knoten zugewiesen werden. Das liegt daran, dass die Abfrage mit größerer Wahrscheinlichkeit den lokalen Arbeitsspeicher von 1 NUMA-Knoten verwendet, sodass die Speicherzugriffzeit verbessert werden kann.  
-* Bei Servern, für die Hyperthreading aktiviert wurde und die im Jahr 2009 oder früher hergestellt wurden, sollte der MAXDOP-Wert die Anzahl der physischen Prozessoren nicht überschreiten.  
+* Für Server, auf denen hyper-threading aktiviert und wurden produzierten im Jahr 2009 oder früher (bevor Funktion Hyperthreading verbessert wurde), der MAXDOP-Wert sollte die Anzahl der physischen Prozessoren, anstatt von logischen Prozessoren nicht überschreiten.
 
-
-Weitere Informationen zur Option „Max. Grad an Parallelität“ finden Sie unter [Festlegen der Option „Max. Grad an Parallelität“](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+Weitere Informationen zu der Max. Grad an Parallelität (Option), finden Sie unter [Konfigurieren der max Degree of Parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Festlegen der maximalen Anzahl von Arbeitsthreads
 
@@ -120,17 +118,17 @@ In der Regel sollte die Anzahl der tempdb-Datendateien mit der Anzahl der CPUs �
 
 In der folgenden Tabelle sind SQL Server-Komponenten aufgeführt, und es wird angegeben, ob sie mehr als 64 CPUs verwenden können.
 
-|Prozessname    |Ausführbares Programm    |Verwenden von mehr als 64 CPUs |  
+|Prozessname   |Ausführbares Programm |Verwenden von mehr als 64 CPUs |  
 |----------|----------|----------|  
-|SQL Server-Datenbankmodul    |Sqlserver.exe    |Ja |  
-|Reporting Services    |Rs.exe    |Nein |  
-|Analysis Services    |As.exe    |Nein |  
-|Integration Services    |Is.exe    |Nein |  
-|Service Broker    |Sb.exe    |Nein |  
-|Volltextsuche    |Fts.exe    |Nein |  
-|SQL Server-Agent    |Sqlagent.exe    |Nein |  
-|SQL Server Management Studio    |Ssms.exe    |Nein |  
-|SQL Server-Setup    |Setup.exe    |Nein |  
+|SQL Server-Datenbankmodul |Sqlserver.exe  |Ja |  
+|Reporting Services |Rs.exe |Nein |  
+|Analysis Services  |As.exe |Nein |  
+|Integration Services   |Is.exe |Nein |  
+|Service Broker |Sb.exe |Nein |  
+|Volltextsuche   |Fts.exe    |Nein |  
+|SQL Server-Agent   |Sqlagent.exe   |Nein |  
+|SQL Server Management Studio   |Ssms.exe   |Nein |  
+|SQL Server-Setup   |Setup.exe  |Nein |  
 
 
 

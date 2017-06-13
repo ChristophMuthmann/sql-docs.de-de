@@ -15,15 +15,13 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd0753457b002558f164f1e5f1c16730463ca25f
+ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
+ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="microsoft-white-papers"></a>Microsoft-Whitepaper
-[Introducing Microsoft Technologies for Data Storage, Movement and Transformation (Einführung in die Microsoft-Technologien für das Speichern, Verschieben und Transformieren von Daten)](https://msdn.microsoft.com/library/mt639326.aspx)  
-[Installing Master Data Services in an AlwaysOn Environment (Installieren von Master Data Services in einer AlwaysOn-Umgebung)](https://msdn.microsoft.com/library/mt761778.aspx)  
+# <a name="microsoft-white-papers"></a>Microsoft-Whitepaper 
 [SQL Server In-Memory OLTP Internals for SQL Server 2016 (Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016)](https://msdn.microsoft.com/library/mt764316.aspx)
   
   

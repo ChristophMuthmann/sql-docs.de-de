@@ -1,31 +1,36 @@
 ---
-title: "Vorschauansicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "Vorschauansicht [Reporting Services]"
+title: Vorschauansicht | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords:
+- Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Vorschauansicht
-Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] die Ansicht **Vorschau**, um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.
+# <a name="preview-view"></a>Vorschauansicht
+Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## enthalten  
+## <a name="options"></a>enthalten  
  Mithilfe der Symbolleiste können Sie Vorschaufunktionen verwalten.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -84,8 +89,9 @@ Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)
  **(18) Weitersuchen**  
  Wählen Sie diese Option aus, um nach der nächsten Instanz des Suchtexts zu suchen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 + [Ausführen einer Vorschau für Berichte](../../reporting-services/reports/previewing-reports.md)
 + [Berichts-Designer (F1-Hilfe)](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
+

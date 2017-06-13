@@ -1,27 +1,32 @@
 ---
-title: "Tastenkombinationen (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Tastenkombinationen"
-  - "Tastenkombinationen"
+title: Tastenkombinationen (Berichts-Generator) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tastenkombinationen (Berichts-Generator)
-  Im Berichts-Generator stehen Ihnen für die Navigation alle von der Windows-Umgebung unterstützten Tastenkombinationen zur Verfügung, wenn Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte erstellen und ändern. Sie können aus mehreren Standardtastenkombinationsschemas auswählen.  
+# <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
+  Im Berichts-Generator stehen Ihnen für die Navigation alle von der Windows-Umgebung unterstützten Tastenkombinationen zur Verfügung, wenn Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellen und ändern. Sie können aus mehreren Standardtastenkombinationsschemas auswählen.  
   
  Sie können im Fenster "Berichts-Generator" navigieren oder Optionen in Dialogfeldern auswählen bzw. ändern, ohne die Maus zu verwenden.  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Tastenkombinationen können die Tasten UMSCHALT, ALT und/oder STRG in Kombination mit Buchstaben enthalten. Es können auch Funktionstasten verwendet werden. Beispiel: F1 öffnet die Hilfedatei für Berichts-Generator.  
   
-## Tastenkombinationen im Berichts-Generator  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Tastenkombinationen im Berichts-Generator  
   
 |Description|Tastenkombination|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Verkleinert die Ansicht des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Minuszeichen (-)|  
 |Zugriffstastenmodus zum Schwenken und Vergrößern des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Linksklick|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
@@ -99,8 +99,8 @@ ms.lasthandoff: 04/11/2017
   
 -   Bei der Wiederherstellung von einer komprimierten Sicherung kann eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt werden:  
   
-    -   **SqlException 3284 aufgetreten. Schweregrad: 16; Status: 5**  
-        **Dateimarkierung für Gerät „https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak“ ist nicht ausgerichtet. Geben Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet wurde, erneut aus: '65536' sieht wie ein möglicher Wert aus.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
+        **Dateimarkierung für Gerät `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` ist nicht ausgerichtet. Geben Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet wurde, erneut aus: '65536' sieht wie ein möglicher Wert aus.**  
   
          Um diesen Fehler zu beheben, führen Sie die **BACKUP** -Anweisung erneut aus, und geben Sie dabei **BLOCKSIZE = 65536** an.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Fehler beim Schreiben auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Von der Übertragungsverbindung können keine Daten gelesen werden: Die Verbindung wurde geschlossen.  
   
--   Ein nicht behebbarer E/A-Fehler für Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": Fehler konnte nicht vom Remoteendpunkt erfasst werden.  
+-   Ein nicht behebbarer e/a-Fehler für Datei "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Fehler konnte nicht vom Remoteendpunkt erfasst werden.  
   
      Meldung 3013, Ebene 16, Status 1, Zeile 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
- In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (407)* **Proxyauthentifizierung erforderlich**.  
+ In einigen Fällen sind die Standardeinstellungen nicht abgerufen Authentifizierungsfehler, z. B. das unten abgebildete verursacht:*ein nicht behebbarer e/a-Fehler für Datei "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (407)* **Proxyauthentifizierung erforderlich**.  
   
  Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Konfigurationsdatei, durch die beim URL-Sicherungsprozess die Standardproxyeinstellungen verwendet werden können:  
   

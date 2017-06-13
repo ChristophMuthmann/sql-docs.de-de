@@ -73,7 +73,7 @@
 ### [Überprüfen der Daten am Abonnenten](validate-data-at-the-subscriber.md)  
 ## [Erstellen von Skripts für die Replikation](scripting-replication.md)  
 
-# [Entwicklerkonzepte](concepts/index.md)
+# [Entwicklerkonzepte](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Technische Referenz](technical-reference-replication.md)  
 ## [Eigenschaftenreferenz](properties-reference-replication.md)  
@@ -83,8 +83,8 @@
 #### [Eigenschaften der Verteilungsdatenbank](distribution-database-properties.md)  
 ### [Verlegereigenschaften](publisher-properties.md)  
 #### [Verlegereigenschaften – Verteiler](publisher-properties-distributor.md)  
-#### [Verlegereigenschaften (Verleger, Allgemein)](publisher-properties-publisher-general.md)  
-#### [Verlegereigenschaften – Verleger, Veröffentlichungsdatenbanken](publisher-properties-publisher-publication-databases.md)  
+#### [Verlegereigenschaften - Verleger, Allgemein](publisher-properties-publisher-general.md)  
+#### [Verlegereigenschaften - Verleger, Veröffentlichungsdatenbanken](publisher-properties-publisher-publication-databases.md)  
 #### [Verlegereigenschaften – Verleger, Abonnenten](publisher-properties-publisher-subscribers.md)  
 ### [Abonnenteneigenschaften](subscriber-properties.md)  
 ### [Veröffentlichungseigenschaften – <Publication>](publication-properties-publication.md)  

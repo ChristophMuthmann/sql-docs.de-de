@@ -1,23 +1,28 @@
 ---
-title: "Anzeigen von Kopf- und Fu&#223;zeilen einer Gruppe (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anzeigen von Kopf- und Fu&#223;zeilen einer Gruppe (Berichts-Generator und SSRS)
+# <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)
   Sie können bestimmen, ob eine statische Zeile wie eine Gruppenkopfzeile oder -fußzeile mit dynamischen Zeilen gerendert werden soll, die mit einer Gruppe in einem Tablix-Datenbereich verknüpft sind.  
   
  Wenn Sie alle Spalten- oder Zeilenüberschriften auf mehreren Seiten wiederholen möchten, können Sie Eigenschaften für den Tablix-Datenbereich festlegen. Weitere Informationen finden Sie unter [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd207045.aspx).  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So behalten Sie eine statische Zeile mit einer Gruppe von dynamischen Zeilen bei, die mit einer Zeilengruppe verknüpft sind  
+### <a name="to-keep-a-static-row-with-a-set-of-dynamic-rows-associated-with-a-row-group"></a>So behalten Sie eine statische Zeile mit einer Gruppe von dynamischen Zeilen bei, die mit einer Zeilengruppe verknüpft sind  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf eine beliebige Stelle im Tablix-Datenbereich, um diesen auszuwählen. Im Gruppierungsbereich werden die Zeilen- und Spaltengruppen für den Datenbereich angezeigt.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  (Optional) Zeigen Sie eine Vorschau des Berichts an. Wenn möglich, wird dieses Element vom Berichtsrenderer mit den angegebenen Zeilengruppenelementen beibehalten.  
   
-### So behalten Sie eine statische Spalte mit einer Gruppe von dynamischen Spalten bei, die mit einer Spaltengruppe verknüpft sind  
+### <a name="to-keep-a-static-column-with-a-set-of-dynamic-columns-associated-with-a-column-group"></a>So behalten Sie eine statische Spalte mit einer Gruppe von dynamischen Spalten bei, die mit einer Spaltengruppe verknüpft sind  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf eine beliebige Stelle im Tablix-Datenbereich, um diesen auszuwählen. Im Gruppierungsbereich werden die Zeilen- und Spaltengruppen für den Datenbereich angezeigt.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 5.  (Optional) Zeigen Sie eine Vorschau des Berichts an. Wo es möglich ist, wird dieses Element vom Berichtsrenderer mit den angegebenen Spaltengruppenelementen beibehalten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
  
   

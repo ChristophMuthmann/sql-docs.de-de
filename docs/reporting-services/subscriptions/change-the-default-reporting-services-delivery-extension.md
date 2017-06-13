@@ -1,35 +1,40 @@
 ---
-title: "&#196;ndern der Standard&#252;bermittlungserweiterung f&#252;r Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berichts-Manager [Reporting Services] Standardübermittlungserweiterung"
+title: "Ändern der Reporting Services-Übermittlungserweiterung | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# &#196;ndern der Standard&#252;bermittlungserweiterung f&#252;r Reporting Services
-  Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationseinstellungen ändern, um die Standardübermittlungserweiterung in der Liste **Übermittelt von** einer Abonnementdefinitionsseite zu ändern. Sie können die Konfiguration z. B. so ändern, dass beim Erstellen eines neuen Abonnements durch den Benutzer standardmäßig eine Dateifreigabeübermittlung statt einer E-Mail-Übermittlung ausgewählt wird. Sie können auch die Reihenfolge der in der Benutzeroberfläche aufgeführten Übermittlungserweiterungen ändern.  
+# <a name="change-the-default-reporting-services-delivery-extension"></a>Ändern der Standardübermittlungserweiterung für Reporting Services
+  Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationseinstellungen ändern, um die Standardübermittlungserweiterung in der Liste **Übermittelt von** einer Abonnementdefinitionsseite zu ändern. Sie können die Konfiguration z. B. so ändern, dass beim Erstellen eines neuen Abonnements durch den Benutzer standardmäßig eine Dateifreigabeübermittlung statt einer E-Mail-Übermittlung ausgewählt wird. Sie können auch die Reihenfolge der in der Benutzeroberfläche aufgeführten Übermittlungserweiterungen ändern.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**Einheitlicher Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält E-Mail- und Windows-Dateifreigabe-Übermittlungserweiterungen. Ihr Berichtsserver verfügt möglicherweise über zusätzliche Übermittlungserweiterungen, wenn Sie benutzerdefinierte Erweiterungen oder Drittanbietererweiterungen zur Unterstützung der benutzerdefinierten Übermittlung bereitgestellt haben. Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf einem Berichtsserver bereitgestellt wurde.  
   
-## Standardkonfiguration für einen Berichtsserver im einheitlichen Modus  
+## <a name="default-native-mode-report-server-configuration"></a>Standardkonfiguration für einen Berichtsserver im einheitlichen Modus  
  Die Reihenfolge der Übermittlungserweiterungen im Berichts-Manager in der Liste **Übermittelt von** basiert auf der Reihenfolge der Übermittlungserweiterungseinträge in der Datei **RSReportServer.config** . Im folgenden Bild wird E-Mail zuerst in der Liste angezeigt und ist standardmäßig ausgewählt.  
   
- ![default list of delivery extensions](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "default list of delivery extensions")  
+ ![Standardliste der übermittlungserweiterungen](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "Standardliste der übermittlungserweiterungen")  
   
  Im Folgenden ist der Standardabschnitt von **RSReportServer.config** dargestellt, der die Standardübermittlungserweiterung und die Reihenfolge steuert, in der diese im Berichts-Manager angezeigt werden. Beachten Sie, dass die E-Mail in der Datei zuerst angezeigt und als Standard festgelegt wird.  
   
@@ -47,13 +52,13 @@ caps.handback.revision: 18
 </DeliveryUI>  
 ```  
   
-#### Konfigurieren der Dateifreigabeübermittlung als Standardübermittlungserweiterung im Berichts-Manager  
+#### <a name="configure-file-share-delivery-as-the-default-delivery-extension-in-report-manager"></a>Konfigurieren der Dateifreigabeübermittlung als Standardübermittlungserweiterung im Berichts-Manager  
   
 1.  Mit den Schritten in diesem Verfahren können Sie die Konfiguration so ändern, dass die Dateifreigabe-Übermittlung als erste Option in der Benutzeroberfläche aufgeführt wird und Standardauswahl ist.  
   
      Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Weitere Informationen zur Konfigurationsdatei finden Sie unter [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). Nach Änderung der Konfiguration sieht die Benutzeroberfläche wie folgt aus:  
   
-     ![modified list of delivery extensions](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "modified list of delivery extensions")  
+     ![Liste der übermittlungserweiterungen geändert](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "Liste der übermittlungserweiterungen geändert")  
   
 2.  Ändern Sie den Abschnitt DeliveryUI wie folgt und beachten Sie die wichtigsten Änderungen:  
   
@@ -91,10 +96,10 @@ caps.handback.revision: 18
   
      Die Datei „RSReportServer.config“ wurde geändert.  
   
-## Berichtsserver im SharePoint-Modus  
+## <a name="sharepoint-mode-report-servers"></a>Berichtsserver im SharePoint-Modus  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus speichert Erweiterungsinformationen in den SharePoint-Dienstanwendungsdatenbanken, und nicht in der Datei „RsrReportServer.config“. Im SharePoint-Modus wird die Konfiguration für die Übermittlungserweiterung mit PowerShell geändert.  
   
-#### Konfigurieren der Standardübermittlungserweiterung  
+#### <a name="configure-the-default-delivery-extension"></a>Konfigurieren der Standardübermittlungserweiterung  
   
 1.  Öffnen Sie die **SharePoint-Verwaltungsshell**.  
   
@@ -109,15 +114,13 @@ caps.handback.revision: 18
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
   
-    ```  
+    ```
   
-4.  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/de-de/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

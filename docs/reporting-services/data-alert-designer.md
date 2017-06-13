@@ -1,32 +1,43 @@
 ---
-title: "Datenwarnungs-Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bearbeiten, Datenwarnungen"
-  - "Aktualisieren, Datenwarnungen"
-  - "Bearbeiten, Warnungen"
-  - "Aktualisieren, Warnungen"
-  - "Erstellen, Datenwarnungen"
-  - "Erstellen, Warnungen"
+title: Datenwarnungs-Designer | Microsoft Docs
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editing, data alerts
+- updating, data alerts
+- editing, alerts
+- updating, alerts
+- creating, data alerts
+- creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 21
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 38277ce132202ea9f112dce0ec0777598a93d39d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Datenwarnungs-Designer
-  Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten. Eine Warnungsdefinition ist eine Auflistung von Metadaten. Dazu gehören die für Sie interessanten Berichtsdaten, die Regeln, die Berichtsdaten zum Erstellen von Datenwarnungsinstanzen und zum Senden von Datenwarnmeldungen erfüllen müssen, sowie die Empfänger der Warnmeldung usw.  
-  
+# <a name="data-alert-designer"></a>Datenwarnungs-Designer
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten. Eine Warnungsdefinition ist eine Auflistung von Metadaten. Dazu gehören die für Sie interessanten Berichtsdaten, die Regeln, die Berichtsdaten zum Erstellen von Datenwarnungsinstanzen und zum Senden von Datenwarnmeldungen erfüllen müssen, sowie die Empfänger der Warnmeldung usw.  
+
+> [!NOTE]
+> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+
  Um eine Warnungsdefinition zu erstellen, führen Sie eine Reihe von verwandten Tasks aus:  
   
 -   Wählen Sie den Bericht und den Berichtsdatenfeed aus, der Daten enthält, die Sie verwenden möchten.  
@@ -42,7 +53,7 @@ caps.handback.revision: 21
 -   Stellen Sie eine Beschreibung der Warnung für eine Warnmeldung bereit.  
   
 > [!NOTE]  
->  Da die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Datenwarnungsfunktion nur verfügbar ist, wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, muss der Bericht, für den Sie eine Warnung erstellen möchten, gespeichert, bereitgestellt oder in eine SharePoint-Dokumentbibliothek hochgeladen werden.  
+>  Da die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungsfunktion nur verfügbar ist, wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, muss der Bericht, für den Sie eine Warnung erstellen möchten, gespeichert, bereitgestellt oder in eine SharePoint-Dokumentbibliothek hochgeladen werden.  
 >   
 >  Datenwarnungen können nicht für Berichte erstellt werden, bei denen die integrierte Windows-Authentifizierung verwendet wird oder die Angabe von Anmeldeinformationen erforderlich ist. Die Berichte müssen gespeicherte Anmeldeinformationen verwenden. Weitere Informationen finden Sie unter [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -51,11 +62,10 @@ caps.handback.revision: 21
 ##  <a name="AlertDesigner"></a> Benutzeroberfläche des Datenwarnungs-Designers  
  Der Datenwarnungs-Designer ist in verschiedene Bereiche unterteilt. Der Bereich, in dem Sie den Berichtsdatenfeed auswählen, der Bereich, in dem Sie einfache oder komplexe Bedingungen erstellen, indem Sie Bedingungen Regeln hinzufügen, usw. Das folgende Bild zeigt die Bereiche im Datenwarnungs-Designer an.  
   
- ![Bereiche auf der Benutzeroberfläche des Warnungs-Designers](../reporting-services/media/rs-alertdesigner.gif "Bereiche auf der Benutzeroberfläche des Warnungs-Designers")  
+ ![Bereiche der Benutzeroberfläche von Warnungs-Designer](../reporting-services/media/rs-alertdesigner.gif "Bereiche der Benutzeroberfläche von Warnungs-Designer")  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-### Warnungsdaten  
+### <a name="alert-data"></a>Warnungsdaten  
  Nach dem Öffnen des Datenwarnungs-Designers werden alle Datenfeeds aus dem Bericht generiert und zur Verfügung gestellt. Die Dropdownliste **Berichtsdatenname** enthält die Namen der Feeds. Die Datenfeeds werden im Arbeitsspeicher zwischengespeichert, während Sie die Warnungsdefinition und die Tabelle erstellen, die angezeigt werden. Die Datenfeeddaten werden schnell aufgefüllt, wenn Sie zwischen Datenfeeds umschalten, um die Berichtsdaten zu untersuchen.  
   
  Der erste Schritt beim Erstellen einer Datenwarnungsdefinition ist das Auswählen des Berichtsdatenfeeds, der die Daten enthält, die mithilfe der Warnung überwacht werden sollen. Berichte können keine oder mehrere Datenfeeds enthalten. Wenn ein Bericht keine Datenfeeds enthält, können Sie keine Warnungen dafür erstellen. Ein Datenfeed kann von jedem Datenbereich generiert werden, einschließlich aller Typen von Diagrammen, Messgeräten, Indikatoren sowie Tabellen, Matrizen und Listen.  
@@ -68,12 +78,12 @@ caps.handback.revision: 21
   
  Einige Berichte enthalten Millionen von Datenzeilen. In der Tabelle werden nur die ersten 100 Zeilen der Daten im Feed angezeigt.  
   
-### Name der Warnung  
+### <a name="alert-name"></a>Name der Warnung  
  Standardmäßig weist die Warnungsdefinition denselben Namen wie der Bericht auf. Sie können den Namen der Warnung in einen sinnvolleren Namen ändern. Dies erleichtert Ihnen beim Verwalten der Warnungen das Bestimmen der Warnungen, die aktualisiert, gelöscht usw. werden sollen.  
   
  Sie können mehrere Warnungen in einem Bericht erstellen. Zwar sind mehrere Warnungsdefinitionen mit demselben Namen möglich, es wird allerdings empfohlen, dass Sie eindeutige Namen für die Warnungen verwenden. Dies erleichtert die Unterscheidung und Verwaltung der Warnungsdefinitionen. Im Datenwarnungs-Manager können Sie eine Liste aller Warnungen anzeigen, die Sie erstellt haben. Weitere Informationen finden Sie unter [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### Regeln und Klauseln  
+### <a name="rules-and-clauses"></a>Regeln und Klauseln  
  Der Umfang der Datenänderungen und die Warnungsregeln definieren die Datenänderungen, die die Warnung auslösen. Der Umfang der Datenänderungen lautet wie folgt:  
   
 -   **Einige Daten haben**– Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
@@ -130,7 +140,7 @@ caps.handback.revision: 21
   
 -   Vergleiche des Datums-/Uhrzeitdatentyps sind **ist**, **ist not**, **ist before**und **ist after**.  
   
--   Vergleiche von numeristchen Datentypen sind **ist**, **ist not**, **ist less than**, **ist less than or equal to**, **ist greater than**, **ist greater than or equal to**.  
+-   Vergleiche von numeristtchen Datentypen sind **ist**, **ist not**, **ist less than**, **ist less than or equal to**, **ist greater than**, **ist greater than or equal to**.  
   
 -   Vergleiche des String-Datentyps sind **ist**, **ist not**und **enthält**.  
   
@@ -144,7 +154,7 @@ caps.handback.revision: 21
   
  Regeln und Klauseln sind in der Datenwarnmeldung enthalten.  
   
-### Zeitplaneinstellungen  
+### <a name="schedule-settings"></a>Zeitplaneinstellungen  
  Der für die Datenwarnung definierte Zeitplan definiert für das Senden der Datenwarnmeldung das Serienmuster sowie Anfang und Ende der jeweiligen Warnmeldung. Die Muster sind: einmal, Minute, täglich und wöchentlich. Obwohl eine Warnung nur einen Zeitplan aufweist, können Sie mit diesen Intervallen komplexe Serienmuster erstellen, die die meisten Geschäftsanforderungen erfüllen. Beispiele für allgemeine Serienmuster, die in Zeitplänen verwendet werden:  
   
 -   **Täglich alle 10 Tage** – sendet Warnungen alle 10 Tage einmal täglich.  
@@ -162,10 +172,10 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  Die Verwendung eines Serienmusters, das häufiger als täglich ausgeführt wird, ist nicht empfehlenswert, sofern hierfür kein wichtiger Grund auf Unternehmensebene vorliegt. Die Verarbeitung von Datenwarnungsdefinitionen in Echtzeit ist kein unterstütztes Szenario. Das zu häufige Verarbeiten von Datenwarnungsdefinitionen beeinträchtigt die Leistung des Berichtsservers und der allgemeinen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bereitstellung.  
   
-### E-Mail-Einstellungen  
+### <a name="email-settings"></a>E-Mail-Einstellungen  
  Sie geben anhand der Option **Empfänger** die E-Mail-Adressen der Empfänger an, die Datenwarnmeldungen per E-Mail erhalten sollen. Mehrere E-Mail-Adressen werden auf dieselbe Art wie bei Microsoft Office Outlook-E-Mails durch Semikolons getrennt. Sie können auch Verteilergruppen als Empfänger angeben. Dies vereinfacht und optimiert die Verwaltung der Empfängerliste. Wenn SharePoint Ihre E-Mail-Adresse bestimmen kann, wenn Sie eine Warnungsdefinition erstellen, wird Ihre E-Mail-Adresse automatisch der Empfängerliste hinzugefügt. Andernfalls müssen Sie sich ausdrücklich als Empfänger hinzufügen.  
   
- Der Standardbetreff der E-Mail lautet **Datenwarnung für \<Warnungsname>**. Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
+ Der Standardbetreff der e-Mail lautet **datenwarnungs für \<Warnungsname >**. Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
   
  Sie können mithilfe der Option **Beschreibung** auch eine Beschreibung angeben, die in der Datenwarnmeldung enthalten sein soll. Das Einfügen einer Beschreibung, insbesondere im Fall von ähnlichen Datenwarnungen, ermöglicht ein schnelles Unterscheiden und Verstehen der Warnmeldungen. Zusätzlich zur Warnmeldung, die gesendet wird, wenn Berichtsdaten die angegebenen Regeln erfüllen, wird bei Auftreten eines Fehlers allen Empfängern eine Warnmeldung gesendet. Weitere Informationen finden Sie unter [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -174,11 +184,10 @@ caps.handback.revision: 21
 ##  <a name="CreateAlert"></a> Erstellen einer Datenwarnungsdefinition  
  Wenn Ihnen die SharePoint-Berechtigungen "Elemente anzeigen" und "Warnungen erstellen" gewährt werden und erstellt werden, können Sie eine Datenwarnungsdefinition für jeden Bericht erstellen, den Sie anzeigen können. Dabei wird vorausgesetzt, dass der betreffende Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet. Sie führen den Bericht über eine SharePoint-Bibliothek aus. Die für Sie verfügbaren Daten, die Sie im Datenwarnungs-Designer verwenden können, stammen aus dem Bericht. Wenn der Bericht parametrisiert wird, müssen Sie den Bericht möglicherweise mithilfe anderer Parameterwerte erstellen, um sicherzustellen, dass die Daten, an denen Sie interessiert sind, im Bericht enthalten sind. Nachdem der Bericht geöffnet ist, klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** , um den Datenwarnungs-Designer zu öffnen. Das folgende Bild zeigt das Öffnen des Datenwarnungs-Designers.  
   
- ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+ ![Öffnen von Warnungs-Designer aus SharePoint-Bibliothek](../reporting-services/media/rs-openalertdesigneriw.gif "öffnen Warnungs-Designer aus SharePoint-Bibliothek")  
   
  Weitere Informationen finden Sie unter [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SaveAlert"></a> Speichern einer Datenwarnungsdefinition  
  Der Datenwarnungs-Designer zeigt die URL der Website an, auf der die Datenwarnungsdefinition gespeichert wird. Datenwarnungsdefinitionen werden immer auf derselben Website wie die Berichte gespeichert.  
@@ -188,18 +197,16 @@ caps.handback.revision: 21
   
  Die Warnungsdefinition wird vor dem Speichern überprüft. Alle Fehler müssen korrigiert werden, bevor die Warnungsdefinition gespeichert werden kann. Weitere Informationen finden Sie unter [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="EditAlert"></a> Bearbeiten einer Datenwarnungsdefinition  
  Nach dem Speichern der Datenwarnungsdefinition können Sie diese im Datenwarnungs-Designer erneut öffnen und dann bearbeiten. Sie können Regeln und Klauseln hinzufügen, ändern oder löschen und den Zeitplan sowie die E-Mail-Einstellungen ändern. Wenn der von der Warnung verwendete Berichtsdatenfeed geändert wurde und die Felder nicht mehr bereitstellt, auf die die Warnungsregeln verweisen, oder wenn die Datentypen oder andere Metadaten der Felder geändert wurden, ist die Warnungsdefinition nicht mehr gültig und muss korrigiert werden, bevor sie erneut gespeichert werden kann. Wenn Sie einen anderen Datenfeed verwenden möchten, müssen Sie eine neue Warnungsdefinition erstellen.  
   
  Um eine Datenwarnungsdefinition zu bearbeiten, klicken Sie im Datenwarnungs-Manager mit der rechten Maustaste auf die gewünschte Definition, und klicken Sie anschließend auf **Bearbeiten**. Das folgende Bild zeigt das Kontextmenü einer Datenwarnung im Datenwarnungs-Manager.  
   
- ![Öffnen des Daten-Warnungs-Designers durch Klicken auf "Bearbeiten"](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Öffnen des Daten-Warnungs-Designers durch Klicken auf "Bearbeiten"")  
+ ![Datenwarnungs-Designer öffnen, indem Sie auf Bearbeiten](../reporting-services/media/rs-alertmanageriwopendesigner.gif "öffnen den Datenwarnungs-Designer durch Klicken auf Bearbeiten")  
   
  Weitere Informationen finden Sie unter [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="HowTo"></a> Verwandte Aufgaben  
  In diesem Abschnitt sind die Prozeduren zum Erstellen und Bearbeiten von Warnungen aufgeführt.  
@@ -207,11 +214,10 @@ caps.handback.revision: 21
 -   [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
-  
-## Siehe auch  
- [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
- [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
+
+## <a name="see-also"></a>Siehe auch
+
+[Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
+[Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

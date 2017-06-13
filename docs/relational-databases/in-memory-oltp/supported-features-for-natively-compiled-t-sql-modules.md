@@ -1,7 +1,7 @@
 ---
 title: "Unterstützte Funktionen für nativ kompilierte T-SQL-Module | Microsoft Dokumentation"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 Die folgenden Abfragekonstrukte werden unterstützt:  
 
+CASE-Ausdruck: CASE kann in jeder Anweisung oder Klausel, die einen gültigen Ausdruck zulässt verwendet werden.
+   - **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Beginnend mit [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE-Anweisungen werden jetzt für nativ kompilierten T-SQL-Modulen unterstützt.
+
 SELECT-Klausel:  
 
 -   Aliase für Spalten und Namen (entweder mithilfe von AS oder = Syntax).  
 
--   Skalare Unterabfragen  
+-   Skalare Unterabfragen
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], skalare Unterabfragen werden jetzt in nativ kompilierten Modulen unterstützt.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], die DISTINCT-Operator wird in nativ kompilierten Modulen unterstützt.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION und UNION ALL
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION und UNION ALL-Operatoren werden jetzt in nativ kompilierten Modulen unterstützt.
 
 -   Variablenzuweisungen  
 
@@ -73,15 +83,22 @@ FROM-Klausel:
 
 -   FROM \<nativ kompilierte Inline-TVF  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN und INNER JOIN.  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN und INNER JOIN.
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS werden jetzt in nativ kompilierten Modulen unterstützt.
 
--   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+-   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Unterabfragen werden jetzt in nativ kompilierten Modulen unterstützt.
 
 WHERE-Klausel:  
 
 -   Filterprädikat IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   SOWIE ZWISCHEN  
+-   OR, IN, NICHT VORHANDEN IST
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS-Operatoren werden jetzt in nativ kompilierten Modulen unterstützt.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) -Klausel:

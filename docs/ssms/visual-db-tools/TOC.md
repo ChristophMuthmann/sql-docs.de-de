@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [Tabelle hinzufügen (Dialogfeld) (Abfrage- und Sicht-Designer) (Visual Database Tools)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [Änderungsskript speichern (Dialogfeld) (Visual Database Tools)](save-change-script-dialog-box-visual-database-tools.md)
 # [Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [Verwenden von Spalten in Aggregatabfragen (Visual Database Tools)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Visual Database Tools](visual-database-tools.md)
 # [Auswählen von Zeilen, die mit einem Wert nicht übereinstimmen (Visual Database Tools)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [Benachrichtigung nach dem Speichervorgang (Dialogfeld) (Visual Database Tools)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [Speichern von Abfragen (Visual Database Tools)](save-queries-visual-database-tools.md)

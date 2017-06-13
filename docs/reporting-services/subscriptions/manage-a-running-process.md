@@ -1,40 +1,45 @@
 ---
-title: "Verwalten eines ausgef&#252;hrten Prozesses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berichtsverarbeitung [Reporting Services], Statusinformationen"
-  - "Aufträge [Reporting Services]"
-  - "Anzeigen von Aufträgen"
-  - "Abbrechen von Aufträgen"
-  - "Benutzeraufträge [Reporting Services]"
-  - "Systemaufträge [Reporting Services]"
-  - "Berichtsverarbeitung [Reporting Services], Verwalten von ausgeführten Prozessen"
-  - "Prozesse [Reporting Services]"
-  - "Scannen von Prozessen [Reporting Services]"
-  - "Statusinformationen [Reporting Services]"
-  - "Berichtsverarbeitung [Reporting Services]"
-  - "Abbrechen von Abonnements"
-  - "Berichtsserver [Reporting Services], Aufträge"
-  - "Datengesteuerte Abonnements"
-  - "Anzeigen von Aufträgen"
-  - "Abonnements [Reporting Services], ausgeführte Prozesse"
+title: "Verwalten eines ausgeführten Prozesses | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], status information
+- jobs [Reporting Services]
+- viewing jobs
+- canceling jobs
+- user jobs [Reporting Services]
+- system jobs [Reporting Services]
+- report processing [Reporting Services], managing running processes
+- processes [Reporting Services]
+- scanning processes [Reporting Services]
+- status information [Reporting Services]
+- report processing [Reporting Services]
+- canceling subscriptions
+- report servers [Reporting Services], jobs
+- data-driven subscriptions
+- displaying jobs
+- subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verwalten eines ausgef&#252;hrten Prozesses
+# <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
   
  Sie können sowohl *Benutzeraufträge* als auch *Systemaufträge*verwalten.  
@@ -73,7 +78,7 @@ caps.handback.revision: 53
   
  Mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] können Sie die Modellgenerierung, die Modellverarbeitung oder datengesteuerte Abonnements nicht auflisten oder abbrechen. Reporting Services bietet keine Möglichkeit zum Abbrechen der Modellgenerierung bzw. -verarbeitung. Sie können jedoch datengesteuerte Abonnements mit den unter diesem Thema aufgeführten Anweisungen abbrechen.  
   
-### So brechen Sie Berichtsverarbeitung oder -abonnements ab  
+### <a name="how-to-cancel-report-processing-or-subscription"></a>So brechen Sie Berichtsverarbeitung oder -abonnements ab  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Berichtsserver her. Anweisungen finden Sie unter [Herstellen einer Verbindung zu einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 53
   
 3.  Klicken Sie mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Aufträge abbrechen**.  
   
-### So brechen Sie ein datengesteuertes Abonnement ab  
+### <a name="how-to-cancel-a-data-driven-subscription"></a>So brechen Sie ein datengesteuertes Abonnement ab  
   
 1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
@@ -97,13 +102,13 @@ caps.handback.revision: 53
   
 7.  Speichern Sie die Datei.  
   
-### Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
+### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
  Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die Einstellung **RunningRequestsDbCycle** gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die Einstellung **RunningRequestsAge** gibt das Intervall an, nach dem der Status eines Auftrags von "Neu" in "Wird ausgeführt" geändert wird.  
   
 ##  <a name="bkmk_sharepoint"></a> Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
  Die Verwaltung von Aufträgen in einer SharePoint-Modusbereitstellung wird für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung abgeschlossen, indem die SharePoint-Zentraladministration verwendet wird.  
   
-#### So verwalten Sie Aufträge im SharePoint-Modus  
+#### <a name="to-manage-jobs-in-sharepoint-mode"></a>So verwalten Sie Aufträge im SharePoint-Modus  
   
 1.  Klicken Sie in der Sharepoint-Zentraladministration auf **Dienstanwendungen verwalten**.  
   
@@ -118,12 +123,12 @@ caps.handback.revision: 53
 ##  <a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
  Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Auftragseigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;rsreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

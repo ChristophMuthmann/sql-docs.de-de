@@ -1,37 +1,42 @@
 ---
-title: "Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
-  Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht mithilfe eines Assistenten eine Karte oder eine Kartenebene hinzugefügt haben, möchten Sie möglicherweise anpassen, wie die Karte im Bericht angezeigt wird. Sie können Verbesserungen vornehmen, indem Sie die folgenden Ideen beachten:  
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
+  Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht mithilfe eines Assistenten eine Karte oder eine Kartenebene hinzugefügt haben, möchten Sie möglicherweise anpassen, wie die Karte im Bericht angezeigt wird. Sie können Verbesserungen vornehmen, indem Sie die folgenden Ideen beachten:  
   
 -   Um den Benutzern zu helfen, zu verstehen, wie die Datenanzeige auf einer Karte interpretiert wird, können Sie Legenden und eine Farbskala sowie Bezeichnungen und QuickInfos hinzufügen.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 13
   
 -   Um die Kartenzeichnungszeit beim Ausführen des Berichts zu steuern, können Sie die Auflösung anpassen, um die Kartenelemente zu vereinfachen.  
   
--   Sie können Kartenelemente in die Berichtsdefinition einbetten, und dann ändern, wie einzelne Elemente angezeigt werden. Sie können z. B. den primären Bürostandort mit einer Ortsmarke und andere Bürostandorte mit Kreisen anzeigen.  
+-   Sie können Kartenelemente in die Berichtsdefinition einbetten, und dann ändern, wie einzelne Elemente angezeigt werden. Sie können z. B. den primären Bürostandort mit einer Ortsmarke und andere Bürostandorte mit Kreisen anzeigen.  
   
 -   Sie können angepasste Regionen hinzufügen, indem Sie Ihre eigenen Datengruppenausdrücke angeben.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 13
   
  Weitere Ideen zum Verbessern eines Berichts finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
- Anzeigeoptionen wirken sich auf die Art und Weise aus, wie eine Karte oder die Teile einer Karte angezeigt werden, wenn Sie den Bericht anzeigen. Einige Optionen steuern die Darstellung der Karte, z. B. die Rahmen und die Schriftarten oder den Bereich, die auf der Karte dargestellt wurden. Andere Optionen steuern den Inhalt jeder Ebene, z. B. Blasengrößen, Markertypen, Bezeichnungen oder QuickInfos.  
+ Anzeigeoptionen wirken sich auf die Art und Weise aus, wie eine Karte oder die Teile einer Karte angezeigt werden, wenn Sie den Bericht anzeigen. Einige Optionen steuern die Darstellung der Karte, z. B. die Rahmen und die Schriftarten oder den Bereich, die auf der Karte dargestellt wurden. Andere Optionen steuern den Inhalt jeder Ebene, z. B. Blasengrößen, Markertypen, Bezeichnungen oder QuickInfos.  
   
  Ein Kartenberichtselement schließt die folgenden Teile ein: die Karte selbst, einen Kartenviewport, einen Satz von Titeln, einen Satz von Legenden (Legende, Farbskala und Entfernungsskala), ein Satz von Ebenen, ein Satz von Kartenelementen auf jeder Ebene (Polygone oder Linien oder Punkte). Verwenden Sie die Informationen in den folgenden Abschnitten, um zu erfahren, welches Eigenschaften-Dialogfeld die Anzeigeoptionen für die verschiedenen Teile einer Karte steuert.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Auflösung und Vereinfachung. Wählen Sie ein Gleichgewicht zwischen Zeichnungszeit und ausführlichen Umrissen für Linien und Polygone aus.  
   
- Um diese Optionen zu ändern, klicken Sie mit der rechten Maustaste auf den Kartenviewport, und verwenden Sie die Seite [Eigenschaften des Kartenviewports (Dialogfeld), Allgemein](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) sowie verknüpfte Seiten.  
+ Um diese Optionen zu ändern, klicken Sie mit der rechten Maustaste auf den Kartenviewport, und verwenden Sie die Seite [Eigenschaften des Kartenviewports (Dialogfeld), Allgemein](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) sowie verknüpfte Seiten.  
   
 ##  <a name="Legends"></a> Ändern von Optionen für die Legenden  
  Legenden helfen Benutzern, die Daten auf einer Karte zu interpretieren.  
@@ -110,7 +115,7 @@ caps.handback.revision: 13
   
 -   Die zugehörigen analytischen Daten und die zugehörigen Übereinstimmungsfelder. Die Quelle der räumlichen Daten ist im Kartenfenster unter dem Namen der Ebene aufgeführt. Wenn die Quelle eingebettet ist, sind die Kartenelemente für die Ebene Teil der Berichtsdefinition. Wenn die Quelle nicht eingebettet wird, dann werden die räumlichen Daten zur Laufzeit abgerufen und der Berichtsprozessor erstellt die Kartenelemente für die Ebene, wenn der Bericht verarbeitet wird. Um Datenoptionen auf der Ebene zu ändern, verwenden Sie die Seite Analytische Daten im Dialogfeld Kartenebene.  
   
--   Überlagern Sie die Zeichnungsreihenfolge. Die Reihenfolge, in der die Ebenen im Kartenfenster angezeigt werden, ist die umgekehrte Zeichnungsreihenfolge für die Ebenen. Die letzte Ebene in der Liste wird zuerst gezeichnet. Wenn z. B. die Punkte auf einer Punktebene oben auf den Polygonen in der Polygonebene angezeigt werden sollen, sollte die Polygonebene auf die Punktebene folgen.  
+-   Überlagern Sie die Zeichnungsreihenfolge. Die Reihenfolge, in der die Ebenen im Kartenfenster angezeigt werden, ist die umgekehrte Zeichnungsreihenfolge für die Ebenen. Die letzte Ebene in der Liste wird zuerst gezeichnet. Wenn z. B. die Punkte auf einer Punktebene oben auf den Polygonen in der Polygonebene angezeigt werden sollen, sollte die Polygonebene auf die Punktebene folgen.  
   
 -   Überlagern Sie die Sichtbarkeit, einschließlich der Transparenz. Um eine Ebene über eine andere Ebene anzuzeigen, sollten Sie die Transparenz auf einen Wert höher als 0 festlegen. Ein Wert von 100% bedeutet, dass die Ebene nicht sichtbar ist. Um mit einer einzelnen Ebene zu arbeiten, können Sie die einzelnen Ebenen auf einfache Weise ein- oder ausblenden, indem Sie im Kartenfenster das Symbol **Sichtbarkeit** verwenden. Sie können auch Zoomstufenoptionen festlegen, um anzugeben, wann Kartenelemente auf der Ebene auf Grundlage der Zoomstufe angezeigt oder ausgeblendet werden.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 13
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   
- Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991) (Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
+ Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991)(Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
   
 ##  <a name="MapElements"></a> Ändern von Optionen für die Kartenelemente auf der Ebene  
  Kartenelemente sind die Punkte, Linien oder Polygone auf einer Ebene, die auf den räumlichen Daten basieren. Für Kartenelemente können die folgenden Optionen festgelegt werden. Diese Optionen gelten für alle Kartenelemente auf der Ebene, egal ob sie eingebettet werden oder nicht:  
@@ -145,7 +150,7 @@ caps.handback.revision: 13
   
 -   Ebenenoptionen  
   
--   Zeigt Linien- oder Polygonenoptionen auf jeder Ebene an. Dies gilt, wenn der Bericht verarbeitet wird, ob die Kartenelemente dynamisch abgerufen werden, oder ob sie die Kartenelemente in die Berichtsdefinition einbetten. Sie geben z. B. auf einer Ebene eine Füllfarbe für alle Elemente an.  
+-   Zeigt Linien- oder Polygonenoptionen auf jeder Ebene an. Dies gilt, wenn der Bericht verarbeitet wird, ob die Kartenelemente dynamisch abgerufen werden, oder ob sie die Kartenelemente in die Berichtsdefinition einbetten. Sie geben z. B. auf einer Ebene eine Füllfarbe für alle Elemente an.  
   
 -   Regeln Sie können Regeln festlegen, um Farbe, Größe, Breite oder Markertyp für alle Kartenelemente auf einer Ebene zu steuern. Die Regeln, die Sie festlegen können, hängen vom Typ des Kartenelements ab.  
   
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Überschreiben Sie Optionen für einzelne eingebettete Punkte, Linien oder Polygone auf einer Ebene. Änderungen, die Sie vornehmen, sind dauerhaft. Um diese Änderungen wiederherzustellen, müssen Sie die Daten für die Ebene erneut laden.  
   
- Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

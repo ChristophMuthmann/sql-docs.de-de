@@ -1,38 +1,43 @@
 ---
-title: "Geschachtelte Datenbereiche (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Geschachtelte Datenbereiche (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
+# <a name="nested-data-regions-report-builder-and-ssrs"></a>Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
   Sie können einen Datenbereich wie ein Diagramm in einen anderen Datenbereich schachteln, z. B. in eine Matrix. Dies geschieht häufig, um Zusammenfassungen von Daten in kompakter Form anzuzeigen oder eine visuelle Darstellung zusammen mit einer Tabellen- oder Matrixdarstellung bereitzustellen.  
   
  Angenommen, eine Matrix (auch bezeichnet als *Tablix*) enthält Bestellungen, die vertikal nach Niederlassung und horizontal nach Quartal gruppiert sind. Sie können der Eckzelle dieses Datenbereichs eine Tabelle oder ein Diagramm hinzufügen, um die Verkäufe aller Niederlassungen zusammenzufassen, oder Sie können einem Matrixspaltenkopf ein Diagramm hinzufügen, um den Anteil der Daten in der Spalte am Verkauf als Prozentsatz aller Verkäufe anzuzeigen.  
   
- ![rs_NestedDataRegion](../../reporting-services/report-design/media/rs-nesteddataregion.gif "rs_NestedDataRegion")  
+ ![Rs_NestedDataRegion](../../reporting-services/report-design/media/rs-nesteddataregion.gif "Rs_NestedDataRegion")  
   
  In dieser Abbildung sind das Kreisdiagramm in der Eckzelle und die Sparklinediagramme in den Zeilen geschachtelte Datenbereiche.  
   
- Definitionsgemäß basieren geschachtelte Datenbereiche auf dem gleichen Berichtsdataset. Sie können keine Datenbereiche schachteln, die auf anderen Datasets basieren. Verwenden Sie Drillthroughberichte oder Unterberichte, um Daten aus anderen Datasets anzuzeigen. Weitere Informationen finden Sie unter [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+ Definitionsgemäß basieren geschachtelte Datenbereiche auf dem gleichen Berichtsdataset. Sie können keine Datenbereiche schachteln, die auf anderen Datasets basieren. Verwenden Sie Drillthroughberichte oder Unterberichte, um Daten aus anderen Datasets anzuzeigen. Weitere Informationen finden Sie unter [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Grundlegendes zum Begriff "Bereich" für einen geschachtelten Datenbereich  
- Der Bereich für Daten in einem geschachtelten Datenbereich wird automatisch durch die Platzierung im übergeordneten Datenbereich bestimmt. So entspricht der in einer Tablix-Eckzelle geschachtelte Diagrammdatenbereich den Daten aus dem Dataset, das an den Tablix-Datenbereich gebunden ist, nach Anwendung der Filter für das Dataset, den Tablix-Datenbereich und den Diagrammdatenbereich. Der Bereich für ein Tablix-Element in einer Tablix-Zelle entspricht im Wesentlichen dem Bereich für die Eckzelle; zusätzlich wurde jedoch eine Einschränkung auf die Mitgliedschaften in Zeilen- und Spaltengruppen der Zelle vorgenommen, in der der Bereich geschachtelt wurde, und die entsprechenden Gruppenfilter wurden angewendet. Weitere Informationen zum Bereich finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+## <a name="understanding-scope-for-a-nested-data-region"></a>Grundlegendes zum Begriff "Bereich" für einen geschachtelten Datenbereich  
+ Der Bereich für Daten in einem geschachtelten Datenbereich wird automatisch durch die Platzierung im übergeordneten Datenbereich bestimmt. So entspricht der in einer Tablix-Eckzelle geschachtelte Diagrammdatenbereich den Daten aus dem Dataset, das an den Tablix-Datenbereich gebunden ist, nach Anwendung der Filter für das Dataset, den Tablix-Datenbereich und den Diagrammdatenbereich. Der Bereich für ein Tablix-Element in einer Tablix-Zelle entspricht im Wesentlichen dem Bereich für die Eckzelle; zusätzlich wurde jedoch eine Einschränkung auf die Mitgliedschaften in Zeilen- und Spaltengruppen der Zelle vorgenommen, in der der Bereich geschachtelt wurde, und die entsprechenden Gruppenfilter wurden angewendet. Weitere Informationen zum Bereich finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  In der unten stehenden Liste wird der Bereich für Zellen in den folgenden Tablix-Bereichen beschrieben:  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 8
   
  Weitere Informationen finden Sie unter [Zonen des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
-## Schachteln eines Diagramms, einer Sparkline oder eines Datenbalkens in einer Tablix  
+## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Schachteln eines Diagramms, einer Sparkline oder eines Datenbalkens in einer Tablix  
  Beim Hinzufügen eines Diagramms (einschließlich Sparklines oder Datenbalken) zur Kopf- oder Fußzeile einer Tablix-Spaltengruppe oder zu einer Tablix-Textzelle werden die an das Diagramm übergebenen Daten auf die Teilmenge der Daten für diese Zelle beschränkt. Wenn Sie einer Tablix-Zelle ein Diagramm hinzufügen, wird die Größe des Diagramms standardmäßig auf die Größe der Zelle erweitert.  
   
 > [!NOTE]  
@@ -54,10 +59,10 @@ caps.handback.revision: 8
   
  Die Farben für die Diagrammlegende werden standardmäßig durch die Farbe der Datenpunkte in der Diagrammreihe bestimmt. Wenn Sie die Farbgebung steuern möchten, sodass in allen geschachtelten Diagrammdatenbereichen die gleiche Farbe für die gleiche Datenkategorie verwendet wird, müssen Sie benutzerdefinierte Farben verwenden und Sortierungsausdrücke für die Daten festlegen. Weitere Informationen finden Sie unter [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) und [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
-## Schachteln eines Messgeräts oder Indikators in einer Tablix  
+## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Schachteln eines Messgeräts oder Indikators in einer Tablix  
  Sie können ein Messgerät oder einen Indikator in einer Tabelle, Matrix oder Liste schachteln, um einen Key Performance Indicator (KPI) anzuzeigen. Wenn Sie ein Messgerät oder einen Indikator in einer Tabelle einfügen, wird das Gerät für jede Zeile in der Tablix gerendert. Weitere Informationen zum Hinzufügen von Indikatoren zu einer Tablix finden Sie unter [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Hinzufügen eines Messgeräts zu einer Tablix  
+### <a name="adding-a-gauge-to-a-tablix"></a>Hinzufügen eines Messgeräts zu einer Tablix  
  Messgeräte können Tablix-Datenbereichen auf zweierlei Weise hinzugefügt werden:  
   
 -   Klicken Sie in die Tablix-Zelle, und fügen Sie ein Messgerät hinzu. Das Dialogfeld **Messgerättyp auswählen** wird angezeigt. Nachdem Sie einen Messgerättyp ausgewählt haben, wird der Datenbereich für das Messgerät in der ausgewählten Tablix-Zelle platziert. Sie müssen die Größe des Tablix-Elements wahrscheinlich ändern, um das Messgerät zu formatieren.  
@@ -70,9 +75,9 @@ caps.handback.revision: 8
   
  Sie müssen die Minimal- und Maximalwerte festlegen, die auf der Messgerätskala angezeigt werden. Wenn Sie den Höchstwert des Messgeräts angeben möchten, können Sie einen Ausdruck wie `=Max!MyField.Value`verwenden. Da der Ausdruck jedoch nur im Bereich der Daten in der Zelle ausgewertet wird, stimmen die Höchstwerte der einzelnen Messgeräte nicht für alle Zeilen im Tablix-Element überein. Dies erschwert möglicherweise Vergleiche zwischen Messgeräten im Tablix-Element. Sie können auch einen statischen Wert als Höchstwert angeben. Alle Zeilen im Tablix-Element zeigen ein Messgerät mit diesem Höchstwert an. Weitere Informationen finden Sie unter [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
- Wenn die Daten auf dem Messgerät zu groß werden, können Sie die Anzahl der angezeigten Stellen mithilfe eines Skalenmultiplizierers reduzieren. Klicken Sie dazu mit der rechten Maustaste auf die Skala, und wählen Sie **Skalierungseigenschaften** aus. Geben Sie im Dialogfeld **Skalierungseigenschaften** einen Wert für **Multiplikator**an.  
+ Wenn die Daten auf dem Messgerät zu groß werden, können Sie die Anzahl der angezeigten Stellen mithilfe eines Skalenmultiplizierers reduzieren. Klicken Sie dazu mit der rechten Maustaste auf die Skala, und wählen Sie **Skalierungseigenschaften**aus. Geben Sie im Dialogfeld **Skalierungseigenschaften** einen Wert für **Multiplikator**an.  
   
-## Schachteln einer Tabelle oder Matrix und eines Diagramms in einer Liste  
+## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>Schachteln einer Tabelle oder Matrix und eines Diagramms in einer Liste  
  Fügen Sie zunächst ein Rechteck hinzu, und fügen Sie dem Rechteck anschließend Datenbereiche hinzu, um mehrere Datenbereiche in einer Liste zu schachteln.  
   
  Sie können eine Gruppe für den Datenbereich einer Liste definieren und ein Tablix-Element sowie ein Diagramm hinzufügen, um unterschiedliche Sichten der gleichen Daten zu ermöglichen. Voraussetzung dafür ist das Definieren identischer Gruppen- und Sortierungsausdrücke für das eingebettete Tablix-Element und das eingebettete Diagramm. Das Tablix-Element sowie das Diagramm verwenden definitionsgemäß Daten aus dem Dataset für den Datenbereich der übergeordneten Liste.  
@@ -82,7 +87,7 @@ caps.handback.revision: 8
   
  Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) und [Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

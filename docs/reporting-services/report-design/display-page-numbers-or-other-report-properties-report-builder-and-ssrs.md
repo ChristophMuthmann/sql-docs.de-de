@@ -1,23 +1,28 @@
 ---
-title: "Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS)
   Seitenkopf- oder –fußzeilen in dem Bericht können Seitenzahlen, Berichtstitel, Dateinamen und andere Berichtseigenschaften auf einfache Weise hinzugefügt werden. Diese Eigenschaften werden als Felder im Ordner Integrierte Felder im Berichtsdatenbereich gespeichert:  
   
 -   Ausführungszeit  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So fügen Sie eine Seitenzahl oder andere Berichtseigenschaften hinzu  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>So fügen Sie eine Seitenzahl oder andere Berichtseigenschaften hinzu  
   
 1.  Erweitern Sie im Berichtsdatenbereich den Knoten Integrierte Felder.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  Ein Textfeld, das den einfachen Ausdruck [&PageNumber] enthält, wird hinzugefügt.  
   
-### So fügen Sie das Wort "Seite" vor der Seitenzahl hinzu  
+### <a name="to-add-the-word-page-before-the-page-number"></a>So fügen Sie das Wort "Seite" vor der Seitenzahl hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf das Textfeld, das [&PageNumber] enthält, und klicken Sie auf **Ausdrücke**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So fügen Sie Gesamtzahl von Seiten nach der Seitenzahl hinzu  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>So fügen Sie Gesamtzahl von Seiten nach der Seitenzahl hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Ausdruck, und klicken Sie auf **Ausdrücke**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

@@ -1,39 +1,44 @@
 ---
-title: "SQL Server mobile-Berichte: End-to-End – Exemplarische Vorgehensweise | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
----
-# SQL Server mobile-Berichte: End-to-End – Exemplarische Vorgehensweise
-Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Webportal und ihrer Anzeige in mobilen Power BI-Apps.
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
 
-Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
+---
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise
+Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
+
+Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
   
 Dieser Artikel begleitet Sie durch die folgenden Aufgaben:   
   
-- Erstellen einer freigegebenen Datenquelle und eines Datasets im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal mithilfe der AdventureWorks-Datenbank als Beispieldatenquelle  
+- Erstellen einer freigegebenen Datenquelle und eines Datasets im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal mithilfe der AdventureWorks-Datenbank als Beispieldatenquelle  
 - Erstellen eines mobilen Reporting Services-Berichts in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
-- Veröffentlichen des mobilen Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal  
+- Veröffentlichen des mobilen Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal  
 - Anzeigen des mobilen Berichts in der mobilen Power BI-App  
   
 ## <a name="before-we-start"></a>Voraussetzungen  
 Um folgen zu können, benötigen Sie diese Produkte:  
   
 * Zum Erstellen von Datenquellen und KPIs und Veröffentlichen von Datasets und mobilen Berichten benötigen Sie Zugriff auf einen [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [-Berichtsserver im nativen Modus](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Zum [Erstellen freigegebener Datasets](#shared-dataset) müssen Sie den [Berichts-Generator installieren](http://www.microsoft.com/download/details.aspx?id=50016).  
+* Zum [Erstellen freigegebener Datasets](#shared-dataset)müssen Sie den [Berichts-Generator installieren](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks-Beispieldatenbanken und Skripts](http://msftdbprodsamples.codeplex.com/).  
 *  ODER: World Wide Importers-Beispieldatenbank, die auf der Seite [Microsoft SQL Server-Beispiele](https://msdn.microsoft.com/library/mt748083.aspx) verfügbar ist.
@@ -44,9 +49,9 @@ Um folgen zu können, benötigen Sie diese Produkte:
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
   
-Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Sehen Sie sich die [Liste unterstützter Datenquellen](https://msdn.microsoft.com/library/ms159219.aspx) an.  
+Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Sehen Sie sich die [Liste unterstützter Datenquellen](https://msdn.microsoft.com/library/ms159219.aspx)an.  
   
-1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal auf **Neu** > **Datenquelle**.  
+1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
 3. Geben Sie Ihre Datenquelleninformationen ein, und klicken Sie auf **OK**.  
@@ -57,17 +62,17 @@ Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der 
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
-6. Nun wird die Datenquelle im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Portal angezeigt.  
+6. Nun wird die Datenquelle im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Portal angezeigt.  
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
 Erfahren Sie mehr über [freigegebene Datenquellen in Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
    
-## <a name="a-nameshareddatasetcreate-a-shared-dataseta"></a><a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
+## <a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
   
-Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)] verwendet. [Installieren Sie Berichts-Generator](http://www.microsoft.com/download/details.aspx?id=50016), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.   
+Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]verwendet. [Installieren Sie Berichts-Generator](https://msdn.microsoft.com/library/ff519551.aspx), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.   
   
-1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal auf **Neu** > **Paginierter Bericht**, um [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)] zu starten.  
+1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Paginierter Bericht** , um [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]zu starten.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. Klicken Sie auf **Neues Dataset**.  
@@ -83,18 +88,18 @@ Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversi
    
 5. Klicken Sie auf **Öffnen**, und navigieren Sie zur Datenquelle, die Sie auf diesem Server erstellt haben.  
    
-6. Wählen Sie die Datenquelle aus, und klicken Sie erneut auf **Öffnen**.    
+6. Wählen Sie die Datenquelle aus, und klicken Sie erneut auf **Öffnen** .    
   
 7. Entwerfen Sie das Dataset im [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
    ![PBI_SSMRP_RB_QueryDesignr600](../../reporting-services/mobile-reports/media/pbi-ssmrp-rb-querydesignr600.png)  
    
-8. Wenn Sie fertig sind, speichern Sie das Dataset auf dem [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)]-Berichtsserver.    
+8. Wenn Sie fertig sind, speichern Sie das Dataset auf dem [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)] -Berichtsserver.    
    
 Nun können Sie das Dataset als Grundlage für Ihre KPIs und mobilen Berichte nutzen.  Sie können mehrere Datasets für die gleiche Datenquelle erstellen. Sie können auch mehrere KPIs und mobile Berichte für diese freigegebene Datasets erstellen.   
   
-## <a name="a-namecreatekpicreate-a-kpia"></a><a name="create-KPI">Erstellen eines KPI</a>  
-Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal.    
+## <a name="create-KPI">Erstellen eines KPI</a>  
+Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal.    
   
 1. Klicken Sie im Webportal rechts oben auf **Neu** > **Neuer KPI**.   
   
@@ -105,7 +110,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Klicken Sie im Feld **Datasetfeld auswählen** auf die Auslassungspunkte (**...**), und wählen Sie ein Dataset aus dem vorherigen Schritt aus.  
+3. Klicken Sie im Feld**Datasetfeld auswählen**auf die Auslassungspunkte ( **...** ), und wählen Sie ein Dataset aus dem vorherigen Schritt aus.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -129,19 +134,19 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
   
 8. Benennen Sie den KPI, wählen Sie eine Visualisierung, und klicken Sie auf **Erstellen**.   
   
-   Der KPI wird im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal angezeigt.  
+   Der KPI wird im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal angezeigt.  
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="a-namecreatemobilereportcreate-a-reporting-services-mobile-reporta"></a><a name="create-mobile-report">Erstellen eines mobilen Berichts in Reporting Services</a>  
+## <a name="create-mobile-report">Erstellen eines mobilen Berichts in Reporting Services</a>  
    
-Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766) oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Webportal. 
+Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal. 
 
-Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] sehen Sie einen leeren Zeichenbereich, in dem Sie Ihren mobilen Bericht erstellen können. Sie können nach Wunsch zuerst mit den visuellen Elementen oder mit Ihren Daten beginnen. Wenn Sie die visuellen Elemente zuerst erstellen, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatisch simulierte Daten, die an den Bericht gebunden sind, und ändert sich dynamisch, sobald Sie Ihre Optionen für die visuellen Elemente ändern. Versuchen Sie es selbst.   
+Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]sehen Sie einen leeren Zeichenbereich, in dem Sie Ihren mobilen Bericht erstellen können. Sie können nach Wunsch zuerst mit den visuellen Elementen oder mit Ihren Daten beginnen. Wenn Sie die visuellen Elemente zuerst erstellen, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatisch simulierte Daten, die an den Bericht gebunden sind, und ändert sich dynamisch, sobald Sie Ihre Optionen für die visuellen Elemente ändern. Versuchen Sie es selbst.   
   
 ## <a name="start-with-the-visuals"></a>Beginnen mit den visuellen Elementen  
   
-1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal auf **Neu** > **Mobiler Bericht**, um [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] zu starten.  
+1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Mobiler Bericht** , um [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]zu starten.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -165,7 +170,7 @@ Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Klicken Sie auf die Registerkarte **Layout**.  
+6. Klicken Sie auf die Registerkarte **Layout** .  
   
 7. Klicken Sie auf das Rädchen „Optionen“ ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) rechts oben in der Strukturzuordnung, um das enthaltene Menü einzublenden.   
   
@@ -175,17 +180,17 @@ Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-
   
 ## <a name="add-your-own-data"></a>Hinzufügen Ihrer eigenen Daten  
   
-1. Wechseln Sie zur Registerkarte **Daten**.    
+1. Wechseln Sie zur Registerkarte **Daten** .    
    
-2. Um Ihre eigenen Daten hinzuzufügen, klicken Sie rechts oben auf **Daten hinzufügen**, und navigieren Sie zu Ihrer Daten.    
+2. Um Ihre eigenen Daten hinzuzufügen, klicken Sie rechts oben auf **Daten hinzufügen** , und navigieren Sie zu Ihrer Daten.    
   
-3. Sie können Daten aus einer lokalen Excel-Arbeitsmappe nutzen, doch in diesem Fall stammen sie aus dem freigegebenen Dataset in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal. Die Meldung „Server hinzugefügt“ wird angezeigt.  
+3. Sie können Daten aus einer lokalen Excel-Arbeitsmappe nutzen, doch in diesem Fall stammen sie aus dem freigegebenen Dataset in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal. Die Meldung „Server hinzugefügt“ wird angezeigt.  
   
 4. Wählen Sie den Server und dann das Dataset aus, das Sie erstellt haben.  
    
-3. Zurück auf der Registerkarte **Daten** ändern Sie im Bereich **Dateneigenschaften** die Eigenschaften **Größe repräsentiert**, **Farbe repräsentiert ** u. a. in Felder in Ihren eigenen Daten. 
+3. Zurück auf der Registerkarte **Daten** ändern Sie im Bereich **Dateneigenschaften** die Eigenschaften **Größe repräsentiert**, **Farbe repräsentiert**u. a. in Felder in Ihren eigenen Daten. 
    
-   *  **Größe repräsentiert**, **Farbe repräsentiert** und **Benutzerdefinierter Mittenwert** müssen Felder mit numerischen Werten sein. 
+   *  **Größe repräsentiert**, **Farbe repräsentiert**und **Benutzerdefinierter Mittenwert** müssen Felder mit numerischen Werten sein. 
    *  **Gruppieren nach** ist eine Kategorie, also ein Textfeld.
    
    ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
@@ -200,13 +205,13 @@ Lassen Sie uns ein Messgerät hinzufügen, um anhand desselben Datasets den bish
 
 2. Es wird erneut mit simulierten Daten begonnen. 
 
-   Beachten Sie, dass in **Visuelle Eigenschaften** die Angaben **Höhere Werte sind besser** und **Deltabezeichnung** standardmäßig ein **Prozent von Ziel** darstellen. Standardmäßig ist **Bereichsabgrenzungen** angegeben, was Sie ändern können. Doch für den Moment war es das.
+   Beachten Sie, dass in **Visuelle Eigenschaften**die Angaben **Höhere Werte sind besser**und **Deltabezeichnung** standardmäßig ein **Prozent von Ziel**darstellen. Standardmäßig ist **Bereichsabgrenzungen** angegeben, was Sie ändern können. Doch für den Moment war es das.
 
    ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. Wählen Sie auf der Registerkarte **Daten** die Tabelle mit Ihren Daten, dann das Feld **Hauptwert** und das Feld aus, das Sie in **Vergleichswert** vergleichen möchten.
+3. Wählen Sie auf der Registerkarte **Daten** die Tabelle mit Ihren Daten, dann das Feld **Hauptwert** und das Feld aus, das Sie in **Vergleichswert**vergleichen möchten.
 
-4. Sie können unterschiedliche Aggregationen wählen, um eine Zahl für **Hauptwert** und eine für **Vergleichswert** zurückzugeben. Standardmäßig ist der Wert eine Summe.
+4. Sie können unterschiedliche Aggregationen wählen, um eine Zahl für **Hauptwert** und eine für **Vergleichswert**zurückzugeben. Standardmäßig ist der Wert eine Summe.
 
    ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
@@ -222,7 +227,7 @@ Auswahllisten fungieren wie Slicer in Power BI und Excel. Wir können eine hinzu
 
    ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Legen Sie auf der Registerkarte **Daten** unter **Dateneigenschaften** die Felder **Schlüssel** und **Bezeichnungen** auf ein Feld in den Daten fest, anhand dessen Sie filtern möchten.
+2. Legen Sie auf der Registerkarte **Daten** unter **Dateneigenschaften**die Felder **Schlüssel** und **Bezeichnungen** auf ein Feld in den Daten fest, anhand dessen Sie filtern möchten.
 
    ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -238,7 +243,7 @@ Nachdem Sie visuelle Elemente im Masterlayout erstellt haben, können Sie einen 
   
 
 ## <a name="save-your-mobile-report"></a>Speichern des mobilen Berichts  
-Sie können den Bericht lokal oder in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]-Webportal speichern. Bei einer lokalen Speicherung speichert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] den Bericht mit zwischengespeicherten Daten, damit Sie ihn öffnen und weiter bearbeiten können. Sie können ihn aber nicht auf einem mobilen Gerät anzeigen.   
+Sie können den Bericht lokal oder in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal speichern. Bei einer lokalen Speicherung speichert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] den Bericht mit zwischengespeicherten Daten, damit Sie ihn öffnen und weiter bearbeiten können. Sie können ihn aber nicht auf einem mobilen Gerät anzeigen.   
   
 1. Klicken Sie links oben auf der Symbol „Speichern“.   
    
@@ -259,7 +264,7 @@ Sie können den Bericht lokal oder in einem [!INCLUDE[PRODUCT_NAME](../../includ
   
 ## <a name="view-your-report-on-a-mobile-device"></a>Anzeigen des Berichts auf einem mobilen Gerät   
   
-Führen Sie zum Anzeigen Ihres [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichts zunächst diese Schritte aus:
+Führen Sie zum Anzeigen Ihres [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts zunächst diese Schritte aus:
 
 *  [Registrieren beim Power BI-Dienst](http://go.microsoft.com/fwlink/?LinkID=513879), wenn Sie noch kein Konto haben.
 *  [Herunterladen der mobile Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr mobiles Gerät.  
@@ -287,7 +292,7 @@ Führen Sie zum Anzeigen Ihres [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Anzeigen von KPIs und mobilen Berichten in der Power BI-App  
   
-Tippen Sie auf die Registerkarte **KPIs** oder **Mobile Berichte**.   
+Tippen Sie auf die Registerkarte **KPIs** oder **Mobile Berichte** .   
   
 ![PBI_iPad_SSMRP_Portal](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png)  
   
@@ -307,3 +312,5 @@ Die KPIs und mobilen Berichte werden in denselben Ordnern angezeigt, in denen si
 -  Anzeigen von [mobilen Reporting Services-Berichten und KPIs in der Power BI-App für Windows 10-Geräte](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
+
+

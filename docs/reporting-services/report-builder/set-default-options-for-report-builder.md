@@ -1,30 +1,35 @@
 ---
-title: "Festlegen von Standardoptionen f&#252;r den Berichts-Generator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10427"
+title: "Legen Sie die Standardoptionen für Berichts-Generator | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Festlegen von Standardoptionen f&#252;r den Berichts-Generator
+# <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  
   
 -   Klicken Sie im Berichts-Generator auf **Datei**  >  **Optionen**.  
   
-## Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
  Möglicherweise hat der Administrator diese Option konfiguriert. Der Wert kann eine wohlgeformte URL sein, die mit http:// oder https:// beginnt. Diese Einstellung bestimmt, welche Datenquellenverbindungen standardmäßig im Tabellen-/Matrixassistenten und Diagrammassistenten angezeigt werden. Außerdem werden die Berichte auf diesem Server verarbeitet. Sie können Ressourcen von diesem Server referenzieren.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
  **Löschen aller letzten Elementlisten**  
  Löscht die aktuellen Listen der zuletzt verwendeten Sites, Server, freigegebenen Datasets, freigegebenen Datenquellenverbindungen und Dokumente.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)  
   
   

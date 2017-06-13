@@ -1,27 +1,34 @@
 ---
-title: "Exportieren von Berichten (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/11/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10437"
+title: Exportieren von Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 23
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportieren von Berichten (Berichts-Generator und SSRS)
-  Sie können einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht in ein anderes Dateiformat, z.B. PowerPoint, [!INCLUDE[ofprword](../../includes/ofprword-md.md)] oder [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], oder in eine PDF- oder Bilddatei exportieren. Sie können den Bericht auch durch Generieren eines Atom-Dienstdokuments exportieren, wobei die im Bericht verfügbaren Atom-kompatiblen Datenfeeds aufgelistet werden. Sie können Ihren Bericht aus dem Berichts-Generator, dem Berichts-Designer ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]) oder dem Berichtsserver exportieren.  
+
+# <a name="export-reports-report-builder-and-ssrs"></a>Exportieren von Berichten (Berichts-Generator und SSRS)
+
+  Sie können einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht in ein anderes Dateiformat, z.B. PowerPoint, [!INCLUDE[ofprword](../../includes/ofprword-md.md)]oder [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oder in eine PDF- oder Bilddatei exportieren. Sie können den Bericht auch durch Generieren eines Atom-Dienstdokuments exportieren, wobei die im Bericht verfügbaren Atom-kompatiblen Datenfeeds aufgelistet werden. Sie können Ihren Bericht aus dem Berichts-Generator, dem Berichts-Designer ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]) oder dem Berichtsserver exportieren.  
   
  Exportieren Sie einen Bericht, um folgende Aufgaben auszuführen:  
   
@@ -31,58 +38,38 @@ caps.handback.revision: 23
   
 -   **Speichern einer Kopie des Berichts in einem anderen Dateiformat.** Sie können einen Bericht z. B. nach Word exportieren und speichern, um eine Kopie des Berichts zu erstellen.  
   
--   **Verwenden von Berichtsdaten als Datenfeeds in Anwendungen.** Sie können z.B. Atom-kompatible Datenfeeds generieren, die vom [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Client verwendet werden können, und anschließend in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mit den Daten arbeiten. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+-   **Verwenden von Berichtsdaten als Datenfeeds in Anwendungen.** Sie können z. B. Atom-kompatible Datenfeeds generieren, die Power Pivot und Power BI verarbeiten kann, und klicken Sie dann mit den Daten in Power Pivot und Power BI arbeiten. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus einem Bericht](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
   
 -   Das Rendern des Berichts auf dem Berichtsserver ist sinnvoll, wenn Sie Abonnements einrichten, Berichte per E-Mail bereitstellen oder einen Bericht speichern möchten, der auf dem Berichtsserver verfügbar ist. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet viele Renderingerweiterungen und unterstützt den Export von Berichten in gebräuchliche Dateiformate. Die Renderingerweiterungen unterstützen Dateiformate mit bedingten Umbrüchen (z. B. Word oder Excel), festen Seitenumbrüche (z. B. PDF oder TIFF) oder nur Daten (z. B. CSV oder Atom-kompatibles XML).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet viele Renderingerweiterungen und unterstützt den Export von Berichten in gebräuchliche Dateiformate. Die Renderingerweiterungen unterstützen Dateiformate mit bedingten Umbrüchen (z. B. Word oder Excel), festen Seitenumbrüche (z. B. PDF oder TIFF) oder nur Daten (z. B. CSV oder Atom-kompatibles XML).  
   
- Unter Umständen bestehen Auswirkungen auf die Berichtspaginierung, wenn Sie einen Bericht in ein anderes Format exportieren. In der Vorschau wird ein Bericht so angezeigt, wie er von der HTML-Renderingerweiterung gerendert wird, in der Regeln für bedingte Seitenumbrüche angewendet werden. Wenn Sie einen Bericht in ein anderes Dateiformat exportieren (z. B. Adobe Acrobat, PDF), basiert die Paginierung auf der physischen Seitengröße und folgt Regeln für feste Seitenumbrüche. Die Seiten können auch durch logische Seitenumbrüche getrennt werden, die Sie zu einem Bericht hinzufügen. Die tatsächliche Länge einer Seite variiert jedoch je nach dem verwendeten Renderertyp. Sie sollten mit dem Paginierungsverhalten der ausgewählten Renderingerweiterung vertraut sein, wenn Sie die Paginierung Ihres Berichts ändern möchten. Möglicherweise müssen Sie den Entwurf des Berichtslayouts für diese Renderingerweiterung anpassen. Weitere Informationen finden Sie unter [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md).  
+ Unter Umständen bestehen Auswirkungen auf die Berichtspaginierung, wenn Sie einen Bericht in ein anderes Format exportieren. In der Vorschau wird ein Bericht so angezeigt, wie er von der HTML-Renderingerweiterung gerendert wird, in der Regeln für bedingte Seitenumbrüche angewendet werden. Wenn Sie einen Bericht in ein anderes Dateiformat exportieren (z. B. Adobe Acrobat, PDF), basiert die Paginierung auf der physischen Seitengröße und folgt Regeln für feste Seitenumbrüche. Die Seiten können auch durch logische Seitenumbrüche getrennt werden, die Sie zu einem Bericht hinzufügen. Die tatsächliche Länge einer Seite variiert jedoch je nach dem verwendeten Renderertyp. Sie sollten mit dem Paginierungsverhalten der ausgewählten Renderingerweiterung vertraut sein, wenn Sie die Paginierung Ihres Berichts ändern möchten. Möglicherweise müssen Sie den Entwurf des Berichtslayouts für diese Renderingerweiterung anpassen. Weitere Informationen finden Sie unter [Seitenlayout und Rendering](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-##  <a name="bkmk_top"></a> In diesem Thema  
-  
--   [So exportieren Sie einen Bericht aus dem Berichts-Generator](#bkmk_export_from_rb)  
-  
--   [Exportieren eines Berichts aus dem Reporting Services-Webportal](#bkmk_export_from_rm)  
-  
--   [So exportieren Sie einen Bericht aus einer SharePoint-Bibliothek](#bkmk_export_from_sharepoint)  
-  
--   [Renderingerweiterungstypen](#RendererTypes)  
-  
--   [Formate, die Sie beim Anzeigen von Berichten exportieren können](#ExportFormats)  
-  
--   [Generieren von Datenfeeds aus einem Bericht](#GeneratingDataFeedsFromReport)  
-  
--   [Problembehandlung bei exportierten Berichten](#Troubleshooting)  
-  
--   [Weitere Methoden zum Exportieren von Berichten](#OtherWaysExportingReports)  
-  
-##  <a name="bkmk_export_from_rb"></a> So exportieren Sie einen Bericht aus dem Berichts-Generator  
-  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+
+## <a name="bkmk_export_from_rb"></a> So exportieren Sie einen Bericht aus dem Berichts-Generator
+
 1.  Führen Sie den Bericht aus, oder zeigen Sie eine Vorschau des Berichts an.  
   
 2.  Klicken Sie im Menüband auf **Exportieren**.  
   
-     ![Report Builder Export](../../reporting-services/report-builder/media/ssrb-export.png "Report Builder Export")  
+     ![Berichts-Generator-Export](../../reporting-services/report-builder/media/ssrb-export.png "Builder Exportieren des Berichts")  
   
 3.  Wählen Sie das Format aus, das Sie verwenden möchten.  
   
      Das Dialogfeld **Speichern unter** wird geöffnet. Standardmäßig entspricht der Dateiname dem Namen des exportierten Berichts. Optional können Sie den Dateinamen ändern.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
+##  <a name="bkmk_export_from_rm"></a> So exportieren Sie einen Bericht aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal  
   
-##  <a name="bkmk_export_from_rm"></a> So exportieren Sie einen Bericht aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal  
-  
-1.  Navigieren Sie auf der Seite **Home** vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal aus zum Bericht, den Sie exportieren möchten.  
+1.  Navigieren Sie auf der Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Home **vom** -Webportal aus zum Bericht, den Sie exportieren möchten.  
   
 2.  Klicken Sie auf den Bericht, um ihn zu rendern und eine Vorschau des Berichts anzuzeigen.  
   
-3.  Klicken Sie auf der Berichts-Viewer-Symbolleiste auf den Dropdownpfeil **Exportieren**.  
+3.  Klicken Sie auf der Berichts-Viewer-Symbolleiste auf den Dropdownpfeil **Exportieren** .  
   
-     ![Reporting Services web portal Export](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services web portal Export")  
+     ![Reporting Services-Webportal Export](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services-Webportal exportieren")  
   
 4.  Wählen Sie das Format aus, das Sie verwenden möchten.  
   
@@ -95,8 +82,6 @@ caps.handback.revision: 23
      Klicken Sie auf **Speichern**, um den Bericht sofort im ausgewählten Exportformat zu speichern.  
   
      Der Bericht wird mit der Anwendung, die dem von Ihnen gewählten Format zugeordnet ist, entweder angezeigt oder gespeichert. Wenn Sie auf **Speichern**klicken, werden Sie aufgefordert, einen Speicherort für Ihren Bericht anzugeben.  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
   
 ##  <a name="bkmk_export_from_sharepoint"></a> So exportieren Sie einen Bericht aus einer SharePoint-Bibliothek  
   
@@ -118,8 +103,6 @@ caps.handback.revision: 23
   
      **Hinweis** Wenn das Programm den Bericht nicht im gewählten Format öffnen kann, weil diesem Dateityp kein Programm zugeordnet ist, werden Sie aufgefordert, den exportierten Bericht zu speichern oder im Internet ein Programm zum Öffnen des Berichts zu suchen.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
-  
 ##  <a name="RendererTypes"></a> Renderingerweiterungstypen  
  Drei Arten von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Renderingerweiterungen sind verfügbar:  
   
@@ -127,39 +110,33 @@ caps.handback.revision: 23
   
      Die folgenden Datenrenderingerweiterungen werden unterstützt: CSV, XML und Atom.  
   
--   **Renderererweiterungen mit bedingtem Seitenumbruch:** Renderingerweiterungen mit bedingtem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, z.B. auf einer Webseite oder in den **ReportViewer**-Steuerelementen.  
+-   **Renderererweiterungen mit bedingtem Seitenumbruch:** Renderingerweiterungen mit bedingtem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, z.B. auf einer Webseite oder in den **ReportViewer** -Steuerelementen.  
   
-     Die folgenden Renderingerweiterungen mit bedingtem Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word und Webarchiv (MHTML).  
+     Die folgenden Renderingerweiterungen mit bedingtem Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word und Webarchiv (MHTML).  
   
 -   **Renderingerweiterungen mit festem Seitenumbruch:** Renderererweiterungen mit festem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert.  
   
      Die folgenden Renderingerweiterungen mit festem Seitenumbruch werden unterstützt: TIFF und PDF  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
-  
 ##  <a name="ExportFormats"></a> Formate, die Sie beim Anzeigen von Berichten exportieren können  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Renderingerweiterungen bereit, die Berichte in anderen Formaten rendern. Sie sollten den Berichtsentwurf für das gewählte Dateiformat optimieren.  In der folgenden Tabelle sind die Formate aufgeführt, die Sie über die Benutzeroberfläche exportieren können.  Es gibt zusätzliche Formate, die Sie mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Abonnements oder beim Exportieren per URL-Zugriff verwenden können.  Gehen Sie zum Abschnitt [Weitere Methoden zum Exportieren von Berichten](#OtherWaysExportingReports) in diesem Thema.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Renderingerweiterungen bereit, die Berichte in anderen Formaten rendern. Sie sollten den Berichtsentwurf für das gewählte Dateiformat optimieren.  In der folgenden Tabelle sind die Formate aufgeführt, die Sie über die Benutzeroberfläche exportieren können.  Es gibt zusätzliche Formate, die Sie mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements oder beim Exportieren per URL-Zugriff verwenden können.  Gehen Sie zum Abschnitt [Weitere Methoden zum Exportieren von Berichten](#OtherWaysExportingReports)in diesem Thema.  
   
 |Format|Renderingerweiterungstyp|Description|  
 |------------|------------------------------|-----------------|  
-|Acrobat-Datei (PDF-Datei)|Fester Seitenumbruch|Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höher kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als PDF-Datei &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|Daten|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind mit Anwendungen lesbar und austauschbar, die Atom-kompatible Datenfeeds nutzen, z.B. mit dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Client.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|Daten|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
-|EXCELOPENXML|Bedingter Seitenumbruch|Wird beim Überprüfen von Berichten als „Excel“ in den Exportmenüs angezeigt. Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument (.xlsx), das mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).|  
+|Acrobat-Datei (PDF-Datei)|Fester Seitenumbruch|Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höher kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.<br /><br /> Weitere Informationen finden Sie unter [exportieren als PDF-Datei](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
+|Atom|Daten|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind lesbar und austauschbar mit Anwendungen, z. B. Power Pivot oder feeds Power BI, die Atom-kompatible Datenfeeds nutzen können.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|Daten|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|EXCELOPENXML|Bedingter Seitenumbruch|Wird beim Überprüfen von Berichten als „Excel“ in den Exportmenüs angezeigt. Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument (.xlsx), das mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [exportieren nach Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Fester Seitenumbruch|Die PowerPoint-Renderingerweiterung rendert einen Bericht als PowerPoint-Dokument (.pptx), das mit PowerPoint 2013 kompatibel ist.|  
-|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
-|Webarchiv|Bedingter Seitenumbruch|Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.<br /><br /> Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die im Berichts-Generator in der Vorschau angezeigt und in einem Browser angezeigt werden. Dies gilt auch bei der Ausführung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal.<br /><br /> Weitere Informationen finden Sie unter [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
-|WORDOPENXML|Bedingter Seitenumbruch|Beim Anzeigen von Berichten als „Word“ im Exportmenü angezeigt. Die Word-Renderingerweiterung rendert einen Bericht als Word-Dokument (.docx), das mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Word &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
-|XML|Daten|Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.<br /><br /> Weitere Informationen finden Sie unter [Exportieren nach XML &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
+|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Webarchiv|Bedingter Seitenumbruch|Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.<br /><br /> Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die im Berichts-Generator in der Vorschau angezeigt und in einem Browser angezeigt werden. Dies gilt auch bei der Ausführung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal.<br /><br /> Weitere Informationen finden Sie unter [Rendern in HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
+|WORDOPENXML|Bedingter Seitenumbruch|Beim Anzeigen von Berichten als „Word“ im Exportmenü angezeigt. Die Word-Renderingerweiterung rendert einen Bericht als Word-Dokument (.docx), das mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [exportieren nach Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
+|XML|Daten|Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.<br/><br/> Weitere Informationen finden Sie unter [exportieren nach XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> Generieren von Datenfeeds aus einem Bericht  
- Führen Sie den Bericht im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal aus, und klicken Sie anschließend auf der Symbolleiste des Webportals auf das Symbol **Datenfeed generieren**, um Datenfeeds aus einem Bericht zu generieren. In einer Eingabeaufforderung werden Sie gefragt, ob die Datei gespeichert oder geöffnet werden soll. Wenn Sie **Öffnen**auswählen, wird das Atom-Dienstdokument in der Anwendung geöffnet, die der Dateierweiterung ".atomsvc" zugeordnet ist. Wenn Sie **Speichern**auswählen, wird das Dokument als ATOMSVC-Datei gespeichert. Standardmäßig wird der Name des Berichts als Dateiname verwendet. Sie können den Namen ändern, um einen sinnvolleren Namen anzugeben.  
+ Führen Sie den Bericht im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal aus, und klicken Sie anschließend auf der Symbolleiste des Webportals auf das Symbol **Datenfeed generieren** , um Datenfeeds aus einem Bericht zu generieren. In einer Eingabeaufforderung werden Sie gefragt, ob die Datei gespeichert oder geöffnet werden soll. Wenn Sie **Öffnen**auswählen, wird das Atom-Dienstdokument in der Anwendung geöffnet, die der Dateierweiterung ".atomsvc" zugeordnet ist. Wenn Sie **Speichern**auswählen, wird das Dokument als ATOMSVC-Datei gespeichert. Standardmäßig wird der Name des Berichts als Dateiname verwendet. Sie können den Namen ändern, um einen sinnvolleren Namen anzugeben.  
   
- Das Atom-Dienstdokument wird auf dem Computer gespeichert. Sie können es später auf einen Berichtsserver oder einen anderen Server hochladen, um es für andere Benutzer verfügbar zu machen. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
+ Das Atom-Dienstdokument wird auf dem Computer gespeichert. Sie können es später auf einen Berichtsserver oder einen anderen Server hochladen, um es für andere Benutzer verfügbar zu machen. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 ##  <a name="Troubleshooting"></a> Problembehandlung bei exportierten Berichten  
  Gelegentlich sehen die Berichte anders aus, oder sie funktionieren nach dem Exportieren in ein anderes Format nicht wunschgemäß. Dies liegt daran, dass für den Renderer möglicherweise bestimmte Regeln und Einschränkungen gelten. Sie können vielen Einschränkungen dadurch begegnen, dass Sie sie beim Erstellen des Berichts berücksichtigen. Sie müssen im Bericht ggf. ein etwas anderes Layout verwenden, die Elemente im Bericht sorgfältig ausrichten, die Fußzeilen im Bericht auf eine Textzeile beschränken usw.  
@@ -194,16 +171,14 @@ caps.handback.revision: 23
   
 -   [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet zusätzliche Funktionen, mit denen Berichte erstellt werden können, die in anderen Formaten problemlos funktionieren. Durch Seitenumbrüche in Tablix-Datenbereichen (Tabelle, Matrix und Liste), Gruppen und Rechtecke lässt sich die Berichtspaginierung besser steuern. Durch Seitenumbrüche begrenzte Berichtsseiten können über unterschiedliche Seitennamen verfügen und die Seitennummerierung zurücksetzen. Mithilfe von Ausdrücken können die Seitennamen und Seitenzahlen bei Ausführung des Berichts dynamisch aktualisiert werden. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet zusätzliche Funktionen, mit denen Berichte erstellt werden können, die in anderen Formaten problemlos funktionieren. Durch Seitenumbrüche in Tablix-Datenbereichen (Tabelle, Matrix und Liste), Gruppen und Rechtecke lässt sich die Berichtspaginierung besser steuern. Durch Seitenumbrüche begrenzte Berichtsseiten können über unterschiedliche Seitennamen verfügen und die Seitennummerierung zurücksetzen. Mithilfe von Ausdrücken können die Seitennamen und Seitenzahlen bei Ausführung des Berichts dynamisch aktualisiert werden. Weitere Informationen finden Sie unter [Paginierung in Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
- Zudem können Sie mit dem integrierten globalen Objekt in RenderFormat bedingt unterschiedliche Berichtslayouts für verschiedene Renderer übernehmen. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
-  
+ Zudem können Sie mit dem integrierten globalen Objekt in RenderFormat bedingt unterschiedliche Berichtslayouts für verschiedene Renderer übernehmen. Weitere Informationen finden Sie unter [integrierte und Benutzerverweise](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
+
 ##  <a name="OtherWaysExportingReports"></a> Weitere Methoden zum Exportieren von Berichten  
- Beim Exportieren eines Berichts handelt es sich um eine bedarfsgesteuerte Aufgabe, die Sie für einen im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal oder Berichts-Generator geöffneten Bericht ausführen. Falls Sie einen Exportvorgang automatisieren möchten (z. B. um einen Bericht in einem wiederkehrenden Zeitplan als spezifischen Dateityp in einen freigegebenen Ordner zu exportieren), erstellen Sie ein Abonnement, durch das der Bericht an einen freigegebenen Ordner übermittelt wird. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
+ Beim Exportieren eines Berichts handelt es sich um eine bedarfsgesteuerte Aufgabe, die Sie für einen im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder Berichts-Generator geöffneten Bericht ausführen. Falls Sie einen Exportvorgang automatisieren möchten (z. B. um einen Bericht in einem wiederkehrenden Zeitplan als spezifischen Dateityp in einen freigegebenen Ordner zu exportieren), erstellen Sie ein Abonnement, durch das der Bericht an einen freigegebenen Ordner übermittelt wird. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
- Berichte, die mit den Berichtstools in der Vorschau angezeigt oder in einer Browseranwendung wie dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal geöffnet werden, werden stets zuerst in HTML gerendert. Sie können keine andere Renderingerweiterung als Standarderweiterung für die Anzeige angeben. Sie können jedoch ein Abonnement erstellen, durch das ein Bericht im gewünschten Renderingformat für die nachfolgende Übermittlung an ein E-Mail-Postfach oder an einen freigegebenen Ordner erstellt wird. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) und [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
+ Berichte, die mit den Berichtstools in der Vorschau angezeigt oder in einer Browseranwendung wie dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal geöffnet werden, werden stets zuerst in HTML gerendert. Sie können keine andere Renderingerweiterung als Standarderweiterung für die Anzeige angeben. Sie können jedoch ein Abonnement erstellen, durch das ein Bericht im gewünschten Renderingformat für die nachfolgende Übermittlung an ein E-Mail-Postfach oder an einen freigegebenen Ordner erstellt wird. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) und [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
   
  Sie können auch über eine URL, in der eine Renderingerweiterung als URL-Parameter angegeben ist, auf einen Bericht zugreifen und ihn direkt im angegebenen Format rendern, ohne ihn zuerst in HTML zu rendern. Im folgenden Beispiel wird ein Bericht im Excel-Format gerendert:  
   
@@ -218,14 +193,12 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 ```  
   
  Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../../reporting-services/export-a-report-using-url-access.md).  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [In diesem Thema](#bkmk_top)  
-  
-## Siehe auch  
- [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+[Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+[Speichern Berichte &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

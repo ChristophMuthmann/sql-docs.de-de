@@ -1,36 +1,41 @@
 ---
-title: "Erstellen, &#196;ndern und L&#246;schen von freigegebenen Datenquellen (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ändern der Datenquelleneigenschaften"
-  - "Freigegebene Datenquellen [Reporting Services]"
-  - "Entfernen von freigegebenen Datenquellen"
-  - "Rollen [Reporting Services], freigegebene Datenquellen"
-  - "Datenquellen [Reporting Services], freigegeben"
-  - "Datenquellen [Reporting Services], Eigenschaften ändern"
-  - "Löschen von freigegebenen Datenquellen"
+title: "Erstellen, ändern und Löschen von freigegebenen Datenquellen (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Erstellen, &#196;ndern und L&#246;schen von freigegebenen Datenquellen (SSRS)
-  Eine freigegebene Datenquelle besteht aus einem Satz von Datenquellen-Verbindungseigenschaften, auf die von mehreren auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver ausgeführten Berichten, Modellen und datengesteuerten Abonnements verwiesen werden kann.  Freigegebene Datenquellen bieten eine einfache Möglichkeit, Datenquelleneigenschaften zu verwalten, die sich im Laufe der Zeit häufig ändern. Wenn sich ein Benutzerkonto oder Kennwort ändert oder Sie die Datenbank auf einen anderen Server verschieben, können Sie die Verbindungsinformationen zentral aktualisieren.  
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)
+  Eine freigegebene Datenquelle besteht aus einem Satz von Datenquellen-Verbindungseigenschaften, auf die von mehreren auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführten Berichten, Modellen und datengesteuerten Abonnements verwiesen werden kann.  Freigegebene Datenquellen bieten eine einfache Möglichkeit, Datenquelleneigenschaften zu verwalten, die sich im Laufe der Zeit häufig ändern. Wenn sich ein Benutzerkonto oder Kennwort ändert oder Sie die Datenbank auf einen anderen Server verschieben, können Sie die Verbindungsinformationen zentral aktualisieren.  
   
  Das folgende Symbol bezeichnet eine freigegebene Datenquelle in der Ordnerhierarchie des Berichts-Managers:  
   
- ![Freigegebene Datenquelle (Symbol)](../../reporting-services/report-data/media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 Symbol für freigegebene Datenquelle  
   
  Freigegebene Datenquellen sind für Berichte und datengesteuerte Abonnements optional, für Berichtsmodelle jedoch erforderlich. Wenn Sie Berichtsmodelle für die Ad-hoc-Berichterstellung verwenden möchten, müssen Sie ein freigegebenes Datenquellenelement erstellen und verwalten, um Verbindungsinformationen für das Modell bereitzustellen.  
@@ -47,7 +52,7 @@ Symbol für freigegebene Datenquelle
   
  Eine freigegebene Datenquelle enthält keine Abfrageinformationen für das Abrufen von Daten. Die Abfrage ist stets Bestandteil einer Berichtsdefinition.  
   
-## Erstellen und Ändern freigegebener Datenquellen  
+## <a name="creating-and-modifying-shared-data-sources"></a>Erstellen und Ändern freigegebener Datenquellen  
  Zum Erstellen einer freigegebenen Datenquelle oder zum Bearbeiten ihrer Eigenschaften ist die Berechtigung **Datenquellen verwalten** für den Berichtsserver erforderlich. Wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, können Sie die freigegebene Datenquelle mit dem Berichts-Manager erstellen und konfigurieren. Wird der Berichtsserver im integrierten SharePoint-Modus ausgeführt, können Sie die Anwendungsseiten einer SharePoint-Website verwenden. Unabhängig vom jeweiligen Modus können Sie für jeden Berichtsserver eine freigegebene Datenquelle im Berichts-Designer erstellen und sie anschließend auf einem Zielserver veröffentlichen.  
   
  Nachdem Sie eine freigegebene Datenquelle auf dem Berichtsserver erstellt haben, können Sie Rollenzuweisungen zur Steuerung des Zugriffs erstellen, die Datenquelle an einen anderen Speicherort verschieben, sie umbenennen sowie den Offlinemodus aktivieren, um die Berichtsverarbeitung zu verhindern, während Wartungsvorgänge für die externe Datenquelle ausgeführt werden. Falls Sie ein freigegebenes Datenquellenelement umbenennen oder in einen anderen Speicherort in der Ordnerhierarchie des Berichtsservers verschieben, werden die Pfadangaben in allen Berichten oder Abonnements, die auf die freigegebene Datenquelle verweisen, entsprechend aktualisiert. Wenn Sie die freigegebene Datenquelle offline schalten, werden alle Berichte, Modelle und Abonnements erst ausgeführt, wenn Sie die Datenquelle erneut aktivieren.  
@@ -59,7 +64,7 @@ Symbol für freigegebene Datenquelle
 1.  Klicken Sie im Berichtsdatenbereich auf der Symbolleiste auf **Neu** , und klicken Sie dann auf **Datenquelle**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
     > [!NOTE]  
-    >  Zum Anzeigen des Berichtsdatenbereichs klicken Sie im Menü **Ansicht** auf **Berichtsdaten**.  
+    >  Zum Anzeigen des Berichtsdatenbereichs klicken Sie im Menü **Ansicht** auf **Berichtsdaten** .  
   
 2.  Geben Sie im Textfeld **Name** einen Namen für die Datenquelle ein, oder übernehmen Sie den Standardnamen. Der Name der Datenquelle wird intern für den Bericht verwendet. Zur Verdeutlichung sollte der Name der Datenquelle den Namen der Datenbank enthalten, die in der Verbindungszeichenfolge angegeben ist.  
   
@@ -77,19 +82,19 @@ Symbol für freigegebene Datenquelle
   
  **So erstellen Sie eine freigegebene Datenquelle im Berichts-Manager**  
   
-1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** .  
   
 3.  Klicken Sie auf **Neue Datenquelle**. Die Seite **Neue Datenquelle** wird geöffnet.  
   
-4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : @ & = + , $ / * \< > | " /.  
+4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : @ & = + , $ / * < > | " /.  
   
 5.  Optional können Sie auch eine Beschreibung eingeben, um Benutzern Informationen zur Verbindung bereitzustellen. Diese Beschreibung wird auf der Seite **Inhalt** im Berichts-Manager angezeigt.  
   
 6.  Geben Sie in der Liste **Datenquellentyp** die Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten aus der Datenquelle verwendet wird.  
   
-7.  Geben Sie in das Feld **Verbindungszeichenfolge** die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Es wird empfohlen, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
+7.  Geben Sie in das Feld **Verbindungszeichenfolge**die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung zur Datenquelle verwendet wird. Es wird empfohlen, dass Sie keine Anmeldeinformationen in der Verbindungszeichenfolge angeben.  
   
      Das folgende Beispiel zeigt eine Verbindungszeichenfolge, mit der eine Verbindung zur lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank hergestellt wird:  
   
@@ -124,12 +129,12 @@ Symbol für freigegebene Datenquelle
   
 3.  Ändern Sie die Datenquelle, und klicken Sie anschließend auf **Anwenden**.  
   
-## Löschen von freigegebenen Datenquellen  
+## <a name="deleting-shared-data-sources"></a>Löschen von freigegebenen Datenquellen  
  Sie können eine freigegebene Datenquelle auf die gleiche Weise löschen wie ein Element auf dem Berichtsserver.  
   
  **So löschen Sie eine freigegebene Datenquelle**  
   
-1.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt**, und führen Sie eine der folgenden Aktionen aus:  
+1.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und führen Sie eine der folgenden Aktionen aus:  
   
     -   Navigieren Sie zum Element der freigegebenen Datenquelle.  
   
@@ -151,16 +156,16 @@ Symbol für freigegebene Datenquelle
   
  Das Löschen einer freigegebenen Datenquelle lässt sich nicht rückgängig machen. Wenn Sie versehentlich eine freigegebene Datenquelle löschen, können Sie eine neue Datenquelle mit denselben Eigenschaftswerten erstellen. Sie müssen jeden einzelnen Bericht, jedes Modell und jedes datengesteuerte Abonnement öffnen, um die freigegebene Datenquelle erneut mit dem Element zu verbinden, das die Datenquelle verwendet. Solange die Datenquelleneigenschaften gleich bleiben, funktionieren die Berichte, Modelle und Abonnements jedoch weiterhin wie zuvor.  
   
-## Importieren von freigegebenen Datenquellen  
+## <a name="importing-shared-data-sources"></a>Importieren von freigegebenen Datenquellen  
  **So importieren Sie eine vorhandene Datenquelle in Berichts-Designer**  
   
-1.  Klicken Sie im Projektmappen-Explorer im Berichtsserverprojekt mit der rechten Maustaste auf den Ordner **Freigegebene Datenquellen**, und klicken Sie anschließend auf **Vorhandenes Element hinzufügen**. Das Dialogfeld **Vorhandenes Element hinzufügen** wird geöffnet.  
+1.  Klicken Sie im Projektmappen-Explorer im Berichtsserverprojekt mit der rechten Maustaste auf den Ordner **Freigegebene Datenquellen** , und klicken Sie anschließend auf **Vorhandenes Element hinzufügen**. Das Dialogfeld **Vorhandenes Element hinzufügen** wird geöffnet.  
   
 2.  Navigieren Sie zu einer vorhandenen RDS-Datenquelldatei (Report Definition Shared), und klicken Sie auf **Öffnen**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Freigegebene Datenquellen in SharePoint  
+## <a name="shared-data-sources-in-sharepoint"></a>Freigegebene Datenquellen in SharePoint  
  Beim Ausführen eines Berichts aus einer SharePoint-Bibliothek können die Verbindungsinformationen innerhalb des Berichts oder in einer externen Datei definiert werden, die mit dem Bericht verknüpft ist. Falls die Verbindungsinformationen in den Bericht eingebettet sind, wird die Datenquelle als benutzerdefinierte Datenquelle bezeichnet. Sind die Verbindungsinformationen in einer externen Datei definiert, wird sie als freigegebene Datenquelle bezeichnet. Bei der externen Datei kann es sich um eine RSDS-Datei (Report Server Data Source, Berichtsserver-Datenquellendatei) oder um eine Office Data Connection-Datei (ODC-Datei) handeln.  
   
  Eine RSDS-Datei ist mit einer RDS-Datei vergleichbar, aber sie weist ein anderes Schema auf. Zum Erstellen einer RSDS-Datei können Sie eine RDS-Datei aus dem Berichts-Designer oder dem Modell-Designer in einer SharePoint-Bibliothek veröffentlichen (aus der ursprünglichen RDS-Datei wird eine neue RSDS-Datei erstellt). Alternativ können Sie eine neue Datei in einer Bibliothek auf einer SharePoint-Website erstellen.  
@@ -178,7 +183,7 @@ Symbol für freigegebene Datenquelle
     > [!NOTE]  
     >  Wenn das Element **Berichtsdatenquelle** nicht im Menü angezeigt wird, wurde der Inhaltstyp für Berichtsdatenquellen noch nicht aktiviert. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
-3.  Geben Sie unter **Name** einen beschreibenden Namen für die RSDS-Datei ein.  
+3.  Geben Sie unter **Name**einen beschreibenden Namen für die RSDS-Datei ein.  
   
 4.  Wählen Sie unter **Datenquellentyp** den Datenquellentyp aus der Liste aus. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -196,12 +201,12 @@ Symbol für freigegebene Datenquelle
   
 7.  Wählen Sie **Diese Datenquelle aktivieren** aus, wenn die Datenquelle aktiviert sein soll. Wenn die Datenquelle konfiguriert aber nicht aktiv ist, wird Benutzern beim Versuch, einen Bericht auf Grundlage der Datenquelle zu verwenden, eine Fehlermeldung angezeigt.  
   
-8.  Klicken Sie auf die Schaltfläche **Verbindung testen**, um die Datenquellenkonfiguration zu überprüfen.  
+8.  Klicken Sie auf die Schaltfläche **Verbindung testen** , um die Datenquellenkonfiguration zu überprüfen.  
   
     > [!NOTE]  
     >  Die Schaltfläche zum Testen der Verbindung wird für den XML-Datenquellentyp nicht unterstützt.  
   
-9. Klicken Sie auf **OK**, um die freigegebene Datenquelle zu speichern.  
+9. Klicken Sie auf **OK** , um die freigegebene Datenquelle zu speichern.  
   
  **So löschen Sie eine freigegebene Datenquellendatei (RSDS-Datei)**  
   
@@ -215,7 +220,7 @@ Symbol für freigegebene Datenquelle
   
  Gehen Sie beim Löschen eines Berichtsmodells umsichtig vor. Wenn Sie ein Modell löschen, können Sie die Berichte, die auf diesem Modell im Berichts-Generator basieren, nicht mehr öffnen und ändern. Wenn Sie versehentlich ein Modell löschen, das von vorhandenen Berichten verwendet wird, müssen Sie das Modell erneut generieren, alle Berichte, von denen das Modell verwendet wird, erneut erstellen und speichern und die zu verwendende Modellelementsicherheit erneut angeben. Es ist nicht möglich, das Modell einfach neu zu generieren und es anschließend einem vorhandenen Bericht anzufügen.  
   
-## Abhängige Elemente  
+## <a name="dependent-items"></a>Abhängige Elemente  
  Um eine Liste der Berichte und Modelle anzuzeigen, die die Datenquelle verwenden, öffnen Sie die Seite Abhängige Elemente für die freigegebene Datenquelle. Um auf diese Seite zuzugreifen, öffnen Sie die Datenquelle im Berichts-Manager oder auf einer SharePoint-Anwendungsseite. Beachten Sie, dass die Seite Abhängige Elemente keine datengesteuerten Abonnements anzeigt. Wenn eine freigegebene Datenquelle von einem Abonnement verwendet wird, wird das Abonnement nicht in der Liste der abhängigen Elemente aufgeführt.  
   
  **So zeigen Sie abhängige Elemente in SharePoint an**  
@@ -224,18 +229,19 @@ Symbol für freigegebene Datenquelle
   
 2.  Zeigen Sie auf die freigegebene Datenquelle.  
   
-3.  Klicken Sie, um einen Pfeil nach unten anzuzeigen, und wählen Sie **Abhängige Elemente anzeigen** aus.  
+3.  Klicken Sie, um einen Pfeil nach unten anzuzeigen, und wählen Sie **Abhängige Elemente anzeigen**aus.  
   
      Für Berichtsmodelle enthält die Liste der abhängigen Elemente die Berichte, die im Berichts-Generator erstellt wurden. Bei freigegebenen Datenquellen kann die Liste der abhängigen Elemente sowohl Berichte als auch Berichtsmodelle enthalten.  
   
-## Siehe auch  
- [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [Datenquellen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Datenquellen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

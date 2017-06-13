@@ -1,24 +1,31 @@
 ---
-title: "Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 23
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
-  Die Word-Renderingerweiterung rendert paginierte Berichte Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.  
+
+# <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
+
+  Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.  
   
  Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document**, und die Dateinamenerweiterung lautet „.docx“.  
   
@@ -41,10 +48,10 @@ caps.handback.revision: 23
   
  Dieser Renderer unterstützt nur logische Seitenumbrüche.  
   
-### Anpassen der Seitengröße  
+### <a name="page-sizing"></a>Anpassen der Seitengröße  
  Wenn der Bericht gerendert wird, wird die Seitenhöhe und -breite in Word von folgenden RDL-Eigenschaften bestimmt: Höhe und Breite des Papierformats, linker und rechter Seitenrand sowie oberer und unterer Seitenrand.  
   
-### Seitenbreite  
+### <a name="page-width"></a>Seitenbreite  
  Word unterstützt Seitenbreiten von bis zu 22 Zoll. Ist der Bericht breiter als 22 Zoll, wird der Bericht zwar dennoch vom Renderer gerendert, der Inhalt des Berichts wird jedoch von Word nicht in der Seitenlayoutansicht oder im Lesemoduslayout angezeigt. Um die Daten anzuzeigen, wechseln Sie zur Normalansicht oder Weblayoutansicht. In diesen Ansichten reduziert Word die Menge an Leerzeichen und zeigt dadurch mehr vom Berichtsinhalt an.  
   
  Beim Rendern wird der Bericht auf die erforderliche Breite (maximal 22 Zoll) geändert, um den Inhalt anzuzeigen. Die minimale Breite des Berichts basiert auf der RDL-Width-Eigenschaft im Bereich „Eigenschaften“.  
@@ -69,7 +76,7 @@ caps.handback.revision: 23
   
 -   `=Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
- Dies liegt daran, dass der Word-Renderer den Bericht für Felder analysiert, die mit der Paginierung zusammenhängen, wie **PageNumber** und **TotalPages** , und nur einfache Verweise verarbeitet und keine Funktionsaufrufe. In diesem Fall wird vom Ausdruck die **ToString** -Funktion aufgerufen. Die folgenden beiden Ausdrücke sind gleichwertig und werden beide ordnungsgemäß gerendert, wenn Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den veröffentlichten Bericht aber auch in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal oder einer SharePoint-Bibliothek rendern. Der Word-Renderer analysiert jedoch nur den zweiten Ausdruck erfolgreich und rendert die richtigen Seitenzahlen.  
+ Dies liegt daran, dass der Word-Renderer den Bericht für Felder analysiert, die mit der Paginierung zusammenhängen, wie **PageNumber** und **TotalPages** , und nur einfache Verweise verarbeitet und keine Funktionsaufrufe. In diesem Fall wird vom Ausdruck die **ToString** -Funktion aufgerufen. Die folgenden beiden Ausdrücke sind gleichwertig und werden beide ordnungsgemäß gerendert, wenn Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den veröffentlichten Bericht aber auch in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder einer SharePoint-Bibliothek rendern. Der Word-Renderer analysiert jedoch nur den zweiten Ausdruck erfolgreich und rendert die richtigen Seitenzahlen.  
   
 -   **Komplexer Ausdruck:**  Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
@@ -80,34 +87,34 @@ caps.handback.revision: 23
 ##  <a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in Word unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
-### Einblenden und Ausblenden  
+### <a name="show-and-hide"></a>Einblenden und Ausblenden  
  Der Word-Renderer rendert Berichtselemente auf Grundlage ihres Status beim Rendern. Wenn der Status eines Berichtselements ausgeblendet wird, wird das Berichtselement nicht im Word-Dokument gerendert. Wird der Status eines Berichtselements angezeigt, wird das Berichtselement im Word-Dokument gerendert. Die Funktion zum Wechseln zwischen beiden Möglichkeiten wird in Word nicht unterstützt.  
   
-### Dokumentstruktur  
+### <a name="document-map"></a>Dokumentstruktur  
  Wenn Dokumentstrukturbezeichnungen im Bericht vorhanden sind, werden sie als Word-Inhaltsverzeichnisbezeichnungen in den entsprechenden Berichtselementen und -gruppen gerendert. Die Dokumentstrukturbezeichnung wird als Bezeichnungstext für das Inhaltsverzeichnis verwendet. Der Ziellink wird in der Nähe des Elements, auf dem die Bezeichnung festgelegt wird, positioniert. Wenn kein Inhaltsverzeichnis im Word-Dokument erstellt wird, können Sie mit den im Bericht gerenderten Dokumentstrukturbezeichnungen ein eigenes Inhaltsverzeichnis erstellen.  
   
-### Links und Drillthroughlinks  
+### <a name="hyperlink-and-drillthrough-links"></a>Links und Drillthroughlinks  
  Links und Drillthroughlinks im Textfeld und Bildberichtselemente werden als Links im Word-Dokument gerendert. Wenn Sie auf den Link klicken, wird der Standardwebbrowser geöffnet und navigiert zur URL. Beim Klicken auf den Drillthroughlink wird auf den ursprünglichen Berichtsserver zugegriffen.  
   
-### Interaktives Sortieren  
+### <a name="interactive-sorting"></a>Interaktives Sortieren  
  Der Berichtsinhalt wird auf der Basis der aktuellen Sortierung innerhalb des Berichtsdatenbereichs gerendert. Word unterstützt keine interaktive Sortierung. Nachdem der Bericht gerendert wurde, können Sie die Tabellensortierung in Word anwenden.  
   
-### Lesezeichen  
+### <a name="bookmarks"></a>Lesezeichen  
  Lesezeichen im Bericht werden als Word-Lesezeichen gerendert. Lesezeichenlinks werden als Links zu den Lesezeichenbezeichnungen innerhalb des Dokuments gerendert. Lesezeichenbezeichnungen müssen weniger als 40 Zeichen lang sein. Das einzige Sonderzeichen, das in einer Lesezeichenbezeichnung verwendet werden kann, ist ein Unterstrich (_). Nicht unterstützte Sonderzeichen werden aus dem Namen der Lesezeichenbezeichnung entfernt. Wenn der Name mehr als 40 Zeichen umfasst, wird er gekürzt. Bei doppelt vorhandenen Lesezeichennamen im Bericht werden die Lesezeichen nicht in Word gerendert.  
   
 ##  <a name="WordStyleRendering"></a> Rendern von Formaten in Word  
  Im Folgenden wird kurz beschrieben, wie Formate in Word gerendert werden.  
   
-### Farbpalette  
+### <a name="color-palette"></a>Farbpalette  
  Im Bericht gerenderte Farben werden im Word-Dokument gerendert.  
   
-### Rahmen  
+### <a name="border"></a>Rahmen  
  Rahmen für Berichtselemente, mit Ausnahme des Seitenrands, werden als Word-Tabellenzellrahmen gerendert.  
   
 ##  <a name="SquigglyLines"></a> Wellenlinien in exportierten Berichten  
  Exportierte Berichtsdaten und -konstanten, die in Word angezeigt werden, können mit roten der grünen Wellenlinien unterlegt sein. Die roten Wellenlinien weisen auf Rechtschreibfehler, die grünen Wellenlinien auf Grammatikfehler hin. Dieser Fall tritt immer dann ein, wenn Berichte Wörter enthalten, die nicht die Korrekturhilferichtlinien (Rechtschreibung und Grammatik) der angegebenen Bearbeitungssprache in Word erfüllen. So werden z. B. englische Spaltentitel mit hoher Wahrscheinlichkeit mit roten Wellenlinien unterlegt, wenn der Bericht mit einer spanischen Word-Version gerendert wird. Rechtschreibfehler sind in Berichten häufiger anzutreffen als Grammatikfehler, da Berichte in der Regel nur kurze Texte und keine vollständigen Sätze oder Absätze enthalten.  
   
- Die Wellenlinien in den Berichten suggerieren, dass der Bericht Fehler enthält, was aber meistens nicht der Fall ist. Sie können die Wellenlinien entfernen, indem Sie die Korrekturhilfensprache für den Bericht ändern. Um die Sprache für die Korrekturhilfen zu ändern, wählen Sie den Inhalt des Berichts aus, und geben Sie anschließend die gewünschte Sprache an. Sie können den gesamten Inhalt oder nur einen Teil des Inhalts auswählen. In Word befindet sich die Sprachoption **Sprache für die Korrekturhilfen festlegen**im Bereich **Sprache** auf der Registerkarte **Überprüfen**. Nachdem Sie den Inhalt aktualisiert haben, müssen Sie das Dokument neu speichern.  
+ Die Wellenlinien in den Berichten suggerieren, dass der Bericht Fehler enthält, was aber meistens nicht der Fall ist. Sie können die Wellenlinien entfernen, indem Sie die Korrekturhilfensprache für den Bericht ändern. Um die Sprache für die Korrekturhilfen zu ändern, wählen Sie den Inhalt des Berichts aus, und geben Sie anschließend die gewünschte Sprache an. Sie können den gesamten Inhalt oder nur einen Teil des Inhalts auswählen. In Word befindet sich die Sprachoption **Sprache für die Korrekturhilfen festlegen** im Bereich **Sprache** auf der Registerkarte **Überprüfen** . Nachdem Sie den Inhalt aktualisiert haben, müssen Sie das Dokument neu speichern.  
   
  Je nachdem welche Sprachversion von Office Sie verwenden, sind die Korrekturhilfen (z. B. Wörterbücher) der ausgewählten Sprache entweder bereits im Programm enthalten oder müssen separat als [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-Sprachpaket erworben werden.  
   
@@ -131,7 +138,7 @@ caps.handback.revision: 23
   
 -   Nachdem der Bericht exportiert wurde, paginiert Word den Bericht erneut. Dadurch werden dem gerenderten Bericht möglicherweise zusätzliche Seitenumbrüche hinzugefügt.  
   
--   Word wiederholt keine Kopfzeilen ab der zweiten Seite, auch nicht, wenn Sie die RepeatOnNewPage-Eigenschaft der statischen Kopfzeile in einem Tablix (Tabelle, Matrix oder Liste) auf **TRUE** festgelegt haben. Sie können explizite Seitenumbrüche im Bericht definieren, um die Anzeige von Kopfzeilen auf neuen Seiten zu erzwingen. Da Word jedoch eine eigene Paginierung auf den nach Word exportierten, gerenderten Bericht anwendet, können die Ergebnisse abweichen, und die Kopfzeile wird möglicherweise nicht erwartungsgemäß wiederholt. Die statische Kopfzeile ist die Zeile, die die Spaltenüberschriften enthält.  
+-   Word wiederholt keine Kopfzeilen ab der zweiten Seite, auch nicht, wenn Sie die RepeatOnNewPage-Eigenschaft der statischen Kopfzeile in einem Tablix (Tabelle, Matrix oder Liste) auf **TRUE**festgelegt haben. Sie können explizite Seitenumbrüche im Bericht definieren, um die Anzeige von Kopfzeilen auf neuen Seiten zu erzwingen. Da Word jedoch eine eigene Paginierung auf den nach Word exportierten, gerenderten Bericht anwendet, können die Ergebnisse abweichen, und die Kopfzeile wird möglicherweise nicht erwartungsgemäß wiederholt. Die statische Kopfzeile ist die Zeile, die die Spaltenüberschriften enthält.  
   
 -   Textfelder werden größer, wenn sie geschützte Leerzeichen enthalten.  
   
@@ -140,7 +147,7 @@ caps.handback.revision: 23
 ##  <a name="WordBenefits"></a> Vorteile der Verwendung des Word-Renderers  
  Der Word-Renderer ermöglicht nicht nur den Zugriff auf die neuen Funktionen, die in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx-Dateien für exportierte Berichte verfügbar sind, sondern stellt mit dem *.docx-Format meistens auch kleinere Dateien zur Verfügung. Die mit dem Word-Renderer exportierten Berichte sind normalerweise deutlich kleiner als die gleichen Berichte, die mit dem Word 2003-Renderer exportiert werden.  
   
-## Abwärtskompatibilität exportierter Berichte  
+## <a name="backward-compatibility-of-exported-reports"></a>Abwärtskompatibilität exportierter Berichte  
  Sie können einen Word-Kompatibilitätsmodus auswählen und die Kompatibilitätsoptionen festlegen. Der Word-Renderer erstellt Dokumente, für die der Kompatibilitätsmodus aktiviert ist. Wenn die Dokumente mit deaktiviertem Kompatibilitätsmodus erneut gespeichert werden, kann sich dies auf das Dokumentlayout auswirken.  
   
  Wenn Sie den Kompatibilitätsmodus deaktivieren und einen Bericht erneut speichern, kann sich das Berichtslayout auf unerwartete Weise ändern.  
@@ -148,19 +155,19 @@ caps.handback.revision: 23
 ##  <a name="AvailabilityWord"></a> Der Word 2003-Renderer  
   
 > [!IMPORTANT]  
->  Die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Renderingerweiterung (.doc) ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  Die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Renderingerweiterung (.doc) ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 sowie [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem installierten Office Compatibility Pack für Word, Excel und PowerPoint. Weitere Informationen finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
   
- Die frühere Version der Word-Renderingerweiterung, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist, wird in Word 2003 umbenannt. Nur die Word-Renderingerweiterung ist standardmäßig verfügbar. Sie müssen die Reporting Services-Konfigurationsdateien aktualisieren, um die Word 2003-Renderingerweiterung verfügbar zu machen. Der Inhaltstyp von Dateien, die vom Word 2003-Renderer generiert werden, ist **application/vnd.ms-word**, und die Dateinamenerweiterung der Dateien lautet „.doc“.  
+ Die frühere Version der Word-Renderingerweiterung, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist, wird in Word 2003 umbenannt. Nur die Word-Renderingerweiterung ist standardmäßig verfügbar. Sie müssen die Reporting Services-Konfigurationsdateien aktualisieren, um die Word 2003-Renderingerweiterung verfügbar zu machen. Der Inhaltstyp von Dateien, die vom Word 2003-Renderer generiert werden, ist **application/vnd.ms-word** , und die Dateinamenerweiterung der Dateien lautet „.doc“.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entspricht der standardmäßige Word-Renderer der Version, die auf das Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx) rendert. Dies ist die **Word**-Option, die in den Menüs **Exportieren** in eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal- und SharePoint-Liste aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
+ In SQL Server Reporting Services ist der standardmäßige Word-Renderer der Version, die für rendert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Format (.docx). Dies ist die **Word** -Option, die in den Menüs **Exportieren** in eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal- und SharePoint-Liste aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
   
  Die Menüoption **Word 2003** ist in den folgenden Szenarien nie sichtbar:  
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an.  
   
--   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [ Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md).  
+-   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [ Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  Wenn der **Word 2003** -Renderer für Sichtbarkeit konfiguriert ist, ist in den folgenden Szenarien sowohl die **Word** - als auch die **Word 2003** -Menüoption verfügbar:  
   
@@ -180,19 +187,20 @@ caps.handback.revision: 23
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- Die WORDOPENXML-Erweiterung definiert den Word-Renderer für [!INCLUDE[ofprword](../../includes/ofprword-md.md)]-.docx-Dateien. Die WORD-Erweiterung definiert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Version. `Visible = “false”` gibt an, dass der Word 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ Die WORDOPENXML-Erweiterung definiert den Word-Renderer für [!INCLUDE[ofprword](../../includes/ofprword-md.md)] -.docx-Dateien. Die WORD-Erweiterung definiert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Version. `Visible = “false”` gibt an, dass der Word 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
-### Unterschiede zwischen dem Word-Renderer und dem Word 2003-Renderer  
+### <a name="differences-between-the-word-and-word-2003-renderers"></a>Unterschiede zwischen dem Word-Renderer und dem Word 2003-Renderer  
  Es gibt keinen visuellen Unterschied zwischen Berichten, die mit dem Word- bzw. Word 2003-Renderer gerendert werden. Möglicherweise fallen Ihnen jedoch kleinere Unterschiede zwischen dem Word- und dem Word 2003-Format auf.  
   
 ##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, beispielsweise Hyperlinks und Drillthroughlinks auslassen oder alle Elemente erweitern, die unabhängig vom ursprünglichen Status des Elements beim Rendern aktiviert bzw. deaktiviert werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
-  
-## Siehe auch  
- [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [Rendern von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Paginierung in Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+[Renderingverhalten](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+[Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+[Rendern von Berichtselementen](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+[Tabellen, Matrizen und Listen](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,7 +3,7 @@ title: "Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
@@ -225,34 +225,10 @@ Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextyp
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Indexscan, alle Tabellenzeilen abrufen. | ja | ja | ja |  
 | Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | ja  | ja |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, \<=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | ja | ja |  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | ja | ja |  
 | Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | ja | ja |  
 | Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | ja |  
   
   
 In dieser Tabelle bedeutet „Ja“, dass der Index die Anforderung effizient bedienen kann, und „Nein“ bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , also....  
-CAPS-guid:{eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Ersetzt dn511012.aspx, also....  
-CAPS-Guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi, 5.5.2016 Donnerstag 17:25 Uhr (Hashinhalt in neuem untergeordneten Artikel, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-
 

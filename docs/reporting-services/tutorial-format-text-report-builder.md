@@ -1,62 +1,49 @@
 ---
-title: "Lernprogramm: Formatieren von Text (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lernprogramm: Formatieren von Text (Berichts-Generator) | Microsoft Docs'
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lernprogramm: Formatieren von Text (Berichts-Generator)
-In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht Text auf verschiedene Weise. Sie können mit unterschiedlichen Formaten experimentieren. 
+
+# <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
+
+In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht Text auf verschiedene Weise. Sie können mit unterschiedlichen Formaten experimentieren. 
 
 Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset können Sie die Formate auswählen, mit denen Sie sich vertraut machen möchten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
 ![Bericht-Erstellen-Format-Bericht](../reporting-services/media/report-build-format-report.png) 
   
 In einem Schritt machen Sie absichtlich einen Fehler, um dadurch erkennen zu können, warum es sich um einen Fehler handelt. Anschließend beheben Sie den Fehler, um den gewünschten Effekt zu erreichen.  
-   
-## <a name="BackToTop"></a>Lernziele  
-  
-### Einrichten des Berichts  
-1. [Erstellen eines leeren Berichts mit einer Datenquelle und einem Dataset](#CreateReport)  
-  
-2. [Hinzufügen eines Felds zur Berichtsentwurfsoberfläche (falsch, dann ordnungsgemäß)](#AddField)  
-  
-3. [Hinzufügen einer Tabelle zur Berichtsentwurfsoberfläche](#AddTable)  
-  
-### Auswählen  
-* [Hinzufügen eines Links zum Bericht](#AddHyperlink)  
-  
-* [Drehen von Text im Bericht](#RotateText)  
-  
-* [Formatieren von Währung](#FormatCurrency)  
-  
-* [Anzeigen von Text mit HTML-Formatierung](#FormatHTML)  
-  
-* [Speichern des Berichts](#Save)  
-  
+    
 Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem Dataset  
   
-### So erstellen Sie einen leeren Bericht  
+### <a name="to-create-a-blank-report"></a>So erstellen Sie einen leeren Bericht  
   
-1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal oder über den integrierten SharePoint-Modus.  
+1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
     Das Dialogfeld **Neuer Bericht oder neues Dataset** wird geöffnet.  
   
@@ -66,7 +53,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 3.  Klicken Sie im rechten Bereich auf **Leerer Bericht**.  
   
-### So erstellen Sie eine Datenquelle  
+### <a name="to-create-a-data-source"></a>So erstellen Sie eine Datenquelle  
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Datenquelle**.  
 
@@ -79,11 +66,11 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Für dieses Lernprogramm sind keine bestimmten Daten erforderlich; es wird lediglich eine Verbindung mit einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Datenbank benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Dieses Lernprogramm ist es bestimmte Daten nicht erforderlich; Es benötigt lediglich eine Verbindung mit einer SQL Server-Datenbank. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### So erstellen Sie ein Dataset  
+### <a name="to-create-a-dataset"></a>So erstellen Sie ein Dataset  
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Dataset**.  
   
@@ -144,33 +131,33 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 ## <a name="AddField"></a>Hinzufügen eines Felds zur Berichtsentwurfsoberfläche  
 Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, werden Sie möglicherweise zunächst versuchen, das Feld direkt auf die Entwurfsoberfläche zu ziehen. Diese Übung zeigt auf, warum dies nicht funktioniert und wie stattdessen vorzugehen ist.  
   
-### So fügen Sie dem Bericht ein Feld hinzu (und erhalten das falsche Ergebnis)  
+### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>So fügen Sie dem Bericht ein Feld hinzu (und erhalten das falsche Ergebnis)  
   
 1.  Ziehen Sie das Feld **FullName** aus dem Berichtsdatenbereich auf die Entwurfsoberfläche.  
   
-    Der Berichts-Generator erstellt ein Textfeld mit einem darin enthaltenen Ausdruck, der als `<Expr>` dargestellt wird.  
+    Der Berichts-Generator erstellt ein Textfeld mit einem darin enthaltenen Ausdruck, der als `<Expr>`dargestellt wird.  
   
 2.  Klicken Sie auf **Ausführen**.  
   
-    Es wird nur ein Datensatz angezeigt (**Fernando Ross**), der nach alphabetischer Sortierung der erste Datensatz in der Abfrage ist. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
+    Es wird nur ein Datensatz angezeigt ( **Fernando Ross**), der nach alphabetischer Sortierung der erste Datensatz in der Abfrage ist. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
   
 3.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
 4.  Wählen Sie den Ausdruck `<Expr>` im Textfeld aus.  
   
-5.  Im Eigenschaftenbereich für die **Value**-Eigenschaft wird Folgendes angezeigt (wenn der Bereich nicht angezeigt wird, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften** aus):  
+5.  Im Eigenschaftenbereich für die **Value** -Eigenschaft wird Folgendes angezeigt (wenn der Bereich nicht angezeigt wird, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften**aus):  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
     ```  
   
-    Die `First`-Funktion dient dazu, dass nur der erste Wert in einem Feld abgerufen wird, und genau dies war auch der Fall.  
+    Die `First` -Funktion dient dazu, dass nur der erste Wert in einem Feld abgerufen wird, und genau dies war auch der Fall.  
   
-    Durch das direkte Ziehen des Felds auf die Entwurfsoberfläche wurde ein Textfeld erstellt. Textfelder an sich sind keine Datenbereiche, weshalb darin keine Daten aus einem Berichtsdataset angezeigt werden. In Textfeldern in Datenbereichen, z. B. Tabellen, Matrizen und Listen werden hingegen Daten angezeigt.  
+    Durch das direkte Ziehen des Felds auf die Entwurfsoberfläche wurde ein Textfeld erstellt. Textfelder an sich sind keine Datenbereiche, weshalb darin keine Daten aus einem Berichtsdataset angezeigt werden. In Textfeldern in Datenbereichen, z. B. Tabellen, Matrizen und Listen werden hingegen Daten angezeigt.  
   
 6.  Wählen Sie das Textfeld aus (wenn der Ausdruck ausgewählt wurde, drücken Sie ESC, um das Textfeld auszuwählen), und drücken Sie die ENTF-TASTE.  
   
-### So fügen Sie dem Bericht ein Feld hinzu (und erhalten das richtige Ergebnis)  
+### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>So fügen Sie dem Bericht ein Feld hinzu (und erhalten das richtige Ergebnis)  
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands im Bereich **Datenbereiche** auf **Liste**. Klicken Sie auf die Entwurfsoberfläche, und ziehen Sie anschließend den Mauszeiger, um ein Feld mit einer Breite von ungefähr fünf Zentimetern und einer Höhe von ca. 2,5 Zentimetern zu erstellen.  
   
@@ -186,7 +173,7 @@ Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, wer
   
 5.  Wählen Sie den Ausdruck im Textfeld aus.  
   
-6.  Im Eigenschaftenbereich für die **Value**-Eigenschaft wird Folgendes angezeigt:  
+6.  Im Eigenschaftenbereich für die **Value** -Eigenschaft wird Folgendes angezeigt:  
   
     ```  
     =Fields!FullName.Value  
@@ -203,23 +190,23 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)** > **Weiter**.  
   
-3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory**, **LinkText** und **Product** nach **Zeilengruppen**, ziehen Sie das Feld **Sales** nach **Werte**, und klicken Sie anschließend auf **Weiter**.  
+3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory**, **LinkText**und **Product** nach **Zeilengruppen**, ziehen Sie das Feld **Sales** nach **Werte**, und klicken Sie anschließend auf **Weiter**.  
 
     ![Berichts-Generator-Text-Felder-anordnen](../reporting-services/media/report-builder-text-arrange-fields.png)
   
-4.  Deaktivieren Sie auf der Seite **Layout auswählen** das Kontrollkästchen **Gruppen erweitern/reduzieren**, damit die vollständige Tabelle angezeigt wird, und klicken Sie anschließend auf **Weiter**. 
+4.  Deaktivieren Sie auf der Seite **Layout auswählen** das Kontrollkästchen **Gruppen erweitern/reduzieren** , damit die vollständige Tabelle angezeigt wird, und klicken Sie anschließend auf **Weiter**. 
   
 5.  Klicken Sie auf **Fertig stellen**.  
   
 6.  Klicken Sie auf **Ausführen**.  
   
-    Die Tabelle sieht einwandfrei aus, enthält jedoch zwei Ergebniszeilen. Die **LinkText**-Spalte benötigt keine Ergebniszeilen.  
+    Die Tabelle sieht einwandfrei aus, enthält jedoch zwei Ergebniszeilen. Die **LinkText** -Spalte benötigt keine Ergebniszeilen.  
     
     ![Berichts-Generator-Format-2-Gesamtwerte](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-9. Wählen Sie Zelle **Gesamt** in der Spalte **LinkText** aus, halten Sie die UMSCHALTTASTE gedrückt, und wählen Sie die zwei Zellen rechts daneben aus: die leere Zelle in der Spalte **Product** und die `[Sum(Sales)]`-Zelle in der Spalte **Sales**.  
+9. Wählen Sie Zelle **Gesamt** in der Spalte **LinkText** aus, halten Sie die UMSCHALTTASTE gedrückt, und wählen Sie die zwei Zellen rechts daneben aus: die leere Zelle in der Spalte **Product** und die `[Sum(Sales)]` -Zelle in der Spalte **Sales** .  
   
 11. Wenn diese drei Zellen ausgewählt sind, klicken Sie mit der rechten Maustaste auf eine der Zellen, und klicken Sie anschließend auf **Zeile löschen**.  
 
@@ -236,11 +223,11 @@ In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschn
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Zelle, die `[LinkText]` enthält, und klicken Sie auf **Textfeldeigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Zelle, die `[LinkText]`enthält, und klicken Sie auf **Textfeldeigenschaften**.  
   
 3.  Auf der **Aktion** auf **Gehe zu URL**.  
   
-5.  Klicken Sie im Feld **URL auswählen** auf **[URL]** und anschließend auf **OK**.  
+5.  Klicken Sie im Feld **URL auswählen** auf **[URL]**und anschließend auf **OK**.  
   
 6.  Das Aussehen des Texts unterscheidet sich nicht. Es muss jedoch dem des Linktexts entsprechen.  
   
@@ -263,14 +250,14 @@ In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitte
   
 2.  Klicken Sie in die Zelle, die enthält. `[Territory].`  
   
-3.  Klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf die Schaltfläche **Fett**.  
+3.  Klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf die Schaltfläche **Fett** .  
   
-4.  Wenn der Eigenschaftenbereich nicht geöffnet ist, aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Eigenschaften**.  
+4.  Wenn der Eigenschaftenbereich nicht geöffnet ist, aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Eigenschaften** .  
   
 5.  Im Bereich Eigenschaften suchen Sie die WritingMode-Eigenschaft und ändern Sie den Schreibmodus von **Standard** auf **Rotate270**.  
  
     > [!NOTE]  
-    > Wenn die Eigenschaften im Eigenschaftenbereich in Kategorien angeordnet sind, befindet sich WritingMode in der Kategorie **Lokalisierung**. Stellen Sie sicher, dass Sie die Zelle und nicht den Text ausgewählt haben. WritingMode ist eine Eigenschaft des Textfeldes, nicht des Texts.  
+    > Wenn die Eigenschaften im Eigenschaftenbereich in Kategorien angeordnet sind, befindet sich WritingMode in der Kategorie **Lokalisierung** . Stellen Sie sicher, dass Sie die Zelle und nicht den Text ausgewählt haben. WritingMode ist eine Eigenschaft des Textfeldes, nicht des Texts.  
 
     ![Berichts-Generator-Auswählen-der-Zelle-Territory](../reporting-services/media/report-builder-select-territory-cell.png)
    
@@ -278,7 +265,7 @@ In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitte
   
 8.  Klicken Sie auf (**!**).  
   
-Nun verläuft der Text in der `[Territory]`-Zelle in den Zellen vertikal von unten nach oben.  
+Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von unten nach oben.  
 
 ![Berichts-Generator-Format-270 Grad-drehen](../reporting-services/media/report-builder-format-rotate-270.png)
 
@@ -294,7 +281,7 @@ Nun verläuft der Text in der `[Territory]`-Zelle in den Zellen vertikal von unt
 
     ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
   
-5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern**, um volle Dollarbeträge ohne Centangaben anzuzeigen.  
+5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.  
   
 6.  Klicken Sie auf „Ausführen“ (**!**), um eine Vorschau des Berichts anzuzeigen.  
   
@@ -334,7 +321,7 @@ Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verb
   
     Dies ist eine Eigenschaft des Texts (nicht des Textfelds). Daher kann in einem Textfeld eine Mischung aus Nur-Text und Text, die HTML-Tags als Formatvorlagen verwenden.  
   
-6.  Klicken Sie auf der Seite **Allgemein** unter **Markuptyp** auf **HTML - HTML-Tags als Formate interpretieren**.  
+6.  Klicken Sie auf der Seite **Allgemein** unter **Markuptyp**auf **HTML - HTML-Tags als Formate interpretieren**.  
   
 7.  Klicken Sie auf **OK**.  
   
@@ -349,7 +336,7 @@ Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek od
   
 Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
   
-### So speichern Sie den Bericht auf einem Berichtsserver  
+### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
@@ -359,27 +346,28 @@ Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn 
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie in **Name** den Standardnamen durch einen Namen Ihrer Wahl.
+4.  Ersetzen Sie in **Name**den Standardnamen durch einen Namen Ihrer Wahl.
 
 5.  Klicken Sie auf **Speichern**.  
   
 Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsservers, mit dem Sie verbunden sind, wird in der Statusleiste unten im Fenster angezeigt.  
   
-### So speichern Sie den Bericht auf dem Computer  
+### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie in **Name** den Standardnamen durch einen Namen Ihrer Wahl. 
+3.  Ersetzen Sie in **Name**den Standardnamen durch einen Namen Ihrer Wahl. 
   
 4.  Klicken Sie auf **Speichern**.  
-  
-## Nächste Schritte  
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Im [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) sind weitere Beispiele enthalten.  
-  
-## Siehe auch  
--   [Lernprogramme für den Berichts-Generator ](../reporting-services/report-builder-tutorials.md) 
--   [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Lernprogramm: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+
+[Berichts-Generator-Lernprogramme ](../reporting-services/report-builder-tutorials.md)  
+ [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

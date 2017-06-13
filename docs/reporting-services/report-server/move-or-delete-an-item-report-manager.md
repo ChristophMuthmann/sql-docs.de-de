@@ -1,47 +1,52 @@
 ---
-title: "Verschieben oder L&#246;schen eines Elements (Berichts-Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verschieben von Elementen"
-  - "Elemente [Reporting Services], verschieben"
+title: "Verschieben oder Löschen eines Elements (Berichts-Manager) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving items
+- items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verschieben oder L&#246;schen eines Elements (Berichts-Manager)
+# <a name="move-or-delete-an-item-report-manager"></a>Verschieben oder Löschen eines Elements (Berichts-Manager)
   Berichte und berichtsbezogene Elemente, die Sie auf einem Berichtsserver veröffentlichen, werden in Ordnern gespeichert. Sie können Elemente in einen anderen Ordner verschieben. Verweise auf diese Elemente werden automatisch vom Berichtsserver verwaltet. Bevor Sie ein Element löschen, ist zu überprüfen, ob Elemente davon abhängen.  
   
-## Verschieben eines Elements  
+## <a name="move-an-item"></a>Verschieben eines Elements  
  Sie können Berichtsserverelemente an andere Speicherorte in der Ordnerhierarchie des Berichtsservers verschieben. Beim Verschieben eines Elements werden auch alle zugehörigen Eigenschaften (einschließlich Sicherheitseinstellungen) an den neuen Speicherort verschoben. Wenn Sie einen Ordner verschieben, werden gleichzeitig alle in diesem Ordner enthaltenen Elemente verschoben.  
   
  Im Berichts-Manager werden die verschiebbaren Elemente in der Ordnerhierarchie angezeigt. In der folgenden Tabelle sind die Symbole für die verschiedenen verschiebbaren Elemente dargestellt.  
   
 |Symbol|Verschiebbares Element|  
 |----------|-------------------|  
-|![Bericht (Symbol)](../../reporting-services/report-server/media/hlp-16doc.png "Bericht (Symbol)")|Bericht|  
-|![Verknüpfter Bericht (Symbol)](../../reporting-services/report-server/media/hlp-16linked.png "Verknüpfter Bericht (Symbol)")|Verknüpfter Bericht|  
-|![Ordner (Symbol)](../../reporting-services/report-server/media/hlp-16folder.png "Ordner (Symbol)")|Ordner|  
-|![allgemeines Ressourcensymbol](../../reporting-services/report-server/media/hlp-16file.png "allgemeines Ressourcensymbol")|Allgemeine Ressource|  
-|![Freigegebene Datenquelle (Symbol)](../../reporting-services/report-data/media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")|Freigegebene Datenquelle|  
+|![Symbol "Bericht"](../../reporting-services/report-server/media/hlp-16doc.gif "Symbol "Bericht"")|Bericht|  
+|![Symbol "Bericht" verknüpfte](../../reporting-services/report-server/media/hlp-16linked.gif "verknüpften Bericht (Symbol)")|Verknüpfter Bericht|  
+|![Symbol "Ordner"](../../reporting-services/report-server/media/hlp-16folder.gif "Symbol "Ordner"")|Ordner|  
+|![Allgemeines Ressourcensymbol](../../reporting-services/report-server/media/hlp-16file.gif "Allgemeines Ressourcensymbol")|Allgemeine Ressource|  
+|![Symbol für freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")|Freigegebene Datenquelle|  
 ||Freigegebenes Dataset|  
   
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  
   
-#### So verschieben Sie ein Element auf der Inhaltsseite  
+#### <a name="to-move-an-item-from-within-the-contents-page"></a>So verschieben Sie ein Element auf der Inhaltsseite  
   
-1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und suchen Sie das zu verschiebende Element.  
   
@@ -57,12 +62,12 @@ caps.handback.revision: 45
   
  Alternativ können Sie zum zu verschiebenden Objekt navigieren, auf **Eigenschaften**klicken, und anschließend oben auf der Seite auf **Verschieben** klicken.  
   
-## Löschen eines Elements  
- Bevor Sie ein Element löschen, ist zu prüfen, ob es von anderen Elementen verwendet wird. Wenn Sie beispielsweise eine freigegebene Datenquelle löschen, werden Berichte und Modelle, die diese Datenquelle verwenden, nicht mehr ausgeführt. Beim Löschen eines Berichts werden auch Abonnements und der Berichtsverlauf, die mit diesem Bericht verknüpft sind, gelöscht. Abhängige Elemente für ein Element finden Sie unter [Abhängige Elemente &#40;Seite&#41; &#40;Berichts-Manager&#41;](../Topic/Dependent%20Items%20Page%20\(Report%20Manager\).md).  
+## <a name="delete-an-item"></a>Löschen eines Elements  
+ Bevor Sie ein Element löschen, ist zu prüfen, ob es von anderen Elementen verwendet wird. Wenn Sie beispielsweise eine freigegebene Datenquelle löschen, werden Berichte und Modelle, die diese Datenquelle verwenden, nicht mehr ausgeführt. Beim Löschen eines Berichts werden auch Abonnements und der Berichtsverlauf, die mit diesem Bericht verknüpft sind, gelöscht. Abhängige Elemente für ein Element finden Sie unter [Abhängige Elemente &#40;Seite&#41; &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e).  
   
-#### So löschen Sie einen Bericht oder ein Element  
+#### <a name="to-delete-a-report-or-item"></a>So löschen Sie einen Bericht oder ein Element  
   
-1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und suchen Sie das zu löschende Element.  
   
@@ -72,8 +77,8 @@ caps.handback.revision: 45
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

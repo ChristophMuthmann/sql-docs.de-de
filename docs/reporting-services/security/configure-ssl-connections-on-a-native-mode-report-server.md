@@ -1,40 +1,45 @@
 ---
-title: "Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Secure Sockets Layer (SSL)"
+title: Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 34
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
+# <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
   
 > [!TIP]  
 >  Bei Verwendung des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie weitere Informationen in der SharePoint-Dokumentation. Beispielsweise unter [Vorgehensweise: Aktivieren von SSL für eine SharePoint 2010-Webanwendung (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
   
  Da Internetinformationsdienste (IIS) auch HTTP-SSL verwenden, bestehen signifikante Probleme mit der Interoperabilität, die berücksichtigt werden müssen, wenn IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer ausgeführt werden. Überprüfen Sie im Abschnitt "Interoperabilitätsprobleme mit IIS", wie Sie diese Probleme beheben können.  
   
-## Anforderungen für Serverzertifikate  
+## <a name="server-certificate-requirements"></a>Anforderungen für Serverzertifikate  
  Auf Ihrem Computer muss ein Serverzertifikat installiert sein (Clientzertifikate werden nicht unterstützt). Reporting Services bietet keine Funktionalität für das Anfordern, Generieren, Herunterladen oder Installieren von Zertifikaten. [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] bietet ein Zertifikate-Snap-in, mit dem Sie ein Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle anfordern können.  
   
  Für Testzwecke können Sie ein Zertifikat lokal generieren. Wenn Sie das Hilfsprogramm **MakeCert** und den Beispielbefehl als Vorlage verwenden, geben Sie Ihren Servernamen als Host an, und entfernen Sie alle Zeilenumbrüche, bevor Sie den Befehl ausführen. Wenn Sie den Befehl in einem DOS-Fenster ausführen, müssen Sie die Puffergröße des Fensters erhöhen, damit der gesamte Befehl aufgenommen werden kann.  
   
  Wenn Sie IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zusammen auf demselben Computer verwenden, können Sie mit der [!INCLUDE[iismgr](../../includes/iismgr-md.md)] -Konsolenanwendung das auf Ihrem Computer installierte Zertifikat abrufen. [!INCLUDE[iismgr](../../includes/iismgr-md.md)] enthält Optionen, mit denen Sie eine Zertifikatanforderungsdatei (CRT-Datei) erstellen und in ein Paket integrieren können, sodass sie nachfolgend von einer vertrauenswürdigen Zertifizierungsstelle verarbeitet werden kann. Die von Ihnen verwendete Zertifizierungsstelle generiert eine Zertifikatsdatei (CER-Datei), die sie an Sie zurücksendet. Über die IIS-Verwaltungskonsole können Sie die Zertifikatsdatei im lokalen Speicher installieren. Weitere Informationen finden Sie unter [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) auf der TechNet-Website.  
   
-## Interoperabilitätsprobleme mit IIS  
+## <a name="interoperability-issues-with-iis"></a>Interoperabilitätsprobleme mit IIS  
  Wenn IIS auf demselben Computer vorhanden ist wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , wirkt sich dies entscheidend auf die SSL-Verbindungen zu einem Berichtsserver aus:  
   
 -   Wenn IIS installiert ist, muss der World Wide Web-(W3SVC)-Dienst immer ausgeführt werden. Der HTTP-SSL-Dienst stellt eine Abhängigkeit zu IIS her, wenn er erkennt, dass IIS ausgeführt wird. Dies bedeutet, dass der World Wide Web-(W3SVC)-Dienst ausgeführt werden muss, wenn IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer installiert werden und Sie Berichtsserver-URLs für SSL-Verbindungen konfigurieren.  
@@ -43,12 +48,12 @@ caps.handback.revision: 34
   
      Sie müssen den Computer neu starten, um alle SSL-Sitzungen aus dem Cache zu löschen. Einige Betriebssysteme speichern SSL-Sitzungen bis zu 10 Stunden im Cache. Aus diesem Grund funktioniert eine https://-URL auch, nachdem die SSL-Bindung von der URL-Reservierung in HTTP.SYS entfernt wurde. Durch den Neustart des Computers werden alle geöffneten Verbindungen geschlossen, die den Kanal verwenden.  
   
-## Binden von SSL an eine URL-Reservierung für Reporting Services  
+## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>Binden von SSL an eine URL-Reservierung für Reporting Services  
  In den folgenden Schritten wird nicht erläutert, wie Sie Zertifikate anfordern, generieren, herunterladen oder installieren. Sie müssen bereits ein Zertifakt installiert haben, das verwendet werden kann. Es bleibt Ihnen überlassen, welche Zertifikatseigenschaften Sie angeben, welche Zertifizierungsstelle Sie verwenden und mit welchen Tools und Hilfsprogrammen Sie das Zertifikat anfordern und installieren.  
   
  Sie können das Zertifikat mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool binden. Wenn das Zertifikat im lokalen Computerspeicher korrekt installiert ist, wird es vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool erkannt und in der Liste **SSL-Zertifikate** auf den Seiten **Webdienst-URL** und **Report-Manager-URL** angezeigt.  
   
-### So konfigurieren Sie eine Berichtsserver-URL für SSL  
+### <a name="to-configure-a-report-server-url-for-ssl"></a>So konfigurieren Sie eine Berichtsserver-URL für SSL  
   
 1.  Starten Sie das Reporting Services-Konfigurationstool, und stellen Sie eine Verbindung mit dem Berichtsserver her.  
   
@@ -76,8 +81,8 @@ caps.handback.revision: 34
   
 5.  Klicken Sie auf die URL, um zu überprüfen, ob sie funktioniert.  
   
-## Speichern von Zertifikatsbindungen  
- Zertifikatsbindungen werden in HTTP.SYS gespeichert. Eine Darstellung der definierten Bindungen wird auch im Abschnitt **URLReservations** der Datei RSReportServer.config gespeichert. Die Einstellungen in der Konfigurationsdatei sind nur eine Darstellung der tatsächlichen, an anderer Stelle gespeicherten Werte. Ändern Sie die Werte in der Konfigurationsdatei nicht direkt. Die Konfigurationseinstellungen werden in der Datei erst angezeigt, wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool oder den Berichtsserver-WMI-Anbieter (Windows Management Instrumentation) verwenden, um ein Zertifikat zu binden.  
+## <a name="how-certificate-bindings-are-stored"></a>Speichern von Zertifikatsbindungen  
+ Zertifikatsbindungen werden in HTTP.SYS gespeichert. Eine Darstellung der definierten Bindungen wird auch im Abschnitt **URLReservations** der Datei RSReportServer.config gespeichert. Die Einstellungen in der Konfigurationsdatei sind nur eine Darstellung der tatsächlichen, an anderer Stelle gespeicherten Werte. Ändern Sie die Werte in der Konfigurationsdatei nicht direkt. Die Konfigurationseinstellungen werden in der Datei erst angezeigt, wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder den Berichtsserver-WMI-Anbieter (Windows Management Instrumentation) verwenden, um ein Zertifikat zu binden.  
   
 > [!NOTE]  
 >  Wenn Sie eine Bindung mit einem SSL-Zertifikat in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] konfigurieren und das Zertifikat später von dem Computer entfernen möchten, müssen Sie sicherstellen, dass Sie die Bindung aus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entfernen, bevor Sie das Zertifikat vom Computer entfernen. Anderenfalls können Sie die Bindung mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder WMI nicht mehr entfernen, und die Fehlermeldung "Ungültiger Parameter" wird angezeigt. Wenn Sie das Zertifikat bereits vom Computer entfernt haben, können Sie das Tool Httpcfg.exe verwenden, um die Bindung aus HTTP.SYS zu entfernen. Weitere Informationen zu Httpcfg.exe finden Sie in der Windows-Produktdokumentation.  
@@ -86,7 +91,7 @@ caps.handback.revision: 34
   
  Wenn Sie SSL-Bindungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mithilfe des Konfigurations-Managers für Reporting Services entfernen, funktioniert SSL möglicherweise nicht mehr für Websites auf einem Server, auf dem Internetinformationsdienste (IIS) ausgeführt werden, bzw. auf einem anderen HTTP.SYS-Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird der folgende Registrierungsschlüssel entfernt. Zusammen mit diesem Registrierungsschlüssel wird auch die SSL-Bindung für IIS entfernt. Ohne diese Bindung wird SSL nicht für das HTTPS-Protokoll bereitgestellt. Um dieses Problem zu diagnostizieren, verwenden Sie den IIS-Manager oder das Befehlszeilen-Hilfsprogramm HTTPCFG.exe. Zur Lösung des Problems stellen Sie die SSL-Bindung für die Websites mithilfe des IIS-Managers wieder her. Um das Problem in Zukunft zu vermeiden, entfernen Sie die SSL-Bindungen mit dem IIS-Manager und stellen die Bindung dann mithilfe des IIS-Managers für die gewünschten Websites wieder her. Weitere Informationen finden Sie im Knowledge Base-Artikel [SSL funktioniert nach dem Entfernen einer SSL-Bindung nicht mehr (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

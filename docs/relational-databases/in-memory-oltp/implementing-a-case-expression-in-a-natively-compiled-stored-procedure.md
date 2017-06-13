@@ -2,7 +2,7 @@
 title: Implementieren eines CASE-Ausdrucks in einer nativ kompilierten gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,13 +16,37 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89227fade8bab98e8c7de4f1119acf16bd28df76
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+
+  CASE-Ausdrücke werden in systemintern kompilierten gespeicherten Prozeduren unterstützt. Das folgende Beispiel zeigt, wie den CASE-Ausdruck in einer Abfrage verwendet wird. Die problemumgehung für CASE-Ausdrücke in nativ kompilierten Modulen beschrieben würde nicht mehr benötigt werden.
+
+``` 
+-- Query using a CASE expression in a natively compiled stored procedure.
+CREATE PROCEDURE dbo.usp_SOHOnlineOrderResult  
+   WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
+   AS BEGIN ATOMIC WITH  (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE=N'us_english')  
+   SELECT   
+      SalesOrderID,   
+      CASE (OnlineOrderFlag)   
+      WHEN 1 THEN N'Order placed online by customer'  
+      ELSE N'Order placed by sales person'  
+      END  
+   FROM Sales.SalesOrderHeader_inmem
+END  
+GO  
+  
+EXEC dbo.usp_SOHOnlineOrderResult  
+GO  
+```  
+
+
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   In systemintern kompilierten gespeicherten Prozeduren werden *keine* CASE-Ausdrücke unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
@@ -85,3 +109,4 @@ GO
  [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
+

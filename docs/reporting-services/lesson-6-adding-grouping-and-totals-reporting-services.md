@@ -1,25 +1,30 @@
 ---
-title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 56
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 6: Adding Grouping and Totals (Reporting Services)
-In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
   
   
 ## <a name="bkmk_groupdata"></a>So gruppieren Sie Daten in einem Bericht  
@@ -32,7 +37,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     Beachten Sie, dass das Zeilenhandle nun Klammern zum Anzeigen einer Gruppe aufweist. Außerdem verfügt die Tabelle nun auf jeder Seite der vertikalen gepunkteten Linie einmal über die Spalte Date.  
   
-    ![](../reporting-services/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
+    ![Datum-Gruppe hinzugefügt](../reporting-services/media/rs-basictablegroups1design.png "Datum Gruppe hinzugefügt")  
   
 4.  Ziehen Sie im **Berichtsdatenbereich** das Feld **Order** in den Bereich **Zeilengruppen** . Platzieren das Feld unter Date und über **Details**.
 
@@ -40,30 +45,30 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
   
-5.  Löschen Sie die ursprünglichen Spalten **Date** und **Order** **rechts** der doppelten Linie. Dadurch werden die einzelnen Datensatzwerte entfernt, und nur der Gruppenwert wird angezeigt. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste und wählen Sie **Spalten löschen** aus.  
+5.  Löschen Sie die ursprünglichen Spalten **Date** und **Order** **rechts** der doppelten Linie. Dadurch werden die einzelnen Datensatzwerte entfernt, und nur der Gruppenwert wird angezeigt. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste und wählen Sie **Spalten löschen**aus.  
   
-    ![Auswählen der zu löschenden Spalten](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Auswählen der zu löschenden Spalten")  
+    ![Wählen Sie die zu löschenden Spalten](../reporting-services/media/rs-basictablegroupsdeletecols.gif "zu löschenden Spalten auswählen")  
   
 6.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[Date]` und anschließend auf das Dialogfeld **Textfeldeigenschaften**.  
   
-7.  Klicken Sie auf **Zahl** und anschließend im Feld **Kategorie** auf **Datum**.  
+7.  Klicken Sie auf **Zahl**und anschließend im Feld **Kategorie** auf **Datum**.  
   
 8.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
   
 10.  Wechseln Sie zur Registerkarte **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Die Vorschau sollte ähnlich der folgenden Abbildung aussehen:  
-    ![rs_Basistabelle_Gruppen_Vorschau](../reporting-services/media/rs-basictablegroupspreview.gif) 
+    ![rs_Basistabelle_Gruppen_Vorschau](../reporting-services/media/rs-basictablegroupspreview.png) 
   
 ## <a name="bkmk_addtotals"></a>So fügen Sie einem Bericht Gesamtwerte hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbereichszelle mit dem Feld `[LineTotal]` und anschließend auf **Gesamtergebnis hinzufügen**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenbereichszelle mit dem Feld `[LineTotal]`und anschließend auf **Gesamtergebnis hinzufügen**.  
   
     Dadurch wird eine Zeile mit dem Gesamtwert für die einzelnen Bestellungen in Dollar hinzugefügt.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feld `[Qty]` und anschließend auf **Gesamtergebnis hinzufügen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feld `[Qty]`und anschließend auf **Gesamtergebnis hinzufügen**.  
   
     Dadurch wird der Ergebniszeile eine Gesamtmenge für die einzelnen Bestellungen hinzugefügt.  
   
@@ -73,13 +78,13 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
 6.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellgrau**und dann auf **OK**.  
   
-    ![Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
+    ![Entwurfsansicht: einfache Tabelle mit Gesamtergebnis der Bestellungen](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: einfache Tabelle mit Gesamtergebnis der Bestellungen")  
   
 ## <a name="bkmk_adddailytotal"></a>So fügen Sie einem Bericht einen Tagesgesamtwert hinzu  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Zelle **Order**, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Zelle **Order** , zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
-    Dadurch wird eine neue Zeile mit der Gesamtmenge und dem Gesamtbetrag in Dollar für die einzelnen Tage hinzugefügt; außerdem wird die Bezeichnung **Total**in der Spalte Order hinzugefügt.  
+    Dadurch wird eine neue Zeile mit der Gesamtmenge und dem Gesamtbetrag in Dollar für die einzelnen Tage hinzugefügt; außerdem wird die Bezeichnung**Total**in der Spalte Order hinzugefügt.  
   
 2.  Geben Sie in der gleichen Zelle zuerst das Wort **Daily** und anschließend das Wort **Total** ein, um **Daily Total**zu erhalten.  
   
@@ -107,7 +112,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     Die letzte Seite sollte ähnlich dem folgenden Bild aussehen. Klicken Sie auf der Symbolleiste auf „Letzte Seite“. ![ssrs_ssdt_Viewer_Symbolleiste_letzte_Seite](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)aus.   
   
-    ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Vorschau: Einfache Tabelle mit Gesamtergebnis")  
+    ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Vorschau: einfache Tabelle mit Gesamtergebnis")  
   
 ## <a name="bkmk_publishreport"></a>So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)  
   
@@ -142,22 +147,24 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     > „Die dem Benutzer 'XXXXXXXX\\[Ihr Benutzername]' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.“  
   
-7.  Rufen Sie das Webportal mit Administratorrechten auf, indem Sie z.B. mit der rechten Maustaste auf das Symbol für Internet Explorer und anschließend auf **Als Administrator ausführen** klicken.  
+7.  Rufen Sie das Webportal mit Administratorrechten auf, indem Sie z.B. mit der rechten Maustaste auf das Symbol für Internet Explorer und anschließend auf **Als Administrator ausführen**klicken.  
   
-    Rufen Sie die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal-URL auf.   
-    **Hinweis:** Für die URL des *Portals* wird „Reports“ und nicht die *Berichtsserver*-URL „Berichtsserver“ verwendet.  Beispiel:   
+    Rufen Sie die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal-URL auf.   
+    **Hinweis:** Für die URL des *Portals* wird „Reports“ und nicht die *Berichtsserver* -URL „Berichtsserver“ verwendet.  Beispiel:   
     - `http://<server name>/reports`.  
      - `http://localhost/reports` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
   
 8.  Wechseln Sie zum Ordner, in dem der Bericht gespeichert ist. Als Standardname wird *Tutorial*, der Name des Projekts oder der Name, den Sie in das Feld TargetReportFolder in den Projekteigenschaften eingegeben haben, verwendet.   
-Klicken Sie auf den Namen des Berichts **Sales Orders**, um den gerenderten Bericht im Browser anzuzeigen.  
+Klicken Sie auf den Namen des Berichts **Sales Orders** , um den gerenderten Bericht im Browser anzuzeigen.  
   
     ![ssrs_Tutorial_Tutorial_Ordner](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Sie haben nun das Lernprogramm zum Erstellen eines grundlegenden Tabellenberichts erfolgreich abgeschlossen.**  
+** Sie haben erfolgreich abgeschlossen, die zum Erstellen einer einfachen Tabellenberichts tutorial.* *  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
+
+

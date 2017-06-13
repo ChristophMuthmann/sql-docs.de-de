@@ -1,3 +1,4 @@
+# [SQL Server Management Studio-Hilfemenü](sql-server-management-studio-menu-help.md)
 # [Eigenschaftenfenster (F1-Hilfe, Management Studio)](properties-window-f1-help-management-studio.md)
 # [Optionen (Umgebung – Seite „Schriftarten und Farben“)](options-environment-fonts-and-colors-page.md)
 # [Optionen (Umgebung – Hilfe – Seite „Allgemein“)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [Dialogfeld Fenster (Hilfe von Microsoft Document Explorer)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [Erweiterte Speicheroptionen](advanced-save-options.md)
 # [Speichern unter](save-as.md)
-# [SQL Server Management Studio-Hilfemenü](sql-server-management-studio-menu-help.md)
 # [Anpassen (Seite Symbolleisten)](customize-toolbars-page.md)
 # [Optionen (Designer – Seite „Wartungspläne“)](options-designers-maintenance-plans-page.md)
 # [Suchordner auswählen (Dialogfeld in Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

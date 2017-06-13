@@ -1,31 +1,36 @@
 ---
-title: "Lektion 4: Definieren einer Datenverbindung und einer Datentabelle f&#252;r den untergeordneten Bericht | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht | Microsoft Docs"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lektion 4: Definieren einer Datenverbindung und einer Datentabelle f&#252;r den untergeordneten Bericht
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht
 Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächsten Schritt eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht. In diesem Tutorial wird eine Datenverbindung mit der AdventureWorks2014-Datenbank hergestellt.  
   
-### So definieren Sie eine Datenverbindung und eine Datentabelle durch Hinzufügen eines Datasets (für den untergeordneten Bericht)  
+### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>So definieren Sie eine Datenverbindung und eine Datentabelle durch Hinzufügen eines Datasets (für den untergeordneten Bericht)  
   
-1.  Wählen Sie im Menü **Website** die Option **Neues Element hinzufügen** aus.  
+1.  Wählen Sie im Menü **Website** die Option **Neues Element hinzufügen**aus.  
   
-2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **DataSet** und anschließend **Hinzufügen** aus. Sobald Sie dazu aufgefordert werden, fügen Sie das Element dem Ordner **App_Code** hinzu, indem Sie **Ja** auswählen.  
+2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **DataSet** und anschließend **Hinzufügen**aus. Sobald Sie dazu aufgefordert werden, fügen Sie das Element dem Ordner **App_Code** hinzu, indem Sie **Ja**auswählen.  
   
     Dadurch wird dem Projekt die neue XSD-Datei **DataSet2.xsd** hinzugefügt und der DataSet-Designer geöffnet.  
   
@@ -41,9 +46,9 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
   
     2.  Wählen Sie im Abschnitt **Am Server anmelden** die Option aus, die Ihnen den Zugriff auf die Daten ermöglicht. Die Standardeinstellung ist**Windows-Authentifizierung verwenden** .  
   
-    3.  Wählen Sie aus **AdventureWorks2014** aus der Dropdownliste **Datenbanknamen eingeben oder auswählen** aus.  
+    3.  Wählen Sie aus **AdventureWorks2014** aus der Dropdownliste **Datenbanknamen eingeben oder auswählen**aus.  
   
-    4.  Wählen Sie **OK**, und wählen Sie anschließend **Weiter** aus.  
+    4.  Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus.  
   
 6.  Wenn Sie in Schritt 5 (b) **SQL Server-Authentifizierung verwenden** ausgewählt haben, legen Sie fest, ob die vertraulichen Daten in die Zeichenfolge eingeschlossen oder ob die Informationen im Anwendungscode festgelegt werden sollen.  
   
@@ -57,9 +62,9 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    Sie können die Abfrage auch erstellen, indem Sie den **Abfrage-Generator** auswählen. Überprüfen Sie anschließend die Abfrage, indem Sie die Schaltfläche **Abfrage ausführen** auswählen. Wenn die Abfrage nicht die erwarteten Daten zurückgibt, verwenden Sie möglicherweise eine frühere Version von AdventureWorks. Weitere Informationen zum Abrufen der **AdventureWorks2014**-Beispieldatenbank, finden Sie unter [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
+    Sie können die Abfrage auch erstellen, indem Sie den **Abfrage-Generator**auswählen. Überprüfen Sie anschließend die Abfrage, indem Sie die Schaltfläche **Abfrage ausführen** auswählen. Wenn die Abfrage nicht die erwarteten Daten zurückgibt, verwenden Sie möglicherweise eine frühere Version von AdventureWorks. Weitere Informationen zum Abrufen der **AdventureWorks2014** -Beispieldatenbank, finden Sie unter [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
   
-10. Deaktivieren Sie auf der Seite **Zu generierende Methode auswählen** die Option **Methoden erstellen, um Updates direkt an die Datenbank zu senden (GenerateDBDirectMethods)** und wählen Sie **Fertig stellen**.  
+10. Deaktivieren Sie auf der Seite **Zu generierende Methode auswählen** die Option **Methoden erstellen, um Updates direkt an die Datenbank zu senden (GenerateDBDirectMethods)**und wählen Sie **Fertig stellen**.  
   
     > [!WARNING]  
     > Deaktivieren Sie in jedem Fall die Option **Methoden erstellen, um Updates direkt an die Datenbank zu senden (GenerateDBDirectMethods)**  
@@ -70,6 +75,8 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
   
 12. Wählen Sie im Menü **Daten** die Option **Datenvorschau** aus, und klicken Sie anschließend auf **Vorschau**.  
   
-## Nächste Aufgabe  
+## <a name="next-task"></a>Nächste Aufgabe  
 Sie haben erfolgreich eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht erstellt. Als Nächstes entwerfen Sie den untergeordneten Bericht mithilfe des Berichts-Assistenten. Siehe [Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
+
+

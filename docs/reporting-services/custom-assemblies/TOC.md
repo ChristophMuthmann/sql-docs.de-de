@@ -1,0 +1,8 @@
+# [Zugreifen auf benutzerdefinierte Assemblys über Ausdrücke](accessing-custom-assemblies-through-expressions.md)
+# [Berechtigungserteilung in benutzerdefinierten Assemblys](asserting-permissions-in-custom-assemblies.md)
+# [Bereitstellen einer benutzerdefinierten Assembly](deploying-a-custom-assembly.md)
+# [Vorgehensweise: Debuggen von benutzerdefinierten Assemblys](how-to-debug-custom-assemblies.md)
+# [Initialisieren von Objekten benutzerdefinierter Assemblys](initializing-custom-assembly-objects.md)
+# [Verweisen auf Assemblys in einer RDL-Datei](referencing-assemblies-in-an-rdl-file.md)
+# [Verwenden von benutzerdefinierten Assemblys mit Berichten](using-custom-assemblies-with-reports.md)
+# [Verwenden von benutzerdefinierten Assemblys mit starkem Namen](using-strong-named-custom-assemblies.md)

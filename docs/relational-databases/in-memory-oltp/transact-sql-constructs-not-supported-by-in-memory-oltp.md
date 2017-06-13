@@ -1,7 +1,7 @@
 ---
 title: "Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |Vorgang|Update der Primärschlüsselspalten|Primärschlüsselspalten in speicheroptimierten Tabellen und Tabellentypen können nicht aktualisiert werden. Wenn der Primärschlüssel aktualisiert werden muss, löschen Sie die alte Zeile, und fügen Sie die neue Zeile mit dem aktualisierten Primärschlüssel ein.|  
 |Vorgang|CREATE INDEX|Indizes zu speicheroptimierten Tabellen müssen inline mit der **CREATE TABLE** - oder der **ALTER TABLE** -Anweisung angegeben werden.|  
 |Vorgang|CREATE FULLTEXT INDEX|Volltextindizes werden für speicheroptimierte Tabellen nicht unterstützt.|  
-|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen keine Schemaänderungen wie **sp_rename**.<br /><br /> Der Versuch, bestimmte Schemaänderungen vorzunehmen, generiert den Fehler 12320. Vorgänge wie Umbenennungen, die eine Änderung der Schemaversion erfordern, werden von speicheroptimierten Tabellen nicht unterstützt.<br /><br /> Bestimmte Schemaänderungen mithilfe von ALTER TABLE und ALTER PROCEDURE sind zulässig.|  
+|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen keine Schemaänderungen wie **sp_rename**.<br /><br /> Der Versuch, bestimmte Schemaänderungen vorzunehmen, generiert den Fehler 12320. Vorgänge wie Umbenennungen, die eine Änderung der Schemaversion erfordern, werden von speicheroptimierten Tabellen nicht unterstützt.<br /><br /> Bestimmte Schemaänderungen mithilfe von ALTER TABLE und ALTER PROCEDURE sind zulässig.<br/><br/>**Gilt für:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Beginnend mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], "Sp_rename" wird unterstützt.| 
 |Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Löschen Sie alle Zeilen mit **DELETE FROM***Tabelle* , oder löschen Sie die Tabelle, und erstellen Sie sie neu, um alle Zeilen aus einer Tabelle zu entfernen.|  
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Überträgt ein sicherungsfähiges Element zwischen Schemas.|  

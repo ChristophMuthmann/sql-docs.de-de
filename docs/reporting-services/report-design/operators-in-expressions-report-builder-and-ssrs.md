@@ -1,29 +1,34 @@
 ---
-title: "Operatoren in Ausdr&#252;cken (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Operatoren in Ausdrücken (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35e702d0d1944cd5e7f2b7120da07e272f30cf70
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Operatoren in Ausdr&#252;cken (Berichts-Generator und SSRS)
+# <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Arithmetik  
+### <a name="arithmetic"></a>Arithmetik  
  Arithmetische Operatoren führen mathematische Vorgänge für zwei numerische Begriffe in einem Ausdruck aus.  
   
 |Operator|Description|  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
 |+|Addiert zwei Zahlen.|  
 |-|Gibt die Differenz zwischen zwei Zahlen zurück oder gibt den negativen Wert eines numerischen Begriffs an.|  
   
-### Vergleich  
+### <a name="comparison"></a>Vergleich  
  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind.  
   
 |Operator|Description|  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
 |Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> In der folgenden Tabelle werden die Zeichen aufgelistet, die als Platzhalterzeichen verwendet werden können:<br /><br /> %: Eine Zeichenfolge mit null oder mehr Zeichen.<br /><br /> _: Ein einzelnes Zeichen.<br /><br /> [ ]: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Gruppe (z. B. [aeiou]).<br /><br /> [^]: Ein einzelnes Zeichen, das nicht innerhalb des angegebenen Bereichs (z. B. [^a-f]) oder der festgelegten Gruppe (z. B. [^aeiou]) liegt.|  
 |Is|Vergleicht zwei Objektverweise.|  
   
-### Verketten von Zeichenfolgen  
+### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
  Mit der Zeichenfolgenverkettung wird die zweite Zeichenfolge in einem Ausdruck an die erste Zeichenfolge angefügt. Verwenden Sie für andere Zeichenfolgenoperationen integrierte Funktionen.  
   
 |Operator|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 8
 |&|Verkettet zwei Zeichenfolgen.|  
 |+|Verkettet zwei Zeichenfolgen.|  
   
-### Logisch und bitweise  
+### <a name="logical-and-bitwise"></a>Logisch und bitweise  
  Logische und bitweise Operatoren führen logische Manipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
 |Operator|Description|  
@@ -70,7 +75,7 @@ caps.handback.revision: 8
 |AndAlso|Führt eine logische Konjunktion zweier Ausdrücke durch.|  
 |OrElse|Führt eine logische Disjunktion zweier Ausdrücke durch.|  
   
-### Bitverschiebung  
+### <a name="bit-shift"></a>Bitverschiebung  
  Bitweise Operatoren führen Bitmanipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
 |Operator|Description|  
@@ -78,11 +83,11 @@ caps.handback.revision: 8
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  
   
-## Siehe auch  
- [Ausdruck (Dialogfeld)](../Topic/Expression%20Dialog%20Box.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausdruck (Dialogfeld)](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Ausdruck &#40;Dialogfeld, Berichts-Generator&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [Ausdruck &#40;Dialogfeld, Berichts-Generator&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

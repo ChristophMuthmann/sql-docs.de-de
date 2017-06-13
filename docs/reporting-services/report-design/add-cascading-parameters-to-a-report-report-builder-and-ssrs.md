@@ -1,35 +1,40 @@
 ---
-title: "Hinzuf&#252;gen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hinzuf&#252;gen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
+# <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
   Kaskadierende Parameter ermöglichen das Verwalten großer Berichtsdatenmengen. Sie können einen Satz von abhängigen Parametern definieren, sodass die Liste der Werte für einen Parameter von dem Wert abhängt, der in einem anderen Parameter ausgewählt wurde. Der erste Parameter ist beispielsweise unabhängig und stellt eine Liste von Produktkategorien dar. Wenn der Benutzer eine Kategorie auswählt, hängt der zweite Parameter vom Wert des ersten Parameters ab. Seine Werte werden mit einer Liste von Unterkategorien innerhalb der ausgewählten Kategorie aktualisiert. Wenn der Benutzer den Bericht anzeigt, werden die Berichtsdaten mit den Parameterwerten für die Kategorie und die Unterkategorien gefiltert.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Zum Erstellen von kaskadierenden Parametern definieren Sie zunächst die Datasetabfrage und binden einen Abfrageparameter für jeden benötigten kaskadierenden Parameter ein. Außerdem müssen Sie ein separates Dataset für jeden kaskadierenden Parameter erstellen, um verfügbare Werte bereitzustellen. Weitere Informationen finden Sie unter [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+ Zum Erstellen von kaskadierenden Parametern definieren Sie zunächst die Datasetabfrage und binden einen Abfrageparameter für jeden benötigten kaskadierenden Parameter ein. Außerdem müssen Sie ein separates Dataset für jeden kaskadierenden Parameter erstellen, um verfügbare Werte bereitzustellen. Weitere Informationen finden Sie unter [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  Die Reihenfolge ist für kaskadierende Parameter relevant, da die Datasetabfrage für einen Parameter weiter unten in der Liste einen Verweis auf jeden Parameter weiter oben in der Liste enthält. Zur Laufzeit bestimmt die Reihenfolge der Parameter im Berichtsdatenbereich die Reihenfolge, in der Parameterabfragen im Bericht aufgeführt werden, und damit die Reihenfolge, in der Benutzer die einzelnen aufeinander folgenden Parameterwerte auswählen.  
   
  Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](http://go.microsoft.com/fwlink/?LinkId=184757).  
   
-## So erstellen Sie das Hauptdataset mit einer Abfrage, die mehrere abhängige Parameter enthält  
+## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>So erstellen Sie das Hauptdataset mit einer Abfrage, die mehrere abhängige Parameter enthält  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 11
   
  Anschließend erstellen Sie ein Dataset, das die Werte für den unabhängigen Parameter bereitstellt.  
   
-## So erstellen Sie ein Dataset zum Bereitstellen von Werten für einen unabhängigen Parameter  
+## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>So erstellen Sie ein Dataset zum Bereitstellen von Werten für einen unabhängigen Parameter  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 11
   
  Anschließend legen Sie die Eigenschaften des ersten Parameters fest, um mit diesem Dataset zur Laufzeit die verfügbaren Werte aufzufüllen.  
   
-## So legen Sie verfügbare Werte für einen Berichtsparameter fest  
+## <a name="to-set-available-values-for-a-report-parameter"></a>So legen Sie verfügbare Werte für einen Berichtsparameter fest  
   
 1.  Klicken Sie im Berichtsdatenbereich im Ordner „Parameter“ mit der rechten Maustaste auf den ersten Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 11
   
 4.  Klicken Sie auf **Werte aus Abfrage abrufen**. Es werden drei Felder angezeigt.  
   
-5.  Klicken Sie in **Dataset** in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
+5.  Klicken Sie in **Dataset**in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
   
 6.  Klicken Sie im Feld **Wert** auf den Namen des Felds, das den Parameterwert bereitstellt.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
  Nun erstellen Sie ein Dataset, das die Werte für einen abhängigen Parameter bereitstellt.  
   
-## So erstellen Sie ein Dataset zum Bereitstellen von Werten für einen abhängigen Parameter  
+## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>So erstellen Sie ein Dataset zum Bereitstellen von Werten für einen abhängigen Parameter  
   
 1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**.  
   
@@ -108,20 +113,20 @@ caps.handback.revision: 11
   
 4.  Wählen Sie in **Abfragetyp**den Abfragetyp für die ausgewählte Datenquelle aus. In diesem Thema wird angenommen, dass der Abfragetyp **Text** ausgewählt wurde.  
   
-5.  Geben Sie in **Abfrage**die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für abhängige Parameter enthalten normalerweise Abfrageparameter für jeden Parameter, von dem der betreffende Parameter abhängig ist. Wenn Sie beispielsweise eine Abfrage für einen Parameter erstellen möchten, der alle Unterkategoriewerte (abhängiger Parameter) für eine Kategorie (unabhängiger Parameter) bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wie die Folgende verwenden:  
+5.  Geben Sie in **Abfrage**die Abfrage ein, mit der Werte für diesen Parameter abgerufen werden sollen. Abfragen für abhängige Parameter enthalten normalerweise Abfrageparameter für jeden Parameter, von dem der betreffende Parameter abhängig ist. Wenn Sie beispielsweise eine Abfrage für einen Parameter erstellen möchten, der alle Unterkategoriewerte (abhängiger Parameter) für eine Kategorie (unabhängiger Parameter) bereitstellt, können Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung wie die Folgende verwenden:  
   
     ```  
     SELECT DISTINCT Subcategory FROM <table>   
     WHERE (Category = @Category)  
     ```  
   
-     In der WHERE-Klausel ist „Category“ der Name eines Felds aus \<Tabelle>, und @Category ist ein Abfrageparameter. Diese Anweisung erstellt eine Liste von Unterkategorien für die in @ Category angegebene Kategorie. Zur Laufzeit wird dieser Wert mit dem Wert ausgefüllt, der vom Benutzer für den Berichtsparameter mit demselben Namen ausgewählt wurde.  
+     In der WHERE-Klausel Kategorie den Namen eines Felds aus ist \<Tabelle > und @Category ist ein Abfrageparameter. Diese Anweisung erstellt eine Liste von Unterkategorien für die Kategorie, die im angegebenen @Category. Zur Laufzeit wird dieser Wert mit dem Wert ausgefüllt, der vom Benutzer für den Berichtsparameter mit demselben Namen ausgewählt wurde.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  Anschließend legen Sie die Eigenschaften des zweiten Parameters fest, um mit diesem Dataset zur Laufzeit die verfügbaren Werte aufzufüllen.  
   
-## So legen Sie verfügbare Werte für einen Berichtsparameter fest  
+## <a name="to-set-available-values-for-a-report-parameter"></a>So legen Sie verfügbare Werte für einen Berichtsparameter fest  
   
 1.  Klicken Sie im Berichtsdatenbereich im Ordner „Parameter“ mit der rechten Maustaste auf den ersten Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 11
   
 4.  Klicken Sie auf **Werte aus Abfrage abrufen**.  
   
-5.  Klicken Sie in **Dataset** in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
+5.  Klicken Sie in **Dataset**in der Dropdownliste auf den Namen des Datasets, das Sie in der vorherigen Prozedur erstellt haben.  
   
 6.  Klicken Sie im Feld **Wert** auf den Namen des Felds, das den Parameterwert bereitstellt.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## So testen Sie die kaskadierenden Parameter  
+## <a name="to-test-the-cascading-parameters"></a>So testen Sie die kaskadierenden Parameter  
   
 1.  Klicken Sie auf **Ausführen**.  
   
@@ -153,12 +158,12 @@ caps.handback.revision: 11
   
 4.  Klicken Sie auf **Bericht anzeigen**. Die Anzeige des Berichts wird mit den ausgewählten Parametern aktualisiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
@@ -44,7 +44,8 @@ Warum diese verwenden?
   
      Eine Operation, die Daten basierend auf einer komplexen Einschränkung filtert, die nicht als einzelner Skalarausdruck ausgedrückt werden kann, kann als Funktion definiert werden. Diese Funktion kann anschließend in der WHERE-Klausel aufgerufen werden, um die Anzahl der Zeilen zu verringern, die an den Client gesendet werden.  
   
-> **HINWEIS:** Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
+> [!NOTE]
+> Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
   
 ##  <a name="FunctionTypes"></a> Funktionstypen  
 **Skalarfunktion**  
@@ -62,12 +63,13 @@ Warum diese verwenden?
   
  Die Anweisungen in einem BEGIN…END-Block dürfen keine Nebeneffekte haben. Nebeneffekte von Funktionen sind dauerhafte Änderungen am Status einer Ressource, deren Gültigkeitsbereich außerhalb der Funktion liegt, wie z. B. Änderungen an einer Datenbanktabelle. Die einzigen Änderungen, die von den Anweisungen in der Funktion vorgenommen werden dürfen, sind Änderungen an lokalen Objekten der Funktion, wie z. B. lokale Cursor oder Variablen. Änderungen an Datenbanktabellen, Cursorvorgänge außerhalb der Funktion, das Senden von E-Mails, das Ausführen einer Katalogänderung und das Generieren eines Resultsets, das an den Benutzer zurückgegeben wird, sind Beispiele für Aktionen, die in einer Funktion nicht ausgeführt werden können.  
   
-> **HINWEIS:** Wenn eine CREATE FUNCTION-Anweisung zu Nebeneffekten bei Ressourcen führt, die beim Ausgeben der CREATE FUNCTION-Anweisung nicht vorhanden sind, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisung aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Funktion jedoch beim Aufrufen nicht aus.  
+> [!NOTE]
+> Wenn eine CREATE FUNCTION-Anweisung zu Nebeneffekten bei Ressourcen führt, die beim Ausgeben der CREATE FUNCTION-Anweisung nicht vorhanden sind, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisung aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Funktion jedoch beim Aufrufen nicht aus.  
   
  Wie oft eine in einer Abfrage angegebene Funktion tatsächlich ausgeführt wird, kann bei den vom Abfrageoptimierer erstellten Ausführungsplänen variieren. Ein Beispiel hierfür ist eine Funktion, die von einer Unterabfrage in einer WHERE-Klausel aufgerufen wird. Wie oft die Unterabfrage und deren Funktion ausgeführt wird, kann bei den verschiedenen Zugriffsmethoden variieren, die der Abfrageoptimierer auswählt.  
   
 ##  <a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
- Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
+Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
   
 -   DECLARE-Anweisungen zum Definieren von lokalen Datenvariablen und lokalen Cursorn für die Funktion.  
   
@@ -110,7 +112,7 @@ Warum diese verwenden?
 ##  <a name="SchemaBound"></a> Schemagebundene Funktionen  
  CREATE FUNCTION unterstützt eine SCHEMABINDING-Klausel, die die Funktion an das Schema von Objekten bindet, auf die verwiesen wird, wie z. B. Tabellen, Sichten und andere benutzerdefinierte Funktionen. Der Versuch, ein Objekt zu ändern oder zu löschen, auf das von einer schemagebundenen Funktion verwiesen wird, erzeugt einen Fehler.  
   
- Die folgenden Bedingungen müssen erfüllt sein, um SCHEMABINDING in [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) angeben zu können:  
+ Die folgenden Bedingungen müssen erfüllt sein, um SCHEMABINDING in [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) angeben zu können:  
   
 -   Alle Sichten und benutzerdefinierten Funktionen, auf die die Funktion verweist, müssen schemagebunden sein.  
   
@@ -138,7 +140,4 @@ Warum diese verwenden?
 |Beschreibt, wie die Definition einer benutzerdefinierten Funktion angezeigt wird.|[Anzeigen benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

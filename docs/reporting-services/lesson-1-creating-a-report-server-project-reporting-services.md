@@ -1,25 +1,33 @@
 ---
-title: "Lektion&#160;1: Erstellen eines Berichtsserverprojekts (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: 'Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
----
-# Lektion&#160;1: Erstellen eines Berichtsserverprojekts (Reporting Services)
-In dieser Lektion erstellen Sie in Visual Studio ein *Berichtsserverprojekt* und eine *Berichtsdefinitionsdatei (.rdl)* in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]. 
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
 
-Zum Erstellen eines Berichts mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] benötigen Sie zunächst ein Berichtsserverprojekt, in dem Sie Ihre Berichtsdefinitionsdatei (.rdl) und alle anderen Ressourcendateien speichern können, die für Ihren Bericht erforderlich sind. 
+---
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)
+
+ > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
+In dieser Lektion erstellen Sie in Visual Studio ein *Berichtsserverprojekt* und eine *Berichtsdefinitionsdatei (.rdl)* in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] . 
+
+Zum Erstellen eines Berichts mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]benötigen Sie zunächst ein Berichtsserverprojekt, in dem Sie Ihre Berichtsdefinitionsdatei (.rdl) und alle anderen Ressourcendateien speichern können, die für Ihren Bericht erforderlich sind. 
 
 In den folgenden Lektionen definieren Sie eine Datenquelle für Ihren Bericht, ein Dataset sowie das Berichtslayout. Beim Ausführen des Berichts werden die Daten abgerufen und mit dem Layout kombiniert und anschließend auf dem Bildschirm gerendert. Dort können Sie sie exportieren, drucken und speichern.  
   
@@ -33,13 +41,13 @@ In den folgenden Lektionen definieren Sie eine Datenquelle für Ihren Bericht, e
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  Klicken Sie unter **Installiert** > **Vorlagen** > **Business Intelligence** auf **Reporting Services**.
+3.  Klicken Sie unter **Installiert** > **Vorlagen** > **Business Intelligence**auf **Reporting Services**.
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
 5. Klicken Sie auf **Berichtsserverprojekt** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Hinweis**: Wenn die Optionen **Business Intelligence** oder **Berichtsserverprojekt** nicht angezeigt werden, müssen Sie SSDT mit den Business Intelligence-Vorlagen aktualisieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
+   >**Hinweis**: Wenn Sie sehen die **Business Intelligence** oder **Berichtsserverprojekt** Optionen müssen Sie SSDT mit Business Intelligence-Projektvorlagen zu aktualisieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
 5.  Geben Sie im Feld **Name**den Namen **Tutorial**ein.  
 
@@ -77,3 +85,5 @@ Sie haben das Berichtsprojekt Tutorial erfolgreich erstellt und dem Berichtsproj
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

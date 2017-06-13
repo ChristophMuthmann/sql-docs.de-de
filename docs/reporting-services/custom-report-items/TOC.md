@@ -1,0 +1,7 @@
+# [Erstellen einer benutzerdefinierten Bericht Element zur Entwurfszeit-Komponente](creating-a-custom-report-item-design-time-component.md)
+# [Erstellen ein benutzerdefiniertes Element-Laufzeitkomponente](creating-a-custom-report-item-run-time-component.md)
+# [Benutzerdefiniertes Element-Architektur](custom-report-item-architecture.md)
+# [Klassenbibliotheken für benutzerdefinierten Berichts-Element](custom-report-item-class-libraries.md)
+# [Implementierungsanforderungen für benutzerdefinierte Berichtselemente](custom-report-item-implementation-requirements.md)
+# [Benutzerdefinierte Berichtselemente](custom-report-items.md)
+# [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)

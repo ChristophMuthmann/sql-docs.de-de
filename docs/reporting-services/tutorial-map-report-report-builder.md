@@ -1,27 +1,32 @@
 ---
-title: "Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft Docs'
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lernprogramm: Kartenbericht (Berichts-Generator)
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]-Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht anzeigen können. 
+# <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
   
-Karten basieren auf räumlichen Daten, die in der Regel aus Punkten, Linien und Polygonen bestehen. Ein Polygon kann z. B. den Umriss eines Countys darstellen, eine Linie eine Straße und ein Punkt die Position eines Orts. Jeder räumliche Datentyp wird auf einer separaten Kartenebene als Satz von Kartenelementen angezeigt.  
+Karten basieren auf räumlichen Daten, die in der Regel aus Punkten, Linien und Polygonen bestehen. Ein Polygon kann z. B. den Umriss eines Countys darstellen, eine Linie eine Straße und ein Punkt die Position eines Orts. Jeder räumliche Datentyp wird auf einer separaten Kartenebene als Satz von Kartenelementen angezeigt.  
   
 Geben Sie zum Verändern der Darstellung von Kartenelementen ein Feld mit Werten an, durch die die Kartenelemente mit analytischen Daten aus einem Dataset verglichen werden. Sie können auch Regeln definieren, durch die Farbe, Größe oder andere Eigenschaften basierend auf Datenbereichen verändert werden.  
 
@@ -34,17 +39,17 @@ In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte
   
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## Anforderungen  
-Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](http://msdn.microsoft.com/de-de/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+## <a name="requirements"></a>Anforderungen  
+Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Weitere Informationen zu weiteren Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Map"></a>1. Erstellen einer Karte mit einer Polygonebene im Karten-Assistenten  
 In diesem Abschnitt fügen Sie dem Bericht eine Karte aus dem Kartenkatalog hinzu. Die Karte enthält eine Ebene, auf der die Countys im Bundesstaat New York angezeigt werden. Die Form jedes Countys ist ein Polygon, das auf eingebetteten räumlichen Daten in der Karte aus dem Kartenkatalog basiert.  
   
-### So fügen Sie mit dem Karten-Assistenten eine Karte in einem neuen Bericht hinzu  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>So fügen Sie mit dem Karten-Assistenten eine Karte in einem neuen Bericht hinzu  
   
-1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal oder über den integrierten SharePoint-Modus.  
+1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
     Das Dialogfeld **Neuer Bericht oder neues Dataset** wird geöffnet.  
   
@@ -70,9 +75,9 @@ In diesem Abschnitt fügen Sie dem Bericht eine Karte aus dem Kartenkatalog hinz
   
 9. Überprüfen Sie, ob auf der Seite **Kartenvisualisierung auswählen** der Eintrag **Standardkarte** ausgewählt ist, und klicken Sie auf **Weiter**.  
   
-11. Aktivieren Sie auf der Seite **Farbdesign und Datenvisualisierung auswählen** die Option **Bezeichnungen anzeigen**.  
+11. Aktivieren Sie auf der Seite **Farbdesign und Datenvisualisierung auswählen** die Option **Bezeichnungen anzeigen** .  
   
-12. Falls aktiviert, deaktivieren Sie die Option **Einfarbige Karte**.  
+12. Falls aktiviert, deaktivieren Sie die Option **Einfarbige Karte** .  
   
 13. Klicken Sie in der Dropdownliste **Datenfeld** auf **#COUNTYNAME**. Im Kartenvorschaubereich im Assistenten werden die folgenden Elemente angezeigt:  
   
@@ -94,7 +99,7 @@ In diesem Abschnitt fügen Sie dem Bericht eine Karte aus dem Kartenkatalog hinz
   
 13. Markieren Sie den Text „Kartentitel“, geben Sie **Umsatz nach Filiale** ein, und drücken Sie die EINGABETASTE.  
 
-15. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine Polygonebene, PolygonLayer1, vom Ebenentyp **Eingebettet** angezeigt. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
+15. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine Polygonebene, PolygonLayer1, vom Ebenentyp **Eingebettet**angezeigt. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
   
     > [!NOTE]  
     > Wenn Sie den Bereich **Kartenebenen** nicht sehen, wird er möglicherweise außerhalb der aktuellen Ansicht angezeigt. Verwenden Sie die Bildlaufleiste am unteren Rand des Entwurfsansichtsfensters, um die Ansicht zu ändern. Deaktivieren Sie alternativ auf der Registerkarte **Ansicht** die Option **Berichtsdaten**, um den Anzeigebereich für die Entwurfsoberfläche zu vergrößern.   
@@ -117,17 +122,17 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 > [!NOTE]  
 > In diesem Tutorial sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
   
-### So fügen Sie eine Punktebene auf Grundlage eines SQL Server-Abfrage nach räumlichen Daten hinzu  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>So fügen Sie eine Punktebene auf Grundlage eines SQL Server-Abfrage nach räumlichen Daten hinzu  
   
 1.  Klicken Sie auf die Registerkarte **Ausführen** auf **Entwurf**, um wieder zur Entwurfsansicht zurückzuwechseln.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard"). 
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die **Assistent für neue Ebenen** Schaltfläche ![Rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "Rs_IconMapLayerWizard"). 
 
     ![Berichts-Generator-Karte-Symbol-des-Assistent-für-neue-Ebene](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
-3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten** aus, und klicken Sie auf **Weiter**.  
+3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten**aus, und klicken Sie auf **Weiter**.  
   
-4.  Klicken Sie auf der Seite **Dataset mit räumlichen SQL Server-Daten auswählen** auf **Neues Dataset mit räumlichen SQL Server-Daten hinzufügen** und anschließend auf **Weiter**.  
+4.  Überprüfen Sie, ob die Option **Dataset mit räumlichen SQL Server-Daten auswählen** auf **Neues Dataset mit räumlichen SQL Server-Daten hinzufügen** > **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer SQL Server-Datenquelle für räumliche Daten auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus.  
 
@@ -186,13 +191,13 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
   
     Das Berichtsdataset mit dem Namen "DataSet1" wird für Sie erstellt. Nachdem Sie den Assistenten abgeschlossen haben, wird im Bereich „Berichtsdaten“ die Feldersammlung angezeigt.  
   
-11. Überprüfen Sie auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen**, ob für **Räumliches Feld** der Wert **SpatialLocation** und für **Ebenentyp** der Wert **Punkt** ausgewählt ist. Übernehmen Sie die anderen Standardwerte auf dieser Seite.  
+11. Überprüfen Sie auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** , ob für **Räumliches Feld** der Wert **SpatialLocation** und für **Ebenentyp** der Wert **Punkt**ausgewählt ist. Übernehmen Sie die anderen Standardwerte auf dieser Seite.  
   
     In der Kartensicht werden Kreise angezeigt, um den Standort jedes Geschäfts zu markieren.  
   
 12. Klicken Sie auf **Weiter**.  
   
-13. Klicken Sie auf der Seite „Kartenvisualisierung auswählen“ auf **Blasendiagrammkarte**, um einen Kartentyp zu erhalten, der Marker anzeigt, die je nach Daten in der Größe variieren. Klicken Sie auf **Weiter**.  
+13. Klicken Sie auf der Seite „Kartenvisualisierung auswählen“ auf **Blasendiagrammkarte** , um einen Kartentyp zu erhalten, der Marker anzeigt, die je nach Daten in der Größe variieren. Klicken Sie auf **Weiter**.  
   
 14. Klicken Sie auf der Seite **Analytisches Dataset auswählen** auf DataSet1 und anschließend auf **Weiter**. Dieses Dataset enthält sowohl analytische Daten als auch räumliche Daten, die auf der neuen Punktebene angezeigt werden.   
   
@@ -200,17 +205,17 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
   
 17. Wählen Sie unter **Datenfeld** `[Sum(SellingArea)]` aus, um die Blasengröße entsprechend der Größe der Ausstellfläche für die Produkte zu variieren.  
   
-18. Wählen Sie **Bezeichnungen anzeigen** und unter **Datenfeld** `[City]` aus.
+18. Wählen Sie **Bezeichnungen anzeigen**und unter **Datenfeld** `[City]`aus.
 
 18. Klicken Sie auf **Fertig stellen**.  
   
     Die Kartenebene wird dem Bericht hinzugefügt. Auf der Legende werden Blasengrößen basierend auf den SellingArea-Werten angezeigt.  
   
- 19. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine neue Ebene PointLayer1 mit dem räumlichen Datenquellentyp **DataRegion** angezeigt.  
+ 19. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine neue Ebene PointLayer1 mit dem räumlichen Datenquellentyp **DataRegion**angezeigt.  
   
-19. Fügen Sie einen Legendentitel hinzu. Wählen Sie in der Legende den Text **Titel** aus, geben Sie **Auslagefläche in Quadratfuß** ein und drücken Sie die EINGABETASTE.  
+19. Fügen Sie einen Legendentitel hinzu. Wählen Sie in der Legende den Text **Titel**aus, geben Sie **Auslagefläche in Quadratfuß** ein und drücken Sie die EINGABETASTE.  
   
-21. Klicken Sie im Bereich **Kartenebenen** auf den Pfeil neben PointLayer1, und klicken Sie anschließend auf **Punkteigenschaften**.  
+21. Klicken Sie im Bereich **Kartenebenen**auf den Pfeil neben PointLayer1, und klicken Sie anschließend auf **Punkteigenschaften**.  
 
     ![Berichts-Generator-Karte-Punkteigenschaften](../reporting-services/media/report-builder-map-point-properties.png)
   
@@ -218,7 +223,7 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 
     ![Berichts-Generator-Karte-Punkteigenschaften-Schriftart](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. Wählen Sie auf der Registerkarte **Allgemein** als **Platzierung** die Einstellung **Unten** aus.
+23. Wählen Sie auf der Registerkarte **Allgemein** als **Platzierung** die Einstellung **Unten**aus.
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,17 +238,17 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 ## <a name="LineLayer"></a>3. Hinzufügen einer Kartenlinienebene, um eine Route anzuzeigen  
 Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die eine Route zwischen zwei Geschäften anzeigt. In diesem Lernprogramm wird der Weg für drei Geschäftsstandorte erstellt. In einer Geschäftsanwendung könnte es sich bei dem Weg um die beste Route zwischen Geschäften handeln.  
   
-### So fügen Sie der Karte eine Linienebene hinzu  
+### <a name="to-add-a-line-layer-to-map"></a>So fügen Sie der Karte eine Linienebene hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die **Assistent für neue Ebenen** Schaltfläche ![Rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "Rs_IconMapLayerWizard").  
   
 3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten** aus, und klicken Sie auf **Weiter**.  
   
 4.  Klicken Sie auf der Seite **Dataset mit räumlichen SQL Server-Daten auswählen** auf **Neues Dataset mit räumlichen SQL Server-Daten hinzufügen** anschließend auf **Weiter**.  
   
-5.  Wählen Sie unter **Verbindung mit einer SQL Server-Datenquelle für räumliche Daten auswählen** die Datenquelle, die Sie im ersten Verfahren verwendet haben.  
+5.  Wählen Sie unter **Verbindung mit einer SQL Server-Datenquelle für räumliche Daten auswählen**die Datenquelle, die Sie im ersten Verfahren verwendet haben.  
   
 6.  Klicken Sie auf **Weiter**.  
   
@@ -262,26 +267,26 @@ Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die ein
   
     Auf der Karte wird ein Weg angezeigt, der drei Geschäfte verbindet.  
   
-10. Überprüfen Sie auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen**, ob für **Räumliches Feld** der Wert **Route** und für **Ebenentyp** der Wert **Linie** ausgewählt ist. Übernehmen Sie die anderen Standardwerte.  
+10. Überprüfen Sie auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** , ob für **Räumliches Feld** der Wert **Route** und für **Ebenentyp** der Wert **Linie**ausgewählt ist. Übernehmen Sie die anderen Standardwerte.  
   
     In der Kartensicht wird ein Weg von einem Geschäft im nördlichen Teil des Bundesstaats New York zu einem Geschäft im südlichen Teil des Bundesstaats New York angezeigt.  
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Klicken Sie auf der Seite **Kartenvisualisierung auswählen** auf **Standardkarte (Linien)** und anschließend auf **Weiter**.  
+12. Klicken Sie auf der Seite **Kartenvisualisierung auswählen** auf **Standardkarte (Linien)**und anschließend auf **Weiter**.  
   
-13. Aktivieren Sie unter **Farbdesign und Datenvisualisierung auswählen** die Option **Einfarbige Karte**. Der Weg wird mit einer einzelnen Farbe angezeigt, die auf dem ausgewählten Design basiert.  
+13. Aktivieren Sie unter **Farbdesign und Datenvisualisierung auswählen**die Option **Einfarbige Karte**. Der Weg wird mit einer einzelnen Farbe angezeigt, die auf dem ausgewählten Design basiert.  
   
 14. Klicken Sie auf **Fertig stellen**.  
 
     ![Berichts-Generator-Karte-Linie](../reporting-services/media/report-builder-map-line.png)
   
-     In der Karte wird eine neue Linienebene mit dem räumlichem Datenquellentyp **DataRegion** angezeigt. In diesem Beispiel stammen die räumlichen Daten aus einem Dataset, aber der Linie sind keine analytischen Daten zugeordnet.  
+     In der Karte wird eine neue Linienebene mit dem räumlichem Datenquellentyp **DataRegion**angezeigt. In diesem Beispiel stammen die räumlichen Daten aus einem Dataset, aber der Linie sind keine analytischen Daten zugeordnet.  
 
-## Anpassen des Zooms
-1. Sollte nicht der gesamte Bundesstaat New York angezeigt werden, können Sie den Zoom anpassen. Die **MapViewport**-Eigenschaften für die ausgewählte Karte finden Sie im Bereich „Eigenschaften“. 
+## <a name="adjust-the-zoom"></a>Anpassen des Zooms
+1. Sollte nicht der gesamte Bundesstaat New York angezeigt werden, können Sie den Zoom anpassen. Die **MapViewport** -Eigenschaften für die ausgewählte Karte finden Sie im Bereich „Eigenschaften“. 
 
-15. Erweitern Sie den Abschnitt **Ansicht**, und erweitern Sie anschließend **Ansicht**, um die Eigenschaft **Zoom** anzuzeigen. Legen Sie hierfür **125** fest. 
+15. Erweitern Sie den Abschnitt **Ansicht** , und erweitern Sie anschließend **Ansicht** , um die Eigenschaft **Zoom** anzuzeigen. Legen Sie hierfür **125**fest. 
 
     ![Berichts-Generator-Karte-Zoom](../reporting-services/media/report-builder-map-zoom.png)
 
@@ -292,14 +297,14 @@ In diesem Abschnitt fügen Sie eine Kartenebene hinzu, die einen Bing Maps-Kache
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![Rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer").  
   
 3.  Klicken Sie in der Dropdownliste auf **Kachelebene**.  
   
     Die letzte Ebene im Bereich **Kartenebene** ist TileLayer1. Standardmäßig zeigt die Kachelebene das Straßenkartenformat an.  
   
     > [!NOTE]  
-    > Sie können auch im Assistenten auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** eine Kachelebene hinzufügen. Wählen Sie dazu **Bing Maps-Hintergrund für diese Kartenansicht hinzufügen** aus. In einem gerenderten Bericht zeigt der Kachelhintergrund Bing Maps-Kacheln für den aktuellen Kartenviewport-Mittelpunkt und die aktuelle Zoomstufe an.  
+    > Sie können auch im Assistenten auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** eine Kachelebene hinzufügen. Wählen Sie dazu **Bing Maps-Hintergrund für diese Kartenansicht hinzufügen**aus. In einem gerenderten Bericht zeigt der Kachelhintergrund Bing Maps-Kacheln für den aktuellen Kartenviewport-Mittelpunkt und die aktuelle Zoomstufe an.  
   
 4.  Klicken Sie auf den Pfeil neben TileLayer1 und anschließend auf **Kacheleigenschaften**.  
   
@@ -316,7 +321,7 @@ In diesem Abschnitt passen Sie die Reihenfolge und Transparenz der Ebene an, um 
   
 3.  Klicken Sie auf den Pfeil neben PolygonLayer1 und auf **Ebenendaten**. Das Dialogfeld **Polygonebeneneigenschaften von Karten** wird geöffnet.  
   
-4.  Geben Sie auf der Registerkarte **Sichtbarkeit** unter **Transparenz (Prozent)** **30** ein.  
+4.  Geben Sie auf der Registerkarte **Sichtbarkeit** unter **Transparenz (Prozent)** **30**ein.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -338,13 +343,13 @@ Um die Countys anhand analytischer Daten farblich zu unterscheiden, müssen Sie 
   
 3.  Klicken Sie auf den Pfeil neben PolygonLayer1 und anschließend auf **Ebenendaten**. Das Dialogfeld **Polygonebeneneigenschaften von Karten** wird geöffnet.  
   
-4.  Wählen Sie auf der Registerkarte **Analytische Daten** unter **Analytisches Dataset** DataSet1 aus. Dieses Dataset wurde vom Assistenten erstellt, als Sie die Abfrage räumlicher Daten für die Countys erstellt haben.  
+4.  Wählen Sie auf der Registerkarte **Analytische Daten** unter **Analytisches Dataset**DataSet1 aus. Dieses Dataset wurde vom Assistenten erstellt, als Sie die Abfrage räumlicher Daten für die Countys erstellt haben.  
   
-6.  Klicken Sie unter **Abzugleichende Felder** auf **Hinzufügen**. Eine neue Zeile wird hinzugefügt.  
+6.  Klicken Sie unter **Abzugleichende Felder**auf **Hinzufügen**. Eine neue Zeile wird hinzugefügt.  
   
-7.  Klicken Sie unter **Aus räumlichem Dataset** auf COUNTYNAME.  
+7.  Klicken Sie unter **Aus räumlichem Dataset**auf COUNTYNAME.  
   
-8.  Klicken Sie unter **Aus analytischem Dataset** auf [County].  
+8.  Klicken Sie unter **Aus analytischem Dataset**auf [County].  
 
     ![Berichts-Generator-Karte-Countys-Farben](../reporting-services/media/report-builder-map-county-colors.png)
   
@@ -361,7 +366,7 @@ Jedem County mit einem Geschäft ist eine Farbe zugeordnet, die auf der Farbpale
 ### <a name="ColorRules"></a>6b. Festlegen von Farbregeln für Polygone  
 Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschäftsumsatz verändert, müssen Sie die Bereichswerte, die Anzahl anzuzeigender Einteilungen innerhalb dieses Bereichs und die zu verwendenden Farben angeben.  
   
-#### So geben Sie Farbregeln für alle Polygone mit zugeordneten Daten an  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>So geben Sie Farbregeln für alle Polygone mit zugeordneten Daten an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
@@ -369,7 +374,7 @@ Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschä
   
 3.  Aktivieren Sie **Daten mithilfe von Farbbereichen anzeigen**. Die Palettenoption wird durch die Optionen für Startfarbe, mittlere Farbe und Endfarbe ersetzt.  
   
-4.  Definieren Sie Bereichswerte für die Umsätze pro County. Wählen Sie unter **Datenfeld** den Eintrag `[Sum(Sales)]` in der Dropdownliste aus.  
+4.  Definieren Sie Bereichswerte für die Umsätze pro County. Wählen Sie unter **Datenfeld**den Eintrag `[Sum(Sales)]`in der Dropdownliste aus.  
   
 5.  Ändern Sie den Ausdruck wie folgt, um das Format zur Anzeige der Währung in Tausendern zu ändern: `=Sum(Fields!Sales.Value)/1000`  
   
@@ -383,15 +388,15 @@ Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschä
   
 8.  Klicken Sie auf **Verteilung**.  
   
-9. Überprüfen Sie, ob der Verteilungstyp **Optimal** lautet. Für den Ausdruck aus Schritt 5 werden die Werte durch die optimale Verteilung in Teilbereiche aufgeteilt, deren Elementanzahl und Umfang jeweils gleich sind.  
+9. Überprüfen Sie, ob der Verteilungstyp **Optimal**lautet. Für den Ausdruck aus Schritt 5 werden die Werte durch die optimale Verteilung in Teilbereiche aufgeteilt, deren Elementanzahl und Umfang jeweils gleich sind.  
   
 10. Übernehmen Sie die Standardwerte für andere Optionen auf dieser Seite. Wenn Sie den optimalen Verteilungstyp auswählen, wird die Anzahl der Teilbereiche bei der Berichtausführung berechnet.  
   
 11. Klicken Sie auf **Legende**.  
   
-12. Überprüfen Sie, ob unter **Farbskalaoptionen** der Wert **In Farbskala anzeigen** ausgewählt ist.  
+12. Überprüfen Sie, ob unter **Farbskalaoptionen**der Wert **In Farbskala anzeigen** ausgewählt ist.  
   
-13. Wählen Sie unter **In dieser Legende anzeigen** in der Dropdownliste die Leerzeile aus. Zurzeit zeigen Sie die Farbbereiche nur in der Farbskala an.  
+13. Wählen Sie unter **In dieser Legende anzeigen**in der Dropdownliste die Leerzeile aus. Zurzeit zeigen Sie die Farbbereiche nur in der Farbskala an.  
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -414,9 +419,9 @@ Für Daten wird standardmäßig ein allgemeines Format verwendet. In diesem Absc
   
 ### <a name="NewLegend"></a>6d. Hinzufügen eines Legendentitels   
   
-1.  Bei ausgewählter Farbskala werden im Eigenschaftenbereich die Eigenschaften für **MapColorScale** angezeigt. 
+1.  Bei ausgewählter Farbskala werden im Eigenschaftenbereich die Eigenschaften für **MapColorScale**angezeigt. 
   
-2. Erweitern Sie den Abschnitt „Titel“, und geben Sie die Beschriftungseigenschaft **Umsatz in Tausend** ein.
+2. Erweitern Sie den Abschnitt „Titel“, und geben Sie die Beschriftungseigenschaft **Umsatz in Tausend**ein.
 
 3. Ändern Sie die Eigenschaft „TextColor“ in **Weiß**.  
 
@@ -429,7 +434,7 @@ Die Countys mit zugeordneten Geschäften und Umsätzen werden entsprechend den F
 ### <a name="NoData"></a>6f. Ändern der Farbe für Countys ohne Daten  
 Sie können die Standardanzeigeoptionen für alle Kartenelemente auf einer Ebene festlegen. Farbregeln haben Vorrang vor diesen Anzeigeoptionen.  
   
-#### So legen Sie die Anzeigeeigenschaften für alle Elemente auf einer Ebene fest  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>So legen Sie die Anzeigeeigenschaften für alle Elemente auf einer Ebene fest  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
@@ -441,9 +446,9 @@ Sie können die Standardanzeigeoptionen für alle Kartenelemente auf einer Ebene
 
      Das Dialogfeld **Polygoneigenschaften von Karten** wird geöffnet. Bevor regelbasierte Anzeigeoptionen angewendet werden, gelten in diesem Dialogfeld festgelegte Anzeigeoptionen für alle Polygone auf der Ebene.  
   
-4.  Vergewissern Sie sich auf der Registerkarte **Ausfüllen**, dass der Füllstil **Einfarbig** lautet. festgelegt ist. Farbverläufe und Muster gelten für alle Farben.  
+4.  Vergewissern Sie sich auf der Registerkarte **Ausfüllen** , dass der Füllstil **Einfarbig**lautet. festgelegt ist. Farbverläufe und Muster gelten für alle Farben.  
   
-6.  Wählen Sie unter **Farbe** die Option **Helles Stahlblau** aus.  
+6.  Wählen Sie unter **Farbe**die Option **Helles Stahlblau**aus.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -456,7 +461,7 @@ In diesem Abschnitt geben Sie einen Punkt an, und verwenden den Markertyp **Ster
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer") und anschließend auf **Punktebene**.  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen**![Rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer"), klicken Sie dann auf **Punktebene**.    
   
     Der Karte wird eine neue Punktebene hinzugefügt. Standardmäßig verfügt die Punktebene über den räumlichen Datentyp **Eingebettet**.  
   
@@ -470,17 +475,17 @@ In diesem Abschnitt geben Sie einen Punkt an, und verwenden den Markertyp **Ster
   
 6.  Klicken Sie mit der rechten Maustaste auf den hinzugefügten Punkt, und klicken Sie anschließend auf **Eigenschaften für eingebettete Punkte**.  
   
-7.  Wählen Sie **Punktoptionen für diese Ebene überschreiben** aus. Im Dialogfeld werden weitere Seiten angezeigt. Hier festgelegte Werte haben Vorrang vor Anzeigeoptionen für die Ebene oder für Farbregeln.  
+7.  Wählen Sie **Punktoptionen für diese Ebene überschreiben**aus. Im Dialogfeld werden weitere Seiten angezeigt. Hier festgelegte Werte haben Vorrang vor Anzeigeoptionen für die Ebene oder für Farbregeln.  
 
     ![Berichts-Generator-Karte-benutzerdefinierter-Punkt-allgemein](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  Wählen Sie auf der Registerkarte **Marker** unter **Markertyp** den Wert **Stern** aus.  
+8.  Wählen Sie auf der Registerkarte **Marker** unter **Markertyp**den Wert **Stern**aus.  
 
 10. Ändern Sie die **Markergröße** in **18 pt**.
   
-3.  Geben Sie auf der Registerkarte **Bezeichnungen** unter **Bezeichnungstext** **Neues Geschäft** ein.  
+3.  Geben Sie auf der Registerkarte **Bezeichnungen** unter **Bezeichnungstext** **Neues Geschäft**ein.  
   
-5.  Klicken Sie unter **Platzierung** auf **Oben**.  
+5.  Klicken Sie unter **Platzierung**auf **Oben**.  
 
 13. Ändern Sie auf der Registerkarte **Schriftart** die Schriftgröße in **10 pt** und den Schriftschnitt in **Fett**.
 
@@ -503,7 +508,7 @@ In diesem Abschnitt erfahren Sie sowohl, wie Sie den Mittelpunkt der Karte ände
   
 2.  Stellen Sie auf der Registerkarte **Zentrieren und zoomen** sicher, dass die Option **Mittelpunkt und Zoomstufe für Ansicht festlegen** ausgewählt ist.  
 
-4. Legen Sie die Einstellung **Zoomfaktor (Prozent)** auf **125** fest.
+4. Legen Sie die Einstellung **Zoomfaktor (Prozent)** auf **125**fest.
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -531,7 +536,7 @@ Dieser Titel wird am Anfang des Berichts angezeigt. Elemente über dem Berichtsh
  
 3.  Geben Sie im Feld **Name** den Namen **Umsätze der Geschäfte in New York** ein.  
 
-3. Speichern Sie den Bericht auf Ihrem lokalen Computer oder auf einem [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Server.
+3. Speichern Sie den Bericht auf Ihrem lokalen Computer oder auf einem [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Server.
   
 4. Klicken Sie auf **Speichern**. 
 
@@ -539,14 +544,16 @@ Wenn Sie den Bericht auf einem Berichtsserver speichern, können Sie ihn dort au
 
 ![Berichts-Generator-Karte-im-Portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
 Damit ist die exemplarische Vorgehensweise für das Hinzufügen einer Karte zum Bericht abgeschlossen.  
   
 Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+

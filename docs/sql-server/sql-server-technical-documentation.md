@@ -1,5 +1,5 @@
 ---
-title: Technische Dokumentation zu SQL Server 2016 | Microsoft-Dokumentation
+title: Technische Dokumentation zu SQL Server | Microsoft Docs
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -20,43 +20,38 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
-author: BYHAM
-ms.author: rickbyh
+author: craigg-msft
+ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 034e10f491c3c327d6a7b2a044f57121636c3c06
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 6ba40fbd036ee6476d7eb3439a5d9e816e79651d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+ > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Installation für SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Server unterstützt. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Weitere Informationen über [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] -Sprachthemen finden Sie unter [Sprachreferenz](../t-sql/language-reference.md).
 
-**SQL Server vNext**
+**SQLServer 2017**
 
-Die neuesten Versionshinweise finden Sie unter [Versionsanmerkungen zu SQL Server vNext](../sql-server/sql-server-vnext-release-notes.md).
-
-Die letzten Informationen zu Neuigkeiten finden Sie unter [Neues in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md).
+- [Versionsanmerkungen zu SQLServer 2017](../sql-server/sql-server-2017-release-notes.md)
+- [Was ist neu in SQLServer 2017](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  
- [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
-
-[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
+- [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **Probieren Sie SQL Server aus!**    
-    
- - [**Herunterladen von SQL Server 2016 aus dem Evaluierungscenter**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
-    
-- **[Starten eines virtuellen Computers mit bereits installiertem SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
-    
--  **[Herunterladen der neuesten Version von SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
-    
-  
-    
+ - [**Herunterladen von SQL Server 2016 aus dem Evaluierungscenter**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[Starten eines virtuellen Computers mit bereits installiertem SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+ - **[Herunterladen der neuesten Version von SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+      
 ## <a name="sql-server-technologies"></a>SQL Server-Technologien    
     
 |||    
@@ -69,7 +64,20 @@ Die letzten Informationen zu Neuigkeiten finden Sie unter [Neues in SQL Server v
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] ist eine Plattform für analytische Daten und ein Business Intelligence-Toolset für Einzelpersonen, Teams und Unternehmen. Server- und Clientdesigner unterstützen herkömmliche OLAP-Lösungen, neue Tabellenmodellierungslösungen sowie Self-Service-Funktionen für die Analyse und Zusammenarbeit mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel und einer SharePoint Server-Umgebung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ermöglicht zudem Data Mining, damit Sie die Muster und Beziehungen erkennen können, die in großen Datenvolumen versteckt sind.|    
 |![Replikationsdienste](../sql-server/media/replication-services.png "Replikationsdienste")|**[Replikation](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen. Mithilfe der Replikation können Sie Daten an verschiedene Standorte, an Remotebenutzer oder mobile Benutzer über lokale Netzwerke und WANs (Wide Area Network), über DFÜ-Verbindungen, Funk-Verbindungen oder über das Internet verteilen.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services liefert webbasierte Berichterstellungsfunktionalität für Unternehmen, sodass Sie Berichte erstellen, die Inhalte aus einer Vielzahl von Datenquellen ziehen, Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten können.|    
-     
+
+    
+## <a name="earlier-sql-server-versions"></a>Frühere SQL Server-Versionen
+- [Onlinedokumentation für SQL Server 2014-Onlinedokumentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [Installieren von SQL Server 2014 Express und anderen älteren Versionen von SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Vielen Dank an [Scott Hanselman](http://www.hanselman.com/) für das Sammeln aller Installer-Paketlinks an einem Ort!**)  
+- [Technische Dokumentation zu SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2-Produktdokumentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [Technische Dokumentation zu SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [Archivierte Dokumentation zu SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+
+**Beispieldatenbanken**  
+- [Beispieldatenbank von Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [AdventureWorks-Beispieldatenbanken und Skripts für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Weitere Informationen   
 + [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)
@@ -78,8 +86,6 @@ Die letzten Informationen zu Neuigkeiten finden Sie unter [Neues in SQL Server v
 + [Installieren von SQL Server-Verwaltungstools mit SSMS](https://msdn.microsoft.com/library/bb500441.aspx) 
 + [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Videos, Beispiele und Communityressourcen](https://msdn.microsoft.com/library/dn237258.aspx)
-+ [Einführung in SQL Server 2016](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
@@ -56,7 +56,7 @@ Die Standardparameter sind gut für einen schnellen Einstieg geeignet; Sie sollt
   
  Der Standardwert (100 MB) reicht möglicherweise nicht aus, wenn die Arbeitsauslastung eine große Anzahl unterschiedlicher Abfragen und Pläne generiert oder wenn der Abfrageverlauf einen längeren Zeitraum aufbewahrt werden soll. Verfolgen Sie den aktuellen Speicherplatz und erhöhen Sie die maximale Größe (MB), um zu verhindern, dass der Abfragespeicher in den schreibgeschützten Modus übergeht.  Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , oder führen Sie das folgende Skript aus, um aktuelle Informationen zur Größe des Abfragespeichers zu erhalten:  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  Im folgenden Skript wird eine neue maximale Größe (MB) festgelegt:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Statistiksammlungsintervall:** Definiert den Grad der Granularität während der gesammelten Laufzeitstatistik (der Standardwert ist 1 Stunde). Ziehen Sie einen niedrigeren Wert in Betracht, wenn Sie eine geringere Granularität oder weniger Zeit benötigen, um Probleme zu erkennen und zu mindern. Denken Sie jedoch daran, dass dies unmittelbar die Größe der Abfragespeicherdaten beeinflusst. Verwenden Sie SSMS oder Transact-SQL, um einen anderen Wert für das Statistiksammlungsintervall festzulegen:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang
   
  Vermeiden Sie es, Verlaufsdaten aufzubewahren, die Sie nicht mehr verwenden möchten. Dies reduziert die Wahrscheinlichkeit für Änderungen in den schreibgeschützten Status. Die Größe der Abfragespeicherdaten sowie die Zeit, um Probleme zu erkennen und zu mindern, lassen sich besser vorhersagen. Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder das folgende Skript, um die zeitbasierte Cleanuprichtlinie zu konfigurieren:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  Es wird dringend empfohlen, das größenbasierte Cleanup zu aktivieren, um sicherzustellen, dass der Abfragespeicher immer im Lese-/ Schreibmodus ausgeführt wird und die neuesten Daten erfasst.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Das folgende Skript legt den Abfrageerfassungsmodus auf Auto fest:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Aktivieren Sie Abfragespeicher mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , wie im vorherigen Abschnitt beschrieben, oder führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus:  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 |SSMS-Ansicht|Szenario|  
 |---------------|--------------|  
 |Rückläufige Abfragen|Identifizieren von Abfragen, bei denen die Ausführungsmetriken vor kurzem rückläufig waren (d. h. sich verschlechtert haben). <br />Verwenden Sie diese Ansicht, um beobachtete Leistungsprobleme in Ihrer Anwendung mit den tatsächlichen Abfragen zu korrelieren, die korrigiert oder verbessert werden müssen.|  
-|Abfragen mit höchstem Ressourcenverbrauch|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um Ihre Aufmerksamkeit auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
-|Nachverfolgte Abfragen|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|  
 |Gesamter Ressourcenverbrauch|Analysieren Sie den Gesamtressourcenverbrauch für die Datenbank für eine der Ausführungsmetriken.<br />Verwenden Sie diese Ansicht, um Ressourcenmuster zu identifizieren (tägliche im Vergleich zu nächtlichen Arbeitsauslastungen), und optimieren Sie den Gesamtverbrauch für Ihre Datenbank.|  
+|Abfragen mit höchstem Ressourcenverbrauch|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um Ihre Aufmerksamkeit auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
+|Abfragen mit erzwungenen Plänen|Listen, die zuvor erzwungene Pläne, die Verwendung des Abfragespeichers. <br />Verwenden Sie diese Ansicht schnell auf alle aktuell erzwungene Plänen zugreifen.|  
+|Abfragen mit hoher Variation|Analysieren von Abfragen mit hoher Ausführung Variante in Bezug auf eine der verfügbaren Dimensionen, z. B. die Dauer, CPU-Zeit-e/a und Speicher in das gewünschte Intervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit weit variant Leistung identifiziert haben, die benutzerfreundlichkeit für Ihre Anwendungen beeinträchtigen werden können.|  
+|Nachverfolgte Abfragen|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
   
 > [!TIP]  
 >  Eine ausführliche Beschreibung dazu, wie Sie mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Abfragen mit dem größten Ressourcenverbrauch identifizieren und diejenigen Abfragen korrigieren können, die aufgrund der Änderung der Planauswahl zurückgestellt wurden, finden Sie unter [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- Wenn Sie eine Abfrage mit suboptimaler Leistung identifizieren, sollte Ihre Aktion von der Ursache des Problems abhängen.  
+ Wenn Sie eine Abfrage mit suboptimaler Leistung identifizieren, hängt von der Vorgang, der die Ursache des Problems.  
   
 -   Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter ist als der vorherige, können Sie den Planerzwingungsmechanismus verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so zu konfigurieren, dass bei zukünftiger Ausführung immer der optimale Plan verwendet wird.  
   
      ![abfrage-speicher-erzwingungs-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> Die Abbildung oben kann verschiedene Formen für bestimmte Abfragepläne, mit der folgenden Bedeutungen für jeden möglichen Status feature:<br />  
+> |Form|Bedeutung|  
+> |-------------------|-------------|
+> |Circle|Abfrage abgeschlossen (regelmäßigen Ausführung erfolgreich abgeschlossen wurde)|
+> |Square|Abgebrochen (vom Client initiiert abgebrochen Ausführung)|
+> |Triangle|Fehlgeschlagene (Ausnahme abgebrochen Ausführung)|
+> Darüber hinaus gibt die Größe der Form Ausführungsanzahl Abfrage innerhalb des angegebenen Zeitintervalls Erhöhen der Größe mit einer größeren Anzahl von Ausführungen wieder.  
+
 -   Sie können daraus schließen, dass der Abfrage ein Index für optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie die Abfrageleistung mit dem Abfragespeicher.  
   
      ![abfrage-speicher-anzeige-plan](../../relational-databases/performance/media/query-store-show-plan.png "abfrage-speicher-anzeige-plan")  
@@ -166,7 +177,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  Der Abfragespeicher kann den Betriebsmodus automatisch ändern. Überwachen Sie regelmäßig den Status des Abfragespeichers, um sicherzustellen, dass der Abfragespeicher funktioniert, und um Maßnahmen zu ergreifen, um Ausfälle aufgrund von vermeidbaren Ursachen zu verhindern. Führen Sie die folgende Abfrage aus, um den Betriebsmodus zu ermitteln und die wichtigsten Parameter anzuzeigen:  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   Bereinigen Sie die Abfragespeicherdaten mithilfe der folgenden Anweisung:  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  Wenden Sie einen oder beide der folgenden Schritte an, indem Sie die folgende Anweisung ausführen, die den Betriebsmodus explizit wieder in den Lese-/ Schreibzugriff zurücksetzt:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Fehlerzustand  
  Zum Wiederherstellen des Abfragespeichers versuchen Sie explizit den Lese-/Schreibmodus einzustellen, und prüfen Sie den tatsächlichen Status erneut.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Wenn das Problem weiterhin besteht, deutet dies auf eine permanente Beschädigung der Abfragespeicherdaten auf dem Datenträger hin. Sie müssen den Abfragespeicher löschen, bevor Sie den Lese-/ Schreibmodus anfordern.  
+ Wenn das Problem weiterhin besteht, gibt es eine Beschädigung der Daten auf dem Datenträger beibehalten werden.
+ 
+ Der Abfragespeicher konnte wiederhergestellt werden, durch das Ausführen **Sp_query_store_consistency_check** gespeicherte Prozedur in der betroffenen Datenbank.
+ 
+ Wenn, die nicht hilfreich waren, können Sie versuchen, den Abfragespeicher löschen, bevor Sie den Lese-/ Schreibmodus anfordern.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfrage
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen,
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Leistungungsüberwachung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

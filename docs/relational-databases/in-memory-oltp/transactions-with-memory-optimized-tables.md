@@ -3,7 +3,7 @@ title: Transaktionen mit speicheroptimierten Tabellen | Microsoft-Dokumentation
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/18/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
@@ -339,31 +339,4 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
 - [Auf Zeilenversionsverwaltung basierende Isolationsstufen im Datenbankmodul](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
-  
-\<!--  
-Link-GUIDS:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd, ms173763.aspx, „SET TRANSACTION ISOLATION LEVEL (Transact-SQL)“  
-  
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac dn511014 (v=sql.130,d=robot) .aspx, „Einführung in speicheroptimierte Tabellen“  
-  
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , „SET IMPLICIT_TRANSACTIONS (Transact-SQL)“  
-  
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , „sp_getapplock (Transact-SQL)“  
-  
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , „Steuern der Transaktionsdauerhaftigkeit“  
-  
-Bild: „hekaton_transactions“ , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-Weitere Informationen finden Sie in den XMetal-Artikeln: dn133169.aspx „Lebensdauer von Transaktionen“  
-  
-Transaktionen mit In-Memory-Tabellen und -Prozeduren  
-{ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Ersetzt möglicherweise: 06075248-705e-4563-9371-b64cd609793c, dn479429.aspx, „Grundlegendes zu Transaktionen in speicheroptimierten Tabellen“  
-  
-GeneMi, 28.3.2016 11:40 Uhr  
--->  
-  
-  
-  
-  
-
 

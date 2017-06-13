@@ -1,7 +1,7 @@
 ---
 title: "Unterstützte Datentypen für In-Memory OLTP | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 06/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
+ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Unterstützte Datentypen für In-Memory OLTP
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Speicheroptimierte Tabellen  
   
--   Systemintern kompilierte gespeicherte Prozeduren  
+-   Nativ kompilierte T-SQL-Module  
   
 ## <a name="unsupported-data-types"></a>Nicht unterstützte Datentypen  
  Die folgenden Datentypen werden nicht unterstützt:  
@@ -57,7 +57,7 @@ Für die vorhergehenden Zeichenfolgen- und binären Datentypen ab SQL Server 201
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identifizieren von LOBs und anderen Spalten außerhalb von Zeilen
 
-Die folgende Transact-SQL-SELECT-Anweisung gibt für speicheroptimierte Tabellen alle Spalten zurück, die sich außerhalb von Zeilen befinden. Beachten Sie dabei Folgendes:
+Beginnend mit SQL Server 2016, unterstützen Speicheroptimierte Tabellen Spalten außerhalb von Zeilen, die eine einzelne Tabellenzeile größer sein als 8060 Bytes zu ermöglichen. Die folgende Transact-SQL-SELECT-Anweisung gibt für speicheroptimierte Tabellen alle Spalten zurück, die sich außerhalb von Zeilen befinden. Beachten Sie dabei Folgendes:
 
 - Alle Indexschlüsselspalten werden innerhalb von Zeilen gespeichert.
   - Nicht eindeutige Indexschlüssel in speicheroptimierten Tabellen können auf NULL festlegbare Spalten enthalten.
@@ -81,24 +81,15 @@ SELECT
 ```
 
 
-#### <a name="natively-compiled-modules-support-for-lobs"></a>Unterstützung für LOBs in nativ kompilierten Modulen
-
-
-Wenn Sie eine integrierte Zeichenfolgenfunktion in einem nativ kompilierten Modul, beispielsweise einer nativen Prozedur, verwenden, kann die Funktion einen LOB-Typ für Zeichenfolgen akzeptieren. In einer nativen Prozedur kann die LTrim-Funktion einen Parameter vom Typ „nvarchar(max)“ oder „varbinary(max)“ eingeben.
-
-Darüber hinaus können diese LOBs der Rückgabetyp einer nativ kompilierten Skalar-UDF (User-Defined Function, benutzerdefinierte Funktion) sein.
-
-
 ### <a name="other-data-types"></a>Andere Datentypen
 
 
 |Andere Typen|Weitere Informationen finden Sie unter|  
 |-----------------|--------------------------|  
-|Tabellentypen|[Speicheroptimierte Tabellenvariablen](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|Tabellentypen|[Speicheroptimierte Tabellenvariablen](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transact-SQL-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

@@ -1,55 +1,40 @@
 ---
-title: "Lernprogramm: Hinzuf&#252;gen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lernprogramm: Hinzuf&#252;gen einer Sparkline zum Bericht (Berichts-Generator)
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht.   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
   
-Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln, häufig in Form von Tabellen und Matrizen in paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Berichten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
+Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln, häufig in Form von Tabellen und Matrizen in paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
 ![Berichts-Generator-Sparkline-fertig](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>Lernziele  
-In diesem Lernprogramm lernen Sie Folgendes:  
-  
-1. [Erstellen eines Berichts mit einer Tabelle](#CreateTable)  
-  
-2. [Erstellen eines Abfrage- und Tabellenlayouts im Tabellen- oder Matrix-Assistenten](#Query)
- 
-    2a. [Formatieren von Daten als Währung](#FormatCurrency) (optional)  
-  
-    2b. [Formatieren von Daten als Datumsangaben](#FormatDates) (optional)  
-  
-3. [Hinzufügen einer Sparkline zur Tabelle](#Sparkline)  
-  
-4. [Vertikales und horizontales Ausrichten der Sparklines](#AlignSparklines)  
-  
-### Weitere optionale Schritte  
-7. [Ändern der Spaltenbreite](#Width)  
-  
-8. [Hinzufügen eines Berichtstitels](#Title)  
-  
-9. [Speichern des Berichts](#Save)  
-  
+     
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
@@ -67,15 +52,15 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**  >  **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
     > [!NOTE]  
-    > Für dieses Lernprogramm sind keine bestimmten Daten erforderlich; es wird lediglich eine Verbindung mit einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Datenbank benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > In diesem Lernprogramm sind keine bestimmte Daten erforderlich; Es benötigt lediglich eine Verbindung mit einer SQL Server-Datenbank. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
-6.  Geben Sie im Feld **Name** den Namen **Product Sales** für die Datenquelle ein.  
+6.  Geben Sie im Feld **Name**den Namen **Product Sales**für die Datenquelle ein.  
   
-7.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.  
+7.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
   
-8.  Geben Sie für **Verbindungszeichenfolge** den folgenden Text ein:  
+8.  Geben Sie für **Verbindungszeichenfolge**den folgenden Text ein:  
   
     `Data Source\=<servername>`  
   
@@ -101,13 +86,13 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 > [!NOTE]  
 > In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
   
-### So erstellen Sie ein Abfrage- und Tabellenlayout im Tabellen-Assistenten 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>So erstellen Sie ein Abfrage- und Tabellenlayout im Tabellen-Assistenten 
   
 1.  Auf der Seite **Abfrage entwerfen** ist der relationale Abfrage-Designer geöffnet. Für dieses Lernprogramm verwenden Sie den textbasierten Abfrage-Designer.  
   
 2.  Klicken Sie auf **Als Text bearbeiten**. Der textbasierte Abfrage-Designer umfasst zwei Bereiche: den Abfragebereich und den Ergebnisbereich.  
   
-3.  Fügen Sie die folgende [!INCLUDE[tsql](../includes/tsql-md.md)]-Abfrage in das Feld **Abfrage** ein.  
+3.  Fügen Sie die folgende [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfrage in das Feld **Abfrage** ein.  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -144,7 +129,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf „Ausführen“ (**!**).  
   
-    Die Abfrage wird ausgeführt, und das Resultset für die Felder **SalesDate**, **Subcategory**, **Product**, **Sales** und **Quantity** wird angezeigt.  
+    Die Abfrage wird ausgeführt, und das Resultset für die Felder **SalesDate**, **Subcategory**, **Product**, **Sales**und **Quantity**wird angezeigt.  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -160,7 +145,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 9. Klicken Sie auf **Weiter**.  
   
-10. Vergewissern Sie sich auf der Seite **Layout auswählen**, dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+10. Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
     Im Vorschaubereich des Assistenten wird eine Tabelle mit drei Zeilen angezeigt. Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt:  
   
@@ -185,11 +170,11 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
 ### <a name="FormatCurrency"></a>2a. Formatieren von Daten als Währung  
-Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate**, um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
+Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
-2.  Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte **SalesDate**. Halten Sie die STRG-Taste gedrückt, und wählen Sie alle Zellen mit `[Sum(Sales)]` aus. 
+2.  Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte **SalesDate** . Halten Sie die STRG-Taste gedrückt, und wählen Sie alle Zellen mit `[Sum(Sales)]`aus. 
 
     ![Berichts-Generator-Sum-Sales-markieren](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -255,7 +240,7 @@ Sparklines sind schwierig zu lesen, wenn nicht durchgängig der gleiche Maßstab
   
 2.  Klicken Sie mit der rechten Maustaste auf die Sparkline, und klicken Sie auf **Eigenschaften für vertikale Achsen**.  
   
-3.  Aktivieren Sie das Kontrollkästchen **Achsen ausrichten in**. Die einzige Option in der Liste lautet „Tablix1“.  
+3.  Aktivieren Sie das Kontrollkästchen **Achsen ausrichten in** . Die einzige Option in der Liste lautet „Tablix1“.  
   
      Dadurch wird die Höhe der Balken in jeder Sparkline relativ zu den anderen Balken festgelegt. 
   
@@ -263,13 +248,13 @@ Sparklines sind schwierig zu lesen, wenn nicht durchgängig der gleiche Maßstab
   
 5.  Klicken Sie mit der rechten Maustaste auf die Sparkline, und klicken Sie auf **Eigenschaften für horizontale Achsen**.  
   
-6.  Aktivieren Sie das Kontrollkästchen **Achsen ausrichten in**. Die einzige Option in der Liste lautet „Tablix1“. 
+6.  Aktivieren Sie das Kontrollkästchen **Achsen ausrichten in** . Die einzige Option in der Liste lautet „Tablix1“. 
   
     Dadurch wird die Breite der Balken in jeder Sparkline relativ zu den anderen Balken festgelegt. Wenn in einigen Sparklines weniger Balken enthalten sind, enthalten diese Sparklines Leerräume für die fehlenden Daten.  
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie auf **Ausführen**, um den Bericht erneut in der Vorschau anzuzeigen.  
+8.  Klicken Sie auf **Ausführen** , um den Bericht erneut in der Vorschau anzuzeigen.  
   
 Nun sind alle Balken in jeder Sparkline und an den Balken der anderen Sparklines ausgerichtet, und die Höhen stehen in einem Verhältnis zueinander.  
   
@@ -280,39 +265,39 @@ Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder we
   
 Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodass der erwartete Inhalt der Textfelder in der Spalte in einer Zeile untergebracht werden kann.  
   
-### So ändern Sie die Breite von Spalten  
+### <a name="to-change-the-width-of-columns"></a>So ändern Sie die Breite von Spalten  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
 2.  Klicken Sie auf die Tabelle, damit graue Leisten über und neben der Tabelle angezeigt werden. Dabei handelt es sich um die Spalten- und Zeilenziehpunkte
   
-3.  Zeigen Sie auf die Zeile zwischen Spaltenhandles, sodass sich der Cursor in einen Doppelpfeil ändert. Vergrößern Sie z.B. die **Product**-Spalte, damit der Produktname auf einer Zeile angezeigt wird.  
+3.  Zeigen Sie auf die Zeile zwischen Spaltenhandles, sodass sich der Cursor in einen Doppelpfeil ändert. Vergrößern Sie z.B. die **Product** -Spalte, damit der Produktname auf einer Zeile angezeigt wird.  
   
-4.  Klicken Sie auf **Ausführen**, um den Bericht als Vorschau anzuzeigen und zu ermitteln, ob er breit genug ist.  
+4.  Klicken Sie auf **Ausführen** , um den Bericht als Vorschau anzuzeigen und zu ermitteln, ob er breit genug ist.  
   
 ## <a name="Title"></a>8. Hinzufügen eines Berichtstitels (optional)  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
 Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### So fügen Sie einen Berichtstitel hinzu  
+### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Sales by Date** ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
+2.  Geben Sie **Sales by Date**ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
   
 3.  Wählen Sie das Textfeld aus, das **Product Sales** enthält.  
   
 4.  Wählen Sie auf der Registerkarte „Stamm“ in der Gruppe **Schriftart** für **Farbe** die Option **Blaugrün** aus.  
   
-7.  Wählen Sie **Fett** aus.  
+7.  Wählen Sie **Fett**aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9. Speichern des Berichts  
-Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
+Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
-### So speichern Sie den Bericht auf einem Berichtsserver  
+### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
@@ -322,26 +307,27 @@ Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn
   
     Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Product Sales**.  
+4.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Product Sales**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
 Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsservers, mit dem Sie verbunden sind, wird in der Statusleiste unten im Fenster angezeigt.  
   
-### So speichern Sie den Bericht auf dem Computer  
+### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
 1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
-2.  Klicken Sie auf **Desktop**, **Eigene Dokumente** oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  Ersetzen Sie im Feld **Name** den Standardnamen durch **Product Sales**.  
+3.  Ersetzen Sie im Feld **Name**den Standardnamen durch **Product Sales**.  
   
 4.  Klicken Sie auf **Speichern**.  
   
-## Nächste Schritte  
-Hiermit ist das Lernprogramm zum Erstellen eines Tabellenberichts mit Sparklinediagrammen abgeschlossen. Weitere Informationen zu Sparklines finden Sie unter [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## <a name="next-steps"></a>Nächste Schritte  
+
+Hiermit ist das Lernprogramm zum Erstellen eines Tabellenberichts mit Sparklinediagrammen abgeschlossen. Weitere Informationen zu Sparklines finden Sie unter [Sparklines und Datenbalken](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Siehe auch  
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

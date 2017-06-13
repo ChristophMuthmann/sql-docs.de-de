@@ -1,64 +1,45 @@
 ---
-title: "Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft Docs'
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
   
 ![SSRS_Tutorial_einfacher_Tabellenbericht](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
-## <a name="BackToTop"></a>Lernziele  
-In diesem Lernprogramm lernen Sie Folgendes:  
-  
-1.  [Erstellen eines Berichts mithilfe eines Assistenten](#CreateTable)  
-  
-    1.  [Angeben einer Datenverbindung im Tabellen-Assistenten](#DataConnection)  
-  
-    2.  [Erstellen einer Abfrage im Tabellen-Assistenten](#Query)  
-  
-    3.  [Gruppieren von Daten im Tabellen-Assistenten](#Groups)  
-  
-    4.  [Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten](#Subtotals)  
-  
-2.  [Formatieren von Daten als Währung](#FormatCurrency)  
-  
-3.  [Formatieren von Daten als Datum](#FormatDate)  
-  
-4.  [Ändern der Spaltenbreite](#Width)  
-  
-5.  [Hinzufügen eines Berichtstitels](#Title)  
-  
-6.  [Speichern des Berichts](#Save)  
-  
-7.  [Exportieren des Berichts](#Export)  
-  
+
 Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Erstellen eines Berichts mithilfe eines Assistenten  
 Erstellen eines Tabellenberichts mithilfe des Tabellen- oder Matrixassistenten. Zwei Modi stehen zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. Im Berichtsentwurfsmodus legen Sie im Berichtsdatenbereich Daten und auf der Entwurfsoberfläche das Berichtslayout fest. Im Entwurfsmodus für freigegebene Datasets erstellen Sie Datasetabfragen, die für andere Benutzer freigegeben werden. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
-### So erstellen Sie einen Bericht  
+### <a name="to-create-a-report"></a>So erstellen Sie einen Bericht  
   
-1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal oder über den integrierten SharePoint-Modus.  
+1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
     Das Dialogfeld **Neuer Bericht oder neues Dataset** wird geöffnet.  
   
@@ -73,13 +54,13 @@ Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung 
   
 In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-### So erstellen Sie eine eingebettete Datenquelle  
+### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
 1.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
 2.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
-3.  Geben Sie im Feld **Name** den Namen **Product_Sales** für die Datenquelle ein.  
+3.  Geben Sie im Feld **Name**den Namen **Product_Sales** für die Datenquelle ein.  
   
 4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.  
   
@@ -109,13 +90,13 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 > [!NOTE]  
 > In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
   
-### So erstellen Sie eine Abfrage  
+### <a name="to-create-a-query"></a>So erstellen Sie eine Abfrage  
   
 1.  Auf der Seite **Abfrage entwerfen** ist der relationale Abfrage-Designer geöffnet. Für dieses Lernprogramm verwenden Sie den textbasierten Abfrage-Designer.  
   
     Klicken Sie auf **Als Text bearbeiten**. Der textbasierte Abfrage-Designer umfasst zwei Bereiche: den Abfragebereich und den Ergebnisbereich.  
   
-2.  Fügen Sie die folgende [!INCLUDE[tsql](../includes/tsql-md.md)]-Abfrage in das leere obere Feld ein.  
+2.  Fügen Sie die folgende [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfrage in das leere obere Feld ein.  
   
     ```  
     SELECT CAST('2009-01-05' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -162,17 +143,17 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 ## <a name="Groups"></a>1c. Gruppieren von Daten im Tabellen-Assistenten  
 Durch das Auswählen von Feldern für die Gruppierung entwerfen Sie eine Tabelle mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
-### So gruppieren Sie Daten  
+### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
   
 1.  Ziehen Sie auf der Seite **Felder anordnen** das Feld Product in **Werte**.  
   
-2.  Ziehen Sie „Quantity“ in **Werte**, und platzieren Sie es unter „Product“.  
+2.  Ziehen Sie „Quantity“ in **Werte** , und platzieren Sie es unter „Product“.  
   
     "Quantity" wird automatisch von der Sum-Funktion aggregiert, dem Standardaggregat für numerische Felder. Der Wert ist "[Sum(Quantity)]".  
   
     Wählen Sie den Pfeil neben „[Sum(Quantity)]“, um die anderen verfügbaren Aggregatfunktionen anzuzeigen. Ändern Sie die Aggregatfunktion nicht.  
   
-3.  Ziehen Sie „Sales“ in **Werte**, und fügen Sie dieses Feld unter „[Sum(Quantity)]“ ein.  
+3.  Ziehen Sie „Sales“ in **Werte** , und fügen Sie dieses Feld unter „[Sum(Quantity)]“ ein.  
   
     "Sales" wird von der Sum-Funktion aggregiert. Der Wert ist "[Sum(Sales)]".  
   
@@ -180,7 +161,7 @@ Durch das Auswählen von Feldern für die Gruppierung entwerfen Sie eine Tabelle
   
 4.  Ziehen Sie „SalesDate“ in **Zeilengruppen**.  
   
-5.  Ziehen Sie „Subcategory“ in **Zeilengruppen**, und fügen Sie dieses Feld unter „SalesDate“ ein.  
+5.  Ziehen Sie „Subcategory“ in **Zeilengruppen** , und fügen Sie dieses Feld unter „SalesDate“ ein.  
   
     Durch die Schritte 4 und 5 werden die Werte für die Felder zuerst nach Datum und dann nach Produktunterkategorie für dieses Datum geordnet.  
   
@@ -189,9 +170,9 @@ Durch das Auswählen von Feldern für die Gruppierung entwerfen Sie eine Tabelle
 ## <a name="Subtotals"></a>1d. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
 Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
-### So fügen Sie Teilergebnisse und Summen hinzu  
+### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
   
-1.  Vergewissern Sie sich auf der Seite **Layout auswählen**, dass unter **Optionen** die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
 2.  Überprüfen Sie, ob **Als Block, Teilergebnis unterhalb** ausgewählt ist.  
   
@@ -209,20 +190,20 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 3.  Deaktivieren Sie die Option **Gruppen erweitern/reduzieren**. In diesem Lernprogramm enthält der erstellte Bericht keine Drilldownfunktion, mit der ein Benutzer eine übergeordnete Gruppenhierarchie einblenden kann, um untergeordnete Gruppenzeilen und Detailzeilen anzuzeigen.  
   
-4.  Klicken Sie auf **Weiter**, um eine Vorschau der Tabelle anzuzeigen, und anschließend auf **Fertig stellen**.  
+4.  Klicken Sie auf **Weiter** , um eine Vorschau der Tabelle anzuzeigen, und anschließend auf **Fertig stellen**.  
   
 Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ## <a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.   
   
-### So formatieren Sie ein Währungsfeld  
+### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
   
 1.  Damit formatierte Textfelder und Platzhaltertext als Beispielwerte in der Entwurfsansicht angezeigt werden, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
   
 2.   Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte "Sales", und ziehen Sie den Mauszeiger nach unten, um alle Zellen auszuwählen, die `[Sum(Sales)]` enthalten.  
   
-3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
+3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie keinen Beispielwährungswert sehen, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
   
@@ -233,13 +214,13 @@ Die Zusammenfassungswerte für "Sales" werden als Währung angezeigt.
 ## <a name="FormatDate"></a>3. Formatieren von Daten als Datum  
 Im Feld „SalesDate“ werden standardmäßig sowohl Datum als auch Uhrzeit angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
-### So formatieren Sie ein Datumsfeld als Standardformat  
+### <a name="to-format-a-date-field-as-the-default-format"></a>So formatieren Sie ein Datumsfeld als Standardformat  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie auf die Zelle, die `[SalesDate]` enthält.  
+2.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Klicken Sie auf dem Menüband auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil und wählen Sie **Datum** aus.  
+3.  Klicken Sie auf dem Menüband auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil und wählen Sie **Datum**aus.  
   
     In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Wenn Sie kein Beispieldatum sehen, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** und wählen Sie **Beispielwerte** aus.  
   
@@ -247,11 +228,11 @@ Im Feld „SalesDate“ werden standardmäßig sowohl Datum als auch Uhrzeit ang
   
 Die "SalesDate"-Werte werden im Standarddatumsformat angezeigt.  
   
-### So ändern Sie das Datumsformat in ein benutzerdefiniertes Format  
+### <a name="to-change-the-date-format-to-a-custom-format"></a>So ändern Sie das Datumsformat in ein benutzerdefiniertes Format  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Wählen Sie die Zelle, die `[SalesDate]` enthält.  
+2.  Wählen Sie die Zelle, die `[SalesDate]`enthält.  
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil in der Ecke unten rechts, um das Dialogfeld zu öffnen.  
   
@@ -259,7 +240,7 @@ Die "SalesDate"-Werte werden im Standarddatumsformat angezeigt.
   
 4.  Prüfen Sie im Bereich Kategorie, ob **Datum** gewählt ist.  
   
-5.  Wählen Sie im Bereich **Typ** die Option **31. Januar 2000** aus.  
+5.  Wählen Sie im Bereich **Typ** die Option **31. Januar 2000**aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -274,7 +255,7 @@ Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder we
   
 Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodass der erwartete Inhalt der Textfelder in der Spalte in einer Zeile untergebracht werden kann.  
   
-### So ändern Sie die Breite von Tabellenspalten  
+### <a name="to-change-the-width-of-table-columns"></a>So ändern Sie die Breite von Tabellenspalten  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
@@ -291,28 +272,28 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### So fügen Sie einen Berichtstitel hinzu  
+### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Product Sales** ein, und klicken Sie anschließend außerhalb des Textfelds.  
+2.  Geben Sie **Product Sales**ein, und klicken Sie anschließend außerhalb des Textfelds.  
   
 3.  Klicken Sie mit der rechten Maustaste auf das Textfeld, das **Product Sales** enthält, und klicken Sie auf **Textfeldeigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Textfeldeigenschaften** auf **Schriftart**.  
   
-5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt** aus.  
+5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt**aus.  
   
-6.  Wählen Sie in der Liste **Farbe** die Option **Kornblumenblau** aus.  
+6.  Wählen Sie in der Liste **Farbe** die Option **Kornblumenblau**aus.  
   
-7.  Wählen Sie **Fett** aus.  
+7.  Wählen Sie **Fett**aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>6. Speichern des Berichts  
-Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
+Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
-### So speichern Sie den Bericht auf einem Berichtsserver  
+### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
 1.  Klicken Sie auf **Datei** > **Speichern als**.  
   
@@ -328,11 +309,11 @@ Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn
   
 Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsservers, mit dem Sie verbunden sind, wird in der Statusleiste unten im Fenster angezeigt.  
   
-### So speichern Sie den Bericht auf dem Computer  
+### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
 1.  Klicken Sie auf **Datei** > **Speichern als**.  
   
-2.  Klicken Sie auf **Desktop**, **Eigene Dokumente** oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
+2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
 3.  In **Name**, ersetzen Sie **Unbenannt** durch **Product Sales**.  
   
@@ -343,19 +324,19 @@ Berichte können in verschiedene Formate exportiert werden, z.B. Microsoft Exce
   
 In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen eine Eigenschaft für den Bericht fest, um einen benutzerdefinierten Namen für das Arbeitsmappenregister anzugeben.  
   
-### So geben Sie den Namen des Arbeitsmappenregisters an  
+### <a name="to-specify-the-workbook-tab-name"></a>So geben Sie den Namen des Arbeitsmappenregisters an  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
 2.  Klicken Sie auf die Entwurfsoberfläche außerhalb des Berichts.  
   
-3.  Suchen Sie im Bereich Eigenschaften nach der InitialPageName-Eigenschaft und geben Sie **Product Sales Excel** ein.  
+3.  Suchen Sie im Bereich Eigenschaften nach der InitialPageName-Eigenschaft und geben Sie **Product Sales Excel**ein.  
   
     > [!NOTE]  
     > Klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften**, falls der Bereich "Eigenschaften" nicht angezeigt wird.  
     > Wenn eine Eigenschaft im Bereich Eigenschaften nicht angezeigt wird, versuchen Sie, die **Alphabetisch** Schaltfläche oben am Bereich auszuwählen, um alle Eigenschaften alphabetisch zu sortieren.   
   
-### So exportieren Sie einen Bericht nach Excel  
+### <a name="to-export-a-report-to-excel"></a>So exportieren Sie einen Bericht nach Excel  
   
 1.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -371,16 +352,18 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 6.  Klicken Sie auf **Speichern**.  
   
-### So zeigen Sie den Bericht in Excel an  
+### <a name="to-view-the-report-in-excel"></a>So zeigen Sie den Bericht in Excel an  
   
 1.  Öffnen Sie den Ordner, in dem Sie die Arbeitsmappe speichern, und doppelklicken Sie auf **Product_Sales_Excel.xlsx**.  
   
-2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel** lautet.  
+2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel**lautet.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
 Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

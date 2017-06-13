@@ -1,24 +1,29 @@
 ---
-title: "Hinzuf&#252;gen, Verschieben oder L&#246;schen von Textfeldern (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen, verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hinzuf&#252;gen, Verschieben oder L&#246;schen von Textfeldern (Berichts-Generator und SSRS)
-  Textfelder sind das am häufigsten verwendete Berichtselement in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichten. Sie können dem Hauptteil des Berichts ein Textfeld hinzufügen, um Informationen wie beispielsweise Titel, Parameterauswahlen, integrierte Felder und Datumsangaben anzuzeigen.  
+# <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS)
+  Textfelder sind das am häufigsten verwendete Berichtselement in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten. Sie können dem Hauptteil des Berichts ein Textfeld hinzufügen, um Informationen wie beispielsweise Titel, Parameterauswahlen, integrierte Felder und Datumsangaben anzuzeigen.  
   
  Jede Zelle in einer Tabelle oder Matrix ist in Wirklichkeit ein Textfeld. Die in einem Bericht mit Tabellen und Matrizen angezeigten Berichtsdaten ergeben sich fast alle aus der Auswertung des Inhalts der einzelnen Textfelder im Bericht durch den Berichtsprozessor. Sie können Zellen genau so formatieren, wie Sie andere Textfelder außerhalb des Datenbereichs formatieren würden.  
   
@@ -27,13 +32,13 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Wenn Sie auf ein Textfeld klicken, bearbeiten Sie sofort den Text im Textfeld. Um das Textfeld selbst auszuwählen, und nicht den Text in dem Textfeld, drücken Sie ESC.  
   
-## So fügen Sie ein Textfeld hinzu  
+## <a name="to-add-a-text-box"></a>So fügen Sie ein Textfeld hinzu  
   
 1.  Klicken Sie in der Entwurfsansicht in der Registerkarte **Einfügen** auf **TextBox**.  
   
 2.  Klicken Sie auf der Entwurfsoberfläche auf ein Feld, und ziehen Sie es auf die gewünschte Textfeldgröße.  
   
-## So fügen Sie ein Textfeld in einer Liste hinzu  
+## <a name="to-add-a-text-box-in-a-list"></a>So fügen Sie ein Textfeld in einer Liste hinzu  
   
 1.  Klicken Sie in der Berichtsentwurfsansicht auf der Registerkarte **Einfügen** auf **Liste**.  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 7
 6.  Prüfen Sie im Eigenschaftenbereich, ob die **Parent** -Eigenschaft dem Rechteck entspricht, das dem Listendatenbereich automatisch hinzugefügt wurde.  
   
     > [!NOTE]  
-    >  Falls der Bereich „Eigenschaften“ nicht angezeigt wird, aktivieren Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften**.  
+    >  Falls der Bereich „Eigenschaften“ nicht angezeigt wird, aktivieren Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften** .  
   
-## So verschieben Sie ein Textfeld  
+## <a name="to-move-a-text-box"></a>So verschieben Sie ein Textfeld  
   
 1.  Klicken Sie in der Berichtsentwurfssicht auf eine leere Stelle im Textfeld, um das Textfeld auszuwählen.  
   
@@ -63,14 +68,14 @@ caps.handback.revision: 7
 2.  Klicken Sie auf den Textfeldziehpunkt, und ziehen Sie das Textfeld an die neue Position.   
     Sie können auch die Pfeiltasten verwenden, um das ausgewählte Textfeld horizontal oder vertikal zu verschieben. Um das Textfeld in kleineren Schritten auf der Entwurfsoberfläche zu verschieben, verwenden Sie die Pfeiltasten mit gedrückter STRG-TASTE.  
   
-## So löschen Sie ein Textfeld  
+## <a name="to-delete-a-text-box"></a>So löschen Sie ein Textfeld  
   
 1.  Klicken Sie in der Berichtsentwurfssicht mit der rechten Maustaste auf eine leere Stelle im Textfeld, um das Textfeld auszuwählen, und klicken Sie dann auf **Löschen**. Oder klicken Sie auf eine leere Stelle im Textfeld, und drücken Sie dann die ENTF-Taste.  
   
     > [!NOTE]  
     >  Wenn Sie im Bearbeitungsmodus in das Textfeld klicken, drücken Sie ESC, um das Textfeld zu wählen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Tastenkombinationen &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  

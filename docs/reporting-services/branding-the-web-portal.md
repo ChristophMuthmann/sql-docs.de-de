@@ -1,38 +1,36 @@
 ---
-title: "Branding des Webportals | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Branding des Webportals | Microsoft Docs
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Branding des Webportals
+
+# <a name="branding-the-web-portal"></a>Branding des Webportals
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Sie können die Darstellung des Webportals ändern, indem Sie es an das eigene Unternehmen anpassen. Dies erfolgt über ein Markenpaket. Das Markenpaket wurde entwickelt, damit Sie keine umfassenden Kenntnisse über das Cascading Stylesheet (CSS) benötigen, um es zu erstellen.  
   
-In diesem Thema:  
-  
--   [Erstellen des Markenpakets](#create)  
-  
--   [Anwenden des Markenpakets auf das Webportal](#apply)  
-  
--   [metadata.xml-Beispiel](#metadata)  
-  
--   [colors.json-Beispiel](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
-## Erstellen des Markenpakets  
+   
+## <a name="creating-the-brand-package"></a>Erstellen des Markenpakets  
   
 Ein Markenpaket für Reporting Services besteht aus drei Elementen und wird als ZIP-Datei verpackt.   
   
@@ -42,11 +40,11 @@ Ein Markenpaket für Reporting Services besteht aus drei Elementen und wird als 
   
 Die Dateien müssen die oben aufgeführten Namen aufweisen. Die ZIP-Datei kann jedoch beliebig benannt werden.  
   
-### metadata.xml  
+### <a name="metadataxml"></a>metadata.xml  
   
 Mit der Datei „metadata.xml“ können Sie den Namen des Markenpakets festlegen. Sie verfügt ebenso jeweils über einen Verweis auf Ihre „colors.json“- und „logo.png“-Dateien.  
   
-Um den Namen des Markenpakets zu ändern, ändern Sie das Attribut **Name** des Elements **SystemResourcePackage**.  
+Um den Namen des Markenpakets zu ändern, ändern Sie das Attribut **Name** des Elements **SystemResourcePackage** .  
   
     name="Multicolored example brand"  
   
@@ -65,7 +63,7 @@ Beispiel mit einer Logodatei.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json  
+### <a name="colorsjson"></a>Colors.json  
   
 Wenn das Markenpaket hochgeladen wird, extrahiert der Server die entsprechenden Name/Wert-Paare aus der „colors.json“-Datei und verbindet sie mit dem LESS-Masterstylesheet „brand.less“. Diese LESS-Datei wird verarbeitet, und die resultierende CSS-Datei an den Client übermittelt. Alle Farben im Stylesheet folgen der hexadezimalen Darstellung einer Farbe mit sechs Zeichen.  
   
@@ -77,7 +75,7 @@ Das LESS-Stylesheet enthält Blöcke, die auf einige vordefinierte LESS-Variable
         background-color:@primaryButtonBg;   
     }  
   
-Obwohl dies der CSS-Syntax ähnelt, sind die Farbwerte, die mit dem Präfix @ versehen sind, eindeutig für LESS. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
+Obwohl dies der CSS-Syntax ähnelt, das die Farbwerte anzeigt, mit dem Präfix der @symbol, sind eindeutig für LESS. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
   
 Wenn beispielsweise die colors.json-Datei die folgenden Werte hätte.  
   
@@ -102,7 +100,7 @@ Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.
   
 |Abschnitt|Description|  
 |---|---|  
-|Primär|Schaltflächen- und Hoverfarben.|  
+|primary|Schaltflächen- und Hoverfarben.|  
 |Secondary|Titelleiste, Suchleiste, linkes Menü (sofern angezeigt) und die Textfarbe für diese Elemente|  
 |Neutral Primary|Hintergründe für Startseiten- und Berichtsbereich.|  
 |Neutral Secondary|Hintergründe für Textfeld- und Ordneroptionen sowie das Menü „Einstellungen“.|  
@@ -116,24 +114,23 @@ Wenn Sie sich zum ersten Mal mit Mobile Report Publisher auf einem Server anmeld
   
 Dann können Sie dieses Design für alle mobilen Berichte verwenden, die Sie erstellen, auch wenn sie nicht für den gleichen Server vorgesehen sind, auf dem Sie das Design bereitgestellt haben.   
   
-### Das Verwenden eines Logos  
+### <a name="using-a-logo"></a>Das Verwenden eines Logos  
   
 Wenn Sie ein Logo mit Ihrem Markenpaket einschließen, wird es im Webportal anstelle des Namens angezeigt, den Sie für das Webportal im Menü "Einstellungen" festgelegt haben.  
   
 Die Datei, die Sie für das Logo einschließen, muss im PNG-Dateiformat vorliegen. Die Dateidimensionen werden skaliert, sobald sie auf den Server hochgeladen werden. Er sollten auf ungefähr 290px x 60px skalieren.  
-  
-<a name="apply">  
-## Anwenden des Markenpakets auf das Webportal  
+   
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Anwenden des Markenpakets auf das Webportal  
   
 Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie Folgendes tun:  
   
 1.  Wählen Sie das **Zahnradsymbol** in der oberen rechten Ecke aus.  
   
-2.  Wählen Sie **Siteeinstellungen** aus.  
+2.  Wählen Sie **Siteeinstellungen**aus.  
   
     ![SSR-Menü nach Klick auf Zahnradsymbol](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  Wählen Sie **Branding** aus.  
+3.  Wählen Sie **Branding**aus.  
   
     ![SSRS-Branding](../reporting-services/media/ssrsbranding.png)  
   
@@ -141,10 +138,9 @@ Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie
   
 **Markenpaket hochladen** übernimmt das Paket für das Webportal. Sie werden sehen, dass dies sofort wirksam wird.  
   
-Sie können das Paket auch **Herunterladen** oder **Entfernen**. Das Entfernen des Pakets führt zum sofortigen Zurücksetzen des Webportals auf das Standardbranding.  
+Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen des Pakets führt zum sofortigen Zurücksetzen des Webportals auf das Standardbranding.  
   
-<a name="metadata">  
-## metadata.xml-Beispiel  
+## <a name="metadataxml-example"></a>metadata.xml-Beispiel  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -157,9 +153,8 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen**. Das Entfernen d
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
-## Colors.json-Beispiel  
+   
+## <a name="colorsjson-example"></a>colors.json-Beispiel  
   
     {  
         "name":"Multicolored example brand",  
@@ -252,12 +247,5 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen**. Das Entfernen d
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,31 +1,36 @@
 ---
-title: "Designer f&#252;r SharePoint-Listenabfragen (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: SharePoint-Listenabfragen (Berichts-Generator) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Designer f&#252;r SharePoint-Listenabfragen (Berichts-Generator)
+# <a name="sharepoint-list-query-designer-report-builder"></a>Designer für SharePoint-Listenabfragen (Berichts-Generator)
   Berichts-Generator und Berichts-Designer enthalten sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer. Mit diesen Designern erstellen Sie Abfragen, um die Daten anzugeben, die für ein Berichtsdataset aus einer SharePoint-Website abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen der Metadaten der SharePoint-Liste, interaktiven Erstellen einer Abfrage und Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die vom grafischen Abfrage-Designer erstellte Abfrage anzuzeigen, eine Abfrage zu ändern oder die Abfragebefehle einzugeben. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
   
 > [!IMPORTANT]  
->  Benutzer greifen auf Datenquellen zu, wenn sie Abfragen erstellen und ausführen. Sie sollten minimale Berechtigungen für die Datenquellen gewähren, z. B. nur Leseberechtigungen.  
+>  Benutzer greifen auf Datenquellen zu, wenn sie Abfragen erstellen und ausführen. Sie sollten minimale Berechtigungen für die Datenquellen gewähren, z. B. nur Leseberechtigungen.  
   
-## Grafischer Abfrage-Designer  
+## <a name="graphical-query-designer"></a>Grafischer Abfrage-Designer  
  Im grafischen Abfrage-Designer können Sie die SharePoint-Website durchsuchen und den Befehl zum Abrufen der SharePoint-Listendaten für ein Dataset interaktiv erstellen. Sie wählen die Felder aus, die im Dataset enthalten sein sollten, und geben optional Filter an, die die Daten im Dataset begrenzen. Sie können angeben, dass Filter als Parameter verwendet werden und den Wert des Filters zur Laufzeit bereitstellen.  
   
  SharePoint-Listen enthalten viele spezifische SharePoint-Felder, die für Berichte u. U. nicht sinnvoll sind. Der Abfrage-Designer enthält eine Option zum Ausblenden dieser Felder, sodass Sie die gewünschten Felder einfacher und schneller bestimmen können.  
@@ -40,7 +45,7 @@ caps.handback.revision: 7
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer bei der Verwendung mit SharePoint-Listen.  
   
- ![rsQD_Relational_Graphical_SharePoint](../../reporting-services/report-data/media/rsqd-relational-graphical-sharepoint.gif "rsQD_Relational_Graphical_SharePoint")  
+ ![RsQD_Relational_Graphical_SharePoint](../../reporting-services/report-data/media/rsqd-relational-graphical-sharepoint.gif "RsQD_Relational_Graphical_SharePoint")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  Die Sortierreihenfolge im Resultset wird von der Reihenfolge bestimmt, in der die Daten aus der Datenquelle abgerufen werden. Die Sortierreihenfolge kann geändert werden, indem die Abfrage geändert wird oder nachdem die Daten für den Bericht abgerufen wurden.  
   
-### Symbolleiste für den grafischen Abfrage-Designer  
+### <a name="graphical-query-designer-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer  
  Die Symbolleiste des relationalen Abfrage-Designers stellt die folgenden Schaltflächen bereit, mit denen Sie eine Abfrage angeben oder die Ergebnisse der Abfrage anzeigen können.  
   
 |Schaltfläche|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**Abfrage ausführen**|Führen Sie die Abfrage aus. Das Resultset wird im Bereich mit den Abfrageergebnissen angezeigt.|  
 |**Verborgene Felder anzeigen**|Blendet die Felder ein oder aus, die automatisch von SharePoint erstellt, normalerweise aber nicht in Berichten verwendet werden (z. B. "ProgId" und "Level" für SharePoint-Linkelemente). Durch das Ausblenden dieser Felder wird die Feldliste verkürzt, sodass sie einfacher zu verwenden ist.|  
   
-## Siehe auch  
- [Abfrage-Designer &#40;Berichts-Generator&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>Siehe auch  
+ [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

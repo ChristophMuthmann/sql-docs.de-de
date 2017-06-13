@@ -1,25 +1,30 @@
 ---
-title: "Erstellen eines verkn&#252;pften Berichts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verknüpfte Berichte [Reporting Services], erstellen"
+title: "Erstellen eines verknüpften Berichts | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Erstellen eines verkn&#252;pften Berichts
+# <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
   Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.  
   
  Ein verknüpfter Bericht wird von einem vorhandenen Bericht abgeleitet und behält die Berichtsdefinition des Originals bei. Ein verknüpfter Bericht erbt immer das Berichtslayout und die Datenquelleneigenschaften des ursprünglichen Berichts. Alle anderen Eigenschaften und Einstellungen können sich von denen des ursprünglichen Berichts unterscheiden, einschließlich Sicherheit, Parameter, Speicherort, Abonnements und Zeitpläne.  
@@ -28,7 +33,7 @@ caps.handback.revision: 44
   
  Obwohl verknüpfte Berichte in der Regel auf parametrisierten Berichten basieren, ist kein parametrisierter Bericht erforderlich. Sie können immer dann verknüpfte Berichte erstellen, wenn Sie einen vorhandenen Bericht mit anderen Einstellungen bereitstellen möchten.  
   
-### So erstellen Sie einen verknüpften Bericht  
+### <a name="to-create-a-linked-report"></a>So erstellen Sie einen verknüpften Bericht  
   
 1.  Navigieren Sie im Berichts-Manager zum Ordner, der den Bericht enthält, zu dem Sie einen Link erstellen möchten, und öffnen Sie dann das Menü Optionen und klicken Sie auf **Verknüpften Bericht erstellen**.  
   
@@ -40,14 +45,14 @@ caps.handback.revision: 44
   
      Das Symbol für einen verknüpften Bericht unterscheidet sich von anderen Elementen, die von einem Berichtsserver verwaltet werden. Das folgende Symbol steht für einen verknüpften Bericht:  
   
-     ![Verknüpfter Bericht (Symbol)](../../reporting-services/report-server/media/hlp-16linked.png "Verknüpfter Bericht (Symbol)")  
+     ![Symbol "Bericht" verknüpfte](../../reporting-services/report-server/media/hlp-16linked.gif "verknüpften Bericht (Symbol)")  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Neuer verknüpfter Bericht (Seite) &#40;Berichts-Manager&#41;](../Topic/New%20Linked%20Report%20Page%20\(Report%20Manager\).md)   
- [Speicherort für Elemente auswählen (Seite) &#40;Berichts-Manager&#41;](../Topic/Choose%20Item%20Location%20Page%20\(Report%20Manager\).md)   
- [Allgemeine Eigenschaften (Seite) &#40;Berichte, Berichts-Manager&#41;](../Topic/General%20Properties%20Page,%20Reports%20\(Report%20Manager\).md)   
+ [Neuer verknüpfter Bericht (Seite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Speicherort für Elemente auswählen (Seite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Allgemeine Eigenschaften (Seite) &#40;Berichte, Berichts-Manager&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
  [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

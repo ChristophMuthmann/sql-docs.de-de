@@ -1,27 +1,38 @@
 ---
-title: "Erstellen einer Datenwarnung im Datenwarnungs-Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen eine Datenwarnung im Datenwarnungs-Designer | Microsoft Docs
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Erstellen einer Datenwarnung im Datenwarnungs-Designer
-  Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach dem Speichern der Warnungsdefinitionen können Sie diese im Datenwarnungs-Designer erneut öffnen, bearbeiten und dann erneut speichern. Weitere Informationen zum Bearbeiten von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) und [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
-  
-### So erstellen Sie eine Datenwarnungsdefinition  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach dem Speichern der Warnungsdefinitionen können Sie diese im Datenwarnungs-Designer erneut öffnen, bearbeiten und dann erneut speichern. Weitere Informationen zum Bearbeiten von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) und [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+
+> [!NOTE]
+> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+
+## <a name="create-a-data-alert-definition"></a>Erstellen einer datenwarnungsdefinition
+ 
 1.  Wechseln Sie zur SharePoint-Bibliothek mit dem Bericht, für den Sie eine Datenwarnungsdefinition erstellen möchten.  
   
 2.  Klicken Sie auf den Bericht.  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      Das folgende Bild zeigt das Menü **Aktionen** an.  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![Öffnen von Warnungs-Designer aus SharePoint-Bibliothek](../reporting-services/media/rs-openalertdesigneriw.gif "öffnen Warnungs-Designer aus SharePoint-Bibliothek")  
   
      Der Datenwarnungs-Designer wird geöffnet und zeigt die ersten 100 Zeilen des ersten Datenfeeds an, den der Bericht in einer Tabelle generiert.  
   
@@ -70,15 +81,15 @@ caps.handback.revision: 13
   
 10. Geben Sie den Vergleichswert ein.  
   
-11. Klicken Sie optional erneut auf die Auslassungspunkte (**…**).  
+11. Klicken Sie optional erneut auf die Auslassungspunkte ( **…** ).  
   
-     Die Auslassungspunkte (**…**) werden in der Zeile mit der ersten Klausel angezeigt.  
+     Die Auslassungspunkte ( **…** ) werden in der Zeile mit der ersten Klausel angezeigt.  
   
      Eine OR-Klausel wird unten und innerhalb der AND-Regel hinzugefügt.  
   
-12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus** und anschließend eine Spalte in der Liste aus.  
+12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.  
   
-     Die Auslassungspunkte (**…**), auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
+     Die Auslassungspunkte ( **…** ), auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
   
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.  
   
@@ -109,15 +120,16 @@ caps.handback.revision: 13
   
 20. Aktualisieren Sie optional im Textfeld **Betreff** die Betreffzeile der Warnmeldung.  
   
-     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>**.  
+     Die Standardeinstellung ist der Antragsteller **datenwarnungs für \<Name der datenwarnung >**.  
   
 21. Geben Sie optional im Textfeld **Beschreibung** eine Beschreibung der Warnmeldung ein.  
   
 22. Klicken Sie auf **Speichern**.  
-  
-## Siehe auch  
- [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
- [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
+[Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

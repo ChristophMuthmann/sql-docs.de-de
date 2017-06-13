@@ -1,29 +1,34 @@
 ---
-title: "Lektion 8: Erstellen eines Datenfilters | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lektion 8: Erstellen eines Datenfilters | Microsoft Docs'
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lektion 8: Erstellen eines Datenfilters
+# <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
 Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  
   
 Sie können für den Drillthroughbericht einen tabellenbasierten Filter **oder** einen Abfragefilter erstellen. Diese Lektion enthält Anweisungen zum Erstellen beider Filtertypen.  
   
-## Tabellenbasierter Filter  
+## <a name="table-based-filter"></a>Tabellenbasierter Filter  
 Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implementieren.  
   
 -   Fügen Sie der Tablix im untergeordneten Bericht einen Filterausdruck hinzu.  
@@ -32,31 +37,31 @@ Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implemen
   
 -   Fügen Sie einen Ereignishandler hinzu, durch den die **PurchaseOrderDetail** -DataTable an den untergeordneten Bericht gebunden wird.  
   
-### So fügen Sie der Tablix im untergeordneten Bericht einen Filterausdruck hinzu  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>So fügen Sie der Tablix im untergeordneten Bericht einen Filterausdruck hinzu  
   
 1.  Öffnen Sie den untergeordneten Bericht.  
   
 2.  Wählen Sie in der Tablix eine Spaltenüberschrift aus. Klicken Sie mit der rechten Maustaste auf die graue Zelle, die oberhalb der Spaltenüberschrift angezeigt wird, und klicken Sie anschließend auf **Tablix-Eigenschaften**.  
   
-3.  Wählen Sie die Seite **Filter** und anschließend **Hinzufügen** aus.  
+3.  Wählen Sie die Seite **Filter** und anschließend **Hinzufügen**aus.  
   
 4.  Wählen Sie im Feld **Ausdruck** aus der Dropdownliste **ProductID** aus. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
-5.  Klicken Sie in der Dropdownliste **Operator** auf den Gleichheitsoperator (**=**).  
+5.  Klicken Sie in der Dropdownliste**=**Operator **auf den Gleichheitsoperator (** ).  
   
-6.  Wählen Sie neben dem Feld **Wert** die Ausdrucksschaltfläche aus. Wählen Sie im Bereich **Kategorie** **Parameter** aus, und doppelklicken Sie im Bereich **Werte** auf **productid**. Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value** vergleichbaren Ausdruck enthalten.  
+6.  Wählen Sie neben dem Feld **Wert** die Ausdrucksschaltfläche aus. Wählen Sie im Bereich **Kategorie** **Parameter** aus, und doppelklicken Sie im Bereich **Werte** auf **productid** . Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
   
-7.  Wählen Sie **OK** aus, und klicken Sie im Dialogfeld **Tablix-Eigenschaften** ein zweites Mal auf **OK**.  
+7.  Wählen Sie **OK** aus, und klicken Sie im Dialogfeld **Tablix-Eigenschaften** ein zweites Mal auf **OK** .  
   
 8.  Speichern Sie die RDLC-Datei.  
   
-### So erstellen Sie eine Funktion, durch die ungefilterte Daten aus der PurchaseOrderDetail-Tabelle ausgewählt werden  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>So erstellen Sie eine Funktion, durch die ungefilterte Daten aus der PurchaseOrderDetail-Tabelle ausgewählt werden  
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
 2.  Erstellen Sie eine neue Funktion, die den **productid**-Parameter vom Typ Integer akzeptiert, ein **datatable** -Objekt zurückgibt und folgende Schritte ausführt.  
   
-    1.  Erstellt eine Instanz des Datasets **DataSet2**, das in Schritt 2 in [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md) erstellt wurde.  
+    1.  Erstellt eine Instanz des Datasets **DataSet2**, das in Schritt 2 in [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)erstellt wurde.  
   
     2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
@@ -102,15 +107,15 @@ Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implemen
             }  
         ```  
   
-### So fügen Sie einen Ereignishandler hinzu, durch den die PurchaseOrderDetail-DataTable an den untergeordneten Bericht gebunden wird  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>So fügen Sie einen Ereignishandler hinzu, durch den die PurchaseOrderDetail-DataTable an den untergeordneten Bericht gebunden wird  
   
 1.  Öffnen Sie „Default.aspx“ in der Entwurfsansicht.  
   
-2.  Klicken Sie mit der rechten Maustaste auf das ReportViewer-Steuerelement, und wählen Sie **Eigenschaften** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf das ReportViewer-Steuerelement, und wählen Sie **Eigenschaften**aus.  
   
 3.  Wählen Sie auf der Seite **Eigenschaften** das Symbol **Ereignisse** aus.  
   
-4.  Doppelklicken Sie auf das Ereignis **Drillthrough**.  
+4.  Doppelklicken Sie auf das Ereignis **Drillthrough** .  
   
     Dadurch wird dem Code ein mit folgendem Block vergleichbarer Ereignishandlerabschnitt hinzugefügt.  
   
@@ -153,20 +158,20 @@ Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implemen
   
 6.  Speichern Sie die Datei.  
   
-## Abfragefilter  
+## <a name="query-filter"></a>Abfragefilter  
 Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.  
   
 -   Erstellen Sie eine Funktion, mit der gefilterte Daten aus der **PurchaseOrderDetail** -Tabelle ausgewählt werden.  
   
 -   Fügen Sie einen Ereignishandler hinzu, durch den Parameterwerte abgerufen und die **PurchaseOrdeDetail** -DataTable an den untergeordneten Bericht gebunden wird.  
   
-### So erstellen Sie eine Funktion, durch die gefilterte Daten aus der PurchaseOrderDetail-Tabelle ausgewählt werden  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>So erstellen Sie eine Funktion, durch die gefilterte Daten aus der PurchaseOrderDetail-Tabelle ausgewählt werden  
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
 2.  Erstellen Sie eine neue Funktion, die den **productid**-Parameter vom Typ Integer akzeptiert, ein **datatable** -Objekt zurückgibt und folgende Schritte ausführt.  
   
-    1.  Erstellt eine Instanz des Datasets **DataSet2**, das in Schritt 2 in [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md) erstellt wurde.  
+    1.  Erstellt eine Instanz des Datasets **DataSet2**, das in Schritt 2 in [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)erstellt wurde.  
   
     2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
@@ -218,15 +223,15 @@ Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.
             }  
         ```  
   
-### So fügen Sie einen Ereignishandler hinzu, durch den Parameterwerte abgerufen und die PurchaseOrderDetail-DataTable an den untergeordneten Bericht gebunden wird  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>So fügen Sie einen Ereignishandler hinzu, durch den Parameterwerte abgerufen und die PurchaseOrderDetail-DataTable an den untergeordneten Bericht gebunden wird  
   
 1.  Öffnen Sie „Default.aspx“ in der Entwurfsansicht.  
   
-2.  Klicken Sie mit der rechten Maustaste auf das ReportViewer-Steuerelement, und wählen Sie **Eigenschaften** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf das ReportViewer-Steuerelement, und wählen Sie **Eigenschaften**aus.  
   
 3.  Wählen Sie im Bereich **Eigenschaften** das Symbol **Ereignisse** aus.  
   
-4.  Doppelklicken Sie auf das Ereignis **Drillthrough**.  
+4.  Doppelklicken Sie auf das Ereignis **Drillthrough** .  
   
     Dadurch wird dem Code ein mit Folgendem vergleichbarer Ereignishandlerabschnitt hinzugefügt.  
   
@@ -289,8 +294,10 @@ Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.
   
 6.  Speichern Sie die Datei.  
   
-## Nächste Aufgabe  
+## <a name="next-task"></a>Nächste Aufgabe  
 Sie haben erfolgreich einen Datenfilter für die Datentabelle erstellt, die Sie für den untergeordneten Bericht definiert haben. Als Nächstes werden Sie die Websiteanwendung erstellen und ausführen. Informationen hierzu finden Sie unter [Lektion 9: Erstellen und Ausführen der Anwendung](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   
+
+

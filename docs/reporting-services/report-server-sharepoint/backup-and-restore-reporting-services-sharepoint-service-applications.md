@@ -1,23 +1,28 @@
 ---
-title: "Sichern und Wiederherstellen von Reporting&#160;Services-SharePoint-Dienstanwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sichern und Wiederherstellen von Reporting Services SharePoint-Dienstanwendungen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Sichern und Wiederherstellen von Reporting&#160;Services-SharePoint-Dienstanwendungen
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen
   In diesem Thema wird das Sichern und Wiederherstellen einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung mit der SharePoint-Zentraladministration oder PowerShell beschrieben. Das Thema enthält:  
   
 -   [Einschränkungen](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> Einschränkungen  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen können teilweise mithilfe der SharePoint-Funktionen zum Sichern und Wiederherstellen gesichert und wiederhergestellt werden. **Zusätzliche Schritte sind erforderlich** , und die Schritte werden in diesem Thema dokumentiert. Derzeit lassen sich auf Basis des Sicherungsprozesses **keine** Verschlüsselungsschlüssel und Anmeldeinformationen für Konten mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenbank sichern.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen können teilweise mithilfe der SharePoint-Funktionen zum Sichern und Wiederherstellen gesichert und wiederhergestellt werden. **Zusätzliche Schritte sind erforderlich** , und die Schritte werden in diesem Thema dokumentiert. Derzeit lassen sich auf Basis des Sicherungsprozesses **keine** Verschlüsselungsschlüssel und Anmeldeinformationen für Konten mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbank sichern.  
   
 ###  <a name="bkmk_recommendations"></a> Empfehlungen  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 3.  Überprüfen Sie, ob die Dienstanwendung ein Konto mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für den Datenbankzugriff verwendet. Bei Verwendung einer dieser Kontotypen müssen Sie sich die Anmeldeinformationen notieren, damit Sie die Dienstanwendung nach der Wiederherstellung konfigurieren können.  
   
-### Sichern der Verschlüsselungsschlüssel mit der Zentraladministration  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>Sichern der Verschlüsselungsschlüssel mit der Zentraladministration  
  Weitere Informationen zum Sichern der Verschlüsselungsschlüssel für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie im Abschnitt „Verschlüsselungsschlüssel“ in [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Sichern der Dienstanwendung mit der SharePoint-Zentraladministration  
@@ -70,11 +75,11 @@ caps.handback.revision: 11
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   
- [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx) in der SharePoint-Dokumentation.  
+ [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)in der SharePoint-Dokumentation.  
   
  [Sichern einer Dienstanwendung (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Überprüfen der Kontoausführung und Datenbankauthentifizierung  
+### <a name="verify-execution-account-and-database-authentication"></a>Überprüfen der Kontoausführung und Datenbankauthentifizierung  
  **Ausführungskonto:** So überprüfen Sie, ob die Dienstanwendung ein Ausführungskonto verwendet:  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten** .  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Eigenschaften** .  
   
-3.  Lesen Sie den Abschnitt **Reporting Services-Dienstdatenbank (SSRS)**.  
+3.  Lesen Sie den Abschnitt **Reporting Services-Dienstdatenbank (SSRS)** .  
   
 4.  Ist die Windows-Authentifizierung konfiguriert, müssen Ihnen die Anmeldeinformationen bekannt sein, um die Dienstanwendung nach der Wiederherstellung konfigurieren zu können. Fahren Sie erst mit der Sicherungs- und Wiederherstellungsprozedur fort, wenn Sie die richtigen Anmeldeinformationen kennen.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  Wurde für die Dienstanwendung ein Ausführungskonto oder die Windows-Authentifizierung für den Datenbankzugriff verwendet, konfigurieren Sie die Anmeldeinformationen.  
   
-### Wiederherstellen der Dienstanwendung mit der SharePoint-Zentraladministration  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>Wiederherstellen der Dienstanwendung mit der SharePoint-Zentraladministration  
   
 1.  Klicken Sie in der Gruppe **Sichern und Wiederherstellen** der SharePoint-Zentraladministration auf die Option zum Wiederherstellen aus einer Sicherung **** .  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [Wiederherstellen einer Dienstanwendung (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)  
   
- [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)  
+ [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
   
-### Wiederherstellen der Verschlüsselungsschlüssel mit der Zentraladministration  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>Wiederherstellen der Verschlüsselungsschlüssel mit der Zentraladministration  
  Weitere Informationen zum Wiederherstellen der Verschlüsselungsschlüssel für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie im Abschnitt „Verschlüsselungsschlüssel“ in [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
-### Konfigurieren des Ausführungskontos und der Datenbankauthentifizierung  
+### <a name="configure-the-execution-account-and-database-authentication"></a>Konfigurieren des Ausführungskontos und der Datenbankauthentifizierung  
  **Ausführungskonto** : Wurde für die Dienstanwendung ein Ausführungskonto verwendet, gehen Sie zum Konfigurieren des Kontos wie folgt vor:  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten** .  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Eigenschaften** .  
   
-3.  Lesen Sie den Abschnitt **Reporting Services-Dienstdatenbank (SSRS)**.  
+3.  Lesen Sie den Abschnitt **Reporting Services-Dienstdatenbank (SSRS)** .  
   
 4.  Wählen Sie **Windows-Authentifizierung**.  
   

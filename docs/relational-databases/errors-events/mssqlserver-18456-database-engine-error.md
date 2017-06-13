@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in 
 |11|Der Anmeldename ist gültig, beim Serverzugriff ist jedoch ein Fehler aufgetreten. Dieser Fehler ist möglicherweise darauf zurückzuführen, dass der Windows-Benutzer als Mitglied der lokalen Administratorgruppe Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat, Windows aber keine Administratoranmeldeinformationen bereitstellt. Starten Sie das Programm zum Herstellen einer Verbindung mit der Option **Als Administrator ausführen**, und fügen Sie anschließend den Windows-Benutzer als spezifischen Anmeldenamen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinzu.|  
 |12|Der Anmeldename ist gültig, beim Serverzugriff ist jedoch ein Fehler aufgetreten.|  
 |18|Das Kennwort muss geändert werden.|  
+|38, 46|Vom Benutzer angeforderte Datenbank wurde nicht gefunden werden.|
+|102 - 111|AAD-Fehler.|
+|122 - 124|Fehler aufgrund leerer Benutzername oder Kennwort.|
+|126|Vom Benutzer angeforderte Datenbank ist nicht vorhanden.|
+|132 - 133|AAD-Fehler.|
   
 Andere Fehlerzustände liegen vor und weisen auf einen unerwarteten internen Verarbeitungsfehler hin.  
   

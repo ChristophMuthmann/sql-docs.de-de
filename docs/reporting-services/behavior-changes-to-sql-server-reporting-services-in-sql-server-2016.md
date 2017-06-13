@@ -1,43 +1,49 @@
 ---
-title: "Verhaltens&#228;nderungen in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, Abwärtskompatibilität"
-  - "Zeilen [Reporting Services], Höhen"
-  - "Führende Leerzeichen"
-  - "Installieren von Reporting Services, Verhaltensänderungen in dieser Version"
-  - "Kryptografie [Reporting Services]"
-  - "Setup [Reporting Services], Verhaltensänderungen mit Version"
-  - "DefaultValueQueryBased-Eigenschaft"
-  - "Verschlüsselung [Reporting Services]"
-  - "Entschlüsselung [Reporting Services]"
-  - "Leerzeichen [SQL Server]"
-  - "Initialisieren von Installationen [Reporting Services]"
-  - "Verhaltensänderungen [Reporting Services]"
+title: "Verändertes Verhalten von SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, backward compatibility
+- rows [Reporting Services], heights
+- leading blanks
+- installing Reporting Services, behavior changes with release
+- cryptography [Reporting Services]
+- Setup [Reporting Services], behavior changes with release
+- DefaultValueQueryBased property
+- encryption [Reporting Services]
+- decryption [Reporting Services]
+- blank characters [SQL Server]
+- initializing installations [Reporting Services]
+- behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 caps.latest.revision: 69
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 66
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f052253295b400bbbbe9d0db25349916e19c2ad2
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verhaltens&#228;nderungen in SQL Server Reporting Services in SQL Server 2016
-  In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Ein verändertes Programmverhalten beeinflusst die Funktionsweise und das Interagieren von Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+# <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2016"></a>Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016
+  In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Verändertes Programmverhalten beeinflusst die Funktionen und Interaktion von in SQL Server 2016 im Vergleich zu früheren Versionen von SQL Server.  
   
  Es gibt keine Verhaltensänderungen.
-  
-## Siehe auch  
- [Neues bei Reporting Services &#40;SSRS&#41;](../Topic/What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)   
- [Als veraltet markierte Features in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/de-de/3876c01e-f81d-4cce-9104-5106a8c369e6)  
- [Nicht mehr unterstützte Features in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/de-de/d529cc96-3483-480b-9bfc-bd28b1d0ef52)   
- [Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/de-de/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)  
-  
-  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Neuigkeiten in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
+[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+[Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+[Wichtige Änderungen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

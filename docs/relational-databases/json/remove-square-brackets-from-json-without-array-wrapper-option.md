@@ -18,25 +18,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea60d5a74c680e9c2aba571a76815f77913da471
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Entfernen von rechteckigen Klammern von JSON-Ausgabe mit der Option WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Geben Sie zum Entfernen der rechteckigen Klammern, die die JSON-Ausgabe der **FOR JSON** -Klausel standardmäßig umgeben, die Option **WITHOUT_ARRAY_WRAPPER** an. Verwenden Sie diese Option, um ein einzelnes JSON-Objekt als Ausgabe anstelle eines Arrays zu generieren.  
+Geben Sie zum standardmäßigen Entfernen der rechteckigen Klammern, die die JSON-Ausgabe der **FOR JSON** -Klausel umgeben, die Option **WITHOUT_ARRAY_WRAPPER** an. Verwenden Sie diese Option mit ein einzeiliges Resultset an, um ein einzelnes JSON-Objekt als Ausgabe anstelle eines Arrays mit einem einzelnen Element zu generieren.
+
+Wenn Sie diese Option mit dem Ergebnis mehrerer Zeilen verwenden, ist die resultierende Ausgabe nicht gültiges JSON aufgrund mehrerer Elemente und die fehlenden eckige Klammern ein.  
   
- Wenn Sie diese Option nicht angeben, wird die JSON-Ausgabe in eckige Klammern eingeschlossen.  
-  
-## <a name="examples"></a>Beispiele  
- Die folgende Tabelle zeigt die Ausgabe der **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an.  
+## <a name="example-single-row-result"></a>Beispiel (einzeiliges Resultset)  
+Die folgende Tabelle zeigt die Ausgabe der **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an.  
   
  **Abfrage**  
   
-```tsql  
+```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Result** without the **WITHOUT_ARRAY_WRAPPER** option  
+ **Ergebnis** (Standard), ohne die **WITHOUT_ARRAY_WRAPPER** Option  
   
 ```json  
 [{
@@ -60,13 +60,14 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
     "day": 15
 }]
 ```  
-  
- Hier finden Sie ein weiteres Beispiel für eine **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an.  
+
+## <a name="example-multiple-row-result"></a>Beispiel (mehrzeilige Ergebnis)
+Hier finden Sie ein weiteres Beispiel für eine **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an. Dieses Beispiel erzeugt ein Ergebnis mehrerer Zeilen. Die Ausgabe ist wegen mehrere Elemente und die fehlenden eckigen Klammern nicht gültiges JSON-Format.
   
  **Abfrage**  
   
-```tsql  
-SELECT TOP 1 SalesOrderNumber, OrderDate, Status  
+```sql  
+SELECT TOP 3 SalesOrderNumber, OrderDate, Status  
 FROM Sales.SalesOrderHeader  
 ORDER BY ModifiedDate  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
@@ -76,21 +77,40 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 } 
 ```  
   
- **Result** without the **WITHOUT_ARRAY_WRAPPER** option  
+ **Ergebnis** (Standard), ohne die **WITHOUT_ARRAY_WRAPPER** Option  
   
 ```json  
 [{
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 }]
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
+Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
   
 ## <a name="see-also"></a>Siehe auch  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

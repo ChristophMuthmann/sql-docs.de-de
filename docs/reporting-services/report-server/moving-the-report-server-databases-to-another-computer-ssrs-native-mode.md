@@ -1,26 +1,33 @@
 ---
-title: "Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verschieben die Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus) | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
+
   Sie können die Berichtsserver-Datenbanken, die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Installation verwendet werden, in eine Instanz auf einem anderen Computer verschieben. Die Datenbanken reportserver und reportservertempdb müssen gemeinsam verschoben bzw. kopiert werden. Für eine Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sind beide Datenbanken erforderlich. Die reportservertempdb-Datenbank muss namentlich der zu verschiebenden primären reportserver-Datenbank entsprechen.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  Das Verschieben einer Datenbank hat keine Auswirkungen auf geplante Vorgänge, die aktuell für Berichtsserverelemente definiert sind.  
   
@@ -28,17 +35,17 @@ caps.handback.revision: 10
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge, die verwendet werden, um einen Zeitplan auszulösen, werden auf der neuen Datenbankinstanz neu erstellt. Sie müssen die Aufträge nicht auf den neuen Computer verschieben, Sie möchten jedoch möglicherweise nicht mehr benötigte Aufträge auf dem Computer löschen.  
   
--   Abonnements, zwischengespeicherte Berichte und Momentaufnahmen bleiben in der verschobenen Datenbank erhalten. Wenn eine Momentaufnahme nach der Verschiebung der Datenbank keine aktualisierten Daten bezieht, löschen Sie die Momentaufnahmeoptionen im Berichts-Manager, und klicken Sie auf **Anwenden**, um die vorgenommenen Änderungen zu speichern. Erstellen Sie den Zeitplan neu, und klicken Sie nochmals auf **Anwenden**, um die vorgenommenen Änderungen wieder zu speichern.  
+-   Abonnements, zwischengespeicherte Berichte und Momentaufnahmen bleiben in der verschobenen Datenbank erhalten. Wenn eine Momentaufnahme nach der Verschiebung der Datenbank keine aktualisierten Daten bezieht, löschen Sie die Momentaufnahmeoptionen im Berichts-Manager, und klicken Sie auf **Anwenden** , um die vorgenommenen Änderungen zu speichern. Erstellen Sie den Zeitplan neu, und klicken Sie nochmals auf **Anwenden** , um die vorgenommenen Änderungen wieder zu speichern.  
   
 -   Temporäre Berichts- und Benutzersitzungsdaten, die in reportservertempdb gespeichert sind, bleiben beim Verschieben dieser Datenbank persistent.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet verschiedene Vorgehensweisen zum Verschieben von Datenbanken (einschließlich Sichern und Wiederherstellen, Anfügen und Trennen sowie Kopieren). Nicht alle Vorgehensweisen sind zum Verschieben einer vorhandenen Datenbank in eine neue Serverinstanz geeignet. Die zum Verschieben der Berichtsserver-Datenbank zu verwendende Vorgehensweise ist je nach Verfügbarkeitsanforderungen Ihres Systems unterschiedlich. Die einfachste Möglichkeit zum Verschieben der Berichtsserver-Datenbanken besteht darin, sie anzufügen und zu trennen. Bei dieser Vorgehensweise muss der Berichtsserver jedoch offline geschaltet werden, während Sie die Datenbank trennen. Sicherungen und Wiederherstellungen sind jedoch besser geeignet, wenn Sie Störungen des Diensts vermeiden möchten. Sie müssen für diese Vorgänge jedoch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ausführen. Das Kopieren der Datenbank wird nicht empfohlen (insbesondere nicht mithilfe des Assistenten zum Kopieren von Datenbanken), da hierbei Berechtigungseinstellungen in der Datenbank verloren gehen.  
   
 > [!IMPORTANT]  
->  Die in diesem Thema vorgestellten Schritte sind geeignet, wenn das Verschieben der Berichtsserver-Datenbank die einzige Änderung ist, die Sie an der vorhandenen Installation vornehmen. Wenn eine vollständige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation migriert wird (d.h. wenn die Datenbank verschoben und die Identität des Berichtsserver-Windows-Diensts, der die Datenbank verwendet, geändert wird), müssen die Verbindung neu konfiguriert und der Verschlüsselungsschlüssel zurückgesetzt werden.  
+>  Die in diesem Thema vorgestellten Schritte sind geeignet, wenn das Verschieben der Berichtsserver-Datenbank die einzige Änderung ist, die Sie an der vorhandenen Installation vornehmen. Wenn eine vollständige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation migriert wird (d.h. wenn die Datenbank verschoben und die Identität des Berichtsserver-Windows-Diensts, der die Datenbank verwendet, geändert wird), müssen die Verbindung neu konfiguriert und der Verschlüsselungsschlüssel zurückgesetzt werden.  
   
-## Trennen und Anfügen der Berichtsserver-Datenbanken  
- Wenn Sie den Berichtsserver offline schalten können, können Sie die Datenbanken trennen, um sie in die gewünschte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu verschieben. Bei dieser Vorgehensweise bleiben die Berechtigungen in den Datenbanken erhalten. Wenn Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank verwenden, müssen Sie sie in eine andere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz verschieben. Nachdem Sie die Datenbanken verschoben haben, müssen Sie die Verbindung des Berichtsservers mit der Berichtsserver-Datenbank erneut konfigurieren. Wenn Sie eine Bereitstellung für dezentrales Skalieren ausführen, müssen Sie die Verbindung der Berichtsserver-Datenbank für jeden Berichtsserver in der Bereitstellung erneut konfigurieren.  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>Trennen und Anfügen der Berichtsserver-Datenbanken  
+ Wenn Sie den Berichtsserver offline schalten können, können Sie die Datenbanken trennen, um sie in die gewünschte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu verschieben. Bei dieser Vorgehensweise bleiben die Berechtigungen in den Datenbanken erhalten. Wenn Sie eine SQL Server-Datenbank verwenden, müssen Sie es in eine andere SQL Server-Instanz verschieben. Nachdem Sie die Datenbanken verschoben haben, müssen Sie die Verbindung des Berichtsservers mit der Berichtsserver-Datenbank erneut konfigurieren. Wenn Sie eine Bereitstellung für dezentrales Skalieren ausführen, müssen Sie die Verbindung der Berichtsserver-Datenbank für jeden Berichtsserver in der Bereitstellung erneut konfigurieren.  
   
  Führen Sie folgende Schritte aus, um die Datenbanken zu verschieben:  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. Starten Sie den Berichtsserverdienst neu.  
   
-## Sichern und Wiederherstellen der Berichtsserver-Datenbanken  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>Sichern und Wiederherstellen der Berichtsserver-Datenbanken  
  Wenn Sie den Berichtsserver nicht offline schalten können, können Sie die Berichtsserver-Datenbanken durch Sichern und Wiederherstellen verschieben. Sie müssen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zum Sichern und Wiederherstellen verwenden. Nach dem Wiederherstellen der Datenbanken müssen Sie den Berichtsserver so konfigurieren, dass die Datenbank in der neuen Serverinstanz verwendet wird. Weitere Informationen finden Sie in den Anweisungen am Ende dieses Themas.  
   
-### Verwenden von BACKUP und COPY_ONLY zum Sichern der Berichtsserver-Datenbanken  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Verwenden von BACKUP und COPY_ONLY zum Sichern der Berichtsserver-Datenbanken  
  Legen Sie beim Sichern der Datenbanken das COPY_ONLY-Argument fest. Achten Sie unbedingt darauf, dass Sie beide Datenbanken und Protokolldateien sichern.  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### Verwenden von RESTORE und MOVE zum Verschieben der Berichtsserver-Datenbanken  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>Verwenden von RESTORE und MOVE zum Verschieben der Berichtsserver-Datenbanken  
  Stellen Sie beim Wiederherstellen der Datenbanken sicher, dass Sie das MOVE-Argument einschließen, damit Sie einen Pfad angeben können. Mithilfe des NORECOVERY-Arguments wird die erste Wiederherstellung ausgeführt. Dadurch verbleibt die Datenbank im RESTORING-Status, und Sie haben Zeit, die Protokollsicherungen zu überprüfen und zu bestimmen, welche Sicherung wiederhergestellt werden soll. Im letzten Schritt wird der RESTORE-Vorgang mit dem RECOVERY-Argument wiederholt.  
   
  Das MOVE-Argument verwendet den logischen Namen der Datendatei. Führen Sie die folgende Anweisung aus, um den logischen Namen zu ermitteln: `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### Konfigurieren der Berichtsserver-Datenbankverbindung  
+### <a name="how-to-configure-the-report-server-database-connection"></a>Konfigurieren der Berichtsserver-Datenbankverbindung  
   
 1.  Starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit dem Berichtsserver her.  
   
@@ -214,16 +221,17 @@ GO
 7.  Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.  
   
 > [!NOTE]  
->  Für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation muss die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz die **RSExecRole**-Rolle beinhalten. Wenn Sie die Berichtsserver-Datenbankverbindung über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool festlegen, werden Rollen erstellt und Anmelderegistrierungen sowie Rollenzuweisungen vorgenommen. Wenn Sie zum Konfigurieren der Verbindung alternative Vorgehensweisen verwenden (insbesondere das Befehlszeilen-Hilfsprogramm rsconfig.exe), ist der Berichtsserver nicht betriebsbereit. Sie müssen möglicherweise WMI-Code schreiben, um den Berichtsserver verfügbar zu machen. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
-  
-## Siehe auch  
- [Erstellen der Rolle RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  Für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation muss die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz die **RSExecRole** -Rolle beinhalten. Wenn Sie die Berichtsserver-Datenbankverbindung über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool festlegen, werden Rollen erstellt und Anmelderegistrierungen sowie Rollenzuweisungen vorgenommen. Wenn Sie zum Konfigurieren der Verbindung alternative Vorgehensweisen verwenden (insbesondere das Befehlszeilen-Hilfsprogramm rsconfig.exe), ist der Berichtsserver nicht betriebsbereit. Sie müssen möglicherweise WMI-Code schreiben, um den Berichtsserver verfügbar zu machen. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Erstellen der Rolle RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Konfigurieren des unbeaufsichtigten Ausführungskontos](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Konfigurations-Manager für Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[RSConfig-Hilfsprogramm](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Konfigurieren und Verwalten von Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Berichtsserver-Datenbank](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,37 +1,42 @@
 ---
-title: "Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
   Sie können Zahlen und Datumsangaben in Datenbereichen formatieren, indem Sie im Dialogfeld **Eigenschaften** des betreffenden Datenbereichs auf der Seite **Zahl** ein Format auswählen.  
   
- Wenn Sie in einem Textfeld-Berichtselement Formatzeichenfolgen angeben möchten, wählen Sie das zu formatierende Element aus, klicken Sie mit der rechten Maustaste, wählen Sie **Textfeldeigenschaften** aus, und klicken Sie anschließend auf **Zahl**. Einzelne Zellen einer Tabelle oder eines Matrixdatenbereichs können auf die gleiche Weise formatiert werden, da es sich bei den Zellen in einer Tabelle oder Matrix um einzelne Textfelder handelt.  
+ Wenn Sie in einem Textfeld-Berichtselement Formatzeichenfolgen angeben möchten, wählen Sie das zu formatierende Element aus, klicken Sie mit der rechten Maustaste, wählen Sie **Textfeldeigenschaften**aus, und klicken Sie anschließend auf **Zahl**. Einzelne Zellen einer Tabelle oder eines Matrixdatenbereichs können auf die gleiche Weise formatiert werden, da es sich bei den Zellen in einer Tabelle oder Matrix um einzelne Textfelder handelt.  
   
- Diagrammdatenbereiche werden häufig zum Anzeigen von Daten auf der Kategorieachse (x) sowie von Werten auf der Wertachse (y) verwendet. Klicken Sie mit der rechten Maustaste auf eine Achse, und wählen Sie **Achseneigenschaften** aus, um die Formatierung in einem Diagramm anzugeben. Auf der Wertachse können Formatierungen nur für Zahlen angegeben werden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Diagrammdatenbereiche werden häufig zum Anzeigen von Daten auf der Kategorieachse (x) sowie von Werten auf der Wertachse (y) verwendet. Klicken Sie mit der rechten Maustaste auf eine Achse, und wählen Sie **Achseneigenschaften**aus, um die Formatierung in einem Diagramm anzugeben. Auf der Wertachse können Formatierungen nur für Zahlen angegeben werden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Zur Angabe einer Formatierung in einem Messgerätdatenbereich klicken Sie mit der rechten Maustaste auf die Skala des Messgeräts, und wählen Sie **Radiale Skalierungseigenschaften** bzw. **Lineare Skalierungseigenschaften** aus.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Überlegungen zum Formatieren von Zahlen und Datumsangaben  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Überlegungen zum Formatieren von Zahlen und Datumsangaben  
  Beachten Sie vor dem Formatieren von Zahlen und Datumsangaben im Bericht folgende Punkte:  
   
 -   Standardmäßig werden Zahlen so formatiert, dass sie die Kultureinstellungen auf dem Clientcomputer widerspiegeln. Geben Sie mithilfe von Formatzeichenfolgen an, wie Zahlen angezeigt werden, sodass die Formatierung unabhängig vom Aufenthaltsort der Person, die den Bericht anzeigt, einheitlich ist.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Wenn Sie unter **Kategorie** die Option **Währung** auswählen und die Option **Werte anzeigen in**aktivieren, können Sie **Tausender**, **Millionen**oder **Milliarden** auswählen, um Zahlen in Finanzformaten anzuzeigen. Wenn der Feldwert zum Beispiel 1.789.905.394 lautet und Sie **Milliarden** auswählen und zwei Dezimalstellen angeben, wird im Bericht der Wert 1,78 angezeigt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
