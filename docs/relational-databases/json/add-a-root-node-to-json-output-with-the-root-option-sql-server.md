@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c06cea4f834549afadef342c02b423e9b6ee7ca9
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e7b316ab5b6f809b348fa882a42a89431590c40b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>Hinzufügen eines Stammknotens zur JSON-Ausgabe mithilfe der ROOT-Option (SQL Server)
@@ -155,7 +155,10 @@ SELECT TOP 5
     }
 }]
 ```  
-  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
+Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+ 
 ## <a name="see-also"></a>Siehe auch  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   

@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d9cdb66be3f6831ad5c2a61258c25425f98c0988
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2b7d75694080b52e9c31e58ffd1e1f738b1035c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen (SQL Server)
@@ -169,8 +169,8 @@ SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')
   
  Weitere Informationen finden Sie unter [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
   
-## <a name="learn-more-about-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über integrierte JSON-Unterstützung in SQL Server  
- [Blogeinträge von Jovan Popovic, Program Manager bei Microsoft](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
+Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
   
 ## <a name="see-also"></a>Siehe auch  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

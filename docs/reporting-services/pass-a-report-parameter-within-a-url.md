@@ -1,26 +1,31 @@
 ---
-title: "&#220;bergeben von Berichtsparametern innerhalb einer URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL-Zugriff [Reporting Services], Übergeben von Parametern"
-  - "Übergeben von Parametern [Reporting Services]"
+title: "Übergeben von Berichtsparametern innerhalb einer URL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# &#220;bergeben von Berichtsparametern innerhalb einer URL
+# <a name="pass-a-report-parameter-within-a-url"></a>Übergeben von Berichtsparametern innerhalb einer URL
   Sie können Berichtsparameter an einen Bericht übergeben, indem Sie sie in eine Berichts-URL einschließen. Diesen URL-Parametern wird nichts vorangestellt, da sie direkt an das Berichtsverarbeitungsmodul übergeben werden.  
   
 > [!IMPORTANT]  
@@ -78,7 +83,7 @@ SalesOrderNumber:isnull=true
  Um einen **Boolean** -Wert zu übergeben, verwenden Sie 0 für "false" und 1 für "true". Um einen **Float** -Wert zu übergeben, schließen Sie das Dezimaltrennzeichen des Servergebietsschemas ein  
   
 > [!NOTE]  
->  Wenn Ihr Bericht einen Berichtsparameter enthält, der einen Standardwert besitzt, und der Wert der **Prompt**-Eigenschaft **FALSE** ist (dies bedeutet, dass die PromptUser-Eigenschaft im Berichts-Manager nicht ausgewählt ist), können Sie keinen Wert für diesen Berichtsparameter innerhalb einer URL übergeben. Dies ermöglicht Administratoren, Benutzer daran zu hindern, die Werte bestimmter Berichtsparameter hinzuzufügen oder zu ändern.  
+>  Wenn Ihr Bericht einen Berichtsparameter enthält, der einen Standardwert besitzt, und der Wert der **Prompt** -Eigenschaft **FALSE** ist (dies bedeutet, dass die PromptUser-Eigenschaft im Berichts-Manager nicht ausgewählt ist), können Sie keinen Wert für diesen Berichtsparameter innerhalb einer URL übergeben. Dies ermöglicht Administratoren, Benutzer daran zu hindern, die Werte bestimmter Berichtsparameter hinzuzufügen oder zu ändern.  
   
 ##  <a name="bkmk_examples"></a> Zusätzliche Beispiele  
  Die URL im folgenden Beispiel enthält Leerzeichen und mehrere Parameter.  
@@ -99,13 +104,13 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Im folgenden Beispiel für eine URL wird der einzelne *SellStartDate*-Parameter mit dem Wert „7/1/2005“ für einen Berichtsserver im einheitlichen Modus übergeben.  
+ Im folgenden Beispiel für eine URL wird der einzelne *SellStartDate* -Parameter mit dem Wert „7/1/2005“ für einen Berichtsserver im einheitlichen Modus übergeben.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "Berichtsdatasets (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Berichtsdatasets (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsdatasets (SSRS)
+# <a name="report-datasets-ssrs"></a>Berichtsdatasets (SSRS)
   Um einem Bericht Daten hinzuzufügen, erstellen Sie Datasets. Jedes Dataset stellt das Resultset der Ausführung eines Abfragebefehls für eine Datenquelle dar. Die Spalten im Resultset sind die Feldauflistung. Die Zeilen im Resultset sind die Daten. Ein Dataset enthält nicht die tatsächlichen Daten. Es enthält die Informationen, die benötigt werden, um einen bestimmten Satz von Daten aus einer Datenquelle abzurufen.  
   
  Zwei Typen von Datasets werden unterschieden: eingebettet und freigegeben. Ein eingebettetes Dataset wird im Bericht definiert und nur von diesem Bericht verwendet. Ein freigegebenes Dataset wird auf dem Berichtsserver oder einer SharePoint-Website definiert und kann von mehreren Berichten verwendet werden. Im Berichts-Generator können Sie im Modus "Freigegebenes Dataset" freigegebene Datasets oder im Modus "Berichts-Designer" eingebettete Datasets erstellen. Im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können freigegebene Datasets als Teil eines Projekts oder eingebettete Datasets als Teil eines Berichts erstellt werden.  
@@ -26,15 +31,15 @@ caps.handback.revision: 8
   
      In der folgenden Abbildung werden im Berichtsdatenbereich eine Datenquelle mit dem Namen [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)], ein Dataset namens "DataSet1" und fünf Felder in der Datasetfeldauflistung angezeigt. Im Layoutbereich wird eine Tabelle mit Spaltenüberschriften in der obersten Zeile und Tabellenzellen mit Text in der untersten Zeile angezeigt. Der Platzhaltertext [Name] stellt die Metadaten für das Namensfeld dar. Wenn der Bericht ausgeführt wird, wird der Platzhaltertext durch die tatsächlichen Datenwerte ersetzt. Die Tabelle wird entsprechend erweitert, um alle Daten anzuzeigen.  
   
-     ![rs_DataDesignandPreview](../../reporting-services/report-data/media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
+     ![Rs_DataDesignandPreview](../../reporting-services/report-data/media/rs-datadesignandpreview.gif "Rs_DataDesignandPreview")  
   
 -   **Freigegebene Datasets.** Erstellen Sie ein freigegebenes Dataset, wenn Sie ein Dataset in mehreren Berichten verwenden möchten. In der Entwurfsansicht für freigegebene Datasets des Berichts-Generators können Sie ein freigegebenes Dataset erstellen und auf einem Berichtsserver oder auf einer SharePoint-Website speichern. Um ein freigegebenes Dataset als Teil eines Projekts zu erstellen, das auf einem Server oder einer Website bereitgestellt werden kann, verwenden Sie den Berichts-Designer.  
   
      Die folgende Abbildung zeigt die Entwurfsansicht für freigegebene Datasets im Berichts-Generator. Sie können die Datenverbindung, die Dataseteigenschaften, die Abfrage und Filter auswählen bzw. ändern, Filter optional als Parameter markieren und die Abfrageergebnisse anzeigen. Anschließend speichern Sie die Änderungen auf dem Server oder der Website.  
   
-     ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
+     ![Rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "Rs_SharedDatasetDesignMode")  
   
- Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md).  
+ Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
   
  Sie können einem Bericht auch Datasets hinzufügen, indem Sie Berichtsteile mit den Datasets hinzufügen, von denen sie abhängig sind. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -77,7 +82,6 @@ caps.handback.revision: 8
   
 -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="QuickStart"></a> Hinzufügen von Daten mit Berichtsteilen  
  Berichtsteile enthalten die Datasets, von denen sie abhängen. Diese Datasets werden basierend auf freigegebenen Datenquellen erstellt, die auf dem Berichtsserver verfügbar sind. Wenn Sie dem Bericht im Berichts-Generator einen Berichtsteil hinzufügen, werden die abhängigen Datasets dem Bericht hinzugefügt (ähnlich wie beim manuellen Hinzufügen). Ein vordefiniertes Diagramm enthält z.B. ein Dataset. Zeigen Sie eine Vorschau des Berichts an, um die Daten anzuzeigen.  
@@ -89,18 +93,16 @@ caps.handback.revision: 8
   
 -   Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) und [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Queries"></a> Abfragen und Abfrage-Designer  
  Zum Angeben der Daten, die Sie aus einer Datenquelle abrufen möchten, erstellen Sie einen Abfragebefehl. Jeder Datenquellentyp stellt einen zugehörigen *Abfrage-Designer* bereit, mit dessen Hilfe Sie die Abfrage erstellen können. Der Abfrage-Designer kann grafisch oder textbasiert sein. In einem grafischen Abfrage-Designer zeigen Sie Metadaten an, die die Daten in der externen Datenquelle darstellen, und erstellen durch Ziehen von Feldern oder Entitäten in die Abfrageentwurfsoberfläche interaktiv eine Abfrage. In einem textbasierten Abfrage-Designer schreiben oder importieren Sie Abfragen in der Abfragesyntax, die von der externen Datenquelle unterstützt wird.  
   
  Im Abfrage-Designer können Sie die Abfrage ausführen, um Beispieldaten anzuzeigen und die Abfragebefehlssyntax zu überprüfen. Spaltennamen im Resultset werden die Feldnamen, die im Berichtsdatenbereich angezeigt werden. Das Resultset muss ein einzelner Satz von Zeilen und Spalten sein, der die gleiche Anzahl von Werten für jede Datenzeile aufweist. Mehrere Resultsets aus einer einzelnen Abfrage werden nicht unterstützt. Unregelmäßige Hierarchien, die keine konstante Anzahl von Spalten enthalten und für jede Zeile eine andere Anzahl von Datenwerten erzeugen können, werden nicht unterstützt.  
   
- Sie benötigen Entwurfszeitanmeldeinformationen, um eine Abfrage auszuführen. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../Topic/Specify%20Credentials%20in%20Report%20Builder.md) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Sie benötigen Entwurfszeitanmeldeinformationen, um eine Abfrage auszuführen. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Die Kommunikation zwischen einer Datenerweiterung und der externen Datenquelle wird von Datenanbietern behandelt. Die Unterstützung der Abfragebefehlssyntax, Abfrageparameter und Datentypen für Werte im Resultset wird von den einzelnen Datenanbietern bestimmt. Weitere Informationen finden Sie im Thema zum jeweiligen Datenerweiterungstyp und unter [Abfrage-Designer &#40;Berichts-Generator&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+ Die Kommunikation zwischen einer Datenerweiterung und der externen Datenquelle wird von Datenanbietern behandelt. Die Unterstützung der Abfragebefehlssyntax, Abfrageparameter und Datentypen für Werte im Resultset wird von den einzelnen Datenanbietern bestimmt. Weitere Informationen finden Sie im Thema zum jeweiligen Datenerweiterungstyp und unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -111,7 +113,7 @@ caps.handback.revision: 8
   
  [Erstellen einer Abfrage im relationalen Abfrage-Designer &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)  
+ [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
@@ -119,24 +121,22 @@ caps.handback.revision: 8
   
  [Zuordnen eines Abfrageparameters zu einem Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/define parameters in the mdx query designer for analysis services.md)  
+ [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Section"></a> In diesem Abschnitt  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
- [Angeben von Anmeldeinformationen im Berichts-Generator](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)  
+ [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   

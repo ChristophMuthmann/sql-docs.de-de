@@ -1,7 +1,7 @@
 ---
 title: "Verschlüsseln einer Datenspalte | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/18/2016
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
@@ -55,7 +55,14 @@ ms.lasthandoff: 04/11/2017
 -   Einige Berechtigungen für den Schlüssel und die VIEW DEFINITION-Berechtigung dürfen nicht verweigert worden sein.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
-  
+
+Um die folgenden Beispiele verwenden, müssen Sie einen Datenbank-Hauptschlüssel verfügen. Wenn die Datenbank nicht bereits einen Datenbank-Hauptschlüssel verfügt, erstellen Sie durch Ausführen der folgenden Anweisung, die Ihr Kennwort bereitstellen:   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+Sichern Sie immer Ihre Datenbank-Hauptschlüssel ein. Weitere Informationen zu Datenbank-Hauptschlüssel, finden Sie unter [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
   
 1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
@@ -66,11 +73,7 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -129,13 +132,6 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

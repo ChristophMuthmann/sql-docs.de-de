@@ -1,23 +1,28 @@
 ---
-title: "Angeben von Farben, die f&#252;r mehrere Formdiagramme konsistent sind (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Geben Sie konsistente Farben in mehrere Form Diagramme Berichts-Generator-SSRS | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Angeben von Farben, die f&#252;r mehrere Formdiagramme konsistent sind (Berichts-Generator und SSRS)
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Angeben von Farben, die für mehrere Formdiagramme konsistent sind (Berichts-Generator und SSRS)
   Bei anderen Diagrammen als Formdiagrammen in paginierten Berichten wählt [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] eine neue Farbe anhand des Indexes von Reihen im Diagramm aus. Beispielsweise wird die erste Reihe im Diagramm der ersten Farbe in der Palette zugeordnet. Formdiagramme weisen jedoch ein anderes Verhalten auf. Bei Formdiagrammen wird jede Farbe in der Palette einem Datenpunkt im Dataset zugeordnet. Beispielsweise wird Datenpunkt 1 der ersten Farbe in der Palette zugeordnet, Datenpunkt 2 wird der zweiten Farbe in der Palette zugeordnet usw.  
   
  Wenn ein Datenpunkt keinen Wert aufweist, wird er nicht im Formdiagramm angezeigt. Dies bedeutet, dass dem Datenpunkt keine Farbe zugewiesen wird. Wenn beispielsweise Punkt 2 den Wert 0 (null) aufweist, wird Punkt 1 der ersten Farbe in der Palette und Punkt 3 der zweiten Farbe in der Palette zugeordnet. Dieses Prinzip weist den Vorteil auf, dass für leere Punkte im Dataset eines Kreisdiagramms nicht unnötigerweise eine Palettenfarbe verwendet wird, wenn die leeren Punkte nicht gezeichnet werden müssen.  
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## So legen Sie konsistente Farben für mehrere Sparkline-Formdiagramme in einer Tabelle oder einer Matrix fest  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>So legen Sie konsistente Farben für mehrere Sparkline-Formdiagramme in einer Tabelle oder einer Matrix fest  
   
 1.  Klicken Sie zum Anzeigen des Bereichs Diagrammdaten auf das Diagramm.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 8
   
 3.  Klicken Sie auf der Registerkarte Allgemein im Feld **Gruppen synchronisieren in** auf den Namen der Kategorie, für die die Farben synchronisiert werden sollen, und klicken Sie dann auf **OK**.  
   
-## So geben Sie konsistente Farben für mehrere Formdiagramme an  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>So geben Sie konsistente Farben für mehrere Formdiagramme an  
   
-1.  Klicken Sie mit der rechten Maustaste außerhalb des Hauptteils des Berichts, und wählen Sie **Berichtseigenschaften** aus.  
+1.  Klicken Sie mit der rechten Maustaste außerhalb des Hauptteils des Berichts, und wählen Sie **Berichtseigenschaften**aus.  
   
 2.  Geben Sie in **Code**den folgenden Code in das Textfeld ein.  
   
@@ -59,13 +64,13 @@ caps.handback.revision: 8
     ```  
   
     > [!NOTE]  
-    >  Sie müssen die Zeichenfolgen "Color1", "Color2" usw. durch eigene Farben ersetzen. Sie können benannte Farben, z. B. "Red", verwenden, oder Sie können einen sechsstelligen Hexadezimalwert verwenden, der die Farbe darstellt, z. B. "#FFFFFF" für Schwarz. Wenn mehr als drei Farben definiert sind, müssen Sie das Array der Farben so erweitern, dass die Anzahl der Farben im Array mit der Anzahl von Punkten im Formdiagramm übereinstimmt. Sie können dem Array neue Farben hinzufügen, indem Sie eine durch Trennzeichen getrennte Liste von Zeichenfolgenwerten angeben, die benannte Farben oder hexadezimale Darstellungen von Farben enthalten.  
+    >  Sie müssen die Zeichenfolgen "Color1", "Color2" usw. durch eigene Farben ersetzen. Sie können benannte Farben, z. B. "Red", verwenden, oder Sie können einen sechsstelligen Hexadezimalwert verwenden, der die Farbe darstellt, z. B. "#FFFFFF" für Schwarz. Wenn mehr als drei Farben definiert sind, müssen Sie das Array der Farben so erweitern, dass die Anzahl der Farben im Array mit der Anzahl von Punkten im Formdiagramm übereinstimmt. Sie können dem Array neue Farben hinzufügen, indem Sie eine durch Trennzeichen getrennte Liste von Zeichenfolgenwerten angeben, die benannte Farben oder hexadezimale Darstellungen von Farben enthalten.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Klicken Sie mit der rechten Maustaste auf das Formdiagramm, und wählen Sie **Reiheneigenschaften** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf das Formdiagramm, und wählen Sie **Reiheneigenschaften**aus.  
   
-5.  Klicken Sie unter **Ausfüllen** auf die *Ausdrucksschaltfläche* (**fx**), um den Ausdruck für die Eigenschaft **Farbe** zu bearbeiten.  
+5.  Klicken Sie unter **Ausfüllen**auf die **Ausdrucksschaltfläche** (*fx*), um den Ausdruck für die Eigenschaft **Farbe** zu bearbeiten.  
   
 6.  Geben Sie den folgenden Ausdruck ein, wobei "MyCategoryField" das Feld ist, das im Bereich **Kategoriegruppen** angezeigt wird:  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Hinzufügen von leeren Punkten zum Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Formdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

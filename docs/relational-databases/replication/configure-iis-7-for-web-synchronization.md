@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
@@ -286,7 +286,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     4.  Wird ein Proxyserver verwendet, klicken Sie auf **Proxyserver für LAN verwenden** und **Proxyserver für lokale Adressen umgehen**und dann auf **OK**.  
   
-2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: **https://server.domain.com/directory/replisapi.dll?diag**  
+2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`  
   
     > [!NOTE]  
     >  Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  

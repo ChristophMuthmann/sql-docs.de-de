@@ -1,32 +1,37 @@
 ---
-title: "Formatieren von Skalen auf einem Messger&#228;t (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formatieren von Skalen auf einem Messger&#228;t (Berichts-Generator und SSRS)
-  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht umfasst die Messgerätskala den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
+  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht umfasst die Messgerätskala den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  
   
- ![Übersicht über die Elemente auf einer Messgerätskala](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Übersicht über die Elemente auf einer Messgerätskala")  
+ ![Übersicht über die Elemente auf einer messgerätskala](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Überblick über die Elemente auf einer messgerätskala")  
   
  Im Gegensatz zu Diagrammen mit mehreren Gruppen zeigen Messgeräte nur einen Wert an. Sie müssen den Mindestwert und den Höchstwert der Skala definieren. Die Intervalle werden automatisch basierend auf dem festgelegten Mindest- und Höchstwert berechnet.  
   
  Wenn Sie einem Messgerät mit einer Skala eine zweite Skala hinzufügen, werden die Darstellungseigenschaften der ersten Skala für die zweite Skala geklont.  
   
- Sie können die Eigenschaften der Skala festlegen, indem Sie mit der rechten Maustaste auf die Messgerätbezeichnungen oder Teilstriche klicken und die Option **Radiale Skalierungseigenschaften** oder **Lineare Skalierungseigenschaften** auswählen. Jeder Messgerättyp enthält mindestens eine Skala mit demselben Eigenschaftensatz. Darüber hinaus sind jedoch auch Eigenschaften vorhanden, die für die einzelnen Messgerättypen spezifisch sind:  
+ Sie können die Eigenschaften der Skala festlegen, indem Sie mit der rechten Maustaste auf die Messgerätbezeichnungen oder Teilstriche klicken und die Option **Radiale Skalierungseigenschaften** oder **Lineare Skalierungseigenschaften**auswählen. Jeder Messgerättyp enthält mindestens eine Skala mit demselben Eigenschaftensatz. Darüber hinaus sind jedoch auch Eigenschaften vorhanden, die für die einzelnen Messgerättypen spezifisch sind:  
   
 -   Auf einem radialen Messgerät können Sie den Radius, den Startwinkel und den Mittelpunktswinkel der radialen Skala angeben.  
   
@@ -65,20 +70,20 @@ caps.handback.revision: 8
   
  Der Skalierungsradius entspricht der Entfernung vom Mittelpunkt des Messgeräts bis zum Mittelpunkt des Skalabalkens. Der Wert des Skalierungsradius wird als Prozentsatz des Messgerätdurchmessers gemessen. Es wird empfohlen, für den Skalierungsradius keinen höheren Wert als 35 anzugeben. Wenn Sie einen höheren Wert als 35 angeben, wird die Skala wahrscheinlich außerhalb der Grenzen des Messgeräts gezeichnet. In der folgenden Abbildung wird veranschaulicht, wie der Skalierungsradius in Bezug auf den Durchmesser des Messgeräts auf dem Skalabalken gemessen wird.  
   
- ![Skalierungsradius in Bezug auf den Messgerätdurchmesser](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Skalierungsradius in Bezug auf den Messgerätdurchmesser")  
+ ![Skalierungsradius in Bezug auf messgerätdurchmessers](../../reporting-services/report-design/media/scaleradiusdiagram.gif "skalierungsradius in Bezug auf messgerätdurchmessers")  
   
- Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
+ Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
   
  Der Mittelpunktswinkel entspricht der Gradzahl (zwischen 0 und 360), um die die Skala gedreht wird. Bei einem Mittelpunktswinkel von 360 Grad wird eine Skala erzeugt, die einen vollständigen Kreis darstellt. Dies ist hilfreich, wenn Sie ein Messgerät entwerfen möchten, das einer Uhr ähnelt.  
   
 ##  <a name="PositioningLabels"></a> Positionieren von Bezeichnungen auf einer linearen oder radialen Skala  
  Es sind zwei Eigenschaften verfügbar, mit denen die Position von Bezeichnungen bestimmt werden kann. Mit der Eigenschaft zum Bestimmen der Bezeichnungsposition wird angeben, ob die Bezeichnungen innerhalb oder außerhalb des Skalabalkens oder auf dem Skalabalken angezeigt werden. Mit der Eigenschaft zum Angeben des Abstands wird der Abstand der Bezeichnungen von der Skala vom Skalabalken aus festgelegt. Wenn Sie Bezeichnungen innerhalb des Skalabalkens positionieren möchten, geben Sie eine negative Zahl an. Wenn sich die Bezeichnungen beispielsweise außerhalb der Skala befinden und Sie als Abstand von der Skala den Wert 10 festgelegt haben, werden die Bezeichnungen um 10 Einheiten von ihrer normalen Position nach außen verschoben angezeigt, wobei eine Einheit wie folgt definiert ist:  
   
--   1 % des Messgerätdurchmessers auf einem radialen Messgerät oder  
+-   1 % des Messgerätdurchmessers auf einem radialen Messgerät oder  
   
 -   1 % der Messgeräthöhe oder der Messgerätbreite (je nachdem, welcher Wert kleiner ist) auf einem linearen Messgerät  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

@@ -1,23 +1,28 @@
 ---
-title: "Angeben der Gr&#246;&#223;e eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Geben Sie die Größe eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Angeben der Gr&#246;&#223;e eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS)
+# <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Angeben der Größe eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS)
   Zusätzlich zu Farbe, Richtung und Form können Sie die Größe anpassen und damit die visuelle Wirkung von Indikatoren maximieren.  
   
  Ein Indikator verfügt über eine Auflistung von Indikatorstatus mit der Bezeichnung IndicatorStates. Die IndicatorStates-Auflistung verfügt in der Regel über mehrere Status. Jeder Status ist ein Element der Auflistung und wird durch ein Symbol dargestellt. Zusammen bilden die Status die IndicatorsStates-Auflistung.  
@@ -34,15 +39,15 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So geben Sie die Symbolgröße für Indikatoren mit einem Ausdruck an  
+### <a name="to-specify-the-indicator-icon-size-using-an-expression"></a>So geben Sie die Symbolgröße für Indikatoren mit einem Ausdruck an  
   
 1.  Klicken Sie auf den Indikator, den Sie ändern möchten.  
   
 2.  Suchen Sie im Eigenschaftenbereich die IndicatorStates-Eigenschaft.  
   
-     Wenn der Eigenschaftenbereich nach Kategorie organisiert ist, finden Sie IndicatorStates unter der Kategorie **Status**.  
+     Wenn der Eigenschaftenbereich nach Kategorie organisiert ist, finden Sie IndicatorStates unter der Kategorie **Status** .  
   
-3.  Klicken Sie neben IndicatorStates auf die Schaltfläche mit den Auslassungszeichen **(...)**. Das Dialogfeld **IndicatorState-Auflistungs-Editor** wird geöffnet.  
+3.  Klicken Sie neben IndicatorStates auf die Schaltfläche mit den Auslassungszeichen **(...)** . Das Dialogfeld **IndicatorState-Auflistungs-Editor** wird geöffnet.  
   
      Wählen Sie alle Elemente der Auflistung aus.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

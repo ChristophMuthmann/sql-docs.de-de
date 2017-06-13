@@ -1,45 +1,54 @@
 ---
-title: "Arbeiten mit paginierten Berichten (Webportal) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Arbeiten mit paginierten Berichten (Webportal) | Microsoft Docs
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 222b9ae4ca3ff3f1dd1f08205a502473fea07da4
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Arbeiten mit paginierten Berichten (Webportal)
+# <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Sie können die Eigenschaften eines paginierten Berichts innerhalb des Webportals anzeigen und verwalten. Über das Webportal erhalten Sie Zugriff auf den Berichts-Generator, um paginierte Berichte zu erstellen oder zu bearbeiten.  
    
-## Erstellen eines paginierten Berichts  
+## <a name="create-a-paginated-report"></a>Erstellen eines paginierten Berichts  
   
 Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.  
   
 1.  Wählen Sie in der Menüleiste „Neu“ aus.  
   
-2.  Wählen Sie **Paginierter Bericht** aus.  
+2.  Wählen Sie **Paginierter Bericht**aus.  
   
     ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  Entweder wird jetzt der Berichts-Generator gestartet, oder Sie werden aufgefordert, ihn herunterzuladen.  
   
-4.  Erstellen Sie Ihren Bericht, und wählen Sie dann das **Speichern**-Symbol in der oberen linken Ecke aus, um den paginierten Bericht wieder auf dem Berichtsserver zu speichern.  
+4.  Erstellen Sie Ihren Bericht, und wählen Sie dann das **Speichern** -Symbol in der oberen linken Ecke aus, um den paginierten Bericht wieder auf dem Berichtsserver zu speichern.  
   
-## Verwalten eines vorhandenen paginierten Berichts  
+## <a name="manage-an-existing-paginated-report"></a>Verwalten eines vorhandenen paginierten Berichts  
   
 Beim Verwalten eines vorhandenen paginierten Berichts haben Sie verschiedene Möglichkeiten.  
   
-> [!NOTE] Wenn im jeweiligen Ordner keine paginierten Berichte angezeigt werden, sollten Sie sich vergewissern, dass Sie paginierte Berichte anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass das Kontrollkästchen **Paginierte Berichte** aktiviert ist.  
+> [!NOTE]
+> Wenn im jeweiligen Ordner keine paginierten Berichte angezeigt werden, sollten Sie sich vergewissern, dass Sie paginierte Berichte anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass das Kontrollkästchen **Paginierte Berichte** aktiviert ist.  
   
-1.  Wählen Sie die **Auslassungspunkte (...)** für das Dataset aus, das Sie verwalten möchten.  
+1.  Wählen Sie die **mit den Auslassungszeichen (...)**  für das Dataset, die Sie verwalten möchten.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -47,19 +56,19 @@ Beim Verwalten eines vorhandenen paginierten Berichts haben Sie verschiedene Mö
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
   
 Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des paginierten Berichts ändern. Außerdem stehen Ihnen folgende Optionen zur Verfügung: **Löschen**, **Verschieben**, **Verknüpften Bericht erstellen**, **Im Berichts-Generator bearbeiten**, **Herunterladen** oder **Ersetzen**.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
 Sie können vorhandene Parameter eines paginierten Berichts ändern. Um einen neuen Parameter hinzuzufügen, müssen Sie den Bericht im Berichts-Generator oder in SQL Server Data Tools bearbeiten.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## Datenquelle  
+## <a name="data-source"></a>Datenquelle  
 Sie können auf eine freigegebene Datenquelle verweisen oder Verbindungsinformationen für eine benutzerdefinierte Datenquelle eingeben.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -82,7 +91,8 @@ Eine Verbindungszeichenfolge kann als ein Ausdruck konfiguriert werden, sodass S
   
 Sie können eine Option angeben, die bestimmt, wie Anmeldeinformationen abgerufen werden.  
   
-> [!IMPORTANT] Falls die Verbindungszeichenfolge Anmeldeinformationen enthält, werden die in diesem Abschnitt festgelegten Optionen und Werte ignoriert. Beachten Sie, dass bei Angabe der Anmeldeinformationen in der Verbindungszeichenfolge die Werte für alle Benutzer, die diese Seite anzeigen, in Klartext angezeigt werden.  
+> [!IMPORTANT]
+> Falls die Verbindungszeichenfolge Anmeldeinformationen enthält, werden die in diesem Abschnitt festgelegten Optionen und Werte ignoriert. Beachten Sie, dass bei Angabe der Anmeldeinformationen in der Verbindungszeichenfolge die Werte für alle Benutzer, die diese Seite anzeigen, in Klartext angezeigt werden.  
   
 **Als Benutzer, der den Bericht anzeigt**  
   
@@ -100,7 +110,7 @@ Sie können auch den Typ der Anmeldeinformationen auswählen, der hier infrage k
   
 Wenn es sich um ein Konto mit Windows-Anmeldeinformationen handelt, muss das angegebene Konto über die Berechtigung zum lokalen Anmelden auf dem Computer verfügen, der die von dem Bericht verwendete Datenquelle hostet.  
   
-Wählen Sie **Mit diesen Anmeldeinformationen anmelden, aber dann versuchen, die Identität des Benutzers anzunehmen, der den Bericht anzeigt**, um eine Delegierung von Anmeldeinformationen zuzulassen. Dies ist jedoch nur möglich, wenn die jeweilige Datenquelle den Identitätswechsel unterstützt. In SQL Server-Datenbanken wird durch diese Option die SETUSER-Funktion festgelegt. Bei Analysis Services wird hierfür „EffectiveUserName“ verwendet.  
+Wählen Sie **Mit diesen Anmeldeinformationen anmelden, aber dann versuchen, die Identität des Benutzers anzunehmen, der den Bericht anzeigt** , um eine Delegierung von Anmeldeinformationen zuzulassen. Dies ist jedoch nur möglich, wenn die jeweilige Datenquelle den Identitätswechsel unterstützt. In SQL Server-Datenbanken wird durch diese Option die SETUSER-Funktion festgelegt. Bei Analysis Services wird hierfür „EffectiveUserName“ verwendet.  
   
 **Benutzer, der den Bericht anzeigt, zur Eingabe von Anmeldeinformationen auffordern**  
   
@@ -114,54 +124,58 @@ Durch Auswahl dieser Option haben Sie die Möglichkeit, keinerlei Anmeldeinforma
   
 Bevor Sie diese Option verwenden können, müssen Sie für den Berichtsserver das Konto für die unbeaufsichtigte Ausführung konfigurieren. Das Konto für die unbeaufsichtigte Ausführung wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn auf anderen Wegen keine Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## Abonnements  
-Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. [Weitere Informationen]  
+## <a name="subscriptions"></a>Abonnements  
+Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. Weitere Informationen finden Sie unter [arbeiten mit Abonnements](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)  
+![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## Abhängige Elemente  
-Verwenden Sie die Seite „Abhängige Elemente“, um eine Liste der Elemente anzuzeigen, die auf diesen Bericht verweisen. Das Symbol für den jeweiligen Elementtyp gibt an, worum es sich dabei handelt. Sie können für jedes Element auf die **Auslassungspunkte (…)** klicken, um das entsprechende Element zu verwalten.  
+## <a name="dependent-items"></a>Abhängige Elemente  
+Verwenden Sie die Seite „Abhängige Elemente“, um eine Liste der Elemente anzuzeigen, die auf diesen Bericht verweisen. Das Symbol für den jeweiligen Elementtyp gibt an, worum es sich dabei handelt. Sie können dann auswählen, die **mit den Auslassungszeichen (...)**  weiter auf jedes Element, um diese Elemente verwalten.  
   
-## Caching  
+## <a name="caching"></a>Caching  
 Zum Zwischenspeichern von Daten für einen paginierten Bericht stehen Ihnen mehrere Optionen zur Verfügung. Sie beginnen mit einer einfachen Auswahl.  
   
-1.  **Diesen Bericht immer mit den neuesten Daten ausführen**: Wenn Sie diese Option auswählen, wird bei jeder Ausführung des Berichts eine Abfrage an die Datenquelle ausgegeben. Dadurch entsteht ein bedarfsgesteuerter Bericht, der immer die neuesten Daten enthält. Bei jedem Öffnen des Berichts wird eine neue Instanz des Berichts erstellt, die die Ergebnisse einer neuen Abfrage enthält. Wenn bei dieser Vorgehensweise zehn Benutzer gleichzeitig den Bericht öffnen, werden zehn Abfragen zur Verarbeitung an die Datenquelle gesendet.  
+1.  **Diesen Bericht immer mit den neuesten Daten ausführen** : Wenn Sie diese Option auswählen, wird bei jeder Ausführung des Berichts eine Abfrage an die Datenquelle ausgegeben. Dadurch entsteht ein bedarfsgesteuerter Bericht, der immer die neuesten Daten enthält. Bei jedem Öffnen des Berichts wird eine neue Instanz des Berichts erstellt, die die Ergebnisse einer neuen Abfrage enthält. Wenn bei dieser Vorgehensweise zehn Benutzer gleichzeitig den Bericht öffnen, werden zehn Abfragen zur Verarbeitung an die Datenquelle gesendet.  
   
-2.  **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden**: Wenn Sie diese Option auswählen, wird eine temporäre Kopie der Daten zur späteren Verwendung in einem Cache abgelegt. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss. Wenn bei dieser Vorgehensweise zehn Benutzer den Bericht öffnen, führt nur die erste Anforderung zu einer Abfrage an die Datenquelle. Der Bericht wird dann zwischengespeichert, und für die restlichen neun Benutzer wird der aus dem Cache abgerufene Bericht angezeigt.  
+2.  **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden** : Wenn Sie diese Option auswählen, wird eine temporäre Kopie der Daten zur späteren Verwendung in einem Cache abgelegt. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss. Wenn bei dieser Vorgehensweise zehn Benutzer den Bericht öffnen, führt nur die erste Anforderung zu einer Abfrage an die Datenquelle. Der Bericht wird dann zwischengespeichert, und für die restlichen neun Benutzer wird der aus dem Cache abgerufene Bericht angezeigt.  
   
-3.  **Diesen Bericht immer für vorher generierte Momentaufnahmen ausführen**: Wenn Sie diese Option auswählen, werden das Layout und die Daten eines Berichts für einen angegebenen Zeitraum zwischengespeichert. Sie können einen Bericht als Berichtsmomentaufnahme ausführen, um zu verhindern, dass der Bericht zu willkürlichen Zeiten ausgeführt wird (z.B. während einer geplanten Sicherung). Die Momentaufnahme kann nach einem festgelegten Zeitplan aktualisiert werden. [Weitere Informationen]  
+3.  **Diesen Bericht immer für vorher generierte Momentaufnahmen ausführen** : Wenn Sie diese Option auswählen, werden das Layout und die Daten eines Berichts für einen angegebenen Zeitraum zwischengespeichert. Sie können einen Bericht als Berichtsmomentaufnahme ausführen, um zu verhindern, dass der Bericht zu willkürlichen Zeiten ausgeführt wird (z.B. während einer geplanten Sicherung). Die Momentaufnahme kann nach einem festgelegten Zeitplan aktualisiert werden. [Weitere Informationen]  
   
 ![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
-Wenn Sie **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden**  auswählen, können Sie einige zusätzliche Optionen festlegen.  
+Wenn Sie **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden** auswählen, können Sie einige zusätzliche Optionen festlegen.  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+
+Weitere Informationen finden Sie unter [arbeiten mit Momentaufnahmen](working-with-snapshots-web-portal.md).
   
-### Cacheablauf  
+### <a name="cache-expiration"></a>Cacheablauf  
   
 Sie können steuern, ob der Cache für den paginierten Bericht nach einer bestimmten Zeitspanne oder nach einem festgelegten Zeitplan ablaufen soll. Sie können einen freigegebenen Zeitplan verwenden  
   
-> [!NOTE] Dadurch wird der Cache nicht aktualisiert.  
+> [!NOTE]
+> Dadurch wird der Cache nicht aktualisiert.  
   
-### Cacheaktualisierungspläne  
+### <a name="cache-refresh-plans"></a>Cacheaktualisierungspläne  
   
 Mithilfe der Option „Cacheaktualisierungspläne“ können Sie Zeitpläne erstellen, nach denen temporäre Kopien der Daten für einen paginierten Bericht vorab in den Cache geladen werden. Ein Aktualisierungsplan enthält einen Zeitplan und bietet die Möglichkeit, Werte für Parameter anzugeben oder zu überschreiben. Sie können keine Werte für Parameter überschreiben, die als schreibgeschützt gekennzeichnet sind. Sie können mehr als einen Aktualisierungsplan erstellen und verwenden.  
    
 Die folgenden Standardrollenzuweisungen ermöglichen es Ihnen, paginierte Berichte für Cacheaktualisierungspläne hinzuzufügen, zu löschen und zu ändern: „Inhalts-Manager“, „Meine Berichte“ und „Verleger“.  
   
-Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Aktualisierungspläne verwalten**, der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
+Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Aktualisierungspläne verwalten** , der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
   
 Wählen Sie **Neuer Cacheaktualisierungsplan**, um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
   
-Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen** auswählen.  
+Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen**auswählen.  
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
-> [!NOTE] SQL Server-Agent muss ausgeführt werden, um einen Cacheaktualisierungsplan zu erstellen.  
+> [!NOTE]
+> SQL Server-Agent muss ausgeführt werden, um einen Cacheaktualisierungsplan zu erstellen.  
   
-Sie können gelistete Pläne **Bearbeiten** oder **Löschen**. Die Option **Neu aus vorhandenem** wird nur aktiviert, wenn genau ein Cacheaktualisierungsplan ausgewählt ist. Durch diese Option wird ein neuer Aktualisierungsplan erstellt, der vom ursprünglichen Plan kopiert wird. Die Seite Cacheaktualisierungsplan wird geöffnet und enthält bereits die Details des ausgewählten Plans. Anschließend können Sie die Optionen für den Aktualisierungsplan ändern und den Plan mit einer neuen Beschreibung speichern.  
+Sie können gelistete Pläne **Bearbeiten** oder **Löschen** . Die Option **Neu aus vorhandenem** wird nur aktiviert, wenn genau ein Cacheaktualisierungsplan ausgewählt ist. Durch diese Option wird ein neuer Aktualisierungsplan erstellt, der vom ursprünglichen Plan kopiert wird. Die Seite Cacheaktualisierungsplan wird geöffnet und enthält bereits die Details des ausgewählten Plans. Anschließend können Sie die Optionen für den Aktualisierungsplan ändern und den Plan mit einer neuen Beschreibung speichern.  
   
-## Verlaufsmomentaufnahmen  
+## <a name="history-snapshots"></a>Verlaufsmomentaufnahmen  
   
 Mithilfe der Seite „Verlaufsmomentaufnahmen“ können Sie die im Laufe der Zeit generierten und gespeicherten Berichtsmomentaufnahmen anzeigen. Abhängig von den festgelegten Optionen enthält der Berichtsverlauf möglicherweise nur die neueren Momentaufnahmen.  
   
@@ -171,13 +185,18 @@ Wenn Sie eine Momentaufnahme generieren möchten, muss der Bericht unbeaufsichti
   
 Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
   
-## Sicherheit  
+## <a name="security"></a>Sicherheit  
 Mithilfe der Eigenschaftenseite „Sicherheit“ können Sie die Sicherheitseinstellungen für den Zugriff auf den Bericht anzeigen und ändern. Diese Seite steht für Elemente zur Verfügung, für die Sie die Berechtigung zur Änderung der Sicherheitseinstellungen besitzen.  
   
 Der Zugriff auf Elemente wird durch Rollenzuweisungen definiert, in denen die Aufgaben angegeben sind, die eine Gruppe oder ein Benutzer ausführen kann. Eine Rollenzuweisung besteht aus einem Benutzer- oder Gruppennamen und einer oder mehreren Rollendefinitionen, die eine Sammlung von Aufgaben angeben.  
   
 **Elementsicherheit bearbeiten**  
   
-Wählen Sie diese Option aus, um die Definition der Sicherheit für das aktuelle Element zu ändern.  
-  
-  
+Wählen Sie diese Option aus, um die Definition der Sicherheit für das aktuelle Element zu ändern.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

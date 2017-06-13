@@ -1,35 +1,40 @@
 ---
-title: "SQL Azure-Verbindungstyp (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Azure-Verbindungstyp (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 02/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d105eb2a7bacb70f93b3237c9a9134695cd13b59
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Azure-Verbindungstyp (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ist eine cloudbasierte, gehostete relationale Datenbank, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Technologien basiert. Wenn Sie Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[ssSDS](../../includes/sssds-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herzustellen und Daten abzurufen.  
+# <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ist eine cloudbasierte, gehostete relationale Datenbank, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologien basiert. Wenn Sie Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[ssSDS](../../includes/sssds-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herzustellen und Daten abzurufen.  
   
  Diese Datenerweiterung unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mit einer vor Ort installierten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Abrufen von Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vergleichbar. Die Vorgehensweise entspricht dem Abrufen von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Legen Sie das Verbindungstimeout beim Öffnen einer Verbindung mit einer [!INCLUDE[ssSDS](../../includes/sssds-md.md)] auf 30 Sekunden fest.  
+>  Legen Sie das Verbindungstimeout beim Öffnen einer Verbindung mit einer [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf 30 Sekunden fest.  
   
- Weitere Informationen finden Sie unter [Windows Azure SQL-Datenbanken auf MSDN](http://go.microsoft.com/fwlink/?LinkId=206770).  
+ Weitere Informationen finden Sie unter [Microsoft Azure SQL-Datenbank auf docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)" basiert.  
   
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
  Wenn Sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herstellen, stellen Sie eine Verbindung mit einem Datenbankobjekt in der Wolke her. Wie Onsitedatenbanken kann die gehostete Datenbank mehrere Schemas mit mehreren Tabellen, Sichten und gespeicherte Prozeduren enthalten. Sie geben das zu verwendende Datenbankobjekt im Abfrage-Designer an. Falls Sie in der Verbindungszeichenfolge keine Datenbank angeben, wird eine Verbindung mit der vom Administrator zugewiesenen Standarddatenbank hergestellt.  
@@ -42,12 +47,12 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Außerdem verwenden Sie das Dialogfeld **Datenquelleneigenschaften** , um Anmeldeinformationen wie Benutzername und Kennwort anzugeben. Die Optionen `User Id` und `Password` werden automatisch an die Verbindungszeichenfolge angefügt. Sie müssen nicht als Teil der Verbindungszeichenfolge eingegeben werden.  
   
- Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
- Die Windows-Authentifizierung (integrierte Sicherheit) wird nicht unterstützt. Wenn Sie versuchen, mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herzustellen, tritt ein Fehler auf. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nur die SQL Server-Authentifizierung (Benutzername und Kennwort). Benutzer müssen daher jedes Mal Anmeldeinformationen (Benutzername und Kennwort) eingeben, wenn sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herstellen.  
+ Die Windows-Authentifizierung (integrierte Sicherheit) wird nicht unterstützt. Wenn Sie versuchen, mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herzustellen, tritt ein Fehler auf. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nur die SQL Server-Authentifizierung (Benutzername und Kennwort). Benutzer müssen daher jedes Mal Anmeldeinformationen (Benutzername und Kennwort) eingeben, wenn sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herstellen.  
   
- Die Anmeldeinformationen müssen über Zugriffsberechtigungen für die Datenbank verfügen. Abhängig von der Abfrage benötigen Sie u. U. andere Berechtigungen, z. B. Berechtigungen für die Ausführung von gespeicherten Prozeduren und den Zugriff auf Tabellen und Sichten. Der Besitzer der externen Datenquelle muss entsprechende Anmeldeinformationen konfigurieren, die Lesezugriff auf die benötigten Datenbankobjekte gewähren.  
+ Die Anmeldeinformationen müssen über Zugriffsberechtigungen für die Datenbank verfügen. Abhängig von der Abfrage benötigen Sie u. U. andere Berechtigungen, z. B. Berechtigungen für die Ausführung von gespeicherten Prozeduren und den Zugriff auf Tabellen und Sichten. Der Besitzer der externen Datenquelle muss entsprechende Anmeldeinformationen konfigurieren, die Lesezugriff auf die benötigten Datenbankobjekte gewähren.  
   
  Auf einem Berichterstellungsclient sind die folgenden Optionen zum Angeben von Anmeldeinformationen verfügbar:  
   
@@ -55,9 +60,8 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Query"></a> Abfragen  
  Mit einer Abfrage wird angegeben, welche Daten für ein Berichtsdataset abgerufen werden sollen. Die Feldauflistung für ein Dataset wird mit den Spalten aus dem Resultset einer Abfrage aufgefüllt. Wenn die Abfrage mehrere Resultsets zurückgibt, verarbeitet der Bericht nur das erste Resultset, das durch eine Abfrage abgerufen wird. Obwohl einige Unterschiede zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bestehen, z. B. die Größe unterstützter Datenbanken, ähnelt das Schreiben von Abfragen für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]weitgehend dem Schreiben von Abfragen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken. Einige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen (z. B. BACKUP) werden nicht in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]unterstützt. Diese Anweisungen werden allerdings nicht in Berichtsabfragen verwendet. Weitere Informationen finden Sie unter [SQL Server-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
@@ -66,7 +70,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   Erstellen Sie eine Abfrage interaktiv. Verwenden Sie den relationalen Abfrage-Designer, der eine hierarchische Ansicht der Tabellen, Sichten, gespeicherten Prozeduren und anderen Datenbankelemente nach Datenbankschema angeordnet anzeigt. Wählen Sie Spalten aus Tabellen oder Sichten aus, oder geben Sie gespeicherte Prozeduren oder Tabellenwertfunktionen an. Begrenzen Sie die Anzahl abzurufender Datenzeilen durch Angabe von Filterkriterien. Passen Sie den Filter an, wenn der Bericht ausgeführt wird, indem Sie die Parameteroption festlegen.  
   
--   Geben Sie eine Abfrage ein, oder fügen Sie sie ein. Verwenden Sie den textbasierten Abfrage-Designer, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Text direkt einzugeben, Abfragetext aus einer anderen Quelle einzufügen, komplexe Abfragen einzugeben, die mit dem relationalen Abfrage-Designer nicht erstellt werden können, oder um abfragebasierte Ausdrücke einzugeben.  
+-   Geben Sie eine Abfrage ein, oder fügen Sie sie ein. Verwenden Sie den textbasierten Abfrage-Designer, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Text direkt einzugeben, Abfragetext aus einer anderen Quelle einzufügen, komplexe Abfragen einzugeben, die mit dem relationalen Abfrage-Designer nicht erstellt werden können, oder um abfragebasierte Ausdrücke einzugeben.  
   
 -   Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Verwenden Sie die Schaltfläche **Abfrage importieren** in einem Abfrage-Designer, um nach einer SQL- oder RDL-Datei zu suchen und eine Abfrage zu importieren.  
   
@@ -81,7 +85,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
  Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=141687) auf msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Verwenden des Abfragetyps "Text"  
- Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehle ein, um die Daten in einem Dataset zu definieren. Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage werden z. B. die Namen aller Mitarbeiter ausgewählt, die Marketingassistenten sind:  
+ Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage werden z. B. die Namen aller Mitarbeiter ausgewählt, die Marketingassistenten sind:  
   
 ```  
 SELECT  
@@ -106,7 +110,6 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Bei der Ausführung der Abfrage werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen. Weitere Informationen finden Sie unter [Abfrageparameter](#Parameters) weiter unten in diesem Thema.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ###  <a name="QueryStoredProcedure"></a> Verwenden des Abfragetyps "StoredProcedure"  
  Zum Angeben einer gespeicherte Prozedur für eine Datasetabfrage stehen Ihnen folgende Methoden zur Verfügung:  
@@ -125,7 +128,6 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Weitere Informationen zu gespeicherten Prozeduren finden Sie unter „Gespeicherte Prozeduren (Datenbankmodul)“ in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335) auf msdn.microsoft.com.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Parameters"></a> Parameter  
  Wenn Abfragetext Abfragevariablen oder gespeicherte Prozeduren mit Eingabeparametern enthält, werden die entsprechenden Abfrageparameter für das Dataset und Berichtsparameter für den Bericht automatisch generiert. Der Abfragetext darf keine DECLARE-Anweisung für jede Abfragevariable enthalten.  
@@ -138,21 +140,19 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Jeder Berichtsparameter ist standardmäßig vom Datentyp "Text" und verfügt über ein automatisch erstelltes Dataset, mit dem eine Dropdownliste verfügbarer Werte bereitgestellt wird. Die Standardwerte müssen möglicherweise nach dem Erstellen der Berichtsparameter geändert werden. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Jeder Berichtsparameter ist standardmäßig vom Datentyp "Text" und verfügt über ein automatisch erstelltes Dataset, mit dem eine Dropdownliste verfügbarer Werte bereitgestellt wird. Die Standardwerte müssen möglicherweise nach dem Erstellen der Berichtsparameter geändert werden. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Remarks"></a> Hinweise  
   
-###### Alternative Datenerweiterungen  
+###### <a name="alternate-data-extensions"></a>Alternative Datenerweiterungen  
  Sie können mit einem ODBC-Datenquellentyp auch aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank Daten abrufen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [ODBC-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
-###### Plattform- und Versionsinformationen  
+###### <a name="platform-and-version-information"></a>Plattform- und Versionsinformationen  
  Weitere Informationen zur Unterstützung einzelner Plattformen und Versionen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
@@ -163,7 +163,6 @@ WHERE EmployeeID = (@EmpID)
   
  [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten und Informationen zum Definieren, Entwerfen, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
@@ -171,7 +170,7 @@ WHERE EmployeeID = (@EmpID)
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -183,11 +182,13 @@ WHERE EmployeeID = (@EmpID)
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
+[Microsoft Azure SQL-Datenbank auf docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ Weiteren Fragen wenden? [Wiederholen Sie den Reporting Services-forum](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
+

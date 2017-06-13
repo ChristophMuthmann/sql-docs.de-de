@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services-SharePoint-Dienst und -Dienstanwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Reporting Services SharePoint Service and Service Applications | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services-SharePoint-Dienst und -Dienstanwendungen
+# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services-SharePoint-Dienst und -Dienstanwendungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus basiert auf der SharePoint-Dienstarchitektur und verwendet einen SharePoint-Dienst sowie mindestens eine Dienstanwendung. Beim Erstellen einer Dienstanwendung wird der Dienst verfügbar gemacht und die Datenbank der Dienstanwendung generiert. Sie können mehrere Reporting Services-Dienstanwendungen erstellen, doch für die meisten Bereitstellungsszenarien ist eine Dienstanwendung ausreichend.  
   
  Dieses Thema enthält folgende Informationen:  
@@ -33,7 +38,7 @@ caps.handback.revision: 10
 -   [Verwandte Aufgaben](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> Erstellen einer Reporting Services-Dienstanwendung  
- Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung" in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/de-de/47efa72e-1735-4387-8485-f8994fb08c8c). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
+ Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung" in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
   
 ##  <a name="bkmk_associations"></a> Ändern der Zuordnungen der Dienstanwendung mit einer Proxygruppe  
  Die Seite Neu zum Erstellen einer Dienstanwendung enthält den Abschnitt **Zuordnung der Webanwendung**. Dieser Abschnitt ermöglicht es Ihnen, die Dienstanwendung im Rahmen der Erstellung zuzuordnen. Führen Sie die folgenden Schritte aus, um die Zuordnung zu ändern und der Dienstanwendung eine Kundenkonfiguration zuzuweisen. Sie können dasselbe allgemeine Verfahren auch verwenden, um den Proxy der Standardgruppe hinzuzufügen, anstatt die Zuordnung der Dienstanwendung in eine benutzerdefinierte Gruppe zu ändern.  

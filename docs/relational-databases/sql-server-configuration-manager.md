@@ -27,13 +27,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0710ebf98d2d0260208b594f3260266ddc0ca8c
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
+
+ > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [SQL Server-Konfigurations-Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)]-Management Console (**mmc.exe**) verwendet die Datei **SQLServerManager\<version>.msc** (z.B. **SQLServerManager13.msc** für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), um den Konfigurations-Manager zu öffnen. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
   
 |||  

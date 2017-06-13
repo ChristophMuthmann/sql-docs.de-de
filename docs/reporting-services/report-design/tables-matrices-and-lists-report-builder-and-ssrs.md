@@ -1,55 +1,60 @@
 ---
-title: "Tabellen, Matrizen und Listen (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.tablixgroup.f1"
-  - "10045"
-  - "sql13.rtp.rptdesigner.tablix.visibility.f1"
-  - "10039"
-  - "sql13.rtp.rptdesigner.groupproperties.visibility.f1"
-  - "10104"
-  - "10047"
-  - "sql13.rtp.rptdesigner.groupproperties.advanced.f1"
-  - "10044"
-  - "sql13.rtp.rptdesigner.groupproperties.filters.f1"
-  - "sql13.rtp.rptdesigner.tablix.sort.f1"
-  - "sql13.rtp.rptdesigner.tablix.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.variables.f1"
-  - "10046"
-  - "10101"
-  - "sql13.rtp.rptdesigner.tablix.filter.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.sort.f1"
-  - "10042"
-  - "10041"
-  - "10102"
-  - "10103"
-  - "10043"
-  - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
+title: Tabellen, Matrizen und Listen (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.tablixgroup.f1
+- "10045"
+- sql13.rtp.rptdesigner.tablix.visibility.f1
+- "10039"
+- sql13.rtp.rptdesigner.groupproperties.visibility.f1
+- "10104"
+- "10047"
+- sql13.rtp.rptdesigner.groupproperties.advanced.f1
+- "10044"
+- sql13.rtp.rptdesigner.groupproperties.filters.f1
+- sql13.rtp.rptdesigner.tablix.sort.f1
+- sql13.rtp.rptdesigner.tablix.general.f1
+- sql13.rtp.rptdesigner.groupproperties.general.f1
+- sql13.rtp.rptdesigner.groupproperties.variables.f1
+- "10046"
+- "10101"
+- sql13.rtp.rptdesigner.tablix.filter.f1
+- sql13.rtp.rptdesigner.groupproperties.sort.f1
+- "10042"
+- "10041"
+- "10102"
+- "10103"
+- "10043"
+- sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
- In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] sind Tabellen, Matrizen und Listen *Datenbereiche*, in denen Daten paginierter Berichte in Zellen angezeigt werden, die in Zeilen und Spalten angeordnet sind. Die Zellen enthalten in der Regel Textdaten wie Text, Datumsangaben und Zahlen, können jedoch auch Messgeräte, Diagramme oder Berichtselemente wie Bilder enthalten. Als Ganzes gesehen werden Tabellen, Matrizen und Listen häufig als *Tablix*-Datenbereiche bezeichnet.  
+# <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
+ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]sind Tabellen, Matrizen und Listen *Datenbereiche* , in denen Daten paginierter Berichte in Zellen angezeigt werden, die in Zeilen und Spalten angeordnet sind. Die Zellen enthalten in der Regel Textdaten wie Text, Datumsangaben und Zahlen, können jedoch auch Messgeräte, Diagramme oder Berichtselemente wie Bilder enthalten. Als Ganzes gesehen werden Tabellen, Matrizen und Listen häufig als *Tablix* -Datenbereiche bezeichnet.  
   
- Die Tabellen-, Matrix- und Listenvorlagen werden auf Grundlage des Tablix-Datenbereichs erstellt, der als flexibles Raster Daten in Zellen anzeigen kann. In den Tabellen- und Matrixvorlagen werden Zellen in Zeilen und Spalten angeordnet. Da Vorlagen Variationen des zugrunde liegenden generischen Tablix-Datenbereichs sind, können Sie Daten in einer Kombination von Vorlagenformaten anzeigen und die Tabelle, Matrix oder Liste so ändern, dass die Funktionen eines anderen Datenbereichs aufgenommen werden, während Sie den Bericht weiterentwickeln. Wenn Sie zum Beispiel eine Tabelle hinzufügen und feststellen, dass sie nicht Ihren Vorstellungen entspricht, können Sie Spaltengruppen hinzufügen und die Tabelle so in eine Matrix umwandeln.  
+ Die Tabellen-, Matrix- und Listenvorlagen werden auf Grundlage des Tablix-Datenbereichs erstellt, der als flexibles Raster Daten in Zellen anzeigen kann. In den Tabellen- und Matrixvorlagen werden Zellen in Zeilen und Spalten angeordnet. Da Vorlagen Variationen des zugrunde liegenden generischen Tablix-Datenbereichs sind, können Sie Daten in einer Kombination von vorlagenformaten anzeigen und ändern die Tabelle, Matrix oder Liste auf die Funktionen eines anderen Datenbereichs eingeschlossen, während Sie den Bericht weiterentwickeln. Wenn Sie zum Beispiel eine Tabelle hinzufügen und feststellen, dass sie nicht Ihren Vorstellungen entspricht, können Sie Spaltengruppen hinzufügen und die Tabelle so in eine Matrix umwandeln.  
   
  Die Tabellen- und Matrixdatenbereiche können komplexe Datenbeziehungen anzeigen, indem sie geschachtelte Tabellen, Matrizen, Listen, Diagramme und Messgeräte einschließen. Tabellen und Matrizen haben ein Tabellenlayout. Die Daten stammen aus einem einzelnen Dataset, das auf einer einzelnen Datenquelle beruht. Der Hauptunterschied zwischen Tabellen und Matrizen ist, dass Tabellen nur Zeilengruppen enthalten können, während Matrizen Zeilengruppen und Spaltengruppen enthalten.  
   
- Listen unterscheiden sich leicht davon. Sie unterstützen ein freies Layout und können mehrere Peertabellen oder -matrizen umfassen, von denen jede ein anderes Dataset verwendet. Listen können auch für Formulare verwendet werden, z. B. für Rechnungen.  
+ Listen unterscheiden sich leicht davon. Sie unterstützen ein freies Layout und können mehrere Peertabellen oder -matrizen umfassen, von denen jede ein anderes Dataset verwendet. Listen können auch für Formulare verwendet werden, z. B. für Rechnungen.  
   
  In den folgenden Bildern werden einfache Berichte mit einer Tabelle, Matrix oder Liste angezeigt.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
 ##  <a name="Table"></a> Tabelle  
  Mithilfe einer Tabelle können Sie Detaildaten anzeigen und/oder Daten in Zeilengruppen anordnen. Die Tabellenvorlage enthält drei Spalten mit einer Tabellenkopfzeile und einer Detailzeile für Daten. Die folgende Abbildung zeigt die ursprüngliche Tabellenvorlage für die Auswahl auf der Entwurfsoberfläche:  
   
- ![Tabellenvorlage auf Entwurfsoberfläche, markiert](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Tabellenvorlage auf Entwurfsoberfläche, markiert")  
+ ![Tabellenvorlage auf Entwurfsoberfläche ausgewählten](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Tabellenvorlage auf Entwurfsoberfläche ausgewählten")  
   
  Sie können Daten nach einzelnen Feldern, mehreren Feldern oder unter Verwendung eigener Ausdrücke gruppieren. Sie können geschachtelte Gruppen oder unabhängige, angrenzende Gruppen erstellen und aggregierte Werte für gruppierte Daten anzeigen oder Gruppen Gesamtergebnisse hinzufügen. Wenn die Tabelle beispielsweise eine Zeilengruppe mit dem Namen [Kategorie] enthält, können Sie ein Teilergebnis für jede Gruppe sowie ein Gesamtergebnis für den Bericht hinzufügen. Um die Darstellung der Tabelle zu verbessern und Daten hervorzuheben, die Sie herausstellen möchten, können Sie Zellen miteinander verbinden und Daten und Tabellenüberschriften formatieren.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 10
 ##  <a name="Matrix"></a> Matrix  
  Mithilfe einer Matrix können Sie analog zu einer PivotTable oder einer Kreuztabelle Zusammenfassungen von aggregierten Daten in Zeilen- und Spaltengruppen anzeigen. Die Anzahl der Zeilen und Spalten für Gruppen wird von der Anzahl der eindeutigen Werte für die einzelnen Zeilen- und Spaltengruppen bestimmt. Die folgende Abbildung zeigt die ursprüngliche Matrixvorlage für die Auswahl auf der Entwurfsoberfläche:  
   
- ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Neue Matrix aus Toolbox hinzugefügt, markiert")  
+ ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "neue Matrix aus Toolbox hinzugefügt, ausgewählt")  
   
  Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zellen der zwei Schnittmengen sind: Kategorie und Gebiet sowie Kategorie und Jahr. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 10
 ##  <a name="List"></a> Liste  
  Erstellen Sie mithilfe einer Liste ein Freiformatlayout. Sie sind nicht auf ein Gitternetzlayout beschränkt, sondern können Felder in der Liste frei platzieren. Mit einer Liste können Sie ein Formular zum Anzeigen einer Vielzahl von Datasetfeldern entwerfen, oder Sie können die Liste als Container zum Anzeigen mehrerer Datenbereiche nebeneinander für gruppierte Daten verwenden. Beispielsweise können Sie eine Gruppe für eine Liste definieren, eine Tabelle, ein Diagramm oder ein Bild hinzufügen, oder Sie können Gruppenwerte in Tabellenform oder als Grafiken anzeigen, wie bei Angestellten- oder Patientendatensätzen.  
   
- ![Neue Liste aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-listtemplatenewselected.png "Neue Liste aus Toolbox hinzugefügt, markiert")  
+ ![Neue Liste aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "neue Liste aus Toolbox hinzugefügt, ausgewählt")  
   
  Weitere Informationen finden Sie unter [Erstellen von Rechnungen und Formularen mit Listen (Berichts-Generator und SSRS)].  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 10
   
  Sie können eine Tabelle, Matrix oder Liste weiterentwickeln, indem Sie eine beliebige Tablix-Funktion hinzufügen. Zu den Tablix-Funktionen gehört das Anzeigen von Detaildaten oder Aggregaten für gruppierte Daten in Zeilen und Spalten. Sie können geschachtelte Gruppen, unabhängige angrenzende Gruppen oder rekursive Gruppen erstellen. Gruppierte Daten können gefiltert und sortiert werden, und Sie können Gruppen mithilfe mehrerer Gruppenausdrücke in einer Gruppendefinition einfach kombinieren.  
   
- Sie können auch Ergebnisse für eine Gruppe oder Gesamtergebnisse für den Datenbereich hinzufügen. Sie können Zeilen oder Spalten ausblenden, um Berichte zu vereinfachen, und Sie können Benutzern ermöglichen, die Anzeige ausgeblendeter Daten wie bei einem Drilldownbericht ein- und auszuschalten. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md).  
+ Sie können auch Ergebnisse für eine Gruppe oder Gesamtergebnisse für den Datenbereich hinzufügen. Sie können Zeilen oder Spalten ausblenden, um Berichte zu vereinfachen, und Sie können Benutzern ermöglichen, die Anzeige ausgeblendeter Daten wie bei einem Drilldownbericht ein- und auszuschalten. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt werden Vorgehensweisen aufgeführt, die Ihnen Schritt für Schritt zeigen, wie Sie mit Tabellen, Matrizen und Listen in ihren Berichten arbeiten, wie Sie Daten in Zeilen und Spalten anzeigen, Spalten hinzuzufügen und löschen, Zellen zusammenführen und Teilergebnisse für Zeilen- und Spaltengruppen aufnehmen.  
@@ -143,12 +148,12 @@ caps.handback.revision: 10
  In den folgenden Themen finden Sie zusätzliche Informationen zum Arbeiten mit den Tablix-Datenbereichen.  
   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
- Erklärt die wichtigsten Konzepte im Zusammenhang mit Tablix-Datenbereichen, z. B. Bereiche der Tablix, Detail- und Gruppendaten, Spalten- und Zeilengruppen sowie statische und dynamische Zeilen und Spalten.  
+ Erklärt die wichtigsten Konzepte im Zusammenhang mit Tablix-Datenbereichen, z. B. Bereiche der Tablix, Detail- und Gruppendaten, Spalten- und Zeilengruppen sowie statische und dynamische Zeilen und Spalten.  
   
  [Hinzufügen von Daten zu einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Stellt ausführliche Informationen zum Hinzufügen von Detail- und Gruppendaten, zu Teilergebnissen und Gesamtbeträgen und zu den Bezeichnungen eines Tablix-Datenbereichs dar.  
   
- [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)  
+ [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Beschreibt die Eigenschaften für einen Tablix-Datenbereich, die Sie modifizieren können, um die Darstellung eines Tablix-Datenbereichs bei der Anzeige des Datenbereichs in einem Bericht zu ändern.  
   
  [Steuern von Zeilen- und Spaltenüberschriften &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)  
@@ -160,8 +165,8 @@ caps.handback.revision: 10
  [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Erklärt, was Gruppen sind und wann Sie verwendet werden, und beschreibt die Gruppen, die für die unterschiedlichen Tablix-Datenbereiche verfügbar sind.  
   
-## Siehe auch  
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

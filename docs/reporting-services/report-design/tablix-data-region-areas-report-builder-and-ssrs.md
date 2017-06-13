@@ -1,24 +1,29 @@
 ---
-title: "Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tablix-Datenbereichen (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)
- In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht hat ein Tablix-Datenbereich vier Bereiche mit Tablix-Zellen:   
+# <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)
+ In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht hat ein Tablix-Datenbereich vier Bereiche mit Tablix-Zellen:   
 * Ecke  
 * Zeilengruppenbereich  
 * Spaltengruppenbereich  
@@ -28,7 +33,7 @@ Die Zellen in den einzelnen Bereichen verfügen über unterschiedliche Funktione
   
 Gepunktete Linien auf der Entwurfsoberfläche bezeichnen die vier Bereiche eines ausgewählten Tablix-Datenbereichs. Die folgende Abbildung zeigt die Bereiche für einen Tablix-Bereich mit geschachtelten Zeilengruppen auf der Basis von Category und Subcategory an sowie geschachtelte Spaltengruppen auf der Basis von Geography und CountryRegion und eine angrenzende Spaltengruppe auf der Basis von Year.  
   
- ![Zonen des Tablix-Datenbereichs](../../reporting-services/report-design/media/rs-tablixareas.gif "Zonen des Tablix-Datenbereichs")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  Die einzelnen Bereiche werden in der folgenden Liste beschrieben:  
   
@@ -48,7 +53,7 @@ Gepunktete Linien auf der Entwurfsoberfläche bezeichnen die vier Bereiche eines
   
  Der Zeilengruppenbereich zeigt zwei Kategoriegruppeninstanzen für Clothing und Components an. Die Spaltengruppe zeigt eine Instanz der Gruppe Geography für North America mit zwei geschachtelten Instanzen der Gruppe CountryRegion für Canada (CA) und United States (US) an. Außerdem zeigt die angrenzende Spalte zwei Jahre Gruppeninstanzen für 2003 und 2004 an. Die Spalte Total enthält die Zeilengesamtwerte. Die Ergebniszeile, die mit der Kategoriegruppe wiederholt wird, enthält die Gesamtwerte der Unterkategorie, und in der Gesamtergebniszeile werden die Kategoriegesamtwerte einmal für den Datenbereich angezeigt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
  [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

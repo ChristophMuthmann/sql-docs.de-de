@@ -1,26 +1,31 @@
 ---
-title: "Berichtsabschnitte (Dialogfeld) (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "10009"
+title: Berichtsabschnitte (Dialogfeld) (Berichts-Generator) melden | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsabschnitte (Dialogfeld) (Berichts-Generator)
-  Wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob der Bericht nur ein **\<Section>**-Element der Berichtsdefinitionssprache (Report Definition Language, RDL) enthält. Das Öffnen eines Berichts mit mehreren **\<Section>**-Elementen wird nicht unterstützt.  
+# <a name="report-sections-dialog-box-report-builder"></a>Berichtsabschnitte (Dialogfeld) (Berichts-Generator)
+  Wenn Sie einen Bericht öffnen, Berichts-Generator überprüft, ob der Bericht nur ein Berichtsdefinitionssprache (RDL) enthält  **\<Abschnitt >** Element. Öffnen einen Bericht mit mehreren  **\<Abschnitt >** -Elementen wird nicht unterstützt.  
   
  Obwohl eine Berichtsdefinition mit mehreren Abschnitten programmgesteuert generiert werden kann, wird die Bearbeitung eines solchen Berichtes in einer Berichterstellungsumgebung nicht unterstützt.  
   
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Klicken Sie zum Fortsetzen des Vorgangs auf **OK** .  
   
-## Siehe auch  
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](http://msdn.microsoft.com/de-de/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+## <a name="see-also"></a>Siehe auch  
+ [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

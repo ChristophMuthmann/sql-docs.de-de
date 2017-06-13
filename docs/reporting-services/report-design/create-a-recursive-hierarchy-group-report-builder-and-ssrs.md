@@ -1,31 +1,36 @@
 ---
-title: "Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
-In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichten organisiert eine rekursive Hierarchiegruppe Daten aus einem einzelnen Berichtsdataset, das mehrere hierarchische Ebenen aufweist, z.B. eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  
+# <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
+In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten organisiert eine rekursive Hierarchiegruppe Daten aus einem einzelnen Berichtsdataset, das mehrere hierarchische Ebenen aufweist, z.B. eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  
   
- Bevor Sie Daten in einer Tabelle als rekursive Hierarchiegruppe organisieren können, müssen Sie ein Dataset erstellen, das alle hierarchischen Daten enthält. Sie benötigen separate Felder für das zu gruppierende Element und das Element, nach dem gruppiert wird. Ein Dataset, in dem Sie Mitarbeiter rekursiv unter dem Manager gruppieren möchten, kann z. B. einen Namen, einen Mitarbeiternamen, eine Mitarbeiter-ID und eine Manager-ID enthalten.  
+ Bevor Sie Daten in einer Tabelle als rekursive Hierarchiegruppe organisieren können, müssen Sie ein Dataset erstellen, das alle hierarchischen Daten enthält. Sie benötigen separate Felder für das zu gruppierende Element und das Element, nach dem gruppiert wird. Ein Dataset, in dem Sie Mitarbeiter rekursiv unter dem Manager gruppieren möchten, kann z. B. einen Namen, einen Mitarbeiternamen, eine Mitarbeiter-ID und eine Manager-ID enthalten.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## So erstellen Sie eine rekursive Hierarchiegruppe  
+## <a name="to-create-a-recursive-hierarchy-group"></a>So erstellen Sie eine rekursive Hierarchiegruppe  
   
 1.  Fügen Sie in der Entwurfsansicht eine Tabelle hinzu, und ziehen Sie die anzuzeigenden Datasetfelder in die Tabelle. Normalerweise ist das Feld, das Sie als Hierarchie anzeigen möchten, in der ersten Spalte angeordnet.  
   
@@ -43,29 +48,29 @@ In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Ber
   
      Führen Sie den Bericht aus. Im Bericht wird die rekursive Hierarchiegruppe angezeigt. Die Anzeige erfolgt jedoch ohne einen Einzug, der die Hierarchie verdeutlichen würde.  
   
-## So formatieren Sie eine rekursive Hierarchiegruppe mit Einzugsebenen  
+## <a name="to-format-a-recursive-hierarchy-group-with-indent-levels"></a>So formatieren Sie eine rekursive Hierarchiegruppe mit Einzugsebenen  
   
 1.  Klicken Sie auf das Textfeld mit dem Feld, dem Sie Einzugsebenen hinzufügen möchten, um ein Hierarchieformat anzuzeigen. Die Eigenschaften für das Textfeld werden im Bereich Eigenschaften angezeigt.  
   
     > [!NOTE]  
-    >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften**.  
+    >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften** .  
   
-2.  Erweitern Sie im Bereich „Eigenschaften“ den Knoten **Auffüllung**, klicken Sie auf **Links**, und wählen Sie in der Dropdownliste den Eintrag **\<Ausdruck…>**.  
+2.  Erweitern Sie im Eigenschaftenbereich die **Padding** Knoten, klicken Sie auf **Links**, und wählen Sie aus der Dropdown-Liste  **\<Ausdruck… >**.  
   
 3.  Geben Sie im Ausdruckfenster den folgenden Ausdruck ein:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *nnyy*. Dabei steht *nn* für eine Zahl und *yy* für die Maßeinheit. Im obigen Beispielausdruck wird eine Zeichenfolge generiert, bei der die Auffüllung mithilfe der **Level**-Funktion basierend auf der Rekursionsebene vergrößert wird. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Informationen zur **Level**-Funktion finden Sie unter [Ebene](../../reporting-services/report-design/level-function-report-builder-and-ssrs.md).  
+     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *Nnyy*, wobei  *nn*  ist eine Zahl und *Yy* ist die Maßeinheit. Im obigen Beispielausdruck wird eine Zeichenfolge generiert, bei der die Auffüllung mithilfe der **Level** -Funktion basierend auf der Rekursionsebene vergrößert wird. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Informationen zur **Level** -Funktion finden Sie unter [Ebene](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Führen Sie den Bericht aus. Der Bericht zeigt eine hierarchische Ansicht der gruppierten Daten an.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)   
+ [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrizen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

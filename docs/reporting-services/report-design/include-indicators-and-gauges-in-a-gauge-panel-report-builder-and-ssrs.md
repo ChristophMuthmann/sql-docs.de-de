@@ -1,23 +1,28 @@
 ---
-title: "Aufnehmen von Indikatoren und Messger&#228;ten in einen Messger&#228;tbereich (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aufnehmen von Indikatoren und Messger&#228;ten in einen Messger&#228;tbereich (Berichts-Generator und SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator und SSRS)
   Der Messgerätbereich ist der Container der obersten Ebene, der mindestens ein Messgerät und/oder einen Indikator enthält. Indikatoren können in Messgeräte eingebettet werden oder neben ihnen im Messgerätbereich eingefügt werden.  
   
  Wenn der Indikator und das Messgerät im Messgerätbereich angrenzen und Daten aus anderen Feldern anzeigen, empfiehlt es sich, Bezeichnungen hinzufügen, um unmissverständlich anzuzeigen, welche Daten das Messgerät und der Indikator übermitteln.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So betten Sie einen Indikator in einem Messgerät ein  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>So betten Sie einen Indikator in einem Messgerät ein  
   
 1.  Öffnen Sie einen vorhandenen Bericht, oder erstellen Sie einen neuen Bericht, der eine Tabelle und eine Matrix mit den anzuzeigenden Daten enthält.   
   
@@ -43,7 +48,7 @@ caps.handback.revision: 8
   
 7.  Klicken Sie im Bereich **Werte** im Listenfeld **(Keine Angabe)** auf das Feld, dessen Werte im Messgerät angezeigt werden sollen. Sie können auch das Feld, das verwendet werden soll, aus dem Berichtsdataset ziehen.  
   
-8.  Klicken Sie mit der rechten Maustaste auf das Messgerät, klicken Sie auf **Indikator hinzufügen** und anschließend auf **Untergeordnet**. Das Dialogfeld **Indikatorart auswählen** wird geöffnet.  
+8.  Klicken Sie mit der rechten Maustaste auf das Messgerät, klicken Sie auf **Indikator hinzufügen**und anschließend auf **Untergeordnet**. Das Dialogfeld **Indikatorart auswählen** wird geöffnet.  
   
 9. Klicken Sie im linken Bereich des Dialogfelds **Indikatorart auswählen** auf den gewünschten Indikatortyp und dann auf den Indikatorsatz.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So zeigen Sie einen Indikator und ein Messgerät nebeneinander an  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>So zeigen Sie einen Indikator und ein Messgerät nebeneinander an  
   
 1.  Öffnen Sie einen vorhandenen Bericht, oder erstellen Sie einen neuen Bericht, der eine Tabelle und eine Matrix mit den anzuzeigenden Daten enthält.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 8
   
 7.  Klicken Sie im Bereich **Werte** im Listenfeld **(Keine Angabe)** auf das Feld, dessen Werte im Messgerät angezeigt werden sollen. Sie können auch das Feld, das verwendet werden soll, aus dem Berichtsdataset ziehen.  
   
-8.  Klicken Sie mit der rechten Maustaste auf das Messgerät, klicken Sie auf **Indikator hinzufügen** und anschließend auf **Angrenzend**. Das Dialogfeld **Indikatorart auswählen** wird geöffnet.  
+8.  Klicken Sie mit der rechten Maustaste auf das Messgerät, klicken Sie auf **Indikator hinzufügen**und anschließend auf **Angrenzend**. Das Dialogfeld **Indikatorart auswählen** wird geöffnet.  
   
 9. Klicken Sie im linken Bereich des Dialogfelds **Indikatorart auswählen** auf den gewünschten Indikatortyp und dann auf den Indikatorsatz.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 8
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

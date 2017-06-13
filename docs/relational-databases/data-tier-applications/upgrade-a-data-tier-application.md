@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade einer Datenebenenanwendung
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/11/2017
 7.  Schließen Sie den Dateidatenstrom, der zum Lesen der DAC-Paketdatei verwendet wurde.  
   
 ### <a name="example-powershell"></a>Beispiel (PowerShell)  
- Im folgenden Beispiel wird eine DAC mit dem Namen "MyApplication" auf einer Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]aktualisiert, wobei eine neue DAC-Version in einem MyApplicationVNext.dacpac-Paket verwendet wird.  
+ Im folgende Beispiel wird eine DAC mit dem Namen "MyApplication" auf einer Standardinstanz von aktualisiert die [!INCLUDE[ssDE](../../includes/ssde-md.md)], verwenden eine neue DAC-Version in einem Paket MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -264,7 +264,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

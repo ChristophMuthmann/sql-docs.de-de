@@ -1,37 +1,44 @@
 ---
-title: "Reporting Services in SQL Server-Datentools (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services in"
+title: Reporting Services in SQL Server Data Tools (SSDT) | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services in SQL Server-Datentools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Umgebung zum Erstellen von Business Intelligence-Lösungen. SSDT verfügt über die Erstellungsumgebung des Bericht-Designers, in dem Sie paginierte [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichtsdefinitionen, freigegebene Datenquellen, freigegebene Datasets und Berichtsteile öffnen, ändern, vorher ansehen, speichern und bereitstellen können. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist nicht im Lieferumfang von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten. Herunterladen von [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT verfügt über die Erstellungsumgebung des Bericht-Designers, in dem Sie paginierte [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichtsdefinitionen, freigegebene Datenquellen, freigegebene Datasets und Berichtsteile öffnen, ändern, vorher ansehen, speichern und bereitstellen können. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]nicht ist mit SQL Server enthalten. Herunterladen von [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  In diesem Thema werden die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Lösungen, -Projekte, -Projektvorlagen und -Konfigurationen beschrieben, die für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendet werden, sowie die Ansichten, Menüs, Symbolleisten und Tastenkombinationen, die Sie im Berichts-Designer verwenden können.  
   
- Eine Einführung in das Entwerfen von Berichten finden Sie unter [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md).  
+ Eine Einführung in das Entwerfen von Berichten finden Sie unter [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Lösungen und Projekte  
  Ein Berichtsprojekt dient als Container für Berichtsdefinitionen und Ressourcen. Jede Datei im Berichtsprojekt wird bei der Bereitstellung des Projekts auf dem Berichtsserver veröffentlicht. Wenn Sie zum ersten Mal ein Projekt erstellen, wird zusätzlich eine Projektmappe als Container für das Projekt erstellt. Sie können mehrere Projekte zu einer Projektmappe hinzufügen.  
   
   
 ##  <a name="bkmk_Configurations"></a> Konfigurationen  
- Wenn Sie mehrere Sätze von Projekteigenschaften für unterschiedliche Bereitstellungsvarianten (etwa Test- und Produktionsberichtsserver im Unternehmen) erstellen möchten, verwenden Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
+ Wenn Sie mehrere Sätze von Projekteigenschaften für unterschiedliche Bereitstellungsvarianten (etwa Test- und Produktionsberichtsserver im Unternehmen) erstellen möchten, verwenden Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
 ##  <a name="bkmk_ReportServerProjects"></a> Berichtsserverprojekte  
  Bei der Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden die folgenden Projektvorlagen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar gemacht:  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **Berichtsserverprojekt-Assistent.** Wenn Sie ein Berichtsserver-Assistenten-Projekt auswählen, wird automatisch ein Berichtsserverprojekt erstellt und der Berichts-Assistent geöffnet. Mithilfe des Assistenten können Sie einen Bericht erstellen. Befolgen Sie hierzu die Anweisungen auf den einzelnen Seiten, um eine Verbindungszeichenfolge für eine Datenquelle zu erstellen, Datenquellen-Anmeldeinformationen festzulegen, eine Abfrage zu entwerfen, einen Tabellen- oder Matrixdatenbereich hinzuzufügen, Berichtsdaten und -gruppen anzugeben, Schriftart und Farbe auszuwählen, den Bericht auf einem Berichtsserver zu veröffentlichen und den Bericht lokal in der Vorschau anzuzeigen. Nachdem Sie mithilfe des Assistenten einen Bericht erstellt haben, können Sie die Berichtsdaten und den Berichts-Designer ändern, und zwar mithilfe des Berichts-Designers im Berichtsserverprojekt.  
   
- ![Neue Projektvorlagen in SSDT](../../analysis-services/media/ssdt-biprojects.png "Neue Projektvorlagen in SSDT")  
+ ![Neue Projektvorlagen in SSDT](../../analysis-services/media/ssdt-biprojects.png "neue Projektvorlagen in SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **Datasets** Jedes Dataset enthält eine Abfrage, aus der hervorgeht, welche Daten aus der Datenquelle abgerufen werden sollen. Erweitern Sie das Dataset, um die von der Datasetabfrage angegebene Feldauflistung anzuzeigen.  
   
-     In einigen Abfrage-Designern für mehrdimensionale Datenquellen können Sie im Filterbereich Filter angeben und auswählen, ob Berichtsparameter erstellt werden sollen. Wenn Sie die Berichtsparameteroption angeben, wird automatisch ein spezielles Dataset erstellt, um die Liste mit den gültigen Werten des Parameters aufzufüllen.  Standardmäßig wird dieses Dataset nicht im Berichtsdatenbereich angezeigt. Weitere Informationen finden Sie unter [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md).  
+     In einigen Abfrage-Designern für mehrdimensionale Datenquellen können Sie im Filterbereich Filter angeben und auswählen, ob Berichtsparameter erstellt werden sollen. Wenn Sie die Berichtsparameteroption angeben, wird automatisch ein spezielles Dataset erstellt, um die Liste mit den gültigen Werten des Parameters aufzufüllen.  Standardmäßig wird dieses Dataset nicht im Berichtsdatenbereich angezeigt. Weitere Informationen finden Sie unter [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Berichtsparameter** Die Liste der Berichtsparameter. Parameter können manuell oder automatisch erstellt werden, wenn eine Datasetabfrage Abfrageparameter einschließt.  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  Verwenden Sie den Eigenschaftenbereich, um Folgendes durchzuführen:  
   
--   Festlegen von Eigenschaften für das aktuell ausgewählte Element auf der Entwurfsoberfläche. Einige Eigenschaften stellen eine Dropdownliste mit Werten bereit. Sie können den Wert auch direkt in die Zelle eingeben. Einige Eigenschaften enthalten eine Sammlung von Werten, die durch den Wert **(Auflistung)** angegeben wird. Die meisten Eigenschaften können einen Ausdruck akzeptieren; komplexe Ausdrücke werden durch den Wert **\<Ausdruck>** angezeigt. Klicken Sie auf **\<Ausdruck>**, um das Dialogfeld **Ausdruck** zu öffnen. Weitere Informationen finden Sie unter [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md).  
+-   Festlegen von Eigenschaften für das aktuell ausgewählte Element auf der Entwurfsoberfläche. Einige Eigenschaften stellen eine Dropdownliste mit Werten bereit. Sie können den Wert auch direkt in die Zelle eingeben. Einige Eigenschaften enthalten eine Sammlung von Werten, die durch den Wert **(Auflistung)**angegeben wird. Die meisten Eigenschaften können einen Ausdruck akzeptieren; komplexe Ausdrücke werden durch die angegebenen  **\<Ausdruck >**. Klicken Sie auf  **\<Ausdruck >** So öffnen die **Ausdruck** (Dialogfeld). Weitere Informationen finden Sie unter [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Verwenden Sie die Schaltflächen in der Symbolleiste des Eigenschaftenbereichs, um das Raster von Kategoriesicht in alphabetische Sicht zu ändern. In der Kategoriesicht müssen Sie möglicherweise eine Kategorie erweitern, um alle Eigenschaften darunter zu sehen. Zum Öffnen des Dialogfelds „Eigenschaften“ für ein Element klicken Sie in der Symbolleiste auf die Schaltfläche **Eigenschaftenseiten** , oder klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Eigenschaften**.  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Befehlszeilenunterstützung für SQL Server-Datentools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] basiert auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und der zugrunde liegenden Anwendung „devenv.exe“. Bevor Sie diese Optionen verwenden können, müssen Sie für beide folgenden Elemente gültige Werte festlegen:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]basiert auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und der zugrunde liegenden Anwendung devenv.exe. Bevor Sie diese Optionen verwenden können, müssen Sie für beide folgenden Elemente gültige Werte festlegen:  
   
 -   Projekteigenschaften für OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder und TargetServerURL.  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |In einem Textfeld Text von der aktuellen Cursorposition bis zum Ende des Ausdrucks auswählen|STRG+UMSCHALT+ENDE|  
     |Das Kontextmenü für das ausgewählte Element öffnen|SHIFT+F10+Eigenschaftentaste auf neueren Tastaturen|
   
-## Siehe auch  
-[Herunterladen von SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)   
- [Reporting Services-Berichte &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+## <a name="next-steps"></a>Nächste Schritte
+
+[Herunterladen von SQL Server Datatools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[Projektmappen-Explorer](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Reporting Services-Berichte](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Bereitstellung und Versionsunterstützung in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

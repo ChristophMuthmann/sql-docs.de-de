@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services-Berichtsserver (einheitlicher Modus) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verwalten von Reporting Services"
-  - "Verwalten [Reporting Services]"
-  - "Reporting Services, Verwaltung"
+title: Reporting Services-Berichtsserver (einheitlicher Modus) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services-Berichtsserver (einheitlicher Modus)
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
   Ein für den einheitlichen Modus konfigurierter Berichtsserver läuft als Anwendungsserver, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten bereitstellt.  
   
  Sie können entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder den Berichts-Manager zum Verwalten von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten verwenden. Verwenden Sie den Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um einen Berichtsserver im einheitlichen Modus zu verwalten.  
@@ -39,7 +44,7 @@ caps.handback.revision: 24
 -   [Verweisen auf eine Bildressource von einem Bericht](#bkmk_referenceimage)  
   
 ##  <a name="bkmk_sum"></a> Zusammenfassung des einheitlichen Modus  
- Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation im einheitlichen Modus besteht aus mehreren serverseitigen Funktionen, die Sie verwalten und warten müssen. Zu den Serverfunktionen gehören folgende:  
+ Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation im einheitlichen Modus besteht aus mehreren serverseitigen Funktionen, die Sie verwalten und warten müssen. Zu den Serverfunktionen gehören folgende:  
   
 -   Der Berichtsserver-Webdienst, der innerhalb des Berichtsserverdiensts ausgeführt wird.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 24
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bezieht sich die Inhaltsverwaltung auf die Verwaltung von Berichten, Modellen, Ordnern, Ressourcen und freigegebenen Datenquellen. Diese Elemente können jeweils unabhängig voneinander über Eigenschaften und Sicherheitseinstellungen verwaltet werden. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden.  
   
 > [!NOTE]  
->  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md).  
+>  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Die Inhaltsverwaltung umfasst die folgenden Aufgaben:  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  Sie können eine Bildressource in einem Bericht verwenden, indem Sie die Bilddatei dem Projekt hinzufügen und es mit dem Bericht veröffentlichen. Nach dem Veröffentlichen des Bilds können Sie den Bildverweis im Bericht aktualisieren, sodass er auf die Ressource auf dem Berichtsserver verweist, und dann nur den Bericht erneut veröffentlichen, um die Änderungen zu speichern. Sie können anschließend das Bild unabhängig vom Bericht aktualisieren, indem Sie die Ressource erneut veröffentlichen. Der Bericht verwendet die aktuelle Version des Bilds, die auf dem Berichtsserver verfügbar ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

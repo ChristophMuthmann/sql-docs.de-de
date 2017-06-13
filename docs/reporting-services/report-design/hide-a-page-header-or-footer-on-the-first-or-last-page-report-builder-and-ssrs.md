@@ -1,29 +1,34 @@
 ---
-title: "Ausblenden einer Seitenkopf- oder Seitenfu&#223;zeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ausblenden Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite Berichts-Generator-SSRS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 17c9a8c854fad691b864ff1b0aba4e91b5d7b64d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ausblenden einer Seitenkopf- oder Seitenfu&#223;zeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS)
+# <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS)
   Ein Bericht kann eine Seitenkopf- und Seitenfußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Nachdem Sie eine Kopf- bzw. Fußzeile hinzugefügt haben, können Sie sie selektiv auf der ersten und letzten Seite des Berichts ausblenden.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So blenden Sie einen Seitenkopf auf der ersten oder letzten Seite aus  
+### <a name="to-hide-a-page-header-on-the-first-or-last-page"></a>So blenden Sie einen Seitenkopf auf der ersten oder letzten Seite aus  
   
 1.  Öffnen Sie einen Bericht in der Entwurfsansicht.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So blenden Sie einen Seitenfuß auf der ersten oder letzten Seite aus  
+### <a name="to-hide-a-page-footer-on-the-first-or-last-page"></a>So blenden Sie einen Seitenfuß auf der ersten oder letzten Seite aus  
   
 1.  Öffnen Sie einen Bericht in der Entwurfsansicht.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

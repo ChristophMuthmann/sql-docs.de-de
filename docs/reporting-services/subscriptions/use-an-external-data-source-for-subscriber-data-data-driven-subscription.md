@@ -1,33 +1,38 @@
 ---
-title: "Verwenden einer externen Datenquelle f&#252;r Abonnentendaten (datengesteuertes Abonnement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abonnentendatenquellen [Reporting Services]"
-  - "Abonnements [Reporting Services], externe Datenquellen"
-  - "Abfragebasierte Abonnements [Reporting Services]"
-  - "Externe Datenquellen [Reporting Services]"
-  - "Datengesteuerte Abonnements"
-  - "Datenquellen [Reporting Services], Abonnements"
+title: "Verwenden eine externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriber data sources [Reporting Services]
+- subscriptions [Reporting Services], external data sources
+- query-based subscriptions [Reporting Services]
+- external data sources [Reporting Services]
+- data-driven subscriptions
+- data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verwenden einer externen Datenquelle f&#252;r Abonnentendaten (datengesteuertes Abonnement)
+# <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Verwenden einer externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement)
   In einem datengesteuerten Abonnement werden dynamische Abonnementdaten von einer Abfrage oder einem Befehl bereitgestellt, die bzw. der Daten aus einer externen Datenquelle abruft. Abonnementdaten können aus allen unterstützten Datenquellen abgerufen werden, die die Anforderungen der datengesteuerten Abonnementverarbeitung erfüllen. Die Abfrage- oder Befehlssyntax muss für eine Datenverarbeitungserweiterung gültig sein, die mit dem Berichtsserver installiert wurde.  
   
-## Anforderungen für die Datenverarbeitung  
+## <a name="data-processing-requirements"></a>Anforderungen für die Datenverarbeitung  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Datenverarbeitungserweiterungen zum Abrufen von Abonnementdaten. Folgende Datenquellentypen werden empfohlen:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken  
@@ -48,9 +53,9 @@ caps.handback.revision: 43
   
 -   Berichtsmodelle  
   
- Wenn Sie über eine benutzerdefinierte Datenverarbeitungserweiterung verfügen, die Sie in datengesteuerten Abonnements verwenden möchten, muss diese die Schnittstellen <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> und <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> implementieren. Die Datenverarbeitungserweiterung muss eine Abfrageausführung vom Typ schema only unterstützen. Diese Abfrage wird zum Abrufen von Spaltenmetadaten zur Entwurfszeit verwendet, damit Benutzer Übermittlungsoptionen und Berichtsparametern in der Abonnementdefinition Spalten zuordnen können. Die Abfrageausführung vom Typ schema only tritt in einem frühen Stadium auf, wenn der Benutzer das Abonnement definiert.  
+ Wenn Sie eine benutzerdefinierte datenverarbeitungserweiterung, die Sie in datengesteuerten Abonnements verwenden möchten verfügen, müssen Sie implementieren die <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> und <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> Schnittstellen. Die Datenverarbeitungserweiterung muss eine Abfrageausführung vom Typ schema only unterstützen. Diese Abfrage wird zum Abrufen von Spaltenmetadaten zur Entwurfszeit verwendet, damit Benutzer Übermittlungsoptionen und Berichtsparametern in der Abonnementdefinition Spalten zuordnen können. Die Abfrageausführung vom Typ schema only tritt in einem frühen Stadium auf, wenn der Benutzer das Abonnement definiert.  
   
-## Abfrageanforderungen  
+## <a name="query-requirements"></a>Abfrageanforderungen  
  Beachten Sie beim Erstellen einer Abfrage, bei der Abonnementdaten abgerufen werden, folgende Punkte:  
   
 -   Sie können nur eine Abfrage für das Abonnement erstellen.  
@@ -59,15 +64,15 @@ caps.handback.revision: 43
   
 -   Vom Berichtsserver wird eine Berichtsübermittlung für jede Zeile im Resultset erstellt. Wenn das Resultset aus dreihundert Zeilen besteht, versucht der Berichtsserver, dreihundert Berichte zu übermitteln.  
   
-## Festlegen von Übermittlungsoptionen mithilfe von Variablendaten aus einer Abonnentendatenbank  
+## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Festlegen von Übermittlungsoptionen mithilfe von Variablendaten aus einer Abonnentendatenbank  
  Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-## Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
+## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
  Wenn Sie ein datengesteuertes Abonnement für einen parametrisierten Bericht erstellen, können Sie Variablenparameterwerte verwenden, um die Ausgabe der einzelnen Berichte anzupassen. Beispielsweise könnte die Abonnentendatenbank Mitarbeiteridentifikationsnummern, Einstellungsdaten, Tätigkeitsbezeichnungen und Informationen zum Bürostandort enthalten, mit denen Berichtsdaten gefiltert werden können. Falls der Bericht Parameter akzeptiert, die auf diesen oder anderen verfügbaren Spaltendaten basieren, können Sie den Parameter der entsprechenden Spalte zuordnen.  
   
  Stellen Sie beim Zuordnen von Abonnentenfeldern zu Berichtsparametern sicher, dass die Datentypen und Spaltenlängen kompatibel sind. Bei einem Datentypenkonflikt tritt bei der Abonnementverarbeitung ein Fehler auf. Weitere Informationen zum Verwenden von Abonnentendaten in einem parameterisierten Bericht finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-## Ändern der Datenquelle für Abonnentendaten  
+## <a name="modifying-the-subscriber-data-source"></a>Ändern der Datenquelle für Abonnentendaten  
  Die folgenden Änderungen an der Datenquelle für Abonnentendaten können das Ausführen des Abonnements verhindern:  
   
 -   Entfernen von Spalten, auf die im Abonnement verwiesen wird.  
@@ -78,9 +83,9 @@ caps.handback.revision: 43
   
  Falls Sie solche Änderungen vornehmen, müssen Sie das Abonnement aktualisieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

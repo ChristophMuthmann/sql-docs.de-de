@@ -1,24 +1,29 @@
 ---
-title: "Tabellen (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tabellen (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tabellen (Berichts-Generator und SSRS)
- Sie können in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] eine Tabelle zum Anzeigen von Detaildaten oder gruppierten Daten verwenden, oder eine Kombination von beiden Daten in einem paginierten Bericht.   
+# <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
+ Sie können in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]eine Tabelle zum Anzeigen von Detaildaten oder gruppierten Daten verwenden, oder eine Kombination von beiden Daten in einem paginierten Bericht.   
    
  Sie können Daten nach einzelnen Feldern, mehreren Feldern oder unter Verwendung eigener Ausdrücke gruppieren. Sie können geschachtelte Gruppen oder unabhängige angrenzende Gruppen erstellen. Wenn Sie aggregierte Werte für gruppierte Daten anzeigen möchten, fügen Sie Gruppen Gesamtwerte hinzu. Formatieren Sie die Zeilen und Spalten, um die Daten zu markieren, die Sie hervorheben möchten. Sie können Detaildaten oder gruppierte Daten zunächst ausblenden und Benutzern mithilfe von Drilldownelementen eine interaktive Auswahl der anzuzeigenden Elemente ermöglichen.  
   
@@ -42,22 +47,22 @@ caps.handback.revision: 12
   
  Wenn Sie die Tabelle auswählen, werden Zeilen- und Spaltenhandles an der Außenseite der Tabelle angezeigt; in den Zellen werden Klammern angezeigt. Zeilenhandles zeigen Grafiken an, die Ihnen helfen, den Zweck der einzelnen Zeilen zu verstehen. Klammern geben die Gruppenmitgliedschaft für eine ausgewählte Zelle an. Die folgende Abbildung zeigt eine ausgewählte leere Zelle in einer Standardtabelle an.  
   
- ![Tabellenvorlage auf Entwurfsoberfläche, markiert](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Tabellenvorlage auf Entwurfsoberfläche, markiert")  
+ ![Tabellenvorlage auf Entwurfsoberfläche ausgewählten](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Tabellenvorlage auf Entwurfsoberfläche ausgewählten")  
   
- Das Zeilenhandle für die Datenzeile zeigt das Detailsymbol (![Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.png "Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile")) an. Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
+ Das Zeilenhandle für die Datenzeile zeigt das Detailsymbol (![Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
   
- ![Entwurf, Tabelle mit fett formatierten Spaltenüberschriften](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Entwurf, Tabelle mit fett formatierten Spaltenüberschriften")  
+ ![Entwurf, Tabelle mit Spaltenüberschriften in Fettschrift](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Entwurf, Tabelle mit Spaltenüberschriften in Fettschrift")  
   
  Überprüfen Sie den Entwurf, indem Sie den Bericht in der Vorschau anzeigen. Die Tabelle wird nach Bedarf nach unten erweitert. Die Bezeichnungszeile und die Detailzeile werden für jede Zeile im Resultset für die Datasetabfrage jeweils einmal angezeigt. Jedes Produkt, das im Rahmen der Bestellung verkauft wird, wird unter Angabe der Menge und Zeilensumme für das Element in einer eigenen Zeile angezeigt, wie die folgende Abbildung zeigt:  
   
- ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](../../reporting-services/media/rs-basictabledetailsformattedpreview.gif "Vorschau der Tabelle mit fett formatierten Spaltenüberschriften")  
+ ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "Vorschau der Tabelle mit fett formatierten Spaltenüberschriften")  
   
- Die Tabelle, die Sie zu Beginn verwenden, stellt eine Vorlage auf Grundlage des Tablix-Datenbereichs dar. Sie können die Tabelle durch Hinzufügen von Funktionen erweitern, die vom zugrunde liegenden Tablix-Datenbereich unterstützt werden. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md). Sie können die Tabelle auch weiterentwickeln, indem Sie Zeilengruppen und/oder Spaltengruppen hinzufügen oder indem Sie Detailgruppen hinzufügen oder entfernen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
+ Die Tabelle, die Sie zu Beginn verwenden, stellt eine Vorlage auf Grundlage des Tablix-Datenbereichs dar. Sie können die Tabelle durch Hinzufügen von Funktionen erweitern, die vom zugrunde liegenden Tablix-Datenbereich unterstützt werden. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). Sie können die Tabelle auch weiterentwickeln, indem Sie Zeilengruppen und/oder Spaltengruppen hinzufügen oder indem Sie Detailgruppen hinzufügen oder entfernen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
-### Hinzufügen von Gesamtwerten für Detaildaten  
+### <a name="adding-totals-for-detail-data"></a>Hinzufügen von Gesamtwerten für Detaildaten  
  Wählen Sie Zellen mit numerischen Daten aus, um Gesamtwerte hinzuzufügen, und fügen Sie anschließend mithilfe des Kontextmenüs Bezeichnungen und Gesamtwerte für Detaildaten von numerischen Feldern hinzu. Weitere Bezeichnungen und Gesamtwerte können auch manuell angegeben werden. Die folgende Abbildung zeigt eine Standardergebniszeile mit Gesamtwerten an, die sowohl manuell als auch automatisch angegeben wurden:  
   
- ![Ergebniszeile zu Tabelle hinzugefügt](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Ergebniszeile zu Tabelle hinzugefügt")  
+ ![Ergebniszeile zu Tabelle hinzugefügt](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Ergebniszeile zu Tabelle hinzugefügt wurde")  
   
  In der Vorschau werden im Bericht die Kopfzeile und die Detailzeile für jede Zeile im Resultset für die Datasetabfrage jeweils einmal angezeigt; außerdem wird die Ergebniszeile angezeigt. Die folgende Abbildung zeigt die letzten Zeilen der Tabelle einschließlich des Zeilengesamtergebnisses.  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 12
   
  Die folgende Abbildung zeigt eine Tabelle mit zwei geschachtelten Zeilengruppen in der Entwurfsansicht. Die Zeilengruppen wurden erstellt, indem zunächst das Feld Order und anschließend das Feld Date in den Zeilengruppenbereich gezogen und jede Gruppe als übergeordnetes Element der vorhandenen Gruppen hinzugefügt wurden. Die Abbildung zeigt eine übergeordnete Gruppe auf Basis des Datums sowie eine untergeordnete Gruppe auf Basis der Bestellnummer an; außerdem wird die standardmäßig definierte Detailgruppe angezeigt.  
   
- ![Tabelle gruppiert nach 'Date' und 'Order'](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "Tabelle gruppiert nach 'Date' und 'Order'")  
+ ![Tabelle nach Datum und Bestellnummer gruppiert](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "Tabelle nach Datum und Bestellnummer gruppiert")  
   
  In der Vorschau werden die Bestelldaten im Bericht zunächst nach Datum und anschließend nach Bestellung angeordnet angezeigt, wie die folgende Abbildung zeigt.  
   
- ![Tabelle gruppiert nach 'Date' und dann 'Order'](../../reporting-services/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach 'Date' und dann 'Order'")  
+ ![Tabelle gruppiert nach Datum und die anschließende Bestellung](../../reporting-services/media/rs-basictablegroupspreview.png "Tabelle nach Datum gruppiert und dann ' order '")  
   
  Gruppierte Daten können auch durch Festlegen eines Einzugs für die Gruppenhierarchie angezeigt werden, um die geschachtelte Beziehung von Gruppen statt einzelner Werte in eigenen Spalten darzustellen. Diese Art der Formatierung wird als abgestufter Bericht bezeichnet. Weitere Informationen zum Formatieren von Gruppeninformationen als abgestufter Bericht finden Sie unter [Erstellen von abgestuften Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
-### Hinzufügen von Gesamtwerten zu Zeilengruppen  
+### <a name="adding-totals-to-row-groups"></a>Hinzufügen von Gesamtwerten zu Zeilengruppen  
  Mit dem kontextabhängigen Befehl **Gesamtergebnis hinzufügen** können Sie Gesamtwerte für eine Gruppe anzeigen. Bei einer Zeilengruppe wird mit dem Befehl Gesamtergebnis hinzufügen eine Zeile außerhalb der Gruppe hinzugefügt, sodass diese in Bezug auf die Gruppe nur einmal wiederholt wird. Bei geschachtelten Gruppen befindet sich das Zeilengesamtergebnis für die untergeordnete Gruppe außerhalb dieser Gruppe, jedoch innerhalb der übergeordneten Gruppe. Das Festlegen der Hintergrundfarbe für das Zeilengesamtergebnis der untergeordneten Gruppe erleichtert in diesem Fall eine Unterscheidung von den Detailzeilen. Sie können auch eine andere Hintergrundfarbe verwenden, um die Tabellenkopf- und Fußzeile zu unterscheiden. Die folgende Abbildung zeigt die Tabelle mit einem Zeilengesamtergebnis an, das auf Basis von Bestellzahlen für die Gruppe hinzugefügt wurde.  
   
  ![Entwurfsansicht, Hinzufügen von Ergebniszeilen zu Gruppe und Tabelle](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Entwurfsansicht, Hinzufügen von Ergebniszeilen zu Gruppe und Tabelle")  
@@ -94,7 +99,7 @@ caps.handback.revision: 12
   
  Mithilfe des Gruppierungsbereichs können Sie Detailzeilen aus einer Tabelle entfernen. Wählen Sie die Detailgruppe aus, und löschen Sie die Gruppe sowie die Zeilen, in denen die Detaildaten angezeigt werden, mithilfe des Kontextmenüs. Die folgende Abbildung zeigt die Entwurfsansicht für eine Tabelle nach Datum und Bestellnummer gruppiert ohne Detailzeilen. Dieser Tabelle wurden keine Gesamtwertzeilen hinzugefügt.  
   
- ![Entwurfsansicht, Tabelle mit zwei Gruppen, keine Details](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Entwurfsansicht, Tabelle mit zwei Gruppen, keine Details")  
+ ![Entwerfen der Sicht, Tabelle mit zwei Gruppen, keine Details](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownnodetailsdesign.gif "entwerfen, Sicht, Tabelle mit zwei Gruppen, keine Details")  
   
  Nachdem Sie die Detailzeile gelöscht haben, werden die Werte auf die Zeilengruppen beschränkt. Die Detaildaten werden nicht mehr angezeigt.  
   
@@ -109,11 +114,11 @@ caps.handback.revision: 12
   
  Sie können die Detailzeilen auch ausblenden, wenn der Bericht zum ersten Mal angezeigt wird. Erstellen Sie dazu einen Drilldownbericht, indem nur die Daten der übergeordneten Gruppe angezeigt werden. Fügen Sie für jede innere Gruppe (einschließlich der Detailgruppe) der Gruppierungszelle der enthaltenden Gruppe einen Sichtbarkeitsumschalter hinzu. Fügen Sie beispielsweise für die Detailgruppe dem Textfeld ein Umschaltelement hinzu, in dem der Gruppenwert für die Bestellnummer angezeigt wird. Fügen Sie für die Bestellnummerngruppen dem Textfeld ein Umschaltelement hinzu, das den Gruppenwert für das Datum enthält. Die folgende Abbildung zeigt die Zeile für den 1. September 2001. Die Zeile wurde erweitert, um die ersten Bestellungen anzuzeigen.  
   
- ![Vorschau, Tabelle mit erweitertem Drilldownknoten](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownpreview.gif "Vorschau, Tabelle mit erweitertem Drilldownknoten")  
+ ![Vorschau, Tabelle mit erweitertem drilldownknoten](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownpreview.gif "Vorschau, Tabelle mit erweitertem drilldownknoten")  
   
  Weitere Informationen finden Sie unter [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

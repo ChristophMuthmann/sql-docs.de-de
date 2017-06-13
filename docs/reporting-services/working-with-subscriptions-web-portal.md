@@ -1,43 +1,52 @@
 ---
-title: "Arbeiten mit Abonnements (Webportal) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Arbeiten mit Abonnements (Webportal) | Microsoft Docs
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Arbeiten mit Abonnements (Webportal)
+# <a name="working-with-subscriptions-web-portal"></a>Arbeiten mit Abonnements (Webportal)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Mithilfe der Seite „Abonnements“ können Sie alle Abonnements für den aktuellen Bericht anzeigen. Wenn Sie über ausreichende Berechtigungen verfügen (wie sie durch den Task "Alle Abonnements verwalten" übertragen werden), können Sie die Abonnements aller Benutzer anzeigen. Ansonsten sind auf dieser Seite nur Ihre Abonnements aufgeführt.  
   
 Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, dass die Berichtsdatenquelle gespeicherte Anmeldeinformationen verwendet. Zum Speichern von Anmeldeinformationen verwenden Sie die Eigenschaftenseite Datenquelle.  
   
-> [!NOTE] Der SQL Server-Agent-Dienst muss gestartet werden.   
+> [!NOTE]
+> Der SQL Server-Agent-Dienst muss gestartet werden.   
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Sie können die Seite „Abonnements“ aufrufen, indem Sie die **Auslassungspunkte (...)** eines Berichts auswählen, **Verwalten** auswählen und anschließend **Abonnements**.  
+Erhalten Sie zur Seite "Abonnements" durch Auswählen der **mit den Auslassungszeichen (...)**  eines Berichts auswählen **verwalten** auswählen und **Abonnements**.  
   
-Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement** auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
+Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement**auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
   
 Diese Seite stellt auch den Ergebnisstatus des Abonnements bereit, der in der Spalte **Ergebnis** zu finden ist. Wenn für ein Abonnement ein Fehler auftritt,überprüfen Sie die Ergebnisspalte zunächst auf die Fehlermeldung.  
   
-## Erstellen oder Bearbeiten eines Abonnements  
+## <a name="creating-or-editing-a-subscription"></a>Erstellen oder Bearbeiten eines Abonnements  
 Mithilfe der Seite Neues Abonnement oder Abonnement bearbeiten können Sie ein neues Abonnement erstellen oder ein vorhandenes Abonnement für einen Bericht bearbeiten. Abhängig von Ihrer Rollenzuweisung stehen auf dieser Seite unterschiedliche Optionen zur Verfügung. Benutzer mit erweiterten Berechtigungen können zusätzliche Optionen verwenden.  
   
 Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus].  
   
-### Typ des Abonnements  
-Können Sie zwischen einem **Standardabonnement** und einem **datengesteuerten Abonnement** wählen.  
+### <a name="type-of-subscription"></a>Typ des Abonnements  
+Können Sie zwischen einem **Standardabonnement** und einem **datengesteuerten Abonnement**wählen.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
    
@@ -47,7 +56,7 @@ Wenn Sie ein datengesteuertes Abonnement erstellen möchten, müssen Sie mit dem
   
 Diese Option steht nur für Benutzer mit erweiterten Berechtigungen zur Verfügung. Wenn die Standardsicherheit verwendet wird, können keine datengesteuerten Abonnements für Berichte im Ordner Meine Berichte verwendet werden.  
   
-### Ziel  
+### <a name="destination"></a>Ziel  
 Wählen Sie die Übermittlungserweiterung aus, die zum Verteilen des Berichts verwendet werden soll.   
   
 Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf dem Berichtsserver installiert und konfiguriert ist. Berichtsserver-E-Mail stellt die Standardübermittlungserweiterung dar. Sie muss jedoch konfiguriert werden, bevor Sie sie verwenden können. Die Dateifreigabeübermittlung erfordert keine Konfiguration. Sie müssen jedoch einen freigegebenen Ordner definieren, bevor Sie sie verwenden können.  
@@ -60,7 +69,7 @@ Abhängig von der ausgewählten Übermittlungserweiterung werden die folgenden E
   
 -   Dateifreigabeabonnements stellen Felder bereit, die es Ihnen ermöglichen, einen Zielspeicherort anzugeben. Jeder beliebige Bericht kann an eine Dateifreigabe übermittelt werden. Berichte, die interaktive Funktionen unterstützen (einschließlich Matrixberichte, in denen ein Drilldown zu unterstützenden Zeilen und Spalten möglich ist), werden jedoch als statische Dateien dargestellt. Drilldownzeilen und -spalten können in einer statischen Datei nicht angezeigt werden. Der Dateifreigabename muss im UNC-Format (Uniform Naming Convention) angegeben werden (Beispiel: \mycomputer\public\myreportfiles). Der Pfadname darf keinen abschließenden umgekehrten Schrägstrich enthalten. Die Berichtsdatei wird in einem Dateiformat ausgegeben, das auf dem Renderformat basiert. Wenn Sie beispielsweise Excel auswählen, wird der Bericht als .xlsx-Datei ausgegeben.  
   
-### Dataset eines datengesteuerten Abonnements  
+### <a name="data-driven-subscription-dataset"></a>Dataset eines datengesteuerten Abonnements  
 Für ein datengesteuertes Abonnement müssen Sie das für das Abonnement verwendete Dataset definieren. Wählen Sie **Dataset bearbeiten** aus, um diese Informationen bereitstellen.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
@@ -77,9 +86,12 @@ Die besten Ergebnisse erzielen Sie, wenn Sie die Abfrage zunächst in SQL Server
   
 ![ssRSWebPortal-subscriptions5](../reporting-services/media/ssrswebportal-subscriptions5.png)  
   
-Sie können anschließend die Abfrage überprüfen. Sie können auch ein **Abfragetimeout** definieren.  
+Sie können anschließend die Abfrage überprüfen. Sie können auch ein **Abfragetimeout**definieren.  
   
-Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten Feldern zuweisen. Sie können die Daten manuell eingeben oder ein Feld aus dem Dataset auswählen, das Sie erstellt haben.  
-  
-  
-  
+Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten Feldern zuweisen. Sie können die Daten manuell eingeben oder ein Feld aus dem Dataset auswählen, das Sie erstellt haben.
+
+[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Arbeiten mit paginierten Berichten](working-with-paginated-reports-web-portal.md)  
+[Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

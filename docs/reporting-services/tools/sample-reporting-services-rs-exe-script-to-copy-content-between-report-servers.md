@@ -1,30 +1,34 @@
 ---
-title: "Reporting Services-Beispielskript f&#252;r &quot;rs.exe&quot; zum Migrieren von Inhalten zwischen Berichtsservern | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Beispiel zu Reporting Services-Beispielskript rs.exe zum Kopieren von Inhalten zwischen Berichtsservern | Microsoft Docs
+ms.custom: 
+ms.date: 07/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services-Beispielskript f&#252;r &quot;rs.exe&quot; zum Migrieren von Inhalten zwischen Berichtsservern
-  Dieses Thema enthält und beschreibt ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-RSS-Beispielskript, mit dem Inhaltselemente und Einstellungen unter Verwendung des Hilfsprogramms **RS.exe** von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver auf einen anderen Berichtsserver kopiert werden. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sowohl im einheitlichen als auch im SharePoint-Modus installiert. Das Skript kopiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Elemente, beispielsweise Berichte und Abonnements, von einem Server zu einem anderen Server. Das Skript unterstützt Berichtsserver im SharePoint-Modus und im einheitlichen Modus.  
+# <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Reporting Services-Beispielskript für "rs.exe" zum Migrieren von Inhalten zwischen Berichtsservern
+  Dieses Thema enthält und beschreibt ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -RSS-Beispielskript, mit dem Inhaltselemente und Einstellungen unter Verwendung des Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sowohl im einheitlichen als auch im SharePoint-Modus installiert. Das Skript kopiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Elemente, beispielsweise Berichte und Abonnements, von einem Server zu einem anderen Server. Das Skript unterstützt Berichtsserver im SharePoint-Modus und im einheitlichen Modus.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus &#124; einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Modus|  
   
-## In diesem Thema:  
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus &#124; einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Modus 
+  
+## <a name="in-this-topic"></a>In diesem Thema:  
   
 -   [So laden Sie das Skript ssrs_migration.rss herunter](#bkmk_download_script)  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 15
 |Verlauf|**Nein**|**Nein**||  
 |Verlaufseinstellungen|Ja|Ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Zeitpläne|Ja|Ja|Zum Migrieren von Zeitplänen muss der SQL Server-Agent auf dem Zielserver ausgeführt werden. Wenn der SQL Server-Agent auf dem Zielserver nicht ausgeführt wird, wird eine Fehlermeldung ähnlich wie in diesem Beispiel angezeigt:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|Rollen und Systemrichtlinien|Ja|Ja|Standardmäßig kopiert das Skript kein benutzerdefiniertes Berechtigungsschema zwischen Servern. Gemäß dem Standardverhalten werden die Elemente auf den Zielserver kopiert, wobei das "inherit parent permissions"-Flag auf TRUE festgelegt ist. Wenn mit dem Skript Berechtigungen für einzelne Elemente kopiert werden sollen, verwenden Sie den SECURITY-Schalter.<br /><br /> Wenn die Quell- und Zielserver sich **nicht im gleichen Berichtsservermodus**befinden, z. B. vom einheitlichen Modus zum SharePoint-Modus, und Sie den SECURITY-Schalter verwenden, versucht das Skript, Standardrollen und -gruppen auf Grundlage des Vergleichs im folgenden Thema zuzuordnen: [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Benutzerdefinierte Rollen und Gruppen werden nicht auf den Zielserver kopiert.<br /><br /> Wenn das Skript zwischen Servern **im gleichen Modus** kopiert wird und Sie den SECURITY-Schalter verwenden, erstellt das Skript neue Rollen (einheitlicher Modus) oder Gruppen (SharePoint-Modus) auf dem Zielserver.<br /><br /> Wenn eine Rolle bereits auf dem Zielserver vorhanden ist, erstellt das Skript eine Fehlermeldung wie im folgenden Beispiel und setzt das Migrieren anderer Elemente fort. Überprüfen Sie nach dem Abschließen des Skripts, ob die Rollen auf dem Zielserver Ihren Anforderungen entsprechend konfiguriert wurden. the Migrating roles: 8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Hinweis:** Wenn ein Benutzer, der auf dem Quellserver vorhanden ist, auf dem Zielserver nicht vorhanden ist, kann das Skript keine Rollenzuweisungen auf dem Zielserver anwenden. Das Skript kann keine Rollenzuweisungen anwenden, selbst wenn der SECURITY-Schalter verwendet wird.|  
+|Rollen und Systemrichtlinien|Ja|Ja|Standardmäßig kopiert das Skript kein benutzerdefiniertes Berechtigungsschema zwischen Servern. Gemäß dem Standardverhalten werden die Elemente auf den Zielserver kopiert, wobei das "inherit parent permissions"-Flag auf TRUE festgelegt ist. Wenn mit dem Skript Berechtigungen für einzelne Elemente kopiert werden sollen, verwenden Sie den SECURITY-Schalter.<br /><br /> Wenn die Quell- und Zielserver sich **nicht im gleichen Berichtsservermodus**befinden, z. B. vom einheitlichen Modus zum SharePoint-Modus, und Sie den SECURITY-Schalter verwenden, versucht das Skript, Standardrollen und -gruppen auf Grundlage des Vergleichs im folgenden Thema zuzuordnen: [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Benutzerdefinierte Rollen und Gruppen werden nicht auf den Zielserver kopiert.<br /><br /> Wenn das Skript zwischen Servern **im gleichen Modus**kopiert wird und Sie den SECURITY-Schalter verwenden, erstellt das Skript neue Rollen (einheitlicher Modus) oder Gruppen (SharePoint-Modus) auf dem Zielserver.<br /><br /> Wenn eine Rolle bereits auf dem Zielserver vorhanden ist, erstellt das Skript eine Fehlermeldung wie im folgenden Beispiel und setzt das Migrieren anderer Elemente fort. Überprüfen Sie nach dem Abschließen des Skripts, ob die Rollen auf dem Zielserver Ihren Anforderungen entsprechend konfiguriert wurden. the Migrating roles: 8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Hinweis:** Wenn ein Benutzer, der auf dem Quellserver vorhanden ist, auf dem Zielserver nicht vorhanden ist, kann das Skript keine Rollenzuweisungen auf dem Zielserver anwenden. Das Skript kann keine Rollenzuweisungen anwenden, selbst wenn der SECURITY-Schalter verwendet wird.|  
 |Freigegebene Datenquelle|Ja|Ja|Das Skript überschreibt keine vorhandenen Elemente auf dem Zielserver. Wenn auf dem Zielserver bereits ein Element mit demselben Namen vorhanden ist, wird eine Fehlermeldung wie die folgende angezeigt:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Anmeldeinformationen werden **NICHT** als Teil der Datenquelle kopiert. Aktualisieren Sie nach dem Migrieren der Inhaltselemente die Anmeldeinformationen auf dem Zielserver.|  
 |Freigegebenes Dataset|Ja|Ja||  
 |Ordner|Ja|Ja|Das Skript überschreibt keine vorhandenen Elemente auf dem Zielserver. Wenn auf dem Zielserver bereits ein Element mit demselben Namen vorhanden ist, wird eine Fehlermeldung wie die folgende angezeigt:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -105,7 +109,7 @@ caps.handback.revision: 15
 |Abonnements|Ja|Ja||  
 |Verlaufseinstellungen|Ja|Ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Verarbeitungsoptionen|Ja|Ja||  
-|Optionen zur Cacheaktualisierung|Ja|Ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|Optionen zur Cacheaktualisierung|Ja|Ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-Migration des Abonnements speichern in \\\server\public\savedreports als TitleOnly... SUCCESS<br />-Migrieren von verlaufseinstellungen für Bericht TitleOnly.rdl... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-Migrieren von Optionen zur cacheaktualisierung für Bericht TitleOnly.rdl... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-Migrieren von Cache Refresh Plan titleonly_refresh735amM2F... SUCCESS|  
 |Cacheaktualisierungspläne|Ja|Ja||  
 |Bilder|Ja|Ja||  
 |Berichtsteile|Ja|Ja||  
@@ -158,9 +162,9 @@ caps.handback.revision: 15
      Sie können **das Skript nach Schritt 1 abbrechen** , wenn Sie nur die Liste der möglichen Migrationen anzeigen oder die Parameter ändern möchten. Abhängige Einstellungen werden in Schritt 1 nicht aufgeführt. Beispielsweise werden die Cacheoptionen eines Berichts nicht aufgeführt, der Bericht selbst wird jedoch aufgeführt.  
   
     > [!TIP]  
-    >  Wenn Sie nur einen einzelnen Server prüfen möchten, verwenden Sie denselben Server als Quelle und Ziel, und brechen Sie den Vorgang nach Schritt 1 ab.  
+    >  Wenn Sie nur einen einzelnen Server prüfen möchten, verwenden Sie denselben Server als Quelle und Ziel, und brechen Sie den Vorgang nach Schritt 1 ab.  
   
-     Eine gute Verwendung für die Überwachungsinformationen aus Schritt 1 besteht darin, vorhandene Rollen auf dem Quell- und Zielserver im einheitlichen Modus zu überprüfen. Im Folgenden finden Sie ein Beispiel für die Überwachungsliste aus Schritts 1. Beachten Sie, dass die Liste den Abschnitt „roles“ enthält, da der Schalter -v security="True" verwendet wurde:  
+     Eine gute Verwendung für die Überwachungsinformationen aus Schritt 1 besteht darin, vorhandene Rollen auf dem Quell- und Zielserver im einheitlichen Modus zu überprüfen. Im Folgenden finden Sie ein Beispiel für die Überwachungsliste aus Schritts 1. Beachten Sie, dass die Liste den Abschnitt „roles“ enthält, da der Schalter -v security="True" verwendet wurde:  
   
     -   `Retrieve and report the list of items that will be migrated. You can cancel the script after step 1 if you do not want to start the actual migration.`  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 15
   
          `Report: /Reports/TitleOnly`  
   
--   Bei SOURCE_URL und TARGET_URL muss es sich um gültige Berichtsserver-URLs handeln, die auf den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Quell- und -Zielberichtsserver zeigen. Berichtsserver-URL im einheitlichen Modus:  
+-   Bei SOURCE_URL und TARGET_URL muss es sich um gültige Berichtsserver-URLs handeln, die auf den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Quell- und -Zielberichtsserver zeigen. Berichtsserver-URL im einheitlichen Modus:  
   
     -   `http://servername/reportserver`  
   
@@ -238,7 +242,7 @@ caps.handback.revision: 15
   
 -   Die virtuelle Ordnerstruktur, die für den Benutzer in SharePoint dargestellt wird, kann von der zugrunde liegenden Struktur abweichen. Öffnen Sie `http://servername/_vti_bin/reportserver` oder `http://servername/sites/site_name/_vti_bin/reportserver` in einem Browser, um die nicht virtuelle Ordnerstruktur anzuzeigen. Dies ist hilfreich, wenn der Quellordner und der Zielordner bei einem Server im SharePoint-Modus auf einen anderen Wert als "/" festgelegt werden sollen.  
   
--   Kennwörter werden nicht migriert und müssen erneut eingegeben werden, z. B. Datenquellen mit gespeicherten Anmeldeinformationen.  
+-   Kennwörter werden nicht migriert und müssen erneut eingegeben werden, z. B. Datenquellen mit gespeicherten Anmeldeinformationen.  
   
 ##  <a name="bkmk_parameter_description"></a> Parameterbeschreibung  
   
@@ -247,7 +251,7 @@ caps.handback.revision: 15
 |**-s** Quell_URL|URL des Quellberichtsservers|Ja|  
 |**-u** Domäne\Kennwort **–p** Kennwort|Anmeldeinformationen für Quellserver.|OPTIONAL, falls nicht vorhanden, werden Standardanmeldeinformationen verwendet.|  
 |**-v st**="WEBSITE"||OPTIONAL. Dieser Parameter wird nur für Berichtsserver im SharePoint-Modus verwendet.|  
-|**- v f**="QUELLORDNER"|Legen Sie diesen Parameter auf "/" fest, um alle Inhalte zu migrieren, oder z. B. auf "/Ordner/Unterordner" für eine partielle Migration. Alle Elemente in diesem Ordner werden kopiert|OPTIONAL, der Standardwert lautet "/".|  
+|**- v f**="QUELLORDNER"|Legen Sie diesen Parameter auf "/" fest, um alle Inhalte zu migrieren, oder z. B. auf "/Ordner/Unterordner" für eine partielle Migration. Alle Elemente in diesem Ordner werden kopiert|OPTIONAL, der Standardwert lautet "/".|  
 |**-v ts**="ZIEL_URL"|'URL des RS-Zielservers"||  
 |**-v tu**="Domäne\Benutzername" **-v tp**="Kennwort"|'Anmeldeinformationen für den Zielserver|OPTIONAL, falls nicht vorhanden, werden Standardanmeldeinformationen verwendet. **Hinweis:** Der Benutzer wird als Ersteller von freigegebenen Zeitplänen und als "Geändert von"-Konto für Berichtselemente auf dem Zielserver aufgeführt.|  
 |**-v tst**="WEBSITE"||OPTIONAL. Dieser Parameter wird nur für Berichtsserver im SharePoint-Modus verwendet.|  
@@ -272,7 +276,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Einheitlicher Modus zu SharePoint-Modus – Stammwebsite  
  Im folgenden Beispiel werden Inhalte von einem **SourceServer** im einheitlichen Modus zur "Stammwebsite" auf einem Server im SharePoint-Modus ( **TargetServer**) migriert. Die Ordner "Reports" und "Data Sources" auf dem Server im einheitlichen Modus werden als neue Bibliotheken in der SharePoint-Bereitstellung migriert.  
   
- ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
+ ![Ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "Ssrs_rss_migrate_root_site")  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
@@ -288,9 +292,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint-Modus zu SharePoint-Modus – "bi"-Websitesammlung  
  Im folgenden Beispiel werden Inhalte wie folgt migriert:  
   
--   Von dem SharePoint-Server **SourceServer**, der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
+-   Von dem SharePoint-Server **SourceServer** , der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
   
--   Zu dem SharePoint-Server **TargetServer**, der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
+-   Zu dem SharePoint-Server **TargetServer** , der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
@@ -308,12 +312,12 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  Weitere Informationen zum Erstellen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsservern auf virtuellen Windows Azure-Computern mit Windows PowerShell finden Sie unter [Verwenden von PowerShell zum Erstellen einer Windows Azure-VM mit einem Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/library/dn449661.aspx).  
+>  Weitere Informationen zum Erstellen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservern auf virtuellen Windows Azure-Computern mit Windows PowerShell finden Sie unter [Verwenden von PowerShell zum Erstellen einer Windows Azure-VM mit einem Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/library/dn449661.aspx).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint-Modus – "bi"-Websitesammlung zu Server im einheitlichen Modus auf virtuellem Windows Azure-Computer  
  Im folgenden Beispiel werden Inhalte wie folgt migriert:  
   
--   Von einem Berichtsserver im SharePoint-Modus (**SourceServer**), der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
+-   Von einem Berichtsserver im SharePoint-Modus ( **SourceServer** ), der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
   
 -   Zu einem Berichtsserver im einheitlichen Modus ( **TargetServer** ), der auf einem virtuellen Windows Azure-Computer ausgeführt wird. **TargetServer** wird nicht der Domäne von **SourceServer** hinzugefügt, und **User2** ist ein Administrator auf dem virtuellen Windows Azure-Computer **TargetServer**.  
   
@@ -324,10 +328,10 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_verification"></a> Überprüfung  
  In diesem Abschnitt werden einige Schritte zusammengefasst, die auf dem Zielserver ausgeführt werden müssen, um zu überprüfen, ob Inhalte und Richtlinien erfolgreich migriert wurden.  
   
-### Zeitpläne  
+### <a name="schedules"></a>Zeitpläne  
  So überprüfen Sie Zeitpläne auf dem Zielserver:  
   
- **im einheitlichen Modus**  
+ **Native Mode**  
   
 1.  Navigieren Sie zum Berichts-Manager auf dem Zielserver.  
   
@@ -341,8 +345,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  Klicken Sie in der Gruppe **Reporting Services** auf **Freigegebene Zeitpläne verwalten**.  
   
-### Rollen und Gruppen  
- **im einheitlichen Modus**  
+### <a name="roles-and-groups"></a>Rollen und Gruppen  
+ **Native Mode**  
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung mit dem Berichtsserver im einheitlichen Modus her.  
   
@@ -353,14 +357,15 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Problembehandlung  
  Verwenden Sie das Ablaufverfolgungsflag **–t** , um weitere Informationen abzurufen. Beispiel: Sie führen das Skript aus, und es wird eine Meldung wie die folgende angezeigt:  
   
--   Die Verbindung mit dem Server konnte nicht hergestellt werden: http://\<Servername>/ReportServer/ReportService2010.asmx  
+-   Konnte keine Verbindung mit Server: http://\<Servername > /ReportServer/ReportService2010.asmx  
   
  Führen Sie das Skript mit dem Flag **–t** erneut aus. Es wird eine Meldung wie die folgende angezeigt:  
   
--   System.Exception: Die Verbindung mit dem Server konnte nicht hergestellt werden: http://\<Servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP-Status 401 bei der Anforderung: nicht autorisiert**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Ende der inneren Ausnahmestapelüberwachung ---  
+-   System.Exception: Konnte keine Verbindung mit Server: http://\<Servername > /ReportServer/ReportService2010.asmx---> System.NET.WebException:: **Fehler bei der Anforderung mit HTTP-Status 401: nicht autorisierte**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Ende der inneren Ausnahmestapelüberwachung ---  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hilfsprogramm RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   
+

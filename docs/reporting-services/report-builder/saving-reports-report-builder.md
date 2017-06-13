@@ -1,30 +1,35 @@
 ---
-title: "Speichern von Berichten (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Speichern von Berichten (Berichts-Generator) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Speichern von Berichten (Berichts-Generator)
-  Im Berichts-Generator können Sie einen Bericht mit Seitenzahlen auf einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. 
+# <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
+  Im Berichts-Generator können Sie einen Bericht mit Seitenzahlen auf einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. 
   
 Wenn Sie einen Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefinition, in der das Berichtslayout beschrieben wird. Die Daten werden nicht gespeichert. Bei jeder Ausführung des Berichts werden die Berichtsdaten aktualisiert. Sie sind dann wahrscheinlich anders als bei der letzten Ausführung des Berichts.  
   
  Wenn Sie den Bericht zu einem anderen Format speichern oder die Berichtsdefinition mit den Daten speichern möchten, verwenden Sie eine der folgenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen:  
   
--   Exportieren Sie einen gerenderten Bericht in ein anderes Dateiformat, z. B. in durch Trennzeichen getrennte Dateien (CSV) oder Excel-Arbeitsmappen, und speichern Sie den Bericht in diesem Format. Sie können auch Datenfeeds von Berichten generieren und die Berichtsdaten speichern.  
+-   Exportieren Sie einen gerenderten Bericht in ein anderes Dateiformat, z. B. in durch Trennzeichen getrennte Dateien (CSV) oder Excel-Arbeitsmappen, und speichern Sie den Bericht in diesem Format. Sie können auch Datenfeeds von Berichten generieren und die Berichtsdaten speichern.  
   
 -   Erstellen Sie Berichtsabonnements, um Berichte an eine Dateifreigabe zu übermitteln und dort zu speichern.  
   
@@ -37,7 +42,7 @@ Wenn Sie einen Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefi
   
 -   Berichte sind für andere Personen verfügbar, wenn diese über die Zugriffsberechtigung auf den Ordner verfügen, in dem Sie den Bericht gespeichert haben.  
   
--   Berichte können im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwaltet und angezeigt werden.  
+-   Berichte können im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwaltet und angezeigt werden.  
   
 -   Berichtsressourcen wie Datenquellen, Bilder und Unterberichte werden für einen einfacheren Zugriff an einem Speicherort gespeichert.  
   
@@ -62,9 +67,9 @@ Wenn Sie einen Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefi
   
 -   [Speichern eines Berichts in einer SharePoint-Bibliothek &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installieren und Deinstallieren von Berichts-Generator](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Installieren und Deinstallieren von Berichts-Generator](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

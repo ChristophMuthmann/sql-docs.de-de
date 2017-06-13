@@ -1,41 +1,46 @@
 ---
-title: "RSReportDesigner-Konfigurationsdatei | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berichts-Designer [Reporting Services], Konfigurationsdatei"
-  - "RSReportDesigner-Konfigurationsdatei"
+title: RSReportDesigner-Konfigurationsdatei | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Report Designer [Reporting Services], configuration file
+- RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 caps.latest.revision: 47
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 47
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# RSReportDesigner-Konfigurationsdatei
+# <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner-Konfigurationsdatei
   In der Datei RSReportDesigner.config werden Einstellungen zu Rendering- und Datenverarbeitungserweiterungen gespeichert, die in Berichts-Designer verfügbar sind. Die Informationen zu Datenverarbeitungserweiterungen werden im **Data** -Element gespeichert. Die Informationen zu Renderingerweiterungen werden im **Render** -Element gespeichert. Das **Designer** -Element zählt die in Berichts-Designer verwendeten Abfrage-Generatoren auf.  
   
  Berichts-Designer verwendet integrierte Berichtsserverfunktionen für die Berichtsvorschau. Zur Unterstützung der lokalen serverseitigen Verarbeitung für Vorschauvorgänge können serverbezogene Einstellungen angegeben werden. Weitere Informationen zu den Konfigurationseinstellungen für den Berichtsserver finden Sie unter [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-## Dateispeicherort  
+## <a name="file-location"></a>Dateispeicherort  
  Diese Datei befindet sich unter \Programme\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies.  
   
-## Bearbeitungsrichtlinien  
+## <a name="editing-guidelines"></a>Bearbeitungsrichtlinien  
  Ändern Sie die Einstellungen in dieser Datei nur, wenn Sie eine benutzerdefinierte Erweiterung bereitstellen bzw. entfernen, das Zwischenspeichern während der Vorschau deaktiviert haben oder nach einem Service Pack-Upgrade eine neue Datenverarbeitungserweiterung registrieren.  
   
  Wenn Sie Renderingerweiterungseinstellungen anpassen, sind spezifische Anweisungen zum Bearbeiten von Konfigurationsdateien verfügbar. Weitere Informationen finden Sie unter [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
  Allgemeine Anleitungen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-## Beispiel für eine Konfigurationsdatei  
+## <a name="example-configuration-file"></a>Beispiel für eine Konfigurationsdatei  
  Das folgende Beispiel veranschaulicht das Format der Datei RSReportDesigner.config.  
   
 ```  
@@ -52,7 +57,7 @@ caps.handback.revision: 47
     <Designer> . . . </Designer>  
 ```  
   
-## Konfigurationseinstellungen  
+## <a name="configuration-settings"></a>Konfigurationseinstellungen  
   
 |Einstellung|Description|  
 |-------------|-----------------|  
@@ -62,12 +67,12 @@ caps.handback.revision: 47
 |**SessionTimeoutMinutes**|Gibt an, für welchen Zeitraum ein Sitzungscookie gültig ist. Der Standardwert ist 3 Minuten.|  
 |**PolicyLevel**|Gibt die Sicherheitsrichtlinien-Konfigurationsdatei an. Der gültige Wert ist Rspreviewpolicy.config. Weitere Informationen finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |**CacheDataForPreview**|Ist der Wert auf **True**festgelegt, speichert Berichts-Designer Daten in einer Cachedatei auf dem lokalen Computer. Gültige Werte sind **TRUE** (Standardwert) und **FALSE**. Weitere Informationen finden Sie unter [Previewing Reports](../../reporting-services/reports/previewing-reports.md).|  
-|**Render**|Zählt die Renderingerweiterungen auf, die für Berichts-Designer zur Vorschau verfügbar sind. Die für die Vorschau verwendeten Renderingerweiterungen sollten mit den Renderingerweiterungen identisch sein, die mit dem Berichtsserver installiert werden.<br /><br /> **Name** gibt die Renderingerweiterung an. Wenn Sie eine Renderingerweiterung per Code aufrufen, verwenden Sie diesen Wert zur Angabe einer bestimmten Erweiterung.<br /><br /> **Type** gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.<br /><br /> **Visible** gibt an, ob der Name auf einer Benutzeroberfläche angezeigt wird. Dieser Wert kann **TRUE** (Standardwert) oder **FALSE** sein. Bei **True**wird der Name auf Benutzeroberflächen angezeigt.|  
-|**Daten**|Zählt die Datenverarbeitungserweiterungen auf, die für Berichts-Designer zum Herstellen einer Verbindung zu Datenquellen verfügbar sind, die wiederum Daten für Berichte bereitstellen. Die in Berichts-Designer verwendeten Datenverarbeitungserweiterungen sollten mit den Datenverarbeitungserweiterungen identisch sein, die mit dem Berichtsserver installiert werden. Informationen zum Hinzufügen oder Entfernen benutzerdefinierter Erweiterungen finden Sie unter [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Name** gibt die Datenverarbeitungserweiterung an.<br /><br /> **Type** gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.|  
+|**Render**|Zählt die Renderingerweiterungen auf, die für Berichts-Designer zur Vorschau verfügbar sind. Die für die Vorschau verwendeten Renderingerweiterungen sollten mit den Renderingerweiterungen identisch sein, die mit dem Berichtsserver installiert werden.<br /><br /> **Name** gibt die Renderingerweiterung an. Wenn Sie eine Renderingerweiterung per Code aufrufen, verwenden Sie diesen Wert zur Angabe einer bestimmten Erweiterung.<br /><br /> **Type** gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.<br /><br /> **Visible** gibt an, ob der Name auf einer Benutzeroberfläche angezeigt wird. Dieser Wert kann **TRUE** (Standardwert) oder **FALSE**sein. Bei **True**wird der Name auf Benutzeroberflächen angezeigt.|  
+|**Data**|Zählt die Datenverarbeitungserweiterungen auf, die für Berichts-Designer zum Herstellen einer Verbindung zu Datenquellen verfügbar sind, die wiederum Daten für Berichte bereitstellen. Die in Berichts-Designer verwendeten Datenverarbeitungserweiterungen sollten mit den Datenverarbeitungserweiterungen identisch sein, die mit dem Berichtsserver installiert werden. Informationen zum Hinzufügen oder Entfernen benutzerdefinierter Erweiterungen finden Sie unter [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Name** gibt die Datenverarbeitungserweiterung an.<br /><br /> **Type** gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.|  
 |**Designer**|Zählt die Abfrage-Generatoren auf, die für Berichts-Designer verfügbar sind. Abfrage-Generatoren bieten eine Benutzeroberfläche zum Erstellen von Abfragen, die in Berichten verwendete Daten abrufen. Die Abfrage-Generatoren für verschiedene Datenverarbeitungserweiterungen können voneinander abweichen. Standardmäßig bietet Reporting Services eine grafische Datentool-Benutzeroberfläche für alle Datenverarbeitungserweiterungen, die im Lieferumfang des Produkts enthalten sind. Wenn Sie allerdings Datenverarbeitungsanwendungen erstellen oder Datenverarbeitungsanwendungen von Drittanbietern verwenden, werden möglicherweise andere Abfrage-Generator-Oberflächen angewendet.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Gibt den Zeitraum an, der auf das Starten des Vorschauverarbeitungsdienst gewartet wird, bevor eine Fehlermeldung angezeigt wird. Der Standardwert ist 15 Sekunden.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   

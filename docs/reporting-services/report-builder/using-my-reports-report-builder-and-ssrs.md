@@ -1,23 +1,28 @@
 ---
-title: "Verwenden von Meine Berichte (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden von Meine Berichte (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verwenden von Meine Berichte (Berichts-Generator und SSRS)
+# <a name="using-my-reports-report-builder-and-ssrs"></a>Verwenden von Meine Berichte (Berichts-Generator und SSRS)
   Auf einem Berichtsserver, der im einheitlichen Modus konfiguriert ist, ist der Ordner Meine Berichte ein persönlicher Arbeitsbereich, in dem Sie Ihre eigenen Berichte speichern und verwenden können. Andere Berichtsserverordner sind öffentliche Ordner, für die Benutzer in der Regel erweiterte Berechtigungen zum Hinzufügen oder Ändern von Ordnerinhalten benötigen. Demgegenüber ist der Ordner Meine Berichte ein vom Benutzer verwalteter Arbeitsbereich. Mit personalisierten Einstellungen können Sie Berichte und Ordner hinzufügen oder entfernen und verknüpfte Berichte speichern.  
   
  Vom Prinzip her ist der Ordner Meine Berichte mit dem Ordner Meine Dateien des Windows-Dateisystems zu vergleichen. Zwar gibt es für jeden Benutzer einen Ordner Meine Berichte, jeder Benutzer greift jedoch auf einen anderen Ordner zu. Mit Ausnahme der Berichtsserveradministratoren haben andere Benutzer keinen Zugriff auf Ihren Ordner Meine Berichte.  
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Verwendungsmöglichkeiten von Meine Berichte  
+## <a name="ways-to-use-my-reports"></a>Verwendungsmöglichkeiten von Meine Berichte  
  Meine Berichte ist bis zum Hinzufügen von Berichten, Ordnern und sonstigen Elementen leer. Es gibt folgende Möglichkeiten, um Inhalt zu Meine Berichte hinzuzufügen.  
   
 -   Erstellen Sie einen persönlichen verknüpften Bericht, und speichern Sie ihn in Meine Berichte. Nicht alle Berichte können verknüpft werden. Weitere Informationen finden Sie unter [Erstellen eines verknüpften Berichts](../../reporting-services/reports/create-a-linked-report.md).  
@@ -40,10 +45,10 @@ caps.handback.revision: 8
   
  Gewöhnlich können Sie mit Berechtigungen für Meine Berichte den Ordner selbst verwalten. Der Berichtsserveradministrator legt letztlich fest, welche Aufgaben die Benutzer ausführen können. Wenn Sie durch unzureichende Berechtigungen Probleme beim Verwenden von Meine Berichte haben, wenden Sie sich an den Berichtsserveradministrator.  
   
-## Durchsuchen von Meine Berichte  
+## <a name="searching-my-reports"></a>Durchsuchen von Meine Berichte  
  Beim Durchsuchen einer Berichtsserver-Datenbank werden die Inhalte des Ordners Meine Berichte in die Suche einbezogen, während die Inhalte der Ordner Meine Berichte von anderen Benutzern ausgeschlossen werden. In den Suchergebnissen werden nur die Berichte aufgeführt, auf die Sie Zugriff haben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

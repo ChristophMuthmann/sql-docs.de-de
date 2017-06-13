@@ -1,23 +1,28 @@
 ---
-title: "Hinzuf&#252;gen eines Filters (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen eines Filters (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hinzuf&#252;gen eines Filters (Berichts-Generator und SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>Hinzufügen eines Filters (Berichts-Generator und SSRS)
   Fügen Sie einem Dataset, einem Datenbereich oder einer Gruppe einen Filter hinzu, wenn Sie spezifische Werte in Berechnungen oder in die Anzeige einschließen bzw. davon ausschließen möchten. Filter werden zuerst auf das Dataset, dann auf den Datenbereich und anschließend auf die Gruppe angewendet (von oben nach unten bei Gruppenhierarchien). In einer Tabelle, Matrix oder Liste werden Filter für Zeilen- und Spaltengruppen sowie für angrenzende Gruppen unabhängig voneinander angewendet. In Diagrammen werden Filter für Kategorie- und Reihengruppen unabhängig voneinander angewendet.  
   
  Um einen Filter hinzuzufügen, müssen Sie eine oder mehrere Filtergleichungen angeben. Eine Filtergleichung besteht aus einem Ausdruck, der die zu filternden Daten definiert, einem Operator und dem Vergleichswert. Der Datentyp der gefilterten Daten und des Werts muss übereinstimmen. Bei Datasets und Datenbereichen wird das Filtern anhand aggregierter Werte nicht unterstützt.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### So legen Sie einen Filter für einen Datenbereich fest  
+### <a name="to-set-a-filter-on-a-data-region"></a>So legen Sie einen Filter für einen Datenbereich fest  
   
 1.  Öffnen Sie einen Bericht in der **Entwurfssicht** .  
   
-2.  Wählen Sie den Datenbereich auf der Entwurfsoberfläche aus, und klicken Sie anschließend mit der rechten Maustaste auf *\<Datenbereich>***-Eigenschaften**. Wählen Sie bei einem Messgerät **Messgerätbereichseigenschaften**aus. Das Dialogfeld *\<Datenbereich>***Eigenschaften** wird geöffnet.  
+2.  Wählen Sie den Datenbereich auf der Entwurfsoberfläche, und klicken Sie dann mit der rechten Maustaste  *\<Datenbereich >***Eigenschaften**. Wählen Sie bei einem Messgerät **Messgerätbereichseigenschaften**aus. Die  *\<Datenbereich >***Eigenschaften** Dialogfeld wird geöffnet.  
   
     > [!NOTE]  
     >  Klicken Sie im Tablix-Datenbereich mit der rechten Maustaste auf das Handle in der Eckzelle, einer Zeile oder Spalte, und klicken Sie anschließend auf **Tablix-Eigenschaften**.  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
 4.  Klicken Sie auf **Hinzufügen**. Es wird eine neue leere Filtergleichung angezeigt.  
   
-5.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Schaltfläche für Ausdrücke (*fx*).  
+5.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Ausdrucksschaltfläche (*fx*).  
   
 6.  Wählen Sie im Dropdownfeld den Datentyp aus, der dem Typ der Daten in dem Ausdruck entspricht, den Sie in Schritt 5 erstellt haben.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So legen Sie einen Filter für eine Tablix-Zeilen- oder Spaltengruppe fest  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>So legen Sie einen Filter für eine Tablix-Zeilen- oder Spaltengruppe fest  
   
 1.  Öffnen Sie einen Bericht in der **Entwurfssicht** .  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
 5.  Klicken Sie auf **Hinzufügen**. Es wird eine neue leere Filtergleichung angezeigt.  
   
-6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Schaltfläche für Ausdrücke (*fx*).  
+6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Ausdrucksschaltfläche (*fx*).  
   
 7.  Wählen Sie im Dropdownfeld den Datentyp aus, der dem Typ der Daten in dem Ausdruck entspricht, den Sie in Schritt 5 erstellt haben.  
   
@@ -78,19 +83,19 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So legen Sie einen Filter für eine Diagrammkategoriegruppe fest  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>So legen Sie einen Filter für eine Diagrammkategoriegruppe fest  
   
 1.  Öffnen Sie einen Bericht in der **Entwurfssicht** .  
   
 2.  Klicken Sie auf der Entwurfsoberfläche zwei Mal auf das Diagramm, um die Daten-, Reihen- und Kategoriefeldablagezonen anzuzeigen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf ein Feld in der Kategoriefeldablagezone, und wählen Sie **Kategoriegruppeneigenschaften** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf ein Feld in der Kategoriefeldablagezone, und wählen Sie **Kategoriegruppeneigenschaften**aus.  
   
 4.  Klicken Sie auf **Filter**. Die aktuelle Liste mit Filtergleichungen wird angezeigt. Standardmäßig ist die Liste leer.  
   
 5.  Klicken Sie auf **Hinzufügen**. Es wird eine neue leere Filtergleichung angezeigt.  
   
-6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Schaltfläche für Ausdrücke (*fx*).  
+6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Ausdrucksschaltfläche (*fx*).  
   
 7.  Wählen Sie im Dropdownfeld den Datentyp aus, der dem Typ der Daten in dem Ausdruck entspricht, den Sie in Schritt 5 erstellt haben.  
   
@@ -102,19 +107,19 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### So legen Sie einen Filter für eine Diagrammreihengruppe fest  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>So legen Sie einen Filter für eine Diagrammreihengruppe fest  
   
 1.  Öffnen Sie einen Bericht in der **Entwurfssicht** .  
   
 2.  Klicken Sie auf der Entwurfsoberfläche zwei Mal auf das Diagramm, um die Daten-, Reihen- und Kategoriefeldablagezonen anzuzeigen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf ein Feld in der Reihenfeldablagezone, und wählen Sie **Reihengruppeneigenschaften** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf ein Feld in der Reihenfeldablagezone, und wählen Sie **Reihengruppeneigenschaften**aus.  
   
 4.  Klicken Sie auf **Filter**. Die aktuelle Liste mit Filtergleichungen wird angezeigt. Standardmäßig ist die Liste leer.  
   
 5.  Klicken Sie auf **Hinzufügen**. Es wird eine neue leere Filtergleichung angezeigt.  
   
-6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Schaltfläche für Ausdrücke (*fx*).  
+6.  Geben Sie unter **Ausdruck**einen Ausdruck für das zu filternde Feld ein, oder wählen Sie einen Ausdruck aus. Wenn Sie den Ausdruck bearbeiten möchten, klicken Sie auf die Ausdrucksschaltfläche (*fx*).  
   
 7.  Wählen Sie im Dropdownfeld den Datentyp aus, der dem Typ der Daten in dem Ausdruck entspricht, den Sie in Schritt 5 erstellt haben.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Siehe auch  
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

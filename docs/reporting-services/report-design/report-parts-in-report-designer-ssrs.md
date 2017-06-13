@@ -1,25 +1,32 @@
 ---
-title: "Berichtsteile im Berichts-Designer (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: Berichtsteile im Berichts-Designer (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsteile im Berichts-Designer (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>Berichtsteile im Berichts-Designer (SSRS)
+
   Nachdem Sie Tabellen, Diagramme und andere paginierte Berichtselemente in einem Projekt erstellt haben, können Sie sie im Berichts-Designer auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website als *Berichtsteile* veröffentlichen, damit sie von Ihnen und weiteren Benutzern in anderen Berichten wiederverwendet werden können.  
   
  Im Allgemeinen weisen Berichtsteile im Berichts-Designer und Berichts-Generator die gleiche Funktionsweise auf. Informationen zu grundlegenden Funktionen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator unterstützt die gemeinsame Erstellung: Sie erstellen einen Berichtsteil und veröffentlichen ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer sind Veröffentlichungen unidirektional: Ein Berichtsteil kann in Berichts-Designer veröffentlicht und erneut verwendet werden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus der Berichtsteilveröffentlichung  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![Rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "Rs_ComponentCreation")  
   
 1.  Person A erstellt im Berichts-Designer ein Projekt, das einen Bericht mit einem Diagramm enthält, das von einem eingebetteten Dataset abhängig ist.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  Person B erstellt im Berichts-Generator einen leeren Bericht und fügt ihm das Diagramm hinzu. Das Diagramm ist jetzt zusammen mit dem eingebetteten Dataset Teil des Berichts von Person B. Person B kann die im Bericht enthaltenen Diagramm- und Datasetinstanzen ändern. Dies hat weder Auswirkungen auf die Diagramm- und Datasetinstanzen auf dem Berichtsserver, noch wird die Beziehung zwischen den Instanzen im Bericht und auf dem Berichtsserver unterbrochen.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![Rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "Rs_BIDScomponentupdate")  
   
 4.  Person A ändert im Berichts-Designer das Diagramm im ursprünglichen Bericht.  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  Stellen Sie den Bericht bereit.  
   
- Wenn Sie den Bericht bereitstellen, wird der Berichtsteil auf einer SharePoint-Website oder einem Berichtsserver veröffentlicht und kann von anderen Benutzern wiederverwendet werden. Zum Veröffentlichen eines Berichtsteils benötigen Sie eine Verbindung mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver sowie ausreichende Berechtigungen für den Server, wenn Sie den Bericht bereitstellen.  
+ Wenn Sie den Bericht bereitstellen, wird der Berichtsteil auf einer SharePoint-Website oder einem Berichtsserver veröffentlicht und kann von anderen Benutzern wiederverwendet werden. Um einen berichtsteil veröffentlichen, benötigen Sie eine Verbindung mit und über ausreichende Berechtigungen auf einem Berichtsserver, wenn Sie den Bericht bereitstellen.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> Wiederverwenden von Berichtsteilen  
  Im Gegensatz zum Berichts-Generator können Sie keine Berichtsteile in einem anderen Projekt als dem suchen und wiederverwenden, in dem er erstellt wurde.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  Sie können den Berichtsteil ändern und dann auf der Website oder dem Server erneut veröffentlichen. Berichtsautoren im Berichts-Generator, die diesen Berichtsteil einem Bericht hinzugefügt haben, werden über die Änderung informiert, wenn sie diesen Bericht das nächste Mal öffnen. Sie können die Änderungen annehmen oder ablehnen.  
   
  Sie können auch einen Bericht, den Sie bereits veröffentlicht haben, als neu veröffentlichen. Klicken Sie im Dialogfeld "Berichtsteile veröffentlichen" auf "Als neuen Berichtsteil veröffentlichen". Dieser neue Berichtsteil hat eine neue eindeutige ID und keine Beziehung zum alten Berichtsteil.  
-  
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [Zurück zum Anfang](#BackToTop)  
-  
-## Siehe auch  
- [Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

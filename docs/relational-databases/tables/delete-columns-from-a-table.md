@@ -1,7 +1,7 @@
 ---
 title: "Spalten aus einer Tabelle löschen | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Spalten aus einer Tabelle löschen
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
-2.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, aus der Sie Spalten löschen möchten, und klicken Sie anschließend auf **Löschen**.  
+2.  In **Objekt-Explorer**, suchen Sie die Tabelle aus der Sie Spalten löschen möchten, und erweitern, um die Spaltennamen verfügbar zu machen. 
+
+3.  Mit der rechten Maustaste in der Spalte, die Sie löschen möchten, und wählen **löschen**.  
   
 3.  Klicken Sie im Dialogfeld **Objekt löschen** auf **OK**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Weitere Beispiele finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

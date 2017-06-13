@@ -1,23 +1,28 @@
 ---
-title: "Renderingverhalten (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Renderingverhalten (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Renderingverhalten (Berichts-Generator und SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>Renderingverhalten (Berichts-Generator und SSRS)
   Abhängig vom ausgewählten Renderer werden beim Rendern eines Berichts bestimmte Regeln auf den Hauptteil des Berichts und seinen Inhalt angewendet. Wie sich Berichtselemente auf einer Seite zusammenfügen, wird durch die Kombination folgender Faktoren bestimmt:  
   
 -   Renderingregeln.  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Allgemeine Verhaltensweisen für HTML, MHTML, Word und Excel (Renderer mit weichem Seitenumbruch)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>Allgemeine Verhaltensweisen für HTML, MHTML, Word und Excel (Renderer mit weichem Seitenumbruch)  
  Im HTML- und MHTML-Format exportierte Berichte sind für die Anzeige am Computerbildschirm optimiert, bei der Seiten unterschiedlich lang sein können. Seitenumbrüche werden vertikal nur an ungefähren Positionen im Berichtshauptteil eingefügt. Diese ungefähren Positionen werden durch die interaktive Höheneinstellung im Bereich Eigenschaften bestimmt. Angenommen, die interaktive Höhe ist auf 5 Zoll festgelegt. Wenn der Bericht gerendert wird, beträgt die Seitenhöhe etwa 5 Zoll. Word und Excel paginieren auf Grundlage logischer Seitenumbrüche und ignorieren die interaktive Höheneinstellung.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   Seitenränder werden nicht übernommen.  
   
-## Allgemeine Verhaltensweisen für PDF, Bild und Drucken (Renderer mit hartem Seitenumbruch)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>Allgemeine Verhaltensweisen für PDF, Bild und Drucken (Renderer mit hartem Seitenumbruch)  
  Berichte, die im PDF- und Bild-Format exportiert werden, sind für den buch- oder dokumentationsähnlichen Druck optimiert, bei dem Seiten eine konsistente Größe aufweisen. Seitenumbrüche werden vertikal und horizontal an bestimmten Positionen im Berichtshauptteil eingefügt. Diese bestimmten Positionen werden durch die Einstellungen für Seitenbreite und -höhe bestimmt.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  Die interaktive Breiteneinstellung wird in den Renderern mit hartem Seitenumbruch nicht verwendet.  
   
-## Minimaler Abstand zwischen Berichtselementen  
+## <a name="minimum-spacing-between-report-items"></a>Minimaler Abstand zwischen Berichtselementen  
  Berichtselemente wachsen innerhalb des Hauptteils des Berichts, um ihren Inhalt aufzunehmen. So wird beispielsweise ein Matrixdatenbereich beim Rendern des Berichts normalerweise zur Seite und nach unten erweitert, und die Höhe eines Textfelds ändert sich abhängig von den Daten, die von einem Ausdruck zurückgegeben wurden.  
   
  Renderer behalten den minimalen Abstand zwischen Berichtselementen bei, die Sie im Berichtslayout definieren. Wenn Sie ein Berichtselement im Berichtslayout neben einem anderen platzieren, wird der Abstand zwischen den Berichtselementen zum Mindestabstand, der bei der horizontalen bzw. vertikalen Erweiterung des Berichts beibehalten werden muss. Wenn Sie beispielsweise einen Matrixdatenbereich einem Bericht hinzufügen und dann ein Rechteck 0,25 Zoll rechts von der Matrix hinzufügen, wird dieser Abstand beibehalten, wenn die Matrix größer wird. Jedes Element wird nach rechts verschoben, um den Mindestabstand zu Elementen beizubehalten, die links von ihm enden.  
   
-## Seitenkopfzeilen und -fußzeilen  
+## <a name="page-headers-and-footers"></a>Seitenkopfzeilen und -fußzeilen  
  Seitenkopf- und -fußzeilen werden am oberen und unteren Rand der einzelnen gerenderten Seiten angezeigt. Sie können für den Seitenkopf und die Seitenfußzeile eine Rahmenfarbe, Rahmenart und Rahmenbreite formatieren. Sie können auch eine Hintergrundfarbe oder ein Hintergrundbild hinzufügen. Diese Formatierungsoptionen werden alle gerendert, abhängig von dem Format, das Sie auswählen.  
   
  Folgende Regeln gelten für Seitenköpfe und -füße, die im HTML- oder MHTML-Rendering-Format gerendert werden:  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   Kopf- und Fußzeilen, die in der ursprünglichen RDL-Datei definiert wurden, werden nicht gerendert, wenn der Bericht als Unterbericht gerendert wird.  
   
-## Logische Seitenumbrüche  
+## <a name="logical-page-breaks"></a>Logische Seitenumbrüche  
  Logische Seitenumbrüche sind Seitenumbrüche, die vor oder nach Berichtselementen oder -gruppen eingefügt werden. Mithilfe von Seitenumbrüchen können Sie festlegen, wie beim Rendern oder Exportieren des Berichts Inhalt für die optimale Anzeige auf einer Berichtsseite angeordnet wird.  
   
  Folgende Regeln gelten beim Rendern logischer Seitenumbrüche:  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   Logische Seitenumbrüche, die für Elemente in einer Tabellen- oder Matrixzelle definiert wurden, werden nicht beibehalten. Dies gilt nicht für Listenelemente.  
   
-## Siehe auch  
- [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

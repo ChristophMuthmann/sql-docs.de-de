@@ -2,7 +2,7 @@
 title: "Verwendungsszenarios für temporale Tabellen | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarien für temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Temporale Tabellen sind im Allgemeinen in Szenarien nützlich, in denen der Verlauf von Datenänderungen nachverfolgt werden muss.    
-Für maßgebliche Produktivitätsvorteile empfehlen wir Ihnen, temporale Tabellen in den folgenden Fällen zu verwenden:  
-  
--   [Datenüberwachung](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Zeitpunktanalyse (Zeitreise)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Erkennung von Anomalien](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Langsam veränderliche Dimensionen](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Reparieren von Datenbeschädigungen auf Zeilenebene](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+Wir empfehlen Ihnen, temporale Tabellen in den folgenden Fällen zu verwenden für die wesentlichen Produktivitätsvorteile in Betracht ziehen.  
   
 ## <a name="data-audit"></a>Datenüberwachung  
  Verwenden Sie die temporale Systemversionsverwaltung für Tabellen, in denen wichtige Informationen gespeichert werden, für die Sie nachverfolgen müssen, was sich wann geändert hat, und um Datenforensik zu einem beliebigen Zeitpunkt durchzuführen.    

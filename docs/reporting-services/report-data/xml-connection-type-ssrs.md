@@ -1,28 +1,33 @@
 ---
-title: "XML-Verbindungstyp (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: XML-Verbindungstyp (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# XML-Verbindungstyp (SSRS)
+# <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
   
  Diese Datenerweiterung unterstützt Parameter und Anmeldeinformationen, die getrennt von der Verbindungszeichenfolge verwaltet werden.  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine schrittweise Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)" basiert.  
   
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
  Bei der Verbindungszeichenfolge muss es sich um eine URL handeln, von der auf den Webdienst, die webbasierte Anwendung oder das per HTTP verfügbare XML-Dokument verwiesen wird. XML-Dokumente müssen die Erweiterung XML aufweisen. Für in der Datasetabfrage eingebettete XML-Daten können Sie auch eine leere Verbindungszeichenfolge verwenden.  
@@ -35,7 +40,7 @@ caps.handback.revision: 9
 |XML-Dokument|`http://localhost/XML/Customers.xml`|  
 |Eingebettetes XML-Dokument|*Leer*|  
   
- Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
@@ -50,7 +55,7 @@ caps.handback.revision: 9
   
  Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden nicht unterstützt. Wenn Sie die integrierte Sicherheit von Windows deaktiviert haben, können Sie sie nicht zum Abrufen von Daten verwenden. Wenn Sie gespeicherte Anmeldeinformationen oder auf Anforderung einzugebende Anmeldeinformationen angeben, tritt ein Laufzeitfehler auf.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="Query"></a> Abfragen  
  Mit einer Abfrage wird angegeben, welche Daten für ein Berichtsdataset abgerufen werden sollen. Die Feldauflistung für ein Dataset wird mit den Spalten aus dem Resultset einer Abfrage aufgefüllt. In Berichten wird nur das erste Resultset verarbeitet, das von einer Abfrage abgerufen wird.  
@@ -119,12 +124,12 @@ caps.handback.revision: 9
   
  Beispiele finden Sie unter [Reporting Services: Verwenden von XML und Webdienst-Datenquellen](http://go.microsoft.com/fwlink/?LinkId=81654).  
   
-### Anforderungen für das Abrufen von XML-Webdienstdaten  
+### <a name="requirements-for-retrieving-xml-web-service-data"></a>Anforderungen für das Abrufen von XML-Webdienstdaten  
  Die XML-Datenverarbeitungserweiterung kann das Schema nicht selbstständig erkennen. Daher müssen Sie über eine Möglichkeit verfügen, die SOAP-Methoden zu ermitteln, mit denen die gewünschten Daten abgerufen werden können. Sie müssen außerdem wissen, welches Adressierungsschema oder welchen Namespace der Webdienst für seine Daten verwendet.  
   
- Für einen Webdienst können Sie ein \<**Abfrage**>-Element angeben, das eine aufzurufende Methode oder eine SOAP-Aktion angibt. Sie können die Abfrage leer lassen und die Standardabfrage verwenden, wenn die XML-Datenquelle eine hierarchische Struktur besitzt, die die im Bericht zu verwendenden Daten bereitstellt. Mit der Abfrage abgerufene Werte und Attribute von XML-Elementknoten werden den im Bericht verwendeten Datasetfeldern zugeordnet.  
+ Sie können für einen Webdienst Bereitstellen einer \< **Abfrage**> Element, das eine aufzurufende Methode oder SOAP-Aktion angibt. Sie können die Abfrage leer lassen und die Standardabfrage verwenden, wenn die XML-Datenquelle eine hierarchische Struktur besitzt, die die im Bericht zu verwendenden Daten bereitstellt. Mit der Abfrage abgerufene Werte und Attribute von XML-Elementknoten werden den im Bericht verwendeten Datasetfeldern zugeordnet.  
   
-### Anforderungen für das Abrufen von XML-Dokumentdaten  
+### <a name="requirements-for-retrieving-xml-document-data"></a>Anforderungen für das Abrufen von XML-Dokumentdaten  
  Bei Verwendung von HTTP muss der Server XML-Daten zurückgeben, oder die XML-Daten müssen im XML- **Query** -Element eingebettet sein. Wenn Sie über HTTP direkt auf ein XML-Dokument verweisen, muss die Erweiterung .xml verwendet werden.  
   
  Sie müssen wissen, wie Sie eine XML-Abfrage erstellen, die alle benötigten Daten abruft. Wenn Sie keinen Elementpfad angeben, besteht das Standardverhalten zum Analysieren eines XML-Dokuments darin, dass der erste verfügbare Pfad zu einer Blattknotenauflistung im XML-Dokument ausgewählt wird. Wenn das XML-Dokument zusätzliche Pfade zu anderen Auflistungen gleichgeordneter Blattknoten enthält, werden diese Knoten ignoriert, es sei denn, Sie geben in der Abfrage einen Pfad ein.  
@@ -136,12 +141,12 @@ caps.handback.revision: 9
 ##  <a name="Parameters"></a> Parameter  
  Die Abfrage wird nicht analysiert, um Parameter zu identifizieren.  
   
- Zum Hinzufügen von Parametern müssen diese im Dialogfeld **Dataseteigenschaften** auf der Seite [Parameter](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) manuell erstellt werden.  
+ Zum Hinzufügen von Parametern müssen diese im Dialogfeld **Dataseteigenschaften** auf der Seite [Parameter](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) manuell erstellt werden.  
   
 ##  <a name="Remarks"></a> Hinweise  
  Die XML-Datenerweiterung unterstützt das Erstellen von Berichten auf Basis von tabellarischen (nicht hierarchischen) XML-Daten. Weitere Informationen finden Sie unter [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) (Hinzufügen von Daten aus externen Datenquellen [SSRS]).  
   
- Es ist keine integrierte Unterstützung zum Abrufen von XML-Dokumenten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank vorhanden.  
+ Es ist keine integrierte Unterstützung zum Abrufen von XML-Dokumenten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank vorhanden.  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
@@ -158,19 +163,19 @@ caps.handback.revision: 9
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfeldauflistung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumenation](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

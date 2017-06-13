@@ -1,31 +1,36 @@
 ---
-title: "Konfigurieren eines Berichtsservers im einheitlichen Modus f&#252;r die lokale Verwaltung (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "Installieren von Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "windows server 2008"
-  - "Vista"
+title: "Konfigurieren Sie einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Konfigurieren eines Berichtsservers im einheitlichen Modus f&#252;r die lokale Verwaltung (SSRS)
-  Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie den Berichtsserver noch nicht installiert oder konfiguriert haben, gehen Sie zu [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) und [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
+  Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie den Berichtsserver noch nicht installiert oder konfiguriert haben, gehen Sie zu [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -62,7 +67,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_configuraiton_overview"></a> Übersicht der Konfigurationsänderungen  
  Durch die folgenden Konfigurationsänderungen wird der Server so konfiguriert, dass Berichtsserverinhalte und -vorgänge mit Standardbenutzerberechtigungen verwaltet werden können:  
   
--   Fügen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs zu vertrauenswürdigen Websites hinzu. Internet Explorer wird unter den aufgelisteten Betriebssystemen standardmäßig im **geschützten Modus** ausgeführt. Diese Funktion verhindert, dass Browseranforderungen Prozesse auf hoher Ebene erreichen, die auf demselben Computer ausgeführt werden. Sie können den geschützten Modus für die Berichtsserveranwendungen deaktivieren, indem Sie sie als vertrauenswürdige Sites hinzufügen.  
+-   Fügen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs zu vertrauenswürdigen Websites hinzu. Internet Explorer wird unter den aufgelisteten Betriebssystemen standardmäßig im **geschützten Modus**ausgeführt. Diese Funktion verhindert, dass Browseranforderungen Prozesse auf hoher Ebene erreichen, die auf demselben Computer ausgeführt werden. Sie können den geschützten Modus für die Berichtsserveranwendungen deaktivieren, indem Sie sie als vertrauenswürdige Sites hinzufügen.  
   
 -   Erstellen Sie Rollenzuweisungen, die Ihnen als Berichtsserveradministrator die Berechtigung zur Verwaltung von Inhalt und Vorgängen verleihen, ohne die Funktion **Als Administrator ausführen** in Internet Explorer verwenden zu müssen. Durch das Erstellen von Rollenzuweisungen für Ihr Windows-Benutzerkonto erhalten Sie Zugriff auf einen Berichtsserver mit Inhalts-Manager- und Systemadministratorberechtigungen durch explizite Rollenzuweisungen, die die vordefinierten, integrierten Rollenzuweisungen ersetzen, die von Reporting Services erstellt werden.  
   
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> Browsereinstellungen für vertrauenswürdige Sites  
   
-1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** auf **Alle Programme**, klicken Sie mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie **Als Administrator ausführen** aus.  
+1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** auf **Alle Programme**, klicken Sie mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie **Als Administrator ausführen**aus.  
   
 2.  Klicken Sie auf **Zulassen** , um den Vorgang fortzusetzen.  
   
-3.  Geben Sie in der URL-Adresse die Berichts-Manager-URL ein. Anweisungen finden Sie unter [Webportal &#40;einheitlicher SSRS-Modus&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+3.  Geben Sie in der URL-Adresse die Berichts-Manager-URL ein. Anweisungen finden Sie unter [Webportal &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 4.  Klicken Sie auf **Extras**.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 9. Fügen Sie `http://<your-server-name>`hinzu.  
   
-10. Deaktivieren Sie das Kontrollkästchen **Für Sites dieser Zone ist eine Serverüberprüfung (https:) erforderlich**, falls Sie HTTPS nicht für die Standardwebsite verwenden.  
+10. Deaktivieren Sie das Kontrollkästchen **Für Sites dieser Zone ist eine Serverüberprüfung (https:) erforderlich** , falls Sie HTTPS nicht für die Standardwebsite verwenden.  
   
 11. Klicken Sie auf **Hinzufügen**.  
   
@@ -132,20 +137,20 @@ caps.handback.revision: 20
   
 8.  Schließen Sie den Berichts-Manager.  
   
-9. Öffnen Sie den Berichts-Manager in Internet Explorer erneut, ohne **Als Administrator ausführen** zu verwenden.  
+9. Öffnen Sie den Berichts-Manager in Internet Explorer erneut, ohne **Als Administrator ausführen**zu verwenden.  
   
 ##  <a name="bkmk_configure_ssms"></a> So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers  
  Standardmäßig ist es nur möglich, auf alle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbaren Berichtsservereigenschaften zuzugreifen, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit Administratorprivilegien starten.  
   
- **So konfigurieren Sie Rolleneigenschaften und Rollenzuweisungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**, sodass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:  
+ **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , sodass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:  
   
--   Klicken Sie im Menü **Start** auf **Alle Programme** und anschließend auf **SQL Server 2014**. Klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, und klicken Sie anschließend auf **Als Administrator ausführen**.  
+-   Klicken Sie im Menü **Start** auf **Alle Programme**und anschließend auf **SQL Server 2014**. Klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, und klicken Sie anschließend auf **Als Administrator ausführen**.  
   
 -   Stellen Sie eine Verbindung mit dem lokalen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server her.  
   
 -   Klicken Sie im Knoten **Sicherheit** auf **Systemrollen**.  
   
--   Klicken Sie mit der rechten Maustaste auf **Systemadministrator**, und klicken Sie anschließend auf **Eigenschaften**.  
+-   Klicken Sie mit der rechten Maustaste auf **Systemadministrator** , und klicken Sie anschließend auf **Eigenschaften**.  
   
 -   Wählen Sie auf der Seite **Systemrolleneigenschaften** die Option **Berichtsservereigenschaften anzeigen**aus. Wählen Sie weitere Eigenschaften aus, die Sie Mitgliedern der Systemadministratorrolle zuordnen möchten.  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

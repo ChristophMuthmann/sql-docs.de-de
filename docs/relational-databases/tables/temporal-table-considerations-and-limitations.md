@@ -2,7 +2,7 @@
 title: "Überlegungen und Einschränkungen zu temporalen Tabellen | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   Die direkte Änderung von Daten in einer Verlaufstabelle ist nicht zulässig.  
   
--   **ON DELETE CASCADE** und **ON UPDATE CASCADE** sind in der aktuellen Tabelle nicht zulässig. Das heißt, dass in den Fällen, wenn die temporale Tabelle als verweisende Tabelle in der Fremdschlüsselbeziehung (entspricht *parent_object_id* in sys.foreign_keys) fungiert, keine CASCADE-Optionen zulässig sind. Verwenden Sie Anwendungslogik oder AFTER-Trigger, um die Konsistenz beim Löschen in der Primärschlüsseltabelle (entspricht  *referenced_object_id* in sys.foreign_keys) beizubehalten, um diese Einschränkung zu umgehen. Falls die Primärschlüsseltabelle temporal und die verweisende Tabelle nicht-temporal ist, gibt es keine entsprechende Einschränkung.  
+-   **ON DELETE CASCADE** und **ON UPDATE CASCADE** sind in der aktuellen Tabelle nicht zulässig. Das heißt, dass in den Fällen, wenn die temporale Tabelle als verweisende Tabelle in der Fremdschlüsselbeziehung (entspricht *parent_object_id* in sys.foreign_keys) fungiert, keine CASCADE-Optionen zulässig sind. Verwenden Sie Anwendungslogik oder AFTER-Trigger, um die Konsistenz beim Löschen in der Primärschlüsseltabelle (entspricht  *referenced_object_id* in sys.foreign_keys) beizubehalten, um diese Einschränkung zu umgehen. Falls die Primärschlüsseltabelle temporal und die verweisende Tabelle nicht-temporal ist, gibt es keine entsprechende Einschränkung. 
+
+    **Hinweis:** diese Einschränkung gilt nur für SQL Server 2016. CASCADE-Optionen werden in unterstützt [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server-2017 CTP 2.0 ab.  
   
 -   **INSTEAD OF** -Trigger sind weder bei der aktuellen noch bei der Verlaufstabelle zulässig, um zu verhindern, dass die DML-Logik ungültig wird. **AFTER** -Trigger sind nur in der aktuellen Tabelle zulässig. In der Verlaufstabelle werden sie blockiert, um zu vermeiden, dass die DML-Logik blockiert wird.  
   

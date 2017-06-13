@@ -1,24 +1,29 @@
 ---
-title: "Tutorial: Hinzuf&#252;gen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft Docs"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Hinzuf&#252;gen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
 
 Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Sie haben keine Achsen. Wenn Sie ein numerisches Feld zu einem Kreisdiagramm hinzufügen, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
@@ -28,37 +33,20 @@ Diese Abbildung zeigt das Kreisdiagramm, das Sie erstellen.
 ![Berichts-Generator-Kreisdiagramm-fertig](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. Erwägen Sie in diesem Fall eine Anzahl von kleinen Slices zu einem größeren Slice zu kombinieren. Kreisdiagramme sind besser lesbar, wenn Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
-  
-## <a name="BackToTop"></a>Lernziele  
-In diesem Tutorial lernen Sie Folgendes:  
-  
-1.  [Erstellen eines Kreisdiagramms im Diagramm-Assistenten](#Chart)  
-  
-2.  [Auswählen des Diagrammtyps](#ChartType)  
-  
-3.  [Anzeigen von Prozentsätzen in jedem Slice](#Percentages)  
-  
-4.  [Kombinieren von kleinen Slices zu einem Slice](#CombineSlices)  
-  
-5.  [Beginnen der Kreisdiagrammwerte bei 0°](#DrawingEffect)  
-  
-6.  [Hinzufügen eines Berichtstitels](#Title)  
-  
-7.  [Speichern des Berichts](#Save)  
-  
+ 
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Erstellen eines Kreisdiagramms im Diagramm-Assistenten  
 In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes Dataset zu erstellen, eine freigegebene Datenquelle auszuwählen, und ein Kreisdiagramm zu erstellen.  
 
   
-1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal oder über den integrierten SharePoint-Modus.  
+1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
     Das Dialogfeld **Neuer Bericht oder neues Dataset** wird geöffnet.  
   
@@ -68,7 +56,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** und anschließend auf **Weiter**.  
+4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**und anschließend auf **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
@@ -101,13 +89,13 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
 Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
 
   
-1.  Klicken Sie auf der Seite **Diagrammtyp auswählen** auf **Kreis** und anschließend auf **Weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
+1.  Klicken Sie auf der Seite **Diagrammtyp auswählen** auf **Kreis**und anschließend auf **Weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
   
-    Ziehen Sie auf der Seite **Diagrammfelder anordnen** das Feld „Product“ in den Bereich **Kategorien**. Kategorien definieren die Anzahl von Slices im Kreisdiagramm. In diesem Beispiel werden acht Slices verwendet, eines für jedes Produkt.  
+    Ziehen Sie auf der Seite **Diagrammfelder anordnen** das Feld „Product“ in den Bereich **Kategorien** . Kategorien definieren die Anzahl von Slices im Kreisdiagramm. In diesem Beispiel werden acht Slices verwendet, eines für jedes Produkt.  
   
-2.  Ziehen Sie das Feld „Sales“ in den Bereich **Werte**. Das Feld "Sales" stellt den Umsatz für die Unterkategorie dar. Im Bereich **Werte** wird `[Sum(Sales)]` angezeigt, da im Diagramm der aggregierte Wert für die einzelnen Produkte angezeigt wird.  
+2.  Ziehen Sie das Feld „Sales“ in den Bereich **Werte** . Das Feld "Sales" stellt den Umsatz für die Unterkategorie dar. Im Bereich **Werte** wird `[Sum(Sales)]` angezeigt, da im Diagramm der aggregierte Wert für die einzelnen Produkte angezeigt wird.  
   
-3.  Klicken Sie auf **Weiter**, um eine Vorschau anzuzeigen.  
+3.  Klicken Sie auf **Weiter** , um eine Vorschau anzuzeigen.  
   
 5.  Klicken Sie auf **Fertig stellen**.  
   
@@ -133,14 +121,14 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Bezeichnung, und klicken Sie anschließend auf **Reihenbezeichnungseigenschaften**.  
   
-4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten** ein.  
+4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten**ein.  
     
-5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **Bezeichnungsdaten** nach **#PERCENT** **{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}** ein, um keine Dezimalstellen anzuzeigen.  
+5.  (Optional) Um anzugeben, wie viele Dezimalstellen die Bezeichnung zeigt, in der **bezeichnen können** nach Feld **#PERCENT**, Typ **{Pn}** , in denen  *n*  ist die Anzahl der anzuzeigenden Dezimalstellen. Geben Sie z.B. **#PERCENT{P0}**ein, um keine Dezimalstellen anzuzeigen.  
 
-6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja**, wenn Sie im Dialogfeld **Aktion bestätigen** zum Festlegen dieses Werts aufgefordert werden.  
+6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
   
     > [!NOTE]  
-    > Die Option **Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
+    > Die Option**Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -161,17 +149,17 @@ Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices z
   
 4.  Erweitern Sie im Abschnitt **Allgemein** den Knoten **CustomAttributes** .  
   
-5.  Legen Sie die Eigenschaft **CollectedStyle** auf **SingleSlice** fest.  
+5.  Legen Sie die Eigenschaft **CollectedStyle** auf **SingleSlice**fest.  
 
     ![Berichts-Generator-Kreisdiagramm-einzelne-Slice-Eigenschaft](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
-6.  Vergewissern Sie sich, dass die **CollectedThreshold**-Eigenschaft auf 5 festgelegt ist.  
+6.  Vergewissern Sie sich, dass die **CollectedThreshold** -Eigenschaft auf 5 festgelegt ist.  
   
-7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent**-Eigenschaft auf **TRUE** festgelegt ist.  
+7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent** -Eigenschaft auf **TRUE**festgelegt ist.  
   
-8.  Klicken Sie auf der Registerkarte **Stamm** auf **Ausführen**, um eine Vorschau des Berichts anzuzeigen.  
+8.  Klicken Sie auf der Registerkarte **Stamm** auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-In der Legende wird die Kategorie „Other“ jetzt angezeigt. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
+In der Legende wird die Kategorie „Other“ jetzt angezeigt. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
 
 ![Berichts-Generator-Kreisdiagramm-beginnt-bei-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
@@ -201,7 +189,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
 
 2. Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie wie folgt **Kamera- und Camcorderumsatz** ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Als Prozentsatz des Gesamtumsatzes** ein:  
+2.  Geben Sie wie folgt **Kamera- und Camcorderumsatz**ein, drücken Sie die EINGABETASTE, und geben Sie anschließend **Als Prozentsatz des Gesamtumsatzes**ein:  
   
     **Kamera- und Camcorderumsatz**  
   
@@ -219,22 +207,24 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 ## <a name="Save"></a>7. Speichern des Berichts  
   
-### So speichern Sie den Bericht  
+### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
 2.  Klicken Sie im Menü **Datei** auf **Speichern**.  
   
-3.  Geben Sie im Feld **Name** den Namen **Umsatz-Kreisdiagramm** ein.  
+3.  Geben Sie im Feld **Name**den Namen **Umsatz-Kreisdiagramm**ein.  
   
 4.  Klicken Sie auf **Speichern**.  
   
 Der Bericht wird auf dem Berichtsserver gespeichert.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
 Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

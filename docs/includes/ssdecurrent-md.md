@@ -1,1 +1,1 @@
- SQL Server 2016-Datenbankmodul 
+ SQL Server 2017-Datenbankmodul 

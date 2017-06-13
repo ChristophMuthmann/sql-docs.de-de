@@ -1,28 +1,33 @@
 ---
-title: "&#196;ndern von Indikatorsymbolen und Indikators&#228;tzen (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ändern von Indikatorsymbolen und Indikatorsätzen (Berichts-Generator und SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# &#196;ndern von Indikatorsymbolen und Indikators&#228;tzen (Berichts-Generator und SSRS)
+# <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Ändern von Indikatorsymbolen und Indikatorsätzen (Berichts-Generator und SSRS)
   Möglicherweise stellen die vorkonfigurierten Indikatorsätze, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für paginierte Berichte bereitstellt, die Daten nicht immer effektiv dar und können im übermittelten Bericht nicht optimal verwendet werden. Dieses Thema enthält Vorgehensweisen, um die Darstellung von Indikatorsymbolen zu ändern und die Indikatorsätze anzupassen, sodass andere, mehr oder weniger Indikatorsymbole enthalten sind.  
   
  Optionen wie Farben können mit Ausdrücken festgelegt werden. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## So ändern Sie die Farbe eines Indikatorsymbols  
+## <a name="to-change-the-color-of-an-indicator-icon"></a>So ändern Sie die Farbe eines Indikatorsymbols  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Indikator, der geändert werden soll, und klicken Sie auf **Indikatoreigenschaften**.  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 8
   
      Klicken Sie optional auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, mit dem der Wert der Option **Farbe** festgelegt wird.  
   
-     Wenn Sie auf **Weitere Farben**geklickt haben, wird das Dialogfeld **Farbe auswählen** geöffnet, in dem Sie zwischen vielen verschiedenen Farben auswählen können. Weitere Informationen zu den zugehörigen Optionen finden Sie unter [Farbe auswählen (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](../Topic/Select%20Color%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md). Klicken Sie auf **OK** , um das Dialogfeld **Farbe auswählen** zu schließen.  
+     Wenn Sie auf **Weitere Farben**geklickt haben, wird das Dialogfeld **Farbe auswählen** geöffnet, in dem Sie zwischen vielen verschiedenen Farben auswählen können. Weitere Informationen zu den zugehörigen Optionen finden Sie unter [Farbe auswählen (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Klicken Sie auf **OK** , um das Dialogfeld **Farbe auswählen** zu schließen.  
   
 4.  Klicken Sie auf **OK**.  
   
-## So ändern Sie das Symbol  
+## <a name="to-change-the-icon"></a>So ändern Sie das Symbol  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Indikator, der geändert werden soll, und klicken Sie auf **Indikatoreigenschaften**.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 4.  Klicken Sie auf **OK**.  
   
-## So verwenden Sie ein benutzerdefiniertes Bild als Indikatorsymbol  
+## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>So verwenden Sie ein benutzerdefiniertes Bild als Indikatorsymbol  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Indikator, der geändert werden soll, und klicken Sie auf **Indikatoreigenschaften**.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 6.  Klicken Sie auf **OK**.  
   
-## So fügen Sie dem Indikatorsatz ein Symbol hinzu  
+## <a name="to-add-an-icon-to-the-indicator-set"></a>So fügen Sie dem Indikatorsatz ein Symbol hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Indikator, der geändert werden soll, und klicken Sie auf **Indikatoreigenschaften**.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
 4.  Klicken Sie auf **OK**.  
   
-## So löschen Sie ein Symbol im Indikatorsatz  
+## <a name="to-delete-an-icon-to-the-indicator-set"></a>So löschen Sie ein Symbol im Indikatorsatz  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Indikator, der geändert werden soll, und klicken Sie auf **Indikatoreigenschaften**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 8
   
 4.  Klicken Sie auf **OK**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

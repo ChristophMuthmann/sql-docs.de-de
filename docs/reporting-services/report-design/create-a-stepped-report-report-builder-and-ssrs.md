@@ -1,26 +1,31 @@
 ---
-title: "Erstellen von abgestuften Berichten (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen von abgestuften Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
-Ein abgestufter Bericht ist paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtstyp, der Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte anzeigt:  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
+Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtstyp, der Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte anzeigt:  
   
- ![Gerenderter gestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "Gerenderter gestufter Bericht")  
+ ![Gerenderter gestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "gerenderte abgestuften Bericht")  
   
  Bei herkömmlichen Tabellenberichten wird die übergeordnete Gruppe in einer angrenzenden Spalte im Bericht platziert. Der neue Tablix-Datenbereich ermöglicht es Ihnen, eine Gruppe und Detailzeilen bzw. Untergruppen zur gleichen Spalte hinzuzufügen. Um die Gruppenzeilen von den Detailzeilen oder Zeilen untergeordneter Gruppen zu unterscheiden, können Sie entweder eine Formatierung wie eine Schriftfarbe anwenden oder die Detailzeilen mit einem Einzug versehen.  
   
@@ -32,7 +37,7 @@ Ein abgestufter Bericht ist paginierter [!INCLUDE[ssRSnoversion](../../includes/
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## So erstellen Sie einen abgestuften Bericht  
+## <a name="to-create-a-stepped-report"></a>So erstellen Sie einen abgestuften Bericht  
   
 1.  Erstellen Sie einen Tabellenbericht. Fügen Sie z. B. einen Tablix-Datenbereich ein, und fügen Sie der Datenzeile Felder hinzu.  
   
@@ -52,7 +57,7 @@ Ein abgestufter Bericht ist paginierter [!INCLUDE[ssRSnoversion](../../includes/
   
      Die folgende Abbildung zeigt, wie der gerenderte Datenbereich beim Anzeigen des Berichts aussehen könnte.  
   
-     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "Gerenderter gruppierter Bericht")  
+     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "gerenderte gruppierter Bericht")  
   
 3.  Für einen abgestuften Bericht benötigen Sie die erste Spalte, die die Gruppeninstanz enthält, nicht. Kopieren Sie stattdessen den Wert in der Gruppenkopfzelle, löschen Sie die Gruppenspalte, und fügen Sie den Wert in das erste Textfeld in der Gruppenkopfzeile ein. Um die Gruppenspalte zu entfernen, klicken Sie mit der rechten Maustaste auf die Gruppenspalte oder die Zelle, und klicken Sie auf **Spalten löschen**. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
@@ -78,13 +83,13 @@ Ein abgestufter Bericht ist paginierter [!INCLUDE[ssRSnoversion](../../includes/
   
      Ihr Datenbereich sollte dem folgenden Beispiel ähneln.  
   
-     ![Datenbereich für gestuften Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Datenbereich für gestuften Bericht")  
+     ![Datenbereich für abgestuftes Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Datenbereich für abgestuften Berichten")  
   
      **Datenbereich für abgestuftes Berichtslayout**  
   
      Klicken Sie auf der Registerkarte **Home** auf **Ausführen**. Der Bericht zeigt die Gruppe mit eingezogenen Ebenen für die Untergruppenwerte an.  
   
-## So erstellen Sie einen abgestuften Bericht mit mehreren Gruppen  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>So erstellen Sie einen abgestuften Bericht mit mehreren Gruppen  
   
 1.  Erstellen Sie einen Bericht wie in der vorherigen Vorgehensweise beschrieben.  
   
@@ -103,7 +108,7 @@ Ein abgestufter Bericht ist paginierter [!INCLUDE[ssRSnoversion](../../includes/
   
 3.  Ändern Sie die Auffüllung für die Zelle, die die Gruppendaten enthält.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

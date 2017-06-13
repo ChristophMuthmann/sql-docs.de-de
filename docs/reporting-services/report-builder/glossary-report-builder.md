@@ -1,23 +1,28 @@
 ---
-title: "Glossar (Berichts-Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Glossar (Berichts-Generator) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Glossar (Berichts-Generator)
+# <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
   
 |Begriff|Definition|  
@@ -44,7 +49,7 @@ caps.handback.revision: 8
 |Sichern (back up)|Erstellen einer Sicherungskopie eines Programms, eines Datenträgers oder von Daten.|  
 |Sicherung|Eine Sammlung von Dateien, Ordnern und anderen Daten, die in einer Datei oder auf mindestens einem Band dupliziert und gespeichert wurde.|  
 |Basistabelle|Eine Tabelle, die dauerhaft in einer Datenbank gespeichert ist. Auf Basistabellen wird durch Sichten, Cursor, SQL-Anweisungen und gespeicherte Prozeduren verwiesen.|  
-|Batch|1. Ein Satz von SQL-Anweisungen, die gemeinsam übermittelt und als Gruppe ausgeführt werden.  2. In Reporting Services eine Auflistung von SOAP-Methodenaufrufen innerhalb einer einzelnen Transaktion.|  
+|Batch|1. Ein Satz von SQL-Anweisungen, die gemeinsam übermittelt und als Gruppe ausgeführt werden.  2. In Reporting Services eine Auflistung von SOAP-Methodenaufrufen innerhalb einer einzelnen Transaktion.|  
 |Binary Large Object (BLOB) (binary large object, BLOB)|Außergewöhnlich große binäre Daten (z. B. digital gespeicherte Bilder, Audio- oder Multimediatracks) oder eine Variable oder Tabellenspalte, die zum Speichern solcher Werte groß genug ist.|  
 |Bitweise Operation (bitwise operation)|Ein Vorgang, der ein einzelnes Bit bearbeitet oder testet, ob ein Bit ON oder OFF ist.|  
 |Lesezeichen (bookmark)|Ein Link in einem Bericht, der zu einer anderen Stelle innerhalb des Berichts springt.|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |Farbregeln (color rules)|Der Algorithmus, durch den jedem Kartenelement auf einer Kartenebene automatisch Farben zugewiesen werden.|  
 |Farbskala|Ein Kartenlegendentyp, in dem die Bedeutung der in einer Karte verwendeten Farben erläutert wird.|  
 |Common Language Runtime (common language runtime)|Das Modul, das die zentrale Komponente der Ausführung von verwaltetem Code bildet. Die Runtime stellt verwalteten Code mit Diensten wie sprachübergreifende Integration, Codezugriffssicherheit, Verwaltung der Objektlebensdauer sowie Debug- und Profilerstellungsunterstützung bereit.|  
-|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht durch einen einzigen integrierten Feldverweis dargestellt werden kann und auf der Entwurfsoberfläche als <\<Expr>> angezeigt wird.|  
+|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht als einen einzigen integrierten Feldverweis dargestellt werden, und wird auf der Entwurfsoberfläche als <\<Expr >>.|  
 |Verkettung|Das Kombinieren von mindestens zwei Zeichenfolgen oder -ausdrücken zu einer Zeichenfolge bzw. einem Zeichenausdruck oder das Kombinieren von mindestens zwei Binärzeichenfolgen oder -ausdrücken zu einer Binärzeichenfolge oder einem Binärzeichenausdruck.|  
 |Parallelität (concurrency)|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. SQL Server verwendet Sperren, damit mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern können, ohne dass Konflikte auftreten.|  
 |CONFIG-Datei|Siehe anderen Begriff: Konfigurationsdatei (configuration file)|  
@@ -161,7 +166,7 @@ caps.handback.revision: 8
 |Messgerätskala (gauge scale)|Eine Messgerätskala ist der durch einen Minimalwert und einen Maximalwert begrenzte Bereich von Werten, die auf dem Messgerät angezeigt werden.  In der Regel enthält die Skalierung eines Messgeräts Messgerätbezeichnungen und -teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen.|  
 |Geodätische Daten (geodesic data)|Daten, die Punkte, Linien oder Bereiche auf einer gekrümmten Oberfläche angeben.|  
 |Geografiedaten (geography data)|Ein SQL-Datentyp für räumliche Daten, der Daten in einem Erdkugel-Koordinatensystem darstellt, beispielsweise GPS-Koordinaten in Längen- und Breitengraden.|  
-|Geometriedaten (geometry data)|Ein räumlicher SQL Server-Datentyp, der planare oder euklidische Daten (flache Erdabbildung) unterstützt.|  
+|Geometriedaten (geometry data)|Ein räumlicher SQL Server-Datentyp, der planare oder euklidische Daten (flache Erdabbildung) unterstützt.|  
 |Globaler Assemblycache|Ein computerweiter Codecache, in dem Assemblys gespeichert werden, die explizit für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer installiert wurden.|  
 |Raster (grid)|Ein Sichttyp, der Daten in einer Tabelle anzeigt.|  
 |Gruppierung (grouping)|Eine Datenmenge, die zusammen in einem Bericht gruppiert wird.|  
@@ -174,7 +179,7 @@ caps.handback.revision: 8
 |Bezeichner (identifier)|Der Name eines Objekts in einer Datenbank.|  
 |Identitätsspalte|Eine Spalte in einer Tabelle, der die IDENTITY-Eigenschaft zugewiesen wurde.|  
 |Index|Ein Datenbankobjekt in einer relationalen Datenbank, das anhand von Schlüsselwerten schnellen Zugriff auf Daten in den Zeilen einer Tabelle bietet.|  
-|Inneres Aggregat (inner aggregate)|Eine Aggregatfunktion, die als Bereichsparameter von einem anderen Aggregat angegeben wird. In =Max(Sum([Quantity]),"Tablix1") ist z. B. "Sum" das innere Aggregat.|  
+|Inneres Aggregat (inner aggregate)|Eine Aggregatfunktion, die als Bereichsparameter von einem anderen Aggregat angegeben wird. In =Max(Sum([Quantity]),"Tablix1") ist z. B. "Sum" das innere Aggregat.|  
 |Innerer Join|Ein Vorgang, bei dem Zeilen aus mehreren Quelltabellen abgerufen werden, indem die Werte aus in den Quelltabellen gemeinsam genutzten Spalten verglichen werden. Mit einem inneren Join werden Zeilen einer Quelltabelle ausgeschlossen, für die in den anderen Quelltabellen keine übereinstimmenden Zeilen vorhanden sind.|  
 |Instanz|1. Eine Kopie von SQL Server, die auf einem Computer ausgeführt wird. 2. Eine spezifische Kopie eines Berichtselements, z. B. eines Berichtsteils, Unterberichts, dynamischen Elements oder einer Gruppe.|  
 |integer|Eine numerische Datentypkategorie, zu der die Datentypen bigint, int, smallint und tinyint gehören.|  
@@ -183,7 +188,7 @@ caps.handback.revision: 8
 |ISO|Eine von zwei internationalen Institutionen, die für die Entwicklung internationaler Datenübertragungsstandards verantwortlich sind. Die Internationale Organisation für Normung (International Organization for Standardization, ISO) arbeitet eng mit der Internationalen Elektrotechnischen Kommission (International Electrotechnical Commission, IEC) zusammen, um Standards für das Computing zu definieren. Gemeinsam haben sie den ISO/IEC SQL-92-Standard für SQL veröffentlicht.|  
 |Rollenzuweisung auf Elementebene|Eine Sicherheitsrichtlinie, die für ein Element im Berichtsserverordner gilt.|  
 |Rollendefinition auf Elementebene|Eine Sicherheitsvorlage, die eine Rolle definiert, mit der der Zugriff auf oder die Interaktion mit einem Element im Ordnernamespace des Berichtsservers gesteuert wird.|  
-|Key Performance Indicator|(KPI) Eine quantifizierbare, standardisierte Metrik, die eine wichtige Geschäftsvariable (z. B. den Marktanteil) in Abhängigkeit von der Zeit wiedergibt.|  
+|Key Performance Indicator|(KPI) Eine quantifizierbare, standardisierte Metrik, die eine wichtige Geschäftsvariable (z. B. den Marktanteil) in Abhängigkeit von der Zeit wiedergibt.|  
 |Schlüsselwort (keyword)|Ein reserviertes Wort in SQL Server, das eine bestimmte Funktion ausführt, z. B. das Definieren oder Ändern von Datenbankobjekten oder das Zugreifen auf Datenbankobjekte. Beispiel: SELECT, FROM und AND.|  
 |KPI|Siehe anderen Begriff: Key Performance Indicator (KPI)|  
 |Bezeichnungsfeld (label field)|Ein Berichtsdataset-Feld, das eine Bezeichnung für ein entsprechendes Schlüsselfeld identifiziert. Die Bezeichnung für ein Schlüsselfeld kann anstelle des Werts in Parametern und Datenbereichen angezeigt werden.|  
@@ -194,7 +199,7 @@ caps.handback.revision: 8
 |Legende (legend)|Ein Element in einem Berichtsdiagramm, einer Karte oder einem Messgerätdatenbereich, das den Zusammenhang zwischen den dargestellten Daten und den zugrunde liegenden Datenwerten erläutert.|  
 |Linienebene|Eine Ebene in einem Kartenberichtselement, die räumliche Daten als Linien darstellt, z. B. für Wege oder Routen.|  
 |Verknüpfter Bericht (linked report)|Ein Bericht, der mittels unterschiedlicher Parameterwerte oder Eigenschaften auf eine vorhandene Berichtsdefinition verweist. Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.|  
-|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
+|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
 |Lokaler Server (local server)|1. Bei SQL Server-Verbindungen eine Instanz von SQL Server, die auf demselben Computer wie die Anwendung ausgeführt wird. <br />2. Beim Auflösen von Verweisen auf die Datenbankobjekte in einer Transact-SQL-Anweisung ist dies die Instanz von SQL Server, die die Anweisung ausführt. <br />3. Bei verteilten Abfragen von SQL Server ist dies die Instanz von SQL Server, die die verteilte Abfrage ausführt. Der lokale Server greift dann auf die Verbindungsserver zu, auf die in der Abfrage verwiesen wird.|  
 |Gebietsschema|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
 |Gebietsschema-ID (LCID) (locale identifier, LCID)|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
@@ -214,8 +219,8 @@ caps.handback.revision: 8
 |Matrixdatenbereich|Ein Datenbereich in einem Berichtslayout, der ähnliche Funktionen wie Kreuztabellen- und PivotTable-Berichte bereitstellt. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört.|  
 |MDX|Siehe anderen Begriff: Mehrdimensionale Ausdrücke (MDX)|  
 |Mercator-Projektion (Mercator projection)|Eine zylindrische Kartenprojektion in einem Kartenberichtselement, die 1569 von Gerardus Mercator erfunden wurde.|  
-|Metadaten|Informationen zu den Eigenschaften von Daten, z. B. der Datentyp in einer Spalte (numerisch, Text usw.) oder die Länge der Spalte, Informationen zu einer Datei, z. B. Titel, Beschreibung, Erstellungsdatum und Datum der letzten Änderung, oder Informationen zur Struktur von Daten oder Informationen, die den Entwurf von Objekten angeben, z. B. Cubes oder Dimensionen.|  
-|Methode|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
+|Metadaten|Informationen zu den Eigenschaften von Daten, z. B. der Datentyp in einer Spalte (numerisch, Text usw.) oder die Länge der Spalte, Informationen zu einer Datei, z. B. Titel, Beschreibung, Erstellungsdatum und Datum der letzten Änderung, oder Informationen zur Struktur von Daten oder Informationen, die den Entwurf von Objekten angeben, z. B. Cubes oder Dimensionen.|  
+|Methode|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
 |MIME-Typ (MIME type)|Das Dateiformat eines Bilds, z. B. .bmp, .gif oder .jpeg.|  
 |Modellabhängigkeit|Eine Beziehung zwischen mindestens zwei Modellen, bei der ein Modell von den Informationen eines anderen Modells abhängt.|  
 |Multidimensional Expressions (MDX)|Eine Syntax zum Definieren mehrdimensionaler Objekte und zum Abfragen und Bearbeiten mehrdimensionaler Daten.|  
@@ -262,7 +267,7 @@ caps.handback.revision: 8
 |Eigenschaft|Ein benanntes Attribut eines Steuerelements, eines Felds oder eines Datenbankobjekts, das festgelegt wird, um eines der Merkmale des Objekts (z. B. Größe, Farbe oder Bildschirmposition) oder einen Aspekt seines Verhaltens (z. B. ob es ausgeblendet ist) zu definieren.|  
 |Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
 |Provider|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
-|Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
+|Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
 |RDL|Siehe anderen Begriff: Berichtsdefinitionssprache (Report Definition Language, RDL)|  
 |Datensatz (record)|Eine Gruppe verwandter Felder (Spalten) mit Informationen, die als Einheit behandelt wird. In einer relationalen Datenbank wird ein Datensatz in der Regel als Zeile bezeichnet.|  
 |Rechteck|Ein Berichtselement, das als Container für mehrere Berichtselemente oder als grafisches Element in einem Bericht verwendet werden kann.|  
@@ -317,7 +322,7 @@ caps.handback.revision: 8
 |Sicherungsfähig|Entitäten, die mit Berechtigungen gesichert werden können.|  
 |Secure Sockets Layer (SSL)|Ein vorgeschlagener offener Standard für die Einrichtung eines sicheren Kommunikationskanals, um das Abfangen wichtiger Informationen (wie z. B. von Kreditkartennummern) zu verhindern. Primär ermöglicht SSL sichere elektronische Finanztransaktionen im WWW. SSL kann entwurfsbedingt jedoch auch für andere Internetdienste verwendet werden.|  
 |Sicherheitserweiterung|Eine Komponente in Reporting Services, mit der ein Benutzer oder eine Gruppe für einen Berichtsserver authentifiziert wird.|  
-|Sicherheitsprinzipal (security principal)|Auf Windows-basierten Computern ein Konto (z. B. ein Benutzer, eine Sicherheitsgruppe, ein Gerät oder ein Computer), dem der Zugriff auf Ressourcen gewährt oder verweigert werden kann.|  
+|Sicherheitsprinzipal (security principal)|Auf Windows-basierten Computern ein Konto (z. B. ein Benutzer, eine Sicherheitsgruppe, ein Gerät oder ein Computer), dem der Zugriff auf Ressourcen gewährt oder verweigert werden kann.|  
 |Semantic Model Definition Language (SMDL) (Semantic Model Definition Language, SMDL)|Ein Satz von Anweisungen, die Layout- und Abfrageinformationen eines im Berichts-Generator erstellten Berichts beschreiben.|  
 |Reihe (series)|In einem Diagramm besteht eine Reihe aus mehreren Datenpunkten.|  
 |Serveraggregat (server aggregate)|Ein Aggregatwert, der für die Datenquelle berechnet wird. Abhängig von der Datenquelle und der InterpretSubtotalsAsDetails-Datasetoption können Serveraggregate als Detaildaten oder als Aggregate behandelt werden.|  
@@ -327,7 +332,7 @@ caps.handback.revision: 8
 |Freigegebene Datenquelle|Eine Datenquellendefinition, die als Datei auf einem Berichtsserver gespeichert und verwaltet wird und für den Zugriff durch mehrere Berichte verfügbar ist.|  
 |Freigegebene Datenquellendefinition (shared data source definition)|Die RSD-Datei, die die XML-Definition einer Datenquelle enthält und dem Schema "shareddatasource.xsd" entspricht.|  
 |Freigegebene Datasetdefinition (shared dataset definition)|Die RCD-Datei, die die XML-Definition eines freigegebenen Datasets enthält und dem Schema "shareddatasetdefinition.xsd" entspricht.|  
-|Einfacher Ausdruck (simple expression)|Ein Ausdruck, der einen Verweis auf ein einzelnes Feld enthält und im Berichtslayout in Klammern angezeigt wird, z. B. [ProductID].|  
+|Einfacher Ausdruck (simple expression)|Ein Ausdruck, der einen Verweis auf ein einzelnes Feld enthält und im Berichtslayout in Klammern angezeigt wird, z. B. [ProductID].|  
 |SKU|Eine Möglichkeit, andere Editionen eines Produkts zu identifizieren, auch das Akronym für Stock Keeping Unit (gebräuchliche Geschäftsterminologie).|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
 |Smarttag (smart tag)|Ein Smarttag macht Schlüsselkonfigurationen direkt für die Entwurfsoberfläche verfügbar, um die allgemeine Entwurfszeit-Produktivität in Visual Studio 2005 zu optimieren.|  
@@ -358,10 +363,10 @@ caps.handback.revision: 8
 |Benutzerinstanz|Eine SQL Server Express-Instanz, die im Auftrag eines Benutzers von der übergeordneten Instanz generiert wird.|  
 |Wertachse (y) (value (y) axis)|Die Achse in einem Diagramm, auf der numerische Datenwerte angezeigt werden. Normalerweise die vertikale Achse. Ausnahme: Bei Balkendiagramm sind die Achsen umgekehrt, und Gruppierungsdaten werden auf der y-Achse angezeigt.|  
 |Wertausdruck|Ein MDX-Ausdruck (Multidimensional Expressions), der einen Wert zurückgibt. Wertausdrücke können mit Mengen, Tupeln, Elementen, Ebenen, Zahlen oder Zeichenfolgen arbeiten.|  
-|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird mit einer DECLARE@localvariable-Anweisung definiert. Innerhalb des Anweisungsgruppe, in dem sie deklariert wird, wird ihr mit einer der Anweisungen SELECT oder SET@localvariable ein Anfangswert zugewiesen.|  
+|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird definiert, mit einem DECLARE@localvariable Anweisung und ein Anfangswert innerhalb des Anweisungsgruppe, in dem sie entweder eine SELECT-Anweisung deklariert ist, zugewiesen oder SET@localvariable Anweisung.|  
 |Variables Intervall (variable interval)|Eine Option für ein Reporting Services-Diagramm, die angegeben werden kann, um automatisch anhand der Breite oder der Höhe des Diagramms die optimale Anzahl der Bezeichnungen zu berechnen, die auf einer Achse platziert werden können.|  
 |Visualisierung (visualization)|Die Methode, die ein Benutzer in Karten, Diagrammen und Messgeräten zur visuellen Darstellung von analytischen Daten auswählt.|  
-|Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
+|Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
 |Windows-Verwaltungsinstrumentation|Eine Oberfläche, die Informationen zu Objekten in einer verwalteten Umgebung bereitstellt.|  
 |WKB (WKB)|Well Known Binary-Datendarstellung gemäß der Spezifikation des Open Geospatial Consortium (OGC).|  
 |WKT (WKT)|Well Known Text-Datendarstellung gemäß der Spezifikation des Open Geospatial Consortium (OGC).|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |x-Achse|Siehe anderen Begriff: Kategorieachse (x)|  
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

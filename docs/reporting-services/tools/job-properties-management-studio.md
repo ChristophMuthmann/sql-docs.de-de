@@ -1,33 +1,38 @@
 ---
-title: "Auftragseigenschaften (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: Auftragseigenschaften (Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Auftragseigenschaften (Management Studio)
-  Verwenden Sie das Fenster **Auftragseigenschaften**, um Informationen zu einem ausgeführten Bericht oder Abonnement anzuzeigen, bevor Sie den Vorgang abbrechen.  
+# <a name="job-properties-management-studio"></a>Auftragseigenschaften (Management Studio)
+  Verwenden Sie das Fenster **Auftragseigenschaften** , um Informationen zu einem ausgeführten Bericht oder Abonnement anzuzeigen, bevor Sie den Vorgang abbrechen.  
   
  Starten Sie, um diese Seite zu öffnen, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stellen Sie eine Verbindung mit einem Berichtsserver her, und öffnen Sie den Ordner **Aufträge** . Klicken Sie mit der rechten Maustaste auf einen gerade ausgeführten Auftrag, und klicken Sie dann auf **Eigenschaften**.  
   
 > [!NOTE]  
 >  Diese Funktion wird in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services nicht unterstützt. Die Seite wird nicht angezeigt, wenn Sie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ausführen.  
   
-## Aufgaben  
+## <a name="tasks"></a>Aufgaben  
  Bevor Sie Informationen zu einem Auftrag anzeigen können, müssen Sie die Seite aktualisieren, damit die Informationen über die gerade auf dem Berichtsserver ausgeführten Aufträge abgerufen werden:  
   
 1.  Öffnen Sie den Berichtsserverordner.  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 3.  Wird ein Auftrag aufgeführt, dann klicken Sie mit der rechten Maustaste auf den Auftrag, und klicken Sie anschließend auf **Eigenschaften**.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Auftrags-ID**  
  Dem Auftrag wird während seiner Verarbeitung ein GUID zugewiesen. Dieser Zufallswert wird jedes Mal generiert, wenn ein Bericht oder Abonnement ausgeführt wird.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **Benutzername**  
  Für Prozesse, die durch einen Benutzer initiiert wurden, zeigt diese Spalte den Namen des Benutzers an. Bei Systemaufträgen ist dies der Name des Berichtsservers.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md)  

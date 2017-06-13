@@ -1,25 +1,30 @@
 ---
-title: "Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10151"
+title: Formeln in Berichts-Modell Abfragen (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
+# <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
   Formeln sind Berechnungen, die für Werte in einem Bericht ausgeführt werden, die ein Berichtsmodell als Datenquelle verwenden. Formel werden im **Dialogfeld "Formeln definieren"** im Berichtsmodell-Abfrage-Designer definiert, wenn Sie eine Abfrage für eine Berichtsmodell-Datenquelle definieren. Eine Formel kann Funktionen, Operatoren, Konstanten und Verweise auf Felder oder Entitäten enthalten. Mithilfe von Formeln können Sie numerische und Textdaten kombinieren, aggregieren, filtern und auswerten. Sie können Formeln erstellen und als neue Felder speichern oder die Formeln vorhandener Felder ändern.  
   
  Formeln sind keine RDL-Ausdrücke und beginnen nicht mit einem Gleichheitszeichen (=). Weitere Informationen zu RDL finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## References  
+## <a name="references"></a>References  
  Ein Verweis ist ein Feldname. Dabei kann es sich um einen vorhandenen Feldnamen in der Entität handeln oder einen berechneten Feldnamen, den Sie erstellt und zur Feldliste hinzugefügt haben. Der Verweis informiert den Berichts-Generator, wo die Werte bzw. Daten, die Sie in einer Formel verwenden möchten, zu finden sind. Sie können in einer Formel auf Felder innerhalb der Kontextentität oder auf Felder in anderen Entitäten verweisen oder den Wert aus einem Feld in mehreren Formeln verwenden.  
   
  Wenn Sie Verweise verwenden, führt der Berichts-Verarbeiter die Formel für jeden Wert in dem Feld aus. Beispiel: Ein Feld enthält die jährlichen Gesamtumsätze für die vergangenen fünf Jahre. Das Feld enthält fünf Werte, die jeweils den Gesamtumsatz eines bestimmten Jahrs darstellen. Wenn die Formel einen Verweis auf dieses Feld enthält, berechnet die Formel den neuen Wert anhand der einzelnen Werte.  
   
-## Operatoren  
+## <a name="operators"></a>Operatoren  
  Operatoren geben den Typ der Berechnung an, die Sie für die Werte einer Formel ausführen möchten. Es gibt drei verschiedene Typen von Berechnungsoperatoren: arithmetische Operatoren, Vergleichsoperatoren und Textoperatoren. Operatoren werden mithilfe von Symbolen angegeben, z. B. durch das Pluszeichen (+).  
   
  **Arithmetische Operatoren.** Arithmetische Operatoren führen grundlegende mathematische Operationen wie Additionen, Subtraktionen oder Multiplikationen durch, kombinieren Zahlen und führen zu numerischen Ergebnissen.  
@@ -57,7 +62,7 @@ caps.handback.revision: 9
   
  Mithilfe von Funktionen können einfache oder komplexe Berechnungen ausgeführt werden. Die Struktur einer Funktion beginnt mit dem Funktionsnamen, gefolgt von einer öffnenden Klammer, den Argumenten für die Funktion, die durch Kommas voneinander getrennt sind, und einer schließenden Klammer.  
   
- ![Beispiel für eine Funktion](../../reporting-services/report-design/media/functionexample.gif "Beispiel für eine Funktion")  
+ ![Ein Beispiel einer Funktion. ] (../../reporting-services/report-design/media/functionexample.gif "Ein Beispiel für eine Funktion.")  
   
  Argumente können aus Feldverweisen, Zahlen, Text und logischen Werten wie **TRUE** oder **FALSE**bestehen. Argumente können auch aus Konstanten, Formeln oder anderen Funktionen bestehen. Die Argumente, die Sie eingeben, müssen einen gültigen Wert für das jeweilige Argument ergeben. Wenn in der Formel z. B. zwei ganze Zahlen multipliziert werden, kann das Ergebnis keine Textzeichenfolge sein.  
   

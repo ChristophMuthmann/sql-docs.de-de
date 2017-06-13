@@ -22,10 +22,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)  
  **Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)**  
   
- Im folgenden Beispiel werden die Transact-SQL-Anweisungen gemeldet, die zum Aktualisieren der DAC "MyApplicaiton" auf das in einer MyApplicationVNext.dacpac-Datei definierte Schema ausgeführt werden würde.  
+ Im folgende Beispiel gibt die Transact-SQL-Anweisungen, die zum Aktualisieren der DAC "myapplicaiton" auf das in einer MyApplication2017.dacpac-Datei definierte Schema ausgeführt werden würde.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -153,7 +153,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

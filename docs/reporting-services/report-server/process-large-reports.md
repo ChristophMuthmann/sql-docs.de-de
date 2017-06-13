@@ -1,29 +1,34 @@
 ---
-title: "Verarbeiten von gro&#223;en Berichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berichtsverarbeitung [Reporting Services], umfangreiche Berichte"
-  - "Seitenumbrüche [Reporting Services]"
-  - "Umfangreiche Berichte"
-  - "Größe [SQL Server], Berichte"
-  - "Verteilen von Berichten [Reporting Services], umfangreiche Berichte"
+title: "Verarbeiten von große Berichten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], large reports
+- page breaks [Reporting Services]
+- large reports
+- size [SQL Server], reports
+- distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Verarbeiten von gro&#223;en Berichten
+# <a name="process-large-reports"></a>Verarbeiten von großen Berichten
   Die Verarbeitung umfangreicher Berichte stellt eine Herausforderung dar und erfordert bestimmte Konfigurationseinstellungen, damit die Berichte ordnungsgemäß ausgeführt werden können. Sie sollten nur dann bedarfsgesteuert ausgeführt werden, wenn sie die Paginierung unterstützen.  
   
 > [!NOTE]  
@@ -35,7 +40,7 @@ caps.handback.revision: 42
   
  Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver) unter blogs.msdn.com.  
   
-## Konfigurationsempfehlungen  
+## <a name="configuration-recommendations"></a>Konfigurationsempfehlungen  
  Für das Ausführen und Rendern von Berichten sowie für den Zugriff auf Berichte gelten die folgenden Empfehlungen:  
   
 -   Entwerfen Sie den Bericht so, dass die Paginierung unterstützt wird. Der Berichtsserver sendet einen Bericht seitenweise. Bei einem Bericht mit Paginierung können Sie steuern, wie viele Daten an den Browser gesendet werden. Weitere Informationen finden Sie unter [Vorabladen des Caches &#40;Berichts-Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
@@ -50,12 +55,12 @@ caps.handback.revision: 42
   
      Standardmäßig können Benutzer einen beliebigen Bericht öffnen, den sie in der Ordnerhierarchie anzeigen können. Selbst wenn Sie für einen Bericht die Ausführung als Momentaufnahme konfigurieren, können Benutzer, die das Berichtselement in einem Ordner anzeigen können, den Bericht öffnen. Bei einem sehr umfangreichen Bericht kann es passieren, dass der Browser nicht mehr reagiert, wenn ein Benutzer den Bericht im Berichts-Manager öffnet.  
   
-## Renderingempfehlungen  
+## <a name="rendering-recommendations"></a>Renderingempfehlungen  
  Vor der Konfiguration der Berichtsverteilung müssen Sie unbedingt wissen, welche Renderingclients für umfangreiche Dokumente ausgelegt sind. Als Format wird die standardmäßige HTML-Renderingerweiterung mit weichen Seitenumbrüchen empfohlen, Sie können aber jedes Format auswählen, das die Paginierung unterstützt.  
   
  Jedes Renderingformat besitzt eine andere Leistung und Arbeitsspeicherverwendung. Ein Bericht wird abhängig vom ausgewählten Format unterschiedlich schnell ausgegeben und benötigt unterschiedlichen Speicherplatz. Zu den schnellsten und am wenigsten arbeitsspeicherintensiven Formaten zählen CSV, XML und HTML. PDF und Excel zeigen die schwächste Leistung, jedoch aus anderen Gründen. PDF ist CPU-intensiv, während Excel RAM-intensiv ist. Bildrendering fällt zwischen diese beiden Gruppen. Das Format können Sie beim Definieren der Methode zum Verteilen des Berichts angeben.  
   
-## Empfehlungen zur Bereitstellung und Verteilung  
+## <a name="deployment-and-distribution-recommendations"></a>Empfehlungen zur Bereitstellung und Verteilung  
  Wenn Sie zum Steuern des Renderns von Berichten Seitenumbrüche verwenden, können Sie einen sehr umfangreichen Bericht auf die gleiche Weise bereitstellen wie jeden anderen Bericht. Zugriff auf den Bericht ermöglichen Sie über den Berichts-Manager, ein SharePoint-Webpart oder eine URL, die Sie zu einem Portal oder zu einer Website hinzufügen. Sämtliche Bereitstellungsoptionen unterstützen den bedarfsgesteuerten Zugriff sowie eine zuvor ausgeführte Berichtsmomentaufnahme.  
   
  Eine alternative Bereitstellungsstrategie stellt das Verteilen von Berichten an einzelne Benutzer dar. Wenn Sie die Übermittlungsoptionen sorgfältig konfigurieren, können Sie umfangreiche Berichte mithilfe von Abonnements verteilen. Sie können entweder ein Standardabonnement oder ein datengesteuertes Abonnement zum Übermitteln des Berichts verwenden. Es folgen Empfehlungen zum Abonnieren und Übermitteln:  
@@ -68,7 +73,7 @@ caps.handback.revision: 42
   
  Für eine Übermittlung von Berichten per E-Mail müssen Sie das Abonnement so konfigurieren, dass es einen Link einschließt. Sie sollten Berichte nicht als Anlage versenden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

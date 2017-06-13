@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9909c0d9d42e40e09517d60bb23906a49c8e9161
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: c96f36b9f59f5cd091dfa3e61be9e1cf7e744f3d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Verwenden von OPENJSON mit einem expliziten Schema (SQL Server)
@@ -89,6 +89,9 @@ DECLARE @json NVARCHAR(MAX) = '{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
+Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
   
 ## <a name="see-also"></a>Siehe auch  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

@@ -1,23 +1,28 @@
 ---
-title: "Berichtsteile und Datasets in Berichts-Generator | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Berichtsteile und Datasets im Berichts-Generator | Microsoft Docs
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsteile und Datasets in Berichts-Generator
+# <a name="report-parts-and-datasets-in-report-builder"></a>Berichtsteile und Datasets in Berichts-Generator
   In Berichts-Generator ist die einfachste Methode, um Daten in einen Bericht einzuschließen, das Hinzufügen von Berichtsteilen aus dem Berichtsteilkatalog. Berichtsteile enthalten die Datasets, von denen sie abhängig sind, so genannte *abhängige Datasets*. Abhängige Datasets basieren auf freigegebenen Datenquellen und können entweder eingebettete Datasets oder freigegebene Datasets sein. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  Eine weitere einfache Methode zum Einschließen von Daten in einen Bericht ist das Verwenden eines freigegebenen Datasets. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -53,10 +58,11 @@ caps.handback.revision: 9
 > [!IMPORTANT]  
 >  Um sicher zu sein, dass Sie und andere Personen weiterhin erfolgreich Daten aus einem freigegebenen Dataset verwenden können, müssen Sie die grundlegenden Prinzipien für das Sichern von Berichtselementen verstehen. Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Sicherheit &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

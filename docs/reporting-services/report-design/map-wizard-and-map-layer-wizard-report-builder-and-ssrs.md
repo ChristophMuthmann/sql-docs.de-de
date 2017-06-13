@@ -1,34 +1,39 @@
 ---
-title: "Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
-  - "10542"
-  - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
+title: Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.mapandlayerwizard.f1
+- "10542"
+- MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
- In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
+# <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
+ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, sammeln Sie die folgenden Informationen:  
   
 -   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
   
--   **anbieten.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
+-   **Spatial data.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
 -   **Analytische Daten.** Analytische Daten, die verwendet werden sollen, um die Kartenanzeige zu verändern, wie z. B. der Jahresumsatz pro Laden.  
   
@@ -108,11 +113,11 @@ caps.handback.revision: 11
  Sie können für jede Ebene dieselbe Quelle oder eine andere Quelle räumlicher Daten verwenden, aber Sie müssen bei jedem Hinzufügen einer Ebene die Quelle angeben. Wenn die räumlichen Daten aus dem Kartenkatalog oder aus einer ESRI-Shape-Datei stammen, ist die räumliche Datenquelle kein separates Berichtselement. Sie wird nicht im Berichtsdatenbereich angezeigt.  
   
 ###  <a name="SpatialData"></a> Was sind räumliche Daten?  
- Räumliche Daten enthalten Koordinaten, die geografische oder geometrische Elemente definieren. Auf einer Karte definieren räumliche Daten *Kartenelemente*: Polygone, die Bereiche oder Formen definieren, Linien, die Routen oder Pfade definieren, und Punkte, die Marker oder Ortsmarken (Pushpins) definieren. Räumliche Daten werden in einem Binärformat in der Datenquelle gespeichert und werden als Sätze von Koordinaten angegeben. Ein Punkt wird z. B. durch eine x- und y-Koordinate (X Y) dargestellt, eine Linie durch zwei Sätze von Koordinaten ((X1 Y1), (X2 Y2)) und ein Polygon durch vier oder mehr Sätze von Koordinaten, wobei der erste und letzte Satz von Koordinaten gleich sind ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)).  
+ Räumliche Daten enthalten Koordinaten, die geografische oder geometrische Elemente definieren. Auf einer Karte definieren räumliche Daten *Kartenelemente*: Polygone, die Bereiche oder Formen definieren, Linien, die Routen oder Pfade definieren, und Punkte, die Marker oder Ortsmarken (Pushpins) definieren. Räumliche Daten werden in einem Binärformat in der Datenquelle gespeichert und werden als Sätze von Koordinaten angegeben. Ein Punkt wird z. B. durch eine x- und y-Koordinate (X Y) dargestellt, eine Linie durch zwei Sätze von Koordinaten ((X1 Y1), (X2 Y2)) und ein Polygon durch vier oder mehr Sätze von Koordinaten, wobei der erste und letzte Satz von Koordinaten gleich sind ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)).  
   
  Weitere Informationen finden Sie in der Dokumentation zum verwendeten Typ räumlicher Daten.  
   
-###  <a name="MapGallery"></a> Was ist der Kartenkatalog?  
+###  <a name="MapGallery"></a>Was ist der kartenkatalog?  
  Der Kartenkatalog enthält Karten aus Berichten, die sich im Kartenkatalogordner für die Berichterstellungsumgebung befinden. Karten aus dem Katalog ermöglichen es, dem Bericht schnell eine Karte hinzuzufügen. Die vordefinierten Karten im Katalog werden von einem Kartenanbieter bereitgestellt.  
   
 > [!NOTE]  
@@ -120,8 +125,8 @@ caps.handback.revision: 11
   
  Um den Kartenkatalog zu erweitern, können Sie Berichte im Kartenkatalogverzeichnis hinzufügen oder entfernen sowie Ordner hinzufügen, um die Karten zu verwalten. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> Was ist eine ESRI-Shape-Datei?  
- Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Der Satz von Dateien enthält im Allgemeinen die Datei *\<Dateiname>*.shp, die die räumlichen Daten enthält, und eine Unterstützungsdatei, in der Regel *\<Dateiname>*.dbf.  
+###  <a name="Shapefile"></a>Was ist eine esri-Shape-Datei?  
+ Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Enthält der Satz von Dateien in der Regel die  *\<Filename >*SHP-Datei, die die räumlichen Daten und eine Unterstützungsdatei enthält * \<Filename >*DBF.  
   
  Wenn Sie eine Shape-Datei als räumliche Datenquelle angeben und sie sich auf dem lokalen Computer befindet, werden die räumlichen Daten automatisch in den Bericht eingebettet. Um räumliche Daten aus einer ESRI-Datei dynamisch zu verwenden, gehen Sie wie folgt vor:  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 11
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrage nach räumlichen Daten ist eine Datasetabfrage, in der Daten vom Datentyp "SQLGeometry" oder "SQLGeography" aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angegeben werden.  
   
 > [!NOTE]  
->  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Wenn Sie die Abfrage im Abfrage-Designer ausführen, enthält das Resultset eine Spalte mit räumlichen Daten, die als Text angezeigt werden. Eine Zeile kann z. B. räumliche Daten enthalten, die einen einzelnen Punkt darstellen, und die nächste Zeile kann räumliche Daten enthalten, die einen Satz von Punkten definieren. Jede Zeile wird zu einem Kartenelement. Sie können die Anzeige jedes Kartenelements als unteilbare Einheit verändern.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 11
   
 -   **Hybrid.** Zeigt die Kombination der Ansichten **Straße** und **Luftbild** an.  
   
- Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und [Planen eines Kartenberichts](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -203,7 +208,7 @@ caps.handback.revision: 11
   
  Eine **analytische Karte** stellt den relativen Wert von einem oder mehreren analytischen Datenaggregaten für jedes Kartenelement dar. Beispiele: der Umsatz pro Laden als Markergröße, die Gewinnspanne für Produktkategorien als Markerfarbe und das meistverkaufte Produkt als Markertyp.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
 ##  <a name="AnalyticalData"></a> Analytisches Dataset auswählen  
  Geben Sie auf dieser Seite an, wo die analytischen Daten abgerufen werden sollen, die auf dieser Kartenebene angezeigt werden.  
@@ -247,9 +252,9 @@ caps.handback.revision: 11
   
 -   **Punkte.** Sie können Regeln für Farbe, Größe, Breite und Markertyp angeben.  
   
- Der Berichtsprozessor wendet die festgelegten Regeln an und bestimmt automatisch die Liste der Elemente, die in einer Legende angezeigt werden sollen. Standardmäßig werden die Ergebnisse aller Regeln für alle Ebenen in der ersten Legende angezeigt. Sie können dies nach Abschließen des Assistenten anpassen. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Der Berichtsprozessor wendet die festgelegten Regeln an und bestimmt automatisch die Liste der Elemente, die in einer Legende angezeigt werden sollen. Standardmäßig werden die Ergebnisse aller Regeln für alle Ebenen in der ersten Legende angezeigt. Sie können dies nach Abschließen des Assistenten anpassen. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

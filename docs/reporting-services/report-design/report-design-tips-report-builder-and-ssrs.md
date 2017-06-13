@@ -1,24 +1,29 @@
 ---
-title: "Berichtsentwurfstipps (Berichts-Generator und SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Melden Sie Entwurfstipps (Berichts-Generator und SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Berichtsentwurfstipps (Berichts-Generator und SSRS)
-  Nutzen Sie die folgenden Tipps zum Entwerfen paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte.  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
+  Nutzen Sie die folgenden Tipps zum Entwerfen paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **Datenbereich als Datenfeed.** Mit entsprechenden Berechtigungen kann ein Berichtsleser einen ATOM-Datenfeed aus einem Datenbereich erstellen.  
   
--   Verwenden Sie Unterstriche statt Leerzeichen in Berichtsnamen. Wenn Sie einen Bericht aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal herunterladen, werden Leerzeichen durch Unterstriche ersetzt. Wenn Sie die Downloadfunktion verwenden, um Berichte lokal zu speichern, und sie dann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]einschließen, werden mit Unterstrichen Berichtsabhängigkeiten für Unterberichte und Drillthroughlinks genau beibehalten.  
+-   Verwenden Sie Unterstriche statt Leerzeichen in Berichtsnamen. Wenn Sie einen Bericht aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal herunterladen, werden Leerzeichen durch Unterstriche ersetzt. Wenn Sie die Downloadfunktion verwenden, um Berichte lokal zu speichern, und sie dann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]einschließen, werden mit Unterstrichen Berichtsabhängigkeiten für Unterberichte und Drillthroughlinks genau beibehalten.  
   
 ##  <a name="Data"></a> Arbeiten mit Daten  
   
@@ -76,9 +81,9 @@ caps.handback.revision: 12
   
     -   **Pfeiltasten** Ausgewähltes Berichtselement verschieben  
   
-    -   **STRG+Pfeiltasten** Ausgewähltes Berichtselement bewegen  
+    -   **STRG+Pfeiltasten** Ausgewähltes Berichtselement bewegen  
   
-    -   **STRG+UMSCHALT+Pfeiltasten**Ausgewähltes Berichtselement vergrößern oder verkleinern  
+    -   **STRG+UMSCHALT+Pfeiltasten** Ausgewähltes Berichtselement vergrößern oder verkleinern  
   
 -   Um einem Rechteck ein Element hinzuzufügen, verwenden Sie die linke obere Spitze der Maus, um auf die ursprüngliche Position des Elements im Rechteckcontainer zu zeigen. Verwenden Sie die Tastenkombinationen, um ausgewählte Objekte zu positionieren. Das Rechteck wird automatisch auf die Größe der enthaltenen Elemente erweitert.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 12
   
     -   Um mit Zeilengruppen und Spaltengruppen in einem Tablix-Datenbereich zu arbeiten, wählen Sie die Gruppe im Gruppierungsbereich aus.  
   
- In Berichts-Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] können Sie aus der Dropdownliste von Objekten auf der Eigenschaftenbereichs-Symbolleiste oder in der hierarchischen Sicht von Berichtselementen im Fenster Dokumentgliederung auswählen. Sie können Elemente in diesem Bereich auswählen und sehen, welches Element auf der Entwurfsoberfläche ausgewählt wird. Zum Öffnen des Fensters **Dokumentgliederung** zeigen Sie im Menü **Ansicht**auf **Weitere Fenster**, und klicken Sie dann auf Dokumentgliederung.  
+ In Berichts-Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]können Sie aus der Dropdownliste von Objekten auf der Eigenschaftenbereichs-Symbolleiste oder in der hierarchischen Sicht von Berichtselementen im Fenster Dokumentgliederung auswählen. Sie können Elemente in diesem Bereich auswählen und sehen, welches Element auf der Entwurfsoberfläche ausgewählt wird. Zum Öffnen des Fensters **Dokumentgliederung** zeigen Sie im Menü **Ansicht**auf **Weitere Fenster**, und klicken Sie dann auf Dokumentgliederung.  
   
 ##  <a name="ReportItems"></a> Arbeiten mit bestimmten Arten von Berichtselementen  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  Die Kombination dieses Verhaltens, die Breiten- und Höheneigenschaften von Berichtselementen, die Größe des Hauptteils des Berichts, die Seitenhöhe und die Seitenbreitendefinition, die Seitenrandeinstellungen des übergeordneten Berichts und die rendererspezifische Unterstützung für Auslagerungen bestimmen gemeinsam, welche Berichtselemente sich auf einer gerenderten Seite zusammenfügen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  

@@ -15,14 +15,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efa0929341a017bb82136a84427a32118167c504
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+ > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Welche Tools beim Installieren von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]installiert werden, hängt von der Edition und den von Ihnen ausgewählten Installationsoptionen ab. In dieser Lektion werden die Haupttools vorgestellt, und Sie erfahren, wie Sie Verbindungen herstellen und eine einfache Funktion (Autorisieren zusätzlicher Benutzer) ausführen.  
   

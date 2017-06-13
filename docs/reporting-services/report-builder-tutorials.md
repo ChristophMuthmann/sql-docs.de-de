@@ -1,28 +1,36 @@
 ---
-title: "Lernprogramme f&#252;r den Berichts-Generator | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Berichts-Generator-Lernprogramme | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lernprogramme f&#252;r den Berichts-Generator
-In den folgenden Tutorials zum Berichts-Generator können Sie sich mit dem Erstellen einfacher paginierter [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Berichte vertraut machen.  
+# <a name="report-builder-tutorials"></a>Lernprogramme für den Berichts-Generator
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+In den folgenden Tutorials zum Berichts-Generator können Sie sich mit dem Erstellen einfacher paginierter [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichte vertraut machen.  
   
 [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Für diese Tutorials benötigen Sie Lesezugriff auf eine [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Datenbank und Berechtigungen für den Zugriff auf einen [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichtsserver.  
+Um diese Lernprogramme verwenden zu können, benötigen Sie nur-Lese Zugriff auf eine SQL Server-Datenbank und die Berechtigungen zum Zugreifen auf eine [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Berichtsserver.  
   
 Wenden Sie sich an den Berichtsserveradministrator, falls Sie in diesem Zusammenhang Hilfe benötigen.  
   
@@ -67,11 +75,11 @@ Führen Sie die Schritte in diesem Lernprogramm aus, um sich mit dem Erstellen v
   
 [Lernprogramm: Einführung in Ausdrücke](../reporting-services/tutorial-introducing-expressions.md)  
 Folgen Sie den Schritten in diesem Lernprogramm, um zu erfahren, wie Sie mit Ausdrücken Feldwerte verketten, berechnen, suchen und in einem Bericht anzeigen. Sie lernen außerdem, wie Sie mithilfe von Ausdrücken je nach Situation verschiedene Bilder und Indikatorzustände anzeigen.  
-  
-## Siehe auch  
-[Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Entwurfsansicht des Berichts](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Lernprogramm: Erstellen eines Quick-Diagrammberichts Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,37 +1,43 @@
 ---
-title: "Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anzeigen und Durchsuchen von Berichten im einheitlichen Modus, die mit SharePoint-Webparts (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: de-de
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt nicht mehr die Verwendung von Webparts im einheitlichen Modus („RSWebParts.cab“) für den Zugriff auf Berichtsserverinhalt auf einer SharePoint-Website von einem Berichtsserver im einheitlichen Modus aus. Verwenden Sie ein [Berichts-Viewer-Webpart für eine SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md).  
+>  Webparts im einheitlichen Modus (RSWebParts.cab) auf den Zugriff berichtsserverinhalte auf einer SharePoint-Website von einem Berichtsserver im einheitlichen Modus mithilfe von SQL Server Reporting Services nicht mehr unterstützt. Verwenden Sie ein [Berichts-Viewer-Webpart für eine SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden verschiedene Webparts bereitgestellt, die mit bestimmten Versionen eines Berichtsservers und in bestimmten Bereitstellungsmodi verwendet werden können.  
   
 -   **Einheitlicher Modus:** Wenn Sie von einem Berichtsserver, der im einheitlichen Modus ausgeführt wird, auf Berichtsserverinhalte auf einer SharePoint-Website zugreifen möchten, verwenden Sie die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthaltenen SharePoint 2.0-Webparts. Anweisungen zur Installation und Verwendung der 2.0-Webparts finden Sie in diesem Thema.  
   
--   **SharePoint-Modus:** Wenn Sie auf einen Berichtsserver zugreifen möchten, der im SharePoint-Modus ausgeführt wird, verwenden Sie die Webparts, die vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte installiert werden. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **SharePoint-Modus:** Wenn Sie auf einen Berichtsserver zugreifen möchten, der im SharePoint-Modus ausgeführt wird, verwenden Sie die Webparts, die vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert werden. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]  
->  Das Berichts-Viewer-Webpart für den einheitlichen Modus („SPViewer.dwp“) unterscheidet sich von dem Webpart („ReportViewer.dwp“), das vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte installiert wird. Die Webparts haben andere Schemas und Implementierungen, aber beide können in der gleichen SharePoint-Farm installiert sein. Optisch können Sie die beiden Webparts anhand des folgenden Merkmals unterscheiden: Das mit dem Add-In installierte Report Viewer-Webpart weist auf der Symbolleiste das Menü **Aktionen** auf.  
+>  Das Berichts-Viewer-Webpart für den einheitlichen Modus („SPViewer.dwp“) unterscheidet sich von dem Webpart („ReportViewer.dwp“), das vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Die Webparts haben andere Schemas und Implementierungen, aber beide können in der gleichen SharePoint-Farm installiert sein. Optisch können Sie die beiden Webparts anhand des folgenden Merkmals unterscheiden: Das mit dem Add-In installierte Report Viewer-Webpart weist auf der Symbolleiste das Menü **Aktionen** auf.  
   
- Weitere Informationen zu Berichtsservermodi finden Sie unter [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-berichtsserver.md).  
+ Weitere Informationen zu Berichtsservermodi finden Sie unter [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).  
   
  In diesem Thema:  
   
@@ -50,18 +56,18 @@ caps.handback.revision: 9
   
  Beachten Sie, dass das Anpassen der Webparts nicht unterstützt wird. Die Webparts müssen unverändert verwendet werden und dürfen weder erweitert noch bearbeitet werden.  
   
--   Der **Berichts-Explorer** („SPExplorer.dwp“) stellt eine Verbindung mit dem Berichts-Manager auf dem Berichtsservercomputer her. Sie können die verfügbaren Berichte auf einem Berichtsserver durchsuchen und einzelne Berichte abonnieren. Wenn der Berichts-Generator aktiviert ist und Sie über ausreichende Berechtigungen verfügen, können Sie den Berichts-Generator über das Berichts-Explorer-Webpart starten.  
+-   Der**Berichts-Explorer** („SPExplorer.dwp“) stellt eine Verbindung mit dem Berichts-Manager auf dem Berichtsservercomputer her. Sie können die verfügbaren Berichte auf einem Berichtsserver durchsuchen und einzelne Berichte abonnieren. Wenn der Berichts-Generator aktiviert ist und Sie über ausreichende Berechtigungen verfügen, können Sie den Berichts-Generator über das Berichts-Explorer-Webpart starten.  
   
      Im Berichts-Explorer wird der Inhalt eines Ordners auf einer Seite im Berichts-Manager angezeigt. Der Zugriff auf einzelne Elemente und Ordner in der Ordnerhierarchie des Berichtsservers wird über Rollenzuweisungen auf dem Berichtsserver gesteuert. Wenn Sie einen Bericht auswählen, wird dieser automatisch in einem neuen Browserfenster geöffnet. Die Anzeige des Berichts und die Bereitstellung der Berichtssymbolleiste erfolgen nicht im Berichts-Viewer-Webpart, sondern im HTML-Viewer auf dem Berichtsserver. Wenn Sie die Symbolleisteneinstellungen anpassen möchten, müssen Sie die URL-Zugriffsparameter auf dem Berichtsserver angeben. Anleitungen finden Sie unter [URL-Zugriffsparameterverweis](../../reporting-services/url-access-parameter-reference.md).  
   
--   Im **Berichts-Viewer** („SPViewer.dwp“) wird ein Bericht angezeigt. Außerdem wird eine Symbolleiste bereitgestellt, mit der Sie auf Seiten navigieren, nach Inhalten suchen oder den Bericht exportieren können. Sie können das Berichts-Viewer-Webpart einer Webpartseite hinzufügen, um auf der betreffenden Seite stets einen bestimmten Bericht anzuzeigen. **Sie können das Webpart auch mit dem Berichts-Explorer verbinden** , um Berichte anzuzeigen, die über dieses Webpart geöffnet werden.  
+-   Im**Berichts-Viewer** („SPViewer.dwp“) wird ein Bericht angezeigt. Außerdem wird eine Symbolleiste bereitgestellt, mit der Sie auf Seiten navigieren, nach Inhalten suchen oder den Bericht exportieren können. Sie können das Berichts-Viewer-Webpart einer Webpartseite hinzufügen, um auf der betreffenden Seite stets einen bestimmten Bericht anzuzeigen. **Sie können das Webpart auch mit dem Berichts-Explorer verbinden** , um Berichte anzuzeigen, die über dieses Webpart geöffnet werden.  
   
 ##  <a name="bkmk_requirements"></a> Anforderungen zum Verwenden der Webparts  
  Für die Verwendung der Webparts Berichts-Viewer und Berichts-Explorer gelten die folgenden Anforderungen:  
   
 -   Folgende Versionen von SharePoint-Produkten und Technologien werden unterstützt:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -71,14 +77,14 @@ caps.handback.revision: 9
   
 -   Der Berichts-Manager muss installiert sein.  
   
- Die Webparts Berichts-Explorer und Berichts-Viewer werden mithilfe einer CAB-Datei (Cabinet-Datei) verteilt, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten ist. Anweisungen zur Installation, Konfiguration und Verwendung der Webparts finden Sie in den folgenden Abschnitten dieses Themas.  
+ Die Webparts Berichts-Explorer und Berichts-Viewer werden mithilfe einer CAB-Datei (Cabinet-Datei) verteilt, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthalten ist. Anweisungen zur Installation, Konfiguration und Verwendung der Webparts finden Sie in den folgenden Abschnitten dieses Themas.  
   
 ##  <a name="bkmk_installingwebparts"></a> Installieren von Webparts  
  Webparts werden als CAB-Datei an einen SharePoint-Server übermittelt. Führen Sie über die Befehlszeile das SharePoint-Tool Stsadm.exe für die CAB-Datei aus, um die Webparts zu installieren. Weitere Informationen zu diesem Tool und zur Bereitstellung von Webparts finden Sie in der SharePoint-Dokumentation.  
   
-#### Installieren von Webparts mit PowerShell  
+#### <a name="install-web-parts-using-powershell"></a>Installieren von Webparts mit PowerShell  
   
-1.  Kopieren Sie **RSWebParts.cab** in einen Ordner auf dem SharePoint-Server. Sie können sie in einen beliebigen Ordner auf dem SharePoint-Server kopieren und nach der Installation der Webparts löschen. Standardmäßig installiert [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] die Datei "RSWebParts.cab" im folgenden Ordner:  
+1.  Kopieren Sie **RSWebParts.cab** in einen Ordner auf dem SharePoint-Server. Sie können sie in einen beliebigen Ordner auf dem SharePoint-Server kopieren und nach der Installation der Webparts löschen. SQL Server 2014 Reporting Services standardmäßig und zuvor die Datei "RSWebParts.cab" im folgenden Ordner installiert:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -102,7 +108,7 @@ caps.handback.revision: 9
   
      Weitere Informationen zum Verwenden von PowerShell finden Sie unter [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
   
-#### Installieren von Webparts mit STSADM.exe  
+#### <a name="install-web-parts-using-stsadmexe"></a>Installieren von Webparts mit STSADM.exe  
   
 1.  Kopieren Sie die Datei **RSWebParts.cab** an den gleichen Speicherort auf dem SharePoint-Server wie in diesem Dokument im Abschnitt zu PowerShell beschrieben.  
   
@@ -125,7 +131,7 @@ caps.handback.revision: 9
   
  Mit der folgenden Vorgehensweise werden beide Webparts einer Seite hinzugefügt und dann Berichts-Explorer und Berichts-Viewer miteinander verbunden, damit ein Bericht im Berichts-Viewer angezeigt wird, wenn Sie im Berichts-Explorer auf diesen Bericht klicken.  
   
-#### Hinzufügen von Berichts-Viewer  
+#### <a name="add-report-viewer"></a>Hinzufügen von Berichts-Viewer  
   
 1.  Klicken Sie im Menü Websiteaktionen auf **Seite bearbeiten**.  
   
@@ -136,19 +142,19 @@ caps.handback.revision: 9
 4.  Wählen Sie **Berichts-Viewer**aus.  
   
     > [!WARNING]  
-    >  Wählen Sie nicht **Berichts-Viewer für SQL Server Reporting Services** aus. Dieses Webpart wird beim Installieren des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-Ins für SharePoint-Produkte registriert und zum Ausführen eines Berichtsservers im SharePoint-Modus verwendet. Es kann auf einem Berichtsserver im einheitlichen Modus zum Anzeigen von Berichten verwendet werden.  
+    >  Wählen Sie nicht **Berichts-Viewer für SQL Server Reporting Services** aus. Dieses Webpart wird beim Installieren des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte registriert und zum Ausführen eines Berichtsservers im SharePoint-Modus verwendet. Es kann auf einem Berichtsserver im einheitlichen Modus zum Anzeigen von Berichten verwendet werden.  
   
 5.  Klicken Sie auf **Hinzufügen**.  
   
 6.  Klicken Sie im Berichts-Viewer-Webpart auf **Webpart bearbeiten** , während sich die Seite im Bearbeitungsmodus befindet.  
   
-7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. In der Standardeinstellung weist die Berichts-Manager-URL die folgende Syntax auf: **http://\<Servername>/reports**.  
+7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. Standardmäßig hat eine Berichts-Manager-URL die folgende Syntax: **http://\<Servername > / reports**.  
   
-8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales** an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products** des Berichtsservers befindet.  
+8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products**des Berichtsservers befindet.  
   
 9. Klicken Sie auf **OK**.  
   
-#### Hinzufügen von Berichts-Explorer und Verbinden mit Berichts-Viewer  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>Hinzufügen von Berichts-Explorer und Verbinden mit Berichts-Viewer  
   
 1.  Klicken Sie in einem anderen Bereich der Seite auf **Webpart hinzufügen** . Klicken Sie im Ordner Sonstiges auf **Berichts-Explorer** , und klicken Sie dann auf **Hinzufügen**.  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  Klicken Sie auf **Bericht anzeigen in**.  
   
     3.  Klicken Sie auf **Berichts-Viewer**.  
-  
-## Siehe auch  
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
