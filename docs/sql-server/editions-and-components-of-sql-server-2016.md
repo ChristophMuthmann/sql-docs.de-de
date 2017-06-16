@@ -35,8 +35,8 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 121
-author: sabotta
-ms.author: carlasab
+author: MikeRayMSFT
+ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec

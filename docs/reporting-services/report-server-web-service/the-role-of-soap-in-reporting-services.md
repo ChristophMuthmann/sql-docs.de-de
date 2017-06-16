@@ -19,9 +19,8 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
-manager: erikre
+author: guyinacube
+ms.author: asaxton
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d860d17f29ca39fc5df422e616805c8bc040185d

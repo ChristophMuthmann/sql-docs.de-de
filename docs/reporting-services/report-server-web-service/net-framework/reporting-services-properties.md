@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 caps.latest.revision: 34
 author: sabotta
-ms.author: carlasab
+ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac

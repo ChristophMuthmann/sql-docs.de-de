@@ -12,7 +12,7 @@ ms.assetid: bf49ba77-0718-45e4-b324-e87e8bec4a66
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
 ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f

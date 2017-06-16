@@ -15,7 +15,7 @@ applies_to:
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: 4
 author: sabotta
-ms.author: carlasab
+ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
