@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
 ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbankmodul)

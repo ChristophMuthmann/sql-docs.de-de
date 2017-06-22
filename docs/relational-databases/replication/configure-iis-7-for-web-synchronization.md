@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: de-de
-ms.lasthandoff: 04/15/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung

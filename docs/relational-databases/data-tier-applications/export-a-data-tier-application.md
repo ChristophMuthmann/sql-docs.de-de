@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="export-a-data-tier-application"></a>Exportieren einer Datenebenenanwendung

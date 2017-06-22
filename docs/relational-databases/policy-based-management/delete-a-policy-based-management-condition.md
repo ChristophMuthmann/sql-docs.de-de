@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4760109e6bd360e008dc962639880091d916ec3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Löschen einer Bedingung der richtlinienbasierten Verwaltung

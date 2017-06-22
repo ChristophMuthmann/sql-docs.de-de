@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur

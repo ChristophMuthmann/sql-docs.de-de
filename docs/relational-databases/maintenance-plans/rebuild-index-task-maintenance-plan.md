@@ -1,5 +1,5 @@
 ---
-title: Task &quot;Index neu erstellen&quot; (Wartungsplan) | Microsoft-Dokumentation
+title: Task 'Index neu erstellen' (Wartungsplan) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Task 'Index neu erstellen' (Wartungsplan)

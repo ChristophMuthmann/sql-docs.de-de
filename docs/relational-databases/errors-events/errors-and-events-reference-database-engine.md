@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11bb38aa47c0892c6c39dfee35a5f81282aa8fd2
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbankmodul)

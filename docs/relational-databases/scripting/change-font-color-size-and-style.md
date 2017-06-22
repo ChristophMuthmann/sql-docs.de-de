@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2017cde2a11a05d47774c6b817b3e10d0785fdab
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-font-color-size-and-style"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt

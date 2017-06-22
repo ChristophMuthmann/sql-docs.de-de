@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 3458af05f6289366c7a9391016327ff9d11c1434
 ms.contentlocale: de-de
-ms.lasthandoff: 04/15/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>Veröffentlichungseigenschaften, FTP-Momentaufnahme und Internet

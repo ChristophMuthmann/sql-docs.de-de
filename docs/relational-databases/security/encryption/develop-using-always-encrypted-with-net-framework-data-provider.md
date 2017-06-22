@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
@@ -262,7 +262,7 @@ Um einen Klartextwert eines Spaltenverschlüsselungsschlüssels zu erhalten, ruf
 
 Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 
-1.    Wenn Always Encrypted für eine Abfrage aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server transparent **sys.sp_describe_parameter_encryption** auf, um Verschlüsselungsmetadaten für Parameter abzurufen, die verschlüsselte Spalten zum Ziel haben, falls die Abfrage Parameter aufweist. Für verschlüsselte Daten, die in den Ergebnissen einer Abfrage enthalten sind, fügt SQL Server automatisch Verschlüsselungsmetadaten an. Die Informationen über den Spaltenhauptschlüssel umfassen:
+1.  Wenn Always Encrypted für eine Abfrage aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server transparent **sys.sp_describe_parameter_encryption** auf, um Verschlüsselungsmetadaten für Parameter abzurufen, die verschlüsselte Spalten zum Ziel haben, falls die Abfrage Parameter aufweist. Für verschlüsselte Daten, die in den Ergebnissen einer Abfrage enthalten sind, fügt SQL Server automatisch Verschlüsselungsmetadaten an. Die Informationen über den Spaltenhauptschlüssel umfassen:
     - Den Namen eines Schlüsselspeicheranbieters, in dem ein Schlüsselspeicher verkapselt ist, der den Spaltenhauptschlüssel enthält. 
     - Den Schlüsselpfad, der den Speicherort des Spaltenhauptschlüssels im Schlüsselspeicher angibt.
     
@@ -270,8 +270,8 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 
     - Den verschlüsselten Wert eines Spaltenverschlüsselungsschlüssels.
     - Der Name des Algorithmus, der verwendet wurde, um den CEK zu verschlüsseln.
-2.    Der .NET Framework-Datenanbieter für SQL Server verwendet den Namen des Spaltenhauptschlüssel-Speicheranbieters, um das Anbieterobjekt (eine Instanz einer von der SqlColumnEncryptionKeyStoreProvider-Klasse abgeleiteten Klasse) in einer internen Datenstruktur nachzuschlagen.
-3.    Um den Spaltenverschlüsselungsschlüssel zu entschlüsseln, ruft der.NET Framework-Datenanbieter für SQL Server die Methode SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey auf und übergibt den Spaltenhauptschlüsselpfad, den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels und den Namen des Verschlüsselungsalgorithmus, der zum Erstellen des verschlüsselten Spaltenverschlüsselungsschlüssels verwendet wurde.
+2.  Der .NET Framework-Datenanbieter für SQL Server verwendet den Namen des Spaltenhauptschlüssel-Speicheranbieters, um das Anbieterobjekt (eine Instanz einer von der SqlColumnEncryptionKeyStoreProvider-Klasse abgeleiteten Klasse) in einer internen Datenstruktur nachzuschlagen.
+3.  Um den Spaltenverschlüsselungsschlüssel zu entschlüsseln, ruft der.NET Framework-Datenanbieter für SQL Server die Methode SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey auf und übergibt den Spaltenhauptschlüsselpfad, den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels und den Namen des Verschlüsselungsalgorithmus, der zum Erstellen des verschlüsselten Spaltenverschlüsselungsschlüssels verwendet wurde.
 
 
 

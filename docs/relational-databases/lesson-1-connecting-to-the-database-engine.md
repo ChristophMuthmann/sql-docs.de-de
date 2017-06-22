@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: de-de
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul

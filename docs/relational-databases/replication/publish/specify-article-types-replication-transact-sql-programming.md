@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4595c34321877ac16b30a105d1d80f414166c47
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)

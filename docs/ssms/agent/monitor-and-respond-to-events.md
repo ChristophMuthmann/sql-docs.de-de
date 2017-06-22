@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96a0b14ba381f1fe2465a73e75dec541037d9915
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse

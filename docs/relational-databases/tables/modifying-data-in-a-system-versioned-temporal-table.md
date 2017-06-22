@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc86424019df085038fffd9b076576eb9c717024
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publisher-properties---publisher-publication-databases"></a>Verlegereigenschaften - Verleger, Veröffentlichungsdatenbanken

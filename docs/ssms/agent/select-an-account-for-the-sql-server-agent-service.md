@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: de-de
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst

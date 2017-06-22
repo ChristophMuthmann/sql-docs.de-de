@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8134ebc66d9b0d75b3eae53b666eea37dee3df5a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services-Funktionen und -Tasks (SSRS)

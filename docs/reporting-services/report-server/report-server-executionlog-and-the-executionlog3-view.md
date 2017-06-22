@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3

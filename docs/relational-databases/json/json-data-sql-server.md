@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON-Daten (SQL Server)

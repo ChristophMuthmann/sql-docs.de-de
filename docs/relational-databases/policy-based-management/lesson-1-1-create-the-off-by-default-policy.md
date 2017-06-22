@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ad1ef04caea4fc15cc53fced05ab5861d54ad7eb
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>Lektion 1-1 – Erstellen der Richtlinie „Standardmäßig aus“

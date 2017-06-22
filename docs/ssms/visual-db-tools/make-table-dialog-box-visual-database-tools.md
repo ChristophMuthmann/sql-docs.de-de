@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Tabelle erstellen (Dialogfeld) (Visual Database Tools)

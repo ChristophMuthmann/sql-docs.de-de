@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Rollendefinitionen - erstellen, löschen oder ändern

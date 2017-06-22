@@ -1,5 +1,5 @@
 ---
-title: Task &quot;Operator benachrichtigen&quot; (Wartungsplan) | Microsoft-Dokumentation
+title: Task 'Operator benachrichtigen' (Wartungsplan) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d42a033466178830694ea4bd7f43aee8d781e224
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Task 'Operator benachrichtigen' (Wartungsplan)

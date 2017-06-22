@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82ca8698bdefad9764b03b19a885b098c8421400
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen

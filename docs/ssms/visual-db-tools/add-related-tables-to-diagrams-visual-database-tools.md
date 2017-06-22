@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af59d37d3d028cf3d37feb7f621f21771e0ce60
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>Hinzufügen verknüpfter Tabellen zu Diagrammen (Visual Database Tools)

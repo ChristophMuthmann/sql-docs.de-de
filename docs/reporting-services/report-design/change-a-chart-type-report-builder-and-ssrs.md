@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Ändern eines Diagrammtyps (Berichts-Generator und SSRS)

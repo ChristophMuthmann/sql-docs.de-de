@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 551b909cce14da7e6aeb277234a430cace112ed7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services-Anmeldung (Dialogfeld) (Berichts-Generator)

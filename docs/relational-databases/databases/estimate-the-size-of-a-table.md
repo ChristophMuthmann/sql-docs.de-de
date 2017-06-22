@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 740800db335b524298c39a3ab9f225e18d785c54
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="estimate-the-size-of-a-table"></a>Schätzen der Größe einer Tabelle

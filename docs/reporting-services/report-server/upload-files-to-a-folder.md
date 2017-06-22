@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner

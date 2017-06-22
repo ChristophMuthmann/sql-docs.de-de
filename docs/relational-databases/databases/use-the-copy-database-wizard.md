@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
@@ -76,9 +76,9 @@ Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken u
 -   Die Methode zum **Trennen und Anfügen** trennt die Datenbank, verschiebt oder kopiert die MDF-, NDF- und LDF-Dateien der Datenbank und fügt die Datenbank am neuen Zielort wieder an. Bei der Methode zum **Trennen und Anfügen** können zur Vermeidung von Datenverlust und Inkonsistenzen keine aktiven Sitzungen an die verschobene oder kopierte Datenbank angefügt werden. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object-Methode werden aktive Sitzungen zugelassen, da die Datenbank nie offline gesetzt wird.  
 
 -    Das Übertragen von SQL Server-Agentaufträgen, die auf Datenbanken verweisen, die nicht bereits auf dem Zielserver vorhanden sind, führen zum Fehlschlagen des gesamten Vorgangs.  Der Assistent versucht, einen SQL Server-Agentauftrag zu erstellen, bevor die Datenbank erstellt wurde.  Problemumgehung:
-     1.    Erstellen Sie eine Shelldatenbank auf dem Zielserver mit demselben Namen wie die zu verschiebende oder zu kopierende Datenbank.  Weitere Informationen finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).
+     1. Erstellen Sie eine Shelldatenbank auf dem Zielserver mit demselben Namen wie die zu verschiebende oder zu kopierende Datenbank.  Weitere Informationen finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).
      
-     2.    Wählen Sie auf der Seite **Zieldatenbank konfigurieren** die Option **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.
+     2. Wählen Sie auf der Seite **Zieldatenbank konfigurieren** die Option **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.
 
 > **WICHTIG!** Die Methode zum **Trennen und Anfügen** bewirkt, dass für den Besitz der Quell- und Zieldatenbank die Anmeldung festgelegt wird, die den **Assistenten zum Kopieren der Datenbank**ausführt.  Informationen zum Ändern des Besitzes einer Datenbank finden Sie unter [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) .
   
@@ -301,44 +301,44 @@ Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.
 ### <a name="common-steps"></a>**Allgemeine Schritte** 
 Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen und Anfügen** oder **SMO**entscheiden, sind die unten aufgeführten fünf Schritte identisch.  Aus Gründen der Übersichtlichkeit sind die Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 6**.
 
-1.    Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
 
-2.    Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...**.
+2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...**.
 
-3.    Wenn die Seite **Willkommen des Assistenten zum Kopieren von Datenbanken** angezeigt wird, klicken Sie auf **Weiter**.
+3.  Wenn die Seite **Willkommen des Assistenten zum Kopieren von Datenbanken** angezeigt wird, klicken Sie auf **Weiter**.
 
-4.    Seite**Quellserver auswählen** : Geben Sie den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet.  Wählen Sie die Authentifizierungsmethode aus.  Wenn **SQL Server-Authentifizierung verwenden** ausgewählt wird, müssen Sie Ihre Anmeldeinformationen eingeben.  Klicken Sie auf **Weiter** , um die Verbindung mit dem Quellserver herzustellen.  Diese Verbindung bleibt während der ganzen Sitzung bestehen.
+4.  Seite**Quellserver auswählen** : Geben Sie den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet.  Wählen Sie die Authentifizierungsmethode aus.  Wenn **SQL Server-Authentifizierung verwenden** ausgewählt wird, müssen Sie Ihre Anmeldeinformationen eingeben.  Klicken Sie auf **Weiter** , um die Verbindung mit dem Quellserver herzustellen.  Diese Verbindung bleibt während der ganzen Sitzung bestehen.
 
-5.    Seite**Zielserver auswählen** : Geben Sie den Server an, auf den die Datenbank verschoben oder kopiert werden soll.  Wählen Sie die Authentifizierungsmethode aus.  Wenn **SQL Server-Authentifizierung verwenden** ausgewählt wird, müssen Sie Ihre Anmeldeinformationen eingeben.  Klicken Sie auf **Weiter** , um die Verbindung mit dem Quellserver herzustellen.  Diese Verbindung bleibt während der ganzen Sitzung bestehen.
+5.  Seite**Zielserver auswählen** : Geben Sie den Server an, auf den die Datenbank verschoben oder kopiert werden soll.  Wählen Sie die Authentifizierungsmethode aus.  Wenn **SQL Server-Authentifizierung verwenden** ausgewählt wird, müssen Sie Ihre Anmeldeinformationen eingeben.  Klicken Sie auf **Weiter** , um die Verbindung mit dem Quellserver herzustellen.  Diese Verbindung bleibt während der ganzen Sitzung bestehen.
 
      > **HINWEIS:** Sie können den Assistenten zum Kopieren von Datenbanken über eine beliebige Datenbank starten.  Sie können den Assistenten zum Kopieren von Datenbanken entweder auf dem Quell- oder Zielserver starten.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Verschieben Sie die Datenbank mithilfe der Methode zum Trennen und Anfügen in eine Instanz auf einem anderen physischen Server.  Ebenso werden eine Anmeldung und ein SQL Server-Agentauftrag verschoben.**  
 Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens `contoso\Jennie` und ein SQL Server-Agentauftrag namens `Jennie’s Report` aus einer Instanz von SQL Server 2008 auf `Server1` in eine Instanz von SQL Server 2016 auf `Server2`verschoben.  `Jennie’s Report` verwendet die `Sales` -Datenbank.  `Sales` ist nicht bereits auf dem Zielserver, `Server2`, vorhanden.  `Server1` wird einem anderen Team neu zugewiesen, nachdem die Datenbank verschoben wurde.
   
-6.    Wie oben unter [Einschränkungen](#Restrictions)erwähnt, muss beim Übertragen eines SQL Server-Agentauftrags, der auf eine Datenbank verweist, die noch nicht auf dem Zielserver vorhanden ist, eine Shelldatenbank auf dem Zielserver erstellt werden.  Erstellen Sie eine Shelldatenbank namens `Sales` auf dem Zielserver. 
+6.  Wie oben unter [Einschränkungen](#Restrictions)erwähnt, muss beim Übertragen eines SQL Server-Agentauftrags, der auf eine Datenbank verweist, die noch nicht auf dem Zielserver vorhanden ist, eine Shelldatenbank auf dem Zielserver erstellt werden.  Erstellen Sie eine Shelldatenbank namens `Sales` auf dem Zielserver. 
 
-7.    Zurück beim **Assistenten**auf der Seite **Übertragungsmethode auswählen** : Überprüfen und verwalten Sie die Standardwerte.  Klicken Sie auf **Weiter**.
+7.  Zurück beim **Assistenten**auf der Seite **Übertragungsmethode auswählen** : Überprüfen und verwalten Sie die Standardwerte.  Klicken Sie auf **Weiter**.
   
-8.    Seite**Datenbanken auswählen** : Aktivieren Sie das Kontrollkästchen **Verschieben** für die gewünschte Datenbank, `Sales`.  Klicken Sie auf **Weiter**.
+8.  Seite**Datenbanken auswählen** : Aktivieren Sie das Kontrollkästchen **Verschieben** für die gewünschte Datenbank, `Sales`.  Klicken Sie auf **Weiter**.
   
-9.    Seite**Zieldatenbank konfigurieren** : Der **Assistent** hat erkannt, dass `Sales` bereits auf dem Zielserver vorhanden ist, wie oben in **Schritt 6** erstellt, und hat `_new` an den Namen der **Zieldatenbank** angefügt.  Löschen Sie `_new` aus dem Textfeld **Zieldatenbank** .  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
+9.  Seite**Zieldatenbank konfigurieren** : Der **Assistent** hat erkannt, dass `Sales` bereits auf dem Zielserver vorhanden ist, wie oben in **Schritt 6** erstellt, und hat `_new` an den Namen der **Zieldatenbank** angefügt.  Löschen Sie `_new` aus dem Textfeld **Zieldatenbank** .  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
   
-10.    Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für `Jennie’s Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
+10. Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für `Jennie’s Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
   
-11.    Seite**Speicherort der Quelldatenbankdateien** : Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für **Dateifreigabe auf dem Quellserver** , und navigieren Sie zum Speicherort für den angegebenen Ordner.  Verwenden Sie z. B. für den Ordnerspeicherort `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` die Option `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` für **Dateifreigabe auf dem Quellserver**.  Klicken Sie auf **Weiter**.
+11. Seite**Speicherort der Quelldatenbankdateien** : Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für **Dateifreigabe auf dem Quellserver** , und navigieren Sie zum Speicherort für den angegebenen Ordner.  Verwenden Sie z. B. für den Ordnerspeicherort `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` die Option `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` für **Dateifreigabe auf dem Quellserver**.  Klicken Sie auf **Weiter**.
   
-12.    Seite**Paket konfigurieren** : Geben Sie in das Textfeld **Paketname:**  `SalesFromServer1toServer2_Move`ein.  Aktivieren Sie das Feld **Übertragungsprotokolle speichern?** .  Wählen Sie in der Dropdownliste **Protokollierungsoptionen** die Option **Textdatei**aus.  Beachten Sie den **Pfad der Fehlerprotokolldatei**, und ändern Sie ihn nach Bedarf.  Klicken Sie auf **Weiter**.  
+12. Seite**Paket konfigurieren** : Geben Sie in das Textfeld **Paketname:**  `SalesFromServer1toServer2_Move`ein.  Aktivieren Sie das Feld **Übertragungsprotokolle speichern?** .  Wählen Sie in der Dropdownliste **Protokollierungsoptionen** die Option **Textdatei**aus.  Beachten Sie den **Pfad der Fehlerprotokolldatei**, und ändern Sie ihn nach Bedarf.  Klicken Sie auf **Weiter**.  
   
      > **HINWEIS:** Der **Pfad der Fehlerprotokolldatei** ist der Pfad auf dem Zielserver.
   
-13.    Seite**Zeitplan für Paket** : Wählen Sie den entsprechenden Proxy aus der Dropdownliste **Integration Services-Proxykonto** aus.  Klicken Sie auf **Weiter**.
+13. Seite**Zeitplan für Paket** : Wählen Sie den entsprechenden Proxy aus der Dropdownliste **Integration Services-Proxykonto** aus.  Klicken Sie auf **Weiter**.
 
-14.    Seite**Assistenten abschließen** : Überprüfen Sie die Zusammenfassung der ausgewählten Optionen.  Klicken Sie auf **Zurück** , um eine Option zu ändern.  Klicken Sie auf **Fertig stellen** , um den Task auszuführen.  Während der Übertragung werden die Statusinformationen zum Ausführen des **Assistenten** auf der Seite **Vorgang wird ausgeführt**überwacht.
+14. Seite**Assistenten abschließen** : Überprüfen Sie die Zusammenfassung der ausgewählten Optionen.  Klicken Sie auf **Zurück** , um eine Option zu ändern.  Klicken Sie auf **Fertig stellen** , um den Task auszuführen.  Während der Übertragung werden die Statusinformationen zum Ausführen des **Assistenten** auf der Seite **Vorgang wird ausgeführt**überwacht.
 
-15.    Seite**Vorgang wird ausgeführt** : Wenn der Vorgang erfolgreich ausgeführt wurde, klicken Sie auf **Schließen**.  Wenn der Vorgang nicht erfolgreich ausgeführt wurde, überprüfen Sie das Fehlerprotokoll, und klicken Sie möglicherweise zur weiteren Überprüfung auf **Zurück** .  Klicken Sie andernfalls auf **Schließen**.
+15. Seite**Vorgang wird ausgeführt** : Wenn der Vorgang erfolgreich ausgeführt wurde, klicken Sie auf **Schließen**.  Wenn der Vorgang nicht erfolgreich ausgeführt wurde, überprüfen Sie das Fehlerprotokoll, und klicken Sie möglicherweise zur weiteren Überprüfung auf **Zurück** .  Klicken Sie andernfalls auf **Schließen**.
   
-16.    **Schritte nach dem Verschieben** : Erwägen Sie die Ausführung der folgenden T-SQL-Anweisungen auf dem neuen Host, `Server2`:
+16. **Schritte nach dem Verschieben** : Erwägen Sie die Ausführung der folgenden T-SQL-Anweisungen auf dem neuen Host, `Server2`:
   
      ~~~ tsql 
      ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
@@ -352,7 +352,7 @@ Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens
      EXEC sp_updatestats;
      ~~~
  
-17.    **Bereinigung nach den Schritten zum Verschieben**  
+17. **Bereinigung nach den Schritten zum Verschieben**  
 Da `Server1` zu einem anderen Team verschoben wird und der **Verschieben** -Vorgang nicht wiederholt wird, sollten Sie die folgenden Schritte ausführen:
      -    SSIS-Paket `SalesFromServer1toServer2_Move` auf `Server2`löschen.
      -    SQL Server-Agentauftrag `SalesFromServer1toServer2_Move` auf `Server2`löschen.
@@ -363,27 +363,27 @@ Da `Server1` zu einem anderen Team verschoben wird und der **Verschieben** -Vorg
 ### <a name="b-----copy-database-using-detach-and-attach-method-to-the-same-instance-and-set-recurring-schedule"></a>**B.     Kopieren der Datenbank mithilfe der Methode zum Trennen und Anfügen auf dieselbe Instanz und Festlegen eines wiederholten Zeitplans.**  
 In diesem Beispiel wird die `Sales` -Datenbank als `SalesCopy` auf derselben Instanz kopiert und erstellt.  Danach wird `SalesCopy`wöchentlich neu erstellt.
 
-6.    Seite**Übertragungsmethode auswählen** : Überprüfen und verwalten Sie die Standardwerte.  Klicken Sie auf **Weiter**.
+6.  Seite**Übertragungsmethode auswählen** : Überprüfen und verwalten Sie die Standardwerte.  Klicken Sie auf **Weiter**.
 
-7.    Seite**Datenbanken auswählen** : Aktivieren Sie das Kontrollkästchen **Kopieren** für die `Sales` -Datenbank.  Klicken Sie auf **Weiter**.
+7.  Seite**Datenbanken auswählen** : Aktivieren Sie das Kontrollkästchen **Kopieren** für die `Sales` -Datenbank.  Klicken Sie auf **Weiter**.
 
-8.    Seite**Zieldatenbank konfigurieren** : Ändern Sie den Namen der **Zieldatenbank** in `SalesCopy`.  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
+8.  Seite**Zieldatenbank konfigurieren** : Ändern Sie den Namen der **Zieldatenbank** in `SalesCopy`.  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
 
-9.    Seite**Paket konfigurieren** : Geben Sie in das Textfeld **Paketname:**  `SalesCopy Weekly Refresh`ein.  Aktivieren Sie das Feld **Übertragungsprotokolle speichern?** .  Klicken Sie auf **Weiter**.
+9.  Seite**Paket konfigurieren** : Geben Sie in das Textfeld **Paketname:**  `SalesCopy Weekly Refresh`ein.  Aktivieren Sie das Feld **Übertragungsprotokolle speichern?** .  Klicken Sie auf **Weiter**.
 
-10.    Seite**Zeitplan für Paket** : Klicken Sie auf das Optionsfeld **Zeitplan:** und dann auf die Schaltfläche **Zeitplan ändern** . 
+10. Seite**Zeitplan für Paket** : Klicken Sie auf das Optionsfeld **Zeitplan:** und dann auf die Schaltfläche **Zeitplan ändern** . 
  
     1. Seite**Neuer Auftragszeitplan** : Geben Sie im Feld **Name** entsprechend `Weekly on Sunday`ein. 
           
     2. Klicken Sie auf **OK**.
 
-11.    Wählen Sie den entsprechenden Proxy aus der Dropdownliste **Integration Services-Proxykonto** aus.  Klicken Sie auf **Weiter**.
+11. Wählen Sie den entsprechenden Proxy aus der Dropdownliste **Integration Services-Proxykonto** aus.  Klicken Sie auf **Weiter**.
 
-12.    Seite**Assistenten abschließen** : Überprüfen Sie die Zusammenfassung der ausgewählten Optionen.  Klicken Sie auf **Zurück** , um eine Option zu ändern.  Klicken Sie auf **Fertig stellen** , um den Task auszuführen.  Während der Paketerstellung werden die Statusinformationen zum Ausführen des **Assistenten** auf der Seite **Vorgang wird ausgeführt**überwacht.
+12. Seite**Assistenten abschließen** : Überprüfen Sie die Zusammenfassung der ausgewählten Optionen.  Klicken Sie auf **Zurück** , um eine Option zu ändern.  Klicken Sie auf **Fertig stellen** , um den Task auszuführen.  Während der Paketerstellung werden die Statusinformationen zum Ausführen des **Assistenten** auf der Seite **Vorgang wird ausgeführt**überwacht.
 
-13.    Seite**Vorgang wird ausgeführt** : Wenn der Vorgang erfolgreich ausgeführt wurde, klicken Sie auf **Schließen**.  Wenn der Vorgang nicht erfolgreich ausgeführt wurde, überprüfen Sie das Fehlerprotokoll, und klicken Sie möglicherweise zur weiteren Überprüfung auf **Zurück** .  Klicken Sie andernfalls auf **Schließen**.
+13. Seite**Vorgang wird ausgeführt** : Wenn der Vorgang erfolgreich ausgeführt wurde, klicken Sie auf **Schließen**.  Wenn der Vorgang nicht erfolgreich ausgeführt wurde, überprüfen Sie das Fehlerprotokoll, und klicken Sie möglicherweise zur weiteren Überprüfung auf **Zurück** .  Klicken Sie andernfalls auf **Schließen**.
 
-14.    Starten Sie den neu erstellten SQL Server-Agentauftrag `SalesCopy weekly refresh`manuell.  Überprüfen Sie den Auftragsverlauf, und stellen Sie sicher, dass `SalesCopy` jetzt auf der Instanz vorhanden ist.
+14. Starten Sie den neu erstellten SQL Server-Agentauftrag `SalesCopy weekly refresh`manuell.  Überprüfen Sie den Auftragsverlauf, und stellen Sie sicher, dass `SalesCopy` jetzt auf der Instanz vorhanden ist.
 
   
 ##  <a name="FollowUp"></a> Anschlussaktivität: Nach dem Aktualisieren einer Datenbank  

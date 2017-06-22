@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f2c8586ba26169bdd236f825b9f9688106788fff
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="install-reporting-services-at-the-command-prompt"></a>Installieren von Reporting Services über die Eingabeaufforderung

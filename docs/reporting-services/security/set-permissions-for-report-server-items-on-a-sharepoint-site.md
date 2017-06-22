@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 183adf345dabb5d1abce184691ef2d59904ecaa0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website

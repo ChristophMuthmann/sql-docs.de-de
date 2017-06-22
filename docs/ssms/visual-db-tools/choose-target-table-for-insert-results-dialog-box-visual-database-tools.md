@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ad966d13867ed658a9c264cece4a0346b35184e5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Zieltabelle für Anfügeabfrage auswählen (Dialogfeld) (Visual Database Tools)

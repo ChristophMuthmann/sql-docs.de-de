@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c40a79e943e9021e10eb321a45d3a14c0fce1582
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>ConfigurationSetting Methode - SetExtendedProtectionSettings

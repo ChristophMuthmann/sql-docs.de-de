@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 96cfc22344b3c47403afcbf95ba92a272ddf518d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Datenquellen-Anmeldeinformationen eingeben (Dialogfeld), (Berichts-Generator)

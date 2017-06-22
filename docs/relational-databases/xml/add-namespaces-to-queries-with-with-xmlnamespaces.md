@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES

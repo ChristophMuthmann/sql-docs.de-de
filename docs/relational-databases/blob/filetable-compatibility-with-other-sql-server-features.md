@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen

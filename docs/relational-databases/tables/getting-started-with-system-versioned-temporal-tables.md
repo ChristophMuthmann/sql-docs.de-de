@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0318f2a574bcdb2f02016fc6d865252deb6fef4a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung

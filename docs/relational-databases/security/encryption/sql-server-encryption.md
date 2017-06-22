@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: de-de
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung

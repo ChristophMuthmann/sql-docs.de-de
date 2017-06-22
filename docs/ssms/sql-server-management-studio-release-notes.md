@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
 ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Versionshinweise für SQL Server Management Studio

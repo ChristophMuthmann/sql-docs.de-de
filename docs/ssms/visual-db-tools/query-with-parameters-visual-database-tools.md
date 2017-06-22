@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Erstellen von Abfragen mit Parametern (Visual Database Tools)

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise

@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade einer Datenebenenanwendung

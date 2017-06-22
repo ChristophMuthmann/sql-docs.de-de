@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ebc41f2261de5a3fcb9ecc12ad990c273576c98c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>Veröffentlichen der Ausführung der gespeicherten Prozedur in einer Transaktionspublikation

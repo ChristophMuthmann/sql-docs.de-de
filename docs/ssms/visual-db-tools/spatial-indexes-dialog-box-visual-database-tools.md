@@ -1,5 +1,5 @@
 ---
-title: "Dialogfeld &quot;Räumliche Indizes&quot; (Visual Database Tools) | Microsoft-Dokumentation"
+title: "Dialogfeld 'Räumliche Indizes' (Visual Database Tools) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)

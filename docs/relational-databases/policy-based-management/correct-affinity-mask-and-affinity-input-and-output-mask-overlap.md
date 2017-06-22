@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a15588b7163451b8ea52358635045afa03ecbf7a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Richtige Überlappung von „Affinity Mask“ und „Affinity I/O Mask“

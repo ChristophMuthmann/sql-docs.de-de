@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 94ccb2d809fe5da7d793ffae753b42765ff0fe1a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful (Ereignisklasse)

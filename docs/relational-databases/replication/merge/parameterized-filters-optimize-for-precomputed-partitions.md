@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Parametrisierte Filter - Optimierung für vorausberechnete Partitionen

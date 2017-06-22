@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)

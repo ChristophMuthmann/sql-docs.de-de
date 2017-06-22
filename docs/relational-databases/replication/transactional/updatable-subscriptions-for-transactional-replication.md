@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0ab23e21b8bc503336fe9e10a715fb0da623d2a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Aktualisierbare Abonnements – Für die Transaktionsreplikation

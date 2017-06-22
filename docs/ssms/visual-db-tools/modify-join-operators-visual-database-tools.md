@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fd890f8a6c63bd6da3d92896c6e7d481d0a110d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Ändern von Joinoperatoren (Visual Database Tools)

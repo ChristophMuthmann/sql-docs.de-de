@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e10105d7589cfeeb3f0fc7cd3a57bd23f396704a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Ändern der mit einer Abfrage verknüpften Verbindung

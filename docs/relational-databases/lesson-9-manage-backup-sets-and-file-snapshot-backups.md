@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9747a3c7730db5d3fe1eda6145ece133c7b6d523
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Lektion 9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen

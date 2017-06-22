@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/06/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Erstellen eines Proxys für den SQL Server-Agent

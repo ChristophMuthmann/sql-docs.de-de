@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Behandeln von Problemen mit der Volltextindizierung

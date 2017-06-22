@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2c8af4701b9a01ee21613fe7e093a89f1d8f990
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS

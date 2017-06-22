@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Aktivieren oder Deaktivieren einer Planhinweisliste

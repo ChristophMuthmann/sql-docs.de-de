@@ -1,5 +1,5 @@
 ---
-title: Planen Sie die Eigenschaften (Seite &quot;Allgemein&quot;) | Microsoft Docs
+title: Planen Sie die Eigenschaften (Seite "Allgemein") | Microsoft Docs
 ms.custom: 
 ms.date: 06/11/2016
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="schedule-properties-general-page"></a>Zeitplaneigenschaften (Registerkarte Allgemein)

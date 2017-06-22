@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a6a0bbee9141df565966df3e90f396e33c9b96a7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelemente – erste Schritte

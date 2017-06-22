@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting Methode - SetServiceState

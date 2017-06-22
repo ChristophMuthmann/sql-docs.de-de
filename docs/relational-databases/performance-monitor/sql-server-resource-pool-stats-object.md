@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, &quot;Statistiken für Ressourcenpools&quot;-Objekt | Microsoft-Dokumentation"
+title: "SQL Server, 'Statistiken für Ressourcenpools'-Objekt | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, 'Statistiken für Ressourcenpools'-Objekt

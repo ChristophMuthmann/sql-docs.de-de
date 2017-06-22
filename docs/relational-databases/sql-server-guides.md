@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/06/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-guides"></a>Handbücher für SQL Server

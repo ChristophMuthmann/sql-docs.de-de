@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f946728b0512ac4db66a3b6abb1182a0ac8706fa
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Optionen für die Abonnementüberprüfung (Mergeabonnements)

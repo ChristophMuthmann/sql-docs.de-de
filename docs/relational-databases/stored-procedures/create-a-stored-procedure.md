@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur

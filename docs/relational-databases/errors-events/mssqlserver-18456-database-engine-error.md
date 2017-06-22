@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: de-de
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456

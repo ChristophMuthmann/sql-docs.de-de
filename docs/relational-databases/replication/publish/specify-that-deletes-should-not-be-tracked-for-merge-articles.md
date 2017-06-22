@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 285e91369dfc5572b0da94fc110ce8b9e720b8a6
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles"></a>Geben Sie an, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen

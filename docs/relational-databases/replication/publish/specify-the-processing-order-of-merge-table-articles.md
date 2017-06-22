@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e84aea86e02abc3820ec615bbcfbe1c41a5cdfd7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-the-processing-order-of-merge-table-articles"></a>Angeben der Verarbeitungsreihenfolge von Mergetabellenartikeln

@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 096156484b2378713485e1177eb9b0cfd6faa5d8
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="replication-agent-executables-concepts"></a>Ausführbare Konzepte für die Programmierung von Replikations-Agents

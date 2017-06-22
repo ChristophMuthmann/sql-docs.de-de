@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
 ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cross-database-queries"></a>Datenbankübergreifende Abfragen
@@ -62,7 +62,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
-    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',    SIZE = 8MB), 
+    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',   SIZE = 8MB), 
      FILEGROUP [DestinationDatabase_mod] CONTAINS MEMORY_OPTIMIZED_DATA  DEFAULT
     ( NAME = N'DestinationDatabase_mod', FILENAME = N'D:\DATA\DestinationDatabase_mod', MAXSIZE = UNLIMITED)
      LOG ON 

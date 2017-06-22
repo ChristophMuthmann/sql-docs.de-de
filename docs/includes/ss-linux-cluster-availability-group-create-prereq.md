@@ -70,7 +70,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##    <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health ereignissitzung aktivieren 
+##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health ereignissitzung aktivieren 
 
 Sie können Optionaly Enable AlwaysOn-Verfügbarkeitsgruppen bestimmte erweiterte Ereignisse bei der Diagnose Ursache helfen bei der Problembehebung für einer verfügbarkeitsgruppe.
 

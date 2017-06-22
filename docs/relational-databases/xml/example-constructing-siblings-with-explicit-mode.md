@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus

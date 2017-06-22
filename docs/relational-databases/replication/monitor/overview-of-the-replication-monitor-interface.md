@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors

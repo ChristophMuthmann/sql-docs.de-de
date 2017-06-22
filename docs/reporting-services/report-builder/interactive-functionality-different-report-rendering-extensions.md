@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Interaktive Funktionalität - verschiedene Berichtsrenderingerweiterungen

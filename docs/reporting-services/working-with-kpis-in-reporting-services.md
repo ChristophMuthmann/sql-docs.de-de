@@ -17,7 +17,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services

@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Festlegen von Parametern für einen veröffentlichten Bericht - integrierten SharePoint-Modus

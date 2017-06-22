@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7058e9c0edce2b457dc63bf9e2d5cf61b6ee64f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Gewusst wie: Installieren von benutzerdefinierten sicherheitserweiterungen

@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75d192eeaec8e8c84551f5d4b40e8c8a32bf420f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Lernprogramm: Verwenden des hierarchyid-Datentyps

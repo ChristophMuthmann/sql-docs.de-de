@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5b348cf6a90addb4d80ced3baf887ba4d8e6ea1d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)

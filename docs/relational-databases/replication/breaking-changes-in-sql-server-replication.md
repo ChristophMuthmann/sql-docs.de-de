@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18df1ff57b49a1ef0d840fd5ae415173d38f43a8
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Wichtige Änderungen in der SQL Server-Replikation

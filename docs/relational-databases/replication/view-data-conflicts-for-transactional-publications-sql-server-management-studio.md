@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 966493051334ca3ead4b6412545ab77e97edafc0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)

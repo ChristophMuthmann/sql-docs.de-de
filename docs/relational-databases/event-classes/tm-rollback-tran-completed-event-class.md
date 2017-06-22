@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: edca6d9f3bfa4ff61df267a0060320708c66b0a1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed-Ereignisklasse

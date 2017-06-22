@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c5b7d3f057bddab388a75ad48f447ede194c8aa0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL-Debugger – Fenster „Threads“

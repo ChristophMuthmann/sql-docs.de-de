@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e2aa0172a18bb1b01297caa9dcf4db07888ce083
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="verify-queries-visual-database-tools"></a>Überprüfen von Abfragen (Visual Database Tools)

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
 ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: de-de
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)

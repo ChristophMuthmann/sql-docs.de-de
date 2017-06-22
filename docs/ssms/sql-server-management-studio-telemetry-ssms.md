@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die an
 ## <a name="audit-feature-usage-data"></a>Überwachen von Featurenutzungsdaten
 
 Machen Sie Folgendes, um sich die von SSMS erfassten Featurenutzungsdaten anzeigen zu lassen:
-1.    Starten Sie SSMS.
-2.    Klicken Sie auf **View** (Ansicht), und klicken Sie anschließend im Hauptmenü auf **Output** (Ausgabe), um das Fenster **Output** (Ausgabe) anzuzeigen. 
-3.    Wenn das Fenster **Output** (Ausgabe) angezeigt wird, wählen Sie im Menü **Show output from:** (Ausgabe anzeigen von:) **Telemetry** (Telemetrie) aus.
+1.  Starten Sie SSMS.
+2.  Klicken Sie auf **View** (Ansicht), und klicken Sie anschließend im Hauptmenü auf **Output** (Ausgabe), um das Fenster **Output** (Ausgabe) anzuzeigen. 
+3.  Wenn das Fenster **Output** (Ausgabe) angezeigt wird, wählen Sie im Menü **Show output from:** (Ausgabe anzeigen von:) **Telemetry** (Telemetrie) aus.
 
 Während Sie SSMS verwenden, um mit Ihrer Datenbank zu interagieren, zeigt das Fenster **Output** (Ausgabe) die erfassten Daten an.
 

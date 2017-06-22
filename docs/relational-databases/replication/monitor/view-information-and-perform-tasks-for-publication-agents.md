@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d2896e84ecfba28325f559da8e9391315c21046
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>Anzeigen von Informationen und Ausführen von Aufgaben für Veröffentlichungs-Agents

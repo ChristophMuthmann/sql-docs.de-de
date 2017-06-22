@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 017e0e7937cd076da1cd700da7db298a1f289035
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Angeben von Bedingungen für Gruppen (Visual Database Tools)

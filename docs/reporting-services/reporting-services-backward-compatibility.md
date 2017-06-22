@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 56d5565743d458312d197670f4304d3b06374fde
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services

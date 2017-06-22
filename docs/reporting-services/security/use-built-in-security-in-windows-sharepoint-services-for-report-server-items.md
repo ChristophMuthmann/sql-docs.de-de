@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: becc8fac740023906166f8a9545139300c233a51
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente

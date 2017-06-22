@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6474761a4aaf0d0e3d8cea032b54be39ed759a92
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navigieren im Datenbankdiagramm-Designer (Visual Database Tools)

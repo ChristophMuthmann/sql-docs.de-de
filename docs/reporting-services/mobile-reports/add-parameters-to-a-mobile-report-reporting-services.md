@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services

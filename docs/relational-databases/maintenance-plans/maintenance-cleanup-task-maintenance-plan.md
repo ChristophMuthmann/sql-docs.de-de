@@ -1,5 +1,5 @@
 ---
-title: Task &quot;Wartungscleanup&quot; (Wartungsplan) | Microsoft-Dokumentation
+title: Task 'Wartungscleanup' (Wartungsplan) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)

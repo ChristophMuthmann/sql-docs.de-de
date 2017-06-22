@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0712854db6e1b4b85a58b4d72264ea51e1162b06
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="results-pane-visual-database-tools"></a>Results Pane (Visual Database Tools)

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: 182d85111f05cf2162084fade0a5a86078efbad5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-primary-keys"></a>Erstellen von Primärschlüsseln

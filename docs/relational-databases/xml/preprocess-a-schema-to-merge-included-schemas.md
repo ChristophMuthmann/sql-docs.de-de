@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas

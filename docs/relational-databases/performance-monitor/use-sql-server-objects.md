@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2fc909391a0c7aefa483f2b6c42d769b34b52fbe
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten

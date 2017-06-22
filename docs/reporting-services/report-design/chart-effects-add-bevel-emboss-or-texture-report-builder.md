@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Diagrammeffekte - Hinzufügen einer Abschrägung, Prägung, oder der Textur (Berichts-Generator)

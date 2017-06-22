@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f82d446fbbe47be4698ae458704e28fa8ac95c15
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Angeben eines Datenträgers oder ein Bands als Sicherungsziel (SQL Server)

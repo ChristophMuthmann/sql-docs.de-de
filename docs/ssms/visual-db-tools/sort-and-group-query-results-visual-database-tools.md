@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)

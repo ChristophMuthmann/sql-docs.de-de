@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cef300f5851e64620787d1dec2ca0b2d6fe114f9
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Löschen von Zeilen im Ergebnisbereich (Visual Database Tools)

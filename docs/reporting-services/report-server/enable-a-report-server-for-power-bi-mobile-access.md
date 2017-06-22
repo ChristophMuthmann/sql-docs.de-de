@@ -17,7 +17,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f9c4b3e4ce530f822f28e7a3db52e802c90d492a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Aktivieren eines Berichtsservers für einen Zugang zu Power BI von Mobilgeräten

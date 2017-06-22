@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Berechtigungen und Visual Database Tools (Visual Database Tools)

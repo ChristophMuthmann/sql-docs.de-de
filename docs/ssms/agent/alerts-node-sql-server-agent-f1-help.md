@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 41dbdc87dac42ef9a8db96648f27d10d946fbe1d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Warnungen (Knoten; F1-Hilfe des SQL Server-Agents)

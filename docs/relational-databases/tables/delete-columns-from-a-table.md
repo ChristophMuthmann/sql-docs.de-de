@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Spalten aus einer Tabelle löschen

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Skript zum Erteilen von Oracle-Berechtigungen

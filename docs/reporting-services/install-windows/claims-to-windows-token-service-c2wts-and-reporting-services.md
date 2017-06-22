@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ab5f4b5d2774d9dc944ad17bb55063388b70a6d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Übersicht über Claims to Windows Token Service (c2WTS) und Reporting Services

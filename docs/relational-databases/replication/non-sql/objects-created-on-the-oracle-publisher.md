@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Auf dem Oracle-Verleger erstellte Objekte

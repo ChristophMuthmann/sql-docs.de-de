@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5e64ee5fa73b98d30797142ed6a3ed8f080bcb0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting Methode - SetDatabaseConnection

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: de-de
-ms.lasthandoff: 05/20/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)

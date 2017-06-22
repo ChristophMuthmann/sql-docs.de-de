@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d98660b1e9e7e7bb56b10026ed69c1577e83fba
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>Metadatenansichten und Funktionen für temporale Tabellen

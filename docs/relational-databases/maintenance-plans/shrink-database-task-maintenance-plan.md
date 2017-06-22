@@ -1,5 +1,5 @@
 ---
-title: Task &quot;Datenbank verkleinern&quot; (Wartungsplan) | Microsoft-Dokumentation
+title: Task 'Datenbank verkleinern' (Wartungsplan) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Task 'Datenbank verkleinern' (Wartungsplan)

@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1c94627129ed2e6706112aad013a3395c4a1e68a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting Methode - SetUnattendedExecutionAccount

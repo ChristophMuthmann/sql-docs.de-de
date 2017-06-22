@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld &quot;Richtlinien auswerten&quot;, Seite &quot;Auswertungsergebnisse&quot; | Microsoft-Dokumentation
+title: Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse' | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3801000fb37d133ca0bf7c5197c939188e4e59a4
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'

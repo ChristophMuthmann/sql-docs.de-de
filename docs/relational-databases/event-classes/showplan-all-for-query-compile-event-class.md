@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14a4d2efcbb069e46c155e5beef01ce3b9ce5cce
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile-Ereignisklasse

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bca4115307f7bf9dab5ffc9d2ab02ababb209d65
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="site-collection-features---report-server-and-power-view"></a>Websitesammlungs-Features - Report Server and Power View

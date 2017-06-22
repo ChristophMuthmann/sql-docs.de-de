@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)

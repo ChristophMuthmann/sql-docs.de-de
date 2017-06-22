@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
 ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Unterstützte Datentypen für In-Memory OLTP

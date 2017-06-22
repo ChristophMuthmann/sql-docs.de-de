@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9848e7cbbfa4fd11cdc16caac828aea9d15be8ba
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installieren von SQL Server 2016 Business Intelligence-Funktionen

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)

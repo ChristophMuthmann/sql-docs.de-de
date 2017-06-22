@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6ecc2b7d8048af0d596d49efb918d533348d62f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Arbeiten mit Datenbankdiagrammen (Visual Database Tools)

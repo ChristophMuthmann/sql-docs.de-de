@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator und SSRS)

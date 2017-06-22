@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74cab49e651efabd8862e4d6ddf78a8fbdf739b8
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation-Ereignisklasse

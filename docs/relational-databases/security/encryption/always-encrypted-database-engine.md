@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: de-de
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
@@ -103,15 +103,15 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
 > [!NOTE]  
 >  Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(Video in englischer Sprache).
 
-1.    Stellen Sie eine Verbindung zu einer vorhandenen Datenbank her, die Tabellen mit Spalten enthält, die Sie mithilfe des **Objekt-Explorers** oder Management Studio verschlüsseln möchten, oder erstellen Sie eine neue Datenbank und anschließend eine Tabelle oder mehrere Tabellen mit Spalten, die verschlüsselt werden müssen, und stellen Sie eine Verbindung dazu her.
-2.    Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, bewegen Sie den Mauszeiger zu **Aufgaben** und klicken Sie auf „Spalten verschlüsseln“, um den **Assistenten für Always Encrypted** zu öffnen.
-3.    Lesen Sie die Seite **Einführung** , und klicken Sie dann auf **Weiter**.
-4.    Erweitern Sie die Tabellen auf der **Spaltenauswahl** -Seite, und wählen Sie die Spalten aus, die Sie verschlüsseln möchten.
-5.    Legen Sie für jede zu verschlüsselnde Spalte den **Verschlüsselungstyp** fest: entweder *deterministisch* oder *zufällig*.
-6.    Wählen Sie für jede zu verschlüsselnde Spalte einen **Verschlüsselungsschlüssel**aus. Falls Sie noch keinen Verschlüsselungsschlüssel für diese Datenbank erstellt haben, wählen Sie die standardmäßige Auswahl (neuer, automatisch generierter Schlüssel), und klicken Sie anschließend auf **Weiter**.
-7.    Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** einen Speicherort für den neuen Schlüssel aus, wählen Sie eine Hauptschlüsselquelle aus, und klicken Sie anschließend auf **Weiter**.
-8.    Wählen Sie auf der Seite **Überprüfung** aus, ob das Skript sofort ausgeführt oder ob ein PowerShell-Skript erstellt werden soll, und klicken Sie dann auf **Weiter**.
-9.    Überprüfen Sie die ausgewählten Optionen auf der Seite **Zusammenfassung** , und klicken Sie dann auf **Fertig stellen**. Schließen Sie den Assistenten nach Abschluss.
+1.  Stellen Sie eine Verbindung zu einer vorhandenen Datenbank her, die Tabellen mit Spalten enthält, die Sie mithilfe des **Objekt-Explorers** oder Management Studio verschlüsseln möchten, oder erstellen Sie eine neue Datenbank und anschließend eine Tabelle oder mehrere Tabellen mit Spalten, die verschlüsselt werden müssen, und stellen Sie eine Verbindung dazu her.
+2.  Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, bewegen Sie den Mauszeiger zu **Aufgaben** und klicken Sie auf „Spalten verschlüsseln“, um den **Assistenten für Always Encrypted** zu öffnen.
+3.  Lesen Sie die Seite **Einführung** , und klicken Sie dann auf **Weiter**.
+4.  Erweitern Sie die Tabellen auf der **Spaltenauswahl** -Seite, und wählen Sie die Spalten aus, die Sie verschlüsseln möchten.
+5.  Legen Sie für jede zu verschlüsselnde Spalte den **Verschlüsselungstyp** fest: entweder *deterministisch* oder *zufällig*.
+6.  Wählen Sie für jede zu verschlüsselnde Spalte einen **Verschlüsselungsschlüssel**aus. Falls Sie noch keinen Verschlüsselungsschlüssel für diese Datenbank erstellt haben, wählen Sie die standardmäßige Auswahl (neuer, automatisch generierter Schlüssel), und klicken Sie anschließend auf **Weiter**.
+7.  Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** einen Speicherort für den neuen Schlüssel aus, wählen Sie eine Hauptschlüsselquelle aus, und klicken Sie anschließend auf **Weiter**.
+8.  Wählen Sie auf der Seite **Überprüfung** aus, ob das Skript sofort ausgeführt oder ob ein PowerShell-Skript erstellt werden soll, und klicken Sie dann auf **Weiter**.
+9.  Überprüfen Sie die ausgewählten Optionen auf der Seite **Zusammenfassung** , und klicken Sie dann auf **Fertig stellen**. Schließen Sie den Assistenten nach Abschluss.
 
   
 ## <a name="feature-details"></a>Details zur Funktion  

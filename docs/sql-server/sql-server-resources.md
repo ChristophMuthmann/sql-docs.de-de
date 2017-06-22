@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-resources"></a>SQL Server-Ressourcen

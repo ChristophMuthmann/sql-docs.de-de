@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="copy-queries-visual-database-tools"></a>Kopieren von Abfragen (Visual Database Tools)

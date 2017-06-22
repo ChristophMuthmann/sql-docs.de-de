@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a25788a3b7eda518aeff01329eb5e207d9092bd6
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lektion 7: Wiederherstellen des Standes einer Datenbank zu einem bestimmten Zeitpunkt

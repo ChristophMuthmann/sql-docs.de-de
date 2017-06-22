@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8ea59a1fc03d3e6ecb9a6a4a4c2bb5246d36124f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert (Ereignisklasse)

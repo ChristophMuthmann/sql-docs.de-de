@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 21d1bab1ac1db414e761dbeba72f3f3db71408ef
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Hinzufügen eines externen Tools zum Menü Extras (SQL Server Management Studio)

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 77ca92438e8ccab3b0e367253ba8a193fc407d6c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Beenden einer Abfrage (Visual Database Tools)

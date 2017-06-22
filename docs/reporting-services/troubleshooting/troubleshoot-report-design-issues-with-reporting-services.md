@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Behandlung von Problemen in Reporting Services

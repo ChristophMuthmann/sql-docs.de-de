@@ -1,5 +1,5 @@
 ---
-title: Konfigurationsdatei &quot;rsreportserver.config&quot; | Microsoft Docs
+title: Konfigurationsdatei "rsreportserver.config" | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer.config-Konfigurationsdatei

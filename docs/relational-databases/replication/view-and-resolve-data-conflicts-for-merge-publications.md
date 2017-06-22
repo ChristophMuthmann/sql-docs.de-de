@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 60829fbd98b0525bf98bcf9246d433c427cb43e9
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen

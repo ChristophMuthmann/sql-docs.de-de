@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9c82bc11ebd60a8cbb5cc745e6c2e0c3c739831a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="report-builder-functions---stdev-function"></a>Berichtsfunktionen Sie Builder - StDev-Funktion

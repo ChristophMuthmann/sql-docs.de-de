@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
@@ -97,7 +97,7 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 >
 
 Beim Ausführen von fortsetzbar onlineneuerstellung von Indizes gelten die folgenden Richtlinien:
--    Verwaltung, Planung, und Erweitern von Wartungsfenstern Index. Sie können angehalten und neu starten eine Neuerstellung des Index mehrere Male an Ihr Wartungsfenster anpassen.
+-   Verwaltung, Planung, und Erweitern von Wartungsfenstern Index. Sie können angehalten und neu starten eine Neuerstellung des Index mehrere Male an Ihr Wartungsfenster anpassen.
 - Wiederherstellung bei Auftreten eines Index neu erstellen (z. B. ein Failover der Datenbank oder von nicht genügend freier Speicherplatz).
 - Wenn ein Indexerstellungsvorgang angehalten wird, sowohl die ursprüngliche Index und die neu erstellte eine erfordern, Speicherplatz und während der DML-Vorgänge aktualisiert werden müssen.
 

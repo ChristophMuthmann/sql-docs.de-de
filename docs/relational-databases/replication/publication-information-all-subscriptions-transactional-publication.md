@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 82e8e827b06e4d0f18db33ca4abab305b950250b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Veröffentlichungsinformationen: Alle Abonnements (Transaktionsveröffentlichung)

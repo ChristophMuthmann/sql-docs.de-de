@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8682c27e9d94410f8ffc902d2c03af491ec758ba
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Angeben der Verarbeitungsreihenfolge von Mergeartikeln

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 45ee91b0e63843b6e6385277d067d2d9f9ea0d2b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Proxys (Knoten der F1-Hilfe des SQL Server-Agents)

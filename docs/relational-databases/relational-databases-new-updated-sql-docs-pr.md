@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: 3ab051a6fd00670139bb1089dcd3f4af76b9ecef
 ms.contentlocale: de-de
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Neue und zuletzt aktualisiert: relationale Datenbanken Docs

@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Wiederherstellen von Dateien und Dateigruppen (SQL Server)

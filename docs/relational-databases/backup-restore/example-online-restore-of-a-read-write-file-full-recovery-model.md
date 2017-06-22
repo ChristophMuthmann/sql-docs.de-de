@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4be86c808d1af35a04b10c88d5cecdd919416137
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff (vollständiges Wiederherstellungsmodell)

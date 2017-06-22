@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9e3723e8fd524810e593234c1bb7b0535e192d07
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-ssrs"></a>Als veraltet markierte Funktionen in SQL Server Reporting Services (SSRS)

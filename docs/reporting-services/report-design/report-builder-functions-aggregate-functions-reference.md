@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f7f78e643a5ed5e8874cf2f8dda867c3edac70d0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Berichts-Generator Functions – Aggregatfunktionsreferenz

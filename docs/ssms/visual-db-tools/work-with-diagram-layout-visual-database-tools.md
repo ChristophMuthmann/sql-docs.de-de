@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c616f7558d0d4be04a7f8b704fce83219d35265a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Verwenden von Diagrammlayout (Visual Database Tools)

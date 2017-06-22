@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af137c019a7f96769b801d01f882e1d98b0da2ea
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes

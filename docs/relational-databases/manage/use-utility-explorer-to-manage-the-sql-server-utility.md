@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd65300d9d3c79ea0604d6ea83c1c9377b7982cc
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms

@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)

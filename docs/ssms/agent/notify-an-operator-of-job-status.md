@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e16ffa25dd18b3dd32b9c8aa3f36ceeb50af1817
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="notify-an-operator-of-job-status"></a>Benachrichtigen eines Operators über den Auftragsstatus

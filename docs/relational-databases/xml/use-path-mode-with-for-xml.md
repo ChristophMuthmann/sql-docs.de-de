@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 64b4d50fcbf13a157cf725ac7b1ab9dd328e8b07
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-path-mode-with-for-xml"></a>Verwenden des PATH-Modus mit FOR XML

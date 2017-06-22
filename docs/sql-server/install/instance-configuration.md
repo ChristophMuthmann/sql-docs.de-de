@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
 ms.contentlocale: de-de
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="installation-wizard-help"></a>Hilfe zur Installation-Assistent

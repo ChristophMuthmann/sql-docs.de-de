@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5b2e9a63f334206750961a39403daed7e3608ce0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Sichern und Wiederherstellen von Systemdatenbanken (SQL Server)

@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 220a93455e473e8079e6ff90b5889dbad5025184
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Erstellen eines benutzerdefinierten Sammlungssatzes -Generischer T-SQL-Abfragesammlertyp

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5e0b5d87a843b2711d9d1b008ec966b3070d4ad
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-peer-to-peer-replication"></a>Veröffentlichung (Peer-zu-Peer-Replikation)

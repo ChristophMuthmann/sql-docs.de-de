@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d24f986e0274592b8984c9bf5d493261781b8f77
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver

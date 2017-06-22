@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, &quot;Statistiken für Arbeitsauslastungsgruppen&quot;-Objekt | Microsoft-Dokumentation"
+title: "SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 12/04/2015
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt

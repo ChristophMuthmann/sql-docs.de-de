@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e6d7c3133037182042e365e852d7dc8381705e1c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-information-and-perform-tasks-for-subscription-agents"></a>Anzeigen von Informationen und Ausführen von Aufgaben für Abonnement-Agents

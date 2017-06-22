@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3b52630036d499deb0c125a9c6d8512a2edc48a4
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
