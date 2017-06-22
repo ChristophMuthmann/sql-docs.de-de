@@ -1,7 +1,7 @@
 ---
 title: Was &#39; s neu in SQLServer 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>Was &#39; s neu in SQLServer 2017
@@ -67,8 +67,8 @@ In diesem Thema wird ein Überblick über die Neuigkeiten in der aktuellen Commu
 - CLR verwendet (Code Access Security, CAS) in .NET Framework, das als Sicherheitsgrenze nicht mehr unterstützt wird. Erstellt mit einer CLR-Assembly `PERMISSION_SET = SAFE` möglicherweise Zugriff auf externe Systemressourcen, nicht verwalteten Code aufrufen und Abrufen der Sysadmin-Berechtigungen. Beginnend mit [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], wird ein `sp_configure` Option namens `clr strict security` wurde eingeführt, um die Sicherheit der CLR-Assemblys zu verbessern. `clr strict security`ist standardmäßig aktiviert, und behandelt `SAFE` und `EXTERNAL_ACCESS` Assemblys als wäre sie gekennzeichneten `UNSAFE`. Die `clr strict security` Option kann deaktiviert werden, um Abwärtskompatibilität zu gewährleisten, aber nicht empfohlen wird. Microsoft empfiehlt, alle Assemblys mit einem Zertifikat oder asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen, die erteilt wurden signiert werden `UNSAFE ASSEMBLY` -Berechtigung in der master-Datenbank. Weitere Informationen finden Sie unter [strikte Sicherheit der CLR](../database-engine/configure-windows/clr-strict-security.md).  
 - Funktionen zur Modellierung von m: n-Beziehungen im Diagramm anzeigen. Dies bietet neue [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) Syntax zum Erstellen von Knoten und Rahmentabellen und das Schlüsselwort [Übereinstimmung](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Verarbeitung mit SQL Server-2017](../relational-databases/graphs/sql-graph-overview.md).   
 - Automatische Optimierung ist ein datenbankfeature, das einen Einblick in die Abfrage potenzielle Leistungsprobleme bereitstellt, kann diese Lösungen empfohlen und automatisch beheben Probleme identifiziert. Automatische Optimierung [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], Sie werden benachrichtigt, sobald ein mögliches Leistungsproblem erkannt wird, und ermöglicht das Anwenden von korrekturmaßnahmen oder ermöglicht die [!INCLUDE[ssde](../includes/ssde-md.md)] automatisch zu beheben von Leistungsproblemen. Weitere Informationen finden Sie unter [Automatische Optimierung](../relational-databases/automatic-tuning/automatic-tuning.md).  
--    Batch-Modus Adaptive Beitreten zur Verbesserung der Qualität des Abfrageplans (unter 140 Db-Kompatibilität).
--    Verschachtelte Ausführung für T-SQL-Tabellenwertfunktionen mit mehreren Anweisungen zur Verbesserung der Qualität des Abfrageplans (unter 140 Db-Kompatibilität).
+-   Batch-Modus Adaptive Beitreten zur Verbesserung der Qualität des Abfrageplans (unter 140 Db-Kompatibilität).
+-   Verschachtelte Ausführung für T-SQL-Tabellenwertfunktionen mit mehreren Anweisungen zur Verbesserung der Qualität des Abfrageplans (unter 140 Db-Kompatibilität).
 - Der Abfragespeicher überwacht jetzt außerdem Wait Stats zusammenfassende Informationen. Nachverfolgen von Statistiken wartevorgangskategorien pro Abfrage im Abfragespeicher ermöglicht das Potenzial der Leistung, Problembehandlung, sogar noch stärker einen Einblick in die Arbeitsleistung zu und seine Engpässe Beibehaltung der Abfragespeicher bietet folgende Vorteile bietet.
 - DTC-Unterstützung für AlwaysOn-Verfügbarkeitsgruppen für alle datenbankübergreifende Transaktionen zwischen Datenbanken, die Teil der verfügbarkeitsgruppe, einschließlich für Datenbanken, die Teil derselben Instanz sind. Weitere Informationen finden Sie unter [Transaktionen - AlwaysOn-Verfügbarkeitsgruppen und Datenbankspiegelung](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - Eine neue Spalte **Modified_extent_page_count** wird in eingeführt [dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) zum Nachverfolgen von differenzielle Änderungen in jeder einzelnen Datenbankdatei an der Datenbank.
@@ -76,7 +76,6 @@ In diesem Thema wird ein Überblick über die Neuigkeiten in der aktuellen Commu
 - SQL Server-Setup unterstützt bis zu angeben der anfänglichen Tempdb-Dateigröße **256 GB (262.144 MB)** pro Datei mit einer Warnung, wenn die Dateigröße auf Wert größer als festgelegt ist **1 GB** und IFI nicht aktiviert ist.
 - Eine neue dynamische Ansicht (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) wurde eingeführt, um die Verwendung von Version Store pro Datenbank überwachen.
 - Eine neue DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) wurde eingeführt, um die DBCC LOGINFO ähnelt VLF-Informationen verfügbar machen.
-- DBCC CLONEDATABASE werden Laufzeitstatistiken geleert, während das Klonen, um zu vermeiden, Query Store Laufzeitstatistiken in Datenbankklon fehlt. Darüber hinaus ist die DBCC CLONEDATABASE weiter verbessert, für die Unterstützung und Klonen von Volltextindizes.
 - Temporale Tabellen mit systemversionsverwaltung unterstützen jetzt CASCADE DELETE- und UPDATE CASCADE.
 - Diese CTP enthält Fehlerbehebungen für das Datenbankmodul.
 - Eine ausführliche Liste der 2017 CTP-Verbesserungen in der vorherigen CTP-Versionen finden Sie unter [Neuigkeiten in SQL Server-2017 (Datenbankmodul)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   

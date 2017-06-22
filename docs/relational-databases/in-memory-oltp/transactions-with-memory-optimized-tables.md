@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
@@ -35,24 +35,6 @@ Die Transaktionsisolationsstufen in SQL Server werden auf speicheroptimierte Tab
 Informationen zu Fehlerbedingungen, die für Transaktionen in speicheroptimierten Tabellen spezifisch sind, finden Sie im Abschnitt [Konflikterkennung und Wiederholungslogik](#confdetretry34ni).
   
 Allgemeine Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Kapitel in diesem Artikel:  
-  
-- [Pessimistisch und optimistisch](#pessvoptim22ni)  
-- [Transaktionseinleitungsmodi](#txninitmodes24ni)  
-  - [Codebeispiel im Explicit-Modus](#codeexamexpmode25ni)  
-- [Zeilenversionsverwaltung](#rowver28ni)  
-- [Transaktionsisolationsstufen](#confdegreeiso30ni)  
-- [Transaktionsphasen und Lebensdauer](#txnphaslife32ni)  
-- [Konflikterkennung und Wiederholungslogik](#confdetretry34ni)  
-  - [Beispiel zum Wiederholen von T-SQL-Code](#retrytsqlcodeexam35ni)  
-- [Containerübergreifende Transaktion](#crossconttxn38ni)  
-- [Einschränkungen](#limitations40ni)  
-- [Systemintern kompilierte gespeicherte Prozeduren](#natcompstorprocs42ni)  
-- [Andere Transaktionslinks](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

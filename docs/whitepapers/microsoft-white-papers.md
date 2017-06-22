@@ -14,10 +14,10 @@ author: sabotta
 ms.author: carlasab
 manager: craigg
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
-ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: c8321e550efb29f93ad13ef05dad76de8d1f930a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="microsoft-white-papers"></a>Microsoft-Whitepaper 

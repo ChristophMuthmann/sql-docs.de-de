@@ -1,7 +1,7 @@
 ---
 title: "Lernprogramme für SQLServer | Microsoft Docs"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: de-de
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Lernprogramme für SQLServer
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Lernprogramme zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
-|[SQL Server R Services-Tutorials](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Informationen zum Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Daten mithilfe der Sprache R und Ausführen von R-Skripts aus [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[SQL Server R Services-Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Informationen zum Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Daten mithilfe der Sprache R und Ausführen von R-Skripts aus [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Zuvor veröffentlichte Tutorials:  
   

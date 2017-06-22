@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12d7876addabfa9afa14f4eb46e9881f574bbbb7
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: f7eb9c1aed79253eaeb1263e4e9bf4768e41350a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-release-notes"></a>SQL Server Release Notes
@@ -41,7 +41,8 @@ In den Anmerkungen zu dieser Version von [!INCLUDE[ssNoVersion](../includes/ssno
 [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)  
   
 [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)  
-  
+[Versionsanmerkungen zu SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
+    
 ### <a name="sql-server-2008-r2"></a>SQL Server 2008 R2  
 [Versionsanmerkungen zu SQL Server 2008 R2](http://download.microsoft.com/download/E/7/D/E7DED7E4-5059-4E3E-82C5-B28BF3FD0AAC/SQLServer2008R2ReleaseNotes.htm)  
   

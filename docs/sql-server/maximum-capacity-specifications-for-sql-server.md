@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: de-de
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replikationsobjekt||Maximale Größe/Anzahl SQL Server (64-Bit)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Artikel (Mergeveröffentlichung)||256|  
+|Artikel (Mergeveröffentlichung)||2048|  
 |Artikel (Momentaufnahmen- oder Transaktionsveröffentlichung)||32.767|  
 |Spalten in einer Tabelle* (Mergeveröffentlichung)||246|  
 |Spalten in einer Tabelle** ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Momentaufnahmen- oder -Transaktionsveröffentlichung)||1.000|  
 |Spalten in einer Tabelle** (Oracle-Momentaufnahmen- oder -Transaktionsveröffentlichung)||995|  
 |Bytes für eine in einem Zeilenfilter verwendete Spalte (Mergeveröffentlichung)||1.024|  
 |Bytes für eine in einem Zeilenfilter verwendete Spalte (Momentaufnahmen- oder Transaktionsveröffentlichung)||8.000|  
-  
+
  * Falls die Zeilennachverfolgung zur Konflikterkennung verwendet wird (Standardeinstellung), kann die Basistabelle maximal 1.024 Spalten enthalten. Die Spalten müssen jedoch im Artikel gefiltert werden, sodass maximal 246 Spalten veröffentlicht werden. Wenn Spaltennachverfolgung verwendet wird, kann die Basistabelle maximal 246 Spalten enthalten.  
   
  ** Die Basistabelle kann die maximal zulässige Anzahl von Spalten in der Veröffentlichungsdatenbank (1.024 für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) enthalten. Die Spalten müssen aber aus dem Artikel herausgefiltert werden, wenn sie das für den Veröffentlichungstyp angegebene Maximum überschreiten.  
