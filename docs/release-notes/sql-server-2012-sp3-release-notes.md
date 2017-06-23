@@ -17,7 +17,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Versionsanmerkungen zu SQL Server 2012 SP3

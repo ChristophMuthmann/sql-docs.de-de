@@ -16,7 +16,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
 ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Microsoft SQL-Dokumentation

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
 ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>Herunterladen von SQL Server PowerShell-Modul

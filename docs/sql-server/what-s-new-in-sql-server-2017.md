@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
 ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>Was &#39; s neu in SQLServer 2017

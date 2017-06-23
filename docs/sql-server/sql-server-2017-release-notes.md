@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
 ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQLServer 2017

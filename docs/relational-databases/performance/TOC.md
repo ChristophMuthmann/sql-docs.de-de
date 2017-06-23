@@ -1,3 +1,4 @@
+# [Adaptive Abfrageverarbeitung](adaptive-query-processing.md)
 # [Automatische Optimierung](../automatic-tuning/automatic-tuning.md)
 # [Kardinalitätsschätzung](cardinality-estimation-sql-server.md)  
 

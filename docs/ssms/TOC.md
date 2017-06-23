@@ -7,6 +7,8 @@
 # [Projektmappen-Explorer +](../ssms/solution/solution-explorer.md)
 # [Vorlagen +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [Registrieren von Servern +](../ssms/register-servers/register-servers.md)
+# [Tutorials +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [Was ist SSMS?](sql-server-management-studio-ssms.md)
 # [SSMS-Änderungsprotokoll](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [So fügen Sie dem Menü „Extras“ ein externes Tool hinzu (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Konfigurieren der Anmeldungsüberwachung (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Verwenden der Toolbox](use-the-toolbox.md)
+
+# [Ssms-Hilfsprogramm](ssms-utility.md)  
+# [Tastenkombinationen für SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
+
