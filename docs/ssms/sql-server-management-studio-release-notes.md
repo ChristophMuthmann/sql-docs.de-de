@@ -1,7 +1,7 @@
 ---
 title: "Versionshinweise für SQL Server Management Studio | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Versionshinweise für SQL Server Management Studio
@@ -57,6 +57,9 @@ Dies sind Probleme und Einschränkungen, die in Verbindung mit diesem SQL Server
     
 5. **Für SSMS-Installationen in anderen Sprachen als Englisch ist möglicherweise die Installation eines zusätzlichen Sicherheitspakets erforderlich.**  
 Lokalisierte Versionen von SSMS (andere Sprachen als Englisch) [benötigen das KB 2862966-Sicherheitsupdatepaket](https://support.microsoft.com/en-us/kb/2862966) für die Installation unter Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
+
+5. **Die Hilfe wird durch Klicken auf „Hilfe“ oder Drücken auf die F1-Taste nicht geöffnet**  
+Einige Umgebungen zeigen Folgendes an, wenn Sie auf „Hilfe“ klicken oder die F1-Taste drücken: **You'll need a new app to open ms-xhelp** (Zum Öffnen von ms-xhelp benötigen Sie eine neue App). Dieser Fehler ist ein bekanntes Problem und wird in einer zukünftigen Version behoben.
   
 ## <a name="feedback"></a>Feedback  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools
@@ -28,8 +28,50 @@ ms.lasthandoff: 04/11/2017
 >  Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
- Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) sowohl in Visual Studio 2015 als auch in Visual Studio 2013 widerrufen bzw. neu erteilen können.  
+ Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) in Visual Studio 2017, Visual Studio 2015 und Visual Studio 2013 widerrufen bzw. neu erteilen können.  
+
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2017  
+ SSDT für Visual Studio 2017 ist das Datenmodellierungstool, das mit SQL Server 2017 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2017 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2017 finden Sie in diesem [Hilfedokument von Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
   
+ In Vorschauversionen von SQL Server 2017 ist das CEIP standardmäßig aktiviert. Sie können es mithilfe der folgenden Anweisungen deaktivieren oder wieder aktivieren.  
+  
+ **In Visual Studio (gilt für vollständige Sprachinstallationen von Visual Studio 2017)**  
+  
+ Wenn Sie das SSDT-Setup auf einem Computer ausführen, auf dem Visual Studio bereits installiert ist, werden nur die SQL Server- und Business Intelligence-Projektvorlagen hinzugefügt. In diesem Szenario können von Visual Studio bereitgestellte Kunden-Feedbackoptionen verwendet werden, um das Einverständnis im CEIP zu widerrufen bzw. neu zu erteilen.  
+  
+1.  Starten Sie Visual Studio.  
+  
+2.  Wählen Sie im Hilfemenü **Feedback senden** > **Einstellungen**aus.  
+  
+3.  Um CEIP zu deaktivieren, klicken Sie auf **Nein, ich möchte nicht teilnehmen**, und klicken Sie dann auf **OK**.  
+  
+     Um CEIP zu aktivieren, klicken Sie auf **Ja, ich möchte teilnehmen**, und klicken Sie dann auf **OK**.  
+  
+
+  
+ **Verwenden einer registrierungsbasierten Richtlinie oder Gruppenrichtlinie**  
+  
+ Wenn Sie das SSDT-Setup auf einem Computer ausführen, auf dem Visual Studio 2017 nicht installiert ist, wird nur die Visual Studio-Shell installiert. Die Shell stellt keine Kunden-Feedbackoptionen bereit. In diesem Fall stellt ein Registrierungsupdate die einzige Option zum Konfigurieren des CEIP dar.  
+  
+ Unternehmenskunden können durch Festlegen einer registrierungsbasierten Richtlinie für SQL Server 2017 eine Gruppenrichtlinie erstellen, um das Einverständnis zu widerrufen bzw. neu zu erteilen.  
+  
+ Der entsprechende Registrierungsschlüssel und die entsprechenden Einstellungen lauten wie folgt:  
+  
+ Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
+  
+ RegEntry name = OptIn  
+  
+ DWORD-Eintrag:  
+  
+-   0 bedeutet keine Teilnahme  
+  
+-   1 bedeutet einschalten  
+  
+> [!CAUTION]  
+>  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
+  
+ Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen zum Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2015  
  SSDT für Visual Studio 2015 ist das Datenmodellierungstool, das mit SQL Server 2016 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2015 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2015 finden Sie in diesem [Hilfedokument von Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
   

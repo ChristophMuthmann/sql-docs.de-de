@@ -22,13 +22,19 @@ Ein Benutzer kann auswählen, um das Standardverhalten überschreiben, und konfi
 Festzulegende `REQUIRED_COPIES_TO_COMMIT` auf 0 (null) ausführen:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+Der entsprechende Befehl, der crm (unter SLES) nutzt, ist:
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 Auf Standardwert zurücksetzen möchten berechnet, Wert, der ausgeführt werden:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]

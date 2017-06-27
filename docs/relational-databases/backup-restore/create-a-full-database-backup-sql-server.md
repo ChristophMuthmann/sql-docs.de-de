@@ -1,7 +1,7 @@
 ---
 title: "Erstellen einer vollständigen Datenbanksicherung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
 
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Gehen Sie für SQL Server 2014 unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
   
->  Informationen zur SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md):  
+>  Informationen zur SQL Server-Sicherung im Azure-BLOB-Speicherdienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md):  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Wenn eine Datenbank größer wird, ist zum Abschließen von vollständigen Datenbanksicherungen jedoch mehr Zeit und mehr Speicherplatz erforderlich. Bei einer großen Datenbank können Sie eine vollständige Datenbanksicherung durch mehrere *differenzielle Datenbanksicherungen*ergänzen. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md):  
+-   Wenn eine Datenbank größer wird, ist zum Abschließen von vollständigen Datenbanksicherungen jedoch mehr Zeit und mehr Speicherplatz erforderlich. Erwägen Sie für große Datenbanken die Ergänzung einer vollständigen Datenbanksicherung mit einer Reihe von [differenziellen Datenbanksicherungen]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) ermittelt werden.  
   
@@ -198,7 +198,7 @@ In diesem Beispiel wird die `Sales` -Datenbank mit Verschlüsselung am standardm
 
 7.  Klicken Sie auf **OK**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Sichern in den Microsoft Azure BLOB-Speicherdienst**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Sichern auf den Azure-BLOB-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**  
 In den drei folgenden Beispielen wird eine vollständige Sicherung der `Sales` -Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten vier Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 5**.
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
@@ -212,7 +212,7 @@ In den drei folgenden Beispielen wird eine vollständige Sicherung der `Sales` -
     **D1.  Es existieren bereits eine Sicherung im Stripesetformat über URLs sowie eine SQL Server-Anmeldeinformation.**  
 Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsrechten erstellt.  Die SQL Server Anmeldeinformation `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist.  
 *
-    5.    Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
+    5.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
 
     6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
 
@@ -247,7 +247,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>So erstellen Sie eine vollständige Datenbanksicherung  
+### <a name="create-a-full-database-backup"></a>Erstellen einer vollständigen Datenbanksicherung  
   
 1.  Führen Sie die BACKUP DATABASE-Anweisung aus, um die vollständige Datenbanksicherung zu erstellen, und geben Sie dabei Folgendes an:  
   
@@ -299,7 +299,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. Sichern auf ein Datenträgermedium**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. Sichern auf ein Datenträgermedium**  
  In diesem Beispiel wird die gesamte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf dem Datenträger gesichert, wobei mithilfe von `FORMAT` ein neuer Mediensatz erstellt wird.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. Sichern auf ein Bandmedium**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. Sichern auf ein Bandmedium**  
  Im folgenden Beispiel wird die gesamte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf Band gesichert, wobei die Sicherung an vorherige Sicherungen angefügt wird.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Sichern auf ein logisches Bandmedium**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Sichern auf ein logisches Bandmedium**  
  Im folgenden Beispiel wird ein logisches Sicherungsmedium für ein Bandlaufwerk erstellt. Im Beispiel wird dann die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank vollständig auf diesem Medium gesichert.  
   
 ```tsql  

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
-ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: de-de
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/30/2017
 
   In diesem Thema werden die bewährten Methoden für den Einsatz eines Abfragespeichers bei Ihrer Arbeitsauslastung vorgestellt.  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden der aktuellen Version von SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers sowie zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden.  
-Laden Sie die aktuelle Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] hier herunter: [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) herunter.  
   
  Eine kurze Beschreibung zur Nutzung des Abfragespeichers in Fehlerbehebungsszenarien finden Sie unter [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -42,7 +42,8 @@ Weitere Informationen finden Sie unter [Query Performance Insight für Azure SQL
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Verwenden von Abfragespeicher mit elastischen Pooldatenbanken
 Sie können den Abfragespeicher bedenkenlos in allen Datenbanken verwenden, selbst in dicht gepackten Pools. Alle mit übermäßiger Ressourcennutzung zusammenhängenden Probleme, die bei der Aktivierung des Abfragespeichers für die große Anzahl Datenbanken in elastischen Pools auftreten konnten, wurden behoben.
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> Dauerhafte Abfragespeicheranpassung an Ihre Arbeitsauslastung  
  Konfigurieren Sie Abfragespeicher basierend auf den Anforderungen hinsichtlich der Arbeitsauslastung und der Behandlung von Leistungsproblemen.   
 Die Standardparameter sind gut für einen schnellen Einstieg geeignet; Sie sollten jedoch das Verhalten von Abfragespeicher im Verlauf der Zeit überwachen und die Konfiguration entsprechend anpassen:  
   
@@ -143,7 +144,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 |Gesamter Ressourcenverbrauch|Analysieren Sie den Gesamtressourcenverbrauch für die Datenbank für eine der Ausführungsmetriken.<br />Verwenden Sie diese Ansicht, um Ressourcenmuster zu identifizieren (tägliche im Vergleich zu nächtlichen Arbeitsauslastungen), und optimieren Sie den Gesamtverbrauch für Ihre Datenbank.|  
 |Abfragen mit höchstem Ressourcenverbrauch|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um Ihre Aufmerksamkeit auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
 |Abfragen mit erzwungenen Plänen|Listen, die zuvor erzwungene Pläne, die Verwendung des Abfragespeichers. <br />Verwenden Sie diese Ansicht schnell auf alle aktuell erzwungene Plänen zugreifen.|  
-|Abfragen mit hoher Variation|Analysieren von Abfragen mit hoher Ausführung Variante in Bezug auf eine der verfügbaren Dimensionen, z. B. die Dauer, CPU-Zeit-e/a und Speicher in das gewünschte Intervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit weit variant Leistung identifiziert haben, die benutzerfreundlichkeit für Ihre Anwendungen beeinträchtigen werden können.|  
+|Abfragen mit hoher Variation|Analysieren von Abfragen mit hoher Ausführung Variante in Bezug auf eine der verfügbaren Dimensionen, z. B. die Dauer, CPU-Zeit-e/a und Speicher in das gewünschte Intervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|  
 |Nachverfolgte Abfragen|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
   
 > [!TIP]  
@@ -273,32 +274,33 @@ Die folgende Tabelle enthält bewährte Methoden:
 |Herausfiltern von nicht relevanten Abfragen.|Konfigurieren Sie den Abfrageerfassungsmodus als Auto.|  
 |Löschen von weniger relevanten Abfragen, wenn die maximale Größe erreicht ist.|Aktivieren Sie die größenbasierte Cleanuprichtlinie.|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- Der Einsatz von nicht parametrisierten Abfragen, wenn diese nicht unbedingt erforderlich sind (z. B. bei Ad-hoc-Analysen), wird nicht empfohlen.  Zwischengespeicherte Pläne können nicht wiederverwendet werden, sodass der Abfrageoptimierer gezwungen ist, Abfragen für jeden eindeutigen Abfragetext zu kompilieren.  
+##  <a name="Parameterize"></a> Vermeiden des Einsatzes von nicht parametrisierten Abfragen  
+ Der Einsatz von nicht parametrisierten Abfragen, wenn diese nicht unbedingt erforderlich sind (z.B. bei Ad-hoc-Analysen), wird nicht empfohlen.  Zwischengespeicherte Pläne können nicht wiederverwendet werden, sodass der Abfrageoptimierer gezwungen ist, Abfragen für jeden eindeutigen Abfragetext zu kompilieren. Weitere Informationen zu diesem Thema finden Sie unter [Richtlinien für die Verwendung der erzwungenen Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
   Abfragespeicher kann darüber hinaus schnell die Kontingentgröße aufgrund einer potenziell großen Anzahl von verschiedenen Abfragetexten und somit einer großen Anzahl von verschiedenen Ausführungsplänen mit ähnlicher Form überschreiten.  
 Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfragespeicher wechselt möglicherweise in den schreibgeschützten Modus oder löscht kontinuierlich die Daten, um mit den eingehenden Abfragen Schritt zu halten.  
   
  Ziehen Sie die folgenden Optionen in Betracht:  
+
+  -   Parametrisieren Sie Abfragen, sofern möglich, indem Sie z.B. Abfragen innerhalb einer gespeicherten Prozedur oder sp_executesql umschließen. Weitere Informationen zu diesem Thema finden Sie unter [Parameter und Wiederverwendung von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
--   Parametrisieren Sie Abfragen, sofern möglich, indem Sie z. B. Abfragen innerhalb einer gespeicherten Prozedur umschließen.  
-  
--   Verwenden Sie die Option **Für Ad-hoc-Arbeitsauslastungen optimieren** , wenn Ihre Arbeitsauslastung viele einmalige Ad-hoc-Batches mit anderen Abfrageplänen enthält.  
+-   Verwenden Sie die Option [**Für Ad-hoc-Arbeitsauslastungen optimieren**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md), wenn Ihre Arbeitsauslastung viele einmalige Ad-hoc-Batches mit anderen Abfrageplänen enthält.  
   
     -   Vergleichen Sie die Anzahl der unterschiedlichen query_hash-Werte mit der Gesamtanzahl von Einträgen in sys.query_store_query. Ist das Verhältnis nahe 1, generiert Ihre Ad-hoc-Arbeitsauslastung verschiedene Abfragen.  
   
--   Wenden Sie FORCED PARAMETERIZATION auf die Datenbank oder auf eine Teilmenge der Abfragen an, wenn die Anzahl der unterschiedlichen Abfragepläne nicht groß ist.  
+-   Wenden Sie die[**erzwungene Parametrisierung**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) auf die Datenbank oder auf eine Teilmenge der Abfragen an, wenn die Anzahl der unterschiedlichen Abfragepläne nicht groß ist.  
   
-    -   Verwenden Sie die Planhinweisliste, um die Parametrisierung nur für die ausgewählte Abfrage zu erzwingen.  
+    -   Verwenden Sie die [Planhinweisliste](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md), um die Parametrisierung nur für die ausgewählte Abfrage zu erzwingen.  
   
-    -   Konfigurieren Sie FORCED PARAMETERIZATION für die Datenbank, wenn Ihre Arbeitsauslastung eine kleine Anzahl von unterschiedlichen Abfragepläne umfasst. (Wenn das Verhältnis zwischen der Anzahl der unterschiedlichen query_hash und der Gesamtanzahl der Einträge in sys.query_store_query wesentlich kleiner als 1 ist.)  
+    -   Konfigurieren Sie die erzwungene Parametrisierung wie die Verwendung des Befehls der [Datenbankoption „Parametrization“](../../relational-databases/databases/database-properties-options-page.md#miscellaneous), sofern es eine kleine Anzahl verschiedener Abfragepläne in Ihrer Arbeitsauslastung gibt: wenn das Verhältnis zwischen der Anzahl unterschiedlicher query_hash und die Gesamtzahl der Einträge in sys.query_store_query viel weniger als 1 it.  
   
 -   Legen Sie den **Abfrageerfassungsmodus** auf AUTO fest, um Ad-hoc-Abfragen mit geringem Ressourcenverbrauch automatisch herauszufiltern.  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a> Vermeiden des DROP- und CREATE-Musters beim Verwalten von enthaltenen Objekten für Abfragen  
  Der Abfragespeicher ordnet einen Abfrageeintrag einem enthaltenen Objekt zu (gespeicherte Prozedur, Funktion und Trigger).  Wenn Sie ein enthaltenes Objekt neu erstellen, wird ein neuer Abfrageeintrag für den gleichen Abfragetext generiert. Dies verhindert die Nachverfolgung der Leistungsstatistiken für diese Abfrage im Verlauf der Zeit und diesen Nutzungsplanerzwingungsmechanismus. Um dies zu vermeiden, verwenden Sie den `ALTER <object>` -Prozess, um die Definition des enthaltenen Objekts nach Möglichkeit zu ändern.  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
+##  <a name="CheckForced"></a> Regelmäßiges Überprüfen des Status der erzwungenen Pläne  
+
+ Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -311,16 +313,19 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das **query_store_plan_forcing_failed**-XEvent verwenden, um Fehler bei der Problembehandlung der Planerzwingung nachzuverfolgen.  
+ Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das **query_store_plan_forcing_failed**-XEvent verwenden, um Fehler bei der Problembehandlung der Planerzwingung nachzuverfolgen.  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen (`database.schema.object`).   
+##  <a name="Renaming"></a> Vermeiden der Umbenennung von Datenbanken bei Abfragen mit erzwungenen Plänen  
+
+ Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen `database.schema.object`.   
+
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Leistungungsüberwachung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)  
   
 
