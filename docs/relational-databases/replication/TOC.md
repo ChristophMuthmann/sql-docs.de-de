@@ -3,9 +3,22 @@
 # [Abwärtskompatibilität von Replikationen](replication-backward-compatibility.md)  
 ## [Als veraltet markierte Funktionen der SQL Server-Replikation](deprecated-features-in-sql-server-replication.md)  
 ## [Wichtige Änderungen in der SQL Server-Replikation](breaking-changes-in-sql-server-replication.md)  
+
+# Replikationsbereiche
+## [Administration of Replication (Verwaltung der Replikation)](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [Entwicklerkonzepte](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [Überwachen der Replikation](./monitor/monitoring-replication.md)
+## [Non-SQL Heterogeneous Database Replication (Heterogene Datenbankreplikation für Nicht-SQL)](./non-sql/heterogeneous-database-replication.md)
+## [Veröffentlichen von Daten und Datenbankobjekten](./publish/publish-data-and-database-objects.md)
+## [Security for Replication (Sicherheit für die Replikation)](./security/security-overview-replication.md)
+
 # [Replikationsfunktionen und -tasks](replication-features-and-tasks.md)  
 ## [Replikationstypen](types-of-replication.md)  
 ### [Momentaufnahmereplikation](snapshot-replication.md)  
+### [Mergereplikation](./merge/merge-replication.md)
+### [Transaktionsreplikation](./transactional/transactional-replication.md) 
+
 ## [Replikation mit Abonnenten von speicheroptimierten Tabellen](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replikation zu SQL-Datenbank](replication-to-sql-database.md)  
 ## [Erneutes Veröffentlichen von Daten](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](validate-partition-information-for-a-merge-subscriber.md)  
 ### [Überprüfen der Daten am Abonnenten](validate-data-at-the-subscriber.md)  
 ## [Erstellen von Skripts für die Replikation](scripting-replication.md)  
-
-# [Entwicklerkonzepte](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Technische Referenz](technical-reference-replication.md)  
 ## [Eigenschaftenreferenz](properties-reference-replication.md)  

@@ -1,17 +1,8 @@
-
-# Behandlung von Ausnahmen +
-## [Behandeln von Ausnahmen in Reporting Services](../../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-## [Einführung in die Ausnahmebehandlung in Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-
-
-# SOAP-Header +
-## [Methoden der Batchverarbeitung](../../report-server-web-service-net-framework-soap-headers/batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Identifizieren des Ausführungsstatus](../../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Festlegen der Element-Namespace für die GetProperties-Methode](../../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Verwenden von Reporting Services-SOAP-Header](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-
-
 # [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)
+
+# [Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+# [Verwenden von Reporting Services SOAP-Headern](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+
 # [Aufrufen von Webdienstmethoden](calling-web-service-methods.md)
 # [Erstellen des Webdienstproxys](creating-the-web-service-proxy.md)
 # [Weglassen von Werten für optionale Webdienstobjekte](omitting-values-for-optional-web-service-objects.md)

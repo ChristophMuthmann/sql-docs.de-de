@@ -1,4 +1,6 @@
 # [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  
+
+# Richtlinienbasierte Verwaltung
 ## [Speicher der richtlinienbasierten Verwaltung](policy-based-management-storage.md)  
 ## [Konfigurieren allgemeiner Eigenschaften der richtlinienbasierten Verwaltung](configure-the-general-properties-of-policy-based-management.md)  
 ## [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [Dialogfeld 'Quelle auswählen'](select-source-dialog-box.md)  
 ### [Dialogfeld 'Als Richtlinie exportieren'](export-as-policy-dialog-box.md)  
 ### [Dialogfeld 'Richtlinien importieren'](import-policies-dialog-box.md)  
+
+
 # [Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Lektion 1.1: Erstellen der Richtlinie 'Standardmäßig aus'](lesson-1-1-create-the-off-by-default-policy.md)  
