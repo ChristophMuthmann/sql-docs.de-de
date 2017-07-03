@@ -1,4 +1,6 @@
-# [Übersicht](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [Was ist SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# Übersicht
 ## [Neuigkeiten in Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Konzepte von Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services-Funktionen und Tasks](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # Entwickler
 ## [Anwendungsintegration](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [Berichtsserver-Webdienst](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Berichtsserver-Webdienst](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Erweiterungen](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [Benutzerdefinierte Berichtselemente](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [Benutzerdefinierte Assemblys](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -82,7 +84,7 @@
 ### [CSV-Geräteinformationseinstellungen](csv-device-information-settings.md)  
 ### [Geräteinformationseinstellungen für Excel](excel-device-information-settings.md)  
 ### [HTML-Geräteinformationseinstellungen](html-device-information-settings.md)  
-### [Image Device Information Settings](image-device-information-settings.md)  ### [Geräteinformationseinstellungen für MHTML](mhtml-device-information-settings.md)  
+### [Bild Geräteinformationseinstellungen](image-device-information-settings.md) ### [Geräteinformationseinstellungen für MHTML](mhtml-device-information-settings.md)  
 ### [PDF-Geräteinformationseinstellungen](pdf-device-information-settings.md)  
 ### [PPTX-Geräteinformationseinstellungen](pptx-device-information-settings.md)  
 ### [XML-Geräteinformationseinstellungen](xml-device-information-settings.md)  
