@@ -10,7 +10,7 @@
 ### [Standorteinstellungen und -Funktionen – Reporting Services](site-settings-and-features-reporting-services.md)  
 ### [Standorteinstellungen und Features - Synchronisierung in SharePoint](activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 ### [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](add-reporting-services-content-types-to-a-sharepoint-library.md)  
-### [Lokaler Modus VS.. Berichten verbundenen Modus im Berichts-Viewer](local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+### [Lokaler Modus VS. Berichten verbundenen Modus im Berichts-Viewer](local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
 ### [Hochladen von Dokumenten in einer SharePoint-Bibliothek](upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
 ### [Festlegen von Verarbeitungsoptionen](set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
 ## [Berichts-Viewer-Webpart auf einer SharePoint-Website](report-viewer-web-part-on-a-sharepoint-site.md)  
