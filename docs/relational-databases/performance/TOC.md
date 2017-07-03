@@ -1,3 +1,7 @@
+
+# [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [Adaptive Abfrageverarbeitung](adaptive-query-processing.md)
 # [Automatische Optimierung](../automatic-tuning/automatic-tuning.md)
 # [Kardinalitätsschätzung](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [Überprüfen von Planhinweislisten nach einem Upgrade](validate-plan-guides-after-upgrade.md)  
 ## [Löschen einer Planhinweisliste](delete-a-plan-guide.md)  
 ## [Aktivieren oder Deaktivieren einer Planhinweisliste](enable-or-disable-a-plan-guide.md)  
-
-# [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[Überwachen der Ressourcenverwendung (Systemmonitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

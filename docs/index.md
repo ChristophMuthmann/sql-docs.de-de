@@ -4,10 +4,10 @@ hide_bc: true
 title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über SQL"
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: c7ae180aed734d85a10cb8b3b750426ecf552b8a
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: 7e838238148bc2e6c887d8960e7456b7539819d3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Werden unter Windows oder Linux ausgeführt</h4>
                                                 <ul>
-                                                    <li><a href="/sql/linux/?toc=/sql/linux/toc.json">SQL Server unter Linux</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-overview">SQL Server unter Linux</a></li>
                                                     <li><a href="/azure/virtual-machines/linux/">Virtuelle Linux-Computer</a></li>
                                                     <li><a href="/azure/virtual-machines/windows/">Virtuelle Windows-Computer</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows Server 2016</a></li>
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/23/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Entwerfen</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver-documentation">Herstellen einer Verbindung mit Clientanwendungen</a></li>
+                                                    <li><a href="/sql/connect/sql-server-driver">Herstellen einer Verbindung mit Clientanwendungen</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relationale Datenbankkonzepte</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>

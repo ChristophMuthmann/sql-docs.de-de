@@ -1,3 +1,5 @@
+# [Webdienstmethoden für Berichtsserver](report-server-web-service-methods.md)
+
 # [Autorisierungsmethoden](authorization-methods.md)
 # [Data Sources and Connection Methods](data-sources-and-connection-methods.md)
 # [Methoden für verknüpfte Berichte](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [Melden von Parametermethoden](report-parameters-methods.md)
 # [Verwaltungsmethoden der Report Server-Namespace](report-server-namespace-management-methods.md)
 # [Report Server Webdienst-Endpunkte](report-server-web-service-endpoints.md)
-# [Webdienstmethoden für Berichtsserver](report-server-web-service-methods.md)
 # [Zeitplanmethoden](scheduling-methods.md)
 # [Subscription and Delivery Methods](subscription-and-delivery-methods.md)

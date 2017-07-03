@@ -1,4 +1,6 @@
-# [Volltextsuche](full-text-search.md)  
+# [Übersicht](full-text-search.md)
+
+# Volltextsuche
 ## [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)  
 ## [Abfragen mit Volltextsuche](query-with-full-text-search.md)  
 ## [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](search-for-words-close-to-another-word-with-near.md)  
@@ -27,6 +29,7 @@
 ## [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](full-text-search-ddl-functions-stored-procedures-and-views.md)  
 ## [Verwenden des Volltextindizierungs-Assistenten](use-the-full-text-indexing-wizard.md)  
 ## [Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016](deprecated-full-text-search-features-in-sql-server-2016.md)  
+
 # [Semantische Suche](semantic-search-sql-server.md)  
 ## [Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)  
 ## [Aktivieren der semantischen Suche in Tabellen und Spalten](enable-semantic-search-on-tables-and-columns.md)  
