@@ -1,7 +1,7 @@
 ---
 title: "Rückgabecodes und Fehlerinformationen der OLE-Automatisierung | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -93,7 +93,7 @@ AS
     DECLARE @Source nvarchar(255);  
     DECLARE @Description nvarchar(255);  
     PRINT N'OLE Automation Error Information';  
-    EXEC HexToChar @HResult, @HRHex OUT;  
+    EXEC sp_HexToChar @HResult, @HRHex OUT;  
     SELECT @Output = N'  HRESULT: ' + @HRHex;  
     PRINT @Output;  
     EXEC @HR = sp_OAGetErrorInfo  
@@ -120,3 +120,4 @@ GO
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   
+
