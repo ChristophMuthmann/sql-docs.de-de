@@ -3,7 +3,7 @@ title: "Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 01/31/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -23,12 +23,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 838a61120369a01355c60f6ef580a8fb3b1cdd7f
+ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
+ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>SQL Server Management Objects-Unterstützung für In-Memory OLTP

@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="search-documents-using-results-lists"></a>Durchsuchen von Dokumenten mithilfe von Ergebnislisten
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  Klicken Sie in der Liste **Suchen in** auf **Alle geöffneten Dokumente**, **Aktuelles Projekt**, **Gesamte Projektmappe**, oder geben Sie einen Verzeichnispfad ein.  
   
-4.  Wählen Sie in der Liste **Dateitypen** eine der aufgeführten Dateierweiterungsgruppen aus, oder geben Sie die Dateierweiterungen für die Dateitypen ein, nach denen gesucht werden soll, getrennt durch Semikolons. Verwenden Sie \*.\* um alle Dateien in dem in der Dropdownliste **Suchen in** angegebenen Verzeichnis zu durchsuchen.  
+4.  Wählen Sie in der Liste **Dateitypen** eine der aufgeführten Dateierweiterungsgruppen aus, oder geben Sie die Dateierweiterungen für die Dateitypen ein, nach denen gesucht werden soll, getrennt durch Semikolons. Verwenden Sie \*geöffnet sind.\* um alle Dateien in dem in der Dropdownliste **Suchen in** angegebenen Verzeichnis zu durchsuchen.  
   
 5.  Treffen Sie aus den übrigen Suchoptionen eine Auswahl, um die Genauigkeit der Suche zu verbessern.  
   
