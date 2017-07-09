@@ -32,7 +32,7 @@ In diesem Thema wird ein Überblick über die Neuigkeiten in der aktuellen Commu
 
 
 **Probieren Sie es aus:**    
-   -   [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[herunterladen den SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[herunterladen den SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>Was ist neu in CTP für SQL Server 2017 2.1 (Mai 2017)
 ### <a name="sql-server-database-engine"></a>SQL Server-Datenbankmodul  
