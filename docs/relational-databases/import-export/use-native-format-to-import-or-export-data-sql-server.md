@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -68,7 +68,7 @@ Um Daten im systemeigenen Format erfolgreich zu importieren, müssen folgende Pu
   
      Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) verwendet das interne binäre Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um auf Nichtzeichen basierende Daten aus einer Tabelle in eine Datendatei zu schreiben.  
   
--   Daten vom Typ[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
+-   Daten vom Typ[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
   
      Am Anfang jedes [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) - oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Felds fügt [bcp](../../tools/bcp-utility.md) die Präfixlänge hinzu.  
   
@@ -150,7 +150,7 @@ Notepad D:\BCP\myNative.fmt
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
 ### **Verwenden von bcp und des nativen Formats zum Exportieren von Daten**<a name="bcp_native_export"></a>
-Der Schalter**-n** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+**-n** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -159,7 +159,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_native_import"></a>
-Der Schalter**-n** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+**-n** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -172,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_native_import_fmt"></a>
-Die Schalter**-n** und **-f** switches und **IN** commund.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+**-n** und **-f** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"

@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -218,61 +218,61 @@ Im folgenden Beispiel wird eine Datenbank in den am 30. Mai 2016 um 13:23:17 Uhr
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Wiederherstellen einer Sicherung aus dem Microsoft Azure-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**
 In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus einer Sicherung ausgeführt, die sich im Microsoft Azure-Speicherdienst befindet.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten sechs Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 7**.
-1.    Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
-2.    Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
 
-3.    Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
+3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
 
-4.    Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
-5.    Wählen Sie eine **URL** aus der Dropdownliste **Sicherungsmedientyp** aus.
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
+5.  Wählen Sie eine **URL** aus der Dropdownliste **Sicherungsmedientyp** aus.
 
-6.    Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Speicherort der Sicherungsdatei auswählen** wird geöffnet.
+6.  Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Speicherort der Sicherungsdatei auswählen** wird geöffnet.
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1.   Wiederherstellen einer Sicherung im Stripesetformat über eine vorhandene Datenbank; eine Shared Access Signature (SAS) ist vorhanden.**
     Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt.  Eine SAS, die der gespeicherten Zugriffsrichtlinie zugeordnet ist, wurde für den Container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`erstellt.  Die Schritte sind weitestgehend identisch, wenn bereits SQL Server-Anmeldeinformationen vorhanden sind.  Die Datenbank `Sales` ist auf dem Server bereits vorhanden.  Die Sicherungsdateien sind `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`.  
 *  
-    7.    Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem **Azure-Speichercontainer aus:** über die Dropdown-Liste, wenn die SQL Server-Anmeldeinformationen bereits vorhanden sind, andernfalls geben Sie den Namen des Containers ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) manuell ein.
+    7.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem **Azure-Speichercontainer aus:** über die Dropdown-Liste, wenn die SQL Server-Anmeldeinformationen bereits vorhanden sind, andernfalls geben Sie den Namen des Containers ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) manuell ein.
     
-    8.    Geben Sie die SAS im **Shared Access Signature:** -Feld für Rich-Text ein.
-       9.    Klicken Sie auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
-    10.    Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    8.  Geben Sie die SAS im **Shared Access Signature:** -Feld für Rich-Text ein.
+       9.   Klicken Sie auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
+    10. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
-    11.    Halten Sie STRG gedrückt, und wählen Sie die Dateien `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`aus.
-    12.    Klicken Sie auf **OK**.
-    13.    Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
-    14.    Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-    15.    Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
-    16.    Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
-    17.    Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
-    18.    Klicken Sie auf **OK**.
+    11. Halten Sie STRG gedrückt, und wählen Sie die Dateien `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`aus.
+    12. Klicken Sie auf **OK**.
+    13. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
+    14. Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
+    15. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
+    16. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern.**.
+    17. Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
+    18. Klicken Sie auf **OK**.
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   Es ist keine Shared Access Signature (SAS) vorhanden.**
     In diesem Beispiel ist die Datenbank `Sales` auf dem Server derzeit nicht vorhanden.
-    7.    Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** wird geöffnet.  
+    7.  Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** wird geöffnet.  
     
-    8.    Füllen Sie das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** aus, und klicken Sie dann auf **OK** um zum Dialogfeld **Speicherort der Sicherungsdatei auswählen** zurückzukehren.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einen Microsoft Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
-    9.    Klicken Sie im Dialogfeld **Speicherort der Sicherungsdatei auswählen** auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
-    10.    Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    11.    Wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
-    12.    Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
-    13.    Klicken Sie auf **OK**.
+    8.  Füllen Sie das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** aus, und klicken Sie dann auf **OK** um zum Dialogfeld **Speicherort der Sicherungsdatei auswählen** zurückzukehren.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einen Microsoft Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
+    9.  Klicken Sie im Dialogfeld **Speicherort der Sicherungsdatei auswählen** auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
+    10. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    11. Wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
+    12. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
+    13. Klicken Sie auf **OK**.
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.    Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)**
 Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` im Microsoft Azure-Speichercontainer `E:\MSSQL\BAK`wiederhergestellt.  Die SQL Server-Anmeldeinformationen für den Azure-Container wurden bereits erstellt.  SQL Server-Anmeldeinformationen für den Zielcontainer müssen bereits vorhanden sein, da sie durch den **Wiederherstellungstask** nicht erstellt werden können.  Die Datenbank `Sales` ist auf dem Server derzeit nicht vorhanden.
-1.    Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
-2.    Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
-3.    Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.    Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
-5.    Wählen Sie eine **Datei** aus der Dropdownliste **Sicherungsmedientyp** aus.
-6.    Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Sicherungsdatei suchen** wird geöffnet.
-7.    Navigieren Sie zu `E:\MSSQL\BAK`, wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
-8.    Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
-9.    Klicken Sie im Fensterbereich **Seite auswählen** auf **Dateien** .
-10.    Aktivieren Sie das Kontrollkästchen **Alle Dateien verschieben in Ordner**.
-11.    Geben Sie den Container ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) in die Textfelder für **Datendateiordner:** und **Protokolldateiordner:**ein.
-12.    Klicken Sie auf **OK**.
+2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
+3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (...), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
+5.  Wählen Sie eine **Datei** aus der Dropdownliste **Sicherungsmedientyp** aus.
+6.  Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Sicherungsdatei suchen** wird geöffnet.
+7.  Navigieren Sie zu `E:\MSSQL\BAK`, wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
+8.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
+9.  Klicken Sie im Fensterbereich **Seite auswählen** auf **Dateien** .
+10. Aktivieren Sie das Kontrollkästchen **Alle Dateien verschieben in Ordner**.
+11. Geben Sie den Container ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) in die Textfelder für **Datendateiordner:** und **Protokolldateiordner:**ein.
+12. Klicken Sie auf **OK**.
 
 
 ## <a name="see-also"></a>Siehe auch    

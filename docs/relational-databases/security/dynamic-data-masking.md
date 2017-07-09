@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
@@ -30,12 +30,12 @@ Die dynamische Datenmaskierung (DDM) beschränkt die Offenlegung vertraulicher D
 
 Mit der dynamischen Datenmaskierung können Sie unbefugten Zugriff auf sensible Daten verhindern, indem Kunden festlegen können, wie viele sensible Daten mit minimaler Auswirkung auf die Anwendungsschicht offengelegt werden. DDM kann für die Datenbank konfiguriert werden, um sensible Daten in Resultsets von Abfragen in festgelegten Datenbankfeldern auszublenden, während die Daten in der Datenbank nicht geändert werden. Die dynamische Datenmaskierung ist für vorhandene Anwendungen einfach zu verwenden, da Maskierungsregeln auf die Abfrageergebnisse angewendet werden. Viele Clientanwendungen können sensible Daten maskieren, ohne vorhandene Abfragen zu ändern.
 
-*     Eine zentrale Datenmaskierungsrichtlinie wirkt sich direkt auf vertrauliche Felder in der Datenbank aus.
-*     Festlegen berechtigter Benutzer oder Rollen, die über Zugriff auf vertrauliche Daten verfügen.
-*     DDM umfasst Funktionen für die vollständige und teilweise Maskierung sowie eine willkürliche Maske für numerische Daten.
-*     Einfache [!INCLUDE[tsql_md](../../includes/tsql-md.md)]-Befehle dienen zum Definieren und Verwalten von Masken.
+*  Eine zentrale Datenmaskierungsrichtlinie wirkt sich direkt auf vertrauliche Felder in der Datenbank aus.
+*  Festlegen berechtigter Benutzer oder Rollen, die über Zugriff auf vertrauliche Daten verfügen.
+*  DDM umfasst Funktionen für die vollständige und teilweise Maskierung sowie eine willkürliche Maske für numerische Daten.
+*  Einfache [!INCLUDE[tsql_md](../../includes/tsql-md.md)]-Befehle dienen zum Definieren und Verwalten von Masken.
 
-Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren. Diese Datenelemente dürfen dem Supportmitarbeiter aber nicht vollständig verfügbar gemacht werden. Es kann eine Maskierungsregel definiert werden, die alle außer den letzten vier Ziffern einer Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer beliebigen Abfrage maskiert. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
+Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren. Diese Datenelemente dürfen dem Supportmitarbeiter aber nicht vollständig verfügbar gemacht werden. Es kann eine Maskierungsregel definiert werden, die alle außer den letzten vier Ziffern einer Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer beliebigen Abfrage maskiert. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
 
  Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsfunktionen (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene...), und es empfiehlt sich dringend, dieses Feature in Verbindung mit diesen anderen Funktionen zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
   
