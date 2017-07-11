@@ -25,14 +25,18 @@ ms.contentlocale: de-de
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
+<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
+
+# Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
   Standardmäßig wird ein Abonnement für eine Transaktionsveröffentlichung mithilfe einer Momentaufnahme initialisiert, die vom Momentaufnahme-Agent generiert und vom Verteilungs-Agent angewendet wird. In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement mit einer anderen Methode zu initialisieren. Folgende weitere Methoden stehen zum Initialisieren eines Abonnements zur Verfügung:  
   
 -   Angeben einer Sicherung. Stellen Sie die Sicherung auf dem Abonnenten her. Der Verteilungs-Agent kopiert dann alle erforderlichen Replikationsmetadaten und gespeicherten Prozeduren. Mit der Initialisierung über eine Sicherung können Daten am schnellsten und bequemsten auf den Abonnenten übertragen werden. Das liegt daran, dass jede neuere Sicherung verwendet werden kann, die nach dem Aktivieren einer Veröffentlichung für das Initialisieren mit einer Sicherung vorgenommen wurde.  
   
 -   Kopieren eines Anfangsdatensatzes auf den Abonnenten mithilfe eines anderen Mechanismus, wie z. B. Anfügen einer Datenbank. Stellen Sie sicher, dass die Daten und das Schema auf dem Abonnenten stimmen. Der Verteilungs-Agent kopiert dann alle erforderlichen Metadaten und gespeicherten Prozeduren.  
   
-## <a name="initializing-a-subscription-with-a-backup"></a>Initialisieren eines Abonnements mit einer Sicherung  
+<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
+
+## Initialisieren eines Abonnements mit einer Sicherung  
  Eine Sicherung enthält eine gesamte Datenbank. Deshalb enthält jede Abonnementdatenbank bei ihrer Initialisierung eine vollständige Kopie der Veröffentlichungsdatenbank.  
   
 -   Die Sicherung enthält Tabellen, die nicht als Artikel für die Veröffentlichung angegeben sind.  
@@ -55,7 +59,9 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Wenn ein Abonnement ohne Verwendung einer Momentaufnahme initialisiert wird, muss das Konto, unter dem der SQL Server-Dienst auf dem Verleger ausgeführt wird, Schreibberechtigung für den Momentaufnahmeordner auf dem Verteiler besitzen. Weitere Informationen zu Berechtigungen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-### <a name="ensuring-the-suitability-of-a-backup"></a>Sicherstellen der Eignung einer Sicherung  
+<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
+
+### Sicherstellen der Eignung einer Sicherung  
  Eine Sicherung eignet sich zum Initialisieren eines Abonnenten, wenn alle Transaktionen, die nach dem Erstellen der Sicherung auftreten, auf dem Verteiler gespeichert werden. Die Replikation zeigt eine Fehlermeldung an, falls sich die Sicherung nicht eignet.  
   
  Beachten Sie die folgenden Richtlinien, um sicherzustellen, dass sich eine Sicherung eignet:  
@@ -70,14 +76,18 @@ ms.lasthandoff: 06/22/2017
   
 -   Abonnierte timestamp-Spalten in wiederhergestellten Datenbanken müssen in **binary(8)** -Spalten konvertiert werden: Kopieren Sie den Inhalt der Tabellen, die timestamp-Spalten enthalten, in neue Tabellen, die übereinstimmende Schemas, jedoch anstelle der timestamp-Spalten **binary(8)** -Spalten aufweisen. Löschen Sie die ursprünglichen Tabellen, und geben Sie den neuen Tabellen jeweils denselben Namen wie den ursprünglichen Tabellen.  
   
-## <a name="initializing-a-subscription-with-an-alternative-method"></a>Initialisieren eines Abonnements mit einer alternativen Methode  
+<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
+
+## Initialisieren eines Abonnements mit einer alternativen Methode  
  Abonnements können mit jeder beliebigen Methode initialisiert werden, die das Kopieren des Veröffentlichungsdatenbankschemas und der Daten auf den Abonnenten zulässt, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Wenn Sie zum Initialisieren des Abonnenten eine alternative Methode verwenden, werden Unterstützungsobjekte der Replikation auf den Abonnenten kopiert.  
   
  Im Unterschied zur Sicherung muss durch Sie oder die Anwendung sichergestellt werden, dass die Daten und das Schema beim Hinzufügen des Abonnements ordnungsgemäß synchronisiert werden. Wenn es zwischen dem Zeitpunkt, zu dem die Daten und das Schema auf den Abonnenten kopiert wurden, und dem Zeitpunkt, zu dem das Abonnement hinzugefügt wird, beispielsweise auf dem Verleger zu einer Aktivität gekommen ist, kann es passieren, dass Änderungen, die sich aus dieser Aktivität ergeben, nicht auf den Abonnenten repliziert werden.  
   
  Informationen zum Initialisieren eines Abonnements mit einer alternativen Methode finden Sie unter [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Siehe auch  
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
