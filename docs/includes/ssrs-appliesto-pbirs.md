@@ -1,0 +1,1 @@
+![Ja](media/yes.png)Power BI-Berichtsserver
