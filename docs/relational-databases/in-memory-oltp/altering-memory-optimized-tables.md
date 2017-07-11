@@ -2,7 +2,7 @@
 title: "Ändern von speicheroptimierten Tabellen | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/04/2016
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,18 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
+<a id="altering-memory-optimized-tables" class="xliff"></a>
+
+# Ändern von speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Änderungen des Schemas und des Indizes in speicheroptimierten Tabellen können mithilfe der Anweisung ALTER TABLE durchgeführt werden. Die Datenbankanwendung kann weiterhin ausgeführt werden, und jeder Vorgang, der auf die Tabellen zugreift, wird blockiert bis der Änderungsprozess abgeschlossen ist.  
+  Änderungen des Schemas und des Indizes in speicheroptimierten Tabellen können mithilfe der Anweisung ALTER TABLE durchgeführt werden. In SQL Server 2016 und Azure SQL-Datenbank sind ALTER TABLE-Vorgänge mit speicheroptimierte Tabellen OFFLINE, d.h., dass die Tabelle während des Vorgangs nicht abgefragt werden kann. Die Datenbankanwendung kann weiterhin ausgeführt werden, und jeder Vorgang, der auf die Tabellen zugreift, wird blockiert bis der Änderungsprozess abgeschlossen ist. Es ist mögliche, mehrere ADD-, DROP- und ALTER-Vorgänge in einer einzigen ALTER TABLE-Anweisung zu kombinieren.
   
-## <a name="alter-table"></a>ALTER TABLE  
+<a id="alter-table" class="xliff"></a>
+
+## ALTER TABLE  
  
 Die ALTER TABLE-Syntax wird für die Änderung des Tabellenschemas sowie zum Hinzufügen, Löschen und Neuerstellen von Indizes verwendet. Indizes werden als Teil der Tabellendefinition berücksichtigt:  
   
@@ -80,12 +84,37 @@ Die ALTER TABLE-Syntax wird für die Änderung des Tabellenschemas sowie zum Hin
   
  Weitere Informationen zu ALTER TABLE-Funktionen und die vollständige Syntax finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## <a name="schema-bound-dependency"></a>Schemagebundene Abhängigkeit  
+<a id="schema-bound-dependency" class="xliff"></a>
+
+## Schemagebundene Abhängigkeit  
  Systemintern kompilierte gespeicherte Prozeduren müssen schemagebunden sein, d. h., sie haben eine schemagebundene Abhängigkeit zu den speicheroptimierten Tabellen, auf die sie zugreifen, und zu den Spalten, auf die sie verweisen. Eine schemagebundene Abhängigkeit ist eine Beziehung zwischen zwei Entitäten, mit der verhindert wird, dass die Entität, auf die verwiesen wird, gelöscht oder in einer inkompatiblen Art geändert wird, solange die verweisende Entität vorhanden ist.  
   
  Wird beispielsweise in einer schemagebundenen systemintern kompilierten gespeicherten Prozedur auf die Spalte *c1* aus der Tabelle *mytable*verwiesen, kann die Spalte *c1* nicht gelöscht werden. Entsprechend kann, wenn es eine solche Prozedur mit einer INSERT-Anweisung ohne Spaltenliste gibt (z. B. `INSERT INTO dbo.mytable VALUES (...)`) keine Spalte aus der Tabelle gelöscht werden.  
+ 
+<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
+
+## Protokollieren von ALTER TABLE bei speicheroptimierten Tabellen
+Bei einer speicheroptimierten Tabelle werden die meisten ALTER TABLE-Szenarios nun parallel ausgeführt und tragen zu einer Optimierung der Schreibvorgänge in das Transaktionsprotokoll bei. Zur Optimierung werden nur die Metadatenänderungen in das Transaktionsprotokoll geschrieben. Die folgenden ALTER TABLE-Vorgänge werden als Singlethread ausgeführt und sind nicht protokolloptimiert.
+
+Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geänderten Tabelle in das Transaktionsprotokoll. Im Folgenden finden Sie eine Liste der Singlethread-Vorgänge:
+
+- Ändern oder Hinzufügen einer Spalte, um einen LOB-Typ (Large Object) zu verwenden: nvarchar(max), varchar(max) oder varbinary(max).
+
+- Hinzufügen oder Löschen eines Columnstore-Indexes.
+
+- Fast jeder Vorgang, der sich auf eine [zeilenüberragende Spalte (off-row column)](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)auswirkt.
+
+    - Sorgen Sie dafür, dass eine Spalte in der Zeile aus der Zeile verschoben wird.
+
+    - Sorgen Sie dafür, dass eine Spalte außerhalb der Zeile in die Zeile verschoben wird.
+
+    - Erstellen Sie eine neue Spalte außerhalb der Zeile.
+
+    - *Ausnahme:* Ein Verlängern einer bereits zeilenüberragenden Spalte wird in der optimierten Weise protokolliert. 
   
-## <a name="examples"></a>Beispiele  
+<a id="examples" class="xliff"></a>
+
+## Beispiele  
  Im folgenden Beispiel ändert sich die Bucketanzahl eines vorhandenen Hashindexes. Dadurch wird der Hashindex mit der neuen Bucketanzahl neu erstellt, während andere Eigenschaften des Hashindexes unverändert bleiben.  
   
 ```tsql
@@ -150,29 +179,10 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Protokollieren von ALTER TABLE bei speicheroptimierten Tabellen
 
+<a id="see-also" class="xliff"></a>
 
-Bei einer speicheroptimierten Tabelle werden die meisten ALTER TABLE-Szenarios nun parallel ausgeführt und tragen zu einer Optimierung der Schreibvorgänge in das Transaktionsprotokoll bei. Zur Optimierung werden nur die Metadatenänderungen in das Transaktionsprotokoll geschrieben. Die folgenden ALTER TABLE-Vorgänge werden als Singlethread ausgeführt und sind nicht protokolloptimiert.
-
-Für die Singlethread-Vorgänge muss der gesamte Inhalt der geänderten Tabelle in das Protokoll geschrieben werden. Im Folgenden finden Sie eine Liste der Singlethread-Vorgänge:
-
-- Ändern oder Hinzufügen einer Spalte, um einen LOB-Typ (Large Object) zu verwenden: nvarchar(max), varchar(max) oder varbinary(max).
-
-- Hinzufügen oder Löschen eines Columnstore-Indexes.
-
-- Fast jeder Vorgang, der sich auf eine [zeilenüberragende Spalte (off-row column)](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)auswirkt.
-
-    - Sorgen Sie dafür, dass eine Spalte in der Zeile aus der Zeile verschoben wird.
-
-    - Sorgen Sie dafür, dass eine Spalte außerhalb der Zeile in die Zeile verschoben wird.
-
-    - Erstellen Sie eine neue Spalte außerhalb der Zeile.
-
-    - *Ausnahme:* Ein Verlängern einer bereits zeilenüberragenden Spalte wird in der optimierten Weise protokolliert.
-
-
-## <a name="see-also"></a>Siehe auch  
+## Siehe auch  
 
 [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

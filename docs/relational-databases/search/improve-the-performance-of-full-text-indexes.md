@@ -25,14 +25,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
+<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
+
+# Verbessern der Leistung von Volltextindizes
 In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
   
 ##  <a name="causes"></a> Common causes of performance issues
-### <a name="hardware-resource-issues"></a>Probleme mit Hardware
+<a id="hardware-resource-issues" class="xliff"></a>
+
+### Probleme mit Hardware
 Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
 
 Der Hauptgrund für eine eingeschränkte Leistung beim Erstellen von Volltextindizes sind Einschränkungen bei den Hardwareressourcen:  
@@ -46,14 +50,18 @@ Der Hauptgrund für eine eingeschränkte Leistung beim Erstellen von Volltextind
     > [!NOTE]  
     >  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kann das Volltextmodul den AWE-Speicher verwenden, weil das Volltextmodul Teil von sqlservr.exe ist.  
 
-### <a name="full-text-batching-issues"></a>Volltext-Batchverarbeitungs Probleme
+<a id="full-text-batching-issues" class="xliff"></a>
+
+### Volltext-Batchverarbeitungs Probleme
  Wenn auf dem System keine Hardwareengpässe vorhanden sind, hängt die Indizierungsleistung der Volltextsuche vor allem von folgenden Faktoren ab:  
   
 -   Wie lange das Erstellen von Volltextbatches durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dauert.  
   
 -   Wie schnell der Filterdaemon diese Batches verarbeiten kann.  
 
-### <a name="full-text-index-population-issues"></a>Volltextindex-Auffüllungsprobleme
+<a id="full-text-index-population-issues" class="xliff"></a>
+
+### Volltextindex-Auffüllungsprobleme
 -   **Typ der Auffüllung.** Im Gegensatz zur vollständigen Auffüllung eignet sich die inkrementelle, manuelle und automatische Änderungsnachverfolgung der Auffüllung nicht zum Maximieren von Hardwareressourcen, um schnellere Geschwindigkeiten zu erzielen. Aus diesem Grund können die Optimierungsvorschläge in diesem Thema die Leistung für Volltextindizierung nicht verbessern, wenn sie inkrementelle, manuelle oder automatische Änderungsüberwachungsauffüllung verwenden.  
   
 -   **Mastermerge** Nach dem Ende einer Auffüllung wird ein abschließender Mergeprozess ausgelöst, der die Indexfragmente zu einem Mastervolltextindex zusammenführt. Dies ermöglicht eine verbesserte Abfrageleistung, da statt mehrerer Indexfragmente nur der Masterindex abgefragt werden muss. Zudem können bessere Bewertungsstatistiken zum Erstellen der Relevanzrangfolge verwendet werden. Der Mastermergeprozess kann E/A-intensiv sein, da beim Zusammenführen der Indexfragmente umfangreiche Daten geschrieben und gelesen werden müssen. Eingehende Abfragen werden dadurch jedoch nicht blockiert.  
@@ -74,7 +82,9 @@ Sie können die Leistung Ihrer Volltextindizes mit den folgenden bewährten Meth
 -   Wenn Sie eine inkrementelle Auffüllung basierend auf einer timestamp-Spalte verwenden, erstellen Sie einen zweiten Index in einer **timestamp**-Spalte, wenn Sie die Leistung der inkrementellen Auffüllung verbessern möchten.  
   
 ##  <a name="full"></a> Beheben von Leistungsproblemen bei vollständiger Auffüllung  
-### <a name="review-the-full-text-crawl-logs"></a>Überprüfen Sie die Volltextdurchforstungsprotokolle
+<a id="review-the-full-text-crawl-logs" class="xliff"></a>
+
+### Überprüfen Sie die Volltextdurchforstungsprotokolle
  Leistungsprobleme diagnostizieren Sie, indem Sie die Volltextdurchforstungsprotokolle überprüfen.
  
 Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standardmäßig befinden sich Durchforstungsprotokolle für eine bestimmte Instanz (in diesem Beispiel die Standardinstanz) im Ordner `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
@@ -86,11 +96,13 @@ Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:
 Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 -   <**DatabaseID**>: Die ID einer Datenbank. <**dbid**> ist eine fünfstellige Zahl mit führenden Nullen.  
 -   <**Volltext-Katalog-ID**>: Die ID eines Volltextkatalogs. <**catid**> ist eine fünfstellige Zahl mit führenden Nullen.  
--   <**n**>: Ist eine ganze Zahl, die angibt, dass mindestens ein Durchforstungsprotokoll desselben Volltextkatalogs vorhanden ist.  
+-   <**n**> ist eine ganze Zahl, die angibt, dass mindestens ein Durchforstungsprotokoll desselben Volltextkatalogs vorhanden ist.  
   
  `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
 
-### <a name="check-physical-memory-usage"></a>Überprüfen Sie die Verwendung des physischen Speichers  
+<a id="check-physical-memory-usage" class="xliff"></a>
+
+### Überprüfen Sie die Verwendung des physischen Speichers  
  Während einer Volltextauffüllung ist es möglich, dass fdhost.exe oder sqlservr.exe viel Arbeitsspeicher beansprucht oder nicht genügend Arbeitsspeicher vorhanden ist.
 -   Wenn das Protokoll der Volltextdurchforstung zeigt, dass fdhost.exe häufig neu gestartet oder dass Fehlercode 8007008 zurückgegeben wird, bedeutet dies, dass für einen der Prozesse kein Speicher mehr verfügbar ist.
 -   Wenn fdhost.exe Dumps erzeugt, insbesondere auf großen Multi-CPU-Computern, steht möglicherweise nicht genügend Arbeitsspeicher zur Verfügung.  
@@ -108,7 +120,9 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 
 -   **Auslagerungsprobleme** Eine zu kleine Auslagerungsdatei, z. B. wenn ein System über eine kleine Auslagerungsdatei mit eingeschränkter Vergrößerung verfügt, kann ebenfalls dazu führen, dass fdhost.exe oder sqlservr.exe nicht mehr auf genügend Arbeitsspeicher zugreifen können. Wenn die Crawlprotokolle keine speicherbezogenen Fehler anzeigen, ist die Leistung wahrscheinlich aufgrund zu vieler Auslagerungen beeinträchtigt.  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Schätzen der Arbeitsspeicheranforderungen des Filterdaemon-Hostprozesses (fdhost.exe)  
+<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
+
+### Schätzen der Arbeitsspeicheranforderungen des Filterdaemon-Hostprozesses (fdhost.exe)  
  Der vom fdhost.exe-Prozess für eine Auffüllung benötigte Arbeitsspeicher hängt hauptsächlich von den verwendeten Volltext-Crawlbereichen, der Größe des Inbound Shared Memory (ISM) und der maximalen Anzahl von ISM-Instanzen ab.  
   
  Der vom Filterdaemonhost verwendete Arbeitsspeicher (in Bytes) kann mit der folgenden Formel ungefähr geschätzt werden:  
@@ -143,7 +157,9 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von „fdhost.exe“  
+<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
+
+ #### Beispiel: Schätzen der Arbeitsspeicheranforderungen von „fdhost.exe“  
   
  Dieses Beispiel gilt für einen 64-Bit-Computer mit 8 GM RAM und 4 dual-Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von fdhost.exe benötigt wird:*F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
   
@@ -153,7 +169,9 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Beispiel: Festlegen von "max server memory"  
+<a id="example-setting-max-server-memory" class="xliff"></a>
+
+ #### Beispiel: Festlegen von "max server memory"  
   
  In diesem Beispiel werden die Anweisungen [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um **maximalen Serverarbeitsspeicher** auf den Wert festzulegen, der im vorherigen Beispiel für *M* berechnet wurde, also `7052`:  
   
@@ -168,7 +186,9 @@ GO
   
 Weitere Informationen zur Serverarbeitsspeicher-Option finden Sie unter [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-### <a name="check-cpu-usage"></a>Überprüfen der CPU-Verwendung  
+<a id="check-cpu-usage" class="xliff"></a>
+
+### Überprüfen der CPU-Verwendung  
 Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht optimal ist, wenn der mittlere CPU-Verbrauch weniger als 30 Prozent beträgt. In diesem Abschnitt werden einige Faktoren behandelt, die sich auf den CPU-Verbrauch auswirken.  
   
 -   Lange Wartezeiten für Seiten  
@@ -211,7 +231,9 @@ Beim Auffüllen eines Volltextindexes werden vom Volltextmodul zwei Arten von Fi
   
 Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Hierzu müssen Sie den Registrierungswert **ThreadingModel** für den Filter auf **Apartment Threaded** festlegen. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
   
-## <a name="see-also"></a>Siehe auch  
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)   

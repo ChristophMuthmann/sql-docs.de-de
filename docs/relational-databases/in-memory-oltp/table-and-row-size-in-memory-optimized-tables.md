@@ -1,7 +1,7 @@
 ---
 title: "Tabellen- und Zeilengröße in speicheroptimierten Tabellen | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+
+# Tabellen- und Zeilengröße in speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Daten in Zeilen maximal 8060 Bytes lang sein. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist es jedoch möglich, eine Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max)-, varchar(max)- und nvarchar(max)-Spalten) zu erstellen. Spalten, die die maximale Größe für Daten in Zeilen überschreiten, werden außerhalb von Zeilen in besonderen internen Tabellen platziert. Informationen zu diesen internen Tabellen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+  Vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] konnte die Größe von Daten in Zeilen einer speicheroptimierten Tabelle nicht größer als [8.060 Bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx) sein. Jedoch ist es jetzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Azure SQL Database möglich, eine speicheroptimierte Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max), varchar(max) und nvarchar(max)) zu erstellen sowie Vorgänge für sie mithilfe nativ kompilierter T-SQL-Module und Tabellentypen auszuführen. 
   
- Es gibt zwei Gründe für das Berechnen der Tabellen- und Zeilengröße:  
+  Spalten, die nicht in das Zeilenlimit von 8060 Bytes passen, werden außerhalb der Zeile in einer separaten internen Tabelle platziert. Jede Spalte außerhalb einer Zeile verfügt über eine entsprechende interne Tabelle, die wiederum über einen einzelnen, nicht gruppierten Index verfügt. Informationen zu diesen internen Tabellen für Spalten außerhalb von Zeilen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
+ 
+  Es gibt bestimmte Szenarios, in denen es nützlich ist, die Größe der Zeile und der Tabelle zu berechnen.
   
 -   Wie viel Arbeitsspeicher verwendet eine Tabelle?  
   
@@ -38,13 +42,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Die Datengröße einer Zeile und die Frage, ob die maximale Zeilengröße von 8.060 Bytes eingehalten wird. Um diese Fragen zu beantworten, verwenden Sie die Berechnung von [row body size], wie unten erläutert.  
 
-Spalten, die nicht in das Zeilenlimit von 8060 Bytes passen, werden außerhalb der Zeile in einer separaten internen Tabelle platziert. Jede Spalte außerhalb einer Zeile verfügt über eine entsprechende interne Tabelle, die wiederum über einen einzelnen, nicht gruppierten Index verfügt. Informationen zu internen Tabellen für Spalten außerhalb von Zeilen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
-  
- Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
+  Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
  ![Speicheroptimierte Tabelle.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
-  
+
+##  <a name="bkmk_TableSize"></a> Berechnen der Tabellengröße
  Die Größe einer Tabelle im Arbeitsspeicher in Bytes wird wie folgt berechnet:  
   
 ```  
@@ -65,34 +68,10 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indices]  
 ```  
-  
- **Zeilentextgröße**  
-  
- Die Berechnung von [row body size] wird in der folgenden Tabelle erläutert.  
-  
- Es gibt zwei verschiedene Berechnungen für die Zeilentextgröße: die berechnete Größe und die tatsächliche Größe:  
-  
--   Die berechnete Größe, bezeichnet mit [computed row body size], wird verwendet, um festzustellen, ob die Zeilengrößeneinschränkung von 8.060 Bytes überschritten wird.  
-  
--   Die tatsächliche Größe, bezeichnet mit [actual row body size], ist die tatsächliche Speichergröße des Zeilentexts im Arbeitsspeicher und in den Prüfpunktdateien.  
-  
- [computed row body size] und [actual row body size] werden ähnlich berechnet. Der einzige Unterschied ist die Berechnung der Größe von (n)varchar(i)- und varbinary(i)-Spalten, wie unten in der folgenden Tabelle dargestellt. Bei der berechneten Zeilentextgröße wird die deklarierte Größe *i* als Größe der Spalte verwendet, während für die tatsächliche Zeilentextgröße die tatsächliche Größe der Daten verwendet wird.  
-  
- In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
-  
-|Abschnitt|Größe|Kommentare|  
-|-------------|----------|--------------|  
-|Spalten flacher Typen|SUM([Größe flacher Typen]) Die Größe (in Bytes) der einzelnen Typen lautet wie folgt:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (Genauigkeit <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (Genauigkeit >18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
-|NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Spalten tiefer Typen mit fester Länge|SUM([size of fixed length deep type columns])<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
-|Spalten tiefer Typen mit variabler Länge [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf [computed row body size] angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
-|Spalten tiefer Typen mit variabler Länge [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Die tatsächliche Größe jeder Spalte lautet wie folgt:<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für varchar(i).<br /><br /> 2 * n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für nvarchar(i).<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Bytes ist; für varbinary(i).|Diese Zeile wird nur auf [actual row body size] angewendet.<br /><br /> Die tatsächliche Größe wird durch die Daten bestimmt, die in den Spalten der Zeile gespeichert werden.|  
-  
-##  <a name="bkmk_RowStructure"></a> Zeilenstruktur  
+##  <a name="bkmk_RowBodySize"></a> Berechnen der Zeilentextgröße
+
+**Zeilenstruktur**
+    
  Die Zeilen in einer speicheroptimierten Tabelle verfügen über folgende Komponenten:  
   
 -   Die Zeilenüberschrift enthält den Zeitstempel, der erforderlich ist, um Zeilenversionsverwaltung zu implementieren. Die Zeilenüberschrift enthält auch den Indexzeiger, um die Zeilenverkettung in den Hashbuckets zu implementieren (oben beschrieben).  
@@ -139,6 +118,32 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
 |John|Paris|  
 |Jane|Prag|  
 |Susan|Bogota|  
+  
+ 
+  
+ Die Berechnung von [row body size] wird in der folgenden Tabelle erläutert.  
+  
+ Es gibt zwei verschiedene Berechnungen für die Zeilentextgröße: die berechnete Größe und die tatsächliche Größe:  
+  
+-   Die berechnete Größe, bezeichnet mit [computed row body size], wird verwendet, um festzustellen, ob die Zeilengrößeneinschränkung von 8.060 Bytes überschritten wird.  
+  
+-   Die tatsächliche Größe, bezeichnet mit [actual row body size], ist die tatsächliche Speichergröße des Zeilentexts im Arbeitsspeicher und in den Prüfpunktdateien.  
+  
+ [computed row body size] und [actual row body size] werden ähnlich berechnet. Der einzige Unterschied ist die Berechnung der Größe von (n)varchar(i)- und varbinary(i)-Spalten, wie unten in der folgenden Tabelle dargestellt. Bei der berechneten Zeilentextgröße wird die deklarierte Größe *i* als Größe der Spalte verwendet, während für die tatsächliche Zeilentextgröße die tatsächliche Größe der Daten verwendet wird.  
+  
+ In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
+  
+|Abschnitt|Größe|Kommentare|  
+|-------------|----------|--------------|  
+|Spalten flacher Typen|SUM([Größe flacher Typen]) Die Größe (in Bytes) der einzelnen Typen lautet wie folgt:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (Genauigkeit <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (Genauigkeit >18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
+|NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Spalten tiefer Typen mit fester Länge|SUM([size of fixed length deep type columns])<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
+|Spalten tiefer Typen mit variabler Länge [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf [computed row body size] angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
+|Spalten tiefer Typen mit variabler Länge [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Die tatsächliche Größe jeder Spalte lautet wie folgt:<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für varchar(i).<br /><br /> 2 * n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für nvarchar(i).<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Bytes ist; für varbinary(i).|Diese Zeile wird nur auf [actual row body size] angewendet.<br /><br /> Die tatsächliche Größe wird durch die Daten bestimmt, die in den Spalten der Zeile gespeichert werden.|   
   
 ##  <a name="bkmk_ExampleComputation"></a> Beispiel: Tabellen- und Zeilengrößenberechnung  
  Für Hashindizes wird die tatsächliche Bucketanzahl auf die nächste Zweierpotenz aufgerundet. Wenn der angegebene bucket_count-Wert beispielsweise 100000 ist, beträgt die tatsächliche Bucketanzahl für den Index 131072.  
@@ -231,8 +236,22 @@ GO
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
+
+##  <a name="bkmk_OffRowLimitations"></a> Beschränkungen für eine zeilenüberragende Spalte
+  Bestimmte Beschränkungen und Vorbehalte bei der Verwendung von zeilenüberragenden Spalten in einer speicheroptimierten Tabelle sind unten aufgeführt:
   
-## <a name="see-also"></a>Siehe auch  
+-   Wenn es einen Columnstore-Index für eine speicheroptimierte Tabelle gibt, müssen alle Spalten in Zeilen passen. 
+-   Alle Indexschlüsselspalten müssen innerhalb von Zeilen gespeichert werden. Wenn eine Indexschlüsselspalte nicht innerhalb von Zeilen passt, schlägt das Hinzufügen des Index fehl. 
+-   Vorbehalte für das [Ändern einer speicheroptimierten Tabelle mit Spalten außerhalb von Zeilen](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
+-   Für LOBs spiegelt die Größenbeschränkung diejenige datenbasierter Tabellen wider (maximal 2 GB auf LOB-Werten). 
+-   Für eine optimale Leistung wird empfohlen, dass die meisten Spalten in 8.060 Bytes passen. 
+
+Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Neues zu In-Memory OLTP in SQL Server 2016 seit CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
+ 
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

@@ -29,11 +29,13 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
+<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
+
+# Verwenden von Warnungen für Replikations-Agentereignisse
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ermöglichen anhand von Warnungen das Überwachen von Ereignissen, wie Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
   
  Die folgenden Warnungen werden installiert, wenn ein Computer als Verteiler konfiguriert wird:  
   
@@ -53,15 +55,21 @@ ms.lasthandoff: 04/11/2017
   
  **So konfigurieren Sie vordefinierte Replikationswarnungen**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## <a name="viewing-the-application-log-directly"></a>Direktes Anzeigen des Anwendungsprotokolls  
+<a id="viewing-the-application-log-directly" class="xliff"></a>
+
+## Direktes Anzeigen des Anwendungsprotokolls  
  Verwenden Sie zum Anzeigen des Anwendungsprotokolls von Windows die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Ereignisanzeige. Das Anwendungsprotokoll enthält sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehlermeldungen als auch Meldungen zu vielen anderen Aktivitäten auf dem Computer. Im Gegensatz zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehlerprotokoll wird beim Neustart von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht jedes Mal ein neues Anwendungsprotokoll erstellt (in jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sitzung werden neue Ereignisse in ein vorhandenes Anwendungsprotokoll geschrieben). Sie können allerdings angeben, wie lange die protokollierten Ereignisse beibehalten werden. Wenn Sie das Windows-Anwendungsprotokoll anzeigen, können Sie das Protokoll nach bestimmten Ereignissen filtern. Weitere Informationen finden Sie in der Windows-Dokumentation.  
   
-## <a name="automating-a-response-to-an-alert"></a>Automatisieren einer Antwort auf eine Warnung  
+<a id="automating-a-response-to-an-alert" class="xliff"></a>
+
+## Automatisieren einer Antwort auf eine Warnung  
  Die Replikation stellt einen Antwortauftrag für Abonnements bereit, deren Überprüfung fehlgeschlagen ist, und bietet außerdem ein Framework zum Erstellen weiterer automatischer Antworten auf Warnungen. Der Antwortauftrag lautet **Abonnements bei Datenüberprüfungsfehler erneut initialisieren** und ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Ordner **Aufträge** des [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Agents gespeichert. Weitere Informationen zum Aktivieren dieses Antwortauftrags finden Sie unter [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md). Wenn die Überprüfung bei Artikeln in einer Transaktionsveröffentlichung einen Fehler erzeugt, werden nur die fehlerhaften Artikel vom Antwortauftrag erneut initialisiert. Schlägt die Überprüfung in einer Mergeveröffentlichung fehl, werden alle Artikel vom Antwortauftrag erneut initialisiert.  
   
-### <a name="framework-for-automating-responses"></a>Framework für automatische Antworten  
+<a id="framework-for-automating-responses" class="xliff"></a>
+
+### Framework für automatische Antworten  
  Wenn eine Warnung auftritt, sind in der Regel die einzigen Informationen, mit deren Hilfe Sie verstehen können, was die Warnung auslöste und welche entsprechende Maßnahme ergriffen werden sollte, in der Warnmeldung enthalten. Eine Analyse dieser Informationen kann sich als fehleranfällig und zeitraubend erweisen. Die Replikation vereinfacht automatische Antworten, da in der **sysreplicationalerts** -Systemtabelle zusätzliche Informationen zur Warnung bereitgestellt werden. Diese Informationen sind bereits so analysiert, dass sie einfach in benutzerdefinierten Programmen verwendet werden können.  
   
  Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: "Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A', für den 'SalesOrderHeader'-Artikel in der in der 'MyPublication'-Veröffentlichung."  
@@ -90,7 +98,9 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Überwachen &#40;Replikation&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
