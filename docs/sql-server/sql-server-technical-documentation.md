@@ -1,6 +1,6 @@
 ---
 title: Technische Dokumentation zu SQL Server | Microsoft Docs
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
+<a id="sql-server-technical-documentation" class="xliff"></a>
+
+# Technische Dokumentation zu SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Installation für SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Server unterstützt. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Weitere Informationen über [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] -Sprachthemen finden Sie unter [Sprachreferenz](../t-sql/language-reference.md).
+
+Sie finden SQL Server-Dokumentationen auch offline, indem Sie den Help Viewer verwenden. Weitere Informationen finden Sie unter [Help Viewer für SQL Server](../release-notes/sql-server-help-installation.md).
 
 **SQLServer 2017**
 
@@ -51,7 +55,9 @@ ms.lasthandoff: 06/22/2017
  - **[Starten eines virtuellen Computers mit bereits installiertem SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[Herunterladen der neuesten Version von SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>SQL Server-Technologien    
+<a id="sql-server-technologies" class="xliff"></a>
+
+## SQL Server-Technologien    
     
 |||    
 |-|-|    
@@ -65,7 +71,9 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services liefert webbasierte Berichterstellungsfunktionalität für Unternehmen, sodass Sie Berichte erstellen, die Inhalte aus einer Vielzahl von Datenquellen ziehen, Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten können.|    
 
     
-## <a name="earlier-sql-server-versions"></a>Frühere SQL Server-Versionen
+<a id="earlier-sql-server-versions" class="xliff"></a>
+
+## Frühere SQL Server-Versionen
 - [Onlinedokumentation für SQL Server 2014-Onlinedokumentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Installieren von SQL Server 2014 Express und anderen älteren Versionen von SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Vielen Dank an [Scott Hanselman](http://www.hanselman.com/) für das Sammeln aller Installer-Paketlinks an einem Ort!**)  
 - [Technische Dokumentation zu SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +86,9 @@ ms.lasthandoff: 06/22/2017
 - [AdventureWorks-Beispieldatenbanken und Skripts für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>Weitere Informationen   
+<a id="more-information" class="xliff"></a>
+
+ ## Weitere Informationen   
 + [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)
 + Das[SQL Server-Update Center](https://msdn.microsoft.com/library/ff803383.aspx) enthält Links und Informationen für alle unterstützten Versionen. 
 + [Installieren des SQL Server-Datenbankmoduls](../database-engine/install-windows/install-sql-server-database-engine.md) 
