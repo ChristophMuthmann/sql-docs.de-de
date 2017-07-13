@@ -1,7 +1,7 @@
 ---
 title: Reporting Services-Datenwarnungen | Microsoft Docs
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,26 +16,30 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
+# Reporting Services-Datenwarnungen
+<a id="reporting-services-data-alerts" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen sind eine datengesteuerte Warnungslösung, mit der Sie sich leichter und zu einem relevanten Zeitpunkt über für Sie interessante oder wichtige Berichtsdaten informieren können. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.  
-  
- Datenwarnmeldungen werden per E-Mail gesendet. Sie können festlegen, dass Meldungen je nach Wichtigkeit der Informationen mehr oder weniger häufig oder nur im Fall von Ergebnisänderungen zu senden sind. Sie können mehrere E-Mail-Empfänger festlegen und somit andere Benutzer informieren, um die Effizienz und Zusammenarbeit verbessern.  
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services-datenwarnungen sind eine datengesteuerte warnungslösung, mit denen die über Berichtsdaten informiert werden, die interessante oder wichtige und zu einem relevanten Zeitpunkt. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.
+
+Datenwarnmeldungen werden per E-Mail gesendet. Sie können festlegen, dass Meldungen je nach Wichtigkeit der Informationen mehr oder weniger häufig oder nur im Fall von Ergebnisänderungen zu senden sind. Sie können mehrere E-Mail-Empfänger festlegen und somit andere Benutzer informieren, um die Effizienz und Zusammenarbeit verbessern.
 
 > [!NOTE]
 > Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
-  
-##  <a name="AlertingWF"></a> Datenwarnungsarchitektur und Workflow  
- Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen zusammengefasst:  
-  
+
+##  <a name="AlertingWF"></a> Datenwarnungsarchitektur und Workflow
+
+Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen zusammengefasst:
+
 -   **Festlegen und Speichern von Datenwarnungsdefinitionen**: Sie führen einen Bericht aus, erstellen Regeln, die interessante Datenwerte kennzeichnen, definieren ein Serienmuster zum Senden der Datenwarnmeldung und legen die Empfänger der Warnmeldung fest.  
   
 -   **Ausführen von Datenwarnungsdefinitionen**: Der Warndienst verarbeitet Warnungsdefinitionen zu einem geplanten Zeitpunkt, ruft Berichtsdaten ab und erstellt Datenwarnungsinstanzen auf Basis von Regeln in der Warnungsdefinition.  
@@ -54,7 +58,8 @@ ms.lasthandoff: 06/22/2017
   
  ![Workflows in einer Reporting Services-Warnungen](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services-Warnungen")  
   
-### <a name="reports-supported-by-data-alerts"></a>Von Datenwarnungen unterstützte Berichte  
+### Von Datenwarnungen unterstützte Berichte
+<a id="reports-supported-by-data-alerts" class="xliff"></a>  
  Sie können Datenwarnungen für alle Typen von professionellen Berichten erstellen, die in der Berichtsdefinitionssprache (RDL) geschrieben und im Berichts-Designer oder Berichts-Generator erstellt wurden. Berichte, die Datenbereiche wie z. B. Tabellen und Diagramme enthalten, Berichte mit Unterberichten und komplexe Berichte mit mehreren parallelen Spaltengruppen und geschachtelten Datenbereichen. Die einzige Voraussetzung ist, dass der Bericht mindestens einen Datenbereich beliebigen Typs beinhaltet und die Berichtsdatenquelle so konfiguriert ist, dass entweder gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet werden. Wenn der Bericht keine Datenbereiche aufweist, können Sie keine Warnung dafür erstellen.  
   
  Sie können keine Datenwarnungen in mit [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]erstellten Berichten erstellen.  
@@ -69,29 +74,34 @@ ms.lasthandoff: 06/22/2017
   
 -   [Authentifizierung mit dem Berichtsserver](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### <a name="run-reports"></a>Ausführen von Berichten  
+### Ausführen von Berichten
+<a id="run-reports" class="xliff"></a>  
  Der erste Schritt zum Erstellen einer Datenwarnungsdefinition umfasst das Suchen des gewünschten Berichts in der SharePoint-Bibliothek und das anschließende Ausführen des Berichts. Wenn ein Bericht bei der Ausführung keine Daten enthält, können Sie zu diesem Zeitpunkt keine Warnung für den Bericht erstellen.  
   
  Geben Sie im Fall eines parametrisierten Berichts die beim Ausführen des Berichts zu verwendenden Parameterwerte an. Die Parameterwerte werden in den Datenwarnungsdefinitionen gespeichert, die Sie für einen Bericht erstellen. Die Werte werden beim erneuten Ausführen des Berichts als Schritt der Verarbeitung der Datenwarnungsdefinition verwendet. Wenn Sie die Parameterwerte ändern, ist der Bericht mit diesen Parameterwerten erneut auszuführen, und Sie müssen eine Warnungsdefinition für die neue Berichtsversion erstellen.  
   
-### <a name="create-data-alert-definitions"></a>Erstellen von Datenwarnungsdefinitionen  
+### Erstellen von Datenwarnungsdefinitionen
+<a id="create-data-alert-definitions" class="xliff"></a>  
  Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungsfunktionen umfassen den Datenwarnungs-Designer, der zum Erstellen von Datenwarnungsdefinitionen dient.  
   
  Um eine Datenwarnungsdefinition zu erstellen, führen Sie den Bericht aus, und öffnen Sie den Datenwarnungs-Designer über das SharePoint-Berichts-Viewer-Menü **Aktionen** . Die Berichtsdaten-Feeds für den Bericht werden generiert. Zudem werden die ersten 100 Zeilen im Datenfeed in einer Datenvorschautabelle im Datenwarnungs-Designer angezeigt. Alle Datenfeeds aus einem Bericht werden so lange zwischengespeichert, wie Sie im Datenwarnungs-Designer an der Warnungsdefinition arbeiten. Das Zwischenspeichern ermöglicht schnelles Umschalten zwischen Datenfeeds. Wenn Sie im Datenwarnungs-Designer eine Warnungsdefinition erneut öffnen, werden die Datenfeeds aktualisiert.  
   
  Datenwarnungsdefinitionen bestehen aus Regeln und Klauseln, denen Berichtsdaten entsprechen müssen, damit eine Datenwarnmeldung ausgelöst wird. Zudem umfassen sie einen Plan mit der Definition der Häufigkeit zum Senden der Warnmeldung, optional die Datumsangaben zum Starten und Beenden des Sendevorgangs für die Warnmeldung sowie Informationen (z. B. die Betreffzeile und eine Beschreibung für die Warnmeldung) und die Empfänger der Meldung. Nach dem Erstellen einer Warnungsdefinition speichern Sie diese in der SQL Server-Warnungsdatenbank.  
   
-### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Speichern von Datenwarnungsdefinitionen und Warnungsmetadaten  
+### Speichern von Datenwarnungsdefinitionen und Warnungsmetadaten
+<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
  Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, wird die SQL Server-Warnungsdatenbank automatisch erstellt.  
   
  Datenwarnungsdefinitionen und Warnungsmetadaten werden in der Warnungsdatenbank gespeichert. Standardmäßig heißt diese Datenbank ReportingServices\<GUID > _Alerting.  
   
  Wenn Sie die Datenwarnungsdefinition speichern, erstellt der Warnungsdienst einen SQL Server-Agent-Auftrag für die Warnungsdefinition. Der Auftrag beinhaltet einen Auftragszeitplan. Der Zeitplan basiert auf dem Serienmuster, das Sie mit der Warnungsdefinition definieren. Durch die Ausführung des Auftrags wird die Verarbeitung der Datenwarnungsdefinition initiiert.  
   
-### <a name="process-data-alert-definitions"></a>Verarbeiten von Datenwarnungsdefinitionen  
+### Verarbeiten von Datenwarnungsdefinitionen
+<a id="process-data-alert-definitions" class="xliff"></a>  
  Wenn der Zeitplan für den Auftrag des SQL Server-Agent die Verarbeitung der Warnungsdefinition startet, wird der Bericht ausgeführt, um die Berichtsdatenfeeds zu aktualisieren. Der Warndienst liest die Datenfeeds und wendet die in den Datenwarnungsdefinitionen angegebenen Regeln auf die Datenwerte an. Entspricht mindestens ein Datenwert den Regeln, wird eine Datenwarnungsinstanz erstellt und eine Datenwarnmeldung mit den Warnungsergebnissen per E-Mail an alle Empfänger gesendet. Die Ergebnisse entsprechen Zeilen mit Berichtsdaten, die zum Zeitpunkt der Erstellung der Warnungsinstanz alle Regeln erfüllt haben. Um mehrere Warnmeldungen mit den gleichen Ergebnissen zu unterbinden, können Sie angeben, dass Meldungen nur gesendet werden, wenn sich die Ergebnisse ändern. In diesem Fall wird eine Warnungsinstanz erstellt und in der Warnungsdatenbank gespeichert. Eine Warnmeldung wird jedoch nicht generiert. Tritt ein Fehler auf, wird die Warnungsinstanz ebenfalls in der Warnungsdatenbank gespeichert und eine Warnmeldung mit den Fehlerdetails an die Empfänger gesendet. Der Abschnitt "Diagnose und Protokollierung" weiter unten in diesem Thema bietet weitere Informationen zur Protokollierung und Problembehandlung.  
   
-### <a name="send-data-alert-messages"></a>Senden von Datenwarnmeldungen  
+### Senden von Datenwarnmeldungen
+<a id="send-data-alert-messages" class="xliff"></a>  
  Datenwarnmeldungen werden per E-Mail gesendet.  
   
  Die Zeile **Von** enthält einen von der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -E-Mail-Übermittlungskonfiguration bereitgestellten Wert. In der Zeile **An** sind die Empfänger aufgelistet, die Sie angegeben haben, als Sie die Warnung im Datenwarnungs-Designer erstellt haben.  
@@ -145,7 +155,8 @@ ms.lasthandoff: 06/22/2017
   
  Standardmäßig gelten die MaxRetries- und SecondsBeforeRetry-Einstellungen für alle Ereignisse von Datenwarnungen. Wenn Sie eine genauere Steuerung der Neuversuche und Verzögerungen bei Neuversuchen wünschen, fügen Sie Elemente für alle Ereignishandler hinzu, die verschiedene Werte für MaxRetries und SecondsBeforeRetry angeben.  
   
-### <a name="event-handlers-and-retry"></a>Ereignishandler und Wiederholung  
+### Ereignishandler und Wiederholung
+<a id="event-handlers-and-retry" class="xliff"></a>  
  Die Ereignishandler sind:  
   
 |Ereignishandler|Description|  
@@ -216,7 +227,8 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="DiagnosticsLogging"></a> Diagnose und Protokollierung  
  Datenwarnungen bieten zahlreiche Möglichkeiten zur Unterstützung von Information Workern und Administratoren beim Nachverfolgen von Warnungen und Verstehen der Ursachen von Fehlern bei Warnungen und helfen Administratoren bei der Verwendung von Protokollen, um zu erfahren, welche Warnmeldungen an wen gesendet wurden, und um die Anzahl der gesendeten Warnungsinstanzen usw. herauszufinden.  
   
-### <a name="data-alert-manager"></a>Datenwarnungs-Manager  
+### Datenwarnungs-Manager
+<a id="data-alert-manager" class="xliff"></a>  
  Der Datenwarnungs-Manager listet Warnungsdefinitionen und Fehlerinformationen auf, die Information Worker und Administratoren beim Ermitteln von Fehlerursachen unterstützen. Einige häufige Ursachen für Fehler:  
   
 -   Der Berichtsdatenfeed wurde geändert, und Spalten, die in Regeln für Datenwarnungsdefinitionen verwendet werden, sind nicht mehr im Datenfeed enthalten.  
@@ -225,12 +237,14 @@ ms.lasthandoff: 06/22/2017
   
 -   Der Datentyp in der zugrunde liegenden Datenquelle wurde geändert, und die Warnungsdefinition ist nicht mehr gültig.  
   
-### <a name="logs"></a>Protokolle  
+### Protokolle
+<a id="logs" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Protokollen, mit denen Sie einen besseren Einblick in die bei der Verarbeitung von Datenwarnungsdefinitionen ausgeführten Berichte, in die erstellten Datenwarnungsinstanzen usw. erhalten. Drei Protokolle sind besonders nützlich: das Warnungsausführungsprotokoll sowie das Ausführungsprotokoll und das Ablaufverfolgungsprotokoll des Berichtsservers.  
   
  Weitere Informationen zu anderen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Protokollen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### <a name="alerting-execution-log"></a>Warnungsausführungsprotokoll  
+#### Warnungsausführungsprotokoll
+<a id="alerting-execution-log" class="xliff"></a>  
  Der Warnungslaufzeitdienst schreibt Einträge in die Tabelle ExecutionLogView in der Warnungsdatenbank. Sie können die Tabelle abfragen oder die folgenden gespeicherten Prozeduren ausführen, um umfangreichere Diagnoseinformationen zu den in der Warnungsdatenbank gespeicherten Datenwarnungen abzurufen.  
   
 -   ReadAlertData  
@@ -251,10 +265,12 @@ ms.lasthandoff: 06/22/2017
   
  Sie können die gespeicherte Prozedur mithilfe von SQL-Agents nach einem Zeitplan ausführen. Weitere Informationen finden Sie unter [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### <a name="report-server-execution-log"></a>Berichtsserver-Ausführungsprotokoll  
+#### Berichtsserver-Ausführungsprotokoll
+<a id="report-server-execution-log" class="xliff"></a>  
  Berichte werden ausgeführt, um die Datenfeeds zu generieren, auf denen Datenwarnungsdefinitionen basieren. Das Ausführungsprotokoll des Berichtsservers in der zugehörigen Datenbank erfasst bei jeder Ausführung des Berichts Informationen. Fragen Sie die ExecutionLog2-Sicht in der Datenbank ab, um ausführliche Informationen zu erhalten. Weitere Informationen finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Sicht](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### <a name="report-server-trace-log"></a>Ablaufverfolgungsprotokoll des Berichtsservers  
+#### Ablaufverfolgungsprotokoll des Berichtsservers
+<a id="report-server-trace-log" class="xliff"></a>  
  Das Ablaufverfolgungsprotokoll des Berichtsservers enthält sehr detaillierte Informationen für Berichtsserver-Dienstvorgänge, einschließlich der vom Berichtsserver-Webdienst und der Hintergrundverarbeitung ausgeführten Vorgänge. Ablaufverfolgungsinformationen können beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Performance Counters  
@@ -318,7 +334,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Siehe auch
+## Siehe auch
+<a id="see-also" class="xliff"></a>
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

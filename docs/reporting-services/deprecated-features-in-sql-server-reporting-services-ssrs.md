@@ -1,7 +1,7 @@
 ---
 title: Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,33 +21,43 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9e3723e8fd524810e593234c1bb7b0535e192d07
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4a02f1937207f0d3dd559c539d078b1a218666df
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="deprecated-features-in-sql-server-reporting-services-ssrs"></a>Als veraltet markierte Funktionen in SQL Server Reporting Services (SSRS)
-  In diesem Thema werden die veralteten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen beschrieben. Die Funktionen sind immer noch in der Version verfügbar, in der sie veraltet sind. Es ist jedoch geplant, die Funktionen in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu entfernen. Verwenden Sie keine veralteten Funktionen in neuen Anwendungen.  
-  
-## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>Funktionen, die in der nächsten Version von SQL Server Reporting Services nicht unterstützt werden  
- Die folgenden [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen werden in der nächsten Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr unterstützt. Verwenden Sie diese Funktionen nicht zum Entwickeln neuer Anwendungen, und ändern Sie so bald wie möglich die Anwendungen, die diese Funktionen zurzeit verwenden.  
-  
+
+# Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016
+<a id="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+In diesem Thema wird beschrieben, die als veraltet markierte SQL Server Reporting Services-Funktionen. Die Funktionen sind immer noch in der Version verfügbar, in der sie veraltet sind. Es ist jedoch geplant, die Funktionen in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu entfernen. Verwenden Sie keine veralteten Funktionen in neuen Anwendungen.
+
+## Funktionen, die in der nächsten Version von SQL Server Reporting Services nicht unterstützt werden
+<a id="features-not-supported-in-the-next-version-of-sql-server-reporting-services" class="xliff"></a>
+
+Die folgenden Funktionen von SQL Server Reporting Services wird nicht in der nächsten Version von SQL Server unterstützt werden. Verwenden Sie diese Funktionen nicht zum Entwickeln neuer Anwendungen, und ändern Sie so bald wie möglich die Anwendungen, die diese Funktionen zurzeit verwenden.
+
 |Kategorie|Als veraltet markierte Funktion|
 |--------------|------------------------| 
 |Berichtsserver|HTML4.0-Renderer Verwenden Sie den HTML5-Renderer.|
-  
-## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Funktionen, die in früheren Versionen von SQL Server Reporting Services nicht unterstützt werden  
-  
--   [Als veraltet markierte Funktionen in SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)  
-  
--   [Als veraltet markierte Funktionen in SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Neues bei Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
- [Abwärtskompatibilität | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
+
+## Funktionen, die in früheren Versionen von SQL Server Reporting Services nicht unterstützt werden
+<a id="features-not-supported-in-previous-versions-of-sql-server-reporting-services" class="xliff"></a>
+
+- [Als veraltet markierte Funktionen in SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+
+- [Als veraltet markierte Funktionen in SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+
+## Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+ [Neuigkeiten in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) [Abwärtskompatibilität | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
  [Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
-  
-  
 
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

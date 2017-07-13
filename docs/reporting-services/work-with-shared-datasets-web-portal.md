@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit freigegebenen Datasets (Webportal) | Microsoft Docs
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Arbeiten Sie mit freigegebenen Datasets - Webportal
+# Arbeiten Sie mit freigegebenen Datasets - Webportal
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Mit einem freigegebenen Dataset können Sie die Einstellungen für ein Dataset getrennt von Berichten und anderen Katalogelementen verwalten, von denen es verwendet wird. Freigegebene Datasets können mit paginierten und mobilen Berichten verwendet werden, zusammen mit KPIs.
 
 Sie können die Eigenschaften eines freigegebenen Datasets innerhalb des Webportals anzeigen und verwalten. Über das Webportal erhalten Sie Zugriff auf den Berichts-Generator, um freigegebene Datasets zu erstellen oder zu bearbeiten.
 
-## <a name="create-a-shared-dataset"></a>Erstellen eines freigegebenen Datasets
+## Erstellen eines freigegebenen Datasets
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.  
   
@@ -47,7 +49,8 @@ Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.
   
 6.  Erstellen Sie Ihr Dataset, und wählen Sie dann das **Speichern** -Symbol in der oberen linken Ecke aus, um das Dataset zurück an den Berichtsserver zu speichern.  
   
-## <a name="manage-an-existing-shared-dataset"></a>Verwalten eines vorhandenen freigegebenen Datasets
+## Verwalten eines vorhandenen freigegebenen Datasets
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 Sie können Sie Folgendes tun, um ein vorhandenes freigegebenes Dataset zu verwalten.  
   
@@ -62,13 +65,15 @@ Sie können Sie Folgendes tun, um ein vorhandenes freigegebenes Dataset zu verwa
   
     ![SSRS-Dataset-Verwalten](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>Eigenschaften
+## Eigenschaften
+<a id="properties" class="xliff"></a>
   
 Im Eigenschaftenbildschirm können Sie den **Namen** und die **Beschreibung** des Datasets ändern. Sie können es auch **Löschen**, **Verschieben**, **Im Berichts-Generator bearbeiten**, **Herunterladen** oder **Ersetzen**.  
   
 ![SSRS-Dataset-Eigenschaften](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Caching
+## Caching
+<a id="caching" class="xliff"></a>
   
 Wenn es um das Zwischenspeichern von Daten für ein Dataset geht, stehen Ihnen Optionen zur Verfügung. Sie beginnen mit einer einfachen Auswahl.  
   
@@ -82,7 +87,8 @@ Die Wahl von **Kopien dieses Berichts zwischenspeichern und wenn verfügbar verw
   
 ![SSRS-Dataset-Zwischenspeichern2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>Cacheablauf  
+### Cacheablauf
+<a id="cache-expiration" class="xliff"></a>  
   
 Sie können steuern, ob der Cache für das freigegebene Dataset nach einer bestimmten Zeitspanne ablaufen soll, oder ob Sie es bevorzugen würden, dies laut einem Zeitplan zu tun. Sie können einen freigegebenen Zeitplan verwenden  
   
@@ -91,13 +97,14 @@ Sie können steuern, ob der Cache für das freigegebene Dataset nach einer besti
 > [!NOTE]
 > Das Festlegen einer Ablaufzeit aktualisiert nicht den Cache. Ohne einen Cacheaktualisierungsplan werden die Daten bei der nächsten Ausführung des Datasets aktualisiert.  
   
-### <a name="cache-refresh-plans"></a>Cacheaktualisierungspläne  
+### Cacheaktualisierungspläne
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 Sie können Cacheaktualisierungspläne verwenden, um Zeitpläne für das Vorabladen des Caches mit temporären Kopien der Daten für ein freigegebenes Dataset zu erstellen. Ein Aktualisierungsplan enthält einen Zeitplan und bietet die Möglichkeit, Werte für Parameter anzugeben oder zu überschreiben. Sie können keine Werte für Parameter überschreiben, die als schreibgeschützt gekennzeichnet sind. Sie können mehr als einen Aktualisierungsplan erstellen und verwenden.   
   
 Die Standardrollenzuweisungen, mit denen Sie freigegebene Datasets für Cacheaktualisierungspläne hinzufügen, löschen und ändern können, lauten „Inhalts-Manager“, „Meine Berichte“ und „Verleger“.  
   
-Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Aktualisierungspläne verwalten** , der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
+Nachdem Sie die obenstehende Option zum Zwischenspeichern angewendet haben, können Sie einen Cacheaktualisierungsplan definieren. Wählen Sie den Link **Manage Refresh Plans** (Aktualisierungspläne verwalten), der angezeigt wird, nachdem Sie die Cacheeinstellungen anwenden. Dadurch gelangen Sie auf die Seite „Cacheaktualisierungsplan“.   
   
 Wählen Sie **Neuer Cacheaktualisierungsplan**, um einen neuen Cacheplan zu erstellen. Sie können einen Namen für den Plan eingeben und einen Zeitplan angeben. Falls das Dataset über definierte Parameter verfügt, werden Ihnen diese aufgelistet angezeigt, und es wird Ihnen möglich sein, Werte bereitzustellen, sofern sie nicht als schreibgeschützt gekennzeichnet sind.  
   

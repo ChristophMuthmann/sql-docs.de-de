@@ -1,6 +1,6 @@
 ---
 title: Arbeiten mit KPIs in Reporting Services | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Arbeiten mit KPIs in Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Ein Key Performance Indicator (KPI) ist ein sichtbarer Hinweis, der Auskunft über den Fortschritt im Hinblick auf das Erreichen eines Ziels gibt.  Key Performance Indicators sind wertvoll für Teams, Manager und Unternehmen, um schnell den bei messbaren Zielen erzielten Fortschritt zu evaluieren.   
   
@@ -34,16 +36,19 @@ Mit KPIs in SQL Server 2016 Reporting Services können Sie einfach Antworten fü
   
 -   Was ist das Minimum, das ich abgeschlossen habe?  
   
-## <a name="creating-a-dataset"></a>Erstellen eines Dataset  
+## Erstellen eines Dataset
+<a id="creating-a-dataset" class="xliff"></a>  
 Eine KPI wird nur die erste Zeile der Daten aus einem freigegebenen Dataset verwenden. Stellen Sie sicher, dass sich die Daten, die Sie verwenden möchten, in dieser ersten Zeile befinden. Um ein freigegebenes Dataset zu erstellen, können Sie entweder den Berichts-Generator oder SQL Server Data Tools verwenden.  
   
 > **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie die KPI befinden.  
   
-## <a name="placement-of-kpis"></a>Platzierung von KPIs  
+## Platzierung von KPIs
+<a id="placement-of-kpis" class="xliff"></a>  
   
 KPIs können in einem beliebigen Ordner auf Ihrem Berichtsserver erstellt werden.  Bevor Sie eine KPI erstellen, sollten Sie überlegen, wo der richtige Speicherort dafür wäre. Sie sollten sie in einem Ordner ablegen, der für Benutzer sichtbar ist. Gleichzeitig sollte der Ordner auch relevant für andere Berichte sowie KPIs in der Umgebung sein.  
   
-## <a name="adding-a-kpi"></a>Hinzufügen einer KPI  
+## Hinzufügen einer KPI
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Nachdem Sie den Speicherort der KPI bestimmt haben, wechseln Sie zu dem Ordner, und wählen Sie **Neu** > **KPI** im oberen Menü aus.  
   
@@ -91,7 +96,8 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Entfernen einer KPI  
+## Entfernen einer KPI
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Um eine KPI zu entfernen, können Sie Folgendes tun.  
   
@@ -103,11 +109,13 @@ Um eine KPI zu entfernen, können Sie Folgendes tun.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Aktualisieren einer KPI  
+## Aktualisieren einer KPI
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Um den KPI zu aktualisieren, müssen Sie das Zwischenspeichern für das freigegebene Dataset konfigurieren. Weitere Informationen zu cacheaktualisierungsplänen, finden Sie unter [arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Nächste Schritte
+## Nächste Schritte
+<a id="next-steps" class="xliff"></a>
   
 [Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)

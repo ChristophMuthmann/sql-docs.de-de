@@ -1,7 +1,7 @@
 ---
 title: Datenwarnungs-Designer | Microsoft Docs
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,15 +23,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 38277ce132202ea9f112dce0ec0777598a93d39d
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-designer"></a>Datenwarnungs-Designer
+# Datenwarnungs-Designer
+<a id="data-alert-designer" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
 Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten. Eine Warnungsdefinition ist eine Auflistung von Metadaten. Dazu gehören die für Sie interessanten Berichtsdaten, die Regeln, die Berichtsdaten zum Erstellen von Datenwarnungsinstanzen und zum Senden von Datenwarnmeldungen erfüllen müssen, sowie die Empfänger der Warnmeldung usw.  
 
@@ -65,7 +68,8 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
  ![Bereiche der Benutzeroberfläche von Warnungs-Designer](../reporting-services/media/rs-alertdesigner.gif "Bereiche der Benutzeroberfläche von Warnungs-Designer")  
   
   
-### <a name="alert-data"></a>Warnungsdaten  
+### Warnungsdaten
+<a id="alert-data" class="xliff"></a>  
  Nach dem Öffnen des Datenwarnungs-Designers werden alle Datenfeeds aus dem Bericht generiert und zur Verfügung gestellt. Die Dropdownliste **Berichtsdatenname** enthält die Namen der Feeds. Die Datenfeeds werden im Arbeitsspeicher zwischengespeichert, während Sie die Warnungsdefinition und die Tabelle erstellen, die angezeigt werden. Die Datenfeeddaten werden schnell aufgefüllt, wenn Sie zwischen Datenfeeds umschalten, um die Berichtsdaten zu untersuchen.  
   
  Der erste Schritt beim Erstellen einer Datenwarnungsdefinition ist das Auswählen des Berichtsdatenfeeds, der die Daten enthält, die mithilfe der Warnung überwacht werden sollen. Berichte können keine oder mehrere Datenfeeds enthalten. Wenn ein Bericht keine Datenfeeds enthält, können Sie keine Warnungen dafür erstellen. Ein Datenfeed kann von jedem Datenbereich generiert werden, einschließlich aller Typen von Diagrammen, Messgeräten, Indikatoren sowie Tabellen, Matrizen und Listen.  
@@ -78,12 +82,14 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Einige Berichte enthalten Millionen von Datenzeilen. In der Tabelle werden nur die ersten 100 Zeilen der Daten im Feed angezeigt.  
   
-### <a name="alert-name"></a>Name der Warnung  
+### Name der Warnung
+<a id="alert-name" class="xliff"></a>  
  Standardmäßig weist die Warnungsdefinition denselben Namen wie der Bericht auf. Sie können den Namen der Warnung in einen sinnvolleren Namen ändern. Dies erleichtert Ihnen beim Verwalten der Warnungen das Bestimmen der Warnungen, die aktualisiert, gelöscht usw. werden sollen.  
   
  Sie können mehrere Warnungen in einem Bericht erstellen. Zwar sind mehrere Warnungsdefinitionen mit demselben Namen möglich, es wird allerdings empfohlen, dass Sie eindeutige Namen für die Warnungen verwenden. Dies erleichtert die Unterscheidung und Verwaltung der Warnungsdefinitionen. Im Datenwarnungs-Manager können Sie eine Liste aller Warnungen anzeigen, die Sie erstellt haben. Weitere Informationen finden Sie unter [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### <a name="rules-and-clauses"></a>Regeln und Klauseln  
+### Regeln und Klauseln
+<a id="rules-and-clauses" class="xliff"></a>  
  Der Umfang der Datenänderungen und die Warnungsregeln definieren die Datenänderungen, die die Warnung auslösen. Der Umfang der Datenänderungen lautet wie folgt:  
   
 -   **Einige Daten haben**– Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
@@ -154,7 +160,8 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Regeln und Klauseln sind in der Datenwarnmeldung enthalten.  
   
-### <a name="schedule-settings"></a>Zeitplaneinstellungen  
+### Zeitplaneinstellungen
+<a id="schedule-settings" class="xliff"></a>  
  Der für die Datenwarnung definierte Zeitplan definiert für das Senden der Datenwarnmeldung das Serienmuster sowie Anfang und Ende der jeweiligen Warnmeldung. Die Muster sind: einmal, Minute, täglich und wöchentlich. Obwohl eine Warnung nur einen Zeitplan aufweist, können Sie mit diesen Intervallen komplexe Serienmuster erstellen, die die meisten Geschäftsanforderungen erfüllen. Beispiele für allgemeine Serienmuster, die in Zeitplänen verwendet werden:  
   
 -   **Täglich alle 10 Tage** – sendet Warnungen alle 10 Tage einmal täglich.  
@@ -172,7 +179,8 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 > [!IMPORTANT]  
 >  Die Verwendung eines Serienmusters, das häufiger als täglich ausgeführt wird, ist nicht empfehlenswert, sofern hierfür kein wichtiger Grund auf Unternehmensebene vorliegt. Die Verarbeitung von Datenwarnungsdefinitionen in Echtzeit ist kein unterstütztes Szenario. Das zu häufige Verarbeiten von Datenwarnungsdefinitionen beeinträchtigt die Leistung des Berichtsservers und der allgemeinen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bereitstellung.  
   
-### <a name="email-settings"></a>E-Mail-Einstellungen  
+### E-Mail-Einstellungen
+<a id="email-settings" class="xliff"></a>  
  Sie geben anhand der Option **Empfänger** die E-Mail-Adressen der Empfänger an, die Datenwarnmeldungen per E-Mail erhalten sollen. Mehrere E-Mail-Adressen werden auf dieselbe Art wie bei Microsoft Office Outlook-E-Mails durch Semikolons getrennt. Sie können auch Verteilergruppen als Empfänger angeben. Dies vereinfacht und optimiert die Verwaltung der Empfängerliste. Wenn SharePoint Ihre E-Mail-Adresse bestimmen kann, wenn Sie eine Warnungsdefinition erstellen, wird Ihre E-Mail-Adresse automatisch der Empfängerliste hinzugefügt. Andernfalls müssen Sie sich ausdrücklich als Empfänger hinzufügen.  
   
  Der Standardbetreff der e-Mail lautet **datenwarnungs für \<Warnungsname >**. Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
@@ -215,7 +223,8 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
 -   [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## <a name="see-also"></a>Siehe auch
+## Siehe auch
+<a id="see-also" class="xliff"></a>
 
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

@@ -2,7 +2,7 @@
 title: "Browserunterstützung für Reporting Services und Power View | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,22 +26,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Browserunterstützung für Reporting Services und Power View
+# Browserunterstützung für Reporting Services und Power View
+<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Erfahren Sie, über welche Browser Versionen unterstützt werden, für das Verwalten und Anzeigen von SQL Server Reporting Services, die ReportViewer-Steuerelemente und Power View.
 
 > [!NOTE]
 > Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Browseranforderungen für das Webportal
+## Browseranforderungen für das Webportal
+<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
 
 Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Browsern.
 
@@ -71,7 +73,8 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 
  **(+)** neueste öffentlich freigegebene Version
 
-## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>Browseranforderungen für das ReportViewer-Websteuerelement (2015)
+## Browseranforderungen für das ReportViewer-Websteuerelement (2015)
+<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
 
  Im Folgenden finden Sie die aktuelle Liste der Browser, die mit dem ReportViewer-Websteuerelement (2015) unterstützt werden. Der Berichts-Viewer unterstützt die Anzeige von Berichten vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webportal und von den SharePoint-Bibliotheken.  
 
@@ -90,9 +93,10 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 
  **(+)** neueste öffentlich freigegebene Version
 
- Informationen bei Verwendung eines SharePoint-Produkts, das in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integriert ist, finden Sie unter [Planen der Browserunterstützung in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ Informationen bei Verwendung eines SharePoint-Produkts, das in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integriert ist, finden Sie unter  [Planen der Browserunterstützung in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-### <a name="authentication-requirements"></a>Authentifizierungsanforderungen
+### Authentifizierungsanforderungen
+<a id="authentication-requirements" class="xliff"></a>
 
  Browser unterstützen spezifische Authentifizierungsschemas, die vom Berichtsserver verarbeitet werden müssen, damit die Clientanforderung nicht fehlschlägt. In der folgenden Tabelle sind die Standardauthentifizierungstypen angegeben, die von den einzelnen unter einem Windows-Betriebssystem ausgeführten Browsern unterstützt werden.
 
@@ -106,7 +110,8 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 
  **(+)** neueste öffentlich freigegebene Version
 
-### <a name="script-requirements-for-viewing-reports"></a>Skriptanforderungen zum Anzeigen von Berichten
+### Skriptanforderungen zum Anzeigen von Berichten
+<a id="script-requirements-for-viewing-reports" class="xliff"></a>
 
  Um den Berichts-Viewer zu verwenden, konfigurieren Sie den Browser für die Ausführung von Skripts.
 
@@ -119,7 +124,8 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 > [!NOTE]
 > Die Berichtssymbolleiste ist Teil der HTML-Viewerkomponente. Die Symbolleiste wird standardmäßig oberhalb der jeweiligen in einem Browserfenster gerenderten Berichte angezeigt. Der Berichts-Viewer stellt Funktionen bereit, mit denen Sie den Bericht nach Informationen durchsuchen, einen Bildlauf zu einer bestimmten Seite durchführen und die Seitengröße aus Darstellungsgründen anpassen können. Weitere Informationen zur Berichtssymbolleiste oder zum HTML-Viewer finden Sie unter [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md).
 
-## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Browserunterstützung für ReportViewer-Webserversteuerelemente in Visual Studio
+## Browserunterstützung für ReportViewer-Webserversteuerelemente in Visual Studio
+<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
 
  Das ReportViewer-Webserversteuerelement wird verwendet, um Berichtsfunktionen in eine ASP.NET-Webanwendung einzubetten. Die Steuerelemente sind in Visual Studio enthalten und unterstützen andere Browser und Browserversionen als die anderen in diesem Thema beschriebenen Komponenten. Der Browsertyp, mit dem die Anwendung angezeigt wird, bestimmt die Art der ReportViewer-Funktionalität, die Sie in der Anwendung bereitstellen können. Ermitteln Sie mithilfe der Tabelle in diesem Thema, welche der unterstützten Browser Einschränkungen bei den Berichtsfunktionen unterliegen und welche Plattformen unterstützt werden.  
 
@@ -135,7 +141,8 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 
  **(+)** neueste öffentlich freigegebene Version
 
-## <a name="power-view-browser-support"></a>Power View-Browserunterstützung
+## Power View-Browserunterstützung
+<a id="power-view-browser-support" class="xliff"></a>
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -152,7 +159,8 @@ Im folgenden wird die aktuelle Liste der für das Webportal unterstützten Brows
 
  Weitere Informationen zur SharePoint 2016-Browserunterstützung finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-## <a name="next-steps"></a>Nächste Schritte
+## Nächste Schritte
+<a id="next-steps" class="xliff"></a>
 
 [Suchen und Anzeigen von Berichten im Webportal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)  
