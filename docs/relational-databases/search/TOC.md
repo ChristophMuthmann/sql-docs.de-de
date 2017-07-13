@@ -1,39 +1,113 @@
+
+
 # [Übersicht](full-text-search.md)
 
+
+
 # Volltextsuche
+
+
 ## [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)  
+
+
 ## [Abfragen mit Volltextsuche](query-with-full-text-search.md)  
+
+
 ## [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](search-for-words-close-to-another-word-with-near.md)  
+
+
 ## [Einschränken von Suchergebnissen mit RANK](limit-search-results-with-rank.md)  
+
+
 ## [Verbessern der Leistung von Volltextabfragen](improve-the-performance-of-full-text-queries.md)  
+
+
 ## [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](search-document-properties-with-search-property-lists.md)  
+
+
 ## [Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+
+
 ## [Erstellen und Verwalten von Volltextkatalogen](create-and-manage-full-text-catalogs.md)  
+
+
 ## [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md)  
+
+
 ## [Auswählen einer Sprache beim Erstellen eines Volltextindex](choose-a-language-when-creating-a-full-text-index.md)  
+
+
 ## [Auffüllen von Volltextindizes](populate-full-text-indexes.md)  
+
+
 ## [Verbessern der Leistung von Volltextindizes](improve-the-performance-of-full-text-indexes.md)  
+
+
 ## [Behandeln von Problemen mit der Volltextindizierung](troubleshoot-full-text-indexing.md)  
+
+
 ## [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](back-up-and-restore-full-text-catalogs-and-indexes.md)  
+
+
 ## [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
+
+
 ## [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
+
+
 ## [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md)  
+
+
 ## [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+
+
 ## [Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
+
+
 ## [Anpassen des Verhaltens der Wörtertrennung mit einem Benutzerwörterbuch](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
+
+
 ## [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
+
+
 ## [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md)  
+
+
 ## [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](manage-and-monitor-full-text-search-for-a-server-instance.md)  
+
+
 ## [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
+
+
 ## [Upgrade der Volltextsuche](upgrade-full-text-search.md)  
+
+
 ## [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](full-text-search-ddl-functions-stored-procedures-and-views.md)  
+
+
 ## [Verwenden des Volltextindizierungs-Assistenten](use-the-full-text-indexing-wizard.md)  
+
+
 ## [Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016](deprecated-full-text-search-features-in-sql-server-2016.md)  
 
+
+
 # [Semantische Suche](semantic-search-sql-server.md)  
+
+
 ## [Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)  
+
+
 ## [Aktivieren der semantischen Suche in Tabellen und Spalten](enable-semantic-search-on-tables-and-columns.md)  
+
+
 ## [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](find-key-phrases-in-documents-with-semantic-search.md)  
+
+
 ## [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](find-similar-and-related-documents-with-semantic-search.md)  
+
+
 ## [Verwalten und Überwachen der semantischen Suche](manage-and-monitor-semantic-search.md)  
+
+
 ## [Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten](semantic-search-ddl-functions-stored-procedures-and-views.md)  

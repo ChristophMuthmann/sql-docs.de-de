@@ -16,17 +16,21 @@ caps.latest.revision: 54
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="full-text-search"></a>Volltextsuche
+<a id="full-text-search" class="xliff"></a>
+
+# Volltextsuche
   Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen.
   
-## <a name="basic-tasks"></a>Grundlegende Aufgaben
+<a id="basic-tasks" class="xliff"></a>
+
+## Grundlegende Aufgaben
 Dieses Thema bietet einen Überblick über die Volltextsuche und beschreibt deren Komponenten und Architektur. Wenn Sie sofort beginnen möchten, finden Sie hier die grundlegenden Aufgaben.
 -   [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -37,7 +41,9 @@ Dieses Thema bietet einen Überblick über die Volltextsuche und beschreibt dere
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmoduls. Wenn Sie bei der Installation von SQL Server nicht die Volltextsuche ausgewählt haben, führen Sie SQL Server-Setup erneut aus, um sie hinzuzufügen.
 
-## <a name="overview"></a>Übersicht
+<a id="overview" class="xliff"></a>
+
+## Übersicht
 Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** oder **varbinary(max)** und **FILESTREAM**. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.  
   
  Volltextabfragen führen linguistische Suchvorgänge für Textdaten in Volltextindizes durch. Dabei werden Wörter und Ausdrücke anhand der Regeln einer bestimmten Sprache (z.B. Englisch oder Japanisch) verarbeitet. Volltextabfragen können einfache Wörter und Ausdrücke oder mehrere Formen eines Worts bzw. Ausdrucks enthalten. Eine Volltextabfrage gibt alle Dokumente zurück, die mindestens eine Übereinstimmung (auch als *Treffer*bezeichnet) enthalten. Eine Übereinstimmung wird gefunden, wenn ein Zieldokument alle in der Volltextabfrage angegebenen Begriffe enthält und alle sonstigen Suchbedingungen erfüllt sind, z. B. der Abstand zwischen den übereinstimmenden Begriffen.    
@@ -146,7 +152,9 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
 ###  <a name="querying"></a> Der Vorgang der Volltextabfrage  
  Der Abfrageprozessor übergibt die Volltextteile einer Abfrage zur Verarbeitung an das Volltextmodul. Das Volltextmodul führt Worttrennungen sowie optional Thesauruserweiterungen, Wortstammerkennung und Stoppwort-/Füllwortverarbeitung durch. Die Volltextteile der Abfrage werden dann in Form von SQL-Operatoren dargestellt, vorrangig als Streaming-Tabellenwertfunktionen. Während der Abfrageausführung greifen diese Streaming-Tabellenwertfunktionen auf den invertierten Index zu, um die richtigen Ergebnisse abzurufen. Die Ergebnisse werden entweder zu diesem Zeitpunkt an den Client zurückgegeben oder vor der Rückgabe an den Client weiter verarbeitet.  
 
-## <a name="full-text-index-architecture"></a>Architektur von Volltextindizes
+<a id="full-text-index-architecture" class="xliff"></a>
+
+## Architektur von Volltextindizes
   Die Informationen in Volltextindizes werden vom Volltextmodul verwendet, um Volltextabfragen zu kompilieren, die eine Tabelle schnell nach bestimmten Wörtern oder Wortkombination durchsuchen können. In einem Volltextindex werden Informationen zu signifikanten Wörtern und ihre Position innerhalb einer oder mehreren Spalte einer Datenbanktabelle gespeichert. Ein Volltextindex ist besonderer Typ eines tokenbasierten funktionellen Index, der durch das Volltextmodul für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt und verwaltet wird. Der Vorgang der Erstellung eines Volltextindexes unterscheidet sich vom Erstellen anderer Indextypen. Statt eine B-Struktur basierend auf einem Wert in einer bestimmten Zeile aufzubauen, erstellt das Volltextsuchmodul eine invertierte, gestapelte, komprimierte Indexstruktur basierend auf einzelnen Token aus dem zu indizierenden Text.  Die Größe des Volltextindexes wird nur durch den verfügbaren Speicherplatz des Computers eingeschränkt, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
  Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]sind Volltextindizes in das Datenbankmodul integriert und befinden sich nicht mehr im Dateisystem, wie dies in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Fall war. Bei einer neuen Datenbank ist ein Volltextkatalog jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist lediglich ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Beachten Sie jedoch, dass während des Upgrades einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank für alle Volltextkataloge, die Datendateien enthalten, eine neue Dateigruppe erstellt wird. Weitere Information finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -232,7 +240,9 @@ Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für ei
 |Assembly|1|2|6|  
 |3|1|2|7|  
 
-### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Unterschiede zwischen Volltextindizes und regulären SQL Server-Indizes:.  
+<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
+
+### Unterschiede zwischen Volltextindizes und regulären SQL Server-Indizes:.  
   
 |Volltextindizes|Reguläre SQL Server-Indizes|  
 |------------------------|--------------------------------|  
