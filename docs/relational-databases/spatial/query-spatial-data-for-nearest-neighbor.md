@@ -21,14 +21,16 @@ ms.contentlocale: de-de
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
+# Abfragen von nächsten Nachbarn aus räumlichen Daten
+<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
   Eine häufig für räumliche Daten verwendete Abfrage ist die Nächster Nachbar-Abfrage. Mithilfe von Nächster Nachbar-Abfragen werden die räumlichen Objekte gesucht, die einem bestimmten räumlichen Objekt am nächsten liegen. Beispielsweise muss von einer Filialsuche auf einer Website häufig die Filiale bestimmt werden, die dem Standort des Kunden am nächsten liegt.  
   
  Eine Nächster Nachbar-Abfrage kann in einer Vielzahl von gültigen Abfrageformaten geschrieben werden. Damit jedoch für die Nächster Nachbar-Abfrage ein räumlicher Index verwendet wird, muss die folgende Syntax angegeben werden.  
   
-## <a name="syntax"></a>Syntax  
+## Syntax
+<a id="syntax" class="xliff"></a>  
   
-```vb  
+```  
 SELECT TOP ( number )  
         [ WITH TIES ]  
         [ * | expression ]   
@@ -54,7 +56,8 @@ SELECT TOP ( number )
   
 ```  
   
-## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Nächster Nachbar-Abfrage und räumliche Indizes  
+## Nächster Nachbar-Abfrage und räumliche Indizes
+<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden **TOP** - und **ORDER BY** -Klauseln verwendet, um eine Abfrage des nächsten Nachbars für Spalten mit räumlichen Daten auszuführen. Die **ORDER BY** -Klausel enthält einen Aufruf der `STDistance()` -Methode für den Typ der Spalte mit räumlichen Daten. Die **TOP** -Klausel gibt die für die Abfrage zurückzugebende Anzahl von Objekten an.  
   
  Die folgenden Anforderungen müssen erfüllt sein, damit eine Nächster Nachbar-Abfrage einen räumlichen Index verwendet:  
@@ -78,10 +81,11 @@ SELECT TOP ( number )
   
  Es wird empfohlen, dass für Indizes in Nächster Nachbar-Abfragen die neuen Mosaiken für räumliche Indizes verwendet werden. Weitere Informationen zu Mosaiken für räumliche Indizes finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)festgelegt sein.  
   
-## <a name="example"></a>Beispiel  
+## Beispiel
+<a id="example" class="xliff"></a>  
  Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die einen räumlichen Index verwenden kann. Im Beispiel wird die Tabelle `Person.Address` in der `AdventureWorks2012` -Datenbank verwendet.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -93,10 +97,11 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Erstellen Sie einen räumlichen Index in der SpatialLocation-Spalte, um zu veranschaulichen, wie eine Nächster Nachbar-Abfrage einen räumlichen Index verwendet. Weitere Informationen zum Erstellen von räumlichen Indizes finden Sie unter [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## <a name="example"></a>Beispiel  
+## Beispiel
+<a id="example" class="xliff"></a>  
  Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die keine räumlichen Indizes verwenden kann.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -107,7 +112,9 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  In der Abfrage fehlt eine **WHERE** -Klausel, die `STDistance()` in einem im Syntaxabschnitt angegebenen Format verwendet, sodass die Abfrage keine räumlichen Indizes verwenden kann.  
   
-## <a name="see-also"></a>Siehe auch  
+## Siehe auch
+<a id="see-also" class="xliff"></a>  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
+
