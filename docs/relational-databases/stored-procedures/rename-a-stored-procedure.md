@@ -1,7 +1,7 @@
 ---
 title: Umbenennen einer gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="rename-a-stored-procedure"></a>Umbenennen einer gespeicherten Prozedur
@@ -47,8 +47,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Prozedurnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md)entsprechen.  
   
--   Beim Umbenennen einer gespeicherten Prozedur wird der Name des entsprechenden Objekts in der Definitionsspalte der **sys.sql_modules** -Katalogsicht nicht geändert. Daher empfiehlt es sich, diesen Objekttyp nicht umzubenennen. Löschen Sie die gespeicherte Prozedur stattdessen, und erstellen Sie sie unter dem neuen Namen neu.  
-  
+-   Beim Umbenennen einer gespeicherten Prozedur werden die `object_id` und alle Berechtigungen zurückbehalten, die speziell dieser Prozedur zugewiesen wurden. Durch das Löschen und Neuerstellen des Objekts wird eine neue `object_id` erstellt, und es werden alle Berechtigungen entfernt, die speziell dieser Prozedur zugewiesen wurden.
+
+-   Beim Umbenennen einer gespeicherten Prozedur wird der Name des entsprechenden Objekts in der Definitionsspalte der **sys.sql_modules**-Katalogsicht nicht geändert. Um dies zu tun, müssen Sie die gespeicherte Prozedur löschen und mit dem neuen Namen neu erstellen.  
+
 -   Das Ändern des Namens oder der Definition einer Prozedur kann dazu führen, dass abhängige Objekte fehlschlagen, wenn sie nicht entsprechend den Änderungen an der Prozedur aktualisiert werden. Weitere Informationen finden Sie unter [Anzeigen der Abhängigkeiten einer gespeicherten Prozedur](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> Sicherheit  
@@ -65,15 +67,10 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>So benennen Sie eine gespeicherte Prozedur um  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
-  
 2.  Erweitern Sie **Datenbanken**, erweitern Sie die Datenbank, zu der die Prozedur gehört, und erweitern Sie dann **Programmierbarkeit**.  
-  
 3.  [Anzeigen der Abhängigkeiten einer gespeicherten Prozedur](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-  
 4.  Erweitern Sie **Gespeicherte Prozeduren**, klicken Sie mit der rechten Maustaste auf die umzubenennende Prozedur, und klicken Sie dann auf **Umbenennen**.  
-  
 5.  Ändern Sie den Namen der Prozedur.  
-  
 6.  Ändern Sie den Namen der Prozedur in abhängigen Objekten oder Skripts, in denen auf den Namen verwiesen wird.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
@@ -81,18 +78,14 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>So benennen Sie eine gespeicherte Prozedur um  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
-  
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
-  
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie eine Prozedur umbenannt wird, indem sie gelöscht und mit einem neuen Namen neu erstellt wird. Im ersten Beispiel wird die gespeicherte Prozedur `'HumanResources.uspGetAllEmployeesTest`erstellt. Im zweiten Beispiel wird die gespeicherte Prozedur in `HumanResources.uspEveryEmployeeTest`umbenannt.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
+
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  
 AS  
     SET NOCOUNT ON;  
@@ -101,17 +94,7 @@ AS
 GO  
   
 --Rename the stored procedure.  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
-CREATE PROCEDURE HumanResources.uspEveryEmployeeTest  
-AS  
-    SET NOCOUNT ON;  
-    SELECT LastName, FirstName, Department  
-    FROM HumanResources.vEmployeeDepartmentHistory;  
-GO  
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -124,3 +107,4 @@ GO
  [Anzeigen der Abhängigkeiten einer gespeicherten Prozedur](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
   
+

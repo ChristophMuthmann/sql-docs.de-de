@@ -1,7 +1,7 @@
 ---
 title: PolyBase-Konfiguration | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase-Konfiguration
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/23/2017
   Verwenden Sie die folgenden Vorgehensweisen, um PolyBase zu konfigurieren.  
   
 ## <a name="external-data-source-configuration"></a>Konfigurieren der externen Datenquelle  
- Sie müssen die Verbindung von SQL Server zur externen Datenquelle sicherstellen. Der Verbindungstyp wirkt sich stark auf die erwartete Abfrageleistung aus. Beispielsweise führt eine 10 GBit-Ethernet-Verbindung zu einer schnelleren Abfrageantwortzeit für PolyBase-Abfragen als eine 1 GBit-Ethernet-Verbindung.  
+ Sie müssen die Verbindung von SQL Server zur externen Datenquelle sicherstellen. Der Verbindungstyp wirkt sich stark auf die Abfrageleistung aus. Beispielsweise führt eine 10 GBit-Ethernet-Verbindung zu einer schnelleren Abfrageantwortzeit für PolyBase-Abfragen als eine 1 GBit-Ethernet-Verbindung.  
   
  Sie müssen SQL Server mithilfe von **sp_configure**für die Verbindung mit Ihrer Hadoop-Version oder Azure-BLOB-Speicher konfigurieren. PolyBase unterstützt zwei Hadoop-Distributionen: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH).  Eine vollständige Liste der unterstützten externen Datenquellen finden Sie unter [Konfiguration der PolyBase-Netzwerkkonnektivität &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  

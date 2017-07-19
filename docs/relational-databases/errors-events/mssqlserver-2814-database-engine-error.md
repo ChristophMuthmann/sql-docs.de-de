@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_2814 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2408e7a6e34e903ecd9c24d93db222de69f6398
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 3bca883d9f5b13b81e021014193df43fc3f5f6e3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
@@ -57,29 +57,24 @@ In der folgenden Tabelle werden die Ursachen für die Neukompilierung aufgeliste
   
 ## <a name="user-action"></a>Benutzeraktion  
   
-1.  Zeigen Sie die Anweisung an, die die Neukompilierung verursacht, indem Sie die folgende Abfrage ausführen. Ersetzen Sie die Platzhalter *sql_handle*, *starting_offset*, *ending_offset* und *plan_handle* durch die in der Fehlermeldung angegebenen Werte. Beachten Sie, dass die Spalten **database_name** und **object_name** für Ad-hoc- und vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen den Wert NULL haben.  
+1.  Zeigen Sie die Anweisung an, die die Neukompilierung verursacht, indem Sie die folgende Abfrage ausführen. Ersetzen Sie die Platzhalter *sql_handle*, *starting_offset*, *ending_offset* und *plan_handle* durch die in der Fehlermeldung angegebenen Werte. Die Spalten **database_name** und **object_name** haben für Ad-hoc- und vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen den Wert NULL.  
   
-    SELECT DB_NAME(st.dbid) AS database_name  
-  
-    , OBJECT_NAME (st.objectid) AS object_name  
-  
-    , st.text  
-  
+    ```sql   
+    SELECT DB_NAME(st.dbid) AS database_name,  
+        OBJECT_NAME(st.objectid) AS object_name,  
+        st.text  
     FROM sys.dm_exec_query_stats AS qs  
-  
     CROSS APPLY sys.dm_exec_sql_text (*sql_handle*) AS st  
-  
     WHERE qs.statement_start_offset = *starting_offset*  
-  
     AND qs.statement_end_offset = *ending_offset*  
-  
-    AND qs.plan_handle = *plan_handle*;  
+    AND qs.plan_handle = *plan_handle*;
+    ```
   
 2.  Ändern Sie auf Grundlage der Beschreibung des Ursachencodes die Anweisung, den Batch oder die Prozedur, um Neukompilierungen zu vermeiden. Eine gespeicherte Prozedur kann z. B. eine oder mehrere SET-Anweisungen enthalten. Diese Anweisungen sollten aus der Prozedur entfernt werden. Weitere Beispiele für die Ursachen von Neukompilierungen und Lösungen finden Sie unter [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005 (Probleme bei der Batchkompilierung, Neukompilierung und beim Zwischenspeichern von Ausführungsplänen in SQL Server 2005)](http://go.microsoft.com/fwlink/?LinkId=69175).  
   
 3.  Wenn das Problem wiederholt auftritt, wenden Sie sich an den Microsoft-Kundendienst.  
   
 ## <a name="see-also"></a>Siehe auch  
-[SQL:StmtRecompile Event Class](../Topic/SQL:StmtRecompile%20Event%20Class.md)  
+[SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   
 

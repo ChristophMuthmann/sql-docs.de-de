@@ -1,7 +1,7 @@
 ---
 title: "Richtlinien für Onlineindexvorgänge | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   Nicht eindeutige, nicht gruppierte Indizes können online erstellt werden, wenn die Tabelle LOB-Datentypen enthält, keine dieser Spalten jedoch in der Indexdefinition als Schlüssel- oder Nichtschlüsselspalte (eingeschlossene Spalte) verwendet wird.  
   
 -   Indizes für lokale temp-Tabellen können nicht online erstellt, neu erstellt oder gelöscht werden. Diese Einschränkung gilt nicht für Indizes globaler temporärer Tabellen.
-- Indizes aus, in denen er nach einem unerwarteten Fehler, Datenbank-Failover beendet fortgesetzt werden können oder ein **anhalten** Befehl. Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der öffentlichen Vorschau für SQL Server-2017.
+- Indizes aus, in denen er nach einem unerwarteten Fehler, Datenbank-Failover beendet fortgesetzt werden können oder ein **anhalten** Befehl. Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
 
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -93,7 +93,7 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 ## <a name="resumable-index-rebuild-considerations"></a>Fortsetzbare Index Rebuild-Überlegungen
 
 > [!NOTE]
-> Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der öffentlichen Vorschau für SQL Server-2017.
+> Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
 >
 
 Beim Ausführen von fortsetzbar onlineneuerstellung von Indizes gelten die folgenden Richtlinien:

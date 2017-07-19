@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>Sichten  
  Das folgende Diagramm zeigt Abfragespeichersichten und ihre logischen Beziehungen, wobei Kompilierzeitinformationen als blaue Entitäten dargestellt werden:  
   
- ![abfrage-speicher-prozess-1ansicht](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![Prozess im Abfragespeicher](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Sichtbeschreibungen**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  Im Fall eines Systemabsturzes kann der Abfragespeicher Laufzeitdaten bis zu einer durch `DATA_FLUSH_INTERVAL_SECONDS`definierten Menge verlieren. Mit dem Standardwert von 900 Sekunden (15 Minuten) besteht ein optimales Gleichgewicht zwischen der Abfrageerfassungsleistung und der Datenverfügbarkeit.  
 Im Fall einer Arbeitsspeicherauslastung können Laufzeitstatistiken früher auf den Datenträger geleert werden als mit `DATA_FLUSH_INTERVAL_SECONDS`definiert.  
-Während dem Lesen der Abfragespeicherdaten werden arbeitsspeicherinterne und auf dem Datenträger gespeicherte Daten transparent zusammengeführt.  
+Während dem Lesen der Abfragespeicherdaten werden arbeitsspeicherinterne und auf dem Datenträger gespeicherte Daten transparent zusammengeführt.
+Im Falle einer Sitzungsbeendigung oder des Neustarts/Absturzes einer Clientanwendung werden Abfragestatistiken nicht aufgezeichnet.  
   
  ![abfrage-speicher-prozess-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "abfrage-speicher-prozess-4planinfo")    
 
