@@ -17,17 +17,17 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: de-de
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z. B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
 ## <a name="sql-statement-processing"></a>Verarbeiten von SQL-Anweisungen
 
@@ -37,7 +37,7 @@ Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren,
 
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
-Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` -Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Eine `SELECT` -Anweisung definiert lediglich Folgendes:  
 * Das Format des Resultsets. Dieses wird meistens in der Auswahlliste angegeben. Das endgültige Format des Resultsets wird jedoch auch von anderen Klauseln, wie z.B. `ORDER BY` und `GROUP BY` , beeinflusst.
@@ -198,7 +198,7 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
   * Die `NUMERIC_ROUNDABORT` -Sitzungsoption ist auf OFF festgelegt.
-* Der Abfrageoptimierer findet eine Übereinstimmung zwischen den Indexspalten der Sicht und Abfrageelementen, wie z.B.: 
+* Der Abfrageoptimierer findet eine Übereinstimmung zwischen den Indexspalten der Sicht und Abfrageelementen, wie z. B.: 
   * Suchbedingungsprädikate in der WHERE-Klausel
   * Joinvorgänge
   * Aggregatfunktionen
@@ -210,19 +210,19 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > [!NOTE] 
 > Die `READCOMMITTED` - und `READCOMMITTEDLOCK` -Hinweise werden in diesem Kontext immer als unterschiedliche Hinweise angesehen, unabhängig von der aktuellen Transaktionsisolationsstufe.
  
-Abweichend von den Anforderungen für die `SET`-Optionen und Tabellenhinweise verwendet der Abfrageoptimierer hier dieselben Regeln, mit denen er ermittelt, ob ein Tabellenindex eine Abfrage erfüllt. In der zu verwendenden Abfrage für eine indizierte Sicht muss nichts weiter angegeben werden.
+Abweichend von den Anforderungen für die `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. In der zu verwendenden Abfrage für eine indizierte Sicht muss nichts weiter angegeben werden.
 
-Eine Abfrage muss nicht explizit in der `FROM`-Klausel auf eine indizierte Sicht verweisen, damit der Abfrageoptimierer die indizierte Sicht verwendet. Falls die Abfrage Verweise auf Spalten in den Basistabellen enthält, die auch in der indizierten Sicht vorhanden sind, und der Abfrageoptimierer schätzt, dass das Verwenden der indizierten Sicht den kostengünstigsten Zugriffsmechanismus darstellt, wählt der Abfrageoptimierer die indizierte Sicht aus. Die Vorgehensweise ist dabei ähnlich wie bei der Auswahl von Basistabellenindizes, wenn in einer Abfrage nicht direkt auf diese verwiesen wird. Der Abfrageoptimierer kann die Sicht auswählen, wenn sie Spalten enthält, auf die die Abfrage nicht verweist, vorausgesetzt die Sicht bietet die kostengünstigste Möglichkeit zum Abdecken einer oder mehrerer Spalten, die in der Abfrage angegeben sind.
+Eine Abfrage muss nicht explizit in der `FROM` clause for the Query Optimizer to use the indexed view. Falls die Abfrage Verweise auf Spalten in den Basistabellen enthält, die auch in der indizierten Sicht vorhanden sind, und der Abfrageoptimierer schätzt, dass das Verwenden der indizierten Sicht den kostengünstigsten Zugriffsmechanismus darstellt, wählt der Abfrageoptimierer die indizierte Sicht aus. Die Vorgehensweise ist dabei ähnlich wie bei der Auswahl von Basistabellenindizes, wenn in einer Abfrage nicht direkt auf diese verwiesen wird. Der Abfrageoptimierer kann die Sicht auswählen, wenn sie Spalten enthält, auf die die Abfrage nicht verweist, vorausgesetzt die Sicht bietet die kostengünstigste Möglichkeit zum Abdecken einer oder mehrerer Spalten, die in der Abfrage angegeben sind.
 
-Der Abfrageoptimierer behandelt eine indizierte Sicht, auf die in der `FROM`-Klausel verwiesen wird, als Standardsicht. Der Abfrageoptimierer erweitert am Beginn des Optimierungsprozesses die Definition der Sicht in die Abfrage. Dann erfolgt der Abgleich der indizierten Sicht. Die indizierte Sicht kann im endgültigen Ausführungsplan verwendet werden, der vom Abfrageoptimierer ausgewählt wird, oder stattdessen kann der Plan die erforderlichen Daten aus der Sicht materialisieren, indem auf die Basistabellen zugegriffen wird, auf die durch die Sicht verwiesen wird. Der Abfrageoptimierer wählt die kostengünstigste Alternative aus.
+The Query Optimizer treats an indexed view referenced in the `FROM` -Klausel verwiesen wird, als Standardsicht. Der Abfrageoptimierer erweitert am Beginn des Optimierungsprozesses die Definition der Sicht in die Abfrage. Dann erfolgt der Abgleich der indizierten Sicht. Die indizierte Sicht kann im endgültigen Ausführungsplan verwendet werden, der vom Abfrageoptimierer ausgewählt wird, oder stattdessen kann der Plan die erforderlichen Daten aus der Sicht materialisieren, indem auf die Basistabellen zugegriffen wird, auf die durch die Sicht verwiesen wird. Der Abfrageoptimierer wählt die kostengünstigste Alternative aus.
 
 #### <a name="using-hints-with-indexed-views"></a>Verwenden von Hinweisen mit indizierten Sichten
 
 Sie können verhindern, dass Sichtindizes für eine Abfrage verwendet werden, indem Sie den `EXPAND VIEWS` -Abfragehinweis verwenden oder indem Sie mit dem `NOEXPAND` -Tabellenhinweis die Verwendung eines Indexes für eine indizierte Sicht erzwingen, die in der `FROM` -Klausel einer Abfrage angegeben ist. Sie sollten jedoch den Abfrageoptimierer für jede Abfrage dynamisch ermitteln lassen, welches die besten Zugriffsmethoden sind. Verwenden Sie `EXPAND` und `NOEXPAND` nur in bestimmten Fällen, wenn Tests gezeigt haben, dass durch sie die Leistung deutlich gesteigert wird.
 
-Die Option `EXPAND VIEWS` gibt an, dass der Abfrageoptimierer für die gesamte Abfrage keine Sichtindizes verwendet. 
+Die Option `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-Wenn `NOEXPAND` für eine Sicht angegeben wird, zieht der Abfrageoptimierer die Verwendung sämtlicher Indizes in Erwägung, die für die Sicht definiert sind. `NOEXPAND` mit der optionalen `INDEX()`-Klausel zwingt den Abfrageoptimierer, die angegebenen Indizes zu verwenden. `NOEXPAND` kann nur für eine indizierte Sicht angegeben werden, nicht für eine nicht indizierte Sicht.
+Wenn `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` mit der optionalen `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` kann nur für eine indizierte Sicht angegeben werden, nicht für eine nicht indizierte Sicht.
 
 Wenn weder `NOEXPAND` noch `EXPAND VIEWS` in einer Abfrage angegeben ist, die eine Sicht enthält, wird die Sicht erweitert, um auf die zugrunde liegenden Tabellen zuzugreifen. Wenn die Abfrage, die die Sicht bildet, irgendwelche Tabellenhinweise enthält, werden diese Hinweise auch an die zugrunde liegenden Tabellen weitergegeben. (Detaillierte Informationen zu diesem Vorgang finden Sie unter „Sichtauflösung“.) Solange die der Sicht zugrunde liegenden Tabellen identische Sätze von Hinweisen besitzen, kommt die Abfrage für den Abgleich mit einer indizierten Sicht infrage. Zumeist stimmen diese Hinweise miteinander überein, da sie direkt aus der Sicht vererbt werden. Wenn die Abfrage jedoch auf Tabellen und nicht auf Sichten verweist und die direkt auf diese Tabellen angewendeten Hinweise nicht identisch sind, so kommt eine solche Abfrage nicht für den Abgleich mit einer indizierten Sicht infrage. Wenn die Hinweise `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`oder `XLOCK` auf die Tabellen angewendet werden, auf die die Abfrage nach der Sichterweiterung verweist, kommt die Abfrage nicht für den Abgleich mit einer indizierten Sicht infrage.
 
@@ -239,7 +239,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor opti
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
 
 * Zunächst verwendet der Abfrageprozessor OLE DB, um die Definitionen der CHECK-Einschränkungen aus jeder Mitgliedstabelle abzurufen. Dadurch kann der Abfrageprozessor die Verteilung der Schlüsselwerte auf die Mitgliedstabellen zuordnen.
-* Der Abfrageprozessor vergleicht die in der `WHERE`-Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` -Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
 
 Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`CustomerID` von 1 bis 3299999), Server2 (`CustomerID` von 3300000 bis 6599999) und Server3 (`CustomerID` von 6600000 bis 9999999) partitioniert ist.
 
@@ -370,7 +370,7 @@ Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen
 > [!NOTE]
 > Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen erneut kompiliert werden.
 
-### <a name="parameters-and-execution-plan-reuse"></a>Parameter und Wiederverwendung von Ausführungsplänen
+### <a name="PlanReuse"></a> Parameter und Wiederverwendung von Ausführungsplänen
 
 Durch die Verwendung von Parametern, einschließlich der Parametermarkierungen in ADO-, OLE DB- und ODBC-Anwendungen, kann die Wiederverwendbarkeit von Ausführungsplänen erhöht werden. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 Sie kann jedoch nach den Regeln der einfachen Parametrisierung parametrisiert werden. Wenn die erzwungene Parametrisierung einen Fehler erzeugt, wird anschließend die einfache Parametrisierung versucht.
 
-### <a name="simple-parameterization"></a>Einfache Parametrisierung
+### <a name="SimpleParam"></a> Einfache Parametrisierung
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit des relationalen Moduls verbessert, neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
 
@@ -474,7 +474,7 @@ Beim Standardverhalten der einfachen Parametrisierung parametrisiert [!INCLUDE[s
 
 Alternativ können Sie angeben, dass eine einzelne Abfrage und alle anderen Abfragen, die in ihrer Syntax gleichwertig sind, und lediglich in ihren Parameterwerten abweichen, parametrisiert werden. 
 
-### <a name="forced-parameterization"></a>Erzwungene Parametrisierung
+### <a name="ForcedParam"></a> Erzwungene Parametrisierung
 
 Sie können das standardmäßige Parametrisierungsverhalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die einfache Parametrisierung, überschreiben, indem Sie angeben, dass alle `SELECT`-, `INSERT`-, `UPDATE`- und `DELETE`-Anweisungen in einer Datenbank mit bestimmten Einschränkungen parametrisiert werden sollen. Die erzwungene Parametrisierung wird aktiviert, indem die `PARAMETERIZATION` -Option in der `FORCED` -Anweisung auf `ALTER DATABASE` festgelegt wird. Indem sie die Frequenz von Anweisungskompilierungen und -neukompilierungen verringert, kann die erzwungene Parametrisierung die Leistungsfähigkeit bestimmter Datenbanken erhöhen. Dabei handelt es sich im Allgemeinen um Datenbanken, die einer großen Anzahl gleichzeitiger Abfragen ausgesetzt sind, wie z. B. Point-of-Sale-Anwendungen.
 
@@ -525,7 +525,7 @@ Beim Parametrisieren von Literalwerten konvertiert [!INCLUDE[ssNoVersion](../inc
 * Binäre Literale werden bei der Parametrisierung in varbinary(8000)-Werte konvertiert, wenn das Literal 8.000 Bytes nicht überschreitet. Wenn es 8.000 Bytes überschreitet, wird es in einen varbinary(max)-Wert konvertiert.
 * Literale vom Typ „money“ werden bei der Parametrisierung in money-Werte konvertiert.
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>Richtlinien für die Verwendung der erzwungenen Parametrisierung
+#### <a name="ForcedParamGuide"></a> Richtlinien für die Verwendung der erzwungenen Parametrisierung
 
 Berücksichtigen Sie Folgendes, wenn Sie die `PARAMETERIZATION` -Option auf FORCED festlegen:
 
@@ -538,7 +538,7 @@ Berücksichtigen Sie Folgendes, wenn Sie die `PARAMETERIZATION` -Option auf FORC
 Sie können das Verhalten der erzwungenen Parametrisierung überschreiben, indem Sie angeben, dass für eine einzelne Abfrage und für alle anderen Abfragen, die syntaktisch äquivalent sind und sich nur in ihren Parameterwerten unterscheiden, die einfache Parametrisierung versucht werden soll. Im Gegensatz dazu können Sie angeben, dass die erzwungene Parametrisierung nur für einen Satz von syntaktisch äquivalenten Abfragen versucht werden soll, selbst wenn die erzwungene Parametrisierung in der Datenbank deaktiviert ist. Zu diesem Zweck werden[Planhinweislisten](../relational-databases/performance/plan-guides.md) verwendet.
 
 > [!NOTE]
-> Wird die `PARAMETERIZATION` -Option auf `FORCED`festgelegt, werden Fehlermeldungen möglicherweise nicht auf die gleiche Weise wie bei der einfachen Parametrisierung gemeldet: Eventuell werden mehr Fehlermeldungen als bei der einfachen Parametrisierung ausgegeben, und die Zeilennummern, in denen die Fehler aufgetreten sind, werden möglicherweise falsch gemeldet.
+> Wird die `PARAMETERIZATION`-Option auf `FORCED` festgelegt, unterscheiden sich Fehlermeldungen möglicherweise, wenn die Option `PARAMETERIZATION` auf `SIMPLE` festgelegt ist: Eventuell werden mehr Fehlermeldungen unter erzwungener Parametrisierung ausgegeben, und die Zeilennummern, in denen die Fehler aufgetreten sind, werden möglicherweise falsch gemeldet.
 
 ### <a name="preparing-sql-statements"></a>Vorbereiten von SQL-Anweisungen
 
@@ -580,7 +580,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten
 * Das Vorbereiten/Ausführen-Modell kann auf andere Datenbanken portiert werden, einschließlich früherer Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### <a name="parameter-sniffing"></a>Parameterermittlung
+### <a name="ParamSniffing"></a> Parameterermittlung
 Die „Parameterermittlung“ bezieht sich auf einen Prozess, wobei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die aktuellen Parameter während der Kompilierung oder Neukompilierung ermittelt und diese an den Abfrageoptimierer übermittelt, sodass sie zum Generieren potenziell effizienter Abfrageausführungspläne verwendet werden können.
 
 Parameterwerte werden während der Kompilierung oder Neukompilierung für die folgenden Batchtypen ermittelt:
@@ -606,7 +606,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
 * Ein serieller Ausführungsplan wird für die betreffende Abfrage als schneller erachtet als jeder mögliche parallele Ausführungsplan.
 * Die Abfrage enthält skalare oder relationale Operatoren, die nicht parallel ausgeführt werden können. Bestimmte Operatoren können verursachen, dass ein Abschnitt des Ausführungsplans oder der gesamte Plan im seriellen Modus ausgeführt wird.
 
-### <a name="degree-of-parallelism"></a>Grad der Parallelität
+### <a name="DOP"></a> Grad der Parallelität
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt automatisch den am besten geeigneten Grad an Parallelität für jede Instanz einer parallelen Abfrageausführung oder eines DDL-Indizierungsvorgangs (Data Definition Language). Dazu werden die folgenden Kriterien untersucht: 
 
@@ -641,7 +641,7 @@ Mithilfe der Serverkonfigurationsoption [Max. Grad an Parallelität](../database
 
 Wenn die Option „Max. Grad an Parallelität“ auf 0 (Standard) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne verwenden. Obwohl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Laufzeitziel von 64 logischen Prozessoren festlegt, wenn MAXDOP auf 0 festgelegt ist, kann falls nötig ein anderer Wert manuell festgelegt werden. Wenn MAXDOP für Abfragen und Indizes auf 0 (null) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne für die jeweiligen Abfragen oder Indizes verwenden. MAXDOP ist kein erzwungener Wert für alle parallelen Abfragen, sondern eher ein Ziel mit Vorbehalt für alle Abfragen, die für die Parallelität qualifiziert sind. Das bedeutet, dass wenn nicht genügend Arbeitsthreads zur Laufzeit vorhanden sind, eine Abfrage möglicherweise mit einem niedrigeren Grad der Parallelität als die MAXDOP-Serverkonfigurationsoption ausgeführt wird.
 
-Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
+Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
 
 ### <a name="parallel-query-example"></a>Beispiel für eine parallele Abfrage
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Nehmen Sie an, dass die folgenden Indizes für die lineitem- und die orders-Tabelle definiert werden:
+Nehmen Sie an, dass die folgenden Indizes für die `lineitem`- und die `orders`-Tabelle definiert werden:
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ Die Hauptphasen eines parallelen Indexvorgangs umfassen Folgendes:
 
 Einzelne `CREATE TABLE` - oder `ALTER TABLE` -Anweisungen können über mehrere Einschränkungen verfügen, die die Erstellung eines Indexes erforderlich machen. Diese mehrfachen Indexerstellungsvorgänge werden seriell durchgeführt, obwohl jeder einzelne Indexerstellungsvorgang auf einem Computer mit mehreren CPUs als paralleler Vorgang ausgeführt werden kann.
 
-## <a name="distributted-query-architecture"></a>Architektur verteilter Abfragen
+## <a name="distributed-query-architecture"></a>Architektur verteilter Abfragen
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zwei Methoden, um auf heterogene OLE DB-Datenquellen in Transact-SQL-Anweisungen zu verweisen:
 
@@ -791,7 +791,7 @@ Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 hat für viele parallele Pläne eine bessere Leistung bei der Verarbeitung von Abfragen in partitionierten Tabellen, eine geänderte Art der Darstellung paralleler und serieller Pläne und bessere Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen ermöglicht. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] hat für viele parallele Pläne eine bessere Leistung bei der Verarbeitung von Abfragen in partitionierten Tabellen, eine geänderte Art der Darstellung paralleler und serieller Pläne und bessere Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen ermöglicht. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
 
 > [!NOTE]
 > Partitionierte Tabellen und Indizes werden nur in der Enterprise Edition, Developer Edition und Evaluation Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.
@@ -802,7 +802,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird die interne Darst
 
 Die Partitionsentfernung wird jetzt im Suchvorgang vorgenommen.
 
-Außerdem wurde der Abfrageoptimierer so erweitert, dass jetzt zunächst ein Such- oder Scanvorgang mit einer Bedingung für `PartitionID` (als logischer führender Spalte) und ggf. für weitere Indexschlüsselspalten durchgeführt werden kann. Anschließend wird dann für jeden eindeutigen Wert, der die Kriterien des Suchvorgangs der ersten Ebene erfüllt hat, ein Suchvorgang der zweiten Ebene mit einer anderen Bedingung in einer oder mehreren zusätzlichen Spalten durchgeführt. Dies bedeutet, dass mit diesem Vorgang, der Skip-Scan genannt wird, der Abfrageoptimierer basierend auf einer Bedingung zunächst einen Such- bzw. Scanvorgang durchführen kann, mit dem die Partitionen ermittelt werden, auf die zugegriffen werden muss, und dann innerhalb dieses Operators einen Indexsuchvorgang der zweiten Ebene, durch den Zeilen in diesen Partitionen zurückgegeben werden, die eine andere Bedingung erfüllen. Sehen Sie sich zum Beispiel die folgende Abfrage an:
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (als logischer führender Spalte) und ggf. für weitere Indexschlüsselspalten durchgeführt werden kann. Anschließend wird dann für jeden eindeutigen Wert, der die Kriterien des Suchvorgangs der ersten Ebene erfüllt hat, ein Suchvorgang der zweiten Ebene mit einer anderen Bedingung in einer oder mehreren zusätzlichen Spalten durchgeführt. Dies bedeutet, dass mit diesem Vorgang, der Skip-Scan genannt wird, der Abfrageoptimierer basierend auf einer Bedingung zunächst einen Such- bzw. Scanvorgang durchführen kann, mit dem die Partitionen ermittelt werden, auf die zugegriffen werden muss, und dann innerhalb dieses Operators einen Indexsuchvorgang der zweiten Ebene, durch den Zeilen in diesen Partitionen zurückgegeben werden, die eine andere Bedingung erfüllen. Sehen Sie sich zum Beispiel die folgende Abfrage an:
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 Zur Auflösung der Abfrage führt der Abfrageprozessor zunächst einen Suchvorgang der ersten Ebene durch, in dem alle Partitionen mit Zeilen, die die Bedingung `T.a < 10`erfüllen, gesucht werden. Hierdurch werden die Partitionen identifiziert, auf die zugegriffen werden muss. In diesen identifizierten Partitionen führt der Prozessor dann einen Suchvorgang der zweiten Ebene im gruppierten Index der Spalte b durch, um die Zeilen zu suchen, die die Bedingung `T.b = 2` und `T.a < 10`erfüllen. 
 
-Die folgende Abbildung ist eine logische Darstellung des Skip-Scan-Vorgangs. Sie zeigt die Tabelle T mit Daten in den Spalten a und b. Die Partitionen sind mit 1 bis 4 nummeriert, wobei die Partitionsgrenzen durch gestrichelte vertikale Linien angezeigt werden. Durch einen Suchvorgang der ersten Ebene in den Partitionen (nicht abgebildet) wurde ermittelt, dass die Partitionen 1, 2 und 3 die Suchbedingung, die durch die für die Tabelle definierte Partitionierung und das Prädikat für Spalte a vorgegeben wurde, erfüllen. Das heißt, sie erfüllen die Bedingung `T.a < 10`. Der vom Suchvorgang der zweiten Ebene innerhalb des Skip-Scan-Vorgangs durchlaufene Pfad ist anhand der Kurve zu erkennen. Im Wesentlichen wird beim Skip-Scan-Vorgang in diesen Partitionen nach Zeilen gesucht, die die Bedingung `b = 2`erfüllen. Die Gesamtkosten für den Skip-Scan-Vorgang entsprechen den Kosten, die durch drei separate Indexsuchvorgänge entstehen würden.   
+Die folgende Abbildung ist eine logische Darstellung des Skip-Scan-Vorgangs. Sie zeigt die Tabelle `T` mit Daten in den Spalten `a` und `b`. Die Partitionen sind mit 1 bis 4 nummeriert, wobei die Partitionsgrenzen durch gestrichelte vertikale Linien angezeigt werden. Durch einen Suchvorgang der ersten Ebene in den Partitionen (nicht abgebildet) wurde ermittelt, dass die Partitionen 1, 2 und 3 die Suchbedingung, die durch die für die Tabelle definierte Partitionierung und das Prädikat für Spalte `a` vorgegeben wurde, erfüllen. Das heißt, sie erfüllen die Bedingung `T.a < 10`. Der vom Suchvorgang der zweiten Ebene innerhalb des Skip-Scan-Vorgangs durchlaufene Pfad ist anhand der Kurve zu erkennen. Im Wesentlichen wird beim Skip-Scan-Vorgang in diesen Partitionen nach Zeilen gesucht, die die Bedingung `b = 2`erfüllen. Die Gesamtkosten für den Skip-Scan-Vorgang entsprechen den Kosten, die durch drei separate Indexsuchvorgänge entstehen würden.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -943,24 +943,24 @@ Die oben aufgeführten Beispiele sind einfache Beschreibungen der Arbeitsthreadz
 
 Ein weiteres Beispiel: Die Tabelle weist vier Partitionen in Spalte A mit Grenzpunkten (10, 20, 30) sowie einen Index in Spalte B auf, und für die Abfrage wird folgende Prädikatklausel verwendet: `WHERE B IN (50, 100, 150)`. Da die Tabellenpartitionen auf den A-Werten basieren, können die B-Werte in allen Tabellenpartitionen enthalten sein. Somit sucht der Abfrageprozessor in jeder der vier Tabellenpartitionen nach jedem der drei B-Werte (50, 100, 150). Der Abfrageprozessor weist Arbeitsthreads proportional zu, sodass alle zwölf Abfragesuchläufe parallel ausgeführt werden können.
 
-|Tabellenpartitionen auf Grundlage der Spalte A    |Suche in allen Tabellenpartitionen nach B-Spaltenwerten |
+|Tabellenpartitionen auf Grundlage der Spalte A |Suche in allen Tabellenpartitionen nach B-Spaltenwerten |
 |----|----|
-|Tabellenpartition 1: A < 10     |B=50, B=100, B=150 |
-|Tabellenpartition 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|Tabellenpartition 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|Tabellenpartition 4: A >= 30     |B=50, B=100, B=150 |
+|Tabellenpartition 1: A < 10   |B=50, B=100, B=150 |
+|Tabellenpartition 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|Tabellenpartition 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|Tabellenpartition 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
 Wir empfehlen die folgenden bewährten Vorgehensweisen, um die Leistung von Abfragen zu verbessern, bei denen in großen partitionierten Tabellen und Indizes auf eine große Menge von Daten zugegriffen wird:
 
-* Verteilen Sie alle Partitionen über viele Datenträger (Datenträgerstriping).
+* Verteilen Sie alle Partitionen über viele Datenträger (Datenträgerstriping). Dies ist besonders bei Verwendung von Festplatten relevant.
 * Verwenden Sie möglichst einen Server mit einem Hauptspeicher, der groß genug ist für Partitionen, auf die häufig zugegriffen wird, bzw. für alle Partitionen, um die E/A-Kosten zu senken.
 * Falls die abgefragten Daten nicht in den Arbeitsspeicher passen, komprimieren Sie die Tabellen und Indizes. Dies reduziert die E/A-Kosten.
 * Verwenden Sie einen Server mit schnellen und möglichst vielen Prozessoren, um sich die Vorteile der parallelen Abfrageverarbeitung zu Nutze zu machen.
 * Stellen Sie sicher, dass der Server über eine ausreichend große E/A-Controllerbandbreite verfügt. 
 * Erstellen Sie für jede große partitionierte Tabelle einen gruppierten Index, um den optimierten B-Strukturscan voll nutzen zu können.
-* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)(Laden von Massendaten in eine partitionierte Tabelle), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
+* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://msdn.microsoft.com/en-us/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
 
 ### <a name="example"></a>Beispiel
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
  [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)
+ [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)  
+ [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)
 
