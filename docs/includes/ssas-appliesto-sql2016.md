@@ -1,0 +1,1 @@
+**GILT FÜR:**![Ja](media/yes.png)SQL Server 2016 Analysis Services![nein](media/no.png)Azure Analysis Services

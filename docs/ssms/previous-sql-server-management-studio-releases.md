@@ -1,7 +1,7 @@
 ---
 title: "Vorgängerversionen von SQL Server Management Studio | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Vorgängerversionen von SQL Server Management Studio
   
 Die folgenden Vorgängerversionen von SQL Server Management Studio sind verfügbar.
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![Download](../ssdt/media/download.png) [SQL Server Management Studio 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Versionsinformationen**  
+  
+*In dieser Version von SSMS wird die Visual Studio 2015 Isolated Shell verwendet.*  
+Releasenummer: 17.0  
+Buildnummer für diesen Release: 14.0.17099.0
+
+## <a name="changelog"></a>Änderungsprotokoll  
+
+Weitere Informationen finden Sie unter [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![herunterladen](../ssdt/media/download.png) [Version von SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 
@@ -330,7 +343,7 @@ Als Problemumgehung können Sie Ihre SQL Server Integration Services-Instanz üb
 **Problembehebungen**  
 1. Programmfehlerbehebung im SSMS-Abfrage-Designer, um das Hinzufügen von Tabellen zum Designer zu ermöglichen, wenn ein Benutzer nicht über SELECT-Berechtigungen für die Tabellen verfügt.
 2. Fehlerbehebung zum Hinzufügen von IntelliSense-Unterstützung für die Funktionen TRY_CAST() und TRY_CONVERT() [(Microsoft Connect-Element #2453461)](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast).
-3. Fehlerbehebung im SSMS-Editor-Fenster, um das Öffnen von SQL-Dateien per Drag-&amp;-Drop zu ermöglichen [(Microsoft Connect-Element #2690658)](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios).
+3. Fehlerbehebung im SSMS-Editor-Fenster, um das Öffnen von SQL-Dateien per Drag-&amp;amp;-Drop zu ermöglichen [(Microsoft Connect-Element #2690658)](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios).
 4. Fehlerbehebung in Analysis Services, um den Data Feed-Anbieter für mehrdimensionale Analysis Services-Modelle ordnungsgemäß anzuzeigen.
 5. Fehlerbehebung in SSMS zum Verhindern des Absturzes beim Bearbeiten einer Join-Verknüpfung im SSMS-Tabellen-Designer [(Microsoft Connect-Element #2721052)](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms).  
 

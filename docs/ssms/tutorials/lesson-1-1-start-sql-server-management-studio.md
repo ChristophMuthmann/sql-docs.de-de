@@ -1,7 +1,7 @@
 ---
 title: Starten von Microsoft SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c472ec73a5b0b24f47b5bc59121eda206e285ac9
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lektion 1-1: Starten von SQL Server Management Studio
@@ -30,9 +30,9 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
   
 #### <a name="to-open-sql-server-management-studio"></a>So öffnen Sie SQL Server Management Studio  
   
-1.  Wie Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] (SSMS) starten hängt von Ihrem Betriebssystem ab.  
-* Geben Sie für neuere Versionen von Windows mit einer **Startseite**auf der **Startseite** **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]** ein, und das Programm erscheint. Klicken Sie auf das Programm, um SSMS zu öffnen. Möglicherweise möchten Sie auch mit der rechten Maustaste auf das Programm klicken, und es anschließend an die **Startseite**anheften.   
-* Zeigen Sie für ältere Versionen von Windows im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server Management Studio**. Geben Sie alternativ im Dialogfeld **Ausführen** **SSMS.exe** ein, und klicken Sie anschließend auf **OK**.  
+1.  Wie Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] (SSMS) starten, hängt von Ihrem Betriebssystem ab.  
+  * Geben Sie für neuere Versionen von Windows mit einer **Startseite** auf der **Startseite** **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]** ein, und das Programm wird angezeigt. Klicken Sie auf das Programm, um SSMS zu öffnen. Möglicherweise möchten Sie auch mit der rechten Maustaste auf das Programm klicken, und es anschließend an die **Startseite**anheften.   
+  * Zeigen Sie für ältere Versionen von Windows im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server Management Studio**. Geben Sie alternativ im Dialogfeld **Ausführen** **SSMS.exe** ein, und klicken Sie anschließend auf **OK**.  
   
     > [!NOTE]  
     >  Wenn SSMS nicht angezeigt wird, haben Sie SSMS möglicherweise nicht richtig installiert. Installieren Sie SSMS aus dem [Download-Center](https://msdn.microsoft.com/library/mt238290.aspx). SSMS wird nicht automatisch mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 installiert. Verwenden Sie die neueste Version, um auf alle Features zuzugreifen.  
@@ -40,11 +40,14 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
 2.  Im nächsten Schritt stellen Sie mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekt-Explorer **-Komponente von SSMS eine Verbindung mit** her. Wenn der Bereich Objekt-Explorer nicht sichtbar ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**. Klicken Sie im Menü des Objekt-Explorers auf die Schaltfläche **Verbinden** und anschließend auf **Datenbankmodul**. Das Dialogfeld **Verbindung mit Server herstellen** sollte angezeigt werden. (Wenn Sie zuvor SSMS installiert haben, erscheint durch die Benutzereinstellungen das Dialogfeld **Verbindung mit dem Server herstellen** möglicherweise automatisch.)  
   
 3.  Schließen Sie im Dialogfeld **Verbindung mit Server herstellen** das Feld **Servername** ab. Sie können mit einem von drei Typen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Verbindung herstellen. Jeder Typ hat ein geringfügig anderes Format für das Feld **Servername** . Wählen Sie eines der folgenden Formate aus:  
---  **Eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, können Sie angeben, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Standardinstanz (unbenannte Instanz) oder eine benannte Instanz sein wird. Wenn Sie eine Verbindung mit einer Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen, geben Sie den Namen des Computers ein. Wenn Sie z.B. SSMS auf einem Computer mit dem Namen „Buchhaltung“ ausführen, und Sie stellen eine Verbindung mit einer Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  her, der auf diesem Computer installiert ist, geben Sie **Buchhaltung** in das Feld **Servername** ein.  
---  **Eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie einen Namen für die Instanz angeben. Auf einem Computer mit dem Namen „Buchhaltung“ können Sie eine benannte Instanz mit dem Namen **Forderungen** angeben. Um eine Verbindung mit einer benannten Instanz herzustellen, geben Sie im Feld **Servername** „Computername Umgekehrter Schrägstrich Instanzname“ein, z.B. **Buchhaltung\Forderungen**.  
---  **Eine Azure SQL-Datenbank:** Das Format des Servernamens für die SQL-Datenbank ist SQL_Server_name.database.windows.net, z.B. **mydb2.database.windows.net**. Wenn Sie Probleme beim Bestimmen des Servernamens haben, besuchen Sie das Azure-Portal, um Hilfe beim Erstellen einer Verbindungszeichenfolge zu erhalten.  
+  -  **Eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, können Sie angeben, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Standardinstanz (unbenannte Instanz) oder eine benannte Instanz sein wird. Wenn Sie eine Verbindung mit einer Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, geben Sie den Namen des Computers ein. Wenn Sie z.B. SSMS auf einem Computer mit dem Namen „Buchhaltung“ ausführen, und Sie stellen eine Verbindung mit einer Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  her, der auf diesem Computer installiert ist, geben Sie **Buchhaltung** in das Feld **Servername** ein.  
+  -  **Eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie einen Namen für die Instanz angeben. Auf einem Computer mit dem Namen „Buchhaltung“ können Sie eine benannte Instanz mit dem Namen **Forderungen** angeben. Um eine Verbindung mit einer benannten Instanz herzustellen, geben Sie im Feld **Servername** „Computername Umgekehrter Schrägstrich Instanzname“ein, z.B. **Buchhaltung\Forderungen**.  
+  -  **Eine Azure SQL-Datenbank:** Das Format des Servernamens für die SQL-Datenbank ist SQL_Server_name.database.windows.net, z.B. **mydb2.database.windows.net**. Wenn Sie Probleme beim Bestimmen des Servernamens haben, besuchen Sie das Azure-Portal, um Hilfe beim Erstellen einer Verbindungszeichenfolge zu erhalten.  
   
-4. Im Bereich **Authentifizierung**  
+4. Wählen Sie im Bereich **Authentifizierung** eine Authentifizierungsmethode aus.  
+  - Wenn Sie der Administrator des Computers sind und soeben SQL Server installiert haben, testen Sie die **Windows-Authentifizierung**.  Dies funktioniert auch, wenn Sie als Domänenbenutzer konfiguriert sind, der Zugriff auf den SQL-Server hat. Da bei dem Anmeldeversuch die Anmeldeinformationen verwendet werden, mit denen Sie sich bei Windows anmelden, sind die Felder **Benutzername** und **Kennwort** abgeblendet. 
+  -  Wenn Sie den Namen und das Kennwort eines Benutzerkontos kennen, wählen Sie **SQL Server-Authentifizierung** aus, und stellen Sie dann den **Benutzernamen** und das **Kennwort** bereit.
+  - Wenn Sie die neueste Version von SSMS haben, stehen Ihnen drei weitere Optionen zur Verfügung, beginnend mit der **Active Directory-Authentifizierung**. Informationen zu diesen erweiterten Optionen finden Sie unter [Universelle Authentifizierung bei SQL-Datenbank und SQL Data Warehouse (SSMS-Unterstützung für MFA)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-ssms-mfa-authentication).  
   
 ## <a name="management-studio-components"></a>Management Studio-Komponenten  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt seine Informationen in Fenstern bereit, die für die jeweils spezielle Art von Informationen vorgesehen sind. Datenbankinformationen werden im Fenster Objekt-Explorer sowie im Fenster für Dokumente angezeigt.  
@@ -59,11 +62,12 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
   
 1.  Klicken Sie im Menü **Ansicht** auf **Registrierte Server**.  
   
-    Das Fenster „Registrierte Server“ wird über oder neben dem Objekt-Explorer angezeigt. Sie können es verschieben und an verschiedenen Orte andocken. In der Liste "Registrierte Server" werden die Server aufgelistet, die Sie häufig verwalten. In dieser Liste können Sie Server hinzufügen und entfernen. Als einzige Server werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen auf dem Computer aufgelistet, auf dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausgeführt wird.  
+    Das Fenster „Registrierte Server“ wird über oder neben dem Objekt-Explorer angezeigt. Sie können es verschieben und an verschiedenen Orte andocken. In der Liste „Registrierte Server“ werden die Server aufgelistet, die Sie häufig verwalten. In dieser Liste können Sie Server hinzufügen und entfernen. Als einzige Server werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen auf dem Computer aufgelistet, auf dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausgeführt wird.  
   
 2.  Wird Ihr Server nicht angezeigt, klicken Sie in der Liste der registrierten Server mit der rechten Maustaste auf **Datenbankmodul**, dann auf **Tasks**und anschließend auf **Lokale Serverregistrierung aktualisieren**. Um zusätzliche SQL-Server auf einer SQL-Datenbank hinzuzufügen, klicken Sie mit der rechten Maustaste auf einen Speicherort unter Registrierte Server, und klicken Sie anschließend auf **Neue Serverregistrierung**. Tragen Sie im Bereich **Anmeldename** die Informationen ein, die Sie auch im Dialogfeld **Verbindung mit Server herstellen** eingetragen haben.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+
   
 
