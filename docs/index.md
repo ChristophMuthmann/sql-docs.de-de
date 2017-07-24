@@ -4,10 +4,10 @@ hide_bc: true
 title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
-ms.openlocfilehash: 78f0b4ab47b5b4a2a5aeff7e2efdbcc0223b7d8d
+ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
+ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: de-de
-ms.lasthandoff: 07/15/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 07/15/2017
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Power BI-Berichtsserver und Tools</a></li>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55329">Power BI-Berichtsserver und Tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Beispieldatenbanken</h4>
                                                 <ul>
@@ -203,7 +203,7 @@ ms.lasthandoff: 07/15/2017
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="/sql/tools/command-prompt-utility-reference-database-engine">Anzeigen aller SQL-Tools</a></li>
+                                                    <li><a href="/sql/tools/overview-sql-tools">Anzeigen aller SQL-Tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Verweis</h4>
                                                 <ul>
