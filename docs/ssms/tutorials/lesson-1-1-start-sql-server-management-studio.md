@@ -20,7 +20,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: de-de
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lektion 1-1: Starten von SQL Server Management Studio

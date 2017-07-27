@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
 ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="resize-the-job-history-log"></a>Ändern der Größe des Auftragsverlaufsprotokolls
