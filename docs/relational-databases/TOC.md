@@ -1,10 +1,5 @@
-# [Datenbankfunktionen](database-features.md)
+# [Übersicht](database-features.md)
 # [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-relational-databases.md)
-
-# Übersicht
-## [Instanzübergreifende Datenbankmodulfunktionen](database-engine-cross-instance-features.md)
-## [Technische Referenz](technical-reference-database-engine.md)  
-## [Funktionsreferenz](feature-reference-database-engine.md)   
 
 # [Handbücher für SQL Server](sql-server-guides.md)
 ## Handbuch zur Problembehandlung und Überwachung Always On-Verfügbarkeitsgruppen
