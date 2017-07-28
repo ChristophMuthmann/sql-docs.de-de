@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Sie können einen DACPAC in ein Datenbankprojekt importieren und weiterhin die Datenbank entwerfen.  
   
-SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, clientseitige Datenbankanwendungsentwicklung. Der Entwickler kann eine Momentaufnahme dieser lokalen Datenbank erstellen, um in einer DACPAC-Datei enthaltenen DACPAC zu erstellen.  
+        SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, clientseitige Datenbankanwendungsentwicklung. Der Entwickler kann eine Momentaufnahme dieser lokalen Datenbank erstellen, um in einer DACPAC-Datei enthaltenen DACPAC zu erstellen.  
   
     -   Unabhängig davon kann der Entwickler ein Datenbankprojekt direkt in einer Datenbank veröffentlichen, und zwar ohne ein DACPAC zu generieren. Der Veröffentlichungsvorgang weist ein ähnliches Verwalten auf wie der Bereitstellungsvorgang anderer Tools.  
   
