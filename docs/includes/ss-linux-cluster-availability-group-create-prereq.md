@@ -41,29 +41,30 @@ Bevor Sie die verfügbarkeitsgruppe erstellen, müssen Sie:
    sudo vi /etc/hosts
    ```
 
-   Das folgende Beispiel zeigt `/etc/hosts` auf **node1** mit Ergänzungen für **node1** und **node2**. In diesem Dokument **node1** bezieht sich auf dem primären SQL Server-Replikat. **Node2** bezieht sich auf den sekundären SQL-Server.;
+   Das folgende Beispiel zeigt `/etc/hosts` auf **node1** mit Ergänzungen für **node1**, **node2** und **node3**. In diesem Dokument bezieht sich **node1** auf den Server, der das primäre Replikat hostet. **node2** und **node3** beziehen sich auf den Server, der die sekundären Replikate hostet.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Installieren von SQLServer
 
 Installieren von SqlServer. Die folgenden Links weisen auf SQL Server-installationsanweisungen für verschiedene Verteilungen. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Always On-Verfügbarkeitsgruppen aktivieren und starten Sie SQL Server neu.
 
-Aktivieren Sie Always On-Verfügbarkeitsgruppen auf jedem Knoten, der SQL Server-Dienst hostet, und dann neu `mssql-server`.  Führen Sie folgendes Skript aus:
+Aktivieren Sie Always On-Verfügbarkeitsgruppen auf jedem Knoten, der eine SQL Server-Instanz hostet, und starten Sie `mssql-server` anschließend neu.  Führen Sie folgendes Skript aus:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health ereignissitzung aktivieren 
 
-Sie können Optionaly Enable AlwaysOn-Verfügbarkeitsgruppen bestimmte erweiterte Ereignisse bei der Diagnose Ursache helfen bei der Problembehebung für einer verfügbarkeitsgruppe.
+Sie können optional erweiterte Ereignisse der Always On-Verfügbarkeitsgruppen aktivieren, die Ihnen bei der Ursachendiagnose helfen, wenn Sie Probleme in einer Verfügbarkeitsgruppe behandeln. Führen Sie den folgenden Befehl auf jeder Instanz des SQL Servers aus. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ Weitere Informationen zu dieser Sitzung XE, finden Sie unter [immer auf erweiter
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Erstellen Sie Db datenbankspiegelungs Endpunktbenutzer
 
-Die folgende Transact-SQL-Skript erstellt eine Anmeldung mit dem Namen `dbm_login`, und einen Benutzer namens `dbm_user`. Aktualisieren Sie das Skript durch ein sicheres Kennwort ein. Führen Sie den folgenden Befehl für alle SQL Server die datenbankspiegelungs-Endpunktbenutzer erstellen.
+Die folgende Transact-SQL-Skript erstellt eine Anmeldung mit dem Namen `dbm_login`, und einen Benutzer namens `dbm_user`. Aktualisieren Sie das Skript durch ein sicheres Kennwort ein. Führen Sie den folgenden Befehl für alle SQL Server-Instanzen aus, um den Endpunktbenutzer für die Datenbankspiegelung zu erstellen.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>Erstellen Sie ein Zertifikat
 
-SQL Server-Dienst unter Linux verwendet Zertifikate zum Authentifizieren von Kommunikation zwischen der Endpunkte für die datenbankspiegelung. 
+Der SQL Server-Dienst unter Linux verwendet Zertifikate zum Authentifizieren von Kommunikation zwischen den Spiegelungsendpunkten. 
 
-Die folgende Transact-SQL-Skript erstellt ein Hauptschlüssel und ein Zertifikat. Klicken Sie dann das Zertifikat sichert, und sichert die Datei mit einem privaten Schlüssel. Aktualisieren Sie das Skript mit sicheren Kennwörtern. Herstellen einer Verbindung mit dem primären SQL Server, und führen Sie die folgende Transact-SQL, um das Zertifikat zu erstellen:
+Die folgende Transact-SQL-Skript erstellt ein Hauptschlüssel und ein Zertifikat. Klicken Sie dann das Zertifikat sichert, und sichert die Datei mit einem privaten Schlüssel. Aktualisieren Sie das Skript mit sicheren Kennwörtern. Stellen Sie eine Verbindung mit der primären SQL Server-Instanz her, und führen Sie die folgende Transact-SQL aus, um das Zertifikat zu erstellen:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Erteilen Sie Berechtigungen auf dem Zielserver Mssql-Benutzer auf das Zertifikat zugreifen.
+Erteilen Sie Berechtigungen auf jedem Zielserver für mssql-Benutzer, damit diese auf das Zertifikat zugreifen können.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ Datenbank-Spiegelungsendpunkte senden und empfangen Meldungen zwischen den Serve
 
 Die folgende Transact-SQL-Anweisung erstellt einen überwachenden Endpunkt mit dem Namen `Hadr_endpoint` für die verfügbarkeitsgruppe dienen. Den Endpunkt gestartet, und bietet connect-Berechtigung für den Benutzer, den Sie erstellt haben. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `**< ... >**`.
 
-
 >[!NOTE]
 >Verwenden Sie eine andere IP-Adresse nicht für die Listener-IP-Adresse, um für diese Version. Wir arbeiten an der Behebung dieses Problems, aber vorläufig der einzige zulässige Wert ist "0.0.0.0".
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >Der TCP-Port in der Firewall muss für den Listenerport geöffnet sein.
+
+>[!IMPORTANT]
+>Für die Version SQL Server 2017 ist `CERTIFICATE` die einzige unterstützte Authentifizierungsmethode für den Datenbankspiegelungs-Endpunkt. Die Option `WINDOWS` wird in einer zukünftigen Version aktiviert.
 
 Ausführliche Informationen finden Sie unter [der Datenbankspiegelungs-Endpunkt (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

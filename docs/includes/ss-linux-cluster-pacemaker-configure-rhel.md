@@ -1,33 +1,28 @@
-
-3. Öffnen Sie auf beiden Clusterknoten die Pacemaker-Firewallports. Führen Sie zum Öffnen dieser Ports mit `firewalld` folgenden Befehl aus:
+3. Öffnen Sie auf allen Clusterknoten die Schrittmacher Firewallports. Führen Sie zum Öffnen dieser Ports mit `firewalld` folgenden Befehl aus:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
    sudo firewall-cmd --reload
    ```
 
-   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit hoher Verfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
+   > Wenn die Firewall nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, öffnen Sie die folgenden Ports für Pacemaker.
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
 
-1. Installieren Sie Pacemaker-Pakete auf jedem Knoten.
+1. Installieren Sie Pacemaker-Pakete auf allen Knoten.
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
-
-2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie auf beiden Knoten dasselbe Kennwort. 
+2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie das Kennwort auf allen Knoten. 
 
    ```bash
    sudo passwd hacluster
    ```
 
-   
-
-3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. So können Knoten dem Cluster nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf beiden Knoten aus.
+3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker, um den Knoten nach dem Neustart einen erneuten Beitritt zum Cluster zu erlauben. Führen Sie den folgenden Befehl auf allen Knoten.
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,9 +39,9 @@
    ```
    
    >[!NOTE]
-   >Wenn Sie vorher einen Cluster auf denselben Knoten konfiguriert haben, müssen Sie die Option „--force“ verwenden, wenn Sie „pcs cluster setup“ ausführen. Beachten Sie, dass dies der Ausführung von „pcs cluster destroy“ entspricht, und der Peacemaker-Dienst muss erneut mithilfe von „sudo systemctl enable pacemaker“ aktiviert werden.
+   >Wenn Sie vorher einen Cluster auf denselben Knoten konfiguriert haben, müssen Sie die Option `--force` verwenden, wenn Sie `pcs cluster setup` ausführen. Diese Option entspricht der Ausführung von `pcs cluster destroy`. Führen Sie `sudo systemctl enable pacemaker` aus, um Pacemaker erneut zu aktivieren.
 
-5. Installieren Sie den SQL Server-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf beiden Knoten aus. 
+5. Installieren Sie den SQL Server-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf allen Knoten. 
 
    ```bash
    sudo yum install mssql-server-ha

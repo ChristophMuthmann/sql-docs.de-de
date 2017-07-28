@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f69a3301d46dcfffa811f11782c43791492a9c72
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-sql-server-docs" class="xliff"></a>
-
-# Neue und zuletzt aktualisiert: SQL Server-Dokumentation
+# <a name="new-and-recently-updated-sql-server-docs"></a>Neue und zuletzt aktualisiert: SQL Server-Dokumentation
 
 
 
@@ -36,7 +34,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **17.5.2017** &nbsp; bis &nbsp; **30.6.2017**
+- *Datumsbereich des Updates:* &nbsp; **23.05.2017** &nbsp; bis &nbsp; **17.07.2017**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **SQL Server**.
 
 
@@ -44,22 +42,30 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Neue Artikel, die vor kurzem erstellt wurden
+## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
 
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-*Dieses Mal sind keine neuen Artikel aufgeführt.*
+1. [Editionen und unterstützten Funktionen von SQL Server 2017](editions-and-components-of-sql-server-2017.md)
+2. [Configure SQL Server to send feedback to Microsoft (Konfigurieren von SQL Server zum Senden von Feedback an Microsoft)](sql-server-customer-feedback.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Aktualisierte Artikel mit Auszüge
+## <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
+
+Diese Compact Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
 
 Dieser Abschnitt zeigt die Auszüge von Updates, die vom Artikel, die vor kurzem eine große Aktualisierung aufgetreten sind.
 
@@ -75,9 +81,7 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd" class="xliff"></a>
-
-### 1. &nbsp; [Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
+### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1. &nbsp; [Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
 
 *Aktualisiert: 14.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
@@ -125,11 +129,9 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-editions-and-supported-features-of-sql-servereditions-and-components-of-sql-server-2016md" class="xliff"></a>
+### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Editionen und unterstützte Funktionen von SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
-### 2. &nbsp; [Editionen und unterstützten Funktionen von SQL Server](editions-and-components-of-sql-server-2016.md)
-
-*Aktualisiert: 16.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_1) | [Weiter](#TitleNum_3))
+*Aktualisiert: 16.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Zurück](#TitleNum_1))
 
 <!-- Source markdown line 113.  ms.author= "mikeray".  -->
 
@@ -155,184 +157,50 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Maximale Rechenkapazität, die von einer einzelnen Instanz verwendet wird [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
 |Maximaler Arbeitsspeicher für Pufferpool pro Instanz von [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Maximum des Betriebssystems|128 GB|64 GB|1410 MB|1410 MB|
 |Maximaler Arbeitsspeicher für Columnstore-Segmentcache pro Instanz von [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+|Maximaler speicheroptimierter Datenumfang pro Datenbank in [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 
 
 
 
-&nbsp;
 
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-<a id="3-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd" class="xliff"></a>
-
-### 3. &nbsp;[Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md)
-
-*Aktualisiert: 17.5.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Zurück](#TitleNum_2) | [Weiter](#TitleNum_4))
-
-<!-- Source markdown line 28.  ms.author= "craigg".  -->
+<a name="similars2"/>
 
 &nbsp;
 
-
-<!-- git diff --ignore-all-space --unified=0 84e7a2a49f2893d49380db1ad75695d9a4fd59b2 27a145ad30c10fd667f926d2e092b88c0ba586c5  (PR=1737  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=67c1c0f3a9da6cc5d050da5db8a493f5da934c2a) -->
-
-
-
-**2.1 (Mai 2017) 2017 CTP für SQL Server**
-
-**Die Dokumentation (CTP-Version 2.1)**
-
-- **Problem und kundenbeeinträchtigung:** Dokumentation [! INCLUDE [ssSQLv14_md--... /Includes/sssqlv14-MD.MD)] ist beschränkt und Inhalt ist im Lieferumfang der [! INCLUDE [ssSQL15_md--... Dokumentationssatz /Includes/sssql15-MD.MD)].  Inhalt in Artikeln, die für spezifische [! INCLUDE [ssSQLv14_md--... /Includes/sssqlv14-MD.MD)] mit vermerkt **gilt für**. 
-- **Problem und kundenbeeinträchtigung:** keine Offlineinhalt steht für die [! INCLUDE [ssSQLv14_md--... /Includes/sssqlv14-MD.MD)].
-
-**SQL Server Reporting Services (CTP-Version 2.1)**
-
-
-- **Problem und kundenbeeinträchtigung:** , wenn Sie SQL Server Reporting Services und Power BI Berichtsserver auf demselben Computer aus, und Deinstallieren eines davon haben, Sie werden nicht mehr auf dem verbleibenden Berichtsserver mit Berichtsserver Konfigurations-Manager eine Verbindung herstellen können.
-- **Problemumgehung** um dieses Problem zu umgehen, müssen Sie nach der Deinstallation von einem der Server die folgenden Vorgänge ausführen.
-
-    1. Starten Sie eine Eingabeaufforderung im Administratormodus.
-    2. Wechseln Sie zu dem Verzeichnis, in dem die verbleibenden Berichtsserver installiert ist.
-
-        *Standardspeicherort für Power BI-Berichtsserver: C:\Program Files\Microsoft Power BI-Berichtsserver*
-
-        *Standardspeicherort für SQL Server Reporting Services: C:\Program Files\Microsoft SQL Server Reporting Services*
-
-    3. Wechseln Sie dann zu dem Ordner. Diese werden entweder *SSRS* oder *PBIRS* je nachdem, welche verfügbare Spannung anzeigt.
-    4. Wechseln Sie zu den WMI-Ordner.
-    5. Führen Sie den folgenden Befehl aus:
-
-        ```
-        regsvr32 /i ReportingServicesWMIProvider.dll
-        ```
-
-        Wenn es angezeigt wird, können Sie den folgenden Fehler ignorieren.
-
-        ```
-        The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
-        ```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-<a id="4-nbsp-what39s-new-in-sql-server-2017what-s-new-in-sql-server-2017md" class="xliff"></a>
-
-### 4. &nbsp;[Was &#39; s neu in SQLServer 2017](what-s-new-in-sql-server-2017.md)
-
-*Aktualisiert: 19.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Zurück](#TitleNum_3))
-
-<!-- Source markdown line 31.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 41ed3624662404aa63ade007d1ea987fe72a3ab5 921f698ae101f7e6b53d268621b868e1a7e7ada7  (PR=2075  ,  Filename=what-s-new-in-sql-server-2017.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=aa08b5e7de9bb317fd781a98ee5d829431b92df6) -->
-
-
-
-**Was ist neu in CTP für SQL Server 2017 2.1 (Mai 2017)**
-
-** SQL Server-Datenbankmodul **
-
-- Eine neue DMF [sys.dm_db_log_stats--... / relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), wurde eingeführt, um die Attribute der Zusammenfassung auf und Informationen zu den Transaktionsprotokolldateien; verfügbar zu machen für die Überwachung der Integritäts des Transaktionsprotokolls hilfreich.  
-- Dieser CTP-Version enthält Fehlerbehebungen und leistungsverbesserungen für das Datenbankmodul.
-- Eine ausführliche Liste der 2017 CTP-Verbesserungen in der vorherigen CTP-Versionen finden Sie unter [SQL Server 2017 (Datenbankmodul) – Neuigkeiten in... / database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
-**SQLServer Reporting Services (SSRS)**
-
-- SQL Server Reporting Services ist nicht mehr verfügbar ist, mithilfe von SQL Server Setup zum Zeitpunkt der CTP-Version 2.1 installiert.
-- Kommentare sind jetzt für Berichte verfügbar. Kommentare können Sie Perspektive an, was in einem Bericht hinzufügen und die Zusammenarbeit mit anderen Personen in Ihrer Organisation. Sie können auch die Anlagen mit Ihren Kommentar einschließen.
-- Für eine ausführlichere SSRS was neue Informationen, einschließlich Details aus früheren Versionen ist, finden Sie unter [in Reporting Services – Neuigkeiten... / reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
-- Weitere Informationen zu Power BI-Berichtsserver, finden Sie unter [erste Schritte mit Power BI-Berichtsserver](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
-
-**SQL Server-Machine Learning-Dienste**
-
-- Es sind keine neuen Machine Learning-Services-Funktionen in dieser CTP-Version.
-- Für ausführlichere Machine Learning Services Funktionen neue Informationen, einschließlich Details aus vorherigen CTPs, finden Sie unter [Neuigkeiten in SQL Server Machine Learning Services –... / advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
-
-**SQL Server Analysis Services (SSAS)**
-
-- Diese CTP enthält keine neuen SSAS-Funktionen.  
-- Weitere Informationen zu Verbesserungen und Fehlerbehebungen in dieser Version finden Sie unter [in SQL Server 2017 Analysis Services – Neuigkeiten... / analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact Liste von Artikeln, die vor kurzem aktualisiert
-
-Diese compact Liste enthält Links zu den aktualisierten Artikeln, die im vorherigen Abschnitt aufgeführt sind.
-
-1. [Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools](#TitleNum_1)
-2. [Editionen und unterstützten Funktionen von SQL Server](#TitleNum_2)
-3. [Versionsanmerkungen zu SQLServer 2017](#TitleNum_3)
-4. [Was &#39; s neu in SQLServer 2017](#TitleNum_4)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## Schwester Artikel
+## <a name="similar-articles"></a>Ähnliche Artikel
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen, innerhalb des gleichen GitHub-Repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-#### Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen.
-
-- [New + Updated (12+2): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (12+2): Erweiterte Analysen für SQL-Dokumente)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2): **Connect to SQL** docs (Neu + Aktualisiert (0+2): Herstellung einer Verbindung mit SQL-Dokumenten)](../connect/new-updated-connect.md)
-- [New + Updated (3+0): **Database Engine for SQL** docs (Neu + Aktualisiert (3+0): Datenbankmodul für SQL-Dokumente)](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2): **Integration Services for SQL** docs (Neu + Aktualisiert (1+2): Integration Services für SQL-Dokumente)](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8): **Linux for SQL** docs (Neu + Aktualisiert (2+8): Linux für SQL-Dokumente)](../linux/new-updated-linux.md)
-- [New + Updated (1+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (1+0): Master Data Services (MDS) für SQL-Dokumente)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5): **Relational Databases for SQL** docs (Neu + Aktualisiert (5+5): Relationale Datenbanken für SQL-Dokumente)](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Reporting Services für SQL-Dokumente)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4): **Microsoft SQL Server** docs (Neu + Aktualisiert (0+4): Microsoft SQL Server-Dokumente)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0): **Tools for SQL** docs (Neu + Aktualisiert (1+0): Tools für SQL-Dokumente)](../tools/new-updated-tools.md)
+- [New + Updated (4+4): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (4+4): Dokumentation zu Erweiterten Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2): **Connect to SQL** docs (Neu + Aktualisiert (1+2): Dokumentation zur Herstellung einer Verbindung mit SQL)](../connect/new-updated-connect.md)
+- [New + Updated (6+0): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs (Neu + Aktualisiert (13+2): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
+- [New + Updated (1+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zur Open Database Connectivity für SQL)](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2): **Microsoft SQL Server** docs (Neu + Aktualisiert (2+2): Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0): **Transact-SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0): **Tools for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu SSIS für SQL)](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs (Neu + Aktualisiert (0+0): Transact-SQL-Dokumente)](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 
