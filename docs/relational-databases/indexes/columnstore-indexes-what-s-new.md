@@ -22,9 +22,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# Columnstore-Indizes - Neuigkeiten
+# <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Zusammenfassung der für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen und für die neueste Version der Azure SQL-Datenbank Premium Edition, Azure SQL Data Warehouse und Parallel Data Warehouse verfügbaren Columnstore-Funktionen.  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > Für Azure SQL-Datenbank sind Columnstore-Indizes nur in der Premium Edition verfügbar.
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## Zusammenfassung der Funktionen für Produktversionen  
+## <a name="feature-summary-for-product-releases"></a>Zusammenfassung der Funktionen für Produktversionen  
  In dieser Tabelle sind die wichtigsten Funktionen für Columnstore-Indizes sowie die Produkte zusammengefasst, in denen sie verfügbar sind.  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fügt diese neuen Funktionen hinzu.
 
-<a id="functional" class="xliff"></a>
-
-### Funktionell
+### <a name="functional"></a>Funktionell
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nicht permanent berechnete Spalten in gruppierten Columnstore-Indexen. Persistent berechnete Spalten werden in gruppierten Indexen nicht unterstützt. Sie können einen nicht gruppierten Index auf einem Columnstore-Index erstellen, der über berechnete Spalten verfügt. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fügt wichtige Verbesserungen hinzu, um die Leistung und Flexibilität von Columnstore-Indizes zu erhöhen. Dies verbessert die Data Warehouse-Szenarios und ermöglicht operative Echtzeitanalysen.  
   
-<a id="functional" class="xliff"></a>
-
-### Funktionell  
+### <a name="functional"></a>Funktionell  
   
 -   Eine Rowstore-Tabelle kann über einen aktualisierbaren nicht gruppierten Columnstore-Index verfügen. Bisher war der nicht gruppierte Columnstore-Index schreibgeschützt.  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Columnstore-Indizes können über eine Komprimierungsverzögerungsoption verfügen, die die Auswirkungen minimiert, die die Transaktionsarbeitsauslastung auf betriebliche Echtzeitanalysen hat.  Mit dieser Option können häufig geänderte Zeilen vor der Komprimierung in den Columnstore stabilisiert werden. Weitere Informationen finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) und [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### Leistung für Datenbankkompatibilitätsgrad 120 oder 130  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>Leistung für Datenbankkompatibilitätsgrad 120 oder 130  
   
 -   Columnstore-Indizes unterstützen die RCSI-Stufe (Read Committed Snapshot Isolation) sowie die Momentaufnahmeisolation (Snapshot Isolation, SI). Dies ermöglicht transaktionale konsistente Analyseabfragen ohne Sperren.  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Die Prädikatweitergabe beschleunigt Abfragen, die Zeichenfolgen vom Typ „[v]char“ oder „n[v]char“ vergleichen. Dies gilt für die allgemeinen Vergleichsoperatoren und schließt Operatoren wie LIKE ein, die Bitmapfilter verwenden. Dies funktioniert bei allen Sortierungen, die von SQL Server unterstützt werden.  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### Leistung für Datenbankkompatibilitätsgrad 130  
+### <a name="performance-for-database-compatibility-level-130"></a>Leistung für Datenbankkompatibilitätsgrad 130  
   
 -   Unterstützung der neuen Batchmodusausführung für Abfragen, die diese Vorgänge verwenden:  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Speicheroptimierte Tabellenabfragen können sowohl beim Zugriff auf Daten im Rowstore- als auch beim Zugriff auf Daten im Columnstore-Index parallele Pläne im SQL InterOp-Modus verwenden.  
   
-<a id="supportability" class="xliff"></a>
-
-### Unterstützbarkeit  
+### <a name="supportability"></a>Unterstützbarkeit  
  Diese Systemsichten sind für Columnstore neu:  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### Einschränkungen  
+### <a name="limitations"></a>Einschränkungen  
   
 -   MERGE wird deaktiviert, wenn ein B-Struktur-Index für einen gruppierten Columnstore-Index definiert wird.  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Für In-Memory-Tabellen können Abfragen für Columnstore-Indizes nur im InterOP-Modus und nicht im einheitlichen In-Memory-Modus ausgeführt werden. Parallele Ausführung wird unterstützt.  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  In SQL Server 2014 wurde der gruppierten Columnstore-Index als primäres Speicherformat eingeführt. Dieser ermöglichte reguläre Ladevorgänge sowie Aktualisierungs-, Lösch- und Einfügevorgänge.  
   
 -   Die Tabelle kann einen gruppierten Columnstore-Index als primären Tabellenspeicher verwenden. Für die Tabelle sind keine anderen Indizes zulässig, aber der gruppierte Columnstore-Index ist aktualisierbar, sodass Sie reguläre Ladevorgänge ausführen und Änderungen an einzelnen Zeilen vornehmen können.  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Diese Operatoren werden für Multithread-Abfragen im Batchmodus ausgeführt: SCAN, FILTER, PROJECT, JOIN, GROUP BY und UNION ALL.  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  In SQL Server 2012 wurden der nicht gruppierte Columnstore-Index als weiterer Indextyp für Rowstore-Tabellen sowie die Batchverarbeitung für Abfragen für Columnstore-Daten eingeführt.  
   
 -   Eine Rowstore-Tabelle kann über einen nicht gruppierten Columnstore-Index verfügen.  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Die Batchverarbeitung bietet eine mindestens doppelt so gute Leistung, ist aber nur für die parallele Abfrageausführung verfügbar.  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  Beschreibung von Columnstore-Indizes   
  Laden von Daten für Columnstore-Indizes   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
