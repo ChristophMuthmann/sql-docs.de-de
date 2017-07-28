@@ -26,6 +26,7 @@
 ## [Verwenden einer Formatdatei für den Massenimport von Daten](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [Überspringen einer Tabellenspalte mithilfe einer Formatdatei](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [Auslassen eines Datenfelds mithilfe einer Formatdatei](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Importieren von Daten aus Excel in SQL](import-data-from-excel-to-sql.md)  
 # [Beispiele für den Massenimport und -export von XML-Dokumenten](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  

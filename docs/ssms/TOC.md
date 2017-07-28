@@ -7,14 +7,11 @@
 ## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-ssms.md)
 ## [Vorgängerversionen von SQL Server Management Studio](previous-sql-server-management-studio-releases.md)
 
-# [Verwenden von SSMS](use-sql-server-management-studio.md)
-# [Funktionen in SQL Server Management Studio](features-in-sql-server-management-studio.md)
-# [Sammlung der Feedbackerfassung](sql-server-management-studio-telemetry-ssms.md)
-# [Herunterladen von SQL Server PowerShell-Modul](download-sql-server-ps-module.md)
+# [Download SQL Server PowerShell Module (Herunterladen des SQL Server PowerShell-Moduls)](download-sql-server-ps-module.md)
 
 # [SQL Server-Agent +](../ssms/agent/sql-server-agent.md)
 # [F1-Hilfe +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
-# [Menü "Hilfe" +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
+# [Menü „Hilfe“ +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
 # [Objekt-Explorer +](../ssms/object/object-explorer.md)
 # [Projektmappen-Explorer +](../ssms/solution/solution-explorer.md)
 # [Vorlagen +](../ssms/template/template-explorer.md)
@@ -49,4 +46,4 @@
 
 # [Ssms-Hilfsprogramm](ssms-utility.md)  
 # [Tastenkombinationen für SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Anonymous Usage Data (Anonyme Verwendungsdaten)](sql-server-management-studio-telemetry-ssms.md)
