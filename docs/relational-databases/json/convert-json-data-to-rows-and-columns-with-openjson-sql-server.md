@@ -2,7 +2,7 @@
 title: Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON (SQL Server) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/31/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,33 +19,33 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: c153135f84f7cb9671840a55f29927fb06ea819e
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Die Rowsetfunktion **OPENJSON** konvertiert JSON-Text in eine Reihe von Zeilen und Spalten. Verwenden Sie **OPENJSON**, um SQL-Abfragen auf JSON-Sammlungen auszuführen oder JSON-Text in SQL Server-Tabellen zu importieren.  
+Die Rowsetfunktion **OPENJSON** konvertiert JSON-Text in eine Reihe von Zeilen und Spalten. Nach der Transformation einer JSON-Sammlung in ein Rowset mithilfe von **OPENJSON** können Sie jede beliebige SQL-Abfrage auf zurückgegebene Daten ausführen oder diese in eine Tabelle von SQL Server einfügen. 
   
- Die **OPENJSON**-Funktion greift ein einzelnes JSON-Objekt oder eine Sammlung von JSON-Objekten auf und transformiert sie in eine oder mehrere Zeilen. Die **OPENJSON**-Funktion gibt die folgenden Informationen zurück:
--   Aus einem JSON-Objekt – alle Schlüsselwertpaare, die auf der ersten Ebene gefunden werden
--   Aus einem JSON-Array – alle Elemente des Arrays mit ihren Indizes  
-  
-Fügen Sie optional eine **WITH**-Klausel hinzu, um das Schema der Zeilen anzugeben, die von der **OPENJSON**-Funktion zurückgegeben werden. Dieses explizite Schema definiert die Struktur der Ausgabe.  
-  
-## <a name="use-openjson-without-an-explicit-schema-for-the-output"></a>Verwenden von OPENJSON ohne ein explizites Schema für die Ausgabe
-Bei Verwendung der **OPENJSON**-Funktion ohne ein explizites Schema für die Ergebnisse, d.h. ohne eine **WITH**-Klausel nach OPENJSON, gibt die Funktion eine Tabelle mit den folgenden drei Spalten zurück:
-1.  Name der Eigenschaft im Eingabeobjekt (oder Index des Elements im Eingabe-Array)
-2.  Wert der Eigenschaft oder des Array-Elements
-3.  Typ (z.B. Zeichenfolge, Zahl, boolescher Wert, Array oder Objekt)
+Die **OPENJSON**-Funktion greift ein einzelnes JSON-Objekt oder eine Sammlung von JSON-Objekten auf und transformiert sie in eine oder mehrere Zeilen. Die **OPENJSON**-Funktion gibt standardmäßig die folgenden Daten zurück:
+-   Aus einem JSON-Objekt gibt die Funktion alle Schlüsselwertpaare zurück, die auf der ersten Ebene gefunden werden.
+-   Aus einem JSON-Array gibt die Funktion alle Elemente des Arrays mit ihren Indizes zurück.  
 
-Jede Eigenschaft des JSON-Objekts oder jedes Element des Arrays wird als separate Zeile zurückgegeben.  
+Sie können eine optionale **WITH**-Klausel hinzufügen, um ein Schema bereitzustellen, das die Struktur der Ausgabe definiert.  
+  
+## <a name="option-1---openjson-with-the-default-output"></a>Option 1: OPENJSON mit der Standardausgabe
+Bei Verwendung der **OPENJSON**-Funktion ohne ein explizites Schema für die Ergebnisse, d.h. ohne eine **WITH**-Klausel nach **OPENJSON**, gibt die Funktion eine Tabelle mit den folgenden drei Spalten zurück:
+1.  Der **Name** der Eigenschaft im Eingabeobjekt (oder Index des Elements im Eingabe-Array)
+2.  Der **Wert** der Eigenschaft oder des Array-Elements
+3.  Der **Typ** (z.B. Zeichenfolge, Zahl, boolescher Wert, Array oder Objekt)
 
-Nachstehend finden Sie ein kurzes Beispiel, das **OPENJSON** mit dem Standardschema verwendet und eine Zeile für jede Eigenschaft des JSON-Objekts zurückgibt.  
+**OPENJSON** gibt jede Eigenschaft des JSON-Objekts oder jedes Element des Arrays als separate Zeile zurück  
+
+Nachstehend finden Sie ein kurzes Beispiel, das **OPENJSON** mit dem Standardschema – also ohne die optionale **WITH**-Klausel – verwendet und eine Zeile für jede Eigenschaft des JSON-Objekts zurückgibt.  
  
 **Beispiel**
 ```sql  
@@ -66,17 +66,17 @@ FROM OPENJSON(@json);
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
 
-### <a name="more-info"></a>Weitere Informationen
+### <a name="more-info-about-openjson-with-the-default-schema"></a>Weitere Informationen zum Verwenden von OPENJSON mit dem Standardschema
 
 Weitere Informationen und Beispiele finden Sie unter [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md) (Verwenden von OPENJSON mit dem Standardschema &#40;SQL Server&#41;).
 
 Weitere Informationen zu Syntax und Verwendung finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)zur Verfügung. 
 
     
-## <a name="use-openjson-with-an-explicit-schema-for-the-output"></a>Verwenden von OPENJSON mit einem expliziten Schema für die Ausgabe
-Wenn Sie mithilfe der **WITH**-Klausel der **OPENJSON**-Funktion ein Schema für die Ergebnisse angeben, gibt die Funktion eine Tabelle zurück, die nur die von Ihnen in der **WITH**-Klausel definierten Spalten enthält. In der **WITH**-Klausel können Sie einen Satz von Ausgabespalten, deren Typen und die Pfade der JSON-Quelleigenschaften für jeden Ausgabewert angeben. **OPENJSON** durchläuft das Array von JSON-Objekten, liest Werte auf dem angegebenen Pfad für jede Spalte und konvertiert sie in einen angegebenen Typ.  
+## <a name="option-2---openjson-output-with-an-explicit-structure"></a>Option 2: OPENJSON-Ausgabe mit einer expliziten Struktur
+Wenn Sie mithilfe der **WITH**-Klausel der **OPENJSON**-Funktion ein Schema für die Ergebnisse angeben, gibt die Funktion eine Tabelle zurück, die nur die von Ihnen in der **WITH**-Klausel definierten Spalten enthält. In der optionalen **WITH**-Klausel können Sie einen Satz von Ausgabespalten, deren Typen und die Pfade der JSON-Quelleigenschaften für jeden Ausgabewert angeben. **OPENJSON** durchläuft das Array von JSON-Objekten, liest Werte auf dem angegebenen Pfad für jede Spalte und konvertiert sie in einen angegebenen Typ.  
 
-Hier finden Sie ein kurzes Beispiel, in dem **OPENJSON** mit einem explizit angegebenen Schema für die Resultate verwendet wird.  
+Hier finden Sie ein kurzes Beispiel, in dem **OPENJSON** mit einem explizit in der **WITH**-Klausel angegebenen Schema für die Ausgabe verwendet wird.  
   
 **Beispiel**
   
@@ -125,23 +125,23 @@ WITH (
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
- Diese Funktion gibt die Elemente eines JSON-Arrays zurück und formatiert diese.  
+Diese Funktion gibt die Elemente eines JSON-Arrays zurück und formatiert diese.  
   
 -   Für jedes Element im JSON-Array generiert **OPENJSON** eine neue Zeile in der Ausgabetabelle. Die zwei Elemente im JSON-Array werden in zwei Zeilen in der zurückgegebenen Tabelle konvertiert.  
   
--   Für jede Spalte, die mithilfe der Syntax `colName type json_path` angegeben wurde, konvertiert die **OPENJSON**-Funktion den Wert, der in jedem Array-Element im angegebenen Pfad gefunden wurde, in einen angegebenen Typ und füllt eine Zelle in der Ausgabetabelle auf. In diesem Beispiel werden Werte für die `Date`-Spalte aus jedem Objekt im Pfad `$.Order.Date` aufgegriffen und in datetime-Werte konvertiert.  
+-   Für jede Spalte, die mithilfe der Syntax `colName type json_path` angegeben wurde, konvertiert die **OPENJSON** den Wert, der in jedem Array-Element im angegebenen Pfad gefunden wurde, in den angegebenen Typ. In diesem Beispiel werden Werte aus der `Date`-Spalte aus jedem Element im Pfad `$.Order.Date` genommen und in datetime-Werte konvertiert.  
   
-Nach der Transformation einer JSON-Sammlung in ein Rowset mithilfe von **OPENJSON** können Sie jede beliebige SQL-Abfrage auf zurückgegebene Daten ausführen oder diese in eine Tabelle einfügen.  
-
-### <a name="more-info"></a>Weitere Informationen
+### <a name="more-info-about-openjson-with-an-explicit-schema"></a>Weitere Informationen zum Verwenden von OPENJSON mit einem expliziten Schema
 Weitere Informationen und Beispiele finden Sie unter [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md) (Verwenden von OPENJSON mit einem expliziten Schema &#40;SQL Server&#41;).
 
 Weitere Informationen zu Syntax und Verwendung finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)zur Verfügung.
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON erfordert Kompatibilitätsgrad 130
-Die **OPENJSON** -Funktion steht nur für den **Kompatibilitätsgrad 130**zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON** -Funktion nicht finden und ausführen. Andere integrierte JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar. Sie können den Kompatibilitätsgrad in der Sicht „sys.databases“ oder in den Datenbankeigenschaften überprüfen.
+Die **OPENJSON** -Funktion steht nur für den **Kompatibilitätsgrad 130**zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere integrierte JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
 
-Sie können den Kompatibilitätsgrad der Datenbank mithilfe des folgenden Befehls ändern:   
+Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den Datenbankeigenschaften überprüfen.
+
+Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befehls ändern:   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  

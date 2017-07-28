@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: "Funktionen der adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern"
 ms.custom: 
-ms.date: 06/22/2017
+ms.date: 07/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,15 @@ ms.assetid:
 author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: fdade5bce38348e80085643c5f6f5a2b4e9663c1
+ms.translationtype: HT
+ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
+ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 
-<a id="adaptive-query-processing-in-sql-databases" class="xliff"></a>
-
-# Adaptive Abfrageverarbeitung in SQL-Datenbanken
+# <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -41,16 +39,12 @@ Manchmal ist der vom Abfrageoptimierer ausgewählte Plan nicht optimal. Dies kan
 
 ![Funktionen der adaptiven Abfrageverarbeitung](./media/1_AQPFeatures.png)
 
-<a id="how-to-enable-adaptive-query-processing" class="xliff"></a>
-
-### So aktivieren Sie die adaptive Abfrageverarbeitung
+### <a name="how-to-enable-adaptive-query-processing"></a>So aktivieren Sie die adaptive Abfrageverarbeitung
 Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Beispiel:
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
-<a id="batch-mode-memory-grant-feedback" class="xliff"></a>
-
-## Feedback zur Speicherzuweisung im Batchmodus
+## <a name="batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Batchmodus
 Der Plan für nach der Ausführung einer Abfrage in SQL Server enthält den für die Ausführung mindestens erforderlichen Speicherplatz und die ideale Speicherzuweisungsgröße, sodass alle Zeilen in den Speicher passen. Es gibt Leistungseinbußen, wenn die Speicherzuweisungsgrößen zu klein sind. Zu große Zuweisungen führen zu verschwendeten Speicherplatz und geringerer Parallelität. Nicht ausreichende Speicherzuweisungen führen zu umfangreichen Überläufen auf den Datenträger. Für wiederholte Workloads berechnet das Feedback zur Speicherzuweisung im Batchmodus den tatsächlich erforderlichen Speicherplatz für eine Abfrage neu und aktualisiert anschließend den Zuweisungswert des zwischengespeicherten Plans.  Wenn die gleiche Abfrageanweisung ausgeführt wird, verwendet die Abfrage die angepasste Speicherzuweisungsgröße. Dadurch werden zu hohe Speicherzuweisungen, die die Parallelität beeinträchtigen, verringert und Probleme bei zu gering geschätzten Speicherzuweisungen behoben, die große Überläufe auf den Datenträger verursacht haben.
 Der folgende Graph veranschaulicht ein Beispiel für den Gebrauch des Feedbacks zur adaptiven Speicherzuweisung im Batchmodus. Die erste Ausführung der Abfrage hat aufgrund von einer hoher Zahl von Überlaufen *88 Sekunden* in Anspruch genommen:
 ```sql
@@ -68,36 +62,24 @@ Wenn das Feedback zur Speicherzuweisung aktiviert ist, dauert die zweite Ausfüh
 
 ![Keine Überläufe](./media/3_AQPGraphNoSpills.png)
 
-<a id="memory-grant-feedback-sizing" class="xliff"></a>
-
-### Größenanpassung des Feedbacks zur Speicherzuweisung im Batchmodus
+### <a name="memory-grant-feedback-sizing"></a>Größenanpassung des Feedbacks zur Speicherzuweisung im Batchmodus
 Wenn *bei zu großen Speicherzuweisungen* der zugewiesene Speicher mehr als doppelt so groß ist wie der tatsächlich verwendete Speicher, berechnet das Feedback zur Speicherzuweisung diese neu und aktualisiert den zwischengespeicherten Plan.  Pläne mit Speicherzuweisungen unter 1 MB werden bei Überschreitungen nicht neu berechnet.
 *Bei zu geringen Speicherzuweisungen*, die bei Batchmodusoperatoren zu einem Überlauf auf einen Datenträger führen, löst das Feedback zur Speicherzuweisung eine Neuberechnung der Speicherzuweisung aus. Überlaufereignisse werden an das Feedback zur Speicherzuweisung gemeldet und können als XEvent-Ereignis *spilling_report_to_memory_grant_feedback* angegeben werden. Dieses Ereignis gibt die Knoten-ID des Plans und die Größe der übergelaufenen Daten dieses Knotens zurück.
 
-<a id="memory-grant-feedback-and-parameter-sensitive-scenarios" class="xliff"></a>
-
-### Feedback zur Speicherzuweisung und parameterempfindliche Szenarios
+### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Feedback zur Speicherzuweisung und parameterempfindliche Szenarios
 Verschiedene Parameterwerte können auch unterschiedliche Abfragepläne erfordern, um optimale Ergebnisse zu bieten. Diese Art von Abfrage wird als „parameterempfindlich“ bezeichnet. Bei parameterempfindlichen Plänen deaktiviert sich das Feedback zur Speicherzuweisung in Abfragen selbst, wenn es nicht stabile Speicheranforderungen aufweist.  Der Plan wird nach mehreren wiederholten Abfrageausführungen deaktiviert. Dies können Sie sich anschauen, indem Sie das XEvent *memory_grant_feedback_loop_disabled* anschauen.
 
-<a id="memory-grant-feedback-caching" class="xliff"></a>
-
-### Caching des Feedbacks zur Speicherzuweisung
+### <a name="memory-grant-feedback-caching"></a>Caching des Feedbacks zur Speicherzuweisung
 Das Feedback kann für eine einzelne Ausführung in einem zwischengespeicherten Plan gespeichert werden. Allerdings sind es aufeinanderfolgende Ausführungen dieser Anweisung, die von Anpassungen des Feedbacks zur Speicherzuweisung profitieren. Diese Funktion gilt für wiederholte Ausführungen von Anweisungen. Das Feedback zur Speicherzuweisung ändert nur den zwischengespeicherten Plan. Änderungen werden aktuell nicht im Abfragespeicher erfasst.
 Das Feedback wird nicht übernommen, wenn der Plan aus dem Cache entfernt wird. Ebenso geht das Feedback verloren, wenn es zu einem Failover kommt. Eine Anweisung mit „OPTION(RECOMPILE)“ erstellt einen neuen Plan und speichert diesen nicht zwischen. Da er nicht zwischengespeichert wird, wird auch kein Feedback zur Speicherzuweisung erzeugt und für diese Kompilation und Ausführung auch nicht gespeichert.  Wenn allerdings eine äquivalente Anweisung (d.h. eine Anweisung mit dem gleichen Abfragehash), die *nicht* „OPTION(RECOMPILE)“ verwendet hat, zwischengespeichert und dann erneut ausgeführt wird, kann die darauffolgende Anweisung vom Feedback zur Speicherzuweisung profitieren.
 
-<a id="tracking-memory-grant-feedback-activity" class="xliff"></a>
-
-### Nachverfolgen der Aktivität des Feedbacks zur Speicherzuweisung
+### <a name="tracking-memory-grant-feedback-activity"></a>Nachverfolgen der Aktivität des Feedbacks zur Speicherzuweisung
 Sie können Ereignisse des Feedbacks zur Speicherzuweisung mit dem XEvent-Ereignis *memory_grant_updated_by_feedback* nachverfolgen.  Dieses Ereignis verfolgt die Ausführungsanzahl, die Zahl von Aktualisierungen des Plans durch das Feedback zur Speicherzuweisung und die optimale zusätzliche Speicherzuweisung vor der Anpassung und nach der Anpassung des zwischengespeicherten Plans durch das Feedback zur Speicherzuweisung.
 
-<a id="memory-grant-feedback-resource-governor-and-query-hints" class="xliff"></a>
-
-### Feedback zur Speicherzuweisung, Ressourcenkontrolle und Abfragehinweise
+### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback zur Speicherzuweisung, Ressourcenkontrolle und Abfragehinweise
 Der tatsächlich zugewiesene Speicher berücksichtigt die Abfragespeichereinschränkung, die von der Ressourcenkontrolle oder dem Abfragehinweis bestimmt wird.
 
-<a id="batch-mode-adaptive-joins" class="xliff"></a>
-
-## Adaptive Joins im Batchmodus
+## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Mit der Funktion der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für Hashjoins oder Nested Loop-Joins geschachtelter Schleifen auf *nach* dem Scan der ersten Eingabe zurückgestellt werden.  Der adaptive Joinoperator definiert einen Schwellenwert, der bestimmt, wann zu einem Nested Loop-Plan gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passender Joinstrategie wechseln.
 Funktionsweise:
 - Wenn die Anzahl der Zeilen der Buildjoineingabe so klein ist, dass ein Join geschachtelter Schleifen passender als ein Hashjoin wäre, wechselt Ihr Plan zu einem Nested Loop-Algorithmus.
@@ -141,24 +123,16 @@ Im Plan erkennen wir das Folgende:
 - Bei einer zurückgegebenen Zeile können Sie erkennen, dass der Clustered Index Seek Zeilen aufweist, die ihn durchlaufen.
 - Da wir die Buildphase des Hashjoins nicht abgeschlossen haben, wird der zweite Branch von 0 (null) Zeilen durchlaufen.
 
-<a id="adaptive-join-benefits" class="xliff"></a>
-
-### Vorteile adaptiver Joins
+### <a name="adaptive-join-benefits"></a>Vorteile adaptiver Joins
 Workloads mit häufiger Oszillation zwischen kleinen und großen Joineingabescans profitieren am meisten von dieser Funktion.
 
-<a id="adaptive-join-overhead" class="xliff"></a>
-
-### Aufwand adaptiver Joins
+### <a name="adaptive-join-overhead"></a>Aufwand adaptiver Joins
 Adaptive Joins erfordern mehr Speicherplatz als ein äquivalenter Plan eines indizierten Nested Loop-Joins. Der zusätzliche Speicherplatz wird so angefordert, als wäre der Nested Loop- ein Hashjoin. Auch die Buildphase ist mit Aufwand verbunden: sowohl für einen Stop-and-Go-Vorgang als auch für einen äquivalenten Nested Loop Streaming-Join. Dieser zusätzliche Aufwand kommt mit Flexibilität für Szenarios, in denen Zeilen möglicherweise in der Buildeingabe schwanken.
 
-<a id="adaptive-join-caching-and-re-use" class="xliff"></a>
-
-### Zwischenspeichern und Wiederverwenden von adaptiven Joins
+### <a name="adaptive-join-caching-and-re-use"></a>Zwischenspeichern und Wiederverwenden von adaptiven Joins
 Adaptive Joins des Batchmodus funktionieren bei der ersten Ausführung einer Anweisung. Wenn sie erst einmal kompiliert wurden, bleiben aufeinanderfolgende Ausführungen adaptiv basierend auf dem Schwellenwert des kompilierten adaptiven Joins und den Laufzeitzeilen, die die Buildphase der äußeren Eingabe durchlaufen.
 
-<a id="tracking-adaptive-join-activity" class="xliff"></a>
-
-### Nachverfolgen der Aktivität adaptiver Joins
+### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
 Der adaptive Joinoperator verfügt über folgende Planattribute des Operators:
 
 | Planattribut | Description |
@@ -169,14 +143,10 @@ Der adaptive Joinoperator verfügt über folgende Planattribute des Operators:
 
 Der geschätzte Plan zeigt die Form des adaptiven Joinplans an sowie den definierten Schwellenwert für adaptive Joins und den geschätzten Jointyp.
 
-<a id="adaptive-join-and-query-store-interoperability" class="xliff"></a>
-
-### Interoperabilität von adaptiven Joins und dem Abfragespeicher
+### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilität von adaptiven Joins und dem Abfragespeicher
 Der Abfragespeicher fängt einen adaptiven Joinplan des Batchmodus ab und kann diesen erzwingen.
 
-<a id="adaptive-join-eligible-statements" class="xliff"></a>
-
-### Zulässige Anweisungen für adaptive Joins
+### <a name="adaptive-join-eligible-statements"></a>Zulässige Anweisungen für adaptive Joins
 Ein logischer Join ist dann für adaptive Joins des Batchmodus zulässig, wenn er folgende Bedingungen erfüllt:
 - Der Datenbankkompatibilitätsgrad beträgt 140.
 - Die Abfrage ist eine SELECT-Anweisung (Anweisungen zur Datenmodifikation sind aktuell noch unzulässig)
@@ -184,21 +154,15 @@ Ein logischer Join ist dann für adaptive Joins des Batchmodus zulässig, wenn e
 - Der Hashjoin verwendet den Batchmodus entweder über einen vorhandenen Columnstore-Index in der Abfrage oder eine mit Columnstore indizierte Tabelle, auf die direkt vom Join verwiesen wird.
 - Die generierten alternativen Lösungen des Nested Loop-Joins und Hashjoins sollten dasselbe erste untergeordnete Element haben (äußerer Verweis).
 
-<a id="adaptive-joins-and-nested-loop-efficiency" class="xliff"></a>
-
-### Adaptive Joins und Nested Loop-Effizienz
+### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Adaptive Joins und Nested Loop-Effizienz
 Wenn ein adaptiver Join zu einem Nested Loop-Vorgang wechselt, verwendet er die Zeilen, die bereits vom Hashjoinbuild gelesen wurden. Der Operator liest *nicht* erneut die Zeilen des äußeren Verweises.
 
-<a id="adaptive-threshold-rows" class="xliff"></a>
-
-### Adaptive Schwellenwertzeilen
+### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen
 Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen dem Aufwand eines Hashjoins und dem Aufwand des alternativen Nested Loop-Joins.  Am Überschneidungspunkt wird der Schwellenwert bestimmt, der wiederum den für den Joinvorgang verwendeten Algorithmus bestimmt.
 
 ![Joinschwellenwert](./media/6_AQPJoinThreshold.png)
 
-<a id="interleaved-execution-for-multi-statement-table-valued-functions" class="xliff"></a>
-
-## Verschachtelte Ausführung mit Funktionen mit mehreren Anweisungen
+## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Verschachtelte Ausführung mit Funktionen mit mehreren Anweisungen
 Eine verschachtelte Ausführung ändert die unidirektionale Grenze zwischen der Optimierungs- und der Ausführungsphase für eine Ausführung mit einer Abfrage. Zudem können Pläne damit auf Grundlage der überarbeiteten Kardinalitätsschätzungen angepasst werden. Wenn Sie bei der Optimierung auf einen möglichen Kandidaten für eine verschachtelte Ausführung (bei der es sich aktuell um **Funktionen mit mehreren Anweisungen (MSTVFs)** handelt) stoßen, wird die Optimierung unterbrochen, die entsprechende Unterstruktur ausgeführt, die genauen Kardinalitätsschätzungen erfasst, und anschließend wird die Optimierung für Downstreamvorgänge wiederaufgenommen.
 Die festgelegten Kardinalitätsschätzung von MSTVFs beträgt in SQL Server 2014 und 2016 „100“ und in früheren Versionen „1“. Die verschachtelte Ausführung löst Probleme bei der Leistung von Workloads, die auf die festgelegten Kardinalitätsschätzungen von MSTVFs zurückzuführen sind.
 
@@ -217,34 +181,24 @@ Vergleich des vorherigen Plans mit dem tatsächlich generierten Plan mit aktivie
 1. Bei Joinalgorithmen haben Sie von einem Nested Loop-Vorgang zu einem Hash Match-Vorgang gewechselt, was für die vorhandene Zahl an Zeilen optimaler ist.
 1. Beachten Sie auch, dass es keine Überlaufwarnungen mehr gibt, da mehr Speicherplatz auf Grundlage der tatsächlichen Zeilenzahl, die den MSTVF-Table Scan durchläuft, zugewiesen wird.
 
-<a id="interleaved-execution-eligible-statements" class="xliff"></a>
-
-### Zulässige Anweisungen für verschachtelte Ausführungen
+### <a name="interleaved-execution-eligible-statements"></a>Zulässige Anweisungen für verschachtelte Ausführungen
 Verweisanweisungen von MSTVF in verschachtelten Ausführungen müssen aktuell schreibgeschützt sein und dürfen nicht Teil eines Datenmodifizierungsvorgangs sein. Zudem sind MSTVFs nicht für die verschachtelte Ausführung zulässig, wenn Sie in einer CROSS APPLY-Anweisung verwendet werden.
 
-<a id="interleaved-execution-benefits" class="xliff"></a>
-
-### Vorteile der verschachtelten Ausführung
+### <a name="interleaved-execution-benefits"></a>Vorteile der verschachtelten Ausführung
 Allgemein gilt: Je höher der Unterschied zwischen der geschätzten und tatsächlichen Zeilenzahl in Verbindung mit der Zahl von Downstreamplanvorgängen ist, desto mehr wird die Leistung beeinträchtigt.
 Allgemein profitieren Abfragen von der verschachtelten Ausführung, die:
 1. einen großen Unterschied zwischen der geschätzten und tatsächlichen Zeilenzahl für das temporäre Resultset aufweisen (in diesem Fall MSTVF) und ...
 1. in denen die Abfrage empfindlich ist, was Änderungen der Größe des temporären Ergebnisses angeht. Dies geschieht typischerweise, wenn es eine komplexe Struktur über der Unterstruktur im Abfrageplan gibt.
 Ein einfaches „SELECT *“ einer MSTVF profitiert nicht von einer verschachtelten Ausführung.
 
-<a id="interleaved-execution-overhead" class="xliff"></a>
-
-### Aufwand der verschachtelten Ausführung
+### <a name="interleaved-execution-overhead"></a>Aufwand der verschachtelten Ausführung
 Der Aufwand ist entweder sehr gering oder nicht vorhanden. MSTVFs wurden bereits vor der Einführung der verschachtelten Ausführung materialisiert. Der Unterschied besteht darin, dass jetzt eine verzögerte Optimierung möglich ist sowie die anschließende Nutzung der Kardinalitätsschätzung des materialisierten Rowsets.
 Genauso wie mit allen Änderungen, die sich auf den Plan auswirken, können sich einige Pläne so ändern, dass Sie einen schlechteren Plan für die Abfrage erhalten, auch wenn Sie eine bessere Kardinalität der Unterstruktur haben. Dies können Sie z.B. verhindern, indem Sie den Kompatibilitätsgrad wiederherstellen oder den Abfragespeicher verwenden, um das Verwenden der nicht rückläufigen Version des Plans zu erzwingen.
 
-<a id="interleaved-execution-and-consecutive-executions" class="xliff"></a>
-
-### Verschachtelte Ausführung und nachfolgende Ausführungen
+### <a name="interleaved-execution-and-consecutive-executions"></a>Verschachtelte Ausführung und nachfolgende Ausführungen
 Sobald ein verschachtelter Ausführungsplan zwischengespeichert wurde, wird der Plan mit den überarbeiteten Schätzungen der ersten Ausführung für nachfolgende Ausführungen verwendet, ohne dass die verschachtelte Ausführung erneut aktiviert werden muss.
 
-<a id="tracking-interleaved-execution-activity" class="xliff"></a>
-
-### Nachverfolgen der Aktivität von verschachtelten Ausführungen
+### <a name="tracking-interleaved-execution-activity"></a>Nachverfolgen der Aktivität von verschachtelten Ausführungen
 Sie können sich Verwendungsattribute im Ausführungsplan der Abfrage anschauen:
 
 | Planattribut | Description |
@@ -262,18 +216,18 @@ Sie können verschachtelte Ausführungen auch mit den folgenden XEvents nachverf
 
 Eine Abfrage muss ausgeführt werden, damit die verschachtelte Ausführung die Kardinalitätsschätzungen für MSTVF überarbeiten kann. Allerdings zeigt der geschätzte Ausführungsplan immer noch an, wenn es Kandidaten für eine verschachtelte Ausführung gibt. Dies macht er mithilfe des Attributs „ContainsInterleavedExecutionCandidates“.
 
-<a id="interleaved-execution-caching" class="xliff"></a>
-
-### Zwischenspeichern der verschachtelte Ausführung
+### <a name="interleaved-execution-caching"></a>Zwischenspeichern der verschachtelte Ausführung
 Wenn ein Plan aus dem Cache gelöscht oder entfernt wird, kommt es bei der Abfrageausführung zu einer neuen Kompilierung mit der verschachtelten Ausführung.
 Eine Anweisung mit „OPTION(RECOMPILE)“ erstellt einen neuen Plan mit der verschachtelten Ausführung und speichert diesen nicht zwischen.
 
-<a id="interleaved-execution-and-query-store-interoperability" class="xliff"></a>
-
-### Interoperabilität von adaptiven Joins und dem Abfragespeicher
+### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilität von adaptiven Joins und dem Abfragespeicher
 Pläne mit der verschachtelten Ausführung können erzwungen werden. Der Plan ist die Version mit angepassten Kardinalitätsschätzungen auf Grundlage der ersten Ausführung.
 
-Weitere Informationen finden Sie unter [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
+## <a name="see-also"></a>Siehe auch
+
+[Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+
+[Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
 
 
 

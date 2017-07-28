@@ -18,10 +18,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: de-de
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/14/2017
   
 -   Mindestfestplattenspeicher: 2 GB  
   
--   TCP/IP-Konnektivität muss aktiviert sein. (Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  Die TCP/IP-Konnektivität ist in SQL Server Developer und SQL Server Express standardmäßig deaktiviert. Damit PolyBase funktionieren kann, muss es manuell aktiviert werden.
+-   TCP/IP muss für Polybase aktiviert sein, damit es ordnungsgemäß funktioniert. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit Polybase auch in den Developer- und Express-Edition ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren (Informationen dazu finden Sie unter [Enable or Disable a Server Network Protocol (Aktivieren und -Deaktivieren eines Server-Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
   
  **Hinweise**  
   

@@ -2,7 +2,7 @@
 title: Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/31/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,42 +19,44 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 06095384c6f6ec876e0d103186b1269d19056987
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL Server als JSON, indem Sie die **FOR JSON**-Klausel einer **SELECT**-Anweisung hinzufügen. Verwenden der **FOR JSON** -Klausel, um Clientanwendungen zu vereinfachen, indem Sie die Formatierung der JSON-Ausgabe von Client-apps zu delegieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL Server als JSON, indem Sie die **FOR JSON**-Klausel einer **SELECT**-Anweisung hinzufügen. Verwenden der **FOR JSON**-Klausel, um Clientanwendungen zu vereinfachen, indem Sie die Formatierung der JSON-Ausgabe von der App zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delegieren.
   
- Bei Verwendung der **FOR JSON** -Klausel, können Sie die Struktur der Ausgabe explizit angeben, oder lassen Sie die Struktur der SELECT-Anweisung die Ausgabe bestimmen.  
+ Bei Verwendung der **FOR JSON** -Klausel, können Sie die Struktur der JSON-Ausgabe explizit angeben, oder lassen Sie die Struktur der SELECT-Anweisung die Ausgabe bestimmen.  
   
--   Verwendung **FOR JSON PATH** auf die vollständige Kontrolle über das Format der JSON-Ausgabe behalten. Sie können Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln.  
+-   Verwenden Sie **FOR JSON PATH**, um die vollständige Kontrolle über das Format der JSON-Ausgabe zu behalten. Sie können Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln.  
   
--   Verwendung **FOR JSON AUTO** zum Formatieren der JSON-Ausgabe automatisch auf Grundlage der Struktur der SELECT-Anweisung.  
+-   Verwenden Sie **FOR JSON AUTO**, um die JSON-Ausgabe automatisch auf Grundlage der SELECT-Anweisung zu formatieren.  
   
 Hier finden Sie ein Beispiel für eine **SELECT**-Anweisung mit der **FOR JSON**-Klausel und deren Ausgabe.
   
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
   
-## <a name="maintain-control-over-json-output-with-for-json-path"></a>Behalten Sie die Kontrolle über JSON-Ausgabe mit FOR JSON PATH.
+## <a name="option-1---you-control-output-with-for-json-path"></a>Option 1: Sie können die Ausgabe mit FOR JSON PATH steuern
 Im **PATH** -Modus können Sie die Punktsyntax verwenden, z.B. `'Item.Price'` , um geschachtelte Ausgaben zu formatieren.  
 
 Hier ist eine Beispielabfrage, die den **PATH** -Modus mit der **FOR JSON** -Klausel verwendet. Im folgenden Beispiel wird auch die Option **ROOT** verwendet, um ein benanntes Stammelement anzugeben. 
   
  ![Flussdiagramm der FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example1.png "Diagram of flow of FOR JSON output")  
 
-### <a name="more-info"></a>Weitere Informationen
+### <a name="more-info-about-for-json-path"></a>Weitere Informationen zu FOR JSON PATH
 Weitere Informationen und Beispiele finden Sie unter [Format Nested JSON-Ausgabe mit dem PATH-Modus &#40; SQLServer &#41; ](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
 Weitere Informationen zu Syntax und Verwendung finden Sie unter [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
 
-## <a name="let-the-select-statement-control-json-output-with-for-json-auto"></a>Ermöglichen der SELECT-Anweisung mit FOR JSON AUTO JSON-Ausgabe
-Im **AUTO** -Modus bestimmt die Struktur der SELECT-Anweisung das Format der JSON-Ausgabe. **Nullwerte** sind standardmäßig nicht in der Ausgabe enthalten. Sie können **INCLUDE_NULL_VALUES** dazu verwenden, dieses Verhalten zu ändern.  
+## <a name="option-2---select-statement-controls-output-with-for-json-auto"></a>Option 2: Die SELECT-Anweisung steuert die Ausgabe mit FOR JSON AUTO
+Im **AUTO** -Modus bestimmt die Struktur der SELECT-Anweisung das Format der JSON-Ausgabe.
+
+**Nullwerte** sind standardmäßig nicht in der Ausgabe enthalten. Sie können **INCLUDE_NULL_VALUES** dazu verwenden, dieses Verhalten zu ändern.  
 
 Hier ist eine Beispielabfrage, die den **AUTO** -Modus mit der **FOR JSON** -Klausel verwendet.
  
@@ -75,8 +77,9 @@ FOR JSON AUTO
     "name": "Jane",
     "surname": "Doe"
 }]
-```  
-### <a name="more-info"></a>Weitere Informationen
+```
+ 
+### <a name="more-info-about-for-json-auto"></a>Weitere Informationen zu FOR JSON AUTO
 Weitere Informationen und Beispiele finden Sie unter [Format JSON Output Automatically with AUTO-Modus &#40; SQLServer &#41; ](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
 Weitere Informationen zu Syntax und Verwendung finden Sie unter [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
@@ -91,13 +94,13 @@ Steuern Sie die Ausgabe von der **FOR JSON** -Klausel, indem Sie die folgenden z
 -   **WITHOUT_ARRAY_WRAPPER**. Geben Sie zum standardmäßigen Entfernen der rechteckigen Klammern, die die JSON-Ausgabe der **FOR JSON** -Klausel umgeben, die Option **WITHOUT_ARRAY_WRAPPER** an. Verwenden Sie diese Option, um ein einzelnes JSON-Objekt als Ausgabe aus einem einzeiliges Resultset generieren. Wenn Sie diese Option nicht angeben, wird die JSON-Ausgabe als Array formatiert - d. h. in eckige Klammern gesetzt. Weitere Informationen finden Sie unter [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41; (Entfernen von rechteckigen Klammern von JSON-Ausgabe mit der Option WITHOUT_ARRAY_WRAPPER (SQL Server))](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## <a name="output-of-the-for-json-clause"></a>Ausgabe der FOR JSON-Klausel  
- Die Ausgabe der **FOR JSON** -Klausel besitzt die folgenden Eigenschaften.  
+Die Ausgabe der **FOR JSON**-Klausel besitzt die folgenden Eigenschaften:  
   
 1.  Das Resultset enthält eine einzelne Spalte.
     -   Ein kleines Resultset kann eine einzelne Zeile enthalten.
     -   Ein großes Resultset wird die lange JSON-Zeichenfolge über mehrere Zeilen aufgeteilt.
         -   Standardmäßig SQL Server Management Studio (SSMS) verkettet die Ergebnisse in eine einzelne Zeile wird die Einstellung des **Ergebnisse in Raster**. Die SSMS-Statusleiste zeigt die tatsächliche Zeilenanzahl an.
-        -   Möglicherweise müssen andere Clientanwendungen Code, um längere Ergebnislisten zu verketten, durch den Inhalt mehrerer Zeilen kombinieren. Ein Beispiel für diesen Code in einer C#-Anwendung, finden Sie unter [verwenden der FOR JSON-Ausgabe in einer C#-Client-app](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung, finden Sie unter [verwenden der FOR JSON-Ausgabe in einer C#-Client-app](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
      ![Beispiel für JSON-Ausgabe](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
   
@@ -143,6 +146,7 @@ Hier ist ein Beispiel, das veranschaulicht, wie die **FOR JSON** -Klausel format
     "D": "Z"
 }] 
 ```  
+
  Weitere Informationen darüber, was Sie in der Ausgabe der **FOR JSON**-Klausel sehen, finden Sie in den folgenden Themen.  
 -   [How FOR JSON converts SQL Server data types to JSON data types &#40;SQL Server&#41; (So konvertiert FOR JSON SQL Server-Datentypen in JSON-Datentypen (SQL Server))](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
 Die **FOR JSON** -Klausel verwendet die in diesem Thema beschriebenen Regeln, um SQL-Datentypen in JSON-Typen in der JSON-Ausgabe zu konvertieren.  

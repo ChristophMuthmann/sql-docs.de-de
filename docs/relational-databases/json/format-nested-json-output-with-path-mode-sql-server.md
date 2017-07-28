@@ -2,7 +2,7 @@
 title: Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus (SQL Server) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 3a11cee5097ed686d20d3bb8fcc7894138700841
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Wenn Sie die vollständige Kontrolle über die Ausgabe der **FOR JSON**-Klausel behalten möchten, geben Sie die Option **PATH** an.  
+Wenn Sie die vollständige Kontrolle über die Ausgabe der **FOR JSON**-Klausel behalten möchten, geben Sie die Option **PATH** an.  
   
- Im**PATH** -Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Die Ergebnisse werden als Array von JSON-Objekten formatiert.  
+Im**PATH** -Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Die Ergebnisse werden als Array von JSON-Objekten formatiert.  
   
 Alternativ können Sie die Option **AUTO** verwenden, um die Ausgabe automatisch entsprechend der Struktur der **SELECT**-Anweisung zu formatieren.
  -   Weitere Informationen zur Option **AUTO** finden Sie unter [Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
@@ -36,9 +36,9 @@ Alternativ können Sie die Option **AUTO** verwenden, um die Ausgabe automatisch
 Hier sind einige Beispiele für die **FOR JSON** -Klausel mit der Option **PATH** . Geschachtelte Ergebnisse formatieren Sie, wie nachfolgend gezeigt, mit durch Punkte getrennten Spaltennamen oder mit verschachtelten Abfragen. Nullwerte sind standardmäßig nicht in der **FOR JSON**-Ausgabe enthalten.  
 
 ## <a name="example---dot-separated-column-names"></a>Beispiel – Durch Punkte getrennte Spaltennamen  
- Die ersten fünf Zeilen der AdventureWorks Tabelle „Person“ werden durch die Abfrage als JSON formatiert.  
+Die ersten fünf Zeilen der AdventureWorks-Tabelle `Person` werden durch die Abfrage als JSON formatiert.  
 
-Die Klausel FOR JSON PATH verwendet das Spaltenalias oder einen Spaltennamen, um den Schlüsselnamen in der JSON-Ausgabe zu bestimmen. Wenn ein Alias Punkte enthält, erstellt die Option PATH geschachtelte Objekte.  
+Die Klausel **FOR JSON PATH** verwendet das Spaltenalias oder einen Spaltennamen, um den Schlüsselnamen in der JSON-Ausgabe zu bestimmen. Wenn ein Alias Punkte enthält, erstellt die Option PATH geschachtelte Objekte.  
 
  **Abfrage**  
   
@@ -58,7 +58,7 @@ SELECT TOP 5
 [{
     "Id": 1,
     "FirstName": "Ken",
-    "LastName": "Sánchez",
+    "LastName": "Sanchez",
     "Info": {
         "MiddleName": "J"
     }
@@ -89,7 +89,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>Beispiel – Mehrere Tabellen  
- Wenn Sie in einer Abfrage auf mehr als eine Tabelle verweisen, schachtelt FOR JSON PATH jede Spalte mithilfe des Alias. Die folgende Abfrage erstellt ein JSON-Objekt pro (OrderHeader, OrderDetails) Paar, das in der Abfrage verknüpft ist. 
+Wenn Sie in einer Abfrage auf mehr als eine Tabelle verweisen, schachtelt **FOR JSON PATH** jede Spalte mithilfe des Alias. Die folgende Abfrage erstellt ein JSON-Objekt pro (OrderHeader, OrderDetails) Paar, das in der Abfrage verknüpft ist. 
   
  **Abfrage**  
   

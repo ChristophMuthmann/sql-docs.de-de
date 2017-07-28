@@ -2,7 +2,7 @@
 title: SQL Server-Konfigurations-Manager | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)]-Management Console (**mmc.exe**) verwendet die Datei **SQLServerManager\<version>.msc** (z.B. **SQLServerManager13.msc** für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), um den Konfigurations-Manager zu öffnen. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  Verwenden Sie immer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tools, z. B. den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager, um das von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Diensten verwendete Konto oder das Kennwort für das Konto zu ändern. Zusätzlich zum Ändern des Kontonamens konfiguriert der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager weitere Einstellungen. So legt er z. B. Berechtigungen in der Windows-Registrierung fest, damit die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Einstellungen vom neuen Konto gelesen werden können. Mit anderen Tools, z. B. dem Windows-Dienstkontroll-Manager, kann der Kontoname geändert werden, aber nicht die zugehörigen Einstellungen. Wenn der Dienst nicht auf den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Teil der Registrierung zugreifen kann, wird der Dienst möglicherweise nicht ordnungsgemäß gestartet.  
   
- Ein weiterer Vorteil des Änderns von Kennwörtern mithilfe des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Managers, SMO oder WMI besteht darin, dass die Änderung sofort in Kraft tritt, ohne dass der Dienst neu gestartet werden muss.  
+ Ein weiterer Vorteil des Änderns von Kennwörtern mithilfe des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Managers, SMO oder WMI besteht darin, dass die Änderung sofort in Kraft tritt, ohne dass der Dienst neu gestartet werden muss.  
   
 ## <a name="manage-server--client-network-protocols"></a>Verwalten von Server- & Clientnetzwerkprotokollen  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager können Sie Server- und Clientnetzwerkprotokolle und Konnektivitätsoptionen konfigurieren. Nachdem die richtigen Protokolle aktiviert wurden, müssen Sie die Servernetzwerkverbindungen im Normalfall nicht ändern. Sie können aber den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, wenn Sie die Serververbindungen so konfigurieren müssen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bei der Überwachung an bestimmten Netzwerkprotokolle, Ports oder Pipes lauscht. Weitere Informationen zum Aktivieren von Protokollen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Informationen zum Aktivieren des Zugriffs auf Protokolle über eine Firewall finden Sie unter [Konfigurieren der Windows-Firewall für SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

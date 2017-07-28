@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
-
-# Neue und zuletzt aktualisiert: relationale Datenbanken Docs
+# <a name="new-and-recently-updated-relational-databases-docs"></a>Neue und zuletzt aktualisiert: relationale Datenbanken Docs
 
 
 
@@ -36,7 +34,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **17.5.2017** &nbsp; bis &nbsp; **30.6.2017**
+- *Datumsbereich des Updates*: &nbsp; **23.5.2017** &nbsp; -bis- &nbsp; **17.7.2017**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **relationalen Datenbanken**.
 
 
@@ -44,9 +42,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Neue Artikel, die vor kurzem erstellt wurden
+## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
 
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
@@ -54,16 +50,28 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 1. [SQL Server In-Memory OLTP Internals for SQL Server 2016 (Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016)](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [Adaptive query processing in SQL databases (Adaptive Abfrageverarbeitung in SQL-Datenbanken)](performance/adaptive-query-processing.md)
 3. [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform (Anleitung zur Verbesserung des Datenschutzes und zur Erfüllung von GDPR-Anforderung mit der SQL-Plattform von Microsoft)](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Aktualisierte Artikel mit Auszüge
+## <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
+
+Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
 
 Dieser Abschnitt zeigt die Auszüge von Updates, die vom Artikel, die vor kurzem eine große Aktualisierung aufgetreten sind.
 
@@ -79,9 +87,7 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
-
-### 1. &nbsp; [Ändern von speicheroptimierten Tabellen](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [Ändern von speicheroptimierten Tabellen](in-memory-oltp/altering-memory-optimized-tables.md)
 
 *Aktualisiert: 23.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
@@ -126,9 +132,7 @@ Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geän
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
-
-### 2. &nbsp; [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp; [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 *Aktualisiert: 22.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_1) | [Weiter](#TitleNum_3))
 
@@ -171,9 +175,7 @@ Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geän
 
 <a name="TitleNum_3"/>
 
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
-
-### 3. &nbsp; [Handbuch für die Überprüfung und Optimierung nach der Migration](post-migration-validation-and-optimization-guide.md)
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp; [Handbuch für die Überprüfung und Optimierung nach der Migration](post-migration-validation-and-optimization-guide.md)
 
 *Aktualisiert: 21.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_2) | [Weiter](#TitleNum_4))
 
@@ -210,11 +212,9 @@ Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ss
 
 <a name="TitleNum_4"/>
 
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*Aktualisiert: 5.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_3) | [Weiter](#TitleNum_5))
+*Aktualisiert: 5.6.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Vorherige](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -250,116 +250,45 @@ Und drittens, bei Problemen mit dem Plan selbst:
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
+## <a name="similar-articles"></a>Ähnliche Artikel
 
-<a name="TitleNum_5"/>
+Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen, innerhalb des gleichen GitHub-Repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
+<!--  20170717-1101  -->
 
-### 5. &nbsp;[Verwalten der Beibehaltung von Verlaufsdaten in Temporalen Tabellen mit Systemversionsverwaltung](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**Mithilfe der zeitliche Verlauf Retention Politikansatz**
-
-> **Hinweis:** mithilfe der zeitliche Verlauf Aufbewahrungsrichtlinie Ansatz gilt für [! INCLUDE [Sqldbesa--... /.. /Includes/sqldbesa-MD.MD)] und SQL Server-2017 CTP-Version 1.3 ab.  
-
-Temporale verlaufsbeibehaltung möglich Ebene des einzelnen Tabelle konfiguriert, wodurch Benutzer flexible Alterungszeitraum erstellen Richtlinien. Anwenden von temporären Aufbewahrung ist einfach: Es erfordert nur einen Parameter bei Erstellung oder dem Schema einer Änderung in Tabelle festgelegt werden.
-
-Nach der Definition Aufbewahrungsrichtlinie startet Azure SQL-Datenbank regelmäßig prüft, ob es sind Zeilen mit Verlaufsdaten, die für die automatische Bereinigung geeignet sind. Identifikation von übereinstimmenden Zeilen und deren Entfernung aus der Verlaufstabelle treten transparent, in die Hintergrundaufgabe, die geplant und vom System ausgeführt wird. Alter-Bedingung für die Verlaufszeilen für die Tabelle aktiviert ist basierend auf der Spalte, die Ende SYSTEM_TIME-Zeitraum darstellt. Tabellenzeilen, die für die Bereinigung geeignet, sofern die Beibehaltungsdauer, z. B. auf sechs Monate festgelegt ist, die folgende Bedingung erfüllen:
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-Im vorherigen Beispiel vorausgesetzt, dass die ValidTo-Spalte an das Ende der SYSTEM_TIME-Zeitraum entspricht.
-**So konfigurieren Sie die Aufbewahrungsrichtlinie werden?**
-
-Bevor Sie die Aufbewahrungsrichtlinie für eine temporale Tabelle konfigurieren, überprüfen Sie zunächst, ob temporale Verlaufsdaten Beibehaltungsdauer auf Datenbankebene aktiviert ist:
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-Datenbank-Flag **Is_temporal_history_retention_enabled** standardmäßig auf ON festgelegt ist, aber Benutzer mit ALTER DATABASE-Anweisung ändern. Es wird auch nach Point in Time Restore-Vorgang auf OFF festgelegt. Um temporale Verlaufstabellen Bereinigung während der Beibehaltung für Ihre Datenbank zu aktivieren, führen Sie die folgende Anweisung aus:
+- [New + Updated (4+4): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (4+4): Dokumentation zu Erweiterten Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2): **Connect to SQL** docs (Neu + Aktualisiert (1+2): Dokumentation zur Herstellung einer Verbindung mit SQL)](../connect/new-updated-connect.md)
+- [New + Updated (6+0): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs (Neu + Aktualisiert (13+2): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
+- [New + Updated (1+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Open Database Connectivity für SQL)](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationale Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2): **Microsoft SQL Server** docs (Neu + Aktualisiert (2+2): Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0): **Transact-SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0): **Tools for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 
 
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact Liste von Artikeln, die vor kurzem aktualisiert
-
-Diese compact Liste enthält Links zu den aktualisierten Artikeln, die im vorherigen Abschnitt aufgeführt sind.
-
-1. [Ändern von speicheroptimierten Tabellen](#TitleNum_1)
-2. [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](#TitleNum_2)
-3. [Nach der Migration Überprüfung und Optimization Guide](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## Schwester Artikel
-
-Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
-
-<!--  20170630-1150  -->
-
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
-
-- [New + Updated (12+2): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (12+2): Erweiterte Analysen für SQL-Dokumente)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2): **Connect to SQL** docs (Neu + Aktualisiert (0+2): Herstellung einer Verbindung mit SQL-Dokumenten)](../connect/new-updated-connect.md)
-- [New + Updated (3+0): **Database Engine for SQL** docs (Neu + Aktualisiert (3+0): Datenbankmodul für SQL-Dokumente)](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2): **Integration Services for SQL** docs (Neu + Aktualisiert (1+2): Integration Services für SQL-Dokumente)](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8): **Linux for SQL** docs (Neu + Aktualisiert (2+8): Linux für SQL-Dokumente)](../linux/new-updated-linux.md)
-- [New + Updated (1+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (1+0): Master Data Services (MDS) für SQL-Dokumente)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5): **Relational Databases for SQL** docs (Neu + Aktualisiert (5+5): Relationale Datenbanken für SQL-Dokumente)](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Reporting Services für SQL-Dokumente)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4): **Microsoft SQL Server** docs (Neu + Aktualisiert (0+4): Microsoft SQL Server-Dokumente)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0): **Tools for SQL** docs (Neu + Aktualisiert (1+0): Tools für SQL-Dokumente)](../tools/new-updated-tools.md)
-
-
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu SSIS für SQL)](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs (Neu + Aktualisiert (0+0): Transact-SQL-Dokumente)](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 

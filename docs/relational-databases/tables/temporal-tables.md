@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] führt die Unterstützung für temporale Tabellen mit Versionsverwaltung durch das System als Datenbankfeature ein, das integrierte Unterstützung für das Bereitstellen von Informationen über die zu jedem Zeitpunkt in der Tabelle gespeicherten Daten mit sich bringt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das mit ANSI SQL 2011 eingeführt wurde und jetzt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt wird.  
+  SQL Server 2016 führt die Unterstützung für temporale Tabellen mit Versionsverwaltung durch das System als Datenbankfeature ein, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten mit sich bringt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das mit ANSI SQL 2011 eingeführt wurde und jetzt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt wird.  
   
  **Schnellstart**  
   
