@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Wartungsplanungs-Assistenten | Microsoft-Dokumentation
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 
 Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
 
-##  <a name="Prerequisite"></a> Voraussetzung 
+##  <a name="Prerequisite"></a> Voraussetzungen 
 Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)aktivieren.
   
   
@@ -86,7 +86,7 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
     4.  Wählen Sie **Getrennte Zeitpläne für jede Aufgabe** oder **Einzelner Zeitplan für den gesamten Plan oder kein Zeitplan** aus, um den Wiederholungszeitplan für den Wartungsplan anzugeben.  
   
-        > **NOTE:** If you select **Separate schedules for each task**, you will need to follow the steps in **e.** für jede Aufgabe im Wartungsplan ausführen.  
+        > **HINWEIS:** Wenn Sie **Getrennte Zeitpläne für jede Aufgabe**auswählen, müssen Sie die Schritte unter **e** für jede Aufgabe im Wartungsplan ausführen.  
   
     5.  Wenn Sie unter **Zeitplan**die Option **Einzelner Zeitplan für den gesamten Plan oder kein Zeitplan**ausgewählt haben, klicken Sie auf **Ändern**.  
   
@@ -110,7 +110,7 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
                 -   Wenn Sie im Dialogfeld **Wiederholen alle**die Option **Täglich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Tagen).  
   
-                -   Wenn Sie im Dialogfeld **Wiederholen alle**die Option **Wöchentlich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Wochen). Wählen Sie den Tag oder die Tage der Woche aus, an denen der Auftragszeitplan ausgeführt wird.  
+                -   Wenn Sie im Dialogfeld **Wiederholen alle**die Option **Wöchentlich** auswählen, geben Sie ein, wie oft der Auftragszeitplan wiederholt wird (in Wochen). Wählen Sie die Tage der Woche aus, an denen der Auftragszeitplan ausgeführt wird.  
   
                 -   Wenn Sie **Monatlich**auswählen, wählen Sie **Tag** oder **Am**aus.  
   
@@ -203,7 +203,7 @@ Kontrollkästchen**Indizes einschließen**
      Die Datenbank wird in aufeinander folgenden Seiten komprimiert. Dabei werden jedoch weder die Seiten neu zugeordnet noch die Datenbankdateien verkleinert. Verwenden Sie diese Option, wenn Sie erwarten, dass die Datenbank wieder wächst, und Sie den Speicher nicht neu zuordnen möchten. Bei Auswahl dieser Option werden die Datenbankdateien nicht so stark wie möglich verkleinert. Dabei wird die NOTRUNCATE-Option verwendet.  
   
      **Freigegebenen Speicherplatz an Betriebssystem zurückgeben**  
-     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Auf diese Weise werden Datenbankdateien so stark wie möglich verkleinert. Dabei wird die TRUNCATEONLY-Option verwendet. Dies ist die Standardeinstellung.  
+     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Dabei wird die TRUNCATEONLY-Option verwendet. Dies ist die Standardeinstellung.  
   
 ## <a name="define-the-index-tasks"></a>Definieren der Indextasks  
   
@@ -262,7 +262,7 @@ Kontrollkästchen**Indizes einschließen**
     > **HINWEIS:** Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      Kontrollkästchen**MAXDOP**   
-     Überschreibt die Konfigurationsoption "Max. Grad an Parallelität" von sp_configure für DBCC CHECKDB. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     Überschreibt die Konfigurationsoption "Max. Grad an Parallelität" von sp_configure für DBCC CHECKDB. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
 #### <a name="define-the-update-statistics-task"></a>Definieren des Tasks "Statistiken aktualisieren"  
   
