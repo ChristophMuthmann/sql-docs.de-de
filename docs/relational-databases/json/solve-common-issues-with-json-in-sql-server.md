@@ -16,7 +16,7 @@ ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 94435e9fb466887a00c8d22076f229481a83f280

@@ -13,7 +13,7 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4233db126530558a3183e410e1b96b50f57d1d27

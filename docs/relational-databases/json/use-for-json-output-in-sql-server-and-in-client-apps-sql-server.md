@@ -17,7 +17,7 @@ ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3

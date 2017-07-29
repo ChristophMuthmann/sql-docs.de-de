@@ -13,7 +13,7 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
@@ -79,13 +79,13 @@ Sie können auch OPENROWSET(Bulk)-Funktion. verwenden wie oben beschrieben, um J
 
     Hier ist die Befehlssyntax:
 
-    ```
+    ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
     Hier ist ein Beispiel, die lokalen Laufwerkbuchstaben zuweist `T:` auf die Freigabe des Azure-Dateispeicher:
 
-    ```
+    ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
     ```
 
@@ -141,7 +141,7 @@ SELECT value
 ### <a name="example-2"></a>Beispiel 2
 OPENROWSET liest einen einzelnen Textwert aus der Datei, gibt ihn als BulkColumn zurück und übergibt ihn an die Funktion OPENJSON. OPENJSON durchläuft das Array von JSON-Objekten im BulkColumn Array und gibt ein Buch in jeder Zeile wird als JSON formatiert:
 
-```
+```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
 {"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
 {"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
@@ -166,7 +166,8 @@ In diesem Beispiel liest OPENROWSET(BULK) den Inhalt der Datei und übergibt den
 978-0641723445|The Lightning Thief (Diebe im Olymp)|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters (Im Bann des Zyklopen)|6.49|304|Rick Riordan| 
 978-1857995879|Sophie’s World : The Greek Philosophers (Sofies Welt: Roman über die Geschichte der Philosophie)|3.07|64|Jostein Gaarder| 
-978-1933988177|Lucene in Action, Zweite Auflage (nur englisch)|30.5|475|Michael McCandless| 
+978-1933988177|Lucene in Action, Zweite Auflage (nur englisch)|30.5|475|Michael McCandless|
+||||||
 
 Jetzt können Sie die Tabelle an den Benutzer zurückgeben oder die Daten in eine andere Tabelle laden.
 

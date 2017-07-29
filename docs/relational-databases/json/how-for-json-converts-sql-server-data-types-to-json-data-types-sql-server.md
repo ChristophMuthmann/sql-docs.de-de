@@ -16,7 +16,7 @@ ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 527cb99c5caf0bb805e17f3b77b7d5e017e28ace
