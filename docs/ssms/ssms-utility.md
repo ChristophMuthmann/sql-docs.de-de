@@ -20,11 +20,11 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
 ms.openlocfilehash: 84b9b39b9a7ae03244dd3703cc303d1cf7f4380b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="ssms-utility"></a>Ssms-Hilfsprogramm

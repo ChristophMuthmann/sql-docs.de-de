@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# Help Viewer und Offlineinhalt für SQL Server
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Help Viewer und Offlineinhalt für SQL Server
   
   
   
 Dieser Artikel beschreibt, wie Sie den Help Viewer installieren und die SQL Server-Dokumentation offline anzeigen. Dieser Artikel umfasst die Dokumentation für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] SQL Server 2016 und SQL Server 2017. 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## Installieren von Help Viewer
+## <a name="install-help-viewer"></a>Installieren von Help Viewer
 In der folgenden Tabelle sind die Tools aufgeführt, die Help Viewer basierend auf der von Ihnen verwendeten SQL Server-Version installieren. Installieren Sie eines der aufgeführten Tools, um Help Viewer zu installieren.
 
 
@@ -56,9 +52,7 @@ In der folgenden Tabelle sind die Tools aufgeführt, die Help Viewer basierend a
 > Sie können lokale Hilfe für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] anzeigen und Help Viewer 2.x nur verwenden, wenn Sie **Inhalt von einem Datenträger installieren**. 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## SQL Server 2016-, SQL Server 2017-Offlineinhalt  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>SQL Server 2016-, SQL Server 2017-Offlineinhalt  
  
 **So installieren Sie Offlineinhalt**  
 1. Öffnen Sie Help Viewer, indem Sie SQL Server Management Studio oder Visual Studio starten und im Menü **Hilfe** auf **Hilfeinhalt hinzufügen und entfernen** klicken.  
@@ -85,9 +79,7 @@ In der folgenden Tabelle sind die Tools aufgeführt, die Help Viewer basierend a
    >[!IMPORTANT]
    > Wenn eine Meldung angezeigt wird, die angibt, dass der Verschiebevorgang fehlgeschlagen ist, schließen Sie das Meldungsfeld und den Help Viewer, und öffnen Sie dann den Help Viewer erneut. Der neue Speicherort für den Inhalt sollte nun unter **Lokaler Speicherpfad** angezeigt werden.   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Offlineinhalt 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Offlineinhalt 
  
   
 **So installieren Sie Offlineinhalt**  
@@ -118,9 +110,7 @@ In der folgenden Tabelle sind die Tools aufgeführt, die Help Viewer basierend a
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## Anzeigen von Onlineinhalt im Help Viewer
+## <a name="view-online-content-in-help-viewer"></a>Anzeigen von Onlineinhalt im Help Viewer
 
 Sie können im Help Viewer v2.x Onlineinhalt anzeigen, indem Sie Folgendes tun.
 
@@ -140,17 +130,13 @@ Sie können im Help Viewer v1.x Onlineinhalt anzeigen, indem Sie Folgendes tun.
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## F1-Hilfe und andere Tipps
+## <a name="f1-help-and-other-tips"></a>F1-Hilfe und andere Tipps
 
 Wenn Sie F1 drücken, wird das entsprechende Thema online angezeigt. Das Thema kann nicht in der lokalen Hilfe angezeigt werden.
 
 Der Help Viewer unterstützt Proxyeinstellungen und das ISO-Format nicht. 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## Zusätzliche Informationen
+## <a name="additional-information"></a>Zusätzliche Informationen
 [Microsoft Help Viewer – Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 

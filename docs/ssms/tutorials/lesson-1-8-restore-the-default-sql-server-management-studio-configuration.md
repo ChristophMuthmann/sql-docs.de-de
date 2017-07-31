@@ -16,11 +16,11 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 89b560ab563dbed6236ba694b692cdff0dfa8685
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>Lektion 1-8: Wiederherstellen der Standardkonfiguration von SQL Server Management Studio
