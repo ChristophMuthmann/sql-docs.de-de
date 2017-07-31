@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 3a4ea7bec5f6cc8d46a0a2783199a6f9d30cf53c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Anzeigen von registrierten Servern in SQL Server Management Studio

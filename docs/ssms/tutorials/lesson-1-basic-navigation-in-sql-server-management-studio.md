@@ -14,11 +14,11 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 8ef902752c9ea7ead6129b0009f6762bc0457047
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio

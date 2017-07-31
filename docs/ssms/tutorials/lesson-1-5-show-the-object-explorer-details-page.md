@@ -16,11 +16,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 2a2ac671e38642f24ecf9b2e6e3829bed656a768
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>Lektion 1-5: Anzeigen der Seite Details zum Objekt-Explorer

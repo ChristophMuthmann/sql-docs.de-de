@@ -16,11 +16,11 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 35291a9fad33aaf7a12431242ebd38e5acad8ca9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Lektion 1-6: Auswählen des Schemas für Tastenkombinationen

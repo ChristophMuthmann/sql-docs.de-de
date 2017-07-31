@@ -16,11 +16,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 3772efa6ab55acd4087cd47f897040f782476636
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Lektion 3-3: Speichern von Skripts als Projekte oder Projektmappen

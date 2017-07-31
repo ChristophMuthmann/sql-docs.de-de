@@ -17,11 +17,11 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: ffc94518fc4589aaadc5d7fdf87e518a6c5adc95
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Ändern der Registrierung eines Servers (SQL Server Management Studio)

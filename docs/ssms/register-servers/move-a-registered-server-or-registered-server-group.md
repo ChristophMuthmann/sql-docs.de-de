@@ -20,11 +20,11 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 0f10ce19a0dff3da8ab598e07ee53a407af06b38
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
