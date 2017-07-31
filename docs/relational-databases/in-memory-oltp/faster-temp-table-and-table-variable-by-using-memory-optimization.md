@@ -14,11 +14,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung

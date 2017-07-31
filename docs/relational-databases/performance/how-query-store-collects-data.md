@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt

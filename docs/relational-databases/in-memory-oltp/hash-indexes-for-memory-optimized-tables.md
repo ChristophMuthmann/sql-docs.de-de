@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Hashindizes für speicheroptimierte Tabellen

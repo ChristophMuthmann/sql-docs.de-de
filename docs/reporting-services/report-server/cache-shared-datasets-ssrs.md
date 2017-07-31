@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Die Abfrage wird in Reaktion auf einen Verweis auf ein freigegebenes Dataset in einem Bericht ausgeführt, der per E-Mail übermittelt wird, und es wird erwartet, dass eine große Anzahl von Personen in kurzer Zeit auf den Link klicken wird.  
   
--   Die folgende Liste enthält Beispiele dafür, wann ein freigegebenes Dataset nicht zwischengespeichert werden sollte:  
+ Die folgende Liste enthält Beispiele dafür, wann ein freigegebenes Dataset nicht zwischengespeichert werden sollte:  
   
 -   Die Abfrageergebnisse müssen immer die neuesten Daten enthalten.  
   

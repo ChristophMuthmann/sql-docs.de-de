@@ -41,7 +41,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
 ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten

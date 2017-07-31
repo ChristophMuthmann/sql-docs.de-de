@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 875a8e25243e9623cbafdfdc63eba65585ca469d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>Entfernen eines registrierten Servers (SQL Server Management Studio)

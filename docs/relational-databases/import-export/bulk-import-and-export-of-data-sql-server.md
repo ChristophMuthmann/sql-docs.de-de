@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
 ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)

@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
 ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
 ms.contentlocale: de-de
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden

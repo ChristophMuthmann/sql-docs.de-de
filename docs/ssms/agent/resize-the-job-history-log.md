@@ -25,15 +25,15 @@ ms.translationtype: HT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
 ms.contentlocale: de-de
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="resize-the-job-history-log"></a>Ändern der Größe des Auftragsverlaufsprotokolls
+# <a name="resize-the-job-history-log"></a>Resize the Job History Log
 In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für Agent-Auftragsverlaufsprotokolle in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] festlegen.
   
 -   **Vorbereitungen:**  
   
-    [Sicherheit](#Security)  
+    [Security](#Security)  
   
 -   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
   
@@ -41,7 +41,7 @@ In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für Agent-Auf
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
 Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  

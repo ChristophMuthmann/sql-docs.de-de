@@ -7,7 +7,7 @@ Sicherstellen, dass die Datenbank, die Sie mit der verf체gbarkeitsgruppe hinzuf�
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 F체hren Sie auf dem prim채ren Replikat f체r die SQL Server die folgende Transact-SQL zum Hinzuf체gen einer Datenbank mit dem Namen `db1` zu einer verf체gbarkeitsgruppe namens `ag1`.

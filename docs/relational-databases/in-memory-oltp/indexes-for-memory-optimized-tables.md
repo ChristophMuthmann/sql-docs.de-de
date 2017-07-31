@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
@@ -226,7 +226,7 @@ Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextyp
 | Indexscan, alle Tabellenzeilen abrufen. | ja | ja | ja |  
 | Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | ja  | ja |  
 | Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | ja | ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | ja | ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | Ja | ja |  
 | Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | ja |  
   
   
