@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/powershell/database-engine-powershell-reference
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3b81711dfbce75d10954b3ab215dca010ca555d3
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 329b0fd18cb947d27ed6b77c4d54d5d8db4b5d6b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/31/2017
 
 --- 
 

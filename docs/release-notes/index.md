@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/release-notes/sql-server-release-notes
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 42bc1c7bb7639c0f32902d9091959d3511fb3d0e
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 3b343eadebb1820d62ad50ce16aadaa8cbfdc2f9
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 

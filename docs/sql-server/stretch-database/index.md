@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/sql-server/stretch-database/stretch-database
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 966f23a6cf34ab4d0504df12a49adf83e3529d0b
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 77827d6148beb40817aa4adee76ec553e0ea5dd7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/31/2017
 
 --- 
 
