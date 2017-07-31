@@ -33,8 +33,10 @@
   ],
   "notification_subscribers": [],
   "branches_to_filter": [
-  "live-oldev", "live"
+    "live-oldev",
+    "live"
   ],
+  "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
