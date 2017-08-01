@@ -7,7 +7,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
 ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 07/20/2017
                                                 <ul>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2016</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017 Preview</a></li>
-                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQLServer Reporting Services (SSRS)</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services (SSRS)</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
                                                 <ul>
