@@ -32,23 +32,19 @@ caps.latest.revision: 57
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="principals-database-engine" class="xliff"></a>
-
-# Prinzipale (Datenbankmodul)
+# <a name="principals-database-engine"></a>Prinzipale (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieses Thema gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in der SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
   
-<a id="sql-server-level-principals" class="xliff"></a>
-
-## Prinzipale auf SQL Server-Ebene  
+## <a name="sql-server-level-principals"></a>Prinzipale auf SQL Server-Ebene  
   
 -  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmelde-ID für die Authentifizierung   
 -  Anmeldung mit Windows-Authentifizierung für Windows-Benutzer  
@@ -57,39 +53,27 @@ ms.lasthandoff: 06/22/2017
 -  Anmeldung mit Azure Active Directory-Authentifizierung für AD-Gruppe
 -  Serverrolle  
   
-<a id="database-level-principals" class="xliff"></a>
-
- ## Prinzipale auf Datenbankebene  
+ ## <a name="database-level-principals"></a>Prinzipale auf Datenbankebene  
   
 -   Datenbankbenutzer (Es gibt 11 Benutzertypen. Weitere Informationen finden Sie unter [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
 -   Datenbankrolle  
 -   Anwendungsrolle  
   
-<a id="sa-login" class="xliff"></a>
-
-## Anmeldename „sa“  
+## <a name="sa-login"></a>Anmeldename „sa“  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Prinzipal auf Serverebene. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der `sa`-Anmeldename ist ein Mitglied der festen Datenbankrolle `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
 
-<a id="dbo-user-and-dbo-schema" class="xliff"></a>
-
-## dbo-Benutzer und dbo-Schema
+## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
 Die `dbo`-Verwendung ist ein bestimmter Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, `sa`-Anmeldenamen und Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer ein. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank und kann nicht beschränkt oder gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
 Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardschema für alle Benutzer, sofern kein anderes Schema angegeben wird.  Das `dbo`-Schema kann nicht gelöscht werden.
   
-<a id="public-server-role-and-database-role" class="xliff"></a>
-
-## Serverrolle und Datenbankrolle „public“  
+## <a name="public-server-role-and-database-role"></a>Serverrolle und Datenbankrolle „public“  
 Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenbankbenutzer gehört zu der Datenbankrolle `public`. Wenn einem Anmeldenamen oder Benutzer keine bestimmten Berechtigungen für ein sicherungsfähiges Element erteilt oder verweigert werden, erbt der Anmeldename oder Benutzer die Berechtigungen, die der Datenbankrolle public für dieses sicherungsfähige Element erteilt wurden. Die feste Serverrolle `public` und die feste Datenbankrolle `public` können nicht gelöscht werden. Sie können jedoch Berechtigungen für die Rollen `public` widerrufen. Es gibt viele Berechtigungen, die den Rollen `public` standardmäßig zugewiesen sind. Die meisten dieser Berechtigungen sind für Routinevorgänge in der Datenbank erforderlich. Diese Vorgänge sollten von jedem ausgeführt werden können. Gehen Sie beim Aufheben der Berechtigungen von public-Anmeldenamen oder -Benutzern vorsichtig vor, da sich die Aufhebung auf alle Anmeldenamen/Benutzer auswirkt. Im Allgemeinen sollten Sie public-Berechtigungen nicht verweigern, da die DENY-Anweisung alle GRANT-Anweisungen außer Kraft setzt, die Sie möglicherweise einzelnen Benutzern gewähren. 
   
-<a id="informationschema-and-sys-users-and-schemas" class="xliff"></a>
-
-## INFORMATION_SCHEMA und sys-Benutzer und -Schemas 
+## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA und sys-Benutzer und -Schemas 
  Jede Datenbank enthält zwei Entitäten, die in Katalogsichten als Benutzer angezeigt werden: `INFORMATION_SCHEMA` und `sys`. Diese Entitäten sind für die interne Verwendung durch das Datenbankmodul erforderlich. Sie können nicht geändert oder gelöscht werden.  
   
-<a id="certificate-based-sql-server-logins" class="xliff"></a>
-
-## Zertifikatbasierte SQL Server-Anmeldenamen  
+## <a name="certificate-based-sql-server-logins"></a>Zertifikatbasierte SQL Server-Anmeldenamen  
  Serverprinzipale, deren Name von doppelten Nummernzeichen (##) eingeschlossen ist, sind nur für die systeminterne Verwendung vorgesehen. Die folgenden Prinzipale werden bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus Zertifikaten erstellt und sollten nicht gelöscht werden.  
   
 -   \##MS_SQLResourceSigningCertificate##    
@@ -100,15 +84,11 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
   
-<a id="the-guest-user" class="xliff"></a>
-
-## Der guest-Benutzer  
+## <a name="the-guest-user"></a>Der guest-Benutzer  
  Jede Datenbank enthält einen `guest`. Dem `guest` -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Der `guest`-Benutzer kann nicht gelöscht werden. Er kann jedoch deaktiviert werden, indem seine CONNECT-Berechtigung aufgehoben wird. Die CONNECT-Berechtigung kann durch Ausführen von `REVOKE CONNECT FROM GUEST;` in einer beliebigen Datenbank mit Ausnahme der `master`- oder `tempdb`-Datenbank aufgehoben werden.  
   
   
-<a id="related-tasks" class="xliff"></a>
-
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation umfasst die folgenden Themen:  
@@ -121,9 +101,7 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
   
 -   [Anwendungsrollen](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

@@ -36,16 +36,14 @@ caps.latest.revision: 74
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="configure-web-synchronization" class="xliff"></a>
-
-# Konfigurieren der Websynchronisierung
+# <a name="configure-web-synchronization"></a>Konfigurieren der Websynchronisierung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die Websynchronisierungsoption für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Mergereplikation ermöglicht die Datenreplikation mithilfe des HTTPS-Protokolls über das Internet. Um die Websynchronisierung zu verwenden, müssen Sie zuerst die folgenden Konfigurationsaktionen ausführen:  
@@ -65,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  In den folgenden Schritten wird aus Platzgründen eine vereinfachte Sicherheitskonfiguration mit lokalen Konten beschrieben. Diese vereinfachte Konfiguration ist für Installationen geeignet, bei denen IIS und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger und -Verteiler auf dem gleichen Computer ausgeführt werden, obwohl es viel wahrscheinlicher ist (und empfohlen wird), dass eine Multiservertopologie für eine Produktionsinstallation verwendet wird. Sie können in diesen Schritten die lokalen Konten durch Domänenkonten ersetzen.  
   
-<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>
-
-## Erstellen von neuen Konten und Zuordnen von SQL Server-Anmeldungen  
+## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>Erstellen von neuen Konten und Zuordnen von SQL Server-Anmeldungen  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (replisapi.dll) stellt eine Verbindung mit dem Verleger durch Identitätswechsel des für den Anwendungspool angegebenen Kontos her, der der Replikationswebsite zugeordnet ist.  
   
  Das für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung verwendete Konto muss über die unter [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)im Abschnitt "Herstellen einer Verbindung mit dem Verleger oder dem Verteiler" beschriebenen Berechtigungen verfügen. Zusammengefasst muss das Konto folgende Bedingungen erfüllen:  
@@ -84,9 +80,7 @@ ms.lasthandoff: 06/22/2017
   
  Bevor Sie die Websynchronisierung konfigurieren, sollten Sie den Abschnitt "Bewährte Methoden bezüglich der Sicherheit bei der Websynchronisierung" in diesem Thema lesen. Weitere Informationen zur Sicherheit bei der Websynchronisierung finden Sie unter [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
   
-<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>
-
-## Konfigurieren des Computers, auf dem IIS ausgeführt wird  
+## <a name="configuring-the-computer-that-is-running-iis"></a>Konfigurieren des Computers, auf dem IIS ausgeführt wird  
  Für die Websynchronisierung ist es erforderlich, IIS zu installieren und zu konfigurieren. Sie benötigen die URL zur Replikationswebsite, bevor Sie eine Veröffentlichung zur Verwendung der Websynchronisierung konfigurieren können.  
   
  Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt. Beginnend mit SQL Server 2012, empfiehlt sich für die Nutzung der Web-Sync-Komponente auf dem IIS-Server die Installation des SQL Servers mit Replikation. Dabei kann es sich um die kostenlose SQL Server Express Edition handeln.  
@@ -100,18 +94,14 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von IIS 7 für die Websynchronisierung](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-<a id="creating-a-web-garden" class="xliff"></a>
-
-## Erstellen eines Webgartens  
+## <a name="creating-a-web-garden"></a>Erstellen eines Webgartens  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung unterstützt zwei gleichzeitige Synchronisierungsvorgänge pro Thread. Das Überschreiten dieser Grenze kann dazu führen, dass die Replikationsüberwachung nicht mehr antwortet. Die Anzahl der replisapi.dll zugeordneten Threads wird von der Eigenschaft "Maximale Anzahl von Arbeitsprozessen" des Anwendungspools bestimmt. Standardmäßig ist diese Eigenschaft auf 1 festgelegt.  
   
  Erhöhen Sie den Wert der Eigenschaft "Maximale Anzahl von Arbeitsprozessen", um eine größere Anzahl gleichzeitiger Synchronisierungsvorgänge pro CPU zu unterstützen. Das horizontale Skalieren durch Erhöhen der Anzahl von Arbeitsprozessen pro CPU wird als Erstellen eines "Webgartens" bezeichnet.  
   
  Ein Webgarten lässt die gleichzeitige Synchronisierung von mehr als zwei Abonnenten zu. Er erhöht außerdem die CPU-Auslastung durch replisapi.dll, was sich negativ auf die Gesamtleistung des Servers auswirken kann. Diese Überlegungen müssen bei der Auswahl eines Werts für die Eigenschaft "Maximale Anzahl von Arbeitsprozessen" beachtet werden.  
   
-<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>
-
-#### So erhöhen Sie die maximale Anzahl von Arbeitsprozessen in IIS 7  
+#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>So erhöhen Sie die maximale Anzahl von Arbeitsprozessen in IIS 7  
   
 1.  Erweitern Sie im **Internetinformationsdienste-Manager**den Knoten für den lokalen Server, und klicken Sie dann auf den Knoten **Anwendungspool** .  
   
@@ -119,9 +109,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Klicken Sie im Dialogfeld **Erweiterte Einstellungen** unter der Überschrift **Prozessmodell**auf die Zeile mit der Bezeichnung Maximale Anzahl von Arbeitsprozessen. Ändern Sie den Eigenschaftswert, und klicken Sie dann auf **OK**.  
   
-<a id="configuring-the-publication" class="xliff"></a>
-
-## Konfigurieren der Veröffentlichung  
+## <a name="configuring-the-publication"></a>Konfigurieren der Veröffentlichung  
  Erstellen Sie eine Veröffentlichung auf dieselbe Weise wie für eine standardmäßige Mergetopologie, um die Websynchronisierung zu verwenden. Weitere Informationen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
  Nachdem die Veröffentlichung erstellt wurde, aktivieren Sie die Option zur Verwendung der Websynchronisierung mithilfe der Methoden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekte (RMO, Replication Management Objects). Um die Websynchronisierung zu aktivieren, müssen Sie die Webserveradresse für Abonnentenverbindungen angeben.  
@@ -130,19 +118,13 @@ ms.lasthandoff: 06/22/2017
   
  **gen** ist ein reserviertes Wort in Websync-Dateien (XML). Versuchen Sie nicht, Tabellen zu veröffentlichen, in denen Spalten mit dem Namen **gen**enthalten sind.  
   
-<a id="configuring-the-subscription" class="xliff"></a>
-
-## Konfigurieren des Abonnements  
+## <a name="configuring-the-subscription"></a>Konfigurieren des Abonnements  
  Nachdem Sie eine Veröffentlichung aktiviert und IIS konfiguriert haben, erstellen Sie ein Pullabonnement und geben an, dass es mithilfe von IIS synchronisiert werden soll. (Die Websynchronisierung wird nur für Pullabonnements unterstützt.)  
   
-<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>
-
-## Aktualisieren von einer früheren Version von SQL Server  
+## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Aktualisieren von einer früheren Version von SQL Server  
  Wenn eine vorhandene Websynchronisierungstopologie konfiguriert wurde und Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren, müssen Sie sicherstellen, dass die neueste Version von Replisapi.dll in das von der Websynchronisierung verwendete virtuelle Verzeichnis kopiert wird. Standardmäßig befindet sich die neueste Version von Replisapi.dll in C:\Programme\Microsoft SQL Server\\<nnn\>\COM.  
   
-<a id="replicating-large-volumes-of-data" class="xliff"></a>
-
-## Replizieren großer Datenmengen  
+## <a name="replicating-large-volumes-of-data"></a>Replizieren großer Datenmengen  
  Um Speicherprobleme auf Abonnentencomputern zu vermeiden, verwendet die Websynchronisierung eine maximale Standardgröße von 100 MB für die XML-Datei zur Übertragung von Änderungen. Die Grenze kann in folgendem Registrierungsschlüssel erweitert werden:  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -161,9 +143,7 @@ ms.lasthandoff: 06/22/2017
   
  Geben Sie für große Datenmengen eine kleine Zahl für die einzelnen Batchverarbeitungsparameter an. Es wird empfohlen, mit dem Wert 10 zu beginnen und dann je nach Anwendungsanforderungen und -leistung diesen Wert zu optimieren. Normalerweise werden diese Parameter in einem Agentprofil angegeben. Weitere Informationen zu Profilen finden Sie unter [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-<a id="security-best-practices-for-web-synchronization" class="xliff"></a>
-
-## Bewährte Methoden bezüglich der Sicherheit bei der Websynchronisierung  
+## <a name="security-best-practices-for-web-synchronization"></a>Bewährte Methoden bezüglich der Sicherheit bei der Websynchronisierung  
  Es gibt verschiedene Auswahlmöglichkeiten für die sicherheitsbezogenen Einstellungen bei der Websynchronisierung. Der folgende Ansatz ist empfehlenswert:  
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verteiler und -Verleger können sich auf demselben Computer befinden (eine typische Konfiguration für die Mergereplikation). IIS sollte jedoch auf einem separaten Computer installiert werden.  
@@ -198,9 +178,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Das Öffnen von Ports in der Firewall kann dazu führen, dass der Server böswilligen Angriffen ausgesetzt ist. Daher sollten Sie Ports grundsätzlich nur dann öffnen, wenn Sie sicher sind, dass Sie das Konzept von Firewallsystemen verstanden haben. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

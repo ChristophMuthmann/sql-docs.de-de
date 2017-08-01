@@ -25,29 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
-
-# Verbessern der Leistung der Transaktionsreplikation
+# <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
   Ziehen Sie nach der Erwägung der allgemeinen Leistungstipps, die unter [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)aufgeführt sind, auch die nachfolgenden Aspekte, die sich speziell auf die Transaktionsreplikation beziehen, in Betracht.  
   
-<a id="database-design" class="xliff"></a>
-
-## Datenbankentwurf  
+## <a name="database-design"></a>Datenbankentwurf  
   
 -   Minimieren Sie den Transaktionsumfang in Ihrem Datenbankentwurf.  
   
      Standardmäßig werden bei der Transaktionsreplikation Änderungen gemäß den Transaktionsgrenzen weitergegeben. Bei Transaktionen geringeren Umfangs ist die Wahrscheinlichkeit geringer, dass der Verteilungs-Agent Transaktionen aufgrund von Netzwerkproblemen erneut übermitteln muss. Wenn der Agent eine Transaktion erneut übermitteln muss, ist der Umfang der gesendeten Daten geringer.  
   
-<a id="distributor-configuration" class="xliff"></a>
-
-## Konfiguration des Verteilers  
+## <a name="distributor-configuration"></a>Konfiguration des Verteilers  
   
 -   Konfigurieren Sie den Verteiler auf einem dedizierten Server.  
   
@@ -57,9 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      Testen Sie die Replikation unter der typischen Auslastung des Systems, um den Speicherbedarf für Befehle zu ermitteln. Stellen Sie sicher, dass die Datenbank ausreichend Speicherkapazität für Befehle aufweist, um die häufige automatische Vergrößerung zu verhindern. Weitere Informationen zum Ändern der Größe einer Datenbank finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-<a id="publication-design" class="xliff"></a>
-
-## Veröffentlichungsentwurf  
+## <a name="publication-design"></a>Veröffentlichungsentwurf  
   
 -   Replizieren Sie die Ausführung gespeicherter Prozeduren bei der Ausführung von Batchupdates für veröffentlichte Tabellen.  
   
@@ -69,9 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Wenn die Verwendung des weiter unten erläuterten **-SubscriptionStreams** -Parameters nicht möglich ist, ziehen Sie die Erstellung mehrerer Veröffentlichungen in Betracht. Durch das Verteilen von Artikeln auf diese Veröffentlichungen können bei der Replikation Änderungen parallel auf Abonnenten angewendet werden.  
   
-<a id="subscription-considerations" class="xliff"></a>
-
-## Überlegungen zu Abonnements  
+## <a name="subscription-considerations"></a>Überlegungen zu Abonnements  
   
 -   Wenn Sie auf einem einzigen Verleger über mehrere Veröffentlichungen verfügen, verwenden Sie unabhängige Agents anstelle freigegebener Agents (dies ist die Standardeinstellung im Assistenten für neue Veröffentlichung).  
   
@@ -81,9 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben von Synchronisierungszeitplänen](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
-
-## Parameter für den Verteilungs-Agent und Protokolllese-Agent  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parameter für den Verteilungs-Agent und Protokolllese-Agent  
   
 -   Um unbeabsichtigte, einmalige Engpässe zu vermeiden, verwenden Sie den **–MaxCmdsInTran** -Parameter für den Protokolllese-Agent.  
   

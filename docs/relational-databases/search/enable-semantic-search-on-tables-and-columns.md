@@ -20,12 +20,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enable-semantic-search-on-tables-and-columns" class="xliff"></a>
-
-# Aktivieren der semantischen Suche in Tabellen und Spalten
+# <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
   Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
   
  Die statistische semantische Suche verwendet die Indizes, die von der Volltextsuche erstellt werden, und erstellt zusätzliche Indizes. Als Ergebnis dieser Abhängigkeit von der Volltextsuche erstellen Sie einen neuen semantischen Index, wenn Sie einen neuen Volltextindex definieren oder einen vorhandenen Volltextindex ändern. Einen neuen semantischen Index können Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder mit dem Volltextindizierungs-Assistenten und anderen Dialogfeldern in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, wie in diesem Thema beschrieben.  
@@ -59,9 +57,7 @@ ms.lasthandoff: 07/10/2017
 ##  <a name="HowToEnableCreate"></a> Erstellen eines semantischen Indexes, wenn kein Volltextindex vorhanden ist  
  Wenn Sie einen neuen Volltextindex mit der **CREATE FULLTEXT INDEX** -Anweisung erstellen, können Sie die semantische Indizierung auf Spaltenebene aktivieren, indem Sie das Schlüsselwort **STATISTICAL_SEMANTICS** als Teil der Spaltendefinition angeben. Sie können die semantische Indizierung auch aktivieren, wenn Sie einen neuen Volltextindex mithilfe des Volltextindizierungs-Assistenten erstellen.  
   
-<a id="create-a-new-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Erstellen eines neuen semantischen Indexes mit Transact-SQL  
+ ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Erstellen eines neuen semantischen Indexes mit Transact-SQL  
  
  Rufen Sie die **CREATE FULLTEXT INDEX**-Anweisung auf, und geben Sie **STATISTICAL_SEMANTICS** für jede Spalte an, in der Sie einen semantischen Index erstellen möchten. Weitere Informationen zu allen Optionen für diese Anweisung finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
@@ -121,17 +117,13 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO
 GO  
 ```  
   
-<a id="create-a-new-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Erstellen eines neuen semantischen Indexes mithilfe von SQL Server Management Studio  
+### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>Erstellen eines neuen semantischen Indexes mithilfe von SQL Server Management Studio  
  Führen Sie den Volltextindizierungs-Assistenten aus, und aktivieren Sie für jede Spalte, in der Sie einen semantischen Index erstellen möchten, die Option **Statistische Semantik** auf der Seite **Tabellenspalten** auswählen. Weitere Informationen, einschließlich Informationen zum Starten des Volltextindizierungs-Assistenten, finden Sie unter [Verwenden des Volltextindizierungs-Assistenten](../../relational-databases/search/use-the-full-text-indexing-wizard.md).  
   
 ##  <a name="HowToEnableAlter"></a> Erstellen eines semantischen Indexes, wenn ein Volltextindex vorhanden ist  
  Sie können die semantische Indizierung hinzufügen, wenn Sie einen vorhandenen Volltextindex mit der **ALTER FULLTEXT INDEX** -Anweisung ändern. Sie können die semantische Indizierung auch mithilfe verschiedener Dialogfelder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]hinzufügen.  
   
-<a id="add-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
-### Hinzufügen eines semantischen Indexes mit Transact-SQL  
+### <a name="add-a-semantic-index-by-using-transact-sql"></a>Hinzufügen eines semantischen Indexes mit Transact-SQL  
  Rufen Sie für jede Spalte, in der Sie einen semantischen Index hinzufügen möchten, die **ALTER FULLTEXT INDEX**-Anweisung mit den unten beschriebenen Optionen auf. Weitere Informationen zu allen Optionen für diese Anweisung finden Sie unter [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Sofern Sie nichts anderes angegeben haben, werden sowohl Volltext- als auch semantische Indizes nach einem Aufruf von **ALTER** erneut aufgefüllt.  
@@ -154,14 +146,10 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-<a id="add-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Hinzufügen eines semantischen Indexes mithilfe von SQL Server Management Studio  
+### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Hinzufügen eines semantischen Indexes mithilfe von SQL Server Management Studio  
  Sie können die Spalten, die für die semantische Indizierung und die Volltextindizierung verfügbar sind, auf der Seite **Volltextindexspalten** des Dialogfelds **Volltextindex-Eigenschaften** ändern. Weitere Informationen finden Sie unter [Verwalten von Volltextindizes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
-<a id="alter-a-semantic-index" class="xliff"></a>
-
-## Ändern eines semantischen Indexes
+## <a name="alter-a-semantic-index"></a>Ändern eines semantischen Indexes
   
 ###  <a name="addreq"></a> Anforderungen und Einschränkungen beim Ändern eines vorhandenen Indexes  
   
@@ -172,9 +160,7 @@ GO
 ##  <a name="dropping"></a> Löschen eines semantischen Indexes  
 Sie können die semantische Indizierung löschen, wenn Sie einen vorhandenen Volltextindex mit der **ALTER FULLTEXT INDEX** -Anweisung ändern. Sie können die semantische Indizierung auch mithilfe verschiedener Dialogfelder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]löschen.  
   
-<a id="drop-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Löschen eines semantischen Indexes mit Transact-SQL  
+ ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Löschen eines semantischen Indexes mit Transact-SQL  
 Rufen Sie zum ausschließlichen Löschen der semantischen Indizierung aus Spalten die **ALTER FULLTEXT INDEX** -Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP STATISTICAL_SEMANTICS** auf. Sie können die Indizierung in einer einzigen **ALTER** -Anweisung aus mehreren Spalten löschen.  
   
 ```tsql  
@@ -199,9 +185,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-<a id="drop-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
- ### Löschen eines semantischen Indexes mithilfe von SQL Server Management Studio  
+ ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Löschen eines semantischen Indexes mithilfe von SQL Server Management Studio  
  Sie können die Spalten, die für die semantische Indizierung und die Volltextindizierung verfügbar sind, auf der Seite **Volltextindexspalten** des Dialogfelds **Volltextindex-Eigenschaften** ändern. Weitere Informationen finden Sie unter [Verwalten von Volltextindizes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
@@ -210,12 +194,8 @@ GO
   
 -   Sie können die **NO POPULATION** -Option nicht angeben, wenn Sie die semantische Indizierung aus der letzten Spalte in einer Tabelle löschen, für die die semantische Indizierung aktiviert wurde. Zur Entfernung der Ergebnisse, die zuvor indiziert wurden, ist ein Auffüllungszyklus erforderlich.  
   
-<a id="check-whether-semantic-search-is-enabled-on-database-objects" class="xliff"></a>
-
-## Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
-<a id="is-semantic-search-enabled-for-a-database" class="xliff"></a>
-
-### Ist die semantische Suche für eine Datenbank aktiviert?
+## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
+### <a name="is-semantic-search-enabled-for-a-database"></a>Ist die semantische Suche für eine Datenbank aktiviert?
   
  Fragen Sie die Eigenschaft **IsFullTextEnabled** der Metadatenfunktion [DATABASEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) ab.  
   
@@ -226,9 +206,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-table" class="xliff"></a>
-
-### Ist die semantische Suche für eine Tabelle aktiviert?  
+### <a name="is-semantic-search-enabled-for-a-table"></a>Ist die semantische Suche für eine Tabelle aktiviert?  
  
  Fragen Sie die Eigenschaft **TableFullTextSemanticExtraction** der Metadatenfunktion [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) ab.  
   
@@ -239,9 +217,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-column" class="xliff"></a>
-
- ### Ist die semantische Suche für eine Spalte aktiviert?
+ ### <a name="is-semantic-search-enabled-for-a-column"></a>Ist die semantische Suche für eine Spalte aktiviert?
    
  So bestimmen Sie, ob die semantische Suche für eine bestimmte Spalte aktiviert ist:  
   
@@ -267,9 +243,7 @@ GO
   
      Der Wert TRUE gibt an, dass die angegebene Spalte zusätzlich zur Volltextindizierung für die semantische Indizierung aktiviert ist.  
   
-<a id="determine-what-can-be-indexed-for-semantic-search" class="xliff"></a>
-
-## Ermitteln der indizierbaren Objekte für die semantische Suche  
+## <a name="determine-what-can-be-indexed-for-semantic-search"></a>Ermitteln der indizierbaren Objekte für die semantische Suche  
   
 ###  <a name="HowToCheckLanguages"></a> Ermitteln der für die semantische Suche unterstützten Sprachen  
   

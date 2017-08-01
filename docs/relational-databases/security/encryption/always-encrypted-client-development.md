@@ -16,11 +16,11 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
 ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (Cliententwicklung)

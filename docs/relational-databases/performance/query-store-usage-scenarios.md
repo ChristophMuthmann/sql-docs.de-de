@@ -17,16 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="query-store-usage-scenarios" class="xliff"></a>
-
-# Verwendungsszenarien für den Abfragespeicher
+# <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Der Abfragespeicher kann in einer großen Bandbreite von Szenarien eingesetzt werden, wenn das Nachverfolgen und Sicherstellen einer vorhersagbaren Arbeitsleistung entscheidend ist. Diese Beispiele dienen zur Veranschaulichung:  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
   
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
-
-## Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
  Im Rahmen der normalen Abfrageausführung kann der Abfrageoptimierer die Entscheidung für einen anderen Plan treffen, da sich wichtige Eingangsparameter geändert haben: die Datenkardinalität hat sich geändert, es wurden Indizes erstellt, geändert oder gelöscht, Statistikinformationen wurden aktualisiert usw.  Meistens funktioniert der neu gewählte Plan besser oder in etwa gleich gut wie der zuvor verwendete. Es gibt jedoch Fälle, in denen der neue Plan deutlich schlechter funktioniert – diese Situation wird als Planauswahl-Änderungsregression bezeichnet. Vor der Einführung des Abfragespeichers war das ein sehr schwer zu erkennendes und behebendes Problem, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen integrierten Datenspeicher bereitstellte, in dem Benutzer nach Ausführungsplänen suchen konnten, die im Lauf der Zeit verwendet worden waren.  
   
  Mit dem Abfragespeicher lassen sich diese Aufgaben schnell lösen:  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  Eine detaillierte Beschreibung des Szenarios finden Sie im Blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Abfragespeicher: Ein Flugdatenschreiber für Ihre Datenbank).  
   
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
-
-## Erkennen und Optimieren der Abfragen mit dem höchsten Ressourcenverbrauch  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>Erkennen und Optimieren der Abfragen mit dem höchsten Ressourcenverbrauch  
  Zwar können im Rahmen Ihrer Arbeitsauslastung Tausende Abfragen generiert werden, normalerweise verwendet jedoch nur eine Handvoll den größten Teil der Systemressourcen und erfordert daher Ihre Aufmerksamkeit. Unter den Abfragen mit dem größten Ressourcenverbrauch finden sich üblicherweise zurückgestellte Abfragen oder solche, die mit weiterer Optimierung verbessert werden können.  
   
  Die Untersuchung lässt sich am einfachsten durch Öffnen von **Abfragen mit dem höchsten Ressourcenverbrauch** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]beginnen. Die Benutzeroberfläche ist in drei Bereiche unterteilt: Ein Histogramm, das die Abfragen mit dem höchsten Ressourcenverbrauch darstellt (links), eine Planzusammenfassung für die ausgewählte Abfrage (rechts) und eine visuellen Abfrageplan für den ausgewählten Plan (unten). Klicken Sie auf die Schaltfläche **Konfigurieren** , um die Anzahl der zu analysierenden Abfragen und das untersuchte Zeitintervall zu steuern. Darüber hinaus können Sie unter verschiedenen Dimensionen des Ressourcenverbrauchs (Dauer, CPU, Arbeitsspeicher, E/A, Anzahl der Ausführungen) und der Baseline (Mittel, Min, Max, Summe, Standardabweichung) wählen.  
@@ -81,9 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Ziehen Sie bei aufwändigen Abfragen eine Neuerstellung in Erwägung. Nutzen Sie beispielsweise die Vorteile der Abfrageparametrisierung, und verringern Sie den Einsatz von dynamischem SQL. Implementieren Sie nach dem Lesen der Daten die optimale Logik (führen Sie Datenfilterung auf der Datenbankseite statt auf der Anwendungsseite aus).  
   
-<a id="ab-testing" class="xliff"></a>
-
-## A/B-Tests  
+## <a name="ab-testing"></a>A/B-Tests  
  Verwenden Sie den Abfragespeicher, um die Arbeitsleistung vor und nach der beabsichtigten Änderung der Anwendung zu vergleichen. Die folgende Liste enthält eine Reihe von Beispielen, für die der Abfragespeicher eingesetzt werden kann, um den Einfluss der Umgebungs- oder Anwendungsänderung auf die Arbeitsleistung zu beurteilen:  
   
 -   Einführen einer neuen Anwendungsversion.  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Verwenden Sie den Abfragespeicher für die Analyse und Reparaturen mithilfe zurückgestellter Abfragen: Im Allgemeinen sollten die neuen Änderungen des Abfrageoptimierers bessere Pläne erzeugen. Jedoch verfügen Sie in Form des Abfragespeichers über eine einfache Möglichkeit, Planauswahlregressionen durchzuführen und falsche Entscheidungen mithilfe des Mechanismus zum Durchsetzen von Plänen zu korrigieren.  
   
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
-
-## Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
  Einige Arbeitsauslastungen weisen keine dominierenden Abfragen auf, die sich optimieren lassen, um die Gesamtleistung der Anwendung zu verbessern. Diese Workloads zeichnen sich normalerweise durch eine relativ große Anzahl verschiedener Abfragen aus, von denen jede einen Teil der Systemressourcen beansprucht. Aufgrund ihrer Einzigartigkeit werden solche Abfragen nur sehr selten ausgeführt (normalerweise nur einmal, daher die Bezeichnung „ad-hoc“), daher ist ihr Ressourcenverbrauch zur Laufzeit nicht kritisch. Da andererseits die Anwendung unterm Strich ständig neue Abfragen generiert, wird ein erheblicher Teil der Systemressourcen für die Kompilierung von Abfragen aufgewendet, was nicht optimal ist. Das ist auch für den Abfragespeicher keine ideale Situation, da die große Anzahl an Abfragen und Plänen den vorgesehenen Speicherplatz schnell erschöpft und der Abfragespeicher so sehr bald in den schreibgeschützten Modus versetzt werden muss. Wenn Sie die **Richtlinie zur größenbasierten Bereinigung** ([dringend empfohlen](https://msdn.microsoft.com/library/mt604821.aspx) , um den Abfragespeicher stets betriebsbereit zu halten) aktiviert haben, bereinigen Hintergrundprozesse während des größten Teils der Zeit die Strukturen des Abfragespeichers, was ebenfalls in erheblichem Maß Systemressourcen verbraucht.  
   
  Die Ansicht**Abfragen mit höchstem Ressourcenverbrauch** gibt Ihnen einen ersten Hinweis auf die Ad-hoc-Natur Ihrer Arbeitsauslastung:  
@@ -231,9 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

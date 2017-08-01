@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
 ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
 ms.contentlocale: de-de
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten

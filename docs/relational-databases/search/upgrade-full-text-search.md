@@ -20,16 +20,14 @@ caps.latest.revision: 106
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="upgrade-full-text-search" class="xliff"></a>
-
-# Upgrade der Volltextsuche
+# <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
   Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
   
   
@@ -85,9 +83,7 @@ ms.lasthandoff: 06/22/2017
   
      Das Importieren bzw. das Neuerstellen während eines Upgrades belegt viele CPU-Ressourcen. Dies führt zu Verzögerungen beim Aktualisieren und Herstellen der Onlineverfügbarkeit des Rests der Serverinstanz. Wenn die schnellstmögliche Onlineverfügbarkeit der Serverinstanz wichtig und das manuelle Auffüllen nach dem Upgrade akzeptabel ist, eignet sich die Option **Zurücksetzen** .  
   
-<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
-
-## Sicherstellen von konsistenten Abfrageergebnissen nach dem Importieren eines Volltextindexes  
+## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>Sicherstellen von konsistenten Abfrageergebnissen nach dem Importieren eines Volltextindexes  
  Wenn beim Upgrade einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ein Volltextkatalog importiert wurde, kann es in einigen Fällen zu Konflikten zwischen der Abfrage und dem Inhalt des Volltextindexes kommen, weil zwischen den alten und neuen Wörtertrennungen Unterschiede bestehen können. Wählen Sie in diesem Fall eine der folgenden Optionen aus, um eine vollständige Übereinstimmung zwischen Abfragen und dem Inhalt des Volltextindexes sicherzustellen:  
   
 -   Erstellen Sie den Volltextkatalog neu, der den Volltextindex enthält ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
@@ -96,9 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  Weitere Informationen zur Wörtertrennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
-
-## Aktualisieren von Füllwortdateien auf Stoplisten  
+## <a name="upgrade-noise-word-files-to-stoplists"></a>Aktualisieren von Füllwortdateien auf Stoplisten  
 Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aktualisiert wird, werden die Füllwortdateien nicht mehr verwendet. Die alten Füllwortdateien werden jedoch im Ordner "FTDATA\FTNoiseThesaurusBak" gespeichert, und Sie können sie später beim Aktualisieren oder Erstellen der entsprechenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Stopplisten verwenden.  
   
  Nach dem Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -118,9 +112,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
      Die STOPLIST OFF-Klausel entfernt die Stoppwortfilterung und löst eine Auffüllung der Tabelle aus, ohne Wörter zu filtern, die als Füllwörter betrachtet werden.  
   
-<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
-
-## Sichern und Importieren von Volltextkatalogen  
+## <a name="backup-and-imported-full-text-catalogs"></a>Sichern und Importieren von Volltextkatalogen  
  Für während des Upgrades neu erstellte oder zurückgesetzte Volltextkataloge (oder für neue Volltextkataloge) ist der Volltextkatalog ein logisches Konzept und nicht in einer Dateigruppe enthalten. Um in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen Volltextkatalog zu sichern, müssen Sie daher jede Dateigruppe identifizieren, die einen Volltextindex des Katalogs enthält, und diese einzeln sichern. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  Bei Volltextkatalogen, die aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]importiert werden, ist der Volltextkatalog immer noch eine Datenbankdatei in einer eigenen Dateigruppe. Der Sicherungsprozess von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] für Volltextkataloge gilt weiterhin, jedoch mit der Ausnahme, dass der MSFTESQL-Dienst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht vorhanden ist. Weitere Informationen zum [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Prozess finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](http://go.microsoft.com/fwlink/?LinkId=209154) in der SQL Server 2005-Onlinedokumentation.  
@@ -163,9 +155,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
 -   [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-<a id="example" class="xliff"></a>
-
-### Beispiel  
+### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die MOVE-Klausel in der [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung verwendet, um eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank mit dem Namen `ftdb1`wiederherzustellen. Die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbankdateien, -Protokolldateien und -Katalogdateien werden wie folgt an neue Speicherorte auf der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz verschoben:  
   
 -   Die Datenbankdatei `ftdb1.mdf`wird an den Speicherort `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`verschoben.  
@@ -190,9 +180,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Weitere Informationen zum Trennen oder Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), und [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

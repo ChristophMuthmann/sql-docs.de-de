@@ -21,16 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: de-de
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-a-database-schema" class="xliff"></a>
-
-# Erstellen eines Datenbankschemas
+# <a name="create-a-database-schema"></a>Erstellen eines Datenbankschemas
   In diesem Thema wird beschrieben, wie ein Schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird.  
   
  **In diesem Thema**  
@@ -65,9 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-##### So erstellen Sie ein Schema  
+##### <a name="to-create-a-schema"></a>So erstellen Sie ein Schema  
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Datenbanken** .  
   
@@ -81,9 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-<a id="additional-options" class="xliff"></a>
-
-### Zusätzliche Optionen  
+### <a name="additional-options"></a>Zusätzliche Optionen  
  Das Dialogfeld **Schema - Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Berechtigungen** und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Berechtigungen** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
@@ -92,9 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-#### So erstellen Sie ein Schema  
+#### <a name="to-create-a-schema"></a>So erstellen Sie ein Schema  
   
 1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   

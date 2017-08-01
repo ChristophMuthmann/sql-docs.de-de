@@ -22,16 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
-
-# Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
   In diesem Thema wird beschrieben, wie ein Geschäftslogikhandler für einen Mergeartikel mit Replikationsprogrammierung oder Replikationsverwaltungsobjekten (RMO) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
   
  Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Die Methoden im Geschäftslogikhandler können vom Replikationsvorgang für jede geänderte Zeile aufgerufen werden, die während der Synchronisierung repliziert wird.  
@@ -58,9 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> Verwenden der Replikationsprogrammierung  
   
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### So erstellen Sie einen Geschäftslogikhandler und stellen ihn bereit  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler und stellen ihn bereit  
   
 1.  Erstellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio ein neues Projekt für die .NET-Assembly mit dem Code, der den Geschäftslogikhandler implementiert.  
   
@@ -103,9 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Auf jedem Server, auf dem der Merge-Agent ausgeführt wird, muss ein Geschäftslogikhandler bereitgestellt werden. Dazu gehört auch der IIS-Server, der die Datei replisapi.dll hostet, wenn die Websynchronisierung verwendet wird.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### So registrieren Sie einen Geschäftslogikhandler  
+#### <a name="to-register-a-business-logic-handler"></a>So registrieren Sie einen Geschäftslogikhandler  
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, um zu prüfen, ob die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
@@ -114,15 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**. Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
 1.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um einen Artikel zu definieren. Geben Sie dabei den Anzeigenamen des Geschäftslogikhandlers für **@article_resolver** an. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
 1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **@publication**, **@article**, den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
   
@@ -139,9 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
-<a id="to-create-a-business-logic-handler" class="xliff"></a>
-
-#### So erstellen Sie einen Geschäftslogikhandler  
+#### <a name="to-create-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler  
   
 1.  Erstellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio ein neues Projekt für die .NET-Assembly mit dem Code, der den Geschäftslogikhandler implementiert.  
   
@@ -182,9 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Erstellen Sie das Projekt, um die Geschäftslogikhandler-Assembly zu erstellen.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### So registrieren Sie einen Geschäftslogikhandler  
+#### <a name="to-register-a-business-logic-handler"></a>So registrieren Sie einen Geschäftslogikhandler  
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -202,15 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &amp;ndash; der Wert **true**.  
   
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### So stellen Sie einen Geschäftslogikhandler bereit  
+#### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   
 1.  Stellen Sie die Assembly auf dem Server, auf dem der Merge-Agent ausgeführt wird, in dem Dateispeicherort bereit, der angegeben wurde, als der Geschäftslogikhandler beim Verteiler registriert wurde. Für ein Pullabonnement wird der Agent auf dem Abonnenten ausgeführt, und für ein Pushabonnement wird der Agent auf dem Verteiler ausgeführt. Wenn Sie die Websynchronisierung verwenden, wird der Agent auf dem Webserver ausgeführt. Wenn der vollständige Pfad beim Registrieren des Geschäftslogikhandlers nicht zusammen mit dem Assemblynamen angegeben wurde, stellen Sie die Assembly im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, bereit. Sie können die Assembly im GAC installieren, wenn es mehrere Anwendungen gibt, die die gleiche Assembly verwenden.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -226,9 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -261,9 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)   
