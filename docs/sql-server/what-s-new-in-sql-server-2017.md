@@ -1,7 +1,7 @@
 ---
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
+ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
+ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
 ms.contentlocale: de-de
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
@@ -40,6 +40,13 @@ SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Platt
     -   Die Failoverbehandlung der Ausführungsprotokolle aus Scale-Out-Workern wurde verbessert.
     -   Der Parameter *runincluster* der gespeicherten Prozedur **[catalog].[create_execution]** wird hinsichtlich Konsistenz und Lesbarkeit in *runinscaleout* umbenannt.
     -   Der SSIS-Katalog verfügt über eine neue globale Eigenschaft, um den Standardmodus für das Ausführen von SSIS-Paketen anzugeben.
+
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- Wenn Sie von den folgenden vorherigen Versionen von SQL Server ein Upgrade auf SQL Server 2017 Master Data Services durchführen, können Sie jetzt von einem verbesserten Erlebnis und einer verbesserten Leistung profitieren.
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
 
 ## <a name="sql-server-database-engine"></a>SQL Server-Datenbankmodul  
 SQL Server-2017 umfasst viele neue Datenbankmodulfunktionen, Verbesserungen und Leistungsverbesserungen. 
@@ -77,10 +84,16 @@ Weitere Informationen finden Sie unter [What's new in SQL Server 2017 Database E
     -   Der SSIS-Katalog verfügt über eine neue globale Eigenschaft, um den Standardmodus für das Ausführen von SSIS-Paketen anzugeben.
 - In der neuen Funktion **Scale Out** können Sie jetzt den Parameter **Use32BitRuntime** verwenden, wenn Sie die Ausführung auslösen. (CTP 2.1)
 - Der Integration Services (SSIS) von SQL Server 2017 unterstützt jetzt auch **SQL Server unter Linux**, und mit einem neuen Paket können Sie die SSIS-Pakete auf Linux über die Befehlszeile ausführen. Weitere Informationen finden Sie unter dem [Blogpost, der die SSIS-Unterstützung für Linux ankündigt](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- Die neue Funktion **Scale Out für SSIS** macht es viel einfacher, SSIS auf mehreren Computern auszuführen. Weitere Informationen finden Sie unter [Integration Services Scale Out (Integration Services Scale Out)](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0)
+- Die neue Funktion **Scale Out für SSIS** macht es viel einfacher, SSIS auf mehreren Computern auszuführen. Weitere Informationen finden Sie unter [Integration Services Scale Out (Integration Services Scale Out)](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
 - OData-Quelle und der OData-Verbindungs-Manager unterstützen jetzt Verbindungen mit den OData-Feeds von Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online. (CTP 1.0)
 
 Weitere Informationen finden Sie unter [What's New in Integration Services in SQL Server 2017 (Neues in Integration Services in SQL Server 2017)](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+
+## <a name="master-data-services-mds"></a>Master Data Services (MDS)
+Zusätzlich zu verbesserten Upgradeleistung und -erfahrung beim Upgrade auf SQL Server 2017 MDS wurden folgende Verbesserungen für MDS vorgenommen.
+- Sie können sich jetzt die sortierte Liste von Entitäten, Sammlungen und Hierarchien auf der **Explorer-Seite** der Webanwendung anschauen.
+- Die Leistung für das Bereitstellen von Millionen von Zeilen mit der entsprechenden gespeicherten Prozedur wurde verbessert.
+- Die Leistung beim Erweitern den Ordners **Entitäten** auf der Seite **Gruppen verwalten** zum Zuweisen von Modellberechtigungen wurde verbessert. Die Seite **Gruppen verwalten** befindet sich im Abschnitt **Sicherheit** der Webanwendung. Weitere Informationen zu Leistungsverbesserungen finden Sie unter [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Weitere Informationen zum Zuweisen von Berechtigungen finden Sie unter [Assign Model Object Permissions (Master Data Services) (Zuweisen von Modellobjektberechtigungen (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 führt zahlreiche Verbesserungen für tabellarische Modelle ein. Dazu gehören:
@@ -99,7 +112,7 @@ SQL Server Analysis Services 2017 führt zahlreiche Verbesserungen für tabellar
 Weitere Informationen finden Sie unter [What's new in SQL Server Analysis Services 2017 (Neues in SQL Server Analysis Services 2017)](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-Ab CTP 2.1 kann SSRS nicht mehr über das SQL Server-Setup installiert werden. Navigieren Sie zum Microsoft Download Center zum [Herunterladen der Vorschau vom Mai 2017 der Power BI-Berichtsserver und Power BI Desktop, optimiert für Power BI-Berichtsserver](https://www.microsoft.com/download/details.aspx?id=55253). Weitere Informationen zu Power BI-Berichtsserver, finden Sie unter [erste Schritte mit Power BI-Berichtsserver](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Ab CTP 2.1 kann SSRS nicht mehr über das SQL Server-Setup installiert werden. Wechseln Sie zum Microsoft Download Center, um den [Releasekandidat von Microsoft SQL Server 2017 Reporting Services herunterzuladen](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Kommentare sind jetzt für Berichte verfügbar, um Perspektive und Zusammenarbeit mit anderen Benutzern hinzuzufügen. Sie können auch die Anlagen mit Ihren Kommentar einschließen. (CTP 2.1)
 - In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen, indem Sie die gewünschten Felder in den Abfrage-Designer ziehen und ablegen. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 

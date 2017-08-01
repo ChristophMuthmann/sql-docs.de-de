@@ -9,7 +9,7 @@ Die folgenden Schritte verwenden **sqlcmd**, um sich lokal mit Ihrer neuen SQL S
    ```
 
    > [!TIP]
-   > Sie können das Kennwort in der Befehlszeile auslassen, damit Sie aufgefordert werden, es einzugeben.
+   > Sie können das Kennwort in der Befehlszeile auslassen, damit Sie aufgefordert werden, dieses einzugeben.
 
    > [!TIP]
    > Wenn Sie später eine Remoteverbindung herstellen möchten, geben Sie den Computernamen oder die IP-Adresse für den Parameter **-S** ein, und stellen Sie sicher, dass der Port 1433 in Ihrer Firewall geöffnet ist.
@@ -19,7 +19,7 @@ Die folgenden Schritte verwenden **sqlcmd**, um sich lokal mit Ihrer neuen SQL S
 1. Wenn Sie einen Verbindungsfehler erhalten, versuchen Sie zunächst das Problem aus der Fehlermeldung zu ermitteln. Überprüfen Sie anschließend die [Empfehlungen zur Verbindungsproblembehandlung](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 ## <a name="create-and-query-data"></a>Erstellen und Abfragen von Daten
-Die folgenden Abschnitte führen Sie durch die Verwendung von **sqlcmd** und Transact-SQL, um eine neue Datenbank zu erstellen, Daten hinzuzufügen und eine einfache Abfrage auszuführen.
+Die folgenden Abschnitte führen Sie durch die Verwendung von **sqlcmd**, um eine neue Datenbank zu erstellen, Daten hinzuzufügen und eine einfache Abfrage auszuführen.
 
 ### <a name="create-a-new-database"></a>Erstellen einer neuen Datenbank
 
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Herstellen einer Verbindung aus Windows
 
-Es ist wichtig zu beachten, dass sich SQL Server-Tools auf Windows mit SQL Server-Instanzen unter Linux auf die gleiche Weise verbinden, wie sie sich mit einer beliebigen Remoteinstanz von SQL Server verbinden würden.
+SQL Server-Tools unter Windows stellen eine Verbindung mit SQL Server-Instanzen unter Linux auf die gleiche Weise her, wie sie sich mit einer beliebigen Remoteinstanz von SQL Server verbinden würden.
 
 Wenn Sie einen Windows-Computer haben, der mit Ihrem Linux-Computer eine Verbindung herstellen kann, versuchen Sie die gleichen Schritte in diesem Thema aus einer Windows-Befehlszeile, die **sqlcmd** ausführt. Stellen Sie sicher, dass Sie den Linux-Zielcomputernamen oder die IP-Adresse und nicht localhost verwenden, und stellen Sie sicher, dass der TCP-Port 1433 geöffnet ist. Unter [Empfehlungen zur Verbindungsproblembehandlung](../linux/sql-server-linux-troubleshooting-guide.md#connection) finden Sie weitere Informationen, wenn beim Herstellen einer Verbindung von Windows Probleme auftreten.
 
@@ -109,6 +109,15 @@ Andere Tools, die unter Windows ausgeführt werden, die sich aber mit SQL Server
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Unter [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md) und [Transact-SQL-Referenz (Datenbankmodul)](../t-sql/language-reference.md) finden Sie weitere Informationen, wenn Sie noch nicht mit T-SQL vertraut sind.
+Weitere Installationsszenarios finden Sie in den folgenden Ressourcen:
+
+|||
+|---|---|
+| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Erfahren Sie, wie Sie eine vorhandene Installation von SQL unter Linux aktualisieren können. |
+| [Deinstallieren](../linux/sql-server-linux-setup.md#uninstall) | Deinstallieren von SQL Server unter Linux |
+| [Unbeaufsichtigtes Installieren](../linux/sql-server-linux-setup.md#unattended) | Erfahren Sie, wie Sie die Installation ohne Aufforderungen skripten können. |
+| [Offlineinstallation](../linux/sql-server-linux-setup.md#offline) | Erfahren Sie, wie Sie die Pakete für die Offlineinstallation manuell herunterladen können. |
 
 Unter [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) und [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) finden Sie andere Möglichkeiten zum Verbinden und Verwalten von SQL Server.
+
+Um mehr über das Schreiben von Transact-SQL-Anweisungen und -Abfragen zu erfahren, schauen Sie sich dieses [Tutorial: Writing Transact-SQL Statements (Tutorial: Schreiben von Transact-SQL-Anweisungen)](../t-sql/tutorial-writing-transact-sql-statements.md) an.
