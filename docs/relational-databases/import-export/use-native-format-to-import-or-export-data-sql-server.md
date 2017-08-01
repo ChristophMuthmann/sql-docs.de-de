@@ -17,11 +17,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -68,7 +68,7 @@ Um Daten im systemeigenen Format erfolgreich zu importieren, müssen folgende Pu
   
      Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) verwendet das interne binäre Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um auf Nichtzeichen basierende Daten aus einer Tabelle in eine Datendatei zu schreiben.  
   
--   Daten vom Typ[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
+-   Daten vom Typ [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      Am Anfang jedes [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) - oder [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Felds fügt [bcp](../../tools/bcp-utility.md) die Präfixlänge hinzu.  
   
