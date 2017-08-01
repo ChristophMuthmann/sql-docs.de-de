@@ -19,7 +19,7 @@
 # [Schätzen der Größe einer Datenbank](estimate-the-size-of-a-database.md)  
 ## [Schätzen der Größe einer Tabelle](estimate-the-size-of-a-table.md)  
 ## [Schätzen der Größe eines gruppierten Indexes](estimate-the-size-of-a-clustered-index.md)  
-## [Schätzen der Größe eines nicht gruppierten Indexes](estimate-the-size-of-a-nonclustered-index.md)  
+## [Schätzen der Größe eines nicht gruppierten Index](estimate-the-size-of-a-nonclustered-index.md)  
 ## [Schätzen der Größe eines Heaps](estimate-the-size-of-a-heap.md)  
 # [Kopieren von Datenbanken auf andere Server](copy-databases-to-other-servers.md)  
 ## [Verwenden des Assistenten zum Kopieren von Datenbanken](use-the-copy-database-wizard.md)  

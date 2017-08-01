@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 569a04a144ccdd8548add6659f3fb9ecf916260c
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: d281d2f22b674a522db25efc453fb7cd5ce217b3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/track-changes/track-data-changes-sql-server
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 926ef18a833addd9e3506be420c53b0897382b55
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 7214db63fdaad1ab26da905f1e92d2e995922cbb
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

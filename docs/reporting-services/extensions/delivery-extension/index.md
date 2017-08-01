@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: d002d1fd231aa4e8f4c564b39d00834034d9368a
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: fad08e3d7a4201ef6a14b60e6c74991fb2b06b0a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

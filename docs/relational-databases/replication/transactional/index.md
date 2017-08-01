@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/replication/transactional/transactional-replication
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bcb39612b9d0c284f537e75b40c96a9d3896b12b
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: b73ee4084dbb37734232da1d0b3ebd7bd65acc9c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

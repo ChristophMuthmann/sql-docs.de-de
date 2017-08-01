@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/views/views
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b85d64ad23814a2cf3715bbde7576ea54d1b71b6
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: a129a4df9a762823059557d677b23fb21c3685e3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

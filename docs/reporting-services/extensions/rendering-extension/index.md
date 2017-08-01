@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/reporting-services/extensions/rendering-extension/deploying-a-rendering-extension
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: f777e773eb773a98a4f122c143977b55f4b5af32
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: 4bcce2529ad679de6ac5df2158d7e3bbe3bfc85e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

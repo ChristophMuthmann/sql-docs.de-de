@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/data-compression/data-compression
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 24580724a6216c8d82c8e52f01c4e8c0ab73a988
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 2a1fe42dfa0212d3ceec1d258552bd5820f37aef
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

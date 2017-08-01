@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/extended-events/extended-events
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 03a33f3e16577058c516d501c1dea19b58d23cc7
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: fdc1643e7ea1755eaf90816f00bcdc7ce4bed952
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

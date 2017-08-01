@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/replication/merge/merge-replication
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ac42fee9f1bdfd473101d8126521e252df38428f
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 9d3f60c4b55584785ca9ea8f9600c69704eff45b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

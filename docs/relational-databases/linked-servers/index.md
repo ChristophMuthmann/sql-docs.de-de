@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/linked-servers/linked-servers-database-engine
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 63794816b1a86cb05ff1c56e5e2640a3f2344685
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: bc782b91233b6508f4fe688d6221bdfc1ac32782
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

@@ -26,7 +26,7 @@
 ## [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)  
 ## [Konfigurieren von Always Encrypted mithilfe von PowerShell](configure-always-encrypted-using-powershell.md)  
 ### [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](configure-always-encrypted-keys-using-powershell.md)  
-### [Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell](rotate-always-encrypted-keys-using-powershell.md)  
+### [Rotieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](rotate-always-encrypted-keys-using-powershell.md)  
 ### [Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell](configure-column-encryption-using-powershell.md)  
 ## [Always Encrypted (Cliententwicklung)](always-encrypted-client-development.md)  
 ### [Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server](develop-using-always-encrypted-with-net-framework-data-provider.md)  

@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
-ms.openlocfilehash: 525b2f47d6cbfc27a2095c7d565818dca508b4d4
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: 8b735e98007d23e34063f6e3c4183aca5732c948
 ms.contentlocale: de-de
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

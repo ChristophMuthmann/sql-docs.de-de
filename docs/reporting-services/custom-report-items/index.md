@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: d23d9aa697b6026326c1ec330a51d0a625660a3a
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: fd7bb730e720f3ea2b9f57491eaf09a5ba2183c8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/relational-databases/replication/concepts/replication-developer-documentation
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3d6805c2294264a6b584bbebd20d0a5c67f628
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: cf01c557a6137dd90540b43116598636a6179a65
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

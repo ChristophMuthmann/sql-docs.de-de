@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/ssms/solution/solution-explorer
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ac02317adb4736afb655418e0eb1b20f8482a45
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 03cbf3039ff6d62e224972a1e373e47917efd3d9
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

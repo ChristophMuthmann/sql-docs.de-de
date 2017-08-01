@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6ad3aa7083a19909ce769a371a1c95b4dd05b39e
+ms.translationtype: HT
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: cd32f05a60c7fbfc8c69bbb276a953d575fb0323
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

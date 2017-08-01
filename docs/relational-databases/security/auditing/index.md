@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/security/auditing/sql-server-audit-database-engine
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1ad860d63a88ee644cde1661d8ecdec59503c4e5
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 509166087e575b7c92bd84f61b8a43a40b4fe7fc
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

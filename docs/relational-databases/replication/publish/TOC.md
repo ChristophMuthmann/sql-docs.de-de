@@ -26,7 +26,7 @@
 ## [Konfigurieren von Momentaufnahmeeigenschaften (Replikationsprogrammierung mit Transact-SQL)](configure-snapshot-properties-replication-transact-sql-programming.md)  
 ## [Übermitteln einer Momentaufnahme über FTP](deliver-a-snapshot-through-ftp.md)  
 ## [Definieren und Ändern eines Spaltenfilters](define-and-modify-a-column-filter.md)  
-## [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md)  
+## [Definieren und Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md)  
 ## [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
 ## [Optimieren von parametrisierten Zeilenfiltern](optimize-parameterized-row-filters.md)  
 ## [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](define-and-modify-a-join-filter-between-merge-articles.md)  

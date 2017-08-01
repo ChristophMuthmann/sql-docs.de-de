@@ -5,7 +5,7 @@
 ## [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](manage-logins-and-passwords-in-replication.md)  
 ## [Sichere Entwicklung](secure-development-replication.md)  
 ## [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md)  
-## [Sicherheitsrollenanforderungen für die Replikation](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [Bewährte Methoden für die Replikationssicherheit](replication-security-best-practices.md)  
 # [Sichere Bereitstellung](secure-deployment-replication.md)  
 ## [Schützen des Verteilers](secure-the-distributor.md)  

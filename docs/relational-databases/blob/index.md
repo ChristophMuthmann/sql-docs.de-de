@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1626edbeb2c106cd5b1fe097ab248c811d90b413
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 2ffd1ec53a35f43cf80e44716a793e7a4841dbc1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

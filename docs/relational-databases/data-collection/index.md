@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/data-collection/data-collection
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 872dde4f33f8a54b656c969e91b1c3c6b5b163eb
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: 2b896d8e83916beb9912c2e1e58812361116bb81
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

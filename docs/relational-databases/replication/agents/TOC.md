@@ -3,7 +3,7 @@
 # [Replikationsverteilungs-Agent](replication-distribution-agent.md)  
 # [Replikationsprotokolllese-Agent](replication-log-reader-agent.md)  
 # [Replikationsmerge-Agent](replication-merge-agent.md)  
-# [Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](replication-queue-reader-agent.md)  
+# [Warteschlangenlese-Agent](replication-queue-reader-agent.md)  
 # [Replikationsmomentaufnahme-Agent](replication-snapshot-agent.md)  
 # [Replikations-Agent-Verwaltung](replication-agent-administration.md)  
 ## [Replikations-Agent-Profile](replication-agent-profiles.md)  

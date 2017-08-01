@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/scripting/database-engine-scripting
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64d2d35d26ccd94f17a8ed16cefdeb3c0a724ae6
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: ba83b8171414e28579ab55b1593f8ac4b0e51ad5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

@@ -1,10 +1,10 @@
 ---
 redirect_url: /sql/reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: a1410996f3195f01d1d34cea04fe5f5835fc166e
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: 276ee9905869efdb5a19aad3b4b3fc865e0aef9f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

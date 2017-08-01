@@ -1,10 +1,10 @@
 --- 
 redirect_url: /sql/relational-databases/tables/tables
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fa4008559a76ad9ebd49998e0e8be5d09edfdda9
+ms.translationtype: HT
+ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
+ms.openlocfilehash: d3e5a117c396b0c10535307b5eca03e0988811fb
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/01/2017
 
 --- 
 

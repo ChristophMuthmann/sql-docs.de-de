@@ -1,6 +1,6 @@
 # [Übersicht](statistics.md)  
-## [Create](create-statistics.md)  
-## [Modify](modify-statistics.md)  
+## [Erstellen](create-statistics.md)  
+## [Ändern](modify-statistics.md)  
 ## [Delete](delete-statistics.md)  
 ## [Anzeigen von Eigenschafte](view-statistics-properties.md)  
 ## [Rename](rename-statistics.md)  
