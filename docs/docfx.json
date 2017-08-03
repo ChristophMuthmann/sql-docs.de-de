@@ -13,12 +13,6 @@
 	  "advanced-analytics/**",
 	  "analysis-services/**",
 	  "connect/**",
-          "data-quality-services/**",
-	  "database-engine/**",
-	  "dmx/**",
-	  "integration-services/**",
-	  "master-data-services/**",
-	  "mdx/**",
           "mref/**",
           "odbc/**",
 	  "relational-databases/automatic-tuning/**",
@@ -79,10 +73,7 @@
 	  "relational-databases/wmi-provider-configuration/**",
 	  "relational-databases/wmi-provider-configuration-classes/**",
    	  "relational-databases/wmi-provider-server-events/**",
-	  "sample/**",
-	  "ssma/**",
 	  "t-sql/**",
-	  "tools/**",
 	  "xquery/**"
        ]
       }
