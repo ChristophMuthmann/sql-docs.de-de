@@ -1,8 +1,8 @@
 ---
-title: Neuigkeiten in SQL Server 2016 | Microsoft-Dokumentation
+title: Was ist neu in SQLServer 2016
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/28/2017
+ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,64 +22,93 @@ caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a59a02db0054f3fe1a7e571ad97f23c65b021a77
-ms.openlocfilehash: 331f6b68bb4cdd4803dd0fd634c3584f3b809064
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 2508b5409b48e4b2a6447a6663c143cbc3ff6309
 ms.contentlocale: de-de
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+# <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
+ Mit SQL Server 2016 können Sie intelligente, unternehmenskritische Anwendungen mithilfe einer skalierbaren, hybriden Datenbankplattform erstellen, in der bereits alles Features integriert sind – von arbeitsspeicherinterner Leistung über erweiterte Sicherheit bis hin zu datenbankinternen Analysen. Das SQL Server 2016-Release bietet neue Sicherheitsfunktionen, Abfragemöglichkeiten, Hadoop- und Cloudintegration, R-Analyse und viele weitere Verbesserungen und Erweiterungen. 
 
-# Was ist neu in SQLServer 2016
- SQL Server 2016: Erstellen von intelligenten, unternehmenskritischen Anwendungen mithilfe einer skalierbaren, hybriden Datenbankplattform, in der schon alles von speicherinterner Leistung über erweiterte Sicherheit bis hin zu datenbankinternen Analysen.
- 
- Diese Seite stellt Links zu detaillierten Informationen zu Neuigkeiten für jede Komponente für SQL Server 2016 bereit.   
- 
-  ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
- 
-[Lesen Sie das Datenblatt der SQL Server 2016-Editionen](http://download.microsoft.com/download/8/A/2/8A2BC8C5-BBA0-4A9C-90BC-AC957D3454D9/SQL_Server_2016_Editions_datasheet.pdf)
- 
-    
- **Probieren Sie SQL Server noch heute aus!**    
- - Laden Sie sich die **kostenlose** [**SQL Server 2016 Developer-Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) herunter!
-    
-[![Azure Virtual Machine (klein)](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto? Starten Sie einen [virtuellen Computer mit vorinstalliertem SQL Server 2016](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu detaillierten Informationen zu den Neuerungen, die SQL Server 2016 für jede SQL Server-Komponente bietet. 
 
- [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Laden Sie die neueste Version von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) herunter.   
+![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
-    
-<a id="whats-new-in-sql-server" class="xliff"></a>
+ **Probieren Sie SQL Server noch heute aus!** 
+- Laden Sie die **kostenlose** [**SQL Server 2016 Developer-Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) herunter.
+- Laden Sie die neueste Version von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) herunter. 
+- Sie haben ein Azure-Konto? Starten Sie einen [virtuellen Computer mit vorinstalliertem SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
- ## Neuerungen in SQL Server
-Links zu einzelnen Themen:
- 
- - [SQL Server-Setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
-  
- - [Analysis Services-Modul (SSAS)](../analysis-services/what-s-new-in-analysis-services.md)  
-  
- - [Datenbankmodul](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)
+## <a name="sql-server-2016-database-engine"></a>SQL Server 2016-Datenbankmodul
+- Sie können jetzt während der Installation und Einrichtung von SQL Server **mehrere tempDB**-Datenbankdateien konfigurieren.
+- Der neue **Abfragespeicher** speichert Abfragetexte, Ausführungspläne und Leistungsmetriken in der Datenbank und ermöglicht so eine einfache Leistungsüberwachung und Behebung von Leistungsproblemen. Ein Dashboard zeigt an, welche Abfragen am längsten dauern und am meisten Arbeitsspeicher- oder CPU-Ressourcen verbrauchen.
+- **Temporale Tabellen** sind Verlaufstabellen, in denen alle Datenänderungen erfasst werden, einschließlich Datum und Uhrzeit.
+- Die neue integrierte **JSON-Unterstützung** in SQL Server unterstützt Import-, Export-, Analyse- und Speichervorgänge in JSON.
+- Das neue **PolyBase**-Abfragemodul integriert SQL Server mit externen Daten in Hadoop oder Azure Blob Storage. Sie können Daten importieren und exportieren sowie Abfragen ausführen.
+- Mit dem neuen **Stretch Database**-Feature können Sie Daten aus einer lokalen SQL Server-Datenbank dynamisch und sicher in einer Azure SQL-Datenbank in der Cloud archivieren. SQL Server fragt automatisch sowohl die lokalen Daten als auch die Remotedaten in den verknüpften Datenbanken ab. 
+- **In-Memory-OLTP:** 
+    - Unterstützt jetzt die Einschränkungen FOREIGN KEY, UNIQUE und CHECK sowie die nativen kompilierten gespeicherte Prozeduren OR, NOT, SELECT DISTINCT, OUTER JOIN und Unterabfragen in SELECT.
+    - Unterstützt Tabellen mit einer Größe von bis zu 2 TB (bisheriger Maximalwert: 256 GB). 
+    - Bietet Erweiterungen des ColumnStore-Index für die Sortierung und die Unterstützung von Always On-Verfügbarkeitsgruppen.
+- Neue Sicherheitsfeatures:
+    - **Always Encrypted:** Wenn dieses Feature aktiviert ist, kann nur die Anwendung, die über den Verschlüsselungsschlüssel verfügt, auf die verschlüsselten sensiblen Daten in einer SQL Server 2016-Datenbank zugreifen. Der Schlüssel wird nie an SQL Server übergeben.
+    - **Dynamische Datenmaskierung:** Wenn dieses Feature in der Tabellendefinition angegeben ist, werden maskierte Daten für die meisten Benutzer ausgeblendet, und nur Benutzer mit einer UNMASK-Berechtigung können alle Daten anzeigen.
+    - **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene des Datenbankmoduls eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
 
- - [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
- 
- - [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
-  
- - [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx)   
-  
- - [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)    
-       
- - [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)    
-      
-  
-    
-<a id="more-links" class="xliff"></a>
+Weitere Informationen finden Sie unter [Datenbankmodul](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
+## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
+SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktionalität für die Erstellung, Datenbankverwaltung, Filterung, Verarbeitung und viele weitere Vorgänge für Tabellenmodelldatenbanken mit **Kompatibilitätsgrad 1200**.
+- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrieren die für die statistische Analyse verwendete Programmiersprache R in SQL Server. 
+- Der neue **Datenbankkonsistenzprüfung (Database Consistency Checker, DBCC)** wird intern ausgeführt, um potenzielle Probleme durch Datenbeschädigung zu erkennen.
+- Die **direkte Abfrage**, die externe Daten live abfragt, anstatt sie vorher zu importieren, unterstützt jetzt weitere Datenquellen einschließlich Azure SQL, Oracle und Teradata. 
+- Es gibt eine Vielzahl neuer **DAX-Funktionen (Data Access Expressions)**.
+- Der neue Namespace **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
+- [Analysis Services Management Objects (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 
-## Weitere Links   
- +   [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)herunter. 
-+ [SQL Server 2016-Datenblatt](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-+ [Von den SQL Server-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx)
- + [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Installieren von SQL Server 2016 vom Installations-Assistenten aus](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
- [Setup und Wartungsinstallation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+Weitere Informationen finden Sie unter [Analysis Services-Modul (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+
+## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
+- Unterstützung für **Always On-Verfügbarkeitsgruppen**
+- **Inkrementelle Paketbereitstellung**
+- Unterstützung für **Always Encrypted**
+- Neue **ssis_logreader**-Rolle auf Datenbankebene
+- Neuer **benutzerdefinierter Protokolliergrad**
+- **Spaltennamen für Fehler** im Datenfluss 
+- Neue **Connectors**
+- Unterstützung für das **Hadoop-Dateisystem (HDFS)**
+
+Weitere Informationen finden Sie unter [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
+
+## <a name="sql-server-2016-master-data-services-mds"></a>SQL Server 2016 Master Data Services (MDS)
+- **Verbesserungen bei abgeleiteten Hierarchien**, einschließlich Unterstützung für rekursive und m:n-Beziehungen
+- Filtern nach **domänenbasiertem Attribut**
+- **Synchronisieren von Entitäten** zur gemeinsamen Nutzung von Entitäten in verschiedenen Modellen
+- Genehmigungsworkflows über **Changesets**
+- **Benutzerdefinierte Indizes** zur Verbesserung der Abfrageleistung
+- Neue **Genehmigungslevel** für mehr Sicherheit
+- Neu gestaltete **Geschäftsregelverwaltung**
+
+Weitere Informationen finden Sie unter [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md).
+
+## <a name="sql-server-2016-reporting-services-ssrs"></a>SQL Server 2016 Reporting Services (SSRS)
+Microsoft hat die Reporting Services in diesem Release sehr gründlich überarbeitet. 
+- Neues **webbasiertes Berichtportal** mit KPI-Feature
+- Neuer **Publisher für mobile Berichte**
+- **Neu gestaltetes Modul zum Rendern von Berichten**, das HTML5 unterstützt 
+- Neue **Diagrammtypen**: Treemap und Sunburst 
+
+Weitere Informationen finden Sie unter [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx).
+
+## <a name="next-steps"></a>Nächste Schritte   
+- [SQL Server-Setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+- [SQL Server 2016-Datenblatt](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [Von den SQL Server-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Installieren von SQL Server 2016 über den Installations-Assistenten](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [Setup und Wartungsinstallation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+- [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 

@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Versionshinweise für SQL Server Management Studio
 Herzlich willkommen! Dies ist das allgemein verfügbare Release von SQL Server Management Studio.  Diese Version von SQL Server Management Studio (SSMS) ist eine eigenständige Installation außerhalb der SQL Server-Version. Wir haben uns zum Ziel gesetzt, sie häufig zu aktualisieren und neue Funktionen, Korrekturen und Hilfestellungen für die neuesten Funktionen von SQL Server und der Azure SQL-Datenbank bereitzustellen.  
   
-Informationen zum Installieren des aktuellen Release von SQL Server Management Studio finden Sie unter [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
+Informationen zum Installieren des aktuellen Release von SQL Server Management Studio finden Sie unter [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
   
 Dies sind Probleme und Einschränkungen, die in Verbindung mit diesem SQL Server Management Studio-Release bestehen:  
 
-1. **Restore-Assistent generiert eine falsche Pfadmuster für Datenbank-Dateispeicherort Ziel** 
-    Dies ist ein bekanntes Problem, wenn SSMS auf einem Linux-Server verbunden ist. Auch wenn der Pfad falsch/ungerade aussieht, ordnungsgemäß auf dem Server verarbeitet wird, d. h. Es gibt keine funktionale Problem.
+1. **Der Assistent für das Wiederherstellen von Datenbanken generiert ein falsches Pfadmuster für den Speicherort der Zieldatenbankdatei**. Dies ist ein bekanntes Problem, wenn SSMS mit einem Linux-Server verbunden ist. Auch wenn der Pfad falsch oder merkwürdig aussieht, wird er auf Serverseite ordnungsgemäß verarbeitet, d.h. es besteht kein Problem mit der Funktionalität.
 
-2. **Datei-Browser-Probleme**
-    - Bei der Arbeit mit einem Windows-basierte SQL Server 2017 CTP 2.0-Instanz möglicherweise die Dateibrowser Benutzeroberfläche in SSMS zu öffnen, wenn der Server eine leere Diskettenlaufwerk oder einen Datenträger mit fester Größe geschützt durch Bitlocker installiert hat. 
-    - Versionen von SQL Server-2017 vor CTP 2.0 wird von der Dateibrowser UI nicht mehr unterstützt.
+2. **Probleme mit dem Dateibrowser**
+    - Bei der Arbeit mit einer Windows-basierten SQL Server 2017 CTP 2.0-Instanz wird die Benutzeroberfläche des Dateibrowsers in SSMS möglicherweise nicht geöffnet, wenn auf dem Server ein leeres Diskettenlaufwerk oder ein mit BitLocker geschützter eingebauter Datenträger vorhanden ist. 
+    - Die Benutzeroberfläche des Dateibrowsers unterstützt keine SQL Server 2017-Versionen vor CTP 2.0 mehr.
     
 
 
@@ -47,7 +46,7 @@ Dies sind Probleme und Einschränkungen, die in Verbindung mit diesem SQL Server
     
     Um das Problem zu umgehen, können Sie die anderen Authentifizierungsmethoden verwenden, die in SSMS verfügbar sind: Active Directory-Kennwortauthentifizierung, integrierte Active Directory-Authentifizierung und SQL Server-Authentifizierung.
 
-5. **SSMS kann sich ausschließlich mit SSIS 2016-Instanzen (SQL Server 2016 Integration Services) verbinden.**  
+5. **SSMS 17.x kann ausschließlich Verbindungen mit SQL Server 2017 Integration Services-Instanzen (SSIS 2017) herstellen.**  
     Es gibt eine bekannte Kompatibilitätseinschränkung bei SQL Server Integration Services, die Verbindungen mit vorherigen Versionen verhindert.
     
     Als Problemumgehung verbinden Sie sich über [das SSMS-Release, das auf Ihre SSIS-Instanz ausgerichtet ist](../ssms/previous-sql-server-management-studio-releases.md), mit Ihrer SQL Server Integration Services-Instanz. 
@@ -63,11 +62,11 @@ Einige Umgebungen zeigen Folgendes an, wenn Sie auf „Hilfe“ klicken oder die
   
 ## <a name="feedback"></a>Feedback  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Ein Problem bei Microsoft Connect melden oder einen Vorschlag einbringen](https://connect.microsoft.com/SQLServer/Feedback).  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Ein Problem oder einen Vorschlag bei Microsoft Connect verzeichnen](https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Siehe auch  
 [SQL Server Management Studio-Lernprogramm](../ssms/use-sql-server-management-studio.md)  
-[Herunterladen von SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+[Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [Vorgängerversionen von SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
 
   
