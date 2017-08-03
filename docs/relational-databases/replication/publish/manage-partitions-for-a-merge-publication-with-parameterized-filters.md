@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **@host_name** – wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
-2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>So löschen Sie eine Partition  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 06/22/2017
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
- Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
+ Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
   
 -   Der Wert und die Filterfunktion, auf dem bzw. der die Partition basiert.  
   
@@ -137,34 +137,34 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-information-on-existing-partitions"></a>So zeigen Sie Informationen zu vorhandenen Partitionen an  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>- und <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaften für die Veröffentlichung und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A>-Methode auf, und übergeben Sie das Ergebnis an ein Array von <xref:Microsoft.SqlServer.Replication.MergePartition>-Objekten.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> -Methode auf, und übergeben Sie das Ergebnis an ein Array von <xref:Microsoft.SqlServer.Replication.MergePartition> -Objekten.  
   
-5.  Rufen Sie für jedes <xref:Microsoft.SqlServer.Replication.MergePartition>-Objekt im Array alle gewünschten Eigenschaften ab.  
+5.  Rufen Sie für jedes <xref:Microsoft.SqlServer.Replication.MergePartition> -Objekt im Array alle gewünschten Eigenschaften ab.  
   
 #### <a name="to-delete-existing-partitions"></a>So löschen Sie vorhandene Partitionen  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>- und <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaften für die Veröffentlichung und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A>-Methode auf, und übergeben Sie das Ergebnis an ein Array von <xref:Microsoft.SqlServer.Replication.MergePartition>-Objekten.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> -Methode auf, und übergeben Sie das Ergebnis an ein Array von <xref:Microsoft.SqlServer.Replication.MergePartition> -Objekten.  
   
-5.  Bestimmen Sie für jedes <xref:Microsoft.SqlServer.Replication.MergePartition>-Objekt im Array, ob die Partition gelöscht werden soll. Diese Entscheidung basiert normalerweise auf dem Wert der <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>- oder der <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>-Eigenschaft.  
+5.  Bestimmen Sie für jedes <xref:Microsoft.SqlServer.Replication.MergePartition> -Objekt im Array, ob die Partition gelöscht werden soll. Diese Entscheidung basiert normalerweise auf dem Wert der <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> -Eigenschaft oder der <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> -Eigenschaft.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A>-Methode auf dem <xref:Microsoft.SqlServer.Replication.MergePublication>-Objekt aus Schritt 2 auf. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.MergePartition>-Objekt aus Schritt 5.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> -Methode für das <xref:Microsoft.SqlServer.Replication.MergePublication> -Objekt aus Schritt 2 auf. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.MergePartition> -Objekt aus Schritt 5.  
   
 7.  Wiederholen Sie Schritt 6 für jede zu löschende Partition.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

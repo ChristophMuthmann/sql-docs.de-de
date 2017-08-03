@@ -31,11 +31,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
     
  Zur optimalen Verwendung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist es erforderlich, die in diesem Thema beschriebenen Begriffe zu verstehen und zu wissen, wie sie mit den Eigenschaften der Daten in Zusammenhang stehen.    
     
-##  <a name="Terms"></a> Collation Terms    
+##  <a name="Terms"></a> Sortierungsbegriffe    
     
 -   [Sortierung](#Collation_Defn)    
     
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  Die Sortierreihenfolge gibt an, wie Datenwerte sortiert werden. Dies wirkt sich auf die Ergebnisse des Datenvergleichs aus. Daten werden mithilfe von Sortierungen sortiert, die mit Indizes optimiert werden können.    
     
-##  <a name="Unicode_Defn"></a> Unicode Support    
+##  <a name="Unicode_Defn"></a> Unicode-Unterstützung    
  Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, besteht keine Notwendigkeit für unterschiedliche Codepages zur Handhabung der verschiedenen Zeichensätze. Wenn Sie Zeichendaten speichern, die mehrere Sprachen darstellen, verwenden Sie immer Unicode-Datentypen (**nchar**, **nvarchar**und **ntext**) anstelle von Nicht-Unicode-Datentypen (**char**, **varchar**und **text**).    
     
  Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.    
@@ -151,7 +151,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Nicht-Unicode|Unicode|Dies ist keine günstige Konfiguration bei der Verwendung mehrsprachiger Daten Sie sind nicht in der Lage, Unicode-Daten auf den Nicht-Unicode-Server zu schreiben. Es ist wahrscheinlich, dass Probleme auftreten, wenn Daten an Server gesendet werden, die von der Codepage des Servers nicht erfasst werden.|    
 |Nicht-Unicode|Nicht-Unicode|Dieses Szenario ist bei mehrsprachigen Daten mit zahlreichen Beschränkungen verbunden. Sie können nur eine Codepage verwenden.|    
     
-##  <a name="Supplementary_Characters"></a> Supplementary Characters    
+##  <a name="Supplementary_Characters"></a> Ergänzende Zeichen    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** zum Speichern von Unicode-Daten bereit. Bei diesen Datentypen wird Text im Format *UTF-16*codiert. Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 0x0000 bis 0x10FFFF entspricht. Die am häufigsten verwendeten Zeichen weisen Codepunktwerte auf, die im Arbeitsspeicher und auf dem Datenträger in ein 16-Bit-Wort passen. Zeichen mit Codepunktwerten, die größer als 0xFFFF sind, erfordern jedoch zwei aufeinanderfolgende 16-Bit-Wörter. Diese Zeichen werden als *ergänzende Zeichen*bezeichnet, und die beiden aufeinanderfolgenden 16-Bit-Wörter werden als *Ersatzpaare*bezeichnet.    
     
  Bei Verwendung ergänzender Zeichen:    
@@ -188,10 +188,10 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Gibt einen UTF-16-Codepunkt im Bereich 0 bis 0x10FFFF zurück.|Gibt einen UCS-2-Codepunkt im Bereich 0 bis 0xFFFF zurück.|    
 |[Einzelnes zu suchendes Zeichen](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Platzhalterzeichen - nicht zu suchende(s) Zeichen](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Ergänzende Zeichen werden für alle Platzhaltervorgänge unterstützt.|Ergänzende Zeichen werden für diese Platzhaltervorgänge nicht unterstützt. Andere Platzhalteroperatoren werden unterstützt.|    
     
-##  <a name="GB18030"></a> GB18030 Support    
+##  <a name="GB18030"></a> GB18030-Unterstützung    
  GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Unterstützung für GB18030-codierte Zeichen, indem diese erkannt werden, wenn Sie den Server von einer clientseitigen Anwendung erreichen, und in systemeigene Unicode-Zeichen konvertiert und als solche gespeichert werden. Nach ihrer Speicherung im Server werden diese Zeichen in allen nachfolgenden Operationen als Unicode-Zeichen behandelt. Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle _100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren SC-Sortierungen optimieren.    
     
-##  <a name="Complex_script"></a> Complex Script Support    
+##  <a name="Complex_script"></a> Unterstützung komplexer Skripts    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann das Eingeben, Speichern, Ändern und Anzeigen komplexer Skripts unterstützen. Zu komplexen Skripts gehören Folgende:    
     
 -   Skripts, die sowohl die Kombination von Text von rechts nach links und Text von links nach rechts enthalten, als auch die Kombination von arabischem und englischem Text.    
@@ -202,7 +202,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagieren, müssen über Steuerelemente verfügen, die komplexe Skripts unterstützen. Standardmäßige Windows-Formularsteuerelemente, die in verwaltetem Code erstellt werden, sind für komplexe Skripts aktiviert.    
 
-##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+##  <a name="Japanese_Collations"></a> Japanische Sortierungen, die in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]werden zwei neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Permutationen verschiedener Optionen (_CS, _AS, _KS, _WS, _VSS usw.) handelt. 
 
@@ -214,7 +214,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 Diese Sortierungen werden in Indizes des Datenbankmoduls, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
     
-##  <a name="Related_Tasks"></a> Related Tasks    
+##  <a name="Related_Tasks"></a> Verwandte Aufgaben    
     
 |Task|Thema|    
 |----------|-----------|    
@@ -225,7 +225,7 @@ Diese Sortierungen werden in Indizes des Datenbankmoduls, in für den Arbeitsspe
 |Beschreibt, wie Transact-SQL-Anweisungen geschrieben werden, die die Übertragung von einer Sprache in eine andere verbessern, oder wie mehrere Sprachen einfacher unterstützt werden.|[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Beschreibt, wie die Sprache von Fehlermeldungen und die bevorzugte Verwendungs- und Anzeigeweise von Datums-, Zeit-, und Währungsdaten geändert werden.|[Festlegen einer Sitzungssprache](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related Content    
+##  <a name="Related_Content"></a> Verwandte Inhalte    
  [Bewährte Vorgehensweisen zur Sortierungsänderung bei SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
  ["Bewährte Vorgehensweise zur Unicode-Migration bei SQL Server"](http://go.microsoft.com/fwlink/?LinkId=113890)    

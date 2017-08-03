@@ -18,11 +18,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="model-database"></a>model-Datenbank
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 |CONCAT_NULL_YIELDS_NULL|OFF|ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
 |CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> ja<br /><br /> ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Ja<br /><br /> ja|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
 |DB_CHAINING|OFF|Nein|  
 |ENCRYPTION|OFF|Nein|  

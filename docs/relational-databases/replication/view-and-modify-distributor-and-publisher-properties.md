@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
@@ -130,66 +130,66 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-distributor-properties"></a>So zeigen Sie die Verteilereigenschaften an oder ändern diese  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt aus Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
   
-3.  (Optional) überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A>-Eigenschaft, um sich davon zu überzeugen, dass der aktuell verbundene Server ein Verteiler ist.  
+3.  (Optional) überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> -Eigenschaft, um sich davon zu überzeugen, dass der aktuell verbundene Server ein Verteiler ist.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>-Methode auf, um die Eigenschaften vom Server abzurufen.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften vom Server abzurufen.  
   
-5.  (Optional) Zum Ändern der Eigenschaften legen Sie einen neuen Wert für eine oder mehrere der Verteilereigenschaften fest, die im <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Objekt festgelegt werden können.  
+5.  (Optional) Zum Ändern der Eigenschaften legen Sie einen neuen Wert für eine oder mehrere der Verteilereigenschaften fest, die im <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Objekt festgelegt werden können.  
   
-6.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Objekts auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen an den Server zu übertragen.  
+6.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>So zeigen Sie Verteilerdatenbankeigenschaften an oder ändern Sie diese Eigenschaften  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Klasse. Geben Sie die Namenseigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt aus Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Klasse. Geben Sie die Namenseigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften vom Server abzurufen. Wenn diese Methode **false**zurückgibt, ist die Datenbank mit dem angegebenen Namen nicht auf dem Server vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften vom Server abzurufen. Wenn diese Methode **false**zurückgibt, ist die Datenbank mit dem angegebenen Namen nicht auf dem Server vorhanden.  
   
-4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Eigenschaften fest.  
+4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Eigenschaften fest.  
   
-5.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Objekts auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen an den Server zu übertragen.  
+5.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>So zeigen Sie die Verlegereigenschaften an oder ändern diese  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Klasse. Geben Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>-Eigenschaft an, und übergeben Sie das <xref:Microsoft.Sqlserver.Management.Common.ServerConnection>-Objekt aus Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Klasse. Geben Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> -Eigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
   
-3.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Eigenschaften fest.  
+3.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Eigenschaften fest.  
   
-4.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>-Eigenschaft auf dem <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Objekt auf **true** festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen an den Server übertragen.  
+4.  (Optional) Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Objekts auf **true**festgelegt ist, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um Änderungen auf dem Server einzutragen.  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>So ändern Sie das Kennwort für die Verwaltungsverbindung zwischen dem Verleger und dem Verteiler  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse.  
   
-3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>-Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
   
     > [!IMPORTANT]  
     >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Optional) Führen Sie die folgenden Schritte aus, um das Kennwort bei jedem Remoteverleger zu ändern, der diesen Verteiler verwendet:  
   
-    1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+    1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-    2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse.  
+    2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse.  
   
-    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 6A erstellte Verbindung fest.  
+    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 6a erstellte Verbindung fest.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
-    5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>-Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
+    5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
   
 ###  <a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel wird gezeigt, wie Verteilungs- und Verteilungsdatenbankeigenschaften geändert werden.  

@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>Partitionierung mit temporären Tabellen
@@ -32,9 +32,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **Aktuelle Tabelle:**  
   
-    -   **SWITCH IN** für die aktuelle Tabelle kann zum Laden und Abfragen von Daten verwendet werden, solange **SYSTEM_VERSIONING** mit **ON** aktiviert ist.  
+    -   **SWITCH IN** für die aktuelle Tabelle kann zum Laden und Abfragen von Daten verwendet werden, solange **SYSTEM_VERSIONING** mit **ON**  
   
-    -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
+    -   **SWITCH OUT** ist nicht zulässig, wenn **SYSTEM_VERSIONING** mit **ON**  
   
 -   **Verlaufstabelle:**  
   

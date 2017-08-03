@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Ein Profil löschen  
   
--   **Follow Up:**  [After Changing Agent Parameters](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Ändern der Agentparameter](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
@@ -234,59 +234,59 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Create_RMO"></a> So erstellen Sie ein neues Agentprofil  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile> -Klasse.  
   
 3.  Legen Sie die folgenden Eigenschaften für das Objekt fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A>: der Name des Profils.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - der Name des Profils.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> : ein <xref:Microsoft.SqlServer.Replication.AgentType>-Wert, der den Typ des Replikations-Agents angibt, für den das Profil erstellt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - ein <xref:Microsoft.SqlServer.Replication.AgentType> -Wert, der den Typ des Replikations-Agents angibt, für den das Profil erstellt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A>: eine Beschreibung des Profils.  
+    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - eine Beschreibung des Profils.  
   
-    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>: Legen Sie diese Eigenschaft auf **TRUE** fest, wenn alle neuen Agentaufträge für diesen <xref:Microsoft.SqlServer.Replication.AgentType> dieses Profil standardmäßig verwenden.  
+    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - Legen Sie diese Eigenschaft auf **true** fest, wenn alle neuen Agentaufträge für diesen <xref:Microsoft.SqlServer.Replication.AgentType> dieses Profil standardmäßig verwenden.  
   
-4.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> auf, um das Profil auf dem Server zu erstellen.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> -Methode auf, um das Profil auf dem Server zu erstellen.  
   
 5.  Sobald das Profil auf dem Server vorhanden ist, können Sie es anpassen, indem Sie Werte für die Parameter für Replikations-Agents hinzufügen, entfernen oder ändern.  
   
-6.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> auf, um das Profil einem vorhandenen Replikationsmerge-Agentauftrag zuzuweisen. Übergeben Sie den Namen der Verteilungsdatenbank für *distributionDBName* und die ID des Auftrags für *agentID*.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> -Methode auf, um das Profil einem vorhandenen Auftrag des Replikations-Agents zuzuordnen. Übergeben Sie den Namen der Verteilungsdatenbank für *distributionDBName* und die ID des Auftrags für *agentID*.  
   
 ###  <a name="Modify_RMO"></a> So ändern Sie ein vorhandenes Agentprofil  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt, das Sie in Schritt 1 erstellt haben.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie das in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt.  
   
-3.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode **false**zurückgibt.  
   
-4.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> auf. Übergeben Sie einen <xref:Microsoft.SqlServer.Replication.AgentType>-Wert, um die zurückgegebenen Profile für einen bestimmten Typ von Replikations-Agent einzugrenzen.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> -Methode auf. Übergeben Sie einen <xref:Microsoft.SqlServer.Replication.AgentType> -Wert, um die zurückgegebenen Profile für einen bestimmten Typ von Replikations-Agent einzugrenzen.  
   
-5.  Rufen Sie das gewünschte <xref:Microsoft.SqlServer.Replication.AgentProfile>-Objekt von dem zurückgegebenen <xref:System.Collections.ArrayList>-Objekt auf, wobei die Eigenschaft <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> mit dem Namen des Profils übereinstimmt.  
+5.  Rufen Sie das gewünschte <xref:Microsoft.SqlServer.Replication.AgentProfile> -Objekt von der zurückgegebenen <xref:System.Collections.ArrayList>ab, wobei die <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> -Eigenschaft des Objekt mit dem Profilnamen übereinstimmt.  
   
 6.  Rufen Sie eine der folgenden Methoden von <xref:Microsoft.SqlServer.Replication.AgentProfile> auf, um das Profil zu ändern:  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A>: fügt dem Profil einen unterstützten Parameter hinzu, wobei es sich bei *name* um den Namen des Replikations-Agent-Parameters und bei *value* um den angegebenen Wert handelt. Rufen Sie zum Aufzählen aller unterstützten Agentparameter für einen bestimmten Agenttyp die Methode <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> auf. Diese Methode gibt ein <xref:System.Collections.ArrayList>-Objekt von <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo>-Objekten zurück, das alle unterstützen Parameter darstellt.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - fügt dem Profil einen unterstützten Parameter hinzu, wobei *name* der Name des Parameters für den Replikations-Agent und *value* der angegebene Wert ist. Rufen Sie zum Aufzählen aller unterstützten Agentparameter für einen bestimmten Agenttyp die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> -Objekten zurück, die alle unterstützten Parameter darstellen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A>: fügt dem Profil einen unterstützen Parameter hinzu, wobei es sich bei *name* um den Namen des Replikations-Agent-Parameters handelt. Rufen Sie zum Aufzählen aller aktuellen Agentparameter, die für das Profil definiert sind, die Methode <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameter>-Objekten zurück, die den vorhandenen Parameter für dieses Profil darstellt.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - entfernt einen vorhandenen Parameter aus dem Profil, wobei *name* der Name des Parameters für den Replikations-Agent ist. Rufen Sie zum Aufzählen aller aktuellen Agentparameter, die für das Profil definiert sind, die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> -Objekten zurück, die den vorhandenen Parameter für dieses Profil darstellen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A>: ändert die Einstellung eines vorhandenen Parameters im Profil, wobei *name* der Name des Agentparameters und *newValue* der Wert ist, in den der Parameter geändert wird. Rufen Sie zum Aufzählen aller aktuellen Agentparameter, die für das Profil definiert sind, die Methode <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameter>-Objekten zurück, die den vorhandenen Parameter für dieses Profil darstellt. Rufen Sie zum Aufzählen aller unterstützten Einstellungen für den Agentparameter die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A>-Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo>-Objekten zurück, die die unterstützen Werte für alle Parameter darstellt.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - ändert die Einstellung eines vorhandenen Parameters im Profil, wobei *name* der Name des Agentparameters und *newValue* der Wert ist, in den der Parameter geändert wird. Rufen Sie zum Aufzählen aller aktuellen Agentparameter, die für das Profil definiert sind, die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> -Objekten zurück, die den vorhandenen Parameter für dieses Profil darstellen. Rufen Sie zum Aufzählen aller unterstützten Einstellungen für den Agentparameter die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> -Objekten zurück, die die unterstützten Werte für alle Parameter darstellen.  
   
 ###  <a name="Delete_RMO"></a> So löschen Sie ein Agentprofil  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.Sqlserver.Management.Common.Serverconnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile>-Klasse. Legen Sie den Namen des Profils für <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile> -Klasse. Legen Sie den Namen des Profils für <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>fest.  
   
-3.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> auf. Wenn diese Methode **false**zurückgibt, wurde ein falscher Name angegeben, oder das Profil ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, wurde ein falscher Name angegeben, oder das Profil ist auf dem Server nicht vorhanden.  
   
-4.  Stellen Sie sicher, dass die Eigenschaft <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> auf <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User> festgelegt ist, wodurch ein Kundenprofil angegeben wird. Entfernen Sie kein Profil, das einen Wert <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> für <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> aufweist.  
+4.  Stellen Sie sicher, dass die <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> -Eigenschaft auf <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>festgelegt ist, womit ein Kundenprofil angegeben wird. Entfernen Sie kein Profil, das einen Wert <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> für <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>aufweist.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A>-Methode auf, um das benutzerdefinierte Profil, das durch dieses Objekt dargestellt wird, vom Server zu entfernen.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> -Methode auf, um das benutzerdefinierte Profil, das durch dieses Objekt dargestellt wird, vom Server zu entfernen.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern der Agentparameter  
  Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten.  
