@@ -1,7 +1,7 @@
 ---
-title: Datenbankfunktionen | Microsoft-Dokumentation
+title: "Relationale Microsoft SQL-Datenbanken – Leitfaden | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/02/2017
+ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
-ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
+ms.translationtype: HT
+ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
+ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# <a name="database-features"></a>Datenbankfunktionen  
+# <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Leitfaden für die Verwendung von relationalen Microsoft SQL-Datenbanken
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  Dieser Abschnitt enthält die Datenbanken zugeordneten Funktionen und Tasks, Datenbankobjekte, Datentypen und die Mechanismen zum Arbeiten mit oder Verwalten von Daten. Diese Informationen beziehen sich auf die meisten Versionen des [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Einzelne Themen geben möglicherweise an, dass einige Features auf einige Plattformen begrenzt sind. Informationen zu bestimmten Plattformen erhalten Sie unter den folgenden Links: 
+  Dieser Abschnitt enthält Funktionen und Tasks, die relationalen Microsoft SQL-Datenbanken zugeordnet sind, sowie Datenbankobjekte, Datentypen und die Mechanismen zum Arbeiten mit oder Verwalten von Daten. Diese Informationen beziehen sich auf die meisten Versionen des [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Einzelne Themen geben möglicherweise an, dass einige Features auf einige Plattformen begrenzt sind. Informationen zu bestimmten Plattformen erhalten Sie unter den folgenden Links: 
   
 - [Lokaler SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) und [Konfiguration von SQL Server](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [Dokumentation zu SQL Server unter Linux](../linux/sql-server-linux-overview.md)  
