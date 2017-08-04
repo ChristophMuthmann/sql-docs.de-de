@@ -1,30 +1,35 @@
 ---
-title: "Identifizieren &#228;hnlicher Datenzeilen mithilfe der Transformation f&#252;r Fuzzygruppierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation für Fuzzygruppierung"
-  - "Übereinstimmung ähnlicher Daten [Integration Services]"
-  - "Ähnliche Datenzeilen [Integration Services]"
-  - "Fuzzyübereinstimmung"
+title: "Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Fuzzy Grouping transformation
+- match similar data [Integration Services]
+- similar data rows [Integration Services]
+- fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Identifizieren &#228;hnlicher Datenzeilen mithilfe der Transformation f&#252;r Fuzzygruppierung
+# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für Fuzzygruppierung hinzufügen und konfigurieren können.  
   
-### So implementieren Sie eine Transformation für Fuzzygruppierung in einem Datenfluss  
+### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>So implementieren Sie eine Transformation für Fuzzygruppierung in einem Datenfluss  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 23
 6.  Wählen Sie im Dialogfeld **Transformations-Editor für Fuzzygruppierung** auf der Registerkarte **Verbindungs-Manager** einen OLE DB-Verbindungs-Manager aus, der eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellt.  
   
     > [!NOTE]  
-    >  Für die Transformation muss eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank vorhanden sein, damit temporäre Tabellen und Indizes erstellt werden können.  
+    >  Für die Transformation muss eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank vorhanden sein, damit temporäre Tabellen und Indizes erstellt werden können.  
   
 7.  Klicken Sie auf die Registerkarte **Spalten** , und aktivieren Sie in der Liste **Verfügbare Eingabespalten** die Kontrollkästchen der Eingabespalten, die zum Identifizieren ähnlicher Zeilen im Dataset verwendet werden sollen.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
   
 9. Aktualisieren Sie optional die Namen von Ausgabespalten in der **Ausgabealias** -Spalte.  
   
-10. Aktualisieren Sie optional die Namen von bereinigten Spalten in der **Gruppenausgabealias**-Spalte.  
+10. Aktualisieren Sie optional die Namen von bereinigten Spalten in der **Gruppenausgabealias** -Spalte.  
   
     > [!NOTE]  
     >  Die Standardnamen von Spalten sind die Namen der Eingabespalten mit dem Suffix "_clean".  
@@ -68,7 +73,7 @@ caps.handback.revision: 23
   
 15. Um anzugeben, wie die Transformation die Zeichenfolgendaten in einer Spalte vergleicht, ändern Sie die Standardauswahl von Vergleichsoptionen in der **Vergleichsflags** -Spalte.  
   
-16. Klicken Sie auf die Registerkarte **Erweitert**, um die Namen der Spalten zu ändern, die die Transformation der Ausgabe für den eindeutigen Zeilenbezeichner (_key_in), den doppelten Zeilenbezeichner (_key_out) und den Ähnlichkeitswert (_score) hinzufügt.  
+16. Klicken Sie auf die Registerkarte **Erweitert** , um die Namen der Spalten zu ändern, die die Transformation der Ausgabe für den eindeutigen Zeilenbezeichner (_key_in), den doppelten Zeilenbezeichner (_key_out) und den Ähnlichkeitswert (_score) hinzufügt.  
   
 17. Passen Sie optional den Schwellenwert für die Ähnlichkeit mithilfe des Schiebereglers an.  
   
@@ -78,10 +83,10 @@ caps.handback.revision: 23
   
 20. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
- [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   

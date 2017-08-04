@@ -1,29 +1,34 @@
 ---
-title: "Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bereitstellungspakete [Master Data Services], erstellen"
-  - "Modelle (Master Data Services), Erstellen eines Bereitstellungspakets"
-  - "Erstellen von Paketen [Master Data Services]"
+title: Erstellen ein Modellbereitstellungspakets mithilfe des Assistenten | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], creating
+- models [Master Data Services], creating a deployment package
+- creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 050a64ae675c953ea54e33bd813f93732804fe1b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten
+# <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten
   Verwenden Sie den [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Modellbereitstellungs-Assistenten, um nur ein Paket der Modellobjekte zu erstellen. Informationen zum Aufnehmen von Daten in ein Paket finden Sie unter [Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   Es muss ein Modell vorhanden sein, aus dem Sie ein Paket erstellen können. Weitere Informationen finden Sie unter [Erstellen eines Modells &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
-### So erstellen Sie ein Modellbereitstellungspaket  
+### <a name="to-create-a-model-deployment-package"></a>So erstellen Sie ein Modellbereitstellungspaket  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 8
   
 8.  Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   [Bereitstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## Siehe auch  
- [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Bereitstellen von Modellen &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -1,37 +1,42 @@
 ---
-title: "Konfiguration von Ausgaben mithilfe des Assistenten f&#252;r langsam ver&#228;nderliche Dimensionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation für langsam veränderliche Dimensionen"
-  - "Langsam veränderliche Dimensionen"
-  - "Assistent für langsam veränderliche Dimensionen"
+title: "Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Konfiguration von Ausgaben mithilfe des Assistenten f&#252;r langsam ver&#228;nderliche Dimensionen
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
   Der Assistent für langsam veränderliche Dimensionen dient als Editor für die Transformation für langsam veränderliche Dimensionen. Das Erstellen und Konfigurieren des Datenflusses für langsam veränderliche Dimensionen kann eine komplexe Aufgabe sein. Der Assistent für langsam veränderliche Dimensionen bietet die einfachste Methode zum Erstellen des Datenflusses für die Ausgaben der Transformation für langsam veränderliche Dimensionen und führt durch die Schritte zum Zuordnen von Spalten, Auswählen von Geschäftsschlüsselspalten, Festlegen von Spaltenänderungsattributen und Konfigurieren der Unterstützung für abgeleitete Dimensionselemente.  
   
  Sie müssen mindestens eine Geschäftsschlüsselspalte in der Dimensionstabelle auswählen und einer Eingabespalte zuordnen. Der Wert des Geschäftsschlüssels verlinkt einen Datensatz in der Quelle mit einem Datensatz in der Dimensionstabelle. Die Transformation verwendet diese Zuordnung, um den Datensatz in der Dimensionstabelle zu finden und um zu ermitteln, ob ein Datensatz neu ist oder geändert wird. Der Geschäftsschlüssel ist im Allgemeinen der Primärschlüssel in der Quelle, es kann sich jedoch auch um einen alternativen Schlüssel handeln, wenn dieser einen Datensatz eindeutig identifiziert und sein Wert unverändert bleibt. Bei dem Geschäftsschlüssel kann es sich auch um einen zusammengesetzten Schlüssel aus mehreren Spalten handeln. Der Primärschlüssel in der Dimensionstabelle ist im Allgemeinen ein Ersatzschlüssel und damit ein numerischer Wert, der automatisch durch eine Identitätsspalte oder durch eine benutzerdefinierte Lösung wie ein Skript generiert wird.  
   
  Bevor Sie den Assistenten für langsam veränderliche Dimensionen ausführen können, müssen Sie dem Datenfluss eine Quelle und eine Transformation für langsam veränderliche Dimensionen hinzufügen, und dann die Ausgabe von der Quelle mit der Eingabe der Transformation für langsam veränderliche Dimensionen verbinden. Optional kann der Datenfluss andere Transformationen zwischen der Datenquelle und der Transformation für langsam veränderliche Dimensionen einschließen.  
   
- Doppelklicken Sie auf die Transformation für langsam veränderliche Dimensionen, um den Assistenten für langsam veränderliche Dimensionen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer zu öffnen.  
+ Doppelklicken Sie auf die Transformation für langsam veränderliche Dimensionen, um den Assistenten für langsam veränderliche Dimensionen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer zu öffnen.  
   
-## Erstellen von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
+## <a name="creating-slowly-changing-dimension-outputs"></a>Erstellen von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
   
-#### So erstellen Sie Ausgaben für die Transformation für langsam veränderliche Dimensionen  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>So erstellen Sie Ausgaben für die Transformation für langsam veränderliche Dimensionen  
   
 1.  Wählen Sie den Verbindungs-Manager für den Zugriff auf die Datenquelle aus, die die zu aktualisierende Dimensionstabelle enthält.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      Im folgenden Diagramm wird ein Beispiel eines Datenflusses dargestellt, der Änderungen für feste Attribute, veränderliche Attribute und Verlaufsattribute sowie abgeleitete Elemente und Änderungen an übereinstimmenden Datensätzen unterstützt.  
   
-     ![Datenfluss vom Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Datenfluss vom Assistenten für langsam veränderliche Dimensionen")  
+     ![Datenfluss vom Assistenten für langsam veränderliche](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Datenfluss vom Assistenten für langsam veränderliche")  
   
-## Aktualisieren von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
+## <a name="updating-slowly-changing-dimension-outputs"></a>Aktualisieren von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
  Die einfachste Methode, um die Konfiguration von Ausgaben für die Transformation für langsam veränderliche Dimensionen zu aktualisieren, ist die erneute Ausführung des Assistenten für langsam veränderliche Dimensionen und das Ändern der Eigenschaften auf den Seiten des Assistenten. Sie können die Transformation für langsam veränderliche Dimensionen auch im Dialogfeld **Erweiterter Editor** oder programmgesteuert aktualisieren.  
   
-## Siehe auch  
- [Transformation für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

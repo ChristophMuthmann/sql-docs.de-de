@@ -1,31 +1,36 @@
 ---
-title: "Ziel-Editor f&#252;r SQL (Seite Erweitert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdestadapter.advanced.f1"
-helpviewer_keywords: 
-  - "Ziel-Editor für SQL"
+title: "Ziel-Editor für SQL (Seite erweitert) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
+helpviewer_keywords:
+- SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e279b5bc6ff340323647d1a93daeb006ec4c3cbf
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r SQL (Seite Erweitert)
+# <a name="sql-destination-editor-advanced-page"></a>Ziel-Editor für SQL (Seite Erweitert)
   Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für SQL** können Sie Optionen für die erweiterte Masseneinfügung angeben.  
   
  Weitere Informationen zum SQL Server-Ziel finden Sie unter [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Identität beibehalten**  
  Gibt an, ob der Task Werte in Identitätsspalten einfügen soll. Der Standardwert dieser Eigenschaft ist **False**.  
   
@@ -45,19 +50,19 @@ caps.handback.revision: 28
  Gibt die erste einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
->  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften**, im Dialogfeld **Erweiterter Editor** und im Objektmodell den Wert -1.  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
  **Letzte Zeile**  
  Gibt die letzte einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
->  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften**, im Dialogfeld **Erweiterter Editor** und im Objektmodell den Wert -1.  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
  **Maximale Anzahl von Fehlern**  
  Gibt die Anzahl der Fehler an, die auftreten können, bevor die Masseneinfügung abgebrochen wird. Der Standardwert dieser Eigenschaft ist **–1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
->  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften**, im Dialogfeld **Erweiterter Editor** und im Objektmodell den Wert -1.  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
   
  **Timeout**  
  Gibt die Anzahl der Sekunden an, die abgewartet werden, bevor die Masseneinfügung aufgrund eines Timeouts abgebrochen wird.  
@@ -65,10 +70,10 @@ caps.handback.revision: 28
  **Spalten sortieren**  
  Geben Sie die Namen der zu sortierenden Spalten an. Jede Spalte kann in auf- oder absteigender Reihenfolge sortiert werden. Wenn Sie mehrere Spalten verwenden, nach denen sortiert werden soll, trennen Sie die Namen in der Liste mit Kommas.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für SQL &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für SQL &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für SQL &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für SQL &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
  [Massenladen von Daten mithilfe des SQL Server-Ziels](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

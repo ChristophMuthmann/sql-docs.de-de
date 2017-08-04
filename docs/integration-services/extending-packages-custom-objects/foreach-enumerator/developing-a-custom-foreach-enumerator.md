@@ -1,0 +1,75 @@
+---
+title: Entwickeln eines benutzerdefinierten ForEach-Enumerators | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- custom foreach enumerators [Integration Services]
+- custom foreach enumerators [Integration Services], about custom foreach enumerators
+- foreach enumerators [Integration Services]
+ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
+caps.latest.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 193fc8958826ac2bc382d5717a4f72690607a217
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
+---
+# <a name="developing-a-custom-foreach-enumerator"></a>Entwickeln eines benutzerdefinierten ForEach-Enumerators
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] verwendet Foreach-Enumeratoren, um die Elementen in einer Auflistung zu durchlaufen und die gleichen Tasks für jedes Element auszuführen. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Vielzahl von Foreach-Enumeratoren, die die am häufigsten verwendeten Auflistungen unterstützen. Dazu gehören alle Dateien in einem Ordner, alle Tabellen in einer Datenbank oder alle Elemente einer in einer Paketvariablen gespeicherten Liste. Sollten die verfügbaren Foreach-Enumeratoren und Auflistungen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Foreach-Enumerator erstellen.  
+  
+ Zum Erstellen eines benutzerdefinierten Foreach-Enumerators müssen Sie eine Klasse erstellen, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>-Basisklasse erbt, das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut auf die neue Klasse anwenden und die Hauptmethoden und -eigenschaften der Basisklasse, einschließlich der <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>-Methode, überschreiben.  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ In diesem Abschnitt wird beschrieben, wie Sie einen benutzerdefinierten Foreach-Enumerator mit zugehöriger Benutzeroberfläche erstellen, konfigurieren und codieren.  
+  
+ [Erstellen eines benutzerdefinierten ForEach-Enumerators](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
+ Beschreibt die Erstellung der Klassen für ein benutzerdefiniertes Foreach-Enumeratorprojekt.  
+  
+ [Codieren eines benutzerdefinierten ForEach-Enumerators](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
+ Beschreibt die Implementierung eines benutzerdefinierten Foreach-Enumerators durch Überschreiben der Methoden und Eigenschaften der Basisklasse.  
+  
+ [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten foreach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ Beschreibt die Implementierung der Benutzeroberflächenklasse und des Formulars, das für die Konfiguration des benutzerdefinierten Foreach-Enumerators verwendet wird.  
+  
+## <a name="related-topics"></a>Verwandte Themen  
+  
+### <a name="information-common-to-all-custom-objects"></a>Informationen, die für alle benutzerdefinierten Objekte gelten  
+ Informationen zu allen Arten benutzerdefinierter Objekte, die Sie in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] erstellen können, finden Sie in den folgenden Themen:  
+  
+ [Entwickeln benutzerdefinierter Objekte für Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
+ Beschreibt die grundlegenden Schritte bei der Implementierung aller Arten benutzerdefinierter Objekte für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+  
+ [Beibehalten von benutzerdefinierten Objekten](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
+ Beschreibt die benutzerdefinierte Persistenz und erklärt, wann diese notwendig ist.  
+  
+ [Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
+ Beschreibt die Techniken für das Erstellen, Signieren, Bereitstellen und Debuggen von benutzerdefinierten Objekten.  
+  
+### <a name="information-about-other-custom-objects"></a>Informationen zu anderen benutzerdefinierten Objekten  
+ Informationen zu den anderen Arten benutzerdefinierter Objekte, die Sie, in erstellen können [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], finden Sie unter den folgenden Themen:  
+  
+ [Entwickeln eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ Erläutert die Programmierung benutzerdefinierter Tasks.  
+  
+ [Entwickeln eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
+ Erläutert die Programmierung benutzerdefinierter Verbindungs-Manager.  
+  
+ [Entwickeln eines benutzerdefinierten Protokollanbieters](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
+ Erläutert die Programmierung benutzerdefinierter Protokollanbieter.  
+  
+ [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ Erläutert die Programmierung benutzerdefinierter Datenflussquellen, Transformationen und Ziele.  
+ 

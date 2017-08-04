@@ -1,30 +1,35 @@
 ---
-title: "Rohdatendatei-Ziel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "Anfügeoptionen [Integration Services]"
-  - "Ziele [Integration Services], Rohdatendatei"
-  - "Rohdaten [Integration Services]"
-  - "Schreiben von Rohdaten"
-  - "Rohdatendatei-Ziel"
+title: Rohdatendatei-Ziel | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Rohdatendatei-Ziel
+# <a name="raw-file-destination"></a>Rohdatendatei-Ziel
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
   
  Zusätzlich zur Option, Rohdatendateien in eine Datei schreiben zu können, können Sie auch das Rohdatendatei-Ziel verwenden, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Mithilfe der Rohdatendatei-Quelle werden Rohdaten abgerufen, die zuvor vom Ziel geschrieben wurden. Sie können die Rohdatendatei-Quelle zudem auf die Nur-Metadaten-Datei verweisen.  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  Diese Quelle hat nur eine reguläre Eingabe. Eine Fehlerausgabe wird nicht unterstützt.  
   
-## Optionen zum Anfügen und zum Erstellen einer neuen Datei  
+## <a name="append-and-new-file-options"></a>Optionen zum Anfügen und zum Erstellen einer neuen Datei  
  Die „WriteOption“-Eigenschaft schließt Optionen zum Anfügen von Daten an eine vorhandene Datei oder zum Erstellen einer neuen Datei ein.  
   
  In der folgenden Tabelle werden die verfügbaren Optionen für die „WriteOption“-Eigenschaft beschrieben.  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  Ersetzen Sie RawFile1 durch RawFile2.  
   
-### Verwenden des Rohdatendatei-Ziels in einer Schleife  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>Verwenden des Rohdatendatei-Ziels in einer Schleife  
  Wenn sich der Datenfluss, der das Rohdatendatei-Ziel verwendet, in einer Schleife befindet, wird die Datei möglicherweise einmal erstellt, und Daten werden an die Datei angefügt, wenn die Schleife wiederholt wird. Wenn die Daten an eine Datei angefügt werden, muss die anzufügende Datei mit dem Format der vorhandenen Datei übereinstimmen.  
   
  Um die Datei in der ersten Iteration einer Schleife zu erstellen, und dann die Zeilen in der nachfolgenden Iteration der Schleife anzufügen, müssen Sie Folgendes zur Entwurfszeit ausführen:  
   
-1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways** fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
+1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways**fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
   
-2.  Setzen Sie die „WriteOption“-Eigenschaft auf **Append** zurück, und legen Sie die „ValidateExternalMetadata“-Eigenschaft auf **False** fest.  
+2.  Setzen Sie die „WriteOption“-Eigenschaft auf **Append** zurück, und legen Sie die „ValidateExternalMetadata“-Eigenschaft auf **False**fest.  
   
  Wenn Sie die Option **TruncateAppend** statt der Option **Append** verwenden, werden die Zeilen abgeschnitten, die in einer vorherigen Iteration hinzugefügt wurden, und dann neue Zeilen angefügt. Das Verwenden der Option **TruncateAppend** erfordert auch, dass die Daten im Dateiformat übereinstimmen.  
   
-## Konfiguration des Rohdatendatei-Ziels  
+## <a name="configuration-of-the-raw-file-destination"></a>Konfiguration des Rohdatendatei-Ziels  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften der Rohdatendatei](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Informationen zum Festlegen der Eigenschaften der Komponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), auf sqlservercentral.com  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Rohdatendatei-Quelle](../../integration-services/data-flow/raw-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

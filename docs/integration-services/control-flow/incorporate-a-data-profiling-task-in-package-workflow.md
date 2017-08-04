@@ -1,24 +1,29 @@
 ---
-title: "Einschlie&#223;en einer Datenprofilerstellungs-Tasks in den Paket-Workflow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenprofilerstellungs-Task [Integration Services], Verwenden der Ausgabe im Workflow"
+title: "Einschließen einer Datenprofilerstellungs-Task im Paket-Workflow | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Einschlie&#223;en einer Datenprofilerstellungs-Tasks in den Paket-Workflow
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
   
  Nachdem Kriterien für die Datenqualität festgelegt wurden, möchten Sie jedoch möglicherweise eine regelmäßige Analyse und Bereinigung der Datenquelle automatisieren. Betrachten Sie folgende Szenarios:  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  Nachdem Sie einen Workflow vorliegen haben, in den Sie den Datenflusstask integrieren können, müssen Sie sich mit den Schritten, die zum Hinzufügen dieses Tasks erforderlich sind, vertraut machen. Im nächsten Abschnitt wird der allgemeine Prozess zur Integration des Datenflusstasks beschrieben. In den beiden letzten Abschnitten wird beschrieben, wie Sie den Datenflusstask entweder direkt mit einer Datenquelle oder mit transformierten Daten aus dem Datenfluss verbinden.  
   
-## Definieren eines allgemeinen Workflows für den Datenflusstask  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>Definieren eines allgemeinen Workflows für den Datenflusstask  
  Das folgende Verfahren erklärt den allgemeinen Ansatz zur Verwendung der Ausgabe des Datenprofilerstellungs-Tasks im Workflow eines Pakets.  
   
-#### So verwenden Sie die Ausgabe des Datenprofilerstellungs-Tasks programmgesteuert in einem Paket  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>So verwenden Sie die Ausgabe des Datenprofilerstellungs-Tasks programmgesteuert in einem Paket  
   
 1.  Fügen Sie den Datenprofilerstellungs-Task zu einem Paket hinzu, und konfigurieren Sie ihn.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  In den folgenden Abschnitten wird beschrieben, wie dieser allgemeine Workflow auf Profildaten angewendet wird, die direkt aus einer externen Datenquelle oder transformiert aus dem Datenflusstask stammen. In diesen Abschnitten wird außerdem erklärt, wie die Eingabe- und Ausgabeanforderungen des Datenflusstasks behandelt werden.  
   
-## Direktes Verbinden des Datenprofilerstellungs-Tasks mit einer externen Datenquelle  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>Direktes Verbinden des Datenprofilerstellungs-Tasks mit einer externen Datenquelle  
  Der Datenprofilerstellungs-Task erstellt Profile für Daten, die direkt aus einer Datenquelle stammen.  Zur Veranschaulichung dieser Funktion wird im folgenden Beispiel anhand des Datenprofilerstellungs-Tasks ein Profil für ein Spalten-NULL-Verhältnis für die Spalten der Person.Address-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank berechnet. Anschließend werden die Ergebnisse mithilfe eines Skripttasks aus der Ausgabedatei abgerufen, und Paketvariablen, die zur Steuerung des Workflows dienen können, werden aufgefüllt.  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   Konfigurieren der Rangfolgeneinschränkungen, mit denen gesteuert wird, welche Downstream-Verzweigungen im Workflow basierend auf den Ergebnissen des Datenprofilerstellungs-Tasks ausgeführt werden.  
   
-### Konfigurieren der Verbindungs-Manager  
+### <a name="configure-the-connection-managers"></a>Konfigurieren der Verbindungs-Manager  
  Dieses Beispiel umfasst zwei Verbindungs-Manager:  
   
 -   Einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank herstellt.  
   
 -   Einen Dateiverbindungs-Manager, der die Ausgabedatei erstellt, in der die Ergebnisse des Datenprofilerstellungs-Tasks gespeichert werden.  
   
-##### So konfigurieren Sie die Verbindungs-Manager  
+##### <a name="to-configure-the-connection-managers"></a>So konfigurieren Sie die Verbindungs-Manager  
   
 1.  Erstellen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein neues [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket.  
   
-2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
+2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank.  
   
-     Standardmäßig trägt der Verbindungs-Manager den folgenden Namen: \<Servername>.AdventureWorks1.  
+     Der Verbindungs-Manager hat standardmäßig die folgenden Namen: \<Servername >. "AdventureWorks1".  
   
 3.  Fügen Sie einen Dateiverbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für das Erstellen der Ausgabedatei für den Datenprofilerstellungs-Task.  
   
      In diesem Beispiel wird der Dateiname "DataProfile1.xml" verwendet. Standardmäßig ist der Name des Verbindungs-Managers mit dem Dateinamen identisch.  
   
-### Konfigurieren der Paketvariablen  
+### <a name="configure-the-package-variables"></a>Konfigurieren der Paketvariablen  
  In diesem Beispiel werden zwei Paketvariablen verwendet:  
   
 -   Die ProfileConnectionName-Variable übergibt den Namen des Dateiverbindungs-Managers an den Skripttask.  
   
 -   Die AddressLine2NullRatio-Variable übergibt das berechnete NULL-Verhältnis für diese Spalte vom Skripttask an das Paket.  
   
-##### So konfigurieren Sie die Paketvariablen, die Profilergebnisse speichern  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>So konfigurieren Sie die Paketvariablen, die Profilergebnisse speichern  
   
 -   Fügen Sie im Fenster **Variablen** die beiden folgenden Paketvariablen hinzu, und konfigurieren Sie sie:  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   Geben Sie den Namen **AddressLine2NullRatio**für die andere Variable ein, und legen Sie den Typ dieser Variablen auf **Double**fest.  
   
-### Konfigurieren des Datenprofilerstellungs-Tasks  
+### <a name="configure-the-data-profiling-task"></a>Konfigurieren des Datenprofilerstellungs-Tasks  
  Der Datenprofilerstellungs-Task muss wie folgt konfiguriert werden:  
   
 -   Um die Daten zu verwenden, die der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager als Eingabe angibt.  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   Um die Profilergebnisse in der Datei zu speichern, die dem Dateiverbindungs-Manager zugeordnet ist.  
   
-##### So konfigurieren Sie den Datenprofilerstellungs-Task  
+##### <a name="to-configure-the-data-profiling-task"></a>So konfigurieren Sie den Datenprofilerstellungs-Task  
   
 1.  Fügen Sie der Ablaufsteuerung einen Datenprofilerstellungs-Task hinzu.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  Schließen Sie den Editor für den Datenprofilerstellungs-Task.  
   
-### Konfigurieren des Skripttasks  
+### <a name="configure-the-script-task"></a>Konfigurieren des Skripttasks  
  Der Skripttask muss so konfiguriert werden, dass die Ergebnisse aus der Ausgabedatei abgerufen und die zuvor konfigurierten Paketvariablen aufgefüllt werden.  
   
-##### So konfigurieren Sie den Skripttask  
+##### <a name="to-configure-the-script-task"></a>So konfigurieren Sie den Skripttask  
   
 1.  Fügen Sie der Ablaufsteuerung einen Skripttask hinzu.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  Schließen Sie die Skriptentwicklungsumgebung, und schließen Sie dann den Skripttask-Editor.  
   
-#### Alternativer Code – Lesen der Profilausgabe aus einer Variablen  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Alternativer Code – Lesen der Profilausgabe aus einer Variablen  
  Das vorherige Verfahren zeigt, wie die Ausgabe des Datenprofilerstellungs-Tasks aus einer Datei geladen wird. Eine alternative Methode wäre allerdings, diese Ausgabe aus einer Paketvariablen zu laden. Um die Ausgabe aus einer Variablen zu laden, müssen Sie den Beispielcode wie folgt ändern:  
   
 -   Rufen Sie die **LoadXml** -Methode der **XmlDocument** -Klasse statt der **Load** -Methode auf.  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### Konfigurieren der Rangfolgeneinschränkungen  
+### <a name="configure-the-precedence-constraints"></a>Konfigurieren der Rangfolgeneinschränkungen  
  Die Rangfolgeneinschränkungen müssen so konfiguriert werden, dass gesteuert wird, welche Downstream-Verzweigungen im Workflow basierend auf den Ergebnissen des Datenprofilerstellungs-Tasks ausgeführt werden.  
   
-##### So konfigurieren Sie die Rangfolgeneinschränkungen  
+##### <a name="to-configure-the-precedence-constraints"></a>So konfigurieren Sie die Rangfolgeneinschränkungen  
   
 -   Verwenden Sie in den Rangfolgeneinschränkungen, mit denen der Skripttask mit Downstream-Verzweigungen verbunden wird, Ausdrücke, die den Workflow anhand der Werte der Variablen steuern.  
   
      Sie können beispielsweise den **Auswertungsvorgang** der Rangfolgeneinschränkung auf **Ausdruck und Einschränkung**festlegen. Dann können Sie `@AddressLine2NullRatio < .90` als Wert des Ausdrucks verwenden. Dadurch folgt der Workflow dem ausgewählten Pfad, wenn die vorherigen Tasks erfolgreich sind und wenn der Anteil der NULL-Werte in der ausgewählten Spalte unter 90 % beträgt.  
   
-## Verbinden des Datenprofilerstellungs-Tasks mit transformierten Daten aus dem Datenfluss  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Verbinden des Datenprofilerstellungs-Tasks mit transformierten Daten aus dem Datenfluss  
  Statt direkt ein Profil der Daten aus einer Datenquelle zu erstellen, können Sie ein Profil für Daten erstellen, die bereits geladen und im Datenfluss transformiert wurden. Der Datenprofilerstellungs-Task funktioniert jedoch nur mit persistenten Daten, nicht mit Daten im Arbeitsspeicher. Aus diesem Grund müssen Sie zuerst eine Zielkomponente verwenden, um die transformierten Daten in einer Stagingtabelle zu speichern.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  Das folgende Verfahren bietet den allgemeinen Ansatz zur Verwendung des Datenprofilerstellungs-Tasks, um ein Profil der vom Datenfluss transformierten Daten zu erstellen. Viele dieser Schritte sind identisch mit den bereits für die Erstellung eines Profils für Daten, die direkt aus einer externen Datenquelle stammen, beschriebenen. Schauen Sie sich diese bereits beschriebenen Schritte an, um weitere Informationen zum Konfigurieren der verschiedenen Komponenten zu erhalten.  
   
-#### So verwenden Sie den Datenprofilerstellungs-Task im Datenfluss  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>So verwenden Sie den Datenprofilerstellungs-Task im Datenfluss  
   
 1.  Erstellen Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 24
   
 7.  Verwenden Sie in den Rangfolgeneinschränkungen, mit denen der Skripttask mit Downstream-Verzweigungen verbunden wird, Ausdrücke, die den Workflow anhand der Werte der Variablen steuern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   

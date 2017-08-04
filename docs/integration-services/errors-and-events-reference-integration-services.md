@@ -1,35 +1,40 @@
 ---
-title: "Fehler- und Ereignisreferenz (Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services-Pakete, Ereignisse"
-  - "Ereignisse [Integration Services]"
-  - "Fehler [Integration Services]"
-  - "Integration Services, Fehler"
+title: Fehler- und Ereignisreferenz (Integration Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Fehler- und Ereignisreferenz (Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
   Dieser Abschnitt der Dokumentation enthält Informationen zu verschiedenen Fehlern und Ereignissen, die im Zusammenhang mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]auftreten können. Für Fehlermeldungen sind Informationen zu Ursache und Lösung enthalten.  
   
- Weitere Informationen zu [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen, einschließlich einer Liste der wichtigsten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehler und deren Beschreibungen, finden Sie unter [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md). Zum aktuellen Zeitpunkt enthält diese Liste jedoch noch keine Informationen zur Problembehandlung.  
+ Weitere Informationen zu [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen, einschließlich einer Liste der wichtigsten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehler und deren Beschreibungen, finden Sie unter [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md). Zum aktuellen Zeitpunkt enthält diese Liste jedoch noch keine Informationen zur Problembehandlung.  
   
 > [!IMPORTANT]  
 >  Viele Fehlermeldungen, die Ihnen bei der Verwendung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] angezeigt werden, stammen von anderen Komponenten wie OLE DB-Anbietern, anderen Datenbankkomponenten wie der [!INCLUDE[ssDE](../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oder von anderen Diensten bzw. Komponenten wie dem Dateisystem, dem SMTP-Server oder Microsoft Message Queueing. Informationen zu diesen externen Fehlermeldungen finden Sie in der Dokumentation der entsprechenden Komponenten.  
   
-## Fehlermeldungen  
+## <a name="error-messages"></a>Fehlermeldungen  
   
 |Symbolischer Name des Fehlers|Description|  
 |----------------------------|-----------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|Gibt an, dass eine Transformation für Cachetransformation versucht, Daten in den Cache im Arbeitsspeicher zu schreiben, während gleichzeitig eine Transformation für Suche Daten aus dem Cache im Arbeitsspeicher liest.|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|Gibt an, dass die Spaltenmetadaten in der Datenquelle nicht mit den Spaltenmetadaten in der Quell- oder Zielkomponente übereinstimmen, die mit der Datenquelle verbunden ist.|  
   
-## Ereignisse (SQLISPackage)  
+## <a name="events-sqlispackage"></a>Ereignisse (SQLISPackage)  
  Weitere Informationen finden Sie unter [Von einem Integration Services-Paket protokollierte Ereignisse](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
 |Ereignis|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 20
 |SQLISPackage_12551|Gibt an, dass die Ausführung eines Pakets nicht abgeschlossen werden konnte und beendet wurde.|  
 |SQLISPackage_12557|Gibt an, dass ein Paket zu Ende ausgeführt wurde.|  
   
-## Ereignisse (SQLISService)  
+## <a name="events-sqlisservice"></a>Ereignisse (SQLISService)  
  Weitere Informationen finden Sie unter [Vom Integration Services-Dienst protokollierte Ereignisse](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
 |Ereignis|Description|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|Gibt an, dass die Konfigurationsdatei nicht gelesen werden konnte oder nicht gültig ist.|  
 |SQLISService_274|Gibt an, dass der Registrierungseintrag, der den Speicherort der Konfigurationsdatei enthält, nicht vorhanden oder leer ist.|  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "DATEDIFF (SSIS-Ausdruck) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF-Anweisung"
-  - "Datumsangaben [Integration Services], DATEDIFF"
+title: DATEDIFF (SSIS-Ausdruck) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF (SSIS-Ausdruck)
+# <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS-Ausdruck)
   Gibt die Anzahl von Datums- und Zeiteinheiten zurück, die zwischen zwei angegebenen Daten überschritten wurden. Der *datepart* -Parameter identifiziert, welche Datums- und Zeiteinheiten verglichen werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *datepart*  
  Der Parameter, der angibt, welche Datumseinheit verglichen und für welche Datumseinheit ein Wert zurückgegeben werden soll.  
   
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  Das Enddatum des Intervalls.  
   
-## Ergebnistypen  
+## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden.  
   
-|Datumseinheit|Abkürzungen|  
+|datepart|Abkürzungen|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  Wenn das Enddatum vor dem Startdatum liegt, gibt die Funktion eine negative Zahl zurück. Wenn das Startdatum und das Enddatum identisch sind oder im gleichen Zeitraum liegen, gibt die Funktion Null zurück.  
   
-## Beispiele für SSIS-Ausdrücke  
+## <a name="ssis-expression-examples"></a>Beispiele für SSIS-Ausdrücke  
  In diesem Beispiel wird die Anzahl von Tagen zwischen zwei Datumsliteralen berechnet. Falls das Datum das Format "mm/dd/yyyy" aufweist, wird 7 zurückgegeben.  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## Siehe auch  
- [DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Siehe auch  
+ [DATEADD &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [Tag &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [Monat &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [Jahr &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

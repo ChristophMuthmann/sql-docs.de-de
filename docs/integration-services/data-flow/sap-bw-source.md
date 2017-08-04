@@ -1,22 +1,27 @@
 ---
-title: "SAP BW-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SAP BW-Quelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW-Quelle
+# <a name="sap-bw-source"></a>SAP BW-Quelle
   Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW-Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket verfügbar.  
   
  Diese Quelle weist eine Ausgabe und eine Fehlerausgabe auf.  
@@ -43,19 +48,19 @@ caps.handback.revision: 10
   
 1.  Melden Sie sich über die SAP GUI bei SAP NetWeaver BW an, geben Sie den Transaktionscode SM59 ein, und erstellen Sie ein RFC-Ziel:  
   
-    1.  Wählen Sie für **Verbindungstyp** die Option **TCP/IP** aus.  
+    1.  Wählen Sie für **Verbindungstyp**die Option **TCP/IP**aus.  
   
     2.  Wählen Sie für **Activation Type**(Aktivierungstyp) die Option **Registered Server Program**(Registriertes Serverprogramm) aus.  
   
-    3.  Wählen Sie für **Communication Type with Target System** (Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)** (Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
+    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)**(Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
   
     4.  Weisen Sie eine entsprechende Programm-ID zu.  
   
 2.  Erstellen Sie ein Open Hub-Ziel:  
   
-    1.  Wechseln Sie zur Administrator-Workbench (Transaktionscode RSA1), und wählen Sie im linken Bereich die Option **Open Hub Destination** (Open Hub-Ziel) aus.  
+    1.  Wechseln Sie zur Administrator-Workbench (Transaktionscode RSA1), und wählen Sie im linken Bereich die Option **Open Hub Destination**(Open Hub-Ziel) aus.  
   
-    2.  Klicken Sie im mittleren Bereich mit der rechten Maustaste auf eine InfoArea, und wählen Sie anschließend **Create Open Hub Destination** (Open Hub-Ziel erstellen) aus.  
+    2.  Klicken Sie im mittleren Bereich mit der rechten Maustaste auf eine InfoArea, und wählen Sie anschließend **Create Open Hub Destination**(Open Hub-Ziel erstellen) aus.  
   
     3.  Wählen Sie für **Destination Type**(Zieltyp) die Option **Third Party Tool**(Drittanbietertool) aus, und geben Sie das zuvor erstellte RFC-Ziel ein.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
   
 3.  Erstellen Sie einen Datenübertragungsprozess (DTP):  
   
-    1.  Klicken Sie im mittleren Bereich der InfoArea mit der rechten Maustaste auf das zuvor erstellte Ziel, und wählen Sie anschließend **Create data transfer process** (Datenübertragungsprozess erstellen) aus.  
+    1.  Klicken Sie im mittleren Bereich der InfoArea mit der rechten Maustaste auf das zuvor erstellte Ziel, und wählen Sie anschließend **Create data transfer process**(Datenübertragungsprozess erstellen) aus.  
   
     2.  Konfigurieren, speichern, und aktivieren Sie den Datenübertragungsprozess.  
   
@@ -115,16 +120,16 @@ caps.handback.revision: 10
   
  Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Verwenden von SQL Server 2008 Integration Services und SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
   
-### Konfigurieren der Quelle mit dem SSIS-Designer  
+### <a name="using-the-ssis-designer-to-configure-the-source"></a>Konfigurieren der Quelle mit dem SSIS-Designer  
  Um weitere Informationen zu den Eigenschaften der SAP BW-Quelle zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, klicken Sie auf eines der folgenden Themen:  
   
--   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für SAP BW &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Quellen-Editor für SAP BW &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Quellen-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite Erweitert&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Quellen-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Während Sie die SAP BW-Quelle konfigurieren, können Sie auch verschiedene Dialogfelder verwenden, um SAP NetWeaver BW-Objekte zu suchen oder die Quelldaten in der Vorschau anzuzeigen. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu diesen Dialogfeldern zu erhalten:  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 10
   
 -   [Vorschau](../../integration-services/data-flow/preview.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

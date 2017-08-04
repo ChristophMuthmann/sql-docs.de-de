@@ -1,34 +1,39 @@
 ---
-title: "&#196;ndern des Namens einer abgeleiteten Hierarchie (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "abgeleitete Hierarchien, Ändern des Namens"
+title: "Ändern des Namens einer abgeleiteten Hierarchie (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc5f01765ac92ad49b45fbd48b035d8303fd609a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#196;ndern des Namens einer abgeleiteten Hierarchie (Master Data Services)
+# <a name="change-a-derived-hierarchy-name-master-data-services"></a>Ändern des Namens einer abgeleiteten Hierarchie (Master Data Services)
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen einer abgeleiteten Hierarchie ändern.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### So ändern Sie den Namen einer abgeleiteten Hierarchie  
+### <a name="to-change-a-derived-hierarchy-name"></a>So ändern Sie den Namen einer abgeleiteten Hierarchie  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 6
   
 8.  Klicken Sie auf **Abgeleitete Hierarchie speichern**.  
   
-## Siehe auch  
- [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Löschen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Abgeleitete Hierarchien &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [Erstellen Sie eine abgeleitete Hierarchie &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Löschen einer abgeleiteten Hierarchie &#40; Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
   
   

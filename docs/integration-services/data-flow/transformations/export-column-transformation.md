@@ -1,34 +1,39 @@
 ---
-title: "Transformation f&#252;r das Exportieren von Spalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exportcolumntrans.f1"
-helpviewer_keywords: 
-  - "Exportieren von Daten"
-  - "Anfügeoptionen [Integration Services]"
-  - "Transformation für das Exportieren von Spalten [Integration Services]"
-  - "Spalten [Integration Services], exportieren"
-  - "Einfügen von Daten"
-  - "Abschneideoptionen [Integration Services]"
+title: Exportieren Sie Spaltentransformation | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exportcolumntrans.f1
+helpviewer_keywords:
+- exporting data
+- append options [Integration Services]
+- Export Column transformation [Integration Services]
+- columns [Integration Services], exporting
+- inserting data
+- truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation f&#252;r das Exportieren von Spalten
+# <a name="export-column-transformation"></a>Transformation für das Exportieren von Spalten
   Die Transformation für das Exportieren von Spalten liest Daten in einem Datenfluss und fügt sie in eine Datei ein. Wenn z. B. der Datenfluss Produktinformationen enthält, wie z. B. ein Image jedes Produkts, könnten Sie mithilfe der Transformation für das Exportieren von Spalten die Bilder in Dateien speichern.  
   
-## Optionen zum Anfügen und Abschneiden  
+## <a name="append-and-truncate-options"></a>Optionen zum Anfügen und Abschneiden  
  In der folgenden Tabelle wird beschrieben, wie die Einstellungen für die Optionen zum Anfügen und Abschneiden die Ergebnisse beeinflussen.  
   
 |Anfügen|Abschneiden|Die Datei ist vorhanden|Ergebnisse|  
@@ -42,7 +47,7 @@ caps.handback.revision: 45
 |Wahr|False|Ja|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
 |Wahr|Wahr|Ja|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
   
-## Konfiguration der Transformation für das Exportieren von Spalten  
+## <a name="configuration-of-the-export-column-transformation"></a>Konfiguration der Transformation für das Exportieren von Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für das Exportieren von Spalten zu konfigurieren:  
   
 -   Geben Sie die Datenspalten und die Spalten an, die den Pfad von Dateien enthalten, in die die Daten geschrieben werden sollen.  
@@ -64,10 +69,10 @@ caps.handback.revision: 45
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   

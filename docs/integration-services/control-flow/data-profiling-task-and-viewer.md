@@ -1,26 +1,31 @@
 ---
-title: "Datenprofilerstellungs-Task und -Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenprofilerstellungs-Aufgabe [Integration Services], Informationen zur Datenprofilerstellung"
-  - "Datenprofilerstellung"
-  - "Profilerstellungsdaten"
+title: Datenprofilerstellungs-Task und -Viewer | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], about data profiling
+- data profiling
+- profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Datenprofilerstellungs-Task und -Viewer
+# <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
   Der Datenprofilerstellungs-Task bietet Funktionen zur Datenprofilerstellung beim Extrahieren, Transformieren und Laden von Daten. Mit dem Datenprofilerstellungs-Task können Sie die folgenden Vorteile erzielen:  
   
 -   Sie können die Quelldaten effizienter analysieren.  
@@ -32,7 +37,7 @@ caps.handback.revision: 33
 > [!IMPORTANT]  
 >  Der Datenprofilerstellungs-Task funktioniert nur mit Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert werden. Dieser Task funktioniert nicht mit Datenquellen von Drittanbietern oder dateibasierten Datenquellen.  
   
-## Übersicht über die Datenprofilerstellung  
+## <a name="data-profiling-overview"></a>Übersicht über die Datenprofilerstellung  
  Datenqualität ist für jedes Unternehmen von Bedeutung. Da Unternehmen zusätzlich zu ihren Transaktionssystemen analytische Systeme und Business Intelligence-Systeme erstellen, hängt die Zuverlässigkeit von Key Performance Indicators (KPIs) und Data Mining-Vorhersageabfragen vollständig von der Gültigkeit der Daten ab, auf denen diese Systeme basieren. Obwohl die Bedeutung von gültigen Daten für Geschäftsentscheidungen ständig zunimmt, wird die Gewährleistung der Gültigkeit dieser Daten immer schwieriger. Daten von unterschiedlichen Systemen und Quellen und zahlreichen Benutzern strömen unaufhörlich in das Unternehmen.  
   
  Es kann schwierig sein, Metriken für die Datenqualität zu definieren, da diese spezifisch für die jeweilige Domäne oder Anwendung sind. Ein gebräuchliches Verfahren zur Definition von Datenqualität ist die Datenprofilerstellung.  
@@ -51,23 +56,23 @@ caps.handback.revision: 33
   
  Die Statistiken, die ein Datenprofil bietet, liefern Ihnen die erforderlichen Informationen, um effizient die Qualitätsprobleme zu minimieren, die durch die Verwendung der Quelldaten auftreten könnten.  
   
-## SQL Server Integration Services und Datenprofilerstellung  
+## <a name="integration-services-and-data-profiling"></a>SQL Server Integration Services und Datenprofilerstellung  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]besteht der Prozess der Datenprofilerstellung aus den folgenden Schritten:  
   
  **Schritt 1: Einrichten des Datenprofilerstellungs-Tasks**  
  Der Datenprofilerstellungs-Task ist ein Task, den Sie verwenden können, um die Profile zu konfigurieren, die Sie berechnen möchten. Sie führen dann das Paket aus, das den Datenprofilerstellungs-Task enthält, um die Profile zu berechnen. Der Task speichert die Profilausgabe im XML-Format in einer Datei oder Paketvariablen.  
   
- **Weitere Informationen finden Sie unter:** [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
+ **Weitere Informationen finden Sie unter:** [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
  **Schritt 2: Überprüfen der Profile, die der Datenprofilerstellungs-Task berechnet**  
  Wenn Sie die vom Datenprofilerstellungs-Task berechneten Datenprofile anzeigen möchten, senden Sie die Ausgabe an eine Datei, und verwenden Sie dann den Datenprofil-Viewer. Dieser Viewer ist ein eigenständiges Hilfsprogramm, das die Profilausgabe im Zusammenfassungs- und Detailformat mit optionaler Drilldownfunktion anzeigt.  
   
- **Weitere Informationen finden Sie unter:** [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
+ **Weitere Informationen finden Sie unter:** [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
-### Hinzufügen von Bedingungslogik zum Datenprofilerstellungs-Workflow  
+### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Hinzufügen von Bedingungslogik zum Datenprofilerstellungs-Workflow  
  Der Datenprofilerstellungs-Task verfügt über keine integrierten Funktionen, die eine Verwendung von Bedingungslogik ermöglichen, um diesen Task auf der Grundlage der Profilausgabe mit Downstream-Tasks zu verbinden. Mit minimalem Programmieraufwand können Sie diese Logik jedoch problemlos einem Skripttask hinzufügen. Der Skripttask könnte beispielsweise eine XPath-Abfrage für die Ausgabedatei des Datenprofilerstellungs-Tasks ausführen. Durch die Abfrage könnte bestimmt werden, ob der Prozentwert von NULL-Werten in einer bestimmten Spalte einen bestimmten Schwellenwert überschreitet. Wenn der Prozentwert den Schwellenwert überschreitet, könnten Sie das Paket unterbrechen und das Problem in den Quelldaten vor dem Fortsetzen beheben. Weitere Informationen finden Sie unter [Einschließen eines Datenprofilerstellungs-Tasks in den Paketworkflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  [Datenprofiler-Schema](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

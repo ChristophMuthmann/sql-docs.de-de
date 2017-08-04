@@ -1,35 +1,40 @@
 ---
-title: "&#196;ndern des Namens einer expliziten Hierarchie (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Explizite Hierarchien, Ändern des Namens"
+title: "Ändern des Namens einer expliziten Hierarchie (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33418d852f5895f9cc160d80975f62137631f047
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#196;ndern des Namens einer expliziten Hierarchie (Master Data Services)
+# <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Ändern des Namens einer expliziten Hierarchie (Master Data Services)
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] den Namen einer expliziten Hierarchie ändern.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### So ändern Sie den Namen einer expliziten Hierarchie  
+### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>So ändern Sie den Namen einer expliziten Hierarchie  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 6
   
 7.  Klicken Sie auf **Speichern**.  
   
-## Siehe auch  
- [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Löschen einer expliziten Hierarchie &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Explizite Hierarchien &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Erstellen Sie eine explizite Hierarchie &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Löschen einer expliziten Hierarchie &#40; Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   

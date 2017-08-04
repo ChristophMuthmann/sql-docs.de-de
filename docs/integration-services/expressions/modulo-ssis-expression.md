@@ -1,29 +1,34 @@
 ---
-title: "(Modulo) (SSIS-Ausdr&#252;cke) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "% (Modulooperator)"
-  - "Rest eines Divisionsvorgangs"
-  - "Modulooperator (%)"
+title: (Modulo) (SSIS-Ausdruck) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '% (modulo operator)'
+- remainder of division operation
+- modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 135fbe7a231de0b77ba3637ef53a4fc785453c10
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# (Modulo) (SSIS-Ausdr&#252;cke)
+# <a name="modulo-ssis-expression"></a>(Modulo) (SSIS-Ausdrücke)
   Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -31,24 +36,24 @@ dividend % divisor
   
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *dividend*  
  Der zu dividierende numerische Ausdruck. *dividend* kann ein beliebiger numerischer Ausdruck sein. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *divisor* kann ein beliebiger numerischer Ausdruck außer Null sein.  
   
-## Ergebnistypen  
+## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Beide Ausdrücke müssen zu ganzzahligen Datentypen mit oder ohne Vorzeichen ausgewertet werden.  
   
  Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
   
  Modulo Null ist nicht zulässig.  
   
-## Beispiele für Ausdrücke  
+## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  In diesem Beispiel wird der Teilungsrest von zwei numerischen Literalen berechnet. Das Ergebnis ist 3.  
   
 ```  
@@ -73,8 +78,8 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## Siehe auch  
- [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

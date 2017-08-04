@@ -1,22 +1,27 @@
 ---
-title: "Benutzerdefinierte Eigenschaften von ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierte Eigenschaften von ADO.NET | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16ce0117e36cfd15f8f1cde1bb8c7ce9ac2df55
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Benutzerdefinierte Eigenschaften von ADO.NET
+# <a name="ado-net-custom-properties"></a>Benutzerdefinierte Eigenschaften von ADO.NET
   **Benutzerdefinierte Eigenschaften von Quellen**  
   
  Die ADO NET-Quelle verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
  Weitere Informationen finden Sie unter [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   
-## Siehe auch  
- [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

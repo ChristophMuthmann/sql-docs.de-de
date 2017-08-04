@@ -1,30 +1,35 @@
 ---
-title: "Transformation f&#252;r langsam ver&#228;nderliche Dimensionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
-  - "Transformation für langsam veränderliche Dimensionen"
-  - "Langsam veränderliche Dimensionen"
-  - "SCD-Transformation"
-  - "Aktualisieren von langsam veränderlichen Dimensionen"
+title: "Langsam veränderliche Dimension Transformation | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- SCD transformation
+- updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation f&#252;r langsam ver&#228;nderliche Dimensionen
-  Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)]-Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
+# <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
+  Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
   
 > [!IMPORTANT]  
 >  Der Assistent für langsam veränderliche Dimensionen unterstützt nur Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -58,7 +63,7 @@ caps.handback.revision: 55
   
  Falls eine Übereinstimmung gefunden wird, erkennt die Transformation für langsam veränderliche Dimensionen, ob die Zeile Änderungen enthält. Falls die Zeile Änderungen enthält, identifiziert die Transformation für langsam veränderliche Dimensionen den Updatetyp für jede Spalte und leitet die Zeile an **Ausgabe: Updates von veränderlichen Attributen**, **Ausgabe des festen Attributs**, **Ausgabe der Einfügevorgänge im Verlaufsattribut**oder **Ausgabe der Updates abgeleiteter Elemente**weiter. Wenn die Zeile unverändert ist, leitet die Transformation für langsam veränderliche Dimensionen die Zeile an **Nicht geänderte Ausgabe**weiter.  
   
-## Ausgaben der Transformation für langsam veränderliche Dimensionen  
+## <a name="slowly-changing-dimension-transformation-outputs"></a>Ausgaben der Transformation für langsam veränderliche Dimensionen  
  Die Transformation für langsam veränderliche Dimensionen weist eine Eingabe und bis zu sechs Ausgaben auf. Eine Ausgabe leitet eine Zeile an die Teilmenge des Datenflusses weiter, der den Update- und Einfügeanforderungen der Zeile entspricht. Eine Fehlerausgabe wird von dieser Transformation nicht unterstützt.  
   
  In der folgenden Tabelle werden die Transformationsausgaben und die Anforderungen der nachfolgenden Datenflüsse beschrieben. Für die Anforderungen wird der Datenfluss beschrieben, den der Assistent für langsam veränderliche Dimensionen erstellt.  
@@ -72,39 +77,39 @@ caps.handback.revision: 55
 |**Neue Ausgabe**|Die Nachschlagetabelle enthält keine übereinstimmenden Zeilen. Die Zeile wird der Dimensionstabelle hinzugefügt. Diese Ausgabe wird für neue Zeilen und Änderungen an Verlaufsattributzeilen verwendet.|Eine Transformation für abgeleitete Spalten legt den Indikator für die aktuelle Zeile fest, und ein OLE DB-Ziel fügt die Zeile ein.|  
 |**Nicht geänderte Ausgabe**|Die Werte in der Nachschlagetabelle stimmen mit den Zeilenwerten überein. Diese Ausgabe wird für nicht geänderte Zeilen verwendet.|Es wird kein Standarddatenfluss erstellt, weil die Transformation für langsam veränderliche Dimensionen keine Schritte ausführt. Wenn Sie diese Zeilen aufzeichnen möchten, sollten Sie einen Datenfluss für diese Ausgabe erstellen.|  
   
-## Geschäftsschlüssel  
+## <a name="business-keys"></a>Geschäftsschlüssel  
  Für die Transformation für langsam veränderliche Dimensionen ist mindestens eine Geschäftsschlüsselspalte erforderlich.  
   
  Die Transformation für langsam veränderliche Dimensionen unterstützt keine Geschäftsschlüssel mit einem NULL-Wert. Falls die Daten Zeilen einschließen, in denen die Geschäftsschlüsselspalte gleich NULL ist, sollten diese Zeilen aus dem Datenfluss entfernt werden. Mit der Transformation für bedingtes Teilen können Sie Zeilen filtern, deren Geschäftsschlüsselspalten NULL-Werte enthalten. Weitere Informationen finden Sie unter [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-## Optimieren der Leistung der Transformation für langsam veränderliche Dimensionen  
+## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>Optimieren der Leistung der Transformation für langsam veränderliche Dimensionen  
  Vorschläge zum Optimieren der Leistung der Transformation für langsam veränderliche Dimensionen finden Sie unter [Funktionen für die Datenflussleistung](../../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Problembehandlung der Transformation für langsam veränderliche Dimensionen  
+## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>Problembehandlung der Transformation für langsam veränderliche Dimensionen  
  Sie können die von der Transformation für langsam veränderliche Dimensionen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei Verbindungen mit externen Datenquellen, bei Befehlen an externe Datenquellen sowie bei an externe Datenquellen gerichteten Abfragen durch die Transformation für langsam veränderliche Dimensionen behandeln. Aktivieren Sie zum Protokollieren der von der Transformation für langsam veränderliche Dimensionen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Konfigurieren der Transformation für langsam veränderliche Dimensionen  
+## <a name="configuring-the-slowly-changing-dimension-transformation"></a>Konfigurieren der Transformation für langsam veränderliche Dimensionen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Konfigurieren der Ausgaben der Transformation für langsam veränderliche Dimensionen  
+## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Konfigurieren der Ausgaben der Transformation für langsam veränderliche Dimensionen  
  Das Koordinieren der Updates und der Einfügungen von Datensätzen in Dimensionstabellen kann eine komplexe Aufgabe sein, insbesondere wenn Änderungen vom Typ 1 und Typ 2 verwendet werden. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer stellt zwei Möglichkeiten bereit, um die Unterstützung langsam veränderlicher Dimensionen zu konfigurieren:  
   
 -   Das Dialogfeld **Erweiterter Editor** , in dem Sie eine Verbindung auswählen, allgemeine und benutzerdefinierte Komponenteneigenschaften festlegen, Eingabespalten auswählen und Spalteneigenschaften für die sechs Ausgaben festlegen. Um die Konfiguration der Unterstützung für eine langsam veränderliche Dimension abzuschließen, müssen Sie manuell den Datenfluss für die Ausgaben erstellen, die die Transformation für langsam veränderliche Dimensionen verwendet. Weitere Informationen finden Sie unter [Data Flow](../../../integration-services/data-flow/data-flow.md).  
   
 -   Der Assistent zum Laden einer Dimension, der Sie durch die Schritte zum Konfigurieren der Transformation für langsam veränderliche Dimensionen und zum Erstellen des Datenflusses für Transformationsausgaben führt. Führen Sie den Assistenten zum Laden einer Dimension erneut aus, um die Konfiguration für langsam veränderliche Dimensionen zu ändern. Weitere Informationen finden Sie unter [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Blogeintrag, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimieren des Assistenten für langsam veränderliche Dimensionen), auf blogs.msdn.com.  
   

@@ -1,32 +1,37 @@
 ---
-title: "Beispiele f&#252;r Gesch&#228;ftsregeln (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/05/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Regelbeispiele "Business" (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 01/05/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Beispiele f&#252;r Gesch&#228;ftsregeln (Master Data Services)
-Dieser Artikel zeigt Beispiele von Geschäftsregeln für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sie finden diese Beispiele in den Beispielmodellen, die in Ihrer Installation von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] enthalten sind.   
+# <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
+Dieser Artikel zeigt Beispiele von Geschäftsregeln für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sie finden diese Beispiele in den Beispielmodellen, die in Ihrer Installation von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten sind.   
   
-Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [Master Data Services](../sql-server/media/master-data-services.png#deploySample).  
+Anleitungen zum Bereitstellen der Beispielmodelle finden Sie unter [Master Data Services-Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md).  
   
   
-## Beispiele für Geschäftsregeln  
+## <a name="business-rule-examples"></a>Beispiele für Geschäftsregeln  
 Beispielmodell |Entität  |Geschäftsregelname| Description  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
-In der folgenden Geschäftsregel wird die `defaults to`-[Regelaktion](../master-data-services/business-rule-conditions-master-data-services.md) auf das PaymentTerms-Attribut angewendet, wenn der Attributwert CustomerType die`is equal`-[Regelbedingung](../master-data-services/business-rule-conditions-master-data-services.md) erfüllt. Andernfalls wird keine Aktion ausgeführt.  
+In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
     CustomerType is equal to 2  
@@ -41,7 +46,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
-In der folgenden Geschäftsregel wird die `defaults to`-[Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das PaymentTerms-Attribut angewendet, wenn der Attributwert CustomerType die`is equal`-[Regelbedingung](../master-data-services/business-rule-conditions-master-data-services.md) erfüllt. Andernfalls wird keine Aktion ausgeführt.  
+In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
     CustomerType is equal to 1  
@@ -57,7 +62,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname| Description    
 ---------|---------|---------|-----------  
 Product     |  Product       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
-In der folgenden Geschäftsregel wird die `must be between`-[Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das DaysToManufacture-Attribut angewendet, wenn der InHouseManufacture-Attributwert die`is equal`-[Regelbedingung](../master-data-services/business-rule-conditions-master-data-services.md) erfüllt. Andernfalls wird keine Aktion ausgeführt.  
+In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
     InHouseManufacture is equal to Y  
@@ -73,7 +78,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|-------------  
 Product     |Product         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
-In der folgenden Geschäftsregel wird unter allen Umständen die `is required`-[Überprüfungsaktion](../master-data-services/business-rule-actions-master-data-services.md) für die angegebenen Attribute verwendet. Die Attributwerte dürfen nicht Null oder leer sein.  
+In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
 ```  
 If  
     None  
@@ -98,7 +103,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|-----------  
 Product     | Product        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
-In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than`-[Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das StandardCost-Attribut von „Products“ angewendet.  
+In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
     None  
@@ -115,7 +120,7 @@ Beispielmodell  |Entität  |Geschäftsregelname|Description
 ---------|---------|---------|------------  
 Product     | Product        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
   
-In der folgenden Geschäftsregel wird die `must be greater than`-[Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf die Attribute „MSRP“ und „DealerCost“ angewendet, wenn der Wert des FinishedGoodIndicator-Attributs die`is equal`-[Regelbedingung](../master-data-services/business-rule-conditions-master-data-services.md) erfüllt.  
+In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
 If  
     FinishedGoodIndicator is equal to Y  
@@ -132,7 +137,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|------------  
 Product     | Product        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
-In der folgenden Geschäftsregel wird die `defaults to` [[-Regelaktion](../master-data-services/business-rule-actions-master-data-services.md)](Business%20Rule%20Conditions%20(Master%20Data%20Services).xml) auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die `is equal`-Regelbedingung nicht erfüllen.  
+In der folgenden Geschäftsregel, die Farbe und -Klassenattribute erfüllen nicht die `is equal` Regel Bedingung, die `defaults to` [Regel "Aktion"](../master-data-services/business-rule-actions-master-data-services.md) auf das Name-Attribut angewendet wird.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -146,15 +151,17 @@ Else
   
   
 **So zeigen Sie die Geschäftsregelbeispiele in den Beispielmodellen an**  
-1. Navigieren Sie zur [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Website, die Sie nach der Installation von MDS eingerichtet haben, und klicken Sie auf das Feld **Systemverwaltung**.   
-Anweisungen zum Einrichten der Website finden Sie unter [Master Data Services](../sql-server/media/master-data-services.png).  
+1. Navigieren Sie zur [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Website, die Sie nach der Installation von MDS eingerichtet haben, und klicken Sie auf das Feld **Systemverwaltung** .   
+Anleitungen zum Einrichten der Website finden Sie unter [Master Data Services-Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Klicken Sie auf das Beispielmodell, das die Geschäftsregel enthält, so wie in den obigen Tabellen aufgeführt, und klicken Sie anschließend auf **Entitäten**.  
 3. Klicken Sie auf die Entität, für welche die Regel gilt, so wie in den obigen Tabellen aufgeführt, und klicken Sie anschließend auf **Geschäftsregeln**.  
 4. Klicken Sie auf den Namen der Geschäftsregel, die Sie anzeigen möchten. Die Benutzeroberfläche wird erweitert, um die Anweisungen **If**, **Then** und **Else** anzuzeigen.  
   
-## Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu   
+## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu   
 Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com).   
   
   
   
   
+
+

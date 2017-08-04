@@ -1,31 +1,36 @@
 ---
-title: "Transformations-Editor f&#252;r Zeichenzuordnung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactermaptransformation.f1"
-helpviewer_keywords: 
-  - "Transformations-Editor für Zeichenzuordnung"
+title: "Transformations-Editor für Zeichen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactermaptransformation.f1
+helpviewer_keywords:
+- Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ddabff7405401657b44a4cbc9205cf6092949d7
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformations-Editor f&#252;r Zeichenzuordnung
+# <a name="character-map-transformation-editor"></a>Transformations-Editor für Zeichenzuordnung
   Im Dialogfeld **Transformations-Editor für Zeichenzuordnung** können Sie die auf Spaltendaten anwendbaren Zeichenfolgenfunktionen auswählen und angeben, ob eine Zuordnung direkt geändert oder als neue Spalte hinzugefügt werden soll.  
   
  Weitere Informationen zur Transformation zum Zuordnen der Zeichen finden Sie unter [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Spalten aus, die mithilfe von Zeichenfolgenfunktionen transformiert werden sollen. Die getroffene Auswahl wird in der nachfolgenden Tabelle angezeigt.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 26
  Geben Sie einen Alias für jede Spalte ein. Der Standard lautet **Copy of** , gefolgt vom Namen der Eingabespalte. Sie können jedoch auch einen eindeutigen, beschreibenden Namen auswählen.  
   
  **Fehlerausgabe konfigurieren**  
- Im Dialogfeld [Fehlerausgabe konfigurieren](../Topic/Configure%20Error%20Output.md) können Sie für die Transformation verfügbare Optionen zur Fehlerbehandlung angeben.  
+ Im Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie für die Transformation verfügbare Optionen zur Fehlerbehandlung angeben.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

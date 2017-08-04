@@ -1,33 +1,38 @@
 ---
-title: "Verbindungs-Manager-Editor f&#252;r Flatfiles (Seite Erweitert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columnproperties.f1"
-helpviewer_keywords: 
-  - "Verbindungs-Manager-Editor für Flatfiles"
+title: Flatfile-Verbindungs-Manager-Editor (Seite erweitert) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columnproperties.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a7fee65a2bf7c387ec207f6f516c55b12b635b0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Verbindungs-Manager-Editor f&#252;r Flatfiles (Seite Erweitert)
+# <a name="flat-file-connection-manager-editor-advanced-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Erweitert)
   Verwenden Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** die Seite **Erweitert** , um die Eigenschaften festzulegen, mit denen angegeben wird, wie mit Integration Services Daten in Flatfiles gelesen und geschrieben werden. Sie können die Namen der Spalten in der Flatfile ändern und Eigenschaften festlegen. Zu den Eigenschaften zählen der Datentyp und die Trennzeichen für jede Spalte in der Datei.  
   
  Standardmäßig beträgt die Länge von Zeichenfolgenspalten 50 Zeichen. Sie können die Länge dieser Spalten ändern, um das Abschneiden von Daten und das Entstehen übermäßig breiter Spalten zu verhindern. Sie können darüber hinaus andere Metadaten aktualisieren, um Kompatibitlität mit Zielspalten zu aktivieren. Sie können beispielsweise den Datentyp einer Spalte, die nur ganzzahlige Daten enthält, in einen numerischen Datentyp ändern, z. B. DT_I2. Nehmen Sie diese Änderungen manuell vor, oder klicken Sie auf die Schaltfläche **Typen vorschlagen** , um mithilfe des Dialogfelds **Spaltentypen vorschlagen** Beispieldaten auszuwerten und einige dieser Änderungen automatisch vornehmen zu lassen.  
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager für Flatfiles im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 36
 |**InputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|  
   
  **Neu**  
- Durch Klicken auf **Neu** fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
+ Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -59,15 +64,15 @@ caps.handback.revision: 36
 |**Einfügen nach**|Fügt nach der ausgewählten Spalte eine neue Spalte ein.|  
   
  **Delete**  
- Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen** klicken.  
+ Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen**klicken.  
   
  **Typen vorschlagen**  
  Im Dialogfeld **Spaltentypen vorschlagen** können Sie die Beispieldaten in der Datei auswerten, um Vorschläge für den Datentyp und die -länge der einzelnen Spalten zu erhalten. Weitere Informationen finden Sie unter [Referenz zur Benutzeroberfläche des Dialogfelds „Spaltentypen vorschlagen“](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Spalten“&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Flatfile-Verbindungs-Manager-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [Flatfile-Verbindungs-Manager-Editor &#40; Seite "Spalten" &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Vorschau&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

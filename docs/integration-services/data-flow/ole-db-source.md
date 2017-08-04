@@ -1,27 +1,32 @@
 ---
-title: "OLE DB-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbsource.f1"
-helpviewer_keywords: 
-  - "Quellen [Integration Services], OLE DB"
-  - "OLE DB-Quelle [Integration Services]"
+title: OLE DB-Quelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbsource.f1
+helpviewer_keywords:
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB-Quelle
+# <a name="ole-db-source"></a>OLE DB-Quelle
   Die OLE DB-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls aus einer Reihe von OLE DB-kompatiblen relationalen Datenbanken. Beispielsweise kann die OLE DB-Quelle Daten aus Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken extrahieren.  
   
 > [!NOTE]  
@@ -54,14 +59,14 @@ caps.handback.revision: 69
   
  Die OLE DB-Quelle weist eine reguläre Ausgabe und eine Fehlerausgabe auf.  
   
-## Verwenden parametrisierter SQL-Anweisungen  
+## <a name="using-parameterized-sql-statements"></a>Verwenden parametrisierter SQL-Anweisungen  
  Die OLE DB-Quelle kann eine SQL-Anweisung zum Extrahieren von Daten verwenden. Die Anweisung kann eine SELECT- oder EXEC-Anweisung sein.  
   
  Die OLE DB-Quelle verwendet einen OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung zur Datenquelle, aus der Daten extrahiert werden. Für die Benennung und Auflistung von Parametern gelten verschiedene Regeln, abhängig vom Anbieter, den der OLE DB-Verbindungs-Manager verwendet, und abhängig vom Managementsystem für relationale Datenbanken (RDBMS), zu dem der Verbindungs-Manager eine Verbindung herstellt. Wenn die Parameternamen vom RDBMS zurückgegeben werden, können Sie Parameternamen verwenden, um die in einer Parameterliste enthaltenen Parameterwerte den Parametern einer SQL-Anweisung zuzuordnen. Andernfalls erfolgt die Zuordnung nach der Ordnungsposition, in der die Parameter in der Parameterliste aufgeführt werden. Die jeweils unterstützten Typen von Parameternamen variieren je nach Anbieter. Beispielsweise erfordern einige Anbieter Variablen- oder Spaltennamen, andere Anbieter erfordern hingegen symbolische Namen, wie z. B. 0 oder Param0. Informationen zu den in SQL-Anweisungen zu verwendenden Parameternamen entnehmen Sie bitte der anbieterspezifischen Dokumentation.  
   
  Bei Verwendung eines OLE DB-Verbindungs-Managers können Sie keine parametrisierten Unterabfragen verwenden, das die OLE DB-Quelle keine Parameterinformationen über den OLE DB-Anbieter ableiten kann. Sie können jedoch einen Ausdruck verwenden, um die Parameterwerte in der Abfrage zu verketten und die SqlCommand-Eigenschaft der Quelle festzulegen. Im Designer von [!INCLUDE[ssIS](../../includes/ssis-md.md)] können Sie eine OLE DB-Quelle im Dialogfeld **Quellen-Editor für OLE DB** konfigurieren und die Parameter Variablen im Dialogfeld **Abfrageparameter festlegen** zuordnen.  
   
-### Angeben von Parametern mithilfe der Ordnungsposition  
+### <a name="specifying-parameters-by-using-ordinal-positions"></a>Angeben von Parametern mithilfe der Ordnungsposition  
  Werden keine Parameternamen zurückgegeben, steuert die Reihenfolge, in der die Parameter in der Liste **Parameter** im Dialogfeld **Abfrageparameter festlegen** aufgelistet werden, welche Parametermarkierungen zur Laufzeit zugeordnet werden. Der erste in der Liste aufgeführte Parameter wird dem ersten ? in der SQL-Anweisung zugeordnet, der zweite Parameter dem zweiten ? usw.  
   
  Die folgende SQL-Anweisung wählt die Zeilen aus der **Product** -Tabelle der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Datenbank aus. Der erste Parameter der **Mappings** -Liste wird dem ersten Parameter der **Color** -Spalte und der zweite Parameter der **Size** -Spalte zugeordnet.  
@@ -72,7 +77,7 @@ caps.handback.revision: 69
   
  Der EXEC-Befehl erfordert in der Regel die Verwendung der Variablennamen, die in der Prozedur Parameterwerte als Parameternamen bereitstellen.  
   
-### Angeben von Parametern mithilfe von Namen  
+### <a name="specifying-parameters-by-using-names"></a>Angeben von Parametern mithilfe von Namen  
  Wenn die tatsächlichen Parameternamen vom RDBMS zurückgegeben werden, werden die von einer SELECT- und EXEC-Anweisung verwendeten Parameter den Namen zugeordnet. Die Parameternamen müssen den Namen entsprechen, die die gespeicherte Prozedur, die von der SELECT- oder EXEC-Anweisung ausgeführt wird, erwartet.  
   
  Die folgende SQL-Anweisung führt die in der **-Datenbank verfügbare gespeicherte Prozedur** uspGetWhereUsedProductID [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] aus.  
@@ -81,13 +86,13 @@ caps.handback.revision: 69
   
  Die gespeicherte Prozedur erwartet, dass die `@StartProductID` - und `@CheckDate`-Variablen Parameterwerte bereitstellen. Dabei ist die Reihenfolge, in der die Parameter in der **Mappings** -Liste angezeigt werden, irrelevant. Die einzige Voraussetzung ist, dass die Parameternamen den Variablennamen der gespeicherten Prozedur entsprechen müssen. Hierzu zählt auch das @-Zeichen.  
   
-### Zuordnen von Parametern zu Variablen  
+### <a name="mapping-parameters-to-variables"></a>Zuordnen von Parametern zu Variablen  
  Die Parameter werden Variablen zugeordnet, die die Parameterwerte zur Laufzeit bereitstellen. Bei den Variablen handelt es sich in der Regel um benutzerdefinierte Variablen, obwohl Sie auch die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Systemvariablen verwenden können. Stellen Sie beim Verwenden von benutzerdefinierten Variablen sicher, dass Sie den Datentyp auf einen Typ festlegen, der mit dem Datentyp der Spalte, auf die der zugeordnete Parameter verweist, kompatibel ist. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Problembehandlung der OLE DB-Quelle  
+## <a name="troubleshooting-the-ole-db-source"></a>Problembehandlung der OLE DB-Quelle  
  Sie können die von der OLE DB-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die OLE DB-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der OLE DB-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Konfigurieren der OLE DB-Quelle  
+## <a name="configuring-the-ole-db-source"></a>Konfigurieren der OLE DB-Quelle  
  Eigenschaften können Sie programmgesteuert oder mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für OLE DB** festlegen können:  
@@ -100,11 +105,11 @@ caps.handback.revision: 69
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften für OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 -   [Extrahieren von Daten mithilfe der OLE DB-Quelle](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -114,12 +119,12 @@ caps.handback.revision: 69
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Wiki-Artikel, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
+ [Integrationsservices &#40; SSIS &#41; Variablen](../../integration-services/integration-services-ssis-variables.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   

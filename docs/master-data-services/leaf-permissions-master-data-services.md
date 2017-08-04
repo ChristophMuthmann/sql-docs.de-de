@@ -1,28 +1,33 @@
 ---
-title: "Blattberechtigungen (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attributgruppen [Master Data Services], Berechtigungen"
-  - "Elemente [Master Data Services], Blattelementberechtigungen"
-  - "Berechtigungen [Master Data Services], Blattelemente"
-  - "Blattelemente [Master Data Services], Attributberechtigungen"
-  - "Attribute [Master Data Services], Attributberechtigungen für Blattelemente"
+title: Blattelemente Berechtigungen (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], permissions
+- members [Master Data Services], leaf member permissions
+- permissions [Master Data Services], leaf members
+- leaf members [Master Data Services], attribute permissions
+- attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: caaea89264b37bd2c92f9c72a1cb7644b67b1fd4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Blattberechtigungen (Master Data Services)
+# <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
   Blattberechtigungen gelten für die Attributwerte aller Blattelemente einer Entität.  
   
  Bei Entitäten, für die keine expliziten Hierarchien aktiviert wurden, erfolgen die Zuweisung einer Berechtigung zu einem **Blatt** und die Zuweisung einer Berechtigung zur Entität auf die gleiche Weise.  
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
   
-## Attributberechtigungen  
+## <a name="attribute-permissions"></a>Attributberechtigungen  
  Attributberechtigungen gelten für die Attributwerte der jeweiligen Entität. Benutzer mit Attributberechtigungen wird lediglich verweigert, Elemente hinzuzufügen oder zu entfernen.  
   
 |Berechtigung|Description|  
@@ -54,7 +59,7 @@ caps.handback.revision: 9
 |**Delete**|Keine Auswirkung.|  
 |**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
-### Beispiel  
+### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
 |Name|Code|Subcategory (Aktualisiert)|  
@@ -62,16 +67,17 @@ caps.handback.revision: 9
 |Mountain-100|BK-M101|{5} Mountainbikes|  
 |Mountain-100|BK-M201|{5} Mountainbikes|  
   
- Sie können im **Explorer** jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
+ Sie können im **Explorer**jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
   
 > [!NOTE]  
 >  In diesem Beispiel ist Subcategory ein domänenbasiertes Attribut, das auf der SubcategoryList-Entität basiert. Sie können eine andere Unterkategorie für Mountain-100 auswählen, der SubcategoryList-Entität jedoch keine Elemente hinzufügen bzw. Elemente aus dieser Entität löschen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)   
+    
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+ [Mitglieder &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Attribute &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

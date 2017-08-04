@@ -1,31 +1,36 @@
 ---
-title: "Versionen (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Versionsflags [Master Data Services], Informationen zu Versionsflags"
-  - "Versionen [Master Data Services]"
-  - "Versionsflags [Master Data Services]"
-  - "Versionen [Master Data Services], Versionsflags"
+title: Versionen (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- version flags [Master Data Services], about version flags
+- versions [Master Data Services]
+- version flags [Master Data Services]
+- versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Versionen (Master Data Services)
+# <a name="versions-master-data-services"></a>Versionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie mehrere Versionen der Masterdaten innerhalb eines Modells erstellen. Versionen können gesperrt werden, während Sie die Daten überprüfen, und für Versionen kann ein Commit ausgeführt werden, nachdem die Daten überprüft wurden. Versionen mit ausgeführtem Commit bilden einen überwachbaren Datensatz mit Änderungen. Jede erstellte Version umfasst sämtliche Elemente, Attributwerte, Hierarchielemente, Hierarchiebeziehungen und Auflistungen für das Modell.  
   
-## Verwenden von Versionen  
+## <a name="when-to-use-versions"></a>Verwenden von Versionen  
  Sie verwenden Versionen für folgende Zwecke:  
   
 -   Verwalten eines überwachungsfähigen Datensatzes der Masterdaten, während sich dieser im Zeitverlauf ändert.  
@@ -37,12 +42,12 @@ caps.handback.revision: 9
 -   Testen verschiedener Hierarchien, ohne sie sofort zu implementieren  
   
 > [!NOTE]  
->  Wenn Sie die Struktur des Modells ändern, z. B. eine neue Entität oder ein neues domänenbasiertes Attribut erstellen, gilt die Änderung für alle Versionen. Wenn Sie eine frühere Version des Modells anzeigen, wird die Entität oder das Attribut angezeigt, es sind aber keine Daten vorhanden.  
+>  Wenn Sie die Struktur des Modells ändern, z. B. eine neue Entität oder ein neues domänenbasiertes Attribut erstellen, gilt die Änderung für alle Versionen. Wenn Sie eine frühere Version des Modells anzeigen, wird die Entität oder das Attribut angezeigt, es sind aber keine Daten vorhanden.  
   
-## Versionsflags  
+## <a name="version-flags"></a>Versionsflags  
  Sobald eine Version für Benutzer oder ein Abonnementsystem freigegeben wird, können Sie ein Identifizierungsflag für die Version festlegen. Sie können dieses Flag bei Bedarf versionsübergreifend verwenden. Anhand von Flags können Benutzer und Abonnementsysteme erkennen, welche Modellversion verwendet werden soll.  
   
-## Workflow zur Versionsverwaltung  
+## <a name="workflow-for-version-management"></a>Workflow zur Versionsverwaltung  
  Verwenden Sie den folgenden Workflow für die Versionsverwaltung:  
   
 1.  Eine Anfangsversion wird automatisch erstellt, wenn Sie ein Modell anlegen und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank mit den Masterdaten des Unternehmens auffüllen. Auf der Grundlage von Berechtigungen können Benutzer dann bei Bedarf Änderungen an dieser Version vornehmen.  
@@ -55,7 +60,7 @@ caps.handback.revision: 9
   
 5.  Kopieren Sie die durch ein Commit bestätigte Version, und teilen Sie den Benutzern mit, dass sie die Arbeit mit der neuen Modellversion aufnehmen können.  
   
-## Sequenzielle oder gleichzeitige Versionen  
+## <a name="sequential-or-simultaneous-versions"></a>Sequenzielle oder gleichzeitige Versionen  
  Sie können sequenzielle oder gleichzeitige Versionen des Modells erstellen.  
   
 -   **Sequenzielle Versionen.** Jedes Mal, wenn Sie ein Commit für eine Version ausführen, erstellen Sie eine neue Kopie und weisen der Version die nächste laufende Nummer zu. Beispielsweise können Sie **Version 7** des Modells kopieren und die Kopie **Version 8**nennen.  
@@ -65,27 +70,27 @@ caps.handback.revision: 9
     > [!NOTE]  
     >  Eine Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] bestimmt, ob alle oder nur die durch ein Commit bestätigten Versionen kopiert werden können. Um gleichzeitige Versionen zu erstellen, müssen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfigurieren, um es Ihnen zu ermöglichen, alle Versionen zu kopieren. Diese Einstellung ist auch in der Tabelle Systemeinstellungen verfügbar. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40; Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40; Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Übernehmen Sie eine Version &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern Sie Namens eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren Sie eine Version &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Löschen Sie eine vorhandene Version.|[Löschen einer Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Löschen Sie vorläufig gelöschte Elemente aus einer Version.|[Endgültiges Löschen von Versionselementen &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Umkehren einer Transaktion &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Umkehren einer Transaktion &#40; Master Data Services &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Benachrichtigungen &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Geschäftsregeln &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

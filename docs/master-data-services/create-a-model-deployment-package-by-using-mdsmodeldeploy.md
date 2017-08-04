@@ -1,23 +1,28 @@
 ---
-title: "Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen ein Modellbereitstellungspakets mit MDSModelDeploy | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f983bc7fb8b25956a6edd61a6a9226384ffb8a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy
+# <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy
   Sie verwenden in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]das Tool MDSModelDeploy, um ein Paket zu erstellen. Abhängig von den angegebenen Befehlen kann das Paket folgenden Inhalt haben:  
   
 -   Nur Modellobjekte.  
@@ -26,7 +31,7 @@ caps.handback.revision: 13
   
  Wenn Sie ein Paket bereitstellen möchten, das nur Modellobjekte enthält, können Sie stattdessen den Modellbereitstellungs-Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung verwenden. Weitere Informationen finden Sie unter [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 1.  Die grundlegenden Berechtigungen zum Ausführen des MDSModelDeploy-Tools lauten wie folgt:  
@@ -57,13 +62,13 @@ caps.handback.revision: 13
   
  Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### So erstellen Sie ein Modellbereitstellungspaket mit MDSModelDeploy  
+### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>So erstellen Sie ein Modellbereitstellungspaket mit MDSModelDeploy  
   
 1.  Öffnen Sie eine Administrator-Eingabeaufforderung.  
   
 2.  Navigieren Sie zum Speicherort von "MDSModelDeploy.exe".  
   
-    -   Wenn MDS am Standardspeicherort installiert wurde, befindet sich die Datei unter „*Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration“.  
+    -   Wenn MDS am Standardspeicherort installiert wurde, befindet sich die Datei unter „ *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration“.  
   
     -   Wenn MDS nicht am Standardspeicherort installiert wurde, suchen Sie auf dem lokalen Computer nach der Datei "MDSModelDeploy.exe".  
   
@@ -91,12 +96,12 @@ caps.handback.revision: 13
   
 6.  Drücken Sie die EINGABETASTE. Nach der erfolgreichen Erstellung des Pakets wird eine Meldung angezeigt, die besagt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   [Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## Siehe auch  
- [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Optionen für modellbereitstellung &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [Bereitstellen von Modellen &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

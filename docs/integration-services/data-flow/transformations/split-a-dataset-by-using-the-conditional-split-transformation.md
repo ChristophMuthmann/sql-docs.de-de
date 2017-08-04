@@ -1,29 +1,34 @@
 ---
-title: "Teilen eines Datasets mithilfe der Transformation f&#252;r bedingtes Teilen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation für bedingtes Teilen"
-  - "Teilen eines Datasets"
-  - "Datasets [Integration Services], teilen"
+title: "Teilen eines Datasets mithilfe der Transformation für bedingtes Teilen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Conditional Split transformation
+- splitting dataset
+- datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Teilen eines Datasets mithilfe der Transformation f&#252;r bedingtes Teilen
+# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Teilen eines Datasets mithilfe der Transformation für bedingtes Teilen
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für bedingtes Teilen hinzufügen und konfigurieren können.  
   
-### So führen Sie eine bedingte Teilung eines Datasets aus  
+### <a name="to-conditionally-split-a-dataset"></a>So führen Sie eine bedingte Teilung eines Datasets aus  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -52,18 +57,18 @@ caps.handback.revision: 40
   
 9. Optional können Sie den Namen der Standardausgabe für Datenzeilen ändern, die mit keiner Bedingung übereinstimmen.  
   
-10. Klicken Sie auf **Fehlerausgabe konfigurieren**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. Klicken Sie auf **Fehlerausgabe konfigurieren**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Klicken Sie auf **OK**.  
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transformation für bedingtes Teilen](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
- [SQL Server Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
+ [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services-Ausdrücke &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Erstellen einer Entit&#228;t (MDS-Add-In f&#252;r Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen einer Entität (MDS-Add-in für Excel) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen einer Entit&#228;t (MDS-Add-In f&#252;r Excel)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren neue Entitäten erstellen, um Daten zu speichern. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
+  In der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], Administratoren neue Entitäten zum Speichern von Daten erstellen. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
@@ -36,13 +41,13 @@ caps.handback.revision: 8
   
     -   Außer der Kopfzeile sollte mindestens eine Zeile mit Daten vorhanden sein. Nicht in allen Spalten müssen Werte enthalten sein, aber die Daten sollten repräsentativ für die Daten sein, die in der Entität enthalten sein sollen.  
   
-    -   Wenn Sie eine Spalte verwenden, die einen eindeutigen Bezeichner enthält (unter MDS als **Code** bezeichnet), sollten Sie sicherstellen, dass die Werte eindeutig sind. Falls keine Spalte Bezeichner enthält, können Sie diese beim Erstellen der Entität automatisch generieren lassen.  
+    -   Wenn Sie eine Spalte verwenden, die einen eindeutigen Bezeichner enthält (unter MDS als **Code**bezeichnet), sollten Sie sicherstellen, dass die Werte eindeutig sind. Falls keine Spalte Bezeichner enthält, können Sie diese beim Erstellen der Entität automatisch generieren lassen.  
   
     -   Stellen Sie sicher, dass keine Zellen Formeln enthalten.  
   
     -   Stellen Sie sicher, dass keine Zellen Zeitwerte enthalten. Datumswerte können unter MDS gespeichert werden, aber für Zeitwerte ist dies nicht möglich.  
   
-### So erstellen Sie eine Entität und laden Daten  
+### <a name="to-create-an-entity-and-load-data"></a>So erstellen Sie eine Entität und laden Daten  
   
 1.  Öffnen oder erstellen Sie ein Excel-Arbeitsblatt, das die zu ladenden Daten enthält.  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. Klicken Sie auf **OK**. Nachdem die Entität erfolgreich erstellt wurde, wird eine neue Kopfzeile angezeigt, die Zellen werden hervorgehoben, und der Blattname wird an den Entitätsnamen angepasst.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   Um Fehler anzuzeigen, die in der Gruppe **Veröffentlichen und Überprüfen** aufgetreten sind, klicken Sie auf **Status anzeigen**. Die Spalten ValidationStatus und InputStatus werden angezeigt. Weitere Informationen finden Sie unter [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Bestätigen Sie, dass die Attribute mit dem gewünschten Datentyp erstellt wurden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

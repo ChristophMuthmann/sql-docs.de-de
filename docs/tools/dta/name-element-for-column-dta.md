@@ -1,29 +1,34 @@
 ---
-title: "Name-Element f&#252;r Spalte (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Name-Element"
+title: "Benennen Sie Element für Spalte (DTA) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40fb6bf358735f81a9d6551f6e647b40e567f934
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Name-Element f&#252;r Spalte (DTA)
+# <a name="name-element-for-column-dta"></a>Name-Element für Spalte (DTA)
   Gibt den Namen für eine Indexspalte in einer benutzerdefinierten Konfiguration an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 12
         <Name>...</Name>  
 ```  
   
-## Elementmerkmale  
+## <a name="element-characteristics"></a>Elementmerkmale  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
@@ -40,17 +45,17 @@ caps.handback.revision: 12
 |**Standardwert**|Keine.|  
 |**Vorkommen**|Für jedes **Column** -Element erforderlich.|  
   
-## Elementbeziehungen  
+## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Column-Element für Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Übergeordnetes Element**|[Column-Element für Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Konflikte zusammenf&#252;hren (MDS-Add-In f&#252;r Excel) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(MDS-Add-in für Excel) Konflikte zusammenführen | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4ede349c35ea8bd25d81b42e6240c6c7a7ebdab9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Konflikte zusammenf&#252;hren (MDS-Add-In f&#252;r Excel)
-  Wenn das [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Add-In für Excel auf dem Server von einem anderen Benutzer geändert wurde, schlägt das Veröffentlichen mit einem Konfliktfehler fehl. Um diesen Fehler zu beheben, können Sie die Konflikte zusammenführen und die Änderungen erneut veröffentlichen.  
+# <a name="merge-conflicts-mds-add-in-for-excel"></a>Konflikte zusammenführen (MDS-Add-In für Excel)
+  Wenn das [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Add-In für Excel auf dem Server von einem anderen Benutzer geändert wurde, schlägt das Veröffentlichen mit einem Konfliktfehler fehl. Um diesen Fehler zu beheben, können Sie die Konflikte zusammenführen und die Änderungen erneut veröffentlichen.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -31,11 +36,11 @@ caps.handback.revision: 6
   
 -   Das aktive Arbeitsblatt muss einen Konfliktfehler aufweisen, nachdem Sie versucht haben, Ihre Änderungen zu veröffentlichen.  
   
-### So führen Sie Konflikte zusammen  
+### <a name="to-merge-conflicts"></a>So führen Sie Konflikte zusammen  
   
 1.  Wählen Sie im Arbeitsblatt die Zeile oder Zelle, die den Konfliktfehler aufweist.  
   
-2.  Wählen Sie in der Menügruppe **Veröffentlichen und überprüfen** die Option **Konflikte zusammenführen**, um das Dialogfeld **Konflikte zusammenführen** zu öffnen.  
+2.  Wählen Sie in der Menügruppe **Veröffentlichen und überprüfen** die Option **Konflikte zusammenführen** , um das Dialogfeld **Konflikte zusammenführen** zu öffnen.  
   
 3.  Im Dialogfeld **Konflikte zusammenführen** haben Sie folgende Möglichkeiten:  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 6
   
     -   Sie können **Ihre** auswählen und auf **Anwenden** klicken, um die vorhandenen lokalen Änderungen beizubehalten.  
   
-4.  Nachdem Sie auf **Anwenden** geklickt haben, können Sie zusätzliche Änderungen vornehmen und erneut veröffentlichen. Sie können auch auf **Abbrechen** klicken, um die Aktualisierung abzubrechen und die neueste Version erneut vom Server herunterzuladen.  
+4.  Nachdem Sie auf **Anwenden**geklickt haben, können Sie zusätzliche Änderungen vornehmen und erneut veröffentlichen. Sie können auch auf **Abbrechen** klicken, um die Aktualisierung abzubrechen und die neueste Version erneut vom Server herunterzuladen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

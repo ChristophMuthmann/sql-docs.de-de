@@ -1,31 +1,36 @@
 ---
-title: "Editor f&#252;r den Task &#39;Nachrichtenwarteschlange&#39; (Seite Empfangen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.receive.f1"
-helpviewer_keywords: 
-  - "Editor für den Task Nachrichtenwarteschlange"
+title: Task ' Nachrichtenwarteschlange ' (Seite empfangen) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.receive.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f51937fa402accf4e18fefdcec5763987241de4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor f&#252;r den Task &#39;Nachrichtenwarteschlange&#39; (Seite Empfangen)
-  Auf der Seite **Empfangen** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ konfigurieren, um MSMQ-Nachrichten ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) zu empfangen.  
+# <a name="message-queue-task-editor-receive-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Empfangen)
+  Auf der Seite **Empfangen** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ konfigurieren, um MSMQ-Nachrichten ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) zu empfangen.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **RemoveFromMessageQueue**  
  Geben Sie an, ob die Nachricht aus der Warteschlange entfernt werden soll, nachdem sie empfangen wurde. Standardmäßig ist dieser Wert auf **False**festgelegt.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 29
 |**String message**|Die Nachricht wird im Task 'Nachrichtenwarteschlange' gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **StringMessage**angezeigt.|  
 |**String message to variable**|Die Nachricht wurde in einer Variablen gespeichert.<br /><br /> Bei Auswahl dieses Wertes wird die dynamische Option **StringMessage**angezeigt.|  
   
-## MessageType (dynamische Optionen)  
+## <a name="messagetype-dynamic-options"></a>MessageType (dynamische Optionen)  
   
-### MessageType = Data file message  
+### <a name="messagetype--data-file-message"></a>MessageType = Data file message  
  **SaveFileAs**  
- Geben Sie den Pfad der zu verwendenden Datei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um nach der Datei zu suchen.  
+ Geben Sie den Pfad der zu verwendenden Datei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um nach der Datei zu suchen.  
   
  **Overwrite**  
  Geben Sie an, dass die Daten in einer vorhandenen Datei überschrieben werden sollen, wenn der Inhalt einer Datendateinachricht gespeichert wird. Der Standardwert ist **False**.  
@@ -62,19 +67,19 @@ caps.handback.revision: 29
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
   
-### Filter (dynamische Optionen)  
+### <a name="filter-dynamic-options"></a>Filter (dynamische Optionen)  
   
-#### Filter = No filter  
+#### <a name="filter--no-filter"></a>Filter = No filter  
  **IdentifierReadOnly**  
  Diese Option ist schreibgeschützt. Sie kann leer sein oder die GUID eines Pakets enthalten, wenn die Eigenschaft Filter vorher festgelegt wurde.  
   
-#### Filter = From package  
- **Bezeichner**  
- Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, und geben Sie das Paket an.  
+#### <a name="filter--from-package"></a>Filter = From package  
+ **Identifier**  
+ Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , und geben Sie das Paket an.  
   
  **Verwandte Themen:** [Paket auswählen](../../integration-services/control-flow/select-a-package.md)  
   
-### MessageType = Variable message  
+### <a name="messagetype--variable-message"></a>MessageType = Variable message  
  **Filter**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
@@ -84,23 +89,23 @@ caps.handback.revision: 29
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
   
  **Variable**  
- Geben Sie den Variablennamen an, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
+ Geben Sie den Variablennamen ein, oder klicken Sie auf \< **neue Variable...** > und konfigurieren Sie dann eine neue Variable.  
   
- **Verwandte Themen:** [Variable hinzufügen](../Topic/Add%20Variable.md)  
+ **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### Filter (dynamische Optionen)  
+### <a name="filter-dynamic-options"></a>Filter (dynamische Optionen)  
   
-#### Filter = No filter  
+#### <a name="filter--no-filter"></a>Filter = No filter  
  **IdentifierReadOnly**  
  Diese Option ist leer.  
   
-#### Filter = From package  
- **Bezeichner**  
- Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, und geben Sie das Paket an.  
+#### <a name="filter--from-package"></a>Filter = From package  
+ **Identifier**  
+ Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , und geben Sie das Paket an.  
   
  **Verwandte Themen:** [Paket auswählen](../../integration-services/control-flow/select-a-package.md)  
   
-### MessageType = Zeichenfolgennachricht  
+### <a name="messagetype--string-message"></a>MessageType = Zeichenfolgennachricht  
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 29
 |**Mit Inhalt**|Die Nachrichten müssen die Zeichenfolge in der Option **CompareString** enthalten.|  
   
  **CompareString**  
- Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine** festgelegt ist.  
+ Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine**festgelegt ist.  
   
-### MessageType = String message to variable  
+### <a name="messagetype--string-message-to-variable"></a>MessageType = String message to variable  
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
@@ -126,18 +131,18 @@ caps.handback.revision: 29
 |**Mit Inhalt**|Die Nachricht muss die Zeichenfolge in der Option **CompareString** enthalten.|  
   
  **CompareString**  
- Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine** festgelegt ist.  
+ Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine**festgelegt ist.  
   
  **Variable**  
- Geben Sie den Namen der Variablen zum Speichern der Nachricht ein, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
+ Geben Sie den Namen der Variablen zum Speichern der Nachricht, oder klicken Sie auf \< **neue Variable...** > und konfigurieren Sie dann eine neue Variable.  
   
- **Verwandte Themen:** [Variable hinzufügen](../Topic/Add%20Variable.md)  
+ **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Senden“&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Task ' Nachrichtenwarteschlange ' &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Task ' Nachrichtenwarteschlange ' &#40; Senden Sie die Seite "&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
- [Nachrichtenwarteschlange (Task)](../../integration-services/control-flow/message-queue-task.md)  
+ [Task "Nachrichtenwarteschlange"](../../integration-services/control-flow/message-queue-task.md)  
   
   

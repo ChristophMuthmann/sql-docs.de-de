@@ -1,32 +1,37 @@
 ---
-title: "CAST (SSIS-Ausdruck) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CAST-Funktion"
-  - "Umwandlungsoperator"
-  - "Konvertieren von Datentypen [Integration Services]"
-  - "Datentypen [Integration Services], Ausdrücke"
-  - "Datentypen [Integration Services], Konvertieren"
+title: CAST (SSIS-Ausdruck) | Microsoft Docs
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# CAST (SSIS-Ausdruck)
+# <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
   Konvertiert einen Ausdruck explizit in einen anderen Datentyp. Der Umwandlungsoperator kann auch als Operator zum Abschneiden dienen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *type_spec*  
- Ein gültiger [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentyp.  
+ Ein gültiger [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Datentyp.  
   
  *expression*  
  Ein beliebiger gültiger Ausdruck.  
   
-## Ergebnistypen  
+## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *type_spec*. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Im folgenden Diagramm werden zulässige Umwandlungsvorgänge dargestellt.  
   
- ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../../integration-services/expressions/media/data-conversion.gif "Zulässige und unzulässige Umwandlungen zwischen Datentypen")  
+ ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../../integration-services/expressions/media/data-conversion.gif "zulässige und unzulässige Umwandlungen zwischen Datentypen")  
   
  Für die Umwandlung in bestimmte Datentypen sind Parameter erforderlich. In der folgenden Tabelle sind diese Datentypen und die zugehörigen Parameter aufgelistet.  
   
@@ -65,11 +70,11 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  Informationen zum Konvertieren einer Zeichenfolge in einen anderen Datumsdatentyp als DT_DATE finden Sie unter [SQL Server Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
- Falls die Codepage eine Multibytezeichen-Codepage ist, kann die Anzahl der Bytes und Zeichen abweichen. Durch das Umwandeln von DT_WSTR in DT_STR mit dem gleichen *charcount*-Wert können die letzten Zeichen in der konvertierten Zeichenfolge abgeschnitten werden. Falls in der Spalte der Zieltabelle ausreichend Speicherplatz vorhanden ist, legen Sie für den Wert des *charcount* -Parameters die Anzahl der Bytes fest, die die Multibytecodepage erfordert. Wenn Sie z.B. Zeichendaten mithilfe der 936-Codepage in einen DT_STR-Datentyp umwandeln, sollten Sie für *charcount* einen Wert festlegen, der bis zu zweimal größer als die Anzahl von Zeichen ist, die die Daten erwartungsgemäß enthalten. Falls Sie Zeichendaten mithilfe der UTF-8-Codepage umwandeln, sollten Sie für *charcount* einen Wert festlegen, der bis zu viermal größer ist.  
+ Falls die Codepage eine Multibytezeichen-Codepage ist, kann die Anzahl der Bytes und Zeichen abweichen. Durch das Umwandeln von DT_WSTR in DT_STR mit dem gleichen *charcount* -Wert können die letzten Zeichen in der konvertierten Zeichenfolge abgeschnitten werden. Falls in der Spalte der Zieltabelle ausreichend Speicherplatz vorhanden ist, legen Sie für den Wert des *charcount* -Parameters die Anzahl der Bytes fest, die die Multibytecodepage erfordert. Wenn Sie z.B. Zeichendaten mithilfe der 936-Codepage in einen DT_STR-Datentyp umwandeln, sollten Sie für *charcount* einen Wert festlegen, der bis zu zweimal größer als die Anzahl von Zeichen ist, die die Daten erwartungsgemäß enthalten. Falls Sie Zeichendaten mithilfe der UTF-8-Codepage umwandeln, sollten Sie für *charcount* einen Wert festlegen, der bis zu viermal größer ist.  
   
  Weitere Informationen zur Struktur von Datumsdatentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Beispiele für SSIS-Ausdrücke  
+## <a name="ssis-expression-examples"></a>Beispiele für SSIS-Ausdrücke  
  In diesem Beispiel wird ein numerischer Wert in eine ganze Zahl umgewandelt.  
   
 ```  
@@ -142,10 +147,10 @@ caps.handback.revision: 61
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## Siehe auch  
- [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Integration Services-Datentypen in Ausdrücken](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

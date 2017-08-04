@@ -1,0 +1,369 @@
+---
+title: SQL Server-Einstellungen unter Linux konfigurieren | Microsoft Docs
+description: "Dieses Thema beschreibt, wie der Mssql-Conf-Tool verwenden, um die Einstellungen für SQL Server-2017 unter Linux konfigurieren."
+author: luisbosquez
+ms.author: lbosq
+manager: jhubbard
+ms.date: 06/16/2017
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
+ms.translationtype: MT
+ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
+ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
+
+**MSSQL-Conf** ein Konfigurationsskript, der mit SQL Server 2017 RC2 für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert ist. Sie können dieses Hilfsprogramm verwenden, um die folgenden Parameter festzulegen:
+
+|||
+|---|---|
+| [Sortierung](#collation) | Legen Sie eine neue Sortierung für SQL Server unter Linux. |
+| [Kundenfeedback](#customerfeedback) | Wählen Sie aus, und zwar unabhängig davon, ob SQL Server Feedback an Microsoft sendet. |
+| [Standarddatenverzeichnis](#datadir) | Ändern Sie das Standardverzeichnis für neue SQL Server-Datenbank-Datendateien (MDF). |
+| [Standard-Protokollverzeichnis](#datadir) | Ändert das Standardverzeichnis für neue SQL Server-Protokolldateien (LDF) Datenbankdateien an. |
+| [Dump Standardverzeichnis](#dumpdir) | Ändern Sie das Standardverzeichnis für neue Speicherabbilder und andere Dateien zur Problembehandlung. |
+| [Standardsicherungsverzeichnis](#backupdir) | Ändern Sie das Standardverzeichnis für neue Sicherungsdateien an. |
+| [Dumptyp](#coredump) | Wählen Sie den Typ der Dump Speicherabbild sammeln. |
+| [Hohe Verfügbarkeit](#hadr) | Aktivieren von Verfügbarkeitsgruppen. |
+| [Lokales Verzeichnis für Überwachung](#localaudit) | Legen Sie ein hinzuzufügende Überwachungsdateien lokalen Verzeichnis. |
+| [Gebietsschema](#lcid) | Legen Sie das Gebietsschema für SQL Server verwenden. |
+| [Arbeitsspeichergrenze](#memorylimit) | Legen Sie den Höchstwert des Arbeitsspeichers für SQL Server. |
+| [TCP-port](#tcpport) | Ändern Sie den Port, auf dem SQL Server für Verbindungen lauscht. |
+| [TLS](#tls) | Konfigurieren Sie die Sicherheit auf Transportebene. |
+| [Ablaufverfolgungsflags](#traceflags) | Legen Sie die Ablaufverfolgungsflags, die der Dienst verwenden soll. |
+
+Die folgenden Abschnitte zeigen Beispiele für die Verwendung von Mssql-Conf für jedes dieser Szenarien.
+
+> [!TIP]
+> Diese Beispiele ausführen Mssql-Conf, indem Sie den vollständigen Pfad angeben: **/opt/mssql/bin/mssql-conf**. Falls gewünscht, um stattdessen an, dass der Pfad zu navigieren, Mssql-Conf im Kontext des aktuellen Verzeichnisses ausgeführt: **. / Mssql-Conf**.
+
+> [!NOTE]
+> Einige dieser Einstellungen können auch mit Umgebungsvariablen konfiguriert werden. Weitere Informationen finden Sie unter [konfigurieren Sie SQL Server-Einstellungen mit Umgebungsvariablen](sql-server-linux-configure-environment-variables.md).
+
+## <a id="collation"></a>Ändern Sie die SQL Server-Sortierung
+
+Die **Satz Sortierung** Option ändert den Sortierungswert auf eines der unterstützten Sortierungen:
+
+1. Führen Sie die **Satz Sortierung** aus, und befolgen Sie die Anweisungen:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-collation
+   ```
+
+1. Das Hilfsprogramm Mssql-Conf versucht, stellen Sie die Datenbanken mithilfe der angegebenen Sortierung und den Dienst neu. Wenn Fehler vorliegen, setzt er die Sortierung auf den vorherigen Wert zurück.
+
+Führen Sie eine Liste der unterstützten Sortierungen, die [Sys. fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) Funktion: `SELECT Name from sys.fn_helpcollations()`.
+
+## <a id="customerfeedback"></a>Konfigurieren von Kundenfeedback
+
+Die **telemetry.customerfeedback** Änderungen festlegen, ob SQL Server Feedback an Microsoft oder nicht sendet. Standardmäßig ist dieser Wert festgelegt, um **"true"**. Um den Wert zu ändern, führen Sie die folgenden Befehle ein:
+
+1. Führen Sie das Skript Mssql-Conf als Root mit der **festgelegt** -Befehl für **telemetry.customerfeedback**. Im folgende Beispiel wird deaktiviert Kundenfeedback durch Angabe **"false"**.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+Weitere Informationen finden Sie unter [Feedback von Kunden für SQL Server on Linux](sql-server-linux-customer-feedback.md).
+
+## <a id="datadir"></a>Ändern Sie das Standardverzeichnis Daten- oder Protokolldatei
+
+Die **filelocation.defaultdatadir** und **filelocation.defaultlogdir** Einstellungen ändern Sie den Speicherort, an dem die neue Datenbank und-Protokolldateien erstellt werden. Dieser Speicherort ist standardmäßig /var/opt/mssql/data. Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
+
+1. Erstellen Sie das Zielverzeichnis für die neue Datenbank Daten-und Protokolldateien. Das folgende Beispiel erstellt ein neues **/Tmp/Daten** Verzeichnis:
+
+   ```bash
+   sudo mkdir /tmp/data
+   ```
+
+1. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+
+   ```bash
+   sudo chown mssql /tmp/data
+   sudo chgrp mssql /tmp/data
+   ```
+
+1. Verwenden der Mssql-Conf so ändern Sie das Standardverzeichnis für die Daten mit der **festgelegt** Befehl:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir /tmp/data
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+1. Jetzt werden die Datenbankdateien für die neuen erstellten Datenbanken in den neuen Speicherort gespeichert werden. Wenn Sie den Speicherort der Protokolldateien (LDF) der neuen Datenbanken ändern möchten, können Sie den folgenden "Set"-Befehl verwenden:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
+   ```
+
+1. Mit diesem Befehl auch davon ausgegangen, dass ein Protokollverzeichnis/Tmp/vorhanden ist, wird unter dem Benutzer und Gruppe **Mssql**.
+
+## <a id="dumpdir"></a>Ändern Sie den Speicherort des Standardverzeichnisses dump
+
+Die **filelocation.defaultdumpdir** Einstellung ändert sich den Standardspeicherort, in dem für den Speicher und SQL-Dumps generiert werden, wenn ein Absturz (Crash) vorhanden ist. Standardmäßig werden diese Dateien in /var/opt/mssql/log generiert.
+
+Um den neuen Speicherort einzurichten, verwenden Sie die folgenden Befehle ein:
+
+1. Erstellen Sie das Zielverzeichnis für neue debugdumpdateien. Das folgende Beispiel erstellt ein neues **/Tmp/Dump** Verzeichnis:
+
+   ```bash
+   sudo mkdir /tmp/dump
+   ```
+
+1. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+
+   ```bash
+   sudo chown mssql /tmp/dump
+   sudo chgrp mssql /tmp/dump
+   ```
+
+1. Verwenden der Mssql-Conf so ändern Sie das Standardverzeichnis für die Daten mit der **festgelegt** Befehl:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdumpdir /tmp/dump
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="backupdir"></a>Ändern des Standardspeicherorts für das Sicherungsverzeichnis
+
+Die **filelocation.defaultbackupdir** Einstellung ändert sich den Standardspeicherort, an dem die Sicherungsdateien generiert werden. Standardmäßig werden diese Dateien in /var/opt/mssql/data generiert.
+
+Um den neuen Speicherort einzurichten, verwenden Sie die folgenden Befehle ein:
+
+1. Erstellen Sie das Zielverzeichnis für neue Sicherungsdateien an. Das folgende Beispiel erstellt ein neues **/Tmp/Sicherung** Verzeichnis:
+
+   ```bash
+   sudo mkdir /tmp/backup
+   ```
+
+1. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+
+   ```bash
+   sudo chown mssql /tmp/backup
+   sudo chgrp mssql /tmp/backup
+   ```
+
+1. Verwenden Sie Mssql-Conf, um das Standardsicherungsverzeichnis mit dem Befehl "Set" zu ändern:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.defaultbackupdir /tmp/backup
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="coredump"></a>Core Dump Einstellungen angeben
+
+Tritt eine Ausnahme in einem SQL Server-Prozesse auf, wird SQL Server ein Speicherabbild erstellt.
+
+Es gibt zwei Optionen für die Steuerung des Typs der Speicher ein Abbild sichert, dass SQL Server erfasst: **coredump.coredumptype** und **coredump.captureminiandfull**. Diese beziehen sich auf die beiden Phasen der Erfassung des Core Dump. 
+
+Die erste Phase Erfassung wird gesteuert, indem die **coredump.coredumptype** Einstellung, die festlegt, den Typ der Dumpdatei, während eine Ausnahme generiert. Die zweite Phase ist aktiviert, wenn die **coredump.captureminiandfull** Einstellung. Wenn **coredump.captureminiandfull** festgelegt ist, auf "true", das Speicherabbild durch die angegebene Datei **coredump.coredumptype** wird generiert, und eine zweite Miniabbild wird ebenfalls generiert. Festlegen von **coredump.captureminiandfull** auf "false" verhindert die zweite Erfassung versuchen.
+
+1. Entscheiden Sie, ob sowohl vollständige als auch Mini-Dumpdateien mit Erfassen der **coredump.captureminiandfull** Einstellung.
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
+    ```
+
+    Standard: **"true"**
+
+1. Geben Sie die Dumpdatei mit der **coredump.coredumptype** Einstellung.
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set coredump.coredumptype <dump_type>
+    ```
+
+    Standard: **Miniplus**
+
+    Die folgende Tabelle enthält die möglichen **coredump.coredumptype** Werte.
+
+    | Typ | Description |
+    |-----|-----|
+    | **Mini** | Mini lautet der kleinste Dump-Dateityp. Verwendet er die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Modulen. Es enthält keine indirekte Speicherreferenzen oder Globals. |
+    | **miniplus** | MiniPlus Mini ähnelt, aber sie zusätzlichen Arbeitsspeicher enthält. Er versteht im Rahmen der SQLPAL und der hostumgebung die folgenden Speicherbereiche das Speicherabbild hinzufügen:</br></br> -Globals verschiedene</br> -Alle Arbeitsspeicher über 64TB</br> -Alle Regionen in gefunden benannte **/proc/$ pid/Zuordnungen**</br> -Indirekte Arbeitsspeicher von Threads und Stapel</br> -Thread Informationen</br> -Der Teb und den Peb des verknüpften</br> -Modulinformationen</br> -Struktur VMM und VAD |
+    | **gefiltert** | Gefilterte mithilfe einer Subtraktion basierende entwerfen, in dem alle Arbeitsspeicher des Prozesses enthalten ist, sofern nicht ausdrücklich ausgeschlossen. Der Entwurf versteht im Rahmen der SQLPAL und der hostumgebung, Ausschließen von bestimmten Regionen von das Speicherabbild.
+    | **vollständige** | Vollständige befindet, die alle Regionen enthält vollständige prozessdump **/proc/$ pid/Zuordnungen**. Dies wird nicht gesteuert, indem **coredump.captureminiandfull** Einstellung. |
+
+## <a id="hadr"></a>Hohe Verfügbarkeit
+
+Die **hadr.hadrenabled** Option Verfügbarkeitsgruppen auf SQL Server-Instanz aktiviert. Der folgende Befehl aktiviert die Verfügbarkeitsgruppen durch Festlegen von **hadr.hadrenabled** auf 1. Sie müssen neu starten, SQL Server für die Einstellung wirksam wird.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
+sudo systemctl restart mssql-server
+```
+
+Informationen, wie dies mit Verfügbarkeitsgruppen verwendet wird, finden Sie unter den folgenden zwei Themen.
+
+- [Konfigurieren Sie Always On-Verfügbarkeitsgruppe für SQLServer on Linux](sql-server-linux-availability-group-configure-ha.md)
+- [Konfigurieren Sie Skalieren von Lesevorgängen verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
+
+## <a id="localaudit"></a>Die lokale Überwachung Verzeichnis festlegen
+
+Die **telemetry.userrequestedlocalauditdirectory** Einstellung ermöglicht das lokale Überwachung und ermöglicht Ihnen das Verzeichnis festlegen, in dem die lokale Überwachung protokolliert werden erstellt.
+
+1. Erstellen Sie ein Zielverzeichnis für neue lokale Überwachungsprotokolle ein. Das folgende Beispiel erstellt ein neues **/Tmp/Audit** Verzeichnis:
+
+   ```bash
+   sudo mkdir /tmp/audit
+   ```
+
+1. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+
+   ```bash
+   sudo chown mssql /tmp/audit
+   sudo chgrp mssql /tmp/audit
+   ```
+
+1. Führen Sie das Skript Mssql-Conf als Root mit der **festgelegt** -Befehl für **telemetry.userrequestedlocalauditdirectory**:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+Weitere Informationen finden Sie unter [Feedback von Kunden für SQL Server on Linux](sql-server-linux-customer-feedback.md).
+
+## <a id="lcid"></a>Ändern Sie das SQL Server-Gebietsschema
+
+Die **language.lcid** ändert sich das SQL Server-Gebietsschema auf alle unterstützten Sprachen-ID (LCID) festlegen. 
+
+1. Im folgende Beispiel ändert das Gebietsschema auf Französisch (1036):
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set language.lcid 1036
+   ```
+
+1. Starten Sie den SQL Server-Dienst, um die Änderungen zu übernehmen:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="memorylimit"></a>Das Arbeitsspeicherlimit festgelegt
+
+Die **memory.memorylimitmb** Steuerelemente Größe des physischen Arbeitsspeichers (in MB) verfügbar auf SQL Server festlegen. Der Standardwert ist 80 % des physischen Arbeitsspeichers.
+
+1. Führen Sie das Skript Mssql-Conf als Root mit der **festgelegt** -Befehl für **memory.memorylimitmb**. Im folgenden Beispiel wird den verfügbare Speicher mit SQL Server zum 3,25 GB (3328 MB) an.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
+   ```
+
+1. Starten Sie den SQL Server-Dienst, um die Änderungen zu übernehmen:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="tcpport"></a>Ändern Sie den TCP-port
+
+Die **network.tcpport** Einstellung ändert sich des TCP-Ports, auf dem SQL Server Verbindungen überwacht. Standardmäßig wird dieser Port auf 1433 festgelegt. Um den Port zu ändern, führen Sie die folgenden Befehle ein:
+
+1. Führen Sie das Skript Mssql-Conf als Stamm mit dem Befehl "set" für "network.tcpport":
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
+   ```
+
+1. Starten Sie SQL Server-Dienst neu:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+1. Wenn nun eine Verbindung mit SQL Server herstellen, müssen Sie den benutzerdefinierten Port durch ein Komma (,) nach der Hostname oder IP-Adresse angeben. Um mit SQLCMD eine Verbindung herzustellen, würden Sie z. B. den folgenden Befehl verwenden:
+
+   ```bash
+   sqlcmd -S localhost,<new_tcp_port> -U test -P test
+   ```
+
+## <a id="tls"></a>TLS-Einstellungen angeben
+
+Die folgenden Optionen konfigurieren TLS für eine Instanz von SQL Server auf dem Linux ausgeführt wird.
+
+|Option |Description |
+|--- |--- |
+|**Network.forceencryption** |Wenn der Wert 1, dann [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] erzwingt, dass alle Verbindungen verschlüsselt werden. Standardmäßig ist diese Option 0. |
+|**Network.tlscert** |Der absolute Pfad zu dem Zertifikat-Datei mit [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] für TLS-Verbindungen verwendet. Beispiel: `/etc/ssl/certs/mssql.pem` der Zertifikatsdatei muss der Mssql-Konto zugänglich sein. Microsoft empfiehlt, Einschränken des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlskey** |Der absolute Pfad zum privaten Schlüssel Datei, die mit [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] für TLS-Verbindungen verwendet. Beispiel: `/etc/ssl/private/mssql.key` der Zertifikatsdatei muss der Mssql-Konto zugänglich sein. Microsoft empfiehlt, Einschränken des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlsprotocols** |Eine durch Trennzeichen getrennte Liste der TLS-Protokolle von SQL Server zulässig sind. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]immer versucht, die stärkste zulässige Protokoll ausgehandelt. Wenn ein Client ein zulässige Protokoll nicht unterstützt [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] lehnt der Verbindungsversuch fehl.  Aus Kompatibilitätsgründen sind alle unterstützten Protokolle (1,2, 1.1, 1.0) standardmäßig zulässig.  Wenn Ihre Clients TLS 1.2 unterstützt, empfiehlt Microsoft, sodass nur TLS 1.2. |
+|**Network.tlsciphers** |Gibt an, welche Chiffren zulässig sind [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] für TLS. Diese Zeichenfolge muss formatiert werden, pro [OpenSSLs-Chiffre Listenformat](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Im Allgemeinen müssen Sie nicht diese Option zu ändern. <br /> Standardmäßig sind die folgenden Chiffren zulässig: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **Network.kerberoskeytabfile** |Pfad zu der Kerberos-Keytab-Datei |
+
+Ein Beispiel der Verwendung von TLS-Einstellungen finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server on Linux](sql-server-linux-encrypted-connections.md).
+
+## <a id="traceflags"></a>Aktivieren/Deaktivieren von Ablaufverfolgungsflags
+
+Dies **Ablaufverfolgungsflag** Option aktiviert oder deaktiviert die Traceflags für den Start des SQL Server-Diensts. Zum Aktivieren/Deaktivieren des ein Ablaufverfolgungsflag, verwenden Sie die folgenden Befehle:
+
+1. Aktivieren Sie ein Ablaufverfolgungsflag mit dem folgenden Befehl ein. Z. B. für Ablaufverfolgungsflag 1234:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf traceflag 1234 on
+   ```
+
+1. Sie können mehrere Traceflags aktivieren, indem Sie diese separat angeben:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf traceflag 2345 3456 on
+   ```
+
+1. Auf ähnliche Weise, können Sie eine oder mehrere aktivierte Traceflags deaktivieren, indem sie angeben und das Hinzufügen der **deaktiviert** Parameter:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf traceflag 1234 2345 3456 off
+   ```
+
+1. Starten Sie den SQL Server-Dienst, um die Änderungen zu übernehmen:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a name="view-current-settings"></a>Anzeigen der aktuellen Einstellungen
+
+Alle Einstellungen anzeigen, die explizit mit konfiguriertem **Mssql-Conf**, führen Sie den folgenden Befehl:
+
+```bash
+sudo cat /var/opt/mssql/mssql.conf
+```
+
+Beachten Sie, dass alle Einstellungen in dieser Datei nicht angezeigt. die Standardwerte verwenden.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Um stattdessen Umgebungsvariablen verwenden, um einige dieser konfigurationsänderungen vornehmen, finden Sie unter [konfigurieren Sie SQL Server-Einstellungen mit Umgebungsvariablen](sql-server-linux-configure-environment-variables.md).
+
+Andere Verwaltungstools und Szenarien finden Sie unter [Verwalten von SQL Server on Linux](sql-server-linux-management-overview.md).
+

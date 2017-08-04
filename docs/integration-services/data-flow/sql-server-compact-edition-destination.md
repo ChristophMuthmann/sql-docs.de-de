@@ -1,28 +1,33 @@
 ---
-title: "SQL Server Compact Edition-Ziel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlservercompactdest.f1"
-helpviewer_keywords: 
-  - "Ziele [Integration Services], SQL Server Compact"
-  - "SQL Server Compact, Ziel"
-  - "Einfügen von Daten"
+title: SQL Server Compact Edition-Ziels | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlservercompactdest.f1
+helpviewer_keywords:
+- destinations [Integration Services], SQL Server Compact
+- SQL Server Compact, destination
+- inserting data
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec7fef9755b0bfd277282de54696d6f6cff5547c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server Compact Edition-Ziel
+# <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition-Ziel
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel schreibt Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbanken.  
   
 > [!NOTE]  
@@ -36,19 +41,19 @@ caps.handback.revision: 56
   
  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel hat eine Eingabe und unterstützt keine Fehlerausgabe.  
   
-## Konfiguration des SQL Server Compact Edition-Ziels  
+## <a name="configuration-of-the-sql-server-compact-edition-destination"></a>Konfiguration des SQL Server Compact Edition-Ziels  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften des SQL Server-Ziels](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Weitere Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   

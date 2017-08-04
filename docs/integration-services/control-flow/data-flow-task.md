@@ -1,30 +1,35 @@
 ---
-title: "Datenflusstask | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "Datenflusstask [Integration Services]"
-  - "Leistung [Integration Services]"
-  - "Datenfluss [Integration Services], Leistung"
-  - "Datenfluss [Integration Services], Datenflusstask"
-  - "Integration Services, Leistung"
+title: Datenflusstask | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Datenflusstask
+# <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt das Datenflussmodul, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
   
  Ein Datenfluss besteht aus mindestens einer Datenflusskomponente, normalerweise jedoch aus verbundenen Datenflusskomponenten. Dabei handelt es sich um Quellen zum Extrahieren von Daten, Transformationen zum Ändern, Routen oder Zusammenfassen von Daten sowie Ziele zum Laden von Daten.  
@@ -33,7 +38,7 @@ caps.handback.revision: 75
   
  Zum Masseneinfügen von Daten aus Textdateien in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank können Sie den Masseneinfügungstask anstelle eines Datenflusstasks und eines Datenflusses verwenden. Mit dem Masseneinfügungstask ist es jedoch nicht möglich, Daten zu transformieren. Weitere Informationen finden Sie unter [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
   
-## Mehrere Flüsse  
+## <a name="multiple-flows"></a>Mehrere Flüsse  
  Ein Datenflusstask kann mehrere Datenflüsse einschließen. Falls ein Task mehrere Datasets kopiert und falls die Reihenfolge, in der die Daten kopiert werden, keine Rolle spielt, kann es praktischer sein, mehrere Datenflüsse in den Datenflusstask einzuschließen. Beispielsweise können Sie fünf Datenflüsse erstellen, von denen jeder Daten aus einer Flatfile in eine unterschiedliche Dimensionstabelle in einem Data Warehouse-Sternschema kopiert.  
   
  Das Datenflussmodul bestimmt jedoch die Ausführungsreihenfolge, wenn in einem einzigen Datenflusstask mehrere Datenflüsse vorhanden sind. Wenn deshalb die Reihenfolge eine Rolle spielt, sollte das Paket mehrere Datenflusstasks verwenden, wobei jeder Task einen Datenfluss enthält. Anschließend können Sie Rangfolgeneinschränkungen anwenden, um die Ausführungsreihenfolge der Tasks zu steuern.  
@@ -42,15 +47,15 @@ caps.handback.revision: 75
   
  ![Datenflüsse](../../integration-services/control-flow/media/mw-dts-09.gif "Datenflüsse")  
   
-## Protokolleinträge  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
+## <a name="log-entries"></a>Protokolleinträge  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
-|**OnPipelinePostEndOfRowset**|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der **ProcessInput**-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|**OnPipelinePostEndOfRowset**|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der **ProcessInput** -Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |**OnPipelinePostPrimeOutput**|Zeigt an, dass die Komponente ihren letzten Aufruf der **PrimeOutput** -Methode abgeschlossen hat. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet dieser Protokolleintrag, dass die Komponente die Zeilenverarbeitung abgeschlossen hat.|  
-|**OnPipelinePreEndOfRowset**|Zeigt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten soll. Dieses Signal wird durch den letzten Aufruf der **ProcessInput**-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|**OnPipelinePreEndOfRowset**|Zeigt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten soll. Dieses Signal wird durch den letzten Aufruf der **ProcessInput** -Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |**OnPipelinePrePrimeOutput**|Zeigt an, dass die Komponente einen Aufruf aus der **PrimeOutput** -Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |**OnPipelineRowsSent**|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der **ProcessInput** -Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |**PipelineBufferLeak**|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Aufrechterhaltene Puffer blockieren die Freigabe von Pufferressourcen und können Speicherverluste verursachen. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### Beispielmeldungen aus einem Datenflusstask  
+### <a name="sample-messages-from-a-data-flow-task"></a>Beispielmeldungen aus einem Datenflusstask  
  In der folgenden Tabelle werden Beispielmeldungen für Protokolleinträge für ein sehr einfaches Paket aufgelistet. Das Paket verwendet eine OLE DB-Quelle zum Extrahieren von Daten aus einer Tabelle, eine Transformation zum Sortieren, um die Daten zu sortieren, und ein OLE DB-Ziel, um die Daten in eine andere Tabelle zu schreiben.  
   
 |Protokolleintrag|Meldungen|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|Der Wert der **Name** -Eigenschaft der Eingabe der Transformation zum Sortieren.|Sortiereingabe|  
 |**RowsSent**|Die Anzahl von Zeilen, die an die Eingabe der Transformation zum Sortieren gesendet wurden.|76|  
   
-## Konfiguration des Datenflusstasks  
+## <a name="configuration-of-the-data-flow-task"></a>Konfiguration des Datenflusstasks  
  Eigenschaften können Sie im Fenster **Eigenschaften** oder programmgesteuert festlegen.  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im Fenster **Eigenschaften** zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Programmgesteuerte Konfiguration des Datenflusstasks  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>Programmgesteuerte Konfiguration des Datenflusstasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Hinzufügen von Datenflusstasks zu Paketen und zum Festlegen von Datenflusseigenschaften anzuzeigen:  
   
 -   [Programmgesteuertes Hinzufügen des Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## Verwandte Aufgaben  
- [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
+ [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Video [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
   

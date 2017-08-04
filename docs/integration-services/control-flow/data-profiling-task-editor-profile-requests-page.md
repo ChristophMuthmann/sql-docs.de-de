@@ -1,26 +1,31 @@
 ---
-title: "Editor f&#252;r den Datenprofilerstellungs-Task (Seite &#39;Profilanforderungen&#39;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "Editor für den Datenprofilerstellungs-Task"
+title: Datenprofilerstellungs-Task-Editor (Seite "Profil Anfragen") | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor f&#252;r den Datenprofilerstellungs-Task (Seite &#39;Profilanforderungen&#39;)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
@@ -33,10 +38,10 @@ caps.handback.revision: 26
   
 3.  Klicken Sie im **Editor für den Datenprofilerstellungs-Task**auf **Profilanforderungen**.  
   
-## Verwenden des Anforderungsbereichs  
+## <a name="using-the-requests-pane"></a>Verwenden des Anforderungsbereichs  
  Der Anforderungsbereich ist der Bereich, der oben auf der Seite angezeigt wird. In diesem Bereich werden alle Profile aufgelistet, die für den aktuellen Datenprofilerstellungs-Task konfiguriert wurden. Wenn keine Profile konfiguriert wurden, ist der Anforderungsbereich leer. Um ein neues Profil hinzuzufügen, klicken Sie in einen leeren Bereich unter der Spalte **Profiltyp** , und wählen Sie einen Profiltyp aus der Liste aus. Zum Konfigurieren eines Profils wählen Sie das Profil im Anforderungsbereich aus und legen dann die Eigenschaften des Profils im Bereich **Anforderungseigenschaften** fest.  
   
-### Optionen im Anforderungsbereich  
+### <a name="requests-pane-options"></a>Optionen im Anforderungsbereich  
  Der Anforderungsbereich enthält die folgenden Optionen:  
   
  **Sicht**  
@@ -44,14 +49,14 @@ caps.handback.revision: 26
   
  Die Spalten im Anforderungsbereich haben sich je nach der ausgewählten **Sicht** geändert. Weitere Informationen über jede dieser Spalten finden Sie im nächsten Abschnitt, "Spalten im Anforderungsbereich".  
   
-### Spalten im Anforderungsbereich  
+### <a name="requests-pane-columns"></a>Spalten im Anforderungsbereich  
  Welche Spalten im Anforderungsbereich angezeigt werden, hängt von der **Sicht** ab, die Sie ausgewählt haben:  
   
 -   Wenn Sie **Alle Anforderungen**auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
   
 -   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**und **Anforderungs-ID**.  
   
--   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten** und **Anforderungs-ID**.  
+-   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten**und **Anforderungs-ID**.  
   
 -   Wenn Sie ein funktionales Abhängigkeitsprofil anzeigen, enthält der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Bestimmende Spalten**, **Abhängige Spalte**und **Anforderungs-ID**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  In den folgenden Abschnitten wird jede dieser Spalten beschrieben.  
   
-#### Spalten, die allen Sichten gemeinsam sind  
+#### <a name="columns-common-to-all-views"></a>Spalten, die allen Sichten gemeinsam sind  
  **Profiltyp**  
  Wählen Sie ein Datenprofil aus folgenden Optionen:  
   
@@ -77,38 +82,38 @@ caps.handback.revision: 26
  **RequestID**  
  Zeigt den Bezeichner für die Anforderung an. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-#### Spalten, die allen einzelnen Profilen gemeinsam sind  
+#### <a name="columns-common-to-all-individual-profiles"></a>Spalten, die allen einzelnen Profilen gemeinsam sind  
  **Verbindungs-Manager**  
- Zeigt den [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager an, der eine Verbindung mit der Quelldatenbank herstellt.  
+ Zeigt den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an, der eine Verbindung mit der Quelldatenbank herstellt.  
   
  **Anforderungs-ID**  
  Zeigt einen Bezeichner für die Anforderung an. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-#### Spalten, die den fünf einzelnen Spaltenprofilen gemeinsam sind  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>Spalten, die den fünf einzelnen Spaltenprofilen gemeinsam sind  
  **Tabelle oder Sicht**  
  Zeigt die Tabelle oder Sicht an, die die ausgewählte Spalte enthält.  
   
- **Column**  
+ **Spalte**  
  Zeigt die für die Profilerstellung ausgewählte Spalte an.  
   
-#### Spezifische Spalten des Kandidatenschlüsselprofils  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>Spezifische Spalten des Kandidatenschlüsselprofils  
  **Tabelle oder Sicht**  
  Zeigt die Tabelle oder Sicht an, die die ausgewählten Spalten enthält.  
   
  **Schlüsselspalten**  
  Zeigt die für die Profilerstellung ausgewählten Spalten an.  
   
-#### Spezifische Spalten des funktionalen Abhängigkeitsprofils  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>Spezifische Spalten des funktionalen Abhängigkeitsprofils  
  **Tabelle oder Sicht**  
  Zeigt die Tabelle oder Sicht an, die die ausgewählten Spalten enthält.  
   
- **Determinante Spalten**  
+ **Bestimmende Spalten**  
  Zeigt die Spalten an, die für die Profilerstellung als determinante Spalte(n) ausgewählt wurden. In dem Beispiel, in die US-amerikanische Postleitzahl den US-Bundesstaat festlegt, ist die Spalte mit den Postleitzahlen die determinante Spalte.  
   
- **Abhängige Spalte**  
+ **Dependent column**  
  Zeigt die Spalte an, die für die Profilerstellung als abhängige Spalte ausgewählt wurde. In dem Beispiel, in dem die US-amerikanische Postleitzahl den US-Bundesstaat festlegt, ist die Spalte mit dem Bundesstaat die abhängige Spalte.  
   
-#### Spezifische Spalten des Wertinklusionsprofils  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>Spezifische Spalten des Wertinklusionsprofils  
  **Untergeordnete Tabelle oder Sicht**  
  Zeigt die Tabelle oder die Sicht an, die die Spalte oder Spalten enthält, die als untergeordnete Spalten ausgewählt wurden.  
   
@@ -121,32 +126,32 @@ caps.handback.revision: 26
  **Übergeordnete Spalten**  
  Zeigt die Spalte oder Spalten an, die für die Profilerstellung als übergeordnete Spalten ausgewählt wurden. In dem Beispiel, in dem Sie prüfen möchten, dass die Werte in einer Spalte mit US-Bundesstaaten in einer Verweistabelle mit aus zwei Zeichen bestehenden Codes für US-Bundesstaaten gefunden werden, ist die übergeordnete Spalte die Spalte mit den Bundesstaatencodes in der Verweistabelle.  
   
-## Verwenden des Bereichs 'Anforderungseigenschaften'  
+## <a name="using-the-request-properties-pane"></a>Verwenden des Bereichs 'Anforderungseigenschaften'  
  Der Bereich **Anforderungseigenschaften** wird unter dem Anforderungsbereich angezeigt. Dieser Bereich zeigt die Optionen für das Profil an, das Sie im Anforderungsbereich ausgewählt haben.  
   
 > [!NOTE]  
->  Wenn Sie einen **Profiltyp** ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
+>  Wenn Sie einen **Profiltyp**ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
   
  Diese Optionen hängen vom ausgewählten Profil ab. Informationen zu den Optionen für einzelne Profiltypen finden Sie in den folgenden Themen:  
   
--   [Optionen für die Anforderung für Kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Kandidat Profiloptionen für Anforderung Key &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Spalte Null-Verhältnis Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Statistics Profile-Anforderung Spaltenoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Verteilungsprofil für Spaltenwert &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Spalte Wert Profil Anforderung Verteilungsoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Spalte Länge Profil Anforderung Verteilungsoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Muster Profil Anforderung Spaltenoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Funktionale Abhängigkeit Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Wert Aufnahme Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Siehe auch  
- [Editor für den Datenprofilerstellungs-Task &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

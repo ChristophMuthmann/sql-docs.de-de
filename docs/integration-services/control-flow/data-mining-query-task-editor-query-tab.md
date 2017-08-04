@@ -1,31 +1,36 @@
 ---
-title: "Editor f&#252;r Data Mining-Abfragetasks (Registerkarte Abfrage) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dmquerytask.query.f1"
-helpviewer_keywords: 
-  - "Editor für Data Mining-Abfragetasks"
+title: "Editor für Data Mining-Abfrage-Abfragetasks (Abfrageregisterkarte) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dmquerytask.query.f1
+helpviewer_keywords:
+- Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30058cf33bee872ad2553cffe1133dd9d35f5bdb
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor f&#252;r Data Mining-Abfragetasks (Registerkarte Abfrage)
+# <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
   
  Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
   
-## Allgemeine Optionen  
+## <a name="general-options"></a>Allgemeine Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für die Data Mining-Abfragetasks ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 29
  **Description**  
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
-## Optionen der Registerkarte Abfrage erstellen  
+## <a name="build-query-tab-options"></a>Optionen der Registerkarte Abfrage erstellen  
  **Data Mining-Abfrage**  
  Geben Sie eine Data Mining-Abfrage ein.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 29
  **Neue Abfrage erstellen**  
  Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
   
- **Verwandte Themen: , .** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **Verwandte Themen:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
-## Optionen der Registerkarte Parameterzuordnung  
+## <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
  **Parametername**  
  Sie können optional den Parameternamen aktualisieren. Ordnen Sie den Parameter einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
  **Entfernen**  
  Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
-## Optionen der Registerkarte Resultset  
+## <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
  **Ergebnisname**  
  Sie können optional den Resultsetnamen aktualisieren. Ordnen Sie das Resultset einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
@@ -77,10 +82,10 @@ caps.handback.revision: 29
  **Entfernen**  
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)   
- [Data Mining-Designer](../../analysis-services/data-mining/data-mining-designer.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für Data Mining-Abfragetasks &#40; Registerkarte "Modell" Mining &#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor für Data Mining-Abfragetasks &#40; Registerkarte "Ausgabe" &#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)   
+ [Datamining-Designer](../../analysis-services/data-mining/data-mining-designer.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Filtern (Dialogfeld, MDS-Add-In f&#252;r Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Filtern (Dialogfeld) (MDS-Add-in für Excel) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Filtern (Dialogfeld, MDS-Add-In f&#252;r Excel)
-  Verwenden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] das Dialogfeld **Filtern**, um die Liste der von MDS verwalteten Daten vor dem Laden in Excel einzugrenzen.  
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>Filtern (Dialogfeld, MDS-Add-In für Excel)
+  Verwenden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]das Dialogfeld **Filtern** , um die Liste der von MDS verwalteten Daten vor dem Laden in Excel einzugrenzen.  
   
  Dieses Dialogfeld enthält drei Abschnitte: **Spalten**, **Zeilen**und **Zusammenfassung**.  
   
-## Spalten  
- Verwenden Sie den Abschnitt **Spalten**, um zu bestimmen, welche Attribute (Spalten) Sie in Excel anzeigen möchten.  
+## <a name="columns"></a>Spalten  
+ Verwenden Sie den Abschnitt **Spalten** , um zu bestimmen, welche Attribute (Spalten) Sie in Excel anzeigen möchten.  
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
@@ -33,8 +38,8 @@ caps.handback.revision: 8
 |Auswahl aufheben|Klicken Sie, um die in der Liste angezeigten ausgewählten Attribute zu löschen.<br /><br /> Sie können weder **Name** noch **Code**löschen.|  
 |Pfeil nach oben/Pfeil nach unten|Klicken Sie auf diese Schaltfläche, um das ausgewählte Attribut in der Liste nach oben oder unten zu verschieben. Die Reihenfolge von oben nach unten entspricht der Reihenfolge von links nach rechts, in der die Spalten im Arbeitsblatt angezeigt werden.|  
   
-## Zeilen  
- Verwenden Sie den Abschnitt **Zeilen**, um zu bestimmen, welche Elemente (Zeilen) in Excel angezeigt werden sollen. Dafür definieren Sie Kriterien, mit denen Sie die Zeilen filtern, die angezeigt werden sollen.  
+## <a name="rows"></a>Zeilen  
+ Verwenden Sie den Abschnitt **Zeilen** , um zu bestimmen, welche Elemente (Zeilen) in Excel angezeigt werden sollen. Dafür definieren Sie Kriterien, mit denen Sie die Zeilen filtern, die angezeigt werden sollen.  
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |Alle entfernen|Entfernt alle Filter aus der Liste.|  
 |Entfernen|Entfernt den ausgewählten Filter aus der Liste.|  
   
-## Zusammenfassung  
+## <a name="summary"></a>Zusammenfassung  
  Verwenden Sie den Abschnitt **Zusammenfassung** , um Details zur Datenmenge, die geladen werden soll, vor dem Laden anzuzeigen.  
   
 |Steuerelementname|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |Zeilen|Die Anzahl der Zeilen, die in Excel geladen werden, basierend auf den im Abschnitt **Zeilen** angewendeten Filtern.|  
 |Spalten|Die Anzahl der Spalten, die in Excel geladen werden, basierend auf den im Abschnitt **Spalten** ausgewählten Attributen.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Filter Data before Exporting &#40;MDS Add-in for Excel&#41; (Filtern von Daten vor dem Exportieren (MDS-Add-In für Excel))](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Overview: Exporting Data to Excel &#40;MDS Add-in for Excel&#41; (Übersicht: Exportieren von Daten nach Excel (MDS-Add-in für Excel))](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

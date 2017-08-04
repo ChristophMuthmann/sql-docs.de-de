@@ -1,29 +1,34 @@
 ---
-title: "Daten-Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataviewer.f1"
-helpviewer_keywords: 
-  - "Daten-Viewer (Dialogfeld)"
+title: Daten-Viewer | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Daten-Viewer
+# <a name="data-viewer"></a>Daten-Viewer
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 13
  **Daten kopieren**  
  Kopiert die Daten des aktuellen Puffers in die Zwischenablage.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

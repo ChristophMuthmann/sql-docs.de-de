@@ -1,32 +1,37 @@
 ---
-title: "Optionen f&#252;r Anforderung f&#252;r Wertinklusionsprofil (Datenprofilerstellungs-Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor für den Datenprofilerstellungs-Task"
+title: Wert der Aufnahme Profil Anforderungsoptionen (Datenprofilerstellungs-Task) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Optionen f&#252;r Anforderung f&#252;r Wertinklusionsprofil (Datenprofilerstellungs-Task)
+# <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Wertinklusionsprofil** festzulegen. Ein Wertinklusionsprofil berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann auch ermitteln, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, um als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Zum Beispiel verwenden Sie ein Wertinklusionsprofil, um ein Profil für die Spalte ProductID einer Vertriebstabelle zu erstellen. Das Profil erkennt, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Products-Tabelle enthalten sind.  
   
 > [!NOTE]  
 >  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Weitere Informationen zum Verwenden des Datenprofilerstellungstasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
+ Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Grundlegendes zur Auswahl von Spalten für die InclusionColumns-Eigenschaft  
+## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>Grundlegendes zur Auswahl von Spalten für die InclusionColumns-Eigenschaft  
  Eine **Anforderung für Wertinklusionsprofil** berechnet, ob alle Werte aus einer Teilmenge in der Obermenge enthalten sind. Die Obermenge ist oft eine Suche oder Verweistabelle. Zum Beispiel ist die Bundesstaatenspalte in einer Tabelle mit Adressen die untergeordnete Tabelle. Jeder aus zwei Zeichen bestehende Bundesstaatencode in dieser Spalte sollte auch in der Tabelle der Bundesstaatencodes des United States Postal Service enthalten sein. Dies ist die übergeordnete Tabelle.  
   
  Wenn Sie den Platzhalter (*) als Wert der untergeordneten oder der übergeordneten Spalte verwenden, vergleicht der Datenprofilerstellungs-Task jede Spalte auf dieser Seite mit der auf der anderen Seite angegebenen Spalte.  
@@ -34,7 +39,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Wenn Sie (*) auswählen, kann diese Option zu zahlreichen Berechnungen führen und die Leistung des Tasks beeinträchtigen.  
   
-## Grundlegendes zu den Schwellenwerteinstellungen  
+## <a name="understanding-the-threshold-settings"></a>Grundlegendes zu den Schwellenwerteinstellungen  
  Sie können zwei verschiedene Schwellenwerteinstellungen verwenden, um die Ausgabe einer Anforderung für Wertinklusionsprofil zu verfeinern.  
   
  Wenn Sie für **InclusionThresholdSetting** einen anderen Wert als **Keine**angeben, meldet das Profil die Inklusionsstärke der Teilmenge nur unter einer der folgenden Bedingungen in der Obermenge:  
@@ -49,18 +54,18 @@ caps.handback.revision: 21
   
 -   Wenn die Inklusionsstärke den Wert 1,0 aufweist und **SupersetColumnsKeyThreshold** auf **Exact**festgelegt ist.  
   
-## Optionen für Anforderungseigenschaften  
+## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
  Für eine **Anforderung für Wertinklusionsbereich**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die **SubsetTableOrView**-, **SupersetTableOrView**- und **InclusionColumns** -Option enthalten  
   
 -   **Allgemein**  
   
--   **enthalten**  
+-   **Options**  
   
-### Datenoptionen  
+### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **SubsetTableOrView**  
  Wählen Sie die vorhandene Tabelle oder Sicht aus, für die ein Profil erstellt werden soll.  
@@ -77,14 +82,14 @@ caps.handback.revision: 21
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Auswahl von Spalten für die InclusionColumns-Eigenschaft" und unter "InclusionColumns-Optionen" in diesem Thema.  
   
-#### SubsetTableOrView-Option und SupersetTableOrView-Option  
+#### <a name="subsettableorview-and-supersettableorview-options"></a>SubsetTableOrView-Option und SupersetTableOrView-Option  
  **Schema**  
  Gibt das Schema an, zu dem die ausgewählte Tabelle gehört. Diese Option ist schreibgeschützt.  
   
  **TableOrView**  
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
-#### InclusionColumns-Optionen  
+#### <a name="inclusioncolumns-options"></a>InclusionColumns-Optionen  
  Die folgenden Optionen sind für jede Gruppe von Spalten verfügbar, die für die Profilerstellung in **InclusionColumns**ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von Spalten für die InclusionColumns-Eigenschaft" in diesem Thema.  
@@ -116,12 +121,12 @@ caps.handback.revision: 21
 |**IgnoreKanaType**|Gibt an, ob beim Vergleichen zwischen den beiden Typen japanischer Kanazeichen unterschieden wird: Hiragana und Katakana. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich den Kanatyp.|  
 |**IgnoreWidth**|Gibt an, ob beim Vergleichen zwischen einem Single-Byte-Zeichen und demselben Zeichen als Double-Byte-Zeichen unterschieden wird. Wenn diese Option festgelegt ist, werden die Single-Byte- und die Double-Byte-Darstellung desselben Zeichens als identisch behandelt.|  
   
-### Allgemeine Optionen  
+### <a name="general-options"></a>Allgemeine Optionen  
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### enthalten  
- **InclusionThresholdSetting**  
+### <a name="options"></a>-Option enthalten  
+ **Keine**  
  Wählen Sie die Schwellenwerteinstellung aus, um die Ausgabe des Profils zu verfeinern. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
 |Wert|Description|  
@@ -135,7 +140,7 @@ caps.handback.revision: 21
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
- **SupersetColumnsKeyThresholdSetting**  
+ **Keine**  
  Geben Sie den übergeordneten Schwellenwert an. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
 |Wert|Description|  
@@ -152,8 +157,8 @@ caps.handback.revision: 21
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von Inklusionsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **InclusionThresholdSetting**ausgewählt wird.  
   
-## Siehe auch  
- [Editor für den Datenprofilerstellungs-Task &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

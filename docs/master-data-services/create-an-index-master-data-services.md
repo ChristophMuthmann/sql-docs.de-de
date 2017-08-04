@@ -1,26 +1,31 @@
 ---
-title: "Erstellen eines Indexes (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen ein Indexes (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Indexes (Master Data Services)
+# <a name="create-an-index-master-data-services"></a>Erstellen eines Indexes (Master Data Services)
   Erstellen Sie einen benutzerdefinierten Index anhand einer Liste von Attributen, die Sie häufig abfragen, und verbessern Sie so die Abfrageleistung.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 6.  Wählen Sie **Ist eindeutig** aus, wenn Sie einen eindeutigen Index erstellen möchten. Weitere Informationen zu Indextypen finden Sie unter [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
   
-7.  Klicken Sie im Feld **Verfügbare Attribute** auf Attribute, und klicken Sie auf den Pfeil für **Hinzufügen**. Um alle Attribute hinzuzufügen, klicken Sie auf den Pfeil **Alle hinzufügen** .  
+7.  Klicken Sie im Feld **Verfügbare Attribute** auf Attribute, und klicken Sie auf den Pfeil für **Hinzufügen** . Um alle Attribute hinzuzufügen, klicken Sie auf den Pfeil **Alle hinzufügen** .  
   
 8.  Klicken Sie auf **Speichern**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|Status|Der Indexstatus.<br /><br /> Wenn Sie auf **Speichern** klicken, wird dieses Bild angezeigt ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), das angibt, dass der Index aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Index Fehler auftreten, wird dieses Bild angezeigt ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> Andernfalls ist der Status „OK“, und dieses Bild wird angezeigt ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Status|Der Indexstatus.<br /><br /> Beim Klicken auf **speichern**, ![Symbol für Status aktualisieren](../master-data-services/media/mds-statusicon-updating.png "Symbol für Status aktualisieren") Bild angezeigt, der angibt, die der Index aktualisiert wird.<br /><br /> Treten Fehler beim Erstellen oder bearbeiten einen Index der ![Symbol nach dem Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol nach dem Fehlerstatus") Bild angezeigt.<br /><br /> Andernfalls ist der Status "OK", und die ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") Bild angezeigt.|  
 |Name|Der Indexname.|  
 |Ist eindeutig|Gibt an, ob der Index eindeutig ist.|  
 |On Attributes|Zeigt die Anzeigenamen der Attribute, auf deren Basis der Index definiert ist.|  
@@ -64,10 +69,10 @@ caps.handback.revision: 6
   
 -   **Am**: Datum und Uhrzeit, wann der Index zuletzt aktualisiert wurde.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
  [Bearbeiten und Löschen eines Indexes &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Analysieren von Deadlocks mit SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Prozessknoten [SQL Server Profiler]"
-  - "Profiler [SQL Server Profiler], Deadlocks"
-  - "Deadlocks [SQL Server], Bestimmen der Ursache"
-  - "Ressourcenknoten [SQL Server Profiler]"
-  - "Diagramme [SQL Server Profiler]"
-  - "SQL Server Profiler, Deadlocks"
-  - "Ereignisse [SQL Server], Deadlocks"
-  - "Rahmen [SQL Server Profiler]"
+title: Analysieren von Deadlocks mit SQL Server Profiler | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process nodes [SQL Server Profiler]
+- Profiler [SQL Server Profiler], deadlocks
+- deadlocks [SQL Server], identifying cause
+- resource nodes [SQL Server Profiler]
+- graphs [SQL Server Profiler]
+- SQL Server Profiler, deadlocks
+- events [SQL Server], deadlocks
+- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysieren von Deadlocks mit SQL Server Profiler
+# <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analysieren von Deadlocks mit SQL Server Profiler
   Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ursache für einen Deadlock zu identifizieren. Ein Deadlock tritt dann auf, wenn eine zyklische Abhängigkeit zwischen mindestens zwei Threads oder Prozessen für eine beliebige Gruppe von Ressourcen in SQL Server besteht. Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie eine Ablaufverfolgung erstellen, die Deadlockereignisse zu Analysezwecken aufzeichnet, wiedergibt und anzeigt.  
   
  Um eine Ablaufverfolgung für Deadlockereignisse auszuführen, fügen Sie die **Deadlock graph** -Ereignisklasse zu einer Ablaufverfolgung hinzu. Diese Ereignisklasse füllt die **TextData** -Datenspalte in der Ablaufverfolgung mit XML-Daten zum Prozess sowie zu vom Deadlock betroffenen Objekten auf. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann das XML-Dokument in eine Deadlock-XML-Datei (.xdl) extrahieren, die Sie später in SQL Server Management Studio anzeigen können. Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] so konfigurieren, dass **Deadlock graph** -Ereignisse entweder in eine einzelne Datei mit allen **Deadlock graph** -Ereignissen oder in separate Dateien extrahiert werden. Das Extrahieren kann auf eine der folgenden Arten ausgeführt werden:  
@@ -34,9 +39,9 @@ caps.handback.revision: 13
   
 -   Mithilfe der Option **SQL Server-Ereignisse extrahieren** im Menü **Datei**  
   
--   Einzelne Ereignisse können auch extrahiert und gespeichert werden, indem Sie mit der rechten Maustaste auf ein bestimmtes Ereignis klicken und **Ereignisdaten extrahieren** auswählen.  
+-   Einzelne Ereignisse können auch extrahiert und gespeichert werden, indem Sie mit der rechten Maustaste auf ein bestimmtes Ereignis klicken und **Ereignisdaten extrahieren**auswählen.  
   
-## Deadlockdiagramme  
+## <a name="deadlock-graphs"></a>Deadlockdiagramme  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden Deadlock-Wartediagramme zum Beschreiben von Deadlocks. Das Deadlock-Wartediagramm enthält Prozessknoten, Ressourcenknoten und Rahmen, die die Beziehungen zwischen den Prozessen und Ressourcen darstellen. Die folgende Tabelle enthält die Definitionen der Komponenten in Wartediagrammen:  
   
  Prozessknoten  
@@ -48,7 +53,7 @@ caps.handback.revision: 13
  Rahmen  
  Die Beziehung zwischen einen Prozess und einer Ressource. Ein **request** -Rahmen tritt auf, wenn ein Prozess auf eine Ressource wartet. Ein **owner** -Rahmen tritt auf, wenn eine Ressource auf einen Prozess wartet. Die Rahmenbeschreibung enthält den Sperrmodus. Beispiel: **Modus: X**.  
   
-## Deadlock-Prozessknoten  
+## <a name="deadlock-process-node"></a>Deadlock-Prozessknoten  
  In einem Wartediagramm enthält der Prozessknoten Informationen zum Prozess. In der folgenden Tabelle werden die Komponenten eines Prozesses erläutert.  
   
 |Komponente|Definition|  
@@ -63,7 +68,7 @@ caps.handback.revision: 13
 |Eingabepuffer|Eingabepuffer des aktuellen Prozesses. Er definiert den Ereignistyp und die ausgeführte Anweisung. Zulässige Werte:<br /><br /> **Sprache**<br /><br /> **RPC**<br /><br /> **Keine**|  
 |Statement|Der Anweisungstyp. Folgende Werte sind möglich:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
-## Deadlock-Ressourcenknoten  
+## <a name="deadlock-resource-node"></a>Deadlock-Ressourcenknoten  
  Bei einem Deadlock warten zwei Prozesse auf eine Ressource, die vom jeweils anderen Prozess beansprucht wird. In einem Deadlockdiagramm werden die Ressourcen als Ressourcenknoten angezeigt.  
   
   

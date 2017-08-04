@@ -1,22 +1,27 @@
 ---
-title: "InfoPackage erstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: InfoPackage erstellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fae3a5c0b43d90fcc85b48db97e23fc444aaf7f2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# InfoPackage erstellen
+# <a name="create-infopackage"></a>InfoPackage erstellen
   Verwenden Sie das Dialogfeld **InfoPackage erstellen** , um ein neues InfoPackage im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoPackage erstellen** auf der Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **InfoSource**  
  Geben Sie den Namen der InfoSource ein, auf der das neue InfoPackage basieren soll.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 10
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie das neue InfoPackage.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Ziel-Editor f&#252;r Excel (Seite Fehlerausgabe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldestadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "Ziel-Editor für Excel"
+title: Excel-Ziel-Editor (Seite Fehlerausgabe) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldestadapter.erroroutput.f1
+helpviewer_keywords:
+- Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b826ecd93e7de8519b22f9001756fba6114bcf7
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r Excel (Seite Fehlerausgabe)
+# <a name="excel-destination-editor-error-output-page"></a>Ziel-Editor für Excel (Seite Fehlerausgabe)
   Auf der Seite **Erweitert** in **Ziel-Editor für Excel** können Sie die Optionen für die Fehlerbehandlung angeben.  
   
  Weitere Informationen zum Excel-Ziel finden Sie unter [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
  **Column**  
- Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** im Knoten **Verbindungs-Manager** ausgewählt wurden.  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** im Knoten **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  
  Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
@@ -49,10 +54,10 @@ caps.handback.revision: 18
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Excel &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
- [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für Excel &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für Excel &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
+ [Schleife durch Excel-Dateien und Tabellen mit einem foreach-Schleifen-Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

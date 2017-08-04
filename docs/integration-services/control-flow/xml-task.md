@@ -1,27 +1,32 @@
 ---
-title: "XML-Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML-Task [Integration Services]"
+title: XML-Task | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML-Task
+# <a name="xml-task"></a>XML Task
   Der XML-Task wird für XML-Daten verwendet. Mit diesem Task kann ein Paket XML-Dokumente abrufen, mithilfe von XSLT-Stylesheets (Extensible Stylesheet Language Transformations) und XPath-Ausdrücken Vorgänge auf die Dokumente anwenden, mehrere Dokumente zusammenführen oder die aktualisierten Dokumente mit Dateien und Variablen überprüfen, vergleichen und speichern.  
   
  Mit diesem Task kann ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket XML-Dokumente zur Laufzeit dynamisch ändern. Der XML-Task kann für folgende Zwecke verwendet werden:  
@@ -36,7 +41,7 @@ caps.handback.revision: 59
   
  Sie können XML-Daten in einen Datenfluss einschließen, indem Sie mithilfe einer XML-Quelle Werte aus einem XML-Dokument extrahieren. Weitere Informationen finden Sie unter [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## XML-Vorgänge  
+## <a name="xml-operations"></a>XML-Vorgänge  
  Der XML-Task ruft als erste Aktion ein bestimmtes XML-Dokument ab. Diese Aktion ist in den XML-Task integriert und wird automatisch ausgeführt. Das abgerufene XML-Dokument wird als Quelle von Daten für den Vorgang verwendet, den der XML-Task ausführt.  
   
  Für die XML-Vorgänge Diff, Merge und Patch sind zwei Operanden erforderlich. Der erste Operand gibt das XML-Quelldokument an. Der zweite Operand gibt ebenfalls ein XML-Dokument an, dessen Inhalt von den Anforderungen des Vorgangs abhängen. Beispielsweise werden mit Diff zwei Dokumente verglichen. Deshalb gibt der zweite Operand ein anderes, ähnliches XML-Dokument an, mit dem das XML-Quelldokument verglichen wird.  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  Der XML-Task kann so konfiguriert werden, dass das Ergebnis des Vorgangs in einer Variablen oder in einer Datei gespeichert wird. Falls Sie das Ergebnis in einer Datei speichern, verwendet der XML-Task einen Dateiverbindungs-Manager für den Zugriff auf die Datei. Sie können die Ergebnisse des Diffgram-Objekts, das vom Diff-Vorgang generiert wird, in Dateien und Variablen speichern.  
   
-## Vordefinierte XML-Vorgänge  
+## <a name="predefined-xml-operations"></a>Vordefinierte XML-Vorgänge  
  Der XML-Task schließt vordefinierte Vorgänge zum Verwenden von XML-Dokumenten ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
 |Vorgang|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|Führt XPath-Abfragen und -Auswertungen aus.|  
 |XSLT|Führt XSL-Transformationen in XML-Dokumenten aus.|  
   
-### Diff-Vorgang  
+### <a name="diff-operation"></a>Diff-Vorgang  
  Für den Diff-Vorgang kann die Verwendung eines anderen Vergleichsalgorithmus konfiguriert werden, abhängig davon, ob der Vergleich schnell oder präzise sein muss. Dieser Vorgang kann auch so konfiguriert werden, dass automatisch ein schneller oder präziser Vergleich basierend auf der Größe der verglichenen Dokumente ausgewählt wird.  
   
  Der Diff-Vorgang enthält Optionen, mit denen der XML-Vergleich angepasst wird. In der folgenden Tabelle werden diese Optionen beschrieben.  
@@ -77,10 +82,10 @@ caps.handback.revision: 59
 |**IgnoreProcessingInstructions**|Dieser Wert gibt an, ob Verarbeitungsanweisungen verglichen werden.|  
 |**IgnoreDTD**|Dieser Wert gibt an, ob die DTD ignoriert wird.|  
   
-### Merge-Vorgang  
+### <a name="merge-operation"></a>Merge-Vorgang  
  Wenn Sie eine XPath-Anweisung zur Identifizierung des Mergespeicherorts im Quelldokument verwenden, wird erwartet, dass diese Anweisung einen einzelnen Knoten zurückgibt. Wenn die Anweisung mehrere Knoten zurückgibt, wird nur der erste Knoten verwendet. Der Inhalt des zweiten Dokuments wird unter dem ersten Knoten zusammengeführt, den die XPath-Abfrage zurückgibt.  
   
-### XPath-Vorgang  
+### <a name="xpath-operation"></a>XPath-Vorgang  
  Für den XPath-Vorgang kann die Verwendung unterschiedlicher Typen von XPath-Funktionalität konfiguriert werden.  
   
 -   Wählen Sie die Option **Evaluation** aus, um XPath-Funktionen wie z.B. „sum()“ zu implementieren.  
@@ -89,12 +94,12 @@ caps.handback.revision: 59
   
 -   Wählen Sie die Option **Values** aus, um den inneren Textwert von allen ausgewählten Knoten verkettet als Zeichenfolge zurückzugeben.  
   
-### Validation-Vorgang  
+### <a name="validation-operation"></a>Validation-Vorgang  
  Für den Validation-Vorgang kann die Verwendung einer Dokumenttypdefinition (DTD) oder einer XML-Schemadefinition (XSD) konfiguriert werden.  
   
  Aktivieren Sie **ValidationDetails** , um eine ausführliche Fehlerausgabe zu erhalten. Weitere Informationen finden Sie unter [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
-## XML-Dokumentcodierung  
+## <a name="xml-document-encoding"></a>XML-Dokumentcodierung  
  Der XML-Task unterstützt nur das Zusammenführen von Unicode-Dokumenten. Dies bedeutet, der Task kann den Merge-Vorgang nur auf Dokumente mit einer Unicode-Codierung anwenden. Wenn Sie andere Codierungen verwenden, tritt beim XML-Task ein Fehler auf.  
   
 > [!NOTE]  
@@ -106,37 +111,37 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
- In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
+ In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
-## Konfiguration des XML-Tasks  
+## <a name="configuration-of-the-xml-task"></a>Konfiguration des XML-Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den XML-Task &#40;Seite Allgemein&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+-   [XML-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
--   [Validieren von XML-Dokumenten mit dem XML-Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validieren von XML-Daten mit den XML-Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen von Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Programmgesteuerte Konfiguration des XML-Tasks  
+## <a name="programmatic-configuration-of-the-xml-task"></a>Programmgesteuerte Konfiguration des XML-Tasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## Verwandte Aufgaben  
- [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
+ [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Blogeintrag, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)(XML-Zielskriptkomponente), auf agilebi.com  
   

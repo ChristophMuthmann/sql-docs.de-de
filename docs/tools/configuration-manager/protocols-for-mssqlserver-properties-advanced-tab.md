@@ -1,22 +1,27 @@
 ---
-title: "Protokolle f&#252;r MSSQLSERVER-Eigenschaften (Registerkarte &quot;Erweitert&quot;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte \"Erweitert\") | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Protokolle f&#252;r MSSQLSERVER-Eigenschaften (Registerkarte &quot;Erweitert&quot;)
+# Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte "Erweitert")
   Mit der Registerkarte **Erweitert** im Dialogfeld **Protokolle für MSSQLSERVER-Eigenschaften** können Sie für ****  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]konfigurieren. **Erweiterter Schutz** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** ist in Windows 7 und Windows Server 2008 R2 verfügbar und in Service Packs für ältere Betriebssysteme enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden. Einige Funktionen von **Erweiterter Schutz** setzen die Auswahl von **Verschlüsselung erzwingen** auf der Registerkarte **Flags** voraus.  
   
 > [!IMPORTANT]  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 -   Bei der Einstellung **Erforderlich**werden nur Verbindungen von geschützten Anwendungen auf geschützten Betriebssystemen akzeptiert. Diese Einstellung ist die sicherste der drei Optionen. Von Betriebssystemen, die die Funktion **Erweiterter Schutz** nicht unterstützen, können jedoch keine Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt werden.  
   
  **Akzeptierte NTLM-SPNs**  
- Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch mehr als einen NTLM-Dienstprinzipalnamen (SPN) identifiziert wird, listen Sie die SPNs hier als eine Reihe von Zeichenfolgen auf, die von Semikolons getrennt wird. Der Wert **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** zeigt beispielsweise an, dass Clients, die versuchen, eine Verbindung mit SPNs mit dem Namen **MSSQLSvc/HOST1.Contoso.com** und **MSSQLSvc/HOST2.Contoso.com** herzustellen, zulässig sind. Die maximale Länge der Variablen beträgt 2048 Zeichen.  
+ Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch mehr als einen NTLM-Dienstprinzipalnamen (SPN) identifiziert wird, listen Sie die SPNs hier als eine Reihe von Zeichenfolgen auf, die von Semikolons getrennt wird. Der Wert **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**zeigt beispielsweise an, dass Clients, die versuchen, eine Verbindung mit SPNs mit dem Namen **MSSQLSvc/HOST1.Contoso.com** und **MSSQLSvc/HOST2.Contoso.com** herzustellen, zulässig sind. Die maximale Länge der Variablen beträgt 2048 Zeichen.  
   
 ## Siehe auch  
  [Erweiterter Schutz für die Authentifizierung mit Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  

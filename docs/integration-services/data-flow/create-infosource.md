@@ -1,22 +1,27 @@
 ---
-title: "InfoSource erstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: InfoSource erstellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4fe8f6aefb8e191e0648666db7e7faf63f8f845
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# InfoSource erstellen
+# <a name="create-infosource"></a>InfoSource erstellen
   Verwenden Sie das Dialogfeld **InfoSource erstellen** , um eine neue InfoSource zu erstellen. Zum Erstellen der neuen InfoSource verwenden Sie entweder das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** .  
   
  Sie können das Dialogfeld **InfoSource erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoSource**aus, und klicken Sie dann auf **Erstellen**.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Transaktionsdaten**  
  Erstellen Sie eine neue InfoSource für Transaktionsdaten.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 10
   
  Wenn Sie diese Option auswählen, wird auch das Dialogfeld **InfoSource für Masterdaten erstellen** geöffnet. Sie verwenden das Dialogfeld **InfoSource für Masterdaten erstellen** , um die neue InfoSource zu erstellen. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

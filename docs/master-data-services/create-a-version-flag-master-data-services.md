@@ -1,29 +1,34 @@
 ---
-title: "Erstellen eines Versionsflags (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen von Versionsflags [Master Data Services]"
-  - "Versionsflags [Master Data Services], erstellen"
-  - "Versionen [Master Data Services], Erstellen von Flags"
+title: Erstellen eines Versionsflags (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating version flags [Master Data Services]
+- version flags [Master Data Services], creating
+- versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3585a40a7ce8312e4e31b13118f6b128e2be13
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Versionsflags (Master Data Services)
+# <a name="create-a-version-flag-master-data-services"></a>Erstellen eines Versionsflags (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Versionsflag, das Sie einer Version zuweisen. Das Flag kann die Version angeben, die Benutzer oder abonnierende Systeme verwenden sollten.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Versionsverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
-### So erstellen Sie ein Versionsflag  
+### <a name="to-create-a-version-flag"></a>So erstellen Sie ein Versionsflag  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Versionsverwaltung**.  
   
@@ -50,12 +55,12 @@ caps.handback.revision: 7
   
 8.  Klicken Sie auf **Speichern**.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
   
--   [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Zuweisen eines Flags zu einer Version &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## Siehe auch  
- [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Versionen &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)   
+ [Ändern Sie Namens eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

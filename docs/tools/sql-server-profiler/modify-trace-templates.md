@@ -1,53 +1,58 @@
 ---
-title: "&#196;ndern von Ablaufverfolgungsvorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorlagen [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Vorlagen"
-  - "Ablaufverfolgungsvorlagen [SQL Server]"
-  - "Ändern von Ablaufverfolgungsvorlagen"
-  - "SQL Server Profiler, Vorlagen"
+title: "Ändern von Ablaufverfolgungsvorlagen | Microsoft Docs"
+ms.custom: 
+ms.date: 07/12/2017
+ms.prod: sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler], templates
+- trace templates [SQL Server]
+- modifying trace templates
+- SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64a49875ae33de199305af4b172acb5e8f234034
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#196;ndern von Ablaufverfolgungsvorlagen
+# <a name="modify-trace-templates"></a>Ändern von ablaufverfolgungsvorlagen
   Sie können Vorlagen ändern, wenn diese in einer Datei auf dem lokalen Computer gespeichert sind und auf dem Computer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ausgeführt wird. Sie können auch Vorlagen ändern, die aus diesen Dateien abgeleitet wurden. Beim Ändern vorhandener Vorlagen bearbeiten Sie die Eigenschaften der Vorlage, wie Ereignisklassen und Datenspalten, in derselben Reihenfolge, in der die Eigenschaften ursprünglich festgelegt wurden. Dies geschieht über die Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungseigenschaften** . Ereignisklassen und Datenspalten können hinzugefügt oder entfernt werden, und Filter können geändert werden. Nach dem Ändern der Vorlage wird eine benutzerspezifische Vorlage erstellt, und die ursprüngliche Systemvorlage bleibt unverändert. Weitere Informationen finden Sie unter [Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen](../../tools/sql-server-profiler/save-traces-and-trace-templates.md).  
   
  Möglicherweise müssen Sie eine Vorlage von einer vorhandenen Ablaufverfolgungsdatei ableiten, z. B. falls Sie vergessen haben, welche Vorlage ursprünglich zum Erstellen der Ablaufverfolgung verwendet wurde (oder wenn diese Datei nicht gespeichert wurde) oder falls Sie eine Ablaufverfolgung später erneut ausführen möchten. Bei vorhandenen Ablaufverfolgungen können Sie die Eigenschaften zwar anzeigen, aber nicht ändern. Um die Eigenschaften zu ändern, müssen Sie die Ablaufverfolgung beenden oder anhalten. Weitere Informationen finden Sie unter [Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md) und [Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md).  
   
- **So erstellen Sie eine Ablaufverfolgungsvorlage**  
+## <a name="to-modify-a-trace-template"></a>So ändern Sie eine Ablaufverfolgungsvorlage  
   
- [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
+1.  Zeigen Sie im Menü **Datei** auf **Vorlagen**, und klicken Sie dann auf **Vorlage bearbeiten**.  
   
- **So führen Sie eine Ablaufverfolgung mithilfe einer Ablaufverfolgungsvorlage aus**  
+2.  Im Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** können Sie auf der Registerkarte **Allgemein** den Servertyp und den Vorlagennamen ändern oder eine Standardvorlage für den Servertyp auswählen.  
   
- [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
+3.  Auf der **Ereignisauswahl** können Sie mit dem Rastersteuerelement hinzufügen oder entfernen Sie die Ereignisse und Datenspalten in der Ablaufverfolgungsdatei wie folgt.  
   
- **So ändern Sie eine Ablaufverfolgungsvorlage**  
+    -   Um ein Ereignis hinzuzufügen, erweitern Sie die entsprechende Ereigniskategorie in der **Ereignisse** -Spalte und wählen dann den Ereignisnamen aus.  
   
- [Verwenden von SQL Server Profiler](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)  
+    -   Wenn Sie ein Ereignis hinzufügen, werden standardmäßig alle relevanten Datenspalten eingeschlossen. Um eine Datenspalte für ein Ereignis aus einer Ablaufverfolgung zu entfernen, deaktivieren Sie das Kontrollkästchen in der Datenspalte für das Ereignis.  
   
- [Verwenden von Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+    -   Um Filter hinzuzufügen, klicken Sie auf den Namen der Datenspalte, und geben Sie die Filterkriterien im Dialogfeld **Filter bearbeiten** an. Sie können auch mit der rechten Maustaste auf den Namen der Datenspalte klicken und anschließend auf **Spaltenfilter bearbeiten** klicken, um das Dialogfeld **Filter bearbeiten** zu öffnen. Klicken Sie auf **OK** , um den Filter hinzuzufügen.  
   
- **So fügen Sie zu einer Ablaufverfolgungsvorlage oder -datei Ereignisse hinzu bzw. entfernen sie**  
+4.  Klicken Sie auf **speichern**, oder klicken Sie auf **speichern unter** um die Ablaufverfolgungsvorlage unter einem anderen Namen zu speichern.  
   
- [Verwenden von SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+## <a name="next-steps"></a>Nächste Schritte  
+[Starten einer Ablaufverfolgung](../../tools/sql-server-profiler/start-a-trace.md)  
+[Erstellen einer Ablaufverfolgung](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
+[Ändern einer vorhandenen Ablaufverfolgung mithilfe von Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+[Geben Sie die Ereignisse und Datenspalten für eine Ablaufverfolgung mithilfe von SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+[SP-Trace-Setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
- [Verwenden von Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
-  
-## Siehe auch  
- [Starten einer Ablaufverfolgung](../../tools/sql-server-profiler/start-a-trace.md)  
-  
-  
+

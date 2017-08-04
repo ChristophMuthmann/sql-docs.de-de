@@ -1,25 +1,30 @@
 ---
-title: "Transformations-Editor f&#252;r die DQS-Bereinigung (Dialogfeld) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+title: DQS-Bereinigung Transformations-Editor (Dialogfeld) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformations-Editor f&#252;r die DQS-Bereinigung (Dialogfeld)
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
   Im Dialogfeld **Transformations-Editor für die DQS-Bereinigung** können Sie Daten mithilfe von Data Quality Services (DQS) korrigieren. Weitere Informationen finden Sie unter [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
   
  Weitere Informationen zur Transformation finden Sie unter [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -44,7 +49,7 @@ caps.handback.revision: 16
   
 ##  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Data Quality Services-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen DQS-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
+ Wählen Sie in der Liste einen vorhandenen DQS-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager für DQS-Bereinigung** einen neuen Verbindungs-Manager. Siehe [Festlegen der Optionen im Dialogfeld „Verbindungs-Manager für DQS-Bereinigung“](#manager)  
@@ -53,7 +58,7 @@ caps.handback.revision: 16
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Verschlüsseln der Verbindung**  
- Gibt an, ob die Verbindung verschlüsselt wird, um die Datenübertragung zwischen dem DQS-Server und [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] zu verschlüsseln.  
+ Gibt an, ob die Verbindung verschlüsselt wird, um die Datenübertragung zwischen dem DQS-Server und [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]zu verschlüsseln.  
   
  **Verfügbare Domänen**  
  Listet die verfügbaren Domänen für die ausgewählte Wissensdatenbank auf. Es gibt zwei Typen von Domänen: einzelne Domänen und Verbunddomänen, die aus mindestens zwei einzelnen Domänen bestehen.  
@@ -89,7 +94,7 @@ caps.handback.revision: 16
  Klicken Sie in das Feld, um den Spaltennamen zu ändern.  
   
  **Ausgabealias**  
- Zeigt die Spalte an, die vom **Transformations-Editor für die DQS-Bereinigung** ausgegeben wird. Die Spalte enthält den ursprünglichen Spaltenwert oder den korrigierten Wert.  
+ Zeigt die Spalte an, die vom **Transformations-Editor für die DQS-Bereinigung**ausgegeben wird. Die Spalte enthält den ursprünglichen Spaltenwert oder den korrigierten Wert.  
   
  Klicken Sie in das Feld, um den Spaltennamen zu ändern.  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 16
   
 3.  Klicken Sie auf **Hinzufügen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anwenden von Datenqualitätsregeln auf eine Datenquelle](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

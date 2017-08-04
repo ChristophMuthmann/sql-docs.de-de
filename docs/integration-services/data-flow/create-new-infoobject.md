@@ -1,22 +1,27 @@
 ---
-title: "Neues InfoObject erstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Neues InfoObject erstellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Neues InfoObject erstellen
+# <a name="create-new-infoobject"></a>Neues InfoObject erstellen
   Verwenden Sie das Dialogfeld **Neues InfoObject erstellen** , um ein neues InfoObject im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoObject erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  Sie können das Dialogfeld **Neues InfoObject erstellen** auch öffnen, indem Sie im Abschnitt **Attribute** des Dialogfelds **Neues InfoObject erstellen** auf **Neu** klicken.  
   
-## Allgemeine Optionen  
+## <a name="general-options"></a>Allgemeine Optionen  
  **Merkmal**  
  Erstellen Sie ein InfoObject, das die Dimensionsdaten darstellt.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie das neue InfoObject.  
   
-## Optionen für "Datentyp"  
+## <a name="data-type-options"></a>Optionen für "Datentyp"  
  **CHAR - Zeichenfolge**  
  Gibt an, dass das InfoObject Zeichendaten enthält.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **Länge**  
  Geben Sie die Länge der Daten ein.  
   
-## Optionen für "Text"  
+## <a name="text-options"></a>Optionen für "Text"  
  **Mit Texten**  
  Gibt an, dass das InfoObject Texte enthält.  
   
@@ -113,10 +118,10 @@ caps.handback.revision: 10
  **Zeitabhängiger Text**  
  Gibt an, dass die Texte zeitabhängig sind.  
   
-## Abschnitt "Attribute"  
+## <a name="attributes-section"></a>Abschnitt "Attribute"  
  Der Abschnitt **Attribute** enthält eine Liste der Attribute für das InfoObject sowie die Optionen, mit denen Sie Listenattribute hinzufügen und entfernen können.  
   
-### Liste "Attribute"  
+### <a name="attributes-list"></a>Liste "Attribute"  
  Die Liste **Attribute** zeigt die Attribute des erstellten InfoObject an. Die Liste **Attribute** verfügt über die folgenden Spaltenüberschriften:  
   
  **InfoObject**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|Einheiten|  
 |TIM|Zeitmerkmale|  
   
-### Optionen für "Attribute"  
+### <a name="attributes-options"></a>Optionen für "Attribute"  
  Verwenden Sie die folgenden Optionen, um Attribute für ein erstelltes InfoObject hinzuzufügen und zu entfernen:  
   
  **Hinzufügen**  
@@ -149,9 +154,9 @@ caps.handback.revision: 10
  Um ein neues InfoObject zu erstellen und hinzuzufügen, klicken Sie auf Neu und verwenden dann eine neue Instanz des Dialogfelds **Neues InfoObject erstellen** , um das neue InfoObject zu erstellen.  
   
  **Entfernen**  
- Entfernt das ausgewählte InfoObject aus der Liste **Attribute**.  
+ Entfernt das ausgewählte InfoObject aus der Liste **Attribute** .  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [InfoCube für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

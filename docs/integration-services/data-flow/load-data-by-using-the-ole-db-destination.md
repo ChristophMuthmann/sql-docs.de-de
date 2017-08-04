@@ -1,29 +1,34 @@
 ---
-title: "Laden von Daten mithilfe des OLE DB-Ziels | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Laden von Daten"
-  - "OLE DB-Ziel [Integration Services]"
-  - "Ziele [Integration Services], OLE DB"
+title: "Lädt Daten mithilfe des OLE DB-Ziels | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loading data
+- OLE DB destination [Integration Services]
+- destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Laden von Daten mithilfe des OLE DB-Ziels
+# <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie ein OLE DB-Ziel hinzufügen und konfigurieren können.  
   
-### So laden Sie Daten mithilfe eines OLE DB-Zieles  
+### <a name="to-load-data-using-an-ole-db-destination"></a>So laden Sie Daten mithilfe eines OLE DB-Zieles  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
     -   **Tabelle oder Sicht** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält.  
   
-    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**, **Zeilen pro Batch** oder **Maximale Einfügungscommitgröße**.  
+    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**, **Zeilen pro Batch**oder **Maximale Einfügungscommitgröße**.  
   
     -   **Variable für Tabellenname oder Sichtname** Wählen Sie die benutzerdefinierte Variable aus, die den Namen einer Tabelle oder Sicht in der Datenbank enthält.  
   
@@ -54,16 +59,16 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  Vom OLE DB-Ziel werden automatisch gleichnamige Spalten zugeordnet.  
   
-9. Klicken Sie auf **Fehlerausgabe**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Klicken Sie auf **Fehlerausgabe**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Klicken Sie auf **OK**.  
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
- [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   
- [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Zieles](../../integration-services/data-flow/ole-db-destination.md)   
+ [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Ziel-Editor f&#252;r SAP BW (Seite Verbindungs-Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.connection.f1"
+title: SAP BW-Ziel-Editor (Seite Verbindungs-Manager) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r SAP BW (Seite Verbindungs-Manager)
+# <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
   Verwenden Sie die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** , um den SAP BW-Verbindungs-Manager auszuwählen, der vom SAP BW-Ziel verwendet wird. Auf dieser Seite wählen Sie außerdem die Parameter aus, die zum Laden der Daten in das SAP NetWeaver BW-System verwendet werden.  
   
  Weitere Informationen zum SAP BW-Ziel von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW finden Sie unter [SAP BW-Ziel](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,13 +39,13 @@ caps.handback.revision: 10
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
  **SAP BW-Verbindungs-Manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **SAP BW-Verbindungs-Manager** einen neuen Verbindungs-Manager.  
@@ -48,7 +53,7 @@ caps.handback.revision: 10
  **Testladevorgang**  
  Führen Sie einen Testladevorgang aus, in dem die ausgewählten Einstellungen verwendet und 0 Zeilen geladen werden.  
   
-### Optionen für "InfoPackage/InfoSource"  
+### <a name="infopackageinfosource-options"></a>Optionen für "InfoPackage/InfoSource"  
  Diese Werte müssen nicht im Voraus bekannt sein und eingegeben werden. Verwenden Sie die Schaltfläche **Suchen** , um das entsprechende InfoPackage zu suchen und auszuwählen. Nachdem Sie ein InfoPackage ausgewählt haben, werden die entsprechenden Werte für diese Optionen von der Komponente eingegeben.  
   
  **InfoPackage**  
@@ -71,24 +76,24 @@ caps.handback.revision: 10
  Geben Sie den Namen des logischen Systems ein, das dem InfoPackage zugeordnet ist.  
   
  **Suchen**  
- Suchen Sie das InfoPackage mithilfe des Dialogfelds **InfoPackage suchen**. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
+ Suchen Sie das InfoPackage mithilfe des Dialogfelds **InfoPackage suchen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
   
-### Optionen für "RFC-Ziel"  
+### <a name="rfc-destination-options"></a>Optionen für "RFC-Ziel"  
  Diese Werte müssen nicht im Voraus bekannt sein und eingegeben werden. Verwenden Sie die Schaltfläche **Suchen** , um das entsprechende RFC-Ziel zu suchen und auszuwählen. Nachdem Sie ein RFC-Ziel ausgewählt haben, werden die entsprechenden Werte für diese Optionen von der Komponente eingegeben.  
   
  **Gatewayhost**  
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN** ein, wobei **NN** der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format **sapgwNN**ein, wobei **NN** der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  
   
  **Suchen**  
- Suchen Sie das RFC-Ziel mithilfe des Dialogfelds **RFC-Ziel suchen**. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Suchen Sie das RFC-Ziel mithilfe des Dialogfelds **RFC-Ziel suchen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-### Optionen für "SAP BW-Objekte erstellen"  
+### <a name="create-sap-bw-objects-options"></a>Optionen für "SAP BW-Objekte erstellen"  
  **Objekttyp auswählen**  
  Wählen Sie den Typ des SAP NetWeaver BW-Objekts aus, das Sie erstellen möchten. Wählen Sie einen der folgenden Typen aus:  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 10
 |**InfoSource**|Erstellen Sie eine neue InfoSource, indem Sie erst das Dialogfeld **InfoSource erstellen** und dann das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** verwenden. Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) und [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Erstellen Sie ein neues InfoPackage mithilfe des Dialogfelds **InfoPackage erstellen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## Siehe auch  
- [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Ziel-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ziel-Editor für SAP BW &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Ziel-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Ziel-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,37 +1,42 @@
 ---
-title: "Editor f&#252;r den Task Datenbanken &#252;bertragen (Seite Datenbanken) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.database.f1"
-helpviewer_keywords: 
-  - "Editor für den Task Datenbanken übertragen"
+title: "Editor für den Task (Seite Datenbanken) übertragen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.database.f1
+helpviewer_keywords:
+- Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b104103ab5fdde0084cfcadcc82897d71d9a5c11
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor f&#252;r den Task Datenbanken &#252;bertragen (Seite Datenbanken)
+# <a name="transfer-database-task-editor-databases-page"></a>Editor für den Task Datenbanken übertragen (Seite Datenbanken)
   Verwenden Sie die Seite **Datenbanken** des Dialogfelds **Editor für den Task Datenbanken übertragen** , um die Eigenschaften für die im Task Datenbanken übertragen verwendeten Quell- und Zieldatenbanken anzugeben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren. Weitere Informationen zu diesem Task finden Sie unter [Datenbanken übertragen (Task)](../../integration-services/control-flow/transfer-database-task.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **SourceConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Quellserver zu erstellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Quellserver zu erstellen.  
   
  **DestinationConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Zielserver zu erstellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Zielserver zu erstellen.  
   
  **DestinationDatabaseName**  
- Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank auf dem Zielserver an.  
+ Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf dem Zielserver an.  
   
  Um dieses Feld automatisch mit dem Namen der Quelldatenbank aufzufüllen, geben Sie zuerst die **SourceConnection** (Quellverbindung) und den **SourceDatabaseName** (Quelldatenbanknamen) an.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 26
 >  Die Daten in der Zielserverdatenbank werden überschrieben, wenn Sie für **DestinationOverwrite** **True**angeben. Dies kann zu Datenverlusten führen. Um dies zu vermeiden, sollten Sie die Zielserverdatenbank an einem anderen Speicherort sichern, bevor Sie den Task Datenbanken übertragen ausführen.  
   
  **Aktion**  
- Gibt an, ob der Task die Datenbank auf den Zielserver kopiert (**Kopieren**) oder verschiebt (**Verschieben**).  
+ Gibt an, ob der Task die Datenbank auf den Zielserver kopiert ( **Kopieren** ) oder verschiebt ( **Verschieben** ).  
   
  **Methode**  
  Gibt an, ob der Task ausgeführt wird, während sich die Datenbank auf dem Quellserver im Online- oder Offlinemodus befindet.  
@@ -86,10 +91,10 @@ caps.handback.revision: 26
 |**Wahr**|Quelldatenbank wieder anfügen.|  
 |**False**|Quelldatenbank nicht wieder anfügen.|  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
+ [Editor für den Task &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [SMO-Verbindungs-Manager](../../integration-services/connection-manager/smo-connection-manager.md)  
   

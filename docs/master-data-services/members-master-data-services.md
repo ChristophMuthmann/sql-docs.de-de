@@ -1,39 +1,44 @@
 ---
-title: "Elemente (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blattelemente [Master Data Services]"
-  - "Konsolidierte Elemente [Master Data Services]"
-  - "Konsolidierte Elemente [Master Data Services], Informationen zu konsolidierten Elementen"
-  - "Elemente [Master Data Services], Informationen zu Elementen"
-  - "Blattelemente [Master Data Services], Informationen zu Blattelementen"
-  - "Elemente [Master Data Services]"
+title: Elemente (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services]
+- consolidated members [Master Data Services]
+- consolidated members [Master Data Services], about consolidated members
+- members [Master Data Services], about members
+- leaf members [Master Data Services], about leaf members
+- members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Elemente (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sind Elemente die physischen Masterdaten. Ein Element kann z. B. ein Fahrrad mit der Modellbezeichnung Road-150 in einer Product-Entität oder ein bestimmter Kunde in einer Customer-Entität sein.  
+# <a name="members-master-data-services"></a>Elemente (Master Data Services)
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sind Elemente die physischen Masterdaten. Ein Element kann z. B. ein Fahrrad mit der Modellbezeichnung Road-150 in einer Product-Entität oder ein bestimmter Kunde in einer Customer-Entität sein.  
   
-## Zusammenhang zwischen Elementen und anderen Modellobjekten  
+## <a name="how-members-relate-to-other-model-objects"></a>Zusammenhang zwischen Elementen und anderen Modellobjekten  
  Sie können sich Elemente als Zeilen in einer Tabelle vorstellen. Verwandte Elemente sind in einer Entität enthalten, und jedes Element wird von Attributwerten definiert.  
   
  In diesem Beispiel stellt die Tabelle eine Entität, die Zeilen in der Tabelle die Elemente und die Spalten in der Tabelle die Attribute dar. Jede Zelle stellt einen Attributwert für ein bestimmtes Element dar.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Als Tabelle dargestellte Master Data Services-Entität")  
+ ![Master Data Services-Entität als Tabelle dargestellte](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services-Entität als Tabelle dargestellt wird.")  
   
-## Elementtypen  
+## <a name="member-types"></a>Elementtypen  
  Es gibt drei Arten von Elementen: Blattelemente, konsolidierte Elemente und Sammlungselemente.  
   
  Blattelemente sind die Standardelemente in einer Entität.  
@@ -48,15 +53,15 @@ caps.handback.revision: 14
   
 -   In expliziten Hierarchien können konsolidierte Elemente übergeordnete Elemente anderer Elemente innerhalb der Hierarchie sein, oder sie können untergeordnete Elemente sein.  
   
-## Organisieren von Elementen mithilfe von Hierarchien und Auflistungen  
+## <a name="use-hierarchies-and-collections-to-organize-members"></a>Organisieren von Elementen mithilfe von Hierarchien und Auflistungen  
  Hierarchien und Auflistungen können verwendet werden, um Elemente für die Berichterstellung oder Analyse zu gruppieren. Weitere Informationen finden Sie unter [Hierarchien &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) und [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
-## Beispiel für ein Element  
+## <a name="member-example"></a>Beispiel für ein Element  
  Im folgenden Beispiel schließt jedes Element einen Attributwert Name, Code, Subcategory StandardCost, ListPrice und FilePhoto ein.  
   
- ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Entitätstabelle für Fahrradprodukte")  
+ ![Tabelle der Product-Entität Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike-Tabelle der Product-Entität")  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -65,10 +70,9 @@ caps.handback.revision: 14
 |Löschen Sie ein vorhandenes Element oder eine Auflistung.|[Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Reaktivieren Sie ein gelöschtes Element oder eine Auflistung.|[Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
 |Aktualisieren Sie die Attributwerte eines Elements.|[Ändern des Attributtyps &#40;MDS-Add-In für Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|Verschieben Sie Elemente innerhalb einer Hierarchie.|[Verschieben von Elementen innerhalb einer Hierarchie &#40;Master Data Services&#41;](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)|  
-|Beheben von Konflikten beim Zusammenführen.|[Konflikte zusammenführen &#40;Master Data Services&#41;](../master-data-services/merge-conflicts-master-data-services.md)|  
+
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
@@ -82,8 +86,7 @@ caps.handback.revision: 14
   
 -   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
--   [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+ 
 -   [Filteroperatoren &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   

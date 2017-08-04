@@ -1,22 +1,27 @@
 ---
-title: "Installieren von Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Installieren von Distributed Replay | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Installieren von Distributed Replay
+# <a name="install-distributed-replay"></a>Installieren von Distributed Replay
   Sie können Distributed Replay auf eine von drei Weisen installieren:  
   
 -   [Installieren von Distributed Replay über den Installations-Assistenten](#bkmk_wizard)  
@@ -62,7 +67,7 @@ caps.handback.revision: 21
   
      \- - ODER -  
   
-     \<Freigabefunktionsverzeichnis>\Tools\\(vom Benutzer angegebenes alternatives freigegebenes Funktionsverzeichnis)  
+     \<Freigeben von Funktionsverzeichnis > \Tools\\(benutzerdefinierte alternatives freigegebenes Funktionsverzeichnis)  
   
 -   Auf einem 64-Bit-System:  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 21
   
      \- - ODER -  
   
-     \<Freigabefunktionsverzeichnis (x86)>\Tools\\(vom Benutzer angegebenes alternatives freigegebenes [x86]-Funktionsverzeichnis)  
+     \<Freigeben von Funktionsverzeichnis (x86) > \Tools\\(benutzerdefinierte alternatives freigegebenes (x86) Funktionsverzeichnis)  
   
-#### So installieren Sie Distributed Replay-Funktionen  
+#### <a name="to-install-distributed-replay-features"></a>So installieren Sie Distributed Replay-Funktionen  
   
 1.  Um die Installation einer der Distributed Replay-Funktionen zu starten, öffnen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten.  
   
@@ -84,11 +89,11 @@ caps.handback.revision: 21
   
 5.  Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf **Installieren** , um die Setup-Unterstützungsdateien für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu installieren oder zu aktualisieren.  
   
-6.  Wählen Sie auf der Seite **Setuprolle** die **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionsinstallation** aus, und klicken Sie dann auf **Weiter**, um mit der Seite für die **Funktionsauswahl** fortzufahren.  
+6.  Wählen Sie auf der Seite **Setuprolle** die **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionsinstallation**aus, und klicken Sie dann auf **Weiter** , um mit der Seite für die **Funktionsauswahl** fortzufahren.  
   
 7.  Konfigurieren Sie auf der Seite **Funktionsauswahl** , welche Funktionen Sie installieren möchten.  
   
-    -   Wählen Sie zum Installieren des Verwaltungstools **Verwaltungstools - Einfach** aus.  
+    -   Wählen Sie zum Installieren des Verwaltungstools **Verwaltungstools - Einfach**aus.  
   
     -   Wählen Sie **Distributed Replay Controller**aus, um den Controllerdienst zu installieren.  
   
@@ -110,9 +115,9 @@ caps.handback.revision: 21
   
 8.  Klicken Sie optional auf die Schaltfläche mit den Auslassungspunkten (…), um den Pfad des freigegebenen Funktionsverzeichnisses zu ändern.  
   
-    1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**.  
+    1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**.  
+    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
   
@@ -129,8 +134,8 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  Nachdem Sie Distributed Replay installiert haben, müssen Sie auf dem Controller und den Clientcomputern Firewallregeln erstellen und jedem Clientcomputer Berechtigungen für den Zielserver gewähren. Weitere Informationen finden Sie unter [Ausführen der Schritte nach der Installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### .NET Framework-Sicherheit  
- Sie müssen über Administratorberechtigungen verfügen, um eine der Distributed Replay-Funktionen zu installieren. Nur bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung mit sysadmin-Berechtigungen können der sysadmin-Serverrolle des Testservers die Clientdienstkonten hinzugefügt werden. Weitere Informationen zu Sicherheitsüberlegungen für Distributed Replay finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
+### <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Sie müssen über Administratorberechtigungen verfügen, um eine der Distributed Replay-Funktionen zu installieren. Nur bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung mit sysadmin-Berechtigungen können der sysadmin-Serverrolle des Testservers die Clientdienstkonten hinzugefügt werden. Weitere Informationen zu Sicherheitsüberlegungen für Distributed Replay finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Installieren von Distributed Replay von der Eingabeaufforderung  
  Wenn Sie eine neue Distributed Replay-Instanz mithilfe der Eingabeaufforderung installieren, können Sie angeben, welche Funktionen installiert und wie diese konfiguriert werden sollen. Die Installation an der Eingabeaufforderung unterstützt das Installieren, Reparieren, Aktualisieren und Deinstallieren der Distributed Replay Utility-Komponenten. Beim Installieren über die Eingabeaufforderung unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus.  
@@ -138,8 +143,8 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
   
-### Installationsparameter  
- Die Liste der Funktionen höchster Ebene umfasst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Tools. Mit der Funktion Tools werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungstools, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und weitere freigegebene Komponenten installiert. Geben Sie für die Installation der Distributed Replay-Komponenten die folgenden Parameter an:  
+### <a name="installation-parameters"></a>Installationsparameter  
+ Die Liste der Funktionen höchster Ebene umfasst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]und Tools. Mit der Funktion Tools werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und weitere freigegebene Komponenten installiert. Geben Sie für die Installation der Distributed Replay-Komponenten die folgenden Parameter an:  
   
 |Komponente|Parameter|  
 |---------------|---------------|  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **Optional**|Das Arbeitsverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
 |/CLTRESULTDIR<br /><br /> **Optional**|Das Ergebnisverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
   
-### Beispielsyntax:  
+### <a name="sample-syntax"></a>Beispielsyntax:  
  **So installieren Sie die Distributed Replay Controller-Komponente**  
   
 ```  
@@ -192,13 +197,13 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 > [!IMPORTANT]  
 >  Nachdem Sie Distributed Replay installiert haben, müssen Sie auf dem Controller und den Clientcomputern Firewallregeln erstellen und jedem Clientcomputer Berechtigungen für den Zielserver gewähren. Weitere Informationen finden Sie unter [Ausführen der Schritte nach der Installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-#### So generieren Sie eine Konfigurationsdatei  
+#### <a name="to-generate-a-configuration-file"></a>So generieren Sie eine Konfigurationsdatei  
   
 1.  Befolgen Sie die Anweisungen des Setup-Assistenten bis zur Seite **Installationsbereit** . Der Pfad zur Konfigurationsdatei wird auf der Seite **Installationsbereit** im Abschnitt mit dem Konfigurationsdateipfad angegeben.  
   
 2.  Brechen Sie das Setupprogramm ab, ohne dabei die Installation abzuschließen, um die INI-Datei zu generieren.  
   
-#### So installieren Sie Distributed Replay mithilfe der Konfigurationsdatei  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>So installieren Sie Distributed Replay mithilfe der Konfigurationsdatei  
   
 -   Führen Sie die Installation an der Eingabeaufforderung aus, und geben Sie die Datei ConfigurationFile.ini mit dem ConfigurationFile-Parameter an.  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Sie müssen beide Kennwörter in der Befehlszeile angeben, da Sie diese nicht in der Konfigurationsdatei konfigurieren können.  
   
-## Siehe auch  
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen des Verwaltung &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

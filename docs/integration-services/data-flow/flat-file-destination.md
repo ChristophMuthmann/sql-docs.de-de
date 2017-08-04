@@ -1,29 +1,34 @@
 ---
-title: "Flatfileziel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledest.f1"
-helpviewer_keywords: 
-  - "Flatfiles"
-  - "Flatfileziel"
-  - "Schreiben von Textdateien [Integration Services]"
-  - "Ziele [Integration Services], Flatfile"
+title: Flat File Destination | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledest.f1
+helpviewer_keywords:
+- flat files
+- Flat File destination
+- text file writing [Integration Services]
+- destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Flatfileziel
+# <a name="flat-file-destination"></a>Flatfileziel
   Das Flatfileziel schreibt Daten in eine Textdatei. Die Textdatei kann in verschiedenen Formaten vorliegen: mit Trennzeichen, mit fester Breite, mit fester Breite mit Zeilentrennzeichen oder mit rechtem Flatterrand.  
   
  Es gibt folgende Möglichkeiten, um das Flatfileziel zu konfigurieren:  
@@ -38,7 +43,7 @@ caps.handback.revision: 49
   
  Das Ziel weist eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
-## Konfiguration des Flatfileziels  
+## <a name="configuration-of-the-flat-file-destination"></a>Konfiguration des Flatfileziels  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für Flatfiles** festlegen können:  
@@ -49,14 +54,14 @@ caps.handback.revision: 49
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften der Flatfile](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Flatfilequelle](../../integration-services/data-flow/flat-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

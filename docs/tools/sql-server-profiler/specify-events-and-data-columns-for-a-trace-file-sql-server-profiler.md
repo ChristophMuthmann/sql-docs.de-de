@@ -1,31 +1,36 @@
 ---
-title: "Angeben von Ereignissen und Datenspalten f&#252;r eine Ablaufverfolgungsdatei (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hinzufügen von Ereignissen"
-  - "Ablaufverfolgungen [SQL Server], Datenspalten"
-  - "Löschen von Ereignissen"
-  - "Entfernen von Ereignissen"
-  - "Ablaufverfolgungen [SQL Server], Ereignisse"
+title: "Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding events
+- traces [SQL Server], data columns
+- deleting events
+- removing events
+- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 413a30657e348dba30d335a225ad243600a0ebbd
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Angeben von Ereignissen und Datenspalten f&#252;r eine Ablaufverfolgungsdatei (SQL Server Profiler)
+# <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Ereignisklassen und Datenspalten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angegeben werden.  
   
-### So geben Sie Ereignisse und Datenspalten für eine Ablaufverfolgung an  
+### <a name="to-specify-events-and-data-columns-for-a-trace"></a>So geben Sie Ereignisse und Datenspalten für eine Ablaufverfolgung an  
   
 1.  Klicken Sie im Dialogfeld **Ablaufverfolgungseigenschaften** oder **Eigenschaften der Ablaufverfolgungsvorlage** auf die Registerkarte **Ereignisauswahl** .  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 2.  Wenden Sie optional Filter auf die Ablaufverfolgung an. Weitere Informationen finden Sie unter [Filtern von Ereignissen in einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

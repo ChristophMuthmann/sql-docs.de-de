@@ -1,26 +1,31 @@
 ---
-title: "Neustarten von Paketen mit Pr&#252;fpunkten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Prüfpunkte [Integration Services]"
-  - "Neustarten von Paketen"
-  - "Starten von Paketen"
+title: "Neustarten von Paketen mit Prüfpunkten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checkpoints [Integration Services]
+- restarting packages
+- starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Neustarten von Paketen mit Pr&#252;fpunkten
+# <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können fehlerhafte Pakete an dem Punkt neu gestartet werden, an dem der Fehler aufgetreten ist. Sie brauchen also nicht noch einmal vollständig ausgeführt werden. Wenn ein Paket zum Verwenden von Prüfpunkten konfiguriert ist, werden Informationen zur Ausführung des Pakets in eine Prüfpunktdatei geschrieben. Wenn das fehlerhafte Paket erneut ausgeführt wird, wird die Prüfpunktdatei verwendet, um das Paket von dem Punkt aus, an dem der Fehler aufgetreten ist, auszuführen. Wenn das Paket erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht und beim nächsten Ausführen des Pakets neu erstellt.  
   
  Das Verwenden von Prüfpunkten in einem Paket bietet die folgenden Vorteile:  
@@ -33,7 +38,7 @@ caps.handback.revision: 54
   
  Wenn ein Paket für das Verwenden von Prüfpunkten konfiguriert ist, zeichnet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] den Punkt, an dem neu gestartet werden soll, in der Prüfpunktdatei auf. Der in der Prüfpunktdatei aufgezeichnete Punkt, an dem neu gestartet werden soll, ist vom Typ des fehlerhaften Containers und der Implementierung von Funktionen wie z. B. Transaktionen abhängig. Die aktuellen Werte von Variablen werden ebenfalls in der Prüfpunktdatei erfasst. Die Werte von Variablen mit dem **Object** -Datentyp werden jedoch nicht in Prüfpunktdateien gespeichert.  
   
-## Definieren von Prüfpunkten, an denen neu gestartet wird  
+## <a name="defining-restart-points"></a>Definieren von Prüfpunkten, an denen neu gestartet wird  
  Die kleinste atomare Arbeitseinheit, die neu gestartet werden kann, ist der Taskhostcontainer, der einen einzelnen Task kapselt. Der Foreach-Schleifencontainer und der Transaktionscontainer werden ebenfalls als atomare Arbeitseinheiten behandelt.  
   
  Wenn ein Paket während des Ausführens eines Transaktionscontainers beendet wird, wird auch die Transaktion beendet, und für alle eventuell durch den Container ausgeführten Vorgänge wird ein Rollback ausgeführt. Beim Neustarten des Pakets wird der fehlerhafte Container erneut ausgeführt. Das Abschließen eventuell vorhandener untergeordneter Container in Transaktionscontainern wird nicht in der Prüfpunktdatei aufgezeichnet. Daher werden beim Neustarten des Pakets sowohl der Transaktionscontainer als auch seine untergeordneten Container erneut ausgeführt.  
@@ -47,7 +52,7 @@ caps.handback.revision: 54
   
  Ein Paket kann nur auf der Ablaufsteuerungsebene neu gestartet werden. Sie können ein Paket also nicht mitten in einem Datenfluss neu starten. Um zu vermeiden, dass der gesamte Datenfluss erneut ausgeführt werden muss, können Sie beim Entwerfen des Pakets mehrere Datenflüsse planen, die jeweils einen bestimmten Datenflusstask verwenden. Auf diese Weise kann das Paket neu gestartet werden und dabei nur einen Datenflusstask erneut ausführen.  
   
-## Konfigurieren des Neustarts eines Pakets  
+## <a name="configuring-a-package-to-restart"></a>Konfigurieren des Neustarts eines Pakets  
  Die Prüfpunktdatei enthält das Ausführungsergebnis aller abgeschlossenen Container, die aktuellen Werte der benutzerdefinierten und der Systemvariablen, sowie Paketkonfigurationsinformationen. Die Datei enthält außerdem den eindeutigen Bezeichner des Pakets. Der Paketbezeichner in der Prüfpunktdatei muss mit dem des Pakets übereinstimmen, damit das Paket neu gestartet werden kann. Anderenfalls tritt beim Neustarten ein Fehler auf. Auf diese Weise wird vermieden, dass ein Paket eine Prüfpunktdatei verwendet, die von einer anderen Paketversion geschrieben wurde. Wenn das Paket nach dem Neustarten erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht.  
   
  In der folgenden Tabelle sind die Paketeigenschaften aufgeführt, die Sie zum Implementieren von Prüfpunkten festlegen können.  
@@ -62,7 +67,7 @@ caps.handback.revision: 54
   
  Mit der ForceExecutionResult-Eigenschaft können Sie die Verwendung der Prüfpunkte eines Pakets testen. Sie können einen Echtzeitfehler imitieren, indem Sie die ForceExecutionResult-Eigenschaft eines Tasks oder eines Containers auf Failure festlegen. Wenn Sie das Paket erneut ausführen, werden der fehlerhafte Task bzw. die fehlerhaften Container erneut ausgeführt.  
   
-### Syntax von Prüfpunkten  
+### <a name="checkpoint-usage"></a>Syntax von Prüfpunkten  
  Die CheckpointUsage-Eigenschaft kann auf die folgenden Werte festgelegt werden:  
   
 |Wert|Description|  
@@ -72,22 +77,46 @@ caps.handback.revision: 54
 |**IfExists**|Gibt an, dass die Prüfpunktdatei verwendet wird, falls sie vorhanden ist. Wenn die Prüfpunktdatei vorhanden ist, wird das Paket an dem Punkt neu gestartet, an dem bei der letzten Ausführung ein Fehler aufgetreten ist; anderenfalls wird das Paket vom Beginn des Paketworkflows aus ausgeführt.|  
   
 > [!NOTE]  
->  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints**-Eigenschaft des Pakets **TRUE** oder der **CheckpointUsage**-Eigenschaft „Immer“. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+>  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets **TRUE**oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
-## Sichern von Prüfpunktdateien  
- Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/access-to-files-used-by-packages.md).  
+## <a name="securing-checkpoint-files"></a>Sichern von Prüfpunktdateien  
+ Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
+
+## <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets
+  Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket so konfigurieren, dass nicht das gesamte Paket erneut ausgeführt wird, sondern ab dem Punkt, an dem ein Fehler auftrat. Hierzu legen Sie die Eigenschaften fest, die für Prüfpunkte gelten.  
   
-### So konfigurieren Sie die Prüfpunkteigenschaften  
+### <a name="to-configure-a-package-to-restart"></a>So konfigurieren Sie den Neustart eines Pakets  
   
--   [Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets](../../integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md)  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie konfigurieren möchten.  
   
-## Externe Ressourcen  
+2.  Doppelklicken Sie im **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
+  
+4.  Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
+  
+5.  Legen Sie die SaveCheckpoints-Eigenschaft auf **TRUE**fest.  
+  
+6.  Geben Sie den Namen der Prüfpunktdatei in die CheckpointFileName-Eigenschaft ein.  
+  
+7.  Legen Sie die CheckpointUsage-Eigenschaft auf einen der beiden Werte fest:  
+  
+    -   Wählen Sie **Always** aus, damit das Paket immer am Prüfpunkt neu gestartet wird.  
+  
+        > [!IMPORTANT]  
+        >  Falls die Prüfpunktdatei nicht verfügbar ist, tritt ein Fehler auf.  
+  
+    -   Wählen Sie **IfExists** aus, damit das Paket nur neu gestartet wird, wenn die Prüfpunktdatei verfügbar ist.  
+  
+8.  Konfigurieren Sie die Tasks und Container, von denen das Paket neu gestartet werden kann.  
+  
+    -   Klicken Sie mit der rechten Maustaste auf einen Task oder Container, und klicken Sie anschließend auf **Eigenschaften**.  
+  
+    -   Legen Sie die FailPackageOnFailure-Eigenschaft auf **TRUE** für alle ausgewählten Tasks und Container fest.  
+    
+## <a name="external-resources"></a>Externe Ressourcen  
   
 -   Technischer Artikel [Automatischer Neustart von SSIS-Paketen nach Failover oder Fehler](http://go.microsoft.com/fwlink/?LinkId=200407)auf social.technet.microsoft.com.  
   
 -   Support-Artikel [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](http://go.microsoft.com/fwlink/?LinkId=241633)auf support.microsoft.com.  
-  
-## Siehe auch  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+

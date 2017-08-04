@@ -1,31 +1,36 @@
 ---
-title: "Masseneinf&#252;gungstask-Editor (Seite Optionen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.options.f1"
-helpviewer_keywords: 
-  - "Masseneinfügungstask-Editor"
+title: Massenimport von Insert Task-Editor (Optionsseite) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.options.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a714027caa6581a56d9f22da84c48d469e80cb1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Masseneinf&#252;gungstask-Editor (Seite Optionen)
+# <a name="bulk-insert-task-editor-options-page"></a>Masseneinfügungstask-Editor (Seite Optionen)
   Auf der Seite **Optionen** des Dialogfelds **Masseneinfügungstask-Editor** können Sie Eigenschaften für den Masseneinfügungsvorgang festlegen. Durch den Masseneinfügungstask werden große Datenmengen in eine Tabelle oder Sicht von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert.  
   
  Weitere Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **CodePage**  
  Geben Sie die Codepage für die in der Datendatei enthaltenen Daten an.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 31
  **FirstRow**  
  Geben Sie die erste zu kopierende Zeile an.  
   
- **enthalten**  
+ **Optionen**  
  |Begriff|Definition|  
 |----------|----------------|  
 |**Check-Einschränkungen**|Wählen Sie diese Option aus, um die Einschränkungen für Tabelle und Spalte zu überprüfen.|  
@@ -59,10 +64,10 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Jede Zeile, die beim Massenladevorgang nicht importiert werden kann, zählt als ein Fehler.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Masseneinfügungstask-Editor &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
- [Masseneinfügungstask-Editor &#40;Seite „Verbindung“&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Bulk Insert Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [Bulk Insert Task-Editor &#40; Seite "Verbindung" &#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "Transformation zum Zuordnen der Zeichen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "Sich gegenseitig ausschließende Zuordnungen [Integration Services]"
-  - "Zuordnen von Daten [Integration Services]"
-  - "Zeichenfolgenfunktionen (string functions)"
-  - "Transformation zum Zuordnen der Zeichen [Integration Services]"
+title: Transformation zum Zuordnen der Zeichen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation zum Zuordnen der Zeichen
+# <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
   Die Transformation zum Zuordnen der Zeichen wendet Zeichenfolgenfunktionen, wie z. B. die Konvertierung von Klein- in Großbuchstaben, auf Zeichendaten an. Diese Transformation betrifft nur Spaltendaten mit einem Zeichenfolgen-Datentyp.  
   
  Die Transformation zum Zuordnen der Zeichen kann Spaltendaten direkt konvertieren oder der Transformationsausgabe eine Spalte hinzufügen und die konvertierten Daten in die neue Spalte einfügen. Sie können auf eine Eingabespalte verschiedene Zuordnungsvorgänge anwenden und die Ergebnisse verschiedenen Spalten hinzufügen. Konvertieren Sie z. B. eine Spalte in Groß- und Kleinbuchstaben, und fügen Sie die Ergebnisse zwei unterschiedlichen Spalten hinzu.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
   
  Diese Transformation weist eine Eingabe, eine Ausgabe und eine Fehlerausgabe auf.  
   
-## Zuordnungsvorgänge  
+## <a name="mapping-operations"></a>Zuordnungsvorgänge  
  In der folgenden Tabelle sind die Zuordnungsvorgänge beschrieben, die von der Transformation zum Zuordnen der Zeichen unterstützt werden.  
   
 |Vorgang|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |Chinesisch (traditionell)|Ordnet Zeichen in vereinfachtem Chinesisch Zeichen in traditionellem Chinesisch zu.|  
 |Großschreibung|Konvertiert Zeichen in Großbuchstaben.|  
   
-## Zuordnungsvorgänge, die sich gegenseitig ausschließen  
+## <a name="mutually-exclusive-mapping-operations"></a>Zuordnungsvorgänge, die sich gegenseitig ausschließen  
  In einer Transformation können mehrere Vorgänge ausgeführt werden. Manche Zuordnungsvorgänge schließen sich jedoch gegenseitig aus. In der folgenden Tabelle sind die Einschränkungen aufgeführt, die bei der Verwendung mehrerer Vorgänge in derselben Spalte gelten. Vorgänge in den Spalten Vorgang A und Vorgang B schließen sich gegenseitig aus.  
   
 |Vorgang A|Vorgang B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |Kleinschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
 |Großschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
   
-## Konfiguration der Transformation zum Zuordnen der Zeichen  
+## <a name="configuration-of-the-character-map-transformation"></a>Konfiguration der Transformation zum Zuordnen der Zeichen  
  Es gibt folgende Möglichkeiten, um die Transformation zum Zuordnen der Zeichen zu konfigurieren:  
   
 -   Geben Sie die zu konvertierenden Spalten an.  
@@ -73,7 +78,7 @@ caps.handback.revision: 42
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

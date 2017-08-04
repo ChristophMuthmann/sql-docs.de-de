@@ -1,29 +1,34 @@
 ---
-title: "Quellen-Editor f&#252;r CDC (Seite Spalten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.columns.f1"
+title: CDC-Quellen-Editor (Spaltenseite) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c746e2b90c9f4f2fc34a9285cf05612302e5c588
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Quellen-Editor f&#252;r CDC (Seite Spalten)
+# <a name="cdc-source-editor-columns-page"></a>Quellen-Editor für CDC (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für CDC** können Sie jeder externen Spalte (Quellspalte) eine Ausgabespalte zuordnen.  
   
  Weitere Informationen zur CDC-Quelle finden Sie unter [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-## Aufgabenliste  
+## <a name="task-list"></a>Aufgabenliste  
  **So öffnen Sie die Seite "Spalten" des Quellen-Editors für CDC**  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Paket, das die CDC-Quelle enthält.  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten in der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
   
@@ -42,8 +47,8 @@ caps.handback.revision: 10
  **Ausgabespalte**  
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen ein. Standardmäßig wird der Name der ausgewählten externen Spalte (Quellspalte) verwendet, Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der eingegebene Name wird im SSIS-Designer angezeigt.  
   
-## Siehe auch  
- [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Quellen-Editor für CDC &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für CDC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   

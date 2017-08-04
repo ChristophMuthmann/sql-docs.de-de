@@ -1,24 +1,29 @@
 ---
-title: "Ausf&#252;hren eines inkrementellen Ladens von mehreren Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Inkrementelles Laden [Integration Services], mehrere Tabellen"
+title: "Ausführen eines inkrementellen Ladens von mehreren Tabellen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ausf&#252;hren eines inkrementellen Ladens von mehreren Tabellen
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Ausführen eines inkrementellen Ladens von mehreren Tabellen
   Im Thema [Verbessern des inkrementellen Ladens mit Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md)veranschaulicht das Diagramm ein einfaches Paket, das ein inkrementelles Laden in nur einer Tabelle ausführt. Das Laden einer Tabelle ist jedoch nicht so üblich wie das Ausführen eines inkrementellen Ladens von mehreren Tabellen.  
   
  Wenn Sie ein inkrementelles Laden von mehreren Tabellen ausführen, müssen einige Schritte einmal für alle Tabellen ausgeführt werden, und andere Schritte müssen für jede Quelltabelle wiederholt werden. Sie haben mehr als eine Option zum Implementieren dieser Schritte in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   Verwenden Sie mehrere Datenflusstasks in einem einzelnen Paket.  
   
-## Laden von mehreren Tabellen mit einem übergeordneten Paket und mehreren untergeordneten Paketen  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>Laden von mehreren Tabellen mit einem übergeordneten Paket und mehreren untergeordneten Paketen  
  Sie können ein übergeordnetes Paket verwenden, um jene Schritte auszuführen, die nur einmal gemacht werden müssen. Die untergeordneten Pakete führen jene Schritte aus, die für jede Quelltabelle gemacht werden müssen.  
   
-#### So erstellen Sie ein übergeordnetes Paket, das jene Schritte ausführt, die nur einmal gemacht werden müssen  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>So erstellen Sie ein übergeordnetes Paket, das jene Schritte ausführt, die nur einmal gemacht werden müssen  
   
 1.  Erstellen eines übergeordneten Pakets.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  Verwenden Sie mehrere Tasks "Paket ausführen", um untergeordnete Pakete für jede zu ladende Tabelle auszuführen. Übergeben Sie die im übergeordneten Paket berechneten Endpunkte an jedes untergeordnete Paket, indem Sie die Variablenkonfiguration für übergeordnete Pakete verwenden.  
   
-     Weitere Informationen finden Sie unter [Paket ausführen (Task)](../../integration-services/control-flow/execute-package-task.md) und [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Weitere Informationen finden Sie unter [Paket ausführen (Task)](../../integration-services/control-flow/execute-package-task.md) und [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-#### So erstellen Sie untergeordnete Pakete, um jene Schritte auszuführen, die für jede Quelltabelle gemacht werden müssen  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>So erstellen Sie untergeordnete Pakete, um jene Schritte auszuführen, die für jede Quelltabelle gemacht werden müssen  
   
 1.  Erstellen Sie für jede Quelltabelle ein untergeordnetes Paket.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          Ein Beispiel für die Verwendung dieser Transformation zur Anwendung von Updates und Löschungen finden Sie unter [Anwenden der Änderungen auf das Ziel](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
-## Laden von mehreren Tabellen mit mehreren Datenflusstasks in einem einzelnen Paket  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Laden von mehreren Tabellen mit mehreren Datenflusstasks in einem einzelnen Paket  
  Alternativ können Sie ein einzelnes Paket verwenden, das für jede zu ladende Quelltabelle einen separaten Datenflusstask enthält.  
   
-#### So laden Sie mehrere Tabellen mit mehreren Datenflusstasks in einem einzelnen Paket  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>So laden Sie mehrere Tabellen mit mehreren Datenflusstasks in einem einzelnen Paket  
   
 1.  Erstellen eines einzelnen Pakets.  
   

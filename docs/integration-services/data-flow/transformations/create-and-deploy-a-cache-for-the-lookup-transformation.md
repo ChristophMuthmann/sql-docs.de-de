@@ -1,26 +1,31 @@
 ---
-title: "Erstellen und Bereitstellen eines Cache f&#252;r die Transformation f&#252;r Suche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen von Cachedateien für die Transformation für Suche"
-  - "Bereitstellen von Cachedateien für Transformation für Suche"
-  - "Cachedateien für Transformation für Suche"
+title: "Erstellen und Bereitstellen eines Cache für die Transformation für Suche | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Erstellen und Bereitstellen eines Cache f&#252;r die Transformation f&#252;r Suche
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Erstellen und Bereitstellen eines Cache für die Transformation für Suche
   Sie können eine Cachedatei (.caw) erstellen und für die Transformation zur Suche bereitstellen. Das Verweisdataset wird in der Cachedatei gespeichert.  
   
  Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in einem Verweisdataset verknüpft werden.  
@@ -29,7 +34,7 @@ caps.handback.revision: 23
   
  Weitere Informationen zur Transformation für Suche und zu Cachedateien finden Sie unter [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-### So erstellen Sie eine Cachedatei  
+### <a name="to-create-a-cache-file"></a>So erstellen Sie eine Cachedatei  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket, und öffnen Sie dann das Paket.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 23
   
      Konfigurieren Sie die Datenquelle nach Bedarf.  
   
-4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor** auf der Seite **Verbindungs-Manager** auf **Neu**, um einen neuen Cacheverbindungs-Manager zu erstellen.  
+4.  Doppelklicken Sie auf die Transformation für Cachetransformation, und klicken Sie dann im **Cachetransformations-Editor**auf der Seite **Verbindungs-Manager** auf **Neu** , um einen neuen Cacheverbindungs-Manager zu erstellen.  
   
 5.  Konfigurieren Sie den Cacheverbindungs-Manager zum Speichern des Cache im **Editor für Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen auswählen:  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
      Das System erstellt die Datei, wenn Sie das Paket ausführen.  
   
     > [!NOTE]  
-    >  Die Schutzebene des Pakets gilt nicht für die Cachedatei. Wenn die Cachedatei vertrauliche Informationen enthält, schränken Sie den Zugriff auf den Speicherort oder Ordner, in dem Sie die Datei speichern, mithilfe einer Zugriffssteuerungsliste ein. Sie sollten nur bestimmten Konten den Zugriff ermöglichen. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  Die Schutzebene des Pakets gilt nicht für die Cachedatei. Wenn die Cachedatei vertrauliche Informationen enthält, schränken Sie den Zugriff auf den Speicherort oder Ordner, in dem Sie die Datei speichern, mithilfe einer Zugriffssteuerungsliste ein. Sie sollten nur bestimmten Konten den Zugriff ermöglichen. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Klicken Sie auf die Registerkarte **Spalten** , und geben Sie dann mit der Option **Indexposition** an, welche Spalten die Indexspalten sind.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 23
   
 8.  Führen Sie das Paket aus.  
   
-### So stellen Sie eine Cachedatei bereit  
+### <a name="to-deploy-a-cache-file"></a>So stellen Sie eine Cachedatei bereit  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket, und öffnen Sie dann das Paket.  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 23
   
 4.  Konfigurieren Sie das Projekt, um ein Bereitstellungshilfsprogramm zu erstellen, und erstellen Sie anschließend das Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Die Manifestdatei „\<*Projektname*>.SSISDeploymentManifest.xml“ wird erstellt. Diese Datei enthält eine Auflistung der verschiedenen Dateien im Projekt, der Pakete und der Paketkonfigurationen.  
+     Eine Manifestdatei \< *Projektname*>. SSISDeploymentManifest.xml, wird erstellt, die der verschiedenen Dateien im Projekt, Pakete und der Paketkonfigurationen.  
   
 5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## Siehe auch  
- [Erstellen eines Bereitstellungs-Hilfsprogramms](../../../integration-services/packages/create-a-deployment-utility.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen eines Bereitstellungshilfsprogramms](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

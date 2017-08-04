@@ -1,28 +1,33 @@
 ---
-title: "Durchf&#252;hren eines Commits f&#252;r eine Version (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Durchführen eines Commits für Versionen [Master Data Services]"
-  - "Versionen [Master Data Services], Commit ausführen"
+title: "Ein Commit für eine Version (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- committing versions [Master Data Services]
+- versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Durchf&#252;hren eines Commits f&#252;r eine Version (Master Data Services)
+# <a name="commit-a-version-master-data-services"></a>Durchführen eines Commits für eine Version (Master Data Services)
   Führen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einen Commit für eine Version eines Modells durch, um Änderungen an den Elementen des Modells und den Attributen zu verhindern. Versionen mit ausgeführtem Commit können nicht entsperrt werden.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Versionsverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
-### So führen Sie einen Commit für eine Version durch  
+### <a name="to-commit-a-version"></a>So führen Sie einen Commit für eine Version durch  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Versionsverwaltung**.  
   
@@ -47,15 +52,15 @@ caps.handback.revision: 7
   
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [Erstellen eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Zuweisen eines Flags zu einer Version &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [Kopieren Sie eine Version &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
-## Siehe auch  
- [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Versionen &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
   

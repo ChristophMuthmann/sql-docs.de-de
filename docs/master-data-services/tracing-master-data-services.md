@@ -1,22 +1,27 @@
 ---
-title: "Ablaufverfolgung (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ablaufverfolgung (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ablaufverfolgung (Master Data Services)
+# <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
   Die Datei "Web.config" enthält einen Ablaufverfolgungsabschnitt, wie unten dargestellt. Dieser Abschnitt ist neu in . [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -63,7 +68,7 @@ caps.handback.revision: 7
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
     |MessageBox|Nachrichtentext der Ablaufverfolgung|  
   
-## Externe Ressourcen  
- Blogbeitrag [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377) (Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  
+## <a name="external-resources"></a>Externe Ressourcen  
+ Blogbeitrag [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  
   
   

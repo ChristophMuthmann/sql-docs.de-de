@@ -1,29 +1,34 @@
 ---
-title: "? : (Bedingt) (SSIS-Ausdruck) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bedingungsoperator (?:)"
-  - "?: (Bedingungsoperator)"
+title: '? : (Bedingt) (SSIS-Ausdruck) | Microsoft Docs'
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (Bedingt) (SSIS-Ausdruck)
+# <a name="--conditional-ssis-expression"></a>? : (Bedingt) (SSIS-Ausdruck)
   Gibt einen von zwei Ausdrücken basierend auf der Auswertung eines booleschen Ausdrucks zurück. Falls der boolesche Ausdruck zu TRUE ausgewertet wird, wird der erste Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis. Falls der boolesche Ausdruck zu FALSE ausgewertet wird, wird der zweite Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *boolean_expression*  
  Ein gültiger Ausdruck, der zu TRUE, FALSE oder NULL ausgewertet wird.  
   
@@ -41,10 +46,10 @@ boolean_expression?expression1:expression2
  *expression2*  
  Ein gültiger Ausdruck.  
   
-## Ergebnistypen  
+## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *expression1* oder *expression2*.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Falls *boolean_expression* zu NULL ausgewertet wird, lautet das Ergebnis des Ausdrucks NULL. Wenn ein ausgewählter Ausdruck, *expression1* oder *expression2* , NULL ist, lautet das Ergebnis NULL. Wenn ein ausgewählter Ausdruck ungleich NULL ist, aber der nicht ausgewählte Ausdruck NULL ist, besitzt das Ergebnis den Wert des ausgewählten Ausdrucks.  
   
  Falls *expression1* und *expression2* vom gleichen Datentyp sind, gehört auch das Ergebnis zu diesem Datentyp. Die folgenden zusätzlichen Regeln sind auch auf Ergebnistypen anwendbar:  
@@ -84,7 +89,7 @@ boolean_expression?expression1:expression2
   
  Weitere Informationen zu Datentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Beispiele für Ausdrücke  
+## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  In diesem Beispiel wird ein Ausdruck gezeigt, der bedingt zu `savannah` oder `unknown`ausgewertet wird.  
   
 ```  
@@ -97,8 +102,8 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## Siehe auch  
- [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

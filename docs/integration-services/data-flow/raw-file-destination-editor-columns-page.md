@@ -1,24 +1,29 @@
 ---
-title: "Ziel-Editor f&#252;r Rohdatendateien (Seite Spalten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationcolumns.f1"
+title: Unformatierte Ziel-Editor (Spaltenseite) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b6ce96dc298d446952b185c8eccdfc9a7778a6c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r Rohdatendateien (Seite Spalten)
+# <a name="raw-file-destination-editor-columns-page"></a>Ziel-Editor für Rohdatendateien (Seite Spalten)
   Verwenden Sie den Ziel-Editor für Rohdatendateien zum Konfigurieren des Rohdatendatei-Ziels, um Rohdaten in eine Datei zu schreiben.  
   
  **Was möchten Sie tun?**  
@@ -55,12 +60,12 @@ caps.handback.revision: 7
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   
  **Eingabespalte**  
- Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten** auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
+ Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten**auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
   
  **Ausgabealias**  
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Rohdatendatei-Ziel](../../integration-services/data-flow/raw-file-destination.md)  
   
   

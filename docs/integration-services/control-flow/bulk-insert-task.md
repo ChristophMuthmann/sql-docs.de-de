@@ -1,35 +1,40 @@
 ---
-title: "Masseneinf&#252;gungstask | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.f1"
-helpviewer_keywords: 
-  - "Masseneinfügungstask"
-  - "Kopieren von Daten [Integration Services]"
+title: Massenimport von Insert-Vorgang | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.f1
+helpviewer_keywords:
+- Bulk Insert task
+- copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Masseneinf&#252;gungstask
-  Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle.  
+# <a name="bulk-insert-task"></a>Masseneinfügungstask
+  Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
   
  Damit die Daten schnell kopiert werden, können für Daten keine Transformationen ausgeführt werden, während sie von der Quelldatei in die Tabelle oder Sicht verschoben werden.  
   
-## Überlegungen zur Verwendung  
+## <a name="usage-considerations"></a>Überlegungen zur Verwendung  
  Beachten Sie Folgendes, bevor Sie den Masseneinfügungstask verwenden:  
   
--   Der Masseneinfügungstask kann Daten nur von einer Textdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht übertragen. Um mit dem Masseneinfügungstask Daten von anderen Datenbank-Managementsystemen (DBMS, Database Management System) zu übertragen, müssen Sie die Daten von der Quelle in eine Textdatei exportieren und anschließend die Daten aus der Textdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle oder -Sicht importieren.  
+-   Der Masseneinfügungstask kann Daten nur von einer Textdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht übertragen. Um mit dem Masseneinfügungstask Daten von anderen Datenbank-Managementsystemen (DBMS, Database Management System) zu übertragen, müssen Sie die Daten von der Quelle in eine Textdatei exportieren und anschließend die Daten aus der Textdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht importieren.  
   
 -   Das Ziel muss eine Tabelle oder Sicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank sein. Falls die Zieltabelle oder -sicht bereits Daten enthält, werden die neuen Daten an die vorhandenen Daten angefügt, wenn der Masseneinfügungstask ausgeführt wird. Wenn Sie die Daten ersetzen möchten, führen Sie einen Task SQL ausführen aus, der eine DELETE- oder TRUNCATE-Anweisung ausführt, bevor Sie den Masseneinfügungstask starten. Weitere Informationen finden Sie unter [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md).  
   
@@ -37,14 +42,14 @@ caps.handback.revision: 61
   
 -   Nur Mitglieder der festen Serverrolle sysadmin können ein Paket ausführen, das einen Masseneinfügungstask enthält.  
   
-## Masseneinfügungstasks für Transaktionen  
+## <a name="bulk-insert-task-with-transactions"></a>Masseneinfügungstasks für Transaktionen  
  Wenn keine Batchgröße festgelegt ist, wird der gesamte Massenkopiervorgang als eine einzige Transaktion behandelt. Die Batchgröße **0** gibt an, dass die Daten in einem einzigen Batch eingefügt werden. Wenn eine Batchgröße festgelegt ist, stellt jeder Batch eine Transaktion dar, für die nach Beendigung des Batches ein Commit ausgeführt wird.  
   
  Das Verhalten des Masseneinfügungstasks in Verbindung mit Transaktionen hängt davon ab, ob der Task an der Pakettransaktion teilnimmt. Wenn der Masseneinfügungstask nicht an der Pakettransaktion teilnimmt, wird für jeden fehlerfreien Batch als eine Einheit ein Commit ausgeführt, bevor der nächste Batch verarbeitet wird. Wenn der Masseneinfügungstask an der Pakettransaktion teilnimmt, verbleiben fehlerfreie Batches nach Abschluss des Tasks in der Transaktion. Diese Batches unterliegen dem Commit- oder Rollbackvorgang des Pakets.  
   
  Bei einem Fehler beim Masseneinfügungstask wird für erfolgreich geladene Batches nicht automatisch ein Rollback ausgeführt; die erfolgreiche Ausführung eines Tasks bedeutet nicht, dass für die Batches automatisch ein Commit ausgeführt wird. Commit- und Rollbackvorgänge erfolgen nur als Reaktion auf Paket- und Workflow-Eigenschaftseinstellungen.  
   
-## Quelle und Ziel  
+## <a name="source-and-destination"></a>Quelle und Ziel  
  Beachten Sie Folgendes, wenn Sie den Speicherort der Quelltextdatei angeben:  
   
 -   Der Server muss die Berechtigung für den Zugriff auf die Datei und die Zieldatenbank besitzen.  
@@ -53,15 +58,15 @@ caps.handback.revision: 61
   
 -   Die Quelldatei, die vom Masseneinfügungstask geladen wird, kann auf demselben Server wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, in die Daten eingefügt werden, oder auf einem Remoteserver gespeichert sein. Falls sich die Datei auf einem Remoteserver befindet, müssen Sie den Dateinamen mithilfe des UNC-Namens (Universal Naming Convention) im Pfad angeben.  
   
-## Leistungsoptimierung  
+## <a name="performance-optimization"></a>Leistungsoptimierung  
  Beachten Sie bei der Optimierung der Leistung Folgendes:  
   
 -   Wenn sich die Textdatei auf demselben Computer wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank befindet, in die Daten eingefügt werden, erfolgt der Kopiervorgang sogar noch schneller, weil die Daten nicht im Netzwerk verschoben werden.  
   
 -   Der Masseneinfügungstask protokolliert keine Zeilen, die Fehler verursachen. Um diese Informationen aufzuzeichnen, können Sie mit den Fehlerausgaben von Datenflusskomponenten Zeilen, die Fehler verursachen, in einer Ausnahmedatei aufzeichnen.  
   
-## Verfügbare benutzerdefinierte Protokolleinträge für den Masseneinfügungstask  
- In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Masseneinfügungstask  
+ In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 61
 |**BulkInsertTaskEnd**|Zeigt die Fertigstellung der Masseneinfügung an.|  
 |**BulkInsertTaskInfos**|Enthält beschreibende Informationen zum Task.|  
   
-## Konfiguration des Masseneinfügungstasks  
+## <a name="bulk-insert-task-configuration"></a>Konfiguration des Masseneinfügungstasks  
  Es gibt folgende Möglichkeiten, um den Masseneinfügungstask zu konfigurieren:  
   
 -   Geben Sie den OLE DB-Verbindungs-Manager zum Herstellen der Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zieldatenbank und der Tabelle oder Sicht an, in die Daten eingefügt werden. Der Masseneinfügungstask unterstützt nur OLE DB-Verbindungen mit der Zieldatenbank.  
@@ -98,22 +103,22 @@ caps.handback.revision: 61
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### Programmgesteuerte Konfiguation des Masseneinfügungstasks  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Programmgesteuerte Konfiguation des Masseneinfügungstasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## Verwandte Aufgaben  
- [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
+ [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Technischer Artikel [Möglicherweise wird bei UAC-fähigen Systemen der Fehler "Die SSIS-Masseneinfügung kann zum Einfügen von Daten nicht vorbereitet werden" angezeigt](http://go.microsoft.com/fwlink/?LinkId=233693)auf support.microsoft.com.  
   
 -   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://go.microsoft.com/fwlink/?LinkId=233700)auf msdn.microsoft.com  
   
--   Technischer Artikel [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701) (Verwenden von SQL Server Integration Services für das Massenladen von Daten) auf simple-talk.com.  
+-   Technischer Artikel [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Verwenden von SQL Server Integration Services für das Massenladen von Daten) auf simple-talk.com.  
   
   

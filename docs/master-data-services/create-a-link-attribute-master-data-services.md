@@ -1,32 +1,37 @@
 ---
-title: "Erstellen eines Linkattributs (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attribute [Master Data Services], Erstellen von Linkattributen"
-  - "Erstellen von Linkattributen [Master Data Services]"
+title: Erstellen eines Linkattributs (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], creating link attributes
+- creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b5c1a0c51283b981daf0df5e65740892fb830c2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Linkattributs (Master Data Services)
-  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ein Linkattribut, wenn Sie möchten, dass Benutzer einen Link als Attributwert eingeben, z. B. http://www.contoso.com.  
+# <a name="create-a-link-attribute-master-data-services"></a>Erstellen eines Linkattributs (Master Data Services)
+  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Linkattribut, wenn Sie möchten, dass Benutzer einen Link als Attributwert eingeben, z. B. http://www.contoso.com.  
   
 > [!NOTE]  
 >  Wenn Benutzer einen Wert für ein Linkattribut eingeben, muss die Zeichenfolge mit **http://** beginnen, oder ein Fehler wird angezeigt.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
   
 -   Eine Entität muss vorhanden sein, um das Attribut dafür erstellen zu können. Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Attributinformationen  
+## <a name="attribute-information"></a>Attributinformationen  
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
 |Column|Description|  
 |------------|-----------------|  
-|Status|Der Attributstatus.<br /><br /> Wenn Sie auf „Speichern“ klicken, wird das Bild ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls lautet der Status „OK“, und das Bild ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
+|Status|Der Attributstatus.<br /><br /> Wenn Sie "Speichern" Klicken die ![Symbol für Status aktualisieren](../master-data-services/media/mds-statusicon-updating.png "Symbol für Status aktualisieren") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn Fehler beim Erstellen oder Bearbeiten eines Attributs vorliegen der ![Symbol nach dem Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol nach dem Fehlerstatus") Bild angezeigt.<br /><br /> Andernfalls ist der Status OK und die ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") Bild angezeigt.|  
 |Name|Der Attributname.|  
 |Anzeigename|Der Anzeigename des Attributs.|  
 |Description|Die Attributbeschreibung.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 9
   
 -   **Am**: Datum und Uhrzeit der letzten Aktualisierung des Attributs.  
   
-### So erstellen Sie ein Linkattribut  
+### <a name="to-create-a-link-attribute"></a>So erstellen Sie ein Linkattribut  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 9
   
 8.  Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-9. Wählen Sie in der Liste **Attributtyp** die Option **Freiform** aus.  
+9. Wählen Sie in der Liste **Attributtyp** die Option **Freiform**aus.  
   
 10. Wählen Sie **Link** in der Liste **Datentyp**aus.  
   
@@ -92,10 +97,10 @@ caps.handback.revision: 9
   
 13. Klicken Sie auf **Speichern**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Ändern eines Attributnamens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Ändern Sie einen Attributnamen und -Datentyp &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Erstellen Sie ein domänenbasiertes Attribut &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

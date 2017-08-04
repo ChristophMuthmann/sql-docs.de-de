@@ -1,25 +1,30 @@
 ---
-title: "Datentypen von Oracle CDC-Instanzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datentypen von Oracle CDC-Instanz | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce8e5f7622c520f819b65000729b7d3c750764fc
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Datentypen von Oracle CDC-Instanzen
+# <a name="oracle-cdc-instance-data-types"></a>Datentypen von Oracle CDC-Instanzen
   Die Oracle CDC-Instanz unterstützt die meisten Oracle-Datentypen. In den folgenden Abschnitten werden die unterstützten Datentypen und die nicht unterstützten Datentypen beschrieben.  
   
-## Unterstützte Datentypen  
+## <a name="supported-data-types"></a>Unterstützte Datentypen  
  In der folgenden Tabelle werden die Oracle-Datentypen, die aufgezeichnet werden können, sowie ihre Standardzuordnung zu SQL Server-Datentypen in den Änderungstabellen beschrieben. Beim Hinzufügen einer Aufzeichnungsinstanz für eine Oracle-Quelltabelle können Sie einige dieser Zuordnungen überschreiben.  
   
 |Datentyp der Oracle-Datenbank|SQL Server-Datentyp|  
@@ -42,7 +47,7 @@ caps.handback.revision: 9
 |VARCHAR2|VARCHAR|  
 |XMLTYPE|NVARCHAR (MAX)|  
   
-## Nicht unterstützte Datentypen  
+## <a name="non-supported-data-types"></a>Nicht unterstützte Datentypen  
  Oracle-Quelltabellen, die Spalten mit den folgenden Oracle-Datentypen enthalten, können nicht aufgezeichnet werden. Aufgezeichnete Spalten mit diesen Datentypen werden als NULL-Werte angezeigt. Eine Änderung des Werts wird jedoch in der Änderungsmaske der aufgezeichneten Tabellen angegeben.  
   
 -   LONG  
@@ -71,8 +76,8 @@ caps.handback.revision: 9
   
 -   VARRAY  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+ [Die Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   

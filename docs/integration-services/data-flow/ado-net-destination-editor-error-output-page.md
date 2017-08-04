@@ -1,24 +1,29 @@
 ---
-title: "ADO.NET-Ziel-Editor (Seite &#39;Fehlerausgabe&#39;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetdest.erroroutput.f1"
+title: ADO.NET-Ziel-Editor (Seite Fehlerausgabe) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1379c364be49a528191910c6af02fff7a5324d81
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO.NET-Ziel-Editor (Seite &#39;Fehlerausgabe&#39;)
+# <a name="ado-net-destination-editor-error-output-page"></a>ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
   Auf der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Ziel-Editor** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zum ADO NET-Ziel finden Sie unter [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
@@ -31,7 +36,7 @@ caps.handback.revision: 17
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 17
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## Siehe auch  
- [ADO.NET-Ziel-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)   
- [ADO.NET-Ziel-Editor &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Siehe auch  
+ [ADO NET-Ziel-Editor &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET-Ziel-Editor &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
   
   

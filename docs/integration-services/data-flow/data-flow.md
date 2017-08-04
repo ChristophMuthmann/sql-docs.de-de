@@ -1,29 +1,34 @@
 ---
-title: "Datenfluss | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ausgabedaten [Integration Services]"
-  - "Datenfluss [Integration Services], Elemente"
-  - "Eingabedaten [Integration Services]"
-  - "Externe Metadaten [Integration Services]"
-  - "Datenfluss [Integration Services]"
-  - "Fehler [Integration Services], Datenflussausgaben"
+title: Datenfluss | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Datenfluss
+# <a name="data-flow"></a>Datenfluss
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Datenflusskomponenten bereit: Quellen, Transformationen und Ziele. Quellen extrahieren Daten aus Datenspeichern, wie z. B. Tabellen und Sichten in relationalen Datenbanken, Dateien und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken. Mit Transformationen werden Daten geändert, zusammengefasst und bereinigt. Mit Zielen werden Daten in Datenspeicher geladen oder Datasets im Arbeitsspeicher erstellt.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  Darüber hinaus stellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pfade bereit, mit denen die Ausgabe einer Komponente mit der Eingabe einer anderen Komponente verbunden werden. Pfade definieren die Reihenfolge von Komponenten und ermöglichen das Hinzufügen von Anmerkungen zum Datenfluss oder das Anzeigen der Quelle der Spalte.  
   
- Sie verbinden Datenflusskomponenten durch Verbinden der Ausgabe von Quellen und Zielen mit der Eingabe von Transformationen und Zielen. Beim Erstellen eines Datenflusses verbinden Sie in der Regel die zweite und nachfolgenden Komponenten, wenn Sie diese dem Datenfluss hinzufügen. Nachdem Sie die Komponente verbunden haben, können die Eingabespalten zum Konfigurieren der Komponente verwendet werden. Wenn keine Eingabespalten verfügbar sind, müssen Sie die Konfiguration der Komponente abschließen, nachdem sie mit dem Datenfluss verbunden wurde. Weitere Informationen finden Sie unter [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md) und [Verbinden von Komponenten mit Pfaden](../Topic/Connect%20Components%20with%20Paths.md).  
+ Sie verbinden Datenflusskomponenten durch Verbinden der Ausgabe von Quellen und Zielen mit der Eingabe von Transformationen und Zielen. Beim Erstellen eines Datenflusses verbinden Sie in der Regel die zweite und nachfolgenden Komponenten, wenn Sie diese dem Datenfluss hinzufügen. Nachdem Sie die Komponente verbunden haben, können die Eingabespalten zum Konfigurieren der Komponente verwendet werden. Wenn keine Eingabespalten verfügbar sind, müssen Sie die Konfiguration der Komponente abschließen, nachdem sie mit dem Datenfluss verbunden wurde. Weitere Informationen finden Sie unter [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md) und [Verbinden von Komponenten mit Pfaden](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
  Im folgenden Diagramm wird ein Datenfluss angezeigt, der eine Quelle, eine Transformation mit einer Eingabe und einer Ausgabe sowie ein Ziel aufweist. Dieses Diagramm enthält die Eingaben, Ausgaben und Fehlerausgaben sowie die Eingabespalten, Ausgabespalten und externen Spalten.  
   
- ![Datenflusskomponenten mit Ein- und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenflusskomponenten mit Ein- und Ausgaben")  
+ ![Datenfluss Komponenten und ihre Eingaben und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenfluss Komponenten und ihre Eingaben und Ausgaben")  
   
 ## <a name="data-flow-implementation"></a>Datenflussimplementierung  
  Der erste Schritte beim Implementieren eines Datenflusstasks in einem Paket besteht darin, der Ablaufsteuerung eines Pakets einen Datenflusstask hinzuzufügen. Ein Paket kann mehrere Datenflusstasks mit jeweils einem eigenen Datenfluss einschließen. Wenn z. B. für ein Paket Datenflüsse in einer bestimmten Reihenfolge oder andere Tasks zwischen den Datenflüssen ausgeführt werden müssen, ist für jeden Datenfluss ein separater Datenflusstask erforderlich.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
 ## <a name="connection-managers"></a>Verbindungs-Manager  
- Viele Datenflusskomponenten stellen eine Verbindung mit Datenquellen her, und Sie müssen dem Paket die Verbindungs-Manager hinzufügen, die die Komponenten benötigen, damit die Komponente ordnungsgemäß konfiguriert werden kann. Sie können die Verbindungs-Manager beim Erstellen des Datenflusses hinzufügen, oder bevor Sie mit dem Erstellen des Datenflusses beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../Topic/Create%20Connection%20Managers.md).  
+ Viele Datenflusskomponenten stellen eine Verbindung mit Datenquellen her, und Sie müssen dem Paket die Verbindungs-Manager hinzufügen, die die Komponenten benötigen, damit die Komponente ordnungsgemäß konfiguriert werden kann. Sie können die Verbindungs-Manager beim Erstellen des Datenflusses hinzufügen, oder bevor Sie mit dem Erstellen des Datenflusses beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ## <a name="external-metadata"></a>Externe Metadaten  
  Wenn Sie einen Datenfluss in einem Paket mithilfe des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers erstellen, werden die Metadaten aus den Quellen und Zielen in die externen Spalten in Quellen und Zielen kopiert, die als Momentaufnahme des Schemas dienen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] das Paket überprüft, vergleicht der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer diese Momentaufnahme mit dem Schema der Quelle oder des Ziels und zeigt in Abhängigkeit von den Änderungen Fehler und Warnungen an.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.  
+

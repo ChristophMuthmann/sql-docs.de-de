@@ -1,26 +1,31 @@
 ---
-title: "FTP-Verbindungs-Manager-Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
-  - "FTP-Verbindungs-Manager-Editor"
+title: FTP-Verbindungs-Manager-Editor | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
+helpviewer_keywords:
+- FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2028a460ac0e7b56a3ad733150ff20029d72fd97
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP-Verbindungs-Manager-Editor
+# <a name="ftp-connection-manager-editor"></a>FTP-Verbindungs-Manager-Editor
   Mithilfe des Dialogfelds **FTP-Verbindungs-Manager-Editor** können Sie Eigenschaften für Verbindungen mit einem FTP-Server angeben.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 26
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 26
  Geben Sie eine Segmentgröße in KB für das Übertragen von Daten an.  
   
  **Verbindung testen**  
- Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen** klicken.  
+ Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

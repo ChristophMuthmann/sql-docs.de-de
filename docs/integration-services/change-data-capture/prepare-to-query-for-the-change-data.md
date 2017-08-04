@@ -1,33 +1,38 @@
 ---
-title: "Vorbereiten zur Abfrage der &#196;nderungsdaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Inkrementelles Laden [Integration Services], Vorbereiten der Abfrage"
+title: "Vorbereiten zur Abfrage der Änderungsdaten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Vorbereiten zur Abfrage der &#196;nderungsdaten
+# <a name="prepare-to-query-for-the-change-data"></a>Vorbereiten zur Abfrage der Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der dritte und letzte Task darin, die Abfrage der Änderungsdaten vorzubereiten und einen Datenflusstask hinzuzufügen.  
   
 > [!NOTE]  
 >  Beim zweiten Task für die Ablaufsteuerung muss sichergestellt werden, dass die Änderungsdaten für das ausgewählte Intervall bereit sind. Weitere Informationen zu diesem Task finden Sie unter [Bestimmen, ob die Änderungsdaten bereit sind](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md). Eine Beschreibung des Gesamtprozesses zum Entwurf der Ablaufsteuerung finden Sie unter [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Entwurfsaspekte  
+## <a name="design-considerations"></a>Entwurfsaspekte  
  Wenn Sie die Änderungsdaten abrufen möchten, müssen Sie eine Transact-SQL-Tabellenwertfunktion aufrufen, die die Endpunkte des Intervalls als Eingabeparameter akzeptiert und für das angegebene Intervall Änderungsdaten zurückgibt. Eine Quellkomponente im Datenfluss ruft diese Funktion auf. Weitere Informationen zu dieser Quellkomponente finden Sie unter [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md).  
   
- Die am häufigsten verwendeten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellkomponenten, einschließlich der OLE DB-Quelle, der ADO-Quelle und der ADO NET-Quelle, können für eine Tabellenwertfunktion keine Parameterinformationen ableiten. Deshalb können die meisten Quellen eine parametrisierte Funktion nicht direkt aufrufen.  
+ Die am häufigsten verwendeten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Quellkomponenten, einschließlich der OLE DB-Quelle, der ADO-Quelle und der ADO NET-Quelle, können für eine Tabellenwertfunktion keine Parameterinformationen ableiten. Deshalb können die meisten Quellen eine parametrisierte Funktion nicht direkt aufrufen.  
   
  Ihnen stehen zwei Entwurfsoptionen zur Verfügung, um die Eingabeparameter an die Funktion zu übergeben:  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 26
   
  Dieses Thema verwendet die erste Entwurfsoption und assembliert eine parametrisierte Abfrage als Zeichenfolge.  
   
-## Vorbereiten der Abfrage  
+## <a name="preparing-the-query"></a>Vorbereiten der Abfrage  
  Bevor Sie die Werte der Eingabeparameter in eine einzelne Abfragezeichenfolge verketten können, müssen Sie die für die Abfrage erforderlichen Paketvariablen einrichten.  
   
-#### So richten Sie Paketvariablen ein  
+#### <a name="to-set-up-package-variables"></a>So richten Sie Paketvariablen ein  
   
 -   Erstellen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Fenster **Variablen** eine Variable mit einem Zeichenfolgen-Datentyp, damit die Abfragezeichenfolge durch den Task "SQL ausführen" zurückgegeben wird.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 26
   
  Wenn die Paketvariable erstellt wurde, können Sie einen Skripttask oder einen Task "SQL ausführen" verwenden, um die Werte der Eingabeparameter zu verketten. Die folgenden zwei Prozeduren beschreiben, wie diese Komponenten konfiguriert werden.  
   
-#### So verwenden Sie einen Skripttask zur Verkettung der Abfragezeichenfolge  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>So verwenden Sie einen Skripttask zur Verkettung der Abfragezeichenfolge  
   
 1.  Fügen Sie dem Paket auf der Registerkarte **Ablaufsteuerung** nach dem For-Schleifencontainer einen Skripttask hinzu, und verbinden Sie den For-Schleifencontainer mit dem Task.  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 26
   
 6.  Schließen Sie die Skriptentwicklungsumgebung und den **Skripttask-Editor**.  
   
-#### So verwenden Sie einen Task "SQL ausführen" zur Verkettung der Abfragezeichenfolge  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>So verwenden Sie einen Task "SQL ausführen" zur Verkettung der Abfragezeichenfolge  
   
 1.  Fügen Sie dem Paket auf der Registerkarte **Ablaufsteuerung** nach dem For-Schleifencontainer einen Task "SQL ausführen" hinzu, und verbinden Sie den For-Schleifencontainer mit diesem Task.  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## Hinzufügen eines Datenflusstasks  
+## <a name="adding-a-data-flow-task"></a>Hinzufügen eines Datenflusstasks  
  Das Hinzufügen eines Datenflusstasks ist der letzte Schritt beim Entwerfen einer Ablaufsteuerung für ein Paket.  
   
-#### So fügen Sie einen Datenflusstask hinzu und vervollständigen Sie die Ablaufsteuerung  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>So fügen Sie einen Datenflusstask hinzu und vervollständigen Sie die Ablaufsteuerung  
   
 -   Fügen Sie auf der Registerkarte **Ablaufsteuerung** einen Datenflusstask hinzu, und verbinden Sie den Task, der die Abfragezeichenfolge verkettet hat.  
   
-## Nächster Schritt  
+## <a name="next-step"></a>Nächster Schritt  
  Nach der Vorbereitung der Abfragezeichenfolge und der Konfiguration des Datenflusstasks besteht der nächste Schritt darin, die Tabellenwertfunktion zu erstellen, mit der die Änderungsdaten von der Datenbank abgerufen werden.  
   
  **Nächstes Thema:** [Erstellen der Funktion zum Abrufen der Änderungsdaten](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

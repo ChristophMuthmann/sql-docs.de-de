@@ -1,30 +1,35 @@
 ---
-title: "Nachrichtenwarteschlange (Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.messagequeuetask.f1"
-helpviewer_keywords: 
-  - "Nachrichtenwarteschlange (Task) [Integration Services]"
-  - "Empfangen von Nachrichten"
-  - "Nachrichten [Integration Services]"
-  - "Senden von Nachrichten"
+title: Task "Nachrichtenwarteschlange"-Nachricht | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.messagequeuetask.f1
+helpviewer_keywords:
+- Message Queue task [Integration Services]
+- receiving messages
+- messages [Integration Services]
+- sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Nachrichtenwarteschlange (Task)
-  Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
+# <a name="message-queue-task"></a>Nachrichtenwarteschlange (Task)
+  Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
   
  Mit dem Task Nachrichtenwarteschlange können Sie Vorgänge im gesamten Unternehmen koordinieren. Nachrichten können in eine Warteschlange eingereiht und später übermittelt werden, falls das Ziel nicht verfügbar oder ausgelastet ist. Beispielsweise können mit diesem Task Nachrichten für den Offlinelaptopcomputer von Vertriebsmitarbeitern, die ihre Nachrichten beim Herstellen einer Verbindung mit dem Netzwerk erhalten, einer Warteschlange hinzugefügt werden. Der Task Nachrichtenwarteschlange kann für folgende Zwecke verwendet werden:  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 68
 > [!NOTE]  
 >  Der Task Nachrichtenwarteschlange entspricht nicht dem Federal Information Processing Standard (FIPS) 140-2, wenn das Betriebssystem des Computers im FIPS-Modus konfiguriert ist und der Task die Verschlüsselung verwendet. Wenn der Task Nachrichtenwarteschlange keine Verschlüsselung verwendet, kann der Task erfolgreich ausgeführt werden.  
   
-## Nachrichtentypen  
+## <a name="message-types"></a>Nachrichtentypen  
  Es gibt folgende Möglichkeiten, um die Nachrichtentypen zu konfigurieren, die der Task Nachrichtenwarteschlange bereitstellt:  
   
 -   **Data file** gibt an, dass eine Datei die Nachricht enthält. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die Datei gespeichert wird und eine vorhandene Datei überschreiben wird, und das Paket angeben, von dem der Task Nachrichten empfangen kann.  
@@ -54,10 +59,10 @@ caps.handback.revision: 68
   
 -   **Variable** gibt an, dass die Nachricht mindestens eine Variable enthält. Sie können den Task so konfigurieren, dass die in der Nachricht enthaltenen Namen der Variablen angegeben werden. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass sowohl das Paket, von dem Nachrichten empfangen werden können, als auch die Variable, die das Ziel der Nachricht ist, angegeben werden.  
   
-## Senden von Nachrichten  
+## <a name="sending-messages"></a>Senden von Nachrichten  
  Beim Konfigurieren des Tasks Nachrichtenwarteschlange zum Senden von Nachrichten können Sie einen der zurzeit von der Message Queuing-Technologie unterstützten Verschlüsselungsalgorithmen, RC2 und RC4, zum Verschlüsseln der Nachricht verwenden. Diese Verschlüsselungsalgorithmen werden inzwischen im Vergleich zu neueren Algorithmen, die von der Message Queuing-Technologie noch nicht unterstützt werden, beide als kryptografisch schwach betrachtet. Daher sollten Sie Ihren Kryptografiebedarf sorgfältig überdenken, wenn Sie Nachrichten mithilfe des Tasks Nachrichtenwarteschlange senden.  
   
-## Empfangen von Nachrichten  
+## <a name="receiving-messages"></a>Empfangen von Nachrichten  
  Beim Empfangen von Nachrichten kann der Task Nachrichtenwarteschlange wie folgt konfiguriert werden.  
   
 -   Umgehen der Nachricht oder Entfernen der Nachricht aus der Warteschlange.  
@@ -70,8 +75,8 @@ caps.handback.revision: 68
   
 -   Speichern der Nachrichtendatei unter einem anderen Dateinamen, falls die Nachricht den Typ **Data file message** verwendet.  
   
-## Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Nachrichtenwarteschlange'  
- In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Nachrichtenwarteschlange'  
+ In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 68
 |**MSMQTaskInfo**|Enthält beschreibende Informationen zum Task.|  
 |**MSMQTaskTimeOut**|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
   
-## Konfiguration des Tasks "Nachrichtenwarteschlange"  
+## <a name="configuration-of-the-message-queue-task"></a>Konfiguration des Tasks "Nachrichtenwarteschlange"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
@@ -97,10 +102,10 @@ caps.handback.revision: 68
   
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie in der Dokumentation zur **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** -Klasse im Entwicklerhandbuch.  
   
-## Verwandte Aufgaben  
- Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
+ Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   

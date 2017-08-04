@@ -1,26 +1,31 @@
 ---
-title: "Ziel-Editor f&#252;r Partitionsverarbeitung (Seite Erweitert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.partprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "Ziel-Editor für Partitionsverarbeitung"
+title: Partition Ziel-Editor (Seite erweitert) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 556e00f1e5e597817ff2c5275a01b9c4ac208e10
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r Partitionsverarbeitung (Seite Erweitert)
+# <a name="partition-processing-destination-editor-advanced-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Erweitert)
   Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** konfigurieren Sie die Fehlerbehandlung.  
   
  Weitere Informationen zum Ziel für Partitionsverarbeitung finden Sie unter [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Standardfehlerkonfiguration verwenden**  
  Gibt an, ob die Standardfehlerbehandlung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden soll. Standardmäßig ist dieser Wert **True**.  
   
@@ -47,10 +52,10 @@ caps.handback.revision: 32
  Gibt an, dass die Verarbeitung beendet werden soll, wenn ein Fehler auftritt.  
   
  **Anzahl von Fehlern**  
- Gibt den Schwellenwert für die Anzahl von Fehlern an, ab dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
+ Gibt den Schwellenwert für die Anzahl von Fehlern an, ab dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
  **Aktion bei Fehler**  
- Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden** ausgewählt haben.  
+ Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -99,8 +104,8 @@ caps.handback.revision: 32
  **Durchsuchen (…)**  
  Wählen Sie einen Pfad für das Fehlerprotokoll aus.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Partitionsverarbeitung &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für partitionsverarbeitung &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
   
   

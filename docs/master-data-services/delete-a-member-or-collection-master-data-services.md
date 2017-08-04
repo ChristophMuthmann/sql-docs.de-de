@@ -1,35 +1,40 @@
 ---
-title: "L&#246;schen eines Elements oder einer Auflistung (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sammlungen [Master Data Services], löschen"
-  - "Blattelemente [Master Data Services], löschen"
-  - "Löschen von Elementen [Master Data Services]"
-  - "Elemente [Master Data Services], löschen"
-  - "Konsolidierte Elemente [Master Data Services], löschen"
+title: "Löschen eines Elements oder einer Auflistung (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# L&#246;schen eines Elements oder einer Auflistung (Master Data Services)
+# <a name="delete-a-member-or-collection-master-data-services"></a>Löschen eines Elements oder einer Auflistung (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]können Sie ein Element oder eine Auflistung löschen, das bzw. die Sie nicht mehr benötigen. Wenn Sie Elemente in einer Massenoperation löschen möchten, verwenden Sie stattdessen Stagingtabellen. Weitere Informationen finden Sie unter [Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]  
 >  Sie können kein Element löschen, das als domänenbasierter Attributwert für ein anderes Element verwendet wird.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
 -   Bei Auflistungen müssen Sie für das zu löschende Blattauflistungsobjekt mindestens über die Berechtigung **Aktualisieren** verfügen.  
   
-### So löschen Sie ein Element oder eine Auflistung  
+### <a name="to-delete-a-member-or-collection"></a>So löschen Sie ein Element oder eine Auflistung  
   
 1.  Wählen Sie auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Startseite aus der Liste **Modell** ein Modell aus.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 10
   
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [Mitglieder &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Schemaauflistungen &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

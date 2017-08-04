@@ -1,27 +1,32 @@
 ---
-title: "Oracle CDC-Instanz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Die Oracle CDC-Instanz | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC-Instanz
-  Die Oracle CDC-Instanz ist ein vom Oracle CDC Service erstellter Prozess zur Verarbeitung der Änderungen, die aus einer einzelnen Oracle-Quelldatenbank aufgezeichnet wurden. Die Oracle CDC-Instanz ruft ihre Konfiguration aus der Tabelle **cdc.xdbcdc_config** ab und verwaltet ihren Status in der Tabelle **cdc.xdbcdc_state**. Diese Tabellen sind Teil der CDC-Datenbank, über die die Oracle CDC-Instanz definiert wird. Weitere Informationen zur Datenbank xdbcdc und zu Tabellen finden Sie unter [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
+# <a name="the-oracle-cdc-instance"></a>Oracle CDC-Instanz
+  Die Oracle CDC-Instanz ist ein vom Oracle CDC Service erstellter Prozess zur Verarbeitung der Änderungen, die aus einer einzelnen Oracle-Quelldatenbank aufgezeichnet wurden. Die Oracle CDC-Instanz ruft ihre Konfiguration aus der Tabelle **cdc.xdbcdc_config** ab und verwaltet ihren Status in der Tabelle **cdc.xdbcdc_state** . Diese Tabellen sind Teil der CDC-Datenbank, über die die Oracle CDC-Instanz definiert wird. Weitere Informationen zur Datenbank xdbcdc und zu Tabellen finden Sie unter [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  Im Folgenden werden die Tasks beschrieben, die von der Oracle CDC-Instanz ausgeführt werden:  
   
--   **Durchführen der Startüberprüfung für den Dienst:** Nach dem Starten lädt die CDC-Instanz ihre Konfiguration aus der Tabelle **xdbcdc_config** und führt eine Reihe von Statusüberprüfungen aus. So wird sichergestellt, dass der permanente Status der CDC-Instanz einheitlich ist und dass mit der Verarbeitung der Änderungen begonnen werden kann.  
+-   **Durchführen der Startüberprüfung für den Dienst:**Nach dem Starten lädt die CDC-Instanz ihre Konfiguration aus der Tabelle **xdbcdc_config** und führt eine Reihe von Statusüberprüfungen aus. So wird sichergestellt, dass der permanente Status der CDC-Instanz einheitlich ist und dass mit der Verarbeitung der Änderungen begonnen werden kann.  
   
 -   **Vorbereiten auf die Änderungsaufzeichnung**: Wenn die Überprüfung erfolgreich ist, scannt die Oracle CDC-Instanz alle momentan definierten Aufzeichnungsinstanzen und bereitet die Oracle LogMiner-Abfragen und andere Unterstützungsstrukturen vor, die für die Änderungsaufzeichnung erforderlich sind. Außerdem lädt die Oracle-Instanz den internen Aufzeichnungsstatus neu, der bei der letzten Ausführung der Oracle CDC-Instanz gespeichert wurde.  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 8
   
     -   In einem separaten Thread werden so viele im Arbeitsspeicher zwischengespeicherte Datensätze wie möglich für bis zu 30 Sekunden in die Tabelle mit den bereitgestellten Transaktionen geschrieben (von der ältesten bis zur neuesten Transaktion). Anschließend wird die Tabelle **xdbcdc_state** aktualisiert und für alle Änderungen ein Commit ausgeführt.  
   
--   **Durchführen von Konfigurationsänderungen:** Die Oracle CDC-Instanz wird entweder vom CDC Service oder bei Erkennung einer neuen Version in der Tabelle **cdc.xdbcdc_config** über Konfigurationsänderungen benachrichtigt. Für die meisten Änderungen ist kein Neustart der Oracle CDC-Instanz erforderlich (z. B. beim Hinzufügen oder Entfernen von Aufzeichnungsinstanzen). Bei einigen anderen Änderungen, z. B. beim Ändern der Oracle-Verbindungszeichenfolge oder der Anmeldeinformationen, muss jedoch ein Neustart der CDC-Instanz ausgeführt werden.  
+-   **Durchführen von Konfigurationsänderungen:**Die Oracle CDC-Instanz wird entweder vom CDC Service oder bei Erkennung einer neuen Version in der Tabelle **cdc.xdbcdc_config** über Konfigurationsänderungen benachrichtigt. Für die meisten Änderungen ist kein Neustart der Oracle CDC-Instanz erforderlich (z. B. beim Hinzufügen oder Entfernen von Aufzeichnungsinstanzen). Bei einigen anderen Änderungen, z. B. beim Ändern der Oracle-Verbindungszeichenfolge oder der Anmeldeinformationen, muss jedoch ein Neustart der CDC-Instanz ausgeführt werden.  
   
--   **Durchführen der Wiederherstellung:** Beim Starten einer Oracle CDC-Instanz wird ihr interner Status aus den Tabellen **xdbcdc_state** und **xdbcdc_staged_transactions** wiederhergestellt. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
+-   **Durchführen der Wiederherstellung:**Beim Starten einer Oracle CDC-Instanz wird ihr interner Status aus den Tabellen **xdbcdc_state** und **xdbcdc_staged_transactions** wiederhergestellt. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung](../../integration-services/change-data-capture/error-handling.md)  
   
   

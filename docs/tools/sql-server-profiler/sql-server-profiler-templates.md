@@ -1,29 +1,34 @@
 ---
-title: "SQL Server Profiler-Vorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Standardmäßige SQL Server Profiler-Vorlagen"
-  - "Vorlagen [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Vorlagen"
-  - "Ablaufverfolgungsvorlagen [SQL Server]"
-  - "Vordefinierte Vorlagen [SQL Server Profiler]"
-  - "SQL Server Profiler, Vorlagen"
+title: SQL Server Profiler-Vorlagen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default SQL Server Profiler templates
+- templates [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler], templates
+- trace templates [SQL Server]
+- predefined templates [SQL Server Profiler]
+- SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Profiler-Vorlagen
+# <a name="sql-server-profiler-templates"></a>SQL Server Profiler-Vorlagen
   Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie Vorlagen erstellen, die die Ereignisklassen und Datenspalten definieren, die in Ablaufverfolgungen eingeschlossen werden sollen. Nach dem Definieren und Speichern der Vorlage können Sie eine Ablaufverfolgung ausführen, die die Daten für jede ausgewählte Ereignisklasse aufzeichnet. Eine Vorlage kann für viele Ablaufverfolgungen verwendet werden. Die Vorlage selbst wird nicht ausgeführt.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] bietet vordefinierte Ablaufverfolgungsvorlagen, mit denen Sie auf einfache Weise die Ereignisklassen konfigurieren können, die Sie höchstwahrscheinlich für spezifische Ablaufverfolgungen benötigen. Beispielsweise können Sie mithilfe der Standardvorlage eine allgemeine Ablaufverfolgung zum Aufzeichnen von Anmeldungen, Abmeldungen, abgeschlossenen Batches und Verbindungsinformationen erstellen. Diese Vorlage kann unverändert zum Ausführen von Ablaufverfolgungen verwendet werden. Sie kann aber auch als Ausgangspunkt für zusätzliche Vorlagen mit unterschiedlichen Ereigniskonfigurationen dienen.  
@@ -33,7 +38,7 @@ caps.handback.revision: 35
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann für eine Reihe von Servertypen eine Ablaufverfolgung ausführen. Beispielsweise können Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nachverfolgen.  Die zulässigen Ereignisklassen sind jedoch für die verschiedenen Servertypen nicht identisch. Deshalb verwaltet [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für die verschiedenen Server unterschiedliche Vorlagen und stellt die betreffende Vorlage zur Verfügung, die dem ausgewählten Servertyp entspricht.  
   
-## Vordefinierte Vorlagen  
+## <a name="predefined-templates"></a>Vordefinierte Vorlagen  
  Neben der Standardvorlage (Standardeinstellung) enthält [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mehrere vordefinierte Vorlagen zum Überwachen bestimmter Ereignistypen. In der folgenden Tabelle sind die vordefinierten Vorlagen, deren Verwendungszweck und die Ereignisklassen, für die sie Informationen aufzeichnen, aufgeführt.  
   
 |Vorlagenname|Vorlagenverwendungszweck|Ereignisklassen|  
@@ -41,16 +46,16 @@ caps.handback.revision: 35
 |SP_Counts|Zeichnet das Ausführungsverhalten einer gespeicherten Prozedur über einen Zeitraum auf.|**SP:Starting**|  
 |Standard|Allgemeiner Ausgangspunkt zum Erstellen einer Ablaufverfolgung. Zeichnet alle gespeicherten Prozeduren und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches, die ausgeführt werden, auf. Mit dieser Vorlage überwachen Sie die allgemeine Aktivität des Datenbankservers.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die von Clients an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, sowie den Ausstellungszeitpunkt auf. Mit dieser Vorlage debuggen Sie Clientanwendungen.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
-|TSQL_Duration|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von Clients an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, und deren Ausführungszeit (in Millisekunden) auf und gruppiert sie nach der Dauer. Mit dieser Vorlage identifizieren Sie langsame Abfragen.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
-|TSQL_Grouped|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, sowie den Ausstellungszeitpunkt auf. Die Informationen werden nach dem Benutzer oder Client, der die Anweisung übermittelt hat, gruppiert. Mit dieser Vorlage analysieren Sie Abfragen von einem bestimmten Client oder Benutzer.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
-|TSQL_Locks|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von Clients an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, sowie die Ausnahmesperrereignisse auf. Verwenden Sie dies, um Probleme mit Deadlocks, Sperrtimeouts und Sperrausweitungsereignissen zu beheben.|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Sperre:Timeout (Timeout>0)**|  
-|TSQL_Replay|Zeichnet detaillierte Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auf, die erforderlich sind, falls die Ablaufverfolgung wiedergegeben wird. Verwenden Sie diese Vorlage für iterative Optimierungen, wie z. B. Vergleichstest.|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **Audit Login**<br /><br /> **Audit Logout**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|TSQL_Duration|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die von Clients an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, und deren Ausführungszeit (in Millisekunden) auf und gruppiert sie nach der Dauer. Mit dieser Vorlage identifizieren Sie langsame Abfragen.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
+|TSQL_Grouped|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, sowie den Ausstellungszeitpunkt auf. Die Informationen werden nach dem Benutzer oder Client, der die Anweisung übermittelt hat, gruppiert. Mit dieser Vorlage analysieren Sie Abfragen von einem bestimmten Client oder Benutzer.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
+|TSQL_Locks|Zeichnet alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die von Clients an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt werden, sowie die Ausnahmesperrereignisse auf. Verwenden Sie dies, um Probleme mit Deadlocks, Sperrtimeouts und Sperrausweitungsereignissen zu beheben.|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Sperre:Timeout (Timeout>0)**|  
+|TSQL_Replay|Zeichnet detaillierte Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auf, die erforderlich sind, falls die Ablaufverfolgung wiedergegeben wird. Verwenden Sie diese Vorlage für iterative Optimierungen, wie z. B. Vergleichstest.|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **Audit Login**<br /><br /> **Audit Logout**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_SPs|Zeichnet detaillierte Informationen zu allen ausgeführten gespeicherten Prozeduren auf. Verwenden Sie diese Vorlage zum Analysieren der Komponentenschritte von gespeicherten Prozeduren. Fügen Sie das **SP:Recompile** -Ereignis hinzu, falls Sie vermuten, dass Prozeduren neu kompiliert werden.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
 |Optimierung|Zeichnet Informationen zur Ausführung von gespeicherten Prozeduren und von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches auf. Verwenden Sie diese Vorlage zum Erstellen von Ablaufverfolgungsausgaben, die der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber als Arbeitsauslastung verwenden kann, um Datenbanken zu optimieren.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
  Informationen zu den Ereignisklassen finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
-## Standardvorlage  
+## <a name="default-template"></a>Standardvorlage  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] bestimmt automatisch die Vorlage **Standard** , die standardmäßig für neue Ablaufverfolgungen verwendet wird. Sie können jedoch statt der Standardvorlage eine beliebige andere vordefinierte oder benutzerdefinierte Vorlage verwenden. Um die Standardvorlage zu ändern, aktivieren Sie im Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** auf der Registerkarte **Allgemein** das Kontrollkästchen **Als Standardvorlage für den ausgewählten Servertyp verwenden** , wenn Sie eine Vorlage erstellen oder bearbeiten.  
   
  Um das Dialogfeld **Eigenschaften der Ablaufverfolgungsvoderlage** zu öffnen, klicken Sie im [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Datei** auf **Voderlagen**, und klicken Sie dann auf **Neue Voderlage** oder **Vorlage bearbeiten**.  
@@ -58,10 +63,10 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  Die Standardvorlage gilt speziell für einen bestimmten Servertyp. Wenn Sie die Standardvorlage für einen Servertyp ändern, sind andere Servertypen davon nicht betroffen. Weitere Informationen zum Festlegen einer Standardvorlage für einen bestimmten Server finden Sie unter [Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
-## Siehe auch  
- [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [Exportieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen einer Ablaufverfolgungsvorlage &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Ändern einer Ablaufverfolgungsvorlage &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Exportieren einer Ablaufverfolgungsvorlage &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Importieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

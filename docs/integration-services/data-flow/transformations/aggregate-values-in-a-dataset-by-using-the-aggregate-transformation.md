@@ -1,29 +1,34 @@
 ---
-title: "Aggregieren von Werten in einem Dataset mithilfe der Transformation f&#252;r das Aggregieren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aggregieren-Transformation [Integration Services]"
-  - "Aggregatwerte [Integration Services]"
-  - "Datasets [Integration Services], Aggregatwerte"
+title: "Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- aggregate values [Integration Services]
+- datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Aggregieren von Werten in einem Dataset mithilfe der Transformation f&#252;r das Aggregieren
+# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren
   Um eine Transformation für das Aggregieren hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  
   
-### So aggregieren Sie Werte in einem Dataset  
+### <a name="to-aggregate-values-in-a-dataset"></a>So aggregieren Sie Werte in einem Dataset  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -67,10 +72,10 @@ caps.handback.revision: 48
   
 15. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transformation für das Aggregieren](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
- [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Entit&#228;tsabh&#228;ngigkeiten-Explorer | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Master Data Services"
+title: "Entitätsabhängigkeiten-Explorer | Microsoft Docs"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Master Data Services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Entit&#228;tsabh&#228;ngigkeiten-Explorer
+# <a name="entity-dependencies-explorer"></a>Entitätsabhängigkeiten-Explorer
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] In 2016 wurde eine neue Explorer-Seite namens „Entitätsabhängigkeiten“ hinzugefügt, die alternative Möglichkeiten zur Visualisierung von Beziehungen zwischen Entitätselementen innerhalb eines Modells bietet. Die Visualisierung basiert auf den Werten ihrer domänenbasierten Attribute (DBA), ohne dass eine abgeleitete Hierarchie definiert werden muss.   
   
 Sie hilft dabei die Frage zu beantworten „ Wer verwendet meine Entität und wie?“. Die Ansicht ist ähnlich der Explorer-Seite der abgeleiteten Hierarchie, umfasst jedoch mehr. Sie zeigt alle DBA-Beziehungen an, nicht nur die, die als Teil einer bestimmten Hierarchie definiert sind. Eine Hierarchiedefinition ist nicht erforderlich, da die angezeigte hierarchische Struktur einfach aus vorhandenen DBAs abgeleitet wird.  
   
-Im Menü der Explorer-Seite listet das Entitätsabhängigkeiten-Menüelement alle Entitäten in dem Modell auf, von denen mindestens eine Entität abhängig ist. (D.h. mindestens eine Entität verfügt über ein DBA, das auf die aufgelistete Entität verweist). Die Anzahl der Abhängigkeiten (sowohl direkte als auch indirekte) wird neben dem Namen der Entität angezeigt, und die Liste wird anhand dieser Anzahl sortiert, wobei die Entitäten auf die am häufigsten verwiesen wird, oben stehen. Der nachfolgende Screenshot aus dem Kundenmodell der [Beispieldaten](https://msdn.microsoft.com/library/master-data-services-sample.aspx) zeigt, dass sieben Entitäten (direkt oder indirekt) auf die Entität „BigArea“ verweisen:  
+Im Menü der Explorer-Seite listet das Entitätsabhängigkeiten-Menüelement alle Entitäten in dem Modell auf, von denen mindestens eine Entität abhängig ist. (D.h. mindestens eine Entität verfügt über ein DBA, das auf die aufgelistete Entität verweist). Die Anzahl der Abhängigkeiten (sowohl direkte als auch indirekte) wird neben dem Namen der Entität angezeigt, und die Liste wird anhand dieser Anzahl sortiert, wobei die Entitäten auf die am häufigsten verwiesen wird, oben stehen. Der nachfolgende Screenshot aus dem Kundenmodell der [Beispieldaten](https://msdn.microsoft.com/library/master-data-services-sample.aspx)zeigt, dass sieben Entitäten (direkt oder indirekt) auf die Entität „BigArea“ verweisen:  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -43,3 +48,5 @@ Die Ansicht ist vollständig bearbeitbar, genau wie die Hierarchie-Explorer-Seit
   
   
   
+
+

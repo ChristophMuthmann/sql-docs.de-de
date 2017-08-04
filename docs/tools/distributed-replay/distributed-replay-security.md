@@ -1,25 +1,30 @@
 ---
-title: "Distributed Replay-Sicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Distributed Replay-Sicherheit | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71e00ff0a5ea435715c5895fa2ec212ad5a8f056
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Distributed Replay-Sicherheit
+# <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
   Bevor Sie die Distributed Replay-Funktion von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
   
-## Benutzer- und Dienstkonten  
+## <a name="user-and-service-accounts"></a>Benutzer- und Dienstkonten  
  In der folgenden Tabelle werden die Konten beschrieben, die für Distributed Replay verwendet werden. Nach der Installation von Distributed Replay müssen Sie die Sicherheitsprinzipale zuweisen, unter denen der Controller und der Clientdienst ausgeführt werden. Daher empfiehlt es sich, dass Sie die entsprechenden Domänenbenutzerkonten konfigurieren, bevor Sie die Distributed Replay-Funktionen installieren.  
   
 |Benutzerkonto|Anforderungen|  
@@ -56,7 +61,7 @@ caps.handback.revision: 29
   
 4.  Konfigurieren Sie das Benutzerkonto, das Sie verwenden möchten.  
   
-## Datei- und Ordnerberechtigungen  
+## <a name="file-and-folder-permissions"></a>Datei- und Ordnerberechtigungen  
  Nachdem die Dienstkonten angegeben wurden, müssen Sie diesen Dienstkonten die notwendige Datei- und Ordnerberechtigungen gewähren. Konfigurieren Sie Datei- und Ordnerberechtigungen entsprechend der folgenden Tabelle:  
   
 |Konto|Ordnerberechtigungen|  
@@ -64,7 +69,7 @@ caps.handback.revision: 29
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Controller|`<Controller_Installation_Path>\DReplayController` (Lesen, Schreiben, Löschen)<br /><br /> `DReplayServer.xml` Datei (Lesen, Schreiben)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (Lesen, Schreiben, Löschen)<br /><br /> `DReplayClient.xml` Datei (Lesen, Schreiben)<br /><br /> Die Arbeits- und Ergebnisverzeichnisse, die in der Clientkonfigurationsdatei durch die Elemente `WorkingDirectory` und `ResultDirectory` angegeben werden. (Lesen, Schreiben)|  
   
-## DCOM-Berechtigungen  
+## <a name="dcom-permissions"></a>DCOM-Berechtigungen  
  DCOM wird für die RPC-Kommunikation (Remote Procedure Call) zwischen dem Controller und dem Verwaltungstool und zwischen dem Controller und allen Clients verwendet. Sie müssen computerweite und anwendungsspezifische DCOM-Berechtigungen für den Controller konfigurieren, nachdem die Distributed Replay-Funktionen installiert wurden.  
   
  Führen Sie folgende Schritte aus, um die DCOM-Berechtigungen für den Controller zu konfigurieren:  
@@ -91,12 +96,12 @@ caps.handback.revision: 29
 > [!IMPORTANT]  
 >  Stellen Sie zum Schutz vor böswilligen Abfragen oder Denial-of-Service-Angriffen sicher, dass nur ein vertrauenswürdiges Benutzerkonto für das Clientdienstkonto verwendet wird. Dieses Konto wird in der Lage sein, eine Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen und Arbeitsauslastungen für diese Instanz zu simulieren.  
   
-## SQL Server-Berechtigungen  
+## <a name="sql-server-permissions"></a>SQL Server-Berechtigungen  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Clientdienstkonten werden verwendet, um eine Verbindung mit der Zielinstanz der Arbeitsauslastung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Für diese Verbindungen wird nur die Windows-Authentifizierung unterstützt.  
   
- Nachdem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Clientdienst auf einer Gruppe von Computern installiert haben, muss dem für diese Dienstkonten verwendeten Sicherheitsprinzipal die „sysadmin“-Serverrolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gewährt werden, für die Sie die Arbeitsauslastung der Ablaufverfolgung wiedergeben möchten. Dieser Schritt wird während des Setups von Distributed Replay nicht automatisch ausgeführt.  
+ Nachdem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Clientdienst auf einer Gruppe von Computern installiert haben, muss dem für diese Dienstkonten verwendeten Sicherheitsprinzipal die „sysadmin“-Serverrolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gewährt werden, für die Sie die Arbeitsauslastung der Ablaufverfolgung wiedergeben möchten. Dieser Schritt wird während des Setups von Distributed Replay nicht automatisch ausgeführt.  
   
-## Datenschutz  
+## <a name="data-protection"></a>Datenschutz  
  In der Distributed Replay-Umgebung wird den folgenden Benutzerkonten Vollzugriff auf die Zielserverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Eingabedaten der Ablaufverfolgung und die Ergebnisdateien der Ablaufverfolgung gewährt:  
   
 -   Interaktives Benutzerkonto, das zum Ausführen des Verwaltungstools verwendet wird.  
@@ -110,25 +115,25 @@ caps.handback.revision: 29
 -   Mitglieder der lokalen Administratorgruppe auf den Clients.  
   
     > [!IMPORTANT]  
-    >  Diese Konten enthalten Vollzugriff auf alle persönlich identifizierbare Informationen (PII) oder vertraulichen Informationen in den Datendateien der Ablaufverfolgung, Zwischendateien, Dispatchdateien oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendateien, die von Distributed Replay verwendet wurden.  
+    >  Diese Konten enthalten Vollzugriff auf alle persönlich identifizierbare Informationen (PII) oder vertraulichen Informationen in den Datendateien der Ablaufverfolgung, Zwischendateien, Dispatchdateien oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datendateien, die von Distributed Replay verwendet wurden.  
   
  Es wird empfohlen, die folgenden Sicherheitsvorsichtsmaßnahmen zu treffen:  
   
--   Speichern Sie die Eingabedaten der Ablaufverfolgung, die Ergebnisdateien der Ablaufverfolgung und Datenbankdateien an einem Speicherort, der das NTFS-Dateisystem (NTFS) verwendet, und wenden Sie die geeigneten Zugriffssteuerungslisten (ACLs) an. Wenn erforderlich, verschlüsseln Sie die Daten, die auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer gespeichert werden. Beachten Sie, dass keine ACLs auf Ablaufverfolgungsdateien angewendet werden und keine Datenmaskierung oder Verbergung erfolgt. Sie sollten diese Dateien möglichst bald nach ihrer Verwendung löschen.  
+-   Speichern Sie die Eingabedaten der Ablaufverfolgung, die Ergebnisdateien der Ablaufverfolgung und Datenbankdateien an einem Speicherort, der das NTFS-Dateisystem (NTFS) verwendet, und wenden Sie die geeigneten Zugriffssteuerungslisten (ACLs) an. Wenn erforderlich, verschlüsseln Sie die Daten, die auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer gespeichert werden. Beachten Sie, dass keine ACLs auf Ablaufverfolgungsdateien angewendet werden und keine Datenmaskierung oder Verbergung erfolgt. Sie sollten diese Dateien möglichst bald nach ihrer Verwendung löschen.  
   
 -   Wenden Sie die entsprechenden ACLs und Beibehaltungsrichtlinie auf alle Zwischendateien und Dispatchdateien an, die von Distributed Replay generiert werden.  
   
 -   Verwenden Sie SSL (Secure Sockets Layer), um den Netzwerktransport zu schützen.  
   
-## Wichtige Schritte zum Entfernen von Elementen  
+## <a name="important-removal-steps"></a>Wichtige Schritte zum Entfernen von Elementen  
  Es empfiehlt sich, Distributed Replay nur in einer Testumgebung zu verwenden. Führen Sie unbedingt die folgenden Aktionen aus, nachdem Sie die Tests abgeschlossen haben und bevor Sie die betreffenden Computer für eine andere Aufgabe bereitstellen:  
   
 -   Deinstallieren Sie die Distributed Replay-Funktionen, und entfernen Sie die zugehörigen Konfigurationsdateien vom Controller und von allen Clients.  
   
 -   Löschen Sie alle Ablaufverfolgungsdateien, Zwischendateien, Dispatchdateien und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdateien, die für Tests verwendet wurden. Die Zwischendateien und Dispatchdateien werden im Arbeitsverzeichnis auf dem Controller bzw. dem Client gespeichert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Installieren von Distributed Replay – Übersicht](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

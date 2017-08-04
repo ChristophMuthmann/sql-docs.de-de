@@ -1,31 +1,36 @@
 ---
-title: "Transformation f&#252;r Suche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "Transformation für Suche"
-  - "Verknüpfen von Spalten [Integration Services]"
-  - "Cache [Integration Services]"
-  - "Übereinstimmungen, exakte [Integration Services]"
-  - "Suchvorgänge [Integration Services]"
-  - "Exakte Übereinstimmungen [Integration Services]"
+title: "Transformation für Suche | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation f&#252;r Suche
+# <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
   
  Das Verweisdataset kann eine Cachedatei, eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Abfrage sein. Die Transformation für Suche stellt entweder mithilfe eines OLE DB-Verbindungs-Managers oder eines Cacheverbindungs-Managers eine Verbindung mit dem Verweisdataset her. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) und [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
@@ -74,14 +79,14 @@ caps.handback.revision: 106
   
 -   Fehlerausgabe.  
   
-## Zwischenspeichern des Verweisdatasets  
+## <a name="caching-the-reference-dataset"></a>Zwischenspeichern des Verweisdatasets  
  In einem speicherresidenten Cache werden das Verweisdataset und eine Hashtabelle gespeichert, mit der die Daten indiziert werden. Der Cache bleibt speicherresident, bis die Ausführung des Pakets abgeschlossen ist. Sie können den Cache in einer Cachedatei (.caw) persistent speichern.  
   
  Wenn Sie den Cache in einer Datei persistent speichern, lädt das System den Cache schneller. Dies verbessert die Leistung der Transformation für Suche und des Pakets. Bei Verwendung einer Cachedatei arbeiten Sie mit Daten, die weniger aktuell sind als die Daten in der Datenbank.  
   
  Im Folgenden finden Sie weitere Vorteile einer persistenten Speicherung des Caches in einer Datei:  
   
--   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter*** [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md) ***.***  
+-   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter*** [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Die Daten können dann auf mehreren Computern verwendet werden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -112,18 +117,18 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Einzelheiten finden Sie in den folgenden Hilfethemen:  
   
 -   [Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Video [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
   
@@ -135,10 +140,10 @@ caps.handback.revision: 106
   
      Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

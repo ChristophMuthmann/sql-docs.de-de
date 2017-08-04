@@ -1,34 +1,39 @@
 ---
-title: "ODBC-Flusskomponenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ODBC-Flusskomponenten | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC-Flusskomponenten
+# <a name="odbc-flow-components"></a>ODBC-Flusskomponenten
   In diesem Thema werden die erforderlichen Begriffe der Erstellung eines ODBC-Datenflusses mit [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  Der Konnektor für Open Database Connectivity (ODBC) von Attunity für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] erleichtert SSIS-Entwicklern das Erstellen von Paketen, mit denen Daten aus Datenbanken mit ODBC-Unterstützung geladen bzw. wieder entladen werden.  
   
  Der ODBC-Connector ist auf die Erzielung der optimalen Leistung ausgelegt, was das Laden (bzw. Entladen) von Daten in eine Datenbank mit ODBC-Unterstützung im [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]-Kontext betrifft.  
   
-## Vorteile  
+## <a name="benefits"></a>Vorteile  
  Die ODBC-Quelle und das ODBC-Ziel für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] erhöhen die Wettbewerbsfähigkeit von SSIS in Projekten, in denen es um das Laden (bzw. Entladen) von Daten in Datenbanken mit ODBC-Unterstützung geht.  
   
  Sowohl für die ODBC-Quelle als auch für das ODBC-Ziel ist eine Datenintegration in Datenbanken mit ODBC-Aktivierung bei hoher Leistung möglich. Beide Komponenten können für die Verwendung mit Zeile-für-Zeile-Parameterarraybindungen für ODBC-Anbieter mit hoher Leistung konfiguriert werden, die diesen Bindungsmodus unterstützen, sowie für die Verwendung mit Einzelzeilen-Parameterbindungen für ODBC-Anbieter mit niedriger Leistung.  
   
-## Erste Schritte mit der ODBC-Quelle und dem ODBC-Ziel  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>Erste Schritte mit der ODBC-Quelle und dem ODBC-Ziel  
  Bevor Sie Pakete einrichten können, die [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]verwenden, müssen Sie die Verfügbarkeit der folgenden Elemente sicherstellen.  
   
 -   [ODBC-Quelle](../../integration-services/data-flow/odbc-source.md)  
@@ -61,11 +66,11 @@ caps.handback.revision: 10
   
  Ziel-Editor für ODBC (Seite "Fehlerausgabe")  
   
-## Betriebsszenarien  
+## <a name="operating-scenarios"></a>Betriebsszenarien  
  In diesem Abschnitt werden einige Hauptverwendungsarten von ODBC-Quell- und -Zielkomponenten beschrieben.  
   
-### Massenkopieren von Daten aus SQL Server-Tabellen in beliebige Datenbanktabellen mit ODBC-Unterstützung  
- Sie können die Komponenten verwenden, um für Daten das Massenkopieren aus einer oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen in eine einzelne Datenbanktabelle mit ODBC-Unterstützung durchzuführen.  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>Massenkopieren von Daten aus SQL Server-Tabellen in beliebige Datenbanktabellen mit ODBC-Unterstützung  
+ Sie können die Komponenten verwenden, um für Daten das Massenkopieren aus einer oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen in eine einzelne Datenbanktabelle mit ODBC-Unterstützung durchzuführen.  
   
  Im folgenden Beispiel wird gezeigt, wie Sie einen SSIS-Datenflusstask erstellen, mit dem Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle extrahiert und in eine DB2-Tabelle geladen werden.  
   
@@ -79,8 +84,8 @@ caps.handback.revision: 10
   
 -   Ziehen Sie ein ODBC-Ziel in die Entwurfsoberfläche, verbinden Sie die Quellausgabe mit dem ODBC-Ziel, und konfigurieren Sie dann das Ziel, um die Daten in die DB2-Tabelle mit den Daten zu laden, die Sie aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank extrahieren. Verwenden Sie den ODBC-Verbindungs-Manager, den Sie zuvor erstellt haben.  
   
-### Massenkopieren von Daten aus Datenbanktabellen mit ODBC-Unterstützung in beliebige SQL Server-Tabellen  
- Sie können die Komponenten verwenden, um für Daten das Massenkopieren aus einer oder mehreren Datenbanktabellen mit ODBC-Unterstützung in eine einzelne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktabelle durchzuführen.  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>Massenkopieren von Daten aus Datenbanktabellen mit ODBC-Unterstützung in beliebige SQL Server-Tabellen  
+ Sie können die Komponenten verwenden, um für Daten das Massenkopieren aus einer oder mehreren Datenbanktabellen mit ODBC-Unterstützung in eine einzelne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanktabelle durchzuführen.  
   
  Im folgenden Beispiel wird gezeigt, wie Sie einen SSIS-Datenflusstask erstellen, bei dem Daten aus einer Sybase-Datenbanktabelle extrahiert und in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanktabelle geladen werden.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   Ziehen Sie ein OLE DB-Ziel in die Entwurfsoberfläche, verbinden Sie die Quellausgabe mit dem OLE DB-Ziel, und konfigurieren Sie dann das Ziel, um die Daten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit den Daten zu laden, die Sie aus der Sybase-Datenbank extrahieren. Verwenden Sie den OLE DB-Verbindungs-Manager, den Sie zuvor erstellt haben.  
   
-## Unterstützte Datentypen  
+## <a name="supported-data-types"></a>Unterstützte Datentypen  
  Die SSIS-Komponenten für ODBC-Massenvorgänge unterstützen alle integrierten ODBC-Datentypen sowie große Objekte (CLOBs und BLOBs).  
   
 Es ist keine Datentypunterstützung für erweiterbare C-Typen vorhanden, die in der ODBC 3.8-Spezifikation beschrieben werden.In der folgenden Tabelle wird beschrieben, welche SSIS-Datentypen für die einzelnen ODBC-SQL-Typen verwendet werden. Ein SSIS-Entwickler kann die Standardzuordnung überschreiben und einen anderen SSIS-Datentyp für Eingabe-/Ausgabespalten angeben, ohne dass sich dies auf die Leistung für die erforderlichen Datenkonvertierungen auswirkt.  
@@ -118,8 +123,8 @@ Es ist keine Datentypunterstützung für erweiterbare C-Typen vorhanden, die in 
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|SQL_TIMESTAMP-Datentypen werden DT_DBTIMESTAMP2 zugeordnet, wenn die Skalierung größer als 3 ist. In allen anderen Fällen werden sie DT_DBTIMESTAMP zugeordnet.|  
-|SQL_CHAR<br /><br />SQLVARCHAR|DT_STR<br /><br />DT_WSTR<br /><br />DT_TEXT<br /><br />DT_NTEXT|DT_STR wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist und die **ExposeStringsAsUnicode**-Eigenschaft den Wert „false“ aufweist.<br /><br />DT_WSTR wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist und die **ExposeStringsAsUnicode**-Eigenschaft den Wert „true“ aufweist.<br /><br />DT_TEXT wird verwendet, wenn die Spaltenlänge größer als 8000 ist und die **ExposeStringsAsUnicode**-Eigenschaft den Wert „false“ aufweist.<br /><br />DT_NTEXT wird verwendet, wenn die Spaltenlänge größer als 8000 ist und die **ExposeStringsAsUnicode**-Eigenschaft den Wert „true“ aufweist.|  
-|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|DT_NTEXT wird verwendet, wenn die **ExposeStringsAsUnicode**-Eigenschaft den Wert „true“ aufweist.|  
+|SQL_CHAR<br /><br />SQLVARCHAR|DT_STR<br /><br />DT_WSTR<br /><br />DT_TEXT<br /><br />DT_NTEXT|DT_STR wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist und die **ExposeStringsAsUnicode** -Eigenschaft den Wert „false“ aufweist.<br /><br />DT_WSTR wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist und die **ExposeStringsAsUnicode** -Eigenschaft den Wert „true“ aufweist.<br /><br />DT_TEXT wird verwendet, wenn die Spaltenlänge größer als 8000 ist und die **ExposeStringsAsUnicode** -Eigenschaft den Wert „false“ aufweist.<br /><br />DT_NTEXT wird verwendet, wenn die Spaltenlänge größer als 8000 ist und die **ExposeStringsAsUnicode** -Eigenschaft den Wert „true“ aufweist.|  
+|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|DT_NTEXT wird verwendet, wenn die **ExposeStringsAsUnicode** -Eigenschaft den Wert „true“ aufweist.|  
 |SQL_WCHAR<br /><br />SQL_WVARCHAR|DT_WSTR<br /><br />DT_NTEXT|DT_WSTR wird verwendet, wenn die Spaltenlänge kleiner oder gleich 4000 ist.<br /><br />DT_NTEXT wird verwendet, wenn die Spaltenlänge größer als 4000 ist.|  
 |SQL_WLONGVARCHAR|DT_NTEXT|  
 |SQL_BINARY|DT_BYTE<br /><br />DT_IMAGE|DT_BYTES wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist.<br /><br />DT_IMAGE wird verwendet, wenn die Spaltenlänge größer als 8000 ist.|  
@@ -128,7 +133,7 @@ Es ist keine Datentypunterstützung für erweiterbare C-Typen vorhanden, die in 
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Anbieterspezifische Datentypen|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES wird verwendet, wenn die Spaltenlänge kleiner oder gleich 8000 ist.<br /><br />DT_IMAGE wird verwendet, wenn die Spaltenlänge 0 (null) oder größer als 8000 ist.|  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [ODBC-Quelle](../../integration-services/data-flow/odbc-source.md)  
   

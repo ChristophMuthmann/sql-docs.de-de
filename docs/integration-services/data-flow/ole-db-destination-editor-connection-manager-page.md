@@ -1,26 +1,31 @@
 ---
-title: "Ziel-Editor f&#252;r OLE DB (Seite Verbindungs-Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbdestadapter.connection.f1"
-helpviewer_keywords: 
-  - "Ziel-Editor für OLE DB"
+title: "Ziel-Editor für OLE DB (Seite Verbindungs-Manager) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbdestadapter.connection.f1
+helpviewer_keywords:
+- OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 81
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c6561914b8d059fc6ceed51a6ed82661620efca5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ziel-Editor f&#252;r OLE DB (Seite Verbindungs-Manager)
+# <a name="ole-db-destination-editor-connection-manager-page"></a>Ziel-Editor für OLE DB (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für OLE DB** können Sie die OLE DB-Verbindung für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
   
 > [!NOTE]  
@@ -31,9 +36,9 @@ caps.handback.revision: 81
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## Statische Optionen  
+## <a name="static-options"></a>Statische Optionen  
  **OLE DB-Verbindungs-Manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
@@ -41,21 +46,21 @@ caps.handback.revision: 81
  **Datenzugriffsmodus**  
  Gibt das Verfahren für das Laden von Daten in das Ziel an. Für das Laden von Doppelbyte-Zeichensatzdaten (Double-Byte Character Set oder DBCS) ist die Verwendung einer der Optionen für schnelles Laden erforderlich. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](../Topic/Use%20Variables%20in%20Packages.md)|  
+|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Variable für Tabellenname oder Sichtname - schnelles Laden|Gibt den Namen der Tabelle oder Sicht in einer Variablen an und verwendet zum Laden der Daten die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL-Befehl|Lädt Daten mithilfe einer SQL-Abfrage in das OLE DB-Ziel.|  
   
  **Vorschau**  
  Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
   
-## Dynamische Optionen (Datenzugriffsmodus)  
+## <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
  Für jede der Einstellungen für **Datenzugriffsmodus** werden spezifische dynamische Optionen angezeigt. In den folgenden Abschnitten werden alle dynamischen Optionen, die für die einzelnen Einstellungen für **Datenzugriffsmodus** verfügbar sind, beschrieben.  
   
-### Datenzugriffsmodus = Tabelle oder Sicht  
+### <a name="data-access-mode--table-or-view"></a>Datenzugriffsmodus = Tabelle oder Sicht  
  **Name der Tabelle oder Sicht**  
  Wählen Sie den Namen der Tabelle oder Sicht aus einer Liste der verfügbaren Namen in der Datenquelle aus.  
   
@@ -65,9 +70,9 @@ caps.handback.revision: 81
 > [!NOTE]  
 >  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-### Datenzugriffsmodus = Tabelle oder Sicht – schnelles Laden  
+### <a name="data-access-mode--table-or-view--fast-load"></a>Datenzugriffsmodus = Tabelle oder Sicht – schnelles Laden  
  **Name der Tabelle oder Sicht**  
- Wählen Sie mithilfe dieser Liste eine Tabelle oder Sicht in der Datenbank aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu** klicken.  
+ Wählen Sie mithilfe dieser Liste eine Tabelle oder Sicht in der Datenbank aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
@@ -99,16 +104,16 @@ caps.handback.revision: 81
 > [!NOTE]  
 >  Der Wert **0** bewirkt möglicherweise, dass das Paket bei der Ausführung nicht mehr reagiert, wenn das OLE DB-Ziel und andere Datenflusskomponenten dieselbe Quelltabelle aktualisieren. Um zu verhindern, dass die Paketausführung beendet wird, legen Sie die Option **Maximale Einfügungscommitgröße** auf **2147483647**fest.  
   
- Wenn Sie für diese Eigenschaft einen Wert bereitstellen, führt das Ziel für Zeilen in Batches, die kleiner sind als (a) die **Maximale Einfügungscommitgröße** oder (b) die verbleibenden Zeilen im Puffer, der gerade verarbeitet wird, einen Commit durch.  
+ Wenn Sie für diese Eigenschaft einen Wert bereitstellen, führt das Ziel für Zeilen in Batches, die kleiner sind als (a) die **Maximale Einfügungscommitgröße**oder (b) die verbleibenden Zeilen im Puffer, der gerade verarbeitet wird, einen Commit durch.  
   
 > [!NOTE]  
 >  Einschränkungsfehler am Ziel bewirken, dass der gesamte Batch mit Zeilen, die durch **Maximale Einfügungscommitgröße** definiert sind, fehlschlägt.  
   
-### Datenzugriffsmodus = Variable für Tabellenname oder Sichtname  
+### <a name="data-access-mode--table-name-or-view-name-variable"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname  
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
-### Datenzugriffsmodus = Variable für Tabellenname oder Sichtname – schnelles Laden  
+### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname – schnelles Laden  
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
@@ -142,14 +147,14 @@ caps.handback.revision: 81
 > [!NOTE]  
 >  Der Wert **0** bewirkt möglicherweise, dass das Paket bei der Ausführung nicht mehr reagiert, wenn das OLE DB-Ziel und andere Datenflusskomponenten dieselbe Quelltabelle aktualisieren. Um zu verhindern, dass die Paketausführung beendet wird, legen Sie die Option **Maximale Einfügungscommitgröße** auf **2147483647**fest.  
   
-### Datenzugriffsmodus = SQL-Befehl  
+### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
  **SQL-Befehlstext**  
- Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen** klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen** klicken.  
+ Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
   
 > [!NOTE]  
 >  Vom OLE DB-Ziel werden keine Parameter unterstützt. Wenn Sie eine parametrisierte INSERT-Anweisung ausführen müssen, ziehen Sie die Transformation für den OLE DB-Befehl in Betracht. Weitere Informationen finden Sie unter [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Abfrage erstellen**  
+ **Build query**  
  Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
   
  **Durchsuchen**  
@@ -158,10 +163,10 @@ caps.handback.revision: 81
  **Abfrage analysieren**  
  Überprüft die Syntax des Abfragetexts.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für OLE DB &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/ole-db-destination-editor-mappings-page.md)   
- [Ziel-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/ole-db-destination-editor-error-output-page.md)   
- [Laden von Daten mithilfe des OLE DB-Ziels](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [OLE DB-Ziel-Editor &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB-Ziel-Editor &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/ole-db-destination-editor-error-output-page.md)   
+ [Lädt Daten mithilfe des OLE DB-Zieles](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

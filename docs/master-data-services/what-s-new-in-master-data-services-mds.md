@@ -1,36 +1,41 @@
 ---
-title: "Neues in Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Was &#39; s in Master Data Services (MDS) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Neues in Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Was &#39; s in Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zusammengefasst. 
+  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zusammengefasst. 
   
- Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
+ Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Informationen zur Installation der Master Data Services, zur Einrichtung der Datenbank und Website und zur Bereitstellung der Beispielmodelle finden Sie unter** [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Informationen zur Installation der Master Data Services, zur Einrichtung der Datenbank und Website und zur Bereitstellung der Beispielmodelle finden Sie unter** [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)zusammengefasst.  
   
  **Download**  
   
 -   Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, navigieren Sie zum  **[Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
   
 ##  <a name="improved-performance"></a>Verbesserte Leistung  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,9 +82,9 @@ caps.handback.revision: 85
   
  Einem Benutzer kann jetzt auf Modellebene explizit die Administratorberechtigung zugewiesen werden. Dies bedeutet, dass der Benutzer die Administratorberechtigung nicht verliert, wenn ihm später in der Modellunterstruktur andere Berechtigungen zugewiesen werden.  
   
- In dieser Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] werden durch die Einführung der folgenden neuen Berechtigungen mehr Berechtigungsstufen bereitgestellt: Lesen, Erstellen, Aktualisieren und Löschen. Beispielsweise kann jetzt ein Benutzer, der nur über die Berechtigung „Aktualisieren“ verfügt, die Masterdaten aktualisieren, ohne Daten zu erstellen oder zu löschen. Wenn Sie einem Benutzer die Berechtigung „Erstellen“, „Aktualisieren“ oder „Löschen“ erteilen, erhält er auch automatisch die Berechtigung „Lesen“. Die Berechtigungen „Lesen“, „Erstellen“, „Aktualisieren“ und „Löschen“ können auch kombiniert werden.  
+ In dieser Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden durch die Einführung der folgenden neuen Berechtigungen mehr Berechtigungsstufen bereitgestellt: Lesen, Erstellen, Aktualisieren und Löschen. Beispielsweise kann jetzt ein Benutzer, der nur über die Berechtigung „Aktualisieren“ verfügt, die Masterdaten aktualisieren, ohne Daten zu erstellen oder zu löschen. Wenn Sie einem Benutzer die Berechtigung „Erstellen“, „Aktualisieren“ oder „Löschen“ erteilen, erhält er auch automatisch die Berechtigung „Lesen“. Die Berechtigungen „Lesen“, „Erstellen“, „Aktualisieren“ und „Löschen“ können auch kombiniert werden.  
   
- Wenn Sie ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] durchführen, werden alte Berechtigungen in neue Berechtigungen konvertiert, wie in der folgenden Tabelle veranschaulicht.  
+ Wenn Sie ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]durchführen, werden alte Berechtigungen in neue Berechtigungen konvertiert, wie in der folgenden Tabelle veranschaulicht.  
   
 |Berechtigung in der vorherigen Version|Neue Berechtigung|  
 |------------------------------------|--------------------|  
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](../master-data-services/master data services and data quality services features support.md)  
+ [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Veraltete Funktionen von Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

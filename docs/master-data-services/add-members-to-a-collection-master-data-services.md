@@ -1,27 +1,32 @@
 ---
-title: "Hinzuf&#252;gen von Elementen zu einer Auflistung (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auflistungen [Master Data Services], Hinzufügen von Elementen"
+title: "Hinzufügen von Mitgliedern zu einer Auflistung (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Hinzuf&#252;gen von Elementen zu einer Auflistung (Master Data Services)
+# <a name="add-members-to-a-collection-master-data-services"></a>Hinzufügen von Elementen zu einer Auflistung (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie Blatt- und konsolidierte Elemente zu einer Auflistung hinzufügen.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   Eine Sammlung muss vorhanden sein. Weitere Informationen finden Sie unter [Erstellen einer Sammlung &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md).  
   
-### So fügen Sie einer Sammlung Elemente hinzu  
+### <a name="to-add-members-to-a-collection"></a>So fügen Sie einer Sammlung Elemente hinzu  
   
 1.  Wählen Sie auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Startseite aus der Liste **Modell** ein Modell aus.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 7
   
 3.  Klicken Sie auf **Explorer**.  
   
-4.  Zeigen Sie auf der Menüleiste auf **Sammlungen**, und klicken Sie auf einen *Entitätsnamen*.  
+4.  Zeigen Sie auf der Menüleiste auf **Sammlungen** , und klicken Sie auf einen *Entitätsnamen*.  
   
 5.  Klicken Sie im Raster auf die Zeile der Auflistung, der Sie Elemente hinzufügen möchten.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
 11. Legen Sie optional die Gewichtung fest, indem Sie in der Spalte **Gewichtung** auf einen Wert klicken.  
   
-## Siehe auch  
- [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Schemaauflistungen &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

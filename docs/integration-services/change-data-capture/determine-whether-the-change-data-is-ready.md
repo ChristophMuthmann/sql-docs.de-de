@@ -1,30 +1,35 @@
 ---
-title: "Bestimmen, ob die &#196;nderungsdaten bereit sind | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Inkrementelles Laden [Integration Services], Ermitteln der Bereitschaft"
+title: "Bestimmen, ob die Änderungsdaten bereit sind. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Bestimmen, ob die &#196;nderungsdaten bereit sind
+# <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der zweite Task darin, sicherzustellen, dass die Änderungsdaten für das ausgewählte Intervall bereit sind. Dieser Schritt ist notwendig, da der asynchrone Aufzeichnungsprozess möglicherweise noch nicht alle Änderungen bis zum ausgewählten Endpunkt verarbeitet hat.  
   
 > [!NOTE]  
 >  Beim ersten Task für die Ablaufsteuerung müssen die Endpunkte des Änderungsintervalls berechnet werden. Weitere Informationen zu diesem Task finden Sie unter [Angeben eines Intervalls von Änderungsdaten](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Eine Beschreibung des Gesamtprozesses zum Entwurf der Ablaufsteuerung finden Sie unter [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Grundlegendes zu den Komponenten der Lösung  
+## <a name="understanding-the-components-of-the-solution"></a>Grundlegendes zu den Komponenten der Lösung  
  Die in diesem Thema beschriebene Lösung verwendet 4 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten:  
   
 -   Ein For-Schleifencontainer, der wiederholt die Ausgabe eines Tasks "SQL ausführen" auswertet.  
@@ -37,7 +42,7 @@ caps.handback.revision: 26
   
  Diese Komponenten legen die Werte von mehreren Paketvariablen fest oder lesen sie, um den Ausführungsablauf innerhalb der Schleife und später im Paket zu steuern.  
   
-#### So richten Sie Paketvariablen ein  
+#### <a name="to-set-up-package-variables"></a>So richten Sie Paketvariablen ein  
   
 1.  Erstellen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Fenster **Variablen** die folgenden Variablen:  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 26
   
          In diesem Beispiel wird der Variablenname "IntervalID" verwendet, und es wird nur auf einen Wert von 0 geprüft, um das erste Laden anzuzeigen.  
   
-## Konfigurieren eines For-Schleifencontainers  
+## <a name="configuring-a-for-loop-container"></a>Konfigurieren eines For-Schleifencontainers  
  Mit dem Variablensatz ist der For-Schleifencontainer die erste Komponente, die hinzugefügt werden muss.  
   
-#### So konfigurieren Sie einen For-Schleifencontainer für das Warten auf die Bereitschaft von Änderungsdaten  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>So konfigurieren Sie einen For-Schleifencontainer für das Warten auf die Bereitschaft von Änderungsdaten  
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers der Ablaufsteuerung einen For-Schleifencontainer hinzu.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 26
   
 3.  Aktivieren Sie im **For-Schleifen-Editor**die folgenden Optionen:  
   
-    1.  Geben Sie für **InitExpression** `@DataReady = 0` ein.  
+    1.  Geben Sie für **InitExpression** `@DataReady = 0`ein.  
   
          Dieser Ausdruck legt den Anfangswert der Schleifenvariablen fest.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          Wenn dieser Ausdruck **False**ergibt, wird die Ausführung aus der Schleife weitergegeben, und das inkrementelle Laden beginnt.  
   
-## Konfigurieren des Tasks "SQL ausführen", der Änderungsdaten abfragt  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>Konfigurieren des Tasks "SQL ausführen", der Änderungsdaten abfragt  
  Innerhalb des For-Schleifencontainers fügen Sie einen Task "SQL ausführen" hinzu. Dieser Task fragt die Tabellen ab, die der Change Data Capture-Prozess in der Datenbank verwaltet. Das Ergebnis dieser Abfrage ist ein Statuswert, der angibt, ob die Änderungsdaten bereit sind.  
   
  In der folgenden Tabelle zeigt die erste Spalte die Werte an, die von der Task "SQL ausführen" durch die Beispiel-Transact-SQL-Abfrage zurückgegeben werden. Die zweite Spalte zeigt an, wie die anderen Komponenten auf diese Werte reagieren.  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
 |3|Gibt das erstmalige Laden aller verfügbaren Änderungsdaten an.<br /><br /> Die Bedingungslogik erhält diesen Wert von einer speziellen Paketvariablen, die nur für diesen Zweck verwendet wird.|Die Ausführung wird aus dem For-Schleifencontainer weitergegeben, und das inkrementelle Laden beginnt.|  
 |5|Gibt an, dass der TimeoutCeiling erreicht wurde.<br /><br /> Die Schleife hat für die festgelegte Anzahl auf Daten getestet, und Daten sind immer noch nicht verfügbar. Ohne diesen Test oder einen ähnlichen Test könnte das Paket unbegrenzt ausgeführt werden.|Die Ausführung setzt mit der optionalen Komponente fort, die den Timeout protokolliert.|  
   
-#### So konfigurieren Sie einen Task "SQL ausführen", um abzufragen, ob Änderungsdaten bereit sind  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>So konfigurieren Sie einen Task "SQL ausführen", um abzufragen, ob Änderungsdaten bereit sind  
   
 1.  Fügen Sie innerhalb des For-Schleifencontainers einen Task "SQL ausführen" hinzu.  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'**das DataReady-Ergebnis der DataReady-Variablen und das TimeoutCount-Ergebnis der TimeoutCount-Variablen zu.  
   
-## Warten, bis die Änderungsdaten bereit sind  
+## <a name="waiting-until-the-change-data-is-ready"></a>Warten, bis die Änderungsdaten bereit sind  
  Sie können unterschiedliche Methoden verwenden, um eine Verzögerung zu implementieren, wenn die Änderungsdaten nicht bereit sind. Die folgenden zwei Prozeduren veranschaulichen, wie mit einem Skripttask oder einem Task "SQL ausführen" eine Verzögerung implementiert wird.  
   
 > [!NOTE]  
 >  Ein vorkompiliertes Skript verursacht weniger Aufwand als ein Task "SQL ausführen".  
   
-#### So implementieren Sie eine Verzögerung mit einem Skripttask  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>So implementieren Sie eine Verzögerung mit einem Skripttask  
   
 1.  Fügen Sie innerhalb des For-Schleifencontainers einen Skripttask hinzu.  
   
@@ -196,13 +201,13 @@ caps.handback.revision: 26
         ```  
   
         > [!NOTE]  
-        >  Die **Thread.Sleep**-Methode erwartet ein Argument, das in Millisekunden angegeben wird.  
+        >  Die **Thread.Sleep** -Methode erwartet ein Argument, das in Millisekunden angegeben wird.  
   
 7.  Verlassen Sie die Standardcodezeile, die **DtsExecResult.Success** aus der Ausführung des Skripts zurückgibt.  
   
 8.  Schließen Sie die Skriptentwicklungsumgebung und den **Skripttask-Editor**.  
   
-#### So implementieren Sie eine Verzögerung mit einem Task "SQL ausführen"  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>So implementieren Sie eine Verzögerung mit einem Task "SQL ausführen"  
   
 1.  Fügen Sie innerhalb des For-Schleifencontainers einen Task "SQL ausführen" hinzu.  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  Ordnen Sie auf der Seite **Parameterzuordnung** des Editors dem Parameter 0 die DelaySeconds-Zeichenfolgenvariable zu.  
   
-## Behandeln einer Fehlerbedingung  
+## <a name="handling-an-error-condition"></a>Behandeln einer Fehlerbedingung  
  Sie können optional eine zusätzliche Komponente innerhalb der Schleife konfigurieren, um eine Fehler- oder Timeoutbedingung zu protokollieren:  
   
 -   Diese Komponente kann eine Fehlerbedingung protokollieren, wenn der Wert der DataReady-Variablen = 1. Dieser Wert gibt an, dass es keine verfügbaren Änderungsdaten vor dem Start des ausgewählten Intervalls gibt.  
   
 -   Diese Komponente kann auch eine Timeoutbedingung protokollieren, wenn der Wert der TimeoutCeiling-Variablen erreicht wird. Dieser Wert gibt an, dass die Schleife für die festgelegte Anzahl auf Daten getestet hat und Daten immer noch nicht verfügbar sind. Ohne diesen Test oder einen ähnlichen Test könnte das Paket unbegrenzt ausgeführt werden.  
   
-#### So konfigurieren Sie einen optionalen Skripttask zur Protokollierung einer Fehlerbedingung  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>So konfigurieren Sie einen optionalen Skripttask zur Protokollierung einer Fehlerbedingung  
   
-1.  Wenn Sie den Fehler oder das Timeout berichten möchten, indem Sie eine Meldung ins Protokoll schreiben, konfigurieren Sie die Protokollierung für das Paket. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  Wenn Sie den Fehler oder das Timeout berichten möchten, indem Sie eine Meldung ins Protokoll schreiben, konfigurieren Sie die Protokollierung für das Paket. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Fügen Sie innerhalb des For-Schleifencontainers einen Skripttask hinzu.  
   
@@ -270,7 +275,7 @@ caps.handback.revision: 26
   
 5.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** des Editors für **ReadOnlyVariables** **User::DataReady** und **User::ExtractStartTime** aus der Liste aus, um deren Werte für das Skript verfügbar zu machen.  
   
-     Wenn Sie Informationen von bestimmten Systemvariablen (z. B. System::PackageName) in die Informationen, die in das Protokoll geschrieben werden, einschließen möchten, wählen Sie auch diese Variablen aus.  
+     Wenn Sie Informationen von bestimmten Systemvariablen (z. B. System::PackageName) in die Informationen, die in das Protokoll geschrieben werden, einschließen möchten, wählen Sie auch diese Variablen aus.  
   
 6.  Klicken Sie im **Skripttask-Editor**auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
   
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  Schließen Sie die Skriptentwicklungsumgebung und den **Skripttask-Editor**.  
   
-## Nächster Schritt  
+## <a name="next-step"></a>Nächster Schritt  
  Nachdem Sie ermittelt haben, dass die Änderungsdaten bereit sind, müssen Sie im nächsten Schritt die Abfrage der Änderungsdaten vorbereiten.  
   
  **Nächstes Thema:** [Vorbereiten zur Abfrage der Änderungsdaten](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

@@ -1,29 +1,34 @@
 ---
-title: "Aufgez&#228;hlte Konstanten in Eigenschaftsausdr&#252;cken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Enumeratoren [Integration Services]"
-  - "Pakete [Integration Services], Ausdrücke"
-  - "Dynamische Eigenschaften"
-  - "Aktualisieren von Paketeigenschaften"
-  - "Enumerationskonstanten [Integration Services]"
-  - "Eigenschaftenausdrücke [Integration Services]"
+title: "Konstanten in Eigenschaftsausdrücken | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Aufgez&#228;hlte Konstanten in Eigenschaftsausdr&#252;cken
+# <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
   Wenn Eigenschaftsausdrücke Werte aus einer Liste von Enumeratorelementen enthalten, müssen die Ausdrücke den numerischen Wert des Enumeratorelements anstelle des Anzeigenamens des Elements verwenden. Wenn z. B. ein Ausdruck die **LoggingMode** -Eigenschaft festlegt, müssen Sie den numerischen Wert 2 anstelle des Anzeigenamens Disabled verwenden.  
   
  In diesem Thema werden nur die entsprechenden numerischen Werte für Anzeigenamen von Enumeratoren aufgelistet, deren Elemente häufig in Eigenschaftsausdrücken verwendet werden. Das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält viele zusätzliche Enumeratoren, die Sie beim Programmieren des Objektmodells verwenden können, um Pakete programmgesteuert zu erstellen oder um benutzerdefinierte Paketelemente, wie z. B. Tasks und Datenflusskomponenten, zu programmieren.  
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Foreach-Schleifenenumeratoren  
  Die Foreach-Schleife enthält eine Reihe von Enumeratoren mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
-### Foreach-ADO-Enumerator  
+### <a name="foreach-ado-enumerator"></a>Foreach-ADO-Enumerator  
  **Type** -Eigenschaft – Festlegung mithilfe von Werten der **ADOEnumerationType** -Enumeration.  
   
 |Anzeigename in ADOEnumerationType|Numerischer Wert|  
@@ -116,7 +121,7 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Foreach-NodeList-Enumerator  
+### <a name="foreach-nodelist-enumerator"></a>Foreach-NodeList-Enumerator  
  **SourceDocumentType**-, **InnerXPathStringSourceType**- und **OuterXPathStringSourceType** -Eigenschaften – Festlegung mithilfe von Werten der **SourceType** -Enumeration.  
   
 |Anzeigename in SourceType|Numerischer Wert|  
@@ -145,7 +150,7 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> Aufgaben  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
-### DDL ausführen (Analysis Services-Task)  
+### <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)  
  **SourceType** -Eigenschaft – Festlegung mithilfe von Werten der **DDLSourceType** -Enumeration.  
   
 |Anzeigename in DDLSourceType|Numerischer Wert|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |Variable|2|  
   
-### Masseneinfügungstask  
- **DataFileType**-Eigenschaft – Festlegung mithilfe von Werten der **DTSBulkInsert_DataFileType**-Enumeration.  
+### <a name="bulk-insert-task"></a>Masseneinfügungstask  
+ **DataFileType** -Eigenschaft – Festlegung mithilfe von Werten der **DTSBulkInsert_DataFileType** -Enumeration.  
   
 |Anzeigename in DTSBulkInsert_DataFileType|Numerischer Wert|  
 |--------------------------------------------------|-------------------|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### SQL ausführen (Task)  
+### <a name="execute-sql-task"></a>SQL ausführen (Task)  
  **ResultSetType** -Eigenschaft – Festlegung mithilfe von Werten der **ResultSetType** -Enumeration.  
   
 |Anzeigename in ResultSetType|Numerischer Wert|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |Variable|3|  
   
-### Task Dateisystem  
+### <a name="file-system-task"></a>Task Dateisystem  
  **Operation** -Eigenschaft – Festlegung mithilfe von Werten der **DTSFileSystemOperation** -Enumeration.  
   
 |Anzeigename in DTSFileSystemOperation|Numerischer Wert|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |ReadOnly|4|  
 |System|8|  
   
-### FTP-Task  
+### <a name="ftp-task"></a>FTP-Task  
  **Operation** -Eigenschaft – Festlegung mithilfe von Werten der **DTSFTPOp** -Enumeration.  
   
 |Anzeigename in DTSFTPOp|Numerischer Wert|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### Nachrichtenwarteschlange (Task)  
+### <a name="message-queue-task"></a>Nachrichtenwarteschlange (Task)  
  **MessageType** -Eigenschaft – Festlegung mithilfe von Werten der **MQMessageType** -Enumeration.  
   
 |Anzeigename in MQMessageType|Numerischer Wert|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### Mail senden (Task)  
+### <a name="send-mail-task"></a>Mail senden (Task)  
  **MessageSourceType** -Eigenschaft – Festlegung mithilfe von Werten der **SendMailMessageSourceType** -Enumeration.  
   
 |Anzeigename in SendMailMessageSourceType|Numerischer Wert|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |Normal|3|  
 |Low|5|  
   
-### Datenbanken übertragen (Task)  
+### <a name="transfer-database-task"></a>Datenbanken übertragen (Task)  
  **Action** -Eigenschaft – Festlegung mithilfe von Werten der **TransferAction** -Enumeration.  
   
 |Anzeigename in TransferAction|Numerischer Wert|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### Fehlermeldungen übertragen (Task)  
+### <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)  
  **IfObjectExists** -Eigenschaft – Festlegung mithilfe von Werten der **IfObjectExists** -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
@@ -289,7 +294,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Aufträge übertragen (Task)  
+### <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)  
  **IfObjectExists** -Eigenschaft – Festlegung mithilfe von Werten der **IfObjectExists** -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
@@ -298,7 +303,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Task "Anmeldungen übertragen"  
+### <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"  
  **IfObjectExists** -Eigenschaft – Festlegung mithilfe von Werten der **IfObjectExists** -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
@@ -315,7 +320,7 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### In master gespeicherte Prozeduren übertragen (Task)  
+### <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)  
  **IfObjectExists** -Eigenschaft – Festlegung mithilfe von Werten der **IfObjectExists** -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### SQL Server-Objekte kopieren (Task)  
+### <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)  
  **ExistingData** -Eigenschaft – Festlegung mithilfe von Werten der **ExistingData** -Enumeration.  
   
 |Anzeigename in ExistingData|Numerischer Wert|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |Ersetzen|0|  
 |Anfügen|1|  
   
-### Webdienst (Task)  
+### <a name="web-service-task"></a>Webdienst (Task)  
  **OutputType** -Eigenschaft – Festlegung mithilfe von Werten der **DTSOutputType** -Enumeration.  
   
 |Anzeigename in DTSOutputType|Numerischer Wert|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |File|0|  
 |Variable|1|  
   
-### WMI-Datenleser (Task)  
+### <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)  
  **OverwriteDestination** -Eigenschaft – Festlegung mithilfe von Werten der **OverwriteDestination** -Enumeration.  
   
 |Anzeigename in OverwriteDestination|Numerischer Wert|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |Variable|2|  
   
-### XML-Task  
+### <a name="xml-task"></a>XML-Task  
  **OperationType** -Eigenschaft – Festlegung mithilfe von Werten der **DTSXMLOperation** -Enumeration.  
   
 |Anzeigename in DTSXMLOperation|Numerischer Wert|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht die programmgesteuerte Verwendung dieser Tasks, und die Programmierungsreferenzdokumentation enthält keine API-Dokumentation dieser Tasks und ihrer zugehörigen Enumeratoren.  
   
-### Alle Wartungstasks  
+### <a name="all-maintenance-tasks"></a>Alle Wartungstasks  
  Die folgenden Enumerationen werden in allen Wartungstasks verwendet, um die angegebenen Eigenschaften festzulegen.  
   
  **DatabaseSelectionType** -Eigenschaft – Festlegung mithilfe von Werten der **DatabaseSelection** -Enumeration.  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |Sicht|1|  
 |TableView|2|  
   
-### Datenbank sichern (Task)  
+### <a name="back-up-database-task"></a>Datenbank sichern (Task)  
  **DestinationCreationType** -Eigenschaft – Festlegung mithilfe von Werten der **DestinationType** -Enumeration.  
   
 |Anzeigename in DestinationType|Numerischer Wert|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |Dateien|1|  
 |Log|2|  
   
- **BackupDevice-Eigenschaft** – Festlegung mithilfe von Werten der **DeviceType**-Enumeration von SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).  
+ **BackupDevice-Eigenschaft** – Festlegung mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DeviceType **-Enumeration von SMO (** Management Objects).  
   
 |Anzeigename in DeviceType|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### Wartungscleanup (Task)  
+### <a name="maintenance-cleanup-task"></a>Wartungscleanup (Task)  
  **FileTypeSelected** -Eigenschaft – Festlegung mithilfe von Werten der **FileType** -Enumeration.  
   
 |Anzeigename in FileType|Numerischer Wert|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |Year|3|  
   
-### Statistiken aktualisieren (Task)  
- **UpdateType**-Eigenschaft – Festlegung mithilfe von Werten der **StatisticsTarget**-Enumeration von SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).  
+### <a name="update-statistics-task"></a>Statistiken aktualisieren (Task)  
+ **UpdateType** -Eigenschaft – Festlegung mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] StatisticsTarget **-Enumeration von SMO (** Management Objects).  
   
 |Anzeigename in StatisticsTarget|Numerischer Wert|  
 |---------------------------------------|-------------------|  
@@ -597,13 +602,13 @@ caps.handback.revision: 34
 |Supported|1|  
 |Required|2|  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
+ [Integrationsservices &#40; SSIS &#41; Pakete](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md)  
   

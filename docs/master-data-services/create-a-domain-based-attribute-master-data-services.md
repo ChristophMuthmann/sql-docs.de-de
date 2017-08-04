@@ -1,30 +1,35 @@
 ---
-title: "Erstellen eines dom&#228;nenbasierten Attributs (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Domänenbasierte Attribute [Master Data Services], Erstellen"
-  - "Erstellen domänenbasierter Attribute [Master Data Services]"
-  - "Attribute [Master Data Services], Erstellen von domänenbasierten Attributen"
+title: "Erstellen eines domänenbasierten Attributs (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- domain-based attributes [Master Data Services], creating
+- creating domain-based attributes [Master Data Services]
+- attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines dom&#228;nenbasierten Attributs (Master Data Services)
-  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ein domänenbasiertes Attribut, um die Werte eines Attributs mit Elementen aus einer Entität aufzufüllen.  
+# <a name="create-a-domain-based-attribute-master-data-services"></a>Erstellen eines domänenbasierten Attributs (Master Data Services)
+  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein domänenbasiertes Attribut, um die Werte eines Attributs mit Elementen aus einer Entität aufzufüllen.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -35,12 +40,12 @@ caps.handback.revision: 12
   
 -   Eine Entität muss vorhanden sein, um das Attribut dafür erstellen zu können. Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Attributinformationen  
+## <a name="attribute-information"></a>Attributinformationen  
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
 |Column|Description|  
 |------------|-----------------|  
-|Status|Der Attributstatus.<br /><br /> Wenn Sie auf „Speichern“ klicken, wird das Bild ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls lautet der Status „OK“, und das Bild ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
+|Status|Der Attributstatus.<br /><br /> Wenn Sie "Speichern" Klicken die ![Symbol für Status aktualisieren](../master-data-services/media/mds-statusicon-updating.png "Symbol für Status aktualisieren") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn Fehler beim Erstellen oder Bearbeiten eines Attributs vorliegen der ![Symbol nach dem Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol nach dem Fehlerstatus") Bild angezeigt.<br /><br /> Andernfalls ist der Status OK und die ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") Bild angezeigt.|  
 |Name|Der Attributname.|  
 |Anzeigename|Der Anzeigename des Attributs.|  
 |Description|Die Attributbeschreibung.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 12
   
 -   **Am**: Datum und Uhrzeit der letzten Aktualisierung des Attributs.  
   
-### So erstellen Sie ein domänenbasiertes Attribut  
+### <a name="to-create-a-domain-based-attribute"></a>So erstellen Sie ein domänenbasiertes Attribut  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -82,24 +87,24 @@ caps.handback.revision: 12
   
 8.  Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-9. Wählen Sie in der Liste **Attributtyp** die Option **Domänenbasiert** aus.  
+9. Wählen Sie in der Liste **Attributtyp** die Option **Domänenbasiert**aus.  
   
-10. Wählen Sie aus der Liste **Domänenentität** die Entität aus, die verwendet werden soll, um die Attributwerte aufzufüllen.  
+10. Wählen Sie aus der Liste **Domänenentität** die Entität aus, die verwendet werden soll, um die Attributwerte aufzufüllen. 
   
 11. **Optional für domänenbasierte Attribute für Blattelemente.** Wählen Sie einen übergeordneten Attributfilter, der verwendet wird, um die zulässigen Werte für das domänenbasierte Attribut zu beschränken.  
   
      Bei dem übergeordneten Filterattribut muss es sich um ein weiteres domänenbasiertes Attribut für ein Blattelement in derselben Entität handeln. Eine abgeleitete Hierarchie muss eine Ebene aufweisen, die die hierarchische Beziehung zwischen den Domänenentitäten der beiden Attribute definiert.  
   
-     Weitere Informationen zur Einschränkung der zulässigen Werte finden Sie unter [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/) (Wie Sie Dropdownlisten domänenbasierter Attribute filtern), auf dem Master Data Services-Blog.  
+     Weitere Informationen zur Einschränkung der zulässigen Werte finden Sie unter [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Wie Sie Dropdownlisten domänenbasierter Attribute filtern), auf dem Master Data Services-Blog.  
   
 12. **Optional.** Wählen Sie **Änderungsnachverfolgung aktivieren** aus, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
 13. Klicken Sie auf **Speichern**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Ändern eines Attributnamens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Erstellen Sie eine abgeleitete Hierarchie &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Ändern Sie einen Attributnamen und -Datentyp &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Löschen eines Attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

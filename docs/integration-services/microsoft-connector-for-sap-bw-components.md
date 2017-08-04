@@ -1,22 +1,27 @@
 ---
-title: "Microsoft Connector for SAP BW Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft Connector für SAP BW-Komponenten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13877d29b192079361051d4775d09f1f4596c9d3
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Microsoft Connector for SAP BW Components
+# <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW Components
   Dieser Abschnitt enthält Themen, in denen die drei Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW beschrieben werden:  
   
 -   SAP BW-Verbindungs-Manager  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  Die Dokumentation für Microsoft Connector 1.1 for SAP BW setzt Kenntnisse der SAP NetWeaver BW-Umgebung voraus. Weitere Informationen zu SAP NetWeaver BW oder Informationen zur Konfiguration von SAP NetWeaver BW-Objekten und -Prozessen finden Sie in der SAP-Dokumentation.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [SAP BW-Verbindungs-Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  Beschreibt den SAP BW-Verbindungs-Manager. Der Verbindungs-Manager stellt eine Verbindung zwischen der SAP BW-Quelle oder dem SAP BW-Ziel und dem SAP NetWeaver BW-System, Version 7, her.  
   

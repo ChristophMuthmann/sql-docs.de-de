@@ -1,25 +1,30 @@
 ---
-title: "Verwalten eines CDC Service &#252;ber die CDC Designer Console | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Verwalten eines CDC Service über die CDC Designer Console | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Verwalten eines CDC Service &#252;ber die CDC Designer Console
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Verwalten eines CDC Service über die CDC Designer Console
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten eines CDC-Diensts verwenden.  
   
-### So verwalten Sie einen CDC-Dienst über die CDC Designer Console  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>So verwalten Sie einen CDC-Dienst über die CDC Designer Console  
   
 1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console**aus.  
   

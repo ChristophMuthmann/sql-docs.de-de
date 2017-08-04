@@ -1,37 +1,42 @@
 ---
-title: "Festlegen von Paketeigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services-Pakete, Eigenschaften"
-  - "Eigenschaften [Integration Services]"
-  - "Prüfpunkte [Integration Services]"
-  - "Ausführungseigenschaften [Integration Services]"
-  - "Pakete [Integration Services], Eigenschaften"
-  - "Identifizierungseigenschaften [Integration Services]"
-  - "Kennwörter [Integration Services]"
-  - "SSIS-Pakete, Eigenschaften"
-  - "Transaktionseigenschaften [Integration Services]"
-  - "Aktualisieren von Paketeigenschaften"
-  - "Eigenschaften erzwungener Ausführungswerte [Integration Services]"
-  - "Sicherheitseigenschaften [Integration Services]"
-  - "Versionseigenschaften [Integration Services]"
-  - "SQL Server Integration Services-Pakete, Eigenschaften"
+title: Festlegen von Paketeigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- checkpoints [Integration Services]
+- execution properties [Integration Services]
+- packages [Integration Services], properties
+- identification properties [Integration Services]
+- passwords [Integration Services]
+- SSIS packages, properties
+- transaction properties [Integration Services]
+- updating package properties
+- forced execution value properties [Integration Services]
+- security properties [Integration Services]
+- version properties [Integration Services]
+- SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Festlegen von Paketeigenschaften
+# <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
   
  Das Fenster **Eigenschaften** stellt eine kategorisierte und alphabetische Liste der Eigenschaften bereit. Klicken Sie auf das Nach Kategorien-Symbol, um das Fenster **Eigenschaften** nach der Kategorie anzuordnen.  
@@ -56,11 +61,11 @@ caps.handback.revision: 39
   
  Informationen zu zusätzlichen Paketeigenschaften, die Sie im Fenster **Eigenschaften** nicht festlegen können, finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
-### So legen Sie Paketeigenschaften im Eigenschaftenfenster fest.  
+### <a name="to-set-package-properties-in-the-properties-window"></a>So legen Sie Paketeigenschaften im Eigenschaftenfenster fest.  
   
--   [Festlegen der Eigenschaften eines Pakets](../Topic/Set%20the%20Properties%20of%20a%20Package.md)  
+-   [Festlegen der Eigenschaften eines Pakets](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
-## Eigenschaften nach Kategorie  
+## <a name="properties-by-category"></a>Eigenschaften nach Kategorie  
  In den folgenden Tabellen sind die Paketeigenschaften nach Kategorie aufgelistet.  
   
 ###  <a name="Checkpoints"></a> Prüfpunkte  
@@ -73,7 +78,7 @@ caps.handback.revision: 39
 |**SaveCheckpoints**|Gibt an, ob die Prüfpunkte in die Prüfpunktdatei geschrieben werden, wenn das Paket ausgeführt wird. Der Standardwert dieser Eigenschaft ist **False**.|  
   
 > [!NOTE]  
->  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints**-Eigenschaft des Pakets „True“ oder der **CheckpointUsage**-Eigenschaft „Immer“. Weitere Informationen finden Sie unter [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+>  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets „True“ oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie unter [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 ###  <a name="Execution"></a> Ausführung  
  Mit den Eigenschaften in dieser Kategorie wird das Laufzeitverhalten des Paketobjekts konfiguriert.  
@@ -94,7 +99,7 @@ caps.handback.revision: 39
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**ForcedExecutionValue**|Ein Wert, der den vom Paket zurückgegebenen optionalen Ausführungswert angibt, falls ForceExecutionValue auf **TRUE** festgelegt ist. Der Standardwert dieser Eigenschaft ist **0**.|  
+|**ForcedExecutionValue**|Ein Wert, der den vom Paket zurückgegebenen optionalen Ausführungswert angibt, falls ForceExecutionValue auf **TRUE**festgelegt ist. Der Standardwert dieser Eigenschaft ist **0**.|  
 |**ForcedExecutionValueType**|Der Datentyp von ForcedExecutionValue. Der Standardwert dieser Eigenschaft ist **Int32**.|  
 |**ForceExecutionValue**|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist **False**.|  
   
@@ -107,7 +112,7 @@ caps.handback.revision: 39
 |**CreatorComputerName**|Der Name des Computers, auf dem das Paket erstellt wurde.|  
 |**CreatorName**|Der Name der Person, die das Paket erstellt hat.|  
 |**Description**|Eine Beschreibung der Paketfunktionalität.|  
-|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die **ID**-Eigenschaft zu generieren, wählen Sie **\<Neue ID generieren>** in der Dropdownliste aus.|  
+|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Generieren Sie einen neuen Zufallswert für die **ID** -Eigenschaft die Option  **\<neue ID generieren\>**  in der Dropdown-Liste.|  
 |**Name**|Der Name des Pakets.|  
 |**PackageType**|Der Pakettyp. Mögliche Werte sind **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**und **SQLReplication**. Der Standardwert dieser Eigenschaft ist **Default**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -116,17 +121,17 @@ caps.handback.revision: 39
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**Konfigurationen**|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
-|**Ausdrücke**|Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Beachten Sie, dass Sie Eigenschaftsausdrücke für alle Paketeigenschaften dieses Objektmodells erstellen können, nicht nur für die im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie **Expressions**, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(…)**, um einen Ausdruck zu ändern und auszuwerten.|  
+|**Konfigurationen**|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
+|**Ausdrücke**|Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Beachten Sie, dass Sie Eigenschaftsausdrücke für alle Paketeigenschaften dieses Objektmodells erstellen können, nicht nur für die im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie **Expressions**, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(…)** , um einen Ausdruck zu ändern und auszuwerten.|  
 |**ForceExecutionResult**|Das Ausführungsergebnis des Pakets. Mögliche Werte sind **None**, **Success**, **Failure**und **Completion**. Der Standardwert dieser Eigenschaft ist **None**. Weitere Informationen finden Sie unter T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.|  
 |**LoggingMode**|Ein Wert, der das Protokollierungsverhalten des Pakets angibt. Mögliche Werte sind **Disabled**, **Enabled**und **UseParentSetting**. Der Standardwert dieser Eigenschaft ist **UseParentSetting**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**OfflineMode**|Gibt an, ob sich das Paket im Offlinemodus befindet. Diese Eigenschaft ist schreibgeschützt. Die Eigenschaft wird auf Projektebene festgelegt. Normalerweise versucht der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer eine Verbindung mit jeder Datenquellen herzustellen, die von dem Paket verwendet wird, um die den Quellen und Zielen zugeordneten Metadaten zu überprüfen. Wenn die Datenquellen nicht verfügbar sind, können Sie diese Verbindungsversuche und die resultierenden Überprüfungsfehler verhindern, indem Sie vor dem Öffnen eines Pakets im Menü **SSIS** die Option **Offline arbeiten** aktivieren. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.|  
 |**SuppressConfigurationWarnings**|Zeigt an, ob die von Konfigurationen generierten Warnungen unterdrückt werden. Der Standardwert dieser Eigenschaft ist **False**.|  
-|**UpdateObjects**|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Beispielsweise wird ein Paket mit einem Masseneinfügungstask aktualisiert, wenn diese Eigenschaft auf **TRUE** festgelegt ist, damit die neuere Version des Masseneinfügungstasks von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
+|**UpdateObjects**|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Beispielsweise wird ein Paket mit einem Masseneinfügungstask aktualisiert, wenn diese Eigenschaft auf **TRUE**festgelegt ist, damit die neuere Version des Masseneinfügungstasks von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
   
 ###  <a name="Security"></a> Security  
- Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
@@ -139,7 +144,7 @@ caps.handback.revision: 39
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |**IsolationLevel**|Die Isolationsstufe der Pakettransaktionen. Mögliche Werte sind **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead** **Serializable**und **Snapshot**. Der Standardwert dieser Eigenschaft ist **Serializable**.<br /><br /> Hinweis: Der Wert **Momentaufnahme** der Eigenschaft **IsolationLevel** ist mit Pakettransaktionen nicht kompatibel. Daher können Sie die **IsolationLevel** -Eigenschaft nicht verwenden, um die Isolationsstufe von Pakettransaktionen auf **Shapshot**festzulegen. Verwenden Sie stattdessen eine SQL-Abfrage, um Pakettransaktionen auf **Snapshot**festzulegen. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> Das System wendet die **IsolationLevel** -Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der **TransactionOption** -Eigenschaft auf **Required**festgelegt ist.<br /><br /> Der Wert der von einem untergeordneten Container angeforderten **IsolationLevel** -Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br />Der Wert der **TransactionOption** -Eigenschaft des untergeordneten Containers ist **Supported**.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten **IsolationLevel** -Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br />Der Wert der **TransactionOption** -Eigenschaft des Containers ist **Required**.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
-|**TransactionOption-**|Die Transaktionsteilnahme des Pakets. Mögliche Werte sind **NotSupported**, **Supported**und **Required**. Der Standardwert dieser Eigenschaft ist **Supported**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
+|**TransactionOption**|Die Transaktionsteilnahme des Pakets. Mögliche Werte sind **NotSupported**, **Supported**und **Required**. Der Standardwert dieser Eigenschaft ist **Supported**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Version  
  Mit den Eigenschaften in dieser Kategorie werden Informationen zur Version des Paketobjekts bereitgestellt.  
@@ -151,5 +156,19 @@ caps.handback.revision: 39
 |**VersionGUID**|Der GUID der Paketversion. Diese Eigenschaft ist schreibgeschützt.|  
 |**VersionMajor**|Die aktuelle Hauptversion des Pakets.|  
 |**VersionMinor**|Die aktuelle Nebenversion des Pakets.|  
+
+## <a name="set-package-properties-in-the-properties-window"></a>Festlegen von Paketeigenschaften im Eigenschaftenfenster 
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie konfigurieren möchten.  
   
+2.  Doppelklicken Sie im Bereich **Projektmappen-Explorer**auf das Paket, um es im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zu öffnen, oder klicken Sie mit der rechten Maustaste, und wählen Sie **Sicht-Designer**aus.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** , und führen Sie eine der folgenden Aktionen aus:  
+  
+    -   Klicken Sie mit der rechten Maustaste an einer beliebigen Stelle im Hintergrund der Entwurfsoberfläche der Ablaufsteuerung, und klicken Sie anschließend auf **Eigenschaften**.  
+  
+    -   Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**.  
+  
+4.  Bearbeiten Sie die Paketeigenschaften im Fenster **Eigenschaften** .  
+  
+5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   

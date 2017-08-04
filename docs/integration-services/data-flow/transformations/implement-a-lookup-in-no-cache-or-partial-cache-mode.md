@@ -1,27 +1,32 @@
 ---
-title: "Implementieren einer Suche im Modus &quot;Kein Cache&quot; oder &quot;Teilcache&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation für Suche"
-  - "Übereinstimmungen, exakte [Integration Services]"
-  - "Suchvorgänge [Integration Services]"
-  - "Exakte Übereinstimmungen [Integration Services]"
+title: Implementieren einer Suche ohne Cache oder partiellem Cache-Modus | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Implementieren einer Suche im Modus &quot;Kein Cache&quot; oder &quot;Teilcache&quot;
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
   Sie können die Transformation für die Suche so konfigurieren, dass der Modus "Teilcache" oder "Kein Cache" verwendet wird:  
   
 -   Teilcache  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  Unabhängig davon, ob Sie Teilcache oder Kein Cache auswählen, verwenden Sie einen OLE DB-Verbindungsmanager, um die Verbindung zum Verweisdataset herzustellen. Das Verweisdataset wird durch die Verwendung einer Tabelle, Sicht oder SQL-Abfrage während der Ausführung der Transformation für Suche generiert.  
   
-### So implementieren Sie eine Transformation für Suche im Modus für "Kein Cache" oder "Teilcache"  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>So implementieren Sie eine Transformation für Suche im Modus für "Kein Cache" oder "Teilcache"  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket, und öffnen Sie dann das Paket.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 67
   
 4.  Doppelklicken Sie auf die Quelle oder die vorherige Transformation, um die Komponente zu konfigurieren.  
   
-5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie anschließend im **Transformations-Editor für Suche** auf der Seite **Allgemein** die Option **Teilcache** oder die Option **Kein Cache** aus.  
+5.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie anschließend im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Teilcache** oder die Option **Kein Cache**aus.  
   
 6.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption aus der Liste aus.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. Klicken Sie auf **OK** , um die Änderungen an der Suchtransformation zu speichern, und führen Sie dann das Paket aus.  
   
-## Siehe auch  
- [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

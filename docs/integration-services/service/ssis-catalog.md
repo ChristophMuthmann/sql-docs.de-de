@@ -1,23 +1,33 @@
 ---
-title: "SSIS-Katalog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SSIS-Katalog | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.iscreatecatalog.f1
+- sql13.ssis.ssms.iscatalogprop.general.f1
+- sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
+ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SSIS-Katalog
-  Der **SSISDB** -Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
+
+# <a name="ssis-catalog"></a>SSIS-Katalog
+  Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
   
  Die Objekte, die im **SSISDB** -Katalog gespeichert werden, umfassen Projekte, Pakete, Parameter, Umgebungen und Verwendungsverläufe.  
   
@@ -31,13 +41,15 @@ caps.handback.revision: 26
   
  Sie können den **SSISDB** -Katalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufrufen, indem Sie eine Verbindung zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul herstellen und dann den Knoten **Integration Services-Kataloge** im Objekt-Explorer erweitern. In **greifen Sie auf die SSISDB-Datenbank zu, indem Sie den Knoten** Datenbanken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer erweitern.  
   
-> [!NOTE] Sie können die **SSISDB** -Datenbank nicht umbenennen.  
+> [!NOTE]
+> Sie können die **SSISDB** -Datenbank nicht umbenennen.  
   
-> [!NOTE] Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, an die die **SSISDB** -Datenbank angefügt wurde, beendet wird oder nicht reagiert, wird der Prozess ISServerExec.exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
+> [!NOTE]
+> Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, an die die **SSISDB** -Datenbank angefügt wurde, beendet wird oder nicht reagiert, wird der Prozess ISServerExec.exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
 >   
 >  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-## <a name="in-this-topic"></a>In diesem Thema  
+## <a name="features-and-capabilities"></a>Features und Funktionen  
   
 -   [Katalogobjektbezeichner](../../integration-services/service/ssis-catalog.md#CatalogObjectIdentifiers)  
   
@@ -54,14 +66,8 @@ caps.handback.revision: 26
 -   [Serverumgebungen, Servervariablen und Serverumgebungsverweise](../../integration-services/service/ssis-catalog.md#ServerEnvironments)  
   
 -   [Ausführungen und Überprüfungen](../../integration-services/service/ssis-catalog.md#Executions)  
-  
--   [Always On-Unterstützung](../../integration-services/service/ssis-catalog.md#AlwaysOn)  
-  
--   [Verwandte Aufgaben](../../integration-services/service/ssis-catalog.md#RelatedTasks)  
-  
--   [Verwandte Inhalte](../../integration-services/service/ssis-catalog.md#RelatedContent)  
-  
-##  <a name="a-namecatalogobjectidentifiersa-catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> Katalogobjektbezeichner  
+
+##  <a name="CatalogObjectIdentifiers"></a> Katalogobjektbezeichner  
  Wenn Sie im Katalog ein neues Objekt erstellen, weisen Sie dem Objekt einen Namen zu. Der Objektname ist der Bezeichner. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt Regeln, welche Zeichen in einem Bezeichner verwendet werden können. Namen für die folgenden Objekte müssen den Regeln für Bezeichner entsprechen.  
   
 -   Ordner  
@@ -74,32 +80,32 @@ caps.handback.revision: 26
   
 -   Umgebungsvariable  
   
-###  <a name="a-namefoldera-folder-project-environment"></a><a name="Folder"></a> Ordner, Projekt, Umgebung  
+###  <a name="Folder"></a> Ordner, Projekt, Umgebung  
  Beachten Sie die folgenden Regeln, wenn Sie einen Ordner, ein Projekt oder eine Umgebung umbenennen.  
   
--   Ungültige Zeichen schließen ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), Pipe (|), Rücktaste (\b), Null (\0) und Tabulator (\t) ein.  
+-   Ungültige Zeichen schließen ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), Pipe (|), Rücktaste (\b), Null (\0) und Tabulator (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   @ ist als erstes Zeichen nicht zulässig, für nachfolgende Zeichen kann @. jedoch verwendet werden.  
+-   @ ist als erstes Zeichen nicht zulässig, aber nachfolgende Zeichen können @.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
-###  <a name="a-nameparametera-parameter"></a><a name="Parameter"></a> Parameter  
+###  <a name="Parameter"></a> Parameter  
  Beachten Sie die folgenden Regeln, wenn Sie einen Parameter benennen.  
   
 -   Das erste Zeichen des Namens muss ein Buchstabe gemäß Unicode-Standard 2.0 oder ein Unterstrich (_) sein.  
   
 -   Bei nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einen Unterstrich (_) handeln.  
   
-###  <a name="a-nameenvironmentvariablea-environment-variable"></a><a name="EnvironmentVariable"></a> Umgebungsvariable  
+###  <a name="EnvironmentVariable"></a> Umgebungsvariable  
  Beachten Sie die folgenden Regeln, wenn Sie eine Umgebungsvariable benennen.  
   
--   Ungültige Zeichen schließen ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), Pipe (|), Rücktaste (\b), Null (\0) und Tabulator (\t) ein.  
+-   Ungültige Zeichen schließen ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), Pipe (|), Rücktaste (\b), Null (\0) und Tabulator (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   @ ist als erstes Zeichen nicht zulässig, für nachfolgende Zeichen kann @. jedoch verwendet werden.  
+-   @ ist als erstes Zeichen nicht zulässig, aber nachfolgende Zeichen können @.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -107,15 +113,15 @@ caps.handback.revision: 26
   
 -   Bei nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einen Unterstrich (_) handeln.  
   
-##  <a name="a-nameconfigurationa-catalog-configuration"></a><a name="Configuration"></a> Katalogkonfiguration  
+##  <a name="Configuration"></a> Katalogkonfiguration  
  Sie können anpassen, wie sich der Katalog verhält, indem Sie die Katalogeigenschaften einstellen. Die Katalogeigenschaften definieren, wie sensible Daten verschlüsselt werden und wie Vorgänge und Versionsdaten für Projekte beibehalten werden. Verwenden Sie das Dialogfeld **Katalogeigenschaften**, oder rufen Sie die gespeicherte [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)-Prozedur auf, um Katalogeigenschaften festzulegen. Verwenden Sie zum Anzeigen der Eigenschaft das Dialogfeld, oder fragen Sie [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) ab. Sie greifen auf das Dialogfeld zu, indem Sie im Objekt-Explorer mit der rechten Maustaste auf **SSISDB** klicken.  
   
-###  <a name="a-namecleanupa-operations-and-project-version-cleanup"></a><a name="Cleanup"></a> Bereinigung von Projektversionen und Vorgängen  
+###  <a name="Cleanup"></a> Bereinigung von Projektversionen und Vorgängen  
  Statusdaten für viele der Vorgänge im Katalog werden in internen Datenbanktabellen gespeichert. Beispielsweise wird im Katalog der Status von Paketausführungen und Projektbereitstellungen nachverfolgt. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet, um alte Daten zu entfernen. Dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag wird bei der Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt.  
   
  Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Jedes Mal, wenn Sie ein Projekt erneut bereitstellen, behält der **SSISDB** -Katalog standardmäßig die frühere Version des Projekts bei. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
  
-Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-Anmeldung **##MS_SSISServerCleanupJobLogin##**. Diese Anmeldung gilt nur für den internen Gebrauch durch SSIS.
+Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-Anmeldung **##MS_SSISServerCleanupJobLogin##**. Diese Anmeldung gilt nur für den internen Gebrauch durch SSIS.
   
  Die folgenden **SSISDB** -Katalogeigenschaften definieren, wie sich dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) und [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -133,7 +139,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
  **Maximale Anzahl der Versionen pro Projekt**  
  Definiert, wie viele Versionen eines Projekts im Katalog gespeichert sind. Frühere Versionen von Projekten werden entfernt.  
   
-###  <a name="a-nameencryptiona-encryption-algorithm"></a><a name="Encryption"></a> Verschlüsselungsalgorithmus  
+###  <a name="Encryption"></a> Verschlüsselungsalgorithmus  
  Die Eigenschaft **Verschlüsselungsalgorithmus** gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte verwendet wird. Sie haben die Wahl zwischen den folgenden Verschlüsselungstypen:  
   
 -   AES_256 (Standard)  
@@ -150,7 +156,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   DES  
   
- Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen. Der SSISDB-Katalog verwendet die Schutzebene **ServerStorage** . Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen. Der SSISDB-Katalog verwendet die Schutzebene **ServerStorage** . Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
@@ -158,7 +164,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
  Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Informationen zur Verschlüsselung sowie zu Algorithmen für die Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie in den Themen im Abschnitt [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
- Ein Datenbank-Hauptschlüssel wird für die Verschlüsselung verwendet. Der Schlüssel wird erstellt, wenn Sie den Katalog erstellen. Weitere Informationen finden Sie unter [Erstellen des SSIS-Katalogs](../../integration-services/service/create-the-ssis-catalog.md).  
+ Ein Datenbank-Hauptschlüssel wird für die Verschlüsselung verwendet. Der Schlüssel wird erstellt, wenn Sie den Katalog erstellen.  
   
  In der folgenden Tabelle sind die im Dialogfeld **Katalogeigenschaften** aufgeführten Eigenschaftsnamen und die zugehörigen Eigenschaften in der Datenbanksicht aufgelistet.  
   
@@ -171,7 +177,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
 |Maximale Anzahl der Versionen pro Projekt|MAX_PROJECT_VERSIONS|  
 |Serverweiter Standardprotokolliergrad|SERVER_LOGGING_LEVEL|  
   
-##  <a name="a-namepermissionsa-permissions"></a><a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
  Projekte, Umgebungen und Pakete sind in Ordnern enthalten, bei denen es sich um sicherungsfähige Objekte handelt. Sie können einem Ordner Berechtigungen gewähren, einschließlich der MANAGE_OBJECT_PERMISSIONS-Berechtigung. MANAGE_OBJECT_PERMISSIONS ermöglicht es Ihnen, die Verwaltung von Ordnerinhalten an einen Benutzer zu delegieren, ohne dass Sie dem Benutzer die Mitgliedschaft in der ssis_admin-Rolle erteilen müssen. Sie haben auch die Möglichkeit, Projekten, Umgebungen und Vorgängen Berechtigungen zu erteilen. Vorgänge schließen das Initialisieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], das Bereitstellen von Projekten, das Erstellen und Starten von Ausführungen, das Überprüfen von Projekten und Paketen und das Konfigurieren des **SSISDB** -Katalogs ein.  
   
  Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -191,11 +197,11 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   Verwenden Sie für ein Projekt die Seite **Berechtigungen** im [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md).  
   
--   Verwenden Sie für eine Umgebung die Seite **Berechtigungen** des Dialogfelds [NIB: Umgebungseigenschaften](http://msdn.microsoft.com/de-de/6a91a8d4-0006-4cfd-9759-3e4295ae452b).  
+-   Verwenden Sie für eine Umgebung die Seite **Berechtigungen** des Dialogfelds [NIB: Umgebungseigenschaften](http://msdn.microsoft.com/en-us/6a91a8d4-0006-4cfd-9759-3e4295ae452b).  
   
  Rufen Sie zum Verwalten von Berechtigungen mithilfe von Transact-SQL [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) und [catalog.revoke_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md) auf. Fragen Sie [catalog.effective_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md) ab, um effektive Berechtigungen für das aktuelle Prinzipal für alle Objekte anzuzeigen. Dieses Thema enthält Beschreibungen der verschiedenen Berechtigungstypen. Fragen Sie [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md) ab, um Berechtigungen anzuzeigen, die explizit dem Benutzer zugewiesen wurden.  
   
-##  <a name="a-namefoldersa-folders"></a><a name="Folders"></a> Ordner  
+##  <a name="Folders"></a> Ordner  
  Ein Ordner enthält ein oder mehrere Projekte und Umgebungen im **SSISDB** -Katalog. Sie können die Ansicht [catalog.folders &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) verwenden, um auf Informationen über Ordner im Katalog zuzugreifen. Sie können folgende gespeicherte Prozeduren zum Verwalten von Ordnern verwenden.  
   
 -   [catalog.create_folder &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -206,7 +212,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   [catalog.set_folder_description &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="a-nameprojectsandpackagesa-projects-and-packages"></a><a name="ProjectsAndPackages"></a> Projekte und Pakete  
+##  <a name="ProjectsAndPackages"></a> Projekte und Pakete  
  Jedes Projekt kann mehrere Pakete enthalten. Sowohl Projekte als auch Pakete können Parameter und Umgebungsverweise enthalten. Sie können über das [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md)auf die Parameter und die Umgebungsverweise zugreifen.  
   
  Sie können weitere Projekttasks ausführen, indem Sie die folgenden gespeicherten Prozeduren aufrufen.  
@@ -217,7 +223,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   [catalog.get_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
   
 -   [catalog.restore_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -229,7 +235,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   [catalog.object_versions &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="a-nameparametersa-parameters"></a><a name="Parameters"></a> Parameter  
+##  <a name="Parameters"></a> Parameter  
  Mit Parametern können Sie Paketeigenschaften zum Zeitpunkt der Paketausführung Werte zuweisen. Rufen Sie [catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) und [catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) auf, um den Wert des Paket- oder Projektparameters festzulegen und den Wert zu löschen. Rufen Sie zum Festlegen des Wert eines Parameters für eine Instanz der Ausführung [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) auf. Sie können Standardparameterwerte abrufen, indem Sie [catalog.get_parameter_values &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) aufrufen.  
   
  Diese Sichten zeigen die Parameter für alle Pakete und Projekte sowie Parameterwerte, die für eine Instanz der Ausführung verwendet werden, an.  
@@ -238,7 +244,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   [catalog.execution_parameter_values &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="a-nameserverenvironmentsa-server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> Serverumgebungen, Servervariablen und Serverumgebungsverweise  
+##  <a name="ServerEnvironments"></a> Serverumgebungen, Servervariablen und Serverumgebungsverweise  
  Serverumgebungen enthalten Servervariablen. Die Variablenwerte können verwendet werden, wenn ein Paket ausgeführt wird oder auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server überprüft wird.  
   
  Die folgenden gespeicherten Prozeduren ermöglichen es Ihnen, zahlreiche weitere Verwaltungstasks für Umgebungen und Variablen auszuführen.  
@@ -279,7 +285,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
   
 -   [catalog.environment_references &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="a-nameexecutionsa-executions-and-validations"></a><a name="Executions"></a> Ausführungen und Überprüfungen  
+##  <a name="Executions"></a> Ausführungen und Überprüfungen  
  Eine Ausführung ist eine Instanz einer Paketausführung. Rufen Sie [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) und [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) auf, um eine Ausführung zu erstellen und zu starten. Rufen Sie [catalog.stop_operation &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md) auf, um eine Ausführung oder eine Paket-/Projektüberprüfung zu beenden.  
   
  Rufen Sie die gespeicherte Prozedur catalog.create_execution_dump auf, um ein ausgeführtes Paket anzuhalten und eine Dumpdatei zu erstellen. Eine Dumpdatei enthält Informationen zur Ausführung eines Pakets, die Ihnen helfen können, Ausführungsprobleme zu beheben. Weitere Informationen zum Erstellen und Konfigurieren von Dumpdateien finden Sie unter [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -299,26 +305,364 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags** erstellt SSIS die SQL Server-
 -   [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
  Sie können Projekte und Pakete überprüfen, indem Sie die gespeicherten Prozeduren [catalog.validate_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) und [catalog.validate_package &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md) aufrufen. Die [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md)-Sicht enthält Details zu Überprüfungen, z.B. die Serverumgebungsverweise, die in der Überprüfung berücksichtigt werden, ob es eine Abhängigkeitsüberprüfung oder eine vollständige Überprüfung ist, und ob die 32-Bit-Laufzeit oder die 64-Bit-Laufzeit verwendet wird, um das Paket auszuführen.  
+
+## <a name="create-the-ssis-catalog"></a>Erstellen des SSIS-Katalogs
+  Nachdem Sie Pakete in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]entworfen und getestet haben, können Sie die Projekte, die die Pakete enthalten, auf einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Bevor Sie die Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen können, muss der **SSISDB** -Katalog auf dem Server vorhanden sein. Der Katalog wird vom Installationsprogramm für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht automatisch erstellt, Sie müssen den Katalog nach folgenden Anweisungen manuell erstellen.  
   
-##  <a name="a-namealwaysona-alwayson-support"></a><a name="AlwaysOn"></a> Always On-Unterstützung  
- Die Always On-Verfügbarkeitsgruppenfunktion ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die Unternehmen eine Alternative zur Datenbankspiegelung bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als Verfügbarkeitsdatenbanken bezeichnet), die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230.aspx).  
+ Sie können den SSISDB-Katalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen. Sie können den Katalog auch programmgesteuert mit Windows PowerShell erstellen.  
   
- SQL Server Integration Services (SSIS) stellt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]neue Funktionen zur Verfügung, mit denen Sie problemlos einen zentralisierten SSIS-Katalog (d.h. eine SSISDB-Benutzerdatenbank) bereitstellen können. Um die hohe Verfügbarkeit für die SSISDB-Datenbank und deren Inhalt (Projekte, Pakete, Ausführungsprotokolle usw.) zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Benutzerdatenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
+### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>So erstellen Sie den SSISDB-Katalog in SQL Server Management Studio  
   
- Eine ausführliche Übersicht und eine Schritt-für-Schritt-Anleitung für die Aktivierung von Always On für SSISDB finden Sie unter [Always On for SSIS Catalog &#40;SSISDB&#41;](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
+1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="a-namerelatedtasksa-related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+2.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul her.  
   
--   [Erstellen des SSIS-Katalogs](../../integration-services/service/create-the-ssis-catalog.md)  
+3.  Erweitern Sie im Objekt-Explorer den Serverknoten, klicken Sie mit der rechten Maustaste auf **Integration Services-Kataloge** , und klicken Sie anschließend auf **Katalog erstellen**.  
   
--   [Sichern, Wiederherstellen und Verschieben des SSIS-Katalogs](../../integration-services/service/backup-restore-and-move-the-ssis-catalog.md)  
+4.  Klicken Sie auf **CLR-Integration aktivieren**.  
   
-##  <a name="a-namerelatedcontenta-related-content"></a><a name="RelatedContent"></a>Verwandte Inhalte  
+     Für den Katalog werden gespeicherte CLR-Prozeduren verwendet.  
+  
+5.  Klicken Sie auf **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** , um die gespeicherte Prozedur [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) jedes Mal ausführen zu lassen, wenn die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Serverinstanz neu gestartet wird.  
+  
+     Durch die gespeicherte Prozedur wird der Status von Vorgängen für den SSISDB-Katalog verwaltet. Dabei wird der Status aller Pakete korrigiert, die während des Ausfalls (falls zutreffend) der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Serverinstanz ausgeführt wurden.  
+  
+6.  Geben Sie ein Kennwort ein, und klicken Sie dann auf **OK**.  
+  
+     Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+  
+### <a name="to-create-the-ssisdb-catalog-programmatically"></a>So erstellen Sie den SSISDB-Katalog programmgesteuert  
+  
+1.  Führen Sie das folgende PowerShell-Skript aus:  
+  
+    ```  
+    # Load the IntegrationServices Assembly  
+    [Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices")  
+  
+    # Store the IntegrationServices Assembly namespace to avoid typing it every time  
+    $ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"  
+  
+    Write-Host "Connecting to server ..."  
+  
+    # Create a connection to the server  
+    $sqlConnectionString = "Data Source=localhost;Initial Catalog=master;Integrated Security=SSPI;"  
+    $sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString  
+  
+    # Create the Integration Services object  
+    $integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection  
+  
+    # Provision a new SSIS Catalog  
+    $catalog = New-Object $ISNamespace".Catalog" ($integrationServices, "SSISDB", "P@assword1")  
+    $catalog.Create()  
+  
+    ```  
+  
+     Weitere Beispiele zum Verwenden von Windows PowerShell und die <xref:Microsoft.SqlServer.Management.IntegrationServices> Namespace finden Sie im Blogeintrag [SSIS und PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), auf blogs.msdn.com. Eine Übersicht über den Namespace und Codebeispiele finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267)(Übersicht über das SSIS-Katalogmodell verwalteter Objekte) auf „blogs.msdn.com“.  
+
+## <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
+  Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Die Katalogeigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und Versionsdaten für Projekte beibehalten werden und zu welchem Zeitpunkt für Überprüfungsvorgänge ein Timeout erfolgt. Der SSISDB-Katalog ist ein zentraler Speicher- und Verwaltungspunkt für Projekte, Pakete, Parameter und Umgebungen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+ Sie können Katalogeigenschaften auch in der catalog.catalog_property-Sicht anzeigen und die Eigenschaften mit der gespeicherten catalog.configure_catalog-Prozedur festlegen. Weitere Informationen finden Sie unter [catalog.catalog_properties &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) und [catalog.configure_catalog &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+  
+ **Was möchten Sie tun?**  
+  
+-   [Öffnen des Dialogfelds "Katalogeigenschaften"](#open_dialog)  
+  
+-   [Konfigurieren der Optionen](#options)  
+  
+###  <a name="open_dialog"></a> Öffnen des Dialogfelds "Katalogeigenschaften"  
+  
+1.  Öffnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  
+2.  Stellen Sie eine Verbindung mit einer Microsoft SQL Server-Datenbank her.  
+  
+3.  Erweitern Sie im Objekt-Explorer den Knoten **Integration Services** , klicken Sie mit der rechten Maustaste auf den Knoten **SSISDB**, und klicken Sie anschließend auf **Eigenschaften**.  
+  
+###  <a name="options"></a> Konfigurieren der Optionen  
+  
+#### <a name="options"></a>enthalten  
+ In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
+  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Description|  
+|-----------------------------------------------------|------------------------------------------------------|-----------------|  
+|Name des Verschlüsselungsalgorithmus|ENCRYPTION_CLEANUP_ENABLED|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (Standard)|  
+|Überprüfungstimeout (Sekunden)|VALIDATION_TIMEOUT|Geben Sie die maximale Ausführungsdauer in Sekunden ab, bevor eine Projektüberprüfung oder Paketüberprüfung beendet wird. Der Standardwert beträgt 300 Sekunden.<br /><br /> Die Validierung ist ein asynchroner Vorgang. Je größer das Projekt oder das Paket ist, desto länger dauert die Validierung.<br /><br /> Informationen zum Überprüfen von Projekten und Paketen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Protokolle regelmäßig bereinigen|OPERATION_CLEANUP_ENABLED|Legen Sie die Eigenschaft auf "True" fest, um anzugeben, dass der SQL Server-Agentauftrag, die Vorgangsbereinigung, ausgeführt wird. Legen Sie die Eigenschaft andernfalls auf "False" fest.|  
+|Beibehaltungsdauer (Tage)|RETENTION_WINDOW|Geben Sie das maximale Alter von zulässigen Vorgangsdaten (in Tagen) an. Daten, die älter als die angegebene Anzahl von Tagen sind, werden vom SQL-Agentauftrag, durch die Vorgangsbereinigung, entfernt.|  
+|Maximale Anzahl der Versionen pro Projekt|MAX_PROJECT_VERSIONS|Geben Sie an, wie viele Versionen eines Projekts im Katalog gespeichert werden. Wenn die maximale Anzahl überschritten wird, werden frühere Versionen von Projekten bei der Bereinigung von Projektversionen entfernt.|  
+
+## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Sichern Sie, Wiederherstellen Sie und verschieben Sie des SSIS-Katalogs
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]Schließt die SSISDB-Datenbank. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
+  
+ Der **SSISDB** -Katalog speichert die Pakete, die Sie auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt haben. Weitere Informationen zum Katalog finden Sie unter [SSIS-Katalog](../../integration-services/service/ssis-catalog.md).  
+  
+###  <a name="backup"></a> So sichern Sie die SSIS-Datenbank  
+  
+1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]her.  
+  
+2.  Sichern Sie den Hauptschlüssel für die SSISDB-Datenbank, indem Sie die Anweisung BACKUP MASTER KEY (Transact-SQL) verwenden. Der Schlüssel wird in einer von Ihnen angegebenen Datei gespeichert. Verwenden Sie ein Kennwort, um den Hauptschlüssel in der Datei zu verschlüsseln.  
+  
+     Weitere Informationen zur Anweisung finden Sie unter [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md).  
+  
+     Im folgenden Beispiel wird der Hauptschlüssel in die Datei `c:\temp directory\RCTestInstKey` exportiert. Das `LS2Setup!` -Kennwort wird zum Verschlüsseln des Hauptschlüssels verwendet.  
+  
+    ```  
+    backup master key to file = 'c:\temp\RCTestInstKey'  
+           encryption by password = 'LS2Setup!'  
+  
+    ```  
+  
+3.  Sichern Sie die SSISDB-Datenbank mit dem Dialogfeld **Datenbank sichern** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Gewusst wie: Sichern einer Datenbank (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+  
+4.  Generieren Sie das CREATE LOGIN-Skript für ##MS_SSISServerCleanupJobLogin ##, indem Sie wie folgt vorgehen. Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
+  
+    1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer die Knoten **Sicherheit** und **Anmeldungen** .  
+  
+    2.  Klicken Sie mit der rechten Maustaste auf **##MS_SSISServerCleanupJobLogin##**, und klicken Sie dann auf **Skript für Anmeldenamen als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
+  
+5.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, generieren Sie das CREATE PROCEDURE-Skript wie folgt für sp_ssis_startup. Weitere Informationen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
+  
+    1.  Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken** und dann die Knoten **master** > **Programmierbarkeit** > **Gespeicherte Prozeduren**.  
+  
+    2.  Klicken Sie mit der rechten Maustaste auf **dbo.sp_ssis_startup**, und klicken Sie dann auf **Skript für gespeicherte Prozeduren als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
+  
+6.  Bestätigen Sie, dass der SQL Server-Agent gestartet wurde.  
+  
+7.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, generieren Sie wie folgt ein Skript für den SSIS-Server-Wartungsauftrag. Das Skript wird bei Erstellung des SSISDB-Katalogs automatisch im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent erstellt. Der Auftrag hilft beim Bereinigen von Bereinigungsvorgangsprotokollen außerhalb der Beibehaltungsdauer und entfernt ältere Projektversionen.  
+  
+    1.  Erweitern Sie im Objekt-Explorer den Knoten **SQL Server-Agent** und dann den Knoten **Aufträge** .  
+  
+    2.  Klicken Sie mit der rechten Maustaste auf den SSIS-Serverwartungsauftrag, und klicken Sie dann auf **Skript für Auftrag als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
+  
+### <a name="to-restore-the-ssis-database"></a>So stellen Sie die SSIS-Datenbank wieder her  
+  
+1.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, aktivieren Sie Common Language Runtime (clr), indem Sie die gespeicherte Prozedur sp_configure ausführen. Weitere Informationen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [CLR-fähig (Option)](http://go.microsoft.com/fwlink/?LinkId=231855).  
+  
+    ```  
+    use master   
+           sp_configure 'clr enabled', 1  
+           reconfigure  
+  
+    ```  
+  
+2.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, erstellen Sie den asymmetrischen Schlüssel und den Anmeldenamen aus dem asymmetrischen Schlüssel, und gewähren Sie dem Anmeldenamen die UNSAFE-Berechtigung.  
+  
+    ```  
+    Create Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey  
+           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
+  
+    ```  
+  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-CLR-gespeicherte Prozeduren erfordern UNSAFE-Berechtigungen, die der Anmeldung gewährt werden müssen, da die Anmeldung einen zusätzlichen Zugriff auf eingeschränkte Ressourcen (z. B. die Microsoft Win32-API) benötigt. Weitere Informationen zur UNSAFE-Codeberechtigung finden Sie unter [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+  
+    ```  
+    Create Login MS_SQLEnableSystemAssemblyLoadingUser  
+           FROM Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey   
+  
+           Grant unsafe Assembly to MS_SQLEnableSystemAssemblyLoadingUser  
+  
+    ```  
+  
+3.  Stellen Sie die SSISDB-Datenbank über die Sicherung wieder her. Verwenden Sie dazu das Dialogfeld **Datenbank wiederherstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie in den nachfolgenden Themen.  
+  
+    -   [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
+  
+    -   [Datenbank wiederherstellen &#40;Seite Dateien&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
+  
+    -   [Datenbank wiederherstellen &#40;Seite Optionen&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
+  
+4.  Führen Sie die Skripts aus, die Sie in [So sichern Sie die SSIS-Datenbank](#backup) für ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup und den SSIS-Serverwartungsauftrag erstellt haben. Bestätigen Sie, dass der SQL Server-Agent gestartet wurde.  
+  
+5.  Führen Sie die folgende Anweisung aus, um die Prozedur "sp_ssis_startup" für die automatische Ausführung festzulegen. Weitere Informationen finden Sie unter [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md).  
+  
+    ```  
+    EXEC sp_procoption N'sp_ssis_startup','startup','on'  
+    ```  
+  
+6.  Ordnen Sie den SSISDB-Benutzer ##MS_SSISServerCleanupJobUser## (SSISDB-Datenbank) ##MS_SSISServerCleanupJobLogin## zu, indem Sie das Dialogfeld **Anmeldungseigenschaften** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
+  
+7.  Verwenden Sie zum Sichern des Hauptschlüssels eine der folgenden Methoden. Weitere Informationen zur Verschlüsselung finden Sie unter [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
+  
+    -   **Methode 1**  
+  
+         Verwenden Sie diese Methode, wenn Sie bereits eine Sicherung des Datenbank-Hauptschlüssels ausgeführt haben und Sie über das Kennwort verfügen, das verwendet wurde, um den Hauptschlüssel zu verschlüsseln.  
+  
+        ```  
+               Restore master key from file = 'c:\temp\RCTestInstKey'  
+               Decryption by password = 'LS2Setup!' -- 'Password used to encrypt the master key during SSISDB backup'  
+               Encryption by password = 'LS3Setup!' -- 'New Password'  
+               Force  
+  
+        ```  
+  
+        > [!NOTE]  
+        >  Bestätigen Sie, dass das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto über Berechtigungen verfügt, die Sicherungsschlüsseldatei zu lesen.  
+  
+        > [!NOTE]  
+        >  Es wird die folgende Warnmeldung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt, wenn der Datenbank-Hauptschlüssel noch nicht vom Diensthauptschlüssel verschlüsselt wurde. Ignorieren Sie die Warnmeldung.  
+        >   
+        >  **Der aktuelle Hauptschlüssel kann nicht entschlüsselt werden. Dieser Fehler wurde ignoriert, da die Option FORCE angegeben war.**  
+        >   
+        >  Das FORCE-Argument gibt an, dass der Wiederherstellungsprozess fortfahren sollte, auch wenn der aktuelle Datenbank-Hauptschlüssel nicht geöffnet ist. Diese Meldung wird für den SSISDB-Katalog angezeigt, da der Datenbank-Hauptschlüssel noch nicht auf der Instanz geöffnet wurde, auf der Sie die Datenbank wiederherstellen.  
+  
+    -   **Methode 2**  
+  
+         Verwenden Sie diese Methode, wenn Sie über das ursprüngliche Kennwort verfügen, das verwendet wurde, um SSISDB zu erstellen.  
+  
+        ```  
+        open master key decryption by password = 'LS1Setup!' --'Password used when creating SSISDB'  
+               Alter Master Key Add encryption by Service Master Key  
+        ```  
+  
+8.  Bestimmen Sie, ob das SSISDB-Katalogschema und die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Binärdateien (ISServerExec-Assembly und SQLCLR-Assembly) kompatibel sind, indem Sie [catalog.check_schema_version](../../integration-services/system-stored-procedures/catalog-check-schema-version.md)ausführen.  
+  
+9. Um zu bestätigen, dass die SSISDB-Datenbank erfolgreich wiederhergestellt wurde, führen Sie Vorgänge für den SSISDB-Katalog aus, beispielsweise das Ausführen von Paketen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Weitere Informationen finden Sie unter [führen Sie Integration Services (SSIS)-Pakete](../../integration-services/packages/run-integration-services-ssis-packages.md).  
+  
+### <a name="to-move-the-ssis-database"></a>So verschieben Sie die SSIS-Datenbank  
+  
+-   Folgen Sie den Anweisungen zum Verschieben von Benutzerdatenbanken. Weitere Informationen finden Sie unter [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
+  
+     Stellen Sie sicher, dass Sie den Hauptschlüssel für die SSISDB-Datenbank sichern und die Sicherungsdatei schützen. Weitere Informationen finden Sie unter [So sichern Sie die SSIS-Datenbank](#backup).  
+  
+     Stellen Sie sicher, dass die für Integration Services (SSIS) relevanten Objekte in der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz erstellt werden, auf der der SSISDB-Katalog noch nicht erstellt wurde.  
+
+## <a name="upgrade-the-ssis-catalog-ssisdb"></a>Aktualisieren des SSIS-Katalogs (SSISDB)
+  Führen Sie den SSISDB-Upgrade-Assistenten aus, um die Datenbank SSIS-Katalogdatenbank (SSISDB) zu aktualisieren, falls diese älter ist als die aktuelle Version der SQL Server-Instanz. Dies tritt auf, wenn eine der folgenden Bedingungen zutrifft.  
+  
+-   Sie haben die Datenbank aus einer älteren Version von SQL Server wiederhergestellt.  
+  
+-   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Dies verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](#Upgrade).  
+  
+ Der Assistent kann die Datenbank nur auf einer lokalen Serverinstanz aktualisieren.  
+  
+### <a name="upgrade-the-ssis-catalog-ssisdb-by-running-the-ssisdb-upgrade-wizard"></a>Aktualisieren des SSIS-Katalogs (SSISDB) mit dem SSISDB-Upgrade-Assistenten  
+  
+1.  Sichern Sie die SSIS-Katalogdatenbank (SSISDB).  
+  
+2.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den lokalen Server und dann **Integration Services-Katalog**.  
+  
+3.  Klicken Sie mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Datenbankupgrade** aus, um den SSISDB-Upgrade-Assistenten zu starten.  
+  
+     ![Starten Sie den SSISDB-Upgrade-Assistent](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "starten Sie den SSISDB-Upgrade-Assistent")  
+  
+4.  Wählen Sie auf der Seite **Instanz auswählen** eine SQL Server-Instanz auf dem lokalen Server aus.  
+  
+    > [!IMPORTANT]  
+    >  Der Assistent kann die Datenbank nur auf einer lokalen Server-Instanz aktualisieren.  
+  
+     Aktivieren Sie das Kontrollkästchen, mit dem Sie bestätigen, dass Sie die SSISDB-Datenbank vor der Ausführung des Assistenten gesichert haben.  
+  
+     ![Wählen Sie den Server in der SSISDB-Upgrade-Assistent](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "wählen Sie den Server in der SSISDB-Upgrade-Assistent")  
+  
+5.  Wählen Sie **Upgrade** , um die SSIS-Katalogdatenbank zu aktualisieren.  
+  
+6.  Überprüfen Sie die Ergebnisse auf der Seite **Ergebnis** .  
+  
+     ![Überprüfen Sie die Ergebnisse im SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "überprüfen Sie die Ergebnisse im SSISDB-Upgrade-Assistenten")  
+
+## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn für SSIS-Katalog (SSISDB)
+  Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230.aspx).  
+  
+ Um eine hohe Verfügbarkeit für den SSIS-Katalog (SSISDB) und dessen Inhalt (Projekte, Pakete, Ausführungsprotokolle usw.) zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Benutzerdatenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
+ 
+ > [!IMPORTANT]
+ > Wenn ein Failover auftritt, werden Pakete, die ausgeführt wurden, nicht neu gestartet oder fortgesetzt. 
+ 
+ **In diesem Abschnitt:**  
+  
+1.  [Erforderliche Komponenten](#prereq)  
+  
+2.  [Konfigurieren der SSIS-Unterstützung für Always On](#Firsttime)  
+  
+3.  [Upgraden von SSISDB in einer Verfügbarkeitsgruppe](#Upgrade)  
+  
+###  <a name="prereq"></a> Voraussetzungen  
+ Bevor Sie die Always On-Unterstützung für die SSISDB-Datenbank aktivieren, müssen Sie folgende Schritte ausführen.  
+  
+1.  Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Failoverclusterfunktion und Tools für Windows Server 2012 installieren). Sie sollten die Funktion und die Tools auf allen Clusterknoten installieren.  
+  
+2.  Installieren Sie SQL Server 2016 mit der Funktion Integration Services (SSIS) auf jedem Clusterknoten.  
+  
+3.  Aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen für jede SQL Server-Instanz. Weitere Informationen finden Sie unter [Aktivieren von Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878259.aspx) .  
+  
+###  <a name="Firsttime"></a> Konfigurieren der SSIS-Unterstützung für Always On  
+  
+-   [Schritt 1: Erstellen des Integration Services-Katalogs](#Step1)  
+  
+-   [Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe](#Step2)  
+  
+-   [Schritt 3: Aktivieren der SSIS-Unterstützung für Always On](#Step3)  
+  
+> [!IMPORTANT]  
+> -   Sie müssen diese Schritte auf dem **Primärknoten** der Verfügbarkeitsgruppe ausführen.
+> -   Sie müssen aktivieren **SSIS-Unterstützung für Always On-** *nach* Sie SSISDB zu einer AlwaysOn-Verfügbarkeitsgruppe hinzufügen.  
+  
+####  <a name="Step1"></a> Schritt 1: Erstellen des Integration Services-Katalogs  
+  
+1.  Starten Sie **SQL Server Management Studio** , und stellen Sie eine Verbindung mit einer SQL Server-Instanz in dem Cluster her, den Sie als **primären Knoten** der Always On-Gruppe mit hoher Verfügbarkeit für SSISDB festlegen möchten.  
+  
+2.  Erweitern Sie im Objekt-Explorer den Serverknoten, klicken Sie mit der rechten Maustaste auf den Knoten **Integration Services-Kataloge** , und klicken Sie dann auf **Katalog erstellen**.  
+  
+3.  Klicken Sie auf **CLR-Integration aktivieren**. Für den Katalog werden gespeicherte CLR-Prozeduren verwendet.  
+  
+4.  Klicken Sie auf **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** , um die gespeicherte [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) -Prozedur jedes Mal ausführen zu lassen, wenn die SSIS-Serverinstanz neu gestartet wird. Durch die gespeicherte Prozedur wird der Status von Vorgängen für den SSISDB-Katalog verwaltet. Dabei wird der Status aller Pakete korrigiert, die während des Ausfalls der SSIS-Serverinstanz (falls zutreffend) ausgeführt wurden.  
+  
+5.  Geben Sie ein **Kennwort**ein, und klicken Sie dann auf **OK**. Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Sichern eines Datenbank-Hauptschlüssels](https://msdn.microsoft.com/library/aa337546.aspx).  
+  
+####  <a name="Step2"></a> Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe  
+ Das Hinzufügen der SSISDB-Datenbank zu einer Always On-Verfügbarkeitsgruppe ist fast identisch mit dem Hinzufügen einer anderen Benutzerdatenbank zu einer Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](https://msdn.microsoft.com/library/hh403415.aspx).  
+  
+ Sie müssen das Kennwort angeben, das Sie beim Erstellen des SSIS-Katalogs auf der Seite **Datenbanken auswählen** im Assistenten für die **Neue Verfügbarkeitsgruppe** angegeben haben.  
+  
+ ![Neue Verfügbarkeitsgruppe](../../integration-services/service/media/ssis-newavailabilitygroup.png "Neue Verfügbarkeitsgruppe")  
+  
+####  <a name="Step3"></a> Schritt 3: Aktivieren der SSIS-Unterstützung für Always On  
+ Nach dem Erstellen des Integration Service-Katalogs klicken Sie mit der rechten Maustaste auf den Knoten **Integration Service-Kataloge** , und klicken Sie auf **Always On-Unterstützung aktivieren...**. Daraufhin sollte das Dialogfeld **Unterstützung für Always On aktivieren** angezeigt werden. Wenn dieses Menüelement deaktiviert ist, vergewissern Sie sich, dass Sie alle erforderlichen Komponenten installiert haben, und klicken Sie auf **Aktualisieren**.  
+  
+ ![Aktivieren der Unterstützung für immer auf](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
+  
+> [!WARNING]  
+>  Das automatische Failover für die SSISDB-Datenbank wird nur unterstützt, wenn Sie die SSIS-Unterstützung für Always On aktiviert haben.  
+  
+ Die neu hinzugefügten sekundären Replikate aus der AlwaysOn-verfügbarkeitsgruppe werden in der Tabelle angezeigt werden. Klicken Sie auf **Verbinden…** , und geben Sie Anmeldeinformationen für die Authentifizierung ein, um eine Verbindung mit dem Replikat herzustellen. Das Benutzerkonto muss Mitglied der Sysadmin-Gruppe auf jedem Replikat die SSIS-Unterstützung für Always On aktiviert sein. Klicken Sie nach der erfolgreichen Herstellung einer Verbindung mit jedem Replikat auf **OK** , um die SSIS-Unterstützung für Always On zu aktivieren.  
+ 
+Wenn die **aktivieren Sie AlwaysOn-Unterstützung** Option im Kontextmenü angezeigt wird, deaktiviert werden soll, nachdem Sie die weiteren Voraussetzungen durchgearbeitet haben, versuchen Sie Folgendes:
+1.  Aktualisieren Sie das Kontextmenü, indem Sie auf die **aktualisieren** Option.
+2.  Stellen Sie sicher, dass Sie mit dem primären Knoten verbinden. In diesem Fall müssen Sie eine AlwaysOn-Unterstützung auf dem primären Knoten aktivieren.
+3.  Stellen Sie sicher, dass der SQL Server-Version 13.0 oder höher ist. SSIS unterstützt Always On-nur unter SQL Server 2016 und höheren Versionen.
+
+###  <a name="Upgrade"></a> Upgraden von SSISDB in einer Verfügbarkeitsgruppe  
+ Wenn Sie SQL Server von einer früheren Version aktualisieren und sich SSISDB in einer Always On-Verfügbarkeitsgruppe befindet, wird Ihr Upgrade möglicherweise durch die Regel „Überprüfung ,SSISDB in Always On-Verfügbarkeitsgruppe‘“ blockiert. Diese Blockierung tritt auf, da die Aktualisierung im Einzelbenutzermodus ausgeführt wird, während eine Verfügbarkeitsdatenbank eine Mehrbenutzerdatenbank sein muss. Daher werden während des Upgradens oder Patchens alle Verfügbarkeitsdatenbanken, einschließlich SSISDB, offline geschaltet und werden daher nicht upgegradet oder gepatcht. Um das Upgrade fortzusetzen, müssen Sie zuerst SSISDB aus der Verfügbarkeitsgruppe entfernen, dann jeden Knoten upgraden oder patchen und SSISDB dann wieder der Verfügbarkeitsgruppe hinzufügen.  
+  
+ Wenn Sie durch die Regel „Überprüfung ,SSISDB in Always On-Verfügbarkeitsgruppe‘“ blockiert werden, müssen Sie diese Schritte ausführen, um SQL Server zu aktualisieren.  
+  
+1.  Entfernen Sie die SSISDB-Datenbank aus der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) und [Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
+  
+2.  Klicken Sie im Upgrade-Assistenten auf **Erneut ausführen**. Die Regel „Überprüfung ,SSISDB in Always On-Verfügbarkeitsgruppe‘“ wird nun erfolgreich ausgeführt.  
+  
+3.  Klicken Sie auf **Weiter** , um das Upgrade fortzusetzen.  
+  
+4.  Nachdem Sie alle Knoten aktualisiert haben, fügen Sie die SSISDB-Datenbank wieder zur Always On-Verfügbarkeitsgruppe hinzu. Weitere Informationen finden Sie unter [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
+  
+ Wenn Sie beim Upgrade von SQL Server nicht blockiert werden und SSISDB sich in einer Always On-Verfügbarkeitsgruppe befindet, müssen Sie SSISDB nach dem Upgrade des SQL Server-Datenbankmoduls gesondert aktualisieren. Verwenden Sie den SSIS-Upgrade-Assistenten, um die SSISDB upzugraden, wie im folgenden Verfahren beschrieben.  
+  
+1.  Verschieben Sie die SSISDB-Datenbank aus der Verfügbarkeitsgruppe, oder löschen Sie die Verfügbarkeitsgruppe, falls SSISDB die einzige Datenbank in der Verfügbarkeitsgruppe ist. Sie müssen **SQL Server Management Studio** auf dem **Primärknoten** der Verfügbarkeitsgruppe starten, um diese Aufgabe auszuführen.  
+  
+2.  Entfernen Sie die SSISDB-Datenbank von allen **Replikatknoten**.  
+  
+3.  Upgraden Sie die SSISDB-Datenbank auf dem **Primärknoten**. Erweitern Sie im**Objekt-Explorer** in SQL Server Management Studio die **Integration Services-Kataloge**, klicken Sie mit der rechten Maustaste auf **SSISDB**, und wählen Sie dann **Datenbankupgrade**aus. Führen Sie die Anweisungen im **SSISDB-Upgrade-Assistenten** aus, um die Datenbank upzugraden. Sie müssen den **SSIDB-Upgrade-Assistenten** lokal auf dem **Primärknoten**starten.  
+  
+4.  Befolgen Sie die Anweisungen in [Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe](#Step2) , um die SSISDB wieder zu einer Verfügbarkeitsgruppe hinzuzufügen.  
+  
+5.  Befolgen Sie die Anweisungen in [Schritt 3: Aktivieren der SSIS-Unterstützung für Always On](#Step3).  
+  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), auf blogs.msdn.com.  
   
 -   Blogeintrag zu [SSIS Catalog Access Control Tips](http://go.microsoft.com/fwlink/?LinkId=246669)(Tipps zur SSIS-Katalogzugriffssteuerung) auf blogs.msdn.com.  
   
 -   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](http://go.microsoft.com/fwlink/?LinkId=254267)auf blogs.msdn.com.  
-  
-  
+

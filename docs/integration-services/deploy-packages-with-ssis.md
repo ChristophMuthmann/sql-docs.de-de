@@ -1,32 +1,37 @@
 ---
-title: "Bereitstellen von Paketen mit SSIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Bereitstellung (Lernprogramm) [Integration Services]"
-  - "Bereitstellen von Paketen [Integration Services]"
-  - "SSIS, Tutorials"
-  - "Integration Services, Tutorials"
-  - "Bereitstellen von Paketen [Integration Services], Installieren"
-  - "SQL Server Integration Services, Tutorials"
-  - "Anleitungen [Integration Services]"
-  - "Bereitstellungshilfsprogramm [Integration Services]"
-  - "Bereitstellen von Paketen [Integration Services], Konfigurationen"
+title: Bereitstellen von Paketen mit SSIS | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- deployment tutorial [Integration Services]
+- deploying packages [Integration Services]
+- SSIS, tutorials
+- Integration Services, tutorials
+- deploying packages [Integration Services], installing
+- SQL Server Integration Services, tutorials
+- walkthroughs [Integration Services]
+- deployment utility [Integration Services]
+- deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Bereitstellen von Paketen mit SSIS
+# <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.    
     
 Zuerst führen Sie Aufgaben aus, um die Bereitstellung vorzubereiten. Sie erstellen zunächst ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und fügen diesem vorhandene Pakete und Datendateien hinzu. Sie erstellen keine neuen Pakete. Stattdessen arbeiten Sie nur mit fertigen Paketen, die speziell für dieses Lernprogramm erstellt wurden. Sie nehmen in diesem Lernprogramm keine Änderung der Funktionalität der Pakete vor. Nachdem Sie die Pakete dem Projekt hinzugefügt haben, sollten Sie sie jedoch im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer öffnen und ihren Inhalt überprüfen. Durch Untersuchen der Pakete erhalten Sie Informationen zu Paketabhängigkeiten wie Protokolldateien und weiteren interessanten Funktionen der Pakete.    
@@ -49,7 +54,7 @@ Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisyst
     
 **Quellcomputer.** Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, **müssen die folgenden Komponenten installiert sein:**
 - SQL Server  
-- Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) herunterladen.     
+- Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen.     
 > **Hinweis!** Sie müssen die Berechtigung haben, Tabellen in AdventureWorks oder andere Daten, die Sie verwenden, erstellen und löschen zu können.         
     
 -   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)    
@@ -57,13 +62,13 @@ Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisyst
 **Zielcomputer.** Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden Komponenten installiert sein:**    
     
 - SQL Server
-- Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) herunterladen. 
+- Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen. 
     
 - [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     
--   Sie müssen über die Berechtigungen zum Erstellen und Löschen von Tabellen in AdventureWorks und zum Ausführen von Paketen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügen.    
+-   Sie müssen über die Berechtigungen zum Erstellen und Löschen von Tabellen in AdventureWorks und zum Ausführen von Paketen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verfügen.    
     
 -   Sie müssen über Lese- und Schreibberechtigung für die sysssispackages-Tabelle in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Systemdatenbank msdb verfügen.    
     
@@ -81,3 +86,5 @@ In dieser Lektion erstellen Sie ein Bereitstellungshilfsprogramm und überprüfe
 [Lektion 3: Installieren von SSIS-Paketen](../integration-services/lesson-3-install-ssis-packages.md)    
 In dieser Lektion kopieren Sie das Bereitstellungspaket auf den Zielcomputer, installieren die Pakete und führen diese dann aus.    
     
+
+

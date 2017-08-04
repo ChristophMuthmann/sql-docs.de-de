@@ -1,49 +1,54 @@
 ---
-title: "SqlLocalDB-Hilfsprogramm | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SqlLocalDB-Hilfsprogramm [SQL Server]"
-  - "Hilfsprogramm für Laufzeit der lokalen Datenbank"
-  - "LocalDB, SqlLocalDB-Hilfsprogramm"
+title: SqlLocalDB-Hilfsprogramm | Microsoft Docs
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SqlLocalDB utility [SQL Server]
+- local database runtime utility
+- LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbeaba1123e7244131cd33f4460ac4e90af7b7f9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# SqlLocalDB-Hilfsprogramm
-  Verwenden Sie das Hilfsprogramm **SqlLocalDB**, um eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB** zu erstellen. Das Hilfsprogramm **SqlLocalDB** (SqlLocalDB.exe) ist ein einfaches Befehlszeilentool, mit dem Benutzer und Entwickler eine Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** erstellen und verwalten können. Informationen zum Verwenden von **LocalDB** finden Sie unter [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+# <a name="sqllocaldb-utility"></a>SqlLocalDB-Hilfsprogramm
+  Verwenden Sie das Hilfsprogramm **SqlLocalDB** , um eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB**zu erstellen. Das Hilfsprogramm **SqlLocalDB** (SqlLocalDB.exe) ist ein einfaches Befehlszeilentool, mit dem Benutzer und Entwickler eine Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**erstellen und verwalten können. Informationen zum Verwenden von **LocalDB**finden Sie unter [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SqlLocalDB.exe   
 {  
-      [ create   | c ] <instance-name>  <instance-version> [-s ]  
-    | [ delete   | d ] <instance-name>  
-    | [ start    | s ] <instance-name>  
-    | [ stop     | p ] <instance-name>  [ -i ] [ -k ]  
-    | [ share    | h ] [" <user_SID> " | " <user_account> " ] " <private-name> " " <shared-name> "  
-    | [ unshare  | u ] " <shared-name> "  
-    | [ info     | i ] <instance-name>  
+      [ create   | c ] \<instance-name>  \<instance-version> [-s ]  
+    | [ delete   | d ] \<instance-name>  
+    | [ start    | s ] \<instance-name>  
+    | [ stop     | p ] \<instance-name>  [ -i ] [ -k ]  
+    | [ share    | h ] [" <user_SID> " | " <user_account> " ] " \<private-name> " " \<shared-name> "  
+    | [ unshare  | u ] " \<shared-name> "  
+    | [ info     | i ] \<instance-name>  
     | [ versions | v ]  
     | [ trace    | t ] [ on | off ]  
     | [ help     | -? ]  
 }  
 ```  
   
-## Argumente  
- [ **create** | **c** ] *<Instanzname>* *<Instanzversion>* [**-s** ]  
- Erstellt eine neue Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** verwendet die Version der mit dem *<Instanzversion>*-Argument angegebenen [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]-Binärdateien. Die Versionsnummer wird im numerischen Format mit mindestens einer Dezimalzahl angegeben. Die Nebenversionsnummern (Service Packs) sind optional. Beispielsweise werden die folgenden zwei Versionsnummern akzeptiert: 11.0 oder 11.0.1186. Die angegebene Version muss auf dem Computer installiert sein. Wenn die Versionsnummer nicht angegeben ist, wird standardmäßig die Version des Hilfsprogramms **SqlLocalDB** verwendet. Durch Hinzufügen von **-s** wird die neue Instanz von **LocalDB** gestartet.  
+## <a name="arguments"></a>Argumente  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ Erstellt eine neue Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** verwendet die Version des [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Binärdateien gemäß  *\<instanzversion >* Argument. Die Versionsnummer wird im numerischen Format mit mindestens einer Dezimalzahl angegeben. Die Nebenversionsnummern (Service Packs) sind optional. Beispielsweise werden die folgenden zwei Versionsnummern akzeptiert: 11.0 oder 11.0.1186. Die angegebene Version muss auf dem Computer installiert sein. Wenn die Versionsnummer nicht angegeben ist, wird standardmäßig die Version des Hilfsprogramms **SqlLocalDB** verwendet. Durch Hinzufügen von **-s** wird die neue Instanz von **LocalDB**gestartet.  
   
  [ **share** | **h** ]  
  Gibt die angegebene private Instanz von **LocalDB** mithilfe des angegebenen freigegebenen Namens frei. Wenn die Benutzer-SID oder der Kontoname weggelassen wird, wird standardmäßig der aktuelle Benutzer verwendet.  
@@ -51,43 +56,43 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  Beendet die Freigabe der angegebenen freigegebenen Instanz von **LocalDB**.  
   
- [ **delete** | **d** ] *<Instanzname>*  
+ [ **delete** | **d** ] *\<instance-name>*  
  Löscht die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*<Instanzname>*"  
- Startet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Bei Erfolg gibt die Anweisung die Named Pipe-Adresse von **LocalDB** zurück.  
+ [ **start** | **s** ] "*\<instance-name>*"  
+ Startet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Bei Erfolg gibt die Anweisung die Named Pipe-Adresse von **LocalDB**zurück.  
   
- [ **stop** | **p** ] *<Instanzname>* [**-i** ] [**-k** ]  
- Beendet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Durch Hinzufügen von **-i** wird das Herunterfahren der Instanz mit der **NOWAIT**-Option angefordert. Durch Hinzufügen von **-k** wird der Instanzprozess ohne Kontaktieren abgebrochen.  
+ [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ Beendet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Durch Hinzufügen von **-i** wird das Herunterfahren der Instanz mit der **NOWAIT** -Option angefordert. Durch Hinzufügen von **-k** wird der Instanzprozess ohne Kontaktieren abgebrochen.  
   
- [ **info** | **i** ] [ *<Instanzname>* ]  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
  Listet alle Instanzen von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** auf, die im Besitz des aktuellen Benutzers sind.  
   
- *<Instanzname>* gibt Name, Version, Status („Wird ausgeführt“ oder „Beendet“) und die letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** und den lokalen Pipenamen von **LocalDB** zurück.  
+ *\<Instanzname >* gibt den Namen, Version, Status (ausgeführt oder angehalten), Letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**, und den lokalen Pipenamen von der **LocalDB**.  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** aktiviert die Ablaufverfolgung für die **SqlLocalDB**-API-Aufrufe für den aktuellen Benutzer. **trace off** deaktiviert die Ablaufverfolgung.  
   
  **-?**  
- Gibt eine kurze Beschreibungen jeder **SqlLocalDB**-Option zurück.  
+ Gibt eine kurze Beschreibungen jeder **SqlLocalDB** -Option zurück.  
   
-## Hinweise  
- Für das *instance name*-Argument müssen die Regeln für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Bezeichner befolgt werden, oder das Argument muss in doppelte Anführungszeichen eingeschlossen werden.  
+## <a name="remarks"></a>Hinweise  
+ Für das *instance name* -Argument müssen die Regeln für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner befolgt werden, oder das Argument muss in doppelte Anführungszeichen eingeschlossen werden.  
   
  Bei der Ausführung von „SqlLocalDB“ ohne Argumente wird der Hilfetext zurückgegeben.  
   
  Vorgänge, die keine Startvorgänge sind, können nur für eine Instanz ausgeführt werden, die zum derzeit angemeldeten Benutzer gehört. Wenn eine SQLLOCALDB-Instanz freigegeben wird, kann sie nur vom Besitzer der Instanz gestartet und beendet werden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
   
-### A. Erstellen einer Instanz von LocalDB  
- Im folgenden Beispiel wird mithilfe der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Binärdateien eine Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** namens `DEPARTMENT` erstellt und die Instanz gestartet.  
+### <a name="a-creating-an-instance-of-localdb"></a>A. Erstellen einer Instanz von LocalDB  
+ Im folgenden Beispiel wird mithilfe der [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**-Binärdateien eine Instanz von** LocalDB `DEPARTMENT` namens [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] erstellt und die Instanz gestartet.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### B. Verwenden einer freigegebenen Instanz von LocalDB  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>B. Verwenden einer freigegebenen Instanz von LocalDB  
  Öffnen Sie eine Eingabeaufforderung unter Administratorberechtigungen.  
   
 ```  
@@ -104,13 +109,14 @@ GO
 EXIT  
 ```  
   
- Führen Sie den folgenden Code aus, um unter Verwendung des `NewLogin`-Anmeldenamens eine Verbindung zur freigegebenen **LocalDB**-Instanz herzustellen.  
+ Führen Sie den folgenden Code aus, um unter Verwendung des **-Anmeldenamens eine Verbindung zur freigegebenen** LocalDB `NewLogin` -Instanz herzustellen.  
   
 ```  
 sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
-[Verwaltungstool für Befehlszeilen: SqlLocalDB.exe](Command-Line%20Management%20Tool:%20SqlLocalDB.exe.md)  
+[Verwaltungstool für Befehlszeilen: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
   
+

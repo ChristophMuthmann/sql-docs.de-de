@@ -1,42 +1,40 @@
 ---
-title: "SSIS-Paket speichern (SQL Server-Import/Export-Assistent) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.savedtspackage.f1"
+title: Speichern Sie die SSIS-Paket (SQL Server-Import / Export-Assistent) | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 caps.latest.revision: 64
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
-  Wenn Sie auf der Seite **Paket speichern und ausführen** angegeben haben, dass das vom Assistenten erstellte SSIS-Paket gespeichert werden soll, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent **SSIS-Paket speichern** an. Auf dieser Seite geben Sie zusätzliche Optionen für das Speichern des Pakets an.  
+# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
+  Wenn Sie angegeben haben, auf die **speichern und Paket ausführen** Seite, die Sie die Einstellungen als SQL Server Integration Services (SSIS)-Paket speichern möchten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistent zeigt **SSIS-Paket speichern**. Auf dieser Seite Geben Sie zusätzliche Optionen zum Speichern des Pakets, das vom Assistenten erstellt.  
 
 Die auf der Seite **SSIS-Paket speichern** angezeigten Optionen hängen von Ihrer Auswahl auf der Seite **Paket speichern und ausführen** ab, ob das Paket in SQL Server oder im Dateisystem gespeichert werden soll. Weitere Informationen zur Seite **Paket speichern und ausführen** finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
 **Was ist ein Paket?** Der Assistent verwendet SQL Server Integration Services (SSIS) zum Kopieren von Daten. In SSIS stellt das Paket die Basiseinheit dar. Der Assistent erstellt ein SSIS-Paket im Arbeitsspeicher, während Sie die Seiten des Assistenten durchlaufen und Optionen festlegen.
- 
-## <a name="screen-shot---save-the-package-in-the-file-system"></a>Screenshot: Speichern des Pakets im Dateisystem
- 
-Der folgende Screenshot zeigt die Seite **SSIS-Paket speichern** des Assistenten nach der Auswahl der Option **Dateisystem** auf der Seite **Paket speichern und ausführen**. 
-  
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
 
-## <a name="screen-shot---save-the-package-in-sql-server"></a>Screenshot: Speichern des Pakets in SQL Server
+## <a name="screen-shot---common-options"></a>Screenshot - allgemeine Optionen
+Der folgende Screenshot zeigt den ersten Teil der **SSIS-Paket speichern** Seite des Assistenten. Der Rest der Seite verfügt über eine Variable Anzahl von Optionen, mit denen des Paketziels abhängig, die Sie ausgewählt haben.
 
- Der folgende Screenshot zeigt die Seite **SSIS-Paket speichern** des Assistenten nach der Auswahl der Option **SQL Server** auf der Seite **Paket speichern und ausführen**. 
-  
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
-  
+![Speichern Sie die Paket - allgemeine Optionen](../../integration-services/import-export-data/media/save-package-common-options.png)
+
 ## <a name="provide-a-name-and-description-for-the-package"></a>Bereitstellen eines Namens und einer Beschreibung für das Paket  
  **Name**  
  Geben Sie einen eindeutigen Namen für das Paket an.  
@@ -45,27 +43,18 @@ Der folgende Screenshot zeigt die Seite **SSIS-Paket speichern** des Assistenten
  Geben Sie eine Beschreibung für das Paket an. Es wird hierbei empfohlen, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **Target**  
- Das Ziel ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Dateisystem), das Sie zuvor für das Paket angegeben haben. Wenn Sie das Paket an einem anderen Ziel speichern möchten, navigieren Sie zurück zur Seite **Paket speichern und ausführen**.
-  
-## <a name="save-the-package-in-the-file-system"></a>Speichern des Pakets im Dateisystem 
-Wenn Sie ein Dateisystemziel ausgewählt haben, füllen Sie die folgenden Felder aus.
+ Das Ziel ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Dateisystem), das Sie zuvor für das Paket angegeben haben. Wenn Sie das Paket an einem anderen Ziel speichern möchten, navigieren Sie zurück zur Seite **Paket speichern und ausführen** .
 
- **Dateiname**  
- Geben Sie den Pfad und den Dateinamen für die Zieldatei ein, oder verwenden Sie die Schaltfläche **Durchsuchen**, um ein Ziel auszuwählen.  
-  
-> [!TIP] Achten Sie darauf, einen Zielordner anzugeben – entweder durch Eingabe oder durch eine Suche. Wenn Sie nur den Dateinamen ohne Pfad eingeben, wissen Sie nicht, wo der Assistent das Paket speichert. Außerdem versucht der Assistent möglicherweise, das Paket an einem Speicherort zu speichern, an dem Sie nicht über die Berechtigung zum Speichern einer Datei verfügen, und löst einen Fehler aus.  
->   
->  Notieren Sie sich, wo Sie die Paketdatei speichern.  
-  
- **Durchsuchen**  
- Sie können den Pfad zur Zieldatei auch im Dialogfeld **Paket speichern** durch eine Suche auswählen.  
+## <a name="screen-shot---save-the-package-in-sql-server"></a>Screenshot: Speichern des Pakets in SQL Server
 
-## <a name="save-the-package-in-sql-server"></a>Speichern des Pakets in SQL Server 
-Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt haben, füllen Sie die folgenden Felder aus.
+ Die folgende Abbildung zeigt die **SSIS-Paket speichern** Seite des Assistenten bei Auswahl der **SQL Server** option die **speichern und Paket ausführen** Seite. 
+  
+![Speichern Sie SSIS-Paket-Seite des Import / Export-Assistenten](../../integration-services/import-export-data/media/save-package2.png "SSIS-Paket speichern Seite des Import / Export-Assistenten")  
 
-Der Assistent speichert das Paket in der Datenbank **msdb** in der Tabelle **sysssispackages**.
- 
- > [!NOTE] Mit dieser Option wird das Paket nicht in der SSIS-Katalogdatenbank (SSISDB) gespeichert.  
+## <a name="options-to-specify-target--sql-server"></a>Optionen zum festlegen (Ziel = SQL Server) 
+
+ > [!NOTE]
+ > Der Assistent speichert das Paket in der **Msdb** -Datenbank in die **Sysssispackages** Tabelle. Diese Option **nicht** des Pakets zur SSIS-Katalogdatenbank (SSISDB) zu speichern.  
  
  **Servername**  
  Geben Sie den Namen des Zielservers ein, oder wählen Sie ihn aus.  
@@ -77,15 +66,34 @@ Stellen Sie eine Verbindung mit dem Server mithilfe der integrierten Windows-Aut
 Stellen Sie eine Verbindung mit dem Server mithilfe der SQL Server-Authentifizierung her.  
   
  **Benutzername**  
-Wenn Sie die SQL-Authentifizierung angegeben haben, geben Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzernamen ein.  
+Wenn Sie SQL Server-Authentifizierung angegeben haben, geben Sie den Benutzernamen ein.  
   
  **Kennwort**  
-Wenn Sie die SQL-Authentifizierung angegeben haben, geben Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kennwort ein.  
+Wenn Sie SQL Server-Authentifizierung angegeben haben, geben Sie das Kennwort ein.  
+    
+## <a name="screen-shot---save-the-package-in-the-file-system"></a>Screenshot: Speichern des Pakets im Dateisystem
+ 
+Die folgende Abbildung zeigt die **SSIS-Paket speichern** Seite des Assistenten bei Auswahl der **Dateisystem** option die **speichern und Paket ausführen** Seite. 
   
+![Speichern Sie SSIS-Paket-Seite des Import / Export-Assistenten](../../integration-services/import-export-data/media/save-package1.png "SSIS-Paket speichern Seite des Import / Export-Assistenten")  
+
+## <a name="options-to-specify-target--file-system"></a>Optionen zum festlegen (Ziel = Dateisystem)
+
+ **Dateiname**  
+ Geben Sie den Pfad und Dateinamen für die Zieldatei oder das Verwenden der **Durchsuchen** klicken, um ein Ziel auszuwählen.  
+  
+> [!TIP]
+> Achten Sie darauf, dass Sie einen Zielordner, geben Sie entweder durch eingeben oder durch navigieren. Wenn Sie nur den Dateinamen ohne Pfad eingegeben haben, wissen Sie nicht, in dem der Assistent das Paket speichert. Außerdem versucht der Assistent möglicherweise, das Paket an einem Speicherort zu speichern, an dem Sie nicht über die Berechtigung zum Speichern einer Datei verfügen, und löst einen Fehler aus.  
+>   
+>  Notieren Sie sich, wo Sie die Paketdatei speichern.  
+  
+ **Durchsuchen**  
+ Suchen Sie nach optional, wählen Sie den Pfad für die Zieldatei in der **Paket speichern** (Dialogfeld).  
+
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Informationen zu den beiden Seiten der Optionen für das Speichern des Pakets  
  Die Seite **SSIS-Paket speichern** ist eine der beiden Seiten, auf denen Sie Optionen für das Speichern des SSIS-Pakets auswählen.  
   
--   Auf der vorherigen Seite (**Paket speichern und ausführen**) haben Sie ausgewählt, ob das Paket in SQL Server oder als Datei gespeichert werden soll. Sie können auch Sicherheitseinstellungen für das gespeicherte Paket auswählen. Weitere Informationen zur Seite **Paket speichern und ausführen** finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+-   Auf der vorherigen Seite ( **Paket speichern und ausführen**) haben Sie ausgewählt, ob das Paket in SQL Server oder als Datei gespeichert werden soll. Sie können auch Sicherheitseinstellungen für das gespeicherte Paket auswählen. Weitere Informationen zur Seite **Paket speichern und ausführen** finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
   
 -   Auf der aktuellen Seite geben Sie einen Namen für das Paket und weitere Informationen dazu an, wo Sie es speichern möchten.  
  
@@ -96,9 +104,9 @@ Wenn Sie die SQL-Authentifizierung angegeben haben, geben Sie das [!INCLUDE[ssNo
   
 -   Weitere Informationen dazu, wie Sie ein Paket über die Eingabeaufforderung oder über eine Batchdatei ausführen, finden Sie unter [dtexec (Hilfsprogramm)](../../integration-services/packages/dtexec-utility.md).  
   
--   Wenn Sie das Paket im Dateisystem gespeichert haben, finden Sie unter [Ausführen eines Pakets in SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md) Informationen zum Ausführen des Pakets in der Entwicklungsumgebung. Sie müssen das Paket einem Integration Services-Projekt hinzufügen, bevor Sie es öffnen und ausführen können.  
- 
--   Wenn Sie das Paket in SQL Server in der Datenbank **msdb** gespeichert haben, stellen Sie eine Verbindung mit dem Integration Services-Dienst her. Navigieren Sie dann in SQL Server Management Studio im Objekt-Explorer zu **Gespeicherte Pakete | MSDB**, klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Paket ausführen** aus.
+-   Wenn Sie das Paket in SQL Server in der Datenbank **msdb** gespeichert haben, stellen Sie eine Verbindung mit dem Integration Services-Dienst her. Navigieren Sie dann in SQL Server Management Studio im Objekt-Explorer zu **Gespeicherte Pakete | MSDB**, klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Paket ausführen**aus.
+
+-   Wenn Sie das Paket im Dateisystem gespeichert haben, finden Sie unter [Ausführen von Integration Services-Paketen (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md) Informationen zum Ausführen des Pakets in der Entwicklungsumgebung. Sie müssen das Paket einem Integration Services-Projekt hinzufügen, bevor Sie es öffnen und ausführen können.  
 
 ## <a name="customize-the-saved-package"></a>Anpassen des gespeicherten Pakets  
  Weitere Informationen zum Anpassen des gespeicherten Pakets finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
@@ -112,3 +120,4 @@ Wenn Sie die SQL-Authentifizierung angegeben haben, geben Sie das [!INCLUDE[ssNo
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
+

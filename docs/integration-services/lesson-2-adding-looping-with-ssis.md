@@ -1,25 +1,30 @@
 ---
-title: "Lesson 2: Adding Looping with SSIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lektion 2: Hinzufügen von Schleifen mit SSIS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Lesson 2: Adding Looping with SSIS
-In [Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) haben Sie ein Paket erstellt, mit dem Daten aus einer einzelnen Flatfilequelle zunächst extrahiert, anschließend mithilfe der Suchtransformationen transformiert und schließlich in die Faktentabelle **FactCurrency** der **AdventureWorksDW2012**-Beispieldatenbank geladen wurden.  
+# <a name="lesson-2-adding-looping-with-ssis"></a>Lesson 2: Adding Looping with SSIS
+In [Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)haben Sie ein Paket erstellt, mit dem Daten aus einer einzelnen Flatfilequelle zunächst extrahiert, anschließend mithilfe der Suchtransformationen transformiert und schließlich in die Faktentabelle **FactCurrency** der **AdventureWorksDW2012** -Beispieldatenbank geladen wurden.  
   
 Das Verwenden einer einzelnen flachen Datei ist allerdings bei einem ETL-Vorgang (Extract, Transform and Load, Extrahieren, Transformieren und Laden) selten. Von einem typischen ETL-Vorgang würden Daten aus mehreren flachen Dateiquellen extrahiert. Das Extrahieren von Daten aus mehreren Quellen erfordert eine iterative (wiederholende) Ablaufsteuerung. Mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist es auf einfache Weise möglich, Iterationen oder Schleifen zu Paketen hinzuzufügen.  
   
@@ -50,22 +55,23 @@ In dieser Lektion ändern Sie nur die Ablaufsteuerung, nicht den Datenfluss.
 > [!IMPORTANT]  
 > Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**finden Sie unter [Reporting Services Produktbeispiel-Projekt auf CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
-## Lektionsaufgaben  
+## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  
   
--   [Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/step-1-copying-the-lesson-1-package.md)  
+-   [Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers](../integration-services/step-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](../integration-services/step-3-modifying-the-flat-file-connection-manager.md)  
+-   [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Schritt 4: Testen des Lektion 2-Tutorialpakets](../integration-services/step-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Schritt 4: Testen des Lektion 2-Tutorialpakets](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## Lektion beginnen  
-[Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/step-1-copying-the-lesson-1-package.md)  
+## <a name="start-the-lesson"></a>Lektion beginnen  
+[Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [For-Schleifencontainer](../integration-services/control-flow/for-loop-container.md)  
   
   
   
+

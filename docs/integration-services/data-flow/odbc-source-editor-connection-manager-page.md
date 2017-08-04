@@ -1,44 +1,49 @@
 ---
-title: "Quellen-Editor f&#252;r ODBC (Seite Verbindungs-Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.connection.f1"
+title: "Quellen-Editor für ODBC (Seite Verbindungs-Manager) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93923df833452025772dd0dbf1df2e17a1582fed
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Quellen-Editor f&#252;r ODBC (Seite Verbindungs-Manager)
+# <a name="odbc-source-editor-connection-manager-page"></a>Quellen-Editor für ODBC (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für ODBC** können Sie den ODBC-Verbindungs-Manager für die Quelle auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
   
  Weitere Informationen zur ODBC-Quelle finden Sie unter [ODBC Source](../../integration-services/data-flow/odbc-source.md).  
   
-## Aufgabenliste  
+## <a name="task-list"></a>Aufgabenliste  
  **So öffnen Sie die Seite "Verbindungs-Manager" des Quellen-Editors für ODBC**  
   
 -   Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Paket, das die ODBC-Quelle enthält.  
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
   
-### Verbindungs-Manager  
+### <a name="connection-manager"></a>Verbindungs-Manager  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
   
-### Neu  
+### <a name="new"></a>Neu  
  Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen ODBC-Verbindungs-Manager erstellen können, wird geöffnet.  
   
-### Datenzugriffsmodus  
+### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
 |Option|Description|  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
 ||Klicken Sie auf **Durchsuchen** , um die SQL-Abfrage aus einer Textdatei zu laden.|  
 ||Klicken Sie auf **Abfrage analysieren** , um die Syntax des Abfragetextes zu überprüfen.|  
   
-### Vorschau  
+### <a name="preview"></a>Vorschau  
  Klicken Sie auf **Vorschau** , um die ersten 200 Zeilen (max.) der Daten anzuzeigen, die aus der ausgewählten Tabelle bzw. Sicht extrahiert wurden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte Eigenschaften der ODBC-Quelle](../../integration-services/data-flow/odbc-source-custom-properties.md)   
- [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+ [Quellen-Editor für ODBC &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [Quellen-Editor für ODBC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

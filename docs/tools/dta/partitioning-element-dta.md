@@ -1,29 +1,34 @@
 ---
-title: "Partitioning-Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Partitioning-Element"
+title: Partitioning-Element (DTA) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1937f32556c442460ee0ed051ae5aed7b14b13b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Partitioning-Element (DTA)
+# <a name="partitioning-element-dta"></a>Partitioning-Element (DTA)
   Enthält das Partitionierungsschema, das der Datenbankoptimierungsratgeber bei der Analyse verwenden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 13
       <Partitioning>...</Partitioning>  
 ```  
   
-## Elementmerkmale  
+## <a name="element-characteristics"></a>Elementmerkmale  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
@@ -42,17 +47,17 @@ caps.handback.revision: 13
 |**Standardwert**|**NONE**|  
 |**Vorkommen**|Einmalig erforderlich für das **TuningOptions** -Element, es sei denn, das **DropOnlyMode** -Element wird verwendet. Wird das **DropOnlyMode** -Element verwendet, kann das **Partitioning**-Element nicht verwendet werden. Diese Elemente schließen sich gegenseitig aus.|  
   
-## Elementbeziehungen  
+## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Übergeordnetes Element**|[TuningOptions-Element &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine einfache XML-Eingabedatei &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

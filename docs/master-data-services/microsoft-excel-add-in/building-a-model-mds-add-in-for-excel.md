@@ -1,22 +1,27 @@
 ---
-title: "Erstellen eines Modells (MDS-Add-In f&#252;r Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen eines Modells (MDS-Add-in für Excel) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Modells (MDS-Add-In f&#252;r Excel)
+# <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren eine Teilmenge der Administratorfunktionen ausführen, die in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung verfügbar sind.  
   
  Administratoren können in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] die folgenden Modellerstellungstasks ausführen:  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
   
  Als Administrator müssen Sie das Modell mit der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder dem Webdienst erstellen. Sie können Entitäten und Attribute innerhalb des Modells dann mithilfe von [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] erstellen. Weitere Informationen zu Modellobjekten finden Sie unter [Modelle &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Die meisten Administratortasks müssen weiterhin in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder mithilfe des Webdiensts ausgeführt werden. In der folgenden Tabelle ist aufgeführt, welche Tools Administratoren verwenden können, um Tasks unter MDS auszuführen.  
   
 |Taskbeschreibung|Tool|Thema|  
@@ -43,15 +48,15 @@ caps.handback.revision: 5
 |Erstellen von Versionen von Daten|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Sperren einer Version &#40;Master Data Services&#41;](../../master-data-services/lock-a-version-master-data-services.md)|  
 |Bereitstellen von Modellen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, Webdienst oder MDSModelDeploy-Tool|[Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Modelle &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)  
   
 -   [Entitäten &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)  
   
--   [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)  
+-   [Attribute &#40; Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänenbasierte Attribute &#40; Master Data Services &#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Attributgruppen &#40;Master Data Services&#41;](../../master-data-services/attribute-groups-master-data-services.md)  
   

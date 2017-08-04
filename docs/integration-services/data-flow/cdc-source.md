@@ -1,24 +1,29 @@
 ---
-title: "CDC-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.f1"
+title: CDC-Quelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC-Quelle
+# <a name="cdc-source"></a>CDC-Quelle
   Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
   
  Der Bereich mit Änderungsdaten, der von CDC-Quelle gelesen wird, wird als CDC-Verarbeitungsbereich bezeichnet und mithilfe des CDC-Steuerungstasks bestimmt, der vor Beginn des aktuellen Datenflusses ausgeführt wird. Der CDC-Verarbeitungsbereich wird aus dem Wert einer Paketvariablen abgeleitet, die den Status der CDC-Verarbeitung für eine Gruppe von Tabellen verwaltet.  
@@ -37,11 +42,11 @@ caps.handback.revision: 11
   
 -   Name der CDC-Statuspaketvariablen, auf deren Grundlage der CDC-Verarbeitungsbereich bestimmt wird. Die CDC-Quelle ändert diese Variable nicht.  
   
- Die von der CDC-Quelle zurückgegebenen Daten entsprechen den Daten, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-CDC-Funktionen **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** oder **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** zurückgegeben werden (falls verfügbar). Die einzige optionale Hinzufügung ist die Spalte **__$initial_processing**, in der angegeben wird, ob sich der aktuelle Verarbeitungsbereich mit einem erstmaligen Ladevorgang der Tabelle überschneiden kann. Weitere Informationen zur erstmaligen Verarbeitung finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Von der CDC-Quelle zurückgegebenen Daten entspricht der zurückgegebene der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC-Funktionen **CDC. fn_cdc_get_all_changes_\<Capture-Instance-Name >** oder **fn_cdc_get_net_changes_\<Capture-Instance-Name >** (sofern vorhanden). Die einzige optionale Hinzufügung ist die Spalte **__$initial_processing** , in der angegeben wird, ob sich der aktuelle Verarbeitungsbereich mit einem erstmaligen Ladevorgang der Tabelle überschneiden kann. Weitere Informationen zur erstmaligen Verarbeitung finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  Die CDC-Quelle weist eine reguläre Ausgabe und eine Fehlerausgabe auf.  
   
-## Fehlerbehandlung  
+## <a name="error-handling"></a>Fehlerbehandlung  
  Die CDC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
 -   **Fehlercode**: Der Wert beträgt immer -1.  
@@ -52,13 +57,13 @@ caps.handback.revision: 11
   
  Je nach Einstellung des Fehlerverhaltens unterstützt die CDC-Quelle das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
   
-## Datentypunterstützung  
+## <a name="data-type-support"></a>Datentypunterstützung  
  Die CDC-Quellkomponente für Microsoft unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen, die den richtigen SSIS-Datentypen zugeordnet sind.  
   
-## Problembehandlung der CDC-Quelle  
+## <a name="troubleshooting-the-cdc-source"></a>Problembehandlung der CDC-Quelle  
  Unten sind Informationen zum Durchführen einer Problembehandlung für die CDC-Quelle aufgeführt.  
   
-### Verwenden dieses Skripts zum Isolieren von Problemen und zum Reproduzieren in SQL Server Management Studio  
+### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Verwenden dieses Skripts zum Isolieren von Problemen und zum Reproduzieren in SQL Server Management Studio  
  Der CDC-Quellvorgang wird vom Vorgang des CDC-Steuerungstasks gesteuert, der vor dem Aufrufen der CDC-Quelle ausgeführt wurde. Der CDC-Steuerungstask bereitet den Wert der CDC-Statuspaketvariablen vor, damit die Start- und End-LSN darin enthalten sein kann. Es wird eine Funktion ausgeführt, die dem folgenden Skript entspricht:  
   
 ```  
@@ -74,31 +79,31 @@ use <cdc-enabled-database-name>
   
  Dabei gilt:  
   
--   \<cdc-enabled-database-name> ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, in der die Änderungstabellen enthalten sind.  
+-   \<CDC-aktiviert – Database-Name > ist der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank, die die Änderungstabellen enthält.  
   
--   \<value-from-state-cs> ist der Wert, der in der CDC-Statusvariablen als CS/\<value-from-state-cs>/ (CS steht für Current-processing-range-Start) angegeben wird.  
+-   \<Wert von State-CE > ist der Wert, der in der CDC-Statusvariablen als CS /\<Wert von State-CE > / (CS steht für den aktuellen-Verarbeitung-Range-Start).  
   
--   \<value-from-state-ce> ist der Wert, der in der CDC-Statusvariablen als CE/\<value-from-state-ce>/ (CE steht für Current-processing-range-End) angegeben wird.  
+-   \<Wert von State-ce > ist der Wert, der in der CDC-Statusvariablen als CE /\<Wert von State-CE > / (CE steht für den aktuellen-Verarbeitung-Range-End).  
   
--   \<mode> steht für die CDC-Verarbeitungsmodi. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   \<Modus > die CDC-Verarbeitungsmodi werden. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Dieses Skript trägt zur Isolierung von Problemen bei, indem sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]reproduziert werden, wo sie leicht reproduziert und identifiziert werden können.  
   
-#### SQL Server-Fehlermeldung  
+#### <a name="sql-server-error-message"></a>SQL Server-Fehlermeldung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt möglicherweise die folgende Meldung zurück:  
   
- **Für die Prozedur oder Funktion cdc.fn_cdc_get_net_changes_ wurden zu wenig Argumente bereitgestellt.**  
+ **Eine unzureichende Anzahl von Argumenten bereitgestellt wurden, für die Prozedur oder Funktion CDC. fn_cdc_get_net_changes_\<... >.**  
   
  Dieser Fehler gibt nicht an, dass ein Argument fehlt. Die Bedeutung ist, dass die Start- bzw. End-LSN-Werte in der CDC-Statusvariablen ungültig sind.  
   
-## Konfigurieren der CDC-Quelle  
+## <a name="configuring-the-cdc-source"></a>Konfigurieren der CDC-Quelle  
  Sie können die CDC-Quelle programmgesteuert oder mit dem SSIS-Designer konfigurieren.  
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
 -   [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Quellen-Editor für CDC &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -110,19 +115,19 @@ use <cdc-enabled-database-name>
   
  Weitere Informationen zu den Eigenschaften, die Sie im Dialogfeld **Erweiterter Editor** festlegen können, finden Sie unter [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Quellen-Editor für CDC &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
--   [Benutzerdefinierte Eigenschaften der CDC-Quelle](../../integration-services/data-flow/cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
 -   [Extrahieren von Änderungsdaten mithilfe der CDC-Quelle](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Blogeintrag, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), auf mattmasson.com.  
   

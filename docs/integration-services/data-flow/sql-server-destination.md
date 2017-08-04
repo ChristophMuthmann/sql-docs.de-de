@@ -1,43 +1,48 @@
 ---
-title: "SQL Server-Ziel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdest.f1"
-helpviewer_keywords: 
-  - "SQL Server-Ziel"
-  - "Laden von Daten"
-  - "Ziele [Integration Services], SQL Server"
-  - "Einfügen von Daten"
-  - "Massenladen [Integration Services]"
+title: SQL Server-Ziels | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdest.f1
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server-Ziel
+# <a name="sql-server-destination"></a>SQL Server-Ziel
   Das SQL Server-Ziel stellt eine Verbindung mit einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank her und kopiert Daten per Massenladen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen und -Sichten. Sie können das SQL Server-Ziel nicht in Paketen verwenden, die auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf einem Remoteserver zugreifen. Die Pakete sollten stattdessen ein OLE DB-Ziel verwenden. Weitere Informationen finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## Berechtigungen  
+## <a name="permissions"></a>Berechtigungen  
  Benutzer, die Pakete ausführen, die das SQL Server-Ziel einschließen, müssen über die Berechtigung "Erstellen globaler Objekte" verfügen. Sie können diese Berechtigung Benutzern erteilen, indem Sie das Tool Lokale Sicherheitsrichtlinie im Menü **Verwaltung** verwenden. Wenn Sie beim Ausführen eines Pakets, das das SQL Server-Ziel verwendet, eine Fehlermeldung erhalten, sollten Sie sicherstellen, dass das Konto, mit dem das Paket ausgeführt wird, über die Berechtigung "Erstellen globaler Objekte" verfügt.  
   
-## Masseneinfügungen  
+## <a name="bulk-inserts"></a>Masseneinfügungen  
  Wenn Sie versuchen, das SQL Server-Ziel zum Massenladen von Daten in eine Remote-Datenbank von SQL Server zu verwenden, wird eine Fehlermeldung der folgenden Form angezeigt: "Ein OLE DB-Datensatz ist verfügbar." Quelle: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Beschreibung: "Massenladen war nicht möglich, weil das SSIS-Dateizuordnungsobjekt 'Global\DTSQLIMPORT' nicht geöffnet werden konnte. Betriebssystemfehlercode 2 (Die angegebene Datei wurde nicht gefunden.). Stellen Sie sicher, dass Sie auf einen lokalen Server mit der Windows-Sicherheit zugreifen.""  
   
- Das SQL Server-Ziel bietet das gleiche Hochgeschwindigkeitseinfügen von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie der Masseneinfügungstask. Mit dem SQL Server-Ziel kann jedoch ein Paket Transformationen auf Spaltendaten anwenden, bevor die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden.  
+ Das SQL Server-Ziel bietet das gleiche Hochgeschwindigkeitseinfügen von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie der Masseneinfügungstask. Mit dem SQL Server-Ziel kann jedoch ein Paket Transformationen auf Spaltendaten anwenden, bevor die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen werden.  
   
  Zum Laden von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie das Verwenden des SQL Server-Ziels anstelle des OLE DB-Ziels in Erwägung ziehen.  
   
-### Masseneinfügungsoptionen  
+### <a name="bulk-insert-options"></a>Masseneinfügungsoptionen  
  Falls das SQL Server-Ziel einen Datenzugriffsmodus für schnelles Laden verwendet, können Sie die folgenden Optionen für schnelles Laden angeben:  
   
 -   Identitätswerte aus der importierten Datendatei beibehalten oder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugewiesene eindeutige Werte verwenden.  
@@ -60,7 +65,7 @@ caps.handback.revision: 65
   
  Weitere Informationen zu Massenladeoptionen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### Leistungsverbesserungen  
+#### <a name="performance-improvements"></a>Leistungsverbesserungen  
  Sie sollten die Standardoptionen wie folgt ändern, um die Leistung einer Masseneinfügung und des Zugriffs auf Tabellendaten während des Masseneinfügungsvorgangs zu verbessern:  
   
 -   Überprüfen Sie während des Massenimportvorgangs keine Einschränkungen der Zieltabelle oder -sicht.  
@@ -69,7 +74,7 @@ caps.handback.revision: 65
   
 -   Wenden Sie keine Sperre auf die Tabelle an. Auf diese Weise ist die Tabelle während des Masseneinfügungsvorgangs weiterhin für andere Benutzer und Anwendungen verfügbar.  
   
-## Konfiguration des SQL Server-Ziels  
+## <a name="configuration-of-the-sql-server-destination"></a>Konfiguration des SQL Server-Ziels  
  Es gibt folgende Möglichkeiten, um das SQL Server-Ziel zu konfigurieren:  
   
 -   Geben Sie die Tabelle oder Sicht an, in die die Daten massengeladen werden sollen.  
@@ -98,7 +103,7 @@ caps.handback.revision: 65
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften des SQL Server-Ziels](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -108,13 +113,13 @@ caps.handback.revision: 65
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 -   [Massenladen von Daten mithilfe des SQL Server-Ziels](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Technischer Artikel [Möglicherweise wird bei UAC-fähigen Systemen der Fehler "Die SSIS-Masseneinfügung kann zum Einfügen von Daten nicht vorbereitet werden" angezeigt](http://go.microsoft.com/fwlink/?LinkId=199482)auf support.microsoft.com.  
   
@@ -122,7 +127,7 @@ caps.handback.revision: 65
   
 -   Technischer Artikel, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), auf simple-talk.com (in englischer Sprache).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   

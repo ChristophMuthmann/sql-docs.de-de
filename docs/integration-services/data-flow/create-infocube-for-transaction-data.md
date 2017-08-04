@@ -1,22 +1,27 @@
 ---
-title: "InfoCube f&#252;r Transaktionsdaten erstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "InfoCube für Transaktionsdaten erstellen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# InfoCube f&#252;r Transaktionsdaten erstellen
+# <a name="create-infocube-for-transaction-data"></a>InfoCube für Transaktionsdaten erstellen
   Verwenden Sie das Dialogfeld **InfoCube für Transaktionsdaten erstellen** , um einen neuen InfoCube für Transaktionsdaten im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoCube für Transaktionsdaten erstellen** im **Ziel-Editor für SAP BW** auf der Seite **Verbindungs-Manager**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoCube**aus, und klicken Sie dann auf **Erstellen**.  
   
-## Allgemeine Optionen  
+## <a name="general-options"></a>Allgemeine Optionen  
  **InfoCube-Name**  
  Geben Sie einen Namen für den neuen InfoCube ein.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie den neuen InfoCube.  
   
-## Optionen für die InfoCube-Übergangsstruktur  
+## <a name="infocube-transfer-structure-options"></a>Optionen für die InfoCube-Übergangsstruktur  
  Im Abschnitt für die InfoCube-Übergangsstruktur können Sie InfoObjects Datenflussspalten zuordnen.  
   
  **PipelineElement**  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - Entfernen**  
  Heben Sie die Zuordnung zwischen dem InfoObject und der Datenflussspalte für die aktuelle Zeile auf. Um die Zuordnung aufzuheben, klicken Sie auf **Entfernen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

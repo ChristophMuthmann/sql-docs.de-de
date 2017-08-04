@@ -1,26 +1,31 @@
 ---
-title: "Quellen-Editor f&#252;r Flatfiles (Seite Spalten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.columns.f1"
-helpviewer_keywords: 
-  - "Quellen-Editor für Flatfiles"
+title: "Quellen-Editor (Spaltenseite) für Flatfiles | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a34e304d72b80412f5527dcb75f00b6dcb2fcbb2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Quellen-Editor f&#252;r Flatfiles (Seite Spalten)
+# <a name="flat-file-source-editor-columns-page"></a>Quellen-Editor für Flatfiles (Seite Spalten)
   Mithilfe des Knotens **Spalten** des Dialogfelds **Quellen-Editor für Flatfiles** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  Weitere Informationen zur Flatfilequelle finden Sie unter [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 28
  **Ausgabespalte**  
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für Flatfiles &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [Quellen-Editor für Flatfiles &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
- [Verbindungs-Manager für Flatfiles](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für Flatfiles &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für Flatfiles &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

@@ -1,57 +1,62 @@
 ---
-title: "RIGHT (SSIS-Ausdruck) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT-Funktion"
+title: RIGHT (SSIS-Ausdruck) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (SSIS-Ausdruck)
+# <a name="right-ssis-expression"></a>RIGHT (SSIS-Ausdruck)
   Gibt die angegebene Anzahl von Zeichen ab der äußersten rechten Position des angegebenen Zeichenausdrucks zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *character_expression*  
  Ein Zeichenausdruck, von dem Zeichen extrahiert werden sollen.  
   
  *integer_expression*  
  Ein ganzzahliger Ausdruck, der die Anzahl der zurückzugebenden Zeichen angibt.  
   
-## Ergebnistypen  
+## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## Hinweise  
- Wenn *integer_expression* größer ist als die Länge von *character_expression*, gibt die Funktion *character_expression* zurück.  
+## <a name="remarks"></a>Hinweise  
+ Wenn *integer_expression* größer ist als die Länge von *character_expression*, gibt die Funktion *character_expression*zurück.  
   
  Falls *integer_expression* null ist, gibt die Funktion eine leere Zeichenfolge zurück.  
   
  Falls *integer_expression* eine negative Zahl ist, gibt die Funktion einen Fehler zurück.  
   
- Für das *integer_expression*-Argument sind Variablen und Spalten möglich.  
+ Für das *integer_expression* -Argument sind Variablen und Spalten möglich.  
   
- RIGHT kann nur mit dem DT_WSTR-Datentyp verwendet werden. Ein *character_expression*-Argument, das ein Zeichenfolgenliteral oder eine Datenspalte mit dem DT_STR-Datentyp ist, wird implizit in den DT_WSTR-Datentyp umgewandelt, bevor RIGHT ausgeführt wird. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ RIGHT kann nur mit dem DT_WSTR-Datentyp verwendet werden. Ein *character_expression* -Argument, das ein Zeichenfolgenliteral oder eine Datenspalte mit dem DT_STR-Datentyp ist, wird implizit in den DT_WSTR-Datentyp umgewandelt, bevor RIGHT ausgeführt wird. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  RIGHT gibt ein NULL-Ergebnis zurück, wenn eines der Argumente NULL ist.  
   
-## Beispiele für Ausdrücke  
+## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  Im folgenden Beispiel wird ein Zeichenfolgenliteral verwendet. Als Ergebnis wird `"Bike"`zurückgegeben.  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## Siehe auch  
- [LEFT &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Links &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "L&#246;schen von Hierarchieelementberechtigungen (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Löschen von Elementberechtigungen [Master Data Services]"
-  - "Elemente [Master Data Services], Löschen von Berechtigungen"
-  - "Berechtigungen [Master Data Services], Löschen von Elementberechtigungen"
+title: "Löschen von Hierarchieelementberechtigungen (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting member permissions [Master Data Services]
+- members [Master Data Services], deleting permissions
+- permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c06cb0309491e9663e4b130b9a641bbbc3a07be
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# L&#246;schen von Hierarchieelementberechtigungen (Master Data Services)
+# <a name="delete-hierarchy-member-permissions-master-data-services"></a>Löschen von Hierarchieelementberechtigungen (Master Data Services)
   Löschen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Modellobjektberechtigungen, um erfolgte Zuweisungen zu entfernen.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### So löschen Sie Hierarchieelementberechtigungen  
+### <a name="to-delete-hierarchy-member-permissions"></a>So löschen Sie Hierarchieelementberechtigungen  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Benutzer- und Gruppenberechtigungen**.  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 6
   
 10. Klicken Sie auf **Speichern**.  
   
-## Siehe auch  
- [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Berechtigungen für Hierarchieelemente &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Zuweisen von Berechtigungen für Hierarchieelemente &#40; Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

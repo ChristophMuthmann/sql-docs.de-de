@@ -1,24 +1,29 @@
 ---
-title: "SAP BW-Verbindungs-Manager-Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
+title: SAP BW-Verbindungs-Manager-Editor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f07a79e630550d7d0599026a91ee53f5b05d05
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW-Verbindungs-Manager-Editor
+# <a name="sap-bw-connection-manager-editor"></a>SAP BW-Verbindungs-Manager-Editor
   Verwenden Sie den **SAP BW-Verbindungs-Manager-Editor** , um die Eigenschaften festzulegen, mit denen eine Verbindung mit einem SAP NetWeaver BW-System, Version 7, hergestellt werden soll.  
   
  Der SAP BW-Verbindungs-Manager stellt Verbindungen mit einem SAP NetWeaver BW-System (Version 7) her, die von einer SAP BW-Quelle oder einem SAP BW-Ziel verwendet werden. Weitere Informationen zum SAP BW-Verbindungs-Manager von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW finden Sie unter [SAP BW-Verbindungs-Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
@@ -36,9 +41,9 @@ caps.handback.revision: 10
   
          – oder –  
   
-    -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten** aus.  
+    -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Verbindungs-Managers erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -58,7 +63,7 @@ caps.handback.revision: 10
  **Einzelnen Anwendungsserver verwenden**  
  Stellen Sie eine Verbindung mit einem einzelnen Anwendungsserver her.  
   
- Um eine Verbindung mit einer Gruppe von Servern mit Lastenausgleich herzustellen, verwenden Sie stattdessen die Option **Lastenausgleich verwenden**.  
+ Um eine Verbindung mit einer Gruppe von Servern mit Lastenausgleich herzustellen, verwenden Sie stattdessen die Option **Lastenausgleich verwenden** .  
   
  **Host**  
  Wenn Sie eine Verbindung mit einem einzelnen Anwendungsserver herstellen, geben Sie den Hostnamen an.  
@@ -113,7 +118,7 @@ caps.handback.revision: 10
  **Verbindung testen**  
  Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen**geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

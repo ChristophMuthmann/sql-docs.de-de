@@ -1,26 +1,31 @@
 ---
-title: "Quellen-Editor f&#252;r Flatfiles (Seite Verbindungs-Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
-helpviewer_keywords: 
-  - "Quellen-Editor für Flatfiles"
+title: "Quellen-Editor (Seite Verbindungs-Manager) für Flatfiles | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1eabce2627126b883d0d246c0306a6efdfaa3b8
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Quellen-Editor f&#252;r Flatfiles (Seite Verbindungs-Manager)
+# <a name="flat-file-source-editor-connection-manager-page"></a>Quellen-Editor für Flatfiles (Seite Verbindungs-Manager)
   Wählen Sie auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für Flatfiles** den Verbindungs-Manager aus, den die Flatfilequelle verwenden soll. Die Flatfilequelle liest die Daten aus einer Textdatei, die in den Formaten mit Trennzeichen, fester Breite oder mit gemischten Inhalten vorliegen kann.  
   
  Eine Flatfilequelle kann einen der folgenden Typen von Verbindungs-Manager verwenden:  
@@ -31,9 +36,9 @@ caps.handback.revision: 29
   
  Weitere Informationen zur Flatfilequelle finden Sie unter [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## enthalten  
- **Verbindungs-Manager für Flatfiles**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie einen neuen Verbindungs-Manager, indem Sie auf **Neu** klicken.  
+## <a name="options"></a>enthalten  
+ **Flat file connection manager**  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie einen neuen Verbindungs-Manager, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Flatfiles** einen neuen Verbindungs-Manager.  
@@ -42,12 +47,12 @@ caps.handback.revision: 29
  Geben Sie an, ob NULL-Werte erhalten werden, wenn Daten extrahiert werden. Der Standardwert dieser Eigenschaft ist **false**. Wenn dieser Wert f**alse**ist, ersetzt die Flatfilequelle die NULL-Werte aus den Quelldaten mit entsprechenden Standardwerten für jede Spalte, z. B. mit leeren Zeichenfolgen in Zeichenfolgenspalten und Nullen in numerischen Spalten.  
   
  **Vorschau**  
- Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
+ Zeigen Sie mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für Flatfiles &#40;Seite Spalten&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
- [Quellen-Editor für Flatfiles &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
- [Verbindungs-Manager für Flatfiles](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für Flatfiles &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [Quellen-Editor für Flatfiles &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

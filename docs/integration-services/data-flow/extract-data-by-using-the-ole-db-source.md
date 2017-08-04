@@ -1,29 +1,34 @@
 ---
-title: "Extrahieren von Daten mithilfe der OLE DB-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Extrahieren von Daten [Integration Services]"
-  - "Quellen [Integration Services], OLE DB"
-  - "OLE DB-Quelle [Integration Services]"
+title: Extrahieren von Daten mithilfe der OLE DB-Quelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Extrahieren von Daten mithilfe der OLE DB-Quelle
+# <a name="extract-data-by-using-the-ole-db-source"></a>Extrahieren von Daten mithilfe der OLE DB-Quelle
   Um eine OLE DB-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
   
-### So extrahieren Sie Daten mithilfe einer OLE DB-Quelle  
+### <a name="to-extract-data-using-an-ole-db-source"></a>So extrahieren Sie Daten mithilfe einer OLE DB-Quelle  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 8.  Aktualisieren Sie optional die Namen von Ausgabespalten, indem Sie Werte in der Liste **Ausgabespalte** bearbeiten.  
   
-9. Klicken Sie auf **Fehlerausgabe**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Klicken Sie auf **Fehlerausgabe**, um die Fehlerausgabe zu konfigurieren. Weitere Informationen finden Sie unter [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Sie können auf **Vorschau** klicken, um bis zu 200 Zeilen der von der OLE DB-Quelle extrahierten Daten anzuzeigen.  
   
@@ -63,10 +68,10 @@ caps.handback.revision: 23
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)   
- [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
+ [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   

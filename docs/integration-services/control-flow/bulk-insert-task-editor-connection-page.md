@@ -1,33 +1,38 @@
 ---
-title: "Masseneinf&#252;gungstask-Editor (Seite Verbindung) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.connection.f1"
-helpviewer_keywords: 
-  - "Masseneinfügungstask-Editor"
+title: Massenimport von Insert Task-Editor (Verbindungsseite) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.connection.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c837ff29b8f5158620629811352c398a39d30c2c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Masseneinf&#252;gungstask-Editor (Seite Verbindung)
+# <a name="bulk-insert-task-editor-connection-page"></a>Masseneinfügungstask-Editor (Seite Verbindung)
   Mithilfe der Seite **Verbindung** im Dialogfeld **Masseneinfügungstask-Editor** können Sie die Quelle und das Ziel des Masseneinfügevorgangs und das zu verwendende Format angeben.  
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## enthalten  
+## <a name="options"></a>Optionen  
  **Verbindung**  
- Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > Erstellen Sie eine neue Verbindung.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 30
 |**Specify**|Geben Sie das Format an. Nach Auswahl dieser Option werden die dynamischen Optionen **RowDelimiter** und **ColumnDelimiter**angezeigt.|  
   
  **File**  
- Wählen Sie einen Datei- oder Flatfileverbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen Datei oder Flatfile-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > Erstellen Sie eine neue Verbindung.  
   
  Der Speicherort ist relativ zum SQL Server-Datenbankmodul, das im Verbindungs-Manager für diesen Task angegeben wurde. Das SQL Server-Datenbankmodul muss auf die Textdatei zugreifen können, und zwar entweder auf einer lokalen Festplatte des Servers oder über eine Freigabe oder einem SQL Server zugeordneten Laufwerk. Auf die Datei wird nicht von der SSIS-Laufzeit zugegriffen.  
   
@@ -54,23 +59,23 @@ caps.handback.revision: 30
  **Tabellen aktualisieren**  
  Aktualisieren Sie die Liste der Tabellen und Sichten.  
   
-## Format (dynamische Optionen)  
+## <a name="format-dynamic-options"></a>Format (dynamische Optionen)  
   
-### Format = Use File  
+### <a name="format--use-file"></a>Format = Use File  
  **FormatFile**  
- Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**…**), um nach der Formatdatei zu suchen.  
+ Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **…** ), um nach der Formatdatei zu suchen.  
   
-### Format = Specify  
+### <a name="format--specify"></a>Format = Specify  
  **RowDelimiter**  
  Geben Sie das Zeilentrennzeichen in der Quelldatei an. Der Standardwert ist **{CR}{LF}**.  
   
  **ColumnDelimiter**  
  Geben Sie das Spaltentrennzeichen in der Quelldatei an. Der Standardwert ist **Tabstopp**.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Masseneinfügungstask-Editor &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
- [Masseneinfügungstask-Editor &#40;Seite „Optionen“&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Bulk Insert Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [Bulk Insert Task-Editor &#40; Seite "Optionen" &#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  

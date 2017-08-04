@@ -1,26 +1,31 @@
 ---
-title: "Erstellen und Verwenden einer Beziehung f&#252;r die Entit&#228;tensynchronisierung (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen und Ausführen eine Entitäten-Synchronisierungspartnerschaft (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen und Verwenden einer Beziehung f&#252;r die Entit&#228;tensynchronisierung (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services)
   Entitäten-Synchronisierung ist eine unidirektionale und wiederholbare Synchronisierung zwischen Entitätsversionen. Sie bietet eine Möglichkeit, Entitätsdaten zwischen verschiedenen Modellen freizugeben.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Komponenten zum Erstellen einer Entitäten-Synchronisierungspartnerschaft:  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -59,7 +64,7 @@ caps.handback.revision: 6
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
-2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten**, und klicken Sie auf **Entitätensynchronisierung**.  
+2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Entitätensynchronisierung**.  
   
 3.  Klicken Sie auf der Seite **Entitätssynchronisierungsverwaltung** auf **Hinzufügen**. Auf der rechten Seite wird ein Bereich angezeigt.  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 6
   
 8.  Wählen Sie aus dem Ziel **Version** eine Version aus.  
   
-9. Wählen Sie **vorhandene Entität**, und wählen Sie anschließend eine Entität von der Entitätsliste, falls Sie eine bereits vorhandene Entität synchronisieren möchten. Wählen Sie **Neue Entität** aus, und geben Sie den Namen der Zielentität ein, falls Sie eine neue Entität erstellen möchten  
+9. Wählen Sie **vorhandene Entität** , und wählen Sie anschließend eine Entität von der Entitätsliste, falls Sie eine bereits vorhandene Entität synchronisieren möchten. Wählen Sie **Neue Entität** aus, und geben Sie den Namen der Zielentität ein, falls Sie eine neue Entität erstellen möchten  
   
-10. Wählen Sie **Synchronisierung bei Bedarf** oder **Automatische Synchronisierung** aus, und legen Sie die Häufigkeit fest.  
+10. Wählen Sie **Synchronisierung bei Bedarf**oder **Automatische Synchronisierung** aus, und legen Sie die Häufigkeit fest.  
   
 11. Klicken Sie auf **Speichern**.  
   
@@ -83,18 +88,18 @@ caps.handback.revision: 6
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
-2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten**, und klicken Sie auf **Entitätensynchronisierung**.  
+2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Entitätensynchronisierung**.  
   
 3.  Wählen Sie auf der Seite **Entity Sync Maintenance** (Entitätssynchronisierungsverwaltung) eine Synchronisierungspartnerschaft im Raster aus.  
   
 4.  Klicken Sie auf **Ausführen**.  
   
-## Informationen zur Synchronisierungsbeziehung  
+## <a name="sync-relationship-information"></a>Informationen zur Synchronisierungsbeziehung  
  Für jede erstellte Synchronisierungsbeziehung wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
 |Column|Description|  
 |------------|-----------------|  
-|Status|Der Status der Synchronisierungsbeziehung.<br /><br /> Wenn Sie auf **Speichern** klicken oder eine Synchronisierungspartnerschaft ausführen, wird das Bild ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, und gibt an, dass die Synchronisierungspartnerschaft aktualisiert wird.<br /><br /> Treten Fehler beim Erstellen, Bearbeiten oder Ausführen einer Synchronisierungspartnerschaft auf, wird das Bild ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls lautet der Status „OK“, und das Bild ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
+|Status|Der Status der Synchronisierungsbeziehung.<br /><br /> Beim Klicken auf **speichern** oder eine Synchronisierungspartnerschaft Ausführen der ![Symbol für Status aktualisieren](../master-data-services/media/mds-statusicon-updating.png "Symbol für Status aktualisieren") angezeigt, das angibt, dass die Synchronisierungspartnerschaft aktualisiert wird.<br /><br /> Treten Fehler beim Erstellen, bearbeiten oder Ausführen einer Synchronisierungspartnerschaft der ![Symbol nach dem Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol nach dem Fehlerstatus") Bild angezeigt.<br /><br /> Andernfalls ist der Status OK und die ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") Bild angezeigt.|  
 |Quellmodell|Der Name des Quellmodells.|  
 |Quellversion|Der Name der Quellversion.|  
 |Quellentität|Der Name der Quellentität.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **Am**: Datum und Uhrzeit, wann die Synchronisierung zuletzt aktualisiert wurde.  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
  [Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

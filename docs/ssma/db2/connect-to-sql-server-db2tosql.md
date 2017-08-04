@@ -1,0 +1,64 @@
+---
+title: Herstellen einer Verbindung mit SQLServer (DB2ToSQL) | Microsoft Docs
+ms.prod: sql-non-specified
+ms.custom: 
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- Azure SQL Database
+- SQL Server
+ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
+caps.latest.revision: 3
+author: sabotta
+ms.author: carlasab
+manager: lonnyb
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 72f43d444830cddbf13fb5dda056d9a985c0c9f2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="connect-to-sql-server-db2tosql"></a>Herstellen einer Verbindung mit SQLServer (DB2ToSQL)
+Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , die Sie zum migrieren möchten. Für den Zugriff auf die **Herstellen einer Verbindung mit SQL Server** Dialogfeld auf die **Datei** Menü klicken Sie auf **Herstellen einer Verbindung mit SQL Server**.  
+  
+## <a name="options"></a>enthalten  
+**Servername**  
+Geben Sie an, oder wählen Sie die Instanz von SQL Server für die Verbindung. Standardmäßig ist die Instanz, der Sie zuletzt verbunden angezeigt.  
+  
+-   Wenn Sie eine Verbindung mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie entweder **"localhost"** oder einen Punkt (**.**).  
+  
+-   Wenn Sie eine Verbindung mit der Standardinstanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers aus.  
+  
+-   Wenn Sie eine Verbindung mit einer benannten Instanz auf einem anderen Computer herstellen, geben Sie den Computernamen, einen umgekehrten Schrägstrich und den Instanznamen, z. B. *"EigenerServer"*\\*MyInstance*.  
+  
+**Serverport**  
+Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ist nicht zum Akzeptieren von Verbindungen auf dem standardmäßigen Standardport (1433), geben Sie die Portnummer konfiguriert. Andernfalls lassen Sie diesen Wert leer.  
+  
+**Datenbank**  
+Geben Sie die Datenbank, um Objekte und Daten zu migrieren. Diese Option ist nicht verfügbar, wenn es sich bei einer erneuten Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+  
+**Authentifizierung**  
+Wählen Sie die Authentifizierungsmethode, die verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Um Ihre aktuelle Windows-Konto zu verwenden, wählen Sie Windows-Authentifizierung. Angeben einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldenamen und ein Kennwort wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung.  
+  
+**Benutzername**  
+Bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung, geben Sie den Anmeldenamen für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
+  
+**Kennwort**  
+Bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung, geben Sie das Kennwort für die Anmeldung für diese Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
+  
+**Verbindung verschlüsseln**  
+Stellen Sie sichere Verbindung mit SQL Server herstellen möchten, verwenden Sie durch Überprüfen der Verbindung Verschlüsseln der **Verbindung verschlüsseln** Kontrollkästchen.  
+  
+**TrustServerCertificate**  
+Wenn Sie diese Option verwenden möchten, wählen Sie die **vertrauenswürdiges Serverzertifikat** Kontrollkästchen.  
+  
+> [!NOTE]  
+> So aktivieren Sie **vertrauenswürdiges Serverzertifikat**, "Encrypt" müssen festgelegt werden, um **"true"**.  
+  
+

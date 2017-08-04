@@ -1,51 +1,56 @@
 ---
-title: "Einrichten von Datenprofilerstellungs-Tasks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenprofilerstellungs-Task [Integration Services], konfigurieren"
+title: Einrichten des Datenprofilerstellungs-Tasks | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Einrichten von Datenprofilerstellungs-Tasks
-  Bevor Sie ein Profil der Quelldaten überprüfen können, müssen Sie zunächst den Datenprofilerstellungs-Task einrichten und ausführen. Sie erstellen diesen Task in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket. Zum Konfigurieren des Datenprofilerstellungs-Tasks verwenden Sie den Editor für den Datenprofilerstellungs-Task. Mit diesem Editor können Sie auswählen, wo die Profile ausgegeben und welche Profile berechnet werden sollen. Nachdem Sie den Task eingerichtet haben, führen Sie das Paket aus, um die Datenprofile zu berechnen.  
+# <a name="setup-of-the-data-profiling-task"></a>Einrichten von Datenprofilerstellungs-Tasks
+  Bevor Sie ein Profil der Quelldaten überprüfen können, müssen Sie zunächst den Datenprofilerstellungs-Task einrichten und ausführen. Sie erstellen diesen Task in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket. Zum Konfigurieren des Datenprofilerstellungs-Tasks verwenden Sie den Editor für den Datenprofilerstellungs-Task. Mit diesem Editor können Sie auswählen, wo die Profile ausgegeben und welche Profile berechnet werden sollen. Nachdem Sie den Task eingerichtet haben, führen Sie das Paket aus, um die Datenprofile zu berechnen.  
   
-## Anforderungen und Einschränkungen  
+## <a name="requirements-and-limitations"></a>Anforderungen und Einschränkungen  
  Der Datenprofilerstellungs-Task funktioniert nur mit Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert werden. Dieser Task funktioniert nicht mit Datenquellen von Drittanbietern oder dateibasierten Datenquellen.  
   
  Um das Paket auszuführen, das den Datenprofilerstellungs-Task enthält, müssen Sie zudem ein Konto verwenden, das über Lese-/Schreibberechtigungen sowie CREATE TABLE-Berechtigungen für die tempdb-Datenbank verfügt.  
   
-## Datenprofilerstellungs-Task in einem Paket  
+## <a name="data-profiling-task-in-a-package"></a>Datenprofilerstellungs-Task in einem Paket  
  Der Datenprofilerstellungs-Task konfiguriert nur die Profile und erstellt die Ausgabedatei, die die berechneten Profile enthält. Zum Überprüfen dieser Ausgabedatei verwenden Sie den Datenprofil-Viewer, ein eigenständiges Viewer-Programm. Da Sie die Ausgabedatei separat anzeigen müssen, können Sie den Datenprofilerstellungs-Task in einem Paket verwenden, das keine anderen Tasks enthält.  
   
  Der Datenprofilerstellungs-Task muss jedoch nicht als einziger Task in einem Paket verwendet werden. Wenn Sie die Datenprofilerstellung im Workflow oder im Datenfluss eines komplexeren Pakets ausführen möchten, stehen folgende Optionen zur Verfügung:  
   
 -   Zur Implementierung bedingter Logik, die auf der Ausgabedatei des Tasks basiert, nehmen Sie in der Ablaufsteuerung des Pakets nach dem Datenprofilerstellungs-Tasks einen Skripttask auf. Mit diesem Skripttask können Sie anschließend die Ausgabedatei abfragen.  
   
--   Um ein Profil der Daten im Datenfluss zu erstellen, nachdem die Daten geladen und transformiert wurden, müssen Sie die geänderten Daten vorübergehend in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle speichern. Anschließend können Sie ein Profil der gespeicherten Daten erstellen.  
+-   Um ein Profil der Daten im Datenfluss zu erstellen, nachdem die Daten geladen und transformiert wurden, müssen Sie die geänderten Daten vorübergehend in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle speichern. Anschließend können Sie ein Profil der gespeicherten Daten erstellen.  
   
  Weitere Informationen finden Sie unter [Einschließen einer Datenprofilerstellungs-Task in den Paketworkflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
-## Einrichten der Taskausgabe  
+## <a name="setup-of-the-task-output"></a>Einrichten der Taskausgabe  
  Nachdem der Datenprofilerstellungs-Task in einem Paket aufgenommen wurde, müssen Sie die Ausgabe für die Profile einrichten, die vom Task berechnet werden. Zum Einrichten der Ausgabe für die Profile verwenden Sie die Seite **Allgemein** des Editors für den Datenprofilerstellungs-Task. Zusätzlich zur Angabe des Ziels für die Ausgabe bietet die Seite **Allgemein** auch die Möglichkeit zur Ausführung eines Schnellprofils der Daten an. Bei Auswahl von **Schnellprofil** erstellt der Datenprofilerstellungs-Task eine Tabelle oder eine Sicht mit einigen oder allen Standardprofilen und deren Standardeinstellungen.  
   
  Weitere Informationen finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) und [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md).  
   
 > [!IMPORTANT]  
->  Die Ausgabedatei enthält möglicherweise vertrauliche Daten über Ihre Datenbank und die darin enthaltenen Daten. Vorschläge zur Verbesserung der Sicherheit dieser Datei finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  Die Ausgabedatei enthält möglicherweise vertrauliche Daten über Ihre Datenbank und die darin enthaltenen Daten. Vorschläge zur Verbesserung der Sicherheit dieser Datei finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
   
-## Auswählen und Konfigurieren der zu berechnenden Profile  
+## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>Auswählen und Konfigurieren der zu berechnenden Profile  
  Nachdem Sie die Ausgabedatei eingerichtet haben, müssen Sie auswählen, welche Datenprofile berechnet werden sollen. Der Datenprofilerstellungs-Task kann acht verschiedene Datenprofile berechnen. Fünf Profile analysieren einzelne Spalten und die restlichen drei analysieren mehrere Spalten oder Beziehungen zwischen Spalten und Tabellen. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
   
  Die folgende Tabelle beschreibt die Berichte, die von jedem dieser Profile berechnet werden, und die Datentypen, für die das Profil gültig ist.  
@@ -77,7 +82,7 @@ caps.handback.revision: 34
   
 -   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte&#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
 -   [Optionen für die Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
@@ -89,16 +94,16 @@ caps.handback.revision: 34
   
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Ausführen des Pakets, das den Datenprofilerstellungs-Task enthält  
+## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Ausführen des Pakets, das den Datenprofilerstellungs-Task enthält  
  Nachdem Sie den Datenprofilerstellungs-Task eingerichtet haben, können Sie den Task ausführen. Der Task berechnet dann die Datenprofile und gibt diese Informationen im XML-Format in einer Datei oder einer Paketvariablen aus. Die Struktur dieses XML-Formats folgt dem DataProfile.xsd-Schema. Sie können das Schema in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen. Dieses Schema für Datenqualitätsinformationen kann für folgende Zwecke nützlich sein:  
   
 -   Zum Austauschen von Datenqualitätsinformationen innerhalb und außerhalb von Organisationen.  
   
 -   Zum Erstellen von benutzerdefinierten Tools, die mit Datenqualitätsinformationen arbeiten.  
   
- Der Zielnamespace wird im Schema als [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) identifiziert.  
+ Der Zielnamespace wird im Schema als [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)identifiziert.  
   
-## Nächster Schritt  
+## <a name="next-step"></a>Nächster Schritt  
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
   

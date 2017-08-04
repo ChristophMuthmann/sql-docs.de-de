@@ -1,31 +1,36 @@
 ---
-title: "Task &#39;Nachrichtenwarteschlange&#39; (Seite Senden) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "Editor für den Task Nachrichtenwarteschlange"
+title: Task ' Nachrichtenwarteschlange ' (Seite senden) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Task &#39;Nachrichtenwarteschlange&#39; (Seite Senden)
+# <a name="message-queue-task-editor-send-page"></a>Task 'Nachrichtenwarteschlange' (Seite Senden)
   Im Dialogfeld **Editor für den Task 'Nachrichtenwarteschlange'** können Sie auf der Seite **Senden** den Task Nachrichtenwarteschlange so konfigurieren, dass Nachrichten von einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gesendet werden.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **UseEncryption**  
  Geben Sie an, ob die Nachricht verschlüsselt werden soll. Der Standardwert ist **False**.  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**Variable message**|Die Nachricht wird in einer Variable gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **VariableMessage**angezeigt.|  
 |**String message**|Die Nachricht wird im Task 'Nachrichtenwarteschlange' gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **StringMessage**angezeigt.|  
   
-## MessageType (dynamische Optionen)  
+## <a name="messagetype-dynamic-options"></a>MessageType (dynamische Optionen)  
   
-### MessageType = Data file message  
+### <a name="messagetype--data-file-message"></a>MessageType = Data file message  
  **DataFileMessage**  
- Geben Sie den Pfad der Datendatei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um nach der Datei zu suchen.  
+ Geben Sie den Pfad der Datendatei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , um nach der Datei zu suchen.  
   
-### MessageType = Variable message  
+### <a name="messagetype--variable-message"></a>MessageType = Variable message  
  **VariableMessage**  
- Geben Sie die Variablennamen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und wählen Sie dann die Variablen aus. Die Variablen werden durch Kommas getrennt.  
+ Geben Sie die Variablennamen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und wählen Sie dann die Variablen aus. Die Variablen werden durch Kommas getrennt.  
   
  **Verwandte Themen:** Variablen auswählen  
   
-### MessageType = Zeichenfolgennachricht  
+### <a name="messagetype--string-message"></a>MessageType = Zeichenfolgennachricht  
  **StringMessage**  
- Geben Sie die Zeichenfolgennachricht ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und geben Sie dann im Dialogfeld **Zeichenfolgennachricht eingeben** die Nachricht ein.  
+ Geben Sie die Zeichenfolgennachricht ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und geben Sie dann im Dialogfeld **Zeichenfolgennachricht eingeben** die Nachricht ein.  
   
-## Siehe auch  
- [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Empfangen“&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Task ' Nachrichtenwarteschlange ' &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Task ' Nachrichtenwarteschlange ' &#40; Empfangen Sie die Seite "&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
   

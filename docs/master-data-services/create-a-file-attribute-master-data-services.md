@@ -1,29 +1,34 @@
 ---
-title: "Erstellen eines Dateiattributs (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen von Dateiattributen [Master Data Services]"
-  - "Attribute [Master Data Services], Erstellen von Dateiattributen"
+title: Erstellen eines Dateiattributs (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating file attributes [Master Data Services]
+- attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erstellen eines Dateiattributs (Master Data Services)
-  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ein Dateiattribut, um Attributwerte mit Dateien aufzufüllen.  
+# <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
+  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Dateiattribut, um Attributwerte mit Dateien aufzufüllen.  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   Eine Entität muss vorhanden sein, um das Attribut dafür erstellen zu können. Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Attributinformationen  
+## <a name="attribute-information"></a>Attributinformationen  
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
 |Column|Description|  
 |------------|-----------------|  
-|Status|Der Attributstatus.<br /><br /> Wenn Sie auf „Speichern“ klicken, wird das Bild ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls lautet der Status „OK“, und das Bild ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
+|Status|Der Attributstatus.<br /><br /> Wenn Sie "Speichern" Klicken die ![Symbol für Status aktualisieren](../master-data-services/media/mds-statusicon-updating.png "Symbol für Status aktualisieren") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn Fehler beim Erstellen oder Bearbeiten eines Attributs vorliegen der ![Symbol nach dem Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol nach dem Fehlerstatus") Bild angezeigt.<br /><br /> Andernfalls ist der Status OK und die ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") Bild angezeigt.|  
 |Name|Der Attributname.|  
 |Anzeigename|Der Anzeigename des Attributs.|  
 |Description|Die Attributbeschreibung.|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **Am**: Datum und Uhrzeit der letzten Aktualisierung des Attributs.  
   
-### So erstellen Sie ein Dateiattribut  
+### <a name="to-create-a-file-attribute"></a>So erstellen Sie ein Dateiattribut  
   
 1.  Klicken Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]auf **Systemverwaltung**.  
   
@@ -79,18 +84,18 @@ caps.handback.revision: 8
   
 8.  Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-9. Wählen Sie in der Liste **Attributtyp** die Option **Datei** aus.  
+9. Wählen Sie in der Liste **Attributtyp** die Option **Datei**aus.  
   
-10. Wählen Sie aus der Liste **Dateierweiterung** einen Dateityp aus, den ein Benutzer hochladen kann, oder akzeptieren Sie den Standardwert (* \*), um alle Dateitypen zuzulassen.  
+10. Wählen Sie aus der Liste **Dateierweiterung** einen Dateityp aus, den ein Benutzer hochladen kann, oder akzeptieren Sie den Standardwert (*\*), um alle Dateitypen zuzulassen.  
   
 11. Optional können Sie **Änderungsnachverfolgung aktivieren** auswählen, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
 12. Klicken Sie auf **Speichern**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Ändern eines Attributnamens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Ändern Sie einen Attributnamen und -Datentyp &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Erstellen Sie ein domänenbasiertes Attribut &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Erstellen Sie ein Textattribut &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

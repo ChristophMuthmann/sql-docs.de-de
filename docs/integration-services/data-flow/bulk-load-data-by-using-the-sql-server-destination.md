@@ -1,31 +1,36 @@
 ---
-title: "Massenladen von Daten mithilfe des SQL Server-Ziels | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server-Ziel"
-  - "Laden von Daten"
-  - "Ziele [Integration Services], SQL Server"
-  - "Einfügen von Daten"
-  - "Massenladen [Integration Services]"
+title: Massenimport von Daten mithilfe des SQL Server-Ziels | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Massenladen von Daten mithilfe des SQL Server-Ziels
+# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Massenladen von Daten mithilfe des SQL Server-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Datenquelle enthalten, damit Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel hinzufügen und konfigurieren können.  
   
-### So laden Sie Daten mithilfe eines SQL Server-Ziels  
+### <a name="to-load-data-using-a-sql-server-destination"></a>So laden Sie Daten mithilfe eines SQL Server-Ziels  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 30
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## Siehe auch  
- [SQL Server-Ziel](../../integration-services/data-flow/sql-server-destination.md)   
- [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Siehe auch  
+ [SQL Server-Ziels](../../integration-services/data-flow/sql-server-destination.md)   
+ [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Optionen f&#252;r die Anforderung f&#252;r funktionales Abh&#228;ngigkeitsprofil (Datenprofilerstellungs-Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor für den Datenprofilerstellungs-Task"
+title: "Anforderung-Profiloptionen funktionales Abhängigkeitsprofil (Datenprofilerstellungs-Task) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Optionen f&#252;r die Anforderung f&#252;r funktionales Abh&#228;ngigkeitsprofil (Datenprofilerstellungs-Task)
+# <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für funktionales Abhängigkeitsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für funktionales Abhängigkeitsprofil** festzulegen. Ein funktionales Abhängigkeitsprofil dokumentiert das Ausmaß, in dem die Werte in einer Spalte (der abhängigen Spalte) von den Werten in einer anderen Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängen. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die Postleitzahlen enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. In diesem Profil sollte dieselbe Postleitzahl immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen das Abhängigkeitsverhältnis.  
   
 > [!NOTE]  
@@ -26,8 +31,8 @@ caps.handback.revision: 24
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Grundlegendes zur Auswahl von determinanten und abhängigen Spalten  
- Eine **Anforderung für funktionales Abhängigkeitsprofil** berechnet das Ausmaß, in dem die determinante Spalte oder Gruppe von Spalten (wird in der **DeterminantColumns**-Eigenschaft angegeben) den Wert der abhängigen Spalte (wird in der **DependentColumn**-Eigenschaft angegeben) festlegt. Eine Spalte mit US-Bundesstaaten sollte beispielsweise funktional von einer Spalte mit US-Postleitzahlen abhängen. Das heißt, wenn die Postleitzahl (determinante Spalte) 98052 lautet, sollte der Bundesstaat (abhängige Spalte) immer Washington sein.  
+## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>Grundlegendes zur Auswahl von determinanten und abhängigen Spalten  
+ Eine **Anforderung für funktionales Abhängigkeitsprofil** berechnet das Ausmaß, in dem die determinante Spalte oder Gruppe von Spalten (wird in der **DeterminantColumns** -Eigenschaft angegeben) den Wert der abhängigen Spalte (wird in der **DependentColumn** -Eigenschaft angegeben) festlegt. Eine Spalte mit US-Bundesstaaten sollte beispielsweise funktional von einer Spalte mit US-Postleitzahlen abhängen. Das heißt, wenn die Postleitzahl (determinante Spalte) 98052 lautet, sollte der Bundesstaat (abhängige Spalte) immer Washington sein.  
   
  Für die determinante Seite können Sie eine Spalte oder Gruppe von Spalten in der **DeterminantColumns** -Eigenschaft angeben. Beispiel: Eine Beispieltabelle enthält die Spalten A, B und C. Sie nehmen die folgende Auswahl für die **DeterminantColumns** -Eigenschaft vor:  
   
@@ -40,18 +45,18 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Wenn Sie **(\*)** auswählen, kann dies zu zahlreichen Berechnungen führen und die Leistung des Tasks beeinträchtigen. Wenn der Task jedoch eine Teilmenge findet, die den Schwellenwert für eine funktionale Abhängigkeit erfüllt, analysiert der Task keine weiteren Kombinationen. Wenn der Task beispielsweise in der oben beschriebenen Beispieltabelle ermittelt, dass Spalte C eine determinante Spalte ist, führt er keine Analyse der zusammengesetzten Kandidaten aus.  
   
-## Optionen für Anforderungseigenschaften  
+## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
  Für eine **Anforderung für funktionales Abhängigkeitsprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
 -   **Daten**, die die **DeterminantColumns** -Option und die **DependentColumn** -Option enthalten  
   
 -   **Allgemein**  
   
--   **enthalten**  
+-   **Options**  
   
-### Datenoptionen  
+### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder Sicht aus, für die ein Profil erstellt werden soll.  
@@ -66,7 +71,7 @@ caps.handback.revision: 24
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von determinanten und abhängigen Spalten" und im Abschnitt "Optionen 'DeterminantColumns' und 'DependentColumn'" in diesem Thema.  
   
-#### Optionen 'DeterminantColumns' und 'DependentColumn'  
+#### <a name="determinantcolumns-and-dependentcolumn-options"></a>Optionen 'DeterminantColumns' und 'DependentColumn'  
  Die folgenden Optionen sind für jede Spalte verfügbar, die für die Profilerstellung in **DeterminantColumns** und **DependentColumn**ausgewählt wird.  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von determinanten und abhängigen Spalten" in diesem Thema.  
@@ -98,15 +103,15 @@ caps.handback.revision: 24
 |**IgnoreKanaType**|Gibt an, ob beim Vergleichen zwischen den beiden Typen japanischer Kanazeichen unterschieden wird: Hiragana und Katakana. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich den Kanatyp.|  
 |**IgnoreWidth**|Gibt an, ob beim Vergleichen zwischen einem Single-Byte-Zeichen und demselben Zeichen als Double-Byte-Zeichen unterschieden wird. Wenn diese Option festgelegt ist, werden die Single-Byte- und die Double-Byte-Darstellung desselben Zeichens als identisch behandelt.|  
   
-### Allgemeine Optionen  
+### <a name="general-options"></a>Allgemeine Optionen  
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### enthalten  
+### <a name="options"></a>-Option enthalten  
  **ThresholdSetting**  
  Geben Sie die Schwellenwerteinstellung an. Der Standardwert dieser Eigenschaft ist **Specified**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **FDStrengthThreshold**angegeben ist. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
@@ -118,8 +123,8 @@ caps.handback.revision: 24
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von funktionale Abhängigkeitsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **ThresholdSetting**ausgewählt wird.  
   
-## Siehe auch  
- [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

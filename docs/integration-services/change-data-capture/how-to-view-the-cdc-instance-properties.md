@@ -1,25 +1,30 @@
 ---
-title: "Anzeigen der CDC-Instanzeigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Anzeigen der CDC-Instanzeigenschaften | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Anzeigen der CDC-Instanzeigenschaften
+# <a name="how-to-view-the-cdc-instance-properties"></a>Anzeigen der CDC-Instanzeigenschaften
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Anzeigen von Informationen zu den Instanzen verwenden, die Sie im Rahmen der Verwaltung des Betriebs der Instanzen erstellen.  
   
-### So zeigen Sie Informationen zu einer bestimmten Instanz an  
+### <a name="to-view-information-about-a-specific-instance"></a>So zeigen Sie Informationen zu einer bestimmten Instanz an  
   
 1.  Wählen Sie im Menü **Start** die Option **CDC Designer Console**aus.  
   

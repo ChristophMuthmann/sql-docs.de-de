@@ -1,27 +1,32 @@
 ---
-title: "Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Globale Ablaufverfolgungsoptionen [SQL Server]"
+title: Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e243eb89d6006d82191e73577ed18dd9a5840bd9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler)
+# <a name="set-global-trace-options-sql-server-profiler"></a>Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die für alle Ablaufverfolgungen gelten, die mit einer bestimmten Instanz von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]erstellt werden.  
   
-### So legen Sie globale Ablaufverfolgungsoptionen fest  
+### <a name="to-set-global-trace-options"></a>So legen Sie globale Ablaufverfolgungsoptionen fest  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 24
         |**4**|Standardwert.|  
         |**255**|Maximalwert. Durch Einstellung eines Maximalwerts wird die für andere Prozesse verfügbare Leistung eingeschränkt.|  
   
-    -   Mit **Standardwartezeit für Systemüberwachung (Sek.)** wird die maximale Zeitspanne in Sekunden angegeben, über die ein Wiedergabethread einen anderen Prozess blockieren kann. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
+    -   Mit**Standardwartezeit für Systemüberwachung (Sek.)** wird die maximale Zeitspanne in Sekunden angegeben, über die ein Wiedergabethread einen anderen Prozess blockieren kann. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
         |Wert|Beschreibung|  
         |-----------|-----------------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 24
         |**3600**|Standardwert. Lässt blockierende Prozesse zu, die nicht länger als **3600** Sekunden oder eine Stunde dauern.|  
         |**86400**|Maximalwert. Lässt blockierende Prozesse zu, die nicht länger als **86400** Sekunden oder einen Tag dauern.|  
   
-    -   Mit **Standardabrufintervall für Systemüberwachung (Sek.)** wird die Frequenz festgelegt, mit der Wiedergabethreads für blockierende Prozesse abgerufen werden. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
+    -   Mit**Standardabrufintervall für Systemüberwachung (Sek.)** wird die Frequenz festgelegt, mit der Wiedergabethreads für blockierende Prozesse abgerufen werden. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
         |Wert|Beschreibung|  
         |-----------|-----------------|  
@@ -65,8 +70,8 @@ caps.handback.revision: 24
         |**60**|Standardwert. Abrufen von blockierenden Prozessen einmal pro Minute.|  
         |**86400**|Maximalwert. Abrufen von blockierenden Prozessen einmal pro **86400** Sekunden, oder einmal pro Tag.|  
   
-## Siehe auch  
- [Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Festlegen der Ablaufverfolgungsanzeige &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

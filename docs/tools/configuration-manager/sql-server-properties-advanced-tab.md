@@ -1,25 +1,30 @@
 ---
-title: "SQL Server-Eigenschaften (Registerkarte Erweitert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server-Eigenschaften (Registerkarte "Erweitert") | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server-Eigenschaften (Registerkarte Erweitert)
+# <a name="sql-server-properties-advanced-tab"></a>SQL Server-Eigenschaften (Registerkarte Erweitert)
   Die folgenden Eigenschaften werden standardmäßig auf der Registerkarte **Erweitert** angezeigt. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Gruppiert**  
  Zeigt an, ob dieser Dienst als Ressource eines gruppierten Servers installiert ist.  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 19
  Gibt an, ob Service Quality Monitoring für diesen Dienst aktiviert wurde. Weitere Informationen zu Berichterstellung für Kundenfeedback finden Sie in der Onlinedokumentation unter "Einstellungen für Fehler- und Verwendungsberichte".  
   
  **Datenpfad**  
- Zeigt den Pfad zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Binärdateien für diese Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
+ Zeigt den Pfad zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Binärdateien für diese Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
  **Speicherverzeichnis**  
  Zeigt den Speicherort für Speicherauszüge für Fehler an.  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
  Zeigt die Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
   
  **Installationspfad**  
- Zeigt den Pfad zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Binärdateien für diese Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
+ Zeigt den Pfad zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Binärdateien für diese Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
  **Instanz-ID**  
  Zeigt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die in diesem Dienst verwendet wird.  
@@ -51,21 +56,21 @@ caps.handback.revision: 19
  Zeigt den Speicherort der Registrierungsschlüssel, die von dieser Anwendung verwendet werden.  
   
  **Service Pack-Ebene**  
- Zeigt die Service Pack-Ebene dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
+ Zeigt die Service Pack-Ebene dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
  **SKU-Name**  
  Zeigt die Stock Keeping Unit (SKU) des Produkts an.  
   
  **Startparameter**  
- Führt alle Startparameter auf, die von dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Parameter werden durch Semikolon getrennt. Zu den Standardparametern gehören die Pfade zu der Datendatei für die master-Datenbank (`master.mdf`), die Protokolldatei für die master-Datenbank (`mastlog.ldf`) und die Fehlerprotokolldatei. Informationen zur Syntax von Startparametern finden Sie in der Onlinedokumentation unter **Verwenden der Startoptionen für den SQL Server-Dienst**.  
+ Führt alle Startparameter auf, die von dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Parameter werden durch Semikolon getrennt. Zu den Standardparametern gehören die Pfade zu der Datendatei für die master-Datenbank (`master.mdf`), die Protokolldatei für die master-Datenbank (`mastlog.ldf`) und die Fehlerprotokolldatei. Informationen zur Syntax von Startparametern finden Sie in der Onlinedokumentation unter **Verwenden der Startoptionen für den SQL Server-Dienst**.  
   
  **Stock Keeping Unit**  
  Zeigt die Nummer der Stock Keeping Unit (SKU) des Produkts an.  
   
  **Version**  
- Zeigt die Versionsnummer dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
+ Zeigt die Versionsnummer dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
  **Name des virtuellen Servers**  
- **Name des virtuellen Servers**, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem gruppierten Server installiert ist.  
+ **Name des virtuellen Servers** , wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem gruppierten Server installiert ist.  
   
   
