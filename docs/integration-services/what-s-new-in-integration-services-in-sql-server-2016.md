@@ -1,29 +1,34 @@
 ---
-title: "Neuigkeiten in Integration Services in SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services, Neuigkeiten"
-  - "Neuigkeiten [Integration Services]"
+title: Was &#39; s in Integration Services in SQLServer 2016 | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services, what's new
+- what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 caps.latest.revision: 183
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 182
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Neuigkeiten in Integration Services in SQL Server 2016
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Was &#39; s in Integration Services in SQLServer 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- Dieses Thema beschreibt die Funktionen, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] hinzugefügt oder aktualisiert wurden.  
+ Dieses Thema beschreibt die Funktionen, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]hinzugefügt oder aktualisiert wurden.  
   
 ## <a name="improvements-grouped-by-category"></a>Verbesserungen nach Kategorien gruppiert  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 182
   
         -   [Veröffentlichung von Microsoft Connector für SAP BW für SQL Server 2016](#SAPBW)
         
-        -   [Connectors, Version&4;.0, für Oracle und Teradata veröffentlicht](#oracleteradata)
+        -   [Connectors, Version&amp;4;.0, für Oracle und Teradata veröffentlicht](#oracleteradata)
         
         -   [Connectors für Analytics Platform System (PDW) Appliance Update 5 veröffentlicht](#pdwau5)
   
@@ -144,16 +149,16 @@ caps.handback.revision: 182
   
 -   Sie haben die Datenbank aus einer älteren Version von SQL Server wiederhergestellt.  
   
--   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Dies verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+-   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Dies verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
   
- Weitere Informationen finden Sie unter [Aktualisieren des SSIS-Katalogs &#40; SSISDB &#41;](../integration-services/service/upgrade-the-ssis-catalog-ssisdb.md). 
+ Weitere Informationen finden Sie unter [SSIS-Katalog &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Unterstützung für Always On im SSIS-Katalog  
  Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230.aspx).  
   
  SSIS stellt in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]neue Funktionen zur Verfügung, mit denen Sie problemlos einen zentralisierten SSIS-Katalog (d. h. eine SSISDB-Benutzerdatenbank) bereitstellen können. Um eine hohe Verfügbarkeit für die SSISDB-Datenbank und ihren Inhalt – Projekte, Pakete, Ausführungsprotokolle usw. – zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Datenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
   
- Eine ausführliche Übersicht und eine Schritt-für-Schritt-Anleitung für die Aktivierung von Always On für SSISDB finden Sie unter [Always On für SSIS-Katalog &#40;SSISDB&#41;](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
+ Eine ausführliche Übersicht und eine schrittweise Anleitung für die Aktivierung von Always On für SSISDB finden Sie unter [SSIS-Katalog](../integration-services/service/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Inkrementelle Paketbereitstellung  
 Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder mehrere Pakete in einem vorhandenen oder neuen Projekt bereitstellen, ohne das gesamte Projekt bereitzustellen. Sie können Pakete schrittweise (inkrementell) mithilfe der folgenden Tools bereitstellen.  
@@ -168,7 +173,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
 -   Die API des Management Object Model (MOM)  
   
- Weitere Informationen finden Sie unter [Deploy Packages to Integration Services Server](../integration-services/packages/deploy-packages-to-integration-services-server.md) .  
+ Weitere Informationen finden Sie unter [Bereitstellen von Integration Services (SSIS) Projects and Packages] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Unterstützung für Always Encrypted im SSIS-Katalog  
  SSIS unterstützt bereits die Funktion Always Encrypted in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie im folgenden Blogbeitrag.  
@@ -184,11 +189,11 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
  Es gibt auch die neue **ssis_monitor** -Rolle. Diese Rolle unterstützt Always On und dient dem SSIS-Katalog nur zur internen Verwendung.  
 
-####  <a name="RuntimeLineage"></a> Neuer Protokolliergrad „RuntimeLineage“ im SSIS-Katalog enthalten  
+####  <a name="RuntimeLineage"></a> Neuer Protokolliergrad „RuntimeLineage“ im SSIS-Katalog  
  Der neue Protokolliergrad **RuntimeLineage** des SSIS-Katalogs sammelt die zur Nachverfolgung der Herkunftsinformationen im Datenfluss erforderlichen Daten. Sie können diese Herkunftsinformationen analysieren, um die Herkunftsbeziehung zwischen Tasks zu bestimmen. Unabhängige Softwareentwickler (ISVs) und Entwickler können mit diesen Informationen benutzerdefinierte Herkunftszuordnungstools erstellen. 
 
 ####  <a name="CustomLogging"></a> Neuer benutzerdefinierter Protokolliergrad im SSIS-Katalog  
- Vorgängerversionen des SSIS-Katalogs boten Ihnen für die Ausführung eines Pakets die Wahl zwischen vier Protokolliergraden: **None, Basic, Performance und Verbose**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] fügt den Protokolliergrad **RuntimeLineage** hinzu. Darüber hinaus können Sie jetzt zahlreiche benutzerdefinierte Protokolliergrade im SSIS-Katalog erstellen und speichern und den Standardprotokolliergrad für jede Paketausführung bestimmen. Wählen Sie für jeden benutzerdefinierten Protokolliergrad nur die Statistiken und Ereignisse aus, die Sie erfassen möchten. Optional können Sie den Ereigniskontext mit aufnehmen, um variable Werte, Verbindungszeichenfolgen und die Eigenschaften von Tasks anzeigen zu lassen. Weitere Informationen finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md). 
+ Vorgängerversionen des SSIS-Katalogs boten Ihnen für die Ausführung eines Pakets die Wahl zwischen vier Protokolliergraden: **None, Basic, Performance und Verbose**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] fügt den Protokolliergrad **RuntimeLineage** hinzu. Darüber hinaus können Sie jetzt zahlreiche benutzerdefinierte Protokolliergrade im SSIS-Katalog erstellen und speichern und den Standardprotokolliergrad für jede Paketausführung bestimmen. Wählen Sie für jeden benutzerdefinierten Protokolliergrad nur die Statistiken und Ereignisse aus, die Sie erfassen möchten. Optional können Sie den Ereigniskontext mit aufnehmen, um variable Werte, Verbindungszeichenfolgen und die Eigenschaften von Tasks anzeigen zu lassen. Weitere Informationen finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Spaltennamen für Fehler im Datenfluss  
  Wenn Sie die Zeilen im Datenfluss, die einen Fehler enthalten umleiten, enthält die Ausgabe einen numerischen Bezeichner für die Spalte, in der der Fehler aufgetreten ist, sondern zeigt den Namen der Spalte nicht. Der Name der fehlerhaften Spalte kann auf verschiedenen Wegen gesucht oder angezeigt werden.  
@@ -206,12 +211,12 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 > [!NOTE]  
 >  (Diese Unterstützung wurde in darauffolgenden Versionen erweitert. Weitere Informationen finden Sie unter [Umfassendere Unterstützung des Fehlerspaltennamens](#getidstring) und [Neue IDTSComponentMetaData130-Schnittstelle in der API](#CMD130).)  
 
-####  <a name="getidstring"></a> Umfassendere Unterstützung des Fehlerspaltennamens  
+####  <a name="getidstring"></a> Umfassendere Unterstützung der Fehlerspaltennamen  
  Das Ereignis **DiagnosticEx** protokolliert seit neuestem nicht mehr nur noch Spalteninformationen für Herkunftsspalten, sondern auch für alle Eingabe- und Ausgabespalten. Daher heißt die Ausgabe nicht mehr Pipeline-Herkunftszuordnung, sondern Pipeline-Spaltenzuordnung.  
   
- Die Methode „GetIdentificationStringByLineageID“ wurde in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>umbenannt. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
+ Die Methode „GetIdentificationStringByLineageID“ wurde in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>hinzugefügt oder aktualisiert wurden. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
   
- Weitere Informationen zu dieser Änderung und zu den Verbesserungen der Fehlerspalte finden Sie im folgenden aktualisierten Blogbeitrag. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (Verbesserungen der Fehlerspalte für SSIS-Datenfluss (aktualisiert für CTP&3;.3))  
+ Weitere Informationen zu dieser Änderung und zu den Verbesserungen der Fehlerspalte finden Sie im folgenden aktualisierten Blogbeitrag. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (In RC0 wurde diese Methode zur neuen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle verschoben. Weitere Informationen finden Sie unter [Neue IDTSComponentMetaData130-Schnittstelle in der API](#CMD130).)  
@@ -220,14 +225,14 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
  Sie können nun in SQL Server unter **Servereigenschaften**mithilfe der Eigenschaft **Serverweiter Protokolliergrad** einen Standardwert für den serverweiten Protokolliergrad festlegen. Sie können zwischen einem der integrierten Protokolliergrade (None, Standard, Verbose, Performance oder RuntimeLineage) oder einem vorhandenen benutzerdefinierten entscheiden. Der ausgewählte Protokolliergrad wird auf alle im SSIS-Katalog bereitgestellten Pakete angewendet. Dies gilt standardmäßig auch für einen SQL Agent-Auftragsschritt, der ein SSIS-Paket ausführt.  
 
 ####  <a name="CMD130"></a> Neue IDTSComponentMetaData130-Schnittstelle in der API  
- Die neue <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle fügt in SQL Server 2016 der vorhandenen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle neue Funktionalität hinzu, insbesondere der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> -Methode. (Die **GetIdentificationStringByID** -Methode wird von der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle zur neuen Schnittstelle verschoben.)Es gibt auch die neuen Schnittstellen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , die beide die **LineageIdentificationString** -Eigenschaft unterstützen. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
+ Der neue Protokolliergrad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle fügt in SQL Server 2016 der vorhandenen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle neue Funktionalität hinzu, insbesondere der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> -Methode. (Die **GetIdentificationStringByID** -Methode wird von der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle zur neuen Schnittstelle verschoben.)Es gibt auch die neuen Schnittstellen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , die beide die **LineageIdentificationString** -Eigenschaft unterstützen. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
 
 ### <a name="better-package-management"></a>Bessere Paketverwaltung
 
 ####  <a name="ProjectUpgrade"></a> Benutzerfreundlicheres Upgraden von Projekten  
  Wenn Sie SSIS-Projekte aus früheren Versionen auf die aktuelle Version upgraden, funktionieren die auf Projektebene ausgeführten Verbindungs-Manager weiterhin wie erwartet, und das Paketlayout und die Anmerkungen werden beibehalten.  
 
-####  <a name="BufferSize"></a> Die Eigenschaft „AutoAdjustBufferSize“ berechnet automatisch die Puffergröße für den Datenfluss.  
+####  <a name="BufferSize"></a> Die Eigenschaft „AutoAdjustBufferSize“ berechnet automatisch die Puffergröße für den Datenfluss  
  Wenn Sie den Wert der Eigenschaft **AutoAdjustBufferSize** auf **true**festlegen, berechnet das Datenflussmodul automatisch die Puffergröße für den Datenfluss. Weitere Informationen finden Sie unter [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="Templates"></a> Wiederverwendbare Vorlagen der Ablaufsteuerung  
@@ -236,7 +241,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="Parts"></a> Neue Vorlagen, zu Teilen umbenannt  
  Die neuen wiederverwendbaren Vorlagen zur Ablaufsteuerung, die in der CTP-Version 3.0 veröffentlicht wurden, wurden zu Teilen der Ablaufsteuerung oder zu Paketteilen umbenannt. Weitere Informationen zu diesem Feature finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
 
-## <a name="connectivity"></a>Connectivity  
+## <a name="connectivity"></a>Konnektivität  
 
 ### <a name="expanded-connectivity-on-premises"></a>Erweiterte lokale Konnektivität
 
@@ -263,7 +268,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
 -   Der Task „Hadoop-Dateisystem“ unterstützt neuerdings zusätzlich zu den Optionen „CopyToHadoop“ und „CopyFromHadoop“ auch „CopyWithinHadoop“. Weitere Informationen finden Sie unter [Hadoop File System Task](../integration-services/control-flow/hadoop-file-system-task.md).  
 
-####  <a name="hdfsORC"></a> Die Komponente HDFS File Destination (HDFS-Dateispeicherort) unterstützt nun das Dateiformat ORC.  
+####  <a name="hdfsORC"></a> Die Komponente HDFS File Destination (HDFS-Dateispeicherort) unterstützt nun das Dateiformat ORC  
  Die Komponente „HDFS-Dateiziel“ unterstützt nun zusätzlich zu Text und Avro das Dateiformat ORC. (Die Komponente HDFS File Source (HDFS-Dateiquelle) unterstützt nur Text und Avro.) Weitere Informationen zu dieser Komponente finden Sie unter [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md).  
 
 ####  <a name="odbc2016"></a> ODBC-Komponenten für SQL Server 2016 aktualisiert  
@@ -275,7 +280,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="SAPBW"></a> Veröffentlichung von Microsoft Connector für SAP BW für SQL Server 2016  
  Der Microsoft® Connector für SAP BW für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht. Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.
  
-#### <a name="oracleteradata"></a> Connectors, Version&4;.0, für Oracle und Teradata veröffentlicht
+#### <a name="oracleteradata"></a> Connectors, Version&amp;4;.0, für Oracle und Teradata veröffentlicht
 Die Microsoft-Connectors, Version&4;.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
 
 ### <a name="pdwau5"></a> Connectors für Analytics Platform System (PDW) Appliance Update 5 veröffentlicht
@@ -285,8 +290,6 @@ Die Zieladapter zum Laden von Daten in PDW mit AU5 wurden veröffentlicht. Die A
 
 ####  <a name="AFP2016"></a> Azure Feature Pack für SSIS für SQL Server 2016 veröffentlicht  
  Das Azure Feature Pack für Integration Services wurde für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]veröffentlicht. Das Feature Pack enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
-
->   [!NOTE] Um sicherzustellen, dass der Azure Storage-Verbindungs-Manager und die Komponenten, die ihn verwenden – Blobquelle, Blobziel, Blob-Upload- und Blob-Download-Task – sowohl Verbindungen mit allgemeinen Speicherkonten als auch Blobspeicherkonten herstellen können, stellen Sie sicher, dass Sie die neueste Version von Azure Feature Pack [hier](https://www.microsoft.com/download/details.aspx?id=49492) herunterladen. Weitere Informationen zu diesen beiden Typen von Speicherkonten finden Sie unter [Einführung in Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
 
 #### <a name="dynamics"></a> Veröffentlichung der Unterstützung für Onlineressourcen von Microsoft Dynamics in Service Pack 1
 
@@ -304,8 +307,8 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
  
 ### <a name="better-install-experience"></a>Benutzerfreundlicheres Installieren
 
-####  <a name="Upgrade"></a> Das Upgrade wird blockiert, wenn SSISDB zu einer Verfügbarkeitsgruppe gehört.  
- Wenn die SSIS-Katalogdatenbank (SSISDB) zu einer Always On-Verfügbarkeitsgruppe gehört, müssen Sie die SSISDB aus der Verfügbarkeitsgruppe entfernen, SQL Server upgraden und die SSISDB erneut zur Verfügbarkeitsgruppe hinzufügen. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+####  <a name="Upgrade"></a> Das Upgrade wird blockiert, wenn SSISDB zu einer Verfügbarkeitsgruppe gehört  
+ Wenn die SSIS-Katalogdatenbank (SSISDB) zu einer Always On-Verfügbarkeitsgruppe gehört, müssen Sie die SSISDB aus der Verfügbarkeitsgruppe entfernen, SQL Server upgraden und die SSISDB erneut zur Verfügbarkeitsgruppe hinzufügen. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Ansprechenderes Designerlebnis
 
@@ -314,9 +317,10 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
    
- ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![TargetServerVersion-Eigenschaft im Dialogfeld Projekt](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft in den Projekteigenschaften (Dialogfeld)")  
 
->   [!IMPORTANT] Wenn Sie benutzerdefinierte Erweiterungen für SSIS entwickeln, siehe [Unterstützung der Festlegung von Zielversionen in Ihren benutzerdefinierten Komponenten](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) und den Blogbeitrag [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Unterstützung benutzerdefinierter SSIS-Erweiterungen dank der Unterstützung mehrerer Versionsn von SSDT für SQL Server 2016).  
+>   [!IMPORTANT]
+> Wenn Sie benutzerdefinierte Erweiterungen für SSIS entwickeln, siehe [Unterstützung der Festlegung von Zielversionen in Ihren benutzerdefinierten Komponenten](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) und den Blogbeitrag [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Unterstützung benutzerdefinierter SSIS-Erweiterungen dank der Unterstützung mehrerer Versionsn von SSDT für SQL Server 2016).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Bessere Verwaltungsfunktionen in SQL Server Management Studio
 
@@ -325,16 +329,14 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
 ### <a name="other-enhancements"></a>Weitere Verbesserungen
 
-####  <a name="BDDinbox"></a> Die Balanced Data Distributor-Transformation ist jetzt Teil von SSIS.  
+####  <a name="BDDinbox"></a> Die Balanced Data Distributor-Transformation ist jetzt Teil von SSIS  
  Die Balanced Data Distributor-Transformation, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]einen separaten Download erforderte, wird jetzt bei der Installation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]automatisch mitgeliefert. Weitere Informationen finden Sie unter [Balanced Data Distributor Transformation](../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md).  
   
-####  <a name="ComplexFeedinbox"></a> Data Feed Publishing-Komponenten sind jetzt Bestandteil von SSIS.  
+####  <a name="ComplexFeedinbox"></a> Data Feed Publishing-Komponenten sind jetzt Bestandteil von SSIS  
  Die Data Feed Publishing-Komponenten, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]einen separaten Download erforderten, werden jetzt bei der Installation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]automatisch mitgeliefert. Weitere Informationen finden Sie unter [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md).  
 
 ####  <a name="AzureBlob"></a> Unterstützung für Azure Blob Storage im SQL Server-Import/Export-Assistenten  
  Der SQL Server-Import/Export-Assistent kann neuerdings Daten aus Azure Blob Storage importieren und auch dort speichern. Weitere Informationen finden Sie unter [Datenquelle wählen &#40;SQL Server-Import/Export-Assistent&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) und [Ziel wählen &#40;SQL Server-Import/Export-Assistent&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
-
->   [!NOTE] Um sicherzustellen, dass der Azure Storage-Verbindungs-Manager und die Komponenten, die ihn verwenden – Blobquelle, Blobziel, Blob-Upload- und Blob-Download-Task – sowohl Verbindungen mit allgemeinen Speicherkonten als auch Blobspeicherkonten herstellen können, stellen Sie sicher, dass Sie die neueste Version von Azure Feature Pack [hier](https://www.microsoft.com/download/details.aspx?id=49492) herunterladen. Weitere Informationen zu diesen beiden Typen von Speicherkonten finden Sie unter [Einführung in Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
 
 ####  <a name="CDCOracle"></a> Veröffentlichung des Change Data Capture Designers für Oracle von Attunity und des dazugehörigen Diensts für SQL Server 2016  
  Microsoft® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht.  Diese Komponenten unterstützen jetzt Oracle 12c in der klassischen Installation. (Eine mehrinstanzenfähige Installation wird nicht unterstützt.) Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.  
@@ -345,7 +347,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 ####  <a name="ASDDL"></a> Analysis Services-Task „DDL ausführen“ aktualisiert  
  Der Analysis Services-Task „DDL ausführen“ akzeptiert nun auch Befehle der Skriptsprache für tabellarische Modelle.
 
-####  <a name="ssasrc0"></a> Analysis Services-Tasks unterstützen Tabellenmodelle.  
+####  <a name="ssasrc0"></a> Analysis Services-Tasks unterstützen Tabellenmodelle  
  Sie können nun alle SSIS-Tasks und Ziele verwenden, die SQL Server Analysis Services (SSAS) mit SQL Server 2016-Tabellenmodellen unterstützen. Die SSIS-Tasks wurden aktualisiert, sodass sie Tabellenobjekte anstelle von mehrdimensionalen Objekten darstellen. Wenn Sie beispielsweise Objekte zur Verarbeitung auswählen, erkennt der Verarbeitungstask automatisch, dass es sich um ein Tabellenmodell handelt, und zeigt eine Auflistung tabellarischer Objekte anstelle von Measuregruppen und Dimensionen an. Der Speicherort der Partitionsverarbeitung zeigt nun auch tabellarische Objekte an und unterstützt die Übertragung von Daten in eine Partition.  
   
  Das Speicherort für die Dimensionsverarbeitung funktioniert nicht für tabellarische Modelle mit dem Kompatibilitätsgrad „SQL Server 2016“.  Für die Verarbeitung von Tabellen benötigen Sie lediglich den Analysis Services-Verarbeitungstask und das Ziel der Partitionsverarbeitung. 
@@ -360,7 +362,9 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
 ## <a name="see-also"></a>Siehe auch  
  [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](../sql-server/von-den-sql-server-2016-editionen-unterstützte-funktionen.md)
+ [Von den SQL Server 2016-Editionen unterstützte Funktionen](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+
