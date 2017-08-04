@@ -1,28 +1,33 @@
 ---
-title: "XML-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "Quellen [Integration Services], XML"
-  - "XML-Quelle [Integration Services]"
-  - "Quellen-Editor für XML"
+title: XML-Quelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML-Quelle
+# <a name="xml-source"></a>XML-Quelle
   Die XML-Quelle liest eine XML-Datendatei und füllt die Spalten in der Quellausgabe mit den Daten.  
   
  Die Daten in XML-Dateien schließen häufig hierarchische Beziehungen ein. Beispielsweise kann eine XML-Datendatei Kataloge und Katalogelemente darstellen. Bevor die Daten in den Datenfluss aufgenommen werden können, muss die Beziehung der Elemente in der XML-Datendatei bestimmt werden, und für jedes Dateielement muss eine Ausgabe generiert werden.  
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
  Die XML-Quelle unterstützt mehrere reguläre Ausgaben und Fehlerausgaben.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt das Dialogfeld **Quellen-Editor für XML** zum Konfigurieren der XML-Quelle ein. Dieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt das Dialogfeld **Quellen-Editor für XML**zum Konfigurieren der XML-Quelle ein. Dieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../Topic/Common%20Properties.md)  
+-   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften der XML-Quelle](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Extrahieren von Daten mithilfe der XML-Quelle](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

@@ -1,25 +1,30 @@
 ---
-title: "Lernprogramm: Verwenden der OData-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Lernprogramm: Verwenden der OData-Quelle | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Lernprogramm: Verwenden der OData-Quelle
+# <a name="tutorial-using-the-odata-source"></a>Lernprogramm: Verwenden der OData-Quelle
   Dieses Lernprogramm führt Sie schrittweise durch den Prozess, bei dem die Sammlung **Employees** aus dem OData-Beispieldienst **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) extrahiert und anschließend in eine Flatfile geladen wird.  
   
-## 1. Erstellen eines Integration Services-Projekts  
+## <a name="1-create-an-integration-services-project"></a>1. Erstellen eines Integration Services-Projekts  
   
 1.  Starten Sie **SQL Server Data Tools** oder [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  Geben Sie einen **Namen** ein, und wählen Sie einen **Speicherort** für das Projekt aus. Klicken Sie anschließend auf **OK**.  
   
-## 2. Hinzufügen und Konfigurieren einer OData-Quelle für das SSIS-Paket  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Hinzufügen und Konfigurieren einer OData-Quelle für das SSIS-Paket  
   
 1.  Ziehen Sie einen **Datenflusstask** aus der **SSIS-Toolbox** auf die Entwurfsoberfläche der Ablaufsteuerung des SSIS-Pakets.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 6
   
 5.  Klicken Sie auf **Neu…** , um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
-6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben Sie für die Zwecke dieses Lernprogramms [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) ein.  
+6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben Sie für die Zwecke dieses Lernprogramms [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)ein.  
   
 7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt. Wenn Sie die Standardauthentifizierung verwenden möchten, wählen Sie **Diesen Benutzernamen und dieses Kennwort verwenden**aus.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. Klicken Sie auf **OK** , um das Dialogfeld **Quellen-Editor für OData** zu schließen.  
   
-## 3. Hinzufügen eines Flatfileziels und Testen der Projektmappe  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Hinzufügen eines Flatfileziels und Testen der Projektmappe  
   
 1.  Ziehen Sie nun ein **Flatfileziel** aus der **SSIS-Toolbox** auf die Entwurfsoberfläche Datenfluss unter die Komponente **OData-Quelle**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
 5.  Wählen Sie im Dialogfeld **Flatfileformat** die Option **Mit Trennzeichen**aus. Das Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** wird geöffnet.  
   
-6.  Geben Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** für **Dateiname** den Namen **c:\Employees.txt** ein.  
+6.  Geben Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** für **Dateiname**den Namen **c:\Employees.txt**ein.  
   
 7.  Klicken Sie im linken Navigationsbereich auf **Spalten**. Auf dieser Seite können Sie die Daten in der Vorschau anzeigen.  
   
