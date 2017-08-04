@@ -2,7 +2,7 @@
 title: Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>Berichte zur Transaktionsleistungsanalyse  
  Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte**und **Übersicht der Transaktionsleistungsanalyse**auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  
   
+### <a name="tables"></a>Tabellen
+  
  Der Detailbericht für eine Tabelle umfasst drei Abschnitte:  
   
 -   Abschnitt zur Scanstatistik  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   Prozent der Gesamtzahl der Zugriffe. Der Prozentsatz der Scans und Suchvorgänge für diese Tabelle im Verhältnis zur Aktivität für die gesamte Datenbank. Je höher der Prozentsatz, desto stärker wird die Tabelle im Vergleich zu anderen Tabellen in der Datenbank verwendet.  
   
     -   Statistik zu Suchläufen/Bereichsscans. In dieser Spalte wird die Anzahl der Punktsuchen und Bereichsscans (Indexscans und Tabellenscans) aufgeführt, die während der Profilerstellung für die Tabelle durchgeführt wurden. Der Durchschnitt je Transaktion beruht auf einer Schätzung.  
-  
-    -   Interop-Zunahme und systemeigene Zunahme. Diese Spalten enthalten Schätzungen des Leistungszuwachses, der bei einer Punktsuche oder einem Bereichsscan erzielt werden könnte, wenn die Tabelle in eine speicheroptimierte Tabelle konvertiert wird.  
-  
+    
 -   Abschnitt zur Konfliktstatistik  
   
      Dieser Abschnitt enthält eine Tabelle mit den Konflikten für die Datenbanktabelle. Weitere Informationen zu Datenbanklatches und -sperren finden Sie unter „Sperrenarchitektur“. Es gibt folgende Spalten:  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      Dieser Abschnitt enthält eine Tabelle, die angibt, wie schwierig es ist, diese Datenbanktabelle in eine speicheroptimierte Tabelle zu konvertieren. Je höher die Schwierigkeitsbewertung, desto schwieriger ist die Konvertierung der Tabelle. Ausführliche Informationen zum Konvertieren dieser Datenbanktabelle erhalten Sie im Ratgeber für die Speicheroptimierung.  
   
- Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.dm_db_index_operational_stats“ (Transact-SQL) gesammelt und aggregiert.  
-  
+Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.dm_db_index_operational_stats“ (Transact-SQL) gesammelt und aggregiert.  
+
+### <a name="stored-procedures"></a>Gespeicherte Prozeduren
+
  Eine gespeicherte Prozedur mit hoher CPU-Zeit im Verhältnis zur verstrichenen Zeit ist ein Kandidat für die Migration. Der Bericht zeigt alle Tabellenverweise an, da systemintern kompilierte gespeicherte Prozeduren nur auf speicheroptimierte Tabellen verweisen können. Das kann den Migrationsaufwand weiter erhöhen.  
   
  Der Detailbericht für eine gespeicherte Prozedur umfasst zwei Abschnitte:  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Migrationsprüfliste mithilfe des Befehls **Prüflisten für die Migration zum In-Memory-OLTP erstellen** oder mithilfe von PowerShell generieren.  
   
- **So generieren Sie eine Migrationsprüfliste über die Benutzeroberfläche**  
+**So generieren Sie eine Migrationsprüfliste über die Benutzeroberfläche**  
   
 1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf eine Datenbank, die nicht die Systemdatenbank ist. Klicken Sie auf **Aufgaben**und anschließend auf **Prüflisten für die Migration zum In-Memory-OLTP erstellen**.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können die Genauigkeit der Berichte überprüfen, indem Sie sie mit den Berichten vergleichen, die von den Tools „Speicheroptimierungsratgeber“ und „Ratgeber für native Kompilierung“ erstellt wurden. Weitere Informationen finden Sie unter [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) und [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
- **So generieren Sie eine Migrationsprüfliste mithilfe von SQL Server PowerShell**  
+**So generieren Sie eine Migrationsprüfliste mithilfe von SQL Server PowerShell**  
   
 1.  Klicken Sie im **Objekt-Explorer**auf eine Datenbank und anschließend auf **PowerShell starten**. Überprüfen Sie, ob die folgende Eingabeaufforderung angezeigt wird.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Der Migrationsprüflistenbericht wird für alle Tabellen und gespeicherten Prozeduren in der Datenbank generiert. Er befindet sich an dem durch „folder_path“ angegebenen Speicherort.  
   
- **So generieren Sie eine Migrationsprüfliste mithilfe von Windows PowerShell**  
+**So generieren Sie eine Migrationsprüfliste mithilfe von Windows PowerShell**  
   
 1.  Starten Sie eine Windows PowerShell-Sitzung mit erhöhten Rechten.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
