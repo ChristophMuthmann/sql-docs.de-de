@@ -17,12 +17,12 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8e9bb9059eb51cd7274b2fc16dce6a879a375d0b
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dc5f97519cc9c2916f164b4905e164a273ef2d58
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Deaktivieren von Stretch-Datenbank und Zurückholen von Remotedaten

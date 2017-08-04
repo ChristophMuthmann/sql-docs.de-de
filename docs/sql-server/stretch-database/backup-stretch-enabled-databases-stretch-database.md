@@ -17,12 +17,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b68a341cc6fb8e01d93b19eb0d7a6a69213af3ba
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 75460a6396a410f7f61623e2273465a8e138f773
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sichern von Datenbanken, für die die Funktion „Stretch-Datenbank“ aktiviert wurde (Stretch-Datenbank)
