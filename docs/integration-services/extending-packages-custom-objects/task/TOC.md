@@ -1,0 +1,7 @@
+# [Entwickeln eines benutzerdefinierten Tasks](developing-a-custom-task.md)
+# [Erstellen eines benutzerdefinierten Tasks](creating-a-custom-task.md)
+# [Codieren eines benutzerdefinierten Tasks](coding-a-custom-task.md)
+# [Herstellen einer Verbindung mit Datenquellen in einem benutzerdefinierten Task](connecting-to-data-sources-in-a-custom-task.md)
+# [Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task](raising-and-defining-events-in-a-custom-task.md)
+# [Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task](adding-support-for-debugging-in-a-custom-task.md)
+# [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](developing-a-user-interface-for-a-custom-task.md)

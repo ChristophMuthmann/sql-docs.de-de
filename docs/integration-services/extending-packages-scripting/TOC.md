@@ -1,0 +1,7 @@
+# [Erweitern von Paketen mit Skripts](extending-packages-with-scripting.md)
+# [Vergleich zwischen Skripttask und Skriptkomponente](comparing-the-script-task-and-the-script-component.md)
+# [Vergleichen von Skriptlösungen und benutzerdefinierten Objekten](comparing-scripting-solutions-and-custom-objects.md)
+# [Verweisen auf andere Assemblys in Skriptlösungen](referencing-other-assemblies-in-scripting-solutions.md)
+# [Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skripttask und einer Skriptkomponente](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
+# [Erweitern von Paketen mithilfe des Skripttasks](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
+# [Erweitern des Datenflusses mit der Skriptkomponente](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)

@@ -1,0 +1,5 @@
+# [Entwickeln bestimmter Arten von Skriptkomponenten](developing-specific-types-of-script-components.md)
+# [Erstellen einer Quelle mit der Skriptkomponente](creating-a-source-with-the-script-component.md)
+# [Erstellen einer synchronen Transformation mit der Skriptkomponente](creating-a-synchronous-transformation-with-the-script-component.md)
+# [Erstellen einer asynchronen Transformation mit der Skriptkomponente](creating-an-asynchronous-transformation-with-the-script-component.md)
+# [Erstellen eines Ziels mit der Skriptkomponente](creating-a-destination-with-the-script-component.md)

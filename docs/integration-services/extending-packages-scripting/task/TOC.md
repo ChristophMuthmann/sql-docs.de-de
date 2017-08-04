@@ -1,0 +1,10 @@
+# [Erweitern von Paketen mithilfe des Skripttasks](extending-the-package-with-the-script-task.md)
+# [Konfigurieren des Skripttasks im Skripttask-Editor](configuring-the-script-task-in-the-script-task-editor.md)
+# [Codieren und Debuggen des Skripttasks](coding-and-debugging-the-script-task.md)
+# [Verwenden von Variablen im Skripttask](using-variables-in-the-script-task.md)
+# [Herstellen einer Verbindung zu Datenquellen im Skripttask](connecting-to-data-sources-in-the-script-task.md)
+# [Auslösen von Ereignissen im Skripttask](raising-events-in-the-script-task.md)
+# [Protokollieren im Skripttask](logging-in-the-script-task.md)
+# [Zurückgeben von Ergebnissen aus dem Skripttask](returning-results-from-the-script-task.md)
+
+# [Skripttask-Beispiele](../../extending-packages-scripting-task-examples/script-task-examples.md)

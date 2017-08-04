@@ -1,0 +1,6 @@
+# [Kategorisierte Webdienstvorgänge (Master Data Services)](categorized-web-service-operations-master-data-services.md)
+# [Erstellen eines benutzerdefinierten Workflows – Beispiel](create-a-custom-workflow-example.md)
+# [Erstellen eines benutzerdefinierten Workflows – XML-Beschreibung](create-a-custom-workflow-xml-description.md)
+# [Erstellen eines benutzerdefinierten Workflows (Master Data Services)](create-a-custom-workflow-master-data-services.md)
+# [Erstellen von Proxyklassen für den Master Data Manager-Webdienst](create-master-data-manager-web-service-proxy-classes.md)
+# [Master Data Services Developer Documentation](master-data-services-developer-documentation.md)
