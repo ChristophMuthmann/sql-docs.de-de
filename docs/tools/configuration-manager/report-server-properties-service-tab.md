@@ -1,25 +1,30 @@
 ---
-title: "Berichtsserver-Eigenschaften (Registerkarte Dienst) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Report Servereigenschaften (Registerkarte Dienst) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Berichtsserver-Eigenschaften (Registerkarte Dienst)
+# <a name="report-server-properties-service-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Dienst)
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berichtsserverdienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 22
  Zeigt die Prozess-ID von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows an.  
   
  **SQL-Diensttyp**  
- Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
@@ -53,7 +58,7 @@ caps.handback.revision: 22
  **Status**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Dienste](../../tools/configuration-manager/sql-server-services.md)  
   
   
