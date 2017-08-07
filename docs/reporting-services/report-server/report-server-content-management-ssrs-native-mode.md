@@ -1,5 +1,5 @@
 ---
-title: Melden von Berichtsserverinhalten (einheitlicher SSRS-Modus) | Microsoft Docs
+title: Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,18 +21,18 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Mit [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 ist erstmals das  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal verfügbar. In diesem Artikel werden der Berichts-Manager und das neue Web-Portal besprochen.  
   
 > [!NOTE]  
->  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+>  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Die Inhaltsverwaltung umfasst die folgenden Aufgaben:  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Symbol|Verschiebbares Element|  
 |----------|-------------------|  
-|![Symbol "Bericht"](../../reporting-services/report-server/media/hlp-16doc.gif "Symbol "Bericht"")|Bericht|  
-|![Symbol "Bericht" verknüpfte](../../reporting-services/report-server/media/hlp-16linked.gif "verknüpften Bericht (Symbol)")|Verknüpfter Bericht|  
-|![Symbol "Ordner"](../../reporting-services/report-server/media/hlp-16folder.gif "Symbol "Ordner"")|Ordner|  
-|![Allgemeines Ressourcensymbol](../../reporting-services/report-server/media/hlp-16file.gif "Allgemeines Ressourcensymbol")|Allgemeine Ressource|  
-|![Symbol für freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")|Freigegebene Datenquelle|  
+|![Berichtsymbol](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")|Bericht|  
+|![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")|Verknüpfter Bericht|  
+|![Ordnersymbol](../../reporting-services/report-server/media/hlp-16folder.gif "Folder icon")|Ordner|  
+|![Symbol allgemeine Ressource](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")|Allgemeine Ressource|  
+|![Symbol freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")|Freigegebene Datenquelle|  
 ||Freigegebenes Dataset|  
   
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  
@@ -124,21 +124,21 @@ ms.lasthandoff: 06/22/2017
 ### <a name="deleting-folders-and-folder-contents"></a>Löschen von Ordnern und Ordnerinhalten  
  Beim Löschen eines Ordners werden alle darin enthaltenen Elemente gelöscht. Vor dem Löschen eines Ordners sollten Sie feststellen, ob er Elemente enthält, auf die andere Elemente in einem anderen Bereich der Ordnerhierarchie verweisen bzw. die von solchen Elementen verwendet werden. Zu solchen Elementen, auf die verwiesen wird, zählen Berichtsdefinitionen, die verknüpfte Berichte, freigegebene Datenquellen und Ressourcen unterstützen.  
   
- Beim Löschen eines Berichts mit einem oder mehreren verknüpften Berichten, die auf diesen Bericht verweisen, werden die verknüpften Berichte nach dem Löschen des Berichts ungültig. Es ist nicht möglich, im Voraus zu wissen, welche verknüpften Berichte betroffen sind. In einem Bericht werden nämlich keine Informationen zu verknüpften Berichten, die auf diesem Bericht basieren, gespeichert. Sie können jedoch die Eigenschaften eines verknüpften Berichts prüfen, um festzustellen, auf welchem Bericht er basiert. Im Gegensatz dazu werden in freigegebenen Datenquellenelementen alle Berichte aufgeführt, die aktuell das Element verwenden. Auf diese Weise können Sie auf einfache Weise bestimmen, ob die Verbindungsinformationen verwendet werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Zudem identifizieren Ressourcen, die von Berichten verwendet werden, diese Berichte nicht.  
+ Beim Löschen eines Berichts mit einem oder mehreren verknüpften Berichten, die auf diesen Bericht verweisen, werden die verknüpften Berichte nach dem Löschen des Berichts ungültig. Es ist nicht möglich, im Voraus zu wissen, welche verknüpften Berichte betroffen sind. In einem Bericht werden nämlich keine Informationen zu verknüpften Berichten, die auf diesem Bericht basieren, gespeichert. Sie können jedoch die Eigenschaften eines verknüpften Berichts prüfen, um festzustellen, auf welchem Bericht er basiert. Im Gegensatz dazu werden in freigegebenen Datenquellenelementen alle Berichte aufgeführt, die aktuell das Element verwenden. Auf diese Weise können Sie auf einfache Weise bestimmen, ob die Verbindungsinformationen verwendet werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Zudem identifizieren Ressourcen, die von Berichten verwendet werden, diese Berichte nicht.  
   
  Überlegen Sie vor dem Löschen eines Ordners, ob der Berichtsverlauf eines Berichts, den Sie löschen möchten, oder eine berichtsspezifische Struktur (z. B. ein datengesteuertes Abonnement), das Bestandteil eines Berichts ist, erhalten bleiben muss. Falls Sie solche Informationen benötigen, verschieben Sie das Element in einen anderen Ordner, bevor Sie den Ordner löschen.  
   
  Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Berichts-Manager können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
   
 ##  <a name="bkmk_Resources"></a> Ressourcen  
- Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder (Berichts-Generator und SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten (Berichts-Generator und SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Hinzufügen und Anzeigen einer Ressource  
  Um einem Berichtsserver eine Ressource hinzuzufügen, laden Sie eine Datei hoch oder veröffentlichen sie:  
   
 |Vorgang|Dateityp|  
 |---------------|---------------|  
-|Upload|Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Veröffentlichen|Alle Dateien in einem Projekt, die keine Berichte, Berichtsteile, Datenquellen oder Datasets darstellen, werden als Ressourcen hochgeladen. Fügen Sie zum Veröffentlichen einer Ressource einem Projekt im Berichts-Designer ein vorhandenes Objekt hinzu, und veröffentlichen Sie das Projekt dann auf einem Berichtsserver.|  
   
  Alle Ressourcen stehen als Dateien, die anschließend auf einen Berichtsserver hochgeladen werden, in einem Dateisystem bereit. Außer der standardmäßigen Größenbeschränkung von 4 MB in ASP.NET gibt es keine Einschränkungen bezüglich der hochzuladenden Dateien. Zum Veröffentlichen als Ressource auf einem Berichtsserver sind jedoch einige Dateitypen, die über entsprechende MIME-Typen verfügen, besser geeignet als andere. Ressourcen, die auf HTML- und JPG-Dateien basieren, werden z.B. in einem Browserfenster geöffnet, wenn der Benutzer auf die Ressource klickt. Die HTML-Datei wird als Webseite und die JPG-Datei als Bild gerendert. Andererseits können Ressourcen ohne entsprechende MIME-Typen, die auf Desktopanwendungsdateien basieren, beispielsweise im Browserfenster möglicherweise nicht gerendert werden.  
@@ -193,7 +193,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Rollen und Berechtigungen &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
+ [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services-Berichte &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
   
   

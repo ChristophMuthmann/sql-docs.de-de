@@ -1,5 +1,5 @@
 ---
-title: "Ändern Sie Zuordnung Legenden-Skalierung zugeordnete Farbregeln in Berichts-Generator-SSRS | Microsoft Docs"
+title: "Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln im Berichts-Generator und SSRS | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln (Berichts-Generator und SSRS)
@@ -56,17 +56,17 @@ ms.lasthandoff: 06/22/2017
   
 -   **Entfernungsskala:** Enthält Informationen zur Interpretation des Maßstabs der Karte. Eine Karte enthält eine Entfernungsskala. Der aktuelle Zoomwert des Kartenviewports bestimmt die Entfernungsskala.  
   
- ![Rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "Rs_MapElements")  
+ ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
 ##  <a name="Viewport"></a> So ändern Sie die Position einer Legende in Bezug zum Viewport  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>So ändern Sie die Position einer Legende in Bezug zum Viewport  
   
-1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste in der Legende, und öffnen Sie die  *\<Berichtselement >***Eigenschaften** Seite.  
+1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf die Legende, und öffnen Sie die Seite *\<<Berichtselement>***Eigenschaften**.  
   
 2.  Klicken Sie in **Position**auf den Ort, der angibt, wo die Legende relativ zum Viewport angezeigt wird.  
   
-3.  Um die Legende außerhalb des Viewports anzuzeigen, wählen Sie **anzeigen \<Berichtselement > außerhalb des kartenviewports**.  
+3.  Um die Legende außerhalb des Viewports anzuzeigen, klicken Sie auf **\<Berichtselement> außerhalb von Viewport anzeigen**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
 3.  Klicken Sie auf **Vorlagenstil anwenden**.  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe der Farbpalette anzeigen**.  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe von Farbbereichen anzeigen**.  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe benutzerdefinierter Farben anzeigen**.  
   
@@ -194,9 +194,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
-3.  Wählen Sie die **aten mithilfe** \<Regeltyp > Option. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
+3.  Aktivieren Sie die Option „**Daten mithilfe von** \<Regeltyp> anzeigen“. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
   
 4.  Klicken Sie auf **Verteilung**.  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **Benutzerdefiniert**. Geben Sie Ihre eigene Anzahl von Bereichen an, um die Verteilung von Werten zu steuern.  
   
-     Weitere Informationen zu Verteilungsoptionen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+     Weitere Informationen zu Verteilungsoptionen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten (Berichts-Generator und SSRS)](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 6.  Geben Sie in **Anzahl der Unterbereiche**die gewünschte Anzahl von Unterbereichen ein. Beim Verteilungstyp **Optimal**wird die Anzahl von Unterbereichen automatisch berechnet.  
   
@@ -226,9 +226,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Regel**.  
   
-3.  Überprüfen Sie, ob **aten mithilfe** \< *Regeltyp*> ausgewählt ist.  
+3.  Überprüfen Sie, ob „**Daten mithilfe von** \<*Regeltyp*> anzeigen“ aktiviert ist.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -247,9 +247,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Farbregel**.  
   
-3.  Aktivieren Sie die zu verwendende Farbregeloption. Um Elemente in einer kartenlegende oder Farbskala anzuzeigen, müssen Sie eine der Auswählen der **aten mithilfe** \<Regeltyp > Optionen.  
+3.  Aktivieren Sie die zu verwendende Farbregeloption. Um Elemente in einer Kartenlegende oder Farbskala anzuzeigen, müssen Sie eine der Optionen „**Daten mithilfe von** \<Regeltyp> anzeigen“ aktivieren.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -268,7 +268,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -281,17 +281,17 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  *\<kartenelementtyp >***Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf *\<Kartenelementtyp>***Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
-4.  Unter**Legendentext** werden Schlüsselwörter angezeigt, die die in der Legende angezeigten Daten angeben. Verwenden Sie Kartenschlüsselwörter und benutzerdefinierte Formate, um das Format des Legendentexts zu steuern. #FROMVALUE {C2} gibt z. B. ein Währungsformat mit zwei Dezimalstellen an. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+4.  Unter**Legendentext** werden Schlüsselwörter angezeigt, die die in der Legende angezeigten Daten angeben. Verwenden Sie Kartenschlüsselwörter und benutzerdefinierte Formate, um das Format des Legendentexts zu steuern. #FROMVALUE {C2} gibt z. B. ein Währungsformat mit zwei Dezimalstellen an. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: Neue Systemrolle (Management Studio) | Microsoft Docs
+title: Neue Systemrolle (Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="new-system-role-management-studio"></a>Neue Systemrolle (Management Studio)

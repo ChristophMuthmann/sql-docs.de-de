@@ -20,11 +20,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82a29880c3595f5c3df5814a65c163ddd02da6a8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Sie können einen eigenen benutzerdefinierten Konfliktlöser als gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur in einem Verleger schreiben. Diese gespeicherte Prozedur wird während der Synchronisierung aufgerufen, wenn in einem Artikel, für den der Konfliktlöser registriert wurde, Konflikte erkannt werden. Die Informationen zur Konfliktzeile werden vom Merge-Agent an die erforderlichen Parameter der Prozedur übergeben. Auf gespeicherten Prozeduren basierende benutzerdefinierte Konfliktlöser werden immer auf dem Verleger erstellt.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure resolvers are only invoked to handle row change-based conflicts. Sie können nicht zur Behandlung anderer Arten von Konflikten verwendet werden, z.&nbsp;B. von Einfügefehlern, die durch den Verstoß gegen eine PRIMARY&nbsp;KEY-Einschränkung oder einen eindeutigen Index verursacht werden.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfliktlöser für gespeicherte Prozeduren werden nur zur Behandlung änderungsbasierter Konflikte auf Zeilenebene aufgerufen. Sie können nicht zur Behandlung anderer Arten von Konflikten verwendet werden, z.&nbsp;B. von Einfügefehlern, die durch den Verstoß gegen eine PRIMARY&nbsp;KEY-Einschränkung oder einen eindeutigen Index verursacht werden.  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen auf gespeicherten Prozeduren basierenden benutzerdefinierten Konfliktlöser  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 2.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus, wobei Sie **@publication**, **@article**, den Wert **resolver_info** für **@property**und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **@value**implementiert wird.  
   
 ##  <a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
- Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>-Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten, die während der Synchronisierung der Mergereplikation eintreten, schreiben können. Weitere Informationen finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver** -Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
+ Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver** -Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen COM-basierten benutzerdefinierten Konfliktlöser  
   

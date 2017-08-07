@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Bereitstellungseigenschaften (Reporting Services) | Microsoft Docs
+title: Festlegen von Bereitstellungseigenschaften (Reporting Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Festlegen von Bereitstellungseigenschaften (Reporting Services)
@@ -33,10 +33,10 @@ ms.lasthandoff: 06/22/2017
  Verwenden Sie den Konfigurations-Manager, um Gruppen mit Projekteigenschaften in Projektkonfigurationen zu erstellen und zu verwalten. Der Konfigurations-Manager ist eine von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]unterstützte Funktion, auf dem [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] basiert.  
   
 > [!NOTE]  
->  Verwechseln Sie diese Funktion nicht mit dem Reporting Services-Konfigurations-Manager, der verwendet wird, um nach der Installation Reporting Services zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+>  Verwechseln Sie diese Funktion nicht mit dem Reporting Services-Konfigurations-Manager, der verwendet wird, um nach der Installation Reporting Services zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
   
 > [!NOTE]  
->  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] wird der Vorgang zur Veröffentlichung von Berichten aus einem Berichtsserverprojekt oder einer Projektmappe als *Bereitstellen von Berichten* bezeichnet.  
+>  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]wird der Vorgang zur Veröffentlichung von Berichten aus einem Berichtsserverprojekt oder einer Projektmappe als *Bereitstellen von Berichten*bezeichnet.  
   
 ### <a name="to-set-deployment-properties"></a>So legen Sie Bereitstellungseigenschaften fest  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Klicken Sie im Dialogfeld **Eigenschaftenseiten** für das Projekt auf **Konfigurations-Manager**.  
   
-3.  Wählen Sie im Dialogfeld **Konfigurations-Manager** die zu bearbeitende Konfiguration aus. Die gerade aktive Konfiguration wird im Format **Active (***\<Configuration >***)**.  
+3.  Wählen Sie im Dialogfeld **Konfigurations-Manager** die zu bearbeitende Konfiguration aus. Die gerade aktive Konfiguration wird als **Aktiv (***\<Konfiguration>***)** angezeigt.  
   
 4.  Aktivieren oder deaktivieren Sie unter **Projektkontext**für jedes Projekt der Projektmappe **Erstellen** oder **Bereitstellen**.  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
  [Veröffentlichen von Datenquellen und Berichten](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Ausführen einer Vorschau für Berichte](../../reporting-services/reports/previewing-reports.md)   
  [Berichts-Designer (F1-Hilfe)](../../reporting-services/tools/report-designer-f1-help.md)   
- [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Veröffentlichen von Berichten auf einem Berichtsserver](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   

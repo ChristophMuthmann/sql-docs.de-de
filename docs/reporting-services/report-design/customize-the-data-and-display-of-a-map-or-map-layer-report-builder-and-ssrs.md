@@ -1,5 +1,5 @@
 ---
-title: Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft Docs
+title: Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -28,11 +28,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Um weitere Details bereitzustellen, können Sie Kartenelementen Links auf jeder Ebene hinzufügen, auf die ein Benutzer klicken kann, um verwandte Berichte zu öffnen.  
   
- Weitere Ideen zum Verbessern eines Berichts finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Weitere Ideen zum Verbessern eines Berichts finden Sie unter [Planen eines Berichts (Berichts-Generator)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
  Anzeigeoptionen wirken sich auf die Art und Weise aus, wie eine Karte oder die Teile einer Karte angezeigt werden, wenn Sie den Bericht anzeigen. Einige Optionen steuern die Darstellung der Karte, z. B. die Rahmen und die Schriftarten oder den Bereich, die auf der Karte dargestellt wurden. Andere Optionen steuern den Inhalt jeder Ebene, z. B. Blasengrößen, Markertypen, Bezeichnungen oder QuickInfos.  
   

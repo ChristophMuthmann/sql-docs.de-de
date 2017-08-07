@@ -1,5 +1,5 @@
 ---
-title: "Abonnements und Übermittlung (Reporting Services) | Microsoft Docs"
+title: Abonnement und Lieferung (Reporting Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Pro Bericht können mehrere Abonnements erstellt werden, um die Abonnementoptionen zu variieren. Beispielsweise können Sie unterschiedliche Parameterwerte angeben, um drei Versionen eines Berichts zu erstellen, wie etwa einen Umsatzbericht West, einen Umsatzbericht Ost und einen Umsatzbericht für alle Verkäufe.  
   
- ![Beispiel für Ssrs-Abonnementablauf](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "Beispiel Ssrs-Abonnementablauf")  
+ ![Beispiel: SSRS-Abonnementablauf](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
  Abonnements sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

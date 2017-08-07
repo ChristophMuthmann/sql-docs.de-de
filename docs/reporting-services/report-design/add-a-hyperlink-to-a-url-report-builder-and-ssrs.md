@@ -1,5 +1,5 @@
 ---
-title: "Fügen Sie einen Link zu einer URL (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
@@ -29,11 +29,11 @@ Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](..
   
 *   Sie können **einen Link hinzufügen, der einen Browser mit einer URL öffnet** , die Sie angeben. Der Link kann eine statische URL oder ein Ausdruck sein, der zu einer URL ausgewertet wird. Wenn ein Feld in einer Datenbank URLs enthält, kann der Ausdruck dieses Feld enthalten, wodurch eine dynamische Liste von Links in dem Bericht entsteht. Stellen Sie sicher, dass die Leser Ihrer Berichte Zugriff auf die URL haben, die Sie bereitstellen.  
    
-*  Sie können auch **URLs angeben, um Drillthroughs zu erstellen** Berichten auf beliebigen Berichtsservern führen, für die Sie und Ihre Benutzer über eine Leseberechtigung verfügen, indem Sie URL-Anforderungen an den Berichtsserver verwenden. Sie können z. B. einen Bericht angeben und die Dokumentstruktur für Benutzer ausblenden, wenn diese den Bericht zum ersten Mal anzeigen. Weitere Informationen finden Sie unter [&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) und [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).
+*  Sie können auch **URLs angeben, um Drillthroughs zu erstellen** Berichten auf beliebigen Berichtsservern führen, für die Sie und Ihre Benutzer über eine Leseberechtigung verfügen, indem Sie URL-Anforderungen an den Berichtsserver verwenden. Sie können z. B. einen Bericht angeben und die Dokumentstruktur für Benutzer ausblenden, wenn diese den Bericht zum ersten Mal anzeigen. Weitere Informationen finden Sie unter [URL-Zugriff (SSRS)](../../reporting-services/url-access-ssrs.md) und [Angeben von Pfaden zu externen Elementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).
  
  *  Außerdem können Sie **ein Lesezeichen an einem bestimmten Ort** im selben Bericht hinzufügen. 
   
-Probieren Sie das Hinzufügen von Links mit Beispieldaten in [Lernprogramm: Formatieren von Text &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-format-text-report-builder.md) aus.  
+Probieren Sie das Hinzufügen von Links mit Beispieldaten im [Tutorial: Format Text (Report VBuilder) (Tutorial: Formatieren von Text (Berichts-Generator))](../../reporting-services/tutorial-format-text-report-builder.md) aus.  
   
 > [!NOTE]  
 >  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  

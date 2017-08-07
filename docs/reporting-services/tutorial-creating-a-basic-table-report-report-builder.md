@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft Docs'
+title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
@@ -52,7 +52,7 @@ Erstellen eines Tabellenberichts mithilfe des Tabellen- oder Matrixassistenten. 
 ## <a name="DataConnection"></a>1a. Angeben einer Datenverbindung im Tabellen-Assistenten  
 Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird.  
   
-In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 ### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
@@ -62,7 +62,7 @@ In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Info
   
 3.  Geben Sie im Feld **Name**den Namen **Product_Sales** für die Datenquelle ein.  
   
-4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.  
+4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
   
 5.  Geben Sie im Feld **Verbindungszeichenfolge** den folgenden Text ein, wobei \<Servername> der Name einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ist:  
   
@@ -72,7 +72,7 @@ In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Info
   
     Da Sie eine Abfrage verwenden, die die Daten enthält, anstatt die Daten aus einer Datenbank abzurufen, enthält die Verbindungszeichenfolge den Datenbanknamen nicht. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-6.  Klicken Sie auf die Registerkarte **Anmeldeinformationen**. Geben Sie die für den Zugriff auf die externe Datenquelle benötigten Anmeldeinformationen ein.  
+6.  Klicken Sie auf die Registerkarte **Anmeldeinformationen** . Geben Sie die für den Zugriff auf die externe Datenquelle benötigten Anmeldeinformationen ein.  
   
 7. Klicken Sie erneut auf die Registerkarte Allgemein. Klicken Sie auf **Verbindung testen**, um sicherzustellen, dass die Verbindung mit der Datenquelle hergestellt werden kann.  
   
@@ -199,13 +199,13 @@ Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine 
   
 ### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
   
-1.  Damit formatierte Textfelder und Platzhaltertext als Beispielwerte in der Entwurfsansicht angezeigt werden, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
+1.  Damit formatierte Textfelder und Platzhaltertext als Beispielwerte in der Entwurfsansicht angezeigt werden, klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
   
-2.   Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte "Sales", und ziehen Sie den Mauszeiger nach unten, um alle Zellen auszuwählen, die `[Sum(Sales)]` enthalten.  
+2.   Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der Spalte "Sales", und ziehen Sie den Mauszeiger nach unten, um alle Zellen auszuwählen, die `[Sum(Sales)]`enthalten.  
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
-    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie keinen Beispielwährungswert sehen, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
+    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie keinen Beispielwährungswert sehen, klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** > **Beispielwerte**.  
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
@@ -222,7 +222,7 @@ Im Feld „SalesDate“ werden standardmäßig sowohl Datum als auch Uhrzeit ang
   
 3.  Klicken Sie auf dem Menüband auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil und wählen Sie **Datum**aus.  
   
-    In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Wenn Sie kein Beispieldatum sehen, klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** und wählen Sie **Beispielwerte** aus.  
+    In der Zelle wird das Beispieldatum **[31.01.2000]**angezeigt. Wenn Sie kein Beispieldatum sehen, klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf den Pfeil neben dem Symbol **Platzhalterformate** und wählen Sie **Beispielwerte** aus.  
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -270,7 +270,7 @@ Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodas
 ## <a name="Title"></a>5. Hinzufügen eines Berichtstitels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
-Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -320,7 +320,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 4.  Klicken Sie auf **Speichern**.  
   
 ## <a name="Export"></a>7. Exportieren des Berichts  
-Berichte können in verschiedene Formate exportiert werden, z.B. Microsoft Excel- und CSV-Dateien. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Berichte können in verschiedene Formate exportiert werden, z.B. Microsoft Excel- und CSV-Dateien. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen eine Eigenschaft für den Bericht fest, um einen benutzerdefinierten Namen für das Arbeitsmappenregister anzugeben.  
   
@@ -340,13 +340,13 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 1.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-2.  Klicken Sie im Menüband auf **Exportieren**  >  **Excel**.  
+2.  Klicken Sie im Menüband auf **Exportieren** > **Excel**.  
   
     Der Bericht öffnet sich.  
   
 3.  Navigieren Sie im Dialogfeld **Speichern unter** zu dem Verzeichnis, in dem die Datei gespeichert werden soll.  
   
-4.  Geben Sie im Textfeld **Dateiname** den Namen **Product_Sales_Excel** ein.  
+4.  Geben Sie im Textfeld **Dateiname** den Namen **Product_Sales_Excel**ein.  
   
 5.  Vergewissern Sie sich, dass der Dateityp **Excel (\*.xlsx)** ist.  
   
@@ -359,7 +359,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
 2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel**lautet.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  

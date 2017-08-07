@@ -1,5 +1,5 @@
 ---
-title: Server-Eigenschaften (Seite erweitert) - Reporting Services | Microsoft Docs
+title: "Servereigenschaften (Seite Erweitert) – Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind **-1** bis **2**,**147**,**483**,**647**. Wenn der Wert **-1** ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet **60**.  
  
 > [!NOTE] 
-> Festlegen eines Werts von **0** wird *löschen* alle Einträge aus dem Ausführungsprotokoll. Der Wert **-1** wird das Ausführungsprotokoll Einträge werden beibehalten und nicht gelöscht werden.
+> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Bei einem Wert von **-1** werden die Einträge im Ausführungsprotokoll nicht gelöscht.
   
  **SessionTimeout**  
  Der Zeitraum in Sekunden, in dem die Sitzung aktiv bleibt. Der Standardwert lautet **600**.  

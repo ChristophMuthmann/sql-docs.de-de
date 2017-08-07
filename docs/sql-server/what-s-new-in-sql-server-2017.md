@@ -1,7 +1,7 @@
 ---
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
+ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
+ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
@@ -26,20 +26,10 @@ SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Platt
 
 **Probieren Sie es aus:** [Herunterladen von SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Führen Sie SQL Server unter Linux aus!** Weitere Informationen finden Sie unter [SQL Server on Linux Documentation (Dokumentation zu SQL Server unter Linux)](https://docs.microsoft.com/sql/linux/) und [What's new for SQL Server 2017 on Linux (Neues für SQL Server-2017 unter Linux)](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+>**Führen Sie SQL Server unter Linux aus!** Weitere Informationen finden Sie in der [Dokumentation zu SQL Server unter Linux](https://docs.microsoft.com/sql/linux/).
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>Neueste Version: SQL Server 2017 Release Candidate (RC1, Juli 2017)
-
-### <a name="sql-server-database-engine"></a>SQL Server-Datenbankmodul    
-- CLR-Assemblys können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen.  
-
-### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-- Die neue **Scale Out**-Funktion in SSIS weist die folgenden neuen und geänderten Funktionen in RC1 auf. Weitere Informationen finden Sie unter [What's New in Integration Services in SQL Server 2017 (Neues in Integration Services in SQL Server 2017)](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
-    -   Scale Out-Master unterstützt jetzt die hohe Verfügbarkeit.
-    -   Die Failoverbehandlung der Ausführungsprotokolle aus Scale-Out-Workern wurde verbessert.
-    -   Der Parameter *runincluster* der gespeicherten Prozedur **[catalog].[create_execution]** wird hinsichtlich Konsistenz und Lesbarkeit in *runinscaleout* umbenannt.
-    -   Der SSIS-Katalog verfügt über eine neue globale Eigenschaft, um den Standardmodus für das Ausführen von SSIS-Paketen anzugeben.
+## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>Neueste Version: SQL Server 2017 Release Candidate (RC2, August 2017)
+Diese Version enthält Fehlerbehebungen und Leistungsverbesserungen.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
 - Wenn Sie von den folgenden vorherigen Versionen von SQL Server ein Upgrade auf SQL Server 2017 Master Data Services durchführen, können Sie jetzt von einem verbesserten Erlebnis und einer verbesserten Leistung profitieren.
@@ -47,9 +37,9 @@ SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Platt
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## <a name="sql-server-database-engine"></a>SQL Server-Datenbankmodul  
 SQL Server-2017 umfasst viele neue Datenbankmodulfunktionen, Verbesserungen und Leistungsverbesserungen. 
+- **CLR-Assemblys** können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen (RC1).  
 - **Fortsetzbare Online-Indexneuerstellung** setzt den Vorgang einer Online-Indexneuerstellung dort fort, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz), oder es pausiert und der Vorgang einer Online-Indexneuerstellung wird später fortgeführt. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Mit der Option **IDENTITY_CACHE** für ALTER DATABASE SCOPED CONFIGURATION können Sie Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover zu einem sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - Die **Automatische Datenbankoptimierung** bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Weitere Informationen finden Sie unter [Automatische Optimierung](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
@@ -119,13 +109,22 @@ Ab CTP 2.1 kann SSRS nicht mehr über das SQL Server-Setup installiert werden. W
 Weitere Informationen finden Sie unter [Neues in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server-Machine Learning-Dienste
-SQL Server R Services wurde umbenannt in **SQL Server-Machine Learning-Dienste**, entsprechend der neuen Unterstützung für Python zusätzlich zu den R-Sprachen. Sie können Machine Learning-Dienste (datenbankintern) zum Ausführen von R- oder Python-Skripts in SQL Server verwenden, oder Sie installieren den Microsoft Machine Learning-Server (eigenständig) zum Bereitstellen und Nutzen von R- und Python-Modellen, die keinen SQL Server erfordern. Beide Plattformen gehören neue MicrosoftML Algorithmen für verteilte maschinelles lernen und die neueste Version von Microsoft R (Version 9.1.0). (CTP 2.0)
-- Machine Learning mit Python enthält das Modul **revoscalepy**, das eine Teilmenge der verteilten Algorithmen und Computekontexte, bereitgestellt in RevoSacaleR, unterstützt. 
-- Sie können problemlos mehrere Modelle parallel von R erstellen, indem Sie die neue Funktion **RxExecBy** verwenden. Unterstützte Computekontexte umfassen RxSpark und RxInSQLServer. (CTP 2.0)
+SQL Server R Services wurde umbenannt in **SQL Server-Machine Learning-Dienste**, entsprechend der Unterstützung für Python zusätzlich zur R-Programmiersprache. Sie können Machine Learning-Dienste (innerhalb einer Datenbank) zum Ausführen von R- oder Python-Skripts in SQL Server verwenden Alternativ können Sie auch **Machine Learning (eigenständig)** installieren, um R- und Python-Modelle bereitzustellen und zu nutzen, die SQL Server nicht benötigen. 
+
+Entwickler von SQL Server haben jetzt Zugriff auf die umfangreichen ML- und AI-Bibliotheken für Python, die in der Open-Source-Umgebung zusammen mit den neuesten Innovationen von Microsoft zur Verfügung stehen: 
+
++ **revoscalepy**: Diese Python-Version von RevoScaleR enthält parallele Algorithmen für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen sowie einen umfangreichen Satz an APIs für die Übertragung und Verschiebung von Daten, Remoterechenkontexte und Datenquellen.
+
++ **microsoftml**: Dieses moderne Paket von ML-Algorithmen und -Transformationen mit Python-Bindungen enthält tiefgreifende neuronale Netzwerke, schnelle Entscheidungsstrukturen und Entscheidungsgesamtstrukturen sowie hochgradig optimierte Algorithmen für lineare und logistische Regressionen. Darüber hinaus erhalten Sie vorgegebene, auf ResNet-Modellen basierende Modelle, die Sie zur Imageextraktion oder Standpunktanalyse verwenden können.
+
++ **Operationalisierung von Python mit T-SQL**: Stellen Sie Python-Code ganz leicht mithilfe der gespeicherten Prozedur `sp_execute_external_script` bereit. Profitieren Sie von hervorragender Leistung, indem Sie Daten aus SQL an Python-Prozesse streamen und MPI-Ringparallelisierung verwenden.
+
++ **Python in Computekontexten von SQL Server**: Datenanalysten und Entwickler können Python-Code remote aus ihrer Entwicklungsumgebung ausführen, um Daten- und Entwicklungsmodelle auszuprobieren, ohne dabei Daten zu verschieben.
 
 Weitere Informationen finden Sie unter [What's new in SQL Server Machine Learning Services (Neues in SQL Server-Machine Learning-Services)](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Lesen Sie sich den Artikel [Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md) durch.
+- Finden Sie heraus, was es [Neues in SQL Server 2017 unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new) gibt.
 - Lesen Sie sich den Artikel [Neues in SQL Server 2016](what-s-new-in-sql-server-2016.md) durch.
 

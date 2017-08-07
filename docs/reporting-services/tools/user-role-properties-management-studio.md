@@ -1,5 +1,5 @@
 ---
-title: Benutzerrolleneigenschaften (Management Studio) | Microsoft Docs
+title: Benutzerrolleneigenschaften (Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="user-role-properties-management-studio"></a>Benutzerrolleneigenschaften (Management Studio)

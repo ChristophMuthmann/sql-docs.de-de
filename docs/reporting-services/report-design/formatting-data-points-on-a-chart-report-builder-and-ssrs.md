@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 ## <a name="adding-tooltips-and-drillthrough-actions-to-data-points"></a>Hinzufügen von QuickInfos und Drillthroughaktionen zu Datenpunkten  
  Sie können den einzelnen Datenpunkten QuickInfos hinzufügen, indem Sie den Wert der **ToolTip** -Eigenschaft für die Reihe festlegen. Wenn Sie QuickInfos anzeigen, ermöglichen Sie Benutzern das Anzeigen von Informationen zum Datenpunkt, beispielsweise des Gruppennamens, des Werts des Datenpunkts und des Prozentsatzes des Datenpunktes in Bezug auf die Gesamtreihe. Weitere Informationen finden Sie unter [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
   
- Sie können auch eine Drillthroughaktion für Datenpunkte in der Reihe angeben, um einen anderen Bericht oder eine URL anzuzeigen. Sie können Parameter übergeben, um Informationen zum Datenpunkt anzuzeigen, auf den geklickt wurde. Weitere Informationen finden Sie unter [Hinzufügen einer Drillthroughaktion für einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md).  
+ Sie können auch eine Drillthroughaktion für Datenpunkte in der Reihe angeben, um einen anderen Bericht oder eine URL anzuzeigen. Sie können Parameter übergeben, um Informationen zum Datenpunkt anzuzeigen, auf den geklickt wurde. Weitere Informationen finden Sie unter [Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="highlighting-individual-data-points-in-a-series"></a>Hervorheben von einzelnen Datenpunkten in einer Reihe  
  In einem Nicht-Formdiagramm können Sie einzelne Datenpunkte hervorheben, indem Sie einen Ausdruck für die Eigenschaft „Color“ angeben. Wenn Sie beispielsweise den höchsten Datenpunktwert in einer Reihe mit dem Namen `MyField` mit einer anderen Farbe hervorheben möchten, geben Sie einen Ausdruck wie den Folgenden an:  
@@ -58,7 +58,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
   
 -   In allen anderen Diagrammtypen können Sie die Datenpunktbezeichnung mithilfe der **Position** -Eigenschaft für die Reihenbezeichnung neu positionieren. Standardmäßig wird die Position von Datenpunktbezeichnungen automatisch vom Diagramm berechnet, um Bezeichnungskonflikte zu vermeiden. Wenn Sie einen Wert für **Position**festlegen, werden alle Datenpunktbezeichnungen auf dieselbe Weise positioniert, wodurch die Bezeichnungen einander überlappen können. Es empfiehlt sich, diesen Ansatz nur bei einer kleinen Anzahl von Datenpunkten zu verfolgen.  
   
- Weitere Informationen finden Sie unter [Positionieren von Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Positionieren von Bezeichnungen in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Hinzufügen von Schlüsselwörtern für Datenpunktbezeichnungen, QuickInfos und Legendentext  
  Sie können ein vorhandenes Element im Diagramm mithilfe von diagrammspezifischen Schlüsselwörtern darstellen, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Diese Schlüsselwörter können nur auf Eigenschaften von QuickInfos, benutzerdefiniertem Legendentext und Datenpunktbezeichnungen angewendet werden. In vielen Fällen ist für ein Diagrammschlüsselwort ein entsprechender einfacher Ausdruck verfügbar, das Schlüsselwort kann jedoch schneller und einfacher eingegeben werden. Im Folgenden finden Sie eine Liste von Diagrammschlüsselwörtern.  
@@ -81,14 +81,14 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 |#MAX|Maximum aller Y-Werte in der Reihe|Alle|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Der Erste aller Y-Werte in der Reihe|Alle|`=First(Fields!MyDataField.Value)`|  
   
- Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- Weitere Informationen zum Hinzufügen von Schlüsselwörtern zu einem Diagramm finden Sie unter [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) und [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
+ Weitere Informationen zum Hinzufügen von Schlüsselwörtern zu einem Diagramm finden Sie unter [Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) und [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>Verbessern der Lesbarkeit in einem Diagramm mit mehreren Datenpunkten  
- Wenn mehrere Reihen im Diagramm vorhanden sind, kann dieser Umstand die Lesbarkeit der Datenpunkte des Diagramms beeinträchtigen. Wenn Sie dem Diagramm mehrere Reihen hinzufügen, empfiehlt es sich, ein Verfahren anzuwenden, mit dem die einzelnen Reihen im Diagramm effektiv gelesen und erkannt werden. Weitere Informationen hierzu finden Sie unter [Mehrere Reihen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Wenn mehrere Reihen im Diagramm vorhanden sind, kann dieser Umstand die Lesbarkeit der Datenpunkte des Diagramms beeinträchtigen. Wenn Sie dem Diagramm mehrere Reihen hinzufügen, empfiehlt es sich, ein Verfahren anzuwenden, mit dem die einzelnen Reihen im Diagramm effektiv gelesen und erkannt werden. Weitere Informationen hierzu finden Sie unter [Mehrere Reihen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md):  
   
- Zur Vereinfachung empfiehlt es sich, in Formdiagrammen nur ein Datenfeld und ein Kategoriefeld hinzuzufügen. Weitere Informationen finden Sie unter [Formdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md). Wenn für das Diagramm mehr als ein Datenfeld und Kategoriefeld erforderlich ist, sollten Sie den Diagrammtyp ändern. Sie können mit der rechten Maustaste auf die Reihe klicken und **Diagrammtyp ändern**auswählen.  
+ Zur Vereinfachung empfiehlt es sich, in Formdiagrammen nur ein Datenfeld und ein Kategoriefeld hinzuzufügen. Weitere Informationen finden Sie unter [Formdiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md). Wenn für das Diagramm mehr als ein Datenfeld und Kategoriefeld erforderlich ist, sollten Sie den Diagrammtyp ändern. Sie können mit der rechten Maustaste auf die Reihe klicken und **Diagrammtyp ändern**auswählen.  
   
 ## <a name="inserting-data-point-markers"></a>Einfügen von Datenpunktmarkern  
  Ein Datenpunktmarker ist ein visueller Indikator, mit dem die einzelnen Datenpunkte in einer Reihe gekennzeichnet werden. In einem Punktdiagramm werden mit dem Marker Form und Größe der einzelnen Datenpunkte bestimmt. Die Größe des Markers wird durch den Diagrammtyp bestimmt. Sie können die Größe, die Farbe oder den Stil des Markers ändern. Marker sind für Bereichs- und Formdiagramme sowie für gestapelte Untertypen nicht verfügbar.  
@@ -104,8 +104,8 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

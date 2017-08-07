@@ -1,5 +1,5 @@
 ---
-title: TreeMap-und Sunburst-Diagramme in Reporting Services | Microsoft Docs
+title: Treemap- und Sunburst-Diagramme in Reporting Services | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
@@ -28,22 +28,22 @@ ms.lasthandoff: 06/22/2017
   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Treemap- und Sunburst-Visualisierung sind hervorragend für die visuelle Darstellung von hierarchischen Daten geeignet.   Dieses Thema bietet eine Übersicht darüber, wie Sie ein Treemap- oder Sunburst-Diagramm zu einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht hinzufügen. Dieses Thema enthält auch eine Adventureworks-Beispielabfrage, um Ihnen beim Einstieg zu helfen.  
   
 ##  <a name="bkmk_treemap_chart"></a> Das Treemap-Diagramm  
- ![Ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "Ssrs_treemap_icon")  
+ ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
   
  In einem Treemap-Diagramm wird die Diagrammfläche in Rechtecke unterteilt, die die verschiedenen Ebenen und die relative Größe der Datenhierarchie darstellen. Die Darstellung ähnelt dem Geäst eines Baums, das am Stamm beginnt und sich in immer feinere Zweige aufspaltet. Jedes Rechteck wird in kleinere Rechtecke aufgespaltet, die die nächste Hierarchieebene darstellen. Die größten Rechtecke des Treemap-Diagramms werden mit ihrem größten Rechteck in der oberen linken Ecke des Diagramms angeordnet. Diese Rechtecke stellen die oberste Hierarchieebene dar. Die Rechtecke sind nach absteigender Hierarchie angeordnet, und das kleinste Rechteck befindet sich in der unteren rechten Ecke.  Innerhalb eines Rechtecks sind die Rechtecke ebenfalls der Hierarchie entsprechend von oben links nach unten rechts angeordnet.  
   
  In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „Southwest“ (Südwesten) das größte und „Germany“ (Deutschland) das kleinste. Innerhalb des Südwestens ist das Feld „Road Bikes“ (Rennräder) größer als das für „Mountain Bikes“.  
   
- ![Ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "Ssrs_treemap_example")  
+ ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>So fügen Sie ein Treemap-Diagramm und konfigurieren es für die Adventureworks-Beispieldaten  
  **Hinweis:** Bevor Sie Ihrem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, anschließend auf **Einfügen**, und klicken Sie danach auf **Diagramm** .  
   
-     Wählen Sie die TreeMap-Diagramm ![Ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "Ssrs_treemap_icon").  
+     Klicken Sie auf „Treemap“ ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
-     ![Ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "Ssrs_insert_treemap_sunburst")  
+     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
 2.  Passen Sie die Position und Größe des Diagramms an.   Für die Verwendung mit den Beispieldaten empfehlen wir ein 5 Zoll breites Diagramm.  
   
@@ -51,13 +51,13 @@ ms.lasthandoff: 06/22/2017
   
     |||  
     |-|-|  
-    |![Ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "Ssrs_treemap_example_properties")|**Values (Werte):** LineTotal<br /><br /> **Category Groups (Kategoriegruppen):** Fügen Sie sie in folgender Reihenfolge hinzu:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> **Series Groups (Reihengruppen):** TerritoryName|  
+    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Values (Werte):** LineTotal<br /><br /> **Category Groups (Kategoriegruppen):** Fügen Sie sie in folgender Reihenfolge hinzu:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> **Series Groups (Reihengruppen):** TerritoryName|  
   
 4.  Um die Seitengröße für ein Treemap-Diagramm zu optimieren, positionieren Sie die Legende darunter.  
   
 5.  Klicken Sie mit der rechten Maustaste auf **LineTotal** und anschließend auf **Series Properties**(Reiheneigenschaften), um QuickInfos hinzuzufügen, die die Unterkategorie und die Zeilensumme anzeigen.  
   
-     ![Ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "Ssrs_visualization_seriesproperties")  
+     ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
      Legen Sie die Eigenschaft **QuickInfo** wie folgt fest:  
   
@@ -73,20 +73,20 @@ ms.lasthandoff: 06/22/2017
   
   
 ##  <a name="bkmk_sunburst_chart"></a> Sunburst-Diagramm  
- ![Ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "Ssrs_sunburst_icon")  
+ ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
  Die Hierarchie wird in einem Sunburst-Diagramm durch eine Reihe von Kreisen dargestellt. Die höchste Hierarchieebene befindet sich in der Mitte und die niedrigeren Ebenen werden in Ringen um die Mitte herum gruppiert.  Die unterste Hierarchieebene befindet sich im äußersten Ring.  
   
- ![Ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "Ssrs_sunburst_example")  
+ ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>So fügen Sie ein Sunburst-Diagramm ein und konfigurieren es für die Adventureworks-Beispieldaten  
  **Hinweis:** Bevor Sie Ihrem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, anschließend auf **Einfügen**, und klicken Sie danach auf **Diagramm** .  
   
-     Wählen Sie Sunburst ![Ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "Ssrs_treemap_icon").  
+     Klicken Sie auf „Sunburst“ ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
-     ![Ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "Ssrs_insert_treemap_sunburst")  
+     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
 2.  Passen Sie die Position und Größe des Diagramms an.   Für die Verwendung mit den Beispieldaten empfehlen wir ein 5 Zoll breites Diagramm.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
     |||  
     |-|-|  
-    |![Ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "Ssrs_treemap_example_properties")|**Values (Werte):** LineTotal<br /><br /> **Category Groups (Kategoriegruppen):** Fügen Sie sie in folgender Reihenfolge hinzu:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> (3) SalesReasonName<br /><br /> **Series Groups (Reihengruppen):** TerritoryName|  
+    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Values (Werte):** LineTotal<br /><br /> **Category Groups (Kategoriegruppen):** Fügen Sie sie in folgender Reihenfolge hinzu:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> (3) SalesReasonName<br /><br /> **Series Groups (Reihengruppen):** TerritoryName|  
   
 4.  Um die Seitengröße für ein Sunburst-Diagramm zu optimieren, positionieren Sie die Legende darunter.  
   
@@ -102,11 +102,11 @@ ms.lasthandoff: 06/22/2017
   
 6.  |||  
     |-|-|  
-    |![Ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "Ssrs_sunburst_linetotalproperties")|Um dem Sunburst-Diagramm die Werte der Kategoriegruppen hinzuzufügen, legen Sie die Beschriftungseigenschaften wie folgt fest: **Visible** = TRUE und **UseValueAsLabel**= FALSE.<br /><br /> Die angezeigten Beschriftungswerte werden durch die Größe der Schriftart, die Gesamtgröße der Diagrammfläche und die Größe der jeweiligen Rechtecke beeinflusst.  Um weitere Beschriftungen anzuzeigen, ändern Sie die LineTotal-Eigenschaft „Schriftart“ von den standardmäßig eingestellten 10 Punkt auf 8 Punkt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Um dem Sunburst-Diagramm die Werte der Kategoriegruppen hinzuzufügen, legen Sie die Beschriftungseigenschaften wie folgt fest: **Visible** = TRUE und **UseValueAsLabel**= FALSE.<br /><br /> Die angezeigten Beschriftungswerte werden durch die Größe der Schriftart, die Gesamtgröße der Diagrammfläche und die Größe der jeweiligen Rechtecke beeinflusst.  Um weitere Beschriftungen anzuzeigen, ändern Sie die LineTotal-Eigenschaft „Schriftart“ von den standardmäßig eingestellten 10 Punkt auf 8 Punkt.|  
   
 7.  Wenn Sie den Farbbereich ändern möchten, verändern Sie im Diagramm die Eigenschaft **Palette** .  
   
-     ![Ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "Ssrs_visualization_palette")  
+     ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
   
 ##  <a name="bkmk_sample_data"></a> Adventureworks-Beispieldaten  
@@ -178,9 +178,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Freigegebene Datasetentwurfsansicht &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
+ [Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [Treemap: Microsoft Research Data-Visualisierungs-Apps für Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+ [Treemap: Visualisierungs-Apps von Microsoft Research Data für Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft Docs"
+title: "Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
@@ -31,9 +31,9 @@ In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssR
 Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den Sie in eine Datasetabfrage einschließen. Der Parameterdatentyp bestimmt, wie der Parameter auf der Symbolleiste der Berichtsansicht angezeigt wird. 
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
+Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -387,7 +387,7 @@ Wenn Sie einen einwertigen Parameter in einen mehrwertigen Parameter ändern mö
   
 5.  Erweitern Sie im Berichtsdatenbereich den Ordner **Datasets** , klicken Sie mit der rechten Maustaste auf **DataSet1**, und klicken Sie anschließend auf **Abfrage**.  
   
-6.  Ändern Sie die **Gleichheitszeichen** (=) in der **** WHERE [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause WHERE last line WHERE query:  
+6.  Ändern Sie die **Gleichheitszeichen** (=) in der [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE**-Klausel in der letzten Zeile in der Abfrage zu **IN**:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -505,7 +505,7 @@ Wenn Sie einen einwertigen Parameter in einen mehrwertigen Parameter ändern mö
 Der Bericht wird auf dem Berichtsserver gespeichert. Der Berichtsserver, mit dem Sie verbunden sind, wird in der Statusleiste unten im Fenster angezeigt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Damit ist die exemplarische Vorgehensweise zum Hinzufügen eines Parameters zum Bericht abgeschlossen. Weitere Informationen zu Parametern finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+Damit ist die exemplarische Vorgehensweise zum Hinzufügen eines Parameters zum Bericht abgeschlossen. Weitere Informationen zu Parametern finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 * [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)

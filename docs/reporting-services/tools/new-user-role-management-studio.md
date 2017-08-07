@@ -1,5 +1,5 @@
 ---
-title: Neue Benutzerrolle (Management Studio) | Microsoft Docs
+title: Neue Benutzerrolle (Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4c239e87379ead3b826e4db3c85006b364392a6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="new-user-role-management-studio"></a>Neue Benutzerrolle (Management Studio)

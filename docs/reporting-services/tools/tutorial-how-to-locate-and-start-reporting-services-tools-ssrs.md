@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: So suchen und starten Sie den Reporting Services-Tools (SSRS) | Microsoft Docs'
+title: 'Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -25,11 +25,11 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -48,13 +48,13 @@ ms.lasthandoff: 06/22/2017
 -   Verwalten von Verschlüsselungsschlüsseln.  
 -   Konfigurieren der unbeaufsichtigten Berichtsverarbeitung und E-Mail-Übermittlung von Berichten.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. Weitere Informationen finden Sie unter [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+ **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird bei der Installation des einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert. Weitere Informationen finden Sie unter [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>So starten Sie den Reporting Services-Konfigurations-Manager  
   
 1.  Geben Sie im Windows-Startbildschirm **reporting** ein und klicken Sie in den Suchergebnissen in **Apps** auf **Reporting Services-Konfigurations-Manager**.  
   
-     ![Reporting services Konfigurationsmanager auf der Startseite](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services Konfigurationsmanager auf der Startseite")  
+     ![Reporting Services-Konfigurations-Manager beim Start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
   
      **Or**  
   
@@ -66,13 +66,13 @@ ms.lasthandoff: 06/22/2017
   
      Falls Sie einen Remotecomputer angeben, klicken Sie auf **Suchen** , um eine Verbindung herzustellen. Der Berichtsserver muss zuvor für die Remoteverwaltung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die Remoteverwaltung](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  Wählen Sie unter **Wählen Sie unterstance Name**die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz aus, die Sie konfigurieren möchten. Nur SQL Server 2008 und höher Berichtsserverinstanzen, die in der Liste angezeigt werden. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.  
+3.  Wählen Sie unter **Wählen Sie unterstance Name**die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz aus, die Sie konfigurieren möchten. In der Liste werden ausschließlich Berichtsserverinstanzen von SQL Server 2008 und höher angezeigt. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
 5.  Wenn Sie sicherstellen möchten, dass das Tool gestartet wurde, vergleichen Sie Ihre Ergebnisse mit dem folgenden Bild:  
   
-     ![Reporting Services-Konfigurationstool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services-Konfigurationstool")  
+     ![Reporting Services-Konfigurationstool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services Configuration tool")  
   
  **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
@@ -81,13 +81,13 @@ ms.lasthandoff: 06/22/2017
   
  **Installation:** das Webportal ist installiert, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (einheitlicher Modus) installieren: [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
- Damit Sie das Webportal öffnen können, müssen Sie über ausreichende Berechtigungen verfügen (anfangs besitzen nur Mitglieder der lokalen Administratorengruppe Berechtigungen, die den Zugriff auf Webportalfunktionen ermöglichen). Das Webportal enthält verschiedene Seiten und Optionen, die sich je nach den Rollenzuweisungen des aktuellen Benutzers unterscheiden. Für Benutzer ohne Berechtigungen wird eine leere Seite angezeigt. Für Benutzer mit Berechtigungen zum Anzeigen von Berichten werden Links angezeigt, auf die sie klicken können, um die Berichte zu öffnen. Weitere Informationen zu Berechtigungen finden Sie unter [Rollen und Berechtigungen &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Damit Sie das Webportal öffnen können, müssen Sie über ausreichende Berechtigungen verfügen (anfangs besitzen nur Mitglieder der lokalen Administratorengruppe Berechtigungen, die den Zugriff auf Webportalfunktionen ermöglichen). Das Webportal enthält verschiedene Seiten und Optionen, die sich je nach den Rollenzuweisungen des aktuellen Benutzers unterscheiden. Für Benutzer ohne Berechtigungen wird eine leere Seite angezeigt. Für Benutzer mit Berechtigungen zum Anzeigen von Berichten werden Links angezeigt, auf die sie klicken können, um die Berichte zu öffnen. Weitere Informationen zu Berechtigungen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
 ### <a name="to-start-the-web-portal"></a>So starten Sie das Webportal  
   
 1.  Öffnen Sie Ihren Browser. Informationen zu unterstützten Browsern und Browserversionen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  Geben Sie in die Adressleiste des Webbrowsers die URL des Webportals ein. Die URL lautet standardmäßig `http://<serverName>/reports`. Zur Bestätigung des Servernamens und der URL können Sie das Reporting Services-Konfigurationstool verwenden. Weitere Informationen zu URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  Geben Sie in die Adressleiste des Webbrowsers die URL des Webportals ein. Standardmäßig lautet die URL `http://<serverName>/reports`kennen lernen. Zur Bestätigung des Servernamens und der URL können Sie das Reporting Services-Konfigurationstool verwenden. Weitere Informationen zu URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  Das Webportal wird im Browserfenster geöffnet. Die Startseite entspricht dem Basisordner. In Abhängigkeit von den Berechtigungen werden möglicherweise zusätzliche Ordner, Links zu Berichten sowie Ressourcendateien auf der Startseite angezeigt. Möglicherweise werden auf der Symbolleiste auch zusätzliche Schaltflächen und Befehle angezeigt.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Geben Sie im Windows-Startbildschirm **sql server** ein, und klicken Sie in den Suchergebnissen in **Apps** auf **SQL Server Management Studio**.  
   
-     ![Management Studio über Windows-Startbildschirm](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Management Studio über Windows-Startbildschirm")  
+     ![Management Studio auf dem Startbildschirm von Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
   
      **Or**  
   
@@ -131,13 +131,13 @@ Herunterladen von [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID
   
 4.  Klicken Sie in der Liste **Vorlagen** auf **Berichtsserverprojekt**. Mit der folgenden Grafik wird veranschaulicht, wie die Projektvorlagen im Dialogfeld angezeigt werden:  
   
-     ![Neues Projekt (Vorlagendialogfeld)](../../reporting-services/tools/media/rs-ui-newrsproject.gif "neues Projekt (Vorlagendialogfeld)")  
+     ![Neues Projekt (Vorlagendialogfeld)](../../reporting-services/tools/media/rs-ui-newrsproject.gif "New Project template dialog box")  
   
 5.  Geben Sie einen Namen und einen Speicherort für das Projekt ein, oder klicken Sie auf **Durchsuchen** , und wählen Sie einen Speicherort aus.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird mit der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Startseite geöffnet. Der Projektmappen-Explorer umfasst Kategorien zum Erstellen von Berichten und Datenquellen. Mit diesen Kategorien können Sie neue Berichte und Datenquellen erstellen. Wenn Sie eine Berichtsdefinition erstellen, werden Fenster im Registerformat angezeigt. Die Fenster im Registerformat lauten Daten, Layout und Vorschau.  
   
- Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zu Abfrage-Designern, die Sie im Berichts-Designer verwenden können, finden Sie unter [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)kennen lernen.  
+ Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zu Abfrage-Designern, die Sie im Berichts-Designer verwenden können, finden Sie unter [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)kennen lernen.  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
  Der[Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) ist eine eigenständige Anwendung zum Erstellen paginierter Berichte außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie haben die Möglichkeit, alle vorhandenen Berichte anzupassen und zu aktualisieren. Dabei spielt es keine Rolle, ob sie im Berichts-Designer oder in früheren Versionen des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]s erstellt wurden. Die Installation kann über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Webportal oder über das Microsoft Download Center erfolgen.  
@@ -179,12 +179,12 @@ Herunterladen von [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Herunterladen von SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[Laden Sie den Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
 [Laden Sie den Berichts-Generator](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Herunterladen von SQL Server Datatools](http://go.microsoft.com/fwlink/?LinkID=616714) 
-[Installieren von Reporting Services im SharePoint-Modus](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+[Herunterladen von SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Installieren des SharePoint-Modus von Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Abfrageentwurfstools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-[Reporting Services-Lernprogramme](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+[Tutorials zu Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

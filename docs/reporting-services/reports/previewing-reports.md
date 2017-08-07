@@ -1,5 +1,5 @@
 ---
-title: Anzeigen einer Berichtsvorschau | Microsoft Docs
+title: "Ausführen einer Vorschau für Berichte | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/05/2016
 ms.prod: sql-server-2016
@@ -20,28 +20,28 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="previewing-reports"></a>Ausführen einer Vorschau für Berichte
   Wenn Sie einen     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht entwerfen, möchten Sie ihn ggf. anzeigen, bevor Sie ihn in einer Produktionsumgebung veröffentlichen. Dazu gibt es mehrere Möglichkeiten: Sie können im Berichts-Designer in den Vorschaumodus wechseln, im Berichts-Designer das Vorschaufenster verwenden oder den Bericht auf einem Berichtsserver in einer Testumgebung veröffentlichen.  
   
 > [!NOTE]  
->  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird als gespeichert  *\<Reportname >*. rdl.data im selben Verzeichnis wie die Berichtsdefinitionsdatei. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
+>  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird in demselben Verzeichnis wie die Berichtsdefinitionsdatei unter dem Namen „*\<Berichtsname>*.rdl.data“ gespeichert. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
   
 ## <a name="preview-mode"></a>Vorschaumodus  
- Sie können die Vorschau eines Berichts im Berichts-Designer anzeigen, indem Sie auf ![Ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "Ssrs_ssdt_preview"). Dadurch wird der Bericht lokal mit derselben Berichtsverarbeitungs- und Renderingfunktionalität ausgeführt, die auf dem Berichtsserver zur Verfügung steht. Der Bericht wird als interaktives Bild angezeigt, in dem Sie Parameter auswählen, auf Links klicken, die Dokumentstruktur anzeigen und ausgeblendete Bereiche des Berichts erweitern bzw. reduzieren können. Darüber hinaus können Sie den Bericht in jedes installierte Renderingformat exportieren.  
+ Sie zeigen die Vorschau eines Berichts im Berichts-Designer an, indem Sie auf ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview") klicken. Dadurch wird der Bericht lokal mit derselben Berichtsverarbeitungs- und Renderingfunktionalität ausgeführt, die auf dem Berichtsserver zur Verfügung steht. Der Bericht wird als interaktives Bild angezeigt, in dem Sie Parameter auswählen, auf Links klicken, die Dokumentstruktur anzeigen und ausgeblendete Bereiche des Berichts erweitern bzw. reduzieren können. Darüber hinaus können Sie den Bericht in jedes installierte Renderingformat exportieren.  
   
 ## <a name="standalone-preview"></a>Eigenständige Vorschau  
  Sie können auch das Berichtsprojekt in einer Debugkonfiguration ausführen, um eine Vorschau des Berichts anzuzeigen, zum Beispiel zum Debuggen von benutzerdefinierten Assemblys, die Sie geschrieben haben. Der Bericht wird im Standardbrowser geöffnet. Ein Berichtsprojekt kann auf drei Arten ausgeführt werden:  
   
 -   Durch Klicken im Menü **Debuggen** auf **Debuggen starten** .  
   
--   Durch Klicken auf die **starten** Schaltfläche auf der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Standardsymbolleiste ![Ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "Ssrs_ssdt_startdebug").  
+-   Durch Klicken auf die Schaltfläche **Start** im der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Standardsymbolleiste ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
   
 -   Durch Drücken von **F5**.  
   

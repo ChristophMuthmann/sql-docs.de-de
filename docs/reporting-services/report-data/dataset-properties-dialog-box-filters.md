@@ -1,5 +1,5 @@
 ---
-title: Dataseteigenschaften (Dialogfeld), filtert | Microsoft Docs
+title: Dataseteigenschaften (Dialogfeld), Filter (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Dataseteigenschaften (Dialogfeld), Filter
