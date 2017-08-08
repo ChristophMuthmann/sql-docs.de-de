@@ -47,8 +47,7 @@
 	  "relational-databases/native-client-odbc-text-image-columns/**",
 	  "relational-databases/native-client-ole-db-blobs/**",
 	  "relational-databases/native-client-ole-db-commands/**",
-	  "relational-databases/native-client-ole-db-data-source-objects/**",
-	  "relational-databases/native-client-ole-db-data-types/**",
+	  "relational-databases/native-client-ole-db-data-source-objects/**",	  "relational-databases/native-client-ole-db-data-types/**",
           "relational-databases/native-client-ole-db-date-time/**",
 	  "relational-databases/native-client-ole-db-errors/**",
  	  "relational-databases/native-client-ole-db-how-to/**",
@@ -94,6 +93,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "bilingual_type": "hover over", 
       "layout": "Conceptual",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],
