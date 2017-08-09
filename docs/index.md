@@ -4,10 +4,10 @@ hide_bc: true
 title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
-ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
+ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
+ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
 ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/01/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Entwerfen</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-drivers">Herstellen einer Verbindung mit Clientanwendungen</a></li>
+                                                    <li><a href="/sql/connect/sql-connection-libraries">Herstellen einer Verbindung mit Clientanwendungen</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relationale Datenbankkonzepte</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
