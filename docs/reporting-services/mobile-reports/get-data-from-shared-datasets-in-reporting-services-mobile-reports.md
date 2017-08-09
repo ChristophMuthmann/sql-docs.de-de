@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Abrufen von Daten aus freigegebenen Datasets in mobilen Reporting Services-Berichten

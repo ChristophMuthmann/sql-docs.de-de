@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Gruppieren von Daten nach Spalten oder Zeilen in einem mobilen Bericht | Reporting Services

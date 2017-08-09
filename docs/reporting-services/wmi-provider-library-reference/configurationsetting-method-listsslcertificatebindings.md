@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9ca4e600826d3bdcb5d55a431abebb46dc463c25
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>ConfigurationSetting Methode - ListSSLCertificateBindings

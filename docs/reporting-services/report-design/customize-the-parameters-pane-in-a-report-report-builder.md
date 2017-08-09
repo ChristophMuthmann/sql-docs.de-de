@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht (Berichts-Generator)

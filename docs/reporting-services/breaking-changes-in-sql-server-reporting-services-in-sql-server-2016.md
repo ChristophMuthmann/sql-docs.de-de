@@ -22,12 +22,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 6348d05b8dbe6c8ab1a682388b4e69ce438e6a12
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016
-<a id="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -35,18 +34,15 @@ ms.lasthandoff: 07/03/2017
 
 In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade oder in benutzerdefinierten Skripts oder Berichten auftreten.
 
-## Sicherheitserweiterungen
-<a id="security-extensions" class="xliff"></a>
+## <a name="security-extensions"></a>Sicherheitserweiterungen
 
 Benutzerdefinierte Sicherheitserweiterungen erfordern einige Änderungen, damit sie mit dem neuen [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]funktionieren. Sicherheitserweiterungen müssen die IAuthenticationExtension2-Schnittstelle verwenden.
 
-## WMI-Anbieter
-<a id="wmi-provider" class="xliff"></a>
+## <a name="wmi-provider"></a>WMI-Anbieter
 
 Der Name der [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] -Anwendung ändert sich von „ReportManager“ in „ReportServerWebApp“.
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
 
 [Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Neuigkeiten in Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   

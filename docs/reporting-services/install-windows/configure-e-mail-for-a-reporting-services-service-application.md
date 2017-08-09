@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23cf66b01385b3c0f3e9ddc6ff24ea578cf5eec3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung

@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services)

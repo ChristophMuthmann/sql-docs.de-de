@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Daten für mobile Berichte von Reporting Services

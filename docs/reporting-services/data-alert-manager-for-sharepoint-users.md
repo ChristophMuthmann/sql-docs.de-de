@@ -22,12 +22,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Datenwarnungs-Manager für SharePoint-Benutzer
-<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
+# <a name="data-alert-manager-for-sharepoint-users"></a>Datenwarnungs-Manager für SharePoint-Benutzer
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -90,8 +89,7 @@ Wenn eine SharePoint-Website für Datenwarnungen aktiviert wird, werden zwei Sha
 -   [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

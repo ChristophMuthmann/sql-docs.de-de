@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Hinzufügen von Datenrastern zu mobilen Berichten | Reporting Services

@@ -19,11 +19,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# <a name="stock-charts-report-builder-and-ssrs"></a>Kursdiagramme (Berichts-Generator und SSRS)
+# Kursdiagramme (Berichts-Generator und SSRS)
 
   Ein Kursdiagramm ist speziell für Finanz- oder wissenschaftliche Daten ausgelegt, bei denen bis zu vier Werte pro Datenpunkt verwendet werden. Diese Werte werden an den Hoch-, Tief-, Anfangs- und Schlusswerten ausgerichtet, die zur Aufzeichnung von Finanzkursdaten verwendet werden. Dieser Diagrammtyp zeigt Anfangs- und Schlusswerte mit Markern, normalerweise Zeilen oder Dreiecke, an. Im folgenden Beispiel werden die Anfangswerte durch Marker auf der linken Seite angezeigt, und die Schlusswerte werden durch Marker auf der rechten Seite dargestellt.  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Variationen  
+## Variationen  
   
 -   **Kerze**. Das Kerzendiagramm ist eine spezielle Form des Kursdiagramms, in dem mithilfe von Kästchen der Unterschied zwischen Anfangs- und Schlusswerten angezeigt wird. Wie das Kursdiagramm kann das Kerzendiagramm bis zu vier Werte pro Datenpunkt anzeigen.  
   
-## <a name="data-considerations-for-stock-charts"></a>Überlegungen zu Daten für ein Kursdiagramm  
+## Überlegungen zu Daten für ein Kursdiagramm  
   
 -   Bei der Darstellung vieler Kursdatenpunkte, wie bei einem Jahresaktienkurs, ist es schwierig, die einzelnen Anfangs-, Schluss-, Hoch- und Tiefwerte jedes Datenpunkts zu unterscheiden. Erwägen Sie in diesem Fall, ein Liniendiagramm anstelle eines Kursdiagramms zu verwenden.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet viele berechnete Zellen zur Verwendung mit Kursdiagrammen, wie "Price Indicator", "Relative Strength Index", "MACD" usw.  
 
-## <a name="next-steps"></a>Nächste Schritte
+## Nächste Schritte
 
 [Bereichsdiagramme](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Diagramme](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

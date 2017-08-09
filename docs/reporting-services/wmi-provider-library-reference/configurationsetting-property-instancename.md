@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9615a0e96bd6978b0d2f0a8bcbf70f0c64922efa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting Eigenschaft - Instanzname

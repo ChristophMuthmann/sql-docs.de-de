@@ -1,5 +1,5 @@
 ---
-title: SharePoint-Listenverbindungstyp (SSRS) | Microsoft-Dokumentation
+title: SharePoint-Listenverbindungstyp (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,20 +15,20 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um Listendaten aus SharePoint 2013 und höher abzurufen.
+Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um herzustellen und Listendaten von SharePoint 2013 und höher abzurufen.
 
-Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)" basiert.  
 
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
  Die Verbindungszeichenfolge für eine SharePoint-Liste ist die URL zur SharePoint-Website oder -Unterwebsite, z. B. `http://MySharePointWeb/MySharePointSite` oder `http://MySharePointWeb/MySharePointSite/Subsite`.  
@@ -71,10 +71,10 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
 
  Bei einer SharePoint-Technologie, die für die Verwendung mit einem Berichtsserver im integrierten Windows-Modus konfiguriert ist, gilt diese Option sowohl für den aktuellen Windows-Benutzer als auch den aktuellen SharePoint-Benutzer.
  
- Diese Option wird nicht für eine SharePoint-Technologie unterstützt, die für die Verwendung ohne Berichtsserver (lokaler Modus) konfiguriert ist. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+ Diese Option wird nicht für eine SharePoint-Technologie unterstützt, die für die Verwendung ohne Berichtsserver (lokaler Modus) konfiguriert ist. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40; Reporting Services im SharePoint-Modus &#41; ](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Anmeldeinformationen sind nicht erforderlich (keine Anmeldeinformationen verwenden):**  
- Diese Option setzt voraus, dass zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfiguriert wird. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Diese Option setzt voraus, dass zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfiguriert wird. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Weitere Informationen zur Unterstützung der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur finden Sie unter [Verwenden der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
@@ -95,17 +95,9 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 -   **Ausgeblendet** Zeigt an, ob das Feld in der SharePoint-Listenansicht angezeigt wird.  
   
- Die Auswahl von Feldern aus mehreren Listen wird nicht unterstützt. Sie können einen Datensatz für jede Liste erstellen und Felder aus jedem Datensatz auswählen. Wenn die Listen über ein gemeinsames Feld verfügen, können Sie die Suchfunktion in einem Tablix-Datenbereich verwenden, der an einen Datensatz gebunden ist, um einen Wert aus dem anderen Datensatz abzurufen, der nicht an den Datenbereich gebunden ist. Weitere Informationen finden Sie unter [Lookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
+ Die Auswahl von Feldern aus mehreren Listen wird nicht unterstützt. Sie können einen Datensatz für jede Liste erstellen und Felder aus jedem Datensatz auswählen. Wenn die Listen über ein gemeinsames Feld verfügen, können Sie die Suchfunktion in einem Tablix-Datenbereich verwenden, der an einen Datensatz gebunden ist, um einen Wert aus dem anderen Datensatz abzurufen, der nicht an den Datenbereich gebunden ist. Weitere Informationen finden Sie unter [Lookup-Funktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Ausgewählte Felder**  Zeigt die Felder an, die Sie ausgewählt haben. Die Namen der Felder in diesem Bereich sind Anzeigenamen, die ein SharePoint-Benutzer angegeben hat. Wenn Sie den Abfrage-Designer schließen, werden diese Namen in der Dataset-Feldauflistung im Berichtsdatenbereich angezeigt. Die Beziehung zwischen eindeutigen Namen und Anzeigenamen steht auf der Seite [Dataseteigenschaften (Dialogfeld), Felder (Berichts-Generator)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
-  
--   **Übernommene Filter**  Schränkt die Daten ein, die aus der SharePoint-Liste zurückgegeben werden, bevor die Daten an den Bericht zurückgegeben werden. Wählen Sie den Feldnamen, den Operator und den Wert aus, die verwendet werden sollen, um die abgerufenen Daten in der Liste einzuschränken. Die Operatoren hängen vom Datentyp des Werts ab, den Sie auswählen.  
-  
-     Sie können die Sortierreihenfolge nicht ändern und keine Gruppen im grafischen Abfrage-Designer angeben. Legen Sie festgelegte Sortierungsausdrücke für das Berichtsdataset und Gruppenausdrücke für die Datenbereiche des Berichts aus, wenn Sie dies möchten. Abfrageparameter werden nicht unterstützt. Um Daten im Bericht zu filtern, verwenden Sie Berichtsfilter oder Berichtsparameter, die Sie erstellen. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) und [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
-  
--   **Abfrageergebnisse**  Zeigt Beispielzeilen an, die bei Ausführung der Abfrage zurückgegeben werden. Wenn sich die Werte in der SharePoint-Liste auf der SharePoint-Website häufig ändern, unterscheiden sich die in den Abfrageergebnissen angezeigten Werte möglicherweise von den Werten, die im Bericht angezeigt werden.  
-  
--   **Ausgewählte Felder**  Zeigt die Felder an, die Sie ausgewählt haben. Die Namen der Felder in diesem Bereich sind Anzeigenamen, die ein SharePoint-Benutzer angegeben hat. Wenn Sie den Abfrage-Designer schließen, werden diese Namen in der Dataset-Feldauflistung im Berichtsdatenbereich angezeigt. Die Beziehung zwischen eindeutigen Namen und Anzeigenamen steht auf der Seite [Dataseteigenschaften (Dialogfeld), Felder (Berichts-Generator)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Ausgewählte Felder**  Zeigt die Felder an, die Sie ausgewählt haben. Die Namen der Felder in diesem Bereich sind Anzeigenamen, die ein SharePoint-Benutzer angegeben hat. Wenn Sie den Abfrage-Designer schließen, werden diese Namen in der Dataset-Feldauflistung im Berichtsdatenbereich angezeigt. Die Beziehung zwischen eindeutigen Namen und Anzeigenamen steht auf der Seite [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Übernommene Filter**  Schränkt die Daten ein, die aus der SharePoint-Liste zurückgegeben werden, bevor die Daten an den Bericht zurückgegeben werden. Wählen Sie den Feldnamen, den Operator und den Wert aus, die verwendet werden sollen, um die abgerufenen Daten in der Liste einzuschränken. Die Operatoren hängen vom Datentyp des Werts ab, den Sie auswählen.  
   
@@ -113,7 +105,15 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 -   **Abfrageergebnisse**  Zeigt Beispielzeilen an, die bei Ausführung der Abfrage zurückgegeben werden. Wenn sich die Werte in der SharePoint-Liste auf der SharePoint-Website häufig ändern, unterscheiden sich die in den Abfrageergebnissen angezeigten Werte möglicherweise von den Werten, die im Bericht angezeigt werden.  
   
- Weitere Informationen finden Sie unter [Designer für SharePoint-Listenabfragen (Berichts-Generator)](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md).  
+-   **Ausgewählte Felder**  Zeigt die Felder an, die Sie ausgewählt haben. Die Namen der Felder in diesem Bereich sind Anzeigenamen, die ein SharePoint-Benutzer angegeben hat. Wenn Sie den Abfrage-Designer schließen, werden diese Namen in der Dataset-Feldauflistung im Berichtsdatenbereich angezeigt. Die Beziehung zwischen eindeutigen Namen und Anzeigenamen steht auf der Seite [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+  
+-   **Übernommene Filter**  Schränkt die Daten ein, die aus der SharePoint-Liste zurückgegeben werden, bevor die Daten an den Bericht zurückgegeben werden. Wählen Sie den Feldnamen, den Operator und den Wert aus, die verwendet werden sollen, um die abgerufenen Daten in der Liste einzuschränken. Die Operatoren hängen vom Datentyp des Werts ab, den Sie auswählen.  
+  
+     Sie können die Sortierreihenfolge nicht ändern und keine Gruppen im grafischen Abfrage-Designer angeben. Legen Sie festgelegte Sortierungsausdrücke für das Berichtsdataset und Gruppenausdrücke für die Datenbereiche des Berichts aus, wenn Sie dies möchten. Abfrageparameter werden nicht unterstützt. Um Daten im Bericht zu filtern, verwenden Sie Berichtsfilter oder Berichtsparameter, die Sie erstellen. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) und [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+  
+-   **Abfrageergebnisse**  Zeigt Beispielzeilen an, die bei Ausführung der Abfrage zurückgegeben werden. Wenn sich die Werte in der SharePoint-Liste auf der SharePoint-Website häufig ändern, unterscheiden sich die in den Abfrageergebnissen angezeigten Werte möglicherweise von den Werten, die im Bericht angezeigt werden.  
+  
+ Weitere Informationen finden Sie unter [Designer für SharePoint-Listenabfragen &#40;Berichts-Generator&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md).  
   
 ### <a name="query-text"></a>Abfragetext  
  Wenn Sie die Abfrage anzeigen möchten, die im grafischen Abfrage-Designer generiert wird, wechseln Sie zum textbasierten Abfrage-Designer. In dieser Ansicht können Sie die XML anzeigen, die vom grafischen Abfrage-Designer erstellt wird. Die XML umfasst Elemente für den Listennamen, die Feldauflistung und den Filter.  
@@ -182,16 +182,16 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
 
 ## <a name="see-also"></a>Siehe auch
 
 [Berichtsparameter](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[Filtern, Gruppieren und Sortieren von Daten](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[Filtern, gruppieren und Sortieren von Daten](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

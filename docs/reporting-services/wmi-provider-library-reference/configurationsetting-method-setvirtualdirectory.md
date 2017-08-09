@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d86d0c416df4ecc01f940ebabad2e409aa826599
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting Methode - SetVirtualDirectory

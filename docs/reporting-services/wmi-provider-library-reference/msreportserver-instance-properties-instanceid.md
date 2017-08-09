@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8e002210d1041da8c510cde99bc0c09261eb66b7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance-Eigenschaften - InstanceID

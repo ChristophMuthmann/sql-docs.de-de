@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Arbeiten mit Momentaufnahmen (Webportal)
-<a id="working-with-snapshots-web-portal" class="xliff"></a>
+# <a name="working-with-snapshots-web-portal"></a>Arbeiten mit Momentaufnahmen (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,8 +33,7 @@ Sie können steuern, wenn Momentaufnahmen für einen Bericht, durch Auswahl erst
    
 Sie können eine Cachemomentaufnahme für schnelleres Laden von bestimmten Ausführungseigenschaften erstellen. Mithilfe von Verlaufsmomentaufnahmen können Sie auch zu bestimmten Zeitpunkten Momentaufnahmen durchführen.  
   
-## Erstellen einer Cachemomentaufnahme
-<a id="creating-a-cache-snapshot" class="xliff"></a>  
+## <a name="creating-a-cache-snapshot"></a>Erstellen einer Cachemomentaufnahme  
   
 Sie können eine Momentaufnahme erstellen, indem Sie folgende Schritte ausführen.  
   
@@ -47,8 +45,7 @@ Sie können eine Momentaufnahme erstellen, indem Sie folgende Schritte ausführe
   
 3.  Wählen Sie **Cachemomentaufnahme erstellen, wenn ich auf dieser Seite auf "Anwenden" klicke** aus, wenn Sie sofort eine Cachemomentaufnahme erstellen möchten. Wenn Sie nur diese Option auswählen, wird die Momentaufnahme nicht aktualisiert.  
   
-## Erstellen, Ändern und Löschen von Verlaufsmomentaufnahmen
-<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
+## <a name="create-modify-and-delete-history-snapshots"></a>Erstellen, Ändern und Löschen von Verlaufsmomentaufnahmen  
   
 Zum Arbeiten mit Berichtsverlaufs-Momentaufnahmen, verwalten Sie einen Bericht, und wählen Sie **Verlaufsmomentaufnahmen**aus.  
   
@@ -66,8 +63,7 @@ Wenn Sie die Verlaufsmomentaufnahme generieren möchten, muss der Bericht unbeau
   
 3.  Sie können eine Verlaufsmomentaufnahme auswählen, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
   
-### Zeitplan und Einstellungen
-<a id="schedule-and-settings" class="xliff"></a>  
+### <a name="schedule-and-settings"></a>Zeitplan und Einstellungen  
   
 Die Auswahl **Zeitplan und Einstellungen** stellt zusätzliche Optionen zur Planung und Steuerung der Beibehaltung von erstellten Momentaufnahmen bereit.  
   
@@ -81,8 +77,7 @@ Sie können auch definieren, wie Momentaufnahmen beibehalten werden sollen.
   
 Mit dieser Option wird eine Berichtsmomentaufnahme, die auf Grundlage von Berichtsausführungseigenschaften generiert wird, in den Berichtsverlauf kopiert. Sie können Berichtsausführungseigenschaften festlegen, um einen Bericht aus einer generierten Momentaufnahme auszuführen. Wenn Sie diese Eigenschaft für den Berichtsverlauf festlegen, können Sie einen Datensatz mit allen im Laufe der Zeit generierten Berichtsmomentaufnahmen speichern, indem Sie die Kopien der Berichtsmomentaufnahmen im Berichtsverlauf platzieren.
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
 
 [Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Arbeiten mit paginierten Berichten](working-with-paginated-reports-web-portal.md)  

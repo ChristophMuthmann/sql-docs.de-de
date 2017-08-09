@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)

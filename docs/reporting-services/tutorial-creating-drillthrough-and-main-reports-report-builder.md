@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)

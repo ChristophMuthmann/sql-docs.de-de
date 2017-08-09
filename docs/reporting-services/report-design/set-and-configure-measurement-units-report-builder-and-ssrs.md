@@ -1,5 +1,5 @@
 ---
-title: "Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
+title: "Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator und SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator und SSRS)

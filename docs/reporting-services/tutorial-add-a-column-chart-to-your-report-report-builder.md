@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)

@@ -17,12 +17,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Arbeiten mit KPIs in Reporting Services
-<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+# <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -36,19 +35,16 @@ Mit KPIs in SQL Server 2016 Reporting Services können Sie einfach Antworten fü
   
 -   Was ist das Minimum, das ich abgeschlossen habe?  
   
-## Erstellen eines Dataset
-<a id="creating-a-dataset" class="xliff"></a>  
+## <a name="creating-a-dataset"></a>Erstellen eines Dataset  
 Eine KPI wird nur die erste Zeile der Daten aus einem freigegebenen Dataset verwenden. Stellen Sie sicher, dass sich die Daten, die Sie verwenden möchten, in dieser ersten Zeile befinden. Um ein freigegebenes Dataset zu erstellen, können Sie entweder den Berichts-Generator oder SQL Server Data Tools verwenden.  
   
 > **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie die KPI befinden.  
   
-## Platzierung von KPIs
-<a id="placement-of-kpis" class="xliff"></a>  
+## <a name="placement-of-kpis"></a>Platzierung von KPIs  
   
 KPIs können in einem beliebigen Ordner auf Ihrem Berichtsserver erstellt werden.  Bevor Sie eine KPI erstellen, sollten Sie überlegen, wo der richtige Speicherort dafür wäre. Sie sollten sie in einem Ordner ablegen, der für Benutzer sichtbar ist. Gleichzeitig sollte der Ordner auch relevant für andere Berichte sowie KPIs in der Umgebung sein.  
   
-## Hinzufügen einer KPI
-<a id="adding-a-kpi" class="xliff"></a>  
+## <a name="adding-a-kpi"></a>Hinzufügen einer KPI  
   
 Nachdem Sie den Speicherort der KPI bestimmt haben, wechseln Sie zu dem Ordner, und wählen Sie **Neu** > **KPI** im oberen Menü aus.  
   
@@ -96,8 +92,7 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## Entfernen einer KPI
-<a id="removing-a-kpi" class="xliff"></a>  
+## <a name="removing-a-kpi"></a>Entfernen einer KPI  
   
 Um eine KPI zu entfernen, können Sie Folgendes tun.  
   
@@ -109,13 +104,11 @@ Um eine KPI zu entfernen, können Sie Folgendes tun.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## Aktualisieren einer KPI
-<a id="refreshing-a-kpi" class="xliff"></a>  
+## <a name="refreshing-a-kpi"></a>Aktualisieren einer KPI  
   
 Um den KPI zu aktualisieren, müssen Sie das Zwischenspeichern für das freigegebene Dataset konfigurieren. Weitere Informationen zu cacheaktualisierungsplänen, finden Sie unter [arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
   
 [Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)

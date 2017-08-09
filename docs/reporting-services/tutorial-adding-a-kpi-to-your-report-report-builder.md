@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)

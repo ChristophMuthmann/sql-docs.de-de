@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6e968b1fb028239144cd43c7a98cff21629c5e9a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting Eigenschaft - SendUsingSMTPServer

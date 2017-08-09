@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 219112996b6fd0c2fb1cb6eff5baca29b65e86d2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting Methode - SetSecureConnectionLevel

@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Unterstützte Kombinationen von SharePoint- und Reporting Services-Server
-<a id="supported-combinations-of-sharepoint-and-reporting-services-server" class="xliff"></a>
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Server
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -39,13 +38,11 @@ Eine SQL Server Reporting Services-Berichtsserver im SharePoint-Modus installier
 > [!NOTE]
 > Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
 
-## Unterstützte Kombinationen von SharePoint- und Reporting Services-Komponenten
-<a id="supported-combinations-of-sharepoint-and-reporting-services-components" class="xliff"></a>
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Komponenten
 
  In der folgenden Tabelle werden die unterstützten Kombinationen von Berichtsserver, dem Reporting Services-Add-In für SharePoint-Produkte und SharePoint-Produkten zusammengefasst. Nicht in der folgenden Tabelle aufgeführte Kombinationen werden nicht unterstützt.
 
-### Unterstützte Kombinationen
-<a id="supported-combinations" class="xliff"></a>
+### <a name="supported-combinations"></a>Unterstützte Kombinationen
 
 ||Berichtsserver|Add-In|SharePoint-Version|
 |-|-------------------|-------------|------------------------|
@@ -83,8 +80,7 @@ Eine SQL Server Reporting Services-Berichtsserver im SharePoint-Modus installier
 
 - **Upgrade** : SharePoint 2010 mit installiertem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In kann nicht direkt auf SharePoint 2013 aktualisiert werden. SharePoint 2013 erfordert SQL Server 2012 SP1 oder höher, der die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -add-Ins und-Berichtsservers. Weitere Informationen zum Upgrade finden Sie unter [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
 
  [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

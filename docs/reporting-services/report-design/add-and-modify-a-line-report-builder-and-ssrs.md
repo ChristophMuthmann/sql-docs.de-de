@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca5f80521b142435210737f2e6c971c8d6853510
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Hinzufügen und Ändern einer Linie (Berichts-Generator und SSRS)

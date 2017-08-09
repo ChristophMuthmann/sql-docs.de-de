@@ -22,11 +22,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Datenwarnungs-Manager für Warnungsadministratoren
-<a id="data-alert-manager-for-alerting-administrators" class="xliff"></a>
+# <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -82,8 +81,7 @@ SQL Server Reporting Services stellt den Datenwarnungs-Manager für SharePoint-W
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 

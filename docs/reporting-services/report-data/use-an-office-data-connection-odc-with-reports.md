@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Verwenden einer Office Data Connection (.odc) mit Berichten

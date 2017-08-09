@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Ausdrucksverweis (Berichts-Generator und SSRS)

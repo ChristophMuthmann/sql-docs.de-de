@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 664bf6ff099454060779ff19dd4e07b48acf6d2c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus

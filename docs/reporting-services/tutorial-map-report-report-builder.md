@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
@@ -35,7 +35,7 @@ Geben Sie zum Verändern der Darstellung von Kartenelementen ein Feld mit Werten
 In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte in den Countys des Bundesstaats New York angezeigt werden.  
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie Schritt-für-Schritt-Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
@@ -99,16 +99,16 @@ In diesem Abschnitt fügen Sie dem Bericht eine Karte aus dem Kartenkatalog hinz
   
 13. Markieren Sie den Text „Kartentitel“, geben Sie **Umsatz nach Filiale** ein, und drücken Sie die EINGABETASTE.  
 
-15. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen**anzuzeigen. Im Bereich **Kartenebenen** wird eine Polygonebene, PolygonLayer1, vom Ebenentyp **Eingebettet**angezeigt. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
+15. Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine Polygonebene, PolygonLayer1, vom Ebenentyp **Eingebettet**angezeigt. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
   
     > [!NOTE]  
-    > Wenn Sie den Bereich **Kartenebenen** nicht sehen, wird er möglicherweise außerhalb der aktuellen Ansicht angezeigt. Verwenden Sie die Bildlaufleiste am unteren Rand des Entwurfsansichtsfensters, um die Ansicht zu ändern. Deaktivieren Sie alternativ auf der Registerkarte **Ansicht** die Option **Berichtsdaten** , um den Anzeigebereich für die Entwurfsoberfläche zu vergrößern.   
+    > Wenn Sie den Bereich **Kartenebenen** nicht sehen, wird er möglicherweise außerhalb der aktuellen Ansicht angezeigt. Verwenden Sie die Bildlaufleiste am unteren Rand des Entwurfsansichtsfensters, um die Ansicht zu ändern. Deaktivieren Sie alternativ auf der Registerkarte **Ansicht** die Option **Berichtsdaten**, um den Anzeigebereich für die Entwurfsoberfläche zu vergrößern.   
 
 15. Klicken Sie auf den Pfeil neben „PolygonLayer1“ und anschließend auf **Polygoneigenschaften**.
 
 16. Ändern Sie auf der Registerkarte **Schriftart** die Farbe zu **Mattes Grau**.
 
-17. Klicken Sie auf der Registerkarte **Home** auf **Ausführen**, um eine Vorschau des Berichts anzuzeigen.  
+17. Klicken Sie auf der Registerkarte **Stamm** auf **Ausführen**, um eine Vorschau des Berichts anzuzeigen.  
   
     ![Berichts-Generator-Karte-erste-Vorschau](../reporting-services/media/report-builder-map-first-preview.png)
   
@@ -124,9 +124,9 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
   
 ### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>So fügen Sie eine Punktebene auf Grundlage eines SQL Server-Abfrage nach räumlichen Daten hinzu  
   
-1.  Klicken Sie auf die Registerkarte **Ausführen** auf **Entwurf**, um wieder zur Entwurfsansicht zurück zu wechseln.  
+1.  Klicken Sie auf die Registerkarte **Ausführen** auf **Entwurf**, um wieder zur Entwurfsansicht zurückzuwechseln.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie in auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die **Assistent für neue Ebenen** Schaltfläche ![Rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "Rs_IconMapLayerWizard"). 
 
     ![Berichts-Generator-Karte-Symbol-des-Assistent-für-neue-Ebene](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -137,7 +137,7 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 5.  Wählen Sie auf der Seite **Verbindung mit einer SQL Server-Datenquelle für räumliche Daten auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus.  
 
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  Klicken Sie auf **Weiter**.  
   
@@ -242,7 +242,7 @@ Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die ein
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie in auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die **Assistent für neue Ebenen** Schaltfläche ![Rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "Rs_IconMapLayerWizard").  
   
 3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten** aus, und klicken Sie auf **Weiter**.  
   
@@ -297,7 +297,7 @@ In diesem Abschnitt fügen Sie eine Kartenebene hinzu, die einen Bing Maps-Kache
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![Rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer").  
   
 3.  Klicken Sie in der Dropdownliste auf **Kachelebene**.  
   
@@ -306,9 +306,9 @@ In diesem Abschnitt fügen Sie eine Kartenebene hinzu, die einen Bing Maps-Kache
     > [!NOTE]  
     > Sie können auch im Assistenten auf der Seite **Optionen für räumliche Daten und Kartenansicht auswählen** eine Kachelebene hinzufügen. Wählen Sie dazu **Bing Maps-Hintergrund für diese Kartenansicht hinzufügen**aus. In einem gerenderten Bericht zeigt der Kachelhintergrund Bing Maps-Kacheln für den aktuellen Kartenviewport-Mittelpunkt und die aktuelle Zoomstufe an.  
   
-4.  Klicken Sie auf den Pfeil neben „TileLayer1“ und anschließend auf **Kacheleigenschaften**.  
+4.  Klicken Sie auf den Pfeil neben TileLayer1 und anschließend auf **Kacheleigenschaften**.  
   
-5.  Wählen Sie auf der Registerkarte **Allgemein** unter **Typ**die Option **Luftbild**aus. Das Luftbild enthält keinen Text.  
+5.  Wählen Sie auf der Registerkarte **Allgemein** unter **Typ** die Option **Luftbild** aus. Das Luftbild enthält keinen Text.  
 
     ![Berichts-Generator-Karte-Bing-Luftbild](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -319,7 +319,7 @@ In diesem Abschnitt passen Sie die Reihenfolge und Transparenz der Ebene an, um 
   
 1.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen.  
   
-3.  Klicken Sie auf den Pfeil neben „PolygonLayer1“ und auf **Ebenendaten**. Das Dialogfeld **Polygonebeneneigenschaften von Karten** wird geöffnet.  
+3.  Klicken Sie auf den Pfeil neben PolygonLayer1 und auf **Ebenendaten**. Das Dialogfeld **Polygonebeneneigenschaften von Karten** wird geöffnet.  
   
 4.  Geben Sie auf der Registerkarte **Sichtbarkeit** unter **Transparenz (Prozent)** **30**ein.  
   
@@ -411,9 +411,9 @@ Für Daten wird standardmäßig ein allgemeines Format verwendet. In diesem Absc
   
 1. Wechseln Sie in die Entwurfsansicht.  
 
-2. Wählen Sie die Farbskala aus. Klicken Sie auf der Registerkarte **Home** im Abschnitt **Zahl** auf **Währung**.  
+2. Wählen Sie die Farbskala aus. Klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Zahl** auf **Währung**.  
   
-4.  Klicken Sie im Abschnitt **Zahl** zweimal auf die Schaltfläche **Dezimalstelle verringern** .  
+4.  Klicken Sie im Abschnitt **Zahl** zweimal auf die Schaltfläche **Dezimalstelle verringern**.  
   
     Die Farbskala zeigt für jeden Bereich den Jahresumsatz im Währungsformat an.  
   
@@ -457,15 +457,15 @@ Sie können die Standardanzeigeoptionen für alle Kartenelemente auf einer Ebene
 Countys ohne zugeordnete Daten werden graublau dargestellt. Nur Countys, denen analytische Daten zugeordnet sind, werden in den Farben im Bereich zwischen **Rot** und **Grün** der angegebenen Farbregeln angezeigt.  
   
 ## <a name="CustomPoint"></a>7. Hinzufügen eines benutzerdefinierten Punkts  
-In diesem Abschnitt geben Sie einen Punkt an, und verwenden den Markertyp **Stern** , um ein neues, noch nicht gebautes Geschäft darzustellen.  
+In diesem Abschnitt geben Sie einen Punkt an, und verwenden den Markertyp **Stern**, um ein neues, noch nicht gebautes Geschäft darzustellen.  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") und anschließend auf **Punktebene**.  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen**![Rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer"), klicken Sie dann auf **Punktebene**.    
   
     Der Karte wird eine neue Punktebene hinzugefügt. Standardmäßig verfügt die Punktebene über den räumlichen Datentyp **Eingebettet**.  
   
-3.  Klicken Sie auf den Pfeil unter „PointLayer2“ und anschließend auf **Punkt hinzufügen**.  
+3.  Klicken Sie auf den Pfeil unter PointLayer2 und anschließend auf **Punkt hinzufügen**.  
   
 4.  Bewegen Sie den Zeiger über den Kartenviewport. Der Cursor verändert sich zu einem Fadenkreuz.  
   
@@ -534,7 +534,7 @@ Dieser Titel wird am Anfang des Berichts angezeigt. Elemente über dem Berichtsh
   
 1.  Klicken Sie in der Entwurfsansicht oder in einer Vorschau auf **Datei** und anschließend auf **Speichern unter**.
  
-3.  Geben Sie im Feld **Name**den Namen **Umsätze der Geschäfte in New York**ein.  
+3.  Geben Sie im Feld **Name** den Namen **Umsätze der Geschäfte in New York** ein.  
 
 3. Speichern Sie den Bericht auf Ihrem lokalen Computer oder auf einem [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Server.
   

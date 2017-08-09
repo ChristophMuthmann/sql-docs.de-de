@@ -31,12 +31,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016
-<a id="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -46,8 +45,7 @@ In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssRSnoversion](../
 
 Es gibt keine Verhaltensänderungen.
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
 
 [Neuigkeiten in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  

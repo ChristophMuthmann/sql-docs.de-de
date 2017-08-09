@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Webportal (einheitlicher SSRS-Modus)
-<a id="web-portal-ssrs-native-mode" class="xliff"></a>
+# <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -31,8 +30,7 @@ Die Reporting Services-Web-Portal ist eine webbasierte Erfahrung basismesswerte 
 
 ![SSRS-Portal](../reporting-services/media/ssrsportal.png)
 
-## Was ist das Webportal
-<a id="what-is-the-web-portal" class="xliff"></a>
+## <a name="what-is-the-web-portal"></a>Was ist das Webportal
 
 Das Webportal können Sie die folgenden Aufgaben ausführen:
 
@@ -70,15 +68,13 @@ In einer neuen Installation verfügen nur lokale Administratoren über ausreiche
 > [!NOTE]
 > Falls Sie auf dem lokalen Computer, auf dem der Server läuft, zum Webportal navigieren, wird Ihnen möglicherweise eine Meldung angezeigt, die besagt, dass Sie nicht berechtigt sind, diesen Ordner anzuzeigen. Das liegt an der Benutzerkontensteuerung (User Account Control; UAC) und daran, dass Sie den Browser nicht als Administrator ausführen. Sie können Edge nicht als Administrator ausführen. Sie werden Internet Explorer verwenden müssen. Sie können entweder remote zum Server navigieren oder Internet Explorer als Administrator starten und zum Webportal gehen. Falls Sie das Webportal remote verwenden möchten, ist es erforderlich, dass Sie Ihrem Kontoinhalts-Manager Berechtigungen für den Ordner erteilen.  
 
-## Starten und verwenden des Webportals
-<a id="start-and-use-the-web-portal" class="xliff"></a>
+## <a name="start-and-use-the-web-portal"></a>Starten und verwenden des Webportals
 
 Die Web-Portal ist eine Webanwendung, die Sie, indem Sie eingeben Öffnen der [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL in der Adressleiste des Browserfensters. Wenn Sie das [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]starten, variieren die angezeigten Seiten, Links und Optionen je nach den Berechtigungen, über die Sie auf dem Berichtsserver verfügen. Um einen Task auszuführen, müssen Sie einer Rolle zugewiesen sein, die den Task einschließt.  Ein Benutzer, dem eine Rolle mit vollen Berechtigungen zugewiesen wurde, hat Zugriff auf sämtliche Anwendungsmenüs und Seiten zum Verwalten eines Berichtsservers. Einem Benutzer, dem eine Rolle mit der Berechtigung zum Anzeigen und Ausführen von Berichten zugewiesen wurde, werden dagegen nur die Menüs und Seiten angezeigt, die diese Aktivitäten unterstützen. Jeder Benutzer kann über verschiedene Rollenzuweisungen für verschiedene Berichtsserver oder sogar für die verschiedenen Berichte und Ordner auf einem einzigen Berichtsserver verfügen.
 
 Weitere Informationen zu den Rollen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-### Starten Sie das Webportal
-<a id="start-the-web-portal" class="xliff"></a>
+### <a name="start-the-web-portal"></a>Starten Sie das Webportal
 
 Um die Web-Portal in einem Browser zu starten, führen Sie folgende Schritte aus:
 
@@ -90,8 +86,7 @@ Um die Web-Portal in einem Browser zu starten, führen Sie folgende Schritte aus
 
     Der Berichtsserver ist möglicherweise für die Verwendung eines bestimmten Ports konfiguriert. Zum Beispiel, *http://[ComputerName]:80/reports* oder *http://[ComputerName]:8080/reports*.
 
-## Gruppieren nach Kategorien
-<a id="grouping-by-categories" class="xliff"></a>
+## <a name="grouping-by-categories"></a>Gruppieren nach Kategorien
 
 Das Webportal werden Elemente in verschiedene Kategorien zu gruppieren. Die folgenden Kategorien sind verfügbar.
 
@@ -110,8 +105,7 @@ Sie können steuern, was angezeigt werden soll, indem Sie oben rechts **View** (
 
 ![SSRS-WebPortal-ausgeblendet](../reporting-services/media/ssrswebportal-hidden.png)
 
-### Power BI Desktop-Berichte und Excel-Arbeitsmappen
-<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
+### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI Desktop-Berichte und Excel-Arbeitsmappen
 
 Sie können Berechtigungen für Power BI Desktop-Berichte und Excel-Arbeitsmappen hochladen, organisieren und verwalten. Sie werden innerhalb des Webportals gruppiert.
 
@@ -119,15 +113,13 @@ Sie können Berechtigungen für Power BI Desktop-Berichte und Excel-Arbeitsmappe
 
 Die Dateien werden innerhalb von Reporting Services gespeichert, ähnlich wie andere Ressourcendateien. Wenn Sie eines dieser Elemente auswählen, wird es lokal auf Ihrem Desktop heruntergeladen. Sie können Ihre Änderungen speichern, indem Sie sie erneut auf den Berichtsserver hochladen.
 
-## Suche nach Elementen
-<a id="search-for-items" class="xliff"></a>
+## <a name="search-for-items"></a>Suche nach Elementen
 
 Sie können einen Suchbegriff eingeben, und es werden Ihnen alle Elemente angezeigt auf die Sie Zugriff haben. Die Ergebnisse werden in KPIs, Berichte, Datasets und andere Elemente kategorisiert. Sie können dann mit den Ergebnissen interagieren und diese zu Ihren Favoriten hinzufügen.
 
 ![SSRS-WebPortal-Suche](../reporting-services/media/ssrswebportal-search.png)
 
-## Webportal-Aufgaben
-<a id="web-portal-tasks" class="xliff"></a>
+## <a name="web-portal-tasks"></a>Webportal-Aufgaben
 
 [Branding the web portal (Branding des Webportals)](../reporting-services/branding-the-web-portal.md)
 
@@ -135,8 +127,7 @@ Sie können einen Suchbegriff eingeben, und es werden Ihnen alle Elemente angeze
 
 [Working with shared datasets (Arbeiten mit freigegebenen Datasets)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Konfigurieren einer URL (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

@@ -19,26 +19,23 @@ ms.translationtype: MT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Gewusst wie: Installieren von benutzerdefinierten sicherheitserweiterungen
-<a id="how-to-install-custom-security-extensions" class="xliff"></a>
+# <a name="how-to-install-custom-security-extensions"></a>Gewusst wie: Installieren von benutzerdefinierten sicherheitserweiterungen
 
 [!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 2016 eingeführt, ein neue Web-Portal um neue Odata-APIs und auch gehostet neue Bericht arbeitsauslastungen wie z. B. mobilen Berichte und KPIS. Dieses neue Portal basiert auf neuere Technologien sowie von vertrauten ReportingServicesService isoliert ist, indem Sie in einem separaten Prozess ausführen. Dieser Prozess ist keiner ASP.NET-Anwendung gehostet und als solche unterbricht Annahmen aus vorhandenen benutzerdefinierten sicherheitserweiterungen. Darüber hinaus nicht die aktuellen Schnittstellen für benutzerdefinierte sicherheitserweiterungen zulassen für jeden externen Kontext übergebene sein, verlassen Implementierer mit die einzige Auswahlmöglichkeit bekannten globale ASP.NET-Objekte untersuchen dies einige Änderungen an der Schnittstelle erforderlich.
 
-## Was geändert?
-<a id="what-changed" class="xliff"></a>
+## <a name="what-changed"></a>Was geändert?
 
 Eine neue Schnittstelle eingeführt wurde, kann implementiert werden, die eine IRSRequestContext bereitstellen die zunehmend üblich, Eigenschaften, die von Erweiterungen verwendet, um die Entscheidungen, die im Zusammenhang mit Authentifizierung bereitstellt.
 
 In früheren Versionen Berichts-Manager wurde die Front-End- und mit eigenen benutzerdefinierten Anmeldeseite konfiguriert werden konnte. In Reporting Services 2016 wird nur eine Seite, die vom Berichtsserver gehostet wird unterstützt und sollte für beide Anwendungen zu authentifizieren.
 
-## Implementierung
-<a id="implementation" class="xliff"></a>
+## <a name="implementation"></a>Implementierung
 
 In früheren Versionen konnten Erweiterungen auf eine häufige Annahme verlassen, dass ASP.NET-Objekte sofort verfügbar ist. Da das neue Portal nicht in ASP.NET ausgeführt wird, kann die Erweiterung Probleme mit Objekten, die Null erreicht.
 
@@ -60,22 +57,19 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 }
 ```
 
-## Bereitstellung und Konfiguration
-<a id="deployment-and-configuration" class="xliff"></a>
+## <a name="deployment-and-configuration"></a>Bereitstellung und Konfiguration
 
 Die grundlegenden erforderlichen Konfigurationen für benutzerdefinierte sicherheitserweiterung sind identisch mit früheren Versionen. Änderungen für Datei "Web.config" und "rsreportserver.config" erforderlich sind: Weitere Informationen finden Sie unter [Konfigurieren von benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Es ist nicht mehr eine separate Datei "Web.config" für den Berichts-Manager, das Portal übernimmt die gleichen Einstellungen wie den Reportserver-Endpunkt.
 
-## Computerschlüssel
-<a id="machine-keys" class="xliff"></a>
+## <a name="machine-keys"></a>Computerschlüssel
 
 Für die Groß-/Kleinschreibung Formularauthentifizierung verwenden, die die Entschlüsselung des Authentifizierungscookies erforderlich ist, müssen beide Prozesse mit dem gleichen Computer Schlüssel und Entschlüsselung der Algorithmus konfiguriert werden. Dies war ein Schritt vertraut, die zuvor hatte Setup Reporting Services in Umgebungen mit horizontaler Skalierung zu arbeiten, aber ist jetzt auch für Bereitstellungen auf einem einzelnen Computer erforderlich.
 
 Sie sollten eine Überprüfung Key spezifisch für die Bereitstellung verwenden, stehen mehrere Tools, die die Schlüssel wie IIS Manager (Internetinformationsdienste) zu generieren. Andere Tools können im Internet befinden.
 
-### SQL Server Reporting Services 2017 und höher
-<a id="sql-server-reporting-services-2017-and-later" class="xliff"></a>
+### <a name="sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services 2017 und höher
 
 **\ReportServer\rsReportServer.config**
 
@@ -85,8 +79,7 @@ Fügen Sie unter `<configuration>`.
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-### SQL Server Reporting Services 2016
-<a id="sql-server-reporting-services-2016" class="xliff"></a>
+### <a name="sql-server-reporting-services-2016"></a>SQL Server Reporting Services 2016
 
 **\ReportServer\web.config**
 
@@ -106,8 +99,7 @@ Fügen Sie unter `<configuration>`.
     </system.web>
 ```
 
-### Power BI-Berichtsserver
-<a id="power-bi-report-server" class="xliff"></a>
+### <a name="power-bi-report-server"></a>Power BI-Berichtsserver
 
 Dies ist verfügbar, ab der Version vom Juni 2017 (Build 14.0.600.301).
 
@@ -119,8 +111,7 @@ Fügen Sie unter `<configuration>`.
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-## Konfigurieren von Pass-Through-cookies
-<a id="configure-passthrough-cookies" class="xliff"></a>
+## <a name="configure-passthrough-cookies"></a>Konfigurieren von Pass-Through-cookies
 
 Das neue Portal und der Berichtsserver kommunizieren mithilfe von internen Soap-APIs für einige der Vorgänge (ähnlich wie die vorherige Version des Berichts-Managers). Zusätzliche Cookies erforderlich sind, aus dem Portal übergeben werden, mit dem Server ist die "passthroughcookies" Eigenschaften weiterhin verfügbar. Weitere Informationen finden Sie unter [konfigurieren Sie das Web-Portal zum Übergeben von benutzerdefinierten Authentifizierungscookies](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
 
@@ -134,8 +125,7 @@ Das neue Portal und der Berichtsserver kommunizieren mithilfe von internen Soap-
 </UI>
 ```
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nächste Schritte
 
 [Konfigurieren von benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [Konfigurieren Sie Berichts-Manager, um die Übergabe von benutzerdefinierten Authentifizierungscookies](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
