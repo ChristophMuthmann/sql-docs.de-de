@@ -29,7 +29,7 @@ In diesen Themen werden die Befehle und Optionen in den Dialogfeldern und Eigens
 Drücken Sie zum Zugreifen auf Dialogfeldthemen F1, wenn ein Dialogfeld geöffnet ist und es fokussiert ist. Klicken Sie zum Zugreifen auf Eigenschaftenfensterthemen auf das Eigenschaftenfenster, und drücken Sie F1.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Entwerfen von Tabellen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Entwerfen von Tabellen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
