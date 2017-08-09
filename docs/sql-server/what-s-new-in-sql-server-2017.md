@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
@@ -49,7 +49,7 @@ SQL Server-2017 umfasst viele neue Datenbankmodulfunktionen, Verbesserungen und 
 - Die Spalte **modified_extent_page_count** in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) verfolgt differenzielle Änderungen in jeder Datenbankdatei und aktiviert dabei intelligente Sicherungslösungen, die eine differenzielle Sicherung oder eine vollständige Sicherung basierend auf dem Prozentsatz der geänderten Seiten in der Datenbank ausführen. (CTP 2.0)
 - Die T-SQL-Syntax [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) unterstützt jetzt das Laden einer Tabelle in eine andere Dateigruppe als die Standarddateigruppe des Benutzers mithilfe des **ON**-Schlüsselworts. (CTP 2.0)
 - Nun werden datenbankübergreifende Transaktionen zwischen Datenbanken unterstützt, die Teil der **Always On-Verfügbarkeitsgruppe** sind, einschließlich Datenbanken, die Teil derselben Instanz sind. Weitere Informationen finden Sie unter [Transactions - Always On Availability Groups and Database Mirroring (Transaktionen – Always On-Verfügbarkeitsgruppen und Datenbankspiegelung)](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- Die neue Funktionalität der **Verfügbarkeitsgruppen** umfasst die Unterstützung ohne Cluster, die Einstellung der Mindestreplikate für Commitverfügbarkeitsgruppen und betreibssystemübergreifende Migrationen von Windows zu Linux und Tests. (CTP 1.3)
+- Die neue Funktionalität der **Verfügbarkeitsgruppen** umfasst die Unterstützung ohne Cluster, die Einstellung der Mindestreplikate für Commitverfügbarkeitsgruppen und betriebssystemübergreifende Migrationen von Windows zu Linux und Tests. (CTP 1.3)
 - Neue dynamische Verwaltungssichten:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) macht zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien verfügbar. Dies ist hilfreich für die Überwachung der Integrität des Transaktionsprotokolls. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) verfolgt die Versionsspeichernutzung pro Datenbank, was für die proaktive Planung der tempdb-Größenanpassung basierend auf der Versionspeichernutzung pro Datenbank hilfreich ist. (CTP 2.0)
@@ -123,8 +123,13 @@ Entwickler von SQL Server haben jetzt Zugriff auf die umfangreichen ML- und AI-B
 
 Weitere Informationen finden Sie unter [What's new in SQL Server Machine Learning Services (Neues in SQL Server-Machine Learning-Services)](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Kontaktaufnahme mit dem SQL Server-Entwicklungsteam 
+- [Stack Overflow (Tag „sql-server“): Anlaufstelle für technische Fragen](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN-Foren: Anlaufstelle für technische Fragen](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect: Meldung von Programmfehlern und Vorschlagen von Features](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit – allgemeine Erläuterung zu SQL Server](https://www.reddit.com/r/SQLServer/)
+
 ## <a name="next-steps"></a>Nächste Schritte
 - Lesen Sie sich den Artikel [Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md) durch.
 - Finden Sie heraus, was es [Neues in SQL Server 2017 unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new) gibt.
 - Lesen Sie sich den Artikel [Neues in SQL Server 2016](what-s-new-in-sql-server-2016.md) durch.
-
