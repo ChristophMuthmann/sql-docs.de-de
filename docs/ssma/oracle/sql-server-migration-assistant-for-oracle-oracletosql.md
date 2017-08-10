@@ -31,10 +31,10 @@ In dieser Dokumentation erläutert die SSMA für Oracle und enthält detailliert
 |Abschnitt|Description|  
 |-----------|---------------|  
 |[Was ist neu in SSMA für Oracle](http://msdn.microsoft.com/en-us/f305ebb6-7393-4a43-abb3-6332b739d690)|Was ist neu in dieser Version von SSMA für Oracle|  
-|[Installieren SSMA für Oracle & #40; OracleToSQL & #41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Enthält Themen, in denen erforderliche Komponenten und Anweisungen zum Installieren von SSMA für die Oracle-Client und der erforderlichen Komponenten auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Erste Schritte mit SSMA für Oracle & #40; OracleToSQL & #41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Führt die Benutzeroptionen-Schnittstelle, Projekte und -Konfiguration.|  
-|[Migrieren von Oracle-Datenbanken zu SQLServer & #40; OracleToSQL & #41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Bietet eine Übersicht über den Konvertierungsprozess und detaillierte Informationen zu jedem Schritt im Prozess an.|  
-|[Referenz zur Benutzeroberfläche & #40; OracleToSQL & #41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Enthält die Dokumentation für SSMA für Dialogfelder "Oracle".|  
+|[Installieren SSMA für Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Enthält Themen, in denen erforderliche Komponenten und Anweisungen zum Installieren von SSMA für die Oracle-Client und der erforderlichen Komponenten auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Erste Schritte mit SSMA für Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Führt die Benutzeroptionen-Schnittstelle, Projekte und -Konfiguration.|  
+|[Migrieren von Oracle-Datenbanken zu SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Bietet eine Übersicht über den Konvertierungsprozess und detaillierte Informationen zu jedem Schritt im Prozess an.|  
+|[Referenz zur Benutzeroberfläche &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Enthält die Dokumentation für SSMA für Dialogfelder "Oracle".|  
 |[Arbeiten mit SSMA für Oracle-Konsole](http://msdn.microsoft.com/en-us/4e47bb04-cf9b-41a0-923e-bdab9ba0c51d)|Enthält eine Dokumentation über die SSMA-Konsolenanwendung|  
 |[Abrufen von SSMA für die Unterstützung nach "Oracle"](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Enthält Informationen über die zusätzliche Informationsquellen.|  
   

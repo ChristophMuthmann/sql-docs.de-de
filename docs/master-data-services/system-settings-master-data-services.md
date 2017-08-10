@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheit von Datenbankobjekten & #40; Master Data Services & #41;](../master-data-services/database-object-security-master-data-services.md)  
+ [Sicherheit von Datenbankobjekten &#40; Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

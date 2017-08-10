@@ -72,7 +72,7 @@ APPEND ({ <child table query> }
  Sie müssen die Abfragen nach der Spalte sortieren, die die übergeordnete Tabelle und die untergeordnete Tabelle verknüpft.  
   
 ## <a name="examples"></a>Beispiele  
- Sie können das folgende Beispiel in einer [INSERT INTO & #40; DMX & #41;](../dmx/insert-into-dmx.md) Anweisung zum Trainieren eines Modells, das eine geschachtelte Tabelle enthält. Die beiden Tabellen in der **Form** Anweisung beziehen sich über die **OrderNumber** Spalte.  
+ Sie können das folgende Beispiel in einer [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md) Anweisung zum Trainieren eines Modells, das eine geschachtelte Tabelle enthält. Die beiden Tabellen in der **Form** Anweisung beziehen sich über die **OrderNumber** Spalte.  
   
 ```  
 SHAPE {  
@@ -85,10 +85,10 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [& #60; quelldatenabfrage & #62;](../dmx/source-data-query.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60; quelldatenabfrage &#62;](../dmx/source-data-query.md)   
+ [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

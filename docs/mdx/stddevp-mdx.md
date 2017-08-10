@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   Alias für die [StdevP](../mdx/stdevp-mdx.md) Funktion  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
 

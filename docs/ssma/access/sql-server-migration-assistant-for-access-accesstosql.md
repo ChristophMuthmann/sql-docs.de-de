@@ -35,7 +35,7 @@ In dieser Dokumentation erläutert die SSMA für Access, enthält schrittweise A
 |-----------|---------------|  
 |[Was ist neu in SSMA für Access](http://msdn.microsoft.com/en-us/a24d3fc0-6911-4bfa-828a-197abf222e02)|Listet die Änderungen an SSMA-Versionen.|  
 |[Installieren von SQL Server Migration Assistant für Access](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)|Enthält Informationen zu den Voraussetzungen für die Installation von SSMA das Verfahren zum Installieren und lizenzieren SSMA und einen Link auf die neueste Version.|  
-|[Erste Schritte mit SQL Server Migration Assistant für Access & #40; AccessToSQL & #41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Führt SSMA und seine Benutzeroberfläche.|  
+|[Erste Schritte mit SQL Server Migration Assistant für Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Führt SSMA und seine Benutzeroberfläche.|  
 |[Access-Datenbanken vorbereitet für die Migration.](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)|Beschreibt, wie die Access-Datenbanken für die Konvertierung in Vorbereiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure.|  
 |[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)|Bietet eine Übersicht über den Konvertierungsprozess und detaillierte Informationen zu jedem Schritt im Prozess an.|  
 |[Verknüpfen von Access-Anwendungen mit SQLServer](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4)|Beschreibt, wie die vorhandenen Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

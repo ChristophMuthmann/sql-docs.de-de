@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 5.  Klicken Sie auf **Regeln anwenden**. Die Geschäftsregeln werden nur auf die im Raster angezeigten Elemente angewendet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überprüfen einer Version anhand von Geschäftsregeln & #40; Master Data Services & #41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Geschäftsregeln & #40; Master Data Services & #41;](../master-data-services/business-rules-master-data-services.md)  
+ [Überprüfen einer Version anhand von Geschäftsregeln &#40; Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Geschäftsregeln &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

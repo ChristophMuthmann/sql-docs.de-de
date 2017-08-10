@@ -67,13 +67,13 @@ Dimension_Name
   
 ```  
   
- Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Weitere Informationen zu Elementnamen und Elementschlüssel finden Sie unter [arbeiten mit Elemente, Tupel und Mengen & #40; MDX & #41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Weitere Informationen zu Elementnamen und Elementschlüssel finden Sie unter [arbeiten mit Elemente, Tupel und Mengen &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke & #40; MDX & #41;](../mdx/expressions-mdx.md)  
+ [Ausdrücke &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   
 
