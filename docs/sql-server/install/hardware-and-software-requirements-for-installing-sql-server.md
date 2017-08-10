@@ -50,11 +50,11 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
 ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
@@ -63,13 +63,13 @@ In diesem Thema sind die Mindestanforderungen an die Hardware und Software aufge
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] führt Unterstützung für [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] unter Linux ein. Weitere Informationen finden Sie unter [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] unter Linux](../../linux/sql-server-linux-overview.md). 
 
-> Dieses Thema gilt für [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und höher. Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
+> Dieses Thema gilt für [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und höher. Weitere Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014 (Hardware- und Software-Anforderungen für die Installation von SQL Server 2014)](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   
 **Probieren Sie es aus:**  
   
 -   Download von SQL Server aus dem [**Evaluierungscenter**.](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
   
--    Starten eines virtuellen Computers mit vorinstalliertem [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm).  
+-    Starten eines virtuellen Computers mit vorinstalliertem [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) .  
   
  **Die folgenden Überlegungen betreffen alle Editionen:**  
   
@@ -125,7 +125,7 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
  **Betriebssystemunterstützung:**  
   
- Die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Editionen werden wie folgt unterteilt:  
+ Die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Editionen werden wie folgt unterteilt:  
   
 -   [Prinzipaleditionen](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Principal)  
   
@@ -174,7 +174,7 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
 \* wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht unterstützt.
   
-###  <a name="TOP_Breadth"></a> Breadth Editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
+###  <a name="TOP_Breadth"></a> Breiteneditionen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle werden die Betriebssystemanforderungen für die Breiteneditionen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]angezeigt:  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition|Unterstützte Betriebssysteme|  
@@ -232,7 +232,7 @@ Die folgenden Anforderungen gelten für alle Installationen:
     > [!WARNING]  
     >  Bei der[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet.  
   
-##  <a name="DC_support"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Domain Controller  
+##  <a name="DC_support"></a> Die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Domänencontroller  
  Aus Sicherheitsgründen sollte [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] nicht auf einem Domänencontroller installiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup wird die Installation auf einem Computer, der als Domänencontroller fungiert, nicht blockieren, es gelten jedoch die folgenden Einschränkungen:  
   
 -   Sie können keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste auf einem Domänencontroller unter einem lokalen Dienstkonto ausführen.  

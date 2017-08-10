@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
@@ -121,7 +121,7 @@ Wenn Sie aktuell Version 1.0.0.440 oder älter verwenden, führen Sie diese Schr
   
 2.  Beenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectordienst.  
   
-3.  Deinstallieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector mithilfe des Windows-Features „Apps & Features“.  
+3.  Deinstallieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector mithilfe des Windows-Features „Apps &amp; Features“.  
   
      (Alternativ können Sie den Ordner umbenennen, in dem sich die DLL-Datei befindet. Der Standardname des Ordners ist „[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Microsoft Azure Key Vault“.  
   
@@ -166,12 +166,11 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
  Der asymmetrische Schlüssel im Schlüsseltresor dient zum Schutz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsschlüssels. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge, die den asymmetrischen Schlüssel verwenden, erfolgen innerhalb des Azure Key Vault-Diensts und werden durch die Sicherheit des Diensts geschützt.  
   
  **Was ist ein Schlüssel-URI?**  
- Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` zum Abrufen der aktuellen Version und verwenden das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` zum Abrufen einer bestimmten Version.  
+ Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie zum Abrufen der aktuellen Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` und zum Abrufen einer bestimmten Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` .  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Zur Konfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** 
- Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
+**Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
 -  Login.microsoftonline.com/*:443
 -  *.Vault.Azure.NET/*:443
   
@@ -188,7 +187,7 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
   
 -   Zum Erstellen eines asymmetrischen Schlüssels wird die `CREATE ASYMMETRIC KEY` -Berechtigung benötigt.  
 
-**Wie ändere ich mein Standard-Active Directory, sodass mein Schlüsseltresor im gleichen Abonnement und Active Directory erstellt wird wie der Dienstprinzipal, den ich für den [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]-Connector erstellt habe?**
+**Wie ändere ich mein Standard-Active Directory, sodass mein Schlüsseltresor im gleichen Abonnement und Active Directory erstellt wird wie der Dienstprinzipal, den ich für den [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] -Connector erstellt habe?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
 -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://msdn.microsoft.com/library/dn868052.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Erweiterbare Schlüsselverwaltung mithilfe von Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

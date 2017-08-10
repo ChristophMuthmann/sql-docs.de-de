@@ -1,5 +1,5 @@
 ---
-title: "Nach der Migration Überprüfung und Optimierung Handbuch | Microsoft Docs"
+title: "Handbuch für die Überprüfung und Optimierung nach der Migration | Microsoft-Dokumtenation"
 ms.custom: 
 ms.date: 5/03/2017
 ms.prod: sql-server-2016
@@ -17,20 +17,20 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: 
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="post-migration-validation-and-optimization-guide"></a>Nach der Migration Überprüfung und Optimization Guide
+# <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]POST Migration Schritt ist sehr wichtig für das Abgleichen Genauigkeit der Daten und die Vollständigkeit sowie Aufdecken von Leistungsproblemen bei der arbeitsauslastung.
+Die Schritte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die nach der der Migration ausgeführt werden, sind sehr wichtig für das Abgleichen der Genauigkeit und der Vollständigkeit der Daten sowie für das Aufdecken von Leistungsproblemen mit der Arbeitsauslastung.
 
-# <a name="common-performance-scenarios"></a>Allgemeine Leistungsszenarien 
-Im folgenden sind einige der allgemeinen leistungsszenarien gefunden, die nach der Migration zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Plattform und deren Behebung. Hierzu gehören auch Szenarios, die für die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (ältere Version zu neuere Version) sowie für die Migration von foreign-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezifisch sind.
+# <a name="common-performance-scenarios"></a>Allgemeine Leistungsszenarios 
+Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nach der Migration zur Plattform [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auftreten, und wie sie behoben werden können. Hierzu gehören auch Szenarios, die für die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (ältere Version zu neuere Version) sowie für die Migration von foreign-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezifisch sind.
 
 ## <a name="CEUpgrade"></a> Abfrageregressionen aufgrund einer Änderung in der CE-Version
 
@@ -50,87 +50,87 @@ Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ss
 
 Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
-## <a name="ParameterSniffing"></a>Sensitivität für die parameterermittlung
+## <a name="ParameterSniffing"></a> Sensitivität für die Parameterermittlung
 
-**Gilt für:** Foreign-Plattform (z. B. Oracle, DB2, MySQL und Sybase) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration.
-
-> [!NOTE]
-> Für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migrationen, wenn dieses Problem in der Quelle vorhanden waren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Migration auf eine neuere Version des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als-wird dieses Szenario nicht berücksichtigen. 
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kompiliert die Abfragepläne für gespeicherte Prozeduren mithilfe der Ermittlung die Eingabeparameter an der ersten Kompilierung, generieren einen Plan parametrisierten und wiederverwendet werden, optimiert für, die Verteilung von Daten eingegeben. Auch wenn keine gespeicherten Prozeduren werden die meisten Anweisungen Generieren von trivialen Pläne parametrisiert werden. Nachdem Sie ein Plan zuerst zwischengespeichert wird, wird eine spätere Ausführung eine zuvor zwischengespeicherte Plan zugeordnet.
-Ein mögliches Problem tritt auf, wenn es sich bei dieser ersten Kompilierung nicht die am häufigsten verwendeten Sätze von Parametern für die üblichen arbeitsauslastung verwendet haben kann. Bei anderen Parametern wird desselben Ausführungsplans ineffizient. Weitere Informationen zu diesem Thema finden Sie unter [Parameterermittlung](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
-
-### <a name="steps-to-resolve"></a>Schritte zum Beheben
-
-1.  Verwenden der `RECOMPILE` Hinweis. Ein Plan wird berechnet, jedes Mal, wenn jeder Parameterwert angepasst.
-2.  Schreiben Sie die gespeicherte Prozedur zur Verwendung der Option `(OPTIMIZE FOR(<input parameter> = <value>))`. Entscheiden Sie, welcher Wert verwendet, die am besten entspricht die meisten der relevanten arbeitsauslastung, erstellen und verwalten einen Plan, der für den parametrisierten Wert effiziente wird.
-3.  Schreiben Sie die gespeicherte Prozedur mithilfe von lokalen Variablen in der Prozedur. Nun verwendet der Optimierer density_vector für Einschätzung, was im gleichen Plan unabhängig vom Wert Parameters.
-4.  Schreiben Sie die gespeicherte Prozedur zur Verwendung der Option `(OPTIMIZE FOR UNKNOWN)`. Dieselbe Wirkung wie die Verwendung der lokalen Variablen Technik.
-5.  Schreiben Sie die Abfrage zum Verwenden des Hinweis `DISABLE_PARAMETER_SNIFFING`. Identisch Effekt wie die Verwendung der lokalen Variablen Technik von völlig deaktiviert die parameterermittlung, es sei denn, `OPTION(RECOMPILE)`, `WITH RECOMPILE` oder `OPTIMIZE FOR <value>` verwendet wird.
-
-> [!TIP] 
-> Nutzen der Vorteile der [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] planen Analyse schnell zu identifizieren, wenn dies ein Problem ist. Weitere Informationen zur Verfügung [hier](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
-
-## <a name="MissingIndexes"></a>Fehlende Indizes
-
-**Gilt für:** Foreign Plattform (z. B. Oracle, DB2, MySQL und Sybase) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration.
-
-Falsche oder fehlende Indizes bewirkt, dass zusätzliche e/a-, die zu zusätzlichen Arbeitsspeicher führt und CPU-verschwendet wird. Dies kann da Arbeitslast Profil geändert hat, wie die Verwendung von Indexentwurf andere Prädikate, vorhandene wird ungültig gemacht. Details zu einer schlechten Indizierungsstrategie oder Änderungen bei der Arbeitsauslastungsprofil gehören:
--   Suchen Sie nach doppelt redundante, selten verwendet und nicht vollständig verwendeten Indizes.
--   Besondere Sorgfalt mit nicht verwendeten Indizes mit Updates.
-
-### <a name="steps-to-resolve"></a>Schritte zum Beheben
-
-1.  Nutzen Sie den grafischen Ausführungsplan nach fehlenden Index verweisen.
-2.  Indizieren von generierten Vorschläge [Datenbankmodul-Optimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Nutzen der Vorteile der [fehlende Indizes DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) oder über die [Dashboard der SQL Server-Leistung](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
-4.  Nutzen Sie bereits vorhandene Skripts, die vorhandenen DMVs verwenden können, um einen Einblick in alle fehlenden, doppelten, redundante, selten verwendeten und nicht vollständig verwendeten Indizes, sondern auch bereitzustellen, wenn alle Verweise von Index mit dem Hinweis/hartcodiert vorhandenen Prozeduren und Funktionen in der Datenbank ist. 
-
-> [!TIP] 
-> Beispiele für solche bereits vorhandene Skripts [Indexerstellung](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) und [Indexinformationen](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
-
-## <a name="InabilityPredicates"></a>Nicht funktionierenden Prädikate zum Filtern von Daten
-
-**Gilt für:** Foreign Plattform (z. B. Oracle, DB2, MySQL und Sybase) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration.
+**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 > [!NOTE]
-> Für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migrationen, wenn dieses Problem in der Quelle vorhanden waren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Migration auf eine neuere Version des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als-wird dieses Szenario nicht berücksichtigen.
+> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Der Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt ist. Wenn eine arbeitsauslastung Prädikate, die nur zum Zeitpunkt der Ausführung bekannt sein kann abhängt, wird das Potenzial für schlechter Planauswahl erhöht. Für einen Plan höherer Qualität Prädikate muss **SARGable**, oder **S**uchen **Arg**u stornierende**können**.
-
-Einige Beispiele für nicht-Prädikate:
--   Implizite datenkonvertierungen, wie z. B. VARCHAR, NVARCHAR oder INT varchar. Suchen Sie nach der Common Language Runtime CONVERT_IMPLICIT Warnungen in die tatsächliche Ausführungspläne. Konvertieren von einem Typ in einen anderen kann auch einem Genauigkeitsverlust führen.
--   Komplexe unbestimmt Ausdrücke wie z. B. `WHERE UnitPrice + 1 < 3.975`, aber nicht `WHERE UnitPrice < 320 * 200 * 32`.
--   Ausdrücke, die mithilfe von Funktionen, wie z. B. `WHERE ABS(ProductID) = 771` oder`WHERE UPPER(LastName) = 'Smith'`
--   Zeichenfolgen mit einem führenden Platzhalterzeichen, wie z. B. `WHERE LastName LIKE '%Smith'`, aber nicht `WHERE LastName LIKE 'Smith%'`.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kompiliert Abfragepläne in gespeicherten Prozeduren, indem die Eingabeparameter bei der ersten Kompilierung ermittelt werden. Anschließend wird ein parametrisierter und wiederverwendeter Plan generiert, der für diese Verteilung von Eingabedaten optimiert ist. Die meisten Anweisungen, die triviale Pläne generieren, werden parametrisiert, wenn auch nicht in gespeicherten Prozeduren. Nachdem Sie ein Plan zuerst zwischengespeichert wird, wird jede spätere Ausführung einem zuvor zwischengespeicherten Plan zugeordnet.
+Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise nicht die am häufigsten verwendeten Parametersätze für die übliche Arbeitsauslastung verwendet hat. Bei anderen Parametern wird derselbe Ausführungsplans ineffizient. Weitere Informationen zu diesem Thema finden Sie unter [Parameterermittlung](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
 
-1. Deklarieren Sie Variablen/Parameter immer als das vorgesehene Ziel [Datentyp](../t-sql/data-types/data-types-transact-sql.md). 
-  -   Dazu kann gehören, vergleichen alle benutzerdefinierten Code-Konstrukt, das in der Datenbank (z. B. gespeicherte Prozeduren, benutzerdefinierte Funktionen oder Sichten) in Bezug auf Systemtabellen gespeichert ist, die Informationen zu Datentypen, die in der zugrunde liegenden Tabellen verwendeten enthalten (z. B. [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
-2. Wenn nicht der gesamte Code in den früheren Zustand zu durchlaufen, klicken Sie dann für den gleichen Zweck ändern Sie den Datentyp für die Tabelle entsprechend der Deklaration einer Variablen/Parameter.
-3. Grund, die Nützlichkeit von den folgenden Konstrukten:
-  -   Fungiert als Prädikate verwendet wird.
-  -   Platzhaltersuchen;
-  -   Komplexe Ausdrücke, die basierend auf Einspaltig Daten – bewerten die Notwendigkeit, stattdessen persistente berechnete Spalten erstellen indiziert werden können;
+1.  Verwenden Sie den `RECOMPILE`-Hinweis. Ein Plan wird jedes Mal je nach Parameterwert berechnet.
+2.  Schreiben Sie die gespeicherte Prozedur neu, sodass die Option `(OPTIMIZE FOR(<input parameter> = <value>))` verwendet wird. Entscheiden Sie, welcher Wert verwendet werden soll, der die am besten zu den meisten der relevanten Arbeitsauslastungen passt und einen Plan erstellt und verwaltet, der für die parametrisierten Werte effizient wird.
+3.  Schreiben Sie die gespeicherten Prozeduren mithilfe der lokalen Variablen innerhalb der Prozedur neu. Nun verwendet der Optimierer den Dichtevektor für Einschätzungen, was zu dem gleichen Plan führt, unabhängig vom Parameterwert.
+4.  Schreiben Sie die gespeicherte Prozedur neu, sodass die Option `(OPTIMIZE FOR UNKNOWN)` verwendet wird. Dies hat dieselbe Wirkung wie die Verwendung der lokalen Variablen.
+5.  Schreiben Sie die Abfrage neu, sodass der Hinweis `DISABLE_PARAMETER_SNIFFING` verwendet wird. Dies hat denselben Effekt wie die Verwendung der lokalen Variablen: Die Parameterermittlung wird vollständig deaktiviert, es sei denn, `OPTION(RECOMPILE)`, `WITH RECOMPILE` oder `OPTIMIZE FOR <value>` wird verwendet.
+
+> [!TIP] 
+> Nutzen Sie die Vorteile der [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]-Plananalyse, um schnell zu ermitteln, ob es sich um ein Problem handelt. Weitere Informationen dazu finden Sie [unter diesem Link](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+
+## <a name="MissingIndexes"></a> Fehlende Indizes
+
+**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der zusätzlicher Arbeitsspeicher und CPU verschwendet wird. Dies kann daran liegen, dass das Arbeitsauslastungsprofil geändert wurde, also z.B. die Verwendung anderer Prädikate, die den vorhandenen Indexentwurf ungültig machen. Anzeichen einer schlechten Indizierungsstrategie oder Änderungen am Arbeitsauslastungsprofil sind z.B. folgende:
+-   Doppelte, redundante, selten verwendete und vollständig nicht verwendete Indizes
+-   Nicht verwendete Indizes mit Updates. Dabei ist besondere Sorgfalt geboten.
+
+### <a name="steps-to-resolve"></a>Schritte zum Beheben
+
+1.  Nutzen Sie den grafischen Ausführungsplan für „Fehlender Index“-Verweise.
+2.  Indizieren Sie generierte Vorschläge mit dem [Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+3.  Nutzen Sie die [Fehlende Indizes-DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) oder das [SQL Server-Leistungsdashboard](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+4.  Nutzen Sie bereits vorhandene Skripts, die vorhandene DMVs verwenden können, um einen Einblick in alle fehlenden, doppelten, redundante, selten verwendeten und nicht vollständig verwendeten Indizes zu bieten. Verwenden Sie diese Skripts auch, wenn Indexverweise in vorhandenen Prozeduren und Funktionen in der Datenbank mit einem Hinweis versehen/hartcodiert wurden. 
+
+> [!TIP] 
+> Beispiele für bereits vorhandene Skripts [Index-Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) und [Index-Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
+
+## <a name="InabilityPredicates"></a> Unmöglichkeit, mit Prädikaten Daten zu filtern
+
+**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+> [!NOTE]
+> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.
+
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer kann nur Informationen berücksichtigen, die zum Zeitpunkt der Kompilierung bekannt sind. Wenn eine Arbeitsauslastung Prädikate nutzt, die nur zum Zeitpunkt der Ausführung bekannt sein können, erhöht sich das Risiko einer schlechten Planauswahl. Für einen qualitativ noch hochwertigeren Plan zu erhalten, müssen Prädikate **SARGable**, oder „**S**earch **Arg**ument**able**“ sein.
+
+Einige Beispiele für nicht SARGable-Prädikate sind:
+-   Implizite Datenkonvertierungen wie VARCHAR, NVARCHAR oder INT zu VARCHAR. Suchen Sie in den tatsächlichen Ausführungsplänen nach CONVERT_IMPLICIT-Laufzeitwarnungen. Das Konvertieren von einem Typ in einen anderen kann auch zu einem Genauigkeitsverlust führen.
+-   Komplexe unbestimmte Ausdrücke wie `WHERE UnitPrice + 1 < 3.975`, aber nicht `WHERE UnitPrice < 320 * 200 * 32`.
+-   Ausdrücke mit Funktionen wie `WHERE ABS(ProductID) = 771` oder`WHERE UPPER(LastName) = 'Smith'`
+-   Zeichenfolgen mit einem führenden Platzhalterzeichen wie `WHERE LastName LIKE '%Smith'`, aber nicht `WHERE LastName LIKE 'Smith%'`
+
+### <a name="steps-to-resolve"></a>Schritte zum Beheben
+
+1. Deklarieren Sie Variablen/Parameter immer als vorgesehenen [Zieldatentyp](../t-sql/data-types/data-types-transact-sql.md). 
+  -   Dazu kann das Vergleichen aller benutzerdefinierten Codekonstrukte gehören, die in der Datenbank gespeichert sind (z.B. gespeicherte Prozeduren, benutzerdefinierte Funktionen oder Sichten), mit Systemtabellen, die Informationen zu Datentypen beinhalten, die in den zugrunde liegenden Tabellen verwendet werden (z.B. [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
+2. Wenn der gesamte Code nicht bis zum vorherigen Punkt durchsucht werden kann, ändern Sie zum gleichen Zweck den Datentyp für die Tabelle entsprechend einer Variablen-/Parameterdeklaration.
+3. Gründe für die Nützlichkeit der folgenden Konstrukte:
+  -   Funktionen werden als Prädikate verwendet
+  -   Platzhaltersuchen
+  -   Komplexe Ausdrücke auf Grundlage von spaltenbasierten Daten – bewerten Sie die Notwendigkeit, anstatt persistenter Spalten berechnete Spalten zu erstellen, die indiziert werden können
 
 > [!NOTE] 
 > Alles, was oben aufgeführt ist, kann programmgesteuert ausgeführt werden.
 
-## <a name="TableValuedFunctions"></a>Verwendung von Tabellenwertfunktionen (mit mehreren Anweisungen Vs Inline)
+## <a name="TableValuedFunctions"></a> Verwendung von Tabellenwertfunktionen (Funktionen mit mehreren Anweisungen oder Inlinefunktionen)
 
-**Gilt für:** Foreign Plattform (z. B. Oracle, DB2, MySQL und Sybase) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration.
+**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 > [!NOTE]
-> Für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migrationen, wenn dieses Problem in der Quelle vorhanden waren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Migration auf eine neuere Version des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als-wird dieses Szenario nicht berücksichtigen.
+> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.
 
-Tabellenwertfunktionen zurückgeben einen Table-Datentyp, der eine Alternative zum Ansichten werden kann. Während der Sichten in einer einzelnen beschränkt sind `SELECT` -Anweisung, benutzerdefinierte Funktionen zusätzliche Anweisungen, die ermöglichen, weitere Logik als Sichten enthalten.
+Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative zu Ansichten sein kann. Ansichten sind auf eine einzelne `SELECT`-Anweisung beschränkt, während benutzerdefinierte Funktionen zusätzliche Anweisungen enthalten können, die mehr Logik als ansichten ermöglichen.
 
 > [!IMPORTANT] 
-> Da die Ausgabetabelle von einem MSTVF (mit mehreren Anweisungen Tabellenwertfunktion) nicht zum Zeitpunkt der Kompilierung erstellt wird die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfrageoptimierer stützt sich auf Heuristik und keine tatsächliche Netzwerkstatistiken, um die Zeile Einschätzung zu bestimmen. Auch wenn die Basistabellen Indizes hinzugefügt werden, ist dies nicht sehr helfen. Für MSTVFs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen festen Schätzung 1 für die Anzahl der Zeilen von einer MSTVF zurückgegeben werden soll (beginnend mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] behobene Schätzung ist 100 Zeilen).
+> Da die Ausgabetabelle einer Tabellenwertfunktion mit mehreren Anweisungen (Multi-Statement Table Valued Function, MSTVF) nicht zur Kompilierzeit erstellt wird, verwendet der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer Heuristik und keine tatsächliche Statistik, um Zeileneinschätzungen zu bestimmen. Auch wenn den Basistabellen Indizes hinzugefügt werden, wird dies nicht helfen. Für MSTVFs verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine feste Schätzung von 1 für die Anzahl der Zeilen, die von einer MSTVF zurückgegeben werden sollen (beginnend mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], wo die behobene Schätzung 100 Zeilen beträgt).
 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
-1.  Wenn die Tabellenwertfunktion mit mehreren Anweisungen nur einzelne Anweisung Inline TVF konvertiert wird.
+1.  Wenn die Tabellenwertfunktion mit mehreren Anweisungen nur eine einzelne Anweisung enthält, konvertieren Sie zu einer Inline-Tabellenwertfunktion.
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -160,13 +160,13 @@ Tabellenwertfunktionen zurückgeben einen Table-Datentyp, der eine Alternative z
     )
     ```
 
-2.  Wenn komplexere, sollten erwägen Sie, Zwischenergebnisse gespeichert in speicheroptimierten Tabellen oder temporären Tabellen zu verwenden.
+2.  Wenn sie komplexer ist, sollten Sie die Zwischenergebnisse verwenden, die in speicheroptimierten Tabellen oder in temporären Tabellen gespeichert sind.
 
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Benutzerdefinierte Funktionen](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Tabellenvariablen und Zeile Einschätzung - Teil 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Tabellenvariablen und Zeile Einschätzung - Teil 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
-[Des Zwischenspeicherns von Ausführungsplänen und Wiederverwendung](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
+[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 1)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
+[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 2)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
 

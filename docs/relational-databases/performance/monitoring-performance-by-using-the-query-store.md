@@ -18,28 +18,24 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: de-de
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# Leistungsüberwachung mit dem Abfragespeicher
+# <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfragespeicher bietet Ihnen Einblick in die Auswahl und die Leistung eines Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern, sodass Sie Verwendungsmuster für Datenbanken erkennen können und verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Sie können den Abfragespeicher mit der Option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) konfigurieren. 
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfragespeicher bietet Ihnen Einblick in die Auswahl und die Leistung eines Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern, sodass Sie Verwendungsmuster für Datenbanken erkennen können und verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Sie können den Abfragespeicher mit der Option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) konfigurieren. 
   
  Informationen zum Betrieb des Abfragespeichers in Azure SQL-Datenbank finden Sie unter [Betrieb des Abfragespeichers in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
   
 ##  <a name="Enabling"></a> Aktivieren des Abfragespeichers  
  Der Abfragespeicher ist bei neuen Datenbanken standardmäßig nicht aktiviert.  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Verwenden der Seite „Abfragespeicher“ in Management Studio  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Verwenden der Seite „Abfragespeicher“ in Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank und anschließend auf **Eigenschaften**.  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  Wählen Sie im Feld **Betriebsmodus (angefordert)** die Option **Ein**.  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Verwenden von Transact-SQL-Anweisungen  
+#### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen  
   
 1.  Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Beispiel:  
   
@@ -158,7 +152,7 @@ Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verf
  Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. Der Standardwert ist 200.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Steuert, ob der Abfragespeicher erfasst statistische Informationen zu warten. Können OFF = 0 "oder" auf = 1 (Standard)  
+ Steuert, ob der Abfragespeicher Wartestatistikinformationen erfasst. Kann Deaktiviert = 0 oder Aktiviert = 1 (Standard) sein  
  
  Fragen Sie die Sicht **sys.database_query_store_options** ab, um die aktuellen Optionen des Abfragespeichers zu ermitteln. Weitere Informationen zu den Werten finden Sie unter [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -171,9 +165,7 @@ Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verf
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### Katalogsichten des Abfragespeichers  
+### <a name="query-store-catalog-views"></a>Katalogsichten des Abfragespeichers  
  Katalogsichten stellen Informationen über den Abfragespeicher bereit.  
 
 ||| 
@@ -181,11 +173,9 @@ Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verf
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[Sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### Gespeicherte Prozeduren für den Abfragespeicher  
+### <a name="query-store-stored-procedures"></a>Gespeicherte Prozeduren für den Abfragespeicher  
  Gespeicherte Prozeduren ermöglichen das Konfigurieren des Abfragespeichers.  
 
 ||| 
@@ -459,8 +449,8 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Wenn Sie alle Leistungsregressionen (nicht nur die im Zusammenhang mit einer Änderung der Planauswahl) anzeigen möchten, entfernen Sie einfach die Bedingung `AND p1.plan_id <> p2.plan_id` aus der vorherigen Abfrage.  
 
- **Abfragen, die am längsten warten?**
- Die Abfrage gibt die 10 Abfragen zurück, die am längsten warten. 
+ **Abfragen mit der längsten Wartezeit?**
+Die Abfrage gibt die 10 Abfragen zurück, die am längsten warten. 
  
  ```tsql 
   SELECT TOP 10
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Verwendungsszenarien für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md)   
