@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 0a1219eb4dac8621ef678cf309ef36b4b039536b
 ms.contentlocale: de-de
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus (SQL Server)
@@ -32,8 +32,8 @@ Wenn die Ausgabe der **FOR JSON**-Klausel automatisch entsprechend der Struktur 
 Wenn Sie die Option **AUTO** angeben, entspricht das Format der JSON-Ausgabe automatisch der Reihenfolge der Spalten in der SELECT-Liste und deren Quelltabellen. Dieses Format können Sie nicht ändern.
  
 Wenn Sie die vollständige Kontrolle über die Ausgabe behalten möchten, geben Sie alternativ die Option **PATH** an.
--   Weitere Informationen zur Option **PATH** finden Sie unter [Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
--   Einen Überblick über die beiden Optionen finden Sie unter [Formatieren von Abfrageergebnissen als JSON mit FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
+-   Weitere Informationen zur Option **PATH** finden Sie unter [Format Nested JSON Output with PATH Mode (Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+-   Einen Überblick über die beiden Optionen finden Sie unter [Format Query Results as JSON with FOR JSON (Formatieren von Abfrageergebnissen als JSON mit FOR JSON)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
 
 Eine Abfrage, die die Option **FOR JSON AUTO** verwendet, benötigt eine **FROM** -Klausel.  
   
@@ -160,7 +160,7 @@ FOR JSON PATH
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
 
 ## <a name="see-also"></a>Siehe auch  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

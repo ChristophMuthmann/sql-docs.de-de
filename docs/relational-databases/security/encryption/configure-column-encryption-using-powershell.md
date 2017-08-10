@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
@@ -41,7 +41,7 @@ Das Cmdlet **Set SqlColumnEncryption** unterstützt zwei Ansätze zum Einrichten
 
 Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs nicht für Schreibtransaktionen verfügbar. Die Semantik von Fremdschlüsseleinschränkungen (**CHECK** oder **NOCHECK**) wird beim Offlineansatz immer beibehalten.
 
-Mit dem online-Ansatz (erfordert die Version des SqlServer PowerShell-Moduls 21.x oder höher), der Vorgang des Kopierens und verschlüsseln, Entschlüsseln oder erneute Verschlüsseln der Daten inkrementell ausgeführt wird. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
+Beim Onlineansatz (erfordert das SqlServer PowerShell-Modul aus Version 21.x oder neuer) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
 
 Es folgen die Leitlinien für die Wahl zwischen Offline- und Onlineansatz:
 

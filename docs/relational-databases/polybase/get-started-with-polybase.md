@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: de-de
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Erste Schritte mit PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dieses Thema enthält die Grundlagen zum Ausführen von PolyBase auf eine SQL Server-Instanz.
+  Dieses Thema behandelt die Grundlagen zum Installieren und Ausführen von PolyBase auf einer SQL Server-Instanz.
   
  Nachdem Sie die Schritte unten ausgeführt haben, verfügen Sie über:  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 07/14/2017
 -   Beispiele für Abfragen, die PolyBase-Objekte verwenden  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Eine Instanz von [SQL Server (64-Bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) durch Folgendes:  
+ Eine Instanz von [SQL Server (64-Bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), die folgendes enthält:  
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit). (Entweder [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktioniert). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm löst einen Fehler aus, wenn JRE nicht vorhanden ist.   
+-   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit). (Entweder [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktioniert). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist.   
   
 -   Minimaler Arbeitsspeicher: 4 GB  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 07/14/2017
   
 -   Hadoop-Cluster. Unterstützte Versionen finden Sie unter [Konfigurieren von PolyBase](#supported).  
 
--   Azure Blob-Speicher
+-   Azure BLOB-Speicher
 
 > [!NOTE]
->   Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Ohne entweder Komponente schlägt die Abfrage fehl. 
+>   Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten fehlschlagen. 
 
 ## <a name="install-polybase"></a>Installieren von PolyBase  
- Wenn Sie PolyBase installiert haben, finden Sie unter [PolyBase-Installation](../../relational-databases/polybase/polybase-installation.md).  
+ Wenn Sie PolyBase nicht installiert haben, lesen Sie [PolyBaseinstallation (Installieren von PolyBase)](../../relational-databases/polybase/polybase-installation.md).  
   
 ### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie nach der Installation den folgenden Befehl aus, um zu bestätigen, dass PolyBase erfolgreich installiert wurde. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  
@@ -79,8 +79,8 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- Nach der Installation müssen Sie SQL Server verwenden entweder Ihre Hadoop Version oder Azure Blob Storage konfigurieren. PolyBase unterstützt zwei Hadoop-Anbieter, Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH).  Zu den unterstützten externen Datenquellen gehören:  
+##  <a name="supported"></a> Konfigurieren von PolyBase  
+ Nach der Installation müssen Sie SQL Server dafür konfigurieren, entweder Ihre Hadoop-Version oder Azure-BLOB-Speicher zu verwenden. PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH).  Zu den unterstützten externen Datenquellen gehören:  
   
 -   Hortonworks HDP 1.3 auf Linux/Windows Server  
   
@@ -90,7 +90,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 unter Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9-5.11 unter Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 unter Linux  
   
 -   Azure BLOB-Speicher  
   
