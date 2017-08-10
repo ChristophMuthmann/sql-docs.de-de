@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="data-retention-management-for-history-table"></a>Verwaltung der Datenbeibehaltung für die Verlaufstabelle  
  Das Verwalten der Datenbeibehaltung für temporale Tabellen beginnt damit, die Beibehaltungsdauer für jede temporale Tabelle zu bestimmen. Ihrer Beibehaltungsrichtlinie sollte in den meisten Fällen als Teil der Geschäftslogik der Anwendung betrachtet werden, die die temporalen Tabellen verwendet. Für Anwendungen in Datenüberwachungs- und Zeitreiseszenarien gelten beispielsweise feste Anforderungen dafür, wie lange Verlaufsdaten für Onlineabfragen verfügbar sein müssen.  
   
- Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, einen Plan für die Verwaltung von Verlaufsdaten zu entwickeln. Dazu gehört, wie und wo Sie Verlaufsdaten speichern und wie Sie Verlaufsdaten löschen, die älter sind, als die Beibehaltungsanforderungen vorsehen. Die folgenden vier Ansätze für die Verwaltung von Verlaufsdaten der temporalen Verlaufstabelle sind verfügbar:  
+ Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, einen Plan für die Verwaltung von Verlaufsdaten zu entwickeln. Dazu gehört, wie und wo Sie Verlaufsdaten speichern und wie Sie Verlaufsdaten löschen, die älter sind, als die Beibehaltungsanforderungen vorsehen. Die folgenden vier Ansätze für das Verwalten von Verlaufsdaten in der temporalen Verlaufstabelle stehen Ihnen zur Verfügung:  
   
 -   [Stretch-Datenbank](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -428,28 +428,28 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>Mithilfe der zeitliche Verlauf Retention Politikansatz
-> **Hinweis:** mithilfe der zeitliche Verlauf Aufbewahrungsrichtlinie Ansatz gilt für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server-2017 CTP-Version 1.3 ab.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien
+> **HINWEIS:** Die Verwendung des Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien gilt für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server-2017 ab Version CTP 1.3.  
 
-Temporale verlaufsbeibehaltung möglich Ebene des einzelnen Tabelle konfiguriert, wodurch Benutzer flexible Alterungszeitraum erstellen Richtlinien. Anwenden von temporären Aufbewahrung ist einfach: Es erfordert nur einen Parameter bei Erstellung oder dem Schema einer Änderung in Tabelle festgelegt werden.
+Die temporale Verlaufsbeibehaltung kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden von temporaler Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.
 
-Nach der Definition Aufbewahrungsrichtlinie startet Azure SQL-Datenbank regelmäßig prüft, ob es sind Zeilen mit Verlaufsdaten, die für die automatische Bereinigung geeignet sind. Identifikation von übereinstimmenden Zeilen und deren Entfernung aus der Verlaufstabelle treten transparent, in die Hintergrundaufgabe, die geplant und vom System ausgeführt wird. Alter-Bedingung für die Verlaufszeilen für die Tabelle aktiviert ist basierend auf der Spalte, die Ende SYSTEM_TIME-Zeitraum darstellt. Tabellenzeilen, die für die Bereinigung geeignet, sofern die Beibehaltungsdauer, z. B. auf sechs Monate festgelegt ist, die folgende Bedingung erfüllen:
+Nachdem Sie Beibehaltungsrichtlinien festgelegt haben, überprüft die Azure SQL-Datenbank in regelmäßigen Abständen, ob Zeilen mit Verlaufsdaten existieren, die für die automatische Datenbereinigung infrage kommen. Die Identifikation von übereinstimmenden Reihen und ihre Entfernung aus der Verlaufstabelle finden transparent in dem Hintergrundtask statt, der vom System geplant und ausgeführt wird. Die Ablaufbedingungen für die Zeilen der Verlaufstabelle werden basierend auf der Spalte überprüft, die das Ende des SYSTEM_TIME-Zeitraums repräsentiert. Wenn die Beibehaltungsdauer beispielsweise auf sechs Monate festgelegt ist, erfüllen die für die Bereinigung infrage kommenden Zeilen folgende Bedingung:
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-Im vorherigen Beispiel vorausgesetzt, dass die ValidTo-Spalte an das Ende der SYSTEM_TIME-Zeitraum entspricht.
-### <a name="how-to-configure-retention-policy"></a>So konfigurieren Sie die Aufbewahrungsrichtlinie werden?
-Bevor Sie die Aufbewahrungsrichtlinie für eine temporale Tabelle konfigurieren, überprüfen Sie zunächst, ob temporale Verlaufsdaten Beibehaltungsdauer auf Datenbankebene aktiviert ist:
+Im vorherigen Beispiel sind wir davon ausgegangen, dass die Spalte „ValidTo“ dem Ende des SYSTEM_TIME-Zeitraums entspricht.
+### <a name="how-to-configure-retention-policy"></a>Wie werden Beibehaltungsrichtlinien konfiguriert?
+Bevor Sie die Aufbewahrungsrichtlinie für eine temporale Tabelle konfigurieren, überprüfen Sie zunächst, ob die temporale Beibehaltung von Verlaufsdaten auf Datenbankebene aktiviert ist:
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-Datenbank-Flag **Is_temporal_history_retention_enabled** standardmäßig auf ON festgelegt ist, aber Benutzer mit ALTER DATABASE-Anweisung ändern. Es wird auch nach Point in Time Restore-Vorgang auf OFF festgelegt. Um temporale Verlaufstabellen Bereinigung während der Beibehaltung für Ihre Datenbank zu aktivieren, führen Sie die folgende Anweisung aus:
+Das Datenbankkennzeichen **Is_temporal_history_retention_enabled** ist standardmäßig auf „ON“ festgelegt, aber Benutzer können dies mit der Anweisung ALTER DATABASE ändern. Es wird ebenfalls nach einer Point-In-Time-Wiederherstellung auf OFF festgelegt. Um die Bereinigung für die temporale Verlaufsbeibehaltung auf Ihrer Datenbank zu aktivieren, führen Sie folgende Anweisung aus:
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
 ```
-Aufbewahrungsrichtlinie wird beim Erstellen der Tabelle durch Angeben der Wert für den Parameter HISTORY_RETENTION_PERIOD konfiguriert:
+Die Beibehaltungsrichtlinien werden während der Tabellenerstellung konfiguriert, indem ein Wert für den Parameter HISTORY_RETENTION_PERIOD angegeben wird:
 ```
 CREATE TABLE dbo.WebsiteUserInfo
 (  
@@ -469,13 +469,13 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-Sie können mit anderen Zeiteinheiten Beibehaltungsdauer angeben: Tage, Wochen, Monaten oder Jahren. Wenn HISTORY_RETENTION_PERIOD weggelassen wird, wird eine unbegrenzte Aufbewahrungsdauer ausgegangen. Sie können auch explizit INFINITE-Schlüsselwort verwenden.
-In einigen Szenarien möglicherweise nach dem Erstellen der Tabelle konfigurieren möchten, oder zum Ändern zuvor konfigurierten Wert. Verwenden Sie in diesem Fall ALTER TABLE-Anweisung:
+Sie können den Beibehaltungszeitraum mithilfe verschiedener Zeiteinheiten angeben: DAYS, WEEKS, MONTHS, und YEARS. Wenn HISTORY_RETENTION_PERIOD weggelassen wird, wird von einer unbegrenzten (INFINITE) Beibehaltung ausgegangen. Sie können das Schlüsselwort INFINITE auch explizit verwenden.
+In manchen Szenarios möchten Sie die Beibehaltung eventuell erst nach der Tabellenerstellung konfigurieren oder den zuvor konfigurierten Wert ändern. Verwenden Sie für diesen Fall die Anweisung ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-Zum aktuellen Status der Aufbewahrungsrichtlinie zu überprüfen, verwenden Sie die folgende Abfrage, die temporären Aufbewahrung Aktivierung-Flag auf Datenbankebene, deren beibehaltungsdauerwerte für einzelne Tabellen verknüpft:
+Benutzen Sie die folgende Abfrage, die die Flag für die temporale Beibehaltungsaktivierung auf Datenbankebene mit den Beibehaltungszeiträumen für die einzelnen Tabellen verknüpft, um den aktuellen Status der Beibehaltungsrichtlinien zu überprüfen:
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,16 +488,16 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>Wie SQL-Datenbank löscht veraltete Zeilen?
-Der Cleanup-Prozess hängt die Indexlayouts der Verlaufstabelle. Es ist wichtig zu beachten, die *darf nur für Tabellen zur Versionsgeschichte von mit einem gruppierten Index (B-Struktur oder Columnstore) endlichen Aufbewahrungsrichtlinie konfiguriert*. Eine Hintergrundtask wird erstellt, um veraltete Daten Cleanup für alle temporalen Tabellen mit begrenzte Beibehaltungsdauer auszuführen. Für den gruppierten Index für Rowstore (B-Struktur) der Bereinigungslogik löscht veraltete Zeilen in kleineren Blöcken (max. 10 K) Druck auf das Datenbankprotokoll und e/a-Subsystem zu minimieren. Obwohl der Bereinigungslogik erforderlichen B-Struktur-Index, Reihenfolge der löschungen für die Zeilen, die älter sind nutzt als die Beibehaltungsdauer ist nicht garantiert werden kann. Daher *akzeptieren eine Abhängigkeit von der Reihenfolge der Bereinigung in Ihren Anwendungen*.
+### <a name="how-sql-database-deletes-aged-rows"></a>Wie löscht die SQL-Datenbank veraltete Zeilen?
+Der Bereinigungsprozess hängt vom Indexlayout der Verlaufstabelle ab. Zu beachten ist, *dass nur Verlaufstabellen mit einem gruppierten Index (B-Struktur oder Columnstore) mit einer unendlichen Aufbewahrungsrichtlinie konfiguriert werden können*. Es wird ein Hintergrundtask erstellt, um die Bereinigung veralteter Daten für alle temporalen Tabellen mit begrenztem Beibehaltungszeitraum auszuführen. Die Bereinigungslogik für den gruppierten Index für Rowstore (B-Struktur) löscht die veralteten Zeilen in kleineren Blöcken (max. 10K), was die Belastung des Datenbankprotokolls und des E/A-Subsystems minimiert. Die Bereinigungslogik verwendet zwar den benötigten B-Strukturindex, jedoch kann die Löschreihenfolge der Zeilen, die den Beibehaltungszeitraum übersteigen, nicht sicher garantiert werden. *Verwenden Sie in Ihren Anwendungen daher keine Abhängigkeit von der Bereinigungsreihenfolge*.
 
-Der Task ' Verlaufscleanup ' für den gruppierten columnstore-gesamte Zeilengruppen gleichzeitig entfernt (in der Regel enthalten 1 Millionen Zeilen jeder), die sehr effizient, insbesondere, wenn Sie Verlaufsdaten mit einer hohen Geschwindigkeit generiert werden.
+Der Bereinigungstask für den gruppierten Columnstore entfernt ganze Zeilengruppen auf einmal (die üblicherweise jeweils 1 Mio. Reihen enthalten). Dies ist sehr effizient, vor allem wenn Verlaufsdaten mit einer hohen Geschwindigkeit generiert werden.
 
-![Gruppierte columnstore-Aufbewahrung](../../relational-databases/tables/media/cciretention.png "gruppierten columnstore-Aufbewahrung")
+![Gruppierte Columnstore-Beibehaltung](../../relational-databases/tables/media/cciretention.png "gruppierte Columnstore-Beibehaltung")
 
-Ausgezeichnete datenkomprimierung und effiziente Aufbewahrung Cleanup macht gruppierten columnstore-Index perfekte Lösung für Szenarien, wenn die arbeitsauslastung eine hohe Menge der Verlaufsdaten schnell generiert. Dieses Muster ist typisch für rechenintensive transaktionsverarbeitungsarbeitsauslastungen, die temporale Tabellen für die änderungsnachverfolgung und Überwachung, Trendanalyse oder als "Erfassung" IoT Daten verwenden.
+Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung machen den gruppierten Columnstore-Index zur perfekten Lösung für Szenarios, bei denen Ihre Workload in kürzester Zeit eine große Menge an Verlaufsdaten generiert. Dieses Muster ist typisch für intensive Transaktionsverarbeitungs-Workloads, die temporale Tabellen verwenden, um die Änderungsnachverfolgung und -überwachung, Trendanalysen oder die Erfassung von IoT-Daten durchzuführen.
 
-Überprüfen Sie [verwalten Sie Verlaufsdaten in Temporalen Tabellen mit Aufbewahrungsrichtlinie](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) Weitere Details.
+Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>Siehe auch  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   

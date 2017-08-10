@@ -1,1 +1,1 @@
-![Ja](media/yes.png)Im integrierten SharePoint-Modus
+![Ja](media/yes.png)Integrierter SharePoint-Modus

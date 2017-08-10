@@ -1,1 +1,1 @@
-**Dieses Thema gilt für:**![Ja](media/yes.png)SQL Server 2016![Ja](media/yes.png)Power BI-Berichtsserver
+**DIESES THEMA BEZIEHT SICH AUF:**![Ja](media/yes.png)SQL Server 2016![Ja](media/yes.png)Power-BI-Berichtsserver
