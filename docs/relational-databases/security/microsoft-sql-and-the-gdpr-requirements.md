@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL und GDPR-Anforderungen | Microsoft Docs
+title: Microsoft SQL und die Anforderungen der Datenschutz-Grundverordnung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Anleitung zu verbessern, Datenschutz und Adressierung GDPR Anforderungen mit der Microsoft SQL-Plattform
+# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Anleitung zur Verbesserung des Datenschutzes und zur Erfüllung der Anforderungen der Datenschutz-Grundverordnung mit der SQL-Plattform von Microsoft
 
 
 ## <a name="summary"></a>Zusammenfassung
-Auf 25 Mai 2018 ist eine Europäischen Datenschutzgesetze wirksam, die einen neuen globalen Balken für Datenschutz, Sicherheit und Compliance festlegt. Die allgemeine Data Protection vor oder GDPR, ist im Grunde zu schützen, und aktivieren die Datenschutz-Rechte von Einzelpersonen und strict globale datenschutzanforderungen führende wie persönliche Daten verwaltet und geschützt werden, während einzelne Wahl ressourcenbezogene richtet. 
+Am 25. Mai 2018 tritt ein europäisches Datenschutzgesetz in Kraft, das eine neue globale Messlatte für Datenschutzrechte, Sicherheit und Konformität setzt. Die Datenschutz-Grundverordnung oder DSGVO handelt grundlegend vom Schutz und der Ermöglichung der Datenschutzrechte von Einzelnen und legt strenge globale Anforderungen an den Datenschutz fest, durch die geregelt wird, wie persönliche Daten verwaltet und geschützt werden, wobei individuelle Entscheidungen berücksichtigt werden. 
 
-Microsoft SQL-Kunden, die die GDPR unterliegen, ob die Verwaltung von Cloud-basierten oder lokalen Datenbanken oder beide müssen sicherstellen, dass Daten in ihre Datenbank-Managementsystemen qualifizieren geeignet behandelt und gemäß GDPR Prinzipien geschützt. Dies bedeutet, dass viele Kunden benötigen zu überprüfen oder ändern ihre datenbankverwaltung und alle Daten, die Behandlung von Prozeduren, insbesondere auf die Sicherheit der Verarbeitung der Daten gemäß den GDPR konzentrieren.
+Microsoft SQL-Kunden, die der DSGVO unterliegen, werden unabhängig davon, ob sie cloudbasierte oder lokale Datenbanken oder beides verwalten, sicherstellen müssen, dass qualifizierende Daten in ihren Datenbanksystemen entsprechend der DSGVO-Prinzipien angemessen behandelt und geschützt werden. Dies bedeutet, dass viele Kunden ihre Datenbankverwaltung und ihre Datenverarbeitungsprozesse überprüfen oder ändern müssen, besonders im Hinblick auf die Sicherheit der Datenverarbeitung, wie in der DSGVO festgelegt.
 
-Microsoft SQL-basierte Technologien bieten viele integrierte Sicherheitsfunktionen, die helfen, Risiken zu reduzieren, um Daten und der Schutz und die Verwaltung von Daten auf Datenbankebene und darüber hinaus zu verbessern. Dieses Dokument überprüft diese Funktionen und Teil des Microsoft-Ansätze, die mit Microsoft SQL für das Erreichen der GDPR Ziele Datenschutz Daten freigibt.
+Microsoft SQL-basierte Technologien bieten viele integrierten Sicherheitsfunktionen, die dabei helfen können, Risiken für Daten zu mindern und den Schutz und die Verwaltbarkeit von Daten auf Datenbankebene und darüber hinaus zu verbessern. In diesem Dokument werden diese Funktionen untersucht, und einige der Ansätze von Microsoft zur Verwendung von Microsoft SQL zum Erreichen der Datenschutzziele der DSGVO werden geteilt.
    
   
-**Writer:** Ronit Reger
+**Autor:** Ronit Reger
 
-**Technische Bearbeiter:** Conor Cunningham; Joachim Hammer; Shai Kariv; Julie Koesmarno; Alice Kupcik; Roland Matchoro; Gilad Mittelman; Dan Rediske; Kundenzufriedenheit ausgerichteten Einsatz Weisberg 
+**Technische Bearbeiter:** Conor Cunningham; Joachim Hammer; Shai Kariv; Julie Koesmarno; Alice Kupcik; Ron Matchoro; Gilad Mittelman; Dan Rediske; Tomer Weisberg 
   
-**Veröffentlicht:** Mai 2017  
+**Veröffentlichung:** Mai 2017  
   
 **Gilt für:** SQL Server (alle Versionen), Azure SQL-Datenbank, Azure SQL Data Warehouse, Analytics Platform System 
   
-Um dieses Dokument zu lesen, laden Sie die [Anleitung zur Verbesserung der Datenschutz und adressierungsanforderungen GDPR mit der Microsoft SQL-Plattform](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf) Dokument.   
+Um das Dokument zu lesen, laden Sie bitte die [Anleitung zur Verbesserung des Datenschutzes und zur Erfüllung der Anforderungen der Datenschutz-Grundverordnung mit der SQL-Plattform von Microsoft](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf) herunter.   
 

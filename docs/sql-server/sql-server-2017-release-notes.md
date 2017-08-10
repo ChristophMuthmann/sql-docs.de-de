@@ -1,5 +1,5 @@
 ---
-title: Versionsanmerkungen zu SQL Server 2017 | Microsoft Docs
+title: SQL Server 2017 Release Notes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/16/2017
 ms.prod: sql-server-2017
@@ -18,14 +18,14 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQLServer 2017
-In diesem Thema werden Einschränkungen und Probleme bei [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]beschrieben. Verwandte Informationen finden Sie in den folgenden Artikeln:
+# <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
+In diesem Thema werden Einschränkungen und Probleme bei [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]beschrieben. Zugehörige Informationen finden Sie in den folgenden Artikeln:
 
-- [Neuigkeiten in SQLServer 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [SQL Server auf Linux-Versionshinweise](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+- [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Versionsanmerkungen zu SQL Server unter Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)beschrieben.
 - [SQL Server Reporting Services release notes (Versionshinweise für SQL Server Reporting Services)](../reporting-services/reporting-services-release-notes.md)beschrieben.
 
  **Probieren Sie es aus:**    
@@ -41,70 +41,70 @@ In diesem Thema werden Einschränkungen und Probleme bei [!INCLUDE[ssSQLv14_md](
 - **Problemumgehung:** Bis die SSMS-Version 17.2 verfügbar ist, können Sie Ihre vorhandene Version von SSMS verwenden, um das Paketausführungsskript zu generieren. Ändern Sie anschließend im Skript den Namen des Parameters *runincluster* in *runinscaleout*, und führen Sie das Skript aus.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
-## <a name="sql-server-2017-ctp-21-may--2017"></a>2.1 (Mai 2017) 2017 CTP für SQL Server
-### <a name="documentation-ctp-21"></a>Die Dokumentation (CTP-Version 2.1)
+## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (Mai 2017)
+### <a name="documentation-ctp-21"></a>Dokumentation (CTP 2.1)
 - **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:**gekennzeichnet. 
 - **Problem und Kundenbeeinträchtigung:** Für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]sind keine Offlineinhalte verfügbar.
 
-### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP-Version 2.1)
+### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
-- **Problem und kundenbeeinträchtigung:** , wenn Sie SQL Server Reporting Services und Power BI Berichtsserver auf demselben Computer aus, und Deinstallieren eines davon haben, Sie werden nicht mehr auf dem verbleibenden Berichtsserver mit Berichtsserver Konfigurations-Manager eine Verbindung herstellen können.
-- **Problemumgehung** um dieses Problem zu umgehen, müssen Sie nach der Deinstallation von einem der Server die folgenden Vorgänge ausführen.
+- **Problem und Kundenbeeinträchtigung:** Wenn Sie sowohl SQL Server Reporting Services als auch den Power BI-Berichtsserver auf demselben Computer installiert haben und eines davon deinstallieren, können Sie keine Verbindung mehr mit dem verbleibenden Berichtsserver mit dem Berichtsserver-Konfigurations-Manager herstellen.
+- **Problemumgehung:** Um dieses Problem zu umgehen, müssen Sie nach der Deinstallation einer der Server die folgenden Vorgänge ausführen.
 
     1. Starten Sie eine Eingabeaufforderung im Administratormodus.
-    2. Wechseln Sie zu dem Verzeichnis, in dem die verbleibenden Berichtsserver installiert ist.
+    2. Wechseln Sie zu dem Verzeichnis, in dem der verbleibenden Berichtsserver installiert ist.
 
-        *Standardspeicherort für Power BI-Berichtsserver: C:\Program Files\Microsoft Power BI-Berichtsserver*
+        *Standardspeicherort für den Power BI-Berichtsserver: C:\Programme\Microsoft Power BI-Berichtsserver*
 
-        *Standardspeicherort für SQL Server Reporting Services: C:\Program Files\Microsoft SQL Server Reporting Services*
+        *Standardspeicherort für SQL Server Reporting Services: C:\Programme\Microsoft SQL Server Reporting Services*
 
-    3. Wechseln Sie dann zu dem Ordner. Diese werden entweder *SSRS* oder *PBIRS* je nachdem, welche verfügbare Spannung anzeigt.
-    4. Wechseln Sie zu den WMI-Ordner.
+    3. Wechseln Sie dann zum nächsten Ordner. Dabei handelt es sich entweder um *SSRS* oder um den *Power BI-Berichtsserver*, je nachdem, was verbleibt.
+    4. Wechseln Sie zum WMI-Ordner.
     5. Führen Sie den folgenden Befehl aus:
 
         ```
         regsvr32 /i ReportingServicesWMIProvider.dll
         ```
 
-        Wenn es angezeigt wird, können Sie den folgenden Fehler ignorieren.
+        Sie können den folgenden Fehler ignorieren, wenn er angezeigt wird.
 
         ```
         The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
         ```
 
-### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP-Version 2.1)
+### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **Problem und kundenbeeinträchtigung:** nach der Installation auf einem Computer mit einer Version von 2016 *TSqlLanguageService.msi* (entweder über SQL-Setup oder als eigenständige verteilbare) v13.* (SQL 2016)-Versionen installiert *Microsoft.SqlServer.Management.SqlParser.dll* und *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* werden entfernt. Jede Anwendung, die eine Abhängigkeit für die 2016 Versionen dieser Assemblys verfügen werden dann nicht mehr ordnungsgemäß, wodurch eine Fehlermeldung ähnlich: *Fehler: konnten nicht geladen werden, Datei oder Assembly ' Microsoft.SqlServer.Management.SqlParser, Version = 13.0.0.0, Culture = Neutral, PublicKeyToken = 89845dcd8080cc91 "oder eine ihrer Abhängigkeiten. Die angegebene Datei wurde nicht gefunden.*
+- **Problem und Kundenbeeinträchtigung:** Nach der Installation auf einem Computer mit 2016er-Version von *TSqlLanguageService.msi* (entweder über SQL-Setup oder als eigenständiges Redistributable) werden die v13.* (SQL 2016)-Versionen von *Microsoft.SqlServer.Management.SqlParser.dll* und *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* entfernt. Jede Anwendung mit einer Abhängigkeit von den 2016er-Versionen dieser Assemblys wird dann nicht mehr funktionieren und zeigt einen Fehler ähnlich dem folgenden an: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. (Fehler: Datei bzw. Assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' und deren Abhängigkeiten konnten nicht geladen werden.) Das System kann die angegebene Datei nicht finden.*
 
-   Darüber hinaus versucht, eine Version von TSqlLanguageService.msi 2016 neu installieren mit der Meldung fehl: *Installation von Microsoft SQL Server 2016 T-SQL Language Service ist fehlgeschlagen, da bereits eine höhere Version auf dem Computer vorhanden ist*.
+   Darüber hinaus wird beim Versuch, eine 2016er-Version von „TSqlLanguageService.msi“ neu zu installieren, die folgende Fehlermeldung angezeigt: *Installation of Microsoft SQL Server 2016 T-SQL Language Service failed because a higher version already exists on the machine* (Fehler bei der Installation von Microsoft SQL Server 2016 T-SQL-Sprachdienst, da eine neuere Version bereits auf dem Computer vorhanden ist.)
 
-- **Problemumgehung** gehen Sie folgendermaßen vor, um die Version der Assemblys, dieses Problem zu umgehen, und Beheben von einer Anwendung, von denen die v13 abhängt:
+- **Problemumgehung:** Um dieses Problem zu umgehen und eine Anwendung zu korrigieren, die von der v13-Version des Assemblys abhängt, gehen Sie folgendermaßen vor:
 
-   1. Wechseln Sie zu **Programme hinzufügen/entfernen**
-   1. Suchen *Microsoft SQL Server vNext T-SQL Language Service CTP2. 1*mit der rechten Maustaste auf ihn, und wählen Sie **Deinstallieren**.
-   1. Nach dem Entfernen der Komponente, reparieren Sie die Anwendung, die unterbrochen wird (oder installieren Sie die entsprechende Version von *TSqlLanguageService.MSI*)
+   1. Wechseln Sie zu **Programme hinzufügen/entfernen**.
+   1. Suchen Sie nach *Microsoft SQL Server vNext T-SQL-Sprachdienst CTP2.1*, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Deinstallieren**.
+   1. Nachdem die Komponente entfernt wurde, reparieren Sie die kaputte Anwendung (oder installieren Sie die entsprechende Version von *TSqlLanguageService.MSI* neu).
 
-   Diese problemumgehung wird die 14-Version dieser Assemblys entfernt, damit jede Anwendung, die abhängig von der 14-Versionen nicht mehr funktionieren. Wenn diese Assemblys erforderlich sind, ist eine separate Installation ohne Seite-an-Seite 2016 Installationen erforderlich.
+   Diese Problemumgehung entfernt die v14-Version dieser Assemblys, sodass alle Anwendungen, die von den v14-Versionen abhängen, nicht mehr funktionieren. Wenn diese Assemblys erforderlich sind, ist eine separate Installation ohne parallele 2016er-Installationen erforderlich.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
-## <a name="sql-server-2017-ctp-20-april--2017"></a>2017 CTP 2.0 (April 2017) für SQL Server
-### <a name="documentation-ctp-20"></a>Die Dokumentation (CTP 2.0)
+## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0 (April 2017)
+### <a name="documentation-ctp-20"></a>Dokumentation (CTP 2.0)
 - **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:**gekennzeichnet. 
 - **Problem und Kundenbeeinträchtigung:** Für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]sind keine Offlineinhalte verfügbar.
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen
 
-- **Problem und kundenbeeinträchtigung:** einer SQL Server-Instanz, die auf ein sekundären Replikat der verfügbarkeitsgruppe gehostet stürzt ab, wenn die SQL Server-Hauptversion kleiner als die Instanz ist, die das primäre Replikat hostet. Wirkt sich auf Upgrades von allen unterstützten Versionen von SQL Server, die zu SQL Server-Verfügbarkeitsgruppen hosten [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. Dies geschieht unter die folgenden Schritte aus. 
+- **Problem und Kundenbeeinträchtigung:** Eine SQL Server-Instanz, die ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet, stürzt ab, wenn die Hauptversion von SQL Server älter ist als die Instanz, die das primäre Replikat hostet. Hat Auswirkungen auf Upgrades von allen unterstützten Versionen von SQL Server, die Verfügbarkeitsgruppen für SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 hosten. Dies geschieht während den folgenden Schritten. 
 
-> 1. Benutzer aktualisiert die SQL Server-Instanz Hostens sekundäres Replikat in Abhängigkeit von [bewährte Methoden](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
-> 2. Nach dem Upgrade ein Failover auftritt und aktualisierten sekundäre Replikat zum primären, vor dem Abschluss der Aktualisierung für alle sekundären Replikate der verfügbarkeitsgruppe angehören. Das frühere primäre ist jetzt ein sekundäres Replikat die niedrigere Version als primäre ist.
-> 3. Die verfügbarkeitsgruppe befindet sich eine nicht unterstützte Konfiguration und die verbleibenden sekundären Replikaten zum Absturz Sicherheitsrisiken ausgesetzt sein. 
+> 1. Ein Benutzer aktualisiert die SQL Server-Instanz, die ein sekundäres Replikat hostet, gemäß den [bewährten Methoden](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
+> 2. Nach dem Upgrade tritt ein Failover auf, und das neu aktualisierte sekundäre Replikat wird zum primären Replikat, bevor das Upgrade für alle sekundären Replikate in der Verfügbarkeitsgruppe abgeschlossen sind. Das frühere primäre Replikat ist nun ein sekundäres Replikat, d.h. mit niedrigerer Version als das primäre Replikat.
+> 3. Die Verfügbarkeitsgruppe befindet sich in einer nicht unterstützten Konfiguration, und für die verbleibenden sekundären Replikate könnte die Gefahr bestehen, dass sie abstürzen. 
 
-- **Problemumgehung** Herstellen einer Verbindung mit SQL Server-Instanz hostet das neue primäre Replikat und das Entfernen der fehlerhaften sekundäres Replikat aus der Konfiguration.
+- **Problemumgehung:** Stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das neue primäre Replikat hostet, und entfernen Sie das fehlerhafte sekundäre Replikat aus der Konfiguration.
 
    `ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName`
 
-   Die Instanz von SQL Server, die das sekundäre Replikat gehostet wird wiederhergestellt.
+   Die SQL Server-Instanz, die das sekundäre Replikat hostet, wird wiederhergestellt.
 
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Kontaktaufnahme mit dem SQL Server-Entwicklungsteam 
 - [Stack Overflow (Tag „sql-server“): Anlaufstelle für technische Fragen](http://stackoverflow.com/questions/tagged/sql-server)

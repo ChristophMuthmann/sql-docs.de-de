@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Spalten aus einer Tabelle löschen
@@ -64,11 +64,11 @@ ms.lasthandoff: 06/23/2017
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>So löschen Sie Spalten mit dem Objekt-Explorer  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
-2.  In **Objekt-Explorer**, suchen Sie die Tabelle aus der Sie Spalten löschen möchten, und erweitern, um die Spaltennamen verfügbar zu machen. 
+2.  Suchen Sie im **Objekt-Explorer** die Tabelle, aus der Sie Spalten löschen möchten, und erweitern Sie diese, um die Spaltennamen anzuzeigen. 
 
-3.  Mit der rechten Maustaste in der Spalte, die Sie löschen möchten, und wählen **löschen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die Spalte, die Sie löschen möchten, und wählen Sie anschließend **Löschen** aus.  
   
 3.  Klicken Sie im Dialogfeld **Objekt löschen** auf **OK**.  
   

@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
@@ -37,11 +37,11 @@ Die letzten drei Downloads werden für den unwahrscheinlichen Fall bereitgestell
 
 |Release| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
-|17.0|[SSDT für VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* Nicht zutreffend|
+|17.0|[SSDT für VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/v|
 |16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT für VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
 |16.4.1|[SSDT für VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT für VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
-\* SSDT unterstützt die letzten beiden Versionen von Visual Studio. SSDT für VS2013 wird mit dem Release von Visual Studio 2017 nicht mehr aktualisiert. Weitere Informationen finden Sie im Abschnitt *Häufig gestellte Fragen* dieses [this SSDT team blog post (Blogbeitrags des SSDT-Teams)](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+\* SSDT unterstützt die letzten beiden Versionen von Visual Studio. SSDT für VS2013 wird mit dem Release von Visual Studio 2017 nicht mehr aktualisiert. Weitere Informationen finden Sie im Abschnitt *Häufig gestellte Fragen* dieses [Blogbeitrags des SSDT-Teams](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## <a name="links-to-download-pages"></a>Links zu Downloadseiten  

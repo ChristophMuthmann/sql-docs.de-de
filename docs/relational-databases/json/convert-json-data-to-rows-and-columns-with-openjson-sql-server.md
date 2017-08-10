@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON (SQL Server)
@@ -145,7 +145,7 @@ Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befe
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
   
 ## <a name="see-also"></a>Siehe auch  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

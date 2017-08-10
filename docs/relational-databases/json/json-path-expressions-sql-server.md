@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON-Pfadausdrücke (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Verwenden Sie JSON-pfadausdrücke, um die Eigenschaften der JSON-Objekte verweisen.  
+ Verwenden Sie JSON-Pfadausdrücke, um auf die Eigenschaften der JSON-Objekte zu verweisen.  
   
  Sie müssen einen Pfadausdruck angeben, wenn Sie die folgenden Funktionen aufrufen.  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>Teile eines Pfadausdrucks
  Ein Pfadausdruck hat zwei Komponenten.  
   
-1.  Das optionale [Path-Modus](#PATHMODE), mit dem Wert **lax** oder **strenge**.  
+1.  Der optionale [PATH-Modus](#PATHMODE) mit einem Wert von **lax** oder **strict**.  
   
 2.  Der [Pfad](#PATH) selbst.  
 
 ##  <a name="PATHMODE"></a> Path mode  
  Am Anfang des Pfadausdrucks können Sie optional den „path mode“ deklarieren, indem Sie das Schlüsselwort **lax** oder **strict**angeben. Der Standardwert ist **lax**.  
   
--   In **lax** Modus, gibt die Funktion leere Werte an, falls der Pfadausdruck einen Fehler enthält. Angenommen, Sie fordern, dass den Wert **$.name**, und die JSON-Text keine **Namen** Schlüssel, die Funktion gibt null zurück, aber einen Fehler wird nicht ausgelöst.  
+-   Im Modus **lax** gibt die Funktion leere Werte zurück, falls der Pfadausdruck einen Fehler enthält. Falls Sie beispielsweise den Wert **$.name** anfordern und der JSON-Text keinen **name**-Schlüssel enthält, gibt die Funktion NULL zurück, löst jedoch keinen Fehler aus.  
   
--   In **strenge** -Modus die Funktion löst einen Fehler, falls der Pfadausdruck einen Fehler enthält.  
+-   Im Modus **strict** löst die Funktion einen Fehler aus, wenn der Pfadausdruck einen Fehler enthält.  
 
-Die folgende Abfrage gibt explizit an `lax` Modus in der Path-Ausdruck.
+Die folgende Abfrage gibt explizit den Modus `lax` im Pfadausdruck an.
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -74,7 +74,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   Array-Elemente. Beispiel: `$.product[3]`. Arrays sind nullbasiert.  
   
-    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist in `$.people[1].surname`, `surname` ist ein untergeordnetes Element des `people`.
+    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist `surname` in `$.people[1].surname` ein untergeordnetes Element von `people`.
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt verweisen auf den folgenden JSON-Text.  
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ „people“: [ { „name“: „John“,  „surname“: „Doe“ },<br />   { „name“: „Jane“,  „surname“: null, „active“: true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Wie integrierte Funktionen doppelte Pfade behandeln  
- Wenn der JSON-Text doppelte Eigenschaften enthält – beispielsweise zwei mit dem gleichen Namen auf der gleichen Ebene Schlüssel – die **JSON_VALUE** und **JSON_QUERY** Funktionen zurückgeben, nur den ersten Wert, der den Pfad entspricht. Verwenden Sie zum Analysieren einer JSON-Objekt, das doppelte Schlüssel enthält, und alle Werte zurückgeben, **OPENJSON**, wie im folgenden Beispiel gezeigt.  
+ Falls der JSON-Text doppelte Eigenschaften enthält – beispielsweise zwei Schlüssel mit dem gleichen Namen auf der gleichen Stufe – geben die Funktionen **JSON_VALUE** und **JSON_QUERY** nur den ersten Wert zurück, der dem Pfad entspricht. Verwenden Sie **OPENJSON**, wie im folgenden Beispiel gezeigt, um ein JSON-Objekt zu analysieren, das doppelte Schlüssel enthält, und um alle Werte zurückzugeben.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -113,7 +113,7 @@ FROM OPENJSON(@json,'$.person.info')
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
   
 ## <a name="see-also"></a>Siehe auch  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

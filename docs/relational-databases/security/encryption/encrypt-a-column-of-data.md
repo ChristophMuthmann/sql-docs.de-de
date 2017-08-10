@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 
-Um die folgenden Beispiele verwenden, müssen Sie einen Datenbank-Hauptschlüssel verfügen. Wenn die Datenbank nicht bereits einen Datenbank-Hauptschlüssel verfügt, erstellen Sie durch Ausführen der folgenden Anweisung, die Ihr Kennwort bereitstellen:   
+Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbank-Hauptschlüssel verfügen. Wenn Ihre Datenbank noch über keinen Datenbank-Hauptschlüssel verfügt, erstellen Sie einen, indem Sie die folgende Anweisung ausführen, wobei Sie Ihr Kennwort bereitstellen:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Sichern Sie immer Ihre Datenbank-Hauptschlüssel ein. Weitere Informationen zu Datenbank-Hauptschlüssel, finden Sie unter [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+Erstellen Sie immer eine Sicherung Ihres Datenbank-Hauptschlüssels. Weitere Informationen zum Erstellen von Datenbank-Hauptschlüsseln finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
   

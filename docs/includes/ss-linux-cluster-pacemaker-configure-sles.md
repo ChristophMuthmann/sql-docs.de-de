@@ -1,4 +1,4 @@
-2. Erstellen Sie eine Datei zum Speichern von SQL Server-Benutzername und Kennwort für die Anmeldung Schrittmacher auf allen Clusterknoten. Der folgende Code erstellt und füllt diese Tabelle:
+2. Erstellen Sie auf allen Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. Der folgende Code erstellt und füllt diese Tabelle:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. Öffnen Sie auf allen Clusterknoten die Schrittmacher Firewallports. Führen Sie zum Öffnen dieser Ports mit `firewalld` folgenden Befehl aus:
+3. Öffnen Sie auf allen Clusterknoten die Pacemaker-Firewallports. Führen Sie zum Öffnen dieser Ports mit `firewalld` folgenden Befehl aus:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    
 
-2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie das Kennwort auf allen Knoten. 
+2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie auf allen Knoten dasselbe Kennwort. 
 
    ```bash
    sudo passwd hacluster
@@ -36,7 +36,7 @@
 
    
 
-3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. So können Knoten dem Cluster nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf allen Knoten.
+3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. So können Knoten dem Cluster nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf allen Knoten aus.
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,7 +44,7 @@
    sudo systemctl enable pacemaker
    ```
 
-4. Installieren Sie den FCI-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf allen Knoten. 
+4. Installieren Sie den FCI-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf allen Knoten aus. 
 
    ```bash
    sudo yum install mssql-server-ha

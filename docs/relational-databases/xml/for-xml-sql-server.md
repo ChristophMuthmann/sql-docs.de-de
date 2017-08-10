@@ -23,16 +23,16 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 259b31233d4d5000b67c9a07d0be36c230dc00f9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
- > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [FOR XML (SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [FOR XML (SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx).
 
   Eine SELECT-Abfrage gibt Ergebnisse als Rowset zurück. Sie können optional die formalen Ergebnisse einer SQL-Abfrage als XML abrufen, indem Sie die FOR XML-Klausel in der Abfrage angeben. Die FOR XML-Klausel kann in Abfragen der obersten Ebene sowie in Unterabfragen verwendet werden. Die FOR XML-Klausel der obersten Ebene kann nur in der SELECT-Anweisung verwendet werden. In Unterabfragen kann FOR XML in den INSERT-, UPDATE- und DELETE-Anweisungen verwendet werden. Die Klausel kann auch in Zuweisungsanweisungen verwendet werden.  
   
