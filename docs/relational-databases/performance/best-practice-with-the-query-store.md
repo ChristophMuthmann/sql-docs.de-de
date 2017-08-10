@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers sowie zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden.  
 Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) herunter.  
   
- Eine kurze Beschreibung zur Nutzung des Abfragespeichers in Fehlerbehebungsszenarien finden Sie unter [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ Eine kurze Beschreibung zur Verwendung des Abfragespeichers bei Fehlerbehebungen finden Sie auf den [@AzureBlogs zu Abfragespeichern](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Verwenden von Query Performance Insight in Azure SQL-Datenbank  
  Wenn Sie Abfragespeicher in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausführen, können Sie mit **Query Performance Insight** den DTU-Verbrauch im Verlauf der Zeit analysieren.  
@@ -143,27 +143,27 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 |Rückläufige Abfragen|Identifizieren von Abfragen, bei denen die Ausführungsmetriken vor kurzem rückläufig waren (d. h. sich verschlechtert haben). <br />Verwenden Sie diese Ansicht, um beobachtete Leistungsprobleme in Ihrer Anwendung mit den tatsächlichen Abfragen zu korrelieren, die korrigiert oder verbessert werden müssen.|  
 |Gesamter Ressourcenverbrauch|Analysieren Sie den Gesamtressourcenverbrauch für die Datenbank für eine der Ausführungsmetriken.<br />Verwenden Sie diese Ansicht, um Ressourcenmuster zu identifizieren (tägliche im Vergleich zu nächtlichen Arbeitsauslastungen), und optimieren Sie den Gesamtverbrauch für Ihre Datenbank.|  
 |Abfragen mit höchstem Ressourcenverbrauch|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um Ihre Aufmerksamkeit auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
-|Abfragen mit erzwungenen Plänen|Listen, die zuvor erzwungene Pläne, die Verwendung des Abfragespeichers. <br />Verwenden Sie diese Ansicht schnell auf alle aktuell erzwungene Plänen zugreifen.|  
-|Abfragen mit hoher Variation|Analysieren von Abfragen mit hoher Ausführung Variante in Bezug auf eine der verfügbaren Dimensionen, z. B. die Dauer, CPU-Zeit-e/a und Speicher in das gewünschte Intervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|  
+|Abfragen mit erzwungenen Plänen|Zeigt vorherige erzwungene Pläne durch Verwendung des Abfragespeichers an. <br />Verwenden Sie diese Ansicht, um schnell auf alle aktuell erzwungenen Pläne zuzugreifen.|  
+|Abfragen mit hoher Variation|Analysieren Sie Abfragen mit hoher Ausführungsvariation in Verbindung mit allen verfügbaren Dimensionen wie Dauer, CPU-Zeit, E/A und Speicherauslastung im gewünschten Zeitintervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|  
 |Nachverfolgte Abfragen|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
   
 > [!TIP]  
 >  Eine ausführliche Beschreibung dazu, wie Sie mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Abfragen mit dem größten Ressourcenverbrauch identifizieren und diejenigen Abfragen korrigieren können, die aufgrund der Änderung der Planauswahl zurückgestellt wurden, finden Sie unter [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- Wenn Sie eine Abfrage mit suboptimaler Leistung identifizieren, hängt von der Vorgang, der die Ursache des Problems.  
+ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet sich das weitere Vorgehen nach der Art des Problems.  
   
 -   Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter ist als der vorherige, können Sie den Planerzwingungsmechanismus verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so zu konfigurieren, dass bei zukünftiger Ausführung immer der optimale Plan verwendet wird.  
   
      ![abfrage-speicher-erzwingungs-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> Die Abbildung oben kann verschiedene Formen für bestimmte Abfragepläne, mit der folgenden Bedeutungen für jeden möglichen Status feature:<br />  
+> Die Abbildung oben kann verschiedene Formen für bestimmte Abfragepläne aufweisen, wobei die möglichen Status folgende Bedeutungen haben:<br />  
 > |Form|Bedeutung|  
 > |-------------------|-------------|
-> |Circle|Abfrage abgeschlossen (regelmäßigen Ausführung erfolgreich abgeschlossen wurde)|
-> |Square|Abgebrochen (vom Client initiiert abgebrochen Ausführung)|
-> |Triangle|Fehlgeschlagene (Ausnahme abgebrochen Ausführung)|
-> Darüber hinaus gibt die Größe der Form Ausführungsanzahl Abfrage innerhalb des angegebenen Zeitintervalls Erhöhen der Größe mit einer größeren Anzahl von Ausführungen wieder.  
+> |Circle|Abfrage abgeschlossen (reguläre Ausführung erfolgreich abgeschlossen)|
+> |Square|Abgebrochen (vom Client initiierter Abbruch der Ausführung)|
+> |Triangle|Fehlgeschlagen (durch abgebrochene Ausführung ausgelöste Ausnahme)|
+> Darüber hinaus gibt die Größe der Form Aufschluss über die Anzahl von Abfrageausführungen innerhalb des angegebenen Zeitintervalls. Die Größe der Form nimmt mit zunehmender Anzahl von Ausführungen zu.  
 
 -   Sie können daraus schließen, dass der Abfrage ein Index für optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie die Abfrageleistung mit dem Abfragespeicher.  
   
@@ -175,7 +175,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
   
 -   Schreiben Sie problematische Abfragen um, beispielsweise, um die Vorteile der Abfrageparametrisierung nutzen zu können oder um eine bessere Logik zu implementieren.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> Überprüfen, ob der Abfragespeicher kontinuierlich Abfragedaten erfasst  
  Der Abfragespeicher kann den Betriebsmodus automatisch ändern. Überwachen Sie regelmäßig den Status des Abfragespeichers, um sicherzustellen, dass der Abfragespeicher funktioniert, und um Maßnahmen zu ergreifen, um Ausfälle aufgrund von vermeidbaren Ursachen zu verhindern. Führen Sie die folgende Abfrage aus, um den Betriebsmodus zu ermitteln und die wichtigsten Parameter anzuzeigen:  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Wenn das Problem weiterhin besteht, gibt es eine Beschädigung der Daten auf dem Datenträger beibehalten werden.
+ Wenn das Problem weiterhin besteht, bedeutet dies, dass die beschädigten Abfragespeicherdaten auf dem Datenträger beibehalten werden.
  
- Der Abfragespeicher konnte wiederhergestellt werden, durch das Ausführen **Sp_query_store_consistency_check** gespeicherte Prozedur in der betroffenen Datenbank.
+ Der Abfragedatenspeicher konnte durch die Ausführung der gespeicherten Prozedur **sp_query_store_consistency_check** innerhalb der betroffenen Datenbank wiederhergestellt werden.
  
- Wenn, die nicht hilfreich waren, können Sie versuchen, den Abfragespeicher löschen, bevor Sie den Lese-/ Schreibmodus anfordern.  
+ Falls dieser Schritt nicht erfolgreich war, versuchen Sie den Abfragespeicher zu löschen, bevor Sie den Lese-/Schreibmodus anfordern.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -313,7 +313,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das **query_store_plan_forcing_failed**-XEvent verwenden, um Fehler bei der Problembehandlung der Planerzwingung nachzuverfolgen.  
+ Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das **query_store_plan_forcing_failed** -XEvent verwenden, um Fehler bei der Problembehandlung der Planerzwingung nachzuverfolgen.  
   
 ##  <a name="Renaming"></a> Vermeiden der Umbenennung von Datenbanken bei Abfragen mit erzwungenen Plänen  
 

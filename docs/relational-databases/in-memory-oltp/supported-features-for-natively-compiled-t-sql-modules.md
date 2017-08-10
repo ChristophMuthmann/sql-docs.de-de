@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
@@ -51,9 +51,9 @@ ms.lasthandoff: 06/23/2017
 
 Die folgenden Abfragekonstrukte werden unterstützt:  
 
-CASE-Ausdruck: CASE kann in jeder Anweisung oder Klausel, die einen gültigen Ausdruck zulässt verwendet werden.
+CASE-Ausdruck: CASE kann in einer beliebigen Anweisung oder Klausel verwendet werden, die einen gültigen Ausdruck zulässt.
    - **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Beginnend mit [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE-Anweisungen werden jetzt für nativ kompilierten T-SQL-Modulen unterstützt.
+    Ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] werden CASE-Anweisungen für nativ kompilierte T-SQL-Module unterstützt.
 
 SELECT-Klausel:  
 
@@ -61,19 +61,19 @@ SELECT-Klausel:
 
 -   Skalare Unterabfragen
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], skalare Unterabfragen werden jetzt in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden skalare Unterabfragen für nativ kompilierte T-SQL-Module unterstützt.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], die DISTINCT-Operator wird in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] CTP 1.1 wird der DISTINCT-Operator in nativ kompilierten Modulen unterstützt.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION und UNION ALL
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION und UNION ALL-Operatoren werden jetzt in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] CTP 1.1 werden die Operatoren UNION und UNION ALL in nativ kompilierten Modulen unterstützt.
 
 -   Variablenzuweisungen  
 
@@ -85,20 +85,20 @@ FROM-Klausel:
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN und INNER JOIN.
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS werden jetzt in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden JOINS für nativ kompilierte T-SQL-Module unterstützt.
 
 -   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Unterabfragen werden jetzt in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden Unterabfragen für nativ kompilierte T-SQL-Module unterstützt.
 
 WHERE-Klausel:  
 
 -   Filterprädikat IS [NOT] NULL  
 
--   SOWIE ZWISCHEN  
--   OR, IN, NICHT VORHANDEN IST
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginnend mit [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS-Operatoren werden jetzt in nativ kompilierten Modulen unterstützt.
+      Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden die Operatoren OR, NOT, IN und EXISTS für nativ kompilierte T-SQL-Module unterstützt.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) -Klausel:
@@ -194,7 +194,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Bitweise Operatoren ~, &, |, und ^  
 
 -   APPLY-Operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
 
 ##  <a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
@@ -205,7 +205,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
 
 -   Zeichenfolgenfunktionen: LEN, LTRIM, RTRIM und SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
 
 -   Identitätsfunktionen: SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Uniqueidentifier-Funktionen: NEWID und NEWSEQUENTIALID  
 
 -   JSON-Funktionen  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
 
 -   Fehlerfunktionen: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Die Einschränkung auf 8192 Zeilen gilt nur für `TOP N`, wobei `N` wie in den Beispielen oben eine Konstante ist.  Wenn `N` größer als 8192 sein muss, können Sie den Wert einer Variablen zuweisen und die Variable mit `TOP`verwenden.  
+ Die Einschränkung auf 8192 Zeilen gilt nur für `TOP N` , wobei `N` wie in den Beispielen oben eine Konstante ist.  Wenn `N` größer als 8192 sein muss, können Sie den Wert einer Variablen zuweisen und die Variable mit `TOP`verwenden.  
 
  Beispiel mit einer Variablen: Wird kompiliert  
 

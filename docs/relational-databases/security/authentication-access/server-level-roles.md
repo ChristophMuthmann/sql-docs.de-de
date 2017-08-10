@@ -26,11 +26,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
  Feste Serverrollen werden der Einfachheit halber und zur Gewährung der Abwärtskompatibilität bereitgestellt. Weisen Sie nach Möglichkeit spezifischere Berechtigungen zu.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind neun feste Serverrollen verfügbar. Die festen Serverrollen erteilten Berechtigungen (mit Ausnahme von **öffentlichen**) kann nicht geändert werden. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie benutzerdefinierte Serverrollen erstellen und diesen Berechtigungen auf Serverebene hinzufügen.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind neun feste Serverrollen verfügbar. Die den festen Serverrollen (außer **public**) erteilten Berechtigungen können nicht geändert werden. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie benutzerdefinierte Serverrollen erstellen und diesen Berechtigungen auf Serverebene hinzufügen.  
   
  Sie können Prinzipale auf Serverebene ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen, Windows-Konten und Windows-Gruppen) zu Rollen auf Serverebene zusammenfassen. Jedes Mitglied einer festen Serverrolle kann der gleichen Rolle andere Anmeldenamen hinzufügen. Mitglieder benutzerdefinierter Serverrollen können der Rolle keine weiteren Serverprinzipale hinzufügen.  
 >  [!NOTE]
@@ -49,17 +49,17 @@ ms.lasthandoff: 06/23/2017
 ## <a name="fixed-server-level-roles"></a>Feste Rollen auf Serverebene  
  In der folgenden Tabelle werden die festen Rollen auf Serverebene und deren Möglichkeiten angezeigt.  
   
-|Feste Rolle auf Serverebene|Description|  
+|Feste Rolle auf Serverebene|Beschreibung|  
 |------------------------------|-----------------|  
-|**sysadmin**|Mitglieder der **Sysadmin** -Serverrolle sysadmin kann alle Aktivitäten auf dem Server ausführen.|  
-|**"serveradmin" sein**|Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.|  
-|**"securityadmin"**|Mitglieder der festen Serverrolle **securityadmin** können Anmeldungen und deren Eigenschaften verwalten. Sie können `GRANT`, `DENY`, und `REVOKE` Berechtigungen auf Serverebene. Sie können auch `GRANT`, `DENY`, und `REVOKE` Datenbankebene Berechtigungen Zugriff auf eine Datenbank. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> **Wichtig:** die Funktion zum Gewähren von Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Serverberechtigungen zuweisen. Die Rolle **securityadmin** muss als Entsprechung der Rolle **sysadmin** behandelt werden.|  
-|**processadmin**|Mitglieder der **Processadmin** festen Serverrolle kann in einer Instanz von ausgeführten Prozessen enden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**setupadmin**|Mitglieder der **Setupadmin** -Serverrolle kann hinzufügen und entfernen Sie Verbindungsserver mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen. (**Sysadmin** Mitgliedschaft ist erforderlich, wenn mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
-|**bulkadmin**|Mitglieder der **Bulkadmin** festen Serverrolle "" ausführen kann die `BULK INSERT` Anweisung.|  
-|**diskadmin**|Die **Diskadmin** feste Serverrolle ist zum Verwalten von Datenträgerdateien verwendet.|  
+|**sysadmin**|Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen.|  
+|**serveradmin**|Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.|  
+|**securityadmin**|Mitglieder der festen Serverrolle **securityadmin** können Anmeldungen und deren Eigenschaften verwalten. Sie können Berechtigungen auf Serverebene erteilen (`GRANT`), verweigern (`DENY`) und widerrufen (`REVOKE`). Sie verfügen auf Datenbankebene auch über die Berechtigungen `GRANT`, `DENY` und `REVOKE`, sofern sie Zugriff eine Datenbank haben. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> **WICHTIG**: Durch die Möglichkeit, Zugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zu gewähren und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Serverberechtigungen zuweisen. Die Rolle **securityadmin** muss als Entsprechung der Rolle **sysadmin** behandelt werden.|  
+|**processadmin**|Mitglieder der festen Serverrolle **processadmin** können Prozesse beenden, die in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden.|  
+|**setupadmin**|Mitglieder der festen Serverrolle **setupadmin** können Verbindungsserver mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen hinzufügen und entfernen. (Die Verwendung von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] erfordert die Mitgliedschaft in **sysadmin**.)|  
+|**bulkadmin**|Mitglieder der festen Serverrolle **bulkadmin** können die `BULK INSERT`-Anweisung ausführen.|  
+|**diskadmin**|Die feste Serverrolle **diskadmin** wird zum Verwalten von Datenträgerdateien verwendet.|  
 |**dbcreator**|Mitglieder der festen Serverrolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.|  
-|**Öffentliche**|Jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung gehört zur der **öffentlichen** -Serverrolle. Wenn einem Serverprinzipal keine bestimmten Berechtigungen für ein sicherungsfähiges Objekt erteilt oder verweigert werden, erbt der Benutzer die Berechtigungen, die der Rolle public für dieses Objekt erteilt wurden. Weisen Sie einem Objekt nur dann public-Berechtigungen zu, wenn das Objekt für alle Benutzer verfügbar sein soll. Sie können keine Mitgliedschaft in „public“ ändern.<br /><br /> **Hinweis:** **öffentlichen** wird anders implementiert als andere Rollen und Berechtigungen können werden gewährt, verweigert oder widerrufen von öffentlichen festen Serverrollen.|  
+|**öffentlich**|Jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung gehört zur Serverrolle **public**. Wenn einem Serverprinzipal keine bestimmten Berechtigungen für ein sicherungsfähiges Objekt erteilt oder verweigert werden, erbt der Benutzer die Berechtigungen, die der Rolle public für dieses Objekt erteilt wurden. Weisen Sie einem Objekt nur dann public-Berechtigungen zu, wenn das Objekt für alle Benutzer verfügbar sein soll. Sie können keine Mitgliedschaft in „public“ ändern.<br /><br /> **Hinweis:** **Public** wird anders implementiert als andere Rollen, und Berechtigungen können der öffentlichen festen Serverrolle gewährt, ihr verweigert oder für sie widerrufen werden.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Berechtigungen fester Serverrollen  
  Jede feste Serverrolle besitzt bestimmte Berechtigungen. Die folgende Grafik zeigt die den Serverrollen zugewiesenen Berechtigungen:   

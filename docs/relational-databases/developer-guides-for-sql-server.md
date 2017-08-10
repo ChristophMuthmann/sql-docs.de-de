@@ -19,11 +19,11 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>Leitfäden für Entwickler für SQL Server
-  Sie integrieren fast jede SQL Server-Funktion mithilfe von benutzerdefiniertem Code mithilfe der Programmierungsmodelle und Programmierungsschnittstellen. Jeder Funktionsbereich enthält native und verwaltete APIs, die für Datensammlung, Datenzugriff, Serververwaltung oder Datenvisualisierung verwendet werden.  
+  Integrieren Sie fast jede SQL Server-Funktion mithilfe von benutzerdefiniertem Code mithilfe der Programmierungsmodelle und Programmierungsschnittstellen. Jeder Funktionsbereich enthält native und verwaltete APIs, die für Datensammlung, Datenzugriff, Serververwaltung oder Datenvisualisierung verwendet werden.  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (Kostenlos!)
 

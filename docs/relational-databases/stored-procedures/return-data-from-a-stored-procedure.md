@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
 
- > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Zurückgeben von Daten aus einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Zurückgeben von Daten von einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
   Es gibt zwei Methoden, Resultsets oder Daten von einer Prozedur an ein aufrufendes Programm zurückzugeben: Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu beiden Ansätzen.  
   

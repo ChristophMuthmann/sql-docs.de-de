@@ -1,6 +1,6 @@
 ---
-title: Aktualisiert - relationale Datenbanken Docs | Microsoft Docs
-description: "Aktualisierter Inhalt in zuletzt geänderten Dokumentation für relationale Datenbanken Codeausschnitte anzeigen"
+title: "Aktualisiert – Dokumentation zu relationalen Datenbanken | Microsoft-Dokumentation"
+description: "Zeigen Sie Codeausschnitte von aktualisierten Inhalten in der zuletzt geänderten Dokumentation zu relationale Datenbanken an."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,23 +19,23 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: de-de
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="new-and-recently-updated-relational-databases-docs"></a>Neue und zuletzt aktualisiert: relationale Datenbanken Docs
+# <a name="new-and-recently-updated-relational-databases-docs"></a>Neu und zuletzt aktualisiert: Dokumentation zu relationalen Datenbanken
 
 
 
-Beinahe jeden Tag Microsoft updates einige vorhandene Artikel auf dessen [Docs.Microsoft.com](http://docs.microsoft.com/) Dokumentationswebsite. Dieser Artikel zeigt Auszüge aus den zuletzt aktualisierten Artikel. Links zu den neuen Artikel, möglicherweise ebenfalls aufgeführt.
+Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
 
-In diesem Artikel wird von einem Programm generiert, die in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug aus dem Quellartikel mit sich Formatierung oder als Markdown angezeigt. Bilder werden hier nicht angezeigt.
+Dieser Artikel wurde im Rahmen eines Programms erstellt, das in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug mit falscher Formatierung oder als Markdown aus dem Quellartikel angezeigt werden. Bilder werden hier nie wiedergegeben.
 
-Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
+Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeldet:
 
 
 
 - *Datumsbereich des Updates*: &nbsp; **23.5.2017** &nbsp; -bis- &nbsp; **17.7.2017**
-- *Bereich für die Themenbereichsdatenbank:* &nbsp; **relationalen Datenbanken**.
+- *Themenbereich:* &nbsp; **Relationale Datenbanken**
 
 
 
@@ -63,21 +63,21 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
+## <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
-Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
+Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt „Auszüge“ aufgeführt sind.
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszügen
 
-Dieser Abschnitt zeigt die Auszüge von Updates, die vom Artikel, die vor kurzem eine große Aktualisierung aufgetreten sind.
+In diesem Abschnitt werden die Auszüge der Updates aus den Artikeln dargestellt, die vor Kurzem umfassend aktualisiert wurden.
 
-Die hier angezeigten Auszüge werden getrennt vom richtigen semantische kontextabhängig angezeigt. Darüber hinaus wird manchmal ein Auszug vom wichtige Markdown-Syntax getrennt, die sie in den tatsächlichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Die Auszüge können nur Sie wissen, ob Ihre Interessen dauert rechtfertigen, klicken Sie auf, und besuchen den tatsächlichen Artikel.
+Die Auszüge hier werden getrennt vom richtigen semantischen Kontext angezeigt. Darüber hinaus wird ein Auszug manchmal getrennt von der wichtigen Markdownsyntax wiedergegeben, die ihn im ursprünglichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Anhand dieser Auszüge sollen Sie nur entscheiden können, ob Sie sich die Zeit nehmen und den eigentlichen Artikel besuchen möchten.
 
-Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und nehmen Sie nicht als genaue Wahrheit alle Textauszug. Besuchen Sie stattdessen den tatsächlichen Artikel aus.
+Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen Auszügen, und gehen Sie bei keinem Textauszug von einer 100-prozentigen Richtigkeit der Informationen aus. Besuchen Sie stattdessen den eigentlichen Artikel.
 
 
 
@@ -188,7 +188,7 @@ Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geän
 
 
 
-Im folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nach der Migration zu [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]-Plattform auftreten, und wie sie behoben werden können. Darunter sind Szenarios, die für die Migration von [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] spezifisch sind (von einer älteren zu einer neueren Version) sowie von einer fremdem Plattform (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
+Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nach der Migration zur Plattform [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] auftreten, und wie sie behoben werden können. Darunter sind Szenarios, die für die Migration von [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] spezifisch sind (von einer älteren zu einer neueren Version) sowie von einer fremdem Plattform (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
 
 **<a name="CEUpgrade"></a> Abfrageregressionen aufgrund einer Änderung in der CE-Version**
 
@@ -238,7 +238,7 @@ Erstens, wenn der Plan die folgenden Konstruktionen enthält:
 * Cursor
 * eine ungültige Sternverknüpfungsspezifikation 
 
-Zweitens, wenn Objekte, von denen der Plan anhängig ist, nicht mehr zur Verfügung stehen:
+Zweitens, wenn Objekte, die der Plan verwendet, nicht mehr zur Verfügung stehen:
 * eine Datenbank (wenn die Datenbank, aus der der Plan kommt, nicht mehr existiert)
 * ein Index (nicht mehr vorhanden oder deaktiviert)
 
@@ -269,10 +269,10 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 - [New + Updated (6+0): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
 - [New + Updated (13+2): **Linux for SQL** docs (Neu + Aktualisiert (13+2): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
 - [New + Updated (1+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Open Database Connectivity für SQL)](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationale Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zur Open Database Connectivity für SQL)](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
 - [New + Updated (2+2): **Microsoft SQL Server** docs (Neu + Aktualisiert (2+2): Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
 - [New + Updated (1+0): **Transact-SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
 - [New + Updated (1+0): **Tools for SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 

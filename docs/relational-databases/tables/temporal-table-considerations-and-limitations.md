@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   **INSERT** - und **UPDATE** -Anweisungen können nicht auf die SYSTEM_TIME-Zeitraumspalten verweisen. Jeder Versuch, Werte direkt in diese Spalten einzufügen, wird blockiert.  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **TRUNCATE TABLE** wird nicht unterstützt, während **SYSTEM_VERSIONING** auf **ON**  
   
 -   Die direkte Änderung von Daten in einer Verlaufstabelle ist nicht zulässig.  
   
 -   **ON DELETE CASCADE** und **ON UPDATE CASCADE** sind in der aktuellen Tabelle nicht zulässig. Das heißt, dass in den Fällen, wenn die temporale Tabelle als verweisende Tabelle in der Fremdschlüsselbeziehung (entspricht *parent_object_id* in sys.foreign_keys) fungiert, keine CASCADE-Optionen zulässig sind. Verwenden Sie Anwendungslogik oder AFTER-Trigger, um die Konsistenz beim Löschen in der Primärschlüsseltabelle (entspricht  *referenced_object_id* in sys.foreign_keys) beizubehalten, um diese Einschränkung zu umgehen. Falls die Primärschlüsseltabelle temporal und die verweisende Tabelle nicht-temporal ist, gibt es keine entsprechende Einschränkung. 
 
-    **Hinweis:** diese Einschränkung gilt nur für SQL Server 2016. CASCADE-Optionen werden in unterstützt [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server-2017 CTP 2.0 ab.  
+    **HINWEIS:** Diese Einschränkung gilt nur für SQL Server 2016. CASCADE-Optionen werden in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und in SQL Server-2017 ab CTP 2.0 unterstützt.  
   
 -   **INSTEAD OF** -Trigger sind weder bei der aktuellen noch bei der Verlaufstabelle zulässig, um zu verhindern, dass die DML-Logik ungültig wird. **AFTER** -Trigger sind nur in der aktuellen Tabelle zulässig. In der Verlaufstabelle werden sie blockiert, um zu vermeiden, dass die DML-Logik blockiert wird.  
   

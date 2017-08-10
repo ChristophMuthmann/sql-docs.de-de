@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |Funktion|ON|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der **CREATE TABLE** -Anweisung.<br /><br /> Alle speicheroptimierten Tabellen sind speicheroptimierten Dateigruppen zugeordnet.|  
 |Datentyp|*Datentypname*|Der angegebene Datentyp wird nicht unterstützt. Ersetzen Sie den Typ durch einen der unterstützten Datentypen. Weitere Informationen finden Sie unter [Unterstützte Datentypen für In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funktion|Berechnete Spalten|Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in speicheroptimierten Tabellen und Indizes berechnete Spalten unterstützt.|  
+|Funktion|Berechnete Spalten|Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in speicheroptimierten Tabellen und Indizes berechnete Spalten unterstützt.|  
 |Funktion|Replikation|Replikation wird für speicheroptimierte Tabellen nicht unterstützt.|  
 |Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **FILESTREAM** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie das **SPARSE** -Schlüsselwort aus der Spaltendefinition.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |Vorgang|Update der Primärschlüsselspalten|Primärschlüsselspalten in speicheroptimierten Tabellen und Tabellentypen können nicht aktualisiert werden. Wenn der Primärschlüssel aktualisiert werden muss, löschen Sie die alte Zeile, und fügen Sie die neue Zeile mit dem aktualisierten Primärschlüssel ein.|  
 |Vorgang|CREATE INDEX|Indizes zu speicheroptimierten Tabellen müssen inline mit der **CREATE TABLE** - oder der **ALTER TABLE** -Anweisung angegeben werden.|  
 |Vorgang|CREATE FULLTEXT INDEX|Volltextindizes werden für speicheroptimierte Tabellen nicht unterstützt.|  
-|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen keine Schemaänderungen wie **sp_rename**.<br /><br /> Der Versuch, bestimmte Schemaänderungen vorzunehmen, generiert den Fehler 12320. Vorgänge wie Umbenennungen, die eine Änderung der Schemaversion erfordern, werden von speicheroptimierten Tabellen nicht unterstützt.<br /><br /> Bestimmte Schemaänderungen mithilfe von ALTER TABLE und ALTER PROCEDURE sind zulässig.<br/><br/>**Gilt für:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Beginnend mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], "Sp_rename" wird unterstützt.| 
+|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen keine Schemaänderungen wie **sp_rename**.<br /><br /> Der Versuch, bestimmte Schemaänderungen vorzunehmen, generiert den Fehler 12320. Vorgänge wie Umbenennungen, die eine Änderung der Schemaversion erfordern, werden von speicheroptimierten Tabellen nicht unterstützt.<br /><br /> Bestimmte Schemaänderungen mithilfe von ALTER TABLE und ALTER PROCEDURE sind zulässig.<br/><br/>**Gilt für:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] wird sp_rename unterstützt.| 
 |Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Löschen Sie alle Zeilen mit **DELETE FROM***Tabelle* , oder löschen Sie die Tabelle, und erstellen Sie sie neu, um alle Zeilen aus einer Tabelle zu entfernen.|  
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Überträgt ein sicherungsfähiges Element zwischen Schemas.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |Operator|OFFSET|Dieser Operator wird nicht unterstützt. Entfernen Sie **OFFSET** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie **INTERSECT** aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
 |Operator|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie **EXCEPT** aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|APPLY|Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.|  
+|Operator|APPLY|Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.|  
 |Operator|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **PIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **UNPIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|CONTAINS|Dieser Operator wird nicht unterstützt. Entfernen Sie **CONTAINS** aus der systemintern kompilierten gespeicherten Prozedur.|  

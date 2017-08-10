@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
@@ -126,15 +126,15 @@ ON
  In diesem Abschnitt werden die Tools und Referenzbibliotheken für die Programmierung beschrieben, die beim Speichern von SQL Server-Datendateien im Azure-Speicher verwendet werden können.  
   
 ### <a name="powershell-support"></a>PowerShell-Unterstützung  
- Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Mit folgendem URL-Format auf Blobs zugreifen: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Greifen Sie mit folgendem URL-Format auf BLOBs zu: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Unterstützung von SQL Server-Objekten und -Leistungsindikatoren  
  In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit dem Microsoft Azure-Speicher zu überwachen.  
   
 ### <a name="sql-server-management-studio-support"></a>Unterstützung von SQL Server Management Studio  
- SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Geben Sie für den URL-Pfad des Speichercontainers z. B. > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
+ SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Geben Sie für den URL-Pfad des Speichercontainers z. B. > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- als **Pfad** in verschiedenen Dialogfeldern ein, z. B. **Neue Datenbank**, **Datenbank anfügen** und **Datenbank wiederherstellen**. Weitere Informationen finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken](https://msdn.microsoft.com/library/dn466438.aspx).  
+ als **Pfad** in verschiedenen Dialogfeldern ein, z. B. **Neue Datenbank**, **Datenbank anfügen**und **Datenbank wiederherstellen**. Weitere Informationen finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken](https://msdn.microsoft.com/library/dn466438.aspx).  
   
 ### <a name="sql-server-management-objects-support"></a>Unterstützung von SQL Server Management Objects  
  Bei Verwendung von SQL Server-Datendateien in Azure werden alle SQL Server Management Objects (SMO) unterstützt. Wenn ein SMO-Objekt einen Dateipfad erfordert, verwenden Sie das BLOB-URL-Format anstelle eines lokalen Dateipfads, beispielsweise `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Weitere Informationen zu SQL Server Management Objects (SMO) finden Sie unter [SQL Server Management Objects &#40;SMO&#41;-Programmierungshandbuch](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in der SQL Server-Onlinedokumentation.  

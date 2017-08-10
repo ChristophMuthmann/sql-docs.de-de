@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: de-de
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# Tabellen- und Zeilengröße in speicheroptimierten Tabellen
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] konnte die Größe von Daten in Zeilen einer speicheroptimierten Tabelle nicht größer als [8.060 Bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx) sein. Jedoch ist es jetzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Azure SQL Database möglich, eine speicheroptimierte Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max), varchar(max) und nvarchar(max)) zu erstellen sowie Vorgänge für sie mithilfe nativ kompilierter T-SQL-Module und Tabellentypen auszuführen. 
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
- ![Speicheroptimierte Tabelle.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![Speicheroptimierte Tabelle](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
 
 ##  <a name="bkmk_TableSize"></a> Berechnen der Tabellengröße
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Neues zu In-Memory OLTP in SQL Server 2016 seit CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

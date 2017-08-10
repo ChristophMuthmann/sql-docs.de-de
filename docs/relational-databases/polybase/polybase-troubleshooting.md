@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
@@ -37,7 +37,7 @@ ms.lasthandoff: 07/20/2017
   
 |||  
 |-|-|  
-|Sicht|Beschreibung|  
+|Sicht|Description|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
@@ -147,7 +147,7 @@ ms.lasthandoff: 07/20/2017
   
 2.  Klicken Sie auf die Registerkarte **Ausführungsplan** .  
   
-     ![PolyBase-Abfrageplan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase-Abfrageplan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase-Abfrageplan")  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Operator **Remote Query** (Remoteabfrage), und wählen Sie **Eigenschaften**.  
   
@@ -224,9 +224,9 @@ ms.lasthandoff: 07/20/2017
  ## <a name="known-limitations"></a>Bekannte Einschränkungen
  
  PolyBase weist folgende Einschränkungen auf: 
- - Die maximal mögliche Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, kann 1 MB nicht überschreiten. 
+ - Die maximal mögliche Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf 1 MB nicht überschreiten. 
  - PolyBase unterstützt Hive 0.12 und Datentypen (z.B. Char(), VarChar()) nicht.   
- - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Spalten auf höchstens 50 Spalten wegen Java-Fehlermeldungen aufgrund von nicht genügend Arbeitsspeicher begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
+ - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Textspalten wegen Java-Fehlermeldungen aufgrund von nicht ausreichendem Arbeitsspeicher auf höchstens 50 Spalten begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
 - [PolyBase wird nicht installiert, wenn Sie einem SQL Server 2016-Failovercluster einen Knoten hinzufügen.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
 ## <a name="error-messages-and-possible-solutions"></a>Fehlermeldungen und mögliche Lösungen
@@ -234,5 +234,5 @@ ms.lasthandoff: 07/20/2017
 Wie Sie Fehler in externen Tabellen beheben, erfahren Sie in diesem Blog von Murshed Zaman: [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/] (https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (PolyBase-Setupfehler und mögliche Lösungen).
 
 ## <a name="see-also"></a>Siehe auch
-[Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase Kerberos-Konnektivität)](polybase-troubleshoot-connectivity.md)
+[Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase-Kerberos-Konnektivität)](polybase-troubleshoot-connectivity.md)
 

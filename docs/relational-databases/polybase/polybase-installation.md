@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: de-de
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
@@ -35,9 +35,9 @@ ms.lasthandoff: 07/17/2017
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit) (Sowohl [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) als auch [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktionieren). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm löst einen Fehler aus, wenn JRE nicht vorhanden ist.  
+-   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit) (Sowohl [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) als auch [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktionieren). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist.  
   
--   Mindestens erforderlicher Arbeitsspeicher: 4 GB  
+-   Mindestens erforderlicher Arbeitsspeicher: 4 GB  
   
 -   Mindestfestplattenspeicher: 2 GB  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 07/17/2017
   
  PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.  
   
-## <a name="single-node-or-polybase-scaleout-group"></a>Einzelknoten oder PolyBase-Erweiterungsgruppe
-Planen Sie vor der Installation von PolyBase auf den SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine PolyBase-Erweiterungsgruppe möchten. Vergewissern Sie sich für eine PolyBase-Erweiterungsgruppe, dass folgende Anforderungen erfüllt sind: 
+## <a name="single-node-or-polybase-scaleout-group"></a>Einzelknoten oder PolyBase-Gruppe mit horizontaler Skalierung
+Planen Sie vor der Installation von PolyBase auf den SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine PolyBase-Erweiterungsgruppe möchten. Vergewissern Sie sich für eine PolyBase-Gruppe mit horizontaler Skalierung, dass folgende Anforderungen erfüllt sind: 
 - Alle Computer befinden sich in derselben Domäne.
 - Sie verwenden während der Installation dasselbe Dienstkonto und Kennwort.
 - Die SQL Server-Instanzen können über das Netzwerk miteinander kommunizieren.
 
-Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installiert wurde, können Sie dies nicht mehr ändern. Sie müssen die Funktion deinstallieren und wieder neu installieren, um diese Einstellung zu ändern.
+Sobald PolyBase entweder eigenständig oder in einer Gruppe mit horizontaler Skalierung installiert wurde, können Sie dies nicht mehr ändern. Sie müssen die Funktion deinstallieren und wieder neu installieren, um diese Einstellung zu ändern.
 
 ## <a name="install-using-the-installation-wizard"></a>Installieren mithilfe des Installations-Assistenten  
   
@@ -81,17 +81,17 @@ Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installi
 6.  Geben Sie auf der Seite **PolyBase-Konfiguration**den Portbereich mit mindestens sechs Ports an. SQL Server-Setup wird die ersten sechs verfügbaren Ports aus diesem Bereich zuweisen.  
   
 ##  <a name="installing"></a> Installieren mithilfe einer Eingabeaufforderung  
- Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen. Die beiden Dienste **SQL Server PolyBase-Modul** und **SQL Server PolyBase-Datenverschiebung** müssen unter demselben Konto ausgeführt werden. In einer PolyBase-Erweiterungsgruppe müssen PolyBase-Dienste auf allen Knoten unter demselben Domänenkonto ausgeführt werden.  
+ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen. Die beiden Dienste **SQL Server PolyBase-Modul** und **SQL Server PolyBase-Datenverschiebung** müssen unter demselben Konto ausgeführt werden. In einer PolyBase-Gruppe mit horizontaler Skalierung müssen PolyBase-Dienste auf allen Knoten unter demselben Domänenkonto ausgeführt werden.  
   
-|SQL Server-Komponente|Parameter und Werte|Beschreibung|  
+|SQL Server-Komponente|Parameter und Werte|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Moduldienstkonto an.|  
 |SQL Server PolyBase-Modul|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
-|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Gibt das Konto für den Datenverschiebungsdienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Gibt das Kennwort für das Datenverschiebungskonto an.|  
-|SQL Server PolyBase-Datenverschiebung|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Gibt den Startmodus für den Datenverschiebungsdienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Gibt das Konto für den Datenverschiebungsdienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Gibt das Kennwort für das Datenverschiebungskonto an.|  
+|SQL Server PolyBase-Datenverschiebungsdienst|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Gibt den Startmodus für den Datenverschiebungsdienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Gibt an, ob die SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe aus Computeknoten verwendet wird. <br />Unterstützte Werte: **True**, **False**|  
 |PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
   

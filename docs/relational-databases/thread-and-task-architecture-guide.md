@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
@@ -93,14 +93,14 @@ Verlassen Sie sich nicht auf automatische Vergrößerung, um die Transaktionspro
 
 Die Leistung von Indexvorgängen, z. B. das Erstellen bzw. das erneute Erstellen von Indizes, kann auf Computern mit vielen CPUs verbessert werden, indem das Wiederherstellungsmodell der Datenbank vorübergehend entweder auf das massenprotokollierte oder auf das einfache Wiederherstellungsmodell festgelegt wird. Diese Indexvorgänge können eine bedeutende Protokollaktivität generieren, und Protokollkonflikte können sich auf den besten Grad an Parallelität (Degree of Parallelism, DOP) von SQL Server auswirken.
 
-Darüber hinaus sollten Sie Anpassen der **Max. Grad an Parallelität (MAXDOP)** Serverkonfigurationsoption für diese Vorgänge. Die folgenden Richtlinien basieren auf internen Tests und sind allgemeine Empfehlungen. Testen Sie unterschiedliche MAXDOP-Einstellungen, um die optimale Einstellung für die Umgebung zu bestimmen.
+Sie sollten außerdem in Erwägung ziehen, die Einstellung für die Serverkonfiguration **Max. Grad an Parallelität (MAXDOP)** für diese Vorgänge anzupassen. Die folgenden Richtlinien basieren auf internen Tests und sind allgemeine Empfehlungen. Testen Sie unterschiedliche MAXDOP-Einstellungen, um die optimale Einstellung für die Umgebung zu bestimmen.
 
 * Beschränken Sie den Wert der Option „Max. Grad an Parallelität“ für das vollständige Wiederherstellungsmodell auf acht oder weniger.   
 * Für das massenprotokollierte Modell oder das einfache Wiederherstellungsmodell sollten Sie den Wert der Option „Max. Grad an Parallelität“ auf einen Wert größer als acht festlegen.   
 * Bei Servern, für die NUMA konfiguriert wurde, sollte der maximale Grad an Parallelität nicht die Anzahl von CPUs überschreiten, die den einzelnen NUMA-Knoten zugewiesen werden. Das liegt daran, dass die Abfrage mit größerer Wahrscheinlichkeit den lokalen Arbeitsspeicher von 1 NUMA-Knoten verwendet, sodass die Speicherzugriffzeit verbessert werden kann.  
-* Für Server, auf denen hyper-threading aktiviert und wurden produzierten im Jahr 2009 oder früher (bevor Funktion Hyperthreading verbessert wurde), der MAXDOP-Wert sollte die Anzahl der physischen Prozessoren, anstatt von logischen Prozessoren nicht überschreiten.
+* Bei Servern, für die Hyperthreading aktiviert wurde und die im Jahr 2009 oder früher hergestellt wurden (bevor das Hyperthreading verbessert wurde), sollte der MAXDOP-Wert nicht die Anzahl der physischen Prozessoren (nicht die der logischen) überschreiten.
 
-Weitere Informationen zu der Max. Grad an Parallelität (Option), finden Sie unter [Konfigurieren der max Degree of Parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Festlegen der maximalen Anzahl von Arbeitsthreads
 

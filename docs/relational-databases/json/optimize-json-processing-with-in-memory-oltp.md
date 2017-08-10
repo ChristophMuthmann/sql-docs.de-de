@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
 ms.contentlocale: de-de
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimieren der JSON-Verarbeitung mit In-Memory-OLTP
@@ -83,7 +83,7 @@ ALTER TABLE xtp.Product
 Mithilfe von berechneten Spalten können Sie Werte aus JSON-Text verfügbar machen und auf diese Werte zugreifen, ohne dass der Wert aus dem JSON-Text erneut abgerufen, erneut ausgewertet und ohne dass die JSON-Struktur erneut analysiert wird. Derartig verfügbar gemachte Werte sind mit einer starken Typisierung versehen und in den berechneten Spalten physisch persistent. Auf JSON-Werte kann mithilfe von permanent berechneten Spalten schneller zugegriffen werden als der direkte Zugriff auf Werte im JSON-Dokument.
 
 Im folgenden Beispiel werden die beiden folgenden Werte aus der JSON `Data`-Spalte verfügbar gemacht:
--   Das Land, in dem ein Produkt hergestellt wird.
+-   Das Land, in dem ein Produkt hergestellt wird
 -   Die Herstellungskosten für das Produkt.
 
 In diesem Beispiel werden die berechneten Spalten `MadeIn` und `Cost` jedes Mal aktualisiert, wenn sich das in der Spalte `Data` gespeicherte JSON-Dokument ändert.
@@ -166,5 +166,5 @@ END
 ```
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
 

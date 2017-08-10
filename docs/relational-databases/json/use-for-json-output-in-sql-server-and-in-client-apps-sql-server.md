@@ -18,20 +18,20 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1fa05e61c8c057141eceee65c5c1da39c5d4200e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Verwenden der FOR JSON-Ausgabe in SQL Server und in Client-Apps (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Die folgenden Beispiele veranschaulichen einige Möglichkeiten zum Verwenden der **FOR JSON** -Klausel und die JSON-Ausgabe im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder in Client-apps.  
+Die folgenden Beispiele veranschaulichen einige Möglichkeiten, die **FOR JSON**-Klausel und ihre JSON-Ausgabe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Client-Apps zu verwenden.  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>Verwenden der FOR JSON-Ausgabe in SQL Server-Variablen  
-Die Ausgabe der FOR JSON-Klausel ist vom Typ NVARCHAR(MAX) und aus, damit Sie es jeder Variablen zuweisen können wie im folgenden Beispiel gezeigt.  
+Die Ausgabe der FOR JSON-Klausel ist vom Typ NVARCHAR(MAX) und kann daher jeder Variablen zugewiesen werden, wie im folgenden Beispiel gezeigt.  
   
 ```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
@@ -65,7 +65,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>Zusammenführen von übergeordneten und untergeordneten Daten in einer einzelnen Tabelle  
-Im folgenden Beispiel wird jeder Satz untergeordneter Zeilen als JSON-Array formatiert. Das JSON-Array wird der Wert der Spalte "Details" in der übergeordneten Tabelle.  
+Im folgenden Beispiel wird jeder Satz von untergeordneten Zeilen als JSON-Array formatiert. Das JSON-Array wird der Wert der Spalte „Details“ in der übergeordneten Tabelle.  
   
 ```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
@@ -78,7 +78,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>Aktualisieren der Daten in JSON-Spalten  
- Im folgende Beispiel wird veranschaulicht, dass Sie den Wert einer Spalte aktualisieren können, die JSON-Text enthält.  
+ Im folgenden Beispiel wird gezeigt, dass Sie den Wert einer Spalte aktualisieren können, die JSON-Text enthält.  
   
 ```sql  
 UPDATE SalesOrder  
@@ -90,7 +90,7 @@ SET Details =
 ```  
   
 ## <a name="use-for-json-output-in-a-c-client-app"></a>Verwenden der FOR JSON-Ausgabe in einer C#-Client-App  
- Im folgenden Beispiel wird veranschaulicht, wie die JSON-Ausgabe einer Abfrage in ein StringBuilder-Objekt in einer C#-Client-App abgerufen wird. Vorausgesetzt, dass die Variable `queryWithForJson` enthält den Text einer SELECT-Anweisung mit einer FOR JSON-Klausel.  
+ Im folgenden Beispiel wird veranschaulicht, wie die JSON-Ausgabe einer Abfrage in ein StringBuilder-Objekt in einer C#-Client-App abgerufen wird. Angenommen, die Variable `queryWithForJson` enthält den Text einer SELECT-Anweisung mit einer FOR JSON-Klausel.  
   
 ```csharp  
 var queryWithForJson = "SELECT ... FOR JSON";
@@ -113,7 +113,7 @@ else
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Für viele spezifische Lösungen Fälle und Empfehlungen zu verwenden, finden Sie unter der [Blogeinträge von jovan zur integrierten JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server und Azure SQL-Datenbank von Microsoft Program Manager Jovan Popovic.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
  
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Abfrageergebnisse als JSON mit FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
