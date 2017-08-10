@@ -27,7 +27,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 01eb198f668834c9c8cc6782f8352465cbc1eec2
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Zugriff auf benutzerdefinierte Assemblys über Ausdrücke
