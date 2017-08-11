@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/31/2017
 |Spalten pro Tabelle (keine breite Tabelle)||1.024||  
 |Spalten pro breiter Tabelle||30.000||  
 |Spalten pro SELECT-Anweisung||4.096||  
-|Spalten pro INSERT-Anweisung||4096||  
+|Spalten pro INSERT-Anweisung||4.096||  
 |Verbindungen pro Client||Höchstwert konfigurierter Verbindungen||  
 |Datenbankgröße||524.272 Terabytes||  
 |Datenbanken pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
