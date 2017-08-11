@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41363d15ebb18431c658c4f990d10a1fa67260ae
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 17eb520881cb87315dc6c3dd77de7369ed0e5736
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager
@@ -65,6 +67,24 @@ ms.lasthandoff: 08/03/2017
 -   [ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
+  
+## <a name="configure-adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager konfigurieren
+  Verwenden Sie das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** , um einer Datenquelle, auf die mithilfe eines .NET Framework-Datenanbieters (z. B. des SqlClient-Anbieters) zugegriffen werden kann, eine Verbindung hinzuzufügen. Der Verbindungs-Manager kann eine vorhandene Verbindung verwenden, oder Sie können eine neue erstellen.  
+  
+ Weitere Informationen zum ADO.NET-Verbindungs-Manager finden Sie unter [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md).  
+  
+### <a name="options"></a>enthalten  
+ **Datenverbindungen**  
+ Wählen Sie in der Liste eine vorhandene ADO.NET.Datenverbindung aus.  
+  
+ **Datenverbindungseigenschaften**  
+ Zeigt Eigenschaften und Werte für die ausgewählte ADO.NET-Datenverbindung an.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** eine ADO.NET-Datenverbindung.  
+  
+ **Delete**  
+ Wählen Sie eine Verbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

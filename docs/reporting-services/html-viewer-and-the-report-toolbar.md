@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML-Viewer und die Berichtssymbolleiste
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>Berichtssymbolleiste  
  Die Berichtssymbolleiste bietet Funktionen zum Navigieren, Zoomen, Aktualisieren, Suchen, Exportieren, Drucken sowie Datenfeedfunktionen für Berichte, die in der HTML-Renderingerweiterung gerendert werden.  
   
- Die Druckfunktionalität ist optional. Wenn verfügbar, wird ein Druckersymbol auf der Berichtssymbolleiste angezeigt. Wenn Sie erstmalig auf das Druckersymbol klicken, wird ein ActiveX-Steuerelement heruntergeladen, das Sie installieren müssen. Sobald das Steuerelement installiert ist, wird durch Klicken auf das Druckersymbol ein Dialogfeld Drucken geöffnet, in dem Sie einen der auf Ihrem Computer installierten Drucker auswählen können. Die Druckverfügbarkeit ist von den Server- und Browsereinstellungen abhängig. Weitere Informationen finden Sie unter [Drucken von Berichten in einem Browser mit dem Drucksteuerelement &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) und [Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Die Druckfunktionalität ist optional. Wenn verfügbar, wird ein Druckersymbol auf der Berichtssymbolleiste angezeigt. Wenn Sie erstmalig auf das Druckersymbol klicken, wird ein ActiveX-Steuerelement heruntergeladen, das Sie installieren müssen. Sobald das Steuerelement installiert ist, wird durch Klicken auf das Druckersymbol ein Dialogfeld Drucken geöffnet, in dem Sie einen der auf Ihrem Computer installierten Drucker auswählen können. Die Druckverfügbarkeit ist von den Server- und Browsereinstellungen abhängig. Weitere Informationen finden Sie unter [Drucken von Berichten in einem Browser mit der Print-Steuerelement &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) und [aktivieren und deaktivieren Sie die clientseitige Drucks für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  In der folgenden Abbildung ist die Berichtssymbolleiste dargestellt. Die tatsächlich angezeigte Berichtssymbolleiste kann Unterschiede zu dieser Abbildung aufweisen, da möglicherweise andere Berichtsfunktionen verwendet werden oder andere Renderingoptionen verfügbar sind.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ||**Einblenden und Ausblenden (Symbole)**|Einblenden oder Ausblenden von Feldern mit Parameterwerten und der Schaltfläche **Bericht anzeigen** in einem Bericht mit Parametern.|  
 |![Aktualisierungsschaltfläche des Webbrowsers auf der Berichtssymbolleiste](../reporting-services/media/htmlviewer-refresh.GIF "Aktualisierungsschaltfläche des Webbrowsers auf der Berichtssymbolleiste")|**Bericht aktualisieren (Symbol)**|Aktualisieren des Berichts. Daten für Liveberichte werden aktualisiert. Zwischengespeicherte Berichte werden vom jeweiligen Speicherort neu geladen.|  
 |![Htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "Htmlviewer_datafeed")|**Datenfeed (Symbol)**|Aus Berichten generierte Datenfeeds.|  
-|![Ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "Ssrs_powerbi_button_reportwviewer")|**An Power BI-Dashboard anheften**|Heften Sie unterstützte Berichtselemente an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]an. Wenn die Schaltfläche nicht angezeigt wird, ist der Berichtsserver nicht mit [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integriert.  Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
+|![Ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "Ssrs_powerbi_button_reportwviewer")|**An Power BI-Dashboard anheften**|Heften Sie unterstützte Berichtselemente an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]an. Wenn die Schaltfläche nicht angezeigt wird, ist der Berichtsserver nicht mit [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integriert.  Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren.|  
   
 ### <a name="about-export-formats"></a>Informationen zu Exportformaten  
  Mithilfe der Berichtssymbolleiste können Sie einen Bericht in einer Vielzahl von Formaten anzeigen. Welche Formate verfügbar sind, ist durch die auf dem Berichtsserver installierten Renderingerweiterungen bestimmt. Wenn Sie ein neues Format auswählen, wird der Bericht in einem zweiten Browserfenster angezeigt. Dabei wird ein mit dem ausgewählten Exportformat verbundener Viewer verwendet. Falls für das gewünschte Format kein Viewer verfügbar ist, können Sie ein anderes Format auswählen.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

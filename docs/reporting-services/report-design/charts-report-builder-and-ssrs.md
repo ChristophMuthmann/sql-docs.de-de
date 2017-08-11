@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
@@ -144,10 +144,10 @@ Weitere Zeit, die Sie aufwenden müssen sorgfältig vorbereiten und auswerten Ih
   
 ## <a name="see-also"></a>Siehe auch  
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Interaktive Sortierung, Dokumentstrukturen, und Links &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Geschachtelte Datenbereiche &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Lernprogramm: Hinzufügen eines Säulendiagramms zu dem Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Lernprogramm: Hinzufügen eines Balkendiagramms zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Verschlüsselungsschlüssel für SSRS - Speichern verschlüsselter Berichtsserverdaten
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  Auf einem Berichtsserver werden weitere Daten gespeichert, die nicht verschlüsselt sind, aber möglicherweise vertrauliche Informationen enthalten, die Sie schützen möchten. Insbesondere Berichtsverlaufs-Momentaufnahmen und Berichtsausführungs-Momentaufnahmen enthalten Abfrageergebnisse mit Daten, die nur für autorisierte Benutzer gedacht sind. Beim Verwenden von Momentaufnahmefunktionen für Berichte mit vertraulichen Daten sollten Sie beachten, dass Benutzer, die Tabellen in einer Berichtsserver-Datenbank öffnen können, möglicherweise auf Teile eines gespeicherten Berichts zugreifen können, indem sie den Inhalt der Tabelle überprüfen.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt weder die Zwischenspeicherung noch den Berichtsverlauf für Berichte, die Parameter basierend auf der Sicherheits-ID des Benutzers verwenden.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt keine Zwischenspeicherung noch den Berichtsverlauf für Berichte, die Parameter basierend auf der Sicherheits-ID des Benutzers.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

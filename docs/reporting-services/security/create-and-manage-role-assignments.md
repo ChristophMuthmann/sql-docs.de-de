@@ -21,11 +21,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Rollenzuweisungen](../../reporting-services/security/role-assignments.md)   
  [Rollendefinitionen](../../reporting-services/security/role-definitions.md)   
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)   

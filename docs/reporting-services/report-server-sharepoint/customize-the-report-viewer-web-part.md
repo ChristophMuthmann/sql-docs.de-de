@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 |Anzeigen der Schaltfläche Zurück|Zeigt die Schaltfläche "Zurück" auf der Symbolleiste an oder blendet sie aus.|  
 |Anzeigen der Suchsteuerelemente|Zeigt die Suchsteuerelemente auf der Symbolleiste an oder blendet sie aus. Die Suchsteuerelemente ermöglichen einem Benutzer, im gerenderten Bericht nach Text zu suchen. Diese Option ändert die Sichtbarkeit aller Suchsteuerelemente.|  
 |Anzeigen des Zoomsteuerelement|Zeigt das Zoomsteuerelement auf der Symbolleiste an oder blendet es aus.|  
-|Anzeigen der ATOM-Feed-Schaltfläche|Zeigt die ATOM-Feed-Schaltfläche auf der Symbolleiste an oder blendet sie aus.<br /><br /> ![htmlviewer_datafeed](../../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
+|Anzeigen der ATOM-Feed-Schaltfläche|Zeigt die ATOM-Feed-Schaltfläche auf der Symbolleiste an oder blendet sie aus.<br /><br /> ![Htmlviewer_datafeed](../../reporting-services/media/htmlviewer-datafeed.gif "Htmlviewer_datafeed")|  
 |Symbolleistenspeicherort|Bestimmt die Position der Symbolleiste innerhalb des Berichts-Viewers. Gültige Werte sind **Top** und **Bottom**.|  
 |Bereich Eingabeaufforderung|Gültige Werte sind unter anderem **Displayed**, **Collapsed**und **Hidden**. Mit**Displayed** wird der Parameterbereich für Berichte angezeigt, die parametrisierte Werte enthalten und für die eine Benutzereingabe erforderlich ist, bevor der Bericht ausgeführt werden kann. Verwenden Sie **Hidden** , wenn alle Berichtsparameter angegeben wurden und Sie nicht möchten, dass der Parameterbereich für Benutzer sichtbar ist.|  
 |Breite des Parameterbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
@@ -98,6 +98,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Fügen Sie den Berichts-Viewer-Webpart auf einer Webseite &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

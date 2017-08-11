@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedule-properties-general-page"></a>Zeitplaneigenschaften (Registerkarte Allgemein)
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/03/2017
  Gibt einen Zeitplan an, der nur einmal an einem bestimmten Datum und zu einer bestimmten Uhrzeit ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Berichtsserver im Management Studio F1-Hilfe](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)  
   

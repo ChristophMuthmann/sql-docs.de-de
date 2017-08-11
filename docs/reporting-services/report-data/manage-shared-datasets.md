@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Die Definition für freigegebene Datasets enthält eine Abfrage, Datasetparameter einschließlich Standardwerten, Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung und Datasetfilter. Die in der Definition festgelegten Werte werden angewendet, sobald das freigegebene Dataset in einem Bericht verwendet wird.  
   
- Öffnen Sie zur Verwendung eines freigegebenen Datasets in einem Bericht eine Anwendung wie den Berichts-Generator, wechseln Sie zum Berichtsserver oder zur SharePoint-Website, und wählen Sie das freigegebene Dataset aus. Dadurch wird dem Bericht eine Instanz des freigegebenen Datasets hinzugefügt. Die Abfrage oder die freigegebene Datenquelle für das freigegebene Dataset kann im Bericht weder angezeigt noch geändert werden. Sie können zusätzliche Dataseteigenschaftswerte angeben, die auf die Instanz im Bericht angewendet werden. Sie können z. B. einen Filter hinzufügen oder Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung ändern. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in der [Berichts-Generator-Dokumentation](http://go.microsoft.com/fwlink/?LinkId=154494) unter „msdn.microsoft.com“.  
+ Öffnen Sie zur Verwendung eines freigegebenen Datasets in einem Bericht eine Anwendung wie den Berichts-Generator, wechseln Sie zum Berichtsserver oder zur SharePoint-Website, und wählen Sie das freigegebene Dataset aus. Dadurch wird dem Bericht eine Instanz des freigegebenen Datasets hinzugefügt. Die Abfrage oder die freigegebene Datenquelle für das freigegebene Dataset kann im Bericht weder angezeigt noch geändert werden. Sie können zusätzliche Dataseteigenschaftswerte angeben, die auf die Instanz im Bericht angewendet werden. Sie können z. B. einen Filter hinzufügen oder Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung ändern. Weitere Informationen finden Sie unter [Bericht eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in der [Dokumentation zu Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=154494) auf "MSDN.Microsoft.com".  
   
 ## <a name="managing-shared-datasets"></a>Verwalten freigegebener Datasets  
  Zum Verwalten der Eigenschaften eines veröffentlichten freigegebenen Datasets verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder Anwendungsseiten auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus bereitgestellt wird Welche Tasks für ein freigegebenes Dataset ausgeführt werden können, hängt von Ihren Rollenzuweisungen und den Berechtigungen auf Website- und auf Elementebene ab, einschließlich der Berechtigungen für den Ordner, wenn die Vererbung von Berechtigungen aktiviert ist. Bei der Sicherheit auf Elementebene für freigegebene Datasets gilt das gleiche Modell wie bei der Sicherheit auf Elementebene für Berichte. Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |Namen bearbeiten|Ändern Sie den Namen des freigegebenen Datasets. Alle Verweise von abhängigen Elementen sind weiterhin funktionsfähig.|  
 |Beschreibung bearbeiten|Ändern Sie die Beschreibung des freigegebenen Datasets.|  
-|Timeout für Abfrageausführung bearbeiten|Legen Sie das Timeout für die Abfrageausführung in Sekunden fest. 0 (null) Sekunden bedeutet kein Timeout. Bestimmt die Anzahl von Sekunden, nach denen ein Timeout bei der Datasetabfrage eintritt. Um keinen Timeoutwert anzugeben, verwenden Sie 0. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Timeout für Abfrageausführung bearbeiten|Legen Sie das Timeout für die Abfrageausführung in Sekunden fest. 0 (null) Sekunden bedeutet kein Timeout. Bestimmt die Anzahl von Sekunden, nach denen ein Timeout bei der Datasetabfrage eintritt. Um keinen Timeoutwert anzugeben, verwenden Sie 0. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für Bericht und freigegebene Dataset Processing &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Abhängige Elemente anzeigen|Zeigen Sie die Elemente an, die dieses freigegebene Dataset verwenden: veröffentlichte Berichtsteile, freigegebene Datenquellen und Berichte.|  
   
  Die folgenden zusätzlichen Eigenschaften für freigegebene Datasets werden automatisch konfiguriert:  

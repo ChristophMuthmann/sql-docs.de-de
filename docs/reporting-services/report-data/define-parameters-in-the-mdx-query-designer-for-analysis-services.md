@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      Um das Dataset anzuzeigen, das verfügbare Werte für den Berichtsparameter enthält, klicken Sie mit der rechten Maustaste auf einen leeren Bereich im Berichtsdatenbereich, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**. Der Berichtsdatenbereich zeigt alle Datasets im Bericht an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Analysis Services-Verbindungstyp für MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Führen Sie **rskeymgmt.exe** lokal auf dem Computer aus, der einen Berichtsserver hostet, der bereits ein Element der Bereitstellung für horizontales Skalieren für Berichtsserver ist.  
   
-2.  Verwenden Sie das **-j** -Argument, um einen Berichtsserver mit der Berichtsserver-Datenbank zu verknüpfen. Verwenden der **-m** und  **-n**  Argumente zum Angeben der Remoteberichtsserver-Instanz Sie die Bereitstellung hinzufügen möchten. Verwenden Sie die Argumente **-u** und **-v** zum Angeben eines Administratorkontos auf dem Remotecomputer. Wenn Sie eine Bereitstellung für horizontales Skalieren mithilfe mehrerer Berichtsserverinstanzen auf demselben Computer erstellen, müssen Sie eine etwas andere Syntax verwenden. Weitere Informationen zu der betreffenden Syntax finden Sie unter [rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Verwenden Sie das **-j** -Argument, um einen Berichtsserver mit der Berichtsserver-Datenbank zu verknüpfen. Verwenden Sie das Hilfsprogramm **-m** und **-n** zum Angeben der Remoteberichtsserver-Instanz, die Sie der Bereitstellung hinzufügen möchten. Verwenden Sie die Argumente **-u** und **-v** zum Angeben eines Administratorkontos auf dem Remotecomputer. Wenn Sie eine Bereitstellung für horizontales Skalieren mithilfe mehrerer Berichtsserverinstanzen auf demselben Computer erstellen, müssen Sie eine etwas andere Syntax verwenden. Weitere Informationen zu der betreffenden Syntax finden Sie unter [rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      Das folgende Beispiel veranschaulicht die anzugebenden Argumente beim Hinzufügen eines Remoteberichtsservers zu einer Bereitstellung für horizontales Skalieren (Sie können die Anmeldeinformationen auslassen, wenn Sie auf dem Remotecomputer über Administratorberechtigungen verfügen):  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  Mit diesen Schritten entfernen Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren. Dabei wird die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Berichtsserver jedoch nicht deinstalliert. Nachdem Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt haben, können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vom Server deinstallieren, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem Server nicht mehr benötigen. Weitere Informationen finden Sie unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Initialisieren eines Berichtsservers &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

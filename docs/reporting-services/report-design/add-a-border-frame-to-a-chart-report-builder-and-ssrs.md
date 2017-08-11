@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)
@@ -51,8 +51,8 @@ ms.lasthandoff: 06/22/2017
 7.  (Optional) Wenn Sie einen Rahmentyp auswählen, geben Sie ein Format und eine Farbe für den Rahmen an. Die Liste **Framefüllfarbe** enthält allgemein verwendete Farben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

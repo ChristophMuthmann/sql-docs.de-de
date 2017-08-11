@@ -21,11 +21,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
@@ -108,7 +108,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
   
 ##  <a name="bkmk-troubleshoot"></a> Problembehandlung  
   
--   **Keine [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Schaltfläche auf der Symbolleiste des Berichts-Viewers:** Dies deutet darauf hin, dass der Berichtsserver nicht in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integriert wurde. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Keine [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Schaltfläche auf der Symbolleiste des Berichts-Viewers:** Dies deutet darauf hin, dass der Berichtsserver nicht in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integriert wurde. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren.  
   
 - **Anheften nicht möglich**: Wenn Sie versuchen, ein Element anzuheften, wird die folgende Fehlermeldung angezeigt: Siehe Abschnitt [Elemente, die angeheftet werden können](#bkmk_supported_items).  
   

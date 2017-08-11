@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Zeitpläne
@@ -129,20 +129,20 @@ ms.lasthandoff: 06/22/2017
 >  Mit dem Facet **Oberflächenkonfiguration für Reporting Services** können geplante Vorgänge vorübergehend oder dauerhaft beendet werden. Obwohl Sie benutzerdefinierte Übermittlungserweiterungen erstellen und bereitstellen können, ist der Prozessor für Zeitplanung und Übermittlung an sich nicht erweiterbar. Sie können die Weise, wie er Ereignisse und Benachrichtigungen verwaltet, nicht ändern. Weitere Informationen zu Deaktivieren von Funktionen finden Sie in die im Abschnitt **Geplante Ereignisse und Übermittlung** von [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Auswirkungen beim Beenden des SQL Server-Agents  
- Die geplante Berichtsverarbeitung verwendet standardmäßig den SQL Server-Agent. Wenn Sie den Dienst anhalten, werden keine neuen Verarbeitungsanforderungen zur Warteschlange hinzugefügt, außer Sie fügen sie programmgesteuert mithilfe der <xref:ReportService2010.ReportingService2010.FireEvent%2A>-Methode hinzu. Wenn Sie den Dienst neu starten, werden die Aufträge, die die Berichtsverarbeitungsanforderungen erstellen, fortgesetzt. Der Berichtsserver versucht nicht, Berichtsverarbeitungsaufträge neu zu erstellen, die möglicherweise in der Vergangenheit aufgetreten sind, während der SQL Server-Agent offline war. Wenn Sie den SQL Server-Agent für eine Woche anhalten, sind alle für diese Woche geplanten Vorgänge verloren.  
+ Die geplante Berichtsverarbeitung verwendet standardmäßig den SQL Server-Agent. Wenn Sie den Dienst anhalten, werden keine neuen Verarbeitungsanforderungen zur Warteschlange hinzugefügt, außer Sie fügen sie programmgesteuert mithilfe der <xref:ReportService2010.ReportingService2010.FireEvent%2A> -Methode hinzu. Wenn Sie den Dienst neu starten, werden die Aufträge, die die Berichtsverarbeitungsanforderungen erstellen, fortgesetzt. Der Berichtsserver versucht nicht, Berichtsverarbeitungsaufträge neu zu erstellen, die möglicherweise in der Vergangenheit aufgetreten sind, während der SQL Server-Agent offline war. Wenn Sie den SQL Server-Agent für eine Woche anhalten, sind alle für diese Woche geplanten Vorgänge verloren.  
   
 > [!NOTE]  
->  Die Funktionen, die der SQL Server-Agent Reporting Services bereitstellt, können durch einen benutzerdefinierten Code ersetzt werden, der die <xref:ReportService2010.ReportingService2010.FireEvent%2A>-Methode verwendet, um geplante Ereignisse zur Warteschlange hinzuzufügen.  
+>  Die Funktionen, die der SQL Server-Agent für Reporting Services bereitstellt, können durch einen benutzerdefinierten Code ersetzt werden, der die <xref:ReportService2010.ReportingService2010.FireEvent%2A> -Methode verwendet, um der Warteschlange geplante Ereignisse hinzuzufügen.  
   
 ###  <a name="bkmk_stoppingservice"></a> Auswirkungen beim Beenden des Berichtsserverdienstes  
  Wenn Sie den Berichtsserverdienst beenden, fährt der SQL Server-Agent fort, Berichtsverarbeitungsanforderungen der Warteschlange hinzuzufügen. Statusinformationen des SQL Server-Agents zeigen an, dass der Auftrag erfolgreich war. Da der Berichtsserverdienst jedoch beendet war, findet keine Berichtsverarbeitung statt. Die Anforderungen werden in der Warteschlange gesammelt, bis Sie den Berichtsserverdienst neu starten. Sobald Sie den Berichtsserverdienst neu gestartet haben, werden alle Berichtsverarbeitungsanforderungen, die sich in der Warteschlange befinden, nacheinander verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Zwischenspeichern von Berichten &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

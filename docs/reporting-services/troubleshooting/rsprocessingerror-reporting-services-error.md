@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Datentypen für einen Filter können nicht verglichen werden  
  In einer Filtergleichung müssen der Filterausdruck, mit dem die zu filternden Elemente definiert werden, und der Filterwert den gleichen Datentyp aufweisen, damit sie verglichen werden können. Wenn einer der folgenden Fehler angezeigt wird, ändern Sie den Filterausdruck oder den Filterwert, sodass die Datentypen übereinstimmen:  
   
--   Die Verarbeitung von  *\<Typ von Berichtselementen >* für die * \<Element Berichtsname >* kann nicht ausgeführt werden. Datentypen können nicht verglichen werden  *\<Typ >* und * \<Typ >*. Überprüfen Sie den Datentyp zurückgegeben werden, indem Sie die  *\<Element Berichtsname >*.  
+-   Die Verarbeitung von  *\<Typ von Berichtselementen >* für die  *\<Element Berichtsname >* kann nicht ausgeführt werden. Datentypen können nicht verglichen werden  *\<Typ >* und  *\<Typ >*. Überprüfen Sie den Datentyp zurückgegeben werden, indem Sie die  *\<Element Berichtsname >*.  
   
 -   Fehler beim Auswerten der  *\<Eigenschaftsname >*.  
   
@@ -118,11 +118,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Die  *\<Typ von Berichtselementen >* "*\<Element Berichtsname >*" weist einen ungültigen Bereich "*\<Bereichsname >*". Der Bereich muss der aktuelle Bereich sein oder im aktuellen Bereich enthalten sein.  
   
--   Die  *\<Eigenschaftsname >* Ausdruck für die * \<Typ von Berichtselementen >* "*\<Element Berichtsname >*" weist einen Bereichsparameter auf, die für eine Aggregatfunktion ungültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
+-   Die  *\<Eigenschaftsname >* Ausdruck für die  *\<Typ von Berichtselementen >* "*\<Element Berichtsname >*" weist einen Bereichsparameter auf, die für eine Aggregatfunktion ungültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
   
  Für Aggregatfunktionen, die laufende Summen berechnen (**Previous**, **RunningValue**oder **RowNumber**), können Sie einen Bereichsparameter angeben, bei dem es sich entweder um einen Zeilengruppennamen oder einen Spaltengruppennamen handelt. Beides ist nicht möglich. Dies gilt für die folgende Fehlermeldung:  
   
--   **Vorherigen**, **"RunningValue"** oder **RowNumber** Aggregatfunktionen, die in den Datenzellen des verwendet die  *\<Typ von Berichtselementen >* "*\<Bericht Elementname >*" verweisen auf Gruppierungsbereiche in den Spalten und Zeilen mit der * \<Typ von Berichtselementen >*. Die Bereichsparameter aller **zurück**, **"RunningValue"** und **RowNumber** -Aggregatfunktionen in einem  *\<Typ von Berichtselementen >* können auf die oder datenspaltengruppierungen, aber nicht auf beide zeilengruppierungen verweisen.  
+-   **Vorherigen**, **"RunningValue"** oder **RowNumber** Aggregatfunktionen, die in den Datenzellen des verwendet die  *\<Typ von Berichtselementen >* "*\<Bericht Elementname >*" verweisen auf Gruppierungsbereiche in den Spalten und Zeilen mit der  *\<Typ von Berichtselementen >*. Die Bereichsparameter aller **zurück**, **"RunningValue"** und **RowNumber** -Aggregatfunktionen in einem  *\<Typ von Berichtselementen >* können auf die oder datenspaltengruppierungen, aber nicht auf beide zeilengruppierungen verweisen.  
   
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  Verwenden Sie keinen Standardbereich für ein Textfeld, das der Berichtsentwurfsoberfläche hinzugefügt wurde, wenn der Bericht über mehr als ein Dataset verfügt. Verwenden Sie einen Ausdruck, der den Namen des Datasets als Bereich enthält, und eine Aggregatfunktion. Beispiel: `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Aggregatfunktionsreferenz &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Verweise auf Parametersammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Häufig verwendete Filter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Datasetfeldauflistung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Verweise auf Parameters-Auflistung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

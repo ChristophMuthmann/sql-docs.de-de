@@ -19,11 +19,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
@@ -37,11 +37,11 @@ ms.lasthandoff: 06/22/2017
   
 3.  Klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie dann auf **Löschen**.  
   
-4.  Wenn Sie dazu aufgefordert werden, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Wenn Sie aufgefordert werden,[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Katalogelemente löschen &#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Katalogelemente löschen &#40; Management Studio &#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [Reporting Services in SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

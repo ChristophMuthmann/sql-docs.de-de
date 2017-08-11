@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>Rollenzuweisungen - ändern oder löschen
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Rollenzuweisungen](../../reporting-services/security/role-assignments.md)   
- [Seite „Siteeinstellungen“ &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Neue Systemrollenzuweisungen: Seite „Systemrollenzuweisungen bearbeiten“ &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Seite "Einstellungen" Standort &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Neue Systemrollenzuweisung: Bearbeiten Sie, Seite "System" Zuweisungen "&#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen gemeinsam verwendet und bestimmten Feldeigenschaftsnamen zugeordnet. Sie sind über die integrierte **Fields** -Sammlung nach Namen verfügbar. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte **Fields** -Sammlung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
- Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquellen finden Sie unter [erstellen und Verwenden von Eigenschaftswerten &#40; MDX &#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Arbeiten mit Feldeigenschaften in einem Bericht  
  Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern anschließend die **Value** -Eigenschaft des Felds in die gewünschte Eigenschaft. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
@@ -155,7 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Integrierte Auflistungen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Datasetfeldauflistung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

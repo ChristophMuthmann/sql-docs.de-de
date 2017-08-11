@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services

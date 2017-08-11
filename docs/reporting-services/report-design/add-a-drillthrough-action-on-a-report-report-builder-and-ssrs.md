@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
 7.  Führen Sie den Bericht aus, und klicken Sie auf das Berichtselement, für das Sie den Link festgelegt haben, um den Link zu testen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktionseigenschaften (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [Im Dialogfeld "Eigenschaften" Aktion &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [Formatieren von Datenpunkten in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Anzeigen von QuickInfos für eine Reihe &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

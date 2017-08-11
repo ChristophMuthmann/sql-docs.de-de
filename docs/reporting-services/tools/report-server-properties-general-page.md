@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-properties-general-page"></a>Berichtsserver-Eigenschaften (Seite Allgemein)
@@ -58,11 +58,11 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Festlegen der Berichtsserver-Eigenschaften &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Aktivieren und Deaktivieren von "Meine Berichte"](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Sichern von Meine Berichte](../../reporting-services/security/secure-my-reports.md)  
+ [Berichtsserver im Management Studio F1-Hilfe](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Secure My Reports (Sichern von Meine Berichte)](../../reporting-services/security/secure-my-reports.md)  
   
   
 

@@ -21,11 +21,11 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 95f694a89450016929fa5129aa823c7242ef0056
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: be7e76aa26ca4b94afd2e32b40b9fbfbe92b170d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="web-service-authentication"></a>Webdienstauthentifizierung

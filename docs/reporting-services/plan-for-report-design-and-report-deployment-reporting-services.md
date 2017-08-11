@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
@@ -117,7 +117,7 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
 ## <a name="see-also"></a>Siehe auch  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)   
- [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40; SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

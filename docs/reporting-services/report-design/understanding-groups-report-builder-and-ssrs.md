@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
  Zellen in einer Zeile oder Spalte eines Tablix-Datenbereichs können zu mehreren Zeilen- und Spaltengruppen gehören. Wenn Sie einen Ausdruck im Textfeld einer Zelle definieren, für die eine Aggregatfunktion verwendet wird (z. B. `=Sum(Fields!FieldName.Value`), ist der Standardgruppenbereich für eine Zelle die innerste untergeordnete Gruppe, zu der dieser gehört. Wenn eine Zelle zu Zeilen- und zu Spaltengruppen gehört, besteht der Bereich aus beiden innersten Gruppen. Sie können auch Ausdrücke erstellen, mit denen Aggregatteilergebnisse berechnet werden, die relativ zu einer anderen Datenmenge zu einer Gruppe zusammengefasst werden. Beispielsweise können Sie den Prozentsatz einer Gruppe relativ zur Spaltengruppe oder zu allen Daten für den Datenbereich berechnen (z. B. `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Weitere Informationen finden Sie unter [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Sortieren von Daten in einem Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Drilldownaktion &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

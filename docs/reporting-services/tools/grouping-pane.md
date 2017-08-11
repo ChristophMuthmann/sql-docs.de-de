@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>Gruppierungsbereich
@@ -32,7 +32,7 @@ Wenn Sie [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Beric
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Bericht** auf **Gruppierung**.
   
- Zellen in den Zeilen- und Spaltengruppenbereiche können statische oder dynamische Elemente einer Gruppe sein. Statische Elemente wiederholen sich einmal pro Gruppe und enthalten meist Bezeichnungen oder Gesamtbeträge. Dynamische Elemente wiederholen sich einmal pro Gruppeninstanz und enthalten meist die eindeutigen Werte des Gruppierungsausdrucks. Wenn Sie Tablix-Zellen im Zeilengruppenbereich oder Spaltengruppenbereich auswählen, wird das entsprechende Gruppenelement im Bereich Zeilengruppen oder Spaltengruppen ausgewählt. Wenn Sie umgekehrt Gruppen im Gruppierungsbereich auswählen, wird die entsprechende, dem Gruppenelement zugeordnete Zelle auf der Entwurfsoberfläche ausgewählt. Weitere Informationen zu Zeilen und Spalten von Tablix-Gruppierungsbereichen finden Sie unter [Zonen des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Zellen in den Zeilen- und Spaltengruppenbereiche können statische oder dynamische Elemente einer Gruppe sein. Statische Elemente wiederholen sich einmal pro Gruppe und enthalten meist Bezeichnungen oder Gesamtbeträge. Dynamische Elemente wiederholen sich einmal pro Gruppeninstanz und enthalten meist die eindeutigen Werte des Gruppierungsausdrucks. Wenn Sie Tablix-Zellen im Zeilengruppenbereich oder Spaltengruppenbereich auswählen, wird das entsprechende Gruppenelement im Bereich Zeilengruppen oder Spaltengruppen ausgewählt. Wenn Sie umgekehrt Gruppen im Gruppierungsbereich auswählen, wird die entsprechende, dem Gruppenelement zugeordnete Zelle auf der Entwurfsoberfläche ausgewählt. Weitere Informationen zu Tablix-Zeilen- und spaltengruppenbereichen finden Sie unter [Tablix-Datenbereiche &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Der Gruppierungsbereich unterstützt die folgenden Modi:  
   
@@ -76,7 +76,7 @@ Zum Bearbeiten der Standardwerte müssen Sie das Gruppenelement im Bereich Zeile
   
 -   **ToggleItem.** Zeichenfolge. Der Name des Textfelds, dem das Umschaltbild hinzugefügt werden soll. Das Textfeld muss demselben Gruppenbereich oder einem enthaltenden Bereich angehören.  
   
- Weitere Informationen dazu, wie dieses Verhalten bei einem Tablix-Datenbereich gesteuert werden kann, finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ Weitere Informationen dazu, wie dieses Verhalten in einem Tablix-Datenbereich gesteuert werden kann, finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  Nicht jedes statische Element verfügt über einen Header, der einer Zelle auf der Entwurfsoberfläche entspricht. Im Gruppierungsbereich wird mit der folgenden Konvention angegeben, ob ein statisches Element keinen Header besitzt:  
   
@@ -86,7 +86,7 @@ Zum Bearbeiten der Standardwerte müssen Sie das Gruppenelement im Bereich Zeile
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

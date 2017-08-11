@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   Erstellen neuer Ordner auf dem Server, um die Berichte nach Wunsch anzuordnen.  
   
- Einige dieser Tasks können vom Administrator des Berichtsservers für Sie ausgeführt werden. Weitere Informationen zu den auf einem Berichtsserver ausgeführten Tasks finden Sie unter [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Einige dieser Tasks können vom Administrator des Berichtsservers für Sie ausgeführt werden. Weitere Informationen zu Aufgaben, die auf einem Berichtsserver ausgeführt werden, finden Sie unter [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Der Berichts-Manager enthält in der Regel Ordner, Berichte, Datenquellen und Berichtsmodelle sowie den Ordner Meine Berichte. Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich, in dem Sie Ihre eigenen Berichte speichern und damit arbeiten können. Andere Berichtsserverordner sind öffentliche Ordner, für die Benutzer in der Regel erweiterte Berechtigungen zum Hinzufügen oder Ändern von Ordnerinhalten benötigen. Sie können Ordner innerhalb von Meine Berichte erstellen, um die Berichte anzuordnen. Weitere Informationen finden Sie unter [Verwenden von „Meine Berichte“ &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
   
  Der Berichts-Manager zeigt Berichte im HTML-Viewer von Reporting Services an. Der HTML-Viewer stellt ein Framework zum Anzeigen von Berichten im HTML-Format bereit und enthält unter anderem eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt für Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste stellt Funktionalität für Seitennavigation, Zoom, Aktualisierung, Suche, Export, Druck und Datenfeeds bereit. Die Berichtssymbolleiste wird auch in einem Browserfenster oben im Bericht angezeigt, wenn Sie über eine URL auf Berichte zugreifen. Die Druckfunktionalität ist optional und muss vom Administrator aktiviert werden. Wenn verfügbar, wird ein Druckersymbol auf der Berichtssymbolleiste angezeigt. Die folgenden Abbildungen enthalten detaillierte Darstellungen der Berichtssymbolleiste in einem Berichts-Manager-Fenster und der Funktionen der Berichtssymbolleiste.  
   
- ![Berichtssymbolleiste in Berichts-Manager](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![Berichtssymbolleiste in Berichts-Manager](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Berichtssymbolleiste in Berichts-Manager")  
 Berichts-Manager-Fenster  
   
- ![Berichtssymbolleiste](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Berichtssymbolleiste](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Berichtssymbolleiste")  
 Berichtssymbolleiste  
   
- Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts in ein anderes Dateiformat &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts als ein anderes Dateiformat &#40; Berichts-Generator und SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- Um einen Bericht auf möglichst einfache Weise auszuwählen und auszuführen, öffnen Sie den Berichts-Manager, und suchen Sie nach dem Bericht bzw. navigieren Sie zu dem Bericht, den Sie anzeigen möchten. Eine Schrittanleitung zum Öffnen von Berichten finden Sie unter [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Um einen Bericht auf möglichst einfache Weise auszuwählen und auszuführen, öffnen Sie den Berichts-Manager, und suchen Sie nach dem Bericht bzw. navigieren Sie zu dem Bericht, den Sie anzeigen möchten. Eine schrittweise Anleitung zum Öffnen von Berichten finden Sie unter [öffnen und Schließen eines Berichts &#40; Berichts-Manager &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn aktualisieren, um neue Daten anzuzeigen.  
   
@@ -107,7 +107,7 @@ Berichtssymbolleiste
   
  Für den Zugriff auf die Anwendungsseiten wählen Sie elementspezifische Aktionen aus einem Dropdownmenü in einem Bericht oder einem anderen Berichtsserverelement aus, das Sie zuvor zu einer SharePoint-Bibliothek hinzugefügt haben. Je nach Element und verfügbaren Berechtigungen kann es Ihnen eventuell auch möglich sein, Berichte im Berichts-Generator zu erstellen, Modelle zu generieren und Einstellungen für die Modellelementsicherheit festzulegen.  
   
- Weitere Informationen zu den Reporting Services- und SharePoint-Technologien finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+ Weitere Informationen über die Reporting Services und SharePoint-Technologie finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40; Reporting Services-SharePoint-Modus &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Suchen von Berichtsserverelementen auf einer SharePoint-Website  
  Bevor Sie Eigenschaften festlegen können, müssen Sie zunächst in der Lage sein, das Element zu finden. Berichtsserverelemente werden immer in Bibliotheken oder in einem Ordner innerhalb einer Bibliothek gespeichert.  

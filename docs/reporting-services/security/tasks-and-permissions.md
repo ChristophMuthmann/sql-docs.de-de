@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>Aufgaben und Berechtigungen
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Aufgaben können nur ausgeführt werden, wenn sie Teil einer Rolle sind und diese Rolle in einer Rollenzuweisung enthalten ist. Wenn z. B. die Aufgabe Modelle anzeigen nicht in einer Rolle enthalten ist oder diese Rolle nicht Teil einer Rollenzuweisung ist, können Benutzer keine Berichtsmodelle anzeigen. Das folgende Diagramm veranschaulicht, wie Berechtigungen in Aufgaben kombiniert und wie Aufgaben in Rollen kombiniert werden, die für spezielle Rollenzuweisungen verwendet werden können.  
   
- ![Diagramm für Berechtigungen und Aufgaben](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![Diagramm für Berechtigungen und Aufgabe](../../reporting-services/security/media/report-securityobjects.gif "Diagramm für Berechtigungen und Aufgabe")  
 Diagramm für Berechtigungen und Aufgaben  
   
 ## <a name="system-and-item-level-tasks"></a>Aufgaben auf System- und Elementebene  

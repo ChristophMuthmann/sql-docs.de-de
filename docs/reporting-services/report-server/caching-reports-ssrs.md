@@ -27,11 +27,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Die Zwischenspeicherung ist eine Technik zur Leistungsoptimierung. Der Inhalt des Zwschenspeichers ist flüchtig und kann sich beim Hinzufügen, Ersetzen oder Entfernen von Berichten ändern. Falls Sie eine zuverlässigere Zwischenspeicherungsstrategie benötigen, sollten Sie eine Momentaufnahme erstellen. Weitere Informationen finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden temporäre Dateien in einer Datenbank gespeichert, damit Benutzersitzungen und Berichtsverarbeitung unterstützt werden. Diese Dateien werden zur internen Verwendung und zur Unterstützung einer konsistenten Anzeige während einer einzelnen Browsersitzung zwischengespeichert. Weitere Informationen zur Zwischenspeicherung von temporären Dateien für die interne Verwendung finden Sie unter [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Speichert temporäre Dateien in einer Datenbank an benutzersitzungen und berichtsverarbeitung unterstützt. Diese Dateien werden zur internen Verwendung und zur Unterstützung einer konsistenten Anzeige während einer einzelnen Browsersitzung zwischengespeichert. Weitere Informationen zur Zwischenspeicherung von temporären Dateien für die interne Verwendung finden Sie unter [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Zwischengespeicherte Instanzen  
  Eine zwischengespeicherte Instanz eines Berichts basiert auf dem Berichtszwischenformat. Der Berichtsserver führt im Allgemeinen die Zwischenspeicherung einer Berichtsinstanz basierend auf dem Berichtsnamen durch. Wenn allerdings ein Bericht gemäß den Abfrageparametern verschiedene Daten enthalten kann, können jeweils mehrere Versionen des Berichts zwischengespeichert werden. Angenommen, Sie haben einen parametrisierten Bericht, der einen Landes-/Regionscode als Parameterwert verwendet. Wenn vier verschiedene Benutzer vier eindeutige Landes-/Regionscodes angeben, werden vier zwischengespeicherte Kopien erstellt.  
@@ -75,12 +75,12 @@ ms.lasthandoff: 06/22/2017
  Falls ein Bericht aus irgendeinem Grund nicht aus einer zwischengespeicherten Instanz generiert werden kann (z. B., wenn die von einem Benutzer angegebenen Parameterwerte von den Werten abweichen, mit denen der zwischengespeicherte Bericht erstellt wird), führt der Berichtsserver den Bericht erneut aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Festlegen der Optionen für die Verarbeitung &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Vorabladen des Caches &#40;Berichts-Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Reporting Services-Konzepte &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Vorabladen des Caches &#40; Berichts-Manager &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
- [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Zwischenspeichern von freigegebenen Datasets &#40; SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Cacheaktualisierung-Optionen &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

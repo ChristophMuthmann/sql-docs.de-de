@@ -10,14 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
+f1_keywords:
+- sql13.dts.designer.odatasource.connectionmanager.f1
+- sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22374d52835c37ecf45fef20e15d563dad8e5917
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
@@ -62,6 +65,24 @@ ms.lasthandoff: 08/03/2017
 |UserName|Der Benutzername, der für die Standardauthentifizierung verwendet wird.|  
 |Kennwort|Das Kennwort, das für die Standardauthentifizierung verwendet wird.|  
 |ConnectionString|Stellt weitere Eigenschaften des Verbindungs-Managers dar.|  
+  
+## <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
+  Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor** , um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Quelle zu bearbeiten.  
+  
+### <a name="options"></a>enthalten  
+ **Name des Verbindungs-Managers**  
+ Name des Verbindungs-Managers.  
+  
+ **Speicherort des Dienstdokuments**  
+ URL für den OData-Dienst. Beispiel: http://services.odata.org/V3/Northwind/Northwind.svc/.  
+  
+ **Authentifizierung**  
+ Wählen Sie entweder **Windows-Authentifizierung** oder **Diesen Benutzernamen und dieses Kennwort verwenden** für **Standardauthentifizierung**aus. Wenn Sie die zweite Option auswählen, geben Sie **Benutzername** und **Kennwort**ein. 
+ 
+ Es gibt jetzt drei weitere Optionen. Wählen Sie **Microsoft Dynamics AX Online** für Dynamics AX Online aus, wählen Sie **Microsoft Dynamics CRM Online** für Dynamics CRM Online, und wählen Sie anschließend **Microsoft Online Services** für Microsoft Online Services. Wenn Sie eine der folgenden drei Optionen auswählen, geben Sie den **Benutzernamen** und das **Kennwort**an.
+  
+ **Verbindung testen**  
+ Klicken Sie auf diese Schaltfläche, um die Verbindung mit der OData-Quelle zu testen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)  

@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51cf021c47749367bba6fcc08081dfeed688298f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Veröffentlichen Sie eine freigegebene Datenquelle in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

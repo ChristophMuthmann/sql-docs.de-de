@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c643b94c86109a99e1448093b4b9744924fcd7f7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Zusammenführen von Zellen in einem Datenbereich (Berichts-Generator und SSRS)
@@ -40,9 +40,9 @@ Zellen können nur innerhalb der folgenden Bereiche eines Datenbereichs zusammen
   
 ## <a name="see-also"></a>Siehe auch  
 [Tablix-Datenbereich](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
- [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Erstellen einer Matrix (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Erstellen von Rechnungen und Formulare mit Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Tabellen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Erstellen einer Matrix](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Create Invoices and Forms with Lists (Erstellen von Rechnungen und Formularen mit Listen)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
 [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

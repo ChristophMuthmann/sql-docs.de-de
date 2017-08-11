@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="what-comes-with-a-report-part"></a>Zugehörige Elemente zu einem Berichtsteil  
  Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jedes angezeigte Objekt von einem Dataset (d. h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Möglicherweise verfügt es auch über einen oder mehrere Parameter. Alle Elemente, von denen es abhängig ist, werden als *Abhängigkeiten*bezeichnet. Diese Elemente und Verweise auf diese Elemente sind im Berichtsteil enthalten, wenn Sie ihn dem Bericht hinzufügen. Das Dataset und die Parameter werden im Berichtsdatenbereich des Berichts aufgeführt.  
   
- Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets finden Sie unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets, finden Sie unter [Berichtsdatasets &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Lösen von Namenskonflikten  
  Wenn Sie einen Berichtsteil hinzufügen, löst Berichts-Generator alle Namenskonflikte. Wenn beispielsweise bereits ein Diagramm1 in Ihrem Bericht vorhanden ist und Sie einen Berichtsteil namens Diagramm1 hinzufügen, benennt Berichts-Generator den neuen Berichtsteil automatisch in Diagramm2 um. Wenn der Bericht bereits ein Dataset1 enthält und Sie einen Berichtsteil hinzufügen, der auf ein anderes Dataset mit dem Namen Dataset1 verweist, benennt Berichts-Generator das neue Dataset in Dataset2 um und aktualisiert die Verweise.  
@@ -148,6 +148,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  
+ [Managing Report Parts (Verwalten von Berichtsteilen)](../../reporting-services/report-design/managing-report-parts.md)  
   
   

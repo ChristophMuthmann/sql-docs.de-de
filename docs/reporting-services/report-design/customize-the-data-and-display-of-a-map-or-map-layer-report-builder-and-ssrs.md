@@ -28,11 +28,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Um weitere Details bereitzustellen, können Sie Kartenelementen Links auf jeder Ebene hinzufügen, auf die ein Benutzer klicken kann, um verwandte Berichte zu öffnen.  
   
- Weitere Ideen zum Verbessern eines Berichts finden Sie unter [Planen eines Berichts (Berichts-Generator)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Weitere Ideen zum Verbessern eines Berichts finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
  Anzeigeoptionen wirken sich auf die Art und Weise aus, wie eine Karte oder die Teile einer Karte angezeigt werden, wenn Sie den Bericht anzeigen. Einige Optionen steuern die Darstellung der Karte, z. B. die Rahmen und die Schriftarten oder den Bereich, die auf der Karte dargestellt wurden. Andere Optionen steuern den Inhalt jeder Ebene, z. B. Blasengrößen, Markertypen, Bezeichnungen oder QuickInfos.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [Karten-Assistent und Kartenebenen-Assistenten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

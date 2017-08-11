@@ -21,11 +21,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |![Löschen](../../reporting-services/report-data/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
 |![Symbol für das Dialogfeld Abfrageparameter](../../reporting-services/report-data/media/iconqueryparameter.gif "Symbol für die Abfrageparameter (Dialogfeld)")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
 |![Vorbereiten der Abfrageschaltfläche](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Schaltfläche Abfrage vorbereiten")|Bereitet die Abfrage vor.|  
-|![Führen Sie die Abfrage](../../reporting-services/report-data/media/rsqdicon-run.gif "führen Sie die Abfrage")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
+|![Führen Sie die Abfrage aus](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
 |![Abbrechen der Abfrage](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Abbrechen der Abfrage")|Abbrechen der Abfrage.|  
 |![Wechseln Sie in den Entwurfsmodus](../../reporting-services/media/rsqdicon-designmode.gif "in den Entwurfsmodus wechseln")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
   
@@ -123,10 +123,10 @@ ms.lasthandoff: 06/22/2017
 -   **Zeigt Aggregationen** (![anzeigen, Aggregationen Schaltfläche](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "anzeigen, Aggregationen Schaltfläche"))  
   
 ## <a name="see-also"></a>Siehe auch  
- [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Analysis Services-Verbindungstyp für DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Analysis Services-Verbindungstyp für MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

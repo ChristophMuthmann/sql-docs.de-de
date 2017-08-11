@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
@@ -83,14 +83,14 @@ rskeymgmt {-?}
  **-r**  *installationID*  
  Entfernt die Informationen zu einem symmetrischen Schlüssel für eine bestimmte Berichtsserverinstanz, wodurch der Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt wird. *installationID* ist ein GUID-Wert, der in der Datei RSReportserver.config gefunden werden kann.  
   
- **-f**  *file*  
+ **-f**  *Datei*  
  Gibt einen vollqualifizierten Pfad zu der Datei an, in der eine Sicherungskopie der symmetrischen Schlüssel gespeichert ist.  
   
  Für **rskeymgmt -e**wird der symmetrische Schüssel in die von Ihnen angegebene Datei geschrieben.  
   
  Für **rskeymgmt -a**wird der in der Datei gespeicherte Wert des symmetrischen Schlüssels auf die Berichtsserverinstanz angewendet.  
   
- **-p**  *password*  
+ **-p**  *Kennwort*  
  (Erforderlich für **-f**) Gibt das Kennwort an, das zum Sichern oder Anwenden eines symmetrischen Schlüssels verwendet wird. Dieser Wert muss angegeben sein.  
   
  **-i**  
@@ -100,15 +100,15 @@ rskeymgmt {-?}
  Gibt den Namen des Remotecomputers an, der die Berichtsserverinstanz hostet, die Sie der Berichtsserverbereitstellung für horizontales Skalieren hinzufügen. Verwenden Sie den Namen, durch den der Computer im Netzwerk identifiziert wird.  
   
  **-n**  
- Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für  **-n**  ist MSSQLSERVER). Wenn Sie den Berichtsserver als eine benannte Instanz installiert  **-n**  ist erforderlich.  
+ Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz installiert haben (der Standardwert für **-n** ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert haben, ist **-n** erforderlich.  
   
- **-u**  *useraccount*  
+ **-u**  *Benutzerkonto*  
  Gibt das Administratorkonto auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen. Wird kein Konto angegeben, werden die Anmeldeinformationen des aktuellen Benutzers verwendet.  
   
- **-v**  *password*  
+ **-v**  *Kennwort*  
  (Erforderlich für **-u**) Gibt das Kennwort eines Administratorkontos auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen möchten.  
   
- **-t**  *trace*  
+ **-t**  *Ablaufverfolgung*  
  Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Dateispeicherort  
- RSKEYMGMT.exe befindet sich unter  **\<* Laufwerk*>: \Programme\Microsoft SQL Server\110\Tools\Binn ** oder * * \<* Laufwerk*>: \Programme Dateien (x86) \Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
+ RSKEYMGMT.exe befindet sich unter  **\<* Laufwerk*>: \Programme\Microsoft SQL Server\110\Tools\Binn ** oder  **\<* Laufwerk*>: \Programme Dateien (x86) \Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Berichtsserver verschlüsselt gespeicherte Anmeldeinformationen und Verbindungsinformationen. Zum Verschlüsseln von Daten werden ein öffentlicher Schlüssel und ein symmetrischer Schlüssel verwendet. Eine Berichtsserver-Datenbank muss über gültige Schlüssel verfügen, damit der Berichtsserver ausgeführt werden kann. Mithilfe von **rskeymgmt** können Sie die Schlüssel sichern, löschen oder wiederherstellen. Wenn die Schlüssel nicht wiederhergestellt werden können, bietet dieses Tool eine Möglichkeit zum Löschen verschlüsselter Inhalte, die nicht mehr verwendet werden können.  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereitstellung für horizontales Skalieren – Reporting Services im einheitlichen Modus &#40;Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   Der Berichtsverlauf enthält eine Auflistung der zuvor ausgeführten Kopien eines Berichts. Mithilfe des Berichtsverlaufs können Sie eine Aufzeichnung eines Berichts für einen bestimmten Zeitraum verwalten. Der Berichtsverlauf ist nicht für Berichte mit vertraulichen oder persönlichen Daten gedacht. Aus diesem Grund kann der Berichtsverlauf nur jene Berichte enthalten, von denen die Abfrage einer Datenquelle mithilfe eines einzigen Satzes von Anmeldeinformationen durchgeführt wird, die für alle einen Bericht ausführenden Benutzer verfügbar sind. (Die Anmeldeinformationen müssen entweder gespeicherte Anmeldeinformationen oder Anmeldeinformationen für die unbeaufsichtigte Berichtsausführung sein.)  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Integration in SharePoint werden die Funktionen zum Auschecken und Einchecken in der Inhaltsverwaltung von SharePoint verwendet, um Updates zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Inhaltstypen zu speichern. Dies umfasst auch die Erstellung von Berichtsmomentaufnahmen. Wenn Sie die Versionsverwaltung für eine Dokumentbibliothek aktiviert haben, wird die Berichtsversion aktualisiert, wenn eine neue Berichtsverlaufs-Momentaufnahme erstellt wird. Dies ist eine zusätzliche Auswirkung der Aktualisierung von Momentaufnahmen. Bei der Aktualisierung einer Momentaufnahme wird die LastExecution-Eigenschaft des Berichts geändert, und dadurch erfolgt gleichzeitig eine Änderung in der Version des Berichts.  
+    >  Bei der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Integration in SharePoint werden die Funktionen zum Auschecken und Einchecken in der Inhaltsverwaltung von SharePoint verwendet, um Updates zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Inhaltstypen zu speichern. Dies umfasst auch die Erstellung von Berichtsmomentaufnahmen. Wenn Sie die Versionsverwaltung für eine Dokumentbibliothek aktiviert haben, wird die Berichtsversion aktualisiert, wenn eine neue Berichtsverlaufs-Momentaufnahme erstellt wird. Dies ist eine zusätzliche Auswirkung der Aktualisierung von Momentaufnahmen. Bei der Aktualisierung einer Momentaufnahme wird die LastExecution-Eigenschaft des Berichts geändert, und dadurch erfolgt gleichzeitig eine Änderung in der Version des Berichts.  
   
 -   Mithilfe von Timeoutwerten können Sie Grenzwerte für die Verwendung der Systemressourcen festlegen.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus|  
   
  **In diesem Thema:**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Zwischenspeichern von Berichten &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Festlegen von Timeoutwerten für Bericht und freigegebenen Datasets Verarbeitung &#40; SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

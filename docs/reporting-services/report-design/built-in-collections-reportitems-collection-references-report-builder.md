@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Integrierte Auflistungen - Verweise auf ReportItems-Auflistungen (Berichts-Generator)
@@ -33,11 +33,11 @@ ms.lasthandoff: 06/22/2017
   
  Beispiel:  
   
--   Dieser Ausdruck wird in einem Textfeld platziert und zeigt den Wert eines **ReportItem**-Textfelds mit dem Namen `Textbox1` an:  
+-   Dieser Ausdruck wird in einem Textfeld platziert und zeigt den Wert eines **ReportItem** -Textfelds mit dem Namen `Textbox1`an:  
   
      `=ReportItems!Textbox1.Value`  
   
--   Dieser Ausdruck wird in der Color-Eigenschaft eines **ReportItem**-Textfelds platziert und zeigt den Text in Schwarz an, wenn der Wert > 0 ist. Andernfalls wird der Wert in Rot angezeigt:  
+-   In diesem Ausdruck platziert eine **ReportItem** Textfeld Color-Eigenschaft wird den Text in Schwarz angezeigt, wenn der Wert > 0 ist; andernfalls wird der Wert in Rot angezeigt:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
  Ein Textfeld in einer Zeile, die sich in einer übergeordneten Gruppe befindet, darf beispielsweise keinen Ausdruck enthalten, der auf den Namen eines Textfelds in einer Zeile einer untergeordneten Gruppe verweist. Ein solcher Ausdruck wird nicht in einen Wert des Berichts aufgelöst, da sich das Textfeld in der untergeordneten Zeile außerhalb des Bereichs befindet. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Integrierte Auflistungen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Paginierung in Reporting Services &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

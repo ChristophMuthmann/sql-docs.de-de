@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
@@ -156,9 +156,9 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
  Um dynamische räumliche Daten zu verwenden, muss sich die räumliche Datenquelle auf dem Berichtsserver befinden. Wenn Berichte in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entworfen werden, können einem Projekt räumliche Datenquellen hinzugefügt werden und zusammen mit der Berichtsdefinition auf dem Berichtsserver veröffentlicht werden. Wenn Sie Berichte mithilfe des Berichts-Generators entwerfen, müssen Sie zuerst die räumlichen Daten auf den Berichtsserver hochladen, und dann im Assistenten oder in den Ebeneneigenschaften diese Quelle räumlicher Daten für die Kartenebene angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Anpassen der Daten und der Anzeige einer Karte oder Kartenebene &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Lernprogramm: Zuordnen von Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Problembehandlung bei Berichten: Zuordnen von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

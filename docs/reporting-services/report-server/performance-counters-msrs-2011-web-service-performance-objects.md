@@ -22,11 +22,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für den MSRS 2011 Web Service, Leistungsobjekte für ""
@@ -131,7 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2011-Webdienst im SharePoint-Modus und den MSRS 2011-Windows-Dienst im SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
- [Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Leistungsindikatoren für den MSRS 2011 Web Service SharePoint Mode und den MSRS 2011 Windows Service SharePoint-Modus, Leistungsobjekte &#40; SharePoint-Modus &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects (Leistungsindikatoren für die Leistungsobjekte ReportServer:Service und ReportServerSharePoint:Service)](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

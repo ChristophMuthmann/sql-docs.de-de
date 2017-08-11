@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|Datum und Uhrzeit mit Zeitzonenoffset|  
     |**DateTime2**|**DateTime**|Datum und Uhrzeit mit Bruchteilen von Millisekunden|  
   
- Weitere Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?linkid=98362) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Weitere Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanktypen finden Sie unter [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?linkid=98362) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
   
  Weitere Informationen zum Einschließen von Verweisen auf ein Datasetfeld aus einem Ausdruck finden Sie unter [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Berichtsteile und Datasets im Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

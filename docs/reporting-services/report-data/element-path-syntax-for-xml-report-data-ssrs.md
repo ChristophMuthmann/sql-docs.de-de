@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |&#124; (Senkrechter Strich)|Trennt Syntaxelemente voneinander. Sie können nur eines der Elemente auswählen.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht mit ein.|  
 |**{ }** (geschweifte Klammern)|Begrenzt Parameter für Syntaxelemente.|  
-|[**,**...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[**,**...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -99,7 +99,7 @@ XMLLocalName :: =
   
  **Beispiel 1**: *Leer*  
   
-|Order|Qty|im Elementknoten &lt;Customer ID="1"|FirstName|LastName|Customer.ID|xmlns|  
+|Order|Qty|im Elementknoten <Customer ID="1"|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
 |Tabelle|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
@@ -108,7 +108,7 @@ XMLLocalName :: =
   
  **Beispiel 2**: `Customers {}/Customer`  
   
-|FirstName|LastName|im Elementknoten &lt;Customer ID="1"|  
+|FirstName|LastName|im Elementknoten <Customer ID="1"|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -133,7 +133,7 @@ XMLLocalName :: =
   
  **Beispiel 5**: `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|FirstName|LastName|im Elementknoten &lt;Customer ID="1"|  
+|Order.ID|FirstName|LastName|im Elementknoten <Customer ID="1"|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [XML-Verbindungstyp &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services-Lernprogramme &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Hinzufügen, bearbeiten und Aktualisieren von Feldern im Fenster ' Berichtsdaten ' &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

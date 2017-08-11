@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Integrierte Auflistungen - integrierte globale Werte und Benutzerverweise (Berichts-Generator)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Verwenden der Globals-Auflistung  
- Die **Globals** -Auflistung enthält die globalen Variablen für den Bericht. Auf der Entwurfsoberfläche werden diese Variablen mit einem kaufmännischen Und-Zeichen (&) als Präfix angezeigt, z.B. `[&ReportName]`. In der folgenden Tabelle sind die Elemente der **Globals** -Auflistung beschrieben.  
+ Die **Globals** -Auflistung enthält die globalen Variablen für den Bericht. Diese Variablen angezeigt mit Präfix, indem Sie auf der Entwurfsoberfläche ein & (kaufmännisches und-Zeichen), z. B. `[&ReportName]`. In der folgenden Tabelle sind die Elemente der **Globals** -Auflistung beschrieben.  
   
 |**Member**|**Typ**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Verwenden der User-Auflistung  
- Die **User** -Auflistung enthält Daten zu dem Benutzer, der den Bericht ausführt. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Auf der Entwurfsoberfläche werden diese Variablen mit einem kaufmännischen Und-Zeichen (&) als Präfix angezeigt, z.B. `[&UserID]`.  
+ Die **User** -Auflistung enthält Daten zu dem Benutzer, der den Bericht ausführt. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Diese Variablen angezeigt mit Präfix, indem Sie auf der Entwurfsoberfläche ein & (kaufmännisches und-Zeichen), z. B. `[&UserID]`.  
   
  In der folgenden Tabelle sind die Elemente der **User** -Auflistung beschrieben.  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Ausdruck &#40;Dialogfeld, Berichts-Generator&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Ausdruck (Dialogfeld) &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Datentypen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Formatieren von Zahlen und Datumsangaben &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
   
  Verwenden Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool zur Konfiguration der URLs: Alle Teile der URL werden in diesem Tool definiert. Im Gegensatz zu früheren Versionen bieten die Websites des Internetinformationsdienste-Managers (IIS) keinen Zugriff mehr auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte, die in den meisten Bereitstellungszenarien gut funktionieren, einschließlich parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen. Standard-URLs beinhalten Instanznamen, wodurch das Risiko von URL-Konflikten bei Ausführung mehrerer Berichtsserverinstanzen auf demselben Computer minimiert wird.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bietet Standardwerte, die auch in den meisten Bereitstellungsszenarien, einschließlich Seite-an-Seite-Bereitstellungen mit anderen Webdiensten und Anwendungen funktionieren. Standard-URLs beinhalten Instanznamen, wodurch das Risiko von URL-Konflikten bei Ausführung mehrerer Berichtsserverinstanzen auf demselben Computer minimiert wird.  
   
  Dieses Thema enthält Anweisungen für die folgenden Aufgaben:  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Legen Sie erweiterte URL-Eigenschaften fest, um zusätzliche URLs zu definieren.  
   
- Weitere Informationen zum Speichern und Verwalten von URLs sowie zu Interoperabilitätsproblemen finden Sie unter [Informationen zu URL-Reservierungen und Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
+ Weitere Informationen wie URLs gespeichert und verwaltet werden oder im Zusammenhang mit Interoperabilität finden Sie unter [URL-Reservierungen und-Registrierungen &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Installieren von Reporting Services und Internet Informationen Services-Seite-an-Seite &#40; SSRS im einheitlichen Modus &#41; ](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie eine URL erstellen oder ändern, beachten Sie folgende Punkte:  
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
 10. Testen Sie die URL, indem Sie auf den Link im Abschnitt **URLs** der Seite klicken. Beachten Sie, dass die Berichtsserver-Datenbank erstellt und konfiguriert werden muss, bevor Sie die URL testen können. Anweisungen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
->  Wenn Sie über vorhandene SSL-Bindungen und URL-Reservierungen verfügen und die SSL-Bindung ändern möchten, um z. B. ein anderes Zertifikat bzw. einen anderen Hostheader zu verwenden, wird empfohlen, die folgenden Schritte in der angegebenen Reihenfolge auszuführen:  
+>  Wenn Sie über vorhandene SSL-Bindungen und URL-Reservierungen verfügen und die SSL-Bindung ändern möchten, um z. B. ein anderes Zertifikat bzw. einen anderen Hostheader zu verwenden, wird empfohlen, die folgenden Schritte in der angegebenen Reihenfolge auszuführen:  
 >   
 >  1.  Entfernen Sie zuerst alle URL-Reservierungen.  
 > 2.  Entfernen Sie anschließend alle SSL Bindungen.  
@@ -199,6 +199,6 @@ ms.lasthandoff: 06/22/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Reporting Services-Konfigurations-Manager &#40; Im einheitlichen Modus &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Konfigurieren des Berichtsserver-URLs &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

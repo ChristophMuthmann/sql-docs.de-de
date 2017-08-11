@@ -19,11 +19,11 @@ caps.latest.revision: 24
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bezieht sich die Inhaltsverwaltung auf die Verwaltung von Berichten, Modellen, Ordnern, Ressourcen und freigegebenen Datenquellen. Diese Elemente können jeweils unabhängig voneinander über Eigenschaften und Sicherheitseinstellungen verwaltet werden. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden.  
   
 > [!NOTE]  
->  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zur Verwaltung der Umgebung, in denen ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40; Reporting Services-SharePoint-Modus &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Die Inhaltsverwaltung umfasst die folgenden Aufgaben:  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Ausgleichen der Anforderungen hinsichtlich der Verarbeitung von Berichten auf dem Server und Angeben der Berichte, die bei Bedarf ausgeführt werden bzw. die aus dem Cache geladen werden.  
   
- Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bzw. den Berichts-Manager ein. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 |Vorgang|Dateityp|  
 |---------------|---------------|  
-|Upload|Alle Dateien werden als Ressourcen hochgeladen, außer Berichtsdefinitions (.rdl)- und Berichtsmodell (.smdl)-Dateien.<br /><br /> Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|Alle Dateien werden als Ressourcen hochgeladen, außer Berichtsdefinitions (.rdl)- und Berichtsmodell (.smdl)-Dateien.<br /><br /> Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Veröffentlichen|Alle Dateien in einem Projekt werden als Ressourcen hochgeladen, außer RDL-, SMDL- und RDS-Datenquellendateien. Fügen Sie zum Veröffentlichen einer Ressource einem Projekt im Berichts-Designer ein vorhandenes Objekt hinzu, und veröffentlichen Sie das Projekt dann auf einem Berichtsserver.|  
   
  Alle Ressourcen stehen als Dateien, die anschließend auf einen Berichtsserver hochgeladen werden, in einem Dateisystem bereit. Außer der standardmäßigen Größenbeschränkung von 4 MB in ASP.NET gibt es keine Einschränkungen bezüglich der hochzuladenden Dateien. Zum Veröffentlichen als Ressource auf einem Berichtsserver sind jedoch einige Dateitypen, die über entsprechende MIME-Typen verfügen, besser geeignet als andere. Ressourcen, die auf HTML- und JPG-Dateien basieren, werden z.B. in einem Browserfenster geöffnet, wenn der Benutzer auf die Ressource klickt. Die HTML-Datei wird als Webseite und die JPG-Datei als Bild gerendert. Andererseits können Ressourcen ohne entsprechende MIME-Typen, die auf Desktopanwendungsdateien basieren, beispielsweise im Browserfenster möglicherweise nicht gerendert werden.  

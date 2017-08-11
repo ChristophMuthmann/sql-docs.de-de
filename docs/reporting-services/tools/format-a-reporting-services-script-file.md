@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatieren einer Reporting Services-Skriptdatei
@@ -36,7 +36,7 @@ Public Sub Main()
 End Sub  
 ```  
   
- Von der Skriptumgebung wird automatisch eine Verbindung mit dem Berichtsserver hergestellt, die Webproxyklasse erstellt und eine Verweisvariable (*rs*) für das Webdienstproxyobjekt generiert. In den einzelnen von Ihnen erstellten Anweisungen muss nur auf die *rs* -Modulebenenvariable verwiesen werden, um beliebige der in der Webdienstbibliothek verfügbaren Webdienstvorgänge auszuführen. Mit dem folgenden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Code wird die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListChildren%2A> innerhalb einer Skriptdatei aufgerufen:  
+ Von der Skriptumgebung wird automatisch eine Verbindung mit dem Berichtsserver hergestellt, die Webproxyklasse erstellt und eine Verweisvariable (*rs*) für das Webdienstproxyobjekt generiert. In den einzelnen von Ihnen erstellten Anweisungen muss nur auf die *rs* -Modulebenenvariable verwiesen werden, um beliebige der in der Webdienstbibliothek verfügbaren Webdienstvorgänge auszuführen. Mit dem folgenden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Code wird die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListChildren%2A> innerhalb einer Skriptdatei aufgerufen:  
   
 ```  
 Public Sub Main()  
@@ -59,7 +59,7 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Hilfsprogramm RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [RS.exe-Hilfsprogramm &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

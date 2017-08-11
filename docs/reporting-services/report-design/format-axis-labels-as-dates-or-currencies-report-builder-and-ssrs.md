@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b8f82c7824a44d46a282eca8d617fb12ac9ade5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)
@@ -28,7 +28,7 @@ Wenn Sie ordnungsgemäß formatierte DateTime-Werte auf einer Achse in einem pag
 > [!NOTE]  
 >  In Säulen- und Punktdiagrammen ist die horizontale Achse bzw. x-Achse die Kategorieachse. In Balkendiagrammen ist die vertikale Achse bzw. y-Achse die Kategorieachse.  
   
- Für die korrekte Formatierung von Zeitintervallen müssen die auf der x-Achse angezeigten Werte einen <xref:System.DateTime>-Datentyp ergeben. Wenn das Feld den Datentyp wurde <xref:System.String>, berechnet das Diagramm keine Intervalle als Datumsangaben oder Uhrzeiten. Weitere Informationen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Für die korrekte Formatierung von Zeitintervallen müssen die auf der x-Achse angezeigten Werte einen <xref:System.DateTime> -Datentyp ergeben. Wenn das Feld den Datentyp <xref:System.String>aufweist, berechnet das Diagramm Intervalle nicht als Datumsangaben oder Zeiten. Weitere Informationen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Wenn der y-Achse ein numerischer Wert hinzugefügt wird, wird die Zahl im Diagramm erst formatiert, wenn sie angezeigt wird. Wenn das numerische Feld eine Verkaufszahl enthält, sollten Sie die Zahlen als Währungseinheiten formatieren, um so die Lesbarkeit des Diagramms zu verbessern.  
   
@@ -63,9 +63,9 @@ Wenn Sie ordnungsgemäß formatierte DateTime-Werte auf einer Achse in einem pag
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Angeben einer logarithmischen Skalierung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Formatieren von Achsenbezeichnungen in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Angeben einer logarithmischen Skala &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Angeben eines Achsenintervalls &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

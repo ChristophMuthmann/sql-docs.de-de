@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>SMTP-Verbindungs-Manager
@@ -50,6 +52,33 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [SMTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
   
- Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
+## <a name="smtp-connection-manager-editor"></a>SMTP-Verbindungs-Manager-Editor
+  Mithilfe des Dialogfelds **SMTP-Verbindungs-Manager-Editor** können Sie einen SMTP-Server (Simple Mail Transfer Protocol) angeben.  
   
+ Weitere Informationen zum SMTP-Verbindungs-Manager finden Sie unter [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
+  
+ **Description**  
+ Beschreiben Sie den Verbindungs-Manager. Die bewährte Methode ist hierbei, den Verbindungs-Manager zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
+  
+ **SMTP-Server**  
+ Geben Sie den Namen des SMTP-Servers an.  
+  
+ **Windows-Authentifizierung verwenden**  
+ Wählen Sie diese Option aus, um E-Mail über einen SMTP-Server zu senden, der zum Authentifizieren des Zugriffs auf den Server die Windows-Authentifizierung verwendet.  
+  
+> [!IMPORTANT]  
+>  Der SMTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Windows-Authentifizierung. Er unterstützt keine Standardauthentifizierung.  
+  
+> [!NOTE]  
+>  Wenn Microsoft Exchange als SMTP-Server verwendet wird, müssen Sie u. U. **Windows-Authentifizierung verwenden** auf **True**festlegen. Exchange-Server können so konfiguriert sein, dass keine nicht authentifizierten SMTP-Verbindungen zugelassen sind.  
+  
+ **Secure Sockets Layer (SSL) aktivieren**  
+ Wählen Sie diese Option aus, um beim Senden von E-Mail-Nachrichten die Kommunikation mit SSL (Secure Sockets Layer) zu verschlüsseln.  
+  
+

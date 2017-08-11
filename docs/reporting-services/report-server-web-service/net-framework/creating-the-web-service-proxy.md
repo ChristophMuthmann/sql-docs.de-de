@@ -23,11 +23,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 067a0d370f8c857423af24b1cd52e6bc93d50a40
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys

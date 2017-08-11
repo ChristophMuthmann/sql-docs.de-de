@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
-  Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
+  Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
   
- Es wird nicht notwendigerweise die gesamte Funktionalität von Drittanbieter-Datenanbietern unterstützt, die mit den Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verfügbar ist. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Informationen zum Erweitern der Funktionalität eines .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Datenanbieter, siehe [Implementieren von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Es wird nicht notwendigerweise die gesamte Funktionalität von Drittanbieter-Datenanbietern unterstützt, die mit den Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verfügbar ist. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Informationen dazu, wie Sie die Funktionalität eines .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieters Datenanbieter, siehe [Implementieren von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Zum Installieren und Registrieren von Datenanbietern benötigen Sie Anmeldeinformationen als Administrator.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     |Attribut|Description|  
     |---------------|-----------------|  
     |**Name**|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
-    |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste, die den vollqualifizierten Namespace der Klasse enthält, implementiert die <xref:System.Data.IDbConnection> -Schnittstelle, gefolgt vom Namen des der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -datenanbieterassembly (nicht einschließlich der Erweiterung ".dll-Datei namens").|  
+    |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
   
      Für eine im BIN-Verzeichnis des Berichtsservers bereitgestellte DLL-Datei kann der Eintrag beispielsweise dem Folgenden ähneln:  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/22/2017
     |Attribut|Description|  
     |---------------|-----------------|  
     |**Name**|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
-    |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste, die den vollqualifizierten Namespace der Klasse enthält, implementiert die <xref:System.Data.IDbConnection> -Schnittstelle, gefolgt vom Namen des der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -datenanbieterassembly (nicht einschließlich der Erweiterung ".dll-Datei namens").|  
+    |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
   
      Für eine im Verzeichnis PrivateAssemblies von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bereitgestellte DLL-Datei kann der Eintrag beispielsweise dem Folgenden ähneln:  
   
@@ -206,8 +206,8 @@ ms.lasthandoff: 06/22/2017
  Die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installierten Datenverarbeitungserweiterungen müssen für jede Plattform systemintern kompiliert und in den richtigen Verzeichnissen installiert werden. Wenn Sie einen benutzerdefinierten Datenanbieter oder einen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbieter registrieren, muss dieser systemintern für die betreffende Plattform kompiliert und im entsprechenden Verzeichnis installiert werden. Wenn Sie diesen auf einer 32-Bit-Plattform ausführen, muss der Datenanbieter für eine 32-Bit-Plattform kompiliert werden. Wenn Sie ihn auf einer 64-Bit-Plattform ausführen, muss der Datenanbieter für die 64-Bit-Plattform kompiliert werden. Sie können keinen 32-Bit-Datenanbieter verwenden, der in 64-Bit-Schnittstellen für eine 64-Bit-Plattform eingeschlossen ist. Überprüfen Sie Ihre Drittanbietersoftware auf Informationen dazu, ob der Datenanbieter für die installierte Plattform verwendet werden kann. Weitere Informationen zu Datenanbietern und zur Plattformunterstützung finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implementieren von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Konfigurieren Sie und verwalten Sie eines Berichtsservers &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Codezugriffssicherheit in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   

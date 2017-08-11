@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Klicken Sie im Feld **Diesen Bericht als Unterbericht verwenden** auf **Durchsuchen**, oder geben Sie den Namen des Berichts ein. Es wird empfohlen, auf **Durchsuchen** zu klicken, da der Pfad zum Unterbericht automatisch angegeben wird. Zum Angeben des Berichts stehen Ihnen mehrere Möglichkeiten zur Verfügung. Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
-6.  (Optional) Klicken Sie für **Rahmen an Seitenumbruch auslassen** auf **Ja**, damit in der Mitte des Unterberichts kein Rahmen gerendert wird, wenn der Unterbericht mehrere Seiten umfasst.  
+6.  (Optional) Klicken Sie für **Rahmen an Seitenumbruch auslassen** auf **Ja** , damit in der Mitte des Unterberichts kein Rahmen gerendert wird, wenn der Unterbericht mehrere Seiten umfasst.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Renderingverhalten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

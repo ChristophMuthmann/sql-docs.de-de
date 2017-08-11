@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS)
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
      Das Textfeld **Ausdruck festlegen für: Wert** enthält den Ausdruck =Globals!PageNumber.  
   
-2.  Setzen Sie den Cursor hinter das Gleichheitszeichen (=), und geben Sie **"Seite " &** ein.  
+2.  Platzieren Sie den Cursor nach dem Gleichheitszeichen (=) und geben **"Page" &**.  
   
      Der Ausdruck ist jetzt "="Seite "&Globals!PageNumber".  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatieren von Text in einem Textfeld &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

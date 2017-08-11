@@ -15,17 +15,17 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e6bf4a1dcb406f12eb212380fe09a546a982880
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)
 Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einen Tabellen-, Matrix- oder Listendatenbereich über die Registerkarte „Einfügen“ des Menübands hinzufügen, starten Sie mit einer Ausgangsvorlage für einen Tablix-Datenbereich. Diese Vorlage stellt jedoch keine Beschränkung für Sie dar. Sie können die Datenanzeige weiterentwickeln, indem Sie Tablix-Datenbereichsfunktionen wie Gruppen, Zeilen und Spalten hinzufügen oder entfernen.  
   
- Wenn Sie eine Zeilen- oder Spaltengruppe löschen, können Sie auch die Zeilen und Spalten löschen, die für die Anzeige von Gruppenwerten verwendet werden. Außerdem können Sie manuell Zeilen und Spalten hinzufügen oder entfernen. Weitere Informationen zum Anzeigen von Detail- und Gruppendaten in Zeilen und Spalten finden Sie unter [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
+ Wenn Sie eine Zeilen- oder Spaltengruppe löschen, können Sie auch die Zeilen und Spalten löschen, die für die Anzeige von Gruppenwerten verwendet werden. Außerdem können Sie manuell Zeilen und Spalten hinzufügen oder entfernen. Weitere Informationen zum Anzeigen von Detail- und Gruppendaten in Zeilen und Spalten finden Sie unter [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
   
  Nachdem Sie die Struktur des Tablix-Datenbereichs geändert haben, können Sie Eigenschaften festlegen, mit denen Sie steuern können, wie der Datenbereich im Bericht gerendert wird. Sie können z. B. Spaltenheader am Anfang jeder Seite wiederholen oder einen Gruppenkopf für die Gruppe beibehalten. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -50,10 +50,10 @@ Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
  Standardmäßig ist die Detailgruppe die innerste untergeordnete Gruppe in einer Gruppenhierarchie. Unter der Detailgruppe können keine Gruppen geschachtelt werden. Sie können weitere, angrenzende Detailgruppen erstellen, um beispielsweise die besten 5 Produkte und die schlechtesten 5 Produkte in Bezug auf den Umsatz anzuzeigen. Da Sie den einzelnen Gruppen Filter- und Sortierungsausdrücke hinzufügen können, können Sie in einem Tablix-Datenbereich zwei Ansichten von Detaildaten eines Datasets anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) und [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tablix-Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tabellen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrizen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a3eabde204f3629f903e66da5b4b0204a49ccd7
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="msmq-connection-manager"></a>MSMQ-Verbindungs-Manager
@@ -52,6 +54,34 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
+  
+## <a name="msmq-connection-manager-editor"></a>MSMQ-Verbindungs-Manager-Editor
+  Mithilfe des Dialogfelds **MSMQ-Verbindungs-Manager** geben Sie den Pfad zu einer Message Queuing-Meldungswarteschlange (auch bekannt als MSMQ) an.  
+  
+ Weitere Informationen zum MSMQ-Verbindungs-Manager finden Sie unter [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md).  
+  
+> [!NOTE]  
+>  Der MSMQ-Verbindungs-Manager unterstützt lokale öffentliche und private Warteschlangen sowie öffentliche Remotewarteschlangen. Er unterstützt keine privaten Remotewarteschlangen. Eine Problemumgehung mithilfe des Skripttasks finden Sie unter [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Verbindungs-Manager im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
+  
+ **Description**  
+ Beschreiben Sie den Verbindungs-Manager. Die bewährte Methode ist hierbei, den Verbindungs-Manager zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
+  
+ **Pfad**  
+ Geben Sie den vollständigen Pfad der Meldungswarteschlange ein. Das Format des Pfades ist vom Typ der Warteschlange abhängig.  
+  
+|Warteschlangentyp|Beispielpfad|  
+|----------------|-----------------|  
+|Öffentlich|\<Computername >\\< Name der Warteschlange\>|  
+|Privat|\<Computername > \Private$\\< Name der Warteschlange\>|  
+  
+ Sie können "." verwenden, um den lokalen Computer darzustellen.  
+  
+ **Test**  
+ Nachdem die Konfiguration des MSMQ-Verbindungs-Managers abgeschlossen ist, überprüfen Sie die Gültigkeit der Verbindung, indem Sie auf **Testen**klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenwarteschlange (Task)](../../integration-services/control-flow/message-queue-task.md)   

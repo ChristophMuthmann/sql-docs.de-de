@@ -24,11 +24,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppierungsausdrücke in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]erstellen. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [Hinzufügen eines Seitenumbruchs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [einen Seitenumbruch &#40; hinzufügen Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  Das Erstellen von Datenbereichsgruppen ist eine Möglichkeit, Daten in einem Bericht zu organisieren. Zum Organisieren von Daten stehen mehrere weitere Methoden zur Verfügung, die alle bestimmte Vorteile bieten. Weitere Informationen finden Sie unter [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -213,11 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Messgeräte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Indikatoren &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

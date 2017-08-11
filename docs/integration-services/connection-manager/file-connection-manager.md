@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9737d90041d9916bf4a1fae892391d2255cc55ab
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-connection-manager"></a>Dateiverbindungs-Manager
@@ -63,6 +65,33 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
- Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)aufgeführt.  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
+  
+## <a name="file-connection-manager-editor"></a>Dateiverbindungs-Manager-Editor
+  Im Dialogfeld **Dateiverbindungs-Manager-Editor** werden die Eigenschaften angegeben, die zum Herstellen einer Verbindung zu einer Datei oder einem Ordner verwendet werden.  
+  
+> [!NOTE]  
+>  Sie können die ConnectionString-Eigenschaft für den Dateiverbindungs-Manager festlegen, indem Sie einen Ausdruck im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angeben. Fügen Sie jedoch im **Dateiverbindungs-Manager-Editor**für **Datei/Ordner**einen Pfad für eine Datei oder einen Ordner hinzu, um Überprüfungsfehler zu vermeiden, wenn Sie die Datei oder den Ordner mit einem Ausdruck angeben.  
+  
+ Weitere Informationen zum Dateiverbindungs-Manager finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+  
+### <a name="options"></a>enthalten  
+ **Verwendungstyp**  
+ Geben Sie an, ob die Verbindung vom **Dateiverbindungs-Manager** zu einer vorhandenen Datei oder einem vorhandenen Ordner hergestellt werden soll, oder ob dafür eine neue Datei oder ein neuer Ordner erstellt werden soll.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|Datei erstellen|Erstellen Sie zur Laufzeit eine neue Datei.|  
+|Vorhandene Datei|Verwenden Sie eine vorhandene Datei.|  
+|Ordner erstellen|Erstellen Sie zur Laufzeit einen neuen Ordner.|  
+|Vorhandener Ordner|Verwenden Sie einen vorhandenen Ordner.|  
+  
+ **Datei/Ordner**  
+ Bei **Datei**geben Sie die zu verwendende Datei an.  
+  
+ Bei **Ordner**geben Sie den zu verwendenden Ordner an.  
+  
+ **Durchsuchen**  
+ Wählen Sie die Datei oder den Ordner mithilfe des Dialogfelds **Datei auswählen** oder des Dialogfelds **Ordner suchen** aus.  
   
   

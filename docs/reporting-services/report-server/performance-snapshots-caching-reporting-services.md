@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c752ea8a5f05a1dc861b0297b7a1c0eaca5cfc88
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)
@@ -68,6 +68,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Überprüfen einer Berichtsausführung](../../reporting-services/report-server/verifying-a-report-run.md)  
+ [Verifying a Report Run (Überprüfen der Berichtsausführung)](../../reporting-services/report-server/verifying-a-report-run.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Angeben eines Achsenintervalls (Berichts-Generator und SSRS)
@@ -48,7 +48,7 @@ In diesem Säulendiagramm ist das horizontale Bezeichnungsintervall auf „Auto�
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Legen Sie im Dialogfeld **Eigenschaften für horizontale Achsen** > Registerkarte **Achsenoptionen** für die Option **Intervall** den Wert **1** fest, um die Gruppenbezeichnung aller Kategorien anzuzeigen. Geben Sie **2** ein, um jede zweite Kategoriegruppenbezeichnung auf der X-Achse anzuzeigen. 
+2.  In der **Eigenschaften für horizontale Achsen** Dialogfeld > **Achsenoptionen** Registerkarte **Intervall** auf **1** um jede kategoriegruppenbezeichnung anzuzeigen. Geben Sie **2**ein, um jede zweite Kategoriegruppenbezeichnung auf der X-Achse anzuzeigen. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,17 @@ Standardmäßig wird das Achsenintervall von [!INCLUDE[ssRSnoversion](../../incl
   
 1.  Klicken Sie mit der rechten Maustaste auf die Diagrammachse, die Sie ändern möchten, und klicken Sie dann auf **Achseneigenschaften**. 
   
-2.  Legen Sie im Dialogfeld **Eigenschaften für horizontale Achsen** > Registerkarte **Achsenoptionen** für die Option **Intervall** den Wert **Auto** fest. Im Diagramm wird die optimale Anzahl von Kategoriebezeichnungen, die auf die Achse passen, im Berichts-Generator angezeigt.  
+2.  In der **Eigenschaften für horizontale Achsen** Dialogfeld > **Achsenoptionen** Registerkarte **Intervall** auf **Auto**. Im Diagramm wird die optimale Anzahl von Kategoriebezeichnungen, die auf die Achse passen, im Berichts-Generator angezeigt.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Achseneigenschaften &#40;Dialogfeld&#41;, Achsenoptionen &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Angeben einer logarithmischen Skalierung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Zeichnen von Daten auf einer sekundären Achse &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Achse-Eigenschaften (Dialogfeld), Achsenoptionen &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Angeben einer logarithmischen Skala &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Zeichnen von Daten auf einer sekundären Achse &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

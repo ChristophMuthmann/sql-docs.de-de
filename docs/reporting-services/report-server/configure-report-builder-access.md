@@ -19,11 +19,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
  Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:  
   
--   Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften die Eigenschaft **EnableReportDesignClientDownload** auf **false**fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften die Eigenschaft **EnableReportDesignClientDownload** auf **false**fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Ein Beispielskript, das eine Berichtsservereigenschaft festlegt, finden Sie unter [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Rollenzuweisungen, die auf einem Berichtsserver im einheitlichen Modus Zugriff auf den Berichts-Generator gewähren  
  Erstellen Sie auf einem Berichtsserver im einheitlichen Modus Benutzerrollenzuweisungen, die Tasks zum Verwenden des Berichts-Generators einschließen. Sie müssen Inhalts-Manager und Systemadministrator sein, um Rollendefinitionen und Rollenzuweisungen auf der Element- und Websiteebene erstellen oder ändern zu können.  
   
- Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von Rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem berechtigt:  
   
@@ -171,8 +171,8 @@ ms.lasthandoff: 06/22/2017
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Berichtsserver-Systemeigenschaften](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

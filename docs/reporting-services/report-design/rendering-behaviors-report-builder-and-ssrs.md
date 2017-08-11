@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Renderingverhalten (Berichts-Generator und SSRS)
@@ -133,8 +133,8 @@ ms.lasthandoff: 06/22/2017
 -   Logische Seitenumbrüche, die für Elemente in einer Tabellen- oder Matrixzelle definiert wurden, werden nicht beibehalten. Dies gilt nicht für Listenelemente.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Interaktive Funktionalität für verschiedene Bericht Rendern von Erweiterungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendern in das HTML- &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Seitenlayout und Rendering &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

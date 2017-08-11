@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2dda922c5ec2cd937960e20535096a186af56a6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="excel-device-information-settings"></a>Geräteinformationseinstellungen für Excel
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Siehe auch  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

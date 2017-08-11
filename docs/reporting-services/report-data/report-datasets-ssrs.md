@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-datasets-ssrs"></a>Berichtsdatasets (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können einem Bericht auch Datasets hinzufügen, indem Sie Berichtsteile mit den Datasets hinzufügen, von denen sie abhängig sind. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Eine Anleitung zum Erstellen eines Berichts, der Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank anzeigt, finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Informationen zum Erstellen eines Berichts, der seine eigenen Daten enthält, finden Sie unter [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Um zu erfahren, wie Sie einen Bericht erstellen, die Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Informationen zum Erstellen eines Berichts, der seine eigenen Daten enthält, finden Sie unter [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 06/22/2017
 -   Fügen Sie eingebettete Datasets hinzu, die auf eingebetteten Datenquellen basieren.  
   
 > [!NOTE]  
->  Auf einem Berichtsserver werden freigegebene Elemente einzeln oder durch Vererbung der Berechtigungen des Ordners, in dem sie veröffentlicht werden, gesichert. Damit andere Benutzer auf die von Ihnen gespeicherten freigegebenen Datasets zugreifen können, müssen Sie verstehen, wie Berechtigungen gewährt werden. Weitere Informationen finden Sie unter [Sicherheit &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/security-report-builder.md) oder [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
+>  Auf einem Berichtsserver werden freigegebene Elemente einzeln oder durch Vererbung der Berechtigungen des Ordners, in dem sie veröffentlicht werden, gesichert. Damit andere Benutzer auf die von Ihnen gespeicherten freigegebenen Datasets zugreifen können, müssen Sie verstehen, wie Berechtigungen gewährt werden. Weitere Informationen finden Sie unter [Sicherheit &#40; Berichts-Generator &#41; ](../../reporting-services/report-builder/security-report-builder.md) oder [Sichern freigegebener Datasetelemente](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Nachdem Sie einem Bericht Daten hinzugefügt haben, können Sie die Daten auf der Berichtsseite anhand von Datenbereichen organisieren, Berichtsteile ändern und diese Änderungen für andere freigeben sowie Benutzern das Einschränken oder Sortieren der im Bericht angezeigten Daten ermöglichen. Weitere Informationen finden Sie in folgenden verwandten Themen:  
   
 -   [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  Im Abfrage-Designer können Sie die Abfrage ausführen, um Beispieldaten anzuzeigen und die Abfragebefehlssyntax zu überprüfen. Spaltennamen im Resultset werden die Feldnamen, die im Berichtsdatenbereich angezeigt werden. Das Resultset muss ein einzelner Satz von Zeilen und Spalten sein, der die gleiche Anzahl von Werten für jede Datenzeile aufweist. Mehrere Resultsets aus einer einzelnen Abfrage werden nicht unterstützt. Unregelmäßige Hierarchien, die keine konstante Anzahl von Spalten enthalten und für jede Zeile eine andere Anzahl von Datenwerten erzeugen können, werden nicht unterstützt.  
   
- Sie benötigen Entwurfszeitanmeldeinformationen, um eine Abfrage auszuführen. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Sie benötigen Entwurfszeitanmeldeinformationen, um eine Abfrage auszuführen. Weitere Informationen finden Sie unter [Geben Sie Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Die Kommunikation zwischen einer Datenerweiterung und der externen Datenquelle wird von Datenanbietern behandelt. Die Unterstützung der Abfragebefehlssyntax, Abfrageparameter und Datentypen für Werte im Resultset wird von den einzelnen Datenanbietern bestimmt. Weitere Informationen finden Sie im Thema zum jeweiligen Datenerweiterungstyp und unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichtsserver-Authoring Konzepte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

@@ -23,11 +23,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Das folgende Symbol bezeichnet eine freigegebene Datenquelle in der Ordnerhierarchie des Berichts-Managers:  
   
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+ ![Symbol freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 Symbol für freigegebene Datenquelle  
   
  Freigegebene Datenquellen sind für Berichte und datengesteuerte Abonnements optional, für Berichtsmodelle jedoch erforderlich. Wenn Sie Berichtsmodelle für die Ad-hoc-Berichterstellung verwenden möchten, müssen Sie ein freigegebenes Datenquellenelement erstellen und verwalten, um Verbindungsinformationen für das Modell bereitzustellen.  
@@ -46,7 +46,7 @@ Symbol für freigegebene Datenquelle
 |----------|-----------------|  
 |Name|Ein Name, der das Element innerhalb der Ordnerhierarchie des Berichtsservers identifiziert.|  
 |Description|Eine Beschreibung, die mit dem Element im Berichts-Manager angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
-|Verbindungstyp|Die für die Datenquelle verwendete Datenverarbeitungserweiterung. Sie können nur Datenverarbeitungserweiterungen verwenden, die auf dem Berichtsserver bereitgestellt werden. Weitere Informationen zu in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen Datenverarbeitungserweiterungen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Verbindungstyp|Die für die Datenquelle verwendete Datenverarbeitungserweiterung. Sie können nur Datenverarbeitungserweiterungen verwenden, die auf dem Berichtsserver bereitgestellt werden. Weitere Informationen zum Bereitstellen von datenverarbeitungserweiterungen enthaltene [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [von Reporting Services &#40; unterstützte Datenquellen SSRS &#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Verbindungszeichenfolge|Die Verbindungszeichenfolge für die Datenbank. Weitere Informationen und Beispiele von Verbindungszeichenfolgen für häufig verwendete Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Anmeldeinformationstyp|Gibt an, wie Anmeldeinformationen für die Verbindung abgerufen werden und ob sie nach dem Herstellen der Verbindung verwendet werden sollen. Weitere Informationen finden Sie unter [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
@@ -114,7 +114,7 @@ Symbol für freigegebene Datenquelle
   
          Weitere Informationen zum Konfigurieren von Anmeldeinformationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Weitere Informationen zum Konto für die unbeaufsichtigte Ausführung finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-9. Klicken Sie auf die Schaltfläche **Verbindung testen**, um die Datenquellenkonfiguration zu überprüfen.  
+9. Klicken Sie auf die Schaltfläche **Verbindung testen** , um die Datenquellenkonfiguration zu überprüfen.  
   
     > [!NOTE]  
     >  Die Schaltfläche zum Testen der Verbindung wird für den XML-Datenquellentyp nicht unterstützt.  
@@ -185,9 +185,9 @@ Symbol für freigegebene Datenquelle
   
 3.  Geben Sie unter **Name**einen beschreibenden Namen für die RSDS-Datei ein.  
   
-4.  Wählen Sie unter **Datenquellentyp** den Datenquellentyp aus der Liste aus. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+4.  Wählen Sie unter **Datenquellentyp**den Datenquellentyp aus der Liste aus. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-5.  Geben Sie unter **Connection String** einen Zeiger auf die Datenquelle und alle anderen Einstellungen an, die zum Herstellen einer Verbindung mit der externen Datenquelle erforderlich sind. Die Syntax der Verbindungszeichenfolge wird durch den von Ihnen verwendeten Datenquellentyp bestimmt. Weitere Informationen und Beispiele finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+5.  Geben Sie unter **Connection String**einen Zeiger auf die Datenquelle und alle anderen Einstellungen an, die zum Herstellen einer Verbindung mit der externen Datenquelle erforderlich sind. Die Syntax der Verbindungszeichenfolge wird durch den von Ihnen verwendeten Datenquellentyp bestimmt. Weitere Informationen und Beispiele finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 6.  Geben Sie in **Anmeldeinformationen**an, wie der Berichtsserver Anmeldeinformationen für den Zugriff auf die externe Datenquelle erhält. Anmeldeinformationen können für die unbeaufsichtigte Berichtsverarbeitung gespeichert, angefordert, integriert oder konfiguriert werden.  
   
@@ -195,7 +195,7 @@ Symbol für freigegebene Datenquelle
   
     -   Wählen Sie **Zur Eingabe der Anmeldeinformationen auffordern** aus, wenn der Benutzer die Anmeldeinformationen bei jeder Ausführung des Berichts eingeben soll. Wählen Sie diese Option nicht aus, wenn Sie eine Abonnement- oder Datenverarbeitung für diesen Bericht planen möchten.  
   
-    -   Wählen Sie **Gespeicherte Anmeldeinformationen** aus, wenn der Zugriff auf die Daten mit einem einzigen Satz Anmeldeinformationen erfolgen soll. Die Anmeldeinformationen werden vor der Speicherung verschlüsselt. Sie können Optionen auswählen, die bestimmen, wie die gespeicherten Anmeldeinformationen authentifiziert werden. Wählen Sie Windows-Anmeldeinformationen verwenden aus, wenn die gespeicherten Anmeldeinformationen zu einem Windows-Benutzerkonto gehören. Wählen Sie **Ausführungskontext für dieses Konto festlegen** aus, wenn Sie den Ausführungskontext auf dem Datenbankserver festlegen möchten. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken kann mit dieser Option die SETUSER-Funktion festgelegt werden. Weitere Informationen finden Sie unter [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Wählen Sie **Gespeicherte Anmeldeinformationen** aus, wenn der Zugriff auf die Daten mit einem einzigen Satz Anmeldeinformationen erfolgen soll. Die Anmeldeinformationen werden vor der Speicherung verschlüsselt. Sie können Optionen auswählen, die bestimmen, wie die gespeicherten Anmeldeinformationen authentifiziert werden. Wählen Sie Windows-Anmeldeinformationen verwenden aus, wenn die gespeicherten Anmeldeinformationen zu einem Windows-Benutzerkonto gehören. Wählen Sie **Ausführungskontext für dieses Konto festlegen** aus, wenn Sie den Ausführungskontext auf dem Datenbankserver festlegen möchten. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken kann mit dieser Option die SETUSER-Funktion festgelegt werden. Weitere Informationen finden Sie unter [SETUSER &#40; Transact-SQL &#41; ](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Wählen Sie **Anmeldeinformationen sind nicht erforderlich** aus, wenn Sie Anmeldeinformationen in der Verbindungszeichenfolge angeben möchten oder wenn Sie den Bericht mithilfe eines Kontos mit Minimalprivilegien ausführen möchten, das auf dem Berichtsserver konfiguriert ist. Ist das Konto nicht auf dem Berichtsserver konfiguriert, werden die Anmeldeinformationen von den Benutzern angefordert, und geplante Vorgänge, die Sie für den Bericht definieren, werden nicht ausgeführt.  
   
@@ -235,13 +235,13 @@ Symbol für freigegebene Datenquelle
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Datenquellen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Seite "Eigenschaften" der Daten-Quellen &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Erstellen Sie, löschen Sie oder ändern Sie einer freigegebenen Datenquelle &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40; Berichts-Manager &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
 

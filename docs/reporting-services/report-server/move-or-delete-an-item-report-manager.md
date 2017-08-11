@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Verschieben oder Löschen eines Elements (Berichts-Manager)
@@ -35,11 +35,11 @@ ms.lasthandoff: 06/22/2017
   
 |Symbol|Verschiebbares Element|  
 |----------|-------------------|  
-|![Symbol "Bericht"](../../reporting-services/report-server/media/hlp-16doc.gif "Symbol "Bericht"")|Bericht|  
-|![Symbol "Bericht" verknüpfte](../../reporting-services/report-server/media/hlp-16linked.gif "verknüpften Bericht (Symbol)")|Verknüpfter Bericht|  
-|![Symbol "Ordner"](../../reporting-services/report-server/media/hlp-16folder.gif "Symbol "Ordner"")|Ordner|  
-|![Allgemeines Ressourcensymbol](../../reporting-services/report-server/media/hlp-16file.gif "Allgemeines Ressourcensymbol")|Allgemeine Ressource|  
-|![Symbol für freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")|Freigegebene Datenquelle|  
+|![Berichtsymbol](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")|Bericht|  
+|![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")|Verknüpfter Bericht|  
+|![Ordnersymbol](../../reporting-services/report-server/media/hlp-16folder.gif "Folder icon")|Ordner|  
+|![Symbol allgemeine Ressource](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")|Allgemeine Ressource|  
+|![Symbol freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")|Freigegebene Datenquelle|  
 ||Freigegebenes Dataset|  
   
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhalt &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Seite "Inhalt" &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -28,15 +28,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8ba2dbc33b0d61b35fc7bee87b6171016af73279
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie Linien, Farben, Datenbereiche, Bilder und andere Berichtselemente formatieren.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bietet Ihnen die Möglichkeit, Linien, Farben, Datenbereiche, Bilder und andere Berichtselemente formatieren.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.lasthandoff: 06/22/2017
  Sie können dem Hintergrund des Berichts oder einem Rechteck, einem Textfeld, einer Tabelle, einer Matrix, einigen Teilen eines Diagramms oder den Text- und Seitenabschnitten eines Berichts auch Bilder hinzufügen, z. B. Logos. Weitere Informationen finden Sie unter [Images &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Ausfüllen (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [Formatieren von Text und Platzhalter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formatieren von Zahlen und Datumsangaben &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatieren von Text in einem Textfeld &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Ausfüllen (Dialogfeld) &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

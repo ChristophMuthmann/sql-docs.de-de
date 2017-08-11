@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Benannter Bereich** Der Name eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe innerhalb des Bereichs für den Ausdruck. Bei Aggregatberechnungen können Sie einen enthaltenden Bereich angeben. Sie können einen benannten Bereich nicht sowohl für eine Zeilengruppe als auch eine Spaltengruppe im selben Ausdruck angeben. Sie können nur dann einen enthaltenen Bereich angeben, wenn der Ausdruck für ein Aggregat eines Aggregats gilt.  
   
-     Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
+     Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die [erste Function &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), also in einer Aggregatfunktion gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -121,7 +121,7 @@ ms.lasthandoff: 06/22/2017
 |C14|Innere Zeilengruppe "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
 |C15|Innere Zeilengruppe "Subcat" und Spaltengruppe "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- Weitere Informationen zur Interpretation visueller Hinweise für Tablix-Datenbereiche finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zum Tablix-Datenbereich finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu Ausdrücken und Aggregaten finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Weitere Informationen zur Interpretation visueller Hinweise für Tablix-Datenbereiche finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu den Tablix-Datenbereich, finden Sie unter [Tablix-Datenbereichszelle, Zeilen und Spalten &#40; Berichts-Generator &#41; und SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu Ausdrücken und Aggregaten finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
 ##  <a name="Sparklines"></a> Synchronisieren von Skalen für Sparklines  
@@ -166,9 +166,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Beispiele für Gruppierungsausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Erstellen von rekursiven Hierarchiegruppen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Formatieren von Text und Platzhalter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

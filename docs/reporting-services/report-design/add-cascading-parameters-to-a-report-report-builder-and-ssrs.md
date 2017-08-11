@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
@@ -28,11 +28,11 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Zum Erstellen von kaskadierenden Parametern definieren Sie zunächst die Datasetabfrage und binden einen Abfrageparameter für jeden benötigten kaskadierenden Parameter ein. Außerdem müssen Sie ein separates Dataset für jeden kaskadierenden Parameter erstellen, um verfügbare Werte bereitzustellen. Weitere Informationen finden Sie unter [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ Zum Erstellen von kaskadierenden Parametern definieren Sie zunächst die Datasetabfrage und binden einen Abfrageparameter für jeden benötigten kaskadierenden Parameter ein. Außerdem müssen Sie ein separates Dataset für jeden kaskadierenden Parameter erstellen, um verfügbare Werte bereitzustellen. Weitere Informationen finden Sie unter [hinzufügen, ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  Die Reihenfolge ist für kaskadierende Parameter relevant, da die Datasetabfrage für einen Parameter weiter unten in der Liste einen Verweis auf jeden Parameter weiter oben in der Liste enthält. Zur Laufzeit bestimmt die Reihenfolge der Parameter im Berichtsdatenbereich die Reihenfolge, in der Parameterabfragen im Bericht aufgeführt werden, und damit die Reihenfolge, in der Benutzer die einzelnen aufeinander folgenden Parameterwerte auswählen.  
   
- Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &amp;lt;legacyBold&amp;gt;Alle auswählen&amp;lt;/legacyBold&amp;gt;](http://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>So erstellen Sie das Hauptdataset mit einer Abfrage, die mehrere abhängige Parameter enthält  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 6.  Klicken Sie auf **Ausführen** (**!**). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
   
     > [!NOTE]  
-    >  Die Reihenfolge von Abfrageparametern beim erstmaligen Ausführen einer Abfrage bestimmt die Reihenfolge, in der sie im Bericht erstellt werden. Informationen zum Ändern der Reihenfolge finden Sie unter [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+    >  Die Reihenfolge von Abfrageparametern beim erstmaligen Ausführen einer Abfrage bestimmt die Reihenfolge, in der sie im Bericht erstellt werden. Um die Reihenfolge zu ändern, finden Sie unter [Ändern der Reihenfolge von Berichtsparametern &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Lernprogramm: Hinzufügen eines Parameters zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Hinzufügen von Datasetfiltern, Datenbereichsfiltern, und Gruppenfilter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

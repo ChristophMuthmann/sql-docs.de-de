@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>Wert  
  Der Value-Ausdruck legt den abschließenden Teil der Filtergleichung fest. Der Berichtsprozessor konvertiert den ausgewerteten Ausdruck in den festgelegten Datentyp und wertet dann die gesamte Filtergleichung aus, um zu ermitteln, ob die unter Ausdruck angegebenen Daten den Filter passieren dürfen.  
   
- Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Z. B. für ein Feld `ListPrice` , die als gespeicherte Daten darstellt eine **Money** Datentyp in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle, die datenverarbeitungserweiterung gibt den Feldwert als eine <xref:System.Decimal> -Datentyp. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  
+ Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Beispiel: Das Feld `ListPrice` repräsentiert Daten, die mit einem **money** -Datentyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle gespeichert sind. Die Datenverarbeitungserweiterung gibt den Feldwert als <xref:System.Decimal> -Datentyp zurück. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  
   
  Dieser Wert kann auch einen Parameterverweis enthalten, mit dem Benutzer interaktiv einen Filterwert auswählen können.  
   
  Zurück zum Anfang  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Ausdrucksverwendungen in Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

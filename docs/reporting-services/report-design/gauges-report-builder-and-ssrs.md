@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  Lineare Messgeräte sind rechteckig, horizontal oder vertikal ausgerichtet und ähneln Linealen. Die Messgerätzeiger sind oft Thermometer, können jedoch auch Marker oder Balken sein. Aufgrund seiner Form ist dieser Messgerättyp hilfreich beim Integrieren in die Tabellen- oder Matrixdatenbereiche, um die Fortschrittsdaten anzuzeigen.  
   
- Abgesehen von diesen Unterschieden sind die zwei Messgerättypen austauschbar. Wenn Sie jedoch im Bericht ein einfaches Messgerät verwenden müssen, sollten Sie erwägen, einen Indikator anstelle eines Messgeräts zu verwenden. Weitere Informationen finden Sie unter [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Abgesehen von diesen Unterschieden sind die zwei Messgerättypen austauschbar. Wenn Sie jedoch im Bericht ein einfaches Messgerät verwenden müssen, sollten Sie erwägen, einen Indikator anstelle eines Messgeräts zu verwenden. Weitere Informationen finden Sie unter [Indikatoren &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  In den folgenden Abbildungen werden radiale und lineare Messgeräte angezeigt. Das radiale Messgerät ist rund und verwendet den Nadelzeiger. Das lineare Messgerät ist horizontal und verwendet den Thermometerzeiger.  
   
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

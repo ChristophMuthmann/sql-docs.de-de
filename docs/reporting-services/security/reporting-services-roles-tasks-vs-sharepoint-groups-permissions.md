@@ -23,11 +23,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen-Tasks im Vergleich zu SharePoint-Gruppen-Berechtigungen
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_compare_tools_terms"></a> Vergleich zwischen Berechtigungstools und zugehöriger Terminologie  
  **Einheitlicher Modus:** Die Berechtigungsobjekte von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus (Rollen und Tasks) werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt und im Berichts-Manager für einzelne Benutzer konfiguriert.  
   
- **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
+ **SharePoint-Modus:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden die SharePoint-Berechtigungsfunktionen genutzt. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
   
  In der folgenden Tabelle werden die Objekte und Konzepte von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus und SharePoint im Hinblick auf Berechtigungen verglichen.  
   

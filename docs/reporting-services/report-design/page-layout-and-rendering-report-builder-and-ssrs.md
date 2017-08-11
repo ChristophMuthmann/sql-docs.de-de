@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
@@ -56,7 +56,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Sie können Eigenschaften für Berichtselemente festlegen, um sie anfänglich auf der Seite auszublenden oder anzuzeigen. Sie können Sichtbarkeitseigenschaften für Zeilen, Spalten oder Gruppen für Datenbereiche erstellen und Umschaltflächen einrichten, über die die Benutzer interaktiv Berichtsdaten anzeigen und ausblenden können. Sie können Sichtbarkeit oder ursprüngliche Sichtbarkeit mit Ausdrücken festlegen, einschließlich Ausdrücke, die auf Berichtsparametern basieren.  
   
- Wenn ein Bericht verarbeitet wird, werden die Berichtsdaten mit den Berichtslayoutelementen kombiniert, und die kombinierten Daten werden an einen Berichtsrenderer gesendet. Der Renderer folgt vordefinierten Regeln für die Berichtselementerweiterung und bestimmt, wie viele Daten auf jede Seite passen. Um einen übersichtlichen Bericht zu entwerfen, der für den Renderer, den Sie verwenden möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] kennen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Wenn ein Bericht verarbeitet wird, werden die Berichtsdaten mit den Berichtslayoutelementen kombiniert, und die kombinierten Daten werden an einen Berichtsrenderer gesendet. Der Renderer folgt vordefinierten Regeln für die Berichtselementerweiterung und bestimmt, wie viele Daten auf jede Seite passen. Um einen übersichtlichen Bericht zu entwerfen, der für den Renderer, den Sie verwenden möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="RenderingExtensions"></a> Renderer  
  Reporting Services schließt einen Satz von Renderern ein, die auch als Renderingerweiterungen bezeichnet werden, mit denen Sie Berichte in andere Formate exportieren können. Es stehen drei Arten von Renderern zur Verfügung:  
@@ -92,7 +92,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Wenn Sie eine Erweiterung für ein **Rendering mit weichem Seitenumbruch** verwenden, z.B. die HTML-Renderingerweiterung, möchten Sie möglicherweise wissen, wie der ausgedruckte Bericht aussieht und wie er aussieht, wenn ein Renderer mit einem harten Seitenumbruch verwendet wird, wie z.B. PDF. Während der Erstellung oder des Updates eines Berichts können Sie ihn in der Vorschau anzeigen und im Berichts-Generator und Berichts-Designer exportieren.  
   
- Die **Renderer mit hartem Seitenumbruch** haben die größten Auswirkungen auf das Berichtslayout und die physische Seitengröße. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Die**Renderer mit hartem Seitenumbruch** haben die größten Auswirkungen auf das Berichtslayout und die physische Seitengröße. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt werden Prozeduren aufgelistet, die Ihnen Schritt für Schritt das Arbeiten mit der Paginierung in Berichten erklären.  

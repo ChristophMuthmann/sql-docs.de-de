@@ -22,11 +22,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Zugreifen auf den Reporting Services-WMI-Anbieter
@@ -90,7 +90,7 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-WMI-Anbieterbibliotheksreferenz &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [RsReportServer.config Configuration File (RSReportServer.config-Konfigurationsdatei)](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
 

@@ -18,17 +18,17 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine Dateifreigabe-Übermittlungserweiterung, mit deren Hilfe ein Bericht an einen Ordner übermittelt werden kann. Diese Erweiterung ist standardmäßig verfügbar und erfordert keine zusätzliche Konfiguration. Damit die Dateiübermittlung erfolgreich ist, müssen Sie Schreibberechtigungen für den freigegebenen Ordner erteilen. Das Konto, das Schreibberechtigungen erfordert, kann entweder mit Anmeldeinformationen im Abonnement oder mit einem **Dateifreigabekonto** für den Berichtsserver konfiguriert sein. Weitere Informationen zum Datenfreigabekonto finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Außerdem müssen Benutzer, die auf die Berichte zugreifen wollen, über Leseberechtigungen für den freigegebenen Ordner verfügen.  
   
- Um einen Bericht an eine Dateifreigabe zu verteilen, definieren Sie entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Erfahren Sie, wie Sie die Datenfreigabeübermittlung in einem datengesteuertes Abonnement verwenden, unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) aufrufen. Zusätzlich sind für das Konto, unter dem Remotedateifreigabe-Abonnements ausgeführt werden, Rechte für die lokale Anmeldung beim [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Computer erforderlich.  
+ Um einen Bericht an eine Dateifreigabe zu verteilen, definieren Sie entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Informationen zum Verwenden der dateifreigabeübermittlung in einem datengesteuerten Abonnement verwenden, finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40; SSRS-Lernprogramm &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Zusätzlich sind für das Konto, unter dem Remotedateifreigabe-Abonnements ausgeführt werden, Rechte für die lokale Anmeldung beim [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Computer erforderlich.  
   
 ||  
 |-|  
@@ -87,6 +87,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Abonnementeinstellungen und ein Dateifreigabekonto &#40; Konfigurations-Manager &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

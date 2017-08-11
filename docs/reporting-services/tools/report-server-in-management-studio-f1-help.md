@@ -17,11 +17,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Berichtsserver im Management Studio (F1-Hilfe)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Berichtsserveraufträge abbrechen](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
+-   [Berichtsserveraufträge Abbrechen](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
 -   [Katalogelemente löschen](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
   
@@ -49,13 +49,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [Servereigenschaften (Seite Ausführung)](../../reporting-services/tools/server-properties-execution-page.md)  
   
--   [Servereigenschaften (Seite Verlauf)](../../reporting-services/tools/server-properties-history-page.md)  
+-   [Servereigenschaften (Verlaufsseite)](../../reporting-services/tools/server-properties-history-page.md)  
   
--   [Servereigenschaften (Seite Protokollierung)](../../reporting-services/tools/server-properties-logging-page.md)  
+-   [Servereigenschaften (Protokollierungsseite)](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [Servereigenschaften (Seite Sicherheit)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [Servereigenschaften (Sicherheitsseite)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
--   [Servereigenschaften (Seite Erweitert)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
+-   [Servereigenschaften (Seite erweitert)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   
 -   [Systemrolleneigenschaften](../../reporting-services/tools/system-role-properties-management-studio.md)  
   

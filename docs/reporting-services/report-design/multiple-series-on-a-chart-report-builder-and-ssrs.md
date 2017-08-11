@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
  Bereichsdiagramme weisen zwei Werte pro Datenpunkt auf. Wenn das Diagramm zwei Reihen aufweist, die dieselbe Kategorieachse (X) verwenden, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen den beiden Reihen anzeigen. Bereichsdiagramme eignen sich optimal für die Anzeige von Hoch-Tief-Daten und Öffnungs-Schluss-Daten. Wenn die erste Reihe beispielsweise den Höchstumsatz für jeden Tag im Januar enthält, während die zweite Reihe den geringsten Umsatz für jeden Tag im Januar enthält, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen dem Höchstumsatz und dem geringsten Umsatz für jeden Tag veranschaulichen. Weitere Informationen finden Sie unter [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Anzeigen einer Reihe mit mehreren Datenbereichen eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Diagrammtypen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   

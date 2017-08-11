@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  Die Verwendung von **RSWindowsNegotiate** hat einen Kerberos-Authentifizierungsfehler zur Folge, wenn der Berichtsserverdienst so konfiguriert wurde, dass er unter einem Domänenbenutzerkonto ausgeführt wird und für das Konto kein Dienstprinzipalname (Service Principal Name, SPN) registriert wurde. Weitere Informationen finden Sie unter [Beheben von Kerberos-Authentifizierungsfehlern beim Herstellen einer Verbindung mit einem Berichtsserver](#proxyfirewallRSWindowsNegotiate) in diesem Thema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] muss für die Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die Dateien "Web.config" für die Berichtsserver-Webdienst die \<Authentifizierungsmodus = "Windows" > festlegen. Wenn Sie es ändern \<Authentifizierungsmodus = "Forms" >, die Windows-Authentifizierung für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] schlägt fehl.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]muss für Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die Dateien "Web.config" für die Berichtsserver-Webdienst die \<Authentifizierungsmodus = "Windows" > festlegen. Wenn Sie es ändern \<Authentifizierungsmodus = "Forms" >, die Windows-Authentifizierung für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] schlägt fehl.  
   
 -   Die Web.config-Dateien muss der Berichtsserver-Webdienst über \<Identität = "true" / >.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  Die folgenden Anweisungen beziehen sich auf Berichtsserver, die im einheitlichen Modus ausgeführt werden. Wenn der Berichtserver im integrierten SharePoint-Modus bereitgestellt wird, müssen die Standardauthentifizierungseinstellungen verwendet werden, welche die integrierte Sicherheit von Windows angeben. Der Berichtsserver verwendet interne Funktionen der standardmäßigen Windows-Authentifizierungserweiterung, um Berichtserver im integrierten SharePoint-Modus zu unterstützen.  
   
 ## <a name="extended-protection-for-authentication"></a>Erweiterter Schutz für die Authentifizierung  
- Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei RSReportServer.config bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei "rsreportserver.config" bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>So konfigurieren Sie einen Berichtsserver für die Verwendung der integrierten Sicherheit von Windows  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können den Fehler erkennen, wenn Sie die Kerberos-Protokollierung aktiviert haben. Ein anderes Fehlersymptom ist, dass Sie mehrfach zur Eingabe von Anmeldeinformationen aufgefordert werden und dann ein leeres Browserfenster angezeigt wird.  
   
- Sie können sich davon überzeugen, dass ein Kerberos-Authentifizierungsfehler vorliegt, indem Sie den Eintrag < **RSWindowsNegotiate** /> aus der Konfigurationsdatei löschen und erneut versuchen, eine Verbindung herzustellen.  
+ Sie können bestätigen, dass Sie durch das Entfernen einer Kerberos-Authentifizierungsfehler auftreten < **RSWindowsNegotiate** / > aus der Konfigurationsdatei und die Verbindung zu überzeugen.  
   
  Nachdem Sie das Problem eindeutig identifiziert haben, können Sie es auf die folgenden Weisen beheben:  
   
@@ -214,10 +214,10 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Siehe auch  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Konfigurieren von benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Erweiterter Schutz für die Authentifizierung mit Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
 

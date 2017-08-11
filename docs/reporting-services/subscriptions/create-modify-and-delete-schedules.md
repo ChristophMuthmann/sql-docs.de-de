@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>Erstellen, Ändern oder Löschen von Zeitplänen
@@ -146,8 +146,8 @@ Klicken Sie auf **Abbrechen**.
 ## <a name="see-also"></a>Siehe auch  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Anhalten und Fortsetzen von freigegebenen Zeitplänen](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Zwischenspeichern eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Zwischenspeichern eines Berichts &#40; Berichts-Manager &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Hinzufügen einer Momentaufnahme zum Melden von Sicherungsverlauf &#40; Berichts-Manager &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

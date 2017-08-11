@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/13/2017
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
 |Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Angenommen, eine Benutzertypen **3**, der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll, falls die Sprache Englisch (Vereinigte Staaten) ist. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|String|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|RW|Falsch|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
+|Authenticate|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Festlegen der Authenticate-Eigenschaft  
  Wenn Sie von einer Browsersitzung heraus drucken, müssen Sie nicht Festlegen der **authentifizieren** Eigenschaft. Im Kontext einer aktiven Sitzung werden alle Anforderungen vom Drucksteuerelement an den Berichtsserver über den Browser verarbeitet. Der Browser legt die für die Kommunikation mit dem Berichtsserver erforderlichen Sitzungsvariablen fest.  

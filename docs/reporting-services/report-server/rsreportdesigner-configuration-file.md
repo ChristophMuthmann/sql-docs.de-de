@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner-Konfigurationsdatei
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie Renderingerweiterungseinstellungen anpassen, sind spezifische Anweisungen zum Bearbeiten von Konfigurationsdateien verfügbar. Weitere Informationen finden Sie unter [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
- Allgemeine Anleitungen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Allgemeine Anweisungen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40; "Rsreportserver.config" &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>Beispiel für eine Konfigurationsdatei  
  Das folgende Beispiel veranschaulicht das Format der Datei RSReportDesigner.config.  

@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
@@ -103,7 +103,7 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Siehe auch  
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
 

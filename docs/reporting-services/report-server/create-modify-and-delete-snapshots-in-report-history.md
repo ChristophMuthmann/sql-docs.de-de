@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
  Der Berichtsverlauf wird beim Löschen eines Berichts ebenfalls gelöscht. Wenn Sie z. B. einen monatlichen Umsatzbericht löschen, weil Sie ihn durch eine neuere Version ersetzen, werden alle zugehörigen Berichtsverläufe ebenfalls gelöscht. Beim Verschieben eines Berichts werden auch alle Berichtsverläufe verschoben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Berichtsverlaufs &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Einschränken des Berichtsverlaufs &#40;Berichts-Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [Erstellen des Berichtsverlaufs &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Hinzufügen einer Momentaufnahme zum Melden von Sicherungsverlauf &#40; Berichts-Manager &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Einschränken des Berichtsverlaufs &#40; Berichts-Manager &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

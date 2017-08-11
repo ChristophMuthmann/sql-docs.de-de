@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5745964338889cd378a109636b2f6ebbdc32db26
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-filter-or-documents-web-part---sharepoint-integrated-mode"></a>Verbinden eines Filters oder Dokumentewebparts - integrierten SharePoint-Modus
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
 11. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [Fügen Sie den Berichts-Viewer-Webpart auf einer Webseite &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Anpassen des Berichts-Viewer-Webparts](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
   

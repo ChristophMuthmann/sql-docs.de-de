@@ -22,11 +22,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
@@ -76,9 +76,9 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="reporting-services-samples"></a>Reporting Services-Beispiele  
   
-1.  Führen Sie eines der Lernprogramme zu Reporting Services durch. Weitere Informationen finden Sie unter [Tutorials zu Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Führen Sie eines der Lernprogramme zu Reporting Services durch. Weitere Informationen finden Sie unter [Tutorials zu Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
-2.  Laden Sie die Adventure Works-Beispieldatenbank und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Beispielberichte von CodePlex herunter. Weitere Informationen finden Sie unter [AdventureWorks-Beispielberichte](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
+2.  Laden Sie die Adventure Works-Beispieldatenbank und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Beispielberichte von CodePlex herunter. Weitere Informationen finden Sie unter [AdventureWorks-Beispielberichte](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
 ##  <a name="bkmk_nativemode"></a> Überprüfen einer Installation im einheitlichen Modus  
  Wenn Sie einen Berichtsserver im einheitlichen Modus anhand der Standardkonfiguration installieren, wird der Server durch das Setup installiert und bereitgestellt. Um festzustellen, ob der Berichtsserver durch das Setup bereitgestellt wurde, führen Sie einige wenige einfache Tests aus. Um diese Schritte ausführen zu können, müssen Sie ein lokaler Administrator sein. Um weitere Benutzer für das Ausführen der Tests zu aktivieren, konfigurieren Sie für diese Benutzer den Berichtsserverzugriff.  
@@ -89,9 +89,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  Öffnen Sie Konsolenanwendungen für die Dienste, und überprüfen Sie, ob der Berichtsserver-Dienst ausgeführt wird. Um den Status des Berichtsserver-Diensts anzuzeigen, klicken Sie auf **Start**, zeigen Sie auf **Systemsteuerung**, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie anschließend auf **Dienste**. Führen Sie in der Liste mit den Diensten einen Bildlauf zu **Berichtsserver (MSSQLSERVER)**durch. Der Status sollte **Gestartet**lauten.  
   
-3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Können Sie die folgende URL berichtsserverinstallation überprüfen: http://*\<Computername >*/ReportServer*\<_instanzname >*. Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Wenn Sie ein lokaler Administrator unter Windows Vista oder Windows Server 2008 sind, finden Sie weitere Informationen unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Können Sie die folgende URL berichtsserverinstallation überprüfen: http://*\<Computername >*/ReportServer*\<_instanzname >*. Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Wenn Sie ein lokaler Administrator unter Windows Vista oder Windows Server 2008 sind, finden Sie unter [konfigurieren einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung &#40; SSRS &#41; ](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Führen Sie Berichte aus, um die Berichtsservervorgänge zu testen. Für diesen Schritt können Sie einen Beispielbericht aus einem Lernprogramm erstellen. Weitere Informationen finden Sie unter [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Lernprogramm&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Führen Sie Berichte aus, um die Berichtsservervorgänge zu testen. Für diesen Schritt können Sie einen Beispielbericht aus einem Lernprogramm erstellen. Weitere Informationen finden Sie unter [Erstellen eines einfachen Tabellenberichts &#40; SSRS-Lernprogramm &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>So überprüfen Sie, ob der [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] installiert ist und ausgeführt wird  
   
@@ -101,11 +101,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  Verwenden Sie den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , um einen neuen Ordner zu erstellen, oder laden Sie eine Datei hoch, um zu testen, ob Definitionen an die Berichtsserver-Datenbank zurückgegeben werden. Falls diese Vorgänge erfolgreich sind, ist die Verbindung einsatzbereit.  
   
-     Weitere Informationen finden Sie unter [Webportal &#40;SSRS im einheitlichen Modus&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Weitere Informationen finden Sie unter [Webportal &#40; SSRS im einheitlichen Modus &#41; ](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>So überprüfen Sie, ob der Berichts-Designer installiert ist und ausgeführt wird  
   
-1.  Öffnen Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], und erstellen Sie auf Grundlage eines Berichtsserverprojekttyps ein neues Projekt. Weitere Informationen zum Verwenden des Berichtsserverprojekt-Assistenten finden Sie in der SQL Server-Onlinedokumentation unter [Reporting Services in SQL Server-Datentools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
+1.  Öffnen Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], und erstellen Sie auf Grundlage eines Berichtsserverprojekttyps ein neues Projekt. Weitere Informationen finden Sie unter dem Berichtsserverprojekt-Assistent, finden Sie unter [Reporting Services in SQL Server Data Tools &#40; SSDT &#41; ](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) in SQL Server-Onlinedokumentation.  
   
 2.  Wenn Sie Berichtsbeispiele installiert haben, öffnen Sie die Beispielberichts-Projektdateien, und veröffentlichen Sie die Berichte auf einem Berichtsserver.  
   

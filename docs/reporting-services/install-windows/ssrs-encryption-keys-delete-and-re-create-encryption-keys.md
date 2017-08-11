@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS-Verschlüsselungsschlüssel – löschen und erneutes Erstellen von Verschlüsselungsschlüsseln
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
 4.  Für Abonnements, die verschlüsselte Daten verwenden (d. h. die Dateifreigabe-Übermittlungserweiterung und alle verschlüsselten Übermittlungserweiterungen von Drittanbietern) öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen erneut ein. Abonnements, die Übermittlungsoption Berichtsserver-E-Mail verwenden, verwenden keine verschlüsselten Daten und sind bei einer Schlüsseländerung nicht betroffen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Speichern verschlüsselter Berichtsserverdaten &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
 

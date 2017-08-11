@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Verwenden einer externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Berichtsmodelle  
   
- Wenn Sie eine benutzerdefinierte datenverarbeitungserweiterung, die Sie in datengesteuerten Abonnements verwenden möchten verfügen, müssen Sie implementieren die <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> und <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> Schnittstellen. Die Datenverarbeitungserweiterung muss eine Abfrageausführung vom Typ schema only unterstützen. Diese Abfrage wird zum Abrufen von Spaltenmetadaten zur Entwurfszeit verwendet, damit Benutzer Übermittlungsoptionen und Berichtsparametern in der Abonnementdefinition Spalten zuordnen können. Die Abfrageausführung vom Typ schema only tritt in einem frühen Stadium auf, wenn der Benutzer das Abonnement definiert.  
+ Wenn Sie über eine benutzerdefinierte Datenverarbeitungserweiterung verfügen, die Sie in datengesteuerten Abonnements verwenden möchten, muss diese die Schnittstellen <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> und <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> implementieren. Die Datenverarbeitungserweiterung muss eine Abfrageausführung vom Typ schema only unterstützen. Diese Abfrage wird zum Abrufen von Spaltenmetadaten zur Entwurfszeit verwendet, damit Benutzer Übermittlungsoptionen und Berichtsparametern in der Abonnementdefinition Spalten zuordnen können. Die Abfrageausführung vom Typ schema only tritt in einem frühen Stadium auf, wenn der Benutzer das Abonnement definiert.  
   
 ## <a name="query-requirements"></a>Abfrageanforderungen  
  Beachten Sie beim Erstellen einer Abfrage, bei der Abonnementdaten abgerufen werden, folgende Punkte:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
  Wenn Sie ein datengesteuertes Abonnement für einen parametrisierten Bericht erstellen, können Sie Variablenparameterwerte verwenden, um die Ausgabe der einzelnen Berichte anzupassen. Beispielsweise könnte die Abonnentendatenbank Mitarbeiteridentifikationsnummern, Einstellungsdaten, Tätigkeitsbezeichnungen und Informationen zum Bürostandort enthalten, mit denen Berichtsdaten gefiltert werden können. Falls der Bericht Parameter akzeptiert, die auf diesen oder anderen verfügbaren Spaltendaten basieren, können Sie den Parameter der entsprechenden Spalte zuordnen.  
   
- Stellen Sie beim Zuordnen von Abonnentenfeldern zu Berichtsparametern sicher, dass die Datentypen und Spaltenlängen kompatibel sind. Bei einem Datentypenkonflikt tritt bei der Abonnementverarbeitung ein Fehler auf. Weitere Informationen zum Verwenden von Abonnentendaten in einem parameterisierten Bericht finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Stellen Sie beim Zuordnen von Abonnentenfeldern zu Berichtsparametern sicher, dass die Datentypen und Spaltenlängen kompatibel sind. Bei einem Datentypenkonflikt tritt bei der Abonnementverarbeitung ein Fehler auf. Weitere Informationen zum Verwenden von Abonnentendaten in einem parametrisierten Bericht finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40; SSRS-Lernprogramm &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Ändern der Datenquelle für Abonnentendaten  
  Die folgenden Änderungen an der Datenquelle für Abonnentendaten können das Ausführen des Abonnements verhindern:  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

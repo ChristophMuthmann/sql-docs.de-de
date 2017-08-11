@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Standardabonnements von einzelnen Benutzern.  
   
- Durch das Abbrechen eines Auftrags werden nur die Prozesse beendet, die auf dem Berichtsserver ausgeführt werden. Da der Berichtsserver keine Datenverarbeitung auf anderen Computern verwaltet, müssen Sie Abfrageprozesse, die anschließend auf anderen Systemen verwaist sind, manuell abbrechen. Geben Sie möglichst Timeoutwerte an, um Abfragen automatisch zu beenden, deren Ausführung zu lange dauert. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Weitere Informationen zum vorübergehenden Anhalten eines Berichts finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ Durch das Abbrechen eines Auftrags werden nur die Prozesse beendet, die auf dem Berichtsserver ausgeführt werden. Da der Berichtsserver keine Datenverarbeitung auf anderen Computern verwaltet, müssen Sie Abfrageprozesse, die anschließend auf anderen Systemen verwaist sind, manuell abbrechen. Geben Sie möglichst Timeoutwerte an, um Abfragen automatisch zu beenden, deren Ausführung zu lange dauert. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für Bericht und freigegebene Dataset Processing &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Weitere Informationen zum vorübergehenden Anhalten eines Berichts finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  In seltenen Fällen müssen Sie den Server neu starten, um einen Prozess abzubrechen. Im SharePoint-Modus muss der Anwendungspool, in dem die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung gehostet wird, u. U. neu gestartet werden. Weitere Informationen finden Sie unter [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  Klicken Sie alternativ auf das Feld für den Auftrag, und klicken Sie auf **Löschen** , um den Auftrag abzubrechen. Durch das Löschen des Auftrags wird nicht das Abonnement gelöscht.  
   
 ##  <a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
- Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>verwalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Auftragseigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40;rsreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Auftragseigenschaften &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40; "Rsreportserver.config" &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

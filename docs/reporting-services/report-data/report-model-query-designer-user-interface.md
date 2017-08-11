@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>Benutzeroberfläche des Berichtsmodellabfrage-Designers
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Aktion rückgängig machen](../../reporting-services/report-data/media/rsqdicon-undo.gif "Aktion rückgängig machen")|Macht die letzte Aktion rückgängig.|  
 |![Wiederholen Sie die Aktion](../../reporting-services/report-data/media/rsqdicon-redo.gif "Aktion wiederholen")|Stellt die letzte Aktion wieder her.|  
-|![Führen Sie die Abfrage](../../reporting-services/report-data/media/rsqdicon-run.gif "führen Sie die Abfrage")|Führt die Abfrage aus und zeigt die resultierenden Zeilen im Ergebnisbereich an.|  
+|![Führen Sie die Abfrage aus](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die resultierenden Zeilen im Ergebnisbereich an.|  
 |![Filtergrafik neben der ausgewählten Filterspalte](../../reporting-services/report-data/media/rsqdicon-filter.gif "Filtergrafik neben der ausgewählten Filterspalte")|Öffnet das Dialogfeld **Daten filtern** , in dem Sie angeben können, nach welchen Daten gefiltert werden soll. Sie können Filter unabhängig von den aktuellen Daten im Entwurfsbereich angeben.|  
   
 ## <a name="text-based-query-designer"></a>Textbasierter Abfrage-Designer  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|  
 |**Importieren**|Importieren einer Abfrage aus einem vorhandenen Bericht.|  
-|![Führen Sie die Abfrage](../../reporting-services/report-data/media/rsqdicon-run.gif "führen Sie die Abfrage")|Führt den Abfragetext aus und zeigt das resultierende Rowset im Ergebnisbereich an.|  
+|![Führen Sie die Abfrage aus](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Führt den Abfragetext aus und zeigt das resultierende Rowset im Ergebnisbereich an.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Berichtsmodellverbindung &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Hinzufügen von Daten aus externen Datenquellen (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
+ [Berichtsmodellverbindung &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

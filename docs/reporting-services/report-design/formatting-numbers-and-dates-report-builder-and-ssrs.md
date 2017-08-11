@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Diagrammdatenbereiche werden häufig zum Anzeigen von Daten auf der Kategorieachse (x) sowie von Werten auf der Wertachse (y) verwendet. Klicken Sie mit der rechten Maustaste auf eine Achse, und wählen Sie **Achseneigenschaften**aus, um die Formatierung in einem Diagramm anzugeben. Auf der Wertachse können Formatierungen nur für Zahlen angegeben werden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
- Zur Angabe einer Formatierung in einem Messgerätdatenbereich klicken Sie mit der rechten Maustaste auf die Skala des Messgeräts, und wählen Sie **Radiale Skalierungseigenschaften** bzw. **Lineare Skalierungseigenschaften** aus.  
+ Zur Angabe einer Formatierung in einem Messgerätdatenbereich klicken Sie mit der rechten Maustaste auf die Skala des Messgeräts, und wählen Sie **Radiale Skalierungseigenschaften** bzw. **Lineare Skalierungseigenschaften**aus.  
   
 > [!NOTE]  
 >  Wenn gewünschte Formatierungsoptionen ausgegraut sind, bedeutet dies, dass die Formatierungsoptionen mit dem Datentyp des Felds, das in der Datenquelle festgelegt ist, inkompatibel sind. Wenn das Feld beispielsweise numerische Werte enthält, der Datentyp des Felds jedoch auf "string" festgelegt ist, können Formatierungsoptionen für numerische Daten (z. B. Währungsdaten oder Dezimalzahlen) nicht angewendet werden.  
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formatieren von Linien, Farben und Bilder &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsenbezeichnungen als Datumsangaben oder Währungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatieren von Skalen auf einem Messgerät &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

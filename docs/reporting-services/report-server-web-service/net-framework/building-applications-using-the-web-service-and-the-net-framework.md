@@ -27,14 +27,14 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
+# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Erstellen von Anwendungen mit dem Webdienst und .NET Framework
   Mit der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], können Sie bekannte Programmierkonstrukte, z. B. Methoden, Grundtypen und benutzerdefinierte komplexe Typen, für die Arbeit mit Webdiensten. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält eine Infrastruktur und Tools, mit denen Sie Webdienstclients erstellen können, die jeden Webdienst von World Wide Web Consortium (W3C) aufrufen können, der den Standards entspricht.  
   
  Ein Berichtsserver-Webdienstclient ist jede Komponente oder Anwendung, die mit einem Berichtsserver über SOAP-Nachrichten (Simple Object Access Protocol) kommuniziert.  
@@ -57,17 +57,17 @@ ms.lasthandoff: 06/13/2017
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Erstellen des Webdienstproxys](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Beschreibt das Verfahren zum Hinzufügen von einer Proxyklasse, dem Projekt mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Webdienstauthentifizierung](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Beschreibt, wie Aufrufe des Berichtsserver-Webdiensts authentifiziert werden.|  
-|[Aufrufen von Webdienstmethoden](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Beschreibt, wie die SOAP-API zu verwenden, um die Webdienstmethoden rufen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Festlegen der Url-Eigenschaft des Webdiensts](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Erläutert, wie Sie den Webdienstproxy programmgesteuert auf eine neue Server-URL richten, nachdem Sie den Webverweis erstellt haben.|  
-|[Angabe von Argumenten](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Beschreibt, wie Sie eine Webdienstmethode aufrufen und Methodenargumente angeben.|  
-|[Weglassen von Werten für optionale Webdienstobjekte](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Beschreibt, wie Werte für optionale Webdienstobjekte weggelassen werden.|  
-|[Verwenden von sicheren Webdienstmethoden](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Beschreibt die **SecureConnectionLevel** Einstellung und die Möglichkeit, in dem sie wirkt sich auf die Verwendung von Reporting Services-SOAP-API.|  
-|[Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Beschreibt die Geräteinfoeinstellungen, die verwendet werden, um Berichte in andere Formate zu rendern.|  
-|[Reporting Services Einstellungen der Übermittlungserweiterungen](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Beschreibt die Einstellungen, die verwendet werden, um Berichte über Berichtsserver-E-Mail zu übermitteln.|  
+|[Creating the Web Service Proxy (Erstellen des Webdienstproxys)](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Beschreibt das Verfahren zum Hinzufügen von einer Proxyklasse, dem Projekt mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Web Service Authentication (Webdienstauthentifizierung)](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Beschreibt, wie Aufrufe des Berichtsserver-Webdiensts authentifiziert werden.|  
+|[Calling Web Service Methods (Aufrufen von Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Beschreibt, wie die SOAP-API zu verwenden, um die Webdienstmethoden rufen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Setting the Url Property of the Web Service (Festlegen der URL-Eigenschaft des Webdiensts)](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Erläutert, wie Sie den Webdienstproxy programmgesteuert auf eine neue Server-URL richten, nachdem Sie den Webverweis erstellt haben.|  
+|[Supplying Web Service Method Arguments (Bereitstellen von Argumenten für Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Beschreibt, wie Sie eine Webdienstmethode aufrufen und Methodenargumente angeben.|  
+|[Omitting Values for Optional Web Service Objects (Weglassen von Werten für optionale Webdienstobjekte)](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Beschreibt, wie Werte für optionale Webdienstobjekte weggelassen werden.|  
+|[Using Secure Web Service Methods (Verwenden von sicheren Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Beschreibt die **SecureConnectionLevel** Einstellung und die Möglichkeit, in dem sie wirkt sich auf die Verwendung von Reporting Services-SOAP-API.|  
+|[Passing Device Information Settings to Rendering Extensions (Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen)](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Beschreibt die Geräteinfoeinstellungen, die verwendet werden, um Berichte in andere Formate zu rendern.|  
+|[Reporting Services Delivery Extension Settings (Einstellungen der Reporting Services-Übermittlungserweiterungen)](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Beschreibt die Einstellungen, die verwendet werden, um Berichte über Berichtsserver-E-Mail zu übermitteln.|  
 |[Verwenden von Reporting Services-SOAP-Header](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Erklärt die Verwendung von SOAP-Headern in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Einführung in die Ausnahmebehandlung in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Gibt Informationen über die Art, wie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Fehler handhabt.|  
+|[Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Gibt Informationen über die Art, wie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Fehler handhabt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

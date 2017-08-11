@@ -22,11 +22,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
@@ -79,9 +79,9 @@ ms.lasthandoff: 06/22/2017
 7.  Klicken Sie auf **Anwenden** , um die Änderungen zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Neuer Ordner &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Seite ' Neuer Ordner ' &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Seite "Inhalt" &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

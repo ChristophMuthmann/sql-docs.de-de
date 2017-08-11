@@ -23,11 +23,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integration von Reporting Services in Anwendungen
@@ -45,19 +45,19 @@ ms.lasthandoff: 06/22/2017
  Der URL-Zugriff ist eine weitere Option für die Integration der Berichtsanzeige in Ihren Anwendungen, wenn die ReportViewer-Steuerelemente nicht zur Verfügung stehen. Darüber hinaus ist der URL-Zugriff hilfreich, wenn Links zu Berichten per E-Mail an Benutzer gesendet werden sollen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Integrieren von Reporting Services mit SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+ [Integrating Reporting Services Using SOAP (Integrieren von Reporting Services mit SOAP)](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Beschreibt, wie Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigation und -verwaltung mithilfe des Berichtsserver-Webdiensts in Ihre vorhandenen Geschäftsanwendungen integrieren.  
   
  [Integrieren von Reporting Services, die mit den ReportViewer-Steuerelementen](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Beschreibt, wie Sie die Berichtsanzeige mithilfe der ReportViewer-Steuerelemente in Ihre vorhandenen Anwendungen integrieren.  
   
- [Integrieren von Reporting Services mit URL-Zugriff](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integrating Reporting Services Using URL Access (Integrieren von Reporting Services mit URL-Zugriff)](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Beschreibt, wie Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigation mithilfe des URL-Zugriffs in Ihre vorhandenen Geschäftsanwendungen integrieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Entscheidung zwischen URL-Zugriff und SOAP](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Berichtsserver-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

@@ -20,11 +20,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
@@ -61,14 +61,14 @@ ms.lasthandoff: 06/22/2017
   
 |XML-Datenquelle|Abfragebeispiel|  
 |---------------------|-------------------|  
-|Web-Service-XML-Daten aus <xref:ReportService2010.ReportingService2010.ListChildren%2A> Methode.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Webdienst-XML-Daten aus der <xref:ReportService2010.ReportingService2010.ListChildren%2A> -Methode|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Webdienst-XML-Daten von SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |XML-Dokument oder eingebettete XML-Daten, die Namespaces verwenden.<br /><br /> Abfrageelement, das Namespaces für einen Elementpfad angibt.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Eingebettetes XML-Dokument.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |XML-Dokument, das Standardwerte verwendet.|*No query*.<br /><br /> Der Elementpfad wird vom XML-Dokument selbst abgeleitet und ist von Namespaces unabhängig.|  
   
 > [!NOTE]  
->  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A>-Methode verwendet. Um diese Abfrage ausführen zu können, müssen Sie eine neue Datenquelle erstellen und legen Sie die Verbindungszeichenfolge auf `http://localhost/reportserver/reportservice2006.asmx`. Die <xref:ReportService2006.ReportingService2006.ListChildren%2A> Methode akzeptiert zwei Parameter: **Element** und **rekursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
+>  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode Um diese Abfrage ausführen zu können, müssen Sie eine neue Datenquelle erstellen und legen Sie die Verbindungszeichenfolge auf `http://localhost/reportserver/reportservice2006.asmx`. Die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode akzeptiert zwei Parameter: **Item** und **Recursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
   
 ## <a name="specifying-namespaces"></a>Angeben von Namespaces  
  Verwenden Sie das XML- **Query** -Element zum Angeben der in den XML-Daten der Datenquelle verwendeten Namespaces. In der folgenden XML-Abfrage wird der Namespace **sales**verwendet. Die XML- **ElementPath** -Knoten für `sales:LineItems` und `sales:LineItem` verwenden den Namespace **sales**.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [XML-Verbindungstyp &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

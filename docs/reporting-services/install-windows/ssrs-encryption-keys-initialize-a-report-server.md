@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Verschlüsselungsschlüssel für SSRS - Initialisieren eines Berichtsservers
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  Der Berichtsserverdienst stellt erneut eine Verbindung zur Berichtsserver-Datenbank her und fügt den symmetrischen Schlüssel zu den Werten des öffentlichen Schlüssels und der Installations-ID hinzu, die in Schritt 3 gespeichert wurden. Bevor der Berichtsserverdienst seinen öffentlichen Schlüssel speichert, verwendet er ihn zum Verschlüsseln des symmetrischen Schlüssels. Sobald der symmetrische Schlüssel gespeichert ist, gilt der Berichtsserver als initialisiert und verfügbar.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Initialisieren eines Berichtsservers für die Bereitstellung für horizontales Skalieren  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt ein Bereitstellungsmodell für horizontales Skalieren, bei dem eine einzelne Berichtsserver-Datenbank für mehrere Berichtsserverinstanzen verwendet wird. Um an einer Bereitstellung für horizontales Skalieren teilzunehmen, muss ein Berichtsserver seine Kopie des symmetrischen Schlüssels in der freigegebenen Datenbank erstellen und speichern. Obwohl ein einzelner symmetrischer Schlüssel von Servern verwendet wird, die die Datenbank verwenden, verfügt jeder Berichtsserver über eine Kopie des Schlüssels. Jede Kopie variiert hinsichtlich ihrer eindeutigen Verschlüsselung des öffentlichen Schlüssels, deren Besitzer sie ist.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt ein Bereitstellungsmodell für dezentrales Skalieren, die gemeinsam für mehrere Berichtsserverinstanzen eine einzelne Berichtsserver-Datenbank. Um an einer Bereitstellung für horizontales Skalieren teilzunehmen, muss ein Berichtsserver seine Kopie des symmetrischen Schlüssels in der freigegebenen Datenbank erstellen und speichern. Obwohl ein einzelner symmetrischer Schlüssel von Servern verwendet wird, die die Datenbank verwenden, verfügt jeder Berichtsserver über eine Kopie des Schlüssels. Jede Kopie variiert hinsichtlich ihrer eindeutigen Verschlüsselung des öffentlichen Schlüssels, deren Besitzer sie ist.  
   
  Die ersten Schritte zum Initialisieren eines Berichtsservers zur Bereitstellung für horizontales Skalieren stimmen mit den ersten drei Schritten überein, die die Initialisierung einer Kombination aus einem einzelnen Server und einer Datenbank beschreiben.  
   

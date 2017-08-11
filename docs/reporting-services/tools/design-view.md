@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>Entwurfsansicht
@@ -61,8 +61,8 @@ Mithilfe der Toolbox können Sie Elemente auswählen, die in einem dieser drei A
  Verwenden Sie den Bereich Eigenschaften, um Eigenschaften für das ausgewählte Berichtselement auf der Entwurfsoberfläche oder die ausgewählte Gruppe im Gruppierungsbereich anzuzeigen. Alternativ können Sie mit der rechten Maustaste auf das ausgewählte Berichtselement oder die Gruppe klicken und anschließend auf **Eigenschaften** klicken, um das entsprechende Dialogfeld **Eigenschaften** für das Berichtselement oder die Gruppe zu öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Berichtsentwurfstipps &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Berichtsentwurfstipps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

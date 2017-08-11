@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingRowGroups"></a> Hinzufügen von Zeilengruppen zu einer Tabelle  
- Analog zum Anzeigen von Detaildaten durch Ziehen eines Felds aus dem Berichtsdatenbereich in eine Zelle können Sie auch Felder in den Gruppierungsbereich ziehen, um Gruppen hinzuzufügen. Ziehen Sie das Feld bei einer Tabelle in den Bereich Zeilengruppen. Nach dem Hinzufügen einer Gruppe werden neuen Spalten im Zeilengruppenbereich von der Tabelle automatisch Zellen hinzugefügt, in denen die Gruppenwerte angezeigt werden. Weitere Informationen zu Bereichen finden Sie unter [Zonen des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Analog zum Anzeigen von Detaildaten durch Ziehen eines Felds aus dem Berichtsdatenbereich in eine Zelle können Sie auch Felder in den Gruppierungsbereich ziehen, um Gruppen hinzuzufügen. Ziehen Sie das Feld bei einer Tabelle in den Bereich Zeilengruppen. Nach dem Hinzufügen einer Gruppe werden neuen Spalten im Zeilengruppenbereich von der Tabelle automatisch Zellen hinzugefügt, in denen die Gruppenwerte angezeigt werden. Weitere Informationen zu Bereichen finden Sie unter [Tablix-Datenbereiche &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt eine Tabelle mit zwei geschachtelten Zeilengruppen in der Entwurfsansicht. Die Zeilengruppen wurden erstellt, indem zunächst das Feld Order und anschließend das Feld Date in den Zeilengruppenbereich gezogen und jede Gruppe als übergeordnetes Element der vorhandenen Gruppen hinzugefügt wurden. Die Abbildung zeigt eine übergeordnete Gruppe auf Basis des Datums sowie eine untergeordnete Gruppe auf Basis der Bestellnummer an; außerdem wird die standardmäßig definierte Detailgruppe angezeigt.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Tabelle gruppiert nach Datum und die anschließende Bestellung](../../reporting-services/media/rs-basictablegroupspreview.png "Tabelle nach Datum gruppiert und dann ' order '")  
   
- Gruppierte Daten können auch durch Festlegen eines Einzugs für die Gruppenhierarchie angezeigt werden, um die geschachtelte Beziehung von Gruppen statt einzelner Werte in eigenen Spalten darzustellen. Diese Art der Formatierung wird als abgestufter Bericht bezeichnet. Weitere Informationen zum Formatieren von Gruppeninformationen als abgestufter Bericht finden Sie unter [Erstellen von abgestuften Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
+ Gruppierte Daten können auch durch Festlegen eines Einzugs für die Gruppenhierarchie angezeigt werden, um die geschachtelte Beziehung von Gruppen statt einzelner Werte in eigenen Spalten darzustellen. Diese Art der Formatierung wird als abgestufter Bericht bezeichnet. Weitere Informationen zum Formatieren von Gruppeninformationen als abgestufter Bericht finden Sie unter [Erstellen eines abgestuften Berichts &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>Hinzufügen von Gesamtwerten zu Zeilengruppen  
  Mit dem kontextabhängigen Befehl **Gesamtergebnis hinzufügen** können Sie Gesamtwerte für eine Gruppe anzeigen. Bei einer Zeilengruppe wird mit dem Befehl Gesamtergebnis hinzufügen eine Zeile außerhalb der Gruppe hinzugefügt, sodass diese in Bezug auf die Gruppe nur einmal wiederholt wird. Bei geschachtelten Gruppen befindet sich das Zeilengesamtergebnis für die untergeordnete Gruppe außerhalb dieser Gruppe, jedoch innerhalb der übergeordneten Gruppe. Das Festlegen der Hintergrundfarbe für das Zeilengesamtergebnis der untergeordneten Gruppe erleichtert in diesem Fall eine Unterscheidung von den Detailzeilen. Sie können auch eine andere Hintergrundfarbe verwenden, um die Tabellenkopf- und Fußzeile zu unterscheiden. Die folgende Abbildung zeigt die Tabelle mit einem Zeilengesamtergebnis an, das auf Basis von Bestellzahlen für die Gruppe hinzugefügt wurde.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  Eine Änderung der Parameter für Renderingerweiterungen wirkt sich nur auf die Renderingvorgänge auf dem Berichtsserver aus. Sie können die Renderingerweiterungseinstellungen in der Berichtsvorschau im Berichts-Designer nicht überschreiben.  
   
- Die Angabe von Parametern für Renderingerweiterungen in den Konfigurationsdateien wirkt sich global auf Renderingerweiterungen aus. Die Einstellungen in den Konfigurationsdateien werden bei Verwendung einer bestimmten Renderingerweiterung statt der Standardwerte verwendet. Wenn Sie Renderingerweiterungsparameter für einen bestimmten Bericht oder Rendervorgang festlegen möchten, müssen Sie die Geräteinformationen entweder programmgesteuert mithilfe der <xref:ReportExecution2005.ReportExecutionService.Render%2A>-Methode angeben oder durch Angabe der Geräteinformationseinstellungen für eine Berichts-URL. Weitere Informationen zum Angeben von Geräteinformationseinstellungen für einen Rendervorgang und zum Anzeigen der vollständigen Liste der Geräteinformationseinstellungen finden Sie unter [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Die Angabe von Parametern für Renderingerweiterungen in den Konfigurationsdateien wirkt sich global auf Renderingerweiterungen aus. Die Einstellungen in den Konfigurationsdateien werden bei Verwendung einer bestimmten Renderingerweiterung statt der Standardwerte verwendet. Wenn Sie Renderingerweiterungsparameter für einen bestimmten Bericht oder Rendervorgang festlegen möchten, müssen Sie die Geräteinformationen entweder programmgesteuert mithilfe der <xref:ReportExecution2005.ReportExecutionService.Render%2A> -Methode angeben oder durch Angabe der Geräteinformationseinstellungen für eine Berichts-URL. Weitere Informationen zum Angeben von Geräteinformationseinstellungen für einen Rendervorgang und zum Anzeigen der vollständigen Liste der Geräteinformationseinstellungen finden Sie unter [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Suchen und Ändern von RSReportServer.config  
  Konfigurationseinstellungen für Berichtsausgabeformate werden als Renderingerweiterungsparameter in der Datei RSReportServer.config angegeben. Wenn Sie Parameter für Renderingerweiterungen in den Konfigurationsdateien angeben möchten, müssen Sie wissen, wie die XML-Strukturen definiert werden, die Renderingparameter festlegen. Es stehen zwei XML-Strukturen zur Verfügung, die geändert werden können:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Die **DeviceInfo** -XML-Struktur definiert die von einer Renderingerweiterung verwendeten Geräteinformationseinstellungen. Die meisten Parameter für Renderingerweiterungen werden als Geräteinformationseinstellungen angegeben.  
   
- Sie können die Datei mithilfe eines Text-Editors ändern. Die Datei RSReportServer.config befindet sich im Ordner \Reporting Services\Report Server\Bin. Weitere Informationen zum Ändern von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Sie können die Datei mithilfe eines Text-Editors ändern. Die Datei RSReportServer.config befindet sich im Ordner \Reporting Services\Report Server\Bin. Weitere Informationen zum Ändern von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40; "Rsreportserver.config" &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Ändern des Anzeigenamens  
  Der Anzeigename für eine Renderingerweiterung wird in der Exportliste der Berichtssymbolleiste angezeigt. Zu den Standardanzeigenamen gehören unter anderem Webarchiv, TIFF-Datei und Acrobat-Datei (PDF-Datei). Sie können den Standardanzeigenamen durch einen benutzerdefinierten Wert ersetzen, indem Sie in den Konfigurationsdateien das **OverrideNames** -Element angeben. Darüber hinaus können Sie das **OverrideNames** -Element verwenden, um die einzelnen Instanzen in der Exportliste voneinander zu unterscheiden, wenn Sie zwei Instanzen für eine einzelne Renderingerweiterung definieren.  

@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  Anzeigen eines Berichts in der Vorschau mit Verweisen auf benutzerdefinierte Assemblys im lokalen Modus.  
   
 ##  <a name="Common"></a> Einschließen von Verweisen auf häufig verwendete Funktionen  
- Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die gängigsten Funktionen umfassen Klassen aus der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> und <xref:System.Convert> Namespaces und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliotheksfunktionen. Die gängigsten Funktionen sind im Dialogfeld **Ausdruck** nach Kategorie sortiert aufgeführt: Text, Datum und Uhrzeit, Mathematische Funktionen, Qualitätskontrolle, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
+ Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den Namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek. Die gängigsten Funktionen sind im Dialogfeld **Ausdruck** nach Kategorie sortiert aufgeführt: Text, Datum und Uhrzeit, Mathematische Funktionen, Qualitätskontrolle, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
   
  Um eine integrierte Funktion zu verwenden, doppelklicken Sie auf den Funktionsnamen im Bereich Element. Im Bereich Beschreibung wird eine Beschreibung der Funktion angezeigt, und ein Beispiel des Funktionsaufrufs finden Sie im Bereich Beispiel. Wenn Sie im Codebereich den Funktionsnamen und anschließend eine linke Klammer **(**eingeben, zeigt die IntelliSense-Hilfe jede gültige Syntax für diesen Funktionsaufruf an. Zur Berechnung des Höchstwerts für ein Feld mit dem Namen `Quantity` in einer Tabelle fügen Sie dem Codebereich beispielsweise den einfachen Ausdruck `=Max(` hinzu und zeigen mithilfe der Smarttags alle gültigen Syntaxmöglichkeiten für den Funktionsaufruf an. Um dieses Beispiel zu vervollständigen, geben Sie `=Max(Fields!Quantity.Value)`ein.  
   
- Weitere Informationen über die einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>, und [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) auf MSDN.  
+ Weitere Informationen zu den einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>und [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
 ##  <a name="NotCommon"></a> Einschließen von Verweisen auf weniger häufig verwendete Funktionen  
- Um einen Verweis auf andere, weniger häufig verwendete CLR-Namespaces einzuschließen, müssen Sie z. B. einen vollqualifizierten Verweis verwenden <xref:System.Text.StringBuilder>. IntelliSense wird für die seltener verwendeten Funktionen im Codebereich des Dialogfelds **Ausdruck** nicht unterstützt.  
+ Um einen Verweis auf andere, weniger häufig verwendete CLR-Namespaces (Common Language Runtime) einzuschließen, verwenden Sie einen vollqualifizierten Verweis, z.B. <xref:System.Text.StringBuilder>. IntelliSense wird für die seltener verwendeten Funktionen im Codebereich des Dialogfelds **Ausdruck** nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
@@ -196,11 +196,11 @@ End Function
  Da sich der Inhalt der *Fields* - und *ReportItems* -Sammlung zur Laufzeit dynamisch ändern kann, sollten Sie über die Aufrufe in der benutzerdefinierten Assembly hinaus nicht daran festhalten (z.B. in einer Elementvariablen). Die gleiche Empfehlung gilt im Allgemeinen für alle integrierten Auflistungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Fügen Sie Code hinzu, um einen Bericht &#40; SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Verwenden von benutzerdefinierten Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Hinzufügen eines Assemblyverweises zu einem Bericht &#40; SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services-Lernprogramme &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

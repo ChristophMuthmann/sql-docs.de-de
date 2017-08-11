@@ -17,11 +17,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-device-information-settings"></a>HTML-Geräteinformationseinstellungen
@@ -59,7 +59,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
   
 ## <a name="see-also"></a>Siehe auch  
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

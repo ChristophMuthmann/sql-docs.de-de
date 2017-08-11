@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Dataseteigenschaften (Dialogfeld), Abfrage (Berichts-Generator)
@@ -31,17 +31,17 @@ ms.lasthandoff: 08/03/2017
   
  Im Dialogfeld **Dataseteigenschaften** ist Folgendes enthalten:  
   
--   [Dataseteigenschaften (Dialogfeld), Parameter &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
+-   [Dataseteigenschaften (Dialogfeld), Parameter &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
+-   [Dataseteigenschaften (Dialogfeld), Felder &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [Dataseteigenschaften (Dialogfeld), Optionen &#40;Berichts-Generator&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [Dataseteigenschaften (Dialogfeld), Optionen &#40; Berichts-Generator &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Dataseteigenschaften (Dialogfeld), Filter &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
+-   [Dataseteigenschaften (Dialogfeld), Filter &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
  Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für das Dataset ein. Der Name darf nicht mit dem Namen eines Datenbereichs oder einer Gruppe im Bericht identisch sein.  
   
@@ -84,6 +84,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Abfrage-Designer &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

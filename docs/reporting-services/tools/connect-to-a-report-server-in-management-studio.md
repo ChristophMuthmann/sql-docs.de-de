@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Klicken Sie auf **Verbinden**. Der Berichtsserver wird im Objekt-Explorer angezeigt.  
   
-6.  Klicken Sie mit der rechten Maustaste auf den Serverknoten, um Systemeigenschaften und Standardeinstellungen für den Server festzulegen. Weitere Informationen finden Sie unter [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Klicken Sie mit der rechten Maustaste auf den Serverknoten, um Systemeigenschaften und Standardeinstellungen für den Server festzulegen. Weitere Informationen finden Sie unter [Festlegen von Berichtsservereigenschaften &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>So stellen Sie eine Verbindung mit einem Berichtsserver im integrierten SharePoint-Modus her  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Klicken Sie auf **Verbinden**. Der Berichtsserver wird im Objekt-Explorer angezeigt.  
   
-6.  Klicken Sie mit der rechten Maustaste auf den Serverknoten, um Systemeigenschaften und Standardeinstellungen für den Server festzulegen. Weitere Informationen finden Sie unter [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Klicken Sie mit der rechten Maustaste auf den Serverknoten, um Systemeigenschaften und Standardeinstellungen für den Server festzulegen. Weitere Informationen finden Sie unter [Festlegen von Berichtsservereigenschaften &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>So registrieren Sie einen Berichtsserver  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services in SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

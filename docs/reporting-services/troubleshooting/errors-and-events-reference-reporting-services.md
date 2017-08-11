@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Fehler- und Ereignisreferenz (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|Fehler|Start/Herunterfahren|Berichtsserver|Die Version der Berichtsserver-Datenbank ist ungültig.|  
 |118|Warnung|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|Das Ablaufverfolgungsprotokoll befindet sich nicht an der erwarteten Verzeichnisposition. Ein neues Ablaufverfolgungsprotokoll wird im Standardverzeichnis erstellt. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Fehler|Aktivierung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle >* wurde kein Zugriff auf den Inhalt der Berichtsserver-Datenbank gewährt.|  
-|120|Fehler|Aktivierung|Berichtsserver|Der symmetrische Schlüssel kann nicht entschlüsselt werden. Wahrscheinlichste Ursache ist eine Änderung des Kontos, unter dem der Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Fehler|Aktivierung|Berichtsserver|Der symmetrische Schlüssel kann nicht entschlüsselt werden. Wahrscheinlichste Ursache ist eine Änderung des Kontos, unter dem der Dienst ausgeführt wird. Weitere Informationen finden Sie unter [konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Fehler|Start/Herunterfahren|Berichtsserver|Fehler beim Starten des Remoteprozeduraufruf-Diensts.|  
 |122|Warnung|Delivery|Prozessor für Zeitplanung und Übermittlung|Der Prozessor für Zeitplanung und Übermittlung konnte keine Verbindung zum SMTP-Server herstellen, der für die Übermittlung von E-Mail verwendet wird. Weitere Informationen zu SMTP-Serververbindungen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Warnung|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|Der Berichtsserver konnte das Ablaufverfolgungsprotokoll nicht schreiben. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|124|Informationen|Aktivierung|Berichtsserver|Der Berichtsserverdienst wurde initialisiert. Weitere Informationen finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
-|125|Informationen|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich extrahiert. Weitere Informationen zu Schlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|126|Informationen|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich angewandt. Weitere Informationen zu Schlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|127|Informationen|Aktivierung|Berichtsserver|Der verschlüsselte Inhalt wurde erfolgreich aus der Berichtsserver-Datenbank entfernt. Weitere Informationen zum Löschen von nicht wiederherstellbaren verschlüsselten Daten finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|124|Informationen|Aktivierung|Berichtsserver|Der Berichtsserverdienst wurde initialisiert. Weitere Informationen finden Sie unter [Initialisieren eines Berichtsservers &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|Informationen|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich extrahiert. Weitere Informationen zu Schlüsseln finden Sie unter [konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|Informationen|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich angewandt. Weitere Informationen zu Schlüsseln finden Sie unter [konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|Informationen|Aktivierung|Berichtsserver|Der verschlüsselte Inhalt wurde erfolgreich aus der Berichtsserver-Datenbank entfernt. Weitere Informationen zum Löschen nicht wiederherstellbarer verschlüsselter Daten finden Sie unter [konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|Fehler|Aktivierung|Berichtsserver|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten aus verschiedenen Versionen können nicht zusammen verwendet werden.|  
 |129|Fehler|Verwaltung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Ein verschlüsselter Wert der Konfigurationseinstellung kann nicht entschlüsselt werden.|  
 |130|Fehler|Verwaltung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle >* die Konfigurationsdatei wurde nicht gefunden. Konfigurationsdateien sind für den Berichtsserver erforderlich.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen von Reporting Services-Abonnements](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services-Protokolldateien und -Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
+ [Reporting Services Log Files and Sources (Reporting Services-Protokolldateien und -Quellen)](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

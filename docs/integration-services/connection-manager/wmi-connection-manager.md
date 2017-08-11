@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8bd256a462a8a0a51441024619f2ed81f6db753
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="wmi-connection-manager"></a>WMI-Verbindungs-Manager
@@ -45,8 +47,37 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
+## <a name="wmi-connection-manager-editor"></a>WMI-Verbindungs-Manager-Editor
+  Mithilfe des Dialogfelds **WMI-Verbindungs-Manager** geben Sie eine WMI-Verbindung (Microsoft Windows Management Instrumentation) mit einem Server an.  
+  
+ Weitere Informationen zum WMI-Verbindungs-Manager finden Sie unter [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
+  
+ **Description**  
+ Beschreiben Sie den Verbindungs-Manager. Die bewährte Methode ist hierbei, den Verbindungs-Manager zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
+  
+ **Servername**  
+ Geben Sie den Namen des Servers an, zu dem die WMI-Verbindung hergestellt werden soll.  
+  
+ **Namespace**  
+ Geben Sie den WMI-Namespace an.  
+  
+ **Windows-Authentifizierung verwenden**  
+ Wählen Sie diese Option aus, wenn Windows-Authentifizierung verwendet werden soll. Wenn Sie Windows-Authentifizierung verwenden, müssen Sie keinen Benutzernamen und kein Kennwort für die Verbindung angeben.  
+  
+ **Benutzername**  
+ Wenn Sie Windows-Authentifizierung nicht verwenden, müssen Sie für die Verbindung einen Benutzernamen angeben.  
+  
+ **Kennwort**  
+ Wenn Sie Windows-Authentifizierung nicht verwenden, müssen Sie für die Verbindung das Kennwort angeben.  
+  
+ **Test**  
+ Testen Sie die Verbindungs-Manager-Einstellungen.  
+  
 ## <a name="see-also"></a>Siehe auch  
  [Webdienst (Task)](../../integration-services/control-flow/web-service-task.md)   
  [Integrationsservices &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+

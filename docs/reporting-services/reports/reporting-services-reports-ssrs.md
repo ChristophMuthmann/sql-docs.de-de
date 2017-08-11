@@ -17,11 +17,11 @@ caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Exportieren (optional).** Der Bericht wird in ein anderes Dateiformat exportiert.  
   
- Weitere Informationen finden Sie unter [Berichtsphasen](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) in [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
+ Weitere Informationen finden Sie unter [Berichtsphasen](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) in [Konzepte von Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
 ## <a name="create-paginated-reports"></a>Erstellen paginierter Berichte  
  So erstellen Sie einen paginierten Bericht  
@@ -80,37 +80,37 @@ ms.lasthandoff: 06/22/2017
   
 -   Folgendes gilt für jeden Bericht:  
   
-    -   **Geben Sie die Datenquellen an.** Definieren Sie für jede einzelne Datenquelle Berichtsdatenquellen. Weitere Informationen finden Sie unter [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    -   **Geben Sie die Datenquellen an.** Definieren Sie für jede einzelne Datenquelle Berichtsdatenquellen. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
     -   **Wählen Sie aus, welche Daten aus der jeweiligen Quelle verwendet werden.** Definieren Sie für jede Datenquelle Berichtsdatasets. Jedes Dataset enthält eine Abfrage, um die zu verwendenden Daten anzugeben. Wenn Sie Berichtsparameter verwenden, definieren Sie ein Dataset, um die verfügbare Werteliste für jeden Parameter aufzufüllen. Weitere Informationen finden Sie unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) und [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
     -   **Wählen Sie eine Datenvisualisierung aus.** Wählen Sie für jedes Dataset aus, welcher Datenbereich zum Anzeigen der Daten verwendet werden soll. Wählen Sie aus Liste der Tabellen, Diagramme, Messgeräte und Karten aus. Weitere Informationen finden Sie in folgenden Themen:  
   
-        -   [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+        -   [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
-        -   [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+        -   [Indikatoren &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-        -   [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+        -   [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
-        -   [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+        -   [Messgeräte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
     -   **Passen Sie die Daten und das Layout an.** Entwerfen Sie das Berichtslayout. Eine Berichtsdefinition verfügt über einen Berichtshauptteil, Datenquellen, Datasets, Datenbereiche, Textfelder, Linien und Bilder. Rechtecke werden als Container für Layoutelemente sowie für visuelle Elemente verwendet. Passen Sie die einzelnen Datenbereiche an, indem Sie Ausdrücke schreiben, mit denen die Filterung, Gruppierung, Sortierung, Formatierung und Anzeige der Daten gesteuert wird. Fügen Sie Berichtsnamen, Speicherorte und andere Identifikationsinformationen hinzu, mit deren Hilfe Dutzende oder sogar Hunderte von Berichten verwaltet werden können. Fügen Sie visuelle Elemente und Container hinzu, um die Layoutelemente auf der Seite zu organisieren. Weitere Informationen finden Sie in folgenden Themen:  
   
-        -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
-        -   [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+        -   [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
-        -   [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+        -   [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
-        -   [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+        -   [Formatieren von Berichtselementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
-        -   [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+        -   [Bilder, Textfelder, Rechtecke und Linien &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Seitenlayout und Rendering &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Konfigurieren Sie Interaktivitätsfunktionen.** Fügen Sie Interaktivitätsfunktionen für die Leser des Berichts hinzu. Fügen Sie beispielsweise Sortierschaltflächen oder Elemente zum Ein-/Ausschalten hinzu, um die Abfragen anzuzeigen. Weitere Informationen finden Sie unter [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -121,10 +121,10 @@ ms.lasthandoff: 06/22/2017
 -   **Überlegen Sie, welche Komponenten wiederverwendet werden können.**  Bestimmen Sie, ob Datenquellen oder Datasetabfragen zur erneuten Verwendung freigegeben werden können. Erstellen Sie in diesem Fall auf dem Berichtsserver oder auf der SharePoint-Website freigegebene Datenquellen und Datasets. Bestimmen Sie, ob die Datenbereiche geeignet sind, als Berichtsteile wiederverwendet zu werden. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Anzeigen von Berichten in der Vorschau  
- Die Berichtsvorschau wird von allen Berichterstellungstools unterstützt. Weitere Informationen finden Sie im Abschnitt [Vorschau](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) von [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) und [Anzeigen einer Berichtsvorschau im Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Die Berichtsvorschau wird von allen Berichterstellungstools unterstützt. Weitere Informationen finden Sie unter der [Vorschau](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) Abschnitt [Entwerfen von Berichten mit Berichts-Designer &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), und [Berichtsvorschau im Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="save-or-publish-reports"></a>Speichern oder Veröffentlichen von Berichten  
- Jedes Erstellungstool unterstützt das lokale Speichern eines Berichts oder das Veröffentlichen des Berichts auf einem Berichtsserver oder einer SharePoint-Website. Weitere Informationen finden Sie im Abschnitt [Speichern und Bereitstellen](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) von [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) und unter [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+ Jedes Erstellungstool unterstützt das lokale Speichern eines Berichts oder das Veröffentlichen des Berichts auf einem Berichtsserver oder einer SharePoint-Website. Weitere Informationen finden Sie unter der [speichern und Bereitstellen von](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) Abschnitt [Entwerfen von Berichten mit Berichts-Designer &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), und [Speichern von Berichten &#40; Berichts-Generator &#41; ](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## <a name="view-reports"></a>Anzeigen von Berichten  
  Sie können einen lokal gespeicherten oder auf einem Berichtsserver veröffentlichten Bericht nicht nur in der Vorschau anzeigen, sondern den Berichtslesern eine Vielzahl von Anzeigemöglichkeiten zur Verfügung stellen. So zeigen Sie einen Bericht an  
@@ -182,7 +182,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Erweiterungen &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
+ [Erweiterungen &#40; SSRS &#41;](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   

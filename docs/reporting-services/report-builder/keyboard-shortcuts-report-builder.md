@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Entwurfsansicht des Berichts &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Glossar &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

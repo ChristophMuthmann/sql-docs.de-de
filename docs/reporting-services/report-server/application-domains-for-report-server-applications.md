@@ -18,11 +18,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0cec89b68c69b5e5ae6875d5d5d5e721008844cd
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Konfigurationsänderungen des Berichtsservers.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konfigurationsänderungen.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Konfigurationsänderungen.  
   
 -   Fehler bei der Speicherbelegung.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. Das Wiederverwendungsintervall wird durch die Konfigurationseinstellung**RecycleTime** in der Datei RSReportServer.config festgelegt.<br /><br /> **MaxAppDomainUnloadTime** legt die Wartezeit fest, während der die Hintergrundverarbeitung abgeschlossen werden kann.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
 |Konfigurationsänderungen des Berichtsservers|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Anwendungsdomänen als Reaktion auf Änderungen in der Datei RSReportServer.config wieder.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Sie können das Auftreten von Wiederverwendungsvorgängen nicht verhindern. Wiederverwendungsvorgänge, die als Reaktion auf Änderungen der Konfigurationseinstellungen auftreten, werden jedoch auf die gleiche Weise behandelt wie geplante Wiederverwendungsvorgänge. Für neue Anforderungen werden neue Anwendungsdomänen erstellt, während aktuelle Anforderungen und Aufträge in der aktuellen Anwendungsdomäne abgeschlossen werden.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konfigurationsänderungen|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet Anwendungsdomänen dann wieder, wenn Änderungen der überwachten Dateien auftreten (z.B. „machine.config“- und „Web.config“-Dateien sowie [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Programmdateien).|Report Server-Webdienst<br /><br /> Berichts-Manager|Nein.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Vorgang.<br /><br /> Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, beeinflussen die Hintergrundverarbeitungs-Anwendungsdomäne nicht.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Konfigurationsänderungen|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]verwendet Anwendungsdomänen dann wieder bei Änderungen auf die Dateien, die er überwacht (z. B. "Machine.config" und "Web.config"-Dateien und [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Programmdateien).|Report Server-Webdienst<br /><br /> Berichts-Manager|Nein.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]verwaltet den Vorgang.<br /><br /> Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, beeinflussen die Hintergrundverarbeitungs-Anwendungsdomäne nicht.|  
 |Ungenügender Arbeitsspeicher und Fehler bei der Speicherbelegung|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR verwendet Anwendungsdomänen sofort wieder, wenn es zu Fehlern bei der Speicherbelegung kommt oder der Arbeitsspeicher des Servers extrem ausgelastet ist.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Bei hoher Arbeitsspeicherauslastung akzeptiert der Berichtsserver keine neuen Anforderungen in der aktuellen Anwendungsdomäne. Während des Zeitraums, in dem der Server neue Anforderungen verweigert, treten HTTP 503-Fehler auf. Neue Anwendungsdomänen werden erst dann erstellt, wenn die alte Anwendungsdomäne entladen wird. Wenn Sie daher bei einer hohen Arbeitsspeicherauslastung des Servers Änderungen an Konfigurationsdateien vornehmen, werden ausgeführte Anforderungen und Aufträge möglicherweise nicht gestartet oder abgeschlossen.<br /><br /> Im Fall eines Fehlers bei der Speicherbelegung werden alle Anwendungsdomänen sofort neu gestartet. Gerade ausgeführte Aufträge und Anforderungen werden gelöscht. Sie müssen diese Aufträge und Anforderungen manuell neu starten.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Geplante und ungeplante Wiederverwendungsvorgänge  
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40; "Rsreportserver.config" &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   
   

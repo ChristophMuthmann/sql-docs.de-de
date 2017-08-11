@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
  Sie können eine bereits vorhandene Berichtsserver-Datenbank aus einer früheren Installation oder einer anderen Instanz mit einer anderen Berichtsserverinstanz verbinden oder wiederverwenden. Das Schema der Berichtsserver-Datenbank muss mit der Berichtsserverinstanz kompatibel sein. Falls die Datenbank in einem älteren Format vorliegt, werden Sie zum Aktualisieren auf das aktuelle Format aufgefordert. Neuere Versionen können nicht auf eine frühere Version herabgestuft werden. Falls Sie mit einer aktuelleren Berichtsserver-Datenbank arbeiten, können Sie diese nicht mit einer früheren Version einer Berichtsserverinstanz verwenden. Weitere Informationen über das Aktualisieren der Berichtsserver-Datenbanken auf neuere Formate finden Sie unter [Upgraden der Berichtsserver-Datenbank](../../reporting-services/install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
->  Die Tabellenstruktur für die Datenbanken wird für Servervorgänge optimiert und sollte nicht geändert oder weiter optimiert werden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] kann die Tabellenstruktur eventuell von einer Version zur nächsten ändern. Durch eigene Änderungen oder Erweiterungen der Datenbank beschränken oder verhindern Sie u. U. die Möglichkeit, zukünftige Upgrades auszuführen oder Service Packs anzuwenden. Möglicherweise werden durch Ihre Änderungen auch Berichtsservervorgänge beeinträchtigt. Wenn Sie z. B. in der ReportServer-Datenbank READ_COMMITTED_SNAPSHOT aktivieren, deaktivieren Sie die interaktive Sortierfunktion.  
+>  Die Tabellenstruktur für die Datenbanken wird für Servervorgänge optimiert und sollte nicht geändert oder weiter optimiert werden. [!INCLUDE[msCoName](../../includes/msconame-md.md)]kann die Tabellenstruktur von einer Version zur nächsten ändern. Durch eigene Änderungen oder Erweiterungen der Datenbank beschränken oder verhindern Sie u. U. die Möglichkeit, zukünftige Upgrades auszuführen oder Service Packs anzuwenden. Möglicherweise werden durch Ihre Änderungen auch Berichtsservervorgänge beeinträchtigt. Wenn Sie z. B. in der ReportServer-Datenbank READ_COMMITTED_SNAPSHOT aktivieren, deaktivieren Sie die interaktive Sortierfunktion.  
   
  Alle Zugriffe auf eine Berichtsserver-Datenbank müssen durch den Berichtsserver behandelt werden. Für den Zugriff auf Inhalte in einer Berichtsserver-Datenbank können Sie Berichtsserver-Verwaltungstools, wie z.B. den Berichts-Manager oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], oder Programmierschnittstellen verwenden, wie z.B. den URL-Zugriff, den Report Server-Webdienst oder den WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
   
@@ -65,16 +65,16 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-server-temporary-database"></a>Temporäre Berichtsserver-Datenbank  
  Jede Berichtsserver-Datenbank speichert mithilfe einer zugehörigen temporären Datenbank Sitzungs- und Ausführungsdaten, zwischengespeicherte Berichte und Arbeitstabellen, die vom Berichtsserver generiert werden. Hintergrundserverprozesse entfernen regelmäßig ältere und nicht verwendete Elemente aus den Tabellen in der temporären Datenbank.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt die temporäre Datenbank nicht neu, wenn diese fehlt, und repariert auch keine fehlenden oder geänderten Tabellen. Obwohl die temporäre Datenbank keine persistenten Daten enthält, sollten Sie sie trotzdem sichern, sodass Sie sie nach einem Notfall nicht wiederherstellen müssen.  
+ Die temporäre Datenbank wird von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht neu erstellt, wenn diese fehlt, und es werden auch keine fehlenden oder geänderten Tabellen repariert. Obwohl die temporäre Datenbank keine persistenten Daten enthält, sollten Sie sie trotzdem sichern, sodass Sie sie nach einem Notfall nicht wiederherstellen müssen.  
   
  Wenn Sie die temporäre Datenbank sichern und anschließend wiederherstellen, sollten Sie die Inhalte löschen. Im Allgemeinen können die Inhalte der temporären Datenbank jederzeit bedenkenlos gelöscht werden. Nach dem Löschen der Inhalte müssen Sie jedoch den Report Server-Windows-Dienst neu starten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hosten einer Berichtsserver-Datenbank in einem SQL Server-Failovercluster](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Speichern verschlüsselter Berichtsserverdaten &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Verwalten einer Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Verwalten einer Berichtsserver-Datenbank &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Erstellen Sie eine Berichtsserver-Datenbank &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

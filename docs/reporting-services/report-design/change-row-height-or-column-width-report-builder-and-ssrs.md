@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Tablix-Datenbereich (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix-Datenbereichszelle, Zeilen und Spalten (Berichts-Generator) und SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
  [Listen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS)
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  Wenn Sie im Bearbeitungsmodus in das Textfeld klicken, drücken Sie ESC, um das Textfeld zu wählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tastenkombinationen &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [Textfelder &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Tastenkombinationen &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

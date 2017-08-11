@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-ssrs"></a>URL-Zugriff (SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  Eine vollständige Liste der über URL-Zugriff verfügbaren Befehle und Einstellungen finden Sie unter [URL-Zugriffsparameterreferenz](../reporting-services/url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Konzepte für den URL-Zugriff  
- URL-Anforderungen an den Berichtsserver enthalten Parameter, die vom Berichtsserver verarbeitet werden. Wie URL-Anforderungen vom Berichtsserver behandelt werden, hängt von den Parametern, den Parameterpräfixen sowie den Elementtypen ab, die in der URL enthalten sind. Berichtsserver-URLs erfüllen die URL-Formatierungsrichtlinien, wie sie vom gemeinsamen Entwurfsstandard des World Wide Web Consortium W3C/IETF vorgeschlagen wurden. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -URL-Funktionen sind kompatibel mit den meisten Internetbrowsern oder -anwendungen, die Standard-URL-Adressen unterstützen.  
+ URL-Anforderungen an den Berichtsserver enthalten Parameter, die vom Berichtsserver verarbeitet werden. Wie URL-Anforderungen vom Berichtsserver behandelt werden, hängt von den Parametern, den Parameterpräfixen sowie den Elementtypen ab, die in der URL enthalten sind. Berichtsserver-URLs erfüllen die URL-Formatierungsrichtlinien, wie sie vom gemeinsamen Entwurfsstandard des World Wide Web Consortium W3C/IETF vorgeschlagen wurden. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-URL-Funktionen sind kompatibel mit den meisten Internetbrowsern oder -anwendungen, die Standard-URL-Adressen unterstützen.  
   
 ### <a name="url-access-syntax"></a>URL-Zugriffssyntax  
  URL-Anforderungen können mehrere Parameter enthalten, die in beliebiger Reihenfolge aufgelistet werden. Parameter werden durch das kaufmännische Und-Zeichen (&) getrennt, Name/Wert-Paare werden durch das Gleichheitszeichen (=) getrennt.  
@@ -115,8 +115,8 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Taskbeschreibungen|Links|  
 |-----------------------|-----------|  
-|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Zugreifen auf Berichtsserverelemente über den URL-Zugriff](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Übergeben von Berichtsparametern an einen Bericht|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Zugreifen auf Berichtsserverelemente mit URL-Zugriff](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Übergeben von Berichtsparametern an einen Bericht|[Übergeben von Berichtsparametern innerhalb einer URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
 |Festlegen des Gebietsschemas der Berichtsparameter in der URL-Zugriffszeichenfolge, durch die die gebietsschemaspezifische Interpretation von Datumsangaben, Währungen usw. festgelegt wird|[Festlegen der Sprache für Berichtsparameter in einer URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |Senden spezifischer Einstellungen für Renderingerweiterungen, durch die das Rendern des Berichts angepasst wird|[Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
 |Direktes Exportieren eines Berichts in ein Dateiformat, ohne ihn im Browser anzuzeigen|[Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md)|  
@@ -124,9 +124,9 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [URL-Zugriffsparameterreferenz](../reporting-services/url-access-parameter-reference.md)   
+ [Übergeben von Berichtsparametern innerhalb einer URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
+ [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)   
  [Integrieren von Reporting Services mit URL-Zugriff](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

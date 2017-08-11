@@ -22,11 +22,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Leistungsindikatoren für den MSRS 2011 SharePoint-Modus, Leistungsobjekte
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Weitere Informationen zu Leistungsindikatoren und Berichtsservern im einheitlichen Modus finden Sie unter [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011-Windows-Dienst, Leistungsobjekte &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) und [Leistungsindikatoren für den MSRS 2011-Webdienst im SharePoint-Modus und den MSRS 2011-Windows-Dienst im SharePoint-Modus, Leistungsobjekte (SharePoint-Modus)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ Informationen zu Leistungsindikatoren und Berichtsservern im einheitlichen Modus finden Sie unter [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011 Windows Service Leistungsobjekte &#40; Im einheitlichen Modus &#41; ](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [Leistungsindikatoren für den MSRS 2011 Web Service SharePoint Mode und den MSRS 2011 Windows Service SharePoint-Modus, Leistungsobjekte (SharePoint-Modus)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
  In diesem Thema:  
   
@@ -142,7 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011-Windows-Dienst, Leistungsobjekte &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011 Windows Service Leistungsobjekte &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects (Leistungsindikatoren für die Leistungsobjekte ReportServer:Service und ReportServerSharePoint:Service)](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

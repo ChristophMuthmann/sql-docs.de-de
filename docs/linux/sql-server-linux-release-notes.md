@@ -4,16 +4,16 @@ description: "Dieses Thema enthält die Versionshinweise und Funktionen für SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
@@ -93,7 +93,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Protokolllese-Agent |
 | &nbsp; | Change Data Capture |
 | &nbsp; | Verwaltete Sicherung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Sicherheit** | Erweiterbare Schlüsselverwaltung |
 | **Dienste** | SQL Server-Browser |
 | &nbsp; | SQL Server R services |
@@ -151,6 +151,8 @@ In den folgenden Abschnitten werden bekannte Probleme in dieser Version von SQL 
       ```
       sudo systemctl restart mssql-server
       ```
+
+- SQL Server 2014-Datenbanken unter Windows, die In-Memory OLTP verwenden, können nicht auf SQL Server-2017 unter Linux wiederhergestellt werden. Zum Wiederherstellen einer SQL Server 2014-Datenbank, die in-Memory OLTP verwendet, zunächst ein upgrade der Datenbanken auf SQL Server 2016 oder 2017 von SQL Server unter Windows bevor sie in SQL Server on Linux verschoben, über sichern/wiederherstellen oder trennen/anfügen.
 
 #### <a name="remote-database-files"></a>Remote-Datenbankdateien
 
@@ -267,6 +269,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Verteilte Abfrage |
+| &nbsp; | Machine Learning-Dienste |
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
@@ -275,7 +278,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Protokolllese-Agent |
 | &nbsp; | Change Data Capture |
 | &nbsp; | Verwaltete Sicherung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | &nbsp; | Verfügbarkeit Gruppe paralleles upgrade |
 | **Sicherheit** | Erweiterbare Schlüsselverwaltung |
 | **Dienste** | SQL Server-Browser |
@@ -458,7 +461,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
 | &nbsp; | Erweiterbare Schlüsselverwaltung |
@@ -619,7 +622,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
 | &nbsp; | Erweiterbare Schlüsselverwaltung |
@@ -765,7 +768,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
 | &nbsp; | Erweiterbare Schlüsselverwaltung |
@@ -856,7 +859,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
     - Change Data Capture
 
 #### <a name="in-memory-oltp"></a>In-Memory OLTP
-- In-Memory OLTP-Datenbanken können nur im Verzeichnis /var/opt/mssql erstellt werden. Weitere Informationen finden Sie auf der [In-Memory-OLTP-Thema](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- In-Memory OLTP-Datenbanken können nur im Verzeichnis /var/opt/mssql erstellt werden. Weitere Informationen finden Sie auf der [In-Memory-OLTP-Thema](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
 
 #### <a name="sqlpackage"></a>SqlPackage
 - Mithilfe des SqlPackage muss einen absoluten Pfad für Dateien angegeben werden. Verwenden relative Pfade werden Dateien unter "/ Tmp /-Sqlpackage. zugeordnet. \<Code \> /System/system32 "Ordner. 
@@ -941,7 +944,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | Datenbankspiegelung  |
+| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
 | &nbsp; | Erweiterbare Schlüsselverwaltung |
@@ -1098,7 +1101,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | AlwaysOn-Verfügbarkeitsgruppen |
+| **High Availability (Hohe Verfügbarkeit)** | AlwaysOn-Verfügbarkeitsgruppen |
 | &nbsp; | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
@@ -1243,7 +1246,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | AlwaysOn-Verfügbarkeitsgruppen |
+| **High Availability (Hohe Verfügbarkeit)** | AlwaysOn-Verfügbarkeitsgruppen |
 | &nbsp; | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |
@@ -1379,7 +1382,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
-| **Hohe Verfügbarkeit** | AlwaysOn-Verfügbarkeitsgruppen |
+| **High Availability (Hohe Verfügbarkeit)** | AlwaysOn-Verfügbarkeitsgruppen |
 | &nbsp; | Datenbankspiegelung  |
 | **Sicherheit** | Active Directory-Authentifizierung |
 | &nbsp; | Windows-Authentifizierung |

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten im Web-Portal (Berichts-Generator und SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigieren der Ordnerhierarchie im Berichts-Manager  
  Für die Suche nach Berichten, die Sie ausführen möchten, können Sie die Startseite verwenden. Diese wird automatisch angezeigt, wenn Sie den Berichts-Manager starten und wenn Sie einen Ordner in der Ordnerhierarchie öffnen. Auf der Startseite werden nur die Elemente angezeigt, zu deren Anzeige Sie berechtigt sind. Der Ordnerpfad wird als Linkzeile oben auf der Startseite angezeigt. Die Ordnernamen sind alphabetisch geordnet, beginnend mit dem Stammordner (Home). Beim Öffnen jedes zusätzlichen Ordners wird der Ordnername dem Ordnerpfad oben auf der Seite hinzugefügt. **(1)** in der Abbildung unten. Wenn Sie einen Bericht öffnen, wird der Name des Berichts ebenfalls dem Ordnerpfad hinzugefügt.  
   
- ![Berichts-Manager-Menüband und Navigation](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![Berichts-Manager-Menüband und Navigation](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Berichts-Manager-Menüband und Navigation")  
 Berichts-Manager-Menüband  
   
  Verwenden Sie zum Navigieren in einer Ordnerhierarchie die folgenden Vorgehensweisen:  
@@ -47,7 +47,7 @@ Berichts-Manager-Menüband
 ## <a name="opening-a-report"></a>Öffnen eines Berichts  
  Wenn Sie einen Bericht gefunden haben, klicken Sie auf den Namen des Berichts, um ihn zu öffnen. Der Bericht wird in HTML gerendert und im Berichts-Manager auf der Seite Inhalt angezeigt. Berichte werden stets von der Browsersitzung zwischengespeichert. Wenn Sie einen Bericht öffnen, können Sie in der Regel durch Klicken auf die Schaltfläche **Zurück** wieder zu dem Bericht zurückkehren. Dies gilt auch, wenn Sie einen Benutzernamen und ein Kennwort zum Ausführen des Berichts eingeben mussten. Ein gerenderter Bericht kann erst beim Schließen des Browsers vollständig geschlossen werden.  
   
- Nicht auf alle in der Ordnerhierarchie angezeigten Berichte kann sofort zugegriffen werden. Bei manchen Berichten werden Sie möglicherweise zur Eingabe Ihres Benutzernamens und Kennworts aufgefordert, um zu ermitteln, ob Sie auf die Datenquelle für den Bericht zugreifen dürfen. Weitere Informationen zum Öffnen von Berichten im Berichts-Manager finden Sie unter [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Nicht auf alle in der Ordnerhierarchie angezeigten Berichte kann sofort zugegriffen werden. Bei manchen Berichten werden Sie möglicherweise zur Eingabe Ihres Benutzernamens und Kennworts aufgefordert, um zu ermitteln, ob Sie auf die Datenquelle für den Bericht zugreifen dürfen. Weitere Informationen zum Öffnen von Berichten im Berichts-Manager finden Sie unter [öffnen und Schließen eines Berichts &#40; Berichts-Manager &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Sie können auch direkt mit Berichts-Generator einen Bericht auf dem Berichtsserver suchen und öffnen. Weitere Informationen finden Sie unter [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -61,6 +61,6 @@ Berichts-Manager-Menüband
   
 ## <a name="see-also"></a>Siehe auch  
  [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

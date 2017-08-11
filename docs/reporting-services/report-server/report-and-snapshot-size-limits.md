@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-and-snapshot-size-limits"></a>Größenbeschränkungen für Berichte und Momentaufnahmen
@@ -86,7 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Verarbeiten von großen Berichten](../../reporting-services/report-server/process-large-reports.md)  
+ [Berichtsserver-Datenbank &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Process Large Reports (Verarbeiten von großen Berichten)](../../reporting-services/report-server/process-large-reports.md)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 349180bb3cfe2b03bee076dfc2dbb90265118fa4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rename-a-report-server-computer"></a>Umbenennen eines Berichtsservercomputers
@@ -52,9 +52,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
+ [Reporting Services-Konfigurations-Manager &#40; Im einheitlichen Modus &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Starten Sie und beenden Sie des Berichtsserver-Diensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [RSConfig-Hilfsprogramm &#40; SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
   

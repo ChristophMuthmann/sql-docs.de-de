@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Berichts-Generator in SQL Server 2016
@@ -38,9 +38,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **Beginnen Sie mit einem freigegebenen Dataset**. Freigegebene Datasets sind Abfragen, die auf einer freigegebenen Datenquelle basieren und auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtserver im einheitlichen Modus oder im integrieren SharePoint-Modus gespeichert sind.  
   
--   **Beginnen Sie mit dem Tabellen-, Matrix- oder Diagramm-Assistenten**. Wählen Sie eine Datenquellenverbindung aus, verschieben Sie Felder per Drag & Drop, um eine Datasetabfrage zu erstellen, wählen Sie das Layout und Format aus, und passen Sie den Bericht an.  
+-   **Beginnen Sie mit dem Tabellen-, Matrix- oder Diagramm-Assistenten**. Wählen Sie eine Datenquellenverbindung aus, verschieben Sie Felder per Drag &amp; Drop, um eine Datasetabfrage zu erstellen, wählen Sie das Layout und Format aus, und passen Sie den Bericht an.  
   
--   **Beginnen Sie mit dem Karten-Assistenten**, um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch einen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Bing Map-Kachelhintergrund hinzufügen.  
+-   **Beginnen Sie mit dem Karten-Assistenten** , um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Bing Map-Kachelhintergrund hinzufügen.  
   
 -   **Beginnen Sie Ihren Bericht mit Berichtsteilen**. Berichtsteile sind Berichtselemente, die separat auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlicht wurden. Berichtsteile können in anderen Berichten wiederverwendet werden. Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als Berichtsteile veröffentlicht werden.  
   
@@ -74,13 +74,13 @@ ms.lasthandoff: 06/22/2017
 >  Veröffentlichte Berichte werden auf einem Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus von einem Berichtsserveradministrator verwaltet. Berichtsserveradministratoren können die Sicherheit definieren, Eigenschaften festlegen und Vorgänge planen, wie Berichtsverlauf und E-Mail-Übermittlung von Berichten. Sie können freigegebene Zeitpläne und freigegebene Datenquellen erstellen und zur allgemeinen Verwendung zur Verfügung stellen. Administratoren verwalten auch alle Berichtsserverordner. Welche Verwaltungsaufgaben ausgeführt werden können, hängt von den Berechtigungen des Benutzers ab.  
   
 ## <a name="see-also"></a>Siehe auch  
-  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)  
+  [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md)
 
   [Neues in Reporting Services und beim Berichts-Generator für SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Beschreibt die neuen Funktionen in dieser Version von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], einschließlich Karten.   
-  [Lernprogramm: Erstellen eines Quick-Diagrammberichts Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Lernprogramm: Erstellen eines Quick-Diagrammberichts offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Bietet eine Einführung für [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] und die Assistenten, die zur Verfügung stehen, um Ihnen bei der Erstellung von Berichten zu helfen. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
   
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

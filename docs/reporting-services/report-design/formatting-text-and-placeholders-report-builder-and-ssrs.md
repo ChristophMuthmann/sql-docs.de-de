@@ -22,11 +22,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Geben Sie einen einfachen oder komplexen Ausdruck in das Textfeld ein. Wenn Sie z.B. **Name: [Name]** im Textfeld eingeben, wird der Text **[Name]** als Platzhalter angezeigt, der den Ausdruck `=Fields!Name.Value`darstellt.  
   
--   Geben Sie einen Ausdruck in ein leeres Textfeld ein, und beginnen Sie dazu mit einem Gleichheitszeichen (=). Wenn Sie den Fokus vom Textfeld entfernen, wird der resultierende Ausdruck in einen Platzhalter umgewandelt, den Sie bearbeiten können. Wenn das Textfeld nicht leer ist oder das Gleichheitszeichen nicht als erstes Zeichen in das Textfeld eingefügt wird, wird das Gleichheitszeichen als Zeichenfolgenliteral behandelt, und es wird kein Platzhalter erstellt. Weitere Informationen zum Definieren von einfachen und komplexen Ausdrücken finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   Geben Sie einen Ausdruck in ein leeres Textfeld ein, und beginnen Sie dazu mit einem Gleichheitszeichen (=). Wenn Sie den Fokus vom Textfeld entfernen, wird der resultierende Ausdruck in einen Platzhalter umgewandelt, den Sie bearbeiten können. Wenn das Textfeld nicht leer ist oder das Gleichheitszeichen nicht als erstes Zeichen in das Textfeld eingefügt wird, wird das Gleichheitszeichen als Zeichenfolgenliteral behandelt, und es wird kein Platzhalter erstellt. Weitere Informationen zum Definieren von einfachen und komplexen Ausdrücken finden Sie unter [Ausdruck verwendet wird, in Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Formatieren von Platzhaltern und statischem Text in einem Textfeld  
  Platzhalter können mithilfe des Dialogfelds **Platzhaltereigenschaften** formatiert werden. Platzhalter können nur als Ganzes formatiert werden. Wenn Sie den zugrunde liegenden Ausdruck anzeigen möchten, können Sie den Mauszeiger über den Platzhalter bewegen. Sie können den zugrunde liegenden Ausdruck ändern, indem Sie auf den Platzhalter doppelklicken oder mit der rechten Maustaste auf den Platzhalter und anschließend auf **Platzhaltereigenschaften**klicken. Im Dialogfeld **Platzhaltereigenschaften** können Sie mit der Eigenschaft **Bezeichnung** unter **Allgemein** auch eine Bezeichnung für die Benutzeroberfläche angeben. Dieser Text wird zur Entwurfszeit für den Platzhalter angezeigt.  
@@ -70,18 +70,18 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Aktionen, die für ein Textfeld definiert wurden, haben eine höhere Priorität als Aktionen, die für Text in einem Textfeld definiert wurden.  
   
- Weitere Informationen zu gemischten Formatierungen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ Weitere Informationen zu gemischten Formatierungen finden Sie unter [Formatieren von Text in einem Textfeld &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>Horizontales Ausrichten von Text  
  Im Dialogfeld **Textfeldeigenschaften** können Sie auf der Registerkarte **Ausrichtung** angeben, wie der Text horizontal ausgerichtet werden soll. Wenn Sie keinen Wert für die Ausrichtung angeben, wird der Standardwert **Standard**verwendet. Dies bedeutet, dass der Text auf Grundlage den Feldtyp für den Platzhalterwert ausgerichtet wird. Wenn Sie einen Ausdruck angeben, der nicht zu einem Zeichenfolgenwert ausgewertet wird (d. h. keine Zahl), wird der Text rechtsbündig ausgerichtet. Wird der Ausdruck zu einem Zeichenfolgenwert ausgewertet (z. B. eine Zahl), wird der Text linksbündig ausgerichtet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Platzhaltereigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Formatieren von Achsenbezeichnungen in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Skalen auf einem Messgerät &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Im Dialogfeld "Eigenschaften" Platzhalter, Allgemein &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Exportieren nach Microsoft Excel &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Textfelder &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

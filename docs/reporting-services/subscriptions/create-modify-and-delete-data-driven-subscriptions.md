@@ -20,17 +20,17 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Erstellen, Ändern und Löschen von datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
   
- Verwenden Sie im Berichts-Manager die Seiten zum Erstellen eines datengesteuerten Abonnements, um ein neues datengesteuertes Abonnement zu erstellen oder ein vorhandenes Abonnement zu ändern. Diese Seiten führen Sie schrittweise durch das Erstellen oder Ändern eines Abonnements. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite Meine Abonnements und der Abonnementliste eines Berichts. Erfahren Sie, wie Sie ein datengesteuertes Abonnement erstellen, indem Sie die Seite [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) aufrufen.  
+ Verwenden Sie im Berichts-Manager die Seiten zum Erstellen eines datengesteuerten Abonnements, um ein neues datengesteuertes Abonnement zu erstellen oder ein vorhandenes Abonnement zu ändern. Diese Seiten führen Sie schrittweise durch das Erstellen oder Ändern eines Abonnements. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite Meine Abonnements und der Abonnementliste eines Berichts. Vorgehensweise: erstellen ein datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40; SSRS-Lernprogramm &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  In diesem Thema:  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Abonnements (Seite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Meine Abonnements (Seite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Seite "Abonnements" &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Meine Abonnements (Seite) &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

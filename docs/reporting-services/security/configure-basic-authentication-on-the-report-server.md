@@ -18,11 +18,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Standardauthentifizierung auf dem Berichtsserver
@@ -95,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Anwendungsdomänen für Berichtsserveranwendungen](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
- [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
+ [Reporting Services-Sicherheit und Schutz](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
 

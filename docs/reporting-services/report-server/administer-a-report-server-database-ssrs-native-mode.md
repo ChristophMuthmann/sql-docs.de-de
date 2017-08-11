@@ -22,11 +22,11 @@ caps.latest.revision: 63
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Für die Verwaltung der Berichtsserver-Datenbanken enthält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Reihe von Tools.  
   
--   Zum Sichern oder Wiederherstellen der Berichtsserver-Datenbank, zum Verschieben einer Berichtsserver-Datenbank oder zum Wiederherstellen einer Berichtsserver-Datenbank können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle oder die Eingabeaufforderungs-Hilfsprogramme für Datenbanken verwenden. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) in der SQL Server-Onlinedokumentation.  
+-   Zum Sichern oder Wiederherstellen der Berichtsserver-Datenbank, zum Verschieben einer Berichtsserver-Datenbank oder zum Wiederherstellen einer Berichtsserver-Datenbank können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle oder die Eingabeaufforderungs-Hilfsprogramme für Datenbanken verwenden. Anweisungen finden Sie [Verschieben der Berichtsserver-Datenbanken auf einem anderen Computer &#40; SSRS im einheitlichen Modus &#41; ](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) in SQL Server-Onlinedokumentation.  
   
 -   Um vorhandene Datenbankinhalte in eine andere Berichtsserver-Datenbank zu kopieren, können Sie eine Kopie einer Berichtsserver-Datenbank anfügen und sie mit einer anderen Berichtsserverinstanz verwenden. Oder Sie können ein Skript erstellen und ausführen, das SOAP-Aufrufe verwendet, um Berichtsserverinhalte in einer neuen Datenbank neu zu erstellen. Sie können das Hilfsprogramm **rs** verwenden, um das Skript auszuführen.  
   
@@ -85,14 +85,14 @@ SET READ_COMMITTED_SNAPSHOT OFF
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Erstellen Sie eine Berichtsserver-Datenbank im einheitlichen Modus &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Konfigurieren Sie die Berichtsserver-Dienstkontos &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Erstellen Sie eine Berichtsserver-Datenbank &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Berichtsserver-Datenbank &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Speichern verschlüsselter Berichtsserverdaten &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

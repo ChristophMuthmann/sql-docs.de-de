@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Anwendungseinstellungen in einem Satz von Konfigurationsdateien gespeichert. Beim Setup werden die Konfigurationsdateien für jede Berichtsserverinstanz erstellt, die Sie installieren. In jeder Datei werden Werte entweder während der Installation festgelegt oder aber wenn Sie Tools und Anwendungen zum Konfigurieren eines Servers für einen Vorgang verwenden. In einigen Fällen müssen Sie eine Datei direkt ändern, um erweiterte Einstellungen hinzuzufügen oder zu konfigurieren. Konfigurationseinstellungen werden als XML-Elemente oder -Attribute angegeben. Wenn Sie sich mit XML und Konfigurationsdateien auskennen, können Sie mit einem Text- oder Code-Editor benutzerdefinierbare Einstellungen ändern.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Anwendungseinstellungen in einem Satz von Konfigurationsdateien gespeichert. Beim Setup werden die Konfigurationsdateien für jede Berichtsserverinstanz erstellt, die Sie installieren. In jeder Datei werden Werte entweder während der Installation festgelegt oder aber wenn Sie Tools und Anwendungen zum Konfigurieren eines Servers für einen Vorgang verwenden. In einigen Fällen müssen Sie eine Datei direkt ändern, um erweiterte Einstellungen hinzuzufügen oder zu konfigurieren. Konfigurationseinstellungen werden als XML-Elemente oder -Attribute angegeben. Wenn Sie sich mit XML und Konfigurationsdateien auskennen, können Sie mit einem Text- oder Code-Editor benutzerdefinierbare Einstellungen ändern.  
   
  Einige Konfigurationseinstellungen können nur mithilfe eines Tools festgelegt werden. Einstellungen, die verschlüsselte Werte enthalten, müssen mit dem Reporting Services-Konfigurationstool, dem Setupprogramm oder dem Befehlszeilen-Hilfsprogramm **rsconfig** geändert werden. Zum Ausführen dieser Tools müssen Sie ein Mitglied der lokalen Administratorengruppe sein.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Konfigurieren des Webportals für die Übergabe von benutzerdefinierten Authentifizierungscookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [Configure the Web Portal to Pass Custom Authentication Cookies (Konfigurieren des Webportals für die Übergabe von benutzerdefinierten Authentifizierungscookies)](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
  [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [ReportingServicesService-Konfigurationsdatei](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Bereitstellen von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Bereitstellen von Übermittlungserweiterungen](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Bereitstellen von Renderingerweiterungen](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)  

@@ -28,11 +28,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Einbetten eines Bilds in einen Bericht &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rechtecke und Linien &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

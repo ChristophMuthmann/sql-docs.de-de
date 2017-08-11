@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
@@ -71,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Ändern Sie die Eigenschaften des Berichts (z.B. Seiteneinrichtung), indem Sie mit der rechten Maustaste auf die graue Fläche um die Entwurfsoberfläche klicken und anschließend auf **Berichtseigenschaften**klicken.  
   
--   Ändern Sie die Eigenschaften von Berichtselementen, indem Sie mit der rechten Maustaste auf die Elemente klicken und anschließend auf **Eigenschaften** klicken.  
+-   Ändern Sie die Eigenschaften von Berichtselementen, indem Sie mit der rechten Maustaste auf die Elemente klicken und anschließend auf **Eigenschaften**klicken.  
   
- Informationen zum Bearbeiten von Elementen auf der Entwurfsoberfläche über die Tastatur finden Sie unter [Tastenkombinationen &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
+ Informationen zum Bearbeiten von Elementen auf der Entwurfsoberfläche über die Tastatur finden Sie unter [Tastenkombinationen &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Entwurfsoberflächengröße und Druckbereich  
  Die Größe der Entwurfsoberfläche kann sich von der Größe des Druckbereichs unterscheiden, den Sie für das Drucken des Berichts angeben. Wenn Sie die Größe der Entwurfsoberfläche ändern, ändert sich der Druckbereich des Berichts dadurch nicht. Unabhängig von der Größe, die Sie für den Druckbereich des Berichts festlegen, ändert sich die Größe des vollständigen Entwurfsbereichs nicht. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  

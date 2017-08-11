@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner
@@ -44,13 +44,13 @@ ms.lasthandoff: 06/22/2017
   
  Dateien, die Sie in eine Berichtsserver-Datenbank hochladen, werden in der Ordnerhierarchie anhand der folgenden Symbole dargestellt.  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![Berichtsymbol](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 Berichtssymbol  
   
- ![Symbol "Modell"](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![Symbol "Modell"](../../reporting-services/report-server/media/model-icon.gif "Modell (Symbol)")  
 Berichtsmodellsymbol  
   
- ![allgemeines Ressourcensymbol](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![Symbol allgemeine Ressource](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 allgemeines Ressourcensymbol  
   
  Beim Hochladen einer Datei wird diese stets im aktuell ausgewählten Ordner gespeichert. Sie können zu dem Ordner navigieren, in dem das Element zuerst gespeichert werden soll. Oder Sie laden eine Datei hoch und verschieben diese dann später an den endgültigen Speicherort.  
@@ -64,9 +64,9 @@ allgemeines Ressourcensymbol
 |Die Inhalte eines Ordners anzeigen|Ressourcen anzeigen, Berichte anzeigen|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
- [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Hochladen einer Datei oder eines Berichts &#40; Berichts-Manager &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

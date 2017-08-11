@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d18adbfb6ce7a50b458ac1f8197c197281e9d81e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)
@@ -43,8 +43,8 @@ ms.lasthandoff: 06/22/2017
 |VirtualDirectory|ReportServer*[_Instanzname]*<br /><br /> Reports*[_Instanzname]*<br /><br /> \<Benutzerdefinierte >|Gibt den Namen der Anwendung an. Dabei handelt es sich um einen Zeichenfolgewert. Standardmäßig verwendet [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ReportServer und Reports als Anwendungsnamen für den Report Server-Webdienst und die Berichts-Manager-Anwendungen. Sie können andere Namen verwenden, wenn Sie es vorziehen.<br /><br /> Dieser Wert ist erforderlich. Er identifiziert die Anwendung.<br /><br /> Geben Sie nur ein virtuelles Verzeichnis für jede Anwendungsinstanz an. Um in der gleichen Instanz mehrere URLs für dieselbe Anwendung zu definieren, erstellen Sie mehrere Versionen von **UrlString**. Um eindeutige Namen für das virtuelle Verzeichnis für mehrere Anwendungsinstanzen zu erstellen, nehmen Sie den Instanznamen ggf. in den Namen des virtuellen Verzeichnisses auf. Verwenden Sie dazu den Unterstrich (_), um den Instanznamen anzuhängen. *InstanceName* ist optional, wird jedoch empfohlen, wenn Sie mehrere Instanzen auf dem gleichen Computer installiert haben. Weitere Informationen dazu, wie Sie URL-Reservierungen für benannte Instanzen festlegen, finden Sie unter [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> Beim Wert für das virtuelle Verzeichnis wird die Groß-/Kleinschreibung nicht beachtet. Sie können jede beliebige Zeichenfolge verwenden, vorausgesetzt sie enthält keine URL-Trennzeichen oder URL-Codierung.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Konfigurieren des Berichtsserver-URLs &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Konfigurieren einer URL &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

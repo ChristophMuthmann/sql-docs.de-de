@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (einheitlicher Modus)  
   
-1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zum freigegebenen Datenquellenelement. ![Symbol für freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")  
+1.  Navigieren Sie im Berichts-Manager im einheitlichen Modus zum freigegebenen Datenquellenelement. ![Symbol freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
   
 2.  Klicken Sie im Kontextmenü den Befehl ![Kontextmenü im Berichts-Manager für Ssrs-Elemente](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "Kontextmenü im Berichts-Manager für Ssrs-Elemente") , und klicken Sie dann auf **verwalten**.  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [sicherheitsrichtlinienanforderungen für gespeicherte Anmeldeinformationen](#bkmk_top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Datenquellen &#40;Seite „Eigenschaften“, Berichts-Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Neue Datenquelle &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40; Berichts-Manager &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Erstellen Sie, löschen Sie oder ändern Sie einer freigegebenen Datenquelle &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Seite "Eigenschaften" der Daten-Quellen &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Seite Neue Datenquelle &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

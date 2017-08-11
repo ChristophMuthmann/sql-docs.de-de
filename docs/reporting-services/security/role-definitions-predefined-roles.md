@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen - vordefinierte Rollen
@@ -215,11 +215,11 @@ ms.lasthandoff: 06/22/2017
  Mithilfe der **Systembenutzer** -Rolle kann die Standardsicherheit ergänzt werden. Sie können die Rolle in neuen Rollenzuweisungen verwenden, die den Berichtsserverzugriff auf Berichtsbenutzer erweitern. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Erstellen Sie, löschen Sie oder ändern Sie einer Rolle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)  
+ [Tasks and Permissions (Aufgaben und Berechtigungen)](../../reporting-services/security/tasks-and-permissions.md)  
   
   
 

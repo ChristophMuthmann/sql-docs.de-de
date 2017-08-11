@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Erstellen einer Matrix (Berichts-Generator und SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in die Bereiche für Zeilengruppen und Spaltengruppen des Gruppierungsbereichs ziehen. Das erste Feld, das Sie in den Bereich für Zeilengruppen bzw. Spaltengruppen ziehen, ersetzt die anfängliche leere Standardgruppe. Sie können dann auf jede einzelne Zelle von den Daten abhängige Formatierungen anwenden.  
   
- ![Matrix, Kategorie Zeilen- und Spaltengruppe Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix, Kategorie Zeilen- und Spaltengruppe Geography")  
+ ![Matrix, Zeile „Kategorie“ and Spaltengruppe „Geographie“](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix, Category row and Geography column group")  
   
  In Vorschau wird die Matrix erweitert, um die Zeilengruppen- und Spaltengruppenwerte anzuzeigen. In den Zellen werden Zusammenfassungswerte angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Vorschau für gerenderte Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "-Vorschau für gerenderte Matrix mit erweiterten Gruppen")  
+ ![Vorschau der gerenderten Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Preview for rendered matrix with expanded groups")  
   
  Die zu Beginn verwendete Matrix ist eine Vorlage auf Grundlage des Tablix-Datenbereichs. Sie können den Matrixentwurf auch weiterentwickeln, indem Sie geschachtelte oder angrenzende Zeilengruppen oder Spaltengruppen oder sogar Detailzeilen hinzufügen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
+ Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
 ##  <a name="AddingAdjacentGroup"></a> Hinzufügen einer angrenzenden Gruppe zu einer Matrix  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Aggregatfunktionsreferenz &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

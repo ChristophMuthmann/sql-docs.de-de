@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterverweis
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Stylesheet*: Legt ein Stylesheet fest, das auf den HTML-Viewer angewendet wird.  
   
--   Geräteinformationseinstellung: Legt eine Geräteinformationseinstellung in der Form von `rc:tag=value`fest, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format* -Parameter). Sie können z.B. die *OutputFormat*-Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Geräteinformationseinstellung: Legt eine Geräteinformationseinstellung in der Form von `rc:tag=value`fest, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format* -Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Befehle des Berichtsservers (rs:)  
  Befehle des Berichtsservers werden mit dem Präfix *rs:* versehen und zum Auswählen des Berichtsservers verwendet:  

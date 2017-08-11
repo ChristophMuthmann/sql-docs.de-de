@@ -20,11 +20,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus &#124; SharePoint 2010 and SharePoint 2013.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus &#124; SharePoint 2010 und SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Listenberechtigungen  
  Mit den Berechtigungen, die Sie für die Bibliothek festlegen, die Berichtsserverelemente enthält, legen Sie fest, wie Benutzer auf diese Elemente zugreifen.  

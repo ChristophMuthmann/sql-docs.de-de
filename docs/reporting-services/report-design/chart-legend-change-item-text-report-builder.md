@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Die Diagrammlegende: Ändern von Text (Berichts-Generator)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 2.  Klicken Sie auf **Legende** , und geben Sie im Feld **Benutzerdefinierter Legendentext** eine Legendenbezeichnung ein. Die Reihe wird mit dem Text aktualisiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [Formatieren der Legende in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Formatieren von Reihenfarben in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Ausblenden von Legendenelementen im Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

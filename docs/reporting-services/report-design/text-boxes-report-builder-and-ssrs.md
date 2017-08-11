@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Textfelder (Berichts-Generator und SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Um wiederholten Text in einem Freiformlayout anzuzeigen, erstellen Sie einen Listendatenbereich, in dem Sie das Textfeld platzieren. Verwenden Sie eine Liste, wenn Sie ein Formular für mehrere Werte wiederholen möchten, z. B. ein Kundenrechnungsformular, das einmal pro Kunde wiederholt wird. Erfahren Sie mehr über das [Erstellen von Rechnungen und Formularen mit Listen](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Verwenden Sie einen rechteckigen Container, wenn Sie das Textfeldlayout steuern möchten und unterhalb des letzten Textfelds ein Abstand gelassen werden soll. Weitere Informationen finden Sie unter [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Verwenden Sie einen rechteckigen Container, wenn Sie das Textfeldlayout steuern möchten und unterhalb des letzten Textfelds ein Abstand gelassen werden soll. Weitere Informationen finden Sie unter [Rechtecke und Linien &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  Die Ausdrücke in einem Textfeld können Literaltext enthalten, auf ein Feld in der Datenbank verweisen oder Daten berechnen. Alle Ausdrücke werden als Platzhaltertext angezeigt, sodass Sie Zahlen, Farben und andere Darstellungseigenschaften formatieren können. Im gleichen Textfeld können Sie auch Platzhalter mit Literaltext kombinieren.  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formatieren von Zahlen und Datumsangaben &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

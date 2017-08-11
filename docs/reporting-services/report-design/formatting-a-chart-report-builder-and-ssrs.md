@@ -56,11 +56,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc669d43fc5331a1ce161b0c1c2098a38c5224fb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatieren eines Diagramms (Berichts-Generator und SSRS)
