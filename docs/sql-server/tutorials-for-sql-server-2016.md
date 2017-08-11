@@ -1,5 +1,5 @@
 ---
-title: "Lernprogramme für SQLServer | Microsoft Docs"
+title: "Tutorials für SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,24 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>Lernprogramme für SQLServer
+# <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]enthält Lernprogramme für neue Technologien und Funktionen vertraut zu machen können. Lernprogramme für frühere Versionen können in der Regel mit aktuelleren Versionen verwendet werden. Wenn Lernprogramme eine neuere Funktion adressieren, Aufrufens sie die minimale Version aus, um das Lernprogramm abgeschlossen haben.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stellt Tutorials bereit, die Ihnen beim Erlernen neuer Technologien und Funktionen helfen. Tutorials für frühere Versionen können üblicherweise auch für aktuellere Versionen verwendet werden. Wenn Tutorials eine neuere Funktion behandeln, wird eine minimale Version angezeigt, um das Tutorial abzuschließen.  
      
--   Wenn ein Lernprogramm eine verwendet den [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] Datenbanken herunter, und verwenden Sie die neueste Version von CodePlex herunter. Weitere Informationen finden Sie unter [AdventureWorks-Datenbanken und Skripts für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Wenn ein Tutorial eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, sollten Sie die neueste Version von CodePlex herunterladen und verwenden. Weitere Informationen finden Sie unter [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3 (AdventureWorks-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Sie können eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte für die Verwendung mit den [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Tutorials unter [Power View-Beispiele für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734)herunterladen.  
 - Schauen Sie sich das neue Beispiel [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) auf dem GitHub-Repository [SQL Server samples](https://github.com/Microsoft/sql-server-samples) an. 
 
  
-## <a name="current-tutorials"></a>Aktuelle Lernprogramme  
+## <a name="current-tutorials"></a>Aktuelle Tutorials  
   
 |Technologie|Description|  
 |--------------|---------------|  

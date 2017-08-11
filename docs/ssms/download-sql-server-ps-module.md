@@ -1,5 +1,5 @@
 ---
-title: Herunterladen von SQL Server PowerShell-Modul | Microsoft Docs
+title: Herunterladen des SQL Server PowerShell-Moduls | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
@@ -10,29 +10,29 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
-- Installieren von Sql Server-Powershell, Herunterladen von Sql Server powershell
+- SQL Server PowerShell installieren, SQL Server PowerShell herunterladen
 ms.assetid: 
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
 ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="download-sql-server-powershell-module"></a>Herunterladen von SQL Server PowerShell-Modul
-Als Teil der 17,0-Version von SQL Server Management Studio wird die SQL Server PowerShell-Modul nun über die PowerShell-Katalog geliefert.  Das Modul ist nicht mehr in der SSMS-Installationspaket enthalten. Wenn Sie PowerShell mit SSMS 17,0 und höher, muss der SQL Server-Modul als ein zusätzlicher Schritt auf dem Computer installiert werden.
+# <a name="download-sql-server-powershell-module"></a>Herunterladen des SQL Server PowerShell-Moduls
+Als Teil der Version 17.0 von SQL Server Management Studio ist das SQL Server PowerShell-Modul nun im PowerShell-Katalog enthalten.  Das Modul ist nicht mehr im SSMS-Installationspaket enthalten. Um PowerShell mit Version 17.0 und neuer von SSMS zu verwenden, muss das SQL Server-Modul in einem zusätzlichen Schritt auf dem Computer installiert werden.
 
-Vollständige Dokumentation zur Installation der neuesten Version von Windows Management Framework aus, und installieren Sie PowerShell-Module im Allgemeinen befinden sich auf die [PowerShell-Katalog](https://www.powershellgallery.com/) Standort.
+Die vollständige Dokumentation über die Installation der neuesten Version von Microsoft Management Framework und die allgemeine Installation von PowerShell-Modulen finden Sie auf der Seite [Power Shell Gallery (PowerShell-Katalog)](https://www.powershellgallery.com/).
 
-Der PowerShell-Befehl zum Installieren des SQL Server-Moduls ist:
+Der PowerShell-Befehl zum Installieren des SQL Server-Moduls lautet:
 
-> Install-Module-Name der SQL Server-Bereich CurrentUser
+> Install-module -Name SqlServer -Scope CurrentUser
 
-Befinden Sie frühere Versionen von SQL Server PowerShell-Module auf dem Computer an, es kann erforderlich sein, geben Sie den "-AllowClobber" Parameter.  
+Wenn sich noch ältere Versionen der SQL Server PowerShell-Module auf dem Computer befinden, kann die Angabe des Parameters „-AllowClobber“ nötig werden.  
 
-Die Versionen der SQL Server PowerShell-Modul die PowerShell-Katalog geliefert unterstützt die versionsverwaltung und PowerShell, Version 5.0 oder höher erforderlich.
+Die Versionen der SQL Server PowerShell-Module, die im PowerShell-Katalog enthalten sind, unterstützen die Versionsverwaltung und benötigen die PowerShell-Version 5.0 oder neuer.
 

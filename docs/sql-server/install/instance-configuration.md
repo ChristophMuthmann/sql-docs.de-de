@@ -1,5 +1,5 @@
 ---
-title: Assistent zum Installieren von | Microsoft Docs
+title: Hilfe zum Installations-Assistenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 2017-04-21
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="installation-wizard-help"></a>Hilfe zur Installation-Assistent
+# <a name="installation-wizard-help"></a>Hilfe zum Installations-Assistenten
 
-In diesem Thema wird beschrieben, einige der in den Konfigurationsseiten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten. 
+In diesem Thema werden einige der Konfigurationsseiten im Installations-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ## <a name="instance-configuration"></a>Instanzkonfiguration
 Verwenden Sie die Seite **Instanzkonfiguration** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um anzugeben, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden soll. Wenn noch keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Server installiert wurde, wird eine Standardinstanz erstellt, es sei denn Sie geben eine benannte Instanz an.  
@@ -99,11 +99,11 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
  Alle Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die denselben Instanznamen verwenden, müssen die folgenden Kriterien erfüllen:  
   
--   **Gleiche version**  
+-   **Gleiche Version**  
   
--   **Gleiche edition**  
+-   **Gleiche Edition**  
   
--   **Gleiche spracheinstellungen**  
+-   **Gleiche Spracheinstellungen**  
   
 -   **Gleicher gruppierter Status**  
   
@@ -126,11 +126,10 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
 >  Die Benutzerkontensteuerung (User Account Control, UAC) ist eine Windows-Sicherheitsfunktion, bei der ein Administrator administrative Aktionen oder Anwendungen einzeln genehmigen muss, bevor diese ausgeführt werden können. Da die Benutzerkontensteuerung in den Standardeinstellungen aktiviert ist, werden Sie aufgefordert, einzelne Vorgänge, für die erhöhte Berechtigungen erforderlich sind, zu genehmigen. Sie können die Benutzerkontensteuerung konfigurieren, um das Standardverhalten zu ändern, oder sie für bestimmte Programme anpassen. Weitere Informationen über die Benutzerkontensteuerung und deren Konfiguration finden Sie unter [Schritt-für-Schritt-Anleitung zur Benutzerkontensteuerung](http://go.microsoft.com/fwlink/?linkid=196350) und [Benutzerkontensteuerung (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Dienstkonten &#40; Analysis Services &#41; ](../../analysis-services/instances/configure-service-accounts-analysis-services.md) 
-  [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+ [Configure Service Accounts &#40;Analysis Services&#41; (Konfigurieren von Dienstkonten und Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configure Windows Service Accounts and Permissions (Konfigurieren von Windows-Dienstkonten und -Berechtigungen)](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse
-  Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Benutzer konfiguriert werden: Über die Berechtigung zum Zugriff auf diese Dateien gewährt wird, können lokale Administratoren und die Mitglieder der SQLServerMSASUser$\<Instanz > Sicherheitsgruppe, die erstellt und während des Setups bereitgestellt wird.  
+  Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Benutzer konfiguriert werden: Die Berechtigung zum Zugriff auf diese Dateien wird den lokalen Administratoren und Mitgliedern der Sicherheitsgruppe SQLServerMSASUser $\<instance> gewährt, die während des Setups erstellt und bereitgestellt wird.  
   
 ### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
@@ -163,18 +162,18 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
  Weitere Informationen zu Verzeichnissen, Dateispeicherorten und Namen für Instanz-IDs finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
 ## <a name="database-engine-configuration---data-directories"></a>Konfiguration des Datenbankmodells - Datenverzeichnisse
-  Mithilfe dieser Seite Geben Sie den Installationspfad für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Programm- und Datendateien. Auf Grundlage des Typs der Installation schließt der unterstützte Speicher möglicherweise einen lokalen Datenträger, freigegebenen Speicher oder SMB-Dateiserver ein.  
+  Verwenden Sie diese Seite, um den Installationspfad für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]-Programm und die Datendateien anzugeben. Auf Grundlage des Typs der Installation schließt der unterstützte Speicher möglicherweise einen lokalen Datenträger, freigegebenen Speicher oder SMB-Dateiserver ein.  
   
  Um eine SMB-Dateifreigabe als Verzeichnis anzugeben, müssen Sie den unterstützten UNC-Pfad manuell eingeben. Das Navigieren zu einer SMB-Dateifreigabe wird nicht unterstützt. Das folgende Format ist ein unterstütztes UNC-Pfadformat einer SMB-Dateifreigabe: \\\\Servername\ShareName\\\...  
   
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Eigenständige Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle sind die unterstützten Speichertypen und die Standardverzeichnisse für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups vom Benutzer konfigurierbar sind.  
   
 ### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
 |Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Datenstammverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnisse und unterbricht die Vererbung als Teil der Konfiguration.|  
+|Datenstammverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |Benutzerdatenbankverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
 |Benutzerdatenbank-Protokollverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
 |Sicherungsverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Legen Sie zur Vermeidung von Datenverlusten entsprechende Berechtigungen fest, und stellen Sie sicher, dass das Benutzerkonto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
@@ -186,7 +185,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 |Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Datenstammverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk: > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnisse und unterbricht die Vererbung als Teil der Konfiguration.|  
+|Datenstammverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |Benutzerdatenbankverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
 |Benutzerdatenbank-Protokollverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk: >\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
 |Sicherungsverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk: >\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Legen Sie zur Vermeidung von Datenverlusten entsprechende Berechtigungen fest, und stellen Sie sicher, dass das Benutzerkonto für den SQL Server-Dienst über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
@@ -220,7 +219,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 ### <a name="see-also"></a>Siehe auch  
 ### <a name="analysis-services-configuration---data-directories"></a>Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse
-  Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Benutzer konfiguriert werden: Über die Berechtigung zum Zugriff auf diese Dateien gewährt wird, können lokale Administratoren und die Mitglieder der SQLServerMSASUser$\<Instanz > Sicherheitsgruppe, die erstellt und während des Setups bereitgestellt wird.  
+  Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Benutzer konfiguriert werden: Die Berechtigung zum Zugriff auf diese Dateien wird den lokalen Administratoren und Mitgliedern der Sicherheitsgruppe SQLServerMSASUser $\<instance> gewährt, die während des Setups erstellt und bereitgestellt wird.  
   
 #### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
@@ -253,7 +252,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
  Weitere Informationen zu Verzeichnissen, Dateispeicherorten und Namen für Instanz-IDs finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Freigabe- und NTFS-Berechtigungen auf einem Dateiserver](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Share and NTFS Permissions on a File Server (Share- und NTFS-Berechtigung für einen Dateiserver)](http://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>Konfiguration des Datenbankmoduls - Filestream
   Verwenden Sie diese Seite, um FILESTREAM für diese Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu aktivieren. FILESTREAM integriert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in ein NTFS-Dateisystem, indem Blobdaten (Binary Large Object) vom Typ **varbinary(max)** als Dateien im Dateisystem gespeichert werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen können FILESTREAM-Daten eingefügt, aktualisiert, abgefragt, gesucht und gesichert werden. Die Win32-Dateisystemschnittstellen stellen Streamingzugriff auf die Daten bereit.  
@@ -308,19 +307,19 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Legen Sie auf keinen Fall ein leeres oder unsicheres sa-Kennwort fest.  
   
- **Gemischter Modus (Windows-Authentifizierung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung)**  
+ **Gemischter Modus (Windows-Authentifizierung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung)**  
  Ermöglicht Benutzern das Herstellen einer Verbindung mithilfe der Windows-Authentifizierung bzw. der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Benutzer, die mithilfe eines Windows-Benutzerkontos Verbindungen herstellen, können vertrauenswürdige Verbindungen verwenden, die von Windows überprüft werden.  
   
  Wenn Sie den gemischten Authentifizierungsmodus auswählen und beim Ausführen älterer Anwendungen ausschließlich SQL-Anmeldungen verwenden, müssen Sie für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konten sichere Kennwörter festlegen.  
   
 > [!NOTE]  
-> Die  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- **Geben Sie ein Kennwort**  
+ **Kennwort eingeben**  
  Geben Sie die Systemadministratoranmeldung (sa) ein, uns bestätigen Sie sie. Kennwörter dienen als erste Schutzmaßnahme gegen Eindringlinge, daher ist die Festlegung sicherer Kennwörter von entscheidender Bedeutung für die Systemsicherheit. Legen Sie auf keinen Fall ein leeres oder unsicheres sa-Kennwort fest.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kennwörter können zwischen 1 und 128 Zeichen enthalten, z. B. eine beliebige Kombination aus Buchstaben, Sonderzeichen und Ziffern enthalten. Wenn Sie den gemischten Authentifizierungsmodus auswählen, müssen Sie ein sicheres sa-Kennwort eingeben, bevor Sie den Vorgang auf der nächsten Seite des Installations-Assistenten fortsetzen können.  
+>  Kennwörter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können zwischen 1 und 128 Zeichen (Kombinationen aus Buchstaben, Sonderzeichen und Ziffern) enthalten. Wenn Sie den gemischten Authentifizierungsmodus auswählen, müssen Sie ein sicheres sa-Kennwort eingeben, bevor Sie den Vorgang auf der nächsten Seite des Installations-Assistenten fortsetzen können.  
   
  **Richtlinien für sichere Kennwörter**  
  Sichere Kennwörter können von anderen nur schwer erraten und selbst von Computerprogrammen nicht ohne größeren Aufwand ausgespäht werden. Beim Festlegen von sicheren Kennwörtern dürfen keine verbotenen Richtlinien oder Bestimmungen verwendet werden, z. B.:  
@@ -356,31 +355,31 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
  Auf dieser Seite eingegebene Kennwörter müssen die Anforderungen der Richtlinien für sichere Kennwörter erfüllen. Bei Automatisierungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, sollten Sie sicherstellen, dass das Kennwort die Anforderungen der Richtlinien für sichere Kennwörter erfüllt.  
   
 ### <a name="related-content"></a>Verwandte Inhalte  
- Weitere Informationen zum Auswählen von Windows-Authentifizierung im Vergleich zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
+ Weitere Informationen zum Auswählen von Windows-Authentifizierung im Vergleich zu der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung finden Sie unter [Choose an Authentication Mode (Wählen einer Authentifizierungsmethode)](../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Weitere Informationen zum Auswählen eines Kontos zum Ausführen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], finden Sie unter [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+ Weitere Informationen zur Auswahl eines Kontos für die Ausführung von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]finden Sie unter [Configure Windows Service Accounts and Permissions (Konfigurieren von Windows-Dienstkonten und -Berechtigungen)](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
   
 ## <a name="database-engine-configuration---tempdb"></a>Datenbankmodulkonfiguration – tempDB
-  Mithilfe dieser Seite geben **Tempdb** Daten- und Protokolldateien Datei, Speicherort, Größe, wachstumseinstellungen und Anzahl der Dateien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Auf Grundlage des Typs der Installation schließt der unterstützte Speicher möglicherweise einen lokalen Datenträger, freigegebenen Speicher oder SMB-Dateiserver ein.  
+  Verwenden Sie diese Seite, um den Speicherort, die Größe und die Vergrößerungseinstellungen für **tempdb** -Daten und -Protokolle anzugeben, ebenso wie die Anzahl an Dateien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Auf Grundlage des Typs der Installation schließt der unterstützte Speicher möglicherweise einen lokalen Datenträger, freigegebenen Speicher oder SMB-Dateiserver ein.  
   
  Um eine SMB-Dateifreigabe als Verzeichnis anzugeben, müssen Sie den unterstützten UNC-Pfad manuell eingeben. Das Navigieren zu einer SMB-Dateifreigabe wird nicht unterstützt. Das folgende Format ist ein unterstütztes UNC-Pfadformat einer SMB-Dateifreigabe: \\\\Servername\ShareName\\\...  
   
-### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine eigenständige Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eigenständige Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des Setups konfigurieren können.  
   
 |Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**Die Datenverzeichnisse**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnisse und unterbricht die Vererbung als Teil der Konfiguration.<br /><br /> Welche Vorgehensweise für die **temdb** -Verzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab. Geben Sie verschiedenen Ordner/Laufwerke an, um die Datendateien über mehrere Volumes zu verteilen.|  
+|**Datenverzeichnisse**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Welche Vorgehensweise für die **temdb** -Verzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab. Geben Sie verschiedenen Ordner/Laufwerke an, um die Datendateien über mehrere Volumes zu verteilen.|  
 |**Protokollverzeichnis**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
   
  *Obwohl freigegebene Datenträger unterstützt werden, wird diese Vorgehensweise für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht empfohlen.  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine Failoverclusterinstanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle sind die unterstützten Speichertypen und die Standardverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups vom Benutzer konfigurierbar sind.  
   
 |Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** -Datenverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Drive:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnisse und unterbricht die Vererbung als Teil der Konfiguration.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis oder die angegebenen Verzeichnisse (falls mehrere Dateien angegeben sind) für alle Clusterknoten gültig sind. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.|  
+|**tempdb** -Datenverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Drive:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis oder die angegebenen Verzeichnisse (falls mehrere Dateien angegeben sind) für alle Clusterknoten gültig sind. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.|  
 |**tempdb** -Protokollverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk: >\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis für alle Clusterknoten gültig ist. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.<br /><br /> Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
   
 ### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -388,11 +387,11 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 -   **Anzahl von Dateien** ist die Gesamtzahl der Datendateien für **tempdb**. Der Standardwert ist der niedrigere der folgenden beiden Werte: entweder acht, oder die Anzahl der logischen Kerne, die vom Setup erkannt wurden. Als allgemeine Regel gilt: Verwenden Sie die gleiche Anzahl an Datendateien wie logischen Prozessoren, falls die Anzahl von logischen Prozessoren acht oder weniger beträgt. Verwenden Sie acht Datendateien, falls die Anzahl von logischen Prozessoren größer als acht ist. Falls weiterhin ein Konflikt besteht, erhöhen Sie anschließend die Anzahl von Datendateien um ein Vielfaches von vier (bis hoch zur Anzahl von logischen Prozessoren) bis der Konflikt auf ein akzeptables Ausmaß reduziert ist, oder ändern Sie die Arbeitsauslastung oder den Code. 
   
--   **Anfangsgröße (MB)** ist die Anfangsgröße in MB für jede **tempdb** -Datendatei. Der Standardwert liegt bei 8 MB (4 MB für [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]führt eine maximale anfängliche Dateigröße 262.144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)]hat eine maximale anfängliche Dateigröße von 1024 MB. Alle **tempdb** -Datendateien haben die gleichen Anfangsgröße. Da **tempdb** bei jedem Start von SQL Server und bei jedem, von SQL Server durchgeführten Failover neu erstellt wird, sollten Sie eine Größe angeben, die der Größe nahekommt, die Ihre Arbeitsauslastung im Normalbetrieb erfordert. Aktivieren Sie die [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md), um die Erstellung von **tempdb** weiter zu optimieren.  
+-   **Anfangsgröße (MB)** ist die Anfangsgröße in MB für jede **tempdb** -Datendatei. Der Standardwert ist 8 MB (oder 4 MB für [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]führt eine maximale anfängliche Dateigröße von 262.144 MB (256 GB) ein. [!INCLUDE[sssql15](../../includes/sssql15-md.md)]hatte eine maximale anfängliche Dateigröße von 1024 MB. Alle **tempdb** -Datendateien haben die gleichen Anfangsgröße. Da **tempdb** bei jedem Start von SQL Server und bei jedem, von SQL Server durchgeführten Failover neu erstellt wird, sollten Sie eine Größe angeben, die der Größe nahekommt, die Ihre Arbeitsauslastung im Normalbetrieb erfordert. Aktivieren Sie die [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md), um die Erstellung von **tempdb** weiter zu optimieren.  
   
 -   **Gesamtanfangsgröße (MB)** ist die kumulierte Größe aller **tempdb** -Datendateien.  
   
--   **Automatische Vergrößerung (MB)** ist die Menge des Speicherplatzes in Megabyte, um die sich jede **tempdb** -Datendatei automatisch vergrößert, wenn es keinen Speicherplatz mehr gibt. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] und später vergrößern alle Datendateien werden zur gleichen Zeit in dieser Einstellung angegebene Menge.  
+-   **Automatische Vergrößerung (MB)** ist die Menge des Speicherplatzes in Megabyte, um die sich jede **tempdb** -Datendatei automatisch vergrößert, wenn es keinen Speicherplatz mehr gibt. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] und später vergrößern sich alle Datendateien gleichzeitig um die in dieser Einstellung angegebene Menge.  
   
 -   **Gesamte automatische Vergrößerung (MB)** ist die kumulierte Größe der einzelnen Ereignisse der automatischen Vergrößerung.  
   
@@ -404,7 +403,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
  **TempDB-Protokolldatei** ist der Name der Protokolldatei. Er wird automatisch erstellt. Die folgenden Einstellungen gelten nur für **tempdb** -Protokolldateien:  
   
--   **Anfangsgröße (MB)** ist die Anfangsgröße der **tempdb** -Protokolldatei. Der Standardwert liegt bei 8 MB (4 MB für [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]führt eine maximale anfängliche Dateigröße 262.144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)]hat eine maximale anfängliche Dateigröße von 1024 MB. Da **tempdb** bei jedem Start von SQL Server und bei jedem, von SQL Server durchgeführten Failover neu erstellt wird, sollten Sie eine Größe angeben, die der Größe nahekommt, die Ihre Arbeitsauslastung im Normalbetrieb erfordert. Aktivieren Sie die [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md), um die Erstellung von **tempdb** weiter zu optimieren.  
+-   **Anfangsgröße (MB)** ist die Anfangsgröße der **tempdb** -Protokolldatei. Der Standardwert ist 8 MB (oder 4 MB für [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]führt eine maximale anfängliche Dateigröße von 262.144 MB (256 GB) ein. [!INCLUDE[sssql15](../../includes/sssql15-md.md)]hatte eine maximale anfängliche Dateigröße von 1024 MB. Da **tempdb** bei jedem Start von SQL Server und bei jedem, von SQL Server durchgeführten Failover neu erstellt wird, sollten Sie eine Größe angeben, die der Größe nahekommt, die Ihre Arbeitsauslastung im Normalbetrieb erfordert. Aktivieren Sie die [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md), um die Erstellung von **tempdb** weiter zu optimieren.  
   
 -   **Hinweis: tempdb** verwendet minimale Protokollierung. Das **tempdb** -Protokoll kann nicht gesichert werden. Es wird jedes Mal neu erstellt, wenn der SQL Server startet oder wenn eine Clusterinstanz einen Failover ausführt.  
   
@@ -431,7 +430,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 ### <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Freigabe- und NTFS-Berechtigungen auf einem Dateiserver](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Share and NTFS Permissions on a File Server (Share- und NTFS-Berechtigung für einen Dateiserver)](http://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>Konfiguration des Datenbankmoduls - Benutzerinstanz
 Mithilfe der Seite **Benutzerinstanz** können Sie eine separate Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für Benutzer ohne Administratorberechtigungen generieren. Zudem können Sie der Administratorrolle Benutzer hinzufügen.  
@@ -448,7 +447,7 @@ Mithilfe der Seite **Benutzerinstanz** können Sie eine separate Instanz von [!I
  Benutzer zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratorrolle hinzufügen  
  Standardmäßig deaktiviert. Aktivieren Sie dieses Kontrollkästchen, um den aktuellen Setupbenutzer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratorrolle hinzuzufügen.  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]Benutzer, die Mitglieder von VORDEFINIERT\Administratoren sind werden nicht automatisch hinzugefügt, der festen Serverrolle "Sysadmin" bei der Verbindung [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Nur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] -Benutzer, die explizit einer Administratorrolle auf Serverebene hinzugefügt wurden, können [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]verwalten. Mitglieder der Gruppe VORDEFINIERT\Administratoren können eine Verbindung mit der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Instanz herstellen, verfügen jedoch nur über begrenzte Berechtigungen für Datenbankaufgaben. Daher müssen Benutzern, deren [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Berechtigungen in früheren Versionen von Windows von VORDEFINIERT\Administratoren und VORDEFINIERT\Benutzer vererbt wurden, unter [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] explizit Administratorberechtigungen in Instanzen von [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]erteilt werden.  
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Benutzer, die Mitglieder von VORDEFINIERT\Administratoren sind, werden nicht automatisch der festen Serverrolle sysadmin hinzugefügt, wenn sie eine Verbindung mit [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] herstellen. Nur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] -Benutzer, die explizit einer Administratorrolle auf Serverebene hinzugefügt wurden, können [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]verwalten. Mitglieder der Gruppe VORDEFINIERT\Administratoren können eine Verbindung mit der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Instanz herstellen, verfügen jedoch nur über begrenzte Berechtigungen für Datenbankaufgaben. Daher müssen Benutzern, deren [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Berechtigungen in früheren Versionen von Windows von VORDEFINIERT\Administratoren und VORDEFINIERT\Benutzer vererbt wurden, unter [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] explizit Administratorberechtigungen in Instanzen von [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]erteilt werden.  
   
  Wenn Sie nach Beendigung dieses Installationsprogramms Änderungen an Benutzerrollen vornehmen möchten, verwenden Sie das Oberflächen-Konfigurationstool von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (SQLSAC.exe). Klicken Sie zum Aktualisieren der Liste der Benutzer in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorrolle auf den Link **Neuen Administrator hinzufügen** .  
   
