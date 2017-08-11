@@ -1,42 +1,47 @@
 ---
-title: "Attribute (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freiformattribute [Master Data Services]"
-  - "Attribute [Master Data Services], Informationen zu Attributen"
-  - "Attribute [Master Data Services], Dateiattribute"
-  - "Dateiattribute [Master Data Services]"
-  - "Attribute [Master Data Services], Freiformattribute"
-  - "Attribute [Master Data Services]"
+title: Attribute (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- free-form attributes [Master Data Services]
+- attributes [Master Data Services], about attributes
+- attributes [Master Data Services], file attributes
+- file attributes [Master Data Services]
+- attributes [Master Data Services], free-form attributes
+- attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Attribute (Master Data Services)
+# <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
   Attribute sind Objekte, die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Entitäten enthalten sind. Attributwerte beschreiben die Elemente der Entität. Ein Attribut kann verwendet werden, um ein Blattelement, ein konsolidiertes Element oder eine Auflistung zu beschreiben.  
   
-## Zusammenhang zwischen Attributen und anderen Modellobjekten  
+## <a name="how-attributes-relate-to-other-model-objects"></a>Zusammenhang zwischen Attributen und anderen Modellobjekten  
  Sie können sich ein Attribut als Spalte in einer Entitätstabelle vorstellen. Ein Attributwert dient zur Beschreibung eines bestimmten Elements.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Als Tabelle dargestellte Master Data Services-Entität")  
+ ![Master Data Services-Entität als Tabelle dargestellte](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services-Entität als Tabelle dargestellt wird.")  
   
  Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
-## Erforderliche Attribute.  
+## <a name="required-attributes"></a>Erforderliche Attribute.  
  Wenn Sie eine Entität erstellen, werden die Attribute Name und Code automatisch erstellt. Code erfordert einen Wert und muss innerhalb der Entität eindeutig sein. Sie können das Name-Attribut und das Code-Attribut nicht entfernen.  
   
-## Attributtypen  
+## <a name="attribute-types"></a>Attributtypen  
  Es gibt drei Typen von Attributen:  
   
 -   Freiformattribute, die Freiformeingabe für Text, Zahlen, Datumsangaben oder Links ermöglichen.  
@@ -45,7 +50,7 @@ caps.handback.revision: 12
   
 -   Dateiattribute, die zum Speichern von Dateien, Dokumenten oder Bildern verwendet werden. Dateiattribute tragen zur Konsistenz der Daten bei, indem bestimmte Erweiterungen für Dateien vorausgesetzt werden. Dateiattribute können jedoch nicht zuverlässig verhindern, dass ein böswilliger Benutzer eine Datei eines anderen Typs hochlädt.  
   
-### Numerische Freiformattribute  
+### <a name="numeric-free-form-attributes"></a>Numerische Freiformattribute  
  Die Werte von numerischen Freiformattributen erfordern eine besondere Behandlung, da diese Werte auf den Werttyp **SqlDouble** beschränkt sind.  
   
  Standardmäßig enthält ein **SqlDouble** -Wert 15 Dezimalstellen, obwohl intern ein Maximum von 17 Ziffern gespeichert wird. Die Genauigkeit einer Gleitkommazahl hat mehrere Folgen:  
@@ -56,10 +61,10 @@ caps.handback.revision: 12
   
 -   Bei einem mithilfe von Gleitkommazahlen berechneten Wert liefert eine *Gegenprobe* möglicherweise ein abweichendes Ergebnis. Der Begriff Roundtrip wird in Bezug auf einen Wert verwendet, wenn ein Vorgang eine ursprüngliche Gleitkommazahl in ein anderes Format konvertiert, ein umgekehrter Vorgang das konvertierte Format zurück zu einer Gleitkommazahl überträgt und die endgültige Gleitkommazahl mit der ursprünglichen Gleitkommazahl übereinstimmt. Der Roundtrip kann fehlschlagen, wenn eine oder mehrere Ziffern am Ende des Werts bei der Konvertierung verloren gehen oder geändert werden.  
   
-## Attributbeispiele  
+## <a name="attribute-examples"></a>Attributbeispiele  
  Im folgenden Beispiel verfügt die Entität über folgende Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Entitätstabelle für Fahrradprodukte")  
+ ![Tabelle der Product-Entität Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike-Tabelle der Product-Entität")  
   
  Im folgenden Beispiel stellt die Entität Product Folgendes:  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 12
   
  ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Produktentitätsbaumstruktur")  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 12
 |Ändern Sie die Reihenfolge der Attribute.|[Ändern der Reihenfolge von Attributen](../master-data-services/change-the-order-of-attributes.md)|  
 |Erstellen Sie ein Datenattribut|[Erstellen eines Datenattributs &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -96,8 +101,5 @@ caps.handback.revision: 12
   
 -   [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
-  
--   [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+-   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

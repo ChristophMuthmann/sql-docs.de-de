@@ -1,25 +1,30 @@
 ---
-title: "Paketeigenschaften (Dialogfeld) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.ispackageprop.general.f1"
-  - "sql13.ssis.ssms.packageproperties.f1"
+title: Eigenschaften (Dialogfeld) | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.ispackageprop.general.f1
+- sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2269955b34d8077a56c83044bf12c262be166aa8
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
-# Paketeigenschaften (Dialogfeld)
+# <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
   Im Dialogfeld **Paketeigenschaften** können Sie Eigenschaften für Pakete anzeigen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server gespeichert sind.  
   
  Weitere Informationen finden Sie unter [Integration Services-Server &#40;SSIS&#41;](https://msdn.microsoft.com/library/ms141134.aspx).  
@@ -42,7 +47,7 @@ caps.handback.revision: 27
   
 4.  Erweitern Sie den Ordner mit dem Paket, für das Sie die Eigenschaften anzeigen möchten.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften** aus.  
+5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften**aus.  
   
 ##  <a name="options"></a> Konfigurieren der Optionen  
  Auf der Seite **Allgemein** können Sie die Eigenschaften des ausgewählten Pakets anzeigen.  
@@ -58,9 +63,10 @@ caps.handback.revision: 27
  **Einstiegspunkt**  
  Der Wert **TRUE** gibt an, dass das Paket direkt gestartet wird. Der Wert **False** gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert lautet **True**.  
   
- Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket** klicken.  
+ Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
   
  **Description**  
  Zeigt die optionale Beschreibung des Pakets an.  
   
   
+

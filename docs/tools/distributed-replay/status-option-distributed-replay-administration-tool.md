@@ -1,59 +1,64 @@
 ---
-title: "Option Status (Verwaltungstool Distributed Replay) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Statusoption (Verwaltungstool Distributed Replay) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6831b370359b7540621eb8d69bdf070689edd9a2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Option Status (Verwaltungstool Distributed Replay)
-  Das Verwaltungstool [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay (**DReplay.exe**) ist ein Befehlszeilentool, das Sie für die Kommunikation mit dem Distributed Replay-Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **status** und die entsprechende Syntax beschrieben.  
+# <a name="status-option-distributed-replay-administration-tool"></a>Option Status (Verwaltungstool Distributed Replay)
+  Das Verwaltungstool [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ( **DReplay.exe**) ist ein Befehlszeilentool, das Sie für die Kommunikation mit dem Distributed Replay-Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **status** und die entsprechende Syntax beschrieben.  
   
  Mit der **status** -Option wird der Controller abgefragt und der aktuelle Status angezeigt.  
   
- ![Themenlink (Symbol)](../../database-engine/configure-windows/media/topic-link.png "Themenlink (Symbol)") Weitere Informationen zu den Syntaxkonventionen für das Verwaltungstool finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") Weitere Informationen zu den Syntaxkonventionen, die für das Verwaltungstool verwendet werden, finden Sie unter [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 dreplay status [-m controller] [-f status_interval]  
 ```  
   
-#### Parameter  
- **-m** *Controller*  
+#### <a name="parameters"></a>Parameter  
+ **-m** *controller*  
  Gibt den Computernamen des Controllers an. Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.  
   
- Wenn der **-m**-Parameter nicht angegeben ist, wird der lokale Computer verwendet.  
+ Wenn der **-m** -Parameter nicht angegeben ist, wird der lokale Computer verwendet.  
   
- **-f** *Statusintervall*  
+ **-f** *status_interval*  
  Gibt die Häufigkeit (in Sekunden) für die Anzeige des Status an.  
   
- Wenn der **-f**-Parameter nicht angegeben wird, ist das Standardintervall 30 Sekunden.  
+ Wenn der **-f** -Parameter nicht angegeben wird, ist das Standardintervall 30 Sekunden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der aktuelle Status alle 60 Sekunden angezeigt. Der Wert `localhost` gibt an, dass der Controllerdienst auf demselben Computer wie das Verwaltungstool ausgeführt wird.  
   
 ```  
 dreplay status –m localhost -f 60  
 ```  
   
-## Berechtigungen  
+## <a name="permissions"></a>Berechtigungen  
  Sie müssen das Verwaltungstool als interaktiver Benutzer mit einem lokalen Benutzerkonto oder Domänenbenutzerkonto ausführen. Um ein lokales Benutzerkonto zu verwenden, müssen das Verwaltungstool und der Controller auf demselben Computer ausgeführt werden.  
   
  Weitere Informationen finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
   
