@@ -18,7 +18,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: de-de
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Webportal
   
-In früheren Versionen konnten Sie Berichts-Manager deaktivieren, indem **IsReportManagerEnabled** auf "false". **IsReportManagerEnabled** ist ab SQL Server 2016 Reporting Services kumulative Update 2 veraltet. Das Webportal wird immer aktiviert.
+In früheren Versionen konnten Sie Berichts-Manager deaktivieren, indem **IsReportManagerEnabled** auf "false". **IsReportManagerEnabled** ist ab SQL Server 2016 Reporting Services kumulative Update 2 veraltet. Das Webportal bleibt weiterhin aktiviert.
   
 ##  <a name="ReportBuilder"></a> Berichts-Generator  
   

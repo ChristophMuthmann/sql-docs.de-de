@@ -22,7 +22,7 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 54b03cf3453777e6d1cc74e27d77686978e2516c
 ms.contentlocale: de-de
@@ -67,7 +67,7 @@ public void InitializeReportServer(string InstallationID,
  Wenn die [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) -Eigenschaft des Berichtsservers beim Aufruf der InitializeReportServer-Methode auf **TRUE** festgelegt ist, gibt die Methode einen Erfolgswert zurück, ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: de-de
@@ -35,9 +35,9 @@ Diese Abbildung zeigt das Kreisdiagramm, das Sie erstellen.
 Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. Erwägen Sie in diesem Fall eine Anzahl von kleinen Slices zu einem größeren Slice zu kombinieren. Kreisdiagramme sind besser lesbar, wenn Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Hinzufügen einer Datenquelle und Hinzufügen eines Datasets finden Sie unter dem ersten Lernprogramm dieser Reihe: [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -61,7 +61,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
@@ -123,7 +123,7 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten**ein.  
     
-5.  (Optional) Um anzugeben, wie viele Dezimalstellen die Bezeichnung zeigt, in der **bezeichnen können** nach Feld **#PERCENT**, Typ **{Pn}** , in denen  *n*  ist die Anzahl der anzuzeigenden Dezimalstellen. Geben Sie z.B. **#PERCENT{P0}**ein, um keine Dezimalstellen anzuzeigen.  
+5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **#PERCENT** nach **Bezeichnungsdaten**den Namen **{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}**ein, um keine Dezimalstellen anzuzeigen.  
 
 6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
   
@@ -143,7 +143,7 @@ Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices z
 
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Sollte das Fenster „Eigenschaften“ nicht angezeigt werden, können Sie es über die Registerkarte **Ansicht** > Gruppe **Ein-/Ausblenden** > **Eigenschaften** öffnen.  
+2.  Wenn der Bereich "Eigenschaften" angezeigt wird, auf die **Ansicht** Registerkarte "> **ein-/ausblenden** Gruppe > Wählen Sie **Eigenschaften**.  
   
 3.  Klicken Sie auf der Entwurfsoberfläche auf ein Segment des Kreisdiagramms. Die Eigenschaften für die Reihe werden im Bereich "Eigenschaften" angezeigt.  
   
@@ -197,7 +197,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf **Fett**.  
   
-4.  Markieren Sie **Als Prozentsatz des Gesamtumsatzes**, und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
+4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes**, und klicken Sie auf die **Home** Registerkarte "> **Schriftart** Abschnitt > legen Sie die Schriftgröße **10**.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   
@@ -220,7 +220,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
 Der Bericht wird auf dem Berichtsserver gespeichert.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  

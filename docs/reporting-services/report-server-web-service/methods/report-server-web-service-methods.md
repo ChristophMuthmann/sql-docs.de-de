@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Webdienstmethoden für Berichtsserver
@@ -39,17 +39,17 @@ ms.lasthandoff: 06/13/2017
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Report Server Webdienst-Endpunkte](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Beschreibt die Verwaltungs- und Ausführungsendpunkte des Berichtsserver-Webdiensts.|  
-|[Verwaltungsmethoden der Report Server-Namespace](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Beschreibt Methoden, mit denen Sie die Berichtsserver-Datenbank verwalten können. Insbesondere können Sie Ordner und Ressourcen verwalten und Elementeigenschaften festlegen.|  
-|[Autorisierungsmethoden](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Beschreibt Methoden, mit denen Sie Aufgaben, Rollen und Richtlinien verwalten können.|  
-|[Data Sources and Connection Methods](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Beschreibt Methoden, mit denen Sie Datenquellenverbindungen und Anmeldeinformationen für Berichte festlegen und verwalten können.|  
-|[Melden von Parametermethoden](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Beschreibt Methoden, mit denen Sie Parameter für Berichte festlegen und abrufen können.|  
-|[Modellmethoden - Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Beschreibt Methoden, mit denen Sie Modelle verwalten können.|  
-|[Rendering und Execution-Methode](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Beschreibt Methoden, mit denen Sie die Berichtsausführung sowie das Rendern und Zwischenspeichern verwalten können.|  
-|[Berichtsverlaufsmethoden](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Beschreibt Methoden, mit denen Sie Berichtsverlaufs-Momentaufnahmen erstellen und verwalten können.|  
-|[Zeitplanmethoden](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Beschreibt Methoden, mit denen Sie freigegebene Zeitpläne und Cacheaktualisierungspläne, die auf dem Berichtsserver verwendet werden, erstellen und verwalten können.|  
-|[Subscription and Delivery Methods](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Beschreibt Methoden, mit denen Sie Abonnements und die Übermittlung von Berichten erstellen und verwalten können.|  
-|[Methoden für verknüpfte Berichte](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Beschreibt Methoden, mit denen Sie verknüpfte Berichte erstellen und verwalten können.|  
+|[Report Server Web Service Endpoints (Report Server-Webdienst-Endpunkte)](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Beschreibt die Verwaltungs- und Ausführungsendpunkte des Berichtsserver-Webdiensts.|  
+|[Report Server Namespace Management Methods (Methoden zur Berichtsserver-Namespaceverwaltung)](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Beschreibt Methoden, mit denen Sie die Berichtsserver-Datenbank verwalten können. Insbesondere können Sie Ordner und Ressourcen verwalten und Elementeigenschaften festlegen.|  
+|[Authorization Methods (Autorisierungsmethoden)](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Beschreibt Methoden, mit denen Sie Aufgaben, Rollen und Richtlinien verwalten können.|  
+|[Data Sources and Connection Methods (Datenquellen- und Verbindungsmethoden)](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Beschreibt Methoden, mit denen Sie Datenquellenverbindungen und Anmeldeinformationen für Berichte festlegen und verwalten können.|  
+|[Report Parameters Methods (Melden von Parametermethoden)](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Beschreibt Methoden, mit denen Sie Parameter für Berichte festlegen und abrufen können.|  
+|[Model Methods - Report Server Web Service (Modellmethoden: Berichtsserver-Webdienst)](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Beschreibt Methoden, mit denen Sie Modelle verwalten können.|  
+|[Rendering and Execution Methods (Rendering- und Execution-Methode)](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Beschreibt Methoden, mit denen Sie die Berichtsausführung sowie das Rendern und Zwischenspeichern verwalten können.|  
+|[Report History Methods (Berichtsverlaufsmethoden)](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Beschreibt Methoden, mit denen Sie Berichtsverlaufs-Momentaufnahmen erstellen und verwalten können.|  
+|[Scheduling Methods (Zeitplanmethoden)](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Beschreibt Methoden, mit denen Sie freigegebene Zeitpläne und Cacheaktualisierungspläne, die auf dem Berichtsserver verwendet werden, erstellen und verwalten können.|  
+|[Subscription and Delivery Methods (Abonnement und Übermittlungsmethoden)](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Beschreibt Methoden, mit denen Sie Abonnements und die Übermittlung von Berichten erstellen und verwalten können.|  
+|[Linked Reports Methods (Methoden für verknüpfte Berichte)](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Beschreibt Methoden, mit denen Sie verknüpfte Berichte erstellen und verwalten können.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf die SOAP-API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   

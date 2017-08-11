@@ -18,7 +18,7 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: de-de

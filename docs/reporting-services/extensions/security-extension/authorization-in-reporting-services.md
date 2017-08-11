@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 20
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b97911d8adf797fdf324e0c97863dadd611ca596
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisierung in Reporting Services
@@ -64,7 +64,7 @@ public bool CheckAccess(
  Der Berichtsserver Ruft die <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> Methode durch Übergabe des Namens der angemeldete Benutzer, ein Benutzertoken, die Sicherheitsbeschreibung für das Element und den angeforderten Vorgang. Hier würden Sie die Sicherheitsbeschreibung auf den Benutzernamen und die entsprechende Berechtigung zur Durchführung der Anforderung überprüfen, dann würden Sie mit **true** anzeigen, dass der Zugriff erteilt wird, oder mit **false** , dass der Zugriff verweigert wird.  
   
 ## <a name="security-descriptors"></a>Sicherheitsbeschreibungen  
- Wenn Sie Autorisierungsrichtlinien für Elemente in der Berichtsserver-Datenbank festlegen, gibt eine Clientanwendung (z. B. der Berichts-Manager) die Benutzerinformationen an die Sicherheitserweiterung weiter, zusammen mit einer Sicherheitsrichtlinie für das Element. Die Sicherheitsrichtlinie und die Benutzerinformationen werden zusammen als Sicherheitsbeschreibung bezeichnet. Eine Sicherheitsbeschreibung enthält die folgenden Informationen für ein Element in der Berichtsserver-Datenbank:  
+ Wenn Sie Autorisierungsrichtlinien für Elemente in der Berichtsserver-Datenbank festlegen, gibt eine Clientanwendung (z. B. der Berichts-Manager) die Benutzerinformationen an die Sicherheitserweiterung weiter, zusammen mit einer Sicherheitsrichtlinie für das Element. Die Sicherheitsrichtlinie und die Benutzerinformationen werden zusammen als Sicherheitsbeschreibung bezeichnet. Eine Sicherheitsbeschreibung enthält die folgenden Informationen für ein Element in der Berichtsserver-Datenbank:  
   
 -   Gruppe oder Benutzer, der eine bestimmte Berechtigung hat, Vorgänge in dem Element auszuführen.  
   

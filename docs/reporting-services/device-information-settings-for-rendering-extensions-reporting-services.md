@@ -16,7 +16,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: de-de
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 |[PPTX-Geräteinformationseinstellungen](../reporting-services/pptx-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der PPTX-Renderingausgabe zugeordnet sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
 

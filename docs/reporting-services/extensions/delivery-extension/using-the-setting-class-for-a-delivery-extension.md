@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Setting class
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c3f077388f6dc568e238b2e6346663ba1bb9807c
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: e7be89798bb881fa189b2a902efb34cbfdc6b6ad
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Verwenden der Setting-Klasse für eine Übermittlungserweiterung

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
 ms.contentlocale: de-de
@@ -375,6 +375,6 @@ ms.lasthandoff: 08/09/2017
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichtsserver-Authoring Konzepte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

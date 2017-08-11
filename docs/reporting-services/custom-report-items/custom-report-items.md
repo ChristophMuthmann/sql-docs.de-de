@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>Benutzerdefinierte Berichtselemente
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="custom-report-item-scenarios"></a>Szenarien für benutzerdefinierte Berichtselemente  
  Es kann sein, dass Entwickler, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Ihre Anwendungen integrieren müssen, Funktionen benötigen, die ursprünglich nicht in der RDL unterstützt werden. Dazu können folgende Elemente gehören: Zuordnungssteuerelemente, horizontale Listen, Spaltenlisten und Repivotable-Matrizen. Eine Laufzeitkomponente für ein benutzerdefiniertes Berichtselement kann zu diesem Zweck mit einer Anwendung entwickelt und verteilt werden.  
   
- Zusätzlich zur Entwicklung von Funktionen, die nicht systemintern unterstützt wird, möglicherweise möchten einige Entwickler bestehende Funktionen durch Alternativversionen der Steuerelemente erweitern, die bereits integriert sind [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In diesem Szenario könnte ein Entwickler drei Komponenten anbieten: eine Laufzeitkomponente, eine Entwurfszeitkomponente und eine Laufzeitkonvertierungskomponente, mit der ein vorhandenes Berichtselement bei Bedarf in ein benutzerdefiniertes Berichtselement umgewandelt wird.  
+ Möglicherweise möchten einige Entwickler zusätzlich zur Entwicklung von Funktionen, die ursprünglich nicht unterstützt wurden, bestehende Funktionen durch Alternativversionen der Steuerelemente erweitern, die bereits in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthalten sind. In diesem Szenario könnte ein Entwickler drei Komponenten anbieten: eine Laufzeitkomponente, eine Entwurfszeitkomponente und eine Laufzeitkonvertierungskomponente, mit der ein vorhandenes Berichtselement bei Bedarf in ein benutzerdefiniertes Berichtselement umgewandelt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Benutzerdefiniertes Element-Architektur](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
@@ -58,6 +58,6 @@ ms.lasthandoff: 06/22/2017
  Beschreibt die Infrastrukturklassen benutzerdefinierter Berichtselemente und die verwalteten Wrapperklassen im **Microsoft.ReportDesigner** -Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

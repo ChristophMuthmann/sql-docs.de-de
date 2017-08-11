@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f2359ac68758ba2846c4a9065f6cb1c9c96a7e01
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="detail-property"></a>Detail-Eigenschaft
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Der Name des Produkts. Der Standardwert ist **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Die Version des [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen sein: 8.00.0xxx.00.  
+ Die Version von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen sein: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  Die Gebietsschema- oder Sprach-ID der INTL DLL (z.B. 0x41A) der Anwendung.  

@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: de-de
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/09/2017
 >  Wenn Sie einen Seitenkopf oder -fuß entfernen, wird er aus dem Bericht gelöscht. Alle Elemente, die Sie zuvor zum Seitenkopf oder -fuß hinzugefügt haben, werden nicht erneut angezeigt, wenn Sie den Seitenkopf oder -fuß anschließend wieder hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

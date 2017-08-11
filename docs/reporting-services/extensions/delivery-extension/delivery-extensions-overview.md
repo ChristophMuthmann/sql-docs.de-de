@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>Übersicht über Übermittlungserweiterungen
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |Berichtsserver-E-Mail|Verwendet einen SMTP-Server, um Berichte an einzelne Benutzer oder Gruppen zu senden.|  
 |Berichtsserver-Dateifreigabe|Wird verwendet, um Berichte in Ihrer Organisation an Netzwerk-Dateifreigaben zu verteilen. Bietet die Möglichkeit, einen Bericht automatisch nach einem festgelegten Zeitplan in eine Dateifreigabe zu kopieren.|  
   
- ![Reporting Servicearchitektur der übermittlungserweiterungen](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Servicearchitektur der übermittlungserweiterungen](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Architektur der übermittlungserweiterungen Reporting Services")  
 Architektur der Übermittlungserweiterungen von Reporting Services  
   
  Übermittlungserweiterungen und Abonnements werden paarweise zugeordnet. Wenn Sie ein Abonnement erstellen, kann ein Benutzer wählen Sie eine der verfügbaren übermittlungserweiterungen, um zu bestimmen, wie der Bericht übermittelt wird. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] befinden sich Abonnements in der Berichtsserver-Datenbank. Wenn ein Ereignis auftritt, gleicht [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] das Ereignis mit den in der Berichtsserver-Datenbank enthaltenen Abonnements ab. Für jedes Abonnement, das an das Ergebnis gebunden ist, erstellt der Berichtsserver eine Benachrichtigung. Bei datengesteuerten Abonnements wird eine Benachrichtigung für jeden Empfänger erstellt. Sobald eine Benachrichtigung erstellt wurde, ruft der Berichtsserver eine bestimmte Übermittlungserweiterung auf und übernimmt die in der Benachrichtigung angegebenen Werte für die Erweiterungseinstellungen. Die Übermittlungserweiterung sendet die Benachrichtigung an den Benutzer, wie von der ausgewählten Übermittlungserweiterung angegeben.  

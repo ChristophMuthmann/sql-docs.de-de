@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: de-de
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Ihnen die Webadresse eines Berichts nicht bekannt ist, können Sie die Webadresse des Berichtsservers aufrufen und dann in der Ordnerhierarchie des Berichtsservers navigieren, um den gewünschten Bericht auszuwählen. Im folgenden Diagramm wird eine Ordnerhierarchie veranschaulicht, wie sie in einem Browserfenster angezeigt wird.  
   
- ![Ordner in einem Browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Ordner in einem Browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Ordner in einem Browser")  
 Ordner in einem Browser  
   
 > [!NOTE]  

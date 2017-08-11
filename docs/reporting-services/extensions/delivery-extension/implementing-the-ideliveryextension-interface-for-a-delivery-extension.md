@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementieren der IDeliveryExtension-Schnittstelle für Übermittlungserweiterungen
   Mit der Klasse der Übermittlungserweiterungen können Sie ausgehend von den Inhalten der Benachrichtigungen Berichtsbenachrichtigungen an Benutzer übermitteln. Die Klasse der Übermittlungserweiterung bietet außerdem eine Infrastruktur zum Validieren der Benutzereinstellungen, die an die Übermittlungserweiterung übergeben werden. Zusätzlich sollte die Übermittlungserweiterung bestimmte Eigenschaften enthalten, mit denen Clients folgende Informationen abrufen können: den Namen der Erweiterung, die von der Erweiterung unterstützten Einstellungen und die Renderingformate, die für diese Übermittlungserweiterung zur Verfügung stehen.  
   
- ![IDeliveryExtension-schnittstellenprozess](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![IDeliveryExtension-schnittstellenprozess](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension-schnittstellenprozess")  
 Mithilfe der IdeliveryExtension-Schnittstelle können auch Clients Benutzerdaten validieren und die erforderlichen Übermittlungseinstellungen abrufen.  
   
  Um eine Klasse der Übermittlungserweiterungen zu erstellen, implementieren Sie <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> und <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Die **IDeliveryExtension** Schnittstelle kann die übermittlungserweiterung zum Übermitteln von berichtsbenachrichtigungen mit der <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> Methode und zur Überprüfung der eingehenden erweiterungseinstellungen mit der <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> Methode. Die **IExtension** Schnittstelle kann die übermittlungserweiterung einen lokalisierten Erweiterungsnamen implementieren und erweiterungsspezifische Konfigurationsdaten in gespeicherten verarbeiten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Konfigurationsdatei. Durch die Implementierung **IExtension**, enthält die übermittlungserweiterung die <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> Eigenschaft. Es wird dringend empfohlen, die [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] unterstützen die **LocalizedName** -Eigenschaft, sodass Benutzern eine vertraute Name für die Erweiterung in einer Benutzeroberfläche, z. B. den Berichts-Manager auftreten.  

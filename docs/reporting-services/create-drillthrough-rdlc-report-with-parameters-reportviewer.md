@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: de-de
@@ -35,13 +35,13 @@ Verwenden Sie Visual Studio 2015 und die ASP.NET-Webanwendung, um eine ASP.NET-W
   
 ## <a name="tasks"></a>Aufgaben  
 [Lektion 1: Erstellen einer neuen Website](../reporting-services/lesson-1-create-a-new-web-site.md)  
-[Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-[Lektion 3: Entwerfen des übergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-[Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-[Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
-[Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
-[Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
-[Lektion 8: Erstellen eines Datenfilters](../reporting-services/lesson-8-create-a-data-filter.md)  
+[Lesson 2: Define a Data Connection and Data Table for Parent Report (Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht)](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+[Lesson 3: Design the Parent Report using the Report Wizard (Lektion 3: Entwerfen des übergeordneten Berichts mithilfe des Berichts-Assistenten)](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+[Lesson 4: Define a Data Connection and Data Table for Child Report (Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht)](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+[Lesson 5: Design the Child Report using the Report Wizard (Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten)](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
+[Lesson 6: Add a ReportViewer Control to the Application (Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung)](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
+[Lesson 7: Add Drillthrough Action on Parent Report (Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht)](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
+[Lesson 8: Create a Data Filter (Lektion 8: Erstellen eines Datenfilters)](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: de-de
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie eine RDL-Datei im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, erstellt der Berichts-Designer automatisch eine Sicherungsdatei und aktualisiert den Bericht auf den aktuellen Namespace. Dies ist die einzige Möglichkeit, wie Sie eine Berichtsdefinitionsdatei aktualisieren können.  
   
- Die von Ihnen festgelegten Bereitstellungseigenschaften können das Schema beeinflussen, in dem die Berichtsdefinitionsdatei gespeichert wird. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
+ Die von Ihnen festgelegten Bereitstellungseigenschaften können das Schema beeinflussen, in dem die Berichtsdefinitionsdatei gespeichert wird. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
  Sie können eine RDL-Datei, die in einer früheren Version erstellten hochladen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] an der neuen Version und es wird bei der ersten Verwendung automatisch aktualisiert. Der Berichtsserver speichert die Berichtsdefinitionsdatei im ursprünglichen Format. Der Bericht wird automatisch aktualisiert, wenn er zum ersten Mal angezeigt wird. Die gespeicherte Berichtsdefinitionsdatei wird jedoch nicht verändert.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      Weitere Informationen hierzu finden Sie unter [Öffnen eines Berichts mit CRIs im Berichts-Designer](#OpeningaReport) weiter hinten in diesem Thema  
   
- Weitere Informationen zum Identifizieren des aktuellen RDL-Namespace für einen Berichtsserver, zu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder zu einem Bericht finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Weitere Informationen zum Identifizieren des aktuellen RDL-Namespaces für einen Berichtsserver [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], oder zu einem Bericht finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Aktualisieren eines Berichts auf einem Berichtsserver  
  Wenn ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstmals auf einem Berichtsserver ausgeführt wird, der auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver aktualisiert wurde, wird der Bericht automatisch auf den aktuellen, vom Berichtsserver unterstützten Berichtsdefinitionsnamespace aktualisiert. Der Bericht kann vor dem Upgrade auf dem Berichtsserver vorhanden gewesen sein, oder der Bericht kann mit dem Berichts-Manager hochgeladen oder vom Berichts-Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf dem Berichtsserver veröffentlicht worden sein.  
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Wichtige Änderungen in SQL Server Reporting Services in SQLServer 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Verändertes Verhalten von SQL Server Reporting Services in SQLServer 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQLServer 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Aktualisieren einer Berichtsserver-Datenbank](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Upgrade a Report Server Database (Aktualisieren der Berichtsserver-Datenbank)](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

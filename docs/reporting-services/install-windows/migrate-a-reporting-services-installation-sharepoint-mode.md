@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: de-de
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |Datenbank|Beispielname||  
 |--------------|------------------|-|  
-|Katalogdatenbank|ReportingService_[GUID der Dienstanwendung] **(\*)**|Wird vom Benutzer migriert.|  
-|Temporäre Datenbank|ReportingService_[GUID der Dienstanwendung]TempDB **(\*)**|Wird vom Benutzer migriert.|  
-|Warnungsdatenbank|ReportingService_[GUID der Dienstanwendung]_Alerting|Wird zusammen mit einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung erstellt.|  
+|Katalogdatenbank|ReportingService_ [GUID der dienstanwendung] **(\*)**|Wird vom Benutzer migriert.|  
+|Temporäre Datenbank|ReportingService_ [GUID der dienstanwendung] TempDB **(\*)**|Wird vom Benutzer migriert.|  
+|Warnungsdatenbank|ReportingService_[GUID der Dienstanwendung]_Alerting|Wird zusammen mit einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt.|  
   
- **(\*)** Die in der Tabelle angezeigten Beispielnamen folgen der Namenskonvention, die von SSRS beim Erstellen einer neuen SSRS-Dienstanwendung verwendet wird. Wenn Sie von einem anderen Server migrieren, verfügen Ihr Katalog und die tempDBs über die entsprechenden Namen der ursprünglichen Installation.  
+ **(\*)** Die in der Tabelle angezeigten Beispielnamen folgen die Namenskonvention SSRS verwendet, bei der Erstellung einer neuen SSRS-dienstanwendung. Wenn Sie von einem anderen Server migrieren, verfügen Ihr Katalog und die tempDBs über die entsprechenden Namen der ursprünglichen Installation.  
   
 ####  <a name="bkmk_backup_operations"></a> Sicherungsvorgänge  
  In diesem Abschnitt werden die zu migrierenden Informationstypen und die Tools bzw. die Vorgehensweise zum Abschließen des Sicherungsvorgangs beschrieben.  

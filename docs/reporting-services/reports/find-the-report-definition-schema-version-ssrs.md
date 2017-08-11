@@ -19,7 +19,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
 ms.contentlocale: de-de
@@ -90,6 +90,6 @@ In einer Berichtsdefinitionsdatei ist der RDL-Namespace für die Version des Ber
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Aktualisieren von Berichten](../../reporting-services/install-windows/upgrade-reports.md)   
-[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[Report Definition Language (Berichtsdefinitionssprache)](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

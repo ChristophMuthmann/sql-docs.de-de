@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: de-de
@@ -41,7 +41,7 @@ Diese Lektion wird vorausgesetzt, Sie verwenden [!INCLUDE[ssManStudioFull_md](..
   
 5.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Neue Abfrage** .  
   
-6.  Kopieren Sie die folgenden [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen in die leere Abfrage:  
+6.  Kopieren Sie die folgenden [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen in die leere Abfrage:  
   
     ```  
     Use Subscribers  
@@ -64,7 +64,7 @@ Diese Lektion wird vorausgesetzt, Sie verwenden [!INCLUDE[ssManStudioFull_md](..
     GO  
     ```  
   
-7.  Klicken Sie auf **! Ausführen** in der Symbolleiste.  
+7.  Klicken Sie auf **! Führen Sie** auf der Symbolleiste.  
   
 8.  Verwenden Sie eine SELECT-Anweisung, um sicherzustellen, dass drei Datenzeilen vorhanden sind. Beispiel: `select * from OrderInfo`  
   

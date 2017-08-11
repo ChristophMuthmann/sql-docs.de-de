@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
 ms.contentlocale: de-de
@@ -31,9 +31,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
--   [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;Horizontales Skalieren für SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+-   [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40; Horizontales Skalieren für SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- Informationen zu den Neuerungen in diesem Release finden Sie im Abschnitt „SharePoint“ in [Neues bei Reporting Services &#40;SSRS&#41;](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Informationen zu in dieser Version Neuigkeiten finden Sie im Abschnitt "SharePoint" [Neuigkeiten in Reporting Services &#40; SSRS &#41; ](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
   
  In diesem Thema:  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_connectedandlocal"></a> Verbundener Modus und lokaler Modus  
  Ab SQL Server 2008 R2 ist zum Anzeigen von Berichten von SharePoint 2010-Servern, auf denen das Microsoft SQL Server 2008 R2 Reporting Services-Add-In (oder höher) für SharePoint 2010-Produkte installiert ist, ein neuer *lokaler Modus* verfügbar.  
   
--   *Lokaler Modus*: Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek gerendert werden, ohne Kombination mit einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Das Add-In lässt sich auf verschiedene Weise installieren, einschließlich mithilfe des Vorbereitungstools für SharePoint 2010-Produkte. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) und [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Lokaler Modus*: Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek gerendert werden, ohne Kombination mit einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Das Add-In lässt sich auf verschiedene Weise installieren, einschließlich mithilfe des Vorbereitungstools für SharePoint 2010-Produkte. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40; Reporting Services im SharePoint-Modus &#41; ](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) und [, wo die Reporting Services-add-in für SharePoint-Produkte finden](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Verbundener Modus*: Der verbundene Modus wird durch Integration eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers mit der SharePoint-Zentraladministration in die SharePoint-Farm unterstützt. Die Kombination mit einem Berichtsserver ermöglicht vollständige End-to-End-Berichterstellung, indem die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen eines Berichtservers bereitgestellt werden, einschließlich Abonnements, Momentaufnahmen und serverbasierte Verarbeitung.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/09/2017
      Der Versionsverlauf von Dokumentbibliotheken wird unter Bibliothekseinstellungen auf der Seite Versionierungseinstellungen konfiguriert.  
   
 ##  <a name="bkmk_supportedcombinations"></a> Unterstützte Kombinationen des SharePoint-Add-Ins und Berichtsservers  
- Nicht alle Funktionen werden in allen Kombinationen von Berichtsserver, Reporting Services-Add-In für SharePoint und SharePoint-Produkten unterstützt. Weitere Informationen finden Sie unter [Unterstützte Kombinationen von SharePoint und Reporting Services-Server und -Add-In &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Nicht alle Funktionen werden in allen Kombinationen von Berichtsserver, Reporting Services-Add-In für SharePoint und SharePoint-Produkten unterstützt. Weitere Informationen finden Sie unter [unterstützte Kombinationen von SharePoint- und Reporting Services-Server und-Add-in &#40; SQL Server 2016 &#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  Die richtige Version des Reporting Services-Add-Ins muss mit der entsprechenden Version von SharePoint-Produkten verwendet werden.  
@@ -114,9 +114,9 @@ ms.lasthandoff: 08/09/2017
  Die Integration wird durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte bereitgestellt. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In ist eine kostenlos erhältliche Komponente, die Sie herunterladen und dann auf einem Server installieren können, auf dem die richtige Version von SharePoint ausgeführt wird.  
   
 > [!TIP]  
->  Nicht alle Funktionen werden in allen Kombinationen von Berichtsserver, Reporting Services-Add-In für SharePoint und SharePoint-Produkten unterstützt. Weitere Informationen finden Sie unter [Unterstützte Kombinationen von SharePoint und Reporting Services-Server und -Add-In &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Nicht alle Funktionen werden in allen Kombinationen von Berichtsserver, Reporting Services-Add-In für SharePoint und SharePoint-Produkten unterstützt. Weitere Informationen finden Sie unter [unterstützte Kombinationen von SharePoint- und Reporting Services-Server und-Add-in &#40; SQL Server 2016 &#41; ](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   In SharePoint stellt das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In den ReportServer-Proxyendpunkt, ein Berichts-Viewer-Webpart und Anwendungsseiten bereit, sodass Sie Berichtsserverinhalte auf einer SharePoint-Website oder -Farm anzeigen, speichern und verwalten können.  
+-   In SharePoint stellt das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In den ReportServer-Proxyendpunkt, ein Berichts-Viewer-Webpart und Anwendungsseiten bereit, sodass Sie Berichtsserverinhalte auf einer SharePoint-Website oder -Farm anzeigen, speichern und verwalten können.  
   
 -   Auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt aktualisierte Programmdateien, einen SOAP-Endpunkt und benutzerdefinierte Sicherheit und Übermittlungserweiterungen bereit. Der Berichtsserver muss für die Ausführung im integrierten SharePoint-Modus konfiguriert werden und dient ausschließlich dazu, den Zugriff auf Berichte und ihre Übermittlung über eine SharePoint-Website zu unterstützen.  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 08/09/2017
   
 |**Task**|**Link**|  
 |--------------|--------------|  
-|Ausführliche Schritte zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) und [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;Horizontales Skalieren für SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Nehmen Sie eine horizontale Skalierung für Ihre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;Horizontales Skalieren für SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Ausführliche Schritte zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus.|[Installieren von Reporting Services im SharePoint-Modus für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) und [hinzufügen ein zusätzlichen Berichtsservers zu einer Farm &#40; Horizontales Skalieren für SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Nehmen Sie eine horizontale Skalierung für Ihre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40; Horizontales Skalieren für SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Fügen Sie zusätzliche SharePoint Web-Front-Ends hinzu, auf denen die zum Anzeigen und Melden von Elementen erforderlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten installiert sind.|[Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Konfigurieren Sie E-Mail für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenwarnungen und -Abonnementfunktionen.|[Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
 |Neueste Informationen für diese Version, siehe TechNet Wiki.|[SQL Server 2012 Reporting Services – Tipps, Tricks und Problembehandlung](http://go.microsoft.com/fwlink/?LinkId=221297).|  

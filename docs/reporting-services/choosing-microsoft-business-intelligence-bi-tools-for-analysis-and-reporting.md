@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: de-de
@@ -37,7 +37,7 @@ In der folgenden Tabelle werden die verschiedenen Arbeitsauslastungen für Daten
 |Erstellen leistungsstarker Datenmodelle||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 wird unterstützt)|  
 |Visualisieren und Untersuchen von Daten||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D-Karten](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Fragen mithilfe von Abfragen in natürlicher Sprache|||||[Q & A](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
+|Fragen mithilfe von Abfragen in natürlicher Sprache|||||[FRAGEN UND ANTWORTEN](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
 |Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von Dateien unter 10 MB)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (unterstützt die Anzeige von unter 1 GB)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [Power BI-Apps für mobile Geräte](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(mithilfe der Power BI-Apps für mobile Geräte)|  
 |Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Websites](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint-Teamwebsites](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Unternehmens-BI**|Professionelle IT-Anwender||||||  

@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: de-de
@@ -37,7 +37,7 @@ Bevor Benutzer und Warnungsadministratoren Datenwarnungen erstellen, bearbeiten,
 
 Weitere Informationen zu SharePoint-Berechtigungen finden Sie im Thema zu [Benutzerberechtigungen und Berechtigungsstufen (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).
 
-## <a name="grant-permissions"></a>Erteilen von Berechtigungen
+## <a name="grant-permissions"></a>Berechtigungen erteilen
   
 1.  Wechseln Sie zu der SharePoint-Website, der Sie Berechtigungen erteilen möchten.  
   
@@ -59,7 +59,7 @@ Weitere Informationen zu SharePoint-Berechtigungen finden Sie im Thema zu [Benut
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40; Reporting Services in SharePoint integrierten Modus &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

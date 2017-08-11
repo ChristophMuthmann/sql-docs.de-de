@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: de-de
@@ -54,7 +54,7 @@ Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der 
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Geben Sie Ihre Datenquelleninformationen ein, und klicken Sie auf **OK**.  
+3. Geben Sie die Datenquelleninformationen > **OK**.  
   
     Datenquellen werden nicht standardmäßig im Portal angezeigt.    
    
@@ -235,9 +235,9 @@ Auswahllisten fungieren wie Slicer in Power BI und Excel. Wir können eine hinzu
   
 Nachdem Sie visuelle Elemente im Masterlayout erstellt haben, können Sie einen mobilen Bericht mit einem Layout erstellen, das spezifisch für Benutzer von Smartphones optimiert ist.    
   
-1. Klicken Sie rechts oben auf das Zeichenbereichssymbol und dann auf **Telefon**.  
+1. Klicken Sie in der oberen rechten Ecke auf das Symbol "Zeichenbereich" > **Phone**.  
   
-2. Auf der Registerkarte „Layout“ sehen Sie unter **Steuerelementinstanzen** die beiden Diagramme, die Sie erstellt haben.   
+2. Auf der Registerkarte „Layout“ sehen Sie unter **Steuerelementinstanzen**die beiden Diagramme, die Sie erstellt haben.   
   
 3. Ziehen Sie die Strukturzuordnung auf den Zeichenbereich „Telefon“ und auf eine Breite von vier Spalten und eine Höhe von drei Zeilen.  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: 46
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6fae356e17f50b56ebe6af4e065a39c6e2e81b1f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="identifying-execution-state"></a>Identifizieren des Ausführungsstatus
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Verwenden von Reporting Services-SOAP-Header](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

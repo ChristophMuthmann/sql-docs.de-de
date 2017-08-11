@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: de-de
@@ -72,7 +72,7 @@ Wenn Sie einen Bericht in der Vorschau anzeigen, können Sie den gerenderten Ber
 > Klicken Sie im Menü **Datei** auf **Alle Speichern** , um den Bericht zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Weitere Informationen finden Sie unter [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Finden Sie unter [Lektion 5: Formatieren eines Berichts &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Tabellen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

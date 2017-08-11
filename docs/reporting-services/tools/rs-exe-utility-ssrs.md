@@ -23,14 +23,14 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: de-de
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
   
 > [!NOTE]  
@@ -59,16 +59,16 @@ rs {-?}
  **-?**  
  (Optional) Zeigt die Syntax der **rs** -Argumente an.  
   
- **-i** *input_file*  
+ **-i** *Eingabedatei*  
  (Erforderlich) Gibt die auszuführende RSS-Datei an. Dieser Wert kann einen relativen oder einen vollqualifizierten Pfad zur RSS-Datei enthalten.  
   
- **-s** *serverURL*  
+ **-s** *Server-URL*  
  (Erforderlich) Gibt den Namen des Webservers und den Namen des virtuellen Verzeichnisses auf dem Berichtsserver an, in dem die Datei ausgeführt werden soll. Ein Beispiel für eine Berichtsserver-URL ist `http://examplewebserver/reportserver`. Das Präfix http:// oder https:// zu Beginn des Servernamens ist optional. Wenn Sie kein Präfix angeben, verwendet der Berichtsserver-Skripthost zunächst https:// und dann http://, falls https:// nicht verfügbar ist.  
   
  **-u** [*Domäne*\\]*Benutzername*  
  (Optional) Gibt ein Benutzerkonto an, das für die Herstellung einer Verbindung mit dem Berichtsserver verwendet wird. Wenn **-u** und **-p** nicht angegeben werden, wird das aktuelle Windows-Benutzerkonto verwendet.  
   
- **-p** *password*  
+ **-p** *Kennwort*  
  (Erforderlich, wenn **-u** angegeben ist.) Gibt das Kennwort an, das mit dem **-u** -Argument verwendet wird. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet.  
   
  **-e**  
@@ -90,7 +90,7 @@ rs {-?}
  **-b**  
  (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von **Main**zurückgegeben wird, wird ein Commit für den Batch ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- **-v** *globalvar*  
+ **-v** *globaleVariable*  
  (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v** -Argument angeben.  
   
  Das Argument **-v** wird in der Befehlszeile angegeben, um zur Laufzeit einen Wert für eine globale Variable festzulegen, die in Ihrem Skript definiert ist. Wenn Ihr Skript beispielsweise eine Variable namens *parentFolder*, enthält, können Sie in der Befehlszeile einen Namen für diesen Ordner angeben:  
@@ -129,7 +129,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>Siehe auch  
 - [Ausführen einer Reporting Services-Skriptdatei](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Skript mit dem Hilfsprogramm rs.exe und dem Webdienst](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

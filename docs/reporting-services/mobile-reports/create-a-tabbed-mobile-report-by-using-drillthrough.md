@@ -14,7 +14,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6554f808c19540d2a3b7cbe3fdf4e86c5fe7a357
 ms.contentlocale: de-de
@@ -105,8 +105,8 @@ In diesem Abschnitt werden die jedes Messgeräts (mit Ausnahme der Monitor "Sale
 
 ### <a name="see-also"></a>Siehe auch
     
-* [Hinzufügen von Parametern zu einem mobilen Bericht](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
-* [Drillthrough zu anderen mobilen Berichten oder URLs aus einem mobilen Bericht hinzufügen](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
+* [Add parameters to a mobile report (Hinzufügen von Parametern zu einem mobilen Bericht)](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
+* [Add drillthrough from a mobile report to other mobile reports or URLs (Drillthrough zu anderen mobilen Berichten oder URLs aus einem mobilen Bericht hinzufügen)](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 
 
 

@@ -19,7 +19,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: de-de
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
  Wählen Sie **TRUE** aus, um die Datenquelle auf dem Server mit der Datenquelle im Projekt zu überschreiben, wenn die Berichte veröffentlicht werden. Wählen Sie **False** aus, um die vorhandene Datenquelle auf dem Server zu belassen.  
   
  **TargetServerVersion**  
- Wählen Sie entweder die geeignete Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder **Version erkennen** aus, um automatisch die Version zu ermitteln, die auf dem von der **TargetServer URL** -Eigenschaft angegebenen Server installiert ist. Der Standardwert ist **SQL Server 2016**.  
+ Wählen Sie entweder die geeignete Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder **Version erkennen** aus, um automatisch die Version zu ermitteln, die auf dem von der **TargetServer URL** -Eigenschaft angegebenen Server installiert ist. Der Standardwert lautet **SQL Server 2016**.  
   
  **TargetDataSourceFolder**  
  Der Name des Ordners, in dem die veröffentlichten, freigegebenen Datenquellen gespeichert werden sollen. Wenn Sie keinen Ordner angeben, wird die Datenquelle im gleichen Ordner wie der Bericht veröffentlicht. Falls der Ordner nicht auf dem Berichtsserver vorhanden ist, erstellt der Berichts-Designer den Ordner, wenn die Berichte veröffentlicht werden.  
@@ -86,13 +86,13 @@ ms.lasthandoff: 08/09/2017
  Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet. Beispiel: 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`.  
++ `http:\\<servername>\<site>\<subsite>`installiert haben.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Veröffentlichen von Berichten](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Festlegen von Bereitstellungseigenschaften &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Berichts-Designer (F1-Hilfe)](../../reporting-services/tools/report-designer-f1-help.md)  
+[Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Berichts-Designer-F1-Hilfe](../../reporting-services/tools/report-designer-f1-help.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

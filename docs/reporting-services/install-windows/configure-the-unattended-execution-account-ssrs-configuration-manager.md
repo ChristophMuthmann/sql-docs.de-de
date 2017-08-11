@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: de-de
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  Verwenden Sie zum Angeben des Kontos das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder das Hilfsprogramm **rsconfig** . Das einfachste Verfahren zum Konfigurieren des Kontos für die unbeaufsichtigte Ausführung besteht darin, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool auszuführen und die Anmeldeinformationen auf der Seite Ausführungskonto anzugeben.  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben** aus.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **RSConfig -e -u\<Domäne/Benutzername > – p\<Kennwort >**  
   
- **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).  
+ **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie unter [Rsconfig-Hilfsprogramm &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) in SQL Server-Onlinedokumentation.  
   
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  

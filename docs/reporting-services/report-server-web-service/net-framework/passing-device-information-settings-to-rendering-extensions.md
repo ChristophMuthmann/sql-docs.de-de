@@ -25,14 +25,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 47
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da897abf38fb1c6e89178a9314189890b88eab87
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: dfbc65590c676278c89ca2646dae0d347abcd3ee
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/13/2017
 </DeviceInfo>  
 ```  
   
- Wenn ein Bericht als HTML-Fragment gerendert wird, befindet sich der Inhalt des Berichts in einem TABLE-Element, ohne ein HTML- oder ein BODY-Element zu verwenden. Verwenden Sie das HTML-Fragment, um den Bericht in ein bestehendes HTML-Dokument einzubinden. Weitere Informationen zu Geräteinformationseinstellungen für HTML-Ausgabe finden Sie unter [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
+ Wenn ein Bericht als HTML-Fragment gerendert wird, befindet sich der Inhalt des Berichts in einem TABLE-Element, ohne ein HTML- oder ein BODY-Element zu verwenden. Verwenden Sie das HTML-Fragment, um den Bericht in ein bestehendes HTML-Dokument einzubinden. Weitere Informationen zu Geräteinformationseinstellungen für die HTML-Ausgabe finden Sie unter [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Übergeben von Geräteinformationen mit URL-Zugriff  
  Die Geräteinformationen können auch mithilfe eines URL-Zugriffs übergeben werden. Dabei werden Geräteinformationseinstellungen als URL-Parameter übergeben. Die folgende URL-Zugriffszeichenfolge kann an den Berichtsserver übergeben werden, um einen gerenderten Bericht ohne die Symbolleiste des HTML-Viewers zu generieren.  

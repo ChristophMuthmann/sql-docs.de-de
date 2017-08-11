@@ -18,7 +18,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: de-de
@@ -54,6 +54,6 @@ ms.lasthandoff: 08/09/2017
      Klicken Sie auf die Schaltfläche **Vorschau** , um den Bericht vor dem Drucken anzuzeigen. Dadurch wird die erste Seite des Berichts in einem separaten Vorschaufenster geöffnet. Weitere Seiten werden beim Rendern des Berichts auf dem Berichtsserver verfügbar. Ein als Vorschau angezeigter Bericht wird im EMF-Format gerendert. Sie können zur vorherigen oder nächsten Seite navigieren, bis die letzte Seite erreicht ist. Dann ist die Schaltfläche **Weiter** deaktiviert. Klicken Sie auf die Schaltfläche **Ränder** , um die Druckränder auf der Vorschauseite zu ändern. Das Dialogfeld **Ränder** wird angezeigt. Konfigurieren Sie den oberen, unteren, rechten und linken Rand, und klicken Sie auf **OK**. Das Dialogfeld wird geschlossen, und die Einstellungen werden für die Renderingvorschau und den Druckvorgang gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Aktivieren Sie und deaktivieren Sie des clientseitige Drucks für Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

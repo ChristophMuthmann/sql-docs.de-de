@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cb8a4502531dbe3ee23434ea126457196b56c701
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 335ffb51ba87298181e2907be36694c53c6eb701
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="secure-development-reporting-services"></a>Sichere Entwicklung (Reporting Services)
@@ -37,10 +37,10 @@ ms.lasthandoff: 06/22/2017
  [Codezugriffssicherheit in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
  Gibt eine Einführung in Codezugriffssicherheit und Richtlinienkonfigurationen für benutzerdefinierte Assemblys und Erweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Grundlegendes zu Sicherheitsrichtlinien](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
+ [Understanding Security Policies (Grundlegendes zu Sicherheitsrichtlinien)](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
  Beschreibt die verschiedenen Assemblytypen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und die Auswirkungen der Codezugriffssicherheit auf die Codeberechtigungen.  
   
- [Verwenden von Reporting Services-Sicherheitsrichtliniendateien](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
+ [Using Reporting Services Security Policy Files (Verwenden von Reporting Services-Sicherheitsrichtliniendateien)](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
  Beschreibt die verschiedenen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Komponenten und die entsprechenden Richtlinienkonfigurationsdateien.  
   
   

@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: de-de
@@ -35,7 +35,7 @@ Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Da
 ## <a name="choosing-a-chart-type"></a>Auswählen eines Diagrammtyps  
  Jeder Diagrammtyp verfügt über eindeutige Merkmale, die Ihnen bei der visuellen Darstellung des Datasets helfen. Zur Anzeige Ihrer Daten können Sie jeden beliebigen Diagrammtyp verwenden. Die Daten lassen sich jedoch leichter lesen, wenn Sie einen für die Daten, die Sie in Ihrem Bericht darstellen möchten, geeigneten Diagrammtyp wählen. Die folgende Tabelle enthält eine Zusammenfassung der Diagrammfunktionen, die die Eignung eines Diagramms für Ihr spezielles Dataset beeinflussen.  
   
- Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
  Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [Beispielberichte für Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
@@ -45,8 +45,8 @@ Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Da
 |[Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  
 |[Datenbalken](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  
 |[Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  
-|[Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  
-|[Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||||  
+|[Liniendiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  
+|[Kreisdiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||||  
 |[Polardiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||||  
 |[Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")|![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")|  
 |[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||![Verfügbare](../../reporting-services/report-data/media/greencheck.gif "verfügbar")||  

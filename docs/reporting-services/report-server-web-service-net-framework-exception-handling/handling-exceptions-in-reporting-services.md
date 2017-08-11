@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 caps.latest.revision: 31
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1cf3ca01075260274b363736bd53c245809e521c
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 7e1472c11575ba8bed99992ec9630e408c347291
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Behandeln von Ausnahmen in Reporting Services

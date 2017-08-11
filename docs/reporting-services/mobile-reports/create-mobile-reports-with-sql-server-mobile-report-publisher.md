@@ -16,7 +16,7 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: de-de
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 Erfahren Sie mehr über mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte, die für mobile Geräte optimiert sind, mit lokalen Daten verbunden sind und über eine Sammlung von Datenvisualisierungen verfügen. 
 
 >[!NOTE]
->  Müssen Sie zum Migrieren von Datazen Serverinhalt z. B. Dashboards und KPIs auf eine SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Server? Versuchen Sie es mit dem [SQL Server Migration Assistant für Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  Müssen Sie Datazen-Serverinhalt wie z.B. Dashboards und KPIs zu einem SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Server migrieren? Versuchen Sie es mit dem [SQL Server Migration Assistant für Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 

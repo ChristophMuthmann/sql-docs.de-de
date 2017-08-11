@@ -22,14 +22,14 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1db09303de945d18f7e71d2d88ca295bb025b26
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
@@ -89,6 +89,6 @@ ms.lasthandoff: 06/22/2017
  Zusätzliche Codegruppen können nacheinander hinzugefügt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu Sicherheitsrichtlinien](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
+ [Understanding Security Policies (Grundlegendes zu Sicherheitsrichtlinien)](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

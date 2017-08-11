@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: de-de
@@ -100,9 +100,9 @@ Sie können ein benutzerdefiniertes markenpaket zum Ändern der Farben für das 
 [Browserunterstützung für Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [Konfigurieren einer URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Überprüfen einer Installation von Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Aktivieren von Reporting Services-Funktionen ein- oder ausschalten](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Aktivieren und Deaktivieren der Reporting Services-Funktionen](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Konfigurieren Sie einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

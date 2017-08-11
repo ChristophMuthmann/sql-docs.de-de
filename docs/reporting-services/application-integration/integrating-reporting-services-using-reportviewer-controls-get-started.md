@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a6a0bbee9141df565966df3e90f396e33c9b96a7
+ms.translationtype: HT
+ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
+ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelemente – erste Schritte

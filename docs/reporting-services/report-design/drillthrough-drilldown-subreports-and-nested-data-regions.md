@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: de-de
@@ -85,22 +85,22 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> In diesem Abschnitt  
- [Drillthroughberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [Drillthroughberichte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Erläutert die Berichte, die geöffnet werden, wenn ein Benutzer in einem Hauptbericht auf einen Link klickt.  
   
- [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [Unterberichte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  Erläutert die Berichte, die im Hauptteil eines Hauptberichts angezeigt werden.  
   
- [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [Geschachtelte Datenbereiche &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  Erläutert die Schachtelung eines Datenbereichs in einem anderen Datenbereich, z. B. eines Diagramms in einer Matrix.  
   
- [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [Drilldownaktion &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  Erläutert die Verwendung der Drilldownaktion zum Aus- und Einblenden von Berichtselementen.  
   
- [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Angeben von Pfaden zu externen Elementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Erläutert, wie auf Elemente außerhalb der Berichtsdefinitionsdatei verwiesen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

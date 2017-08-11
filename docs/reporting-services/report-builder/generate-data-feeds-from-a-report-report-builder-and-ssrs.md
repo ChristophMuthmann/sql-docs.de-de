@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
 ms.contentlocale: de-de
@@ -31,7 +31,7 @@ Sie können Atom-kompatible Datenfeeds von paginierten Berichten generieren und 
   
  Ein Atom-Dienstdokument enthält einen eindeutigen Bezeichner für jeden Datenfeed. Sie verwenden den Bezeichner in einer URL, um den Inhalt des Datenfeeds anzuzeigen.  
   
- Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -90,6 +90,6 @@ Sie können Atom-kompatible Datenfeeds von paginierten Berichten generieren und 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Exportieren von Berichten](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+[Export Reports (Exportieren von Berichten)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)

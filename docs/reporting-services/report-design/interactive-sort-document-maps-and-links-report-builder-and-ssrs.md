@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: de-de
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Interaktive Sortierung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [Interaktive Sortierung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Erläutert das Hinzufügen interaktiver Sortierschaltflächen zu Spaltenkopfzeilen.  
   
- [Erstellen einer Dokumentstruktur &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Erstellen einer Dokumentstruktur &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie ein Inhaltsverzeichnis für die Navigation in einem umfangreichen Bericht hinzufügen.  
   
- [Hinzufügen eines Lesezeichens zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Lesezeichens zu einem Bericht &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Erläutert, wie Lesezeichen hinzugefügt werden, um in einem Bericht Links zu erstellen.  
   
- [Hinzufügen eines Links zu einer URL &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Fügen Sie einen Link zu einer URL &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Erläutert, wie ein Link aus dem Bericht einer URL hinzugefügt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

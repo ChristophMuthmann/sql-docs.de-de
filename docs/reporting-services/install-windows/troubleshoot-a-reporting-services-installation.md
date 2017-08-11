@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: de-de
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Der Ordner System32 muss die Datei Authz.dll enthalten.  
   
- Setup führt keine Überprüfung für Internet Information Services (IIS) oder [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]mehr durch. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erfordert MDAC 2.0 und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 2.0; Setup installiert diese, wenn sie nicht bereits installiert sind.  
+ Setup führt keine Überprüfung für Internet Information Services (IIS) oder [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]mehr durch. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erfordert MDAC 2.0 und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , Version 2.0; diese werden ggf. von Setup installiert.  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Problembehandlung von Installationen im SharePoint-Modus  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [Beheben von Problemen mit Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>Sie den SQL Server Reporting Services-Dienst in der SharePoint-Zentraladministration nicht angezeigt, nach der Installation von SQL Server 2016 SSRS im SharePoint-Modus  
+###  <a name="bkmk_no_ssrs_service"></a> Nach der Installation von SQL Server 2016 SSRS im SharePoint-Modus wird der SQL Server Reporting Services-Dienst nicht in der SharePoint-Zentraladministration angezeigt.  
  **Beschreibung:** Wenn nach der erfolgreichen Installation von SQL Server 2016 Reporting Services im SharePoint-Modus und das SQL Server 2016 Reporting Services Add-in für SharePoint 2013/2016 ein, nicht "SQL Server Reporting Services" in den folgenden zwei Menüs angezeigt werden und dann die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Dienst wurde nicht registriert:  
   
 -   Klicken Sie auf SharePoint 2013/2016-Zentraladministration > „Anwendungsverwaltung“ > Seite „Dienste auf dem Server verwalten“.  
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein:  
   
-    -   **Führen Sie \<**  *.NET 4.0 Framework-Verzeichnis* **> \InstallUtil.exe \< ** *Berichtsserver-Bin-Verzeichnis* **> \ReportingServicesLibrary.dll**  
+    -   **Führen Sie \<**  *.NET 4.0 Framework-Verzeichnis* **> \InstallUtil.exe \<**  *Berichtsserver-Bin-Verzeichnis* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Ersetzen Sie \< *.NET 4.0 Framework-Verzeichnis*> durch den physischen Pfad der .NET Framework 4.0-Dateien und \< *Berichtsserver-Bin-Verzeichnis*> durch den physischen Pfad für die Berichtsserver-Binärdateien.  
@@ -248,10 +248,10 @@ ms.lasthandoff: 08/09/2017
  Nachdem Sie die 64-Bit-Instanz repariert oder die Registrierungsschlüssel manuell erneut hinzugefügt haben, können Sie mit dem Systemmonitor die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Leistungsobjekte konfigurieren, die Sie überwachen möchten.  
   
 ###  <a name="ConfigPropsMissing"></a> Nach einem Upgrade von SQL Server 2005 sind die "ReportServerExternalURL"-Konfigurationseigenschaft und die "PassThroughCookies"-Konfigurationseigenschaft nicht konfiguriert.  
- Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], werden die Konfigurationseigenschaften **ReportServerExternalURL** und **PassThroughCookies** nicht durch den Aktualisierungsvorgang konfiguriert. **ReportServerExternalURL** ist eine optionale Eigenschaft und sollte nur dann festgelegt werden, wenn Sie SharePoint 2.0 Webparts verwenden und möchten, dass Benutzer einen Bericht abrufen und in einem neuen Browserfenster öffnen können. Weitere Informationen zu **ReportServerExternalURL** finden Sie unter [URLs in Konfigurationsdateien &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). **PassThroughCookies** ist nur beim Verwenden der benutzerdefinierten Authentifizierungsmethode erforderlich. Weitere Informationen zu **"passthroughcookies"**, finden Sie unter [konfigurieren Sie das Web-Portal zum Übergeben von benutzerdefinierten Authentifizierungscookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], werden die Konfigurationseigenschaften **ReportServerExternalURL** und **PassThroughCookies** nicht durch den Aktualisierungsvorgang konfiguriert. **ReportServerExternalURL** ist eine optionale Eigenschaft und sollte nur dann festgelegt werden, wenn Sie SharePoint 2.0 Webparts verwenden und möchten, dass Benutzer einen Bericht abrufen und in einem neuen Browserfenster öffnen können. Weitere Informationen zu **ReportServerExternalURL**, finden Sie unter [URLs in Konfigurationsdateien &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). **PassThroughCookies** ist nur beim Verwenden der benutzerdefinierten Authentifizierungsmethode erforderlich. Weitere Informationen zu **"passthroughcookies"**, finden Sie unter [konfigurieren Sie das Web-Portal zum Übergeben von benutzerdefinierten Authentifizierungscookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
->  Wenn Sie benutzerdefinierte Authentifizierung verwenden, wird empfohlen, die Installation zu migrieren, statt ein Upgrade durchzuführen. Weitere Informationen zur Migration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+>  Wenn Sie benutzerdefinierte Authentifizierung verwenden, wird empfohlen, die Installation zu migrieren, statt ein Upgrade durchzuführen. Weitere Informationen zum Migrieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Migrieren einer Installation von Reporting Services &#40; Im einheitlichen Modus &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  Standardmäßig sind diese Eigenschaften in der [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Konfiguration nicht vorhanden. Wenn Sie diese Eigenschaften in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] konfiguriert haben und die von ihnen bereitgestellte Funktionalität weiterhin benötigen, müssen Sie sie nach dem Upgrade manuell der Datei **RSReportServer.config** hinzufügen. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
 

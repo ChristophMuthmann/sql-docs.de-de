@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 caps.latest.revision: 41
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cb9aec71556ad17066432725a1f37d9157c357d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  Jede Renderingerweiterung, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] implementiert und mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] geliefert wird, verwendet eine Reihe gemeinsamer Schnittstellen. Damit wird sichergestellt, dass jeder Erweiterung vergleichbare Funktionen implementiert und die Komplexität des Renderingcodes im Kern des Berichtsservers reduziert.  
   
 ## <a name="rendering-object-model"></a>Renderingobjektmodell  
- Wenn ein Bericht verarbeitet wird, ist das Ergebnis ein öffentliches verfügbares Objektmodell, das als Renderingobjektmodell (ROM) bezeichnet wird. Das Renderingobjektmodell ist eine Auflistung von Klassen, die Inhalte, Layout und Daten eines verarbeiteten Berichts definieren. Das ROM steht Entwicklern zur Verfügung, die benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und bereitstellen möchten. Ein ROM wird erstellt, wenn der Berichtsserver die XML-Definition eines Berichts zusammen mit den benutzerdefinierten Berichtsdaten verarbeitet. Wenn die Verarbeitung abgeschlossen ist, wird das öffentliche Modell von einer Renderingerweiterung zur Definition der Berichtsausgabe verwendet. Die verfügbaren öffentlichen Klassen des ROMs sind im **Microsoft.ReportingServices.OnDemandReportRendering**Namespace definiert.  
+ Wenn ein Bericht verarbeitet wird, ist das Ergebnis ein öffentliches verfügbares Objektmodell, das als Renderingobjektmodell (ROM) bezeichnet wird. Das Renderingobjektmodell ist eine Auflistung von Klassen, die Inhalte, Layout und Daten eines verarbeiteten Berichts definieren. Das ROM steht Entwicklern zur Verfügung, die benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und bereitstellen möchten. Ein ROM wird erstellt, wenn der Berichtsserver die XML-Definition eines Berichts zusammen mit den benutzerdefinierten Berichtsdaten verarbeitet. Wenn die Verarbeitung abgeschlossen ist, wird das öffentliche Modell von einer Renderingerweiterung zur Definition der Berichtsausgabe verwendet. Verfügbaren öffentlichen Klassen des ROMs werden definiert, der **Microsoft.ReportingServices.OnDemandReportRendering** Namespace.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Schreiben von benutzerdefinierten Renderingerweiterungen  
  Bevor Sie sich dazu entscheiden, eine benutzerdefinierte Renderingerweiterung zu erstellen, sollten Sie einfachere Alternativen prüfen. Folgende Aktionen sind möglich:  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Fügen Sie benutzerdefinierte Formatierungs- und Präsentationsfunktionen hinzu, indem Sie XSL-Transformationen (XSLT) mit der Ausgabe des XML-Renderingformats kombinieren.  
   
- Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, das nicht in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten ist, und Sie entscheiden sich, eine eigene Implementierung einer Renderingerweiterung mit verwaltetem Code zu schreiben, dann muss die Renderingerweiterung die **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**-Schnittstelle implementieren, die vom Berichtsserver benötigt wird.  
+ Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, die in nicht eingeschlossen ist [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und sich entschieden, einer eigene Implementierung von eine Renderingerweiterung in verwaltetem Code zu schreiben, Erweiterung Renderingcodes implementieren muss die **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** -Schnittstelle, die vom Berichtsserver erforderlich ist.  
   
  Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](http://go.microsoft.com/fwlink/?LinkId=19951).  
   

@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
 ms.contentlocale: de-de
@@ -40,9 +40,9 @@ In den folgenden Schritten wird eine vergleichende Tabelle mit Gesamtwerten mit 
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   Für **Vergleichsreihe** --  sind **Comparison1** bis **Comparison5** ausgewählt.
+   Dasselbe gilt für **Vergleichsreihe** -- **Comparison1** über **Comparison5** ausgewählt werden.
    
-4. Wählen Sie **Vorschau** aus.
+4. Wählen Sie **Vorschau**aus.
 
    ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 

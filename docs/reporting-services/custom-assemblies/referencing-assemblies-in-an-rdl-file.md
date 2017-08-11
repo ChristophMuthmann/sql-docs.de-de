@@ -20,14 +20,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 87609ab5b118eaa696f7152b25cf7e984e7f6e7f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Verweisen auf Assemblys in einer RDL-Datei
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 </CodeModules>  
 ```  
   
- Statt <xref:System.Reflection.Assembly.Load%2A> aus benutzerdefiniertem Code, registrieren Sie Ihren benutzerdefinierten Assemblys entweder manuell hinzufügen **CodeModule** Elemente, die RDL-Datei oder mithilfe der **Verweise** auf der Registerkarte die **Berichtseigenschaften** Dialogfeld. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)-Ausdruck dar.  
+ Statt <xref:System.Reflection.Assembly.Load%2A> aus benutzerdefiniertem Code, registrieren Sie Ihren benutzerdefinierten Assemblys entweder manuell hinzufügen **CodeModule** Elemente, die RDL-Datei oder mithilfe der **Verweise** auf der Registerkarte die **Berichtseigenschaften** Dialogfeld. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  Die **Klassen** Element unterstützt die Verwendung von Instanzelementen in einer Berichtsdefinition. **Klassen** ist ein Element der obersten Ebene, die einen Verweis auf den Klassennamen und einen Instanznamen enthält. Ein Eintrag in einer Berichtsdefinition, der die Verwendung von Instanzelementen unterstützt, kann folgendermaßen aussehen:  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [Zugriff auf benutzerdefinierte Assemblys über Ausdrücke](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von benutzerdefinierten Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

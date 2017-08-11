@@ -14,7 +14,7 @@ caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
 ms.contentlocale: de-de

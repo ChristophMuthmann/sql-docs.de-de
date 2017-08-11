@@ -19,14 +19,14 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 43
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 33dfc4da9781e537c222bd9aed593b694d734ba0
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ae7f1a99b09e4c8fc5f2483e9aa360cce83da2df
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Eigenschaften für Reporting Services - Eigenschaften der Berichtsserverelemente
@@ -65,13 +65,13 @@ ms.lasthandoff: 06/13/2017
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |**Sprache**|Die in einem Bericht verwendete Sprache. Der Wert ist ein Sprachcode, der in der IETF-Spezifikation (Internet Engineering Task Force) RFC1766 definiert ist. Der erste Teil ist eine Bezeichnung aus zwei Zeichen für die Basissprache. Der zweite Teil ist durch einen Bindestrich getrennt und legt die Variation oder den Dialekt der Sprache fest. Wenn der Wert nicht im **Style**-Element angegeben ist, das zum **Body**-Element in der Berichtsdefinition gehört, ist der Standardwert gleich der Sprache des Berichtsservers.|  
-|**ReportProcessingTimeout**|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert gleich **-1** ist, gibt es für den Berichten während der Verarbeitung kein Timeout. Wenn der Wert gleich **null** ist, wird für das Timeout bei der Berichtsverarbeitung der Wert der Systemeigenschaft **ReportProcessingTimeout** verwendet. Der Standardwert ist **null**. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
+|**ReportProcessingTimeout**|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**, findet bei Berichten während der Verarbeitung kein Timeout. Wenn der Wert **null**, den Wert der Systemeigenschaft **ReportProcessingTimeout** wird für die berichtsverarbeitungstimeout verwendet. Der Standardwert ist **null**. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Zeitpunkt (Datum und Uhrzeit), zu dem zuletzt eine Berichtsmomentaufnahme für einen Bericht erstellt wurde.|  
-|**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf **true** festgelegt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf **None** festgelegt. Ist diese Eigenschaft auf **false** festgelegt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
-|**HasParameterDefaultValues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert lautet auch **true**, wenn ein Bericht keine Berichtsparameter hat. Wenn diese Eigenschaft auf **false** festgelegt ist, hat mindestens ein Berichtsparameter keinen gültigen Standardwert.|  
+|**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Wenn diese Eigenschaft, um festgelegt wird **"true"**, Standardwerte für Berichtsparameter definiert sind und Datenquellen-Anmeldeinformationen mit dem Bericht gespeichert werden, oder auf die Option zum Abrufen der Anmeldeinformationen festgelegt ist **keine**. Wenn diese Eigenschaft, um festgelegt wird **"false"**, die Voraussetzungen für die unbeaufsichtigten Ausführen eines Berichts nicht erfüllt sind. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**HasParameterDefaultValues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert ist auch **"true"** , wenn ein Bericht keine Berichtsparameter. Wenn diese Eigenschaft auf **false** festgelegt ist, hat mindestens ein Berichtsparameter keinen gültigen Standardwert.|  
 |**HasDataSourceCredentials**|Ein Wert, der angibt, dass die Option zum Abrufen der Anmeldeinformationen für alle zum Bericht gehörenden Datenquellen entweder gleich **None** oder gleich **Store** ist. Wenn diese Eigenschaft auf **false** festgelegt ist, ist eine Option zum Abrufen der Anmeldeinformationen für eine der zum Bericht gehörenden Datenquellen gleich **Integrated** oder gleich **Prompt**.|  
 |**IsSnapshotExecution**|Ein Wert, der angibt, ob der Bericht eine Momentaufnahme ist.|  
-|**HasScheduleReadyDataSources**|Ein Wert, der angibt, ob die Datenquellen eines Berichts so konfiguriert sind, dass die geplante Ausführung unterstützt wird. Wenn diese Eigenschaft auf **false** festgelegt ist, können Benutzer den Bericht nicht abonnieren.|  
+|**HasScheduleReadyDataSources**|Ein Wert, der angibt, ob die Datenquellen eines Berichts so konfiguriert sind, dass die geplante Ausführung unterstützt wird. Wenn diese Eigenschaft, um festgelegt wird **"false"**, Benutzer können nicht abonniert werden zum Bericht.|  
   
 ## <a name="resource-properties"></a>Ressourceneigenschaften  
  Zusätzlich zu den zuvor aufgeführten Elementeigenschaften gilt folgende Eigenschaft für Ressourcen in der Berichtsserver-Datenbank.  

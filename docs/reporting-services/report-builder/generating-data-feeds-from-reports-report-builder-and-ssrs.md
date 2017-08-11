@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
 ms.contentlocale: de-de
@@ -195,6 +195,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
-[Exportieren von Berichten](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+[Export Reports (Exportieren von Berichten)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
