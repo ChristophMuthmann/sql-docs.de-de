@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisierung in Reporting Services

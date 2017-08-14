@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 5984c00833185e3f4bcb7f81460829769f2abd7a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services-Erweiterungsbibliothek

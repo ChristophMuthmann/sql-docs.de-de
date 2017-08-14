@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: de-de
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
 
   Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.  
   
- Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document**, und die Dateinamenerweiterung lautet „.docx“.  
+ Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , und die Dateinamenerweiterung lautet „.docx“.  
   
- Weitere Informationen zum Exportieren zu Word finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Finden Sie unter [Exportieren von Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) Weitere Informationen zum Exportieren nach Word.  
   
  Nachdem Sie den Bericht in ein Word-Dokument exportiert haben, können Sie den Inhalt bearbeiten und dokumentartige Berichte wie Adressetiketten, Bestellungen oder Serienbriefe entwerfen.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an.  
   
--   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [ Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen finden Sie unter [lokaler Modus VS. Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Wenn der **Word 2003** -Renderer für Sichtbarkeit konfiguriert ist, ist in den folgenden Szenarien sowohl die **Word** - als auch die **Word 2003** -Menüoption verfügbar:  
   
@@ -201,6 +201,6 @@ ms.lasthandoff: 08/09/2017
 [Renderingverhalten](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
 [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
 [Rendern von Berichtselementen](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
-[Tabellen, Matrizen und Listen](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+[Tables, Matrices, and Lists (Tabellen, Matrizen und Listen)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
