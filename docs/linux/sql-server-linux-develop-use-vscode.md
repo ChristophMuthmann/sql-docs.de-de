@@ -254,7 +254,7 @@ Weitere Informationen zu verwenden, oder der Mssql-Erweiterung verwendet werden 
 
 Weitere Informationen zur Verwendung von Visual Studio Code finden Sie unter der [Dokumentation zu Visual Studio Code](https://code.visualstudio.com/docs).
 
-[** Mssql ** Erweiterung für Visual Studio-Code]:https://aka.ms/mssql-marketplace
+[ **Mssql** Erweiterung für Visual Studio-Code]:https://aka.ms/mssql-marketplace
 [herunterladen und installieren Sie Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core Anweisungen]:https://www.microsoft.com/net/core
 [Verwalten von remoteverbindungsprofilen]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
