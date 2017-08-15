@@ -186,8 +186,9 @@ Verwenden Sie zum Installieren der Tools für Mac El Capitan und Sierra die folg
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a>Docker
@@ -263,3 +264,4 @@ Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQ
 - [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
 
 Ein Beispiel zum Verwenden von **Bcp** zum Massenimport und Exportieren von Daten, finden Sie unter [Massenkopieren von Daten mit SQL Server on Linux](sql-server-linux-migrate-bcp.md).
+

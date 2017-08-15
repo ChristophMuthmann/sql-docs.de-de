@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst
@@ -60,7 +60,7 @@ Zur Verbesserung der Sicherheit sollten Sie die Option **Dieses Konto**auswähle
   
     -   Berechtigung zum Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)  
   
-    -   Berechtigung Zugriff auf diesen Computer vom Netzwerk (zugreifen SeNetworkLogonRight)  
+    -   Berechtigung für den Zugriff auf diesen Computer über das Netzwerk (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > Wenn das Konto nicht über die Berechtigungen verfügt, die zur Unterstützung von Proxys erforderlich sind, können Aufträge nur von Mitgliedern der festen Serverrolle **sysadmin** erstellt werden.  
@@ -112,7 +112,7 @@ Starten Sie den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnovers
 ## <a name="common-tasks"></a>Allgemeine Aufgaben  
 **So geben Sie das Startkonto für den SQL Server-Agent-Dienst an**  
   
--   [Festlegen des Dienststartkontos für den SQL Server-Agent &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Festlegen des Dienststartkontos für den SQL Server-Agent &#40;SQL Server-Konfigurations-Manager&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **So geben Sie das Mailprofil für den SQL Server-Agent an**  
   
