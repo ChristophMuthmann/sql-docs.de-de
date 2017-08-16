@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
@@ -70,8 +70,8 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(A-ERR)**|Fehlernummer. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert der Fehlernummer dieses Token im Auftragsschritt automatisch.|  
 |**(A-SEV)**|Fehlerschweregrad. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Fehlerschweregrads dieses Token im Auftragsschritt automatisch.|  
 |**(A-MSG)**|Meldungstext. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Meldungstexts dieses Token im Auftragsschritt automatisch.|  
-|**(AGENT_JOB_NAME)**|Der Name des Auftrags.|  
-|**(AGENT_STEP_NAME)**|Der Name des Schrittes.|  
+|**(JOBNAME)**|Der Name des Auftrags.|  
+|**(STEPNAME)**|Der Name des Schrittes.|  
 |**(DATE)**|Das aktuelle Datum (im Format YYYYMMDD).|  
 |**(INST)**|Der Instanzname. Für eine Standardinstanz erhält dieses Token den Standardinstanznamen: MSSQLSERVER.|  
 |**(JOBID)**|Auftrags-ID.|  
