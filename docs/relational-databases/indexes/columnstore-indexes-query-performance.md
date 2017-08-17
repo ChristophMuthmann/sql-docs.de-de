@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes Abfrageleistung
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹Gilt für SQL Server 2016, SQL-Datenbank V12 Premium-Edition und SQL Data Warehouse    
     
 ### <a name="aggregate-pushdown"></a>Aggregatweitergabe    
- Eine normaler Ausführungspfad zur Aggregatsberechnung, um die qualifizierenden Zeilen aus dem SCAN-Knoten abzurufen und die Werte im Batchmodus zu aggregieren.  Dies bietet eine gute Leistung. Ab SQL Server 2016 kann der Aggregatsvorgang jedoch mittels Push an den SCAN-Knoten weitergegeben werden, um die Leistung der Aggregatsberechnung in erheblichem Maße zusätzlich zum Batchmodus auszuführen, sofern folgende Bedingungen erfüllt sind    
-    
--   Unterstützte Aggregatoperatoren sind: MIN, MAX, SUM, COUNT, AVG    
-    
--   Jeder Datentyp <= 64 Bit wird unterstützt.  Bigint wird z. B. unterstützt, da seine Größe 8 Bytes beträgt, dezimal (38,6) wird jedoch nicht unterstützt, da es 17 Bytes groß ist. Außerdem werden keine Zeichenfolgentypen unterstützt.    
-    
--   Aggregatoperator muss über dem SCAN-Knoten oder SCAN-Knoten mit Group by sein    
+ Eine normaler Ausführungspfad zur Aggregatsberechnung, um die qualifizierenden Zeilen aus dem SCAN-Knoten abzurufen und die Werte im Batchmodus zu aggregieren.  Dies bietet eine gute Leistung. Ab SQL Server 2016 kann der Aggregatsvorgang jedoch mittels Push an den SCAN-Knoten weitergegeben werden, um die Leistung der Aggregatsberechnung in erheblichem Maße zusätzlich zum Batchmodus auszuführen, sofern folgende Bedingungen erfüllt sind 
+ 
+-    Die Aggregate sind MIN, MAX, SUM, COUNT und COUNT(*). 
+-  Der Aggregatoperator muss über dem SCAN-Knoten oder SCAN-Knoten mit Group by sein.
+-  Dieses Aggregat ist kein eindeutiges Aggregat.
+-  Die Aggregatspalte ist keine Zeichenfolgenspalte.
+-  Die Aggregatspalte ist keine virtuelle Spalte. 
+-  Der Datentyp für die Eingabe und Ausgabe muss einer der folgenden sein und in 64 Bit passen.
+    -  Tiny int, int, big int, small int, bit
+    -  Small money, money, decimal und numeric, die eine Genauigkeit von <= 18 besitzt
+    -  Small date, date, datetime, datetime2, time
     
  Aggregatweitergabe wird durch effiziente Aggregation von komprimierten/codierten Daten bei Cache-entlastender Ausführung und durch Nutzung von SIMD weiter beschleunigt.    
     

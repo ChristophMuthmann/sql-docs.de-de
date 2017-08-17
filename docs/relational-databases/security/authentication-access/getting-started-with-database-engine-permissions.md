@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Eine Grafik mit den Beziehungen zwischen den [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Prinzipalen und Servern und Datenbankobjekten finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Berechtigungen im Vergleich mit festen Server- und Datenbankrollen  
- Die Berechtigungen der festen Serverrollen und festen Datenbankrollen sind ähnlich, jedoch nicht genau identisch mit präzisen Berechtigungen. Mitglieder der festen Serverrolle `sysadmin` haben z.B. alle Berechtigungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Gleiches gilt für Anmeldungen mit der Berechtigung `CONTROL SERVER` . Doch durch Erteilen der Berechtigung `CONTROL SERVER` wird eine Anmeldung nicht Mitglied der festen Serverrolle „sysadmin“. Und durch Hinzufügen einer Anmeldung zur festen Serverrolle  `sysadmin` wird der Anmeldung nicht explizit die Berechtigung  `CONTROL SERVER` erteilt. Mitunter überprüft eine gespeicherte Prozedur Berechtigungen, indem die feste Rolle und nicht die präzise Berechtigung überprüft wird. Das Trennen einer Datenbank erfordert z.B. die Mitgliedschaft in der festen Datenbankrolle `db_owner` . Die entsprechende Berechtigung `CONTROL DATABASE` reicht nicht aus. Diese beiden Systeme arbeiten parallel, interagieren allerdings nur selten. Microsoft empfiehlt, nach Möglichkeit das neuere, präzise Berechtigungssystem anstelle der festen Rollen zu verwenden.  
+ Die Berechtigungen der festen Serverrollen und festen Datenbankrollen sind ähnlich, jedoch nicht genau identisch mit präzisen Berechtigungen. Mitglieder der festen Serverrolle `sysadmin` haben z.B. alle Berechtigungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Gleiches gilt für Anmeldungen mit der Berechtigung `CONTROL SERVER` . Durch Erteilen der Berechtigung `CONTROL SERVER` wird eine Anmeldung jedoch nicht Mitglied der festen Serverrolle „sysadmin“. Und durch Hinzufügen einer Anmeldung zur festen Serverrolle `sysadmin` wird der Anmeldung nicht explizit die Berechtigung `CONTROL SERVER` erteilt. Mitunter überprüft eine gespeicherte Prozedur Berechtigungen, indem die feste Rolle und nicht die präzise Berechtigung überprüft wird. Das Trennen einer Datenbank erfordert z.B. die Mitgliedschaft in der festen Datenbankrolle `db_owner` . Die entsprechende Berechtigung `CONTROL DATABASE` reicht nicht aus. Diese beiden Systeme arbeiten parallel, interagieren allerdings nur selten. Microsoft empfiehlt, nach Möglichkeit das neuere, präzise Berechtigungssystem anstelle der festen Rollen zu verwenden.
   
 ## <a name="monitoring-permissions"></a>Überwachen von Berechtigungen  
  Die folgenden Sichten geben Sicherheitsinformationen zurück.  

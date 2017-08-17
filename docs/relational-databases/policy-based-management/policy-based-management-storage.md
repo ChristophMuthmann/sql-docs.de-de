@@ -1,7 +1,7 @@
 ---
 title: Speicher der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,18 +16,18 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0426d583d1ada35c7ad3e36d4fe1a621e9754360
+ms.translationtype: HT
+ms.sourcegitcommit: e59b30393d9bb917fc48511d7e621c14e9a01c9c
+ms.openlocfilehash: fa8ad7ecca05b2fe7b4ef6b955f5b24fadb0e23b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="policy-based-management-storage"></a>Speicher der richtlinienbasierten Verwaltung
   Richtlinien werden in der msdb-Datenbank gespeichert. Nachdem eine Richtlinie oder Bedingung geändert wurde, sollte die msdb-Datenbank gesichert werden. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="storing-policies"></a>Speichern von Richtlinien  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält Richtlinien, die verwendet werden können, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Diese Richtlinien sind standardmäßig nicht in [!INCLUDE[ssDE](../../includes/ssde-md.md)]installiert, aber sie können aus ihrem Standardinstallationspfad C:\Programme\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 importiert werden.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält Richtlinien, die verwendet werden können, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Diese Richtlinien sind standardmäßig nicht in [!INCLUDE[ssDE](../../includes/ssde-md.md)]installiert, aber sie können aus ihrem Standardinstallationspfad C:\Programme (x86)\Microsoft SQL Server\140\Tools\Policies\DatabaseEngine\1033 importiert werden.  
   
  Sie können Richtlinien über das Menü **Datei/Neu** direkt erstellen und diese dann in einer Datei speichern. Auf diese Weise können Sie Richtlinien erstellen, wenn Sie nicht mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind.  
   

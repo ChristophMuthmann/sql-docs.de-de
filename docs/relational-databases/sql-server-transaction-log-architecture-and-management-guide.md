@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
@@ -187,7 +187,7 @@ Informationen zum Festlegen des Wiederherstellungsintervalls finden Sie unter [K
 > [!TIP]  
 >  Die erweiterte Setupoption „-k“ von SQL Server ermöglicht Datenbankadministratoren, das Prüfpunkt-E/A-Verhalten auf Basis des Durchsatzes des E/A-Subsystems für einige Prüfpunkttypen zu drosseln. Die Setupoption „-k“ gilt für automatische Prüfpunkte sowie für andere, nicht gedrosselte Prüfpunkte. 
  
-Automatische Prüfpunkte schneiden den ungenutzten Teil des Transaktionsprotokolls ab, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet. Das Protokoll wird jedoch nicht durch automatische Prüfpunkte abgeschnitten, wenn die Datenbank das Modell der vollständigen oder massenprotokollierten Wiederherstellung verwendet. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
+Automatische Prüfpunkte schneiden den ungenutzten Teil des Transaktionsprotokolls ab, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet. Das Protokoll wird jedoch nicht durch automatische Prüfpunkte abgeschnitten, wenn die Datenbank das Modell der vollständigen oder massenprotokollierten Wiederherstellung verwendet. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &amp;#40;SQL Server&amp;#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
 Die CHECKPOINT-Anweisung stellt jetzt ein optionales checkpoint_duration-Argument bereit, das die gewünschte Zeitdauer (in Sekunden) für die zu beendenden Prüfpunkte angibt. Weitere Informationen finden Sie unter [CHECKPOINT (Transact-SQL)](../t-sql/language-elements/checkpoint-transact-sql.md).
 
@@ -217,7 +217,7 @@ Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Tran
 ## <a name="additional-reading"></a>Zusätzliches Lesematerial  
  In den folgenden empfohlenen Artikeln und Büchern finden Sie zusätzliche Informationen zu Transaktionsprotokollen.  
   
- [Grundlegendes zur Protokollierung und Wiederherstellung in SQL Server von Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Understanding Logging and Recovery in SQL Server by Paul Randal (Grundlegendes zur Protokollierung und Wiederherstellung in SQL Server von Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Verwaltung von SQL Server-Transaktionsprotokollen von Tony Davis und Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
