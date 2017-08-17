@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio – Änderungsprotokoll (SSMS) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,84 +13,219 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
-ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/08/2017
 
 ---
-# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 
-## <a name="ssms-171-release"></a>SSMS 17.1-Version
-Allgemein verfügbare | Buildnummer: 14.0.17119.0
+Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie die [previous SSMS versions below (Vorgängerversionen von SSMS weiter unten)](#previous-ssms-releases) herunter.
+
+## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
+
+Allgemein verfügbar | Buildnummer: 14.0.17177.0
 
 ### <a name="enhancements"></a>Erweiterungen
 
-- Profiler: Hilfe > Info jetzt zeigt die Versionsnummer (z. B. 17.1)
-- Analysis Service-Benutzer können Anmeldeinformationen für ihre Datenquellen für 1200 aktualisieren TM-Modelle und oben im Kontextmenü auf die Datenquelle
-- Integrierte SSIS meldet jetzt anzeigen Protokolle von SSIS-Ausführung mit horizontaler Skalierung in der CTP-Version 2.1
-- SSIS mit horizontaler Skalierung-verwaltungsanwendung
-  - Zeigt grundlegende Informationen zu Master mit horizontaler Skalierung.
-  - Ein Arbeitsthread wird problemlos zu Dezentrales Skalieren hinzufügen.
-  - Anzeigen der Worker mit horizontaler Skalierung und grundlegende Informationen zu diesen, kann und auch aktiviert oder deaktiviert werden einfach.
+- Multi-Factor Authentication (MFA)
+  - Azure AD-Authentifizierung für mehrere Benutzer für eine universelle Authentifizierung mit Multi-Factor Authentication (UA mit MFA)
+  - Ein neues Eingabefeld für Benutzeranmeldeinformationen wurde der universellen Authentifizierung mit MFA hinzugefügt, um die Authentifizierung für mehrere Benutzer zu unterstützen.
+- Das Dialogfeld „Verbindung“ unterstützt nun die folgenden fünf Authentifizierungsmethoden:
+  - Windows-Authentifizierung
+  - SQL Server-Authentifizierung
+  - Active Directory: Universell mit MFA-Unterstützung
+  - Active Directory: Kennwort
+  - Active Directory: Integriert
+
+- Verwenden der universellen Authentifizierung mit MFA durch den Assistenten für Datenbankimport und -export für DacFx.
+- Informationen zur API-Unterstützung finden Sie unter [IUniversalAuthProvider-Schnittstelle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
+- Die von ADAL verwaltete Bibliothek, die von der universellen Authentifizierung mit MFA in Azure AD verwendet wird, wurde auf Version 3.13.9 aktualisiert.
+- Zusätzlich wurde eine neue CLI-Schnittstelle erstellt, die Azure AD-Administratoreinstellungen für SQL Datenbank und SQL Data Warehouse unterstützt.
+
+ Weitere Informationen zu den Authentifizierungsmethoden in Active Directory finden Sie unter [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA) (Universelle Authentifizierung mit SQL-Datenbank und SQL Data Warehouse (SSMS-Unterstützung für MFA))](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) und [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio (Konfigurieren der mehrstufigen Authentifizierung in Azure SQL-Datenbank für SQL Server Management Studio)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
+
+- Das Ausgabefenster enthält Einträge für Abfragen, die während der Erweiterung der Objekt-Explorer-Knoten ausgeführt wurden
+- Aktivierter Sicht-Designer für Azure SQL-Datenbanken
+- Die Standardoptionen für die Skripterstellung für Skripterstellungsobjekte aus dem Objekt-Explorer in SSMS haben sich geändert:
+  - Zuvor war das generierte Skript bei einer neuen Installation standardmäßig auf die neueste Version von SQL Server (aktuell SQL Server 2017) ausgerichtet.
+  - Mit SSMS 17.2 wurde eine neue Option hinzugefügt: *Skripteinstellungen mit Quelle abgleichen*. Mit der Einstellung *TRUE* ist das generierte Skript auf dieselbe Version, denselben Modultyp und dieselbe Moduledition wie die des Servers, von dem aus das Skript für das Objekt erstellt wird, ausgerichtet.
+  - Der Wert für *Skripteinstellungen mit Quelle abgleichen* ist standardmäßig auf *TRUE* festgelegt. Neue Installationen von SSMS verfügen somit automatisch über die Standardeinstellung, dass die Skripte von Objekten an dasselbe Ziel wie das des Originalservers gerichtet werden.
+  - Wenn der Wert für *Skripteinstellungen mit Quelle abgleichen* auf *FALSE* festgelegt ist, werden die normalen Zieloptionen für die Skripterstellung aktiviert und funktionieren wie bisher.
+    - Zusätzlich wurden alle Skripterstellungsoptionen in ihren eigenen Abschnitt verschoben: *Versionsoptionen*. Sie befinden sich nicht länger unter*Allgemeine Skriptoptionen*.
+
+- Unterstützung für nationale Clouds in „Wiederherstellen aus URL“
+- Die QueryStoreUI-Berichte unterstützen nun zusätzliche Metriken (RowCount, DOP, CLR Time usw.) aus „sys.query_store_runtime_stats“.
+- IntelliSense wird nun für die Azure SQL-Datenbank unterstützt
+    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
+- Sicherheit: Das Verbindungsdialogfeld stuft Serverzertifikate standardmäßig als nicht vertrauenswürdig ein und fordert Verschlüsselung für Azure SQL-Datenbankverbindungen an
+- Allgemeine Verbesserungen für die Unterstützung von SQL Server unter Linux:
+ - Der Knoten „Datenbank-E-Mail“ ist zurück
+ - Verschiedene auf Pfade bezogene Probleme wurden behoben
+ - Der Aktivitätsmonitor ist stabiler
+ - Das Dialogfeld „Verbindungseigenschaften“ zeigt die korrekte Plattform an
+- Der Leistungsdashboard-Serverbericht ist nun als Standardbericht verfügbar:
+  - Verbindung zu SQL Server 2008 und höheren Versionen möglich.
+  - Der Unterbericht zu fehlenden Indizes verwendet Bewertungen, um das Identifizieren der nützlichsten Indizes zu unterstützen.
+  - Der Unterbericht zum Verlauf der Wartezustände aggregiert die Wartevorgänge nun nach Kategorie. Wartevorgänge, die sich im Leerlauf oder Ruhezustand befinden, werden standardmäßig herausgefiltert.
+  - Ein neuer Unterbericht für den Verlauf von Latches.
+- Die Showplan-Knotensuche ermöglicht die Suche in Planeigenschaften. Einfache Suche nach beliebigen Operatoreigenschaften wie z.B. Tabellennamen. Das Verwenden dieser Option beim Anzeigen eines Plans:
+  - Klicken Sie mit der rechten Maustaste auf „Plan“ und im Kontextmenü auf die Option „Knoten finden“
+  - Drücken Sie STRG+F
+
+
+### <a name="analysis-services-as"></a>Analysis Services (AS)
+
+- Neue AAD-Rollenmemberauswahl für Benutzer ohne E-Mail-Adressen in AS Azure-Modellen in SSMS
+
+### <a name="integration-services-is"></a>Integration Services (IS)
+
+- Eine neue Spalte („Anzahl von Ausführungen“) wurde dem Ausführungsbericht für SSIS hinzugefügt
+
+### <a name="known-issues-in-this-release"></a>Bekannte Probleme in dieser Version:
+
+- Bei Abfragefenstern, die die universelle Active Directory-Authentifizierung mit MFA-Unterstützung verwenden, kann ein Fehler ähnlich dem Folgenden auftreten, wenn versucht wird, eine Abfrage durchzuführen, nachdem das Fenster für eine Stunde geöffnet war:
+
+   `Msg 0, Level 11, State 0, Line 0
+The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
+
+   Ein erneutes Ausführen der Abfrage sollte den Fehler überwinden und erfolgreich sein.
+
+- Die folgenden SSMS-Funktionalitäten werden für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
+  - Der Designer **Neue Tabelle/Sicht** zeigt die Anmeldeaufforderung im alten Format an, außerdem funktioniert die Azure AD-Authentifizierung nicht.
+  - Das Feature **Die ersten 200 Zeilen bearbeiten** unterstützt die Azure AD-Authentifizierung nicht.
+  - Die Komponente **Registrierter Server** unterstützt die Azure AD-Authentifizierung nicht.
+  - Der **Datenbankoptimierungsratgeber** wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem der Benutzer eine wenig hilfreiche Fehlermeldung angezeigt bekommt: *Datei oder Assembly ‚Microsoft.IdentityModel.Clients.ActiveDirectory,…‘ konnte nicht geladen werden* Entgegen der Erwartung *wird die Microsoft Azure SQL-Datenbank nicht vom Datenbankoptimierungsratgeber unterstützt. (DTAClient)*.
+
+**AS**
+
+- Der Objekt-Explorer in SSAS zeigt den Benutzernamen der Windows-Authentifizierung nicht in den AS Azure-Verbindungseigenschaften an.
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
-- AlwaysOn:
-  - Ein Problem behoben, in dem die Eigenschaften eines verfügbarkeitsreplikats wurde immer angezeigt als Modus "Automatisches Failover" für wsfc-Testreihen.
-  - Das Problem behoben wurde, in die schreibgeschützten Routingliste überschrieben, beim Aktualisieren der Verfügbarkeitsgruppe.
-- Always Encrypted: wurde ein Problem behoben, in denen generierte Protokolldatei die Informationen, die von DacFx generierten fehlte.
-- ShowPlan: wurden in Problem behoben, in dem wurde die Benutzeroberfläche immer der tatsächliche Typ Verknüpfungsattribut für nicht Adaptive Joinoperatoren angezeigt.
-- Setup:
-  - Ein Problem behoben, in denen wurde SSMS 17,0 SSDT für Visual Studio 2013 [verbinden Element 3133479] wichtige
-  - Ein Problem behoben, in denen wurde durch Klicken auf "Restart" am Ende des Setups nicht den Computer neu zu starten
-- Scripting: vorübergehend verhindert, dass SSMS versehentliches Löschen von Azure-Datenbankobjekte, beim Versuch, das Löschen zu erstellen, indem Sie diese Option deaktivieren.  Richtige Korrektur werden in einer zukünftigen Version von SSMS.
-- Objekt-Explorer: ein Problem behoben, in denen wurde Knoten "Datenbanken" nicht erweitert, wenn die Verbindung mit einer Azure-Datenbank mit "AS kopieren" erstellt
 
-## <a name="ssms-170-release"></a>SSMS 17,0-Version
-Allgemein verfügbare | Buildnummer: 14.0.17099.0
+- Ein Problem behoben, das beim Versuch auftrat, die Ergebnisse einer Abfrage als Text zu drucken.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
+- Es wurde ein Problem behoben, bei dem SSMS Tabellen und andere Objekte falsch gelöscht hat, wenn ein Skript für die Löschung dieser Objekte in einer SQL Azure-Datenbank erstellt wurde.
+- Es wurde ein Problem behoben, bei dem SSMS gelegentlich den Start verweigert hat mit einem Fehler wie: „Eine oder mehrere Komponenten können nicht gefunden werden. Bitte installieren Sie die Anwendung neu“
+- Es wurde ein Problem behoben, bei dem die SPID in der SSMS-Benutzeroberfläche veraltet und nicht mehr synchron angezeigt werden konnte. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- Es wurde ein Problem bei der automatischen Installation von SSMS behoben, bei dem das Argument /passive als /quiet behandelt wurde.
+- Es wurde ein Problem behoben, bei dem SSMS beim Start gelegentlich den Fehler „Objektverweis ist nicht auf eine Instanz des Objekts festgelegt“ ausgegeben hat. http://connect.microsoft.com/SQLServer/feedback/details/3134698
+- Es wurde ein Problem mit dem „Datenkomprimierungs-Assistenten“ behoben, das einen Absturz von SSMS verursacht hat, wenn auf der Graph-Tabelle ‚Berechnen‘ angeklickt wurde
+- Es wurde ein Leistungsproblem behoben, das beim Rechtsklicken auf einen Index für eine Tabelle (bei einer langsamen Internetverbindung) auftrat. https://connect.microsoft.com/SQLServer/feedback/details/3120783
+- Es wurde ein Problem behoben, bei dem es SSMS nicht möglich war, Sicherungsdateien auf Servern mit einer Sammlung, bei der nach Groß- und Kleinschreibung unterschieden wird, aufzulisten. http://connect.microsoft.com/SQLServer/feedback/details/3134787 und https://connect.microsoft.com/SQLServer/feedback/details/3137000
+- Showplan und Showplan vergleichen verschiedene Problembehebungen
+- Es wurde ein Problem behoben, bei dem das Verbindungsdialogfeld dem Benutzer nicht gestattet hat, das „Netzwerkprotokoll“ anzugeben, das für die Verbindung verwendet werden soll, falls SQL Server nicht auf dem Computer installiert ist, auf dem SSMS ausgeführt wird. https://connect.microsoft.com/SQLServer/feedback/details/3134997
+- Verbesserte Unterstützung für die Konfigurationen für mehrere Monitore, bei denen manche SSMS-Dialogfelder an zufälligen Orten angezeigt wurden. Die neue Option „Aufgabendialogfeld“ wurde unter den Benutzereinstellungen von „SQL Server-Objekt-Explorer | Befehle“ hinzugefügt, durch die es ermöglicht wird, die Position eines Aufgabendialogfelds oder Eigenschaftsblatts zu speichern, wenn es geschlossen wird. https://connect.microsoft.com/SQLServer/feedback/details/889169, https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
+- Es wurde ein Problem behoben, bei dem SSMS keine Datenbankeigenschaften für verschlüsselte Azure SQL-Datenbanken ändern konnte
+- Die Option „Ergebnisse nach der Ausführung verwerfen“ wurde verbessert. https://connect.microsoft.com/SQLServer/feedback/details/1196581
+- Es wurde ein Problem behoben bzw. verbessert, bei dem es Benutzern nicht möglich war, auf Azure-Abonnements zuzugreifen, für die sie keine Administratorrechte besitzen.
+- Der Assistent für die Datenbankwiederherstellung wurde verbessert, damit die Zieldatenbank in OE unabhängig von der Auswahl der Quelldatenbank ausgewählt bleibt. https://connect.microsoft.com/SQLServer/feedback/details/3118581
+- Es wurde ein Problem behoben, bei dem der Objekt-Explorer neu hinzugefügte „nativ kompilierte gespeicherte Prozeduren“ nicht korrekt sortiert hat. http://connect.microsoft.com/SQLServer/feedback/details/3133365
+- Es wurde ein Problem behoben, bei dem „SELECT TOP N ROWS“ die Klausel „TOP“ nicht enthalten hat. Für Azure SQLDW. https://connect.microsoft.com/SQLServer/feedback/details/3133551 und https://connect.microsoft.com/SQLServer/feedback/details/3135874
+- QueryStoreUI: Es wurde ein Problem behoben, bei dem nicht benutzerdefinierte Zeitintervalle nicht bei allen Berichten ordnungsgemäß funktioniert haben.
+- Always Encrypted:
+    - Verbessertes Messaging für den AKV-Berechtigungsstatus im neuen CMK-Dialogfenster
+    - Zur CEK-Dropdownliste wurde QuickInfo hinzugefügt, um die Entscheidung von CEKs mit langen Namen zu erleichtern
+    - Es wurde ein Problem behoben, bei dem einige CNG-Schlüsselspeicheranbieter nicht im Dialogfeld „Neuer Spaltenhauptschlüssel“ für Always Encrypted angezeigt wurden
+- Inkonsistenz bei „Anwendungsname“ für SSMS-Verbindungen wurde behoben. http://connect.microsoft.com/SQLServer/feedback/details/3135115
+- Es wurde ein Problem behoben, bei dem SSMS inkorrekte Skripts für SQL Azure generiert hat (Tabellen und Indizes mit der Option „DATA_COMPRESSIONS“). https://connect.microsoft.com/SQLServer/feedback/details/3133148
+- Es wurde ein Problem behoben, bei dem es dem Benutzer nicht möglich war, die Tastenkombination STRG+Q zu verwenden, um den Schnellstart auszuführen (Hinweis: Die neuen Tastenkombinationen, um die Option „IntelliSense aktiviert“ im Abfrage-Editor umzuschalten, sind nun STRG+B und STRG+I). https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- Es wurde ein Problem in „Datenbank wiederherstellen“ behoben, bei dem SSMS eine Ausnahme beim Versuch ausgelöst hat, ein Speicherkonto aus einem Abonnement auszuwählen, in dem sich Konten mit benutzerdefinierten Domänen befinden
+- Es wurde ein Problem in „Datenbankdiagramm“ behoben, bei dem SSMS den Fehler „Der Index war außerhalb des Arraybereichs.“ ausgelöst hat. Außerdem war es dem Benutzer nicht möglich, die „Tabellenansicht“ in eine andere Einstellung als „Standard“ zu ändern. https://connect.microsoft.com/SQLServer/feedback/details/3133792 und http://connect.microsoft.com/SQLServer/feedback/details/3135326
+- Es wurde ein Problem in „Sicherung/Wiederherstellung in die URL“ behoben, bei dem SSMS keine klassischen Speicherkonten aufgelistet hat.
+- Es wurde ein Problem behoben, bei dem eine Ausnahme bei dem Versuch ausgelöst wurde, schemagebundene sicherungsfähige Elemente zu den Datenbankrollen hinzuzufügen. https://connect.microsoft.com/SQLServer/feedback/details/3118143
+- Es wurde ein Problem behoben, bei dem SSMS gelegentlich folgenden Fehler angezeigt hat: „‘Data‘ ist NULL. Diese Methode oder Eigenschaft kann nicht für NULL-Werte aufgerufen werden.“ Beim Erweitern eines Tabellenknotens http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- DTA: Es wurde ein Problem behoben, bei dem „DTAEngine.exe“ mit Heapbeschädigung beendet wurde, wenn die Partitionsfunktion mit bestimmten Begrenzungswerten ausgewertet wurde.
+
+
+Analysis Services (AS)
+- Es wurde ein Problem behoben, bei dem „Datenbank wiederherstellen“ in AS zu einem Fehler führt, wenn die Datenbank einen anderen Namen als die ID trägt
+- Es wurde ein Problem behoben, bei dem das DAX-Abfragefenster die Menüoption zum Umschalten von „IntelliSense aktiviert“ ignoriert hat
+- Es wurde ein Problem behoben, bei dem die Verbindung zu SSAS durch IIS-Adressen (http/https) verhindert wurde, die „msmdpump“ enthalten
+- Die Verbindung zu AS Azure mit einem Kennwort, das einen Semikolon enthält, ist nun möglich
+- Das Ausgeben des AS-Befehls „Datenbank wiederherstellen“ mit der Option „Mitgliedschaft auslassen“ schließt die neue entsprechende JSON-Option ein, wenn SQL Server 2017, AS Server oder AS Azure verwendet wird
+- Es wurde ein sehr seltenes Problem behoben, bei dem das Dialogfeld „Datenbank löschen“ beim Laden einen Fehler auslösen konnte
+- Es wurde ein Problem behoben, das beim Versuch auftreten konnte, Partitionen im Modell mit Kompatibilitätsgrad 1400 anzuzeigen, die eine Mischung aus SQL-Abfragen und Partitionsdefinitionen enthalten
+
+Integration Services (IS)
+- Es wurde ein Problem behoben, bei dem die Berichte zu Ausführungsinformationen des SSISDB-Katalogs nicht angezeigt werden konnten
+- Es wurde ein Problem in SSMS behoben, bei dem eine große Anzahl von Projekten/Paketen zu Leistungsproblemen führen konnte
+
+
+## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
+
+Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in den folgenden Abschnitten anklicken.
+
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
+Allgemein verfügbar | Buildnummer: 14.0.17119.0
+
+### <a name="enhancements"></a>Erweiterungen
+
+- Profiler: „Hilfe“ > „Info“ zeigt jetzt die Versionsnummer (z.B. 17.1) an.
+- Benutzer von Analysis Services können die Anmeldeinformationen für ihre Datenquellen für 1200 TM-Modelle und höher über das Kontextmenü auf der Datenquelle aktualisieren
+- Integrierte SSIS-Berichte zeigen nun Protokolle der Ausführung der SSIS-Horizontalskalierung in CTP 2.1 an
+- Verwaltungsanwendung der SSIS-Horizontalskalierung
+  - Anzeigen grundlegender Informationen zum Master für horizontales Skalieren
+  - Einfaches Hinzufügen eines Workers zur Bereitstellung für horizontales Skalieren
+  - Anzeigen aller Worker für horizontales Skalieren und grundlegender Informationen zu diesen sowie deren einfache Aktivierung oder Deaktivierung
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+- Always On:
+  - Ein Problem wurde behoben, bei dem die Eigenschaften eines Verfügbarkeitsreplikats immer im Modus „Automatisches Failover“ für WSFC-Verfügbarkeitsgruppen angezeigt wurden.
+  - Ein Problem wurde behoben, bei dem die schreibgeschützte Routingliste beim Aktualisieren der Verfügbarkeitsgruppe überschrieben wurde
+- Always Encrypted: Ein Problem wurde behoben, bei dem in der generierten Protokolldatei die Informationen von DacFx fehlten.
+- ShowPlan: Ein Problem wurde behoben, bei dem auf der Benutzeroberfläche immer das tatsächliche Jointyp-Attribut für nichtadaptive Verknüpfungsoperatoren angezeigt wurde.
+- Setup:
+  - Ein Problem wurde behoben, bei dem SSMS 17.0 SSDT auf Visual Studio 2013 unterbrach [Microsoft Connect-Artikel 3133479]
+  - Ein Problem wurde behoben, bei dem das Klicken auf „Neustart“ am Ende des Setups nicht zu einem Neustart des Computers führte
+- Skripterstellung: Es wird vorübergehend verhindert, dass SSMS versehentlich Azure-Datenbankobjekte löscht, wenn versucht wird, ein Skript für den Löschvorgang zu erstellen, indem diese Option deaktiviert wird.  Dies wird in einer zukünftigen Version von SSMS behoben.
+- Objekt-Explorer: Ein Problem wurde behoben, bei dem der Knoten „Datenbanken“ nicht erweitert wurde, wenn er mit einer Azure-Datenbank verbunden wurde, die mit „AS COPY“ erstellt wurde.
+
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+Allgemein verfügbar | Buildnummer: 14.0.17099.0
 
 ### <a name="enhancements"></a>Erweiterungen 
 
 - Upgradepaket und Windows Software Update Services (WSUS) 
-    - Zukünftige 17.X-Versionen enthalten ein kleineres Kumulatives Updatepaket 
-  - Das Updatepaket wird auch WSUS-Katalog veröffentlicht werden  
+    - Zukünftige 17.X-Versionen enthalten ein kleineres, kumulatives Updatepaket 
+  - Das Updatepaket wird auch im WSUS-Katalog veröffentlicht werden  
 - Symbolupdates
-    - Symbole wurden aktualisiert, um mit VS Shell bereitgestellten Symbole konsistent sein und Unterstützung hoher DPI-Auflösung
+    - Symbole wurden aktualisiert, sind nun mit den von VS Shell bereitgestellten Symbolen konsistent und unterstützen hohe DPI-Auflösungen
     - Neue SSMS- und Profiler-Programmsymbole zur Unterscheidung zwischen 16.X und 17.X-Versionen
 - SQL PowerShell-Modul
-  - SQL Server PowerShell-Modul aus SSMS entfernt und geliefert wird jetzt über die PowerShell-Katalog (PowerShell 5.0 jetzt erforderlich, um die Modul-versionsverwaltung unterstützen)
-  - Sonstige Verbesserungen an der "Präsentation" (Formatierung) einiger SMO-Objekte (z. B. Datenbanken zeigen nun die Größe und die verfügbaren Speicherplatz und die Tabellen anzeigen Zeile Anzahl und den Speicherplatz Verwendung)
-  - Hinzugefügte farbliche Kennzeichnung beim Aufrufen der PowerShell-Eingabeaufforderung im Menü "Start PowerShell" in OE
+  - Das SQL Server PowerShell-Modul wurde aus SSMS entfernt und wird nun über den PowerShell-Katalog geliefert (PowerShell 5.0 ist nun erforderlich, um die Modulversionsverwaltung zu unterstützen)
+  - Verschiedene Verbesserungen der Darstellung (Formatierung) einiger SMO-Objekte (z.B. zeigen Datenbanken nun die Größe und den verfügbaren Speicherplatz an und Tabellen zeigen Zeilenanzahl und Speicherplatznutzung an)
+  - Eine neu hinzugefügte farbliche Kennzeichnung beim Aufrufen der PowerShell-Eingabeaufforderung im Menü „PowerShell starten“ in Outlook Express
   - Parameter -ClusterType und -RequiredCopiesToCommit zu VG-Cmdlets hinzugefügt (Cmdlets New-SqlAvailabilityGroup, Join-SqlAvailabilityGroup und Set-SqlAvailabilityGroup)
   - Parameter -ActiveDirectoryAuthority und -AzureKeyVaultResourceId zu Cmdlet Add-SqlAzureAuthenticationContext hinzugefügt
-  - Hinzugefügte Revoke-SqlAvailabilityGroupCreateAnyDatabase, Grant SqlAvailabilityGroupCreateAnyDatabase und Set-SqlAvailabilityReplicaRoleToSecondary-cmdlets
-  - Cmdlets Set-SqlAvailabilityReplica "und" New-SqlAvailabilityReplica hinzugefügten SeedingMode - parameter
-  - Get-SqlDatabase hinzugefügt "ConnectionString" - parameter
+  - Die Cmdlets „Revoke-SqlAvailabilityGroupCreateAnyDatabase“, „Grant-SqlAvailabilityGroupCreateAnyDatabase“ und „Set-SqlAvailabilityReplicaRoleToSecondary“ wurden hinzugefügt
+  - Der Parameter „-SeedingMode“ wurde zu den Cmdlets „Set-SqlAvailabilityReplica“ und „New-SqlAvailabilityReplica“ hinzugefügt
+  - Der Parameter „-ConnectionString“ wurde zu „Get-SqlDatabase“ hinzugefügt
 - SQL Server unter Linux
     - Allgemeine Verbesserungen und Fehlerbehebungen für den Protokollversand
-  - Unterstützung für systemeigene Linux Pfade anfügen, wiederherstellen und Sicherung einer Datenbank
-  - Unterstützung für systemeigene Linux-Pfade für Audit Log Zielordner
+  - Unterstützung für die nativen Linux-Pfade „Datenbank anfügen“, „Datenbank wiederherstellen“ und „Datenbank sichern“ wurde hinzugefügt
+  - Unterstützung für native Linux-Pfade für den Zielordner von Überwachungsprotokollen wurde hinzugefügt
 - Analysis Services
-  - DAX-Abfrage-Fenster:
+  - DAX-Abfragefenster:
     - Im Editor übereinstimmende Klammern
-    - Definieren von Measures und VAR definieren-syntaxunterstützung
-    - Zusammengestellte Intellisense-Verbesserungen
-  - Universal-Authentifizierung
-    - Ermöglicht Benutzern die Angabe, dass die Verbindung einen Benutzernamen und kein Kennwort und die Azure-Anmeldedialogfeld behandelt
-  - SSMS PQ Integration: 
+    - Syntaxunterstützung von DEFINE MEASURE und DEFINE VAR
+    - Verschiedene IntelliSense-Verbesserungen
+  - Universelle Authentifizierung
+    - Ermöglicht Benutzern das Festlegen eines Benutzernamens ohne Kennwort und das Azure-Anmeldedialogfeld kümmert sich um die Verbindung
+  - SSMS-PQ-Integration: 
     - Skripterstellung für strukturierte Datenquellen funktioniert 
-    - Anzeigen und bearbeiten strukturierter Daten Quellen PQ UI
+    - Anzeigen und Bearbeiten strukturierter Datenquellen auf der PQ-Benutzeroberfläche
 - Neue Vorlage für „Add Unique Constraint“ (Eindeutige Einschränkung hinzufügen)
 - Showplan
     - Im Eigenschaftenfenster für verstrichene Zeit über alle Threads hinweg „max“ statt „sum“ anzeigen
     - Neue Mem Grant Operator-Eigenschaften verfügbar machen
     - Schaltfläche „Edit Query“ (Abfrage bearbeiten) in der Live-Abfragestatistik wurde aktiviert
     - Unterstützung für verschachtelte Ausführung
-  - Neue Option "Analysieren tatsächlichen Ausführungsplan"
-  - Allgemeine Verbesserungen bei der Showplan-Vergleich
-  - Funktionalität in Showplan-Vergleich-Funktion zum Suchen von erhebliche Unterschiede bei der Kardinalitätsschätzung übereinstimmenden Knoten zwei Abfragepläne und führen Sie grundlegende Analyse von mögliche Fehlerursachen eingeführt
+  - Neue Option bei „Tatsächlichen Ausführungsplan analysieren“
+  - Allgemeine Verbesserungen beim Showplan-Vergleich
+  - Eine neu eingeführte Funktion im Feature „Showplan-Vergleich“, die es ermöglicht, Unterschiede der Kardinalitätsschätzung zwischen abgeglichenen Knoten zweier Abfragepläne zu erkennen und grundlegende Analysen möglicher Hauptursachen durchzuführen
 - Configuration Manager wurde vom Registrierte Server-Explorer entfernt
 - Lesen von Überwachungsprotokollen vom Azure-Blobspeicher aktivieren
 - Zusätzliche Parametrisierung für „Always Encrypted“; weitere Informationen finden Sie [hier](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) 
@@ -98,20 +233,23 @@ Allgemein verfügbare | Buildnummer: 14.0.17099.0
 - „Skripts generieren“ für die Azure SQL-Datenbank skriptet jetzt Volltext, Regeln und Datenbanken
 - Korrekturen beim Branding auf dem Begrüßungsbildschirm von SSMS und Profiler
 - Die Benutzeroberfläche des Steuerungspunkts für Hilfsprogramme wurde aus SSMS entfernt
-- SSMS kann jetzt "PremiumRS" Edition SQL Azure-Datenbanken erstellen.
+- SSMS kann nun SQL Azure-Datenbanken der PremiumRS-Edition erstellen
 - AlwaysOn-Verfügbarkeitsgruppen
-  - Hinzufügen von Unterstützung für neue Clustertypen: extern und keine
-    - Hinzufügen von Unterstützung für SQL Server on Linux
-    - Hinzufügen des automatischen Seedings als eine Option für die anfängliche datensynchronisierung
-    - Feste einige Mängel, z. B. Endpunkt-URL, die Behandlung von DB-Aktualisierung und das Layout der Benutzeroberfläche
-    - Azure-Replikaten entfernte verwandte Funktionen
-  - Verbesserte IntelliSense für mehrere Availability Group-Schlüsselwörter
+  - Unterstützung für neue Clustertypen wurde hinzugefügt: EXTERNE und KEINE
+    - Unterstützung für SQL Server unter Linux wurde hinzugefügt
+    - Automatisches Seeding wurde als Option für die anfängliche Datensynchronisierung hinzugefügt
+    - Einige Mängel z.B. beim Umgang mit der Endpunkt-URL, bei der Datenbankaktualisierung und beim Layout der Benutzeroberfläche wurden behoben
+    - Mit Azure-Replikaten verbundene Funktionen wurden entfernt
+  - IntelliSense wurde für mehrere Schlüsselwörter von Verfügbarkeitsgruppen verbessert
 - Aktivitätsmonitor
-  - Hinzugefügte neue "Aktivitätsmonitor" Bereich im Ausgabefenster von SSMS
-  - Verbindung Fehler/Timeoutmeldung zum Protokollieren von Informationen, um die Ausgabe anstatt in einer Popup-Nachricht geändert
-  - Entfernt leeres Diagramm (5. Diagramm) im Abschnitt Übersicht
-  - Übersicht über Titel hinzugefügt "(angehalten)", wenn die Datensammlung für den Aktivitätsmonitor angehalten wird
-  - Graph-Erweiterungen für SQL Server - neuer Symbole für Diagramm Tabellen "Knoten" und "Edge - Diagramm Tabellen" Knoten "und" Edge werden Diagramm Tabellen im Ordner angezeigt werden: Vorlagen zum Erstellen der Knoten und Rand Tabellen graph
+  - Im SSMS-Ausgabefenster wurde der neue Bereich „Aktivitätsmonitor“ hinzugefügt
+  - Die Meldung zu Verbindungsfehler/Timeout wurde so geändert, dass sie Informationen an das Ausgabefenster und nicht an eine Popupmeldung protokolliert
+  - Das leere Diagramm (5. Diagramm) im Abschnitt „Übersicht“ wurde entfernt
+  - Beim Titel in „Übersicht“ wird nun „(angehalten)“ angezeigt, wenn die Datensammlung für den Aktivitätsmonitor angehalten wird
+  - Graph-Erweiterungen für SQL Server 
+    - Neue Symbole für Diagrammknoten und Rahmentabellen
+    - Diagrammknoten und Rahmentabellen werden im Ordner „Graph-Tabellen“ angezeigt
+    - Vorlagen zum Erstellen von Diagrammknoten und Rahmentabellen sind verfügbar
 - Darstellungsmodus
     - 3 neue Aufgaben, die über Schnellstart (STRG-Q) verfügbar sind
     - PresentOn: Präsentationsmodus aktivieren
@@ -121,12 +259,12 @@ Allgemein verfügbare | Buildnummer: 14.0.17099.0
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 
-- Ein Problem behoben, in SSMS abgestürzt, wenn Showplan über Surfacebook Touchpad durch einen Bildlauf
-- Ein Problem behoben wird, hängt von SSMS für einen langen Zeiten beim Abrufen der Eigenschaften von einem Datenbanken, die wiederhergestellten oder offline geschaltet wird 
-- Ein Problem behoben, in denen konnte "Help Viewer" nicht in der RC-Builds geöffnet werden
-- Ein Problem behoben, wobei "Wartung Pläne Aufgaben" Toolboxelemente in SSMS möglicherweise fehlt.
-- Ein Problem behoben, in SSMS, in denen der Benutzer konnte eine Datenbank zu verkleinern, wenn der Datenbankname geschweifte Klammern enthalten. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
-- Ein Problem behoben, in SSMS versucht wurde, den Löschvorgang Skript Datenbank wurde von einem Azure verursacht tatsächlich das Löschen der Datenbank selbst. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- Ein Problem wurde behoben, bei dem SSMS abstürzte, wenn Showplan über das Touchpad des Surface Books gescrollt wurde
+- Ein Problem wurde behoben, bei dem SSMS für lange Zeit hing, während die Eigenschaften einer Datenbank abgerufen wurden, die wiederhergestellt wurde oder offline war 
+- Ein Problem wurde behoben, bei dem „Help Viewer“ in RC-Builds nicht geöffnet werden konnte
+- Ein Problem wurde behoben, bei dem Elemente der Toolbox „Wartungsplantasks“ in SSMS fehlten
+- Ein Problem in SSMS wurde behoben, bei dem ein Benutzer eine Datenbank nicht verkleinern konnte, wenn deren Name geschweifte Klammern enthielt [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- Ein Problem wurde behoben, bei dem SSMS versuchte, ein Skript für den Löschvorgang einer Azure-Datenbank zu erstellen, dabei aber die Datenbank selbst löschte [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
 - Ein Problem wurde behoben, bei dem für Standardwerte für benutzerdefinierte Tabellentypen kein Skript erstellt wurde. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
 - Eine weitere Runde von Leistungsverbesserungen um das Kontextmenü für Indizes. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
 - Ein Problem wurde behoben, das übermäßiges Flimmern verursachte, wenn der Mauszeiger auf einen fehlenden Index im Ausführungsplan zeigte. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
@@ -142,10 +280,10 @@ Allgemein verfügbare | Buildnummer: 14.0.17099.0
     - Ein Problem wurde behoben, bei dem der AE-Assistent einen falschen Fehler anzeigte, wenn der Benutzer keine Berechtigungen in Abonnements hatte oder in diesen nicht über Azure Key Vault verfügte.
     - Ein Problem im AE-Assistent wurde behoben, bei dem im Fall von mehreren AADs die Azure-Abonnements nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden
     - Ein Problem im AE-Assistent wurde behoben, bei dem die Azure-Abonnements, für die der Benutzer über eine Leseberechtigung verfügt, nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden
-  - Ein Problem behoben, in denen möglicherweise Ressourcendateien nicht ordnungsgemäß geladen werden, was ergibt ungenaue Fehlermeldungen
+  - Ein Problem wurde behoben, bei dem Ressourcendateien nicht ordnungsgemäß geladen werden, was zu ungenauen Fehlermeldungen führte
 - Verbesserter Kontrast von Hyperlinks auf SSMS-Setup-Seite
 - Ein Problem wurde behoben, bei dem Polybase-Knoten bei Verbindung mit SQL Server Express (2016 SP1) nicht angezeigt wurden
-- Ein Problem behoben, wobei ist SSMS kann nicht zum Ändern des Kompatibilitätsgrads einer Azure-Datenbank auf "v140" fest
+- Ein Problem wurde behoben, bei dem SSMS den Kompatibilitätsgrad einer Azure-Datenbank nicht auf v140 ändern konnte
 - Verbesserte Leistung von Objekt-Explorer beim Erweitern der Liste der Azure-Datenbanken [Connect Item (Connect-Artikel)](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Ein Problem wurde behoben, bei dem das Kontextmenüelement „View SQL Server Log“ (SQL Server-Protokoll anzeigen) für nicht-relationale Servertypen (AS\RS\IS) nicht ordnungsgemäß angezeigt wurde 
 - Ein Problem wurde behoben, bei dem das Prüfen der Syntax einer Analysis Services-Partitionsabfrage mithilfe von SQL-Authentifizierung zu einer Benachrichtigung führen konnte, dass die Anmeldung fehlgeschlagen ist
@@ -156,7 +294,7 @@ Allgemein verfügbare | Buildnummer: 14.0.17099.0
 - „SecurityPolicy create“ (Sicherheitsrichtlinie erstellen) schlägt fehl, wenn das Zielobjekt eine eckige Klammer (]) im Namen hat.
 - Das Menü „Zuletzt verwendete öffnen“ in SSMS 2016 zeigt keine zuletzt gespeicherten Dateien an. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 - Das Zurücksetzen der Benutzereinstellungen nach einem VS-Shell Update wurde behoben.
-- Ein Problem, die den Benutzer kann so ändern Sie den Kompatibilitätsgrad einer Datenbank auf SQL Server-2017 verhindern wurde behoben.
+- Ein Problem wurde behoben, das einen Benutzer daran hinderte, den Kompatibilitätsgrad einer Datenbank in SQL Server 2017 anzupassen
 - Abfragefenster, die die Authentifizierung mit AAD Universal verwenden, können die Abfrage nach einer Stunde nicht mehr aktualisieren.
 - Die Benutzeroberfläche des Steuerungspunkts für Hilfsprogramme wurde aus SSMS entfernt.
 - Verbindungen, die mit der Authentifizierung von AD Universal hergestellt wurden, können Daten nach Ablauf das anfänglichen Tokens nicht mehr abfragen.
@@ -177,10 +315,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Fehler bei „Always Encrypted“ durch das Aktualisieren von Modulen nach der Verschlüsselung werden falsch verarbeitet.
 - Verändertes Standardverbindungstimeout für OLTP und OLAP zwischen 15 und 30 Sekunden, um eine Klasse ignorierter Verbindungsfehler zu korrigieren. 
 - Der Absturz von SSMS nach dem Starten eines benutzerdefinierten Berichts wurde behoben. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Ein Problem behoben, wobei "Skript generieren..." ein Fehler auftritt, für Azure SQL-Datenbanken.
+- Ein Problem wurde behoben, bei dem „Skript generieren“ für Azure SQL-Datenbanken fehlschlug
 - „Script As“ und der „Assistent zum Generieren von Skripts“ wurden korrigiert, sodass keine zusätzlichen Zeilenvorschübe mehr eingefügt werden, wenn Objekte wie z.B. gespeicherte Prozeduren geskriptet werden. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS-PowerShell-Anbieter: Einfügen der Eigenschaft „Zuletzt verarbeitet“ in den Ordner „Dimension and MeasureGroup“ (Dimension und Measuregruppe). [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Live-Abfragestatistik: das Problem wurde behoben, dass nur die erste Abfrage in einem Batch angezeigt wurde. [Verbinden Sie Element] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Live-Abfragestatistik: das Problem wurde behoben, dass nur die erste Abfrage in einem Batch angezeigt wurde. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan: im Eigenschaftenfenster über alle Threads hinweg „max“ statt „sum“ anzeigen.
 - Abfragespeicher: einen neuen Bericht in Abfragen mit hoher Ausführungsvariation hinzufügen.
 - Leistungsprobleme des Objekt-Explorers: [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
@@ -194,23 +332,23 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Problem beim Anzeigen der Berechtigungen einer Datenbank (Absturz) behoben
 - Abfragespeicher: allgemeine Erweiterungen von Kontextmenüelementen für Ergebnisrastern von Abfragespeicherberichten
 - Konfigurieren von „Always Encrypted“ schlägt für eine vorhandene Tabelle fehl mit Fehlern für nicht verknüpfte Objekte. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- Konfigurieren von „Always Encrypted“ funktioniert nicht für eine vorhandene Datenbank mit mehreren Schemas. [Verbinden Sie Element] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- Der Assistent für „Always Encrypted“ und „Verschlüsselte Spaltendaten“ versagt, wenn die Datenbank Sichten enthält, die auf Systemsichten verweisen. [Verbinden Sie Element] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- Konfigurieren von „Always Encrypted“ funktioniert nicht für eine vorhandene Datenbank mit mehreren Schemas. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Der Assistent für „Always Encrypted“ und „Verschlüsselte Spaltendaten“ versagt, wenn die Datenbank Sichten enthält, die auf Systemsichten verweisen. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Bei der Verschlüsselung mit „Always Encrypted“ werden Fehler durch das Aktualisieren von Modulen nach der Verschlüsselung falsch verarbeitet.
 - Probleme mit dem Absturz der Benutzeroberfläche im Dialogfeld „Neue Serverregistrierung“ wurden behoben
 - Beheben eines DMF-Problems, die Benutzeroberfläche aktualisiert Ausdrücke inkorrekt, die konstante Zeichenfolgewerte mit Anführungszeichen enthalten
 - Das Problem wurde behoben, das zum Absturz von SSMS beim Ausführen von benutzerdefinierten Berichten geführt hat
-- Hinzufügen "Ausführung Skalierung Out..." Menüelement zu dem Ordnerknoten
-- Wurde ein Problem mit der Azure SQL-Datenbank-Firewall Positivlisten-IP-Adresse-Funktion
-- Feste ein Problem in SSMS verursachte einen Objektverweis nicht Ausnahme festgelegt, wenn die Quelle des als mehrdimensionale Partition zu bearbeiten
-- Ein Problem in SSMS verursachte einen Objektverweis nicht Ausnahme festgelegt, wenn Sie eine Kunden-Assembly von mehrdimensionalen AS löschen festen Server
-- Ein Problem behoben, in denen Fehler beim Umbenennen einer 1400 AS tabellendatenbank
-- Wurde ein Problem mit eine 1400/Compat-Ebene als tabellarische Datenquelle über Eigenschaften Verbindungsdialogfeld scripting
-- Entfernen Sie die Annahme, dass Tabellen in als 1400 Kompatibilitätsgrad Modell über mindestens eine Partition aufweisen
-- STRG + R, wechselt jetzt im Ergebnisbereich in SSMS DAX-Abfrage-editor
+- Das Menüelement „Execution in Scale Out...“ (Ausführung in horizontaler Hochskalierung) wurde dem Ordnerknoten hinzugefügt
+- Ein Problem mit der Funktion zum Erstellen von IP-Adressen-Whitelists für die Firewall einer Azure SQL-Datenbank wurde behoben
+- Ein Problem in SSMS wurde behoben, bei dem beim Bearbeiten der Source einer multidimensionalen AS-Partition die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist
+- Ein Problem in SSMS wurde behoben, bei dem beim Löschen einer Kundenassembly von einem multidimensionalen AS-Server die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist
+- Ein Problem wurde behoben, bei dem das Umbenennen einer tabellarischen AS-Datenbank 1400 fehlschlug
+- Ein Problem bei der Skripterstellung für eine tabellarische AS-Datenquelle mit Kompatibilitätsgrad 1400 aus dem Dialogfeld „Verbindungseigenschaften“ wurde behoben
+- Die Annahme wurde entfernt, dass Tabellen im AS-Modell mit Kompatibilitätsgrad 1400 mindestens eine Partition aufweisen
+- Mit CTRL+R kann nun der Ergebnisbereich im DAX-Abfrage-Editor von SSMS umgeschaltet werden
 
 
-## <a name="ssms-1653-release"></a>Veröffentlichung von SSMS 16.5.3
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Allgemein verfügbar | Buildnummer: 13.0.16106.4
 
 In dieser Version wurden folgende Probleme behoben:
@@ -240,7 +378,7 @@ In dieser Version wurden folgende Probleme behoben:
 * SSMS 2016 stürzt ab mit der Fehlermeldung „The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506“ (Der Vorgang wurde aufgrund eines internen Fehlers in der .NET-Laufzeit in der IP 71AF8579 (71AE0000) mit dem Exitcode 80131506 beendet).
 
 
-## <a name="ssms-1651-release"></a>Release von SSMS 16.5.1
+## <a name="ssms-1651"></a>SSMS 16.5.1
 Allgemein verfügbar | Buildnummer: 13.0.16100.1
 
 * Es wurde ein Problem behoben, bei dem Invoke-Sqlcmd fälschlicherweise mehrere Zeilen einfügt, wenn CHECK-Einschränkungen auftreten. [Microsoft Connect-Element: 811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
@@ -250,7 +388,7 @@ Allgemein verfügbar | Buildnummer: 13.0.16100.1
 * Es wurde ein Problem behoben, das dazu geführt hat, dass durch Klicken auf die Abfrageplan-XML nicht die richtige SSMS-Benutzeroberfläche geöffnet wurde.
 
 
-## <a name="ssms-165-release"></a>Release von SSMS 16.5
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
 Allgemein verfügbar | Buildnummer: 13.0.16000.28
 
 * Es wurde ein Problem behoben, bei dem ein Absturz passieren könnte, wenn eine Datenbank mit dem Tabellennamen, der „;:“ enthält, angeklickt wird.
@@ -274,7 +412,7 @@ Allgemein verfügbar | Buildnummer: 13.0.16000.28
 * Es wurde ein Problem behoben, bei dem SSMS-Abstürze auftreten, wenn die Anwendung geschlossen wird, oder wenn sie versucht, das Fehlerdialogfeld anzuzeigen.
 
 
-## <a name="ssms-1641-september-2016-release"></a>SSMS-Release 16.4.1 (September 2016)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 16.4.1 (September 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
 Allgemein verfügbar | Buildnummer: 13.0.15900.1
 
 *  Problem behoben, das zu einem Fehler beim Ausführen von ALTER/Modify einer gespeicherten Prozedur führt:  
@@ -336,14 +474,14 @@ Allgemein verfügbar | Buildnummer: 13.0.15900.1
 
 
 
-## <a name="ssms-163-august-2016-release"></a>SSMS-Release 16.3 (August 2016)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 16.3 (August 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
 Allgemein verfügbar | Versionsnummer: 13.0.15700.28
 
 * Die monatlichen Releases von SSMS werden nun nummeriert.
 
 * [Neue Authentifizierungsoption**„Universelle Active Directory-Authentifizierung“**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Dieser tokenbasierte Authentifizierungsmechanismus wird durch Azure Active Directory gestützt und bietet Unterstützung für mehrstufige, kennwortbasierte und integrierte Authentifizierungsmechanismen.
 
-* Neue Vorlagen für erweiterte Ereignisse mit derselben Funktionalität wie SQL Server Profiler-Vorlagen [(Microsoft Connect-Element #2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Weitere Informationen zu den enthaltenen [SQL Server Profiler-Vorlagen](https://msdn.microsoft.com/library/ms190176.aspx).
+* Neue Vorlagen für erweiterte Ereignisse mit derselben Funktionalität wie SQL Server Profiler-Vorlagen [(Microsoft Connect-Element #2543925).](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Weitere Informationen zu den enthaltenen [SQL Server Profiler-Vorlagen](https://msdn.microsoft.com/library/ms190176.aspx).
 
 * Neue Dialogfelder zum Erstellen von Datenbanken sowie für Datenbankeigenschaften für Azure SQL-Datenbanken.
 
@@ -391,7 +529,7 @@ Allgemein verfügbar | Versionsnummer: 13.0.15700.28
 
 
 ---
-## <a name="ssms-july-2016-hotfix-update-release"></a>Hotfixupdate für SSMS – Juli 2016 
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![download (Herunterladen des)](../ssdt/media/download.png) [SSMS July 2016 hotfix update (Hotfixupdates für SSMS (Juli 2016))](http://go.microsoft.com/fwlink/?LinkID=822301)
 Allgemein verfügbar | Versionsnummer: 13.0.15600.2
 
 * **Programmfehlerbehebung in SSMS, um fehlende Kontextmenüelemente zu aktivieren**.  
@@ -401,358 +539,92 @@ Allgemein verfügbar | Versionsnummer: 13.0.15600.2
 [Microsoft Connect-Element #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-## <a name="ssms-july-2016-release"></a>SSMS-Release Juli 2016 
+## <a name="ssms-july-2016"></a>SSMS Juli 2016 
 Allgemein verfügbar | Versionsnummer: 13.0.15500.91
 
-* *Bearbeitung 5. Juli:* **Verbesserte Unterstützung für tabellarische SQL Server 2016-Datenbanken (Kompatibilitätsstufe 1200) im Dialogfeld „Analysis Services-Prozess“ und im Bereitstellungs-Assistenten für Analysis Services.**
+* *Bearbeitung 5. Juli:* Verbesserte Unterstützung für tabellarische SQL Server 2016-Datenbanken (Kompatibilitätsstufe 1200) im Dialogfeld „Analysis Services-Prozess“ und im Bereitstellungs-Assistenten für Analysis Services.
 
-* *Bearbeitung 5. Juli:* **Neue Option im SSMS-Dialogfeld „Abfrageausführungsoptionen“ zum Festlegen von XACT_ABORT. Diese Option ist in dieser Version von SSMS standardmäßig aktiviert und weist SQL Server an, beim Auftreten eines Laufzeitfehlers einen Rollback der gesamten Transaktion auszuführen und den Batch abzubrechen.**
+* *Bearbeitung 5. Juli:* Neue Option im SSMS-Dialogfeld „Abfrageausführungsoptionen“ zum Festlegen von ‚XACT_ABORT‘. Diese Option ist in dieser Version von SSMS standardmäßig aktiviert und weist SQL Server an, beim Auftreten eines Laufzeitfehlers ein Rollback der gesamten Transaktion auszuführen und den Batch abzubrechen.
 
-* **Unterstützung für Azure SQL Data Warehouse in SSMS.**
+* Unterstützung für Azure SQL Data Warehouse in SSMS.
 
-* **Umfangreiche Updates am SQL Server PowerShell-Modul. Zu diesen gehören ein neues [SQL PowerShell-Modul und neue CMDLETs für Always Encrypted, SQL Agent und SQL-Fehlerprotokolle](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)**.
+* Umfangreiche Updates am SQL Server PowerShell-Modul. Zu diesen gehören ein neues [SQL PowerShell-Modul und neue CMDLETs für Always Encrypted, SQL Agent und SQL-Fehlerprotokolle](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update).
 
-* **Unterstützung für die PowerShell-Skripterstellung im Always Encrypted-Assistenten**.
+* Unterstützung für die PowerShell-Skripterstellung im Always Encrypted-Assistenten.
 
-* **Deutlich verbesserte Verbindungszeiten für Azure SQL-Datenbanken.**
+* Deutlich verbesserte Verbindungszeiten für Azure SQL-Datenbanken.
 
-* **Neues Dialogfeld „URL-Sicherung“, das die Erstellung von Azure-Speicheranmeldeinformationen für Datenbanksicherungen von SQL Server 2016 unterstützt. Es bietet eine optimierte Benutzeroberfläche zum Speichern von Datenbanksicherungen unter einem Azure-Speicherkonto.**
+* Neues Dialogfeld „URL-Sicherung“, das die Erstellung von Azure-Speicheranmeldeinformationen für Datenbanksicherungen von SQL Server 2016 unterstützt. Dieser Dialog bietet eine optimierte Benutzeroberfläche zum Speichern von Datenbanksicherungen unter einem Azure-Speicherkonto.
  
-* **Neues Wiederstellen-Dialogfeld zur Optimierung der Wiederherstellung einer SQL Server 2016-Datenbanksicherung aus dem Microsoft Azure-Speicherdienst.**
+* Neues Wiederstellen-Dialogfeld zur Optimierung der Wiederherstellung einer SQL Server 2016-Datenbanksicherung aus dem Microsoft Azure-Speicherdienst.
  
-* **Programmfehlerbehebung im SSMS-Abfrage-Designer, um das Hinzufügen von Tabellen zum Designer zu ermöglichen, wenn ein Benutzer nicht über SELECT-Berechtigungen für die Tabellen verfügt.**
+* Fehlerbehebung im SSMS-Abfrage-Designer, um das Hinzufügen von Tabellen zum Designer zu ermöglichen, wenn ein Benutzer nicht über SELECT-Berechtigungen für die Tabellen verfügt.
 
-* **Programmfehlerbehebung zum Hinzufügen von IntelliSense-Unterstützung für die Funktionen TRY_CAST() und TRY_CONVERT().**  
+* Programmfehlerbehebung zum Hinzufügen von IntelliSense-Unterstützung für die Funktionen TRY_CAST() und TRY_CONVERT().  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2453461](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast).
 
-* **Programmfehlerbehebung im PowerShell-Modul, um das Laden der SQLAS-Erweiterung von Analysis Services zu ermöglichen.**  
+* Programmfehlerbehebung im PowerShell-Modul, um das Laden der SQLAS-Erweiterung von Analysis Services zu ermöglichen.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2544902](https://connect.microsoft.com/SQLServer/feedback/details/2544902/ssms-march-2016-refresh-sqlps-failed-to-load-the-sqlas-extension).
 
-* **Programmfehlerbehebung im SSMS-Editor-Fenster, um das Öffnen von SQL-Dateien per Drag &amp; Drop zu ermöglichen.**  
+* Programmfehlerbehebung im SSMS-Editor-Fenster, um das Öffnen von SQL-Dateien per Drag & Drop zu ermöglichen.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2690658](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios).
 
-* **Fehlerbehebung im Profiler, um den Absturz von Profiler beim Beenden zu beheben.**  
+* Fehlerbehebung im Profiler, um den Absturz von Profiler beim Beenden zu beheben.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2616550](https://connect.microsoft.com/SQLServer/feedback/details/2616550/sql-server-2016-rc2-profiler-version-13-0-1300-275-wont-close-after-trace-is-started-even-after-trace-is-stopped).  
 [Microsoft Connect-Element #2319968](https://connect.microsoft.com/SQLServer/Feedback/Details/2319968).
 
-* **Programmfehlerbehebung in SSMS zum Verhindern des Absturzes beim Bearbeiten einer Join-Verknüpfung im SSMS-Tabellen-Designer.**  
+* Programmfehlerbehebung in SSMS zum Verhindern des Absturzes beim Bearbeiten einer Join-Verknüpfung im SSMS-Tabellen-Designer.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2721052](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms).
 
-* **Fehlerbehebung in SSMS, um die Datenbank-Skripterstellung für Mitglieder der db_owner-Rolle zu ermöglichen.**  
+* Fehlerbehebung in SSMS, um die Datenbank-Skripterstellung für Mitglieder der db_owner-Rolle zu ermöglichen.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2869241](https://connect.microsoft.com/SQLServer/feedback/details/2869241/error-with-script-database-as-create-to-in-ssms-2008r2-and-ssms-2016-june).
 
-* **Programmfehlerbehebung im SSMS-Editor zum Entfernen der Verzögerung beim Schließen einer Abfrageregisterkarte, wenn der Server offline gesetzt wurde.**  
+* Programmfehlerbehebung im SSMS-Editor zum Entfernen der Verzögerung beim Schließen einer Abfrageregisterkarte, wenn der Server offline gesetzt wurde.  
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2656058](https://connect.microsoft.com/SQLServer/feedback/details/2656058/ssms-2014-2016-query-tab-takes-significantly-longer-to-close-if-the-instance-it-was-connected-to-is-now-offline).
 
-* **Programmfehlerbehebung zum Aktivieren der Sicherungsoption in SQL Server Express-Datenbanken.**  
+* Programmfehlerbehebung zum Aktivieren der Sicherungsoption in SQL Server Express-Datenbanken. 
 *Verwandte Fehleranfragen von Kunden:*  
 [Microsoft Connect-Element #2801910](https://connect.microsoft.com/SQLServer/feedback/details/2801910/ssms-2016-backup-option-not-appearing-in-tasks).  
 [Microsoft Connect-Element #2874434](https://connect.microsoft.com/SQLServer/feedback/details/2874434/backup-missing-from-tasks-context-menu-in-ssms-2016-when-you-are-connected-to-an-express-instance).
 
-* **Fehlerbehebung in Analysis Services, um den Data Feed-Anbieter für mehrdimensionale Analysis Services-Modelle ordnungsgemäß anzuzeigen.**
+* Fehlerbehebung in Analysis Services, um den Data Feed-Anbieter für mehrdimensionale Analysis Services-Modelle ordnungsgemäß anzuzeigen.
 
 ----
-## <a name="ssms-june-2016-generally-available-release"></a>SSMS-Release aus Juni 2016 allgemein verfügbar
+## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS June 2016 (SSMS (Juni 2016))](http://go.microsoft.com/fwlink/?LinkID=799832)
 Allgemein verfügbar | Versionsnummer: 13.0.15000.23
 
-* **SSMS ist mit dem Release aus Juni 2016 allgemein verfügbar.**
+* SSMS ist mit dem Release aus Juni 2016 allgemein verfügbar.
 
-* **Dialogfeld für die Schnellsuche in SSMS, das besser in das aktuelle Dokument integriert ist und eine Suche über reguläre Ausdrücke ermöglicht.**  
+* Dialogfeld für die Schnellsuche in SSMS, das besser in das aktuelle Dokument integriert ist und eine Suche über reguläre Ausdrücke ermöglicht. 
 *Verwandte Fehleranfragen von Kunden:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
 
-* **Verbesserungen beim SSMS-Installationsprogramm, um den Installationsfortschritt nachverfolgen und Exitcodes bei unbeaufsichtigten Installationen über Skripts zu verarbeiten.**
+* Verbesserungen beim SSMS-Installationsprogramm, um den Installationsfortschritt nachverfolgen und Exitcodes bei unbeaufsichtigten Installationen über Skripts zu verarbeiten.
 
-* **Programmfehlerbehebung für die kontextbezogene F1-Hilfe in SSMS, um Hilfedokumente und -artikel ordnungsgemäß anzuzeigen.**
+* Programmfehlerbehebung für die kontextbezogene F1-Hilfe in SSMS, um Hilfedokumente und -artikel ordnungsgemäß anzuzeigen.
 
-* **Programmfehlerbehebung in der Ansicht „Zurückgestellte Abfragen“ des Abfragedatenspeichers, der beim Scrollen zu einem Absturz von SSMS geführt hat.** 
+* Programmfehlerbehebung in der Ansicht „Zurückgestellte Abfragen“ des Abfragedatenspeichers, der beim Scrollen zu einem Absturz von SSMS geführt hat.
 
-* **Programmfehlerbehebung beim OLEDB-Connector von Excel Analysis Services, um Verbindungen von Excel 2016 mit SQL Server Analysis Services zu ermöglichen.**
+* Programmfehlerbehebung beim OLEDB-Connector von Excel Analysis Services, um Verbindungen von Excel 2016 mit SQL Server Analysis Services zu ermöglichen.
 
-* **Programmfehlerbehebung für das SSMS-Verbindungsdialogfeld, um das Verbindungsdialogfeld bei Verwendung von mehreren Monitoren auf demselben Monitor anzuzeigen wie das SSMS-Hauptsystem.**  
+* Programmfehlerbehebung für das SSMS-Verbindungsdialogfeld, um das Verbindungsdialogfeld bei Verwendung von mehreren Monitoren auf demselben Monitor anzuzeigen wie das SSMS-Hauptsystem.  
 *Verwandte Fehleranfragen von Kunden:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
 <https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
 <https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
 
-* **Programmfehlerbehebungen für Always Encrypted-Features. Der Fehler, bei dem die Always Encrypted-Menüoption nicht ordnungsgemäß für Stretch-Datenbanken aktiviert wurde, wurde behoben. Außerdem wurde der Fehler im Always Encrypted-Assistenten behoben, bei dem der HSM-Anbieter SafeNet (Luna SA) nicht ordnungsgemäß verwendet wurde.**
+* Programmfehlerbehebungen für Always Encrypted-Features. Der Fehler, bei dem die Always Encrypted-Menüoption nicht ordnungsgemäß für Stretch-Datenbanken aktiviert wurde, wurde behoben. Außerdem wurde der Fehler im Always Encrypted-Assistenten behoben, bei dem der HSM-Anbieter SafeNet (Luna SA) nicht ordnungsgemäß verwendet wurde.
 
----
-## <a name="ssms-april-2016-preview"></a>SSMS April 2016 (Vorschau) 
-Versionsnummer: 13.0.14000.36
-  
-* **Verbesserung beim SSMS-Installationsprogramm, um lesbare Fehlermeldungen hinzuzufügen.**  
-  
-* **Verbesserung im Assistenten für Stretch-Datenbanken, um Unterstützung von Prädikaten hinzuzufügen**.  
-  
-* **Verbesserungen im Always Encrypted PowerShell-Cmdlet, um Schlüsselverschlüsselungs-APIs hinzuzufügen**.  
-  
-* **Programmfehlerbehebung zum Deaktivieren von IntelliSense auf der SSMS-Symbolleiste, wenn dieses Feature im Dialogfeld „Tools &gt; Optionen“ deaktiviert wurde.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
-    
-* **Verbesserungen und Programmfehlerbehebungen für die Benutzeroberfläche für den Showplan-Vergleich, um den von langen Abfrageplänen verwendeten Abstand zu verringern**.  
-  
-* **Programmfehlerbehebungen in SSMS, um Probleme zu behandeln, die zu einem Absturz von SSMS beim Beenden des Programms geführt haben**.   
-  
-* **Programmfehlerbehebungen im Always Encrypted-Assistenten, um Benutzerberechtigungen während der Verschlüsselung beizubehalten und Trennvorgänge für die Datenbank zu ermöglichen, nachdem der Assistent abgeschlossen wurde**.  
-  
-* **Programmfehlerbehebung im Always Encrypted-Dialogfeld für neue Spaltenhauptschlüssel, um Feedback zu geben, wenn ein Benutzer versucht, einen Schlüssel unter Verwendung eines nicht unterstützten Kryptografiealgorithmusanbieters (CNG-Anbieter) zu erstellen.**  
-  
----  
-## <a name="ssms-march-2016-preview-refresh"></a>SSMS März 2016 (Vorschauaktualisierung)
-Versionsnummer: 13.0.13000.55
-  
-* **SSMS verwendet jetzt die Visual Studio 2015 Isolated Shell.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2390544/update-ssms-to-use-visual-studio-2015-dependencies/>  
-  
-* **Neue Schnellstartsymbolleiste, um im Handumdrehen nach Menüelementen und Optionen suchen zu können. (VS 2015 Isolated Shell)**  
-  
-* **Verbesserungen bei den SSMS-Designoptionen, um Unterstützung für ein helles SSMS-Design hinzuzufügen. (VS 2015 Isolated Shell)**  
-  
-* **Programmfehlerbehebung bei den Optionen im SSMS-Toolmenü, um Abfrageverknüpfungen bei Auswahl der Schaltfläche „Standard wiederherstellen“ ordnungsgemäß zurückzusetzen.**  
-  
-* **Programmfehlerbehebung bei neuen SSMS-Projektvorlagen, um gut lesbare Vorlagennamen anzuzeigen.**  
-  
-* **Der Fehler beim Anzeigen des SQL Agent-Auftragsverlaufs in SSMS wurde behoben.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2458860/error-viewing-job-history-microsoft-datawarehouse-sqm/>  
-    
-* **Programmfehlerbehebung, um eine Offline-Installation von SSMS zu ermöglichen. SSMS kann nun auch ohne Internetverbindung installiert werden. (VS 2015 Isolated Shell)**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2497178/cannot-install-ssms-when-server-has-no-internet-access/>  
-    
-* **Programmfehlerbehebung, um das aktuelle Verzeichnis des Benutzers beim Import des SQL Server PowerShell-Moduls (SQLPS) beizubehalten.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2434605/loading-sqlps-module-changes-current-directory-to-ps-sqlserver/>  
-    
-* **Programmfehlerbehebung im SQL Server PowerShell-Modul (SQLPS) für die Verwendung genehmigter PowerShell-Verben.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2432891/sqlps-module-uses-unapproved-powershell-verbs/>  
-    
-* **Programmfehlerbehebung im SQL Server PowerShell-Modul (SQLPS) zur Beschleunigung des Modulladevorgangs.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2429153/sqlps-module-is-slow-to-load/>  
-    
-* **Programmfehlerbehebung in SQL Agent-Auftragsschritten, um das Ändern von Auftragsschritten zu ermöglichen.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2453996/issues-with-agent-in-ssms-2016-rc0-13-0-12000-65/>  
-    
-* **Programmfehlerbehebung im Objekt-Explorer von SSMS, um Tabellen alphabetisch aufzulisten.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2424718/sql-server-2016-ssms-table-list-confusing/>  
-    
-* **Programmfehlerbehebung in der Dropdownliste „Verfügbare Datenbanken“, um eine korrekte Liste mit Datenbanknamen anzuzeigen, wenn eine SQL Server-Verbindung geändert wird.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2513420/available-databases-drop-down-box-does-not-update-when-connection-changes-in-ssms/>  
-    
-* **Programmfehlerbehebung bei SSMS-Tastenkombinationen, um die Dropdownliste „Verfügbare Datenbanken“ zu markieren, wenn STRG-U gedrückt wird.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
-  
----  
-## <a name="ssms-march-2016-preview"></a>SSMS März 2016 (Vorschau) 
-Versionsnummer: 13.0.12500.29 
-  
-* **Verbesserung im SSMS-Webinstaller, um eine Navigation über die Tastatur zu ermöglichen.**  
-  
-* **Verbesserung im Always Encrypted-Assistenten, um Unterstützung von Aliasdatentypen für die Verschlüsselung hinzuzufügen.**  
-  
-* **Programmfehlerbehebung im Always On-Assistenten „Neue Verfügbarkeitsgruppe“, um die richtige maximale Anzahl von Zielen für ein automatisches Failover anzuzeigen.**  
-*Verwandte Fehleranfragen von Kunden:* <https://connect.microsoft.com/SQLServer/feedback/details/2333670/ssms-is-showing-the-wrong-number-of-maximum-automatic-failover-targets/>  
-    
-* **Programmfehlerbehebung im SSMS-Webinstaller, um Fehler zu behandeln, die sich auf die Installation auswirken.**  
-*Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2181548/sql-server-2016-ctp-3-2-management-studio-setup/>  
-    
-* **Programmfehlerbehebung im SSMS-Vorschaurelease, um das Speichern von Wartungsplänen bei Verwendung von SQL Server 2012 und niedrigeren Versionen zu ermöglichen.**  
-      
-* **Programmfehlerbehebung im Sicherungs-Assistenten, um mehrere benutzerdefinierte Sicherungsnamen für Stripesetsicherungen zu ermöglichen und den richtigen Namen der Sicherungsdatei anzuzeigen, wenn nach der Auswahl von Speicheranmeldeinformationen ein neuer Name eingegeben wird.**  
-  
----  
-## <a name="ssms-february-2016-preview"></a>SSMS Februar 2016 (Vorschau) 
-Versionsnummer: 13.0.12000.65
-  
-* **Verbesserung beim Aktivitätsmonitor, um Textoptionen anzuzeigen, wenn Einstellungen für hohen Kontrast in SSMS aktiviert sind.**  
-  
-* **Verbesserungen im Dialogfeld des Always Encrypted-Assistenten, um eine Warnung anzuzeigen, wenn die Sortierung für eine Spalte während der Verschlüsselung geändert wird.**  
-  
-* **Verbesserungen bei der Richtlinienverwaltung, um Unterstützung für das Erstellen von Bedingungen für Spaltenverschlüsselungsschlüssel, Spaltenverschlüsselungsschlüsselwerte und Spaltenhauptschlüssel hinzuzufügen.**  
-  
-* **Programmfehlerbehebung, um die Benutzerfreundlichkeit des Dialogfelds zum Bereinigen von Always Encrypted-Hauptschlüsseln sowie von Always Encrypted-Fehlermeldungen zu verbessern.**  
-  
-* **Programmfehlerbehebung, um die Rotation der Always Encrypted-Spaltenhauptschlüssel zu deaktivieren, wenn nur ein Schlüssel vorhanden ist.**  
-  
-* **Programmfehlerbehebung für den Typeninitialisiererfehler, der auftritt, wenn das Always Encrypted-Dialogfeld unter Verwendung des SSMS-Release aus Januar oder über das SSMS-Release in Kombination mit den SQL Server RC0-Medien gestartet wird.**  
-  
----  
-## <a name="ssms-january-2016-preview"></a>SSMS Januar 2016 (Vorschau) 
-Versionsnummer: 13.0.11000.78 
-  
-* **Programmfehlerbehebung in SSMS, um das Löschen von Sitzungen für Erweiterte Ereignisse (XEvent) zu ermöglichen.**  
-  
-* **Programmfehlerbehebung, um das Dialogfeld „Eigenschaften“ für eine Verfügbarkeitsgruppe von SQL Server 2014 zu öffnen.**  
- *Verwandte Fehleranfragen von Kunden:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/1609719/>  
-     
-* **Programmfehlerbehebung, um die Möglichkeit zu aktivieren, einer Verfügbarkeitsgruppe ein Azure-Replikat hinzuzufügen.**  
- *Verwandte Fehleranfragen von Kunden:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2029135/>  
-     
-* **Programmfehlerbehebung, um das Dialogfeld „Eigenschaften“ für SQL Server 2014-Datenbanken zu öffnen.**  
- *Verwandte Fehleranfragen von Kunden:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2080209/>  
-     
-* **Programmfehlerbehebung, um doppelte Spalten zu entfernen, die beim Verbinden mit einer Azure SQL-Datenbank für jede Tabelle angezeigt werden.**  
- *Verwandte Fehleranfragen von Kunden:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
----  
-## <a name="ssms-december-2015-preview"></a>SSMS Dezember 2015 (Vorschau) 
-Versionsnummer: 13.0.900.73
-  
-* **Verbesserungen am Showplan-Vergleich, um den Vergleich des aktuellen Abfrageausführungsplans mit einem in einer Datei gespeicherten zu ermöglichen.**  
-  
-* **Verbesserte IntelliSense-Unterstützung für Columnstore-Inlineindizes in SSMS.**  
-  
-* **Programmfehlerbehebung im Assistenten für Sitzungen für erweiterte Ereignisse, um bei bestehender Verbindung mit einem Azure V12-Server die Auswahl von Vorlagen zu ermöglichen.**  
-  
-* **Neue Tabstopps in den Dialogfeldern „Überwachung erstellen“ und „Neue Anmeldung“ unter dem Ordner „Sicherheit“, um die Navigation per Tastatur zu erleichtern.**  
-  
-* **Programmfehlerbehebung, um die Funktionalität zum „Wechseln zur Registerkarte ‚Ergebnisse‘ nach der Abfrageausführung“ zu aktivieren, wenn in SSMS die Darstellung von Ergebnissen im Rasterformat festgelegt ist.**   
- *Verwandte Fehleranfragen von Kunden:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1390296/switch-to-results-tab-after-query-execution-grid-mode-in-ssms-2016>  
-  
-* **Programmfehlerbehebung, um Spaltenköpfe ohne Abschneiden anzuzeigen, wenn für SSMS die Darstellung von Ergebnissen im Rasterformat festgelegt ist.**  
- *Verwandte Fehleranfragen von Kunden:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/2004111/bugbash-column-headers-in-grid-mode-truncated-with-courier-new-8>  
-      
-* **Programmfehlerbehebungen, um die ordnungsgemäße Installation des SSMS-Webinstallationsprogramms zu ermöglichen.**  
- *Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2003865/ssms-october-preview-incoherent-error-message>  
-<https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
-  
----  
-## <a name="ssms-november-2015-preview"></a>SSMS November 2015 (Vorschau)
-Versionsnummer: 13.0.800.111
-  
-* **Unterstützung für die Skalierung von Bitmaps für hochauflösende Anzeigen in SSMS.**  
-  
-* **Verbesserungen an der Benutzeroberfläche der Dialogfelder und Assistenten für Always Encrypted zum Vereinfachen der Erstellung von Datenbank-Verschlüsselungsschlüsseln.**  
-  
-* **Neue Option für das Kontextmenü in der Liste „Prozesse“ – im Aktivitätsmonitor zum Anzeigen von Statistiken zu aktiven Abfragen.**  
-  
-* **Programmfehlerbehebung, um die ordnungsgemäße Deinstallation von SSMS-Vorschauversionen von Clientcomputern zu ermöglichen.**  
-  *Verwandte Fehleranfragen von Kunden:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
-  
-* **Programmfehlerbehebung, um die Bearbeitung von Auftragsschritten im SQL-Auftrags-Agent auch bei fehlenden Dateien zu ermöglichen**.  
-  *Verwandte Fehleranfragen von Kunden:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-    <https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  
-      
-* **Programmfehlerbehebung in der Menüoption „Zieldaten anzeigen“ für eine Sitzung für erweiterte Ereignisse in einer Datenbank, die auf einem virtuellen Azure-Computer ausgeführt wird.**  
-  *Verwandte Fehleranfragen von Kunden*:  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-***  
 
-## <a name="ssms-october-2015-preview"></a>SSMS Oktober 2015 (Vorschau) 
-Versionsnummer: 13.0.700.242  
-* **Moderneres Webinstallationsprogramm, das den Download und die Installation von SSMS vereinfacht.**  
+## <a name="additional-downloads"></a>Weitere Downloads  
+Eine Liste aller SQL Server Management Studio-Downloads finden Sie im [Microsoft Download Center](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
-* **Der neue Always Encrypted-Spaltenverschlüsselungs-Assistent vereinfacht die clientseitige Ver- und Entschlüsselung von ausgewählten Spalten.**  
-  
-* **Das neue Drehungsdialogfeld für Spaltenhauptschlüssel (Column Master Key, CMK) vereinfacht bei Immer-verschlüsselt-Datenbanken die Drehung von Verschlüsselungsschlüsseln, damit die Daten sicher bleiben.**  
-  
-* **Die neue Stretch-Datenbanküberwachung ermöglicht die Problembehandlung und Überwachung des Migrationsstatus von Daten in die Azure-Cloud.**  
-  
-* **Verbesserungen am Stretch-Datenbank-Assistent zur Unterstützung der Auswahl eines Microsoft Azure-Servers, der nicht zum standardmäßigen Microsoft Azure-Abonnement gehört.**  
-  *Verwandte Fehleranfragen von Kunden:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1687063/cannot-choose-from-multiple-microsoft-azure-subscriptions>  
-* **Programmfehlerbehebung, um eine ordnungsgemäße Anzeige des Live-Ausführungsplans in SSMS zu ermöglichen.**  
-  *Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1774446/viewing-live-execution-plan-from-activity-monitor-crashes-ssms>    
-* **Programmfehlerbehebung zum Entfernen ungültiger Optionen in der SSMS-Skripterstellung für Datenbank-Momentaufnahmen**  
-  *Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1515168/ssms-scripting-of-database-snapshots-includes-invalid-options>  
-* **Programmfehlerbehebung in der Benutzeroberfläche des Abfragedatenspeichers, um Details im Bereich „Erste Abfragen nach Ressourcenverbrauch“ anzuzeigen.**  
-  *Verwandte Fehleranfragen von Kunden:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
-***  
-
-## <a name="ssms-september-2015-preview"></a>SSMS September 2015 (Vorschau) 
-Versionsnummer: 13.0.600.65  
-* **Dialogfeld für neue Firewallregeln, mit dem das Herstellen einer Verbindung mit einer Azure SQL-Datenbank optimiert wird.**      
-    
-* **Aktualisiertes Dialogfeld „Neuer Index“, das die Erstellung von nicht gruppierten Rowstore-Indizes auch dann zulässt, wenn ein gruppierter Columnstore-Index vorhanden ist. Diese Funktionalität ist ab SQL 2016 verfügbar.**      
-  *Verwandte Fehleranfragen von Kunden:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1552617/creation-of-nc-index-when-clustered-columnstore-index>  
-      
-* **Programmfehlerbehebung, um das Anzeigen und Bearbeiten von Auftragsschritten des SQL Agent in Vorschauversionen von SSMS unter Windows 7 zu ermöglichen.**      
-  *Verwandte Fehleranfragen von Kunden:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1548140/cannot-view-or-edit-any-sql-agent-job-step>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1626895/unable-to-load-dll-dts>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1576662/error-creating-new-job-step>     
-      
-* **Programmfehlerbehebung zum Anzeigen von Auslöserknoten in SSMS für SQL Server 2014 und höher zu ermöglichen.**      
-  *Verwandte Fehleranfragen von Kunden:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1617533/trigger-node-missing>   
-      
-* **Programmfehlerbehebungen in der Benutzeroberfläche von Standardberichten, um Versionsinformationen aus den Kopfdaten auszuschließen.**      
-  *Verwandte Fehleranfragen von Kunden:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1387471/report-headings-wrongly-named>  
-      
-* **Programmfehlerbehebung, um die Anzeige von Abfragen in der dynamischen Abfragestatistik als abgeschlossen zu verhindern, wenn dies nicht zutrifft.**      
-  *Verwandte Fehleranfragen von Kunden:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
-  
-***      
-## <a name="ssms-august-2015-preview"></a>SSMS August 2015 (Vorschau) 
-Versionsnummer: 13.0.500.53
-  
-* **Updates am Objekt-Explorer, um die Ladeverzögerung bei einer größeren Datenbankanzahl zu verhindern.**  
-  
-* **Verbesserungen für die Installation von SSMS auf Windows 10-Computern.**  
-  
-* **Programmfehlerbehebungen am SQL Server-Konfigurations-Manager und an der Benutzeroberfläche für Benutzerberichte**    
-***  
-  
-## <a name="ssms-july-2015-preview"></a>SSMS Juli 2015 (Vorschau)
-Versionsnummer: 13.0.400.91
-  
-* **Datenbankdiagramme für Azure SQL-Datenbank (V12).**  
-  
-* **Verbesserte IntelliSense-Unterstützung für die neue Syntax von temporalen Tabellen.**  
-  
-* **Aktualisierte DacFx-Bibliothek zur Unterstützung der neuesten SQL Azure-Datenbankfunktionen, einschließlich Sicherheit auf Zeilenebene und Azure Active Directory-Authentifizierung.**  
-  
-* **Programmfehlerbehebungen (aktualisierte Benutzeroberfläche für die Prüfung auf Updates, korrigierte Benutzeroberfläche in der Liste „Kompatibilitätsgrad“ und mehr).**  
-***  
-  
-## <a name="ssms-june-2015-preview"></a>SSMS Juni 2015 (Vorschau) 
-Versionsnummer: 13.0.300.44
-  
-* **Neues kompaktes SSMS-Webinstallationsprogramm.**  
-  
-* **Automatische Prüfung auf Updates.**  
-  
-* **SSMS unterstützt jetzt die Volltextsuche für Azure SQL-Datenbank (V12).**  
-  
-* **Berücksichtigte häufige Kundenanfragen:**  
-  * „Oberste 200 Zeilen bearbeiten“ für Tabellen und Sichten im Objekt-Explorer aktiviert.  
-  * Tabellen-Designer für Azure SQL-Datenbank (V12) aktiviert.  
-  * Eigenschaften- und Tabellen-Dialogfelder für Azure SQL-Datenbank (V12) aktiviert.  
-    
- * **Neue Option zum Überspringen der Aufforderung zum Speichern von T-SQL-Dateien.**  
-   
- * **Unterstützung für den Import/Export-Assistenten für neue Dienstebenen von Azure SQL-Datenbank (Basic, Standard, Premium).**  
-   
- * **Zahlreiche Programmfehlerbehebungen (Skripterstellungsszenarios, Aktivieren der Änderungsnachverfolgung für SQL-Datenbanken und mehr).**   
+Das aktuelle Release von SQL Server Management Studio finden Sie unter [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
 

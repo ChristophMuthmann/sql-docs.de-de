@@ -1,7 +1,7 @@
 ---
 title: "Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,16 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
+
 SQL Server Data Tools (SSDT) stellt Projektvorlagen und Entwurfsoberflächen zum Erstellen von SQL Server-Inhaltstypen bereit: relationale Datenbanken, Analysis Services-Modelle, Reporting Services-Berichte und Integration Services-Pakete.  
   
 SSDT basiert auf einer Visual Studio-Shell und wird zusammen mit SQL Server veröffentlicht. Neue Versionen von SSDT umfassen die neuesten Funktionen von SQL Server. Ältere Versionen enthalten die Vorlagen und die Entwurfsumgebung, die für diese Version aktuell waren.  
@@ -33,18 +34,18 @@ SSDT ist abwärtskompatibel, d.h., Sie können jederzeit [das neueste SSDT](http
 
 ## <a name="recent-downloads"></a>Neueste Downloads
 
-Die letzten drei Downloads werden für den unwahrscheinlichen Fall bereitgestellt, dass Sie mit der [aktuellen Version](https://msdn.microsoft.com/library/mt204009.aspx)Probleme haben. 
+Die letzten drei Downloads werden für den unwahrscheinlichen Fall bereitgestellt, dass Sie mit der [aktuellen Version](download-sql-server-data-tools-ssdt.md)Probleme haben. 
 
 |Release| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.1|[SSDT für VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/v|
 |17.0|[SSDT für VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/v|
 |16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT für VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
-|16.4.1|[SSDT für VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT für VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
 \* SSDT unterstützt die letzten beiden Versionen von Visual Studio. SSDT für VS2013 wird mit dem Release von Visual Studio 2017 nicht mehr aktualisiert. Weitere Informationen finden Sie im Abschnitt *Häufig gestellte Fragen* dieses [Blogbeitrags des SSDT-Teams](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
-## <a name="links-to-download-pages"></a>Links zu Downloadseiten  
+## <a name="links-to-download-pages"></a>Links zu Downloadseiten 
 **SQL Relational: Datenbankmodul**  
   
 Stellt Vorlagen bereit, mit denen relationale Datenbanken für das RDBMS und Azure SQL-Datenbank erstellt werden können. SSDT ist versionsunabhängig im Hinblick auf das Design einer relationalen Datenbank. Sie können Visual Studio 2012 oder 2013 mit jeder Version des SQL Server-Datenbankmoduls oder von Azure SQL-Datenbank verwenden.  
@@ -76,5 +77,5 @@ Für SQL Server 2012 oder 2014 können Sie entweder **SSDT-BI für Visual Studio
 ## <a name="see-also"></a>Siehe auch  
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
-  
+[SQL Tools and Utilities (Tools und Hilfsprogramme für SQL)](../tools/overview-sql-tools.md)
 

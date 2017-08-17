@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51c7de44c90a78293fc3777a92261e30fbc5f28c
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbestimmungen
@@ -110,11 +110,13 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   
 **11.   RECHTLICHE AUSWIRKUNGEN.** Dieser Vertrag beschreibt bestimmte Rechte. Unter dem Recht Ihres Landes haben Sie möglicherweise andere Rechte. Möglicherweise besitzen Sie auch Rechte gegenüber den Dritten, von denen Sie die Software erworben haben. Dieser Vertrag ändert nicht Ihre Rechte, die sich aus den Gesetzen Ihres Lands ergeben, sofern die Gesetze Ihres Lands dies nicht zulassen.  
   
-**12.   GARANTIEAUSSCHLUSS. Die Software wird „wie besehen“ lizenziert. Sie tragen das mit der Nutzung verbundene Risiko. Microsoft gewährt keine ausdrücklichen Gewährleistungen oder Garantien. Möglicherweise haben Sie unter den örtlich anwendbaren Gesetzen zusätzliche Verbraucherrechte oder gesetzliche Garantien, die durch diesen Vertrag nicht abgeändert werden können. Im durch das örtlich anwendbare Recht zugelassenen Umfang schließt Microsoft konkludente Garantien der Handelsüblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter aus.**  
+**12.   Die Software kann von Microsoft bereitgestellte Vorschauversionen, Betaversionen oder andere Software oder Features aus der Vorabversion enthalten, wie in der Dokumentation beschrieben. VORSCHAUVERSIONEN WERDEN ALS „WIE BESEHEN“, „OHNE GARANTIE AUF FEHLERFREIHEIT“ UND „WIE VERFÜGBAR BEREITGESTELLT UND SIND VON DEN VEREINBARUNGEN ZUM SERVICELEVEL UND BESCHRÄNKTER GARANTIE AUSGESCHLOSSEN. Vorschauversionen können nicht vom Kundendienst abgedeckt werden. Vorschauversionen unterliegen reduzierten oder geänderten Richtlinien zu Sicherheit, Kompatibilität und Datenschutz. Wir behalten uns vor, Vorschauversionen jederzeit ohne vorherige Ankündigung zu ändern oder einzustellen. Wir behalten uns ebenfalls vor, eine Vorschauversion nicht für die „allgemeine Verfügbarkeit“ zu veröffentlichen.**
+
+**13.   GARANTIEAUSSCHLUSS. Die Software wird als „wie besehen“ lizenziert. Sie tragen das mit der Nutzung verbundene Risiko. Microsoft gewährt keine ausdrücklichen Gewährleistungen oder Garantien. Möglicherweise haben Sie unter den örtlich anwendbaren Gesetzen zusätzliche Verbraucherrechte oder gesetzliche Garantien, die durch diesen Vertrag nicht abgeändert werden können. Im durch das örtlich anwendbare Recht zugelassenen Umfang schließt Microsoft konkludente Garantien der Handelsüblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter aus.**  
   
 **FÜR AUSTRALIEN – Gemäß australischem Verbrauchergesetz besitzen Sie gesetzliche Garantien und nichts in diesen Bedingungen soll diese Rechte einschränken.**  
   
-**13.   EINSCHRÄNKUNG UND AUSSCHLUSS VON ABHILFEMASSNAHMEN UND SCHÄDEN. Sie können von Microsoft und deren Lieferanten nur einen Ersatz für direkte Schäden bis zu einem Betrag von 5 US-Dollar erhalten. Sie können keinen Ersatz für andere Schäden erhalten, einschließlich Folgeschäden, Schäden aus entgangenem Gewinn, spezielle, indirekte oder zufällige Schäden.**  
+**14.   EINSCHRÄNKUNG UND AUSSCHLUSS VON ABHILFEMASSNAHMEN UND SCHÄDEN. Sie können von Microsoft und deren Lieferanten nur einen Ersatz für direkte Schäden bis zu einem Betrag von 5 US-Dollar erhalten. Sie können keinen Ersatz für andere Schäden erhalten, einschließlich Folgeschäden, Schäden aus entgangenem Gewinn, spezielle, indirekte oder zufällige Schäden.**  
 Diese Einschränkung gilt für  
 * alles, was auf die Software, die Dienste, die Inhalte (einschließlich des Codes) auf Drittanbieterseiten oder in Drittanbieterprogrammen bezogen ist  
 * Ansprüche aufgrund von Vertragsverletzungen, Verletzungen der Gewährleistung, Garantie oder Konditionen, der Kausalhaftung, Unterlassung oder anderer zivilrechtlicher Delikte im vom geltenden Recht zugelassenen Umfang  
