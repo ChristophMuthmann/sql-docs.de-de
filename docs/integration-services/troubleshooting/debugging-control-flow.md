@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features und tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten Funktionen und Tools, mit denen Sie die Ablaufsteuerung in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket behandeln können.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt Breakpoints für Container und Tasks.  
   

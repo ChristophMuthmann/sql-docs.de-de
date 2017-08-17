@@ -149,7 +149,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> In Versionen vor Version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt. Ab Version 13 kann die UTF-8-Codierung in frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]importiert werden.|  
   
  **-d** ***database_name***<a name="d"></a>   
- Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn **-d** *Datenbankname* und ein dreiteiliger Name (*Datenbankname.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Wenn *Datenbankname* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, fügen Sie keinen Leerraum zwischen **-d** und dem Datenbanknamen hinzu.  
+ Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn **-d** *Datenbankname* und ein dreiteiliger Name (*Datenbankname.Schema.Tabelle*, als erster Parameter an bcp.exe übergeben) angegeben werden, tritt ein Fehler auf, da Sie den Datenbanknamen nicht zweimal angeben können. Wenn *Datenbankname* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, fügen Sie keinen Leerraum zwischen **-d** und dem Datenbanknamen hinzu.  
   
  **-e** ***Fehlerdatei***<a name="e"></a>  
  Gibt den vollständigen Pfad einer Fehlerdatei an, in der alle Zeilen gespeichert werden, die das **bcp** -Hilfsprogramm nicht von der Datei in die Datenbank übertragen kann. Die durch den **bcp** -Befehl generierten Fehlermeldungen werden an die Arbeitsstation des Benutzers gesendet. Wenn diese Option nicht verwendet wird, wird keine Fehlerdatei erstellt.  
@@ -195,7 +195,7 @@ Die ungefähre Anzahl von Kilobytes (KB) an Daten pro Batch (als *cc*). In der S
 Gibt an, dass eine Massenupdatesperre auf Tabellenebene für die Dauer des Massenladens aktiviert wird. Andernfalls wird eine Sperre auf Zeilenebene aktiviert. Dieser Hinweis verbessert die Leistung beträchtlich, da weniger Sperrkonflikte für die Tabelle auftreten, wenn diese während des Massenkopiervorgangs gesperrt wird. Eine Tabelle kann gleichzeitig von mehreren Clients geladen werden, wenn die Tabelle keine Indizes aufweist und **TABLOCK** angegeben ist. Standardmäßig wird das Sperrverhalten durch die Tabellenoption **table lock on bulk load**bestimmt.  
   
   > [!NOTE]
-  > Wenn die Zieltabelle ein gruppierter Columnstore-Index ist, ist der TABLOCK-Hinweis zum Laden durch mehrere Clients parallel nicht erforderlich, da jedem parallel ausgeführten Thread eine eigene Zeilengruppe im Index zugewiesen wird, in die er Daten lädt. Details finden Sie in den Grundlagenthemen zum Columnstore-Index.
+  > Wenn die Zieltabelle ein gruppierter Columnstore-Index ist, ist der TABLOCK-Hinweis zum Laden durch mehrere Clients parallel nicht erforderlich, da jedem parallel ausgeführten Thread eine eigene Zeilengruppe im Index zugewiesen wird, in die er Daten lädt. Details finden Sie in den Grundlagenthemen zum Columnstore-Index,
   
   **CHECK_CONSTRAINTS**  
   Gibt an, dass alle Einschränkungen, die für die Zieltabelle oder -sicht gelten, während des Massenimportvorgangs überprüft werden müssen. Ohne den CHECK_CONSTRAINTS-Hinweis werden alle CHECK- und FOREIGN KEY-Einschränkungen ignoriert. Nach dem Vorgang wird die Einschränkung für die Tabelle als nicht vertrauenswürdig markiert.  
@@ -376,7 +376,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
   
 -   Bei Besitzer-, Tabellen- oder Sichtnamen, die eingebettete Leerzeichen oder Anführungszeichen enthalten, ist Folgendes möglich:  
   
-    -   Angeben der Option **-q** .  
+    -   Angeben der Option **-q** oder  
   
     -   Einschließen des Besitzer-, Tabellen- oder Sichtnamens in eckige Klammern ([]) innerhalb der Anführungszeichen.  
   
