@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a3487f9048571511460bc22b5c0b605592ba74f5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Erstellen von Datenbankprojekten mit SQL Server Management Studio
@@ -70,6 +70,6 @@ Eine Projektmappe besteht aus mindestens einem Skriptprojekt. Ein Projekt besteh
 ## <a name="see-also"></a>Siehe auch  
 [Verwenden von SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Schreiben, Analysieren und Bearbeiten von Abfragen mit SQL Server Management Studio](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
-[Projektmappen &amp;#40;SQL Server Management Studio&amp;#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
+[Projektmappen &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

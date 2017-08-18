@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ad966d13867ed658a9c264cece4a0346b35184e5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Zieltabelle für Anfügeabfrage auswählen (Dialogfeld) (Visual Database Tools)
@@ -35,6 +35,6 @@ Wählen Sie in der Liste den Namen der Tabelle aus, der Zeilen hinzugefügt werd
 > Sie können im Fenster **Eigenschaften** die Tabelle ändern, in die Sie Zeilen einfügen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen von Abfragen zum Einfügen von Ergebnissen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
+[Erstellen von Abfragen zum Einfügen von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
   
 

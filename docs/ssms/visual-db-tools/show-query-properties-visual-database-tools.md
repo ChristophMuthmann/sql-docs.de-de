@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Anzeigen von Abfrageeigenschaften (Visual Database Tools)
@@ -36,6 +36,6 @@ Sie können sich im Abfrage- und Sicht-Designer im Eigenschaftenfenster die Eige
 Im **Eigenschaftenfenster** werden nun die Eigenschaften für die Abfrage angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen grundlegender Vorgänge mit Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

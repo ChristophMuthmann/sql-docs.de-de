@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b702cadee477e53a0af109dee115b11132f9cd74
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Entwicklungs-, Test- und Produktionsdatenbanken (Visual Database Tools)
@@ -31,6 +31,6 @@ Wenn Sie zwei Datenbanken mit identischer Struktur besitzen, können Sie Änderu
 Führen Sie hierzu alle Änderungen in einer einzigen Sitzung mit der Entwicklungsdatenbank aus, erstellen Sie ein Änderungsskript der Sitzung, und führen Sie das Skript später für die Testdatenbank aus.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Mehrbenutzerumgebungen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Mehrbenutzerumgebungen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f285297c725a85eedcbb225b7180ade91728beb
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
@@ -36,6 +36,6 @@ Column
 Stellt eine Dropdownliste bereit, aus der Sie die Spalte auswählen können, auf welche die Partitionsfunktion angewendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Tabelleneigenschaften &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Tabelleneigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

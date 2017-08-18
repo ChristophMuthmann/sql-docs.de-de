@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-queries-visual-database-tools"></a>Kopieren von Abfragen (Visual Database Tools)
@@ -42,9 +42,9 @@ Sie können die Anweisungen einer Abfrage in eine neue Abfrage kopieren, um sie 
 6.  Klicken Sie mit der rechten Maustaste, und klicken Sie im Kontextmenü auf **Einfügen**.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Umbenennen von Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
-[Löschen von Abfrageergebnissen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[Speichern von Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Ausführen grundlegender Vorgänge mit Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Umbenennen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
+[Löschen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[Speichern von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

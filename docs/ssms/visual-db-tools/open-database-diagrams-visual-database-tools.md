@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54c012b6648c2c35395b22489d3f2f3493f189fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Öffnen von Datenbankdiagrammen (Visual Database Tools)
@@ -44,7 +44,7 @@ Das Datenbankdiagramm wird im Datenbankdiagramm-Designer geöffnet, in dem Sie d
 > Das Diagramm kann nur von seinem Besitzer oder einem Mitglied der db_owner-Rolle der Datenbank geöffnet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Grundlagen des Besitzes von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Grundlagen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
 

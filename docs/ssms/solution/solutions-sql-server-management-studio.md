@@ -20,15 +20,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 095f51e1ba4713d13133eac5bb42d8b468a4cada
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
-Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]-Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
+Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
   
 ## <a name="solution-overview"></a>Übersicht über die Lösungen  
 Sie können [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] als Plattform für die Skriptentwicklung für [!INCLUDE[ssDE](../../includes/ssde_md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]verwenden. Entwickeln Sie Skripts und Abfragen für relationale und mehrdimensionale Datenbanken mithilfe der [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Code-Editoren, und sammeln Sie verwandte Skripts und Abfragen in Projekten.  
@@ -58,7 +58,7 @@ Projektmappen und Projekte können in eine [!INCLUDE[msCoName](../../includes/ms
   
 ## <a name="see-also"></a>Siehe auch  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
-[Projekte &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

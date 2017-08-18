@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1b47f476867e064ac5ffe995605ff9701803be9b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Anzeigen von Spaltennamen im Diagrammbereich (Visual Database Tools)
@@ -42,6 +42,6 @@ Sie können die Spaltennamen von Tabellen im Bereich **Diagrammbereich** des Abf
 2.  Wählen Sie im Kontextmenü **Nur Name** aus.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

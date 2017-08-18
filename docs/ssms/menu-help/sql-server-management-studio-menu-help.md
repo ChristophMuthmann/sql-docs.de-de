@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio-Hilfemenü
@@ -31,17 +31,17 @@ Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in 
   
 [Erweiterte Speicheroptionen](../../ssms/menu-help/advanced-save-options.md)  
   
-[Suchordner auswählen &amp;#40;Dialogfeld in Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[Suchordner auswählen &#40;Dialogfeld in Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[Auswählen von Toolboxelementen &amp;#40;Seite „Wartungstasks“&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[Auswählen von Toolboxelementen &#40;Seite „Wartungstasks“&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[Anpassen &amp;#40;Seite „Befehle“&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[Anpassen &#40;Seite „Befehle“&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[Anpassen &amp;#40;Seite „Symbolleisten“&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[Anpassen &#40;Seite „Symbolleisten“&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [Externe Tools](../../ssms/menu-help/external-tools.md)  
   
-[Öffnen mit &amp;#40;Neue Datei&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[Öffnen mit &#40;Neue Datei&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [Optionen (Dialogfelder, F1-Hilfe)](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in 
   
 [Änderungen speichern](../../ssms/menu-help/save-changes.md)  
   
-[Dialogfeld Fenster &amp;#40;Hilfe von Microsoft Document Explorer&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[Dialogfeld Fenster &#40;Hilfe von Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Löschen eines Datenbankdiagramms (Visual Database Tools)
@@ -42,6 +42,6 @@ Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.
 Das Datenbankdiagramm wird aus der Datenbank gelöscht. Beim Löschen eines Datenbankdiagramms werden die Tabellen im Diagramm nicht gelöscht.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

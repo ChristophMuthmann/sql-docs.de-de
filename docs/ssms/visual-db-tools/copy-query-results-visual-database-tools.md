@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Kopieren von Abfrageergebnissen (Visual Database Tools)
@@ -55,6 +55,6 @@ Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Be
 5.  Klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Kopieren**aus.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Daten im Ergebnisbereich &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

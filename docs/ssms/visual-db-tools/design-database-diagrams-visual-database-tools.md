@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Entwerfen von Datenbankdiagrammen (Visual Database Tools)
@@ -43,7 +43,7 @@ Innerhalb eines Datenbankdiagramms können Tabellen mit drei unterschiedlichen M
   
 **Titelleiste** In der Titelleiste wird der Name der Tabelle angezeigt.  
   
-Wenn Sie in einer Tabelle Änderungen vorgenommen und diese noch nicht gespeichert haben, wird am Ende des Tabellennamens ein Sternchen (*) angezeigt, um so auf ungespeicherte Änderungen hinzuweisen. Informationen zum Speichern von geänderten Tabellen und Diagrammen finden Sie unter [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+Wenn Sie in einer Tabelle Änderungen vorgenommen und diese noch nicht gespeichert haben, wird am Ende des Tabellennamens ein Sternchen (*) angezeigt, um so auf ungespeicherte Änderungen hinzuweisen. Informationen zum Speichern von geänderten Tabellen und Diagrammen finden Sie unter [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **Zeilenselektor** Klicken Sie auf den Zeilenselektor, um eine Spalte in einer Datenbank auszuwählen. Der Zeilenselektor zeigt ein Symbol in Form eines Schlüssels an, wenn sich die Spalte im Primärschlüssel der Tabelle befindet. Informationen zu Primärschlüsseln finden Sie unter [Verwenden von Schlüsseln (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
@@ -61,19 +61,19 @@ Innerhalb eines Datenbankdiagramms können Eigenschaften mit drei unterschiedlic
 **Verknüpfte Tabellen** Die Beziehungslinie gibt an, das zwischen zwei Tabellen eine Fremdschlüsselbeziehung definiert ist. Bei einer 1:n-Beziehung ist die Fremdschlüsseltabelle die Tabelle neben dem Unendlichkeitszeichen der Linie. Wenn beide Endpunkte der Linie mit derselben Tabelle verbunden sind, handelt es sich um eine reflexive Beziehung. Weitere Informationen finden Sie unter [Zeichnen reflexiver Beziehungen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-[Grundlagen des Besitzes von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Grundlagen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-[Navigieren im Datenbankdiagramm-Designer &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
+[Navigieren im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
   
-[Einrichten im Datenbankdiagramm-Designer &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Einrichten im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   
-[Aktualisieren von Datenbankdiagrammen aus älteren Versionen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
+[Aktualisieren von Datenbankdiagrammen aus älteren Versionen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
-[Öffnen des Datenbankdiagramm-Designers &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
+[Öffnen des Datenbankdiagramm-Designers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Verwenden von Tabellen in Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-[Verwenden von Diagrammlayout &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Verwenden von Tabellen in Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[Verwenden von Diagrammlayout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 

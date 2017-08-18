@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>Drucken von Abfrageergebnissen (Visual Database Tools)
-Wenn Sie die Ergebnisse der Abfrage ausdrucken möchten, können Sie den Inhalt aus dem [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in ein anderes Windows-Programm, z. B. ein Textverarbeitungsprogramm, kopieren, dort formatieren und drucken.  
+Wenn Sie die Ergebnisse der Abfrage ausdrucken möchten, können Sie den Inhalt aus dem [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in ein anderes Windows-Programm, z. B. ein Textverarbeitungsprogramm, kopieren, dort formatieren und drucken.  
   
 Der Abfrage- und Sicht-Designer legt die Abfrageergebnisse in die Zwischenablage, wobei Tabstopps als Trennzeichen zwischen Spalten sowie Wagenrücklauf- und Zeilenvorschubzeichen als Trennzeichen zwischen Zeilen verwendet werden.  
   
@@ -44,6 +44,6 @@ Der Abfrage- und Sicht-Designer legt die Abfrageergebnisse in die Zwischenablage
 5.  Formatieren und drucken Sie die Ergebnisse.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen grundlegender Vorgänge mit Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

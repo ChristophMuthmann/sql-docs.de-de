@@ -20,11 +20,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Hinzufügen eines vorhandenen Projekts zu einer Projektmappe
@@ -44,7 +44,7 @@ Sie können zu einer vorhandenen Projektmappe ein oder mehrere Projekte hinzufü
 > Bevor Sie in einer Umgebung mit mehreren Entwicklern ein vorhandenes Projekt aus freigegebenen Verzeichnissen hinzufügen, sollten Sie sicherstellen, dass durch Ihre Änderungen nicht die Änderungen anderer Entwickler beeinträchtigt oder überschrieben werden.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Projekte &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Projektmappen &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

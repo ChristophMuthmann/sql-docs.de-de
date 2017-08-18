@@ -18,28 +18,28 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Erstellen von Abfragen mit Parametern (Visual Database Tools)
 In vielen Fällen empfiehlt es sich, eine Abfrage zu erstellen, die Sie in den Anwendungen immer wieder für die Eingabe verschiedener Daten verwenden können. In diesem Abschnitt erhalten Sie Informationen darüber, wie Parameterabfragen für allgemeine Zwecke erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-[Parameterabfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  
+[Parameterabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  
 Informationen zu allgemeinen Abfragen.  
   
-[Erstellen von Abfragen mit unbenannten Parametern &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md)  
+[Erstellen von Abfragen mit unbenannten Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md)  
 Erstellen einer Abfrage mit unbenannten Parametern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
-[Ausführen grundlegender Vorgänge mit Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Stellt Links zu Themen bereit, in denen die gängigsten Abfrageaufgaben behandelt werden.  
   
-[Angeben von Suchkriterien &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Enthält Links zu Themen, die verschiedene Suchverfahren und deren Anwendung erläutern.  
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Öffnen des Tabellen-Designers (Visual Database Tools)
@@ -47,7 +47,7 @@ Sie können den Tabellen-Designer aufrufen, indem Sie eine neue oder eine vorhan
     Das Menü **Tabellen-Designer** wird dem Hauptmenü hinzugefügt, und die Tabelle wird in den Designerbereichen geöffnet.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Entwerfen von Tabellen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Entwerfen von Tabellen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Tabellen](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
   
 

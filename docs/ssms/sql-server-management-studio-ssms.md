@@ -17,7 +17,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
 ms.openlocfilehash: 91f6659896282f5c64a2b3d2c931f2b7dee635a3
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)

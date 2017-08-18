@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Erstellen eines neuen Datenbankdiagramms (Visual Database Tools)
@@ -42,7 +42,7 @@ Mit dem Objekt-Explorer können neue Datenbankdiagramme erstellt werden. Datenba
 Das Ändern und Löschen von Tabellen sowie das Ändern vorhandener Tabellen und Tabellenbeziehungen kann fortgesetzt werden, bis das neue Datenbankdiagramm vollständig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Grundlagen des Besitzes von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Grundlagen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
 

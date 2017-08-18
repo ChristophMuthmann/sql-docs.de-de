@@ -17,31 +17,31 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
 Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]klicken.  
   
-[Optionen &amp;#40;Designer - Analysis Services-Designer – Allgemein&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[Optionen &#40;Designer - Analysis Services-Designer – Allgemein&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[Optionen &amp;#40;Designer – Seite „Wartungspläne“&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[Optionen &#40;Designer – Seite „Wartungspläne“&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[Optionen &amp;#40;Designer – Seite „Tabellen- und Datenbank-Designer“&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[Optionen &#40;Designer – Seite „Tabellen- und Datenbank-Designer“&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[Optionen &amp;#40;Umgebung – Seite „Schriftarten und Farben“&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[Optionen &#40;Umgebung – Seite „Schriftarten und Farben“&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[Optionen &amp;#40;Umgebung – Seite „Allgemein“&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[Optionen &#40;Umgebung – Seite „Allgemein“&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[Optionen &amp;#40;Umgebung – Hilfe – Seite „Allgemein“&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[Optionen &#40;Umgebung – Hilfe – Seite „Allgemein“&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[Optionen &amp;#40;Umgebung – Hilfe – Seite „Online“&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[Optionen &#40;Umgebung – Hilfe – Seite „Online“&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[Optionen &amp;#40;Umgebung – Seite „Tastatur“&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[Optionen &#40;Umgebung – Seite „Tastatur“&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [Optionen (Abfrageausführung – Analysis-Server – Seite „Allgemein“)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

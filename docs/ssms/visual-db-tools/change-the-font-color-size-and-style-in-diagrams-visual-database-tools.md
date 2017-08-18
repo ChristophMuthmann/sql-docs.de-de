@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bbfd8eb271ea0eb10ed0f8dac22833d8a4aa0f5c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt in Diagrammen (Visual Database Tools)
@@ -39,6 +39,6 @@ Durch Ändern der Schriftfarbe, des Schriftgrads und des Schriftschnitts können
 4.  Ändern Sie die Schriftart, den Schriftgrad, die angezeigte Elemente und die Farben für Vordergrund und Hintergrund.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c801801c96b4abf82745278e1b28b9b88309a2d6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-queries-visual-database-tools"></a>Löschen von Abfragen (Visual Database Tools)
@@ -43,9 +43,9 @@ Sie können eine Abfrage löschen, indem Sie sie aus dem Projekt entfernen und d
 > Wenn Sie die Abfrage aus dem Projekt entfernen möchten, ohne sie zu löschen, klicken Sie auf **Entfernen**. Dann können Sie mit der rechten Maustaste auf den Abfrageordner klicken und **Element hinzufügen** auswählen, um die Abfrage später zu suchen und hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Löschen von Abfrageergebnissen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[Verwerfen von Änderungen an Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Ausführen grundlegender Vorgänge mit Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Löschen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[Verwerfen von Änderungen an Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

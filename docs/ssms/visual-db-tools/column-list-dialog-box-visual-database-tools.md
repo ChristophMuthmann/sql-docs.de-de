@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d776ff25e821b30f6e0e17778a7ab9f5f3ceebd3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Spaltenliste (Dialogfeld) (Visual Database Tools)
@@ -41,6 +41,6 @@ Zeigt die Datentypen für jede Spalte im ausgewählten Tabellenwertobjekt an.
 Zeigt die Datentypeneigenschaften für jede Spalte im ausgewählten Tabellenwertobjekt an. Mögliche Werte sind NULLABLE, IDENTITY, ROWGUID und leer.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

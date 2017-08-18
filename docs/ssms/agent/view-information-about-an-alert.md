@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
@@ -44,7 +44,7 @@ In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Information über eine Warnung anzeigen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
@@ -63,13 +63,13 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
     Weitere Informationen zu den im Dialogfeld *Eigenschaften von Warnung***Warnungsname** enthaltenen verfügbaren Optionen finden Sie unter:  
   
-    -   [Warnungseigenschaften – Neue Warnung &amp;#40;Seite „Allgemein“&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
+    -   [Warnungseigenschaften – Neue Warnung &#40;Seite „Allgemein“&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
-    -   [Warnungseigenschaften – Neue Warnung &amp;#40;Seite „Antwort“&amp;#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
+    -   [Warnungseigenschaften – Neue Warnung &#40;Seite „Antwort“&#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
   
-    -   [Warnungseigenschaften – Neue Warnung &amp;#40;Seite „Optionen“&amp;#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
+    -   [Warnungseigenschaften – Neue Warnung &#40;Seite „Optionen“&#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
   
-    -   [Warnungseigenschaften &amp;#40;Seite „Verlauf“&amp;#41;](../../ssms/agent/alert-properties-history-page.md)  
+    -   [Warnungseigenschaften &#40;Seite „Verlauf“&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
 5.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

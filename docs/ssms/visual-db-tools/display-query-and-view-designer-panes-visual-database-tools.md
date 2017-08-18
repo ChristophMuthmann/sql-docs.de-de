@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23f1d17f062613ef9c75ee8d7748d3ed72d8d375
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Anzeigen von Bereichen des Abfrage- und Sicht-Designers (Visual Database Tools)
@@ -38,7 +38,7 @@ Der Abfrage- und Sicht-Designer umfasst vier separate Bereiche: den Diagrammbere
 2.  Zeigen Sie im Menü **Abfrage-Designer** auf **Bereich** , und klicken Sie auf den Namen des Bereichs, der geöffnet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen von Abfragen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Öffnen des Abfrage- und Sicht-Designers &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
+[Erstellen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Öffnen des Abfrage- und Sicht-Designers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   
 

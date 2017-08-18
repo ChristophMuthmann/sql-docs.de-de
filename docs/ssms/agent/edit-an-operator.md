@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b8628cf736650c53493501777f79f970ff864209
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-an-operator"></a>Bearbeiten eines Operators
@@ -72,11 +72,11 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
     Weitere Informationen zu den verfügbaren Optionen im Dialogfeld *Operatorname***Eigenschaften** finden Sie unter:  
   
-    -   [Operatoreigenschaften – Neuer Operator &amp;#40;Seite „Allgemein“&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Operatoreigenschaften – Neuer Operator &#40;Seite „Allgemein“&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Operatoreigenschaften – Neuer Operator &amp;#40;Seite „Benachrichtigungen“&amp;#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Operatoreigenschaften – Neuer Operator &#40;Seite „Benachrichtigungen“&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Operatoreigenschaften &amp;#40;Seite „Verlauf“&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Operatoreigenschaften &#40;Seite „Verlauf“&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

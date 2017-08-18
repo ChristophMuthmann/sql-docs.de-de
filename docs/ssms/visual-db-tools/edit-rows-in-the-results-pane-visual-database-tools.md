@@ -21,15 +21,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed3ab23388672cda824ad3ccce6e1275908c028d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Bearbeiten von Zeilen im Ergebnisbereich (Visual Database Tools)
-In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) bearbeiten. Ausführlichere Informationen zum Ändern von Daten finden Sie unter [Regeln für das Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) und [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)bearbeiten. Ausführlichere Informationen zum Ändern von Daten finden Sie unter [Regeln zum Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) und [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)bearbeiten.  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>So bearbeiten Sie Daten im Ergebnisbereich  
   
@@ -45,7 +45,7 @@ In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-d
 4.  Speichern Sie die Änderungen, indem Sie die Zeile verlassen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Daten im Ergebnisbereich &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[Regeln zum Aktualisieren von Ergebnissen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
+[Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Regeln zum Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
   
 

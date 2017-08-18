@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
@@ -53,6 +53,6 @@ Der SQL-Editor bietet viele nützliche Funktionen für die SQL-Textbearbeitung, 
 Bei der Bearbeitung von SQL-Anweisungen werden bestimmte Transact-SQL-Anweisungen in einem von einer dünnen Linie umrandeten Feld eingeschlossen. Dies hilft bei der visuellen Aufteilung von SQL-Code in Befehlsabschnitte und identifiziert Blöcke von SQL-Anweisungen, die grafisch mithilfe des Abfrage-Designers entworfen werden können. Weitere Informationen zur Verwendung des Abfrage-Designers finden Sie unter [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: eb8a2d8b33d8d33eba5c3e6567157ff9b6b7fa16
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Anzeigen von Diagrammeigenschaften (Visual Database Tools)
@@ -38,6 +38,6 @@ Sie können Eigenschaften für ein Datenbankdiagramm im Eigenschaftenfenster anz
 Die Eigenschaften des Diagramms sind nun im **Eigenschaften** -Fenster sichtbar.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verwenden von Datenbankdiagrammen &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

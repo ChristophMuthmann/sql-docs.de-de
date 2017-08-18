@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Manuelles Erstellen von Selbstjoins (Visual Database Tools)
@@ -122,14 +122,14 @@ Cheryl Carson       Abraham Bennet
   
 4.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die Auslassungszeichen **(…)** , die rechts neben der Eigenschaft angezeigt werden.  
   
-5.  Ändern Sie nach Bedarf im [Dialogfeld „Join“](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) den Vergleichsoperator zwischen den Primärschlüsseln. Sie können z. B. den Operator in "kleiner als" (<) ändern.  
+5.  Ändern Sie nach Bedarf im [Dialogfeld „Join“](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) den Vergleichsoperator zwischen den Primärschlüsseln. Sie können z. B. den Operator in "kleiner als" (<) ändern.  
   
 6.  Erstellen Sie die zusätzliche Joinbedingung (z. B. authors.zip = authors1.zip), indem Sie den Namen der primären Joinspalte aus der ersten Instanz der Tabelle bzw. des Tabellenwertobjekts ziehen und in der entsprechenden Spalte der zweiten Instanz ablegen.  
   
 7.  Geben Sie weitere Optionen für die Abfrage an (z. B. Ausgabespalten, Suchbedingungen und Sortierreihenfolge).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Automatisches Erstellen von Selbstjoins &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[Erstellen von Abfragen mit Joins &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Automatisches Erstellen von Selbstjoins &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[Erstellen von Abfragen mit Joins &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 
