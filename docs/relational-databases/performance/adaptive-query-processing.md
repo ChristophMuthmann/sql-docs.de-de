@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: "Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern"
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ Die Abfrage gibt 336 Zeilen zurück.  Wenn Sie die Liveabfragestatistik aktivier
 ![Abfrageergebnis: 336 Zeilen](./media/4_AQPStats336Rows.png)
 
 Im Plan sehen wir das Folgende:
-- Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
-- Wir sehen den neuen adaptiven Joinoperator. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Nested-Loop-Plan gewechselt wird.  In diesem Beispiel beträgt der Schwellenwert 78 Zeilen.  Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin.  Wenn der Schwellenwert nicht überschritten wird, wird ein Nested Loop-Join verwendet.
-- Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Untersuchungsphase eines Standardhashjoin-Vorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die den Operator durchlaufen: in diesem Fall „672 von 672“.
-- Der letzte Branch ist der Clustered Index Seek, der vom Nested Loop-Join verwendet worden wäre, wäre der Schwellenwert nicht überschritten worden. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
+1. Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
+1. Wir sehen den neuen adaptiven Joinoperator. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Nested-Loop-Plan gewechselt wird.  In diesem Beispiel beträgt der Schwellenwert 78 Zeilen.  Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin.  Wenn der Schwellenwert nicht überschritten wird, wird ein Nested Loop-Join verwendet.
+1. Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Untersuchungsphase eines Standardhashjoin-Vorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die den Operator durchlaufen: in diesem Fall „672 von 672“.
+1. Der letzte Branch ist der Clustered Index Seek, der vom Nested Loop-Join verwendet worden wäre, wäre der Schwellenwert nicht überschritten worden. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
  Schauen wir uns nun den Plan für die gleiche Abfrage, aber dieses Mal mit einem Mengenwert an, der nur eine Zeile in der Tabelle hat:
  
 ```sql
@@ -166,7 +166,7 @@ Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen dem Aufw
 Eine verschachtelte Ausführung ändert die unidirektionale Grenze zwischen der Optimierungs- und der Ausführungsphase für eine Ausführung mit einer Abfrage. Zudem können Pläne damit auf Grundlage der überarbeiteten Kardinalitätsschätzungen angepasst werden. Wenn Sie bei der Optimierung auf einen möglichen Kandidaten für eine verschachtelte Ausführung (bei der es sich aktuell um **Funktionen mit mehreren Anweisungen (MSTVFs)** handelt) stoßen, wird die Optimierung unterbrochen, die entsprechende Unterstruktur ausgeführt, die genauen Kardinalitätsschätzungen erfasst, und anschließend wird die Optimierung für Downstreamvorgänge wiederaufgenommen.
 Die festgelegte Kardinalitätsschätzung von MSTVFs beträgt in SQL Server 2014 und 2016 „100“ und in früheren Versionen „1“. Die verschachtelte Ausführung löst Probleme bei der Leistung von Workloads, die auf die festgelegten Kardinalitätsschätzungen von MSTVFs zurückzuführen sind.
 
-Die folgende Abbildung zeigt die Ausgabe einer Liveabfragestatistik, eine Teilmenge eines allgemeinen Ausführungsplans, der die Wirkung von festgelegten Kardinalitätsschätzungen von MSTVFs veranschaulicht. Sie sehen den tatsächlichen Zeilenfluss gegenüber dem geschätzten. Es gibt drei erwähnenswerte Bereiche des Plan (von rechts nach links):
+Die folgende Abbildung zeigt die Ausgabe einer Liveabfragestatistik, eine Teilmenge eines allgemeinen Ausführungsplans, der die Wirkung von festgelegten Kardinalitätsschätzungen von MSTVFs veranschaulicht. Sie sehen den tatsächlichen Zeilenfluss gegenüber dem geschätzten. Es gibt drei erwähnenswerte Bereiche des Plans (von rechts nach links):
 1. Der MSTVF-Table Scan hat eine festgelegte Schätzung von 100 Zeilen. In diesem Beispiels gibt es allerdings *527.597* Zeilen, die den MSTVF-Table Scan durchlaufen. Dies ist an der Liveabfragestatistik „527597 von 100“ der tatsächlichen Elemente von geschätzten Elemente zu erkennen – die festgelegte Schätzung liegt also deutlich zu niedrig.
 1. Für den Nested Loop-Vorgang wird davon ausgegangen, dass nur 100 Zeilen von der äußeren Seite des Joins zurückgegebene werden. Aufgrund der hohen Zahl an tatsächlich von MSTVF zurückgegebenen Zeilen sollten Sie sich aber für einen komplett anderen Joinalgorithmus entscheiden.
 1. Beachten Sie, dass beim Hash Match-Vorgang ein kleines Warnsymbol angezeigt wird, das in diesem Fall darauf hinweist, dass es einen Überlauf auf den Datenträger hab.
