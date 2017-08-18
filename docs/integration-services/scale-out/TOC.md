@@ -4,6 +4,7 @@
 # [Exemplarische Vorgehensweise: Einrichten von horizontaler Hochskalierung für Integration Services](walkthrough-set-up-integration-services-scale-out.md)
 # [Scale Out-Master](integration-services-ssis-scale-out-master.md)
 # [Scale Out-Worker](integration-services-ssis-scale-out-worker.md)
+# [Scale Out-Manager](integration-services-ssis-scale-out-manager.md)
 # [Ausführen von Paketen in horizontaler Hochskalierung](run-packages-in-integration-services-ssis-scale-out.md)
 # [Ändern des Kontos für die Scale Out-Protokollierung](change-logdb-account.md)
 # [Umgang mit Zertifikaten in Scale Out](deal-with-certificates-in-ssis-scale-out.md)
