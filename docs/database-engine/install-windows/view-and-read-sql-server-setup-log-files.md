@@ -1,30 +1,35 @@
 ---
-title: "Lesen und Anzeigen der Setupprotokolldateien von SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anzeigen von Protokollen"
-  - "Anzeigen von Protokolldateien"
-  - "Setup [SQL Server], Protokolle"
-  - "Installationsprotokolldateien [SQL Server]"
-  - "Installieren von SQL Server, Protokolle"
-  - "Fehler [SQL Server], Setup"
-  - "Protokolle [SQL Server], Setup"
+title: Lesen und Anzeigen der Setupprotokolldateien von SQL Server | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing logs
+- displaying log files
+- Setup [SQL Server], logs
+- installation log files [SQL Server]
+- installing SQL Server, logs
+- errors [SQL Server], Setup
+- logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Lesen und Anzeigen der Setupprotokolldateien von SQL Server
+# <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
   Bei jeder Ausführung von Setup werden Protokolldateien in einem neuen Protokollordner erstellt, der einen Zeitstempel aufweist, und zwar unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\. Das Namensformat für mit einem Zeitstempel versehene Protokollordner ist JJJJMMTT_hhmmss. Wenn Setup in einem unbeaufsichtigten Modus ausgeführt wird, werden die Protokolle unter %temp%\sqlsetup*.log erstellt. Alle Dateien in den Protokollordnern werden in der Log\*.cab-Datei im jeweiligen Protokollordner archiviert.  
   
  Eine typische Setupanforderung durchläuft drei Ausführungsphasen:  
@@ -47,10 +52,10 @@ caps.handback.revision: 54
   
  In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprotokolldateien beschrieben.  
   
-## Zusammenfassungstext  
+## <a name="summary-text"></a>Zusammenfassungstext  
   
-### Übersicht  
- In dieser Datei werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten, die beim Setup entdeckt wurden, die Betriebssystemumgebung, die Parameterwerte für die Befehlszeile, wenn diese angegeben wurden, und der allgemeine Status jeder MSI-/MSP-Datei, die ausgeführt wurde, angegeben.  
+### <a name="overview"></a>Übersicht  
+ In dieser Datei werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, die beim Setup entdeckt wurden, die Betriebssystemumgebung, die Parameterwerte für die Befehlszeile, wenn diese angegeben wurden, und der allgemeine Status jeder MSI-/MSP-Datei, die ausgeführt wurde, angegeben.  
   
  Das Protokoll ist in folgende Abschnitte unterteilt:  
   
@@ -76,98 +81,99 @@ caps.handback.revision: 54
   
 -   Speicherort der Regelberichtdatei  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\.  
   
  Um Fehler in der Textdatei zu finden, die die Zusammenfassung enthält, durchsuchen Sie die Datei nach den Schlüsselwörtern "error" oder "failed".  
   
-## Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die summary_engine-Basisdatei ähnelt der Zusammenfassungsdatei und wird während des Hauptworkflows generiert.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_engine-base_JJJJMMTT_HHMMss_ComponentUpdate.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_JJJJMMTT_HHMMss_ComponentUpdate.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Komponentenupdate-Zusammenfassungsprotokolldatei ähnelt der Zusammenfassungsdatei und wird während des Komponentenupdateworkflows generiert.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_engine-base_\<Versionsnummer>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Zusammenfassungsprotokolldatei für die globalen Regeln ähnelt der Zusammenfassungsdatei und wird während des Workflows für allgemeine Regeln generiert.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Detail.txt  
+## <a name="detailtxt"></a>Detail.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Datei Detail.txt wird für den Hauptworkflow wie Installation oder Upgrade generiert und liefert Einzelheiten zur Ausführung. Die Protokolle in der Datei werden basierend auf dem Zeitpunkt generiert, zu dem die Installationsaktionen aufgerufen wurden. Sie zeigen die Reihenfolge, in der die Aktionen ausgeführt wurden, und ihre Abhängigkeiten.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup.  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  Wenn während des Setupvorgangs ein Fehler auftritt, wird die Ausnahme oder der Fehler am Ende dieser Datei protokolliert. Um die Fehler zu finden, prüfen Sie daher zunächst das Ende der Datei, und suchen Sie dann nach den Schlüsselwörtern "Fehler" oder "Ausnahme".  
   
-## Detail_ComponentUpdate.txt  
+## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Datei Detail_ComponentUpdate.txt wird für den Komponentenupdateworkflow generiert und ähnelt der Datei Detail.txt.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Detail_GlobalRules.txt  
+## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Datei Detail_GlobalRules.txt wird für die Ausführung der globalen Regeln generiert und ähnelt der Datei Detail.txt.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## MSI-Protokolldateien  
+## <a name="msi-log-files"></a>MSI-Protokolldateien  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die MSI-Protokolldateien liefern Details zum Installationspaketprozess. Sie werden durch MSIEXEC während der Installation des angegebenen Pakets generiert.  
   
  Typen von MSI-Protokolldateien:  
   
--   \<Feature>_\<Architektur>\_\<Interaktion>.log  
+-   \<Feature>\<Architektur>\_\<Interaktion>.log  
   
--   \<Feature>_\<Architektur>\_\<Sprache>\_\<Iteration>.log  
+-   \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log  
   
 -   \<Feature>_\<Architektur>\_\<Iteration>\_\<Workflow>.log  
   
-### Speicherort  
- Die MSI-Protokolldateien befinden sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
+### <a name="location"></a>Speicherort  
+ Die MSI-Protokolldateien befinden sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name.\>log.  
   
  Am Ende der Datei ist eine Zusammenfassung der Ausführung zu finden, die Aufschluss über eventuelle Fehler gibt. Um die Fehler in der MSI-Datei zu finden, suchen Sie nach "value 3". In der Regel sind die Fehler in der Nähe dieser Zeichenfolge zu finden.  
   
-## ConfigurationFile.ini  
+## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Die Konfigurationsdatei enthält die Eingabeeinstellungen, die während der Installation angegeben werden. Sie kann verwendet werden, um eine Installation neu zu starten, ohne die Einstellungen manuell eingeben zu müssen. Kennwörter für die Konten, die PID und einige Parameter werden jedoch nicht in der Konfigurationsdatei gespeichert. Diese Einstellungen können der Datei entweder hinzugefügt oder über die Befehlszeile oder die Setupbenutzeroberfläche angegeben werden. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 mithilfe einer Konfigurationsdatei](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### Übersicht  
+### <a name="overview"></a>Übersicht  
  Im Bericht zur Systemkonfigurationsprüfung sind eine kurze Beschreibung für jede ausgeführte Regel sowie der Ausführungsstatus enthalten.  
   
-### Speicherort  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Siehe auch  
- [Installieren von SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Installieren von SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

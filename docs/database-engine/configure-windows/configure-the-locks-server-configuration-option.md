@@ -1,24 +1,29 @@
 ---
-title: "Konfigurieren der Serverkonfigurationsoption Sperren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sperren (Option) [SQL Server]"
+title: "Konfigurieren der Serverkonfigurationsoption „Sperren“ | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e604d8fdd52824c11657b52b2baa3a7b528370d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Konfigurieren der Serverkonfigurationsoption Sperren
+# <a name="configure-the-locks-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Sperren
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Sperren** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Sperren** können Sie die maximale Anzahl verfügbarer Sperren festlegen und so die Menge an Arbeitsspeicher begrenzen, die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für Sperren verwendet. Die Standardeinstellung ist 0. Dadurch kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sperrstrukturen je nach Systemanforderungen dynamisch zuordnen oder die Zuordnung von Sperrstrukturen aufheben.  
@@ -40,7 +45,7 @@ caps.handback.revision: 28
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung**: [Nach dem Konfigurieren der Option „Sperren“](#FollowUp)  
+-   **Nachverfolgung**  [Nach dem Konfigurieren der Option „Sperren“](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 28
   
 -   Wenn der Server gestartet wird, während die Option **Sperren** auf 0 festgelegt ist, richtet der Sperren-Manager ausreichend Arbeitsspeicher von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für einen ersten Pool von 2.500 Sperrstrukturen ein. Wenn der Sperrenpool verbraucht ist, wird zusätzlicher Arbeitsspeicher für den Pool eingerichtet.  
   
-     Wenn für den Sperrenpool mehr Arbeitsspeicher benötigt wird als im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Speicherpool verfügbar ist und auf dem Computer weiterer Speicher zur Verfügung steht (wenn also der Schwellenwert **Max. Serverarbeitsspeicher** noch nicht erreicht ist), weist [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Regel dynamisch Speicher zu, um die Sperrenanforderung zu erfüllen. Wenn durch das Zuweisen dieses Speichers jedoch eine Auslagerung auf Betriebssystemebene ausgelöst würde (wenn beispielsweise eine weitere Anwendung auf dem gleichen Computer als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und diesen Arbeitsspeicher verwendet), wird kein weiterer Speicherplatz für Sperren zugewiesen. Der dynamische Sperrenpool ruft nicht mehr als 60 Prozent des Speichers ab, der dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugewiesen ist. Wenn der Sperrenpool 60 Prozent des von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]angeforderten Speichers erreicht hat oder wenn auf dem Computer kein weiterer Speicher verfügbar ist, wird bei weiteren Sperrenanforderungen ein Fehler generiert.  
+     Wenn für den Sperrenpool mehr Arbeitsspeicher benötigt wird als im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Speicherpool verfügbar ist und auf dem Computer weiterer Speicher zur Verfügung steht (wenn also der Schwellenwert **Max. Serverarbeitsspeicher** noch nicht erreicht ist), weist [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Regel dynamisch Speicher zu, um die Sperrenanforderung zu erfüllen. Wenn durch das Zuweisen dieses Speichers jedoch eine Auslagerung auf Betriebssystemebene ausgelöst würde (wenn beispielsweise eine weitere Anwendung auf dem gleichen Computer als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und diesen Arbeitsspeicher verwendet), wird kein weiterer Speicherplatz für Sperren zugewiesen. Der dynamische Sperrenpool ruft nicht mehr als 60 Prozent des Speichers ab, der dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugewiesen ist. Wenn der Sperrenpool 60 Prozent des von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]angeforderten Speichers erreicht hat oder wenn auf dem Computer kein weiterer Speicher verfügbar ist, wird bei weiteren Sperrenanforderungen ein Fehler generiert.  
   
      Wenn Sperren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch verwendet werden dürfen, entspricht dies der empfohlenen Konfiguration. Sie können **Sperren** jedoch festlegen und die Möglichkeit der dynamischen Zuweisung von Sperrenressourcen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] außer Kraft setzen. Wenn **Sperren** auf einen anderen Wert als 0 festgelegt wird, kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] dem unter **Sperren**angegebenen Wert keine weiteren Sperren zuweisen. Erhöhen Sie diesen Wert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Meldung anzeigt, dass die Anzahl der verfügbaren Sperren überschritten wurde. Da jede Sperre Arbeitsspeicher verbraucht (96 Bytes pro Sperre), kann es bei Erhöhung dieses Werts erforderlich werden, dem Server mehr Speicher zuzuweisen.  
   
@@ -63,9 +68,9 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So konfigurieren Sie die Option locks  
+#### <a name="to-configure-the-locks-option"></a>So konfigurieren Sie die Option locks  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften**aus.  
   
 2.  Klicken Sie auf den **Erweitert** -Knoten.  
   
@@ -75,13 +80,13 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So konfigurieren Sie die Option locks  
+#### <a name="to-configure-the-locks-option"></a>So konfigurieren Sie die Option locks  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) zum Festlegen des Werts der Option `locks` verwendet wird, um die Anzahl der für alle Benutzer verfügbaren Sperren auf `20000` zu setzen.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) zum Festlegen des Werts der Option `locks` verwendet wird, um die Anzahl der für alle Benutzer verfügbaren Sperren auf `20000`zu setzen.  
   
 ```tsql  
 Use AdventureWorks2012 ;  
@@ -96,14 +101,15 @@ RECONFIGURE;
 GO  
 ```  
   
- Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)konfiguriert wird.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Sperren  
  Der Server muss neu gestartet werden, bevor die Einstellung wirksam werden kann.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

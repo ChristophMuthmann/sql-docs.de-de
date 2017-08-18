@@ -1,32 +1,37 @@
 ---
-title: "&#196;ndern der Rollen zwischen prim&#228;rem und sekund&#228;rem Protokollversandserver (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Protokollversand [SQL Server], Rollenänderungen"
-  - "Sekundäre Datendateien [SQL Server], Rollenänderung zwischen"
-  - "Primäre Datenbanken [SQL Server]"
-  - "Erste Rollenänderung [SQL Server]"
-  - "Protokollversand [SQL Server-Agent], Failover"
-  - "Failover [SQL Server], Protokollversand"
+title: "Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#196;ndern der Rollen zwischen prim&#228;rem und sekund&#228;rem Protokollversandserver (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server)
   Nachdem Sie für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration ein Failover zu einem sekundären Server ausgeführt haben, können Sie die sekundäre Datenbank so konfigurieren, dass sie als primäre Datenbank fungiert. Anschließend können Sie primäre und sekundäre Datenbanken je nach Bedarf austauschen.  
   
-## Ausführen der ersten Rollenänderung  
+## <a name="performing-the-initial-role-change"></a>Ausführen der ersten Rollenänderung  
  Bei erstmaligem Failover zu einer sekundären Datenbank und einer anschließenden Konfiguration als neuer primärer Datenbank müssen Sie mehrere Schritte ausführen. Nachdem Sie diese anfänglichen Schritte ausgeführt haben, können Sie die Rollen zwischen der primären und sekundären Datenbank problemlos wechseln.  
   
 1.  Führen Sie ein manuelles Failover von der primären Datenbank zu einer sekundären Datenbank aus. Sichern Sie das aktive Transaktionsprotokoll auf dem primären Server mit NORECOVERY. Weitere Informationen finden Sie unter [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md).  
@@ -67,7 +72,7 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## Tauschen der Rollen  
+## <a name="swapping-roles"></a>Tauschen der Rollen  
  Nachdem Sie die oben aufgeführten Schritte für den erstmaligen Rollenwechsel ausgeführt haben, können Sie die Rollen zwischen der primären und der sekundären Datenbank mithilfe der im folgenden Abschnitt beschriebenen Schritte tauschen. Führen Sie für einen Rollenwechsel die folgenden allgemeinen Schritte aus:  
   
 1.  Schalten Sie die sekundäre Datenbank online. Sichern Sie das Transaktionsprotokoll auf dem primären Server mit NORECOVERY.  
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  Aktivieren Sie den Protokollversand-Sicherungsauftrag auf dem sekundären Server (dem neuen primären Server), und kopieren Sie die Aufträge auf den primären Server (den neuen sekundären Server), um sie dort wiederherzustellen.  
   
 > [!IMPORTANT]  
->  Wenn sich der Wechsel zwischen sekundärer und primärer Datenbank für Benutzer und Anwendungen so reibungslos wie möglich gestalten soll, müssen Sie ggf. einige oder alle Metadaten für die Datenbank, wie z. B. Anmeldenamen und Aufträge, auf der neuen primären Serverinstanz neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+>  Wenn sich der Wechsel zwischen sekundärer und primärer Datenbank für Benutzer und Anwendungen so reibungslos wie möglich gestalten soll, müssen Sie ggf. einige oder alle Metadaten für die Datenbank, wie z. B. Anmeldenamen und Aufträge, auf der neuen primären Serverinstanz neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

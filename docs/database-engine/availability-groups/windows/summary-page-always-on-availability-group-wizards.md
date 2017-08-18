@@ -1,27 +1,32 @@
 ---
-title: "Seite „Zusammenfassung“ (Always On-Verf&#252;gbarkeitsgruppen-Assistenten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.summary.f1"
-  - "sql13.swb.adddatabasewizard.summary.f1"
-  - "sql13.swb.addreplicawizard.summary.f1"
-  - "sql13.swb.failoverwizard.summary.f1"
+title: "Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.summary.f1
+- sql13.swb.adddatabasewizard.summary.f1
+- sql13.swb.addreplicawizard.summary.f1
+- sql13.swb.failoverwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce87daca535ad8090e5c436610195d50c5b80f65
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Seite „Zusammenfassung“ (Always On-Verf&#252;gbarkeitsgruppen-Assistenten)
+# <a name="summary-page-always-on-availability-group-wizards"></a>Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
@@ -30,9 +35,9 @@ caps.handback.revision: 12
   
 ##  <a name="PageOptions"></a> Optionen auf der Seite "Zusammenfassung"  
  **Skript**  
- Klicken Sie, um ein [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript für die im Zusammenfassungsraster aufgeführten Aktionen zu generieren. Sie werden aufgefordert, ein Ziel für das Skript anzugeben.  
+ Klicken Sie, um ein [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript für die im Zusammenfassungsraster aufgeführten Aktionen zu generieren. Sie werden aufgefordert, ein Ziel für das Skript anzugeben.  
   
- **Previous**  
+ **Zurück**  
  Klicken Sie, um zur Seite zurückzukehren, die der aktuellen Seite unmittelbar vorausgeht. Sie können die Schaltfläche **Zurück** verwenden, um zurück zu einer vorausgehenden Seiten zu navigieren und optional einen angegebenen Wert ändern.  
   
  **Fertig stellen**  
@@ -41,7 +46,7 @@ caps.handback.revision: 12
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** wird durch Abbrechen des Assistenten dieser beendet, ohne Aktionen auszuführen.  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [&#91;Nach oben&#93;](#Top)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -49,13 +54,14 @@ caps.handback.revision: 12
   
 -   [Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
--   [Verwenden des Assistenten für das Failover für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird](../../../analysis-services/instances/media/uparrow16x16.png "Pfeilsymbol, dass mit dem Link "Zurück zum Anfang" verwendet wird") [&#91;Nach oben&#93;](#Top)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
   
-## Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

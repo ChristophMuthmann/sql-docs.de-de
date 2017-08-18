@@ -1,40 +1,34 @@
 ---
-title: "Betriebsmodi der Datenbankspiegelung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbankspiegelung [SQL Server], Betriebsmodi"
+title: Betriebsmodi der Datenbankspiegelung | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Betriebsmodi der Datenbankspiegelung
+# <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
   In diesem Thema werden die synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen beschrieben.  
   
 > [!NOTE]  
 >  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **In diesem Thema:**  
-  
--   [Begriffe und Definitionen](#TermsAndDefinitions)  
-  
--   [Asynchrone Datenbankspiegelung (Modus für hohe Leistung)](#async)  
-  
--   [Synchrone Datenbankspiegelung (Modus für hohe Sicherheit)](#Sync)  
-  
--   [Transact-SQL-Einstellungen und Betriebsmodi für die Datenbankspiegelung](#TsqlSettingsAndOpModes)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  In diesem Abschnitt werden einige Begriffe eingeführt, die für dieses Thema wichtig sind.  
@@ -49,13 +43,13 @@ caps.handback.revision: 21
  Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
  Zeuge  
- Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver erkennen kann, ob die Initiierung eines automatischen Failovers auszulösen ist. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
+ Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver erkennen kann, ob die Initiierung eines automatischen Failovers auszulösen ist. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
   
-## Asynchrone Datenbankspiegelung (Modus für hohe Leistung)  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>Asynchrone Datenbankspiegelung (Modus für hohe Leistung)  
  In diesem Abschnitt werden die Funktionsweise der asynchronen Datenbankspiegelung, die geeignete Verwendung des Modus für hohe Leistung sowie die entsprechende Reaktion auf den Fehlschlag des Prinzipalservers beschrieben.  
   
 > [!NOTE]  
->  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Weitere Informationen zu Editionen, die die Datenbankspiegelung vollständig unterstützen, finden Sie unter „Hohe Verfügbarkeit (Always On)“ in [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Weitere Informationen zu Editionen, die die Datenbankspiegelung vollständig unterstützen, finden Sie unter „Hohe Verfügbarkeit (Always On)“ in [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Datenbank-Spiegelungssitzung asynchron ausgeführt. Im asynchronen Betrieb wird nur ein Betriebsmodus unterstützt, nämlich der Modus für hohe Leistung. Dieser Modus verbessert die Leistung auf Kosten der hohen Verfügbarkeit. Im Modus für hohe Leistung werden nur der Prinzipalserver und der Spiegelserver verwendet. Probleme auf dem Spiegelserver haben nie Auswirkungen auf den Prinzipalserver. Bei einem Ausfall des Prinzipalservers wird die Spiegeldatenbank als DISCONNECTED gekennzeichnet, steht jedoch als betriebsbereit zur Verfügung.  
   
@@ -63,7 +57,7 @@ caps.handback.revision: 21
   
  Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Leistung.  
   
- ![Reine Partnerkonfiguration einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Reine Partnerkonfiguration einer Sitzung")  
+ ![Reine Partnerkonfiguration einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
   
  Sobald im Modus für hohe Leistung der Prinzipalserver das Protokoll für eine Transaktion an den Spiegelserver sendet, wird vom Prinzipalserver eine Bestätigung an den Client gesendet, ohne auf eine Bestätigung vom Spiegelserver zu warten. Für Transaktionen wird ein Commit ausgeführt, ohne darauf zu warten, dass der Spiegelserver das Protokoll auf dem Datenträger speichert. Im asynchronen Betrieb kann der Prinzipalserver mit minimaler Transaktionslatenzzeit ausgeführt werden.  
   
@@ -154,14 +148,14 @@ caps.handback.revision: 21
 ###  <a name="HighSafetyWithOutAutoFailover"></a> Modus für hohe Sicherheit ohne automatisches Failover  
  Die folgende Abbildung veranschaulicht die Konfiguration des Modus für hohe Sicherheit ohne automatisches Failover. Die Konfiguration besteht nur aus den zwei Partnern.  
   
- ![Partnerkommunikation ohne Zeugen](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partnerkommunikation ohne Zeugen")  
+ ![Partnerkommunikation ohne Zeugen](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
   
- Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt. Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalserverinstanz in Betrieb und wird ungeschützt ausgeführt (d. h., ohne die Spiegelung der Daten). Wenn der Prinzipalserver ausfällt, wird die Spiegelung unterbrochen, der Dienst kann aber auf dem Spiegelserver erzwungen werden (mit möglichem Datenverlust). Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+ Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt. Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalserverinstanz in Betrieb und wird ungeschützt ausgeführt (d. h., ohne die Spiegelung der Daten). Wenn der Prinzipalserver ausfällt, wird die Spiegelung unterbrochen, der Dienst kann aber auf dem Spiegelserver erzwungen werden (mit möglichem Datenverlust). Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)herunter.  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> Modus für hohe Sicherheit mit automatischem Failover  
  Automatisches Failover bietet eine hohe Verfügbarkeit, indem sichergestellt wird, dass die Datenbank trotz Ausfall eines Servers weiterhin bedient wird. Zur Unterstützung eines automatischen Failovers muss die Sitzung eine dritte Serverinstanz besitzen, den *Zeugen*, der sich idealerweise auf einem dritten Computer befindet. Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Sicherheit mit automatischem Failover.  
   
- ![Der Zeuge und die zwei Partner einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "Der Zeuge und die zwei Partner einer Sitzung")  
+ ![Der Zeuge und die zwei Partner einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
   
  Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover einfach dadurch, dass er prüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
@@ -190,7 +184,7 @@ caps.handback.revision: 21
  In diesem Abschnitt wird eine Datenbank-Spiegelungssitzung im Hinblick auf die ALTER DATABASE-Einstellungen und die Status der gespiegelten Datenbank und des Zeugen (sofern vorhanden) beschrieben. Der Abschnitt ist für Benutzer bestimmt, die Datenbankspiegelungen primär oder ausschließlich mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anstelle von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten.  
   
 > [!TIP]  
->  Als Alternative zu [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie den Betriebsmodus einer Sitzung im Objekt-Explorer mithilfe der Seite **Spiegelung** des Dialogfelds **Datenbankeigenschaften** steuern. Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+>  Als Alternative zu [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie den Betriebsmodus einer Sitzung im Objekt-Explorer mithilfe der Seite **Spiegelung** des Dialogfelds **Datenbankeigenschaften** steuern. Weitere Informationen finden Sie im Abschnitt zu [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **In diesem Abschnitt:**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **In diesem Abschnitt:**  
   
--   [Transaktionssicherheit](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [Zeugenstatus](#WitnessState)  
   
-####  <a name="TxnSafety"></a> Transaktionssicherheit  
+####  <a name="TxnSafety"></a> Transaction Safety  
  Bei der Transaktionssicherheit handelt es sich um eine spiegelungsspezifische Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron betrieben wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
 -   SAFETY FULL  
@@ -218,11 +212,11 @@ caps.handback.revision: 21
   
      Wenn Sie mithilfe von ALTER DATABASE-Anweisungen eine Sitzung einrichten, wird die Sitzung mit der SAFETY-Einstellung FULL begonnen. Die Sitzung startet also im Modus mit hoher Sicherheit. Nachdem die Sitzung begonnen hat, können Sie einen Zeugen hinzufügen.  
   
-     Weitere Informationen finden Sie unter [Synchrone Datenbankspiegelung (Modus für hohe Sicherheit)](#Sync) (zuvor in diesem Thema beschrieben).  
+     Weitere Informationen finden Sie unter [Synchrone Datenbankspiegelung (Modus für hohe Sicherheit)](#Sync)(zuvor in diesem Thema beschrieben).  
   
 -   SAFETY OFF  
   
-     Durch das Deaktivieren der Transaktionssicherheit wird die Sitzung asynchron im Modus mit hoher Leistung betrieben. Wenn die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte die WITNESS-Eigenschaft ebenfalls auf OFF festgelegt werden (Standardeinstellung). Informationen zur Auswirkung der Zeugenoption im Modus für hohe Leistung finden Sie im Abschnitt [Der Zeugenstatus](#WitnessState) weiter unten in diesem Thema. Weitere Informationen zum Ausführen mit deaktivierter Transaktionssicherheit finden Sie unter [Asynchrone Datenbankspiegelung (Modus für hohe Leistung)](#async) (zuvor in diesem Thema beschrieben).  
+     Durch das Deaktivieren der Transaktionssicherheit wird die Sitzung asynchron im Modus mit hoher Leistung betrieben. Wenn die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte die WITNESS-Eigenschaft ebenfalls auf OFF festgelegt werden (Standardeinstellung). Informationen zur Auswirkung der Zeugenoption im Modus für hohe Leistung finden Sie im Abschnitt [Der Zeugenstatus](#WitnessState)weiter unten in diesem Thema. Weitere Informationen zum Ausführen mit deaktivierter Transaktionssicherheit finden Sie unter [Asynchrone Datenbankspiegelung (Modus für hohe Leistung)](#asynchronous-database-mirroring-high-performance-mode)(zuvor in diesem Thema beschrieben).  
   
  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der **sys.database_mirroring**-Katalogsicht in der **mirroring_safety_level**-Spalte und der **mirroring_safety_level_desc**-Spalte aufgezeichnet. Weitere Informationen finden Sie unter [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
@@ -246,7 +240,7 @@ caps.handback.revision: 21
 |Betriebsmodus|Transaktionssicherheit|Zeugenstatus|  
 |--------------------|------------------------|-------------------|  
 |Modus mit hoher Leistung|OFF|NULL (kein Zeuge)**|  
-|Der Modus mit hoher Sicherheit ohne automatisches Failover|FULL|NULL (kein Zeuge)|  
+|Modus für hohe Sicherheit ohne automatisches Failover|FULL|NULL (kein Zeuge)|  
 |Modus für hohe Sicherheit mit automatischem Failover*|FULL|CONNECTED|  
   
  *Wenn der Zeuge getrennt wird, sollten Sie WITNESS auf OFF festlegen, bis die Serverinstanz des Zeugen wieder verfügbar ist.  
@@ -254,7 +248,7 @@ caps.handback.revision: 21
  **Wenn ein Zeuge im Modus für hohe Leistung vorhanden ist, nimmt er nicht an der Sitzung teil. Um die Datenbank verfügbar zu machen, müssen jedoch eine Verbindung mit mindestens zwei Serverinstanzen bestehen bleiben. Daher wird empfohlen, die WITNESS-Eigenschaft in Sitzungen im Modus für hohe Leistung auf OFF festgelegt zu lassen. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
- Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring**-Katalogsicht. Die wichtigen Spalten sind die folgenden:  
+ Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  
   
 |Faktor|Spalten|Beschreibung|  
 |------------|-------------|-----------------|  
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

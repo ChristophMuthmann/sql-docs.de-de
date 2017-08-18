@@ -1,37 +1,42 @@
 ---
-title: "Informationen zum Protokollversand (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sekundärserver [SQL Server]"
-  - "Protokollversand [SQL Server], Aufträge"
-  - "Kopieraufträge [SQL Server]"
-  - "Primäre Datenbanken [SQL Server]"
-  - "Protokollversand [SQL Server], überwachen"
-  - "Protokollversand [SQL Server], Informationen zum Protokollversand"
-  - "Warnungsaufträge [SQL Server]"
-  - "Verfügbarkeit [SQL Server]"
-  - "Aufträge [SQL Server], Protokollversand"
-  - "Überwachen von Servern [SQL Server]"
-  - "Wiederherstellungsaufträge [SQL Server]"
-  - "Protokollversand [SQL Server]"
-  - "Sicherungsaufträge [SQL Server]"
-  - "Primärserver [SQL Server]"
+title: Informationen zum Protokollversand (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Informationen zum Protokollversand (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie automatisch Transaktionsprotokollsicherungen von einer *primären Datenbank* auf einer Instanz eines *primären Servers* an eine oder mehrere *sekundäre Datenbanken* auf separaten Instanzen eines *sekundären Servers* senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  
   
  **In diesem Thema:**  
@@ -55,20 +60,20 @@ caps.handback.revision: 65
 -   Ermöglicht eine vom Benutzer angegebene Verzögerung zwischen dem Zeitpunkt, zu dem der primäre Server das Protokoll der primären Datenbank sichert, und dem Zeitpunkt, zu dem die sekundären Server die Protokollsicherung wiederherstellen (anwenden) müssen. Eine längere Verzögerung kann nützlich sein, wenn z. B. versehentlich Daten in der primären Datenbank geändert werden. Wenn die versehentliche Änderung schnell bemerkt wird, kann eine Verzögerung es Ihnen ermöglichen, die noch unveränderten Daten von einer sekundären Datenbank abzurufen, bevor die Änderung dort widergespiegelt wird.  
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
- Primärer Server  
- Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die der Produktionsserver ist.  
+ primären Servers  
+ Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die der Produktionsserver ist.  
   
- Primäre Datenbank  
+ primären Datenbank  
  Die Datenbank auf dem primären Server, die Sie auf einem anderen Server sichern möchten. Die gesamte Verwaltung der Protokollversandkonfiguration über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erfolgt von der primären Datenbank aus.  
   
- Sekundärer Server  
- Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], auf der Sie eine betriebsbereite Standby-Kopie der primären Datenbank bereithalten möchten.  
+ sekundären Servers  
+ Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf der Sie eine betriebsbereite Standby-Kopie der primären Datenbank bereithalten möchten.  
   
  Sekundäre Datenbank  
  Die betriebsbereite Standby-Kopie der primären Datenbank. Sie sekundäre Datenbank kann sich im Status RECOVERING oder STANDBY befinden, in dem die Datenbank für den eingeschränkten schreibgeschützten Zugriff verfügbar ist.  
   
  Überwachungsserver  
- Eine optionale Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die alle Informationen zum Protokollversand nachverfolgt:  
+ Eine optionale Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die alle Informationen zum Protokollversand nachverfolgt:  
   
 -   Wann das Transaktionsprotokoll in der primären Datenbank zuletzt gesichert wurde.  
   
@@ -80,16 +85,16 @@ caps.handback.revision: 65
 >  Nach dem Konfigurieren des Überwachungsservers kann dieser nicht ohne vorhergehendes Entfernen des Protokollversands geändert werden.  
   
  Sicherungsauftrag  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag, der den Sicherungsvorgang ausführt, den Verlauf auf dem lokalen Server und dem Überwachungsserver protokolliert und veraltete Sicherungsdateien und Verlaufsinformationen löscht. Wenn der Protokollversand aktiviert ist, wird die Auftragskategorie "Protokollversandsicherung" in der primären Serverinstanz erstellt.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag, der den Sicherungsvorgang ausführt, den Verlauf auf dem lokalen Server und dem Überwachungsserver protokolliert und veraltete Sicherungsdateien und Verlaufsinformationen löscht. Wenn der Protokollversand aktiviert ist, wird die Auftragskategorie "Protokollversandsicherung" in der primären Serverinstanz erstellt.  
   
  Kopierauftrag  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag, der die Sicherungsdateien vom primären Server in ein konfigurierbares Ziel auf dem sekundären Server kopiert und den Verlauf auf dem sekundären Server und dem Überwachungsserver protokolliert. Wenn der Protokollversand auf einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandkopie" in jeder sekundären Serverinstanz in einer Protokollversandkonfiguration erstellt.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag, der die Sicherungsdateien vom primären Server in ein konfigurierbares Ziel auf dem sekundären Server kopiert und den Verlauf auf dem sekundären Server und dem Überwachungsserver protokolliert. Wenn der Protokollversand auf einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandkopie" in jeder sekundären Serverinstanz in einer Protokollversandkonfiguration erstellt.  
   
  Wiederherstellungsauftrag  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag, der die kopierten Sicherungsdateien in den sekundären Datenbanken wiederherstellt. Er protokolliert den Verlauf auf dem lokalen Server und dem Überwachungsserver und löscht veraltete Dateien und Verlaufsinformationen. Wenn der Protokollversand in einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandwiederherstellung" in der sekundären Serverinstanz erstellt.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag, der die kopierten Sicherungsdateien in den sekundären Datenbanken wiederherstellt. Er protokolliert den Verlauf auf dem lokalen Server und dem Überwachungsserver und löscht veraltete Dateien und Verlaufsinformationen. Wenn der Protokollversand in einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandwiederherstellung" in der sekundären Serverinstanz erstellt.  
   
  Warnungsauftrag  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag, der Warnungen für primäre und sekundäre Datenbanken auslöst, wenn ein Sicherungs- oder ein Wiederherstellungsvorgang nicht erfolgreich innerhalb eines angegebenen Schwellenwerts abgeschlossen wird. Wenn der Protokollversand in einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandwarnung"in der Überwachungsserverinstanz erstellt.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag, der Warnungen für primäre und sekundäre Datenbanken auslöst, wenn ein Sicherungs- oder ein Wiederherstellungsvorgang nicht erfolgreich innerhalb eines angegebenen Schwellenwerts abgeschlossen wird. Wenn der Protokollversand in einer Datenbank aktiviert ist, wird die Auftragskategorie "Protokollversandwarnung"in der Überwachungsserverinstanz erstellt.  
   
 > [!TIP]  
 >  Für jede Warnung müssen Sie eine Warnungsnummer angeben. Stellen Sie sicher auch sicher, dass die Warnung zum Benachrichtigen eines Bedieners konfiguriert ist, wenn eine Warnung ausgelöst wird.  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  Darüber hinaus können Sie Warnungen für die Protokollversandkonfiguration konfigurieren.  
   
-### A Typische Protokollversandkonfiguration  
+### <a name="a-typical-log-shipping-configuration"></a>A Typische Protokollversandkonfiguration  
  In der folgenden Abbildung wird eine Protokollversandkonfiguration mit der primären Serverinstanz, drei sekundären Serverinstanzen und einer Überwachungsserverinstanz dargestellt. In der Abbildung werden die Schritte, die vom Sicherungs-, Kopier- und Wiederherstellungsauftrag ausgeführt werden, folgendermaßen veranschaulicht:  
   
 1.  Die primäre Serverinstanz führt den Sicherungsauftrag aus, um das Transaktionsprotokoll in der primären Datenbank zu sichern. Diese Serverinstanz speichert die Protokollsicherung dann in einer primären Protokollsicherungsdatei, die an den Sicherungsordner gesendet wird.  In dieser Abbildung befindet sich der Sicherungsordner in einem freigegebenen Verzeichnis, der *Sicherungsfreigabe*.  
@@ -122,12 +127,12 @@ caps.handback.revision: 65
   
  Die primäre Serverinstanz und die sekundäre Serverinstanz senden ihre eigenen Verlaufs- und Statusinformationen an die Überwachungsserverinstanz.  
   
- ![Die Konfiguration zeigt Sicherungs-, Kopier- & Wiederherstellungsaufträge](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Die Konfiguration zeigt Sicherungs-, Kopier- & Wiederherstellungsaufträge")  
+ ![Die Konfiguration zeigt Sicherungs-, Kopier- und Wiederherstellungsaufträge an](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
   
 ##  <a name="Interoperability"></a> Interoperabilität  
- Der Protokollversand kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden:  
+ Der Protokollversand kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden:  
   
--   [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

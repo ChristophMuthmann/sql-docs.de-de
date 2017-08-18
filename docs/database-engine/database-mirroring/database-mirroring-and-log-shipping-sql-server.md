@@ -1,25 +1,30 @@
 ---
-title: "Datenbankspiegelung und Protokollversand (SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbankspiegelung [SQL Server], Interoperabilität"
-  - "Protokollversand [SQL Server], Datenbankspiegelung"
+title: Datenbankspiegelung und Protokollversand (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Datenbankspiegelung und Protokollversand (SQL&#160;Server)
+# <a name="database-mirroring-and-log-shipping-sql-server"></a>Datenbankspiegelung und Protokollversand (SQL Server)
   Für eine Datenbank kann eine Datenbankspiegelung oder ein Protokollversand ausgeführt werden. Datenbankspiegelung und Protokollversand können auch gleichzeitig ausgeführt werden. Bei der Entscheidung für eine Methode sollten Sie Folgendes berücksichtigen:  
   
 -   Wie viele Zielserver benötigen Sie?  
@@ -35,7 +40,7 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Einführungen zu diesen Technologien finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md) und [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Kombinieren von Protokollversand und Datenbankspiegelung  
+## <a name="combining-log-shipping-and-database-mirroring"></a>Kombinieren von Protokollversand und Datenbankspiegelung  
  Die Prinzipaldatenbank in einer Spiegelungssitzung kann auch als primäre Datenbank bei der Protokollversandkonfiguration dienen, oder umgekehrt, da die Sicherungsfreigabe für den Protokollversand intakt ist. Die Datenbank-Spiegelungssitzung wird in einem beliebigen Betriebsmodus ausgeführt, egal ob synchron (mit der Transaktionssicherheit festgelegt auf FULL) oder asynchron (mit der Transaktionssicherheit festgelegt auf OFF).  
   
 > [!NOTE]  
@@ -46,37 +51,37 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Die Einstellungen für die Unterscheidung nach Groß-/Kleinschreibung der am Protokollversand beteiligten Server sollten übereinstimmen.  
   
- Während einer Protokollversandsitzung erstellen Sicherungsaufträge in der primären Datenbank Protokollsicherungen in einem Sicherungsordner. Von dort werden die Sicherungen von den Kopieraufträgen der sekundären Server kopiert. Damit die Sicherungs- und Kopieraufträge erfolgreich ausgeführt werden, benötigen sie Zugriff auf den Sicherungsordner des Protokollversands. Zur Optimierung der Verfügbarkeit des primären Servers empfiehlt es sich, den Sicherungsordner in einem freigegebenen Sicherungsspeicherort auf einem separaten Hostcomputer anzulegen. Stellen Sie sicher, dass alle Protokollversandserver, einschließlich des Spiegelservers bzw. des primären Servers, Zugriff auf den freigegebenen Sicherungsspeicherort haben (wird als *Sicherungsfreigabe* bezeichnet).  
+ Während einer Protokollversandsitzung erstellen Sicherungsaufträge in der primären Datenbank Protokollsicherungen in einem Sicherungsordner. Von dort werden die Sicherungen von den Kopieraufträgen der sekundären Server kopiert. Damit die Sicherungs- und Kopieraufträge erfolgreich ausgeführt werden, benötigen sie Zugriff auf den Sicherungsordner des Protokollversands. Zur Optimierung der Verfügbarkeit des primären Servers empfiehlt es sich, den Sicherungsordner in einem freigegebenen Sicherungsspeicherort auf einem separaten Hostcomputer anzulegen. Stellen Sie sicher, dass alle Protokollversandserver, einschließlich des Spiegelservers bzw. des primären Servers, Zugriff auf den freigegebenen Sicherungsspeicherort haben (wird als *Sicherungsfreigabe*bezeichnet).  
   
- Damit der Protokollversand nach einem Failover der Datenbankspiegelung fortgesetzt wird, müssen Sie auch den Spiegelserver als primären Server konfigurieren. Verwenden Sie dabei die gleiche Konfiguration wie für den primären Server in der Prinzipaldatenbank. Die Spiegeldatenbank befindet sich im Wiederherstellungsstatus, wodurch die Sicherungsaufträge am Wiederherstellen des Protokolls in der Spiegeldatenbank gehindert werden. Dadurch wird sichergestellt, dass die Spiegeldatenbank bzw. primäre Datenbank die Prinzipaldatenbank bzw. primäre Datenbank nicht beeinträchtigt, deren Protokollsicherungen aktuell von sekundären Servern kopiert werden. Nach der Ausführung des Sicherungsauftrags für die Spiegeldatenbank bzw. primäre Datenbank protokolliert der Sicherungsauftrag eine Meldung in der **log_shipping_monitor_history_detail**-Tabelle, und der Agentauftrag gibt einen Erfolgsstatus zurück. Dadurch sollen unbegründete Warnungen vermieden werden.  
+ Damit der Protokollversand nach einem Failover der Datenbankspiegelung fortgesetzt wird, müssen Sie auch den Spiegelserver als primären Server konfigurieren. Verwenden Sie dabei die gleiche Konfiguration wie für den primären Server in der Prinzipaldatenbank. Die Spiegeldatenbank befindet sich im Wiederherstellungsstatus, wodurch die Sicherungsaufträge am Wiederherstellen des Protokolls in der Spiegeldatenbank gehindert werden. Dadurch wird sichergestellt, dass die Spiegeldatenbank bzw. primäre Datenbank die Prinzipaldatenbank bzw. primäre Datenbank nicht beeinträchtigt, deren Protokollsicherungen aktuell von sekundären Servern kopiert werden. Nach der Ausführung des Sicherungsauftrags für die Spiegeldatenbank bzw. primäre Datenbank protokolliert der Sicherungsauftrag eine Meldung in der**log_shipping_monitor_history_detail** -Tabelle, und der Agentauftrag gibt einen Erfolgsstatus zurück. Dadurch sollen unbegründete Warnungen vermieden werden.  
   
  Die Spiegeldatenbank bzw. primäre Datenbank ist in der Protokollversandsitzung inaktiv. Bei einem Failover der Spiegelung wird die ehemalige Spiegeldatenbank als Prinzipaldatenbank online geschaltet. Nun wird diese Datenbank auch als primäre Datenbank für den Protokollversand aktiviert. Die Sicherungsaufträge für den Protokollversand, die zuvor keinen Protokollversand für diese Datenbank ausführen konnten, starten den Protokollversand. Dagegen wird durch ein Failover die ehemalige Prinzipaldatenbank bzw. die primäre Datenbank zur neuen Spiegeldatenbank bzw. primären Datenbank und sie erhalten den Wiederherstellungsstatus. Für Sicherungsaufträge in dieser Datenbank wird dann keine Protokollsicherung mehr ausgeführt.  
   
 > [!NOTE]  
 >  Bei einem automatischen Failover erfolgt der Wechsel zur Spiegelrolle, wenn die ehemalige Prinzipaldatenbank bzw. primäre Datenbank wieder an der Spiegelungssitzung teilnimmt.  
   
- Zur Ausführung in einem Modus für hohe Sicherheit mit automatischem Failover wird die Datenbankspiegelungssitzung mit einer zusätzlichen Serverinstanz konfiguriert, die als *Zeuge* bezeichnet wird. Falls die Prinzipaldatenbank aus irgendeinem Grund verloren geht, nachdem die Datenbank synchronisiert wurde, und falls der Spiegelserver und der Zeuge noch miteinander kommunizieren können, wird ein automatisches Failover ausgeführt. Durch ein automatisches Failover übernimmt der Spiegelserver die Prinzipalrolle und die Datenbank wird als Prinzipaldatenbank online geschaltet. Falls der Sicherungsspeicherort für den Protokollversand für den neuen Prinzipalserver bzw. primären Server zugänglich ist, werden von dessen Sicherungsaufträgen Protokollsicherungen an diesen Speicherort gesendet. Mit dem synchronen Modus der Datenbankspiegelung wird sichergestellt, dass die Protokollkette nicht von einem Spiegelungsfailover betroffen ist und dass nur ein gültiges Protokoll wiederhergestellt wird. Die sekundären Server kopieren weiterhin Protokollsicherung, ohne zu wissen, dass eine andere Serverinstanz nun der primäre Server ist.  
+ Zur Ausführung in einem Modus für hohe Sicherheit mit automatischem Failover wird die Datenbankspiegelungssitzung mit einer zusätzlichen Serverinstanz konfiguriert, die als *Zeuge*bezeichnet wird. Falls die Prinzipaldatenbank aus irgendeinem Grund verloren geht, nachdem die Datenbank synchronisiert wurde, und falls der Spiegelserver und der Zeuge noch miteinander kommunizieren können, wird ein automatisches Failover ausgeführt. Durch ein automatisches Failover übernimmt der Spiegelserver die Prinzipalrolle und die Datenbank wird als Prinzipaldatenbank online geschaltet. Falls der Sicherungsspeicherort für den Protokollversand für den neuen Prinzipalserver bzw. primären Server zugänglich ist, werden von dessen Sicherungsaufträgen Protokollsicherungen an diesen Speicherort gesendet. Mit dem synchronen Modus der Datenbankspiegelung wird sichergestellt, dass die Protokollkette nicht von einem Spiegelungsfailover betroffen ist und dass nur ein gültiges Protokoll wiederhergestellt wird. Die sekundären Server kopieren weiterhin Protokollsicherung, ohne zu wissen, dass eine andere Serverinstanz nun der primäre Server ist.  
   
  Wenn Sie eine lokale Protokollversandüberwachung verwenden, müssen für dieses Szenario keine besonderen Aspekte beachtet werden. Informationen zum Verwenden einer Remoteüberwachungsinstanz für dieses Szenario finden Sie weiter unten im Abschnitt "Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz".  
   
-## Failover von der Prinzipaldatenbank zur Spiegeldatenbank  
+## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover von der Prinzipaldatenbank zur Spiegeldatenbank  
  Die folgende Abbildung veranschaulicht die Interaktion von Protokollversand und Datenbankspiegelung, wenn die Spiegelung im Modus für hohe Sicherheit mit automatischem Failover ausgeführt wird. Zunächst ist **Server_A** sowohl der Prinzipalserver für die Spiegelung als auch der primäre Server für den Protokollversand. **Server_B** ist der Spiegelserver und ist auch als primärer Server konfiguriert, der derzeit inaktiv ist. **Server_C** und **Server_D** sind sekundäre Protokollversandserver. Zur Optimierung der Verfügbarkeit der Protokollversandsitzung befindet sich der Sicherungsspeicherort in einem Freigabeverzeichnis auf einem separaten Hostcomputer.  
   
- ![Protokollversand und Datenbankspiegelung](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Protokollversand und Datenbankspiegelung")  
+ ![Protokollversand und Datenbankspiegelung](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
  Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. .  
   
-## Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz  
+## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz  
  Wenn der Protokollversand mit einer Remoteüberwachungsinstanz verwendet wird, hat das Kombinieren der Protokollversandsitzung und der Datenbankspiegelung Auswirkungen auf die Informationen in den Überwachungstabellen. Die Informationen zum primären Server sind eine Kombination der Informationen, die auf dem Prinzipalserver bzw. primären Server konfiguriert sind, und der auf jedem sekundären Server konfigurierten Überwachung.  
   
  Für eine möglichst nahtlose Überwachung sollten Sie bei Verwendung der Remoteüberwachung den ursprünglichen primären Namen angeben, wenn Sie den primären Server auf dem sekundären Server konfigurieren. Diese Vorgehensweise erleichtert außerdem das Ändern der Protokollversandkonfiguration des Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents. Weitere Informationen zur Überwachung finden Sie unter [Überwachen des Protokollversands &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md).  
   
-## Einrichten der Kombination aus Spiegelung und Protokollversand  
+## <a name="setting-up-mirroring-and-log-shipping-together"></a>Einrichten der Kombination aus Spiegelung und Protokollversand  
  Um die Datenbankspiegelung und den Protokollversand gemeinsam einzurichten, sind die folgenden Schritte erforderlich:  
   
 1.  Stellen Sie Sicherungen der Prinzipaldatenbank bzw. primären Datenbank mit der Option NORECOVERY auf einer anderen Serverinstanz wieder her, die dann später von der Datenbankspiegelung als Spiegeldatenbank für die Prinzipaldatenbank bzw. primäre Datenbank verwendet wird. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-2.  Einrichten der Datenbankspiegelung Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) oder [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+2.  Einrichten der Datenbankspiegelung Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) oder [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 3.  Stellen Sie Sicherungen der Prinzipaldatenbank bzw. primären Datenbank auf anderen Serverinstanzen wieder her, die dann später als sekundäre Datenbanken für den Protokollversand für die primäre Datenbank verwendet werden.  
   

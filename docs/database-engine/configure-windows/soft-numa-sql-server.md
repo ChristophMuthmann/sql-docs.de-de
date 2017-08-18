@@ -1,30 +1,35 @@
 ---
-title: "Soft-NUMA (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NUMA"
-  - "soft-NUMA"
-helpviewer_keywords: 
-  - "NUMA"
-  - "Non-Uniform Memory Access"
-  - "Soft-NUMA"
+title: Soft-NUMA (SQL Server) | Microsoft-Dokumentation
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NUMA
+- soft-NUMA
+helpviewer_keywords:
+- NUMA
+- non-uniform memory access
+- soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 53
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Soft-NUMA (SQL Server)
+# <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Das SQL Server-Datenbankmodul partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen.  Bei Prozessoren mit zehn oder mehr Kernen pro Socket, erhöht die Verwendung von Software-NUMA zum Teilen von NUMA-Hardwareknoten in der Regel die Skalierbarkeit und die Leistung, da Prozessoren mit zehn oder mehr Kernen pro Socket verwendet werden. Vor SQL Server 2014 SP2 war beim softwarebasierten NUMA (soft-NUMA) eine Bearbeitung der Registrierung erforderlich, um eine Affinitätsmaske für die Knotenkonfiguration hinzuzufügen. Außerdem wurde der softwarebasierte NUMA über einen Computer anstatt über eine Instanz konfiguriert.  In SQL Server 2014 SP2 und SQL Server 2016 wird soft-NUMA automatisch auf die Datenbank-Instanzebene konfiguriert, wenn der SQL Server-Dienst startet.  
@@ -34,7 +39,7 @@ caps.handback.revision: 52
   
 ## <a name="automatic-soft-numa"></a>Automatischer Soft-NUMA  
  Immer wenn der Datenbankmodul-Server in SQL Server 2016 beim Start mehr als acht physische CPU-Kerne pro NUMA-Knoten oder Fassung erkennt, werden standardmäßig automatisch Soft-NUMA-Knoten erstellt. Prozessorkerne mit Hyperthreading werden beim Zählen der physischen Kerne auf einem Knoten nicht unterschieden.  Wenn mehr als 8 physische Prozessoren pro Fassung erkannt werden, erstellt der Datenbankmodul-Dienst Soft-NUMA-Knoten, die im Idealfall acht Knoten enthalten, jedoch auch fünf oder bis zu neun logische Kerne pro Knoten enthalten können. Die Größe des Hardwareknotens kann durch eine CPU-Affinitätsmaske eingeschränkt werden. Finden Sie unter   
-            [ALTER SERVER CONFIGURATION &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) Die Anzahl von NUMA-Knoten wird nie die maximale Anzahl von unterstützten NUMA-Knoten übersteigen.  
+            [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) Die Anzahl von NUMA-Knoten wird nie die maximale Anzahl von unterstützten NUMA-Knoten übersteigen.  
   
  Sie können soft-NUMA mithilfe der [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) -Anweisung mit dem Argument SET SOFTNUMA deaktivieren oder wieder aktivieren. Nach der Änderung des Werts dieser Einstellung ist ein Neustart des Datenbankmoduls erforderlich, damit diese wirksam wird.  
   
@@ -52,12 +57,14 @@ caps.handback.revision: 52
 ## <a name="manual-soft-numa"></a>Manueller Soft-NUMA  
  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuell konfigurieren, um Soft-NUMA durch Deaktivieren der automatischen Soft_NUMA und Bearbeiten der Registrierung zu verwenden, damit Sie eine Affinitätsmaske für die Knotenkonfiguration hinzufügen können. Wenn Sie diese Methode verwenden, kann die Soft-NUMA-Maske als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (Die Verwendung von QWORD-Werten ist in Versionen vor Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht möglich.) Nach Änderung der Registrierung müssen Sie das [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu starten, damit die Soft-NUMA-Konfiguration wirksam wird.  
   
-> [!TIP] Die Nummerierung der CPUs beginnt mit 0.  
+> [!TIP]
+> Die Nummerierung der CPUs beginnt mit 0.  
 
-> [!WARNING] [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+> [!WARNING]
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
  Betrachten Sie das folgende Beispiel. Ein Computer mit acht CPUs verfügt über keine NUMA-Hardware. Drei Soft-NUMA-Knoten werden konfiguriert.   
-            [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz A wird für die Verwendung der CPUs 0 bis 3 konfiguriert. Eine zweite [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz wird installiert und für die Verwendung der CPUs 4 bis 7 konfiguriert. Das Beispiel kann wie folgt visuell dargestellt werden:  
+            [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz A wird für die Verwendung der CPUs 0 bis 3 konfiguriert. Eine zweite [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz wird installiert und für die Verwendung der CPUs 4 bis 7 konfiguriert. Das Beispiel kann wie folgt visuell dargestellt werden:  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -70,7 +77,8 @@ caps.handback.revision: 52
  Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter   
             [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)(Vorgehensweise: Soft-NUMA, E/A-Abschlussthreads, LAZY WRITER-Worker- und Arbeitsspeicherknoten).  
   
-> [!NOTE] Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion] (../Token/ssNoVersion_md.md)].  
+> [!NOTE]
+> Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="set-the-cpu-affinity-mask"></a>Festlegen der CPU-Affinitätsmaske  
  Führen Sie auf Instanz A die folgende Anweisung aus, um die Instanz durch Festlegen der CPU-Affinitätsmaske für die Verwendung der CPUs 0, 1, 2 und 3 zu konfigurieren:  
@@ -90,11 +98,12 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ### <a name="map-soft-numa-nodes-to-cpus"></a>Zuordnen von Soft-NUMA-Knoten zu den CPUs  
  Fügen Sie mithilfe des Registrierungs-Editors (regedit.exe) die folgenden Registrierungsschlüssel hinzu, um den CPUs 0 und 1 den Soft-NUMA-Knoten 0, den CPUs 2 und 3 den Soft-NUMA-Knoten 1 und den CPUs 4, 5, 6 und 7 den Soft-NUMA-Knoten 2 zuzuordnen.  
   
-> [!TIP] Verwenden Sie zum Angeben der CPUs 60 bis 63 den QWORD-Wert F000000000000000 oder den BINARY-Wert 1111000000000000000000000000000000000000000000000000000000000000.  
+> [!TIP]
+> Verwenden Sie zum Angeben der CPUs 60 bis 63 den QWORD-Wert F000000000000000 oder den BINARY-Wert 1111000000000000000000000000000000000000000000000000000000000000.  
   
  Legen Sie für das folgende Beispiel einen DL580 G9-Server mit 18 Kernen pro Fassung (in 4 Fassungen) zugrunde, wobei jede Fassung eine eigene K-Gruppe darstellt. Eine Soft-NUMA-Konfiguration, die Sie dafür erstellen, könnte etwa so aussehen. (6 Kerne pro Knoten, 3 Knoten pro Gruppe, 4 Gruppen).  
   
-|Beispiel für einen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Server mit mehreren K-Gruppen|Typ|Wertname|Wertdaten|  
+|Beispiel für einen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Server mit mehreren K-Gruppen|Typ|Wertname|Wertdaten|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Gruppieren|0|  
@@ -130,7 +139,8 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): Die Spalten „softnuma“ und „softnuma_desc“ zeigen die Konfigurationswerte an.  
   
-> [!NOTE] Obwohl Sie den ausgeführten Wert für automatischen soft-NUMA mithilfe von [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) anzeigen können, können Sie dessen Wert mit **sp_configure** nicht ändern. Sie müssen die [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)-Anweisung mit dem SET SOFTNUMA-Argument verwenden.  
+> [!NOTE]
+> Obwohl Sie den ausgeführten Wert für automatischen soft-NUMA mithilfe von [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) anzeigen können, können Sie dessen Wert mit **sp_configure** nicht ändern. Sie müssen die [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)-Anweisung mit dem SET SOFTNUMA-Argument verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von TCP/IP-Ports zu NUMA-Knoten &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
@@ -138,3 +148,5 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+
+

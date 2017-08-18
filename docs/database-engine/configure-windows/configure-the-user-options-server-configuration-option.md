@@ -1,26 +1,31 @@
 ---
-title: "Konfigurieren der Serverkonfigurationsoption Benutzeroptionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Globale Standards für alle Benutzer [SQL Server]"
-  - "Benutzer [SQL Server], globale Standards"
-  - "Benutzeroptionen (Option) [SQL Server]"
+title: "Konfigurieren der Serverkonfigurationsoption „Benutzeroptionen“ | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
+# <a name="configure-the-user-options-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Benutzeroptionen** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die Option **Benutzeroptionen** gibt globale Standardwerte für alle Benutzer an. Es wird eine Liste der Standardoptionen der Abfrageverarbeitung für die Dauer der Sitzung eines Benutzers erstellt. Mit der Option **Benutzeroptionen** können Sie die Standardwerte der SET-Optionen ändern (wenn die Standardeinstellungen des Servers nicht verwendet werden können).  
@@ -41,7 +46,7 @@ caps.handback.revision: 25
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachbereitung:** [Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“](#FollowUp)  
+-   **Nachbereitung:**  [Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 25
     |8192|NUMERIC_ROUNDABORT|Generiert einen Fehler, wenn in einem Ausdruck ein Genauigkeitsverlust auftritt.|  
     |16384|XACT_ABORT|Führt ein Rollback für eine Transaktion aus, wenn eine Transact-SQL-Anweisung einen Laufzeitfehler auslöst.|  
   
--   Die Bitpositionen in **Benutzeroptionen** sind mit den Positionen in @@OPTIONS identisch. Jede Verbindung verfügt über eine eigene @@OPTIONS-Funktion, die die Konfigurationsumgebung darstellt. Bei der Anmeldung bei einer Instanz von \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhält ein Benutzer eine Standardumgebung, die dem Wert von @@OPTIONS den aktuellen Wert von **Benutzeroptionen** zuweist. Das Ausführen von SET-Anweisungen für **Benutzeroptionen** wirkt sich ausschließlich auf den entsprechenden Wert in der @@OPTIONS-Funktion der Sitzung aus. Alle Verbindungen, die nach der Änderung dieser Einstellung erstellt werden, erhalten den neuen Wert.  
+-   Die Bitpositionen in **Benutzeroptionen** sind mit den Positionen in @@OPTIONS identisch. Jede Verbindung verfügt über eine eigene @@OPTIONS-Funktion, die die Konfigurationsumgebung darstellt. Bei der Anmeldung bei einer Instanz von \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhält ein Benutzer eine Standardumgebung, die @@OPTIONS den aktuellen Wert von **Benutzeroptionen** zuweist. Das Ausführen von SET-Anweisungen für **Benutzeroptionen** wirkt sich ausschließlich auf den entsprechenden Wert in der @@OPTIONS-Funktion der Sitzung aus. Alle Verbindungen, die nach der Änderung dieser Einstellung erstellt werden, erhalten den neuen Wert.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -76,9 +81,9 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
-#### So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
+#### <a name="to-configure-the-user-options-configuration-option"></a>So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften**aus.  
   
 2.  Klicken Sie auf den Knoten **Verbindungen** .  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
+#### <a name="to-configure-the-user-options-configuration-option"></a>So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
@@ -109,10 +114,11 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Konfigurationsoption "Benutzeroptionen"  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

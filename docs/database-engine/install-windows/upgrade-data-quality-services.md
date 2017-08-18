@@ -1,32 +1,39 @@
 ---
-title: "Aktualisieren von Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aktualisieren von Data Quality Services | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Aktualisieren von Data Quality Services
-  Dieses Thema enthält Informationen dazu, wie Sie die vorhandene Data Quality Services-Installation (DQS) auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 aktualisieren. Während des Upgrades des Data Quality-Servers in DQS auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] muss auch das DQS-Datenbankschema aktualisiert werden.  
+# <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
+Dieses Thema enthält Informationen dazu, wie Sie die vorhandene [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality Services-Installation (DQS) aktualisieren. Während des Upgrades des [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers muss auch das DQS-Datenbankschema aktualisiert werden.  
   
 > [!IMPORTANT]  
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
-> -   Um eine Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
-> -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkID=506665) herunterladen.  
+> -   Um eine Verbindung mit dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
+> -   Nachdem Data Quality Services und Master Data Services aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkID=506665)herunterladen.  
   
 ##  <a name="Prerequisites"></a> Voraussetzungen  
   
--   Sie müssen als Mitglied der Administratorgruppe auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]-Computer angemeldet sein.  
+-   Sie müssen als Mitglied der Administratorgruppe auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computer angemeldet sein.  
   
 -   Ihr Windows-Benutzerkonto muss Mitglied der festen Serverrolle sysadmin auf der SQL Server-Instanz sein, auf der der [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installiert ist.  
   
@@ -35,27 +42,32 @@ caps.handback.revision: 12
   
 1.  Sichern Sie die DQS-Datenbanken, bevor Sie den Upgradevorgang starten. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
-2.  Aktualisieren Sie die SQL Server-Instanz mit der DQS-Installation auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Aktualisieren Sie die SQL Server-Instanz, auf der DQS installiert ist.  
   
-    1.  Führen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Setup-Assistenten aus.  
+    1.  Führen Sie den [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Setup-Assistenten aus.  
   
     2.  Klicken Sie im linken Bereich auf **Installation**.  
   
-    3.  Klicken Sie im rechten Bereich auf **Von SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 oder SQL Server 2014 aktualisieren**.  
+    3.  Klicken Sie im rechten Bereich auf **Upgrade von...** einer vorherigen Version von SQL Server.  
   
     4.  Schließen Sie den Setup-Assistenten ab.  
   
         > [!NOTE]  
-        >  Auf diese Weise wird die SQL Server-Instanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert. Außerdem wird der neueste Data Quality-Client installiert, wenn zuvor ein Data Quality-Client auf dem Computer installiert war. Wenn auf anderen Computern ein Data Quality-Client installiert ist, müssen Sie auf diesen Computern die Teilschritte unter Schritt 2 ausführen, um die aktuelle Version des Data Quality-Clients zu installieren. Der Setup-Assistent installiert die aktuelle Version neben der vorhandenen Version des Data Quality-Clients. Nachdem Sie das DQS-Datenbankschema aktualisiert haben, können Sie mit der aktuellen oder einer früheren Version des Data Quality-Clients eine Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Data Quality-Servers herstellen.  
+        >  Auf diese Weise wird die SQL Server-Instanz auf [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] aktualisiert. Außerdem wird der neueste Data Quality-Client installiert, wenn zuvor ein Data Quality-Client auf dem Computer installiert war. Wenn auf anderen Computern ein Data Quality-Client installiert ist, müssen Sie auf diesen Computern die Teilschritte unter Schritt 2 ausführen, um die aktuelle Version des Data Quality-Clients zu installieren. Der Setup-Assistent installiert die aktuelle Version neben der vorhandenen Version des Data Quality-Clients. Nachdem Sie das DQS-Datenbankschema aktualisiert haben, können Sie mit der aktuellen oder einer früheren Version des Data Quality-Clients eine Verbindung mit der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Data Quality-Servers herstellen.  
   
 3.  Aktualisieren Sie das DQS-Datenbankschema.  
   
     1.  Starten Sie eine -Eingabeaufforderung als Administrator.  
   
-    2.  Wechseln Sie an der Eingabeaufforderung zu dem Verzeichnis, in dem DQSInstaller.exe enthalten ist. Bei Verwendung der Standardinstanz von SQL Server steht die Datei DQSInstaller.exe unter C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn zur Verfügung:  
-  
+    2.  Wechseln Sie an der Eingabeaufforderung zu dem Verzeichnis, in dem DQSInstaller.exe enthalten ist. Bei Verwendung der Standardinstanz von SQL Server steht die Datei DQSInstaller.exe unter C:\Programme\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn zur Verfügung:  
+
+      >[!NOTE]
+      >Ersetzen Sie [nn] im Ordnerpfad mit der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Versionsnummer.
+      >- Für SQL Server 2016: 13
+      >- Für SQL Server 2017: 14
+
         ```  
-        cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn  
+        cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, und drücken Sie die EINGABETASTE:  
@@ -64,7 +76,7 @@ caps.handback.revision: 12
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  Sie werden vom Installationsprogramm aufgefordert, die DQS-Datenbanken zu sichern, bevor Sie den Vorgang fortsetzen. Wenn Sie die DQS-Datenbanken bereits gesichert haben, geben Sie **J** oder **Ja** ein und drücken die EINGABETASTE, um das Upgrade fortzusetzen.  
+    4.  Sie werden vom Installationsprogramm aufgefordert, die DQS-Datenbanken zu sichern, bevor Sie den Vorgang fortsetzen. Wenn Sie die DQS-Datenbanken bereits gesichert haben, geben Sie **J** oder **Ja**ein und drücken die EINGABETASTE, um das Upgrade fortzusetzen.  
   
     5.  Nach dem erfolgreichen Upgrade des DQS-Datenbankschemas wird eine Abschlussmeldung angezeigt.  
   
@@ -87,9 +99,9 @@ caps.handback.revision: 12
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMÄNE\Benutzername>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMÄNE\Benutzername>|2||  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Entfernen von Data Quality Server-Objekten](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Aktualisieren auf SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

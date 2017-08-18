@@ -1,36 +1,41 @@
 ---
-title: "Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Spoofingangriffe"
-  - "Dienstbindung"
-  - "Lockangriffe"
-  - "SChannel"
-  - "Kanalbindung"
-  - "Erweiterter Schutz"
+title: "Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von „Erweiterter Schutz“ | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- spoofing attacks
+- service binding
+- luring attacks
+- Schannel
+- channel binding
+- Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz
+# <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
   
 > [!IMPORTANT]  
 >  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
   
-## Beschreibung von "Erweiterter Schutz"  
- **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z. B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensts) zu authentifizieren.  
+## <a name="description-of-extended-protection"></a>Beschreibung von "Erweiterter Schutz"  
+ **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z. B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts) zu authentifizieren.  
   
  Der Angriff kann auf zwei Arten erfolgen:  
   
@@ -40,32 +45,32 @@ caps.handback.revision: 22
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trägt mithilfe der Dienstbindung und Kanalbindung dazu bei, solche Angriffe auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen zu reduzieren.  
   
-### Dienstbindung  
- Bei der Dienstbindung werden Lockangriffe dadurch verhindert, dass ein Client einen signierten Dienstprinzipalnamen (Service Principal Name, SPN) des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensts senden muss, mit dem der Client eine Verbindung herstellen möchte. Der Dienst überprüft als Teil der Authentifizierungsantwort, ob der im Paket empfangene SPN mit seinem eigenen SPN übereinstimmt. Wenn ein Client verleitet wird, eine Verbindung mit einem Angreifer herzustellen, sendet der Client den signierten SPN des Angreifers. Der Angreifer kann das Paket nicht übertragen, um sich beim echten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst als Client zu authentifizieren, weil das Paket den SPN des Angreifers enthält. Bei der Dienstbindung fallen einmalig unwesentliche Kosten an, allerdings bietet sie keinen Schutz vor Spoofingangriffen. Dienstbindung tritt auf, wenn eine Clientanwendung keine Verschlüsselung verwendet, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen.  
+### <a name="service-binding"></a>Dienstbindung  
+ Bei der Dienstbindung werden Lockangriffe dadurch verhindert, dass ein Client einen signierten Dienstprinzipalnamen (Service Principal Name, SPN) des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts senden muss, mit dem der Client eine Verbindung herstellen möchte. Der Dienst überprüft als Teil der Authentifizierungsantwort, ob der im Paket empfangene SPN mit seinem eigenen SPN übereinstimmt. Wenn ein Client verleitet wird, eine Verbindung mit einem Angreifer herzustellen, sendet der Client den signierten SPN des Angreifers. Der Angreifer kann das Paket nicht übertragen, um sich beim echten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst als Client zu authentifizieren, weil das Paket den SPN des Angreifers enthält. Bei der Dienstbindung fallen einmalig unwesentliche Kosten an, allerdings bietet sie keinen Schutz vor Spoofingangriffen. Dienstbindung tritt auf, wenn eine Clientanwendung keine Verschlüsselung verwendet, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen.  
   
-### Kanalbindung  
- Bei der Kanalbindung wird zwischen einem Client und einer Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensts ein sicherer Kanal (SChannel) eingerichtet. Der Dienst überprüft die Echtheit des Clients, indem er das für den jeweiligen Kanal spezifische Kanalbindungsbindungstoken (Channel Binding Token, CBT) des Clients mit dem eigenen CBT vergleicht. Durch die Kanalbindung werden sowohl Lock- als auch Spoofingangriffe unterbunden. Diese Methode verursacht jedoch höhere Laufzeitkosten, da TLS (Transport Layer Security)-Verschlüsselung für den gesamten Sitzungsdatenverkehr erforderlich ist. Kanalbindung tritt auf, wenn eine Clientanwendung Verschlüsselungen verwendet, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen – unabhängig davon, ob Verschlüsselungen vom Client oder dem Server erzwungen werden.  
+### <a name="channel-binding"></a>Kanalbindung  
+ Bei der Kanalbindung wird zwischen einem Client und einer Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts ein sicherer Kanal (SChannel) eingerichtet. Der Dienst überprüft die Echtheit des Clients, indem er das für den jeweiligen Kanal spezifische Kanalbindungsbindungstoken (Channel Binding Token, CBT) des Clients mit dem eigenen CBT vergleicht. Durch die Kanalbindung werden sowohl Lock- als auch Spoofingangriffe unterbunden. Diese Methode verursacht jedoch höhere Laufzeitkosten, da TLS (Transport Layer Security)-Verschlüsselung für den gesamten Sitzungsdatenverkehr erforderlich ist. Kanalbindung tritt auf, wenn eine Clientanwendung Verschlüsselungen verwendet, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen – unabhängig davon, ob Verschlüsselungen vom Client oder dem Server erzwungen werden.  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen TLS 1.0 und SSL 3.0. Wenn Sie ein anderes Protokoll (beispielsweise TLS 1.1 oder TLS 1.2) erzwingen, indem Sie Änderungen an der SChannel-Betriebssystemebene vornehmen, können Sie möglicherweise keine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen.  
   
-### Betriebssystemunterstützung  
+### <a name="operating-system-support"></a>Betriebssystemunterstützung  
  Die folgenden Links enthalten weitere Informationen dazu, wie **Erweiterter Schutz**von Windows unterstützt wird:  
   
 -   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](http://msdn.microsoft.com/library/dd639324.aspx)  
   
 -   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
-## Einstellungen  
+## <a name="settings"></a>Einstellungen  
  Es gibt drei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungseinstellungen, die sich auf die Dienstbindung und die Kanalbindung auswirken. Die Einstellungen können mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder der Windows-Verwaltungsinstrumentation konfiguriert und mithilfe des Facets **Serverprotokolleinstellung** der richtlinienbasierten Verwaltung angezeigt werden.  
   
 -   **Erzwingen der Verschlüsselung**  
   
-     Mögliche Werte sind **Ein** und **Aus**. Zur Verwendung der Kanalbindung muss **Verschlüsselung erzwingen** auf **Ein**festgelegt werden, sodass die Verschlüsselung auf allen Clients erzwungen wird. Bei der Einstellung **Aus**wird nur die Dienstbindung gewährleistet. **Verschlüsselung erzwingen** befindet sich im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager unter **Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Flags“)**.  
+     Mögliche Werte sind **Ein** und **Aus**. Zur Verwendung der Kanalbindung muss **Verschlüsselung erzwingen** auf **Ein**festgelegt werden, sodass die Verschlüsselung auf allen Clients erzwungen wird. Bei der Einstellung **Aus**wird nur die Dienstbindung gewährleistet. **Verschlüsselung erzwingen** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Flags“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Erweiterter Schutz**  
   
-     Mögliche Werte sind **Aus**, **Zulässig**und **Erforderlich**. Mit der Variablen **Erweiterter Schutz** können Benutzer die Ebene für **Erweiterter Schutz** für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfigurieren. **Erweiterter Schutz** befindet sich im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager unter **Protokolle für MSSQLSERVER-Eigenschaften** (Registerkarte „Erweitert“).  
+     Mögliche Werte sind **Aus**, **Zulässig**und **Erforderlich**. Mit der Variablen **Erweiterter Schutz** können Benutzer die Ebene für **Erweiterter Schutz** für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfigurieren. **Erweiterter Schutz** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Registerkarte „Erweitert“).  
   
     -   Bei der Einstellung **Aus**ist **Erweiterter Schutz** deaktiviert. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz akzeptiert Verbindungen von jedem beliebigen Client, unabhängig davon, ob er geschützt ist oder nicht. **Aus** ist mit älteren und nicht gepatchten Betriebssystemen kompatibel, bietet aber weniger Sicherheit. Verwenden Sie diese Einstellung, wenn Sie wissen, dass die Clientbetriebssysteme keinen erweiterten Schutz unterstützen.  
   
@@ -75,9 +80,9 @@ caps.handback.revision: 22
   
 -   **Akzeptierte NTLM-SPNs**  
   
-     Die Variable **Akzeptierte NTLM-SPNs** wird benötigt, wenn ein Server durch mehr als einen SPN identifiziert wird. Wenn ein Client versucht, mithilfe eines gültigen, dem Server nicht bekannten SPNs eine Verbindung mit dem Server herzustellen, verursacht die Dienstbindung einen Fehler. Um dieses Problem zu vermeiden, können Benutzer mithilfe von **Akzeptierte NTLM-SPNs**mehrere SPNs für den Server angeben. **Akzeptierte NTLM-SPNs** umfasst eine Reihe durch Semikolons getrennter SPNs. Beispiel: Um die Verwendung der SPNs **MSSQLSvc/ HostName1.Contoso.com** und **MSSQLSvc/ HostName2.Contoso.com** zuzulassen, geben Sie im Feld **Akzeptierte NTLM-SPNs** die Zeichenfolge **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** ein. Die maximale Länge der Variablen beträgt 2.048 Zeichen. **Akzeptierte NTLM-SPNs** befindet sich im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager unter **Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Erweitert“)**.  
+     Die Variable **Akzeptierte NTLM-SPNs** wird benötigt, wenn ein Server durch mehr als einen SPN identifiziert wird. Wenn ein Client versucht, mithilfe eines gültigen, dem Server nicht bekannten SPNs eine Verbindung mit dem Server herzustellen, verursacht die Dienstbindung einen Fehler. Um dieses Problem zu vermeiden, können Benutzer mithilfe von **Akzeptierte NTLM-SPNs**mehrere SPNs für den Server angeben. **Akzeptierte NTLM-SPNs** umfasst eine Reihe durch Semikolons getrennter SPNs. Beispiel: Um die Verwendung der SPNs **MSSQLSvc/ HostName1.Contoso.com** und **MSSQLSvc/ HostName2.Contoso.com**zuzulassen, geben Sie im Feld **Akzeptierte NTLM-SPNs** die Zeichenfolge **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** ein. Die maximale Länge der Variablen beträgt 2.048 Zeichen. **Akzeptierte NTLM-SPNs** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Erweitert“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Aktivieren von "Erweiterter Schutz" für das Datenbankmodul  
+## <a name="enabling-extended-protection-for-the-database-engine"></a>Aktivieren von "Erweiterter Schutz" für das Datenbankmodul  
  Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Für einige frühere**-Versionen wird** Erweiterter Schutz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in zukünftigen Updates verfügbar sein. Nachdem Sie **Erweiterter Schutz** auf dem Servercomputer aktiviert haben, führen Sie die folgenden Schritte aus, um **Erweiterter Schutz**zu aktivieren:  
@@ -94,15 +99,15 @@ caps.handback.revision: 22
   
 6.  Starten Sie den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienst neu.  
   
-## Konfigurieren anderer SQL Server-Komponenten  
- Weitere Informationen zur Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md) (Erweiterter Schutz für die Authentifizierung mit Reporting Services).  
+## <a name="configuring-other-sql-server-components"></a>Konfigurieren anderer SQL Server-Komponenten  
+ Weitere Informationen zur Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)(Erweiterter Schutz für die Authentifizierung mit Reporting Services).  
   
- Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
+ Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

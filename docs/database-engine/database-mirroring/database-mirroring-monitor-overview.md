@@ -1,26 +1,31 @@
 ---
-title: "Datenbankspiegelungs-Monitor (&#220;bersicht) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.main.f1"
-helpviewer_keywords: 
-  - "Datenbankspiegelungs-Monitor [SQL Server], Schnittstelle"
+title: "Datenbankspiegelungs-Monitor (Übersicht) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 129958519a6115df494479c6c2237d4a611cfed5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Datenbankspiegelungs-Monitor (&#220;bersicht)
+# <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
   Wenn Sie über die richtigen Berechtigungen verfügen, können Sie den Datenbankspiegelungs-Monitor verwenden, um eine beliebige Teilmenge der gespiegelten Datenbanken auf einer Serverinstanz zu überwachen. Durch das Überwachen können Sie das Vorhandensein und die Qualität des Datenflusses in der Datenbank-Spiegelungssitzung überprüfen. Der Datenbankspiegelungs-Monitor ist auch bei der Problembehandlung der Ursachen für reduzierten Datenfluss hilfreich.  
   
  Sie können jede der gespiegelten Datenbanken für die Überwachung auf jedem der Failoverpartner einzeln registrieren. Wenn Sie eine Datenbank registrieren, werden die folgenden Informationen zur Datenbank vom Datenbankspiegelungs-Monitor zwischengespeichert:  
@@ -31,15 +36,15 @@ caps.handback.revision: 40
   
 -   Die letzten bekannten Rollen jedes Partners (Prinzipal oder Spiegel)  
   
-## Berechtigungen  
- Um Datenbankspiegelung zu überwachen, müssen Sie entweder Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **dbm_monitor** in der **msdb**-Datenbank auf der Serverinstanz sein. Wenn Sie Mitglied von **sysadmin** oder **dbm_monitor** auf nur einer der Partnerserverinstanzen sind, kann der Monitor nur mit diesem Partner eine Verbindung herstellen. Der Monitor kann keine Informationen von dem anderen Partner abrufen.  
+## <a name="permissions"></a>Berechtigungen  
+ Um Datenbankspiegelung zu überwachen, müssen Sie entweder Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank auf der Serverinstanz sein. Wenn Sie Mitglied von **sysadmin** oder **dbm_monitor** auf nur einer der Partnerserverinstanzen sind, kann der Monitor nur mit diesem Partner eine Verbindung herstellen. Der Monitor kann keine Informationen von dem anderen Partner abrufen.  
   
- Wenn Sie nur Mitglied von **dbm_monitor** auf einer Serverinstanz sind, haben Sie eingeschränkte Berechtigungen auf dieser Serverinstanz. Sie können nur die neueste Statuszeile anzeigen. Wenn Sie mithilfe von **dbm_monitor**-Berechtigungen eine Verbindung mit einer Serverinstanz herstellen, werden Sie vom Datenbankspiegelungs-Monitor informiert, dass Sie eingeschränkte Berechtigungen haben.  
+ Wenn Sie nur Mitglied von **dbm_monitor** auf einer Serverinstanz sind, haben Sie eingeschränkte Berechtigungen auf dieser Serverinstanz. Sie können nur die neueste Statuszeile anzeigen. Wenn Sie mithilfe von **dbm_monitor** -Berechtigungen eine Verbindung mit einer Serverinstanz herstellen, werden Sie vom Datenbankspiegelungs-Monitor informiert, dass Sie eingeschränkte Berechtigungen haben.  
   
 > [!IMPORTANT]  
->  Die feste Datenbankrolle **dbm_monitor** wird in der **msdb**-Datenbank erstellt, wenn die erste Datenbank im Datenbankspiegelungs-Monitor registriert wird. Die neue **dbm_monitor**-Rolle hat keine Mitglieder, bis ein Systemadministrator der Rolle Benutzer zuweist.  
+>  Die feste Datenbankrolle **dbm_monitor** wird in der **msdb** -Datenbank erstellt, wenn die erste Datenbank im Datenbankspiegelungs-Monitor registriert wird. Die neue **dbm_monitor** -Rolle hat keine Mitglieder, bis ein Systemadministrator der Rolle Benutzer zuweist.  
   
-## Navigationsstruktur  
+## <a name="navigation-tree"></a>Navigationsstruktur  
  Wenn Datenbanken für die Überwachung durch den Datenbankspiegelungs-Monitor registriert wurden, wird eine Liste registrierter Datenbanken in der Navigationsstruktur angezeigt. Die Struktur wird alle 30 Sekunden automatisch aktualisiert. Wählen Sie eine registrierte Datenbank aus, um ihren Status anzuzeigen. Weitere Informationen finden Sie weiter unten unter "Detailbereich".  
   
  Für jede registrierte Datenbank werden die folgenden Informationen angezeigt:  
@@ -56,7 +61,7 @@ caps.handback.revision: 40
 |----------|------------|-----------------|  
 |Warnungssymbol|**Unbekannt**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
 |Warnungssymbol|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank hält mit dem Inhalt der Prinzipaldatenbank nicht Schritt. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
-|Standard-Datenbankzylinder|**Synchronisiert**|Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank behält diesen Status so lange bei, wie der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet.<br /><br /> Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich.<br /><br /> Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert**.|  
+|Standard-Datenbankzylinder|**Synchronisiert**|Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank behält diesen Status so lange bei, wie der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet.<br /><br /> Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich.<br /><br /> Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .|  
 |Warnungssymbol|**Angehalten**|Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.|  
 |Fehlersymbol|**Getrennt**|Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 40
  *<MIRROR_SERVER>*  
  Der Name des Partners, der derzeit die Spiegelserverinstanz ist. Das Format ist identisch mit dem Format für den Prinzipalserver.  
   
-## Detailbereich  
+## <a name="detail-pane"></a>Detailbereich  
  Die Darstellung des Monitors ist abhängig davon, ob eine Datenbank ausgewählt ist. Wenn Sie den Monitor öffnen, zeigt der Detailbereich den Link **Gespiegelte Datenbank registrieren** an. Klicken Sie darauf, um eine Datenbank zu registrieren. Registrierte Datenbanken werden unter dem Knoten **Datenbankspiegelungs-Monitor** in der Navigationsstruktur aufgelistet. Der Datenbankspiegelungs-Monitor versucht immer, eine Verbindung mit jeder Serverinstanz herzustellen, für die gespeicherte Anmeldeinformationen vorliegen.  
   
  Wenn Sie eine Datenbank auswählen, wird der Status auf der Seite im Registerformat **Status** im Detailbereich angezeigt. Der Inhalt dieser Seite stammt sowohl von der Prinzipal- als auch von der Spiegelserverinstanz. Die Seite wird asynchron aufgefüllt, wenn Statusinformationen über separate Verbindungen mit der Prinzipal- und der Spiegelserverinstanz gesammelt werden. Der Status wird automatisch in Intervallen von 30 Sekunden aktualisiert.  
@@ -82,7 +87,7 @@ caps.handback.revision: 40
   
  Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:***\<date>**\<time>*. Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
   
-## Menü Aktion  
+## <a name="action-menu"></a>Menü Aktion  
  Das Menü **Aktion** enthält immer die folgenden Befehle:  
   
 |Befehl|Beschreibung|  
@@ -101,8 +106,8 @@ caps.handback.revision: 40
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

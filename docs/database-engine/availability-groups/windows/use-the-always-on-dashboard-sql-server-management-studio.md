@@ -1,30 +1,35 @@
 ---
-title: "Verwenden des Always On-Dashboards (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server-HADR], Richtlinien"
-  - "Verfügbarkeitsgruppen [SQL Server], Dashboard"
+title: "Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Verwenden des Always On-Dashboards (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Datenbankadministratoren verwenden das Always On-Dashboard, um die Integrität einer Always On-Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikaten und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das Always On-Dashboard sind:  
+  Datenbankadministratoren verwenden das Verfügbarkeitsgruppen-Dashboard von Always On, um die Integrität einer Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikate und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das Verfügbarkeitsgruppen-Dashboard von Always On sind:  
   
 -   Auswählen eines Replikats für ein manuelles Failover.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   Auswerten der Auswirkungen auf die Leistung eines sekundären Replikats mit synchronem Commit  
   
- Das Always On-Dashboard bietet wichtige Statusangaben und Leistungsindikatoren zu Verfügbarkeitsgruppen, die Ihnen Entscheidungen zu Vorgängen mit hoher Verfügbarkeit anhand folgender Informationen ermöglichen.  
+ Das Dashboard bietet wichtige Statusangaben und Leistungsindikatoren zu Verfügbarkeitsgruppen, die Ihnen Entscheidungen zu Vorgängen mit hoher Verfügbarkeit anhand folgender Informationen ermöglichen.  
   
 -   Replikat-Rollupstatus  
   
@@ -50,34 +55,6 @@ caps.handback.revision: 30
   
 -   Zeit zum Wiederherstellen des Protokolls  
   
- **In diesem Thema:**  
-  
--   **Vorbereitungen:**  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
-     [Berechtigungen](#Permissions)  
-  
--   **Erste Schritte mit: **  
-  
-     [Das Always On-Dashboard](#SSMSProcedure)  
-  
-     [So ändern Sie Always On-Dashboard-Optionen](#DashboardOptions)  
-  
--   **Dashboardbereiche:**  
-  
-     [Zusammenfassung zu Verfügbarkeitsgruppen](#AvGroupsView)  
-  
-     [Verfügbarkeitsgruppendetails](#AvGroupDetails)  
-  
-     [Verfügbarkeitsreplikatdetails](#AvReplicaDetails)  
-  
-     [So gruppieren Sie Verfügbarkeitsgruppeninformationen](#AvDbDetails)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
@@ -92,7 +69,7 @@ caps.handback.revision: 30
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der das Always On-Dashboard ausgeführt werden soll.  
   
-2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)**, klicken Sie mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen**, und klicken Sie dann auf **Dashboard anzeigen**.  
+2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** , klicken Sie mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , und klicken Sie dann auf **Dashboard anzeigen**.  
   
 ###  <a name="DashboardOptions"></a> So ändern Sie Always On-Dashboard-Optionen  
  Sie können das [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Dialogfeld **Optionen** verwenden, um das Verhalten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On-Dashboards für das automatische Aktualisieren und Aktivieren einer automatisch definierten Always On-Richtlinie zu konfigurieren.  
@@ -101,7 +78,7 @@ caps.handback.revision: 30
   
 2.  Um das Dashboard automatisch zu aktualisieren, wählen Sie im Dialogfeld **Optionen** den Befehl **Automatische Aktualisierung aktivieren**aus, geben Sie das Aktualisierungsintervall in Sekunden ein, und geben Sie dann die Häufigkeit ein, mit der der Verbindungsversuch wiederholt werden soll.  
   
-3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte Always On-Richtlinie aktivieren** aus.  
+3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte Always On-Richtlinie aktivieren**aus.  
   
 ##  <a name="AvGroupsView"></a> Zusammenfassung zu Verfügbarkeitsgruppen  
  Im Verfügbarkeitsgruppen-Bildschirm wird eine Zusammenfassungszeile für jede Verfügbarkeitsgruppe angezeigt, für die die verbundene Serverinstanz ein Replikat hostet. In diesem Bereich werden die folgenden Spalten angezeigt.  
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **Manuell**. Gibt an, dass kein Replikat im automatischen Failovermodus ist.  
   
  **Probleme**  
- Klicken Sie auf den Link **Probleme**, um die Problembehandlungsdokumentation für ein angegebenes Problem zu öffnen. Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Klicken Sie auf den Link **Probleme** , um die Problembehandlungsdokumentation für ein angegebenes Problem zu öffnen. Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Klicken Sie auf die Spaltenüberschriften, um die Verfügbarkeitsgruppeninformationen nach dem Namen der Verfügbarkeitsgruppe, primärer Instanz, Failovermodus oder Problem zu sortieren.  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **Status der Verfügbarkeitsgruppe**  
  Zeigt den Zustand für die Verfügbarkeitsgruppe an.  
   
- **Primäre Instanz**  
+ **Primary instance**  
  Der Name der Serverinstanz, die das primäre Replikat der Verfügbarkeitsgruppe hostet.  
   
- **Failovermodus**  
+ **Failover mode**  
  Zeigt den Failovermodus an, für den das Replikat konfiguriert ist. Die folgenden Werte für den Failovermodus sind möglich:  
   
 -   **Automatisch**. Gibt an, dass ein oder mehrere Replikate im automatischen Failovermodus sind.  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. Unbekannter Status. Dieser Wert tritt auf, wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren kann (d. h., der lokale Knoten ist nicht Teil des WSFC-Quorums).  
   
  **Probleme**  
- Listet den Namen des Problems auf. Dieser Wert wird standardmäßig angezeigt. Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Listet den Namen des Problems auf. Dieser Wert wird standardmäßig angezeigt. Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Verfügbarkeitsmodus**  
  Gibt die Replikateigenschaft an, die Sie für jedes Verfügbarkeitsreplikat einzeln festgelegt haben. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **Verfügbarkeitsdatenbanken**  
   
--   **Synchronisierungsstatus**  
+-   **Synchronization state**  
   
 -   **Failoverbereitschaft**  
   
@@ -249,7 +226,7 @@ caps.handback.revision: 30
  Der Name der Verfügbarkeitsdatenbank. Dieser Wert wird standardmäßig angezeigt.  
   
  **Replikat**  
- Der Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die das Verfügbarkeitsreplikat hostet. Dieser Wert wird standardmäßig angezeigt.  
+ Der Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die das Verfügbarkeitsreplikat hostet. Dieser Wert wird standardmäßig angezeigt.  
   
  **Synchronisierungsstatus**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade mit dem primärem Replikat synchronisiert wird. Dieser Wert wird standardmäßig angezeigt. Folgende Synchronisierungsstatus sind möglich:  
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  Wenn eine Datenbank den Status INITIALIZING aufweist, befindet sich die Datenbank nach einem erzwungenen Failover zum sekundären Replikat immer in einem Status, in dem sie nicht gestartet werden kann.  
   
- **Failoverbereitschaft**  
+ **Failover Readiness**  
  Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
   
 -   **Datenverlust**  
@@ -304,10 +281,10 @@ caps.handback.revision: 30
   
 -   **Kritisch**. Klicken Sie, um die kritischen Probleme anzuzeigen.  
   
- Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Angehalten**  
- Gibt an, ob der Status der Datenbank **Angehalten** oder **Fortgesetzt** lautet. Dieser Wert wird standardmäßig ausgeblendet.  
+ Gibt an, ob der Status der Datenbank **Angehalten** oder **Fortgesetzt**lautet. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Ursache für das Anhalten**  
  Gibt die Ursache für den Status "Angehalten" an. Dieser Wert wird standardmäßig ausgeblendet.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Verwenden von Always On-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

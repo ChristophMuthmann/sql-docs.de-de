@@ -1,27 +1,32 @@
 ---
-title: "SMO and DMO XPs (Serverkonfigurationsoption) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SMO and DMO XPs (Serverkonfigurationsoption) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd3457a8081eea7d57c9c3d673adf2b3fb6db07
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# SMO and DMO XPs (Serverkonfigurationsoption)
+# <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (Serverkonfigurationsoption)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie die Option SMO and DMO XPs, um erweiterte gespeicherte Prozeduren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) auf diesem Server zu aktivieren.  
   
- Beachten Sie, dass DMO beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wurde.  
+ Beachten Sie, dass DMO beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wurde.  
   
  Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 15
   
  Diese Einstellung wird sofort wirksam.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die erweiterten gespeicherten Prozeduren von SMO aktiviert.  
   
 ```  
@@ -46,7 +51,8 @@ RECONFIGURE
 GO  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Programmierungshandbuch für SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   
+

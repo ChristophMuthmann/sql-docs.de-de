@@ -1,29 +1,34 @@
 ---
-title: "Servereigenschaften (Seite Arbeitsspeicher) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.memory.f1"
+title: "Servereigenschaften (Seite „Speicher“) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81b299739f8986e819062756d9fbd8fffcbaca41
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Servereigenschaften (Seite Arbeitsspeicher)
+# <a name="server-properties---memory-page"></a>Servereigenschaften (Seite „Speicher“)
   Auf dieser Seite können Sie die Arbeitsspeichereinstellungen für den Server anzeigen und bearbeiten. Wenn für **Minimaler Serverarbeitsspeicher** 0 und für **Maximaler Serverarbeitsspeicher** 2147483647 MB festgelegt sind, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu jeder Zeit die optimale Menge an Arbeitsspeicher nutzen, abhängig davon, wie viel Arbeitsspeicher vom Betriebssystem und von anderen Anwendungen aktuell verwendet wird. Mit der wechselnden Auslastung des Computers und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert sich auch der zugeordnete Arbeitsspeicher. Sie können außerdem diese dynamische Arbeitsspeicherbelegung mit den unten angegebenen Minimal- und Maximalwerten begrenzen.  
   
-## Optionen  
+## <a name="options"></a>Optionen  
  **Minimaler Serverarbeitsspeicher (in MB)**  
- Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der angegebenen Mindestgröße des zugeordneten Speichers beginnen und unterhalb dieses Werts keinen Speicher freigeben sollte. Legen Sie diesen Wert auf der Basis der Größe und Aktivität Ihrer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fest. Diese Option sollte immer auf einen geeigneten Wert festgelegt werden, um sicherzustellen, dass das Betriebssystem nicht zu viel Arbeitsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfordert und dadurch die Leistung von Windows beeinträchtigt.  
+ Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der angegebenen Mindestgröße des zugeordneten Speichers beginnen und unterhalb dieses Werts keinen Speicher freigeben sollte. Legen Sie diesen Wert auf der Basis der Größe und Aktivität Ihrer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest. Diese Option sollte immer auf einen geeigneten Wert festgelegt werden, um sicherzustellen, dass das Betriebssystem nicht zu viel Arbeitsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfordert und dadurch die Leistung von Windows beeinträchtigt.  
   
  **Maximaler Serverarbeitsspeicher (in MB)**  
  Gibt an, wie viel Arbeitsspeicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Starten und zur Laufzeit maximal zuordnen kann. Diese Serverkonfigurationsoption kann auf einen bestimmten Wert festgelegt werden, wenn Sie wissen, dass mehrere Anwendungen gleichzeitig mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, und Sie sicherstellen möchten, dass diese Anwendungen über genügend Arbeitsspeicher verfügen. Wenn diese Anwendungen, z. B. Webserver oder E-Mail-Server, Arbeitsspeicher nur bei Bedarf anfordern, legen Sie die Option nicht fest, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in diesem Fall Arbeitsspeicher für sie nach Bedarf freigibt. Viele Anwendungen verwenden jedoch beim Starten den gesamten verfügbaren Arbeitsspeicher und fordern keinen weiteren Arbeitsspeicher mehr an, selbst wenn er benötigt wird. Wenn eine Anwendung, die sich so verhält, auf demselben Computer gleichzeitig mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, legen Sie die Option auf einen Wert fest, der sicherstellt, dass der von der Anwendung benötigte Arbeitsspeicher nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet wird. Die minimale Speichergröße, die Sie für **Maximaler Serverarbeitsspeicher** angeben können, beträgt 128 MB. (64 Megabyte (MB) für ältere 32-Bit-Systeme.)  
@@ -35,7 +40,7 @@ caps.handback.revision: 45
 >  Werte zwischen 1 und 703 sind nicht zulässig. Wenn ein Wert innerhalb dieses Bereichs eingegeben wird, wird er mit 704 überschrieben.  
   
  **Minimaler Arbeitsspeicher pro Abfrage (in KB)**  
- Gibt die Größe des Arbeitsspeichers (in kB) an, der für die Ausführung einer Abfrage zugeordnet wird. Der Benutzer kann einen Wert zwischen 512 und 2147483647 kB festlegen. Der Standardwert ist 1024 KB.  
+ Gibt die Größe des Arbeitsspeichers (in kB) an, der für die Ausführung einer Abfrage zugeordnet wird. Der Benutzer kann einen Wert zwischen 512 und 2147483647 kB festlegen. Der Standardwert ist 1024 KB.  
   
  **Konfigurierte Werte**  
  Zeigt für die Optionen in diesem Bereich konfigurierte Werte an. Wenn Sie diese Werte ändern, klicken Sie anschließend auf **Ausgeführte Werte** , um zu sehen, ob die Änderungen wirksam sind. Sind sie nicht wirksam, muss die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuerst neu gestartet werden.  
@@ -43,8 +48,9 @@ caps.handback.revision: 45
  **Ausgeführte Werte**  
  Zeigt die derzeit aktiven Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
+

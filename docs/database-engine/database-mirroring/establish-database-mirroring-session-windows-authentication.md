@@ -1,224 +1,98 @@
 ---
-title: "Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows-Authentifizierung [SQL Server]"
-  - "Datenbankspiegelung [SQL Server], Sicherheit"
+title: "Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL)
+# <a name="establish-database-mirroring-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Nach der Vorbereitung der Spiegeldatenbank ([Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)) können Sie eine Sitzung zur Datenbankspiegelung beginnen. Die Prinzipal-, Spiegel- und Zeugenserverinstanzen müssen separate Serverinstanzen sein, die auf getrennten Hostsystemen ausgeführt werden.  
+ Verwenden Sie im Dialogfeld **Datenbankeigenschaften** die Seite für die Spiegelung, ****  um eine Datenbank-Spiegelungssitzung festzulegen und die Eigenschaften der Datenbankspiegelung für eine Datenbank zu ändern. Bevor Sie die Seite für die Spiegelung ****  zum Konfigurieren der Datenbankspiegelung verwenden, sollten Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:  
   
-> [!IMPORTANT]  
->  Die Konfiguration der Datenbankspiegelung sollte außerhalb der Spitzenbetriebszeiten durchgeführt werden, da sich die Konfiguration der Spiegelung auf die Leistung auswirken kann.  
-  
-> [!NOTE]  
->  Eine Serverinstanz kann an mehreren gleichzeitigen Datenbank-Spiegelungssitzungen mit den gleichen oder anderen Partnern teilnehmen. Eine Serverinstanz kann bei manchen Sitzungen als Partner und bei anderen Sitzungen als Zeuge dienen. Auf der Spiegelserverinstanz muss dieselbe Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie auf der Prinzipalserverinstanz ausgeführt werden. Die Datenbankspiegelung ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
-  
-### So richten Sie eine Datenbank-Spiegelungssitzung ein  
-  
-1.  Erstellen Sie die Spiegeldatenbank. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
-  
-2.  Richten Sie die Sicherheit auf jeder Serverinstanz ein.  
-  
-     Jede Serverinstanz in einer Datenbank-Spiegelungssitzung benötigt einen eigenen Datenbank-Spiegelungsendpunkt. Falls der Endpunkt nicht vorhanden ist, müssen Sie ihn erstellen.  
+-   Die Prinzipalinstanz und die Spiegelserverinstanz müssen auf der gleichen Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden: entweder auf der Standard Edition oder auf der Enterprise Edition. Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
   
     > [!NOTE]  
-    >  Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md).  
+    >  Eine Zeugenserverinstanz ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-     Stellen Sie sicher, dass auf allen Partnerservern ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl der zu unterstützenden Spiegelungssitzungen darf die Serverinstanz nur einen Endpunkt für die Datenbankspiegelung enthalten. Wenn Sie diese Serverinstanz in Sitzungen zur Datenbankspiegelung ausschließlich für Partner verwenden möchten, können Sie dem Endpunkt die Rolle Partner zuweisen (ROLE**=**PARTNER). Wenn Sie auch den Server in anderen Datenbank-Spiegelungssitzungen für Zeugen verwenden möchten, weisen Sie dem Endpunkt die Rolle ALL zu.  
+-   Die Spiegeldatenbank muss vorhanden sein und sich auf dem neuesten Stand befinden.  
   
-     Zum Ausführen der SET PARTNER-Anweisung muss die Option STATE der Endpunkte beider Partner auf STARTED festgelegt sein.  
+     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-     Um zu erfahren, ob eine Serverinstanz einen Endpunkt für die Datenbankspiegelung besitzt, und um Informationen zu Rolle und Status der Serverinstanz zu erhalten, führen Sie auf der Instanz die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung aus:  
+-   Wenn die Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, ist für jede Instanz in der **master** -Datenbank der anderen Instanzen ein Anmeldename erforderlich. Sofern kein Anmeldename vorhanden ist, müssen Sie vor dem Konfigurieren der Spiegelung einen erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
-    ```  
-    SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
-    ```  
+### <a name="to-configure-database-mirroring"></a>So konfigurieren Sie eine Datenbankspiegelung  
   
-    > [!IMPORTANT]  
-    >  Ein bereits verwendeter Datenbankspiegelungs-Endpunkt darf nicht neu konfiguriert werden. Wenn ein Endpunkt für die Datenbankspiegelung vorhanden ist und bereits verwendet wird, empfiehlt es sich, diesen Endpunkt auf der Serverinstanz für jede Sitzung zu verwenden. Wird ein bereits verwendeter Endpunkt gelöscht, kann dies zum erneuten Starten des Endpunkts führen, wodurch die Verbindungen der vorhandenen Sitzungen gestört werden, was von den anderen Serverinstanzen als Fehler interpretiert werden kann. Dies ist vor allem im Modus für hohe Sicherheit mit automatischem Failover wichtig, bei dem das Neukonfigurieren des Endpunkts auf einem Partner zur Ausführung eines Failovers führen könnte. Wenn für eine Sitzung zudem ein Zeuge festgelegt wurde, kann das Entfernen des Endpunkts für die Datenbankspiegelung dazu führen, dass der Prinzipalserver der Sitzung das Quorum verliert. In diesem Fall wird die Datenbank offline gebracht und die Verbindung mit den Benutzern getrennt. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+1.  Nachdem Sie eine Verbindung mit der Prinzipalserverinstanz hergestellt haben, klicken Sie im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-     Wenn einem der Partner ein Endpunkt fehlt, finden Sie eine Hilfestellung unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+2.  Erweitern Sie **Datenbanken**, und wählen Sie die zu spiegelnde Datenbank aus.  
   
-3.  Wenn Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, erfordert jede Instanz eine Anmeldung bei der **master** -Datenbank der anderen Instanzen. Falls die Anmeldung nicht vorhanden ist, müssen Sie sie erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, wählen Sie **Tasks**aus, und klicken Sie anschließend auf **Spiegeln**. Dadurch wird die Seite **Spiegelung** im Dialogfeld **Datenbankeigenschaften** geöffnet.  
   
-4.  Um den Prinzipalserver als Partner auf der Spiegelungsdatenbank festzulegen, stellen Sie eine Verbindung mit dem Spiegelungsserver her, und geben Sie die folgende Anweisung aus:  
-  
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***\<Server-Netzwerkadresse>*  
-  
-     Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist für beide Partner gleich) und *\<Server-Netzwerkadresse>* die Servernetzwerkadresse des Prinzipalservers.  
-  
-     Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
-  
-     TCP**://**\<*Systemadresse>***:**\<*Port>*  
-  
-     Dabei ist *<Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und *<Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
-  
-     Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER1 - der Name des Partnersystems - und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
-  
-    ```  
-    ALTER DATABASE AdventureWorks   
-       SET PARTNER = 'TCP://DBSERVER1:7022'  
-    ```  
-  
-     Diese Anweisung bereitet den Spiegelserver darauf vor, eine Sitzung einzurichten, wenn er durch den Prinzipalserver kontaktiert wird.  
-  
-5.  Um den Spiegelserver als Partner auf der Prinzipaldatenbank festzulegen, stellen Sie eine Verbindung mit dem Prinzipalserver her, und geben Sie die folgende Anweisung aus:  
-  
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***\<Server-Netzwerkadresse>*  
-  
-     Weitere Informationen finden Sie unter Schritt 4.  
-  
-     Auf der Prinzipalserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Spiegelserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER2 (der Name des Partnersystems), und der Spiegelungsendpunkt der Partnerdatenbank verwendet den Port 7025:  
-  
-    ```  
-    ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
-    ```  
-  
-     Durch Eingeben dieser Anweisung auf dem Prinzipalserver beginnt die Datenbankspiegelungssitzung.  
-  
-6.  Standardmäßig ist für eine Sitzung die Transaktionssicherheitsstufe FULL festgelegt (SAFETY ist auf FULL festgelegt), wodurch die Sitzung im synchronen Modus für hohe Sicherheit ohne automatisches Failover gestartet wird. Sie können die Sitzung wie folgt umkonfigurieren, sodass sie entweder im Modus für hohe Sicherheit mit automatischem Failover oder im asynchronen Modus für hohe Leistung ausgeführt wird:  
-  
-    -   **Modus für hohe Sicherheit mit automatischem Failover**  
-  
-         Wenn die Sitzung im Modus für hohe Sicherheit automatisches Failover unterstützen soll, fügen Sie eine Zeugenserverinstanz hinzu. Weitere Informationen finden Sie unter [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
-  
-    -   **Modus mit hoher Leistung**  
-  
-         Wenn Sie kein automatisches Failover wünschen oder wenn Ihnen Leistung wichtiger als hohe Verfügbarkeit ist, können Sie alternativ die Transaktionssicherheit deaktivieren. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
-  
-        > [!NOTE]  
-        >  Im Modus für hohe Leistung sollte WITNESS auf OFF festgelegt sein. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
-  
-## Beispiel  
-  
-> [!NOTE]  
->  Im folgenden Beispiel wird für eine vorhandene Spiegeldatenbank eine Datenbank-Spiegelungssitzung zwischen Partnern eingerichtet. Weitere Informationen zum Erstellen einer Spiegeldatenbank finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
-  
- Das Beispiel zeigt die grundlegenden Schritte zum Erstellen einer Datenbankspiegelungssitzung ohne einen Zeugen. Die zwei Partner sind die Standardserverinstanzen auf zwei Computersystemen (PARTNERHOST1 und PARTNERHOST5). Beide Partnerinstanzen führen dasselbe Windows-Domänenbenutzerkonto aus (MYDOMAIN\dbousername).  
-  
-1.  Auf der Prinzipalserverinstanz (Standardinstanz auf PARTNERHOST1) erstellen Sie einen Endpunkt, der mithilfe von Port 7022 alle Rollen unterstützt:  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
+4.  Klicken Sie zum Konfigurieren der Spiegelung auf **Sicherheit konfigurieren** , um den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung zu starten.  
   
     > [!NOTE]  
-    >  Ein Beispiel zum Einrichten einer Anmeldung finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+    >  Während einer Datenbank-Spiegelungssitzung können Sie mithilfe dieses Assistenten nur die Zeugenserverinstanz hinzufügen oder ändern.  
   
-2.  Auf der Spiegelserverinstanz (Standardinstanz auf PARTNERHOST5) erstellen Sie einen Endpunkt, der mithilfe von Port 7022 alle Rollen unterstützt:  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
-  
-3.  Auf der Prinzipalserverinstanz (auf PARTNERHOST1) sichern Sie die Datenbank:  
-  
-    ```  
-    BACKUP DATABASE AdventureWorks   
-        TO DISK = 'C:\AdvWorks_dbmirror.bak'   
-        WITH FORMAT  
-    GO  
-    ```  
-  
-4.  Stellen Sie auf der Spiegelserverinstanz (auf `PARTNERHOST5`) die Datenbank wieder her:  
-  
-    ```  
-    RESTORE DATABASE AdventureWorks   
-        FROM DISK = 'Z:\AdvWorks_dbmirror.bak'   
-        WITH NORECOVERY  
-    GO  
-    ```  
-  
-5.  Nach dem Erstellen der vollständigen Datenbanksicherung müssen Sie eine Protokollsicherung für die Prinzipaldatenbank erstellen. Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wird beispielsweise das Protokoll in derselben Datei gesichert, die auch bei der vorhergehenden vollständigen Datenbanksicherung verwendet wurde:  
-  
-    ```  
-    BACKUP LOG AdventureWorks   
-        TO DISK = 'C:\AdventureWorks.bak'   
-    GO  
-    ```  
-  
-6.  Sie können erst mit der Spiegelung beginnen, nachdem Sie die erforderliche Protokollsicherung (und alle nachfolgenden Protokollsicherungen) angewendet haben.  
-  
-     Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wird z. B. das erste Protokoll aus C:\AdventureWorks.bak wiederhergestellt:  
-  
-    ```  
-    RESTORE LOG AdventureWorks   
-        FROM DISK = 'C:\ AdventureWorks.bak'   
-        WITH FILE=1, NORECOVERY  
-    GO  
-    ```  
-  
-7.  Legen Sie die Serverinstanz für die Spiegelserverinstanz auf PARTNERHOST1 als Partner fest (wodurch sie zum ersten Prinzipalserver wird):  
-  
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER =   
-        'TCP://PARTNERHOST1:7022'  
-    GO  
-    ```  
+5.  Der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung erstellt automatisch auf jeder Serverinstanz den Endpunkt für die Datenbankspiegelung (sofern keiner vorhanden ist) und gibt die Server-Netzwerkadressen in das der Rolle der jeweiligen Serverinstanz entsprechende Feld ein (**Prinzipal**, **Spiegel**oder **Zeuge**).  
   
     > [!IMPORTANT]  
-    >  Eine Datenbankspiegelungssitzung wird standardmäßig im synchronen Modus ausgeführt, wozu die Transaktionssicherheitsstufe FULL verwendet wird (d. h., SAFETY auf FULL festgelegt sein muss). Um eine Sitzung im asynchronen Modus für hohe Leistung auszuführen, legen Sie SAFETY auf OFF fest. Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+    >  Beim Erstellen eines Endpunkts verwendet der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung immer die Windows-Authentifizierung. Bevor Sie den Assistenten mit der zertifikatbasierten Authentifizierung verwenden können, muss der Spiegelungsendpunkt auf jeder der Serverinstanzen bereits für die Verwendung von Zertifikaten konfiguriert worden sein. Außerdem müssen alle Felder im Dialogfeld **Dienstkonten** des Assistenten leer bleiben. Informationen zum Erstellen eines Datenbank-Spiegelungsendpunkts für die Verwendung von Zertifikaten finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-8.  Legen Sie auf der Prinzipalserverinstanz die Serverinstanz auf `PARTNERHOST5` als Partner fest (wodurch sie zum ersten Spiegelserver wird):  
+6.  Sie können optional den Betriebsmodus ändern. Die Verfügbarkeit von bestimmten Betriebsmodi hängt davon ab, ob Sie eine TCP-Adresse für einen Zeugen angegeben haben. Folgende Optionen stehen zur Verfügung:  
   
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER = 'TCP://PARTNERHOST5:7022'  
-    GO  
-    ```  
+    |Option|Zeuge?|Erklärung|  
+    |------------|--------------|-----------------|  
+    |**Hohe Leistung (asynchron)**|NULL (falls vorhanden, wird er nicht verwendet, die Sitzung benötigt jedoch ein Quorum)|Um die Leistung zu steigern, befindet sich die Spiegeldatenbank immer in einem gewissen zeitlichen Abstand zur Prinzipaldatenbank und niemals auf dem tatsächlich aktuellen Stand. Die Lücke zwischen den beiden Datenbanken ist üblicherweise aber sehr klein. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Falls die Prinzipalserverinstanz unverfügbar wird, wird der Spiegel beendet. Wenn aber die Sitzung keinen Zeugen hat (wie empfohlen) oder der Zeuge mit dem Spiegelserver verbunden ist, ist der Spiegelserver als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
+    |**Hohe Sicherheit ohne automatisches Failover (synchron)**|Nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden.<br /><br /> Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist.<br /><br /> Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
+    |**Hohe Sicherheit mit automatischem Failover (synchron)**|Ja (erforderlich)|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden.<br /><br /> Die Verfügbarkeit wird durch Bereitstellen eine Zeugenserverinstanz zur Unterstützung des automatischen Failovers maximiert. Beachten Sie, dass die Auswahl der Option **Hohe Sicherheit mit automatischem Failover (synchron)** nur möglich ist, wenn Sie zuvor eine Zeugenserveradresse angegeben haben.<br /><br /> Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist.<br /><br /> In Anwesenheit eines Zeugen hat der Verlust eines Partners die folgende Auswirkung:<br /><br /> Wenn der Prinzipalserver ausfällt, findet ein automatisches Failover statt. Die Spiegelserverinstanz übernimmt die Rolle des Prinzipals und stellt ihre Datenbank als Prinzipaldatenbank zur Verfügung.<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Wichtig \*\*** Wenn der Zeuge getrennt wird, müssen die Partner miteinander verbunden sein, damit die Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
-9. Optional oder wenn Sie den Modus für hohe Sicherheit mit automatischem Failover verwenden möchten, richten Sie die Zeugenserverinstanz ein. Weitere Informationen finden Sie unter [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
+7.  Wenn alle folgenden Bedingungen vorhanden sind, klicken Sie auf **Spiegelung starten** , um die Spiegelung zu beginnen:  
   
-> [!NOTE]  
->  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+    -   Sie sind aktuell mit der Prinzipalserverinstanz verbunden.  
   
-## Siehe auch  
+    -   Die Sicherheit wurde ordnungsgemäß konfiguriert.  
+  
+    -   Die vollqualifizierten TCP-Adressen der Prinzipal- und Spiegelserverinstanz sind angegeben (im Abschnitt **Server-Netzwerkadressen** ).  
+  
+    -   Wenn der Betriebsmodus auf **Hohe Sicherheit mit automatischem Failover (synchron)**festgelegt ist, ist die vollqualifizierte TCP-Adresse der Zeugenserverinstanz ebenfalls angegeben.  
+  
+8.  Nach dem Beginn der Spiegelung können Sie den Betriebsmodus ändern und die Änderung speichern, indem Sie auf **OK**klicken. Beachten Sie, dass Sie nur in den Hochsicherheitsmodus mit automatischem Failover wechseln können, wenn Sie zuerst eine Zeugenserveradresse angegeben haben.  
+  
+    > [!NOTE]  
+    >  Zum Entfernen des Zeugen löschen Sie seine Servernetzwerkadresse aus dem Feld **Zeuge** . Wenn Sie vom Modus für hohe Sicherheit mit automatischem Failover zum Modus zur hohe Leistung wechseln, wird das Feld **Zeuge** automatisch gelöscht.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [Entfernen der Datenbankspiegelung (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
+ [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)   
- [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+
