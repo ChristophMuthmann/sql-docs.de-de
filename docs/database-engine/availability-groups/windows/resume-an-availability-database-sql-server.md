@@ -1,29 +1,34 @@
 ---
-title: "Fortsetzen einer Verf&#252;gbarkeitsdatenbank (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "Verfügbarkeitsgruppen [SQL Server], Fortsetzen einer Datenbank"
-  - "sekundäre Datenbanken [SQL Server], in Verfügbarkeitsgruppe"
-  - "primäre Datenbanken [SQL Server], in Verfügbarkeitsgruppe"
-  - "Verfügbarkeitsgruppen [SQL Server], Datenbanken"
+title: "Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Fortsetzen einer Verf&#252;gbarkeitsdatenbank (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server)
   Eine angehaltene Verfügbarkeitsdatenbank können Sie in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]fortsetzen. Beim Fortsetzen einer angehaltenen Datenbank wechselt die Datenbank in den Status SYNCHRONIZING. Beim Fortsetzen der primären Datenbank werden auch ihre sekundären Datenbanken fortgesetzt, die beim Anhalten der primären Datenbank angehalten wurden. Wenn eine sekundäre Datenbank lokal von der Serverinstanz, die das sekundäre Replikat hostet, angehalten wurde, muss diese sekundäre Datenbank lokal fortgesetzt werden. Sobald sich eine bestimmte sekundäre Datenbank und die entsprechende primäre Datenbank im Status SYNCHRONIZING befinden, wird die Datensynchronisierung auf der sekundären Datenbank fortgesetzt.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-### Einschränkungen  
+### <a name="limitations-and-restrictions"></a>Einschränkungen  
  Ein RESUME-Befehl gibt einen Wert zurück, sobald es vom Replikat akzeptiert wurde, das die Zieldatenbank hostet. Das Fortsetzen der Datenbank ist jedoch dadurch asynchron.  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
@@ -70,34 +75,34 @@ caps.handback.revision: 38
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz mit dem Verfügbarkeitsreplikat her, auf der eine Datenbank fortgesetzt werden soll, und erweitern Sie die Serverstruktur.  
   
-2.  Erweitern Sie die Knoten **Hohe Verfügbarkeit (immer aktiviert)** und **Verfügbarkeitsgruppen**.  
+2.  Erweitern Sie die Knoten **Hohe Verfügbarkeit (immer aktiviert)** und **Verfügbarkeitsgruppen** .  
   
 3.  Erweitern Sie die Verfügbarkeitsgruppe.  
   
-4.  Erweitern Sie den Knoten **Verfügbarkeitsdatenbanken**, klicken Sie mit der rechten Maustaste auf die Datenbank, und klicken Sie auf **Datenverschiebung fortsetzen**.  
+4.  Erweitern Sie den Knoten **Verfügbarkeitsdatenbanken** , klicken Sie mit der rechten Maustaste auf die Datenbank, und klicken Sie auf **Datenverschiebung fortsetzen**.  
   
 5.  Klicken Sie im Dialogfeld **Datenverschiebung fortsetzen** auf **OK**.  
   
 > [!NOTE]  
->  Wiederholen Sie zum Fortsetzen weiterer Datenbanken in diesem Replikatspeicherort Schritt 4 und 5 für jede Datenbank.  
+>  Wiederholen Sie zum Fortsetzen weiterer Datenbanken in diesem Replikatspeicherort Schritt 4 und 5 für jede Datenbank.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So setzen Sie eine sekundäre Datenbank fort, die lokal angehalten wurde**  
   
 1.  Stellen Sie eine Verbindung mit der Serverinstanz her, die das sekundäre Replikat hostet, dessen Datenbank Sie fortsetzen möchten.  
   
-2.  Setzen Sie die sekundäre Datenbank mithilfe der folgenden [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)-Anweisung fort:  
+2.  Setzen Sie die sekundäre Datenbank mithilfe der folgenden [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)-Anweisung fort:  
   
      ALTER DATABASE *database_name* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So setzen Sie eine sekundäre Datenbank fort**  
   
-1.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das Replikat hostet, dessen Datenbank Sie fortsetzen möchten. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).  
+1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das Replikat hostet, dessen Datenbank Sie fortsetzen möchten. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).  
   
-2.  Verwenden Sie das Cmdlet **Resume-SqlAvailabilityDatabase**, um die Verfügbarkeitsgruppe fortzusetzen.  
+2.  Verwenden Sie das Cmdlet **Resume-SqlAvailabilityDatabase** , um die Verfügbarkeitsgruppe fortzusetzen.  
   
-     Beispielsweise wird durch den folgenden Befehl die Datensynchronisierung für die Verfügbarkeitsdatenbank `MyDb3` in der Verfügbarkeitsgruppe `MyAg` fortgesetzt.  
+     Beispielsweise wird durch den folgenden Befehl die Datensynchronisierung für die Verfügbarkeitsdatenbank `MyDb3` in der Verfügbarkeitsgruppe `MyAg`fortgesetzt.  
   
     ```  
     Resume-SqlAvailabilityDatabase `   
@@ -105,7 +110,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das Cmdlet **Get-Help** in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das Cmdlet **Get-Help** in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -115,7 +120,8 @@ caps.handback.revision: 38
   
 -   [Anhalten einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

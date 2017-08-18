@@ -1,35 +1,40 @@
 ---
-title: "Failover zu einer sekund&#228;ren Datenbank f&#252;r den Protokollversand (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Primäre Datenbanken [SQL Server]"
-  - "Sekundäre Datendateien [SQL Server], manuelles Failover"
-  - "Protokollversand [SQL Server-Agent], Failover"
-  - "Failover [SQL Server], Protokollversand"
+title: "Failover zu einer sekundären Datenbank für den Protokollversand (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary databases [SQL Server]
+- secondary data files [SQL Server], manual fail over
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Failover zu einer sekund&#228;ren Datenbank f&#252;r den Protokollversand (SQL Server)
+# <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover zu einer sekundären Datenbank für den Protokollversand (SQL Server)
   Wenn die primäre Serverinstanz ausfällt oder gewartet werden muss, kann ein Failover zu einer sekundären Datenbank für den Protokollversand ausgeführt werden.  
   
-## Vorbereitungen für ein kontrolliertes Failover  
+## <a name="preparing-for-a-controlled-failover"></a>Vorbereitungen für ein kontrolliertes Failover  
  Normalerweise sind die primäre und die sekundäre Datenbank nicht synchronisiert, da die primäre Datenbank nach dem letzten Sicherungsauftrag weiterhin aktualisiert wird. In manchen Fällen wurden möglicherweise auch die aktuellen Sicherungen des Transaktionsprotokolls nicht auf die sekundären Serverinstanzen kopiert, oder die Protokollsicherungen wurden zwar kopiert, jedoch noch nicht vollständig auf die sekundäre Datenbank angewendet. Es wird empfohlen, nach Möglichkeit zunächst alle sekundären Datenbanken mit der primären Datenbank zu synchronisieren.  
   
  Informationen zu Protokollversandaufträgen finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Ausführen eines Failovers  
+## <a name="failing-over"></a>Ausführen eines Failovers  
  So führen Sie ein Failover zu einer sekundären Datenbank aus  
   
 1.  Kopieren Sie alle noch nicht kopierten Sicherungsdateien aus der Sicherungsfreigabe in den für den Kopiervorgang verwendeten Zielordner jedes sekundären Servers.  
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 4.  Nach der Synchronisierung der sekundären Server können Sie auf Wunsch ein Failover zu einem von ihnen ausführen, indem Sie seine sekundäre Datenbank wiederherstellen und Clients zu dieser Serverinstanz umleiten. Beim Wiederherstellen wird die Datenbank in einen konsistenten Status versetzt und online geschaltet.  
   
     > [!NOTE]  
-    >  Wenn Sie eine sekundäre Datenbank verfügbar machen, sollten Sie sicherstellen, dass die Metadaten konsistent mit den Metadaten der ursprünglichen, ersten Datenbank sind. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+    >  Wenn Sie eine sekundäre Datenbank verfügbar machen, sollten Sie sicherstellen, dass die Metadaten konsistent mit den Metadaten der ursprünglichen, ersten Datenbank sind. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Nachdem Sie die sekundäre Datenbank wiederhergestellt haben, können Sie sie so konfigurieren, dass sie für die anderen sekundären Datenbanken als erste Datenbank dient.  
   
@@ -57,9 +62,9 @@ caps.handback.revision: 31
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
+ [Sicherungen des Protokollfragments &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

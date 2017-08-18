@@ -1,42 +1,47 @@
 ---
-title: "Protokollversandtabellen und gespeicherte Prozeduren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sekundärserver [SQL Server]"
-  - "Überwachen von Servern [SQL Server]"
-  - "Protokollversand [SQL Server], Systemtabellen"
-  - "Protokollversand [SQL Server], Prozeduren"
-  - "Primärserver [SQL Server]"
+title: Protokollversandtabellen und gespeicherte Prozeduren | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Protokollversandtabellen und gespeicherte Prozeduren
+# <a name="log-shipping-tables-and-stored-procedures"></a>Protokollversandtabellen und gespeicherte Prozeduren
   In diesem Thema werden alle mit der Protokollversandkonfiguration verknüpften Tabellen und gespeicherten Prozeduren beschrieben. Die Protokollversandtabellen sind auf allen Servern in **msdb** gespeichert. Die unten stehenden Tabellen beschreiben, welche Tabellen und gespeicherten Prozeduren auf welchen Servern in Protokollversandkonfigurationen verwendet werden.  
   
-## Tabellen des primären Servers  
+## <a name="primary-server-tables"></a>Tabellen des primären Servers  
   
 |Tabelle|Beschreibung|  
 |-----------|-----------------|  
-|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID.  Diese Tabelle wird auf dem primären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
+|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID. Diese Tabelle wird auf dem primären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Speichert Fehlerdetails für Protokollversandaufträge, die dem primären Server zugeordnet sind.|  
 |[log_shipping_monitor_history_detail](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)|Speichert Verlaufsdetails für Protokollversandaufträge, die dem primären Server zugeordnet sind.|  
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|Speichert einen Überwachungseintrag für die primäre Datenbank.|  
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|Enthält Konfigurationsinformationen für die primären Datenbanken eines bestimmten Servers. Speichert eine Zeile pro primäre Datenbank.|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|Ordnet primäre Datenbanken sekundären Datenbanken zu.|  
   
-## Gespeicherte Prozeduren des primären Servers  
+## <a name="primary-server-stored-procedures"></a>Gespeicherte Prozeduren des primären Servers  
   
 |Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
@@ -50,11 +55,11 @@ caps.handback.revision: 20
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|Ruft die Namen sekundärer Datenbanken für eine primäre Datenbank ab.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Aktualisiert die Anzeige auf die neuesten Informationen für den angegebenen Protokollversand-Agent.|  
   
-## Tabellen des sekundären Servers  
+## <a name="secondary-server-tables"></a>Tabellen des sekundären Servers  
   
 |Tabelle|Beschreibung|  
 |-----------|-----------------|  
-|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID.  Diese Tabelle wird auf dem sekundären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
+|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID. Diese Tabelle wird auf dem sekundären Server nur dann verwendet, wenn kein Remoteüberwachungsserver konfiguriert wurde.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Speichert Fehlerdetails für Protokollversandaufträge, die dem sekundären Server zugeordnet sind.|  
 |[log_shipping_monitor_history_detail](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)|Speichert Verlaufsdetails für Protokollversandaufträge, die dem sekundären Server zugeordnet sind.|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|Speichert einen Überwachungseintrag für jede sekundäre Datenbank, die dem sekundären Server zugeordnet ist.|  
@@ -62,9 +67,9 @@ caps.handback.revision: 20
 |[log_shipping_secondary_databases](../../relational-databases/system-tables/log-shipping-secondary-databases-transact-sql.md)|Speichert die Konfigurationsinformationen für eine bestimmte sekundäre Datenbank. Speichert eine Zeile pro sekundäre Datenbank.|  
   
 > [!NOTE]  
->  Sekundäre Datenbanken, die zu einer primären Datenbank gehören und auf demselben sekundären Server verwaltet werden, nutzen die Einstellungen der **log_shipping_secondary**-Tabelle gemeinsam. Wenn eine freigegebene Eigenschaft für eine einzelne sekundäre Datenbank geändert wird, wird die geänderte Einstellung auch für alle übrigen Datenbanken wirksam.  
+>  Sekundäre Datenbanken, die zu einer primären Datenbank gehören und auf demselben sekundären Server verwaltet werden, nutzen die Einstellungen der **log_shipping_secondary** -Tabelle gemeinsam. Wenn eine freigegebene Eigenschaft für eine einzelne sekundäre Datenbank geändert wird, wird die geänderte Einstellung auch für alle übrigen Datenbanken wirksam.  
   
-## Gespeicherte Prozeduren des sekundären Servers  
+## <a name="secondary-server-stored-procedures"></a>Gespeicherte Prozeduren des sekundären Servers  
   
 |Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
@@ -79,24 +84,24 @@ caps.handback.revision: 20
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Diese gespeicherte Prozedur ruft die Einstellungen einer angegebenen primären Datenbank auf dem sekundären Server ab.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Aktualisiert die Anzeige auf die neuesten Informationen für den angegebenen Protokollversand-Agent.|  
   
-## Tabellen des Überwachungsservers  
+## <a name="monitor-server-tables"></a>Tabellen des Überwachungsservers  
   
 |Tabelle|Beschreibung|  
 |-----------|-----------------|  
-|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID. |  
+|[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Speichert Fehlerdetails für Protokollversandaufträge.|  
 |[log_shipping_monitor_history_detail](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)|Speichert Verlaufsdetails für Protokollversandaufträge.|  
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|Speichert einen Überwachungseintrag für jede primäre Datenbank, die diesem Überwachungsserver zugeordnet ist.|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|Speichert einen Überwachungseintrag für jede sekundäre Datenbank, die diesem Überwachungsserver zugeordnet ist.|  
   
-## Gespeicherte Prozeduren des Überwachungsservers  
+## <a name="monitor-server-stored-procedures"></a>Gespeicherte Prozeduren des Überwachungsservers  
   
 |Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Erstellt einen Warnungsauftrag des Protokollversands, falls dieser noch nicht erstellt wurde.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Entfernt den Warnungsauftrag des Protokollversands, falls keine zugeordneten primären Datenbanken vorhanden sind.|  
 |[sp_help_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)|Gibt die Auftrags-ID des Warnungsauftrags zurück.|  
-|[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene primäre Datenbank aus der **log_shipping_monitor_primary**-Tabelle zurück.|  
-|[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene sekundäre Datenbank aus der **log_shipping_monitor_secondary**-Tabelle zurück.|  
+|[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene primäre Datenbank aus der **log_shipping_monitor_primary** -Tabelle zurück.|  
+|[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene sekundäre Datenbank aus der **log_shipping_monitor_secondary** -Tabelle zurück.|  
   
   

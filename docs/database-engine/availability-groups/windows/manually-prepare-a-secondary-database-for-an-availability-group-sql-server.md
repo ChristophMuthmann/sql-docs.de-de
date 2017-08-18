@@ -1,58 +1,46 @@
 ---
-title: "Manuelles Vorbereiten einer sekund&#228;ren Datenbank auf eine Verf&#252;gbarkeitsgruppe (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.preparedbs.f1"
-  - "sql13.swb.availabilitygroup.configsecondarydbs.f1"
-helpviewer_keywords: 
-  - "sekundäre Datenbanken [SQL Server], in Verfügbarkeitsgruppe"
-  - "Sekundäre Datenbanken [SQL Server]"
-  - "Verfügbarkeitsgruppen [SQL Server], Konfigurieren"
-  - "Verfügbarkeitsgruppen [SQL Server], Datenbanken"
+title: "Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.preparedbs.f1
+- sql13.swb.availabilitygroup.configsecondarydbs.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- secondary databases [SQL Server]
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 47
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Manuelles Vorbereiten einer sekund&#228;ren Datenbank auf eine Verf&#252;gbarkeitsgruppe (SQL Server)
-  In diesem Thema wird erläutert, wie eine sekundäre Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell für eine Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vorbereitet wird. Die Vorbereitung einer sekundären Datenbank erfordert zwei Schritte: (1) das Wiederherstellen einer aktuellen Datenbanksicherung der primären Datenbank und nachfolgender Protokollsicherungen auf allen Serverinstanzen, auf denen das sekundäre Replikat gehostet wird, mit RESTORE WITH NORECOVERY und (2) das Verknüpfen der wiederhergestellten Datenbank mit der Verfügbarkeitsgruppe.  
+# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Manuelles Vorbereiten einer Datenbank auf eine Verfügbarkeitsgruppe (SQL Server)
+In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell für eine Always On-Verfügbarkeitsgruppe in vorbereitet wird. Das Vorbereiten einer Datenbank erfolgt in zwei Schritten: 
+
+1. Stellen Sie mit RESTORE WITH NORECOVERY die neuesten Datenbank- und Protokollsicherungen für jede primäre Datenbank und nachfolgende Protokollsicherungen auf jeder Serverinstanz wieder her, die das sekundäre Replikat hostet.
+2. Verknüpfen Sie die wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe.  
   
 > [!TIP]  
->  Wenn Sie bereits über eine Protokollversandkonfiguration verfügen, können Sie möglicherweise die primäre Datenbank für den Protokollversand zusammen mit einer oder mehreren sekundären Datenbanken in eine primäre Always On-Datenbank und eine oder mehrere sekundäre Always On-Datenbanken konvertieren. Weitere Informationen finden Sie unter [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md).  
-  
--   **Vorbereitungen:**  
-  
-     [Voraussetzungen und Einschränkungen](#Prerequisites)  
-  
-     [Empfehlungen](#Recommendations)  
-  
-     [Sicherheit](#Security)  
-  
--   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks)  
-  
--   **Nachverfolgung:** [Nach dem Vorbereiten einer sekundären Datenbank](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+>  Wenn Sie eine vorhandene Protokollversandkonfiguration haben, können Sie möglicherweise die primäre Datenbank für den Protokollversand zusammen mit mindestens einer sekundären Datenbank in ein primäres Replikat einer Verfügbarkeitsgruppe und mindestens ein sekundäres Replikat konvertieren. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+
+##  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Stellen Sie sicher, dass das System, auf dem die Datenbank gespeichert werden soll, einen Datenträger mit ausreichend Speicherplatz für die sekundären Datenbanken besitzt.  
   
@@ -66,9 +54,9 @@ caps.handback.revision: 47
   
 -   Nach dem Wiederherstellen der Datenbank müssen Sie alle seit der letzten wiederhergestellten Datensicherung erstellten Protokollsicherungen wiederherstellen (WITH NORECOVERY).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="Recommendations"></a> Empfehlungen  
   
--   Bei eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollte der Dateipfad (einschließlich des Laufwerkbuchstabens) einer sekundären Datenbank nach Möglichkeit mit dem Pfad der entsprechenden primären Datenbank übereinstimmen. Grund: Wenn beim Erstellen einer sekundären Datenbank die Datenbankdateien verschoben werden, tritt beim späteren Hinzufügen einer Datei auf der sekundären Datenbank möglicherweise ein Fehler auf und bewirkt, dass die sekundäre Datenbank angehalten wird.  
+-   Bei eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sollte der Dateipfad (einschließlich des Laufwerkbuchstabens) einer sekundären Datenbank nach Möglichkeit mit dem Pfad der entsprechenden primären Datenbank übereinstimmen. Grund: Wenn beim Erstellen einer sekundären Datenbank die Datenbankdateien verschoben werden, tritt beim späteren Hinzufügen einer Datei auf der sekundären Datenbank möglicherweise ein Fehler auf und bewirkt, dass die sekundäre Datenbank angehalten wird.  
   
 -   Vor dem Vorbereiten der sekundären Datenbanken sollten Sie unbedingt geplante Protokollsicherungen auf den Datenbanken in der Verfügbarkeitsgruppe anhalten, bis die Initialisierung sekundärer Replikate abgeschlossen ist.  
   
@@ -78,18 +66,21 @@ caps.handback.revision: 47
 ####  <a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über BACKUP DATABASE- und BACKUP LOG-Berechtigungen. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md).  
   
- Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)nicht wiederhergestellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!NOTE]  
->  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Datenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md) oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md) erstellen.  
+>  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Replikatdatenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)erstellen.  
   
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
 1.  Wenn Sie noch keine aktuelle Sicherung der primären Datenbank besitzen, erstellen Sie neue vollständige oder differenzielle Datenbanksicherung. Es wird empfohlen, diese Sicherung und nachfolgende Protokollsicherungen auf der empfohlenen Netzwerkfreigabe zu speichern.  
   
-2.  Erstellen Sie mindestens eine neue Protokollsicherung der primären Datenbank.  
+2.  Erstellen Sie mindestens eine neue Protokollsicherung der primären Datenbank.
+
+   >[!NOTE]
+   >Eine Transaktionsprotokollsicherung ist möglicherweise nicht erforderlich, wenn eine Transaktionsprotokollsicherung noch nicht in der Datenbank im primären Replikat erfasst wurde. Microsoft empfiehlt, dass Sie jedes Mal eine Transaktionsprotokollsicherung durchführen, wenn eine neue Datenbank mit der Verfügbarkeitsgruppe verknüpft wird. 
   
 3.  Stellen Sie auf der Serverinstanz, die das sekundäre Replikat hostet, die vollständige Datenbanksicherung der primären (und optional eine differenzielle Sicherung) und anschließend nachfolgende Protokollsicherungen wieder her.  
   
@@ -133,7 +124,7 @@ caps.handback.revision: 47
   
 2.  Stellen Sie auf der Serverinstanz, die das sekundäre Replikat hostet, die vollständige Datenbanksicherung der primären (und optional eine differenzielle Sicherung) und anschließend alle nachfolgenden Protokollsicherungen wieder her. Verwenden Sie WITH NORECOVERY für jeden Wiederherstellungsvorgang.  
   
-     Wenn sich die Dateipfade der primären Datenbank und der sekundären Datenbank unterscheiden, z. B. wenn sich die primäre Datenbank auf Laufwerk F: befindet, bei der Serverinstanz, die das sekundäre Replikat hostet, jedoch das Laufwerk F: fehlt, schließen Sie die MOVE-Option in die WITH-Klausel ein.  
+     Wenn sich die Dateipfade der primären Datenbank und der sekundären Datenbank unterscheiden, z. B. wenn sich die primäre Datenbank auf Laufwerk F: befindet, bei der Serverinstanz, die das sekundäre Replikat hostet, jedoch das Laufwerk F: fehlt, schließen Sie die MOVE-Option in die WITH-Klausel ein.  
   
 3.  Wurden seit der erforderlichen Protokollsicherung zusätzliche Protokollsicherungen in der primären Datenbank vorgenommen, müssen Sie diese ebenfalls auf die Serverinstanz kopieren, die das sekundäre Replikat hostet, und alle Protokollsicherungen auf die sekundäre Datenbank anwenden, beginnend mit der frühesten und mithilfe von RESTORE WITH NORECOVERY.  
   
@@ -189,12 +180,12 @@ caps.handback.revision: 47
   
     -   **Wenn die Pfade unterschiedlich sind, führen Sie Folgendes aus:**  
   
-         Wenn sich der Pfad der sekundären Datenbank vom Pfad der primären Datenbank unterscheidet (z. B. wenn die Laufwerkbuchstaben unterschiedlich sind), ist es für das Erstellen der sekundären Datenbank erforderlich, dass der Wiederherstellungsvorgang eine MOVE-Klausel einschließt.  
+         Wenn sich der Pfad der sekundären Datenbank vom Pfad der primären Datenbank unterscheidet (z. B. wenn die Laufwerkbuchstaben unterschiedlich sind), ist es für das Erstellen der sekundären Datenbank erforderlich, dass der Wiederherstellungsvorgang eine MOVE-Klausel einschließt.  
   
         > [!IMPORTANT]  
         >  Wenn die Pfadnamen der primären und sekundären Datenbank unterschiedlich sind, können Sie keine Datei hinzufügen. Der Grund hierfür besteht darin, dass die Serverinstanz des sekundären Replikats beim Empfangen des Protokolls für das Hinzufügen einer Datei versucht, die neue Datei unter demselben Pfad abzulegen, der von der primären Datenbank verwendet wird.  
   
-         Der folgende Befehl stellt z. B. eine Sicherung einer primären Datenbank wieder her, die sich im Datenverzeichnis der Standardinstanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) befindet. Bei der Datenbankwiederherstellung muss die Datenbank in das Datenverzeichnis einer Remoteinstanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (*Always On1*) verschoben werden, die das sekundäre Replikat auf einem anderen Clusterknoten hostet. Dort werden die Daten und-Protokolldateien im Verzeichnis *C:\Programme\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* wiederhergestellt. Der Wiederherstellungsvorgang verwendet WITH NORECOVERY, um die sekundäre Datenbank in der wiederhergestellten Datenbank zu belassen.  
+         Der folgende Befehl stellt z. B. eine Sicherung einer primären Datenbank wieder her, die sich im Datenverzeichnis der Standardinstanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) befindet. Bei der Datenbankwiederherstellung muss die Datenbank in das Datenverzeichnis einer Remoteinstanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (*Always On1*) verschoben werden, die das sekundäre Replikat auf einem anderen Clusterknoten hostet. Dort werden die Daten und-Protokolldateien im Verzeichnis *C:\Programme\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* wiederhergestellt. Der Wiederherstellungsvorgang verwendet WITH NORECOVERY, um die sekundäre Datenbank in der wiederhergestellten Datenbank zu belassen.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -207,7 +198,7 @@ caps.handback.revision: 47
         GO  
         ```  
   
-5.  Nach dem Wiederherstellen der vollständigen Sicherung müssen Sie eine Protokollsicherung für die primäre Datenbank erstellen. Beispielsweise wird das Protokoll mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung in der Sicherungsdatei *E:\MyDB1_log.bak* gesichert:  
+5.  Nach dem Wiederherstellen der vollständigen Sicherung müssen Sie eine Protokollsicherung für die primäre Datenbank erstellen. Beispielsweise wird das Protokoll mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung in der Sicherungsdatei *E:\MyDB1_log.bak*gesichert:  
   
     ```  
     BACKUP LOG MyDB1   
@@ -217,7 +208,7 @@ caps.handback.revision: 47
   
 6.  Sie können die Datenbank erst mit dem sekundären Replikat verknüpfen, nachdem Sie die erforderliche Protokollsicherung (und alle nachfolgenden Protokollsicherungen) angewendet haben.  
   
-     So wird beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung das erste Protokoll von *C:\MyDB1.bak* wiederhergestellt:  
+     So wird beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung das erste Protokoll von *C:\MyDB1.bak*wiederhergestellt:  
   
     ```  
     RESTORE LOG MyDB1   
@@ -228,7 +219,7 @@ caps.handback.revision: 47
   
 7.  Wenn weitere Protokollsicherungen erfolgen, bevor die Datenbank mit dem sekundären Replikat verknüpft wird, müssen Sie mit RESTORE WITH NORECOVERY auch alle Protokollsicherungen nacheinander auf der Serverinstanz wiederherstellen, die das sekundäre Replikat hostet.  
   
-     So werden beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung zwei zusätzliche Protokolle von *E:\MyDB1_log.bak* wiederhergestellt:  
+     So werden beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung zwei zusätzliche Protokolle von *E:\MyDB1_log.bak*wiederhergestellt:  
   
     ```  
     RESTORE LOG MyDB1   
@@ -244,16 +235,16 @@ caps.handback.revision: 47
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
-1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
+1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
   
-2.  Verwenden Sie das Cmdlet **Backup-SqlDatabase**, um jede Sicherung zu erstellen.  
+2.  Verwenden Sie das Cmdlet **Backup-SqlDatabase** , um jede Sicherung zu erstellen.  
   
-3.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das sekundäre Replikat hostet.  
+3.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das sekundäre Replikat hostet.  
   
 4.  Stellen Sie die Datenbank und die Protokollsicherungen aller primären Datenbanken mit dem Cmdlet **restore-SqlDatabase** wieder her, und geben Sie dabei den Wiederherstellungsparameter **NoRecovery** an. Wenn sich die Dateipfade zwischen den Computern unterscheiden, die das primäre Replikat und das sekundäre Zielreplikat hosten, verwenden Sie ebenfalls den Wiederherstellungsparameter **RelocateFile** .  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help**-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 5.  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie sie mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -276,14 +267,15 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Vorbereiten einer sekundären Datenbank  
- Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die neu wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+##  <a name="FollowUp"></a> Nächste Schritte  
+ Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die neu wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE-Argumente &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [RESTORE-Argumente &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)   
+ [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
   
+

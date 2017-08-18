@@ -1,28 +1,33 @@
 ---
-title: "Richtlinienauswertungsergebnis (AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.agdashboard.policyeval.f1"
-  - "sql13.swb.agdashboard.policyeval.f1"
+title: Richtlinienauswertungsergebnis (Always On) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.agdashboard.policyeval.f1
+- sql13.swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 99e4bfcb27e83991ca69b775f6db846eaec5d585
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Richtlinienauswertungsergebnis (AlwaysOn)
+# <a name="policy-evaluation-result-always-on"></a>Richtlinienauswertungsergebnis (AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Verwenden Sie im AlwaysOn-Dashboard die Seite **Ergebnis der Richtlinienauswertung**, um die aktuellen Richtlinienprobleme anzuzeigen.  
+  Verwenden Sie im AlwaysOn-Dashboard die Seite **Ergebnis der Richtlinienauswertung** , um die aktuellen Richtlinienprobleme anzuzeigen.  
   
  **In diesem Thema:**  
   
@@ -36,8 +41,8 @@ caps.handback.revision: 9
   
 |Symbol|Severity|  
 |----------|--------------|  
-|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI-Symbol: Fehler")|Kritisch|  
-|![UI-Symbol: warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI-Symbol: warning")|Warnung|  
+|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|Kritisch|  
+|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|Warnung|  
   
  **Beschreibung**  
  In diesem Raster wird eine kurze Beschreibung des ausgewählten Problems angezeigt.  
@@ -51,8 +56,9 @@ caps.handback.revision: 9
   
 -   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+

@@ -1,29 +1,34 @@
 ---
-title: "Konfiguration der PolyBase-Netzwerkkonnektivit&#228;t (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Konfiguration der PolyBase-Netzwerkkonnektivit&#228;t (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Stellt globale Konfigurationseinstellungen für die PolyBase-Hadoop- und Azure Blob Storage-Konnektivität dar oder ändert diese.  
   
- ![Themenlink (Symbol)](../../database-engine/configure-windows/media/topic-link.png "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,23 +75,23 @@ RECONFIGURE
   
 -   Option 5: Hortonworks HDP 2.0 unter Linux  
   
--   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5 und 5.9 unter Linux  
+-   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 und 5.11 unter Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4 und 2.5 unter Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 und 2.6 unter Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2 und 2.3 unter Windows Server  
   
 -   Option 7: Azure Blob Storage (WASB[S])  
   
  **RECONFIGURE**  
- Aktualisiert den Ausführungswert (run_value), damit er mit dem Konfigurationswert (config_value) übereinstimmt. Definitionen von „run_value“ und „config_value“ finden Sie unter [Resultsets](#ResultSets). Der neue Konfigurationswert, der von sp_configure festgelegt wird, wird erst dann wirksam, wenn der Ausführungswert durch die RECONFIGURE-Anweisung festgelegt wird.  
+ Aktualisiert den Ausführungswert (run_value), damit er mit dem Konfigurationswert (config_value) übereinstimmt. Definitionen von „run_value“ und „config_value“ finden Sie unter [Resultsets](#ResultSets) . Der neue Konfigurationswert, der von sp_configure festgelegt wird, wird erst dann wirksam, wenn der Ausführungswert durch die RECONFIGURE-Anweisung festgelegt wird.  
   
  Nach der Ausführung von RECONFIGURE müssen Sie den SQL Server-Dienst beenden und neu starten. Beachten Sie, dass beim Beenden des SQL Server-Diensts die zwei zusätzlichen PolyBase-Modul- und Datenverschiebungsdienste automatisch beendet werden. Starten Sie diese zwei Dienste nach dem Neustart des SQL Server-Moduldiensts neu (sie starten nicht automatisch).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a> Resultsets  
+##  <a name="ResultSets"></a> Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück.  
   
 |Spaltenname|Datentyp|Description|  
@@ -94,12 +99,12 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
 |**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
-|**config_value**|**int**|Mithilfe von **sp_configure** festgelegter Wert.|  
+|**config_value**|**int**|Mithilfe von **sp_configure**festgelegter Wert.|  
 |**run_value**|**int**|Von PolyBase aktuell verwendeter Wert. Dieser Wert wird durch Ausführen von RECONFIGURE festgelegt.<br /><br /> **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.<br /><br /> Bevor dieser Ausführungswert richtig ist, ist möglicherweise ein Neustart erforderlich, falls gerade eine Neukonfiguration ausgeführt wird.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie nach der Ausführung von RECONFIGURE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu starten, damit der Ausführungswert von „hadoop connectivity“ wirksam wird.  
-In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] müssen Sie nach der Ausführung von RECONFIGURE die Region [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] neu starten, damit der Ausführungswert von „hadoop connectivity“ wirksam wird.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen Sie nach der Ausführung von RECONFIGURE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu starten, damit der Ausführungswert von „hadoop connectivity“ wirksam wird.  
+In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]müssen Sie nach der Ausführung von RECONFIGURE die Region [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] neu starten, damit der Ausführungswert von „hadoop connectivity“ wirksam wird.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  RECONFIGURE ist in einer expliziten oder impliziten Transaktion nicht zulässig.  
@@ -107,7 +112,7 @@ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] müssen Sie nach der Ausführun
 ## <a name="permissions"></a>Berechtigungen  
  Alle Benutzer können **sp_configure** ohne Parameter oder mit dem Parameter @configname ausführen.  
   
- Erfordert die **ALTER SETTINGS**-Berechtigung auf Serverebene oder die Mitgliedschaft in der festen **sysadmin**-Serverrolle, um einen Konfigurationswert zu ändern oder RECONFIGURE auszuführen.  
+ Erfordert die **ALTER SETTINGS** -Berechtigung auf Serverebene oder die Mitgliedschaft in der festen **sysadmin** -Serverrolle, um einen Konfigurationswert zu ändern oder RECONFIGURE auszuführen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

@@ -169,7 +169,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Das Serienmuster gibt an, wann die Warnung gesendet wird. Wenn die Regeln während des Intervalls erfüllt werden, das das Muster angibt, wird die Warnung erst am Ende des Intervalls gesendet.  
   
- Falls Sie so schnell wie möglich eine Datenwarnmeldung erhalten möchten, wenn Berichtsdaten die angegebenen Regeln erfüllen, können Sie die Warnung so planen, dass sie oft ausgeführt wird. Wenn sich die Berichtsdaten nicht ändern, erhalten Sie und andere Empfänger u. U. viele redundante Meldungen. Möchten Sie nur Meldungen empfangen, wenn sich die Ergebnisse der Regelanwendung ändern, wählen Sie die Option zum Senden von Meldungen nur bei Ergebnisänderungen **** .  
+ Falls Sie so schnell wie möglich eine Datenwarnmeldung erhalten möchten, wenn Berichtsdaten die angegebenen Regeln erfüllen, können Sie die Warnung so planen, dass sie oft ausgeführt wird. Wenn sich die Berichtsdaten nicht ändern, erhalten Sie und andere Empfänger u. U. viele redundante Meldungen. Möchten Sie nur Meldungen empfangen, wenn sich die Ergebnisse der Regelanwendung ändern, wählen Sie die Option zum **Senden von Meldungen nur bei Ergebnisänderungen** .  
   
 > [!IMPORTANT]  
 >  Die Verwendung eines Serienmusters, das häufiger als täglich ausgeführt wird, ist nicht empfehlenswert, sofern hierfür kein wichtiger Grund auf Unternehmensebene vorliegt. Die Verarbeitung von Datenwarnungsdefinitionen in Echtzeit ist kein unterstütztes Szenario. Das zu häufige Verarbeiten von Datenwarnungsdefinitionen beeinträchtigt die Leistung des Berichtsservers und der allgemeinen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bereitstellung.  

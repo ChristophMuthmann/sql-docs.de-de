@@ -1,43 +1,48 @@
 ---
-title: "Servereigenschaften (Seite Erweitert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
+title: "Servereigenschaften (Seite „Erweitert)“ | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Servereigenschaften (Seite Erweitert)
+# <a name="server-properties---advanced-page"></a>Servereigenschaften (Seite „Erweitert“)
   Auf dieser Seite können Sie die erweiterten Servereinstellungen anzeigen und ändern.  
   
  **So zeigen Sie die Seite Servereigenschaften an**  
   
 -   [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## Kapselung  
+## <a name="containment"></a>Kapselung  
  Aktivieren enthaltener Datenbanken  
  Gibt an, ob diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eigenständige Datenbanken zulässt. Bei **True**kann eine eigenständige Datenbank erstellt, wiederhergestellt oder angefügt werden. Bei **False**kann keine eigenständige Datenbank erstellt, wiederhergestellt oder an diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Wenn die Einschlusseigenschaft geändert wird, kann sich dies auf die Sicherheit der Datenbank auswirken. Durch das Aktivieren eigenständiger Datenbanken gewährt der Datenbankbesitzer Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn eigenständige Datenbanken deaktiviert werden, können Benutzer u. U. keine Verbindung herstellen. Wie sich die Einschlusseigenschaft auswirken kann, erfahren Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md) und [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM-Zugriffsebene**  
- Zeigt die aktuelle Ebene der FILESTREAM-Unterstützung auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Um die Zugriffsebene zu ändern, wählen Sie einen der folgenden Werte aus:  
+ Zeigt die aktuelle Ebene der FILESTREAM-Unterstützung auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Um die Zugriffsebene zu ändern, wählen Sie einen der folgenden Werte aus:  
   
  **Disabled**  
  Binary Large Object-Daten (BLOB) können nicht auf dem Dateisystem gespeichert werden. Dies ist der Standardwert.  
   
  **Transact-SQL-Zugriff aktiviert**  
- Auf FILESTREAM-Daten kann mit [!INCLUDE[tsql](../../includes/tsql-md.md)] zugegriffen werden, aber nicht über das Dateisystem.  
+ Auf FILESTREAM-Daten kann mit [!INCLUDE[tsql](../../includes/tsql-md.md)]zugegriffen werden, aber nicht über das Dateisystem.  
   
  **Vollzugriff aktiviert**  
  Auf FILESTREAM-Daten kann mit [!INCLUDE[tsql](../../includes/tsql-md.md)] und über das Dateisystem zugegriffen werden.  
@@ -47,7 +52,7 @@ caps.handback.revision: 65
  **FILESTREAM-Freigabename**  
  Zeigt den schreibgeschützten Namen der FILESTREAM-Freigabe an, die während des Setups ausgewählt wurde. Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
-## Sonstiges  
+## <a name="miscellaneous"></a>Sonstiges  
  **Triggern ermöglichen, weitere Trigger auszulösen**  
  Ermöglicht Triggern, weitere Trigger auszulösen. Trigger können maximal 32 Ebenen tief geschachtelt werden. Weitere Informationen finden Sie im Abschnitt „Geschachtelte Trigger“ unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -66,14 +71,14 @@ caps.handback.revision: 65
  Die Standardsprache für alle neuen Anmeldungen, sofern nicht anders angegeben.  
   
  **Volltextupgrade-Option**  
- Steuert, wie Volltextindizes migriert werden, wenn Sie für eine Datenbank ein Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausführen. Diese Eigenschaft ist für die folgenden Aktionen gültig: Upgrade durch Anfügen einer Datenbank, Wiederherstellen einer Datenbanksicherung, Wiederherstellen einer Dateisicherung oder Kopieren der Datenbank mit dem Assistenten zum Kopieren von Datenbanken.  
+ Steuert, wie Volltextindizes migriert werden, wenn Sie für eine Datenbank ein Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausführen. Diese Eigenschaft ist für die folgenden Aktionen gültig: Upgrade durch Anfügen einer Datenbank, Wiederherstellen einer Datenbanksicherung, Wiederherstellen einer Dateisicherung oder Kopieren der Datenbank mit dem Assistenten zum Kopieren von Datenbanken.  
   
  Die Alternativen lauten folgendermaßen:  
   
  **Importieren**  
- Volltextkataloge werden importiert. Dieser Vorgang ist bedeutend schneller als die Verwendung von **Neu erstellen**. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Wörtertrennungen. Aus diesem Grund sollten Sie die Volltextkataloge zu einem späteren Zeitpunkt neu erstellen.  
+ Volltextkataloge werden importiert. Dieser Vorgang ist bedeutend schneller als die Verwendung von **Neu erstellen**. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]eingeführten Wörtertrennungen. Aus diesem Grund sollten Sie die Volltextkataloge zu einem späteren Zeitpunkt neu erstellen.  
   
- Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbanken verfügbar.  
+ Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.  
   
  **Neu erstellen**  
  Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
@@ -86,10 +91,10 @@ caps.handback.revision: 65
 > [!NOTE]  
 >  Die Option für das Volltextupgrade kann auch mit der [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option-Aktion festgelegt werden.  
   
- Nachdem Sie eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angehängt, wiederhergestellt oder kopiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option**. Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen** festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren** festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Nachdem Sie eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]angehängt, wiederhergestellt oder kopiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Max. Textgröße für Replikation**  
- Legt die maximale Größe (in Byte) von Daten des Typs **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml** und **image** fest, die einer replizierten oder aufgezeichneten Spalte in einer einzelnen INSERT-, UPDATE-, WRITETEXT- oder UPDATETEXT-Anweisung hinzugefügt werden können. Die Änderung der Einstellung wird sofort wirksam. Weitere Informationen finden Sie unter [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Legt die maximale Größe (in Byte) von Daten des Typs **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**und **image** fest, die einer replizierten oder aufgezeichneten Spalte in einer einzelnen INSERT-, UPDATE-, WRITETEXT- oder UPDATETEXT-Anweisung hinzugefügt werden können. Die Änderung der Einstellung wird sofort wirksam. Weitere Informationen finden Sie unter [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Startprozeduren suchen (Scan For Startup Procs)**  
  gibt an, dass von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Start nach der automatischen Ausführung gespeicherter Prozeduren gesucht wird. Bei **True**sucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach allen Prozeduren auf dem Server, für die eine automatische Ausführung definiert ist, und führt diese aus. Bei **False** (Standardeinstellung) wird keine Suche ausgeführt. Weitere Informationen finden Sie unter [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
@@ -99,7 +104,7 @@ caps.handback.revision: 65
   
  Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen finden Sie unter [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Netzwerk  
+## <a name="network"></a>Netzwerk  
  **Netzwerkpaketgröße**  
  Legt die im gesamten Netzwerk verwendete Paketgröße (in Bytes) fest. Der Standardwert ist 4096 Bytes. Wenn eine Anwendung Massenkopiervorgänge ausführt oder große Mengen an Daten vom Typ **text** oder **image** sendet bzw. empfängt, kann eine über der Standardgröße liegende Paketgröße die Effizienz verbessern, da weniger Netzwerklesevorgänge und -schreibvorgänge ausgeführt werden. Sendet und empfängt eine Anwendung kleine Mengen von Informationen, können Sie die Paketgröße auf 512 Bytes festlegen. Dies ist für die meisten Datenübertragungen ausreichend. Weitere Informationen finden Sie unter [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  Die Änderung der Einstellung wird sofort wirksam.  
   
-## Parallelität:  
+## <a name="parallelism"></a>Parallelität:  
  **Kostenschwellenwert für Parallelität**  
  Gibt den Schwellenwert an, über dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parallele Pläne für Abfragen erstellt und ausgeführt werden. Die Kosten beziehen sich auf eine geschätzte Zeit in Sekunden, die für das Ausführen des seriellen Plans bei einer bestimmten Hardwarekonfiguration benötigt wird. Aktivieren Sie diese Option nur bei symmetrischen Multiprozessorsystemen. Weitere Informationen finden Sie unter [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 65
  **Abfragewartezeit**  
  Gibt die Zeit in Sekunden an (von 0 bis 2147483647), die eine Abfrage auf Ressourcen wartet, bevor der Vorgang timeoutbedingt abgebrochen wird. Bei Verwendung des Standardwertes von –1 wird das Timeout als das 25-fache der geschätzten Abfragekosten berechnet. Weitere Informationen finden Sie unter [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

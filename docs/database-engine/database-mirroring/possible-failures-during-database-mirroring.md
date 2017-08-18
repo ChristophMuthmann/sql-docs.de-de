@@ -1,30 +1,35 @@
 ---
-title: "M&#246;gliche Fehler w&#228;hrend der Datenbankspiegelung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Timeoutzeitraum [SQL Server-Datenbankspiegelung]"
-  - "Softwarefehler [SQL Server]"
-  - "Datenbankspiegelung [SQL Server], Problembehandlung"
-  - "Timeoutfehler [SQL Server]"
-  - "Problembehandlung [SQL Server], Datenbankspiegelung"
-  - "Hardwarefehler"
-  - "Fehler bei Datenbank-Spiegelungssitzungen [SQL Server]"
+title: "Mögliche Fehler während der Datenbankspiegelung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# M&#246;gliche Fehler w&#228;hrend der Datenbankspiegelung
+# <a name="possible-failures-during-database-mirroring"></a>Mögliche Fehler während der Datenbankspiegelung
   Physische, betriebssystembedingte oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Probleme können einen Fehler während einer Datenbank-Spiegelungssitzung verursachen. Die Datenbankspiegelung überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert die Datenbankspiegelung eigene Timeoutmechanismen. Beim Auftreten eines solchen Timeouts nimmt die Datenbankspiegelung an, dass ein Fehler aufgetreten ist, und generiert einen *Softwarefehler*. Einige Fehler auf der SQL Server-Instanzebene führen jedoch nicht dazu, dass bei der Spiegelung ein Timeout eintritt und die Sitzung nicht erkannt wird.  
   
 > [!IMPORTANT]  
@@ -32,8 +37,8 @@ caps.handback.revision: 59
   
  Die Geschwindigkeit der Fehlererkennung und somit die Reaktionszeit der Spiegelsitzung auf den Fehler hängen davon ab, ob es sich um einen Hardware- oder Softwarefehler handelt. Bestimmte Hardwarefehler, wie z. B. Netzwerkfehler, werden sofort gemeldet. In bestimmten Fällen kann jedoch die Meldung von Hardwarefehlern durch komponentenspezifische Timeoutzeitspannen verzögert werden. Bei Softwarefehlern bestimmt die Timeoutzeitspanne die Geschwindigkeit der Fehlererkennung. Standardmäßig sind hierfür 10 Sekunden festgelegt. Dies ist der empfohlene Mindestwert.  
   
-## Fehler aufgrund von Hardwarefehlern  
- Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Hardwarefehler dar:   
+## <a name="failures-due-to-hard-errors"></a>Fehler aufgrund von Hardwarefehlern  
+ Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Hardwarefehler dar:  
   
 -   Eine unterbrochene Verbindung oder ein fehlerhaftes Kabel  
   
@@ -73,8 +78,8 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  Das Spiegeln bietet keinen Schutz vor Problemen im Hinblick auf den Zugriff des Clients auf die Server. Nehmen wir beispielsweise an, eine öffentliche Netzwerkkarte verwaltet Clientverbindungen zu der Prinzipalserverinstanz, während eine private Netzwerkschnittstellenkarte den Spiegelungsverkehr zwischen den Serverinstanzen verwaltet. Wenn in einem solchen Fall die öffentliche Netzwerkkarte ausfällt, können die Clients nicht mehr auf die Datenbank zugreifen, obwohl die Datenbank weiterhin gespiegelt wird.  
   
-## Fehler aufgrund von Softwarefehlern  
- Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Spiegelungstimeouts dar:   
+## <a name="failures-due-to-soft-errors"></a>Fehler aufgrund von Softwarefehlern  
+ Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Spiegelungstimeouts dar:  
   
 -   Netzwerkfehler, wie z. B. Timeouts für TCP-Verbindungen, gelöschte oder beschädigte Pakete oder Pakete in falscher Reihenfolge.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   Unzureichende Verarbeitungsressourcen, wie z. B. Überlastung der CPU oder des Datenträgers, volles Transaktionsprotokoll oder unzureichender Arbeitsspeicher oder nicht genügend Threads. In diesen Fällen müssen Sie den Timeoutzeitraum erhöhen, die Arbeitsauslastung reduzieren oder die Hardware an die Arbeitsauslastung anpassen.  
   
-### Der Spiegelungstimeout-Mechanismus  
+### <a name="the-mirroring-time-out-mechanism"></a>Der Spiegelungstimeout-Mechanismus  
  Aufgrund der Tatsache, dass Softwarefehler nicht direkt von einer Serverinstanz erkannt werden, kann ein Softwarefehler potenziell dazu führen, dass eine Serverinstanz unbegrenzt wartet. Um dies zu verhindern, implementiert die Datenbankspiegelung einen eigenen Timeoutmechanismus, der darauf basiert, dass jede Serverinstanz in einer Spiegelungssitzung in regelmäßigen Intervallen einen Ping über alle offenen Verbindungen sendet.  
   
  Damit eine Verbindung offen bleibt, muss eine Serverinstanz innerhalb der definierten Timeoutzeitspanne einen Ping über diese Verbindung erhalten. Hinzu kommt die Dauer, die zum Senden eines weiteren Pings erforderlich ist. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Die Serverinstanz setzt nach dem Empfangen eines Pings die Timeoutzähler dieser Verbindung wieder zurück.  
@@ -103,10 +108,10 @@ caps.handback.revision: 59
   
 -   Führen Sie folgende Abfrage durch: **mirroring_connection_timeout** in [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
-## Reagieren auf Fehler  
+## <a name="responding-to-an-error"></a>Reagieren auf Fehler  
  Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Betriebsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen über die Abläufe beim Ausfall eines Partners finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

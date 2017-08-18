@@ -1,33 +1,38 @@
 ---
-title: "Optionen (SQL Server Always On, Dashboardseite) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Alwayson.Dashboard"
+title: Optionen (SQL Server Always On, Dashboardseite) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6edac25ccc503679e45bdc3477a819e0285e2909
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Optionen (SQL Server Always On, Dashboardseite)
+# <a name="options-sql-server-always-on-dashboard-page"></a>Optionen (SQL Server Always On, Dashboardseite)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie die Seite **SQL Server Always On-Dashboard** des [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Dialogfelds **Optionen**, um das Always On-Dashboard zu konfigurieren.  
   
  **So greifen Sie auf diese Seite zu:**  
   
- Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **SQL Server Always On**, und klicken Sie dann auf **Dashboard**.  
+ Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **SQL Server Always On** , und klicken Sie dann auf **Dashboard**.  
   
-## Auf dieser Seite  
+## <a name="on-this-page"></a>Auf dieser Seite  
  **Automatische Aktualisierung aktivieren**  
  Klicken Sie, um die automatische Aktualisierung zu aktivieren. Folgende Optionen sind verfügbar:  
   
@@ -38,7 +43,8 @@ caps.handback.revision: 8
  **Aktivieren Sie die benutzerdefinierte Always On-Richtlinie.**  
  Wenn Sie eine eigene Always On-Richtlinie definiert haben, klicken Sie auf diese Option, um die Richtlinie zu aktivieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des Always On-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

@@ -1,28 +1,33 @@
 ---
-title: "Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Protokollversand [SQL Server], aktualisieren"
+title: Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
   Beim Aktualisieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Update wird Ihre Notfallwiederherstellungslösung für den Protokollversand beibehalten, wenn Sie Ihre Protokollversandserver in der richtigen Reihenfolge aktualisieren.  
   
 > [!NOTE]  
-> Die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) wurde in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]eingeführt. In einer aktualisierten Protokollversandkonfiguration wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** bestimmt, ob die Transaktionsprotokoll-Sicherungsdateien mithilfe der Sicherungskomprimierung komprimiert werden. Das Verhalten für die Sicherungskomprimierung der Protokollsicherung kann für jede Protokollversandkonfiguration festgelegt werden. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+>  Die[Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) wurde in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]eingeführt. In einer aktualisierten Protokollversandkonfiguration wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** bestimmt, ob die Transaktionsprotokoll-Sicherungsdateien mithilfe der Sicherungskomprimierung komprimiert werden. Das Verhalten für die Sicherungskomprimierung der Protokollsicherung kann für jede Protokollversandkonfiguration festgelegt werden. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  
   
  **In diesem Thema:**  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 59
   
 -   [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
   
--   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+-   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   
 ##  <a name="ProtectData"></a> Datensicherung vor dem Upgrade  
  Als bewährte Methode wird empfohlen, dass Sie die Daten vor einem Protokollversandupgrade schützen.  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  Der Protokollversand unterstützt auch die Option zum [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) sowie zum [Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Da der Protokollversand heute jedoch nur noch selten als hoch verfügbare Lösung konfiguriert wird (neuere Optionen sind deutlich stabiler), wird die Downtime durch ein Failover im Allgemeinen nicht minimiert, da Systemdatenbank-Objekte nicht synchronisiert werden. Außerdem ist es äußerst aufwändig, Clients eine problemlose Ermittlung und Verbindung mit einer höher gestuften sekundären Instanz zu ermöglichen.  
   
-## Siehe auch  
- [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
- [Überwachen des Protokollversands &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
+ [Konfigurieren des Protokollversands (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
+ [Überwachen des Protokollversands (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

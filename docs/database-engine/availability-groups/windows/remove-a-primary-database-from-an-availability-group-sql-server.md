@@ -1,30 +1,35 @@
 ---
-title: "Entfernen einer prim&#228;ren Datenbank aus einer Verf&#252;gbarkeitsgruppe (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeprimarydb.f1"
-helpviewer_keywords: 
-  - "primäre Datenbanken [SQL Server], in Verfügbarkeitsgruppe"
-  - "Verfügbarkeitsgruppen [SQL Server], entfernen"
-  - "Verfügbarkeitsgruppen [SQL Server], konfigurieren"
-  - "Verfügbarkeitsgruppen [SQL Server], Datenbanken"
+title: "Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeprimarydb.f1
+helpviewer_keywords:
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64c6b353bb46dd08f69823e85826fc93553e6e0d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Entfernen einer prim&#228;ren Datenbank aus einer Verf&#252;gbarkeitsgruppe (SQL Server)
-  In diesem Thema wird erläutert, wie sowohl die primäre Datenbank als auch die entsprechenden sekundären Datenbanken aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] entfernt werden.  
+# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
+  In diesem Thema wird erläutert, wie sowohl die primäre Datenbank als auch die entsprechenden sekundären Datenbanken aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]entfernt werden.  
   
 -   **Vorbereitungen:**  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 28
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat der zu entfernenden Datenbanken hostet, und erweitern Sie die Serverstruktur.  
   
-2.  Erweitern Sie die Knoten **Hohe Verfügbarkeit mit AlwaysOn** und **Verfügbarkeitsgruppen**.  
+2.  Erweitern Sie die Knoten **Hohe Verfügbarkeit mit AlwaysOn** und **Verfügbarkeitsgruppen** .  
   
 3.  Wählen Sie die Verfügbarkeitsgruppe aus, und erweitern Sie den Knoten **Verfügbarkeitsdatenbanken** .  
   
 4.  Dieser Schritt hängt davon ab, ob Sie mehrere Datenbankgruppen oder nur eine Datenbank entfernen möchten:  
   
-    -   Verwenden Sie zum Entfernen mehrerer Datenbanken den Bereich **Details zum Objekt-Explorer** , um alle zu entfernenden Datenbanken anzuzeigen und auszuwählen. Weitere Informationen finden Sie unter [Verwenden der Details zum Objekt-Explorer zum Überwachen von Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Verwenden Sie zum Entfernen mehrerer Datenbanken den Bereich **Details zum Objekt-Explorer** , um alle zu entfernenden Datenbanken anzuzeigen und auszuwählen. Weitere Informationen finden Sie unter [Verwenden der Details zum Objekt-Explorer zum Überwachen von Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Wählen Sie zum Entfernen einer einzelnen Datenbank diese im Bereich **Objekt-Explorer** oder **Details zum Objekt-Explorer** aus.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 28
   
      Dabei ist *Gruppenname* der Name der Verfügbarkeitsgruppe und *Verfügbarkeitsdatenbankname* der Name der zu entfernenden Datenbank.  
   
-     Im folgenden Beispiel wird eine Datenbank namens `Db6` aus der `MyAG`-Verfügbarkeitsgruppe entfernt.  
+     Im folgenden Beispiel wird eine Datenbank namens `Db6` aus der `MyAG` -Verfügbarkeitsgruppe entfernt.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
@@ -92,9 +97,9 @@ caps.handback.revision: 28
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So entfernen Sie eine Verfügbarkeitsdatenbank**  
   
-1.  Wechseln Sie mit **cd** in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
+1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
   
-2.  Verwenden Sie das **Remove-SqlAvailabilityDatabase**-Cmdlet, und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit der Serverinstanz verbunden sind, die das primäre Replikat hostet, werden die primäre Datenbank und ihre entsprechenden sekundären Datenbanken aus der Verfügbarkeitsgruppe entfernt.  
+2.  Verwenden Sie das **Remove-SqlAvailabilityDatabase** -Cmdlet, und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit der Serverinstanz verbunden sind, die das primäre Replikat hostet, werden die primäre Datenbank und ihre entsprechenden sekundären Datenbanken aus der Verfügbarkeitsgruppe entfernt.  
   
      Beispielsweise wird durch den folgenden Befehl das Verfügbarkeitsdatenbank `MyDb9` von der Verfügbarkeitsgruppe namens `MyAg`entfernt. Da der Befehl auf der Serverinstanz ausgeführt wird, von der das primäre Replikat gehostet wird, werden die primäre Datenbank und alle entsprechenden sekundären Datenbanken aus der Verfügbarkeitsgruppe entfernt. Für diese Datenbank wird auf allen sekundären Replikaten keine Datensynchronisierung mehr ausgeführt.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 28
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help**-Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -123,8 +128,9 @@ caps.handback.revision: 28
   
      Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Replikationsabonnenten und Always On-Verf&#252;gbarkeitsgruppen (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Failoverabonnenten mit AlwaysOn"
-  - "Verfügbarkeitsgruppen [SQL Server], Interoperabilität"
-  - "Replikation [SQL Server], AlwaysOn-Verfügbarkeitsgruppen"
+title: "Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Replikationsabonnenten und Always On-Verf&#252;gbarkeitsgruppen (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Wenn für eine Always On-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, tritt u.U. ein Fehler beim Replikationsabonnement auf. Bei Transaktionsabonnenten setzt der Verteilungs-Agent die Replikation automatisch fort, wenn für das Abonnement der Name des Verfügbarkeitsgruppenlisteners des Abonnenten verwendet wird. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
   
-## Unterstützte Vorgänge  
+## <a name="what-is-supported"></a>Unterstützte Vorgänge  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation unterstützt das automatische Failover des Verlegers, das automatische Failover von Transaktionsabonnenten und das manuelle Failover von Mergeabonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. Always On kann nicht mit WebSync- und ssNoVersion Compact-Szenarien kombiniert werden.  
   
  **Failover eines Mergepullabonnements**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  Ein Pushabonnement schlägt bei einem Verfügbarkeitsgruppenfailover fehl, da der Push-Agent keine Verbindung mehr mit der ursprünglichen Abonnementdatenbank auf dem ursprünglichen Abonnenten herstellen kann.  
   
-## Erstellen eines Transaktionsabonnements in einer Always On-Umgebung  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Erstellen eines Transaktionsabonnements in einer Always On-Umgebung  
  Führen Sie bei der Transaktionsreplikation folgende Schritte aus, um die Verfügbarkeitsgruppe eines Abonnenten zu konfigurieren und ein Failover auszuführen:  
   
 1.  Bevor Sie das Abonnement erstellen, fügen Sie der entsprechenden Always On-Verfügbarkeitsgruppe die Abonnentendatenbank hinzu.  
@@ -46,7 +51,7 @@ caps.handback.revision: 19
 3.  Erstellen Sie das Abonnement mit dem Namen des Verfügbarkeitsgruppenlisteners des Abonnenten mithilfe des Skripts im Abschnitt **Erstellen eines Pushabonnements für eine Transaktionsreplikation** unten. Der Listenername bleibt nach einem Failover weiterhin gültig, während der tatsächliche Servername des Abonnenten von dem Knoten abhängig ist, der zum neuen primären Replikat wird.  
   
     > [!NOTE]  
-    >  Das Abonnement muss mithilfe eines [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skripts erstellt werden, nicht mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    >  Das Abonnement muss mithilfe eines [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skripts erstellt werden, nicht mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Bei Erstellung eines Pullabonnements:  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  Wenn Sie beim Erstellen des Abonnements diese Schritte befolgen, müssen nach einem Failover keine weiteren Maßnahmen ergriffen werden.  
   
-## Erstellen eines Pushabonnements für eine Transaktionsreplikation  
+## <a name="creating-a-transactional-replication-push-subscription"></a>Erstellen eines Pushabonnements für eine Transaktionsreplikation  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,7 +84,7 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## So setzen Sie Merge-Agents nach einem Verfügbarkeitsgruppenfailover des Abonnenten fort  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>So setzen Sie Merge-Agents nach einem Verfügbarkeitsgruppenfailover des Abonnenten fort  
  Bei einer Mergereplikation muss der Abonnent mithilfe folgender Schritte von einem Replikationsadministrator manuell neu konfiguriert werden:  
   
 1.  Führen Sie **sp_subscription_cleanup** aus, um das alte Abonnement für den Abonnenten zu entfernen. Führen Sie diese Aktion für das neue primäre Replikat aus (das zuvor das sekundäre Replikat war).  
@@ -90,3 +95,4 @@ GO
 >  Das aktuelle Verfahren ist für Mergereplikationsabonnenten nicht geeignet, die Mergereplikation erfolgt jedoch hauptsächlich für nicht verbundene Benutzer (Desktops, Laptops, Mobiltelefone), die keine Always On-Verfügbarkeitsgruppen auf dem Abonnenten nutzen.  
   
   
+

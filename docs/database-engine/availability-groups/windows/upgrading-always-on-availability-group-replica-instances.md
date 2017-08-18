@@ -1,30 +1,35 @@
 ---
-title: "Upgraden von Always On-Verf&#252;gbarkeitsgruppen-Replikatsinstanzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Upgraden von Always On-Verf&#252;gbarkeitsgruppen-Replikatsinstanzen
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Always On-Verfügbarkeitsgruppe auf eine neue [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Version oder ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack aktualisiert wird, können Sie die Downtime für das primäre Replikat auf ein einzelnes manuelles Failover reduzieren. Führen Sie dazu ein paralleles Upgrade aus (oder zwei manuelle Failover, falls Sie einen Failback auf das ursprüngliche primäre Replikat ausführen). Diese Vorgehensweise funktioniert auch, wenn eine kumulative Aktualisierung durchgeführt wird, beim Installieren auf einem neuen Windows Service Pack oder bei der kumulativen Aktualisierung. Während des Upgradevorgangs steht ein sekundäres Replikat weder für ein Failover noch für schreibgeschützte Vorgänge zur Verfügung. Nach dem Upgrade kann es etwas dauern, bis das sekundäre Replikat auf dem gleichen Stand ist, wie der primäre Replikatknoten. Dies ist vom Ausmaß der Aktivität auf dem Primären Replikatknoten (erwarten Sie also viel Netzwerkverkehr) abhängig.  
+  Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Always On-Verfügbarkeitsgruppe auf eine neue [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Version oder ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack aktualisiert wird, können Sie die Downtime für das primäre Replikat auf ein einzelnes manuelles Failover reduzieren. Führen Sie dazu ein paralleles Upgrade aus (oder zwei manuelle Failover, falls Sie einen Failback auf das ursprüngliche primäre Replikat ausführen). Diese Vorgehensweise funktioniert auch, wenn eine kumulative Aktualisierung durchgeführt wird, beim Installieren auf einem neuen Windows Service Pack oder bei der kumulativen Aktualisierung. Während des Upgradevorgangs steht ein sekundäres Replikat weder für ein Failover noch für schreibgeschützte Vorgänge zur Verfügung. Nach dem Upgrade kann es etwas dauern, bis das sekundäre Replikat auf dem gleichen Stand ist, wie der primäre Replikatknoten. Dies ist vom Ausmaß der Aktivität auf dem Primären Replikatknoten (erwarten Sie also viel Netzwerkverkehr) abhängig.  
   
 > [!NOTE]  
->  In diesem Thema wird nur das Upgraden des SQL Servers selbst behandelt. Es behandelt nicht das Upgraden des Betriebssystems, das den WSFC-Cluster (Windows Server Failover Clusting) beinhaltet. Das Upgraden des Windows-Betriebssystems, das den Failovercluster hostet, wird für ältere Betriebssysteme als Windows Server 2012 R2 nicht unterstützt. Weitere Informationen über das Upgraden eines Clusterknotens, der auf Windows Server 2012 R2 ausgeführt wird, finden Sie unter [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx) (Paralleles Upgraden für Clusterbetriebssysteme)  
+>  In diesem Thema wird nur das Upgraden des SQL Servers selbst behandelt. Es behandelt nicht das Upgraden des Betriebssystems, das den WSFC-Cluster (Windows Server Failover Clusting) beinhaltet. Das Upgraden des Windows-Betriebssystems, das den Failovercluster hostet, wird für ältere Betriebssysteme als Windows Server 2012 R2 nicht unterstützt. Weitere Informationen über das Upgraden eines Clusterknotens, der auf Windows Server 2012 R2 ausgeführt wird, finden Sie unter [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(Paralleles Upgraden für Clusterbetriebssysteme)  
   
-## Erforderliche Komponenten  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Prüfen Sie, dass Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version des SQL Servers auf SQL Server 2016 upgraden können. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]upgraden.  
@@ -33,9 +38,9 @@ caps.handback.revision: 14
   
 -   [Planen und Testen des Upgradeplans für das Datenbankmodul](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
   
--   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+-   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   
-## Bewährte Verfahren für parallele Upgrades von Always On-Verfügbarkeitsgruppen  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Bewährte Verfahren für parallele Upgrades von Always On-Verfügbarkeitsgruppen  
  Beachten Sie beim Ausführen von Serverupgrades oder -aktualisierungen die folgenden bewährten Verfahren, um die Downtime und Datenverluste für Ihre Verfügbarkeitsgruppen zu minimieren:  
   
 -   Vor dem Start des parallelen Upgrades:  
@@ -62,10 +67,10 @@ caps.handback.revision: 14
   
 -   Bevor Sie ein Failover für eine Verfügbarkeitsgruppe ausführen, sollten Sie überprüfen, ob der Synchronisierungsstatus des Failoverziels SYNCHRONIZED lautet.  
   
-## Prozess des parallelen Upgrades  
+## <a name="rolling-upgrade-process"></a>Prozess des parallelen Upgrades  
  Die genauen Schritte hängen von Faktoren wie der Bereitstellungstopologie der Verfügbarkeitsgruppen und dem Commitmodus der einzelnen Replikate ab. Im einfachsten Szenario ist ein paralleles Upgrade jedoch ein mehrstufiger Prozess, der in seiner einfachsten Form aus den folgenden Schritten besteht:  
   
- ![Szenario 'Upgrade von Verfügbarkeitsgruppen in HADR'](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Szenario 'Upgrade von Verfügbarkeitsgruppen in HADR'")  
+ ![Szenario für ein Upgrade von Verfügbarkeitsgruppen in HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
   
 1.  Deaktivieren des automatischen Failovers für alle Replikate mit synchronem Commit  
   
@@ -81,10 +86,10 @@ caps.handback.revision: 14
   
  Falls erforderlich, können Sie einen zusätzlichen manuellen Failover ausführen, um die ursprüngliche Konfiguration der Verfügbarkeitsgruppe wiederherzustellen.  
   
-## Verfügbarkeitsgruppe mit einem sekundären Remotereplikat  
- Wenn Sie eine Verfügbarkeitsgruppe ausschließlich zur Notfallwiederherstellung bereitgestellt haben, müssen Sie für die Verfügbarkeitsgruppe u. U. ein Failover auf ein sekundäres Replikat mit asynchronem Commit ausführen. Diese Konfiguration wird in der folgenden Abbildung dargestellt:  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>Verfügbarkeitsgruppe mit einem sekundären Remotereplikat  
+ Wenn Sie eine Verfügbarkeitsgruppe ausschließlich zur Notfallwiederherstellung bereitgestellt haben, müssen Sie für die Verfügbarkeitsgruppe u. U. ein Failover auf ein sekundäres Replikat mit asynchronem Commit ausführen. Diese Konfiguration wird in der folgenden Abbildung dargestellt:  
   
- ![Szenario 'Upgrade von Verfügbarkeitsgruppen in DR'](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Szenario 'Upgrade von Verfügbarkeitsgruppen in DR'")  
+ ![Szenario für ein Upgrade von Verfügbarkeitsgruppen in DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Availability Group Upgrade in HADR Scenario")  
   
  In diesem Fall müssen Sie für die Verfügbarkeitsgruppe während des parallelen Upgrades ein Failover auf das sekundäre Replikat mit asynchronem Commit ausführen. Zur Vermeidung von Datenverlusten ändern Sie den Commitmodus in den synchronen Commitmodus und warten mit dem Failover der Verfügbarkeitsgruppe, bis das sekundäre Replikat synchronisiert ist. Der Prozess zum Durchführen eines parallelen Upgrades kann somit folgendermaßen aussehen:  
   
@@ -108,10 +113,10 @@ caps.handback.revision: 14
   
 -   Ändern Sie den Verfügbarkeitsmodus während des Upgradens oder Aktualisierens von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] am primären Standort zurück in den asynchronen Commitmodus, und kehren Sie zu synchronen Commits zurück, wenn Sie wieder bereit für ein Failover auf den primären Standort sind.  
   
-## Verfügbarkeitsgruppe mit Failoverclusterinstanz-Knoten  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Verfügbarkeitsgruppe mit Failoverclusterinstanz-Knoten  
  Falls eine Verfügbarkeitsgruppe Failoverclusterinstanz-Knoten (Failover Cluster Instance; FCI) beinhaltet, sollten Sie die inaktiven Knoten vor den aktiven Knoten upgraden. In der folgenden Abbildung ist ein gängiges Verfügbarkeitsgruppenszenario mit FCIs dargestellt. Es basiert auf FCIs, die auf lokale Hochverfügbarkeit und asynchrone Commits zur Remote-Notfallwiederherstellung ausgelegt sind, und veranschaulicht die Schritte zum Ausführen des Upgrades.  
   
- ![Upgrade von Verfügbarkeitsgruppen mit FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Upgrade von Verfügbarkeitsgruppen mit FCIs")  
+ ![Szenario für ein Upgrade von Verfügbarkeitsgruppen mit FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade in HADR Scenario")  
   
 1.  Upgraden oder Aktualisieren von REMOTE2 (Remote2)  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  Upgraden oder Aktualisieren von PRIMARY1 (Primär1)  
   
-## Upgraden oder Aktualisieren von SQL Server-Instanzen mit mehreren Verfügbarkeitsgruppen  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>Upgraden oder Aktualisieren von SQL Server-Instanzen mit mehreren Verfügbarkeitsgruppen  
  Falls Sie mehrere Verfügbarkeitsgruppen mit primären Replikaten auf verschiedenen Serverknoten ausführen (eine Aktive-/Aktive Konfiguration), umfasst der Upgradepfad mehr Failoverschritte, um die hohe Verfügbarkeit während des Vorgangs zu sichern. Angenommen, Sie führen drei Verfügbarkeitsgruppen auf drei Serverknoten aus (vgl. die folgende Tabelle) und alle sekundären Replikate werden im synchronen Commitmodus ausgeführt.  
   
 |Verfügbarkeitsgruppe|Knoten1|Knoten2|Knoten3|  
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  In vielen Fällen wird nach Fertigstellung des parallelen Upgrades ein Failback auf das primäre Replikat durchgeführt.  
   
-## Siehe auch  
- [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

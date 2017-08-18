@@ -1,35 +1,40 @@
 ---
-title: "Servereigenschaften (Seite Verbindungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "Servereigenschaften (Seite „Verbindungen“) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
-# Servereigenschaften (Seite Verbindungen)
+# <a name="server-properties---connections-page"></a>Servereigenschaften (Seite „Verbindungen“)
   Mithilfe dieser Seite können Sie die Verbindungsoptionen anzeigen und ändern.  
   
-## Verbindungen  
+## <a name="connections"></a>Verbindungen  
  **Maximale Anzahl von gleichzeitigen Verbindungen (0 = unbegrenzt)**  
  Wenn diese Option auf einen Wert ungleich null festgelegt ist, wird die Anzahl der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugelassenen Verbindungen entsprechend begrenzt.  
   
 > [!CAUTION]  
 >  Wenn dieser Wert sehr klein ist, z. B. 1 oder 2, könnten dadurch Administratoren daran gehindert werden, eine Verbindung mit dem Server zwecks Verwaltung herzustellen. Die dedizierte Administratorverbindung kann allerdings immer hergestellt werden.  
   
-## Standardverbindungsoptionen  
- **Standardverbindungsoptionen**  
+## <a name="default-connection-options"></a>Standardverbindungsoptionen  
+ **Default connection options**  
  Gibt die Standardverbindungsoptionen an, die in der folgenden Tabelle beschrieben werden.  
   
 |Konfigurationsoption|Beschreibung|  
@@ -52,9 +57,9 @@ caps.handback.revision: 27
   
  Weitere Informationen zu den Verbindungsoptionen finden Sie, wenn Sie nach der entsprechenden Option in der Onlinedokumentation suchen.  
   
-## Remoteserververbindungen  
+## <a name="remote-server-connections"></a>Remoteserververbindungen  
  **Remoteverbindungen mit diesem Server zulassen**  
- Steuert die Ausführung von gespeicherten Prozeduren von Remoteservern, auf denen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Das Aktivieren dieses Kontrollkästchens hat dieselbe Wirkung wie das Festlegen der Option **sp_configure 'remote access'** auf 1. Ist es deaktiviert, wird die Ausführung der gespeicherten Prozeduren von einem Remoteserver verhindert.  
+ Steuert die Ausführung von gespeicherten Prozeduren von Remoteservern, auf denen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Das Aktivieren dieses Kontrollkästchens hat dieselbe Wirkung wie das Festlegen der Option **sp_configure 'remote access'** auf 1. Ist es deaktiviert, wird die Ausführung der gespeicherten Prozeduren von einem Remoteserver verhindert.  
   
  **Timeout für Remoteabfragen (Sekunden, 0 = kein Timeout)**  
  Gibt an, wie viel Zeit (in Sekunden) ein Remotevorgang in Anspruch nehmen kann, bevor das Timeout von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eintritt. Die Standardeinstellung ist 600 Sekunden, was einer Wartezeit von zehn Minuten entspricht.  
@@ -62,15 +67,15 @@ caps.handback.revision: 27
  **Verteilte Transaktionen für die Kommunikation zwischen Servern verlangen**  
  Schützt die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC). Weitere Informationen finden Sie unter [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
-## Anzeigeoptionen der Eigenschaftenseite  
+## <a name="property-page-display-options"></a>Anzeigeoptionen der Eigenschaftenseite  
  **Konfigurierte Werte**  
  Zeigt für die Optionen in diesem Bereich konfigurierte Werte an. Wenn Sie diese Werte ändern, klicken Sie anschließend auf **Ausgeführte Werte** , um zu sehen, ob die Änderungen wirksam sind. Sind sie nicht wirksam, muss die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuerst neu gestartet werden.  
   
  **Ausgeführte Werte**  
  Zeigt die gegenwärtig ausgeführten Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## Siehe auch  
- [Optionen &#40;Abfrageausführung: SQL Server: Seite „Erweitert“&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Optionen &#40;Abfrageausführung: SQL Server: Seite „Erweitert“&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
