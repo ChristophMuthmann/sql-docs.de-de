@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
@@ -71,7 +71,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
 
 ## <a name="fixed-database-roles"></a>feste Datenbankrollen
   
- In der folgenden Tabelle sind die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden. Mit Ausnahme der **öffentlichen** -Datenbankrolle, die den festen Datenbankrollen zugewiesenen Berechtigungen kann nicht geändert werden.   
+ In der folgenden Tabelle sind die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden. Außer bei der Datenbankrolle **public** können die den festen Datenbankrollen zugewiesenen Berechtigungen nicht geändert werden.   
   
 |Name der festen Datenbankrolle|Description|  
 |-------------------------------|-----------------|  

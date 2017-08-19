@@ -1,6 +1,6 @@
 ---
-title: "Aktualisiert – SSMS für SQL Server-Dokumentation | Microsoft-Dokumentation"
-description: "Anzeigen von Codeausschnitten für aktualisierten Inhalt für kürzliche Änderungen in der Dokumentation für SQL Server Management Studio (SSMS) für Microsoft SQL Server"
+title: "Aktualisiert: Dokumentation zu SSMS für SQL Server | Microsoft-Dokumentation"
+description: "Anzeigen von Codeausschnitten für aktualisierten Inhalt für kürzliche Änderungen in der Dokumentation zu SQL Server Management Studio (SSMS) für Microsoft SQL Server"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,22 +19,22 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: de-de
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Neu und kürzlich aktualisiert: SQL Server Management Studio (SSMS) für SQL Server
 
 
 
-Beinahe jeden Tag Microsoft updates einige vorhandene Artikel auf dessen [Docs.Microsoft.com](http://docs.microsoft.com/) Dokumentationswebsite. Dieser Artikel zeigt Auszüge aus den zuletzt aktualisierten Artikel. Links zu den neuen Artikel, möglicherweise ebenfalls aufgeführt.
+Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
 
-In diesem Artikel wird von einem Programm generiert, die in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug aus dem Quellartikel mit sich Formatierung oder als Markdown angezeigt. Bilder werden hier nicht angezeigt.
+Dieser Artikel wurde im Rahmen eines Programms erstellt, das in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug mit falscher Formatierung oder als Markdown aus dem Quellartikel angezeigt werden. Bilder werden hier nie wiedergegeben.
 
-Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
+Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeldet:
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **23.05.2017** &nbsp; bis &nbsp; **17.07.2017**
+- *Datumsbereich des Updates*: &nbsp; **23.5.2017** &nbsp; -bis- &nbsp; **17.7.2017**
 - *Themenbereich:* &nbsp; **SQL Server Management Studio (SSMS)**
 
 
@@ -57,7 +57,7 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 8. [Gleichzeitiges Ausführen von Anweisungen für mehrere Server](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
 9. [Exportieren von Informationen zum registrierten Server (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
 10. [Importieren von Informationen zum registrierten Server (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe](register-servers/move-a-registered-server-or-registered-server-group.md)
+11. [Verschieben eines registrierten Servers bzw. einer registrierten Servergruppe](register-servers/move-a-registered-server-or-registered-server-group.md)
 12. [Registrieren eines verbundenen Servers (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
 13. [Registrierte Server (F1-Hilfe)](register-servers/registered-servers-f1-help.md)
 14. [Registrieren von Servern](register-servers/register-servers.md)
@@ -74,21 +74,21 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 25. [Lektion 1-6: Auswählen des Schemas für Tastenkombinationen](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
 26. [Lektion 1-7: Festlegen der Startoptionen](tutorials/lesson-1-7-set-the-startup-options.md)
 27. [Lektion 1-8: Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [Lektion 1-9: Zusammenfassung: Grundlagen zur Navigation](tutorials/lesson-1-9-summary-basic-navigation.md)
+28. [Lektion 1-9: Zusammenfassung – Grundlagen zur Navigation](tutorials/lesson-1-9-summary-basic-navigation.md)
 29. [Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
 30. [Lektion 2-1: Herstellen einer Verbindung mit dem Abfrage-Editor](tutorials/lesson-2-1-connecting-with-query-editor.md)
 31. [Lektion 2-2: Hinzufügen von Einzügen](tutorials/lesson-2-2-adding-indentation.md)
 32. [Lektion 2-3: Maximieren des Abfrage-Editors](tutorials/lesson-2-3-maximizing-query-editor.md)
 33. [Lektion 2-4: Verwenden von Kommentaren](tutorials/lesson-2-4-using-comments.md)
 34. [Lektion 2-5: Weitere Möglichkeiten zum Anzeigen des Codefensters](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [Lektion 2-6: Erstellen eines Skriptes für eine Tabelle](tutorials/lesson-2-6-script-a-table.md)
+35. [Lektion 2-6: Erstellen eines Skripts für eine Tabelle](tutorials/lesson-2-6-script-a-table.md)
 36. [Lektion 2: Schreiben von Transact-SQL-Code](tutorials/lesson-2-writing-transact-sql.md)
 37. [Lektion 3-1: Erstellen von Skripts mit Vorlagen](tutorials/lesson-3-1-create-scripts-using-templates.md)
 38. [Lektion 3-2: Erstellen von benutzerdefinierten Vorlagen](tutorials/lesson-3-2-create-custom-templates.md)
 39. [Lektion 3-3: Speichern von Skripts als Projekte oder Lösungen](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [Lektion 3-4: Zusammenfassung: Projektmappen und Skriptprojekte](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
+40. [Lektion 3-4: Zusammenfassung – Projektmappen und Skriptprojekte](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
 41. [Lektion 3: Verwenden von Vorlagen, Lösungen und Skriptprojekten](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+42. [Lernprogramm: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 
 
 
@@ -97,21 +97,21 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
+## <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
-Diese Compact Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
+Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt „Auszüge“ aufgeführt sind.
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszügen
 
-Dieser Abschnitt zeigt die Auszüge von Updates, die vom Artikel, die vor kurzem eine große Aktualisierung aufgetreten sind.
+In diesem Abschnitt werden die Auszüge der Updates aus den Artikeln dargestellt, die vor Kurzem umfassend aktualisiert wurden.
 
-Die hier angezeigten Auszüge werden getrennt vom richtigen semantische kontextabhängig angezeigt. Darüber hinaus wird manchmal ein Auszug vom wichtige Markdown-Syntax getrennt, die sie in den tatsächlichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Die Auszüge können nur Sie wissen, ob Ihre Interessen dauert rechtfertigen, klicken Sie auf, und besuchen den tatsächlichen Artikel.
+Die Auszüge hier werden getrennt vom richtigen semantischen Kontext angezeigt. Darüber hinaus wird ein Auszug manchmal getrennt von der wichtigen Markdownsyntax wiedergegeben, die ihn im ursprünglichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Anhand dieser Auszüge sollen Sie nur entscheiden können, ob Sie sich die Zeit nehmen und den eigentlichen Artikel besuchen möchten.
 
-Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und nehmen Sie nicht als genaue Wahrheit alle Textauszug. Besuchen Sie stattdessen den tatsächlichen Artikel aus.
+Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen Auszügen, und gehen Sie bei keinem Textauszug von einer 100-prozentigen Richtigkeit der Informationen aus. Besuchen Sie stattdessen den eigentlichen Artikel.
 
 
 
@@ -136,31 +136,31 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 **Release von SSMS 17.1**
 
-Allgemein verfügbare | Buildnummer: 14.0.17119.0
+Allgemein verfügbar | Buildnummer: 14.0.17119.0
 
 **Erweiterungen**
 
 
-- Profiler: Hilfe > Info jetzt zeigt die Versionsnummer (z. B. 17.1)
-- Analysis Service-Benutzer können Anmeldeinformationen für ihre Datenquellen für 1200 aktualisieren TM-Modelle und oben im Kontextmenü auf die Datenquelle
-- Integrierte SSIS meldet jetzt anzeigen Protokolle von SSIS-Ausführung mit horizontaler Skalierung in der CTP-Version 2.1
-- SSIS mit horizontaler Skalierung-verwaltungsanwendung
-  - Zeigt grundlegende Informationen zu Master mit horizontaler Skalierung.
-  - Ein Arbeitsthread wird problemlos zu Dezentrales Skalieren hinzufügen.
-  - Anzeigen der Worker mit horizontaler Skalierung und grundlegende Informationen zu diesen, kann und auch aktiviert oder deaktiviert werden einfach.
+- Profiler: „Hilfe“ > „Info“ zeigt jetzt die Versionsnummer (z.B. 17.1) an.
+- Benutzer von Analysis Services können die Anmeldeinformationen für ihre Datenquellen für 1200 TM-Modelle und höher über das Kontextmenü auf der Datenquelle aktualisieren
+- Integrierte SSIS-Berichte zeigen nun Protokolle der Ausführung der SSIS-Horizontalskalierung in CTP 2.1 an
+- Verwaltungsanwendung der SSIS-Horizontalskalierung
+  - Anzeigen grundlegender Informationen zum Master für horizontales Skalieren
+  - Einfaches Hinzufügen eines Workers zur Bereitstellung für horizontales Skalieren
+  - Anzeigen aller Worker für horizontales Skalieren und grundlegender Informationen zu diesen sowie deren einfache Aktivierung oder Deaktivierung
 
 **Behebung von Programmfehlern**
 
-- AlwaysOn:
-  - Ein Problem behoben, in dem die Eigenschaften eines verfügbarkeitsreplikats wurde immer angezeigt als Modus "Automatisches Failover" für wsfc-Testreihen.
-  - Das Problem behoben wurde, in die schreibgeschützten Routingliste überschrieben, beim Aktualisieren der Verfügbarkeitsgruppe.
-- Always Encrypted: wurde ein Problem behoben, in denen generierte Protokolldatei die Informationen, die von DacFx generierten fehlte.
-- ShowPlan: wurden in Problem behoben, in dem wurde die Benutzeroberfläche immer der tatsächliche Typ Verknüpfungsattribut für nicht Adaptive Joinoperatoren angezeigt.
+- Always On:
+  - Ein Problem wurde behoben, bei dem die Eigenschaften eines Verfügbarkeitsreplikats immer im Modus „Automatisches Failover“ für WSFC-Verfügbarkeitsgruppen angezeigt wurden.
+  - Ein Problem wurde behoben, bei dem die schreibgeschützte Routingliste beim Aktualisieren der Verfügbarkeitsgruppe überschrieben wurde
+- Always Encrypted: Ein Problem wurde behoben, bei dem in der generierten Protokolldatei die Informationen von DacFx fehlten.
+- ShowPlan: Ein Problem wurde behoben, bei dem auf der Benutzeroberfläche immer das tatsächliche Jointyp-Attribut für nichtadaptive Verknüpfungsoperatoren angezeigt wurde.
 - Setup:
-  - Ein Problem behoben, in denen wurde SSMS 17,0 SSDT für Visual Studio 2013 [verbinden Element 3133479] wichtige
-  - Ein Problem behoben, in denen wurde durch Klicken auf "Restart" am Ende des Setups nicht den Computer neu zu starten
-- Scripting: vorübergehend verhindert, dass SSMS versehentliches Löschen von Azure-Datenbankobjekte, beim Versuch, das Löschen zu erstellen, indem Sie diese Option deaktivieren.  Richtige Korrektur werden in einer zukünftigen Version von SSMS.
-- Objekt-Explorer: ein Problem behoben, in denen wurde Knoten "Datenbanken" nicht erweitert, wenn die Verbindung mit einer Azure-Datenbank mit "AS kopieren" erstellt
+  - Ein Problem wurde behoben, bei dem SSMS 17.0 SSDT auf Visual Studio 2013 unterbrach [Microsoft Connect-Artikel 3133479]
+  - Ein Problem wurde behoben, bei dem das Klicken auf „Neustart“ am Ende des Setups nicht zu einem Neustart des Computers führte
+- Skripterstellung: Es wird vorübergehend verhindert, dass SSMS versehentlich Azure-Datenbankobjekte löscht, wenn versucht wird, ein Skript für den Löschvorgang zu erstellen, indem diese Option deaktiviert wird.  Dies wird in einer zukünftigen Version von SSMS behoben.
+- Objekt-Explorer: Ein Problem wurde behoben, bei dem der Knoten „Datenbanken“ nicht erweitert wurde, wenn er mit einer Azure-Datenbank verbunden wurde, die mit „AS COPY“ erstellt wurde.
 
 
 
@@ -179,7 +179,7 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [New + Updated (4+4): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (4+4): Dokumentation zu Erweiterten Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (4+4): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (4+4): Dokumentation zu erweiterten Analysen für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
 - [New + Updated (2+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (1+2): **Connect to SQL** docs (Neu + Aktualisiert (1+2): Dokumentation zur Herstellung einer Verbindung mit SQL)](../connect/new-updated-connect.md)
 - [New + Updated (6+0): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)

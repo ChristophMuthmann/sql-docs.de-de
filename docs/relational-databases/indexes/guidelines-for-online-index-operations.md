@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/11/2017
 -   Nicht eindeutige, nicht gruppierte Indizes können online erstellt werden, wenn die Tabelle LOB-Datentypen enthält, keine dieser Spalten jedoch in der Indexdefinition als Schlüssel- oder Nichtschlüsselspalte (eingeschlossene Spalte) verwendet wird.  
   
 -   Indizes für lokale temp-Tabellen können nicht online erstellt, neu erstellt oder gelöscht werden. Diese Einschränkung gilt nicht für Indizes globaler temporärer Tabellen.
-- Indizes aus, in denen er nach einem unerwarteten Fehler, Datenbank-Failover beendet fortgesetzt werden können oder ein **anhalten** Befehl. Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
+- Indizes können von dort fortgesetzt werden, wo nach einem unerwarteten Fehler, einem Datenbank-Failover oder einem **PAUSE**-Befehl angehalten wurde. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
 
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -90,29 +90,29 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 ## <a name="transaction-log-considerations"></a>Überlegungen zum Transaktionsprotokoll  
  Umfangreiche Indexvorgänge, die offline oder online ausgeführt werden, können große Datenlasten generieren, die das Transaktionsprotokoll schnell füllen können. Damit sichergestellt wird, dass für den Indexvorgang ein Rollback ausgeführt werden kann, kann das Transaktionsprotokoll erst abgeschnitten werden, nachdem der Indexvorgang abgeschlossen wurde; das Protokoll kann jedoch während des Indexvorgangs gesichert werden. Aus diesem Grund muss das Transaktionsprotokoll für die Dauer des Indexvorgangs genügend Speicherplatz zum Speichern der Transaktionen des Indexvorgangs sowie ggf. der gleichzeitigen Benutzertransaktionen aufweisen. Weitere Informationen finden Sie unter [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Fortsetzbare Index Rebuild-Überlegungen
+## <a name="resumable-index-rebuild-considerations"></a>Überlegungen zur fortsetzbaren Neuerstellung von Indizes
 
 > [!NOTE]
-> Finden Sie unter [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
+> Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
 >
 
-Beim Ausführen von fortsetzbar onlineneuerstellung von Indizes gelten die folgenden Richtlinien:
--   Verwaltung, Planung, und Erweitern von Wartungsfenstern Index. Sie können angehalten und neu starten eine Neuerstellung des Index mehrere Male an Ihr Wartungsfenster anpassen.
-- Wiederherstellung bei Auftreten eines Index neu erstellen (z. B. ein Failover der Datenbank oder von nicht genügend freier Speicherplatz).
-- Wenn ein Indexerstellungsvorgang angehalten wird, sowohl die ursprüngliche Index und die neu erstellte eine erfordern, Speicherplatz und während der DML-Vorgänge aktualisiert werden müssen.
+Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten die folgenden Richtlinien:
+-   Verwalten, Planen und Erweitern von Indexwartungsfenstern. Sie können einen Vorgang zur Neuerstellung eines Index mehrmals anhalten und neu starten, um Ihr Wartungsfenster anzupassen.
+- Wiederherstellen nach Fehlern bei der Indexneuerstellung (z.B. Datenbank-Failover oder wenn kein Speicherplatz mehr verfügbar war).
+- Wenn ein Indexvorgang angehalten wird, wird sowohl für den ursprünglichen Index als auch für den neu erstellten Index Speicherplatz benötigt, und beide müssen während des DML-Vorgangs aktualisiert werden.
 
-- Ermöglicht die Kürzung von Abschneiden von Protokollen bei einer Neuerstellung des Index (dieser Vorgang kann nicht für eine reguläre Onlineindexvorgang ausgeführt werden).
-- SORT_IN_TEMPDB = ON-Option wird nicht unterstützt.
+- Ermöglicht das Abschneiden von Abschneideprotokollen während eines Vorgangs zur Neuerstellung eines Index (dieser Vorgang kann für einen regulären Onlineindexvorgang nicht durchgeführt werden).
+- Die Option SORT_IN_TEMPDB=ON wird nicht unterstützt.
 
 > [!IMPORTANT]
-> Fortsetzbare Wiederherstellung erfordert keine geöffnet zu lassen, langer abgeschnitten, sodass Abschneiden des Protokolls während dieses Vorgangs und eine bessere protokollverwaltung Speicherplatz. Mit dem neuen Entwurf verwaltet wir behalten Sie die erforderlichen Daten in einer Datenbank sowie alle Verweise, die erforderlich sind, die fortsetzbaren Vorgang neu zu starten.
+> Bei der fortsetzbaren Neuerstellung müssen Sie kein lang ausgeführtes Abschneiden offen halten, wobei das Protokoll während diesem Vorgang abgeschnitten werden kann und der Protokollspeicherplatz besser verwaltet werden kann. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
 >
 
-Im Allgemeinen ist kein Leistungsunterschied zwischen onlineneuerstellung von Indizes kann wieder aufgenommen und nicht fortgesetzt werden. Wenn Sie einen fortsetzbaren Index aktualisieren, während es sich bei einem indexneuerstellungsvorgang wurde angehalten:
-- Für überwiegend schreibgeschützten arbeitsauslastungen sich Auswirkungen auf die Leistung aus. 
-- Updateintensive arbeitsauslastungen bei Auftreten einer Verringerung der Durchsatz (unsere Tests zeigt an, der kleiner als 10 % Beeinträchtigung).
+Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Vorgang zur Indexneuerstellung unterbrochen ist:
+- Bei Arbeitsauslastungen, die meistens nur gelesen werden, ist die Leistungsauswirkung unbedeutend. 
+- Bei Arbeitsauslastungen, die oft aktualisiert werden, tritt möglicherweise eine Minderung des Durchsatzes auf (bei unseren Tests ergab sich weniger als 10% Minderung).
 
-Im Allgemeinen besteht kein Unterschied in Defragmentierung Qualität zwischen onlineneuerstellung von Indizes kann wieder aufgenommen und nicht fortgesetzt werden.
+Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwischen fortsetzbaren und nicht fortsetzbaren Onlineindexneuerstellungen.
  
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md)  
