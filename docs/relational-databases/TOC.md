@@ -1,17 +1,17 @@
 # [Übersicht](database-features.md)
 # [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-relational-databases.md)
 
-# [Handbücher für SQL Server](sql-server-guides.md)
-## Handbuch zur Problembehandlung und Überwachung Always On-Verfügbarkeitsgruppen
+# [SQL Server Guides (Handbücher für SQL-Server)](sql-server-guides.md)
+## Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen
 ## [Indexentwurf](sql-server-index-design-guide.md)
-## [Architektur der Speicherverwaltung](memory-management-architecture-guide.md)
+## [Memory Management Architecture (Architektur der Speicherverwaltung)](memory-management-architecture-guide.md)
 ### [Lesen von Seiten](reading-pages.md)  
 ### [Schreiben von Seiten](writing-pages.md)
-## [Architektur von Seiten und Blöcken](pages-and-extents-architecture-guide.md)
-## [Nach der Migration Überprüfung und Optimierung](post-migration-validation-and-optimization-guide.md)
-## [Architektur der abfrageverarbeitung](query-processing-architecture-guide.md)
-## [Thread- und Taskarchitektur](thread-and-task-architecture-guide.md)
-## [Architektur des Transaktionsprotokolls und Verwaltung](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Pages and Extents Architecture (Architektur von Seiten und Blöcken)](pages-and-extents-architecture-guide.md)
+## [Post-migration Validation and Optimization (Überprüfung und Optimierung nach der Migration)](post-migration-validation-and-optimization-guide.md)
+## [Query Processing Architecture (Architektur der Abfrageverarbeitung)](query-processing-architecture-guide.md)
+## [Thread and Task Architecture (Thread- und Taskarchitektur)](thread-and-task-architecture-guide.md)
+## [Transaction Log Architecture and Management (Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management-guide.md)
 ## Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 
 # [Sichern und Wiederherstellen](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -43,7 +43,7 @@
 # [Fehler und Ereignisse](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [Ereignisklassen](../relational-databases/event-classes/sql-server-event-class-reference.md)
 # [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)
-# [Diagramme](../relational-databases/graphs/sql-graph-overview.md)
+# [Graphs (Diagramme)](../relational-databases/graphs/sql-graph-overview.md)
 # [Hierarchische Daten](hierarchical-data-sql-server.md)  
 # [Importieren und Exportieren](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
 # [In-Memory OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

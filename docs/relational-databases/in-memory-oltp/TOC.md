@@ -1,7 +1,7 @@
 # [Übersicht](in-memory-oltp-in-memory-optimization.md)  
 # [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [Übersicht und Verwendungsszenarien](overview-and-usage-scenarios.md)
-# [Mechanismen für SQL Server 2016-whitepaper](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
+# [Internals for SQL Server 2016 whitepaper (Whitepaper: Interna für SQL Server 2016)](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
 # [Anforderungen für die Verwendung speicheroptimierter Tabellen](requirements-for-using-memory-optimized-tables.md)  
 # [Codebeispiele für In-Memory OLTP](in-memory-oltp-code-samples.md)  

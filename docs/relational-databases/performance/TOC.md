@@ -3,7 +3,7 @@
 # [Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [Adaptive Abfrageverarbeitung](adaptive-query-processing.md)
-# [Automatische Optimierung](../automatic-tuning/automatic-tuning.md)
+# [Automatic Tuning (Automatische Optimierung)](../automatic-tuning/automatic-tuning.md)
 # [Kardinalitätsschätzung](cardinality-estimation-sql-server.md)  
 
 # [Überwachen und Optimieren der Leistung](monitor-and-tune-for-performance.md)  
@@ -27,7 +27,7 @@
 ### [Anzeigen eines tatsächlichen Ausführungsplans](display-an-actual-execution-plan.md)  
 ### [Speichern eines Ausführungsplans im XML-Format](save-an-execution-plan-in-xml-format.md)  
 ## [Live-Abfragestatistik](live-query-statistics.md)  
-## [Leistungungsüberwachung mit dem Abfragespeicher](monitoring-performance-by-using-the-query-store.md)  
+## [Überwachen der Leistung mit dem Abfragespeicher](monitoring-performance-by-using-the-query-store.md)  
 ## [Verwenden des Abfragespeichers mit In-Memory-OLTP](using-the-query-store-with-in-memory-oltp.md)  
 ## [Bewährte Methoden für den Abfragespeicher](best-practice-with-the-query-store.md)  
 ## [Verwendungsszenarios für den Abfragespeicher](query-store-usage-scenarios.md)  
