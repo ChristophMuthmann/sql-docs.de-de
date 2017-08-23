@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f1d8e15bcdbf3d9fa8ccb4b3fc92c309b8f11055
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: e390d6efa26dcb628da636bc9bcf7c8fac54af65
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen

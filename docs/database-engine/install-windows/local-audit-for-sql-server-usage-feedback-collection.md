@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server enthält internetfähige Funktionen, die Daten über Ihren Computer oder Ihr Gerät („Standardcomputerinformationen“) erfassen und an Microsoft senden können. Die Komponente „Lokale Überwachung“ der [Feedbackerfassung zur SQL Server-Nutzung](http://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.  
 
-Seit SQL Server 2016 CU2 kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbankmodul und Analysis Services (SSAS) konfiguriert werden. Die lokale Überwachung für SQL Server Integration Services (SSIS) kann mit dem Datenbankmodul konfiguriert werden. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
+Seit SQL Server 2016 CU2 kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbankmodul und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten 
 
@@ -61,7 +61,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server 
  
 1. Starten Sie **Dienste** , klicken Sie auf die **Windows**  -Schaltfläche, und geben Sie *services.msc*ein. 
 
-2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für das Datenbankmodul nach **SQL Server CEIP-Dienst *Instanzname***erstellen. Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP *Instanzname***. 
+2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für das Datenbankmodul nach **SQL Server CEIP-Dienst \<Instanzname\>**erstellen. Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP \<Instanzname\>**. Suchen Sie für Integration Services **SQL Server Integration Services-CEIP-Dienst 13**.
 
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie **Eigenschaften**aus. 
 

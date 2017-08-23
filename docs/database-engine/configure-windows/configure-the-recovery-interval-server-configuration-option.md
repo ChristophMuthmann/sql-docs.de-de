@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c945263cf63d626798c0d94aa35b9113f78eaaa4
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Wiederherstellungsintervall
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Wiederherstellungsintervall** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Wiederherstellungsintervall** wird eine Obergrenze für die Zeitdauer festgelegt, wie lange das Wiederherstellen einer Datenbank dauern darf. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet den für diese Option angegebenen Wert, um annäherungsweise zu ermitteln, wie häufig [automatische Prüfpunkte](../../relational-databases/logs/database-checkpoints-sql-server.md) für die jeweilige Datenbank ausgegeben werden sollen.  
+  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Wiederherstellungsintervall** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Wiederherstellungsintervall** wird eine Obergrenze für die Zeitdauer festgelegt, wie lange das Wiederherstellen einer Datenbank dauern darf. Das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet den für diese Option angegebenen Wert, um annäherungsweise zu ermitteln, wie häufig [automatische Prüfpunkte](../../relational-databases/logs/database-checkpoints-sql-server.md) für die jeweilige Datenbank ausgegeben werden sollen.  
   
  Der Standardwert für das Wiederherstellungsintervall ist 0, was es dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermöglicht, das Wiederherstellungsintervall automatisch zu konfigurieren. In der Regel geht mit dem standardmäßigen Wiederherstellungsintervall etwa ein automatischer Prüfpunkt pro Minute für aktive Datenbanken einher, was zu Wiederherstellungszeiten von unter einer Minute führt. Höhere Werte geben die ungefähre maximale Wiederherstellungszeit in Minuten an. Wenn Sie beispielsweise das Wiederherstellungsintervall auf 3 festlegen, bedeutet dies eine maximale Wiederherstellungszeit von ungefähr drei Minuten.  
   
