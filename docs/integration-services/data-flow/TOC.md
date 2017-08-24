@@ -45,7 +45,7 @@
 # [Benutzerdefinierte Eigenschaften der Flatfile](flat-file-custom-properties.md)  
 # [OData-Quelle](odata-source.md)  
 ## [Lernprogramm: Verwenden der OData-Quelle](tutorial-using-the-odata-source.md)  
-## [Ändern einer OData-Quellabfrage zur Laufzeit](modify-odata-source-query-at-runtime.md)  
+## [Bereitstellen einer OData-Quellabfrage zur Laufzeit](modify-odata-source-query-at-runtime.md)  
 ## [OData-Quelleneigenschaften](odata-source-properties.md)  
 # [ODBC-Flusskomponenten](odbc-flow-components.md)  
 ## [ODBC-Ziel](odbc-destination.md)  
