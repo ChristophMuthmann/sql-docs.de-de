@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Dieses Dokument beschreibt die Behebung von Microsoft SQL Server unter Linux oder auf einem Docker-Container ausgeführt wird. Stellen Sie die Einschränkungen dieser privaten Preview-Version Denken Sie daran, bei der Problembehandlung SQL Server on Linux. Sie finden eine Liste dieser in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Problembehandlung bei Verbindungsfehlern

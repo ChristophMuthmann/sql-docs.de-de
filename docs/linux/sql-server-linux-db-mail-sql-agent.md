@@ -17,7 +17,8 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Die folgenden Schritte veranschaulichen, wie DB Mail einrichten und verwenden es mit SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. 
 

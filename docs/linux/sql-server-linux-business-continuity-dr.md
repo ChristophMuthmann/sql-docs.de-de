@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>Business Continuity und Database Recovery SQL Server on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server on Linux können Organisationen eine Vielzahl der Vereinbarung zum Servicelevel-Ziele, um verschiedene geschäftlichen Anforderungen gerecht zu erzielen.
 
 Die einfachsten Lösungen nutzen Virtualisierungstechnologien um ein hohes Maß an Stabilität gegenüber Hostebene-Fehlern vor Hardwarefehlern zu gewährleisten, sowie die Flexibilität und ressourcenmaximierung Fehlertoleranz zu erreichen. Diese Systeme können lokal, in einer privaten oder öffentlichen Cloud und Hybrid-Umgebungen ausführen. Die einfachste Form der Wiederherstellung im Notfall und Schutz ist die datenbanksicherung. Einfache Lösungen, die in SQL Server 2017 RC2 verfügbar sind:

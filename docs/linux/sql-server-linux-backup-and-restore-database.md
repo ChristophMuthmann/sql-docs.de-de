@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Sie können Sicherungen der Datenbanken von SQL Server 2017 RC2 unter Linux mit den gleichen Tools wie andere Plattformen ausführen. Auf einem Linux-Server, können Sie `sqlcmd` zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Sicherung mit sqlcmd

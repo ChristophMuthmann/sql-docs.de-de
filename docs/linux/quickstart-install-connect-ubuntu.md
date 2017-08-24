@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank für Ubuntu
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 In diesem Schnellstart-Tutorial installieren Sie zunächst SQL Server 2017 RC2 auf Ubuntu 16.04. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 
 > [!TIP]

@@ -18,7 +18,9 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Sicherheitseinschränkungen für SQL Server on Linux
 
-SQL Server on Linux ist zurzeit die folgenden Einschränkungen: 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
+SQL Server on Linux ist zurzeit die folgenden Einschränkungen:
 
 * Eine standard-Kennwortrichtlinie wird bereitgestellt. MUST_CHANGE ist die einzige Option, die Sie konfigurieren können.  
 * Erweiterbare Schlüsselverwaltung wird nicht unterstützt. 
