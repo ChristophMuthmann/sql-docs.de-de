@@ -15,22 +15,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4f3283de9e26ce05849a34c8906a3095c229680
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 64e297a37c3b6449551968b5788f8c2c0ddd4ab6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="odata-source-properties"></a>OData-Quelleneigenschaften
-  Wenn Sie im Datenfluss mit der rechten Maustaste auf **OData-Quelle** und anschließend auf **Eigenschaften**klicken, werden die Eigenschaften der Komponente **OData-Quelle** im Fenster **Eigenschaften** angezeigt.  
-  
-|||  
-|-|-|  
+Wenn Sie mit der rechten Maustaste **OData-Quelle** im Datenfluss und auf **Eigenschaften**, Sie finden Sie unter Eigenschaften für die **OData-Quelle** -Komponente in den **Eigenschaften** Fenster.  
+
+## <a name="properties"></a>Eigenschaften 
 |Eigenschaft|Description|  
-|CollectionName|Der Name der Auflistung, die Sie vom OData-Dienst abrufen möchten. Die Eigenschaft **CollectionName** wird verwendet, wenn **UseResourcePath** FALSE ist.<br /><br /> Diese Eigenschaft ist ausdrucksfähig, d. h., der Wert kann zur Laufzeit festgelegt werden. Wenn die Metadaten der Auflistung jedoch nicht mit den Metadaten übereinstimmen, die zur Entwurfszeit verwendet wurden, tritt ein Überprüfungsfehler auf, der zum Abbruch der Datenflussausführung führt.|  
+|-|-|  
+|CollectionName|Der Name der Auflistung, um vom OData-Dienst abrufen. Die Eigenschaft **CollectionName** wird verwendet, wenn **UseResourcePath** FALSE ist.<br /><br /> Diese Eigenschaft ist Expressionable, die Sie den Wert zur Laufzeit festlegen kann. Jedoch, wenn die Metadaten der Auflistung nicht den Metadaten, der zur Entwurfszeit vorhanden waren übereinstimmen, tritt ein Validierungsfehler, datenflussausführung fehlschlägt.|  
 |DefaultStringLength|Dieser Wert gibt die Standardlänge für Zeichenfolgenspalten an, die keine maximale Länge aufweisen.<br /><br /> **Standardwert:** 4000|  
-|Abfrage|Die OData-Abfrageparameter. Diese Eigenschaft ist ausdrucksfähig und kann zur Laufzeit festgelegt werden.|  
+|Abfrage|Die OData-Abfrageparameter. Diese Eigenschaft ist Expressionable und kann zur Laufzeit festgelegt werden.|  
 |ResourcePath|Verwenden Sie diese Eigenschaft, wenn Sie einen vollständigen Ressourcenpfad angeben müssen, anstatt nur einen Auflistungsnamen auszuwählen. Diese Eigenschaft wird verwendet, wenn **UseResourcePath** TRUE ist.|  
 |UseResourcePath|Beim Wert TRUE wird der **ResourcePath** -Wert an die Basis-URL angefügt, um den Speicherort des OData-Feeds zu bestimmen. Bei FALSE wird der **CollectionName** -Wert verwendet.<br /><br /> **Standardwert:** False|  
   
-  
+## <a name="see-also"></a>Siehe auch
+[OData-Quelle](odata-source.md)
+

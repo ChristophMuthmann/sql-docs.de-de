@@ -1,5 +1,5 @@
 ---
-title: "Ändern Sie die OData-Quellabfrage zur Laufzeit | Microsoft Docs"
+title: Geben Sie einen OData-Quellabfrage zur Laufzeit | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e061fe6989d9629d655d9e0c08f2cd4c1d932540
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="modify-odata-source-query-at-runtime"></a>Ändern einer OData-Quellabfrage zur Laufzeit
-  Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen Ausdruck hinzufügen.  
+# <a name="provide-an-odata-source-query-at-runtime"></a>Geben Sie einen OData-Quellabfrage zur Laufzeit
+ Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Hinzufügen einer *Ausdruck* auf die **[OData-Quelle]. [ Abfrage]** Eigenschaft des Datenflusstasks.  
   
- Beachten Sie, dass die Spalten gegenüber der Entwurfszeit unverändert bleiben müssen, da bei der Paketausführung ansonsten ein Fehler auftritt. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt in der Benutzeroberfläche der Quellkomponente zu deaktivieren.  
+ Die zurückgegebenen Spalten müssen die gleichen Spalten, die zur Entwurfszeit zurückgegeben wurden, werden; Andernfalls erhalten Sie einen Fehler auf, wenn das Paket ausgeführt wird. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt in der Benutzeroberfläche der Quellkomponente zu deaktivieren.  
   
- Es gibt einige verschiedene Möglichkeiten, den Abfragewert zur Laufzeit dynamisch festzulegen. Im Folgenden sind einige der gängigeren Methoden beschrieben.  
+ Es gibt einige verschiedene Möglichkeiten, den Abfragewert zur Laufzeit dynamisch festzulegen. Hier sind einige der gängigeren Methoden.  
   
-## <a name="exposing-the-query-as-a-parameter"></a>Verfügbarmachen der Abfrage als Parameter  
- Anhand der folgenden Schritte können Sie eine Abfrage, die von der OData-Quellkomponente als Parameter verwendet wird, für das Paket verfügbar machen.  
+## <a name="provide-the-query-as-a-parameter"></a>Geben Sie die Abfrage als parameter  
+ Das folgende Verfahren zeigt, wie ein OData-Quellkomponente als Parameter des Pakets verwendete Abfrage verfügbar zu machen.  
   
 1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask** , und wählen Sie die Option **Parametrisieren** aus.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Wählen Sie **Neuen Parameter erstellen** oder **Vorhandenen Parameter verwenden**aus.  
   
-4.  Wenn Sie **Neuen Parameter erstellen**auswählen, gehen Sie wie folgt vor:  
+4.  Bei Auswahl des **neuen Parameter erstellen**:  
   
     1.  Geben Sie den **Name** und eine **Beschreibung** für den Parameter ein.  
   
@@ -49,24 +49,24 @@ ms.lasthandoff: 08/03/2017
   
 5.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
-## <a name="using-an-expression"></a>Verwenden eines Ausdrucks  
- Diese Methode ist hilfreich, wenn Sie eine Abfragezeichenfolge zur Laufzeit dynamisch erstellen möchten. In diesem Beispiel wird die MaxRows-Variable auf andere Weise (Skript, Parameter usw.) festgelegt.  
+## <a name="provide-the-query-with-an-expression"></a>Geben Sie die Abfrage mit einem Ausdruck
+ Diese Methode ist nützlich, wenn die Abfragezeichenfolge zur Laufzeit dynamisch erstellt werden sollen.
   
-1.  Wählen Sie den **Datenflusstask** aus, der die **OData-Quelle**enthält.  
+1.  Wählen Sie die **Data Flow Task** , enthält Ihre **OData-Quelle**.  
   
 2.  Heben Sie im Fenster **Eigenschaften** die Eigenschaft **Ausdrücke** hervor.  
   
-3.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), um den **Eigenschaftsausdrucks-Editor**aufzurufen.  
+3.  Klicken Sie auf die (Schaltfläche) um die **Eigenschaftsausdrucks-Editor**.  
   
 4.  Wählen Sie die Eigenschaft **[OData-Quelle].[Abfrage]** aus.  
   
-5.  Klicken Sie auf die **Ausdruck**auf die Schaltfläche mit den Auslassungspunkten (...).  
+5.  Klicken Sie auf die (Schaltfläche) für **Ausdruck**.  
   
 6.  Geben Sie den **Ausdruck**ein.  
   
 7.  Klicken Sie auf **OK**.  
   
-> [!WARNING]  
->  Beachten Sie bei Verwendung dieser Methode, dass die festgelegten Werte ordnungsgemäß URL-codiert sind. Bei der Übernahme der Werte aus der Benutzereingabe (z. B. der parameterbasierten Festlegung einzelner Abfrageoptionswerte) müssen Sie sicherstellen, dass die Werte überprüft werden, um potenzielle Angriffe durch die Einschleusung von SQL-Befehlen zu vermeiden.  
+> [!NOTE]  
+> Wenn Sie diesen Ansatz verwenden, müssen Sie sicherstellen, dass die festgelegten Werte ordnungsgemäß URL-codiert werden. Bei der Übernahme der Werte aus der Benutzereingabe (z. B. der parameterbasierten Festlegung einzelner Abfrageoptionswerte) müssen Sie sicherstellen, dass die Werte überprüft werden, um potenzielle Angriffe durch die Einschleusung von SQL-Befehlen zu vermeiden.  
   
   

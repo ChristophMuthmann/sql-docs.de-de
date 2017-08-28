@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import / Export-Assistent)
@@ -39,6 +39,8 @@ Möglicherweise müssen auch die erforderlichen Verbindungsinformationen zu such
 
 > [!TIP]
 > Wenn Sie wissen, dass des Treibers installiert und nicht im 64-Bit-Applet wird angezeigt, suchen Sie in der 32-Bit-Applet stattdessen. Dies darüber hinaus erfahren Sie, ob Sie die 64-Bit oder 32-Bit SQL Server-Import / Export-Assistenten ausführen müssen.
+>
+> Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
     
 ## <a name="step-1---select-the-data-source"></a>Schritt 1: Wählen Sie die Datenquelle
 Die ODBC-Treiber auf dem Computer installiert sind nicht in der Dropdown-Liste der Datenquellen aufgeführt. Um mit einem ODBC-Treiber eine Verbindung herzustellen, starten Sie dazu die **.NET Framework-Datenanbieter für ODBC** als Datenquelle für die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite des Assistenten. Dieser Anbieter dient als Wrapper um die ODBC-Treiber.

@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  Die Transformation für Suche versucht, einen Gleichheitsjoin zwischen Werten in der Transformationseingabe und Werten im Verweisdataset auszuführen. (Ein Gleichheitsjoin bedeutet, dass jede Zeile in der Transformationseingabe mindestens einer Zeile aus dem Verweisdataset entsprechen muss.) Wenn ein Gleichheitsjoin nicht ausgeführt werden kann, führt die Transformation für Suche eine der folgenden Aktionen aus:  
   
--   Falls im Verweisdataset kein entsprechender Eintrag vorhanden ist, wird kein Join ausgeführt. Standardmäßig werden bei Verwendung einer Transformation für Suche die Zeilen ohne übereinstimmende Einträge als Fehler behandelt. Sie haben jedoch die Möglichkeit, die Transformation für Suche so zu konfigurieren, dass die Zeilen an eine Ausgabe nicht übereinstimmender Einträge weitergeleitet werden. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Allgemein“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) und [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+-   Falls im Verweisdataset kein entsprechender Eintrag vorhanden ist, wird kein Join ausgeführt. Standardmäßig werden bei Verwendung einer Transformation für Suche die Zeilen ohne übereinstimmende Einträge als Fehler behandelt. Sie haben jedoch die Möglichkeit, die Transformation für Suche so zu konfigurieren, dass die Zeilen an eine Ausgabe nicht übereinstimmender Einträge weitergeleitet werden.  
   
 -   Sind in der Verweistabelle mehrere übereinstimmende Einträge vorhanden, gibt die Transformation für Suche nur den ersten übereinstimmenden Eintrag zurück, der von der Suchabfrage zurückgegeben wird. Wenn mehrere übereinstimmende Einträge gefunden werden, wird von der Transformation für Suche nur dann ein Fehler bzw. eine Warnung generiert, wenn die Transformation für das Laden des gesamten Verweisdatasets in den Cache konfiguriert ist. In diesem Fall, wird von der Transformation für Suche eine Warnung generiert, wenn die Transformation während des Füllens des Caches mehrere übereinstimmende Einträge erkennt.  
   
@@ -139,6 +143,139 @@ ms.lasthandoff: 08/03/2017
 -   Beispiel [Transformation für Suche](http://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
   
      Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=267527).  
+  
+## <a name="lookup-transformation-editor-general-page"></a>Transformations-Editor für Suche (Seite 'Allgemein')
+  Auf der Seite **Allgemein** des Dialogfelds Transformations-Editor für Suche können Sie den Cachemodus und den Verbindungstyp auswählen sowie angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen.  
+  
+### <a name="options"></a>enthalten  
+ **Vollcache**  
+ Das Verweisdataset wird generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
+  
+ **Teilcache**  
+ Das Verweisdataset wird während der Ausführung der Transformation für Suche generiert. Die Zeilen mit übereinstimmenden Einträgen im Verweisdataset und die Zeilen ohne übereinstimmende Einträge im Dataset werden in den Cache geladen.  
+  
+ **Kein Cache**  
+ Das Verweisdataset wird während der Ausführung der Transformation für Suche generiert. Es werden keine Daten in den Zwischenspeicher geladen.  
+  
+ **Cacheverbindungs-Manager**  
+ Die Transformation für Suche wird für die Verwendung eines Cacheverbindungs-Managers konfiguriert. Diese Option ist nur verfügbar, wenn die Option Vollcache ausgewählt ist.  
+  
+ **OLE DB-Verbindungs-Manager**  
+ Die Transformation für Suche wird für die Verwendung eines OLE DB-Verbindungs-Managers konfiguriert.  
+  
+ **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen**  
+ Wählen Sie eine Option für die Behandlung von Zeilen aus, die nicht mindestens einem Eintrag im Verweisdataset entsprechen.  
+  
+ Wenn Sie **Zeilen an Ausgabe nicht übereinstimmender Einträge umleiten**auswählen, werden die Zeilen an eine Ausgabe nicht übereinstimmender Einträge weitergeleitet und nicht als Fehler behandelt. Die Option **Fehler** auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für Suche** ist nicht verfügbar.  
+  
+ Wenn Sie im Listenfeld **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine andere Option auswählen, werden die Zeilen als Fehler behandelt. In diesem Fall ist die Option **Fehler** auf der Seite **Fehlerausgabe** verfügbar.  
+  
+### <a name="external-resources"></a>Externe Ressourcen  
+ Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
+  Auf der Seite **Verbindung** des Dialogfelds **Transformations-Editor für Suche** können Sie einen Verbindungs-Manager auswählen. Wenn Sie einen OLE DB-Verbindungs-Manager auswählen, wählen Sie auch eine Abfrage, Tabelle oder Sicht zum Generieren des Verweisdatasets aus.  
+  
+### <a name="options"></a>enthalten  
+ Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
+  
+ **Allgemein**  
+ Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Editor für den Cacheverbindungs-Manager** eine neue Verbindung.  
+  
+ Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche**auf der Seite **Allgemein**die Optionen **Vollcache**, **Teilcache**oder **Kein Cache** und OLE DB-Verbindungs-Manager auswählen.  
+  
+ **Teilcache**  
+ Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** eine neue Verbindung.  
+  
+ **Tabelle oder Sicht verwenden**  
+ Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
+  
+> [!NOTE]  
+>  Wenn Sie auf der Seite **Erweitert** im Transformations-Editor für Suche ****eine SQL-Anweisung angeben, wird durch diese SQL-Anweisung der hier ausgewählte Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
+  
+ **Ergebnisse einer SQL-Abfrage verwenden**  
+ Wählen Sie diese Option aus, um nach einer vorhandenen Abfrage zu suchen, eine neue Abfrage zu erstellen, die Abfragesyntax zu überprüfen und eine Vorschau der Abfrageergebnisse anzuzeigen.  
+  
+ **Abfrage erstellen**  
+ Erstellen Sie eine auszuführende Transact-SQL-Anweisung mit dem **** Abfrage-Generator, einem grafischen Tool, das verwendet wird, um Abfragen mithilfe des Durchsuchens von Daten zu erstellen.  
+  
+ **Durchsuchen**  
+ Verwenden Sie diese Option, um nach einer vorhandenen Abfrage zu suchen, die als Datei gespeichert ist.  
+  
+ **Abfrage analysieren**  
+ Überprüft die Syntax der Abfrage.  
+  
+ **Vorschau**  
+ Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. Diese Option zeigt bis zu 200 Zeilen an.  
+  
+### <a name="external-resources"></a>Externe Ressourcen  
+ Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
+  Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare Eingabespalten**  
+ Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
+  
+ Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten bestimmten Suchspalten zuordnen.  
+  
+ Sie können auch mithilfe der Tastatur Eingabespalten bestimmten Suchspalten zuordnen. Dazu heben Sie eine Spalte in der Tabelle **Verfügbare Eingabespalten** hervor, drücken die Anwendungstaste und klicken dann auf **Zuordnungen bearbeiten**.  
+  
+ **Verfügbare Suchspalten**  
+ Zeigt die Liste der Suchspalten an. Die Suchspalten sind Spalten in der Verweistabelle, in denen nach Werten gesucht werden soll, die mit den Eingabespalten übereinstimmen.  
+  
+ Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Suchspalten bestimmten Eingabespalten zuordnen.  
+  
+ Wählen Sie mithilfe der Kontrollkästchen die Suchspalten in der Verweistabelle aus, für die die Suchvorgänge ausgeführt werden sollen.  
+  
+ Sie können auch mithilfe der Tastatur Suchspalten bestimmten Eingabespalten zuordnen. Dazu heben Sie eine Spalte in der Tabelle **Verfügbare Suchspalten** hervor, drücken die Anwendungstaste und klicken dann auf **Zuordnungen bearbeiten**.  
+  
+ **Suchspalte**  
+ Zeigt die Liste der ausgewählten Suchspalten an. Die Auswahl wird entsprechend in der Auswahl der Kontrollkästchen in der Tabelle **Verfügbare Suchspalten** deutlich.  
+  
+ **Suchvorgang**  
+ Wählen Sie in der Liste einen Suchvorgang aus, der für die Suchspalte ausgeführt werden soll.  
+  
+ **Ausgabealias**  
+ Geben Sie einen Alias für die Ausgabe der einzelnen Suchspalten ein. Standardmäßig wird der Name der Suchspalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>Transformations-Editor für Suche (Seite 'Erweitert')
+  Auf der Seite **Erweitert** des Dialogfelds **Transformations-Editor für Suche** können Sie die teilweise Zwischenspeicherung konfigurieren und die SQL-Anweisung für die Suchtransformation ändern.  
+  
+### <a name="options"></a>enthalten  
+ **Cachegröße (32-Bit)**  
+ Passen Sie die Cachegröße (in Megabytes) für 32-Bit-Computer an. Der Standardwert ist 5 Megabytes.  
+  
+ **Cachegröße (64-Bit)**  
+ Passen Sie die Cachegröße (in Megabytes) für 64-Bit-Computer an. Der Standardwert ist 5 Megabytes.  
+  
+ **Cache für Zeilen ohne übereinstimmende Einträge aktivieren**  
+ Zeilen ohne übereinstimmende Einträge im Verweisdataset werden zwischengespeichert.  
+  
+ **Zuordnung von Cache**  
+ Geben Sie den Prozentsatz des Caches an, der für Zeilen ohne übereinstimmende Einträge im Verweisdataset zugeordnet werden soll.  
+  
+ **SQL-Anweisung ändern**  
+ Hiermit ändern Sie die zum Generieren des Verweisdatasets verwendete SQL-Anweisung.  
+  
+> [!NOTE]  
+>  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im Transformations-Editor für Suche ****angegebene Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+  
+ **Abfrageparameter festlegen**  
+ Ordnen Sie mithilfe des Dialogfelds **Abfrageparameter festlegen** die Eingabespalten den Parametern zu.  
+  
+### <a name="external-resources"></a>Externe Ressourcen  
+ Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

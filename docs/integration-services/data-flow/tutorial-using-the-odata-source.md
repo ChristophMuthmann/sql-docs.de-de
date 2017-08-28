@@ -15,16 +15,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: cbdc4a2e0719e65e378d232c5abcb5404e8342f1
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="tutorial-using-the-odata-source"></a>Lernprogramm: Verwenden der OData-Quelle
   Dieses Lernprogramm führt Sie schrittweise durch den Prozess, bei dem die Sammlung **Employees** aus dem OData-Beispieldienst **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) extrahiert und anschließend in eine Flatfile geladen wird.  
   
-## <a name="1-create-an-integration-services-project"></a>1. Erstellen eines Integration Services-Projekts  
+## <a name="1-create-an-integration-services-project"></a>1. Erstellen Sie ein Integration Services-Projekt  
   
 1.  Starten Sie **SQL Server Data Tools** oder [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -36,29 +36,29 @@ ms.lasthandoff: 08/03/2017
   
 5.  Geben Sie einen **Namen** ein, und wählen Sie einen **Speicherort** für das Projekt aus. Klicken Sie anschließend auf **OK**.  
   
-## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Hinzufügen und Konfigurieren einer OData-Quelle für das SSIS-Paket  
+## <a name="2-add-and-configure-an-odata-source"></a>2. Hinzufügen und Konfigurieren einer OData-Quelle 
   
 1.  Ziehen Sie einen **Datenflusstask** aus der **SSIS-Toolbox** auf die Entwurfsoberfläche der Ablaufsteuerung des SSIS-Pakets.  
   
-2.  Klicken Sie auf die Registerkarte **Datenfluss** , oder doppelklicken Sie auf den neu hinzugefügten **Datenflusstask** , um die **Datenfluss-Entwurfsoberfläche**zu starten.  
+2.  Klicken Sie auf die **Datenfluss** Registerkarte aus, oder doppelklicken Sie auf die **Data Flow Task** auf die Entwurfsoberfläche Datenfluss zu öffnen.  
   
-3.  Ziehen Sie die **OData-Quelle** aus der Gruppe **Allgemein** in die **SSIS-Toolbox**. Beim erstmaligen Installieren der **OData-Quelle** wird sie unter der Gruppe **Allgemein** in der **SSIS-Toolbox**angezeigt.  
+3.  Ziehen Sie die **OData-Quelle** aus der Gruppe **Allgemein** in die **SSIS-Toolbox**.
   
-4.  Doppelklicken Sie auf die Komponente **OData-Quelle** , um das Dialogfeld **Quellen-Editor für OData** zu öffnen.  
+4.  Doppelklicken Sie auf die **OData-Quelle** Komponente zum Starten der **Quellen-Editor für OData-** (Dialogfeld).  
   
 5.  Klicken Sie auf **Neu…** , um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
-6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben Sie für die Zwecke dieses Lernprogramms [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)ein.  
+6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Diese URL kann es sich um die URL zum dienstdokument oder zu einem bestimmten Feed oder die Entität sein. Im Rahmen dieses Lernprogramms, geben Sie die URL zum dienstdokument: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt. Wenn Sie die Standardauthentifizierung verwenden möchten, wählen Sie **Diesen Benutzernamen und dieses Kennwort verwenden**aus.  
+7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt.  
   
-8.  Klicken Sie für die Verbindung auf **Verbindung testen** , und klicken Sie auf **OK** , um eine Instanz des OData-Verbindungs-Managers zu erstellen.  
+8.  Klicken Sie auf **Verbindung testen** testet die Verbindung, und klicken Sie auf **OK** zum Abschließen der Erstellung einer Instanz des OData-Verbindungs-Managers.  
   
 9. Vergewissern Sie sich im Dialogfeld **Quellen-Editor für OData** , dass **Auflistung** für die Option **Auflistung für Ressourcenpfad verwenden** ausgewählt ist.  
   
-10. Wählen Sie in der Dropdownliste **Auflistung** den Eintrag **Employees**aus.  
+10. Aus der **Auflistung** Dropdown-Liste **Mitarbeiter**.  
   
-11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen**ein. Ex. $orderby=CompanyName&$top=100. Geben Sie für die Zwecke dieses Lernprogramms **$top=5** ein.  
+11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen**ein. Beispiel: `$orderby=CompanyName&$top=100`. Geben Sie im Rahmen dieses Lernprogramms `$top=5`.  
   
 12. Klicken Sie auf **Vorschau** , um eine Vorschau der Daten aufzurufen.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/03/2017
   
 15. Klicken Sie auf **OK** , um das Dialogfeld **Quellen-Editor für OData** zu schließen.  
   
-## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Hinzufügen eines Flatfileziels und Testen der Projektmappe  
+## <a name="3-add-and-configure-a-flat-file-destination"></a>3. Fügen Sie hinzu und konfigurieren Sie ein Flatfileziel
   
 1.  Ziehen Sie nun ein **Flatfileziel** aus der **SSIS-Toolbox** auf die Entwurfsoberfläche Datenfluss unter die Komponente **OData-Quelle**.  
   
@@ -78,9 +78,9 @@ ms.lasthandoff: 08/03/2017
   
 4.  Klicken Sie im Dialogfeld **Ziel-Editor für Flatfiles** auf **Neu** , um einen neuen Verbindungs-Manager für Flatfiles zu erstellen.  
   
-5.  Wählen Sie im Dialogfeld **Flatfileformat** die Option **Mit Trennzeichen**aus. Das Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** wird geöffnet.  
+5.  Wählen Sie im Dialogfeld **Flatfileformat** die Option **Mit Trennzeichen**aus. Sie sehen die **Dateiverbindungs-Manager-Editor für Flatfiles** (Dialogfeld).  
   
-6.  Geben Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** für **Dateiname**den Namen **c:\Employees.txt**ein.  
+6.  In der **Dateiverbindungs-Manager-Editor für Flatfiles** im Dialogfeld für die **Dateiname**, geben Sie `c:\Employees.txt`.  
   
 7.  Klicken Sie im linken Navigationsbereich auf **Spalten**. Auf dieser Seite können Sie die Daten in der Vorschau anzeigen.  
   
@@ -89,7 +89,8 @@ ms.lasthandoff: 08/03/2017
 9. Klicken Sie im Dialogfeld **Ziel-Editor für Flatfiles** im linken Navigationsbereich auf **Zuordnungen** . Überprüfen Sie die Zuordnungen.  
   
 10. Klicken Sie auf OK, um das Dialogfeld **Ziel-Editor für Flatfiles** zu schließen.  
-  
-11. Kompilieren Sie das SSIS-Paket, und führen Sie es aus. Überprüfen Sie, ob die Ausgabedatei mit ID, Vorname und Nachname für fünf Mitarbeiter aus dem OData-Feed erstellt wird.  
+
+## <a name="4-run-the-package"></a>4. Führen Sie das Paket
+Führen Sie das SSIS-Paket. Stellen Sie sicher, dass die Ausgabedatei, mit der ID, Vorname erstellt wird und Nachname für fünf Mitarbeiter aus dem OData-feed.
   
   

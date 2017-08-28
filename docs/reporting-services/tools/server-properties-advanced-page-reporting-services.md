@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -124,6 +124,19 @@ Das Exportieren von Daten aus Power BI-Visualisierungen PowerBI ReportServer akt
 
 **EnableTestConnectionDetailedErrors**  
 Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert ist **true**. Wenn die Option auf **false**festgelegt wird, werden nur generische Fehlermeldungen gesendet.
+
+**AccessControlAllowCredentials**  
+Gibt an, ob die Antwort auf die Clientanforderung verfügbar gemacht werden kann, wenn das Flag "Anmeldeinformationen" festgelegt ist auf "true". Der Standardwert ist **false**.
+
+**AccessControlAllowHeaders** eine durch Kommas getrennte Liste von Headern, die vom Server zugelassen wird, wenn ein Client eine Anforderung sendet. Diese Eigenschaft kann eine leere Zeichenfolge angeben * können alle Header.
+
+**AccessControlAllowMethods** eine durch Kommas getrennte Liste von HTTP-Methoden, die vom Server zugelassen wird, wenn ein Client eine Anforderung sendet. Die Standardwerte lauten (GET, PUT, POST, PATCH, DELETE), Angeben von * können alle Methoden.
+
+**AccessControlAllowOrigin** eine durch Kommas getrennte Liste der Ursprünge, denen vom Server zugelassen wird, wenn ein Client eine Anforderung sendet. Der Standardwert ist dies verhindert, dass alle Anforderungen, die Angabe leer * lässt alle Ursprünge aus, wenn Anmeldeinformationen nicht festgelegt werden. Wenn Anmeldeinformationen angegeben sind, muss eine explizite Liste der Ursprünge angegeben werden.
+
+**AccessControlExposeHeaders** eine durch Kommas getrennte Liste von Headern, die der Server für Clients verfügbar gemacht wird. Für diese Einstellung gibt es keinen Standardwert.
+
+**AccessControlMaxAge** gibt die Anzahl der Sekunden, die die Ergebnisse der Preflight-Anforderung zwischengespeichert werden können. Der Standardwert ist 600 (zehn Minuten).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Betreiben Sie HA-verfügbarkeitsgruppe für SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>Führen Sie ein Failover der verfügbarkeitsgruppe.
 
@@ -175,9 +176,6 @@ Für `CLUSTER_TYPE=EXTERNAL`, die Failover-Semantik Trigger unterscheiden sich i
 
 In den folgenden Abschnitten wird erläutert, wie ein paralleles Upgrade mit SQL Server-Instanzen unter Linux mit Verfügbarkeitsgruppen ausführen. 
 
->[!WARNING]
->Unter Linux wird die paralleles Upgrade auf SQL Server 2017 RC2 nicht unterstützt. Nach dem upgrade des sekundären Replikats, wird diese vom primären Replikat getrennt, bis das primäre Replikat aktualisiert wird. Microsoft ist zum Beheben dieses Problems für eine künftige Version planen. 
-
 ### <a name="upgrade-steps-on-linux"></a>Aktualisieren Sie die Schritte unter Linux
 
 Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Linux sind, ist der Clustertyp der verfügbarkeitsgruppe entweder `EXTERNAL` oder `NONE`. Eine verfügbarkeitsgruppe, die von einem Cluster-Manager verwaltet wird, neben Windows Server-Failovercluster (WSFC ist) `EXTERNAL`. Schrittmacher mit Corosync ist ein Beispiel für einen externen Cluster-Manager. Eine verfügbarkeitsgruppe mit keine Cluster-Manager verfügt Clustertyp `NONE` die Aktualisierung hier beschriebenen Schritte sind spezifisch für Verfügbarkeitsgruppen von Clustertyp `EXTERNAL` oder `NONE`.
@@ -191,6 +189,15 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
 
    >[!NOTE]
    >Wenn eine verfügbarkeitsgruppe nur asynchrone verfügt wird Replikate - um Datenverluste zu vermeiden. ändern ein Replikat, synchrone und warten, bis er synchronisiert wird. Aktualisieren Sie dann dieses Replikat aus.
+   
+   b. 1. Beenden Sie die Ressource auf dem Knoten, der das sekundäre Replikat als Ziel für Upgrade hostet
+   
+   Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b. 2. Upgrade von SQL Server auf dem sekundären Replikat
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -198,11 +205,18 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b. 3. Entfernen der Speicherorteinschränkung
+
+   Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   Stellen Sie als bewährte Methode sicher die Ressource wird gestartet (mit `pcs status` Befehl) und das sekundäre Replikat ist verbunden und Zustand "synchronisiert" nach dem Upgrade.
 
 1. Nachdem alle sekundären Replikate aktualisiert werden, ein manuelles Failover zu einem synchronen sekundären Replikate.
 
    Für Verfügbarkeitsgruppen mit `EXTERNAL` cluster-Typ, verwenden Sie die Verwaltungstools fehlschlagen Over; Verfügbarkeitsgruppen mit `NONE` Clustertyp sollten Transact-SQL verwenden, um Failover auszuführen. 
-
    Im folgenden Beispiel wird ein Failover einer verfügbarkeitsgruppe mit die Verwaltungstools. Ersetzen Sie `<targetReplicaName>` durch den Namen des synchronen sekundären Replikats, das primäre werden soll:
 
    ```bash
@@ -211,7 +225,6 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    
    >[!IMPORTANT]
    >Die folgenden Schritte gelten nur für Verfügbarkeitsgruppen, die nicht über einen Manager verfügen.  
-
    Wenn der Cluster Verfügbarkeit Gruppentyp ist `NONE`manuell ein Failover. Führen Sie die folgenden Schritte wie folgt aus:
 
       A. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
@@ -226,13 +239,27 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Aktualisieren Sie nach einem Failover SQL Server, auf dem alten primären Replikat. 
+1. Aktualisieren Sie SQL Server auf dem alten primären Replikat durch Wiederholen der Schritte b. 1-b. 3 oben beschriebene Prozedur, nach dem Failover.
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. Für eine Verfügbarkeitsgruppen mit einem externen-Cluster ist Manager – Geben Sie den Cluster, auf dem EXTERNEN und Bereinigung der standorteinschränkung, die durch das manuelle Failover verursacht wurde. 

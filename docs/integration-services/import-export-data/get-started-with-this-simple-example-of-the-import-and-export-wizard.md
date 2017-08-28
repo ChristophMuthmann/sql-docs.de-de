@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import / Export-Assistenten
@@ -44,6 +44,8 @@ Sie können den Assistenten starten, aus der Microsoft SQL Server 2016-Gruppe au
 
 > [!NOTE]
 > In diesem Beispiel wählen Sie den 32-Bit-Assistenten aus, da Sie die 32-Bit-Version von Microsoft Office installiert haben. Daher müssen Sie die 32-Bit-Datenanbieter für die Verbindung in Excel verwenden. Für viele andere Datenquellen können Sie in der Regel die 64-Bit-Assistenten auswählen.
+>
+> Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
 
 Weitere Informationen finden Sie unter [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -58,9 +60,6 @@ Wahrscheinlich möchten finden auf dieser Seite erneut, also fahren Sie fort und
 Auf der nächsten Seite **wählen Sie eine Datenquelle**, Sie Microsoft Excel als Datenquelle auswählen. Klicken Sie dann durchsuchen Sie die Excel-Datei und wählen Sie aus. Geben Sie Sie schließlich die Excel-Version, mit denen Sie die Datei zu erstellen.
 
 ![Wählen Sie die Excel-Datenquelle](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> In der Regel geben Sie Microsoft Excel 2016 als die Version und die Dateien für die Verbindung mit Excel 2016 und Zugriff 2016 herunterladen. Wenn Sie ein Microsoft Office 365-Abonnement verfügen, kann nicht jedoch die Laufzeit Office 2016 installieren. Sie können den Datenanbieter für Excel 2016 und Zugriff 2016 nur mit einer desktop-Version von Microsoft Office installieren. So geben Sie einfach die vorherige Version von Excel mit Excel 2013. Falls erforderlich, laden Sie die Dateien für die Verbindung mit Excel 2013 und Access 2013 herunter. Diese Einschränkung von der Laufzeit Office 2016 gemäß [diesem Blogbeitrag](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
 Weitere Informationen zum Verbinden mit Excel finden Sie unter [Herstellen einer Verbindung mit einer Excel-Datenquelle](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [wählen Sie eine Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 

@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieser Artikel zeigt unterstützte Bereitstellungskonfigurationen für SQL Server Always On-Verfügbarkeitsgruppen für Linux-Servern. Eine verfügbarkeitsgruppe unterstützt hohe Verfügbarkeit und Schutz von Daten. Automatische fehlererkennung, automatisches Failover und transparente wiederverbindung nach einem Failover bereitstellen hohen Verfügbarkeit. Synchronisierte Replikate bereitzustellen Datenschutz. 
 
@@ -114,7 +115,7 @@ Z. B. eine verfügbarkeitsgruppe mit drei synchronen Replikaten - ein primäres 
 In diesem Szenario haben zwei Replikate für die Reaktion für das Failover ausgelöst werden soll. Für das erfolgreiche automatische Failover nach einem Ausfall des primären Replikats, beide sekundäre Replikate müssen auf dem neuesten Stand und reagieren auf die Benachrichtigung vorab heraufstufen. Wenn sie online und synchron sind, haben sie die gleichen Sequenznummer. Die verfügbarkeitsgruppe stuft eine davon. Wenn nur eines der sekundären Replikate auf reagiert der vorab heraufstufen Aktion, der Resource-Agent kann nicht garantieren, dass die sekundäre Datenbank, die geantwortet hat die höchste Sequence_number hat und ein Failover wird nicht ausgelöst.
 
 >[!IMPORTANT]
->Wenn `required_synchronized_secondaries_to_commit` ist Risiko eines Datenverlusts 0 vorhanden ist. Bei einem Ausfall primäre Replikat wird der Agent für die Ressource nicht automatisch einen Failover ausgelöst. Sie können entweder warten, vom primären zum Wiederherstellen oder manuell ein Failover mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>Wenn `required_synchronized_secondaries_to_commit` 0 (null) entspricht, besteht das Risiko von Datenverlust. Bei einem Ausfall primäre Replikat wird der Agent für die Ressource nicht automatisch einen Failover ausgelöst. Sie können entweder warten, vom primären zum Wiederherstellen oder manuell ein Failover mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Sie können auswählen, um das Standardverhalten überschreiben und verhindern, dass die verfügbarkeitsgruppenressource Einstellung `required_synchronized_secondaries_to_commit` automatisch.
 

@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio unter Windows zum Verwalten von SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieses Thema enthält [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) und führt Sie durch ein paar häufige Aufgaben. SSMS ist eine Windows-Anwendung, daher SSMS verwenden, wenn Sie einen Windows-Computer verfügen, der mit einer SQL Server-Remoteinstanz unter Linux eine Verbindung herstellen können.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) ist Teil einer Suite von SQL-Tools, die Microsoft-Angebote kostenlos für Entwicklung und Verwaltung Anforderungen freizugeben. SSMS ist eine integrierte Umgebung zugreifen, konfigurieren, verwalten, verwalten und entwickeln aller Komponenten von SQL Server lokal oder in der Cloud unter Linux, Windows oder Docker unter MacOS und Azure SQL-Datenbank und Azure SQL Data Warehouse. SSMS kombiniert eine umfassende Gruppe grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf SQL Server zu ermöglichen.
 
 SSMS bietet eine Breite Palette von Funktionen zur Entwicklung und Verwaltung für SQL Server, Tools, einschließlich:
+
 - Konfigurieren Sie, überwachen Sie und verwalten Sie einzelne oder mehrere Instanzen von SQL Server
 - bereitstellen, überwachen und aktualisieren Sie die Datenebenen-Komponenten wie z. B. Datenbanken und Data Warehouses
 - Sichern und Wiederherstellen von Datenbanken

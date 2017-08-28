@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 08/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -16,12 +16,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 caps.latest.revision: 18
 author: sabotta
 ms.author: carlasab
-manager: murato
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: a701e2650a14831f5292d7e62e510efc441d5caf
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -38,6 +38,23 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
 -   [SQL Server Migration Assistant für Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 -  [SQL Server Migration Assistant für Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+
+## <a name="supported-sources-and-target-versions"></a>Unterstützte Quellen und Zielversionen
+Überprüfen Sie die Informationen im Download Center für den Download SSMA, für unterstützte Datenquellen.
+
+Die folgende Zielversionen werden für SSMA unterstützt.
+
+- SQL Server 2008
+- SQL Server 2008 R2
+- SQL Server 2012
+- SQL Server 2014
+- SQL Server 2016
+- Azure SQL Database
+- SQLServer 2017 unter Windows und Linux (Vorschau)
+- ** Azure SQL Datawarehouse
+
+** Dieses Ziel wird nur von SSMA für Oracle unterstützt.
+ 
 
 ## <a name="downloads"></a>Downloads
 - [SSMA für Access](http://aka.ms/ssmaforaccess)
@@ -57,7 +74,7 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
   
     -   [SQL Server Developer Center-Community](http://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und andere Communityressourcen, die für SQL Server-Entwickler nützlich sind  
   
--   Mit dem telefonischen Support - wechseln Sie zu [https://support.microsoft.com/en-us/assistedsupportproducts](https://support.microsoft.com/en-us/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie die Version, und wählen Sie dann "start-Anforderung".  Begleiteten Support ist im Lieferumfang von SQL Server Migration Assistant-Tool.  
+-   Mit dem telefonischen Support - wechseln Sie zu [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie die Version und dann "Starten Anforderung".  Begleiteten Support ist im Lieferumfang von SQL Server Migration Assistant-Tool.  
   
 -   Premier Support - haben einen Vertrag Premier erhalten Sie Premier support für die [Premier-Onlineportal](https://premier.microsoft.com/).  
   

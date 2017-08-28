@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Konfigurieren von Always On-verfügbarkeitsgruppe für SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieser Artikel beschreibt, wie eine SQL Server AlwaysOn für die verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux erstellt wird. Es gibt zwei Konfigurationstypen für Verfügbarkeitsgruppen. Ein *hohe Verfügbarkeit* Konfiguration verwendet einen Cluster-Manager für die Geschäftskontinuität bereitstellen. Diese Konfiguration kann auch schreibgeschützte mit horizontaler Skalierung Replikate enthalten. Dieses Dokument erläutert, wie die hohe Verfügbarkeit der verfügbarkeitsgruppenkonfiguration erstellt wird.
 

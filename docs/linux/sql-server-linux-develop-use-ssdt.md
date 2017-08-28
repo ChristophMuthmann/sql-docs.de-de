@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 05cc425e6411734b0cc300a9e3587fa2196893ab
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server on Linux 
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Entwicklungs- und Datenbank Lifecycle Management (DLM)-Umgebung, für die SQL Server on Linux. Sie können entwickeln, erstellen, testen und Ihre Datenbank aus einem Projekt quellcodeverwaltete veröffentlichen, wie Sie den Anwendungscode entwickeln.
 
@@ -37,7 +39,7 @@ SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Entwi
 
 SQL Server 2017 RC2 unter Linux wird von SSDT-Version 17,0 RC oder höher unterstützt.
 
-1. [Herunterladen und installieren Sie SSDT 17,0 RC2].
+* [Herunterladen und installieren Sie SSDT 17,0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
 ## <a name="create-a-new-database-project-in-source-control"></a>Erstellen eines neuen Datenbankprojekts in der quellcodeverwaltung
 
@@ -110,11 +112,7 @@ Wenn Sie noch nicht in T-SQL vertraut sind, finden Sie unter [Lernprogramm: Schr
 Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools finden Sie unter [SSDT MSDN-Dokumente]
 
 [herunterladen und installieren Sie Visual Studio]:https://www.visualstudio.com/downloads/
-[Herunterladen und installieren Sie SSDT 17,0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN-Dokumente]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbankmodul)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-
-
