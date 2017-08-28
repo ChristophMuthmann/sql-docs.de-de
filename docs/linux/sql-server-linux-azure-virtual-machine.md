@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-a-linux-sql-server-2017-virtual-machine-with-the-azure-portal"></a>Erstellen Sie eine virtuelle Maschine von Linux, SQL Server-2017 mit Azure-portal
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Azure bietet eine Linux-VM-Images, die SQL Server 2017 RC2 installiert haben. Dieses Thema enthält eine kurze exemplarische Vorgehensweise zur Verwendung von Azure-Portal zum Erstellen eines virtuellen Computers Linux SQL Server. 
 

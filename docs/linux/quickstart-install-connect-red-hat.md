@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In diesem Schnellstart-Tutorial installieren Sie zunächst SQL Server 2017 RC2 auf Red Hat Enterprise Linux (RHEL) 7.3. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 

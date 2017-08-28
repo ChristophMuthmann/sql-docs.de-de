@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren Sie die SQL Server-Befehlszeilentools Sqlcmd und Bcp unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Die folgenden Schritte installieren Sie die Befehlszeilentools, Microsoft ODBC-Treiber und ihre Abhängigkeiten. Die **Mssql-Tools** Paket enthält:
 

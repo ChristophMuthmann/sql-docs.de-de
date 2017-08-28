@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In diesem Schnellstart-Tutorial installieren Sie zuerst SQL Server 2017 RC2 unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 

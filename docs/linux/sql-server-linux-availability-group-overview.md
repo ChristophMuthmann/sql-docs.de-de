@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Verfügbarkeitsgruppen für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Eine SQL Server Always On-verfügbarkeitsgruppe ist eine hohe Verfügbarkeit (HA), Wiederherstellung im Notfall (DR) und die Lösung mit horizontaler Skalierung. Es bietet hohe Verfügbarkeit für Gruppen von Datenbanken auf direkt angeschlossener Speicher. Unterstützt mehrere sekundäre Replikate für integrierte hohe Verfügbarkeit und DR, automatische fehlererkennung schnell transparentes Failover und Lastenausgleich lesen. Diese Breite Palette von Funktionen können Sie eine optimale SLAs für Ihre arbeitsauslastungen Verfügbarkeit zu erzielen.
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server-Protokollversand ist eine HA-Konfiguration, in dem eine Datenbank von einem primären Server auf einem oder mehreren sekundären Servern repliziert. Kurz gesagt, ist eine Sicherung der Quelldatenbank auf dem sekundären Server wiederhergestellt. Klicken Sie dann der primäre Server erstellt Sicherungen des Transaktionsprotokolls in regelmäßigen Abständen und die sekundären Servern wiederhergestellt werden, aktualisieren die sekundäre Kopie der Datenbank. 
 

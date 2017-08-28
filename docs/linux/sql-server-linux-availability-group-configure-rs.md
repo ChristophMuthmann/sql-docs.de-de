@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Konfigurieren von schreibgeschützten verfügbarkeitsgruppe mit horizontaler Skalierung für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Sie können eine verfügbarkeitsgruppe für schreibgeschützte mit horizontaler Skalierung für SQL Server on Linux konfigurieren. Es gibt zwei Architekturen für Verfügbarkeitsgruppen. Ein *hohe Verfügbarkeit* Architektur verwendet einen Cluster-Manager, um die Geschäftskontinuität bereitstellen. Diese Architektur kann auch schreibgeschützte mit horizontaler Skalierung Replikate enthalten. Um die hohe Verfügbarkeit-Architektur zu erstellen, finden Sie unter [Konfigurieren von Always On-verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 

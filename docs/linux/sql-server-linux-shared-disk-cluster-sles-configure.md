@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SLES freigegebene Datenträgercluster für SQL Server konfigurieren
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieses Handbuch enthält Anweisungen, um eine freigegebene Datenträgercluster zwei Knoten für SQL Server auf SUSE Linux Enterprise Server (SLES) zu erstellen. Die clustering-Ebene basiert auf SUSE [hohe Verfügbarkeit Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Schrittmacher](http://clusterlabs.org/). 
 

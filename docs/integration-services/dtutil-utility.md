@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  Verwenden Sie die folgende Syntax, um zu bestimmen, ob ein Paket in der **msdb** -Datenbank einer lokalen Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorhanden ist, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet:  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Ausführen von Integration Services-Paketen (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+

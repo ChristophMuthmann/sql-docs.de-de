@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben von Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieses Dokument beschreibt, wie die folgenden Aufgaben für SQL Server auf einem freigegebenen Datenträger-Failovercluster mit Red Hat Enterprise Linux ausgeführt werden.
 

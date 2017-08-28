@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>Business Continuity und Database Recovery SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server on Linux können Organisationen eine Vielzahl der Vereinbarung zum Servicelevel-Ziele, um verschiedene geschäftlichen Anforderungen gerecht zu erzielen.
 

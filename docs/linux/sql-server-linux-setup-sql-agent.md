@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installieren von SQL Server-Agent für Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Die folgenden Schritte installieren Sie SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. Die [SQL Server-Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) geplante SQL Server-Aufträge ausgeführt. Informationen zu Funktionen, die für diese Version von SQL Server-Agent unterstützt, finden Sie unter der [Release Notes](sql-server-linux-release-notes.md).
 
