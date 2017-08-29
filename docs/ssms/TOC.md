@@ -32,6 +32,7 @@
 # [Die SQL Server Management Studio-Umgebung](the-sql-server-management-studio-environment.md)
 # [Eigenschaftenseiten in SSMS](property-pages-in-sql-server-management-studio.md)
 # [Eigenschaftenfenster (Management Studio)](properties-window-management-studio.md)
+# [Ausgabefenster in SSMS](output-window.md)
 
 # [Info (Dialogfeld)](about-dialog-box.md)
 # [SQL Server Management Studio-Webbrowser](sql-server-management-studio-web-browser.md)
