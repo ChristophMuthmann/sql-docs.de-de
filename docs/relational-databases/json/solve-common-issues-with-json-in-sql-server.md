@@ -54,7 +54,7 @@ FOR JSON PATH
 Jedes Ergebnis einer FOR JSON-Abfrage oder die Funktion JSON_QUERY in den Spaltenausdrücken wird als separates geschachteltes JSON-Unterobjekt formatiert und im Hauptergebnis aufgenommen.  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>Verhindern von doppelt geschütztem JSON in der FOR JSON-Ausgabe  
- **Frage:** Ich habe einen JSON-Text, der in einer Tabellenspalte gespeichert ist. Ich möchte ihn in der Ausgabe von FOR JSON einschließen. FOR JSON schützt aber alle Zeichen in JSON, also erhalte ich eine JSON-Zeichenfolge anstelle eines geschachtelten-Objekts, wie im folgenden Beispiel gezeigt.  
+ **Frage:** Ich habe einen JSON-Text, der in einer Tabellenspalte gespeichert ist. Ich möchte ihn in der Ausgabe von FOR JSON einschließen. FOR JSON schützt aber alle Zeichen in JSON, also erhalte ich eine JSON-Zeichenfolge anstelle eines geschachtelten Objekts, wie im folgenden Beispiel gezeigt.  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -69,7 +69,7 @@ FOR JSON PATH
   
  Wie kann ich verhindern, dass dieses Verhalten auftritt? Ich möchte, dass `{"day":23}` als JSON-Objekt und nicht als geschützter Text zurückgegeben wird.  
   
- **Antwort:** Ein JSON-Objekt, das in einer Textspalte oder als Literal gespeichert wird, wird wie jeder beliebige Text behandelt. Das bedeutet, dass es in doppelte Anführungszeichen eingeschlossen und geschützt ist. Wenn ein ungeschütztes JSON-Objekt zurückgegeben werden soll, übergeben Sie diese JSON-Spalte als Argument an die Funktion JSON_QUERY, wie im folgenden Beispiel gezeigt.  
+ **Antwort:** Ein JSON-Objekt, das in einer Textspalte oder als Literal gespeichert wird, wird wie jeder beliebige Text behandelt. Das bedeutet, dass es in doppelte Anführungszeichen eingeschlossen und mit Escapezeichen versehen ist. Wenn ein ungeschütztes JSON-Objekt zurückgegeben werden soll, übergeben Sie diese JSON-Spalte als Argument an die Funktion JSON_QUERY, wie im folgenden Beispiel gezeigt.  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -90,7 +90,7 @@ FOR JSON PATH
   
  Es scheint, dass der von der FOR JSON-Abfrage zurückgegebene Text als Klartext geschützt wird. Dies geschieht nur, wenn WITHOUT_ARRAY_WRAPPER angegeben wird. Warum wird es nicht als ein JSON-Objekt behandelt und im Ergebnis ungeschützt eingefügt?  
   
- **Antwort:** Wenn Sie die Option `WITHOUT_ARRAY_WRAPPER` in der inneren `FOR JSON` angeben, ist der resultierende JSON-Text nicht notwendigerweise im gültigen JSON-Format. Daher geht die äußere `FOR JSON` davon aus, dass es sich hierbei um Klartext handelt und schützt die Zeichenfolge. Wenn Sie sicher sind, dass die JSON-Ausgabe gültig ist, binden Sie diese mithilfe der `JSON_QUERY`-Funktion ein, um sie auf ordnungsgemäß formatierte JSON heraufzustufen, wie im folgenden Beispiel gezeigt.  
+ **Antwort:** Wenn Sie die Option `WITHOUT_ARRAY_WRAPPER` in der inneren `FOR JSON` angeben, ist der resultierende JSON-Text nicht notwendigerweise im gültigen JSON-Format. Daher geht die äußere `FOR JSON` davon aus, dass es sich hierbei um Klartext handelt, und schützt die Zeichenfolge. Wenn Sie sicher sind, dass die JSON-Ausgabe gültig ist, binden Sie diese mithilfe der `JSON_QUERY`-Funktion ein, um darauf wie im folgenden Beispiel gezeigt ordnungsgemäß formatiertes JSON zu generieren.  
   
 ```sql  
 SELECT 'Text' as myText,  
@@ -149,5 +149,5 @@ WHERE [key] = 'color'
  **Antwort:** In JSON-Pfaden müssen Sie diese in Anführungszeichen einschließen. Beispiel: `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
 

@@ -27,7 +27,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="sql-server-guides"></a>Handbücher für SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Die folgenden Handbücher sind verfügbar: Darin werden allgemeine Konzepte erläutert. Sie gelten für alle Versionen von SQL Server, sofern nicht anders in das entsprechende Handbuch. 
+Die folgenden Handbücher sind verfügbar: Darin werden allgemeine Konzepte erläutert. Sie gelten für alle Versionen von SQL Server, sofern im entsprechenden Handbuch nicht anders angegeben. 
 
 [Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen](http://msdn.microsoft.com/library/dn135328)  
 [Handbuch zum Indexentwurf](../relational-databases/sql-server-index-design-guide.md)  

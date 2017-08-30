@@ -47,9 +47,9 @@ ms.lasthandoff: 07/31/2017
   
 -   Die Authentifizierungsoptionen (**-E**, **-U**, und **-P**) geben die Anmeldeinformationen an, die **sqlcmd** verwendet, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. **HINWEIS:** Die Option **-E** ist die Standardeinstellung und muss nicht angegeben werden.  
   
--   Die Eingabeoptionen (**-Q**, **-q**und **-i**) ermitteln den Eingabespeicherort für **sqlcmd**.  
+-   Die Eingabeoptionen (**-Q**, **-q** und **-i**) ermitteln den Eingabespeicherort für **sqlcmd**.  
   
--   Die Ausgabeoption (**-o**) gibt die Datei an, in die **sqlcmd** die Ausgabe ausgeben soll.  
+-   Die Ausgabeoption (**-o**) gibt die Datei an, in die **sqlcmd** die Ausgabe schreiben soll.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Herstellen einer Verbindung mit dem Hilfsprogramm „sqlcmd“  
   
