@@ -62,8 +62,8 @@ Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten
   
 -   Speicheroptimierte Tabellen  
   
- ### <a name="data-types"></a>Datentypen  
- -   text, ntext und image  
+### <a name="data-types"></a>Datentypen  
+-   text, ntext und image  
   
 -   timestamp  
   
