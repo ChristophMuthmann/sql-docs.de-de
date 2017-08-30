@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
@@ -199,7 +199,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Verzögerte Dauerhaftigkeit|ja|ja|ja|ja|ja|
 |Automatische Optimierung|ja|Nein|Nein|Nein|Nein|
 |Adaptive Joins im Batchmodus|ja|Nein|Nein|Nein|Nein|
-|Feedback zur Speicherzuweisung im Batch|ja|Nein|Nein|Nein|Nein|
+|Feedback zur Speicherzuweisung im Batchmodus|ja|Nein|Nein|Nein|Nein|
+|Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|ja|ja|ja|ja|ja|
 |Verbesserungen beim massenhaften Einfügen|ja|ja|ja|ja|ja|
 
 
