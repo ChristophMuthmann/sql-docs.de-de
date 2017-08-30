@@ -428,23 +428,23 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien
-> **HINWEIS:** Die Verwendung des Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien gilt für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server-2017 ab Version CTP 1.3.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für die Richtlinie zur Beibehaltung temporaler Verlaufsdaten
+> **HINWEIS:** Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.  
 
-Die temporale Verlaufsbeibehaltung kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden von temporaler Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.
+Die Beibehaltung temporaler Verlaufsdaten kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden der temporalen Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.
 
-Nachdem Sie Beibehaltungsrichtlinien festgelegt haben, überprüft die Azure SQL-Datenbank in regelmäßigen Abständen, ob Zeilen mit Verlaufsdaten existieren, die für die automatische Datenbereinigung infrage kommen. Die Identifikation von übereinstimmenden Reihen und ihre Entfernung aus der Verlaufstabelle finden transparent in dem Hintergrundtask statt, der vom System geplant und ausgeführt wird. Die Ablaufbedingungen für die Zeilen der Verlaufstabelle werden basierend auf der Spalte überprüft, die das Ende des SYSTEM_TIME-Zeitraums repräsentiert. Wenn die Beibehaltungsdauer beispielsweise auf sechs Monate festgelegt ist, erfüllen die für die Bereinigung infrage kommenden Zeilen folgende Bedingung:
+Nachdem Sie Beibehaltungsrichtlinien festgelegt haben, überprüft Azure SQL-Datenbank in regelmäßigen Abständen, ob Zeilen mit Verlaufsdaten existieren, die für die automatische Datenbereinigung infrage kommen. Die Ermittlung übereinstimmender Zeilen und ihre Entfernung aus der Verlaufstabelle erfolgen transparent mithilfe eines vom System geplanten und ausgeführten Hintergrundtasks. Die Ablaufbedingungen für die Zeilen der Verlaufstabelle werden basierend auf der Spalte überprüft, die das Ende des SYSTEM_TIME-Zeitraums repräsentiert. Wenn die Beibehaltungsdauer beispielsweise auf sechs Monate festgelegt ist, erfüllen die für die Bereinigung infrage kommenden Zeilen folgende Bedingung:
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
 Im vorherigen Beispiel sind wir davon ausgegangen, dass die Spalte „ValidTo“ dem Ende des SYSTEM_TIME-Zeitraums entspricht.
 ### <a name="how-to-configure-retention-policy"></a>Wie werden Beibehaltungsrichtlinien konfiguriert?
-Bevor Sie die Aufbewahrungsrichtlinie für eine temporale Tabelle konfigurieren, überprüfen Sie zunächst, ob die temporale Beibehaltung von Verlaufsdaten auf Datenbankebene aktiviert ist:
+Bevor Sie die Aufbewahrungsrichtlinie für eine temporale Tabelle konfigurieren, überprüfen Sie zunächst, ob die Beibehaltung temporaler Verlaufsdaten auf Datenbankebene aktiviert ist:
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-Das Datenbankkennzeichen **Is_temporal_history_retention_enabled** ist standardmäßig auf „ON“ festgelegt, aber Benutzer können dies mit der Anweisung ALTER DATABASE ändern. Es wird ebenfalls nach einer Point-In-Time-Wiederherstellung auf OFF festgelegt. Um die Bereinigung für die temporale Verlaufsbeibehaltung auf Ihrer Datenbank zu aktivieren, führen Sie folgende Anweisung aus:
+Das Datenbankflag **Is_temporal_history_retention_enabled** ist standardmäßig auf „ON“ festgelegt, aber Benutzer können dies mit der Anweisung ALTER DATABASE ändern. Es wird ebenfalls nach einer Point-In-Time-Wiederherstellung auf OFF festgelegt. Um die Bereinigung der Beibehaltung temporaler Verlaufsdaten in Ihrer Datenbank zu aktivieren, führen Sie folgende Anweisung aus:
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
@@ -470,12 +470,12 @@ CREATE TABLE dbo.WebsiteUserInfo
  );
 ```
 Sie können den Beibehaltungszeitraum mithilfe verschiedener Zeiteinheiten angeben: DAYS, WEEKS, MONTHS, und YEARS. Wenn HISTORY_RETENTION_PERIOD weggelassen wird, wird von einer unbegrenzten (INFINITE) Beibehaltung ausgegangen. Sie können das Schlüsselwort INFINITE auch explizit verwenden.
-In manchen Szenarios möchten Sie die Beibehaltung eventuell erst nach der Tabellenerstellung konfigurieren oder den zuvor konfigurierten Wert ändern. Verwenden Sie für diesen Fall die Anweisung ALTER TABLE:
+In manchen Szenarios sollten Sie die Beibehaltung erst nach der Tabellenerstellung konfigurieren oder den zuvor konfigurierten Wert ändern. Verwenden Sie für diesen Fall die Anweisung ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-Benutzen Sie die folgende Abfrage, die die Flag für die temporale Beibehaltungsaktivierung auf Datenbankebene mit den Beibehaltungszeiträumen für die einzelnen Tabellen verknüpft, um den aktuellen Status der Beibehaltungsrichtlinien zu überprüfen:
+Zum Prüfen des aktuellen Status der Beibehaltungsrichtlinie verwenden Sie die folgende Abfrage, die das Flag für die Aktivierung der temporalen Beibehaltung auf Datenbankebene mit den Beibehaltungszeiträumen für die einzelnen Tabellen verknüpft:
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,8 +488,8 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>Wie löscht die SQL-Datenbank veraltete Zeilen?
-Der Bereinigungsprozess hängt vom Indexlayout der Verlaufstabelle ab. Zu beachten ist, *dass nur Verlaufstabellen mit einem gruppierten Index (B-Struktur oder Columnstore) mit einer unendlichen Aufbewahrungsrichtlinie konfiguriert werden können*. Es wird ein Hintergrundtask erstellt, um die Bereinigung veralteter Daten für alle temporalen Tabellen mit begrenztem Beibehaltungszeitraum auszuführen. Die Bereinigungslogik für den gruppierten Index für Rowstore (B-Struktur) löscht die veralteten Zeilen in kleineren Blöcken (max. 10K), was die Belastung des Datenbankprotokolls und des E/A-Subsystems minimiert. Die Bereinigungslogik verwendet zwar den benötigten B-Strukturindex, jedoch kann die Löschreihenfolge der Zeilen, die den Beibehaltungszeitraum übersteigen, nicht sicher garantiert werden. *Verwenden Sie in Ihren Anwendungen daher keine Abhängigkeit von der Bereinigungsreihenfolge*.
+### <a name="how-sql-database-deletes-aged-rows"></a>Wie löscht SQL-Datenbank veraltete Zeilen?
+Der Bereinigungsprozess hängt vom Indexlayout der Verlaufstabelle ab. Zu beachten ist, dass eine Richtlinie für die begrenzte Beibehaltung *nur für Verlaufstabellen mit einem gruppierten Index (B-Struktur oder Columnstore) konfiguriert werden können*. Es wird ein Hintergrundtask erstellt, um die Bereinigung veralteter Daten für alle temporalen Tabellen mit begrenztem Beibehaltungszeitraum auszuführen. Die Bereinigungslogik für den gruppierten Index für Rowstore (B-Struktur) löscht die veralteten Zeilen in kleineren Blöcken (max. 10K), was die Belastung des Datenbankprotokolls und des E/A-Subsystems minimiert. Die Bereinigungslogik verwendet zwar den benötigten B-Strukturindex, jedoch kann die Löschreihenfolge der Zeilen, die den Beibehaltungszeitraum übersteigen, nicht sicher garantiert werden. *Verwenden Sie in Ihren Anwendungen daher keine Abhängigkeit von der Bereinigungsreihenfolge*.
 
 Der Bereinigungstask für den gruppierten Columnstore entfernt ganze Zeilengruppen auf einmal (die üblicherweise jeweils 1 Mio. Reihen enthalten). Dies ist sehr effizient, vor allem wenn Verlaufsdaten mit einer hohen Geschwindigkeit generiert werden.
 
