@@ -67,20 +67,20 @@ ms.lasthandoff: 08/02/2017
   
 |Richtlinienname|Problem|Kategorie**\***|Facet|  
 |-----------------|-----------|--------------------|-----------|  
-|WSFC-Clusterstatus|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
-|Onlinezustand der Verfügbarkeitsgruppe|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus synchroner Replikate|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verbindungsstatus von Verfügbarkeitsreplikaten|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Kritisch|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsreplikat-Verbindungsstatus|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
+|WSFC-Clusterstatus|[WSFC-Clusterdienst ist offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
+|Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeitsgruppe ist offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|[Verfügbarkeitsgruppe nicht bereit für automatischen Failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Einige Verfügbarkeitsreplikate synchronisieren keine Daten](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus synchroner Replikate|[Einige synchrone Replikate wurden nicht synchronisiert](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verbindungsstatus von Verfügbarkeitsreplikaten|[Einige Verfügbarkeitsreplikate sind getrennt](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Verfügbarkeitsreplikat hat keine fehlerfreie Rolle](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Kritisch|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsreplikat-Verbindungsstatus|[Verfügbarkeitsreplikat wird getrennt](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
 |Joinzustand des Verfügbarkeitsreplikats|[Verfügbarkeitsreplikat ist nicht verknüpft](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Warnung|Verfügbarkeitsreplikat|  
-|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsdatenbank im angehaltenen Zustand|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Joinzustand der Verfügbarkeitsdatenbank|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsdatenbank im angehaltenen Zustand|[Verfügbarkeitsdatenbank angehalten](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Joinzustand der Verfügbarkeitsdatenbank|[Sekundäre Datenbank ist nicht verknüpft](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
   
 > [!IMPORTANT]  
 >  **\*** Für Always On-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer Always On-Kategorie wird deren Funktionalität der Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von Always On-Kategorien daher nicht.  
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Siehe auch  
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Verwaltung einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
+ [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
