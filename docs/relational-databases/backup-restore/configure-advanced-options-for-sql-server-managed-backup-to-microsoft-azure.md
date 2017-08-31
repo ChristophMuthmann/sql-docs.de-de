@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure
   Das folgende Tutorial beschreibt, wie Sie erweiterte Optionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]festlegen. Diese Prozeduren sind nur notwendig, wenn Sie die Funktionen benötigen, die sie bieten. Andernfalls können Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktivieren und sich auf das Standardverhalten verlassen.  
   
- In jedem Szenario wird die Sicherung mit dem `database_name` -Parameter angegeben. Wenn `database_name` NULL oder * ist, beeinflussen die Änderungen die Standardeinstellungen auf Instanzebene. Instanzebeneneinstellungen wirken sich auch auf neue Datenbanken aus, die nach der Änderung erstellt wurden.  
+ In jedem Szenario wird die Sicherung mit dem `database_name` -Parameter angegeben. Wenn `database_name` NULL oder * ist, wirken sich die Änderungen auf die Standardeinstellungen auf Instanzebene aus. Instanzebeneneinstellungen wirken sich auch auf neue Datenbanken aus, die nach der Änderung erstellt wurden.  
   
  Nachdem Sie diese Einstellungen angegeben haben, können Sie die verwaltete Sicherung für die Datenbank oder Instanz mithilfe der gespeicherten Systemprozedur [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) aktivieren. Weitere Informationen finden Sie unter [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

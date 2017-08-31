@@ -1,7 +1,7 @@
 ---
 title: Aktivieren und Konfigurieren von FILESTREAM | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Verwenden Sie 64-KB-NTFS-Cluster. Komprimierte Volumes müssen auf 4-KB-NTFS-Cluster festgelegt werden.  
   
--   Deaktivieren Sie die Indizierung von FILESTREAM-Volumes, und legen Sie **disablelastaccess** fest. Verwenden Sie zum Festlegen von **disablelastaccess**das Windows-Hilfsprogramm **fsutil** .  
+-   Deaktivieren Sie die Indizierung auf FILESTREAM-Volumes, und legen Sie **disablelastaccess** fest. Verwenden Sie zum Festlegen von **disablelastaccess** das Windows-Hilfsprogramm **fsutil**.  
   
 -   Deaktivieren Sie die Virenüberprüfung für FILESTREAM-Volumes, wenn diese nicht erforderlich ist. Wenn eine Virenüberprüfung erforderlich ist, sollten keine Richtlinien festgelegt werden, durch die verdächtige oder infizierte Dateien automatisch gelöscht werden.  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   Speicherplatzverwaltung und Richtlinien werden von FILESTREAM nicht direkt unterstützt. Sie können jedoch indirekt Speicherplatz verwalten und Richtlinien anwenden, indem Sie jede FILESTREAM-Dateigruppe einem separaten Volume zuweisen und die Verwaltungsfunktionen des Volumes verwenden.  
   
   
+

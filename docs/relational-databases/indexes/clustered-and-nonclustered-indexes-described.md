@@ -1,7 +1,7 @@
 ---
 title: Beschreibung von gruppierten und nicht gruppierten Indizes | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Der Zeiger von einer Indexzeile in einem nicht gruppierten Index auf eine Datenzeile wird als Zeilenlokator bezeichnet. Die Struktur des Zeilenlokators hängt davon ab, ob die Datenseiten in einem Heap oder einer gruppierten Tabelle gespeichert sind. Bei einem Heap ist der Zeilenlokator ein Zeiger auf die Zeile. Bei einer gruppierten Tabelle entspricht der Zeilenlokator dem Schlüssel des gruppierten Indexes.  
   
-    -   Sie können der Blattebene des nicht gruppierten Indexes Nichtschlüsselspalten hinzufügen, um vorhandene Beschränkungen des Indexschlüssels (900 Bytes und 16 Schlüsselspalten) zu umgehen und vollständig abgedeckte, indizierte Abfragen auszuführen. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+    -   Sie können der Blattebene des nicht gruppierten Indexes Nichtschlüsselspalten hinzufügen, um vorhandene Beschränkungen des Indexschlüssels zu umgehen und vollständig abgedeckte, indizierte Abfragen auszuführen. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Weitere Informationen zu Einschränkungen von Indexschlüsseln finden Sie unter [Spezifikationen der maximalen Kapazität für SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md). 
   
  Sowohl gruppierte als auch nicht gruppierte Indizes können eindeutig sein. Dies bedeutet, dass nicht derselbe Indexschlüsselwert für zwei oder mehr Zeilen verwendet werden darf. Andernfalls handelt es sich nicht um einen eindeutigen Index, und mehrere Zeilen können denselben Schlüsselwert verwenden. Weitere Informationen finden Sie unter [Erstellen eindeutiger Indizes](../../relational-databases/indexes/create-unique-indexes.md).  
   

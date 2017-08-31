@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 3f87dec24a195cabd75fb653fcb5bcaf51e29db9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
@@ -145,11 +145,11 @@ ms.lasthandoff: 08/02/2017
   
  Typen von MSI-Protokolldateien:  
   
--   \<Feature>\<Architektur>\_\<Interaktion>.log  
+-   \<Feature>_\<Architektur>\_\<Interaktion>.log  
   
 -   \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log  
   
--   \<Feature>_\<Architektur>\_\<Iteration>\_\<Workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaktion>\_\<Workflow>.log  
   
 ### <a name="location"></a>Speicherort  
  Die MSI-Protokolldateien befinden sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name.\>log.  

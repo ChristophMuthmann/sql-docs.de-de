@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
@@ -37,7 +37,7 @@ Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren,
 
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` -Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Eine `SELECT` -Anweisung definiert lediglich Folgendes:  
 * Das Format des Resultsets. Dieses wird meistens in der Auswahlliste angegeben. Das endgültige Format des Resultsets wird jedoch auch von anderen Klauseln, wie z.B. `ORDER BY` und `GROUP BY` , beeinflusst.
@@ -210,19 +210,19 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > [!NOTE] 
 > Die `READCOMMITTED` - und `READCOMMITTEDLOCK` -Hinweise werden in diesem Kontext immer als unterschiedliche Hinweise angesehen, unabhängig von der aktuellen Transaktionsisolationsstufe.
  
-Abweichend von den Anforderungen für die `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. In der zu verwendenden Abfrage für eine indizierte Sicht muss nichts weiter angegeben werden.
+Abweichend von den Anforderungen für die `SET`-Optionen und Tabellenhinweise verwendet der Abfrageoptimierer hier dieselben Regeln, mit denen er ermittelt, ob ein Tabellenindex eine Abfrage erfüllt. In der zu verwendenden Abfrage für eine indizierte Sicht muss nichts weiter angegeben werden.
 
-Eine Abfrage muss nicht explizit in der `FROM` clause for the Query Optimizer to use the indexed view. Falls die Abfrage Verweise auf Spalten in den Basistabellen enthält, die auch in der indizierten Sicht vorhanden sind, und der Abfrageoptimierer schätzt, dass das Verwenden der indizierten Sicht den kostengünstigsten Zugriffsmechanismus darstellt, wählt der Abfrageoptimierer die indizierte Sicht aus. Die Vorgehensweise ist dabei ähnlich wie bei der Auswahl von Basistabellenindizes, wenn in einer Abfrage nicht direkt auf diese verwiesen wird. Der Abfrageoptimierer kann die Sicht auswählen, wenn sie Spalten enthält, auf die die Abfrage nicht verweist, vorausgesetzt die Sicht bietet die kostengünstigste Möglichkeit zum Abdecken einer oder mehrerer Spalten, die in der Abfrage angegeben sind.
+Eine Abfrage muss nicht explizit in der `FROM`-Klausel auf eine indizierte Sicht verweisen, damit der Abfrageoptimierer die indizierte Sicht verwendet. Falls die Abfrage Verweise auf Spalten in den Basistabellen enthält, die auch in der indizierten Sicht vorhanden sind, und der Abfrageoptimierer schätzt, dass das Verwenden der indizierten Sicht den kostengünstigsten Zugriffsmechanismus darstellt, wählt der Abfrageoptimierer die indizierte Sicht aus. Die Vorgehensweise ist dabei ähnlich wie bei der Auswahl von Basistabellenindizes, wenn in einer Abfrage nicht direkt auf diese verwiesen wird. Der Abfrageoptimierer kann die Sicht auswählen, wenn sie Spalten enthält, auf die die Abfrage nicht verweist, vorausgesetzt die Sicht bietet die kostengünstigste Möglichkeit zum Abdecken einer oder mehrerer Spalten, die in der Abfrage angegeben sind.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` -Klausel verwiesen wird, als Standardsicht. Der Abfrageoptimierer erweitert am Beginn des Optimierungsprozesses die Definition der Sicht in die Abfrage. Dann erfolgt der Abgleich der indizierten Sicht. Die indizierte Sicht kann im endgültigen Ausführungsplan verwendet werden, der vom Abfrageoptimierer ausgewählt wird, oder stattdessen kann der Plan die erforderlichen Daten aus der Sicht materialisieren, indem auf die Basistabellen zugegriffen wird, auf die durch die Sicht verwiesen wird. Der Abfrageoptimierer wählt die kostengünstigste Alternative aus.
+Der Abfrageoptimierer behandelt eine indizierte Sicht, auf die in der `FROM`-Klausel verwiesen wird, als Standardsicht. Der Abfrageoptimierer erweitert am Beginn des Optimierungsprozesses die Definition der Sicht in die Abfrage. Dann erfolgt der Abgleich der indizierten Sicht. Die indizierte Sicht kann im endgültigen Ausführungsplan verwendet werden, der vom Abfrageoptimierer ausgewählt wird, oder stattdessen kann der Plan die erforderlichen Daten aus der Sicht materialisieren, indem auf die Basistabellen zugegriffen wird, auf die durch die Sicht verwiesen wird. Der Abfrageoptimierer wählt die kostengünstigste Alternative aus.
 
 #### <a name="using-hints-with-indexed-views"></a>Verwenden von Hinweisen mit indizierten Sichten
 
 Sie können verhindern, dass Sichtindizes für eine Abfrage verwendet werden, indem Sie den `EXPAND VIEWS` -Abfragehinweis verwenden oder indem Sie mit dem `NOEXPAND` -Tabellenhinweis die Verwendung eines Indexes für eine indizierte Sicht erzwingen, die in der `FROM` -Klausel einer Abfrage angegeben ist. Sie sollten jedoch den Abfrageoptimierer für jede Abfrage dynamisch ermitteln lassen, welches die besten Zugriffsmethoden sind. Verwenden Sie `EXPAND` und `NOEXPAND` nur in bestimmten Fällen, wenn Tests gezeigt haben, dass durch sie die Leistung deutlich gesteigert wird.
 
-Die Option `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+Die Option `EXPAND VIEWS` gibt an, dass der Abfrageoptimierer für die gesamte Abfrage keine Sichtindizes verwendet. 
 
-Wenn `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` mit der optionalen `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` kann nur für eine indizierte Sicht angegeben werden, nicht für eine nicht indizierte Sicht.
+Wenn `NOEXPAND` für eine Sicht angegeben wird, zieht der Abfrageoptimierer die Verwendung sämtlicher Indizes in Erwägung, die für die Sicht definiert sind. `NOEXPAND` mit der optionalen `INDEX()`-Klausel zwingt den Abfrageoptimierer, die angegebenen Indizes zu verwenden. `NOEXPAND` kann nur für eine indizierte Sicht angegeben werden, nicht für eine nicht indizierte Sicht.
 
 Wenn weder `NOEXPAND` noch `EXPAND VIEWS` in einer Abfrage angegeben ist, die eine Sicht enthält, wird die Sicht erweitert, um auf die zugrunde liegenden Tabellen zuzugreifen. Wenn die Abfrage, die die Sicht bildet, irgendwelche Tabellenhinweise enthält, werden diese Hinweise auch an die zugrunde liegenden Tabellen weitergegeben. (Detaillierte Informationen zu diesem Vorgang finden Sie unter „Sichtauflösung“.) Solange die der Sicht zugrunde liegenden Tabellen identische Sätze von Hinweisen besitzen, kommt die Abfrage für den Abgleich mit einer indizierten Sicht infrage. Zumeist stimmen diese Hinweise miteinander überein, da sie direkt aus der Sicht vererbt werden. Wenn die Abfrage jedoch auf Tabellen und nicht auf Sichten verweist und die direkt auf diese Tabellen angewendeten Hinweise nicht identisch sind, so kommt eine solche Abfrage nicht für den Abgleich mit einer indizierten Sicht infrage. Wenn die Hinweise `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`oder `XLOCK` auf die Tabellen angewendet werden, auf die die Abfrage nach der Sichterweiterung verweist, kommt die Abfrage nicht für den Abgleich mit einer indizierten Sicht infrage.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 Bei der Verarbeitung komplexer SQL-Anweisungen können für das relationale Modul eventuell Schwierigkeiten bei der Bestimmung der Ausdrücke auftreten, die parametrisiert werden können. Um die Wahrscheinlichkeit zu erhöhen, dass das relationale Modul Übereinstimmungen zwischen komplexen SQL-Anweisungen und vorhandenen, nicht verwendeten Ausführungsplänen erkennt, sollten Sie die Parameter explizit mithilfe von „sp_executesql“ oder Parametermarkierungen angeben. 
 
 > [!NOTE]
-> Wenn die arithmetischen Operatoren +, -, *, / oder % zur impliziten oder expliziten Konvertierung von Konstantenwerten der Datentypen „int“, „smallint“, „tinyint“ oder „bigint“ in die Datentypen „float“, „real“, „decimal“ oder „numeric“ verwendet werden, wendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezielle Regeln an, um den Typ und die Genauigkeit der Ausdrucksergebnisse zu berechnen. Allerdings unterscheiden sich diese Regeln in Abhängigkeit davon, ob die Abfrage parametrisiert ist oder nicht. Daher können gleiche Ausdrücke in Abfragen in einigen Fällen zu unterschiedlichen Ergebnissen führen.
+> Wenn die arithmetischen Operatoren +, –, \*, / oder % zur impliziten oder expliziten Konvertierung von Konstantenwerten der Datentypen „int“, „smallint“, „tinyint“ oder „bigint“ in die Datentypen „float“, „real“, „decimal“ oder „numeric“ verwendet werden, wendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezielle Regeln an, um den Typ und die Genauigkeit der Ausdrucksergebnisse zu berechnen. Allerdings unterscheiden sich diese Regeln in Abhängigkeit davon, ob die Abfrage parametrisiert ist oder nicht. Daher können gleiche Ausdrücke in Abfragen in einigen Fällen zu unterschiedlichen Ergebnissen führen.
 
 Beim Standardverhalten der einfachen Parametrisierung parametrisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine relativ kleine Klasse von Abfragen. Allerdings können Sie angeben, dass mit bestimmten Einschränkungen alle Abfragen in einer Datenbank parametrisiert werden, indem Sie die `PARAMETERIZATION` -Option des Befehls `ALTER DATABASE` auf `FORCED`festlegen. Damit kann die Leistung von Datenbanken verbessert werden, bei denen sehr viele gleichzeitige Abfragen auftreten, indem die Häufigkeit der Abfragekompilierungen verringert wird.
 
@@ -503,7 +503,7 @@ Außerdem werden die folgenden Abfrageklauseln nicht parametrisiert. Beachten Si
 * Das style-Argument einer `CONVERT` -Klausel.
 * Integer-Konstanten innerhalb einer `IDENTITY` -Klausel.
 * Über die ODBC-Erweiterungssyntax angegebene Konstanten.
-* Vor der Kompilierzeit auf eine Konstante reduzierbar Ausdrücke, die Argumente der Operatoren +, -, *, / und % sind. Um zu ermitteln, ob die erzwungene Parametrisierung in Frage kommt, betrachtet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausdruck als vor der Kompilierzeit auf eine Konstante reduzierbar, wenn die beiden folgenden Bedingungen erfüllt sind:  
+* Vor der Kompilierzeit auf eine Konstante reduzierbare Ausdrücke, die Argumente der Operatoren +, -, \*, / und % sind. Um zu ermitteln, ob die erzwungene Parametrisierung in Frage kommt, betrachtet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausdruck als vor der Kompilierzeit auf eine Konstante reduzierbar, wenn die beiden folgenden Bedingungen erfüllt sind:  
   * Der Ausdruck enthält keine Spalten, Variablen oder Unterabfragen.  
   * Der Ausdruck enthält eine `CASE` -Klausel.  
 * Argumente von Abfragehinweisklauseln. Zu diesen gehören das `number_of_rows` -Argument des `FAST` -Abfragehinweises, das `number_of_processors` -Argument des `MAXDOP` -Abfragehinweises sowie das number-Argument des `MAXRECURSION` -Abfragehinweises.

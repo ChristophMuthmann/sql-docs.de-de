@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Zusammenfassung der PolyBase-Funktionen mit Versionsangabe
@@ -34,7 +34,8 @@ Zusammenfassung der PolyBase-Funktionen, die für SQL Server-Produkte und -Diens
 |**Funktion**|**SQL Server 2016**|**Azure SQL-Datenbank**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
 |Hadoop-Daten abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|Nein|ja|
 |Daten aus Hadoop importieren|ja|Nein|Nein|ja|
-|Daten für Hadoop exportieren  |ja|Nein|Nein| ja|
+|Daten für Hadoop exportieren  |ja|Nein|Nein| Ja|
+|Abfragen, Importieren aus und Exportieren in HDInsights |Nein|Nein|Nein|Nein
 |Abfrageberechnungen auf Hadoop verlagern|ja|Nein|Nein|ja|  
 |Daten aus Azure-BLOB-Speicher importieren|ja|Nein|Ja|ja| 
 |Daten für Azure-BLOB-Speicher exportieren|ja|Nein|Ja|Ja|  

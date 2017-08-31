@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>Planhinweislisten
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>Typen von Planhinweislisten  
  Die folgenden Typen von Planhinweislisten können erstellt werden.  
   
- OBJECT-Planhinweisliste  
+ ### <a name="object-plan-guide"></a>OBJECT-Planhinweisliste  
  OBJECT-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, benutzerdefinierten Skalarfunktionen, benutzerdefinierten Tabellenwertfunktionen mit mehreren Anweisungen und von DML-Triggern ausgeführt werden.  
   
- Angenommen, die folgende gespeicherte Prozedur, die den `@Country`_`region` -Parameter annimmt, existiert in einer Datenbankanwendung, die in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank bereitgestellt wird:  
+ Angenommen, die folgende gespeicherte Prozedur, die den `@Country_region`-Parameter annimmt, existiert in einer Datenbankanwendung, die in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank bereitgestellt wird:  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- Gehen Sie weiterhin davon aus, dass diese gespeicherte Prozedur kompiliert und für `@Country`_`region = N'AU'` (Australien) optimiert wurde. Aus Australien kommen jedoch nur relativ wenige Bestellungen. Wenn die Abfrage mit Parameterwerten für Länder oder Regionen mit mehr Bestellungen ausgeführt wird, verringert dies die Leistung. Da die meisten Bestellungen aus den USA kommen, würde ein für `@Country`\_`region = N'US'` generierter Abfrageplan wahrscheinlich eine bessere Leistung für alle möglichen Werte des `@Country`\_`region` -Parameters erbringen.  
+ Gehen Sie weiterhin davon aus, dass diese gespeicherte Prozedur kompiliert und für `@Country_region = N'AU'` (Australien) optimiert wurde. Aus Australien kommen jedoch nur relativ wenige Bestellungen. Wenn die Abfrage mit Parameterwerten für Länder oder Regionen mit mehr Bestellungen ausgeführt wird, verringert dies die Leistung. Da die meisten Bestellungen aus den USA kommen, würde ein für `@Country_region = N'US'` generierter Abfrageplan wahrscheinlich eine bessere Leistung für alle möglichen Werte des `@Country_region` -Parameters erbringen.  
   
  Sie könnten dieses Problem lösen, indem Sie die gespeicherte Prozedur so ändern, dass der Abfrage der `OPTIMIZE FOR` -Abfragehinweis hinzugefügt wird. Da sich die gespeicherte Prozedur jedoch in einer bereitgestellten Anwendung befindet, können Sie den Code der Anwendung nicht direkt ändern. Stattdessen können Sie in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank die folgende Planhinweisliste erstellen.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  Wenn die in der `sp_create_plan_guide` -Anweisung angegebene Abfrage ausgeführt wird, wird sie vor der Optimierung so geändert, dass sie die `OPTIMIZE FOR (@Country = N''US'')` -Klausel enthält.  
   
- SQL-Planhinweisliste  
+ ### <a name="sql-plan-guide"></a>SQL-Planhinweisliste  
  SQL-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von eigenständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches, die nicht Teil eines Datenbankobjekts sind, ausgeführt werden. SQL-basierte Planhinweislisten können auch zum Abgleich von Abfragen verwendet werden, die in einer bestimmten Form parametrisiert werden. SQL-Planhinweislisten werden für eigenständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches verwendet. Diese Anweisungen werden von einer Anwendung häufig mithilfe der gespeicherten Systemprozedur [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) übermittelt. Betrachten Sie beispielsweise den folgenden eigenständigen Batch:  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Um zu verhindern, dass ein paralleler Ausführungsplan für diese Abfrage generiert wird, erstellen Sie die folgende Planhinweisliste und legen den `MAXDOP` -Abfragehinweis im `1` -Parameter auf `@hints` fest.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,25 +105,28 @@ sp_create_plan_guide
   
  SQL-Planhinweislisten können auch für Abfragen erstellt werden, die in derselben Form parametrisiert werden, wenn die PARAMETERIZATION-Datenbankoption mithilfe von SET auf FORCED festgelegt wird oder wenn eine TEMPLATE-Planhinweisliste erstellt wird, die eine parametrisierte Abfrageklasse angibt.  
   
- TEMPLATE (Planhinweisliste)  
+ ### <a name="template-plan-guide"></a>TEMPLATE (Planhinweisliste)  
  Eine TEMPLATE-Planhinweisliste zur Übereinstimmung mit eigenständigen Abfragen, die in einer angegebenen Form parametrisiert werden. Diese Planhinweislisten werden verwendet, um die aktuelle PARAMETERIZATION-Datenbankoption für eine bestimmte Abfrageklasse zu überschreiben.  
   
  Sie können eine TEMPLATE-Planhinweisliste in folgenden Situationen erstellen:  
   
--   Die Datenbankoption PARAMETERIZATION ist auf FORCED festgelegt, es gibt aber Abfragen, die nach den Regeln der einfachen Parametrisierung kompiliert werden sollen.  
+-   Die Datenbankoption PARAMETERIZATION ist auf FORCED festgelegt, es gibt aber Abfragen, die nach den Regeln der [einfachen Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) kompiliert werden sollen.  
   
--   Die Datenbankoption PARAMETERIZATION ist auf SIMPLE festgelegt (die Standardeinstellung), für eine Klasse von Abfragen soll aber eine erzwungene Parametrisierung versucht werden.  
+-   Die Datenbankoption PARAMETERIZATION ist auf SIMPLE festgelegt (die Standardeinstellung), für eine Klasse von Abfragen soll aber eine [erzwungene Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) versucht werden.  
   
 ## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  
  Planhinweislisten beziehen sich auf die Datenbank, in der sie erstellt werden. Daher können nur die Planhinweislisten gegen die Abfrage geprüft werden, die in der zum Zeitpunkt der Ausführung einer Abfrage aktuellen Datenbank vorhanden sind. Beispiel: Wenn [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die aktuelle Datenbank ist und die folgende Abfrage ausgeführt wird:  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Dann können nur in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank vorhandene Planhinweislisten mit dieser Abfrage verglichen werden. Wenn jedoch [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die aktuelle Datenbank ist und die folgenden Anweisungen ausgeführt werden:  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Dann können nur in `DB1` vorhandene Planhinweislisten mit dieser Abfrage verglichen werden, weil die Abfrage im Kontext von `DB1`ausgeführt wird.  
   
