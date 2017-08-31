@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
  Die Kompatibilitätsgrade von Datenbanken, die einem bestimmten Server zugeordnet sind, bleiben unverändert, bis Sie sie manuell ändern.  
   
 ### <a name="in-place-upgrade"></a>Direktes Upgrade  
- Sie können eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auaufmatically migrate existing databases from the old instance auf the new instance. Da die Metadaten und die binären Daten zwischen den beiden Versionen kompatibel sind, behalten Sie die Daten nach dem Upgrade bei, und es ist nicht nötig, eine manuelle Datenmigration durchzuführen.  
+ Sie können eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aktualisieren und als Teil des Upgradevorgangs vorhandene Datenbanken automatisch von der alten Instanz in die neue migrieren. Da die Metadaten und die binären Daten zwischen den beiden Versionen kompatibel sind, behalten Sie die Daten nach dem Upgrade bei, und es ist nicht nötig, eine manuelle Datenmigration durchzuführen.  
   
  Um eine vorhandene Instanz zu aktualisieren, führen Sie das Setup aus, und geben Sie den Namen der vorhandenen Instanz als Namen für die neue Instanz an.  
   

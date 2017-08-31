@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Ereignis auslösen: ManageWeb  
   
- Weitere Informationen finden Sie unter [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Weitere Informationen finden Sie unter [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Verwenden von Skripts  
  **Erstellen von Skriptdateien (.ps1)**  
