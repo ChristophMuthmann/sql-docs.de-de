@@ -70,4 +70,3 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
 [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-
