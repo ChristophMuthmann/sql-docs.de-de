@@ -1,7 +1,7 @@
 ---
 title: "Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
-Dieses Änderungsprotokoll bezieht sich auf [SQL Server Data Tools (SSDT) für Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT für Visual Studio 2017 (15.3.0, Vorschauversion)
+Buildnummer: 14.0.16121.0
+  
+### <a name="whats-new"></a>Neues
+
+Diese Vorschauversion ist die erste Version von SSDT für Visual Studio 2017. Mit diesem Release wird für Projekte von SQL Server-Datenbank, Analysis Services, Reporting Services und Integration Services in Visual Studio 2017 15.3 oder höher eine eigenständige Benutzererfahrung für die Webinstallation eingeführt.
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**Bekannte Probleme**
+
+- Das Installationsprogramm ist nicht lokalisiert.
+- SSIS ist nicht lokalisiert.
+- Die SSIS-Aufgabe „Paket ausführen“ unterstützt kein Debuggen, wenn der Prozess *ExecuteOutofProcess* auf *TRUE* festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- Eine vollständige Liste der Änderungen finden Sie unter [changelog (Änderungsprotokoll)](changelog-for-sql-server-data-tools-ssdt.md).
+- Melden Sie Fehler auf der Website [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback).
+- SSIS-Pakete mit Drittanbietererweiterungen können nicht so geändert werden, dass sie sich an andere Serverversionen richten.
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 für Visual Studio 2015
 Buildnummer: 14.0.61707.300
 
 ### <a name="whats-new"></a>Neues
@@ -76,7 +92,7 @@ Buildnummer: 14.0.61707.300
 - Die neueste *TargetServerVersion* wurde von „SQL Server vNext“ zu „SQL Server 2017“ geändert
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 für Visual Studio 2015
 Buildnummer: : 14.0.61705.170
 
 ### <a name="whats-new"></a>Neues
@@ -106,7 +122,7 @@ Buildnummer: : 14.0.61705.170
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - Behebung eines Problems mit Datenbanken mit asymmetrischem Schlüssel durch ein HSM mit einem [Connect item (Connect-Element)](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider) eines EKM-Anbieters
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (Unterstützung bis SQL Server 2017)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 für Visual Studio 2015 (Unterstützung bis SQL Server 2017)
 Buildnummer: : 14.0.61704.140
 
 ### <a name="whats-new"></a>Neues
@@ -208,7 +224,7 @@ Buildnummer: : 14.0.61704.140
 - „Always Encrypted“ (Immer verschlüsselt): Onlineverschlüsselung deaktiviert bei Abbruch nicht die Änderungsnachverfolgung und funktioniert nicht ordnungsgemäß, wenn die Änderungsnachverfolgung nicht vor dem Start der Verschlüsselung bereinigt wurde
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (Unterstützung bis SQL Server 2016)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 für Visual Studio 2015 (Unterstützung bis SQL Server 2016)
 Veröffentlicht: 20. Oktober 2016
 
 Buildnummer: 14.0.61021.0
@@ -303,7 +319,7 @@ Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4 (für SQL Server 2016)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 für Visual Studio 2015 (für SQL Server 2016)
 Veröffentlicht: 20. September 2016
 
 Buildnummer: 14.0.60918
@@ -343,7 +359,7 @@ Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3 (für SQL Server 2016)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 für Visual Studio 2015 (für SQL Server 2016)
 Veröffentlicht: 15. August 2016
 
 Buildnummer: 14.0.60812.0  
@@ -383,7 +399,7 @@ Buildnummer: 14.0.60812.0
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT Juli (für SQL Server 2016)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT für Visual Studio 2015 (für SQL Server 2016) – Juli  
 Veröffentlicht: 30. Juni 2016  
   
 Buildnummer: 14.0.60629.0  
@@ -426,7 +442,7 @@ Buildnummer: 14.0.60629.0
     * Folgendes Problem wurde behoben: In einer in Kompatibilitätsmodellen vom Typ 1200 berechneten Tabellenbenutzeroberfläche konnte ein Fehler auftreten, wenn für den Spaltentyp die Standardformatierung verwendet wurde, um eine Änderung des Formatierungstyps über die Benutzeroberfläche zu ermöglichen. 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT Juni (für SQL Server 2016)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT für Visual Studio 2015 (für SQL Server 2016) – Juni  
 Veröffentlicht:1. Juni 2016  
   
 Buildnummer: 14.0.60525.0 
