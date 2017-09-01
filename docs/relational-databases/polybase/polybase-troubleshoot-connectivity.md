@@ -20,7 +20,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität

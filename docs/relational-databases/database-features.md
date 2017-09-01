@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
 ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Leitfaden für die Verwendung von relationalen Microsoft SQL-Datenbanken

@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher

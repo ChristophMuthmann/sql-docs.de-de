@@ -22,7 +22,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: df1eb91bc84f39d0e2277731d5329d79b8c43e78
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)

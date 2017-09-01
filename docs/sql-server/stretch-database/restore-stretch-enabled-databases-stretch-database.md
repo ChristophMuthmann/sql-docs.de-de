@@ -1,5 +1,5 @@
 ---
-title: Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch-Datenbank) | Microsoft-Dokumentation
+title: Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/06/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4233db126530558a3183e410e1b96b50f57d1d27
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch-Datenbank)
+# <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Das Wiederherstellen einer gesicherten Datenbank ist nach vielen Arten von Fehlern, Ausfällen und Notfällen unerlässlich.
@@ -39,7 +39,7 @@ Nach der Wiederherstellung der SQL Server-Datenbank müssen Sie die gespeicherte
 ## <a name="restore-your-remote-azure-data"></a>Wiederherstellen der Azure-Remotedaten
 
 ### <a name="recover-a-live-azure-database"></a>Wiederherstellen einer Azure-Livedatenbank
-Der SQL Server Stretch-Datenbankdienst in Azure verwendet Azure Storage-Momentaufnahmen, um mindestens alle acht Stunden eine Momentaufnahme aller Livedaten zu erstellen. Diese Momentaufnahmen werden sieben Tage lang aufbewahrt. Dadurch können Sie Ihre Daten von mindestens 21 Wiederherstellungspunkten in den letzten sieben Tagen wiederherstellen – bis zum Zeitpunkt der Erstellung der letzten Momentaufnahme.
+Der SQL Server Stretch Database-Dienst in Azure verwendet Azure Storage-Momentaufnahmen, um mindestens alle acht Stunden eine Momentaufnahme aller Livedaten zu erstellen. Diese Momentaufnahmen werden sieben Tage lang aufbewahrt. Dadurch können Sie Ihre Daten von mindestens 21 Wiederherstellungspunkten in den letzten sieben Tagen wiederherstellen – bis zum Zeitpunkt der Erstellung der letzten Momentaufnahme.
 
 Um eine Azure-Livedatenbank im Azure-Portal in einem Zustand wiederherzustellen, den sie zu einem früheren Zeitpunkt hatte, führen Sie folgende Schritte aus:
 
@@ -51,7 +51,7 @@ Um eine Azure-Livedatenbank im Azure-Portal in einem Zustand wiederherzustellen,
 6. Der Wiederherstellungsvorgang für die Datenbank beginnt und kann mithilfe von **BENACHRICHTIGUNGEN**überwacht werden.
 
 ### <a name="recover-a-deleted-azure-database"></a>Wiederherstellen einer gelöschten Azure-Datenbank
-Der SQL Server Stretch-Datenbankdienst in Azure erstellt vor dem Löschen einer Datenbank eine Datenbank-Momentaufnahme und bewahrt diese sieben Tage lang auf. Danach werden keine Momentaufnahmen der Livedatenbank mehr aufbewahrt. Dadurch können Sie eine gelöschte Datenbank in dem Zustand wiederherstellen, den sie zum Zeitpunkt des Löschens hatte.
+Der SQL Server Stretch Database-Dienst in Azure erstellt vor dem Löschen einer Datenbank eine Datenbank-Momentaufnahme und bewahrt diese sieben Tage lang auf. Danach werden keine Momentaufnahmen der Livedatenbank mehr aufbewahrt. Dadurch können Sie eine gelöschte Datenbank in dem Zustand wiederherstellen, den sie zum Zeitpunkt des Löschens hatte.
 
 Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzustellen, den sie zum Zeitpunkt des Löschens hatte, führen Sie folgende Schritte aus:
 
@@ -84,7 +84,7 @@ Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzuste
     
   ## <a name="see-also"></a>Siehe auch  
  [Sichern von Stretch-aktivierten Datenbanken](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
- [Verwalten und Problembehandlung von Stretch-Datenbank](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+ [Verwalten und Problembehandlung von Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

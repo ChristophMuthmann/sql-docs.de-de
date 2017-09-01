@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
 ms.openlocfilehash: bb666c02a3e0d165a3c32515503be265287e1cac
 ms.contentlocale: de-de
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Task 'Index neu erstellen' (Wartungsplan)

@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="performance-counters"></a>Leistungsindikatoren

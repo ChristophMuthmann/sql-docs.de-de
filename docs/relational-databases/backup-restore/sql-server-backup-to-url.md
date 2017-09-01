@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
