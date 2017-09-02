@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stellt Tutorials bereit, die Ihnen beim Erlernen neuer Technologien und Funktionen helfen. Tutorials für frühere Versionen können üblicherweise auch für aktuellere Versionen verwendet werden. Wenn Tutorials eine neuere Funktion behandeln, wird eine minimale Version angezeigt, um das Tutorial abzuschließen.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stellt Tutorials bereit, die Ihnen beim Erlernen neuer Technologien und Funktionen helfen. Tutorials für frühere Versionen können üblicherweise auch für aktuellere Versionen verwendet werden. Wenn Tutorials eine neuere Funktion behandeln, wird die zur Bearbeitung mindestens erforderliche Version angezeigt.  
      
 -   Wenn ein Tutorial eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, sollten Sie die neueste Version von CodePlex herunterladen und verwenden. Weitere Informationen finden Sie unter [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3 (AdventureWorks-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Sie können eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte für die Verwendung mit den [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Tutorials unter [Power View-Beispiele für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734)herunterladen.  
