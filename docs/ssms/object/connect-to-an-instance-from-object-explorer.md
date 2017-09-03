@@ -1,7 +1,7 @@
 ---
-title: Verbinden mit einer Instanz mit dem Objekt-Explorer | Microsoft-Dokumentation
+title: Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>Verbinden mit einer Instanz mit dem Objekt-Explorer
-Um Objekte mittels Objekt-Explorer zu verwalten, müssen Sie zuerst den Objekt-Explorer mit der Instanz verbinden, die die Objekte enthält. Sie können den Objekt-Explorer gleichzeitig mit mehreren Instanzen verbinden.  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
+
+Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verbindung mit dem Server herstellen. Eine Verbindung zu mehreren Servern gleichzeitig ist jedoch nicht möglich.
+
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) unterstützt verschiedene Typen von Verbindungen. In diesem Artikel finden Sie Informationen zum Herstellen einer Verbindung mit SQL Server und Azure SQL-Datenbank (Herstellen einer Verbindung mit einem logischen Azure SQL-Server). Informationen zu den anderen Verbindungsoptionen finden Sie unter den [Links](#see-also) unten auf dieser Seite.
   
-## <a name="connecting-object-explorer-to-a-server"></a>Herstellen einer Verbindung zwischen dem Objekt-Explorer und einem Server  
-Um den Objekt-Explorer verwenden zu können, müssen Sie zuerst eine Verbindung mit einem Server herstellen. Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden** , und wählen Sie in der Dropdownliste den Servertyp aus. Das Dialogfeld **Verbindung mit Server herstellen** wird geöffnet. Um eine Verbindung herzustellen, sind als Mindestangabe der Name des Servers und die richtigen Authentifizierungsinformationen erforderlich.  
-  
-## <a name="optional-object-explorer-connection-settings"></a>Optionale Verbindungseinstellungen für den Objekt-Explorer  
-Beim Herstellen einer Verbindung mit einem Server können Sie weitere Verbindungsinformationen im Dialogfeld **Verbindung mit Server herstellen** angeben. Im Dialogfeld **Verbindung mit Server herstellen** werden die zuletzt verwendeten Einstellungen beibehalten und von neuen Verbindungen wie z. B. neuen Fenstern des Code-Editors verwendet.  
-  
-Zum Angeben optionaler Verbindungseinstellungen führen Sie die folgenden Schritte aus:  
-  
-1.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden** , und klicken Sie auf den Servertyp, mit dem eine Verbindung hergestellt werden soll. Das Dialogfeld **Verbindung mit Server herstellen** wird angezeigt.  
-  
-2.  Geben Sie in das Feld **Servername** den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Instanz ein.  
-  
-3.  Klicken Sie auf **Optionen**. Im Dialogfeld **Verbindung mit Server herstellen** werden weitere Optionen angezeigt.  
-  
-4.  Klicken Sie auf die Registerkarte **Verbindungseigenschaften** , um die weiteren Einstellungen zu konfigurieren. Die verfügbaren Einstellungen variieren abhängig vom Servertyp. Die folgenden Einstellungen sind für [!INCLUDE[ssDE](../../includes/ssde_md.md)]verfügbar.  
-  
-    |Einstellung|Description|  
-    |-----------|---------------|  
-    |**Verbindung mit Datenbank herstellen**|Treffen Sie eine Auswahl aus den verfügbaren Datenbanken auf dem Server. In dieser Liste werden nur Datenbanken angezeigt, für die Sie die Berechtigung zum Anzeigen haben.|  
-    |**Netzwerkprotokoll**|Treffen Sie eine Auswahl aus Shared Memory, TCP/IP oder Named Pipes.|  
-    |**Netzwerkpaketgröße**|Konfigurieren Sie in Byte. Die Standardeinstellung ist 4096 Byte.|  
-    |**Verbindungstimeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung ist 15 Sekunden.|  
-    |**Ausführungstimeout**|Konfigurieren Sie in Sekunden. Die Standardeinstellung (0) weist darauf hin, dass es für die Ausführung kein Timeout gibt.|  
-    |**Verschlüsseln der Verbindung**|Erzwingt die Verschlüsselung.|  
-  
-5.  Um den angegebenen Server zur Liste der registrierten Server hinzuzufügen, klicken Sie auf die Registerkarte **Registrierter Server** , klicken Sie auf den Speicherort für den neuen Server, und schließen Sie die Verbindung ab.  
-  
-> [!NOTE]  
-> Mithilfe der Seite **Zusätzliche Verbindungsparameter** können Sie der Verbindungszeichenfolge weitere Verbindungsparameter hinzufügen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Seite „Zusätzliche Verbindungsparameter“&#41;](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md).  
-  
+## <a name="connecting-to-a-server"></a>Verbinden mit einem Server  
+
+1. Klicken Sie im **Objekt-Explorer** auf **Verbinden > Datenbankmodul…**.
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. Füllen Sie das Formular **Verbindung mit Server herstellen** aus, und klicken Sie auf **Verbinden**:
+
+   ![Verbindung mit Server herstellen](../media/connect-to-server/connect.png)
+
+1. Wenn Sie eine Verbindung zu einem Azure SQL-Server herstellen, werden Sie möglicherweise dazu aufgefordert, sich anzumelden, um eine Firewallregel zu erstellen. Klicken Sie auf **Anmelden…**. Falls dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.
+
+   ![Firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. Nachdem Sie sich angemeldet haben, wird das Formular mit Ihrer IP-Adresse ausgefüllt. Wenn sich Ihre IP-Adresse häufig ändert, kann es einfacher sein, Zugriff auf einen IP-Bereich zu gewähren. Wählen Sie also die Option aus, die für Ihre Umgebung am besten geeignet ist. 
+
+   ![Firewall](../media/connect-to-server/new-firewall-rule.png)
+
+1. Um eine Firewallregel zu erstellen und eine Verbindung zum Server herzustellen, klicken Sie auf **OK**.
+
+1. Nach der Verbindungsherstellung wird der Server im **Objekt-Explorer** angezeigt:
+
+   ![Verbunden](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Entwerfen, Erstellen und Aktualisieren von Tabellen](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
+[Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
 

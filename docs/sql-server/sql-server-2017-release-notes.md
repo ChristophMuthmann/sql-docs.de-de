@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 Release Notes | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: de-de
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 In diesem Thema werden Einschränkungen und Probleme bei [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]beschrieben. Verwandte Informationen finden Sie unter:
 - [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes (Versionsanmerkungen zu SQL Server unter Linux)](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-  
-[![Download from Evaluation Center. (Herunterladen aus dem Evaluierungscenter)](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Herunterladen[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the (aus dem )**[Evaluation Center (Evaluierungscenter)](http://go.microsoft.com/fwlink/?LinkID=829477)**
+
+[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2: August 2017)
 Es gibt keine Versionsanmerkungen für diese Version von SQL Server unter Windows. Siehe: [SQL Server on Linux Release notes (Versionsanmerkungen zu SQL Server unter Linux)](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -109,11 +109,12 @@ Es gibt keine Versionsanmerkungen für diese Version von SQL Server unter Window
 
    Die SQL Server-Instanz, die das sekundäre Replikat hostet, wird wiederhergestellt.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Kontaktaufnahme mit dem SQL Server-Entwicklungsteam 
-- [Stack Overflow (Tag „sql-server“): Anlaufstelle für technische Fragen](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Hilfe erhalten 
+- [Stapelüberlauf (Tag „sql-server“): Anlaufstelle für Fragen zur SQL-Entwicklung](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN-Foren: Anlaufstelle für technische Fragen](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect: Meldung von Programmfehlern und Vorschlagen von Features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit – allgemeine Erläuterung zu SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Lizenzbedingungen und -informationen zu Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>Weitere Informationen
 - [SQL Server Reporting Services release notes (Versionshinweise für SQL Server Reporting Services)](../reporting-services/reporting-services-release-notes.md)beschrieben.

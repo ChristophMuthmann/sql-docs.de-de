@@ -1,7 +1,7 @@
 ---
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Dieses Thema fasst die Neuigkeiten für bestimmte Funktionsbereiche in den neuesten Versionen von SQL Server 2017 Release Candidate (RC2, August 2017) und Community Technical Preview (CTP) zusammen.
 
-**Probieren Sie es aus:** [Laden Sie die aktuellsten Version von SQL Server 2017 herunter: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 Diese Version enthält Fehlerbehebungen und Leistungsverbesserungen.
 
 >**Führen Sie SQL Server unter Linux aus!** Weitere Informationen finden Sie in der [Dokumentation zu SQL Server unter Linux](https://docs.microsoft.com/sql/linux/).
@@ -112,11 +112,12 @@ Entwickler von SQL Server haben jetzt Zugriff auf die umfangreichen ML- und AI-B
 
 Weitere Informationen finden Sie unter [What's new in SQL Server Machine Learning Services (Neues in SQL Server-Machine Learning-Services)](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Kontaktaufnahme mit dem SQL Server-Entwicklungsteam 
-- [Stack Overflow (Tag „sql-server“): Anlaufstelle für technische Fragen](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Hilfe erhalten 
+- [Stapelüberlauf (Tag „sql-server“): Anlaufstelle für Fragen zur SQL-Entwicklung](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN-Foren: Anlaufstelle für technische Fragen](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect: Meldung von Programmfehlern und Vorschlagen von Features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit – allgemeine Erläuterung zu SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Lizenzbedingungen und -informationen zu Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Lesen Sie sich den Artikel [Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md) durch.

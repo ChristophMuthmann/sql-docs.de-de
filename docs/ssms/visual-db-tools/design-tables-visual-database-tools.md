@@ -1,7 +1,7 @@
 ---
-title: Entwerfen von Tabellen (Visual Database Tools) | Microsoft-Dokumentation
+title: Erstellen und Aktualisieren von Tabellen (SSMS) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -12,26 +12,58 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
 - Table Designer, designing tables
+- opening tables
+- opening Table Designer
+- tables [SQL Server], opening
+- Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f87cf8d01b8a7b00e91df6803936f37df4af4b46
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="design-tables-visual-database-tools"></a>Entwerfen von Tabellen (Visual Database Tools)
-Im Tabellen-Designer ist ein Fenster zur Gestaltung individuell angepasster Tabellen verfügbar. In den Themen dieses Abschnitts wird erläutert, wie Datenbanktabellen mit dem Tabellen-Designer erstellt und geändert werden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-[Öffnen des Tabellen-Designers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
-Öffnen einer neuen oder vorhandenen Datenbanktabelle.  
-  
-[Speichern Ihrer Arbeit im Tabellen-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
-Speichern von Änderungen an bestimmten Tabellen oder an allen Tabellen, die im Tabellen-Designer geöffnet sind.  
-  
+# <a name="create-and-update-database-tables"></a>Erstellen und Aktualisieren von Datenbanktabellen
 
+Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../relational-databases/tables/tables.md) entworfen und visualisiert werden können. Mit dem Tabellen-Designer von SQL Server Management Studio (SSMS) können Sie Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen.  
+
+  
+## <a name="create-a-table"></a>Erstellen einer Tabelle  
+  
+1. Klicken Sie mit der rechten Maustaste in der Datenbank auf den Knoten **Tabellen**, und klicken Sie auf **Neu** > **Tabelle**:  
+  
+    ![Neue Tabelle](../media/design-tables/new-table.png)
+  
+1. Fügen Sie Ihrer Tabelle [Spalten](column-properties-visual-database-tools.md) hinzu:
+  
+    ![Tabelle entwerfen](../media/design-tables/new-table2.png)
+
+1. Schließen Sie den Designer, und speichern Sie die Änderungen.
+  
+## <a name="update-a-table"></a>Aktualisieren einer Tabelle  
+  
+1. Klicken Sie mit der rechten Maustaste auf die Tabelle unter dem Knoten **Tabellen** Ihrer Datenbank, und klicken Sie auf **Entwerfen**:  
+  
+   ![Tabelle aktualisieren](../media/design-tables/update-table.png)
+
+1. Aktualisieren Sie die gewünschten Tabelleneinstellungen:
+
+   ![](../media/design-tables/update-table2.png)
+
+1. Schließen Sie den Designer, und speichern Sie die Änderungen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Tabellen](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
+[Tabelleneigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Spalteneigenschaften](column-properties-visual-database-tools.md)  
+[Hinzufügen von Spalten zu einer Tabelle](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
+[Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
+[Indizes](../../relational-databases/indexes/indexes.md)  
+[Data types (Transact-SQL) (Datentypen (Transact-SQL))](../../t-sql/data-types/data-types-transact-sql.md)  
+[Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
