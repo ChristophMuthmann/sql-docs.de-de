@@ -23,11 +23,11 @@ ms.lasthandoff: 07/31/2017
 
 
 ## <a name="summary"></a>Zusammenfassung
-Am 25. Mai 2018 tritt ein europäisches Datenschutzgesetz in Kraft, das eine neue globale Messlatte für Datenschutzrechte, Sicherheit und Konformität setzt. Die Datenschutz-Grundverordnung oder DSGVO handelt grundlegend vom Schutz und der Ermöglichung der Datenschutzrechte von Einzelnen und legt strenge globale Anforderungen an den Datenschutz fest, durch die geregelt wird, wie persönliche Daten verwaltet und geschützt werden, wobei individuelle Entscheidungen berücksichtigt werden. 
+Am 25. Mai 2018 tritt ein europäisches Datenschutzgesetz in Kraft, das eine neue globale Messlatte für Datenschutzrechte, Sicherheit und Konformität setzt. Die Datenschutz-Grundverordnung (DSGVO) behandelt im Wesentlichen Schutz und Gewährung von Datenschutzrechten Einzelner. Sie stellt strenge globale Anforderungen an den Datenschutz, durch die Verwaltung und Schutz persönlicher Daten unter Berücksichtigung individueller Entscheidungen geregelt werden. 
 
-Microsoft SQL-Kunden, die der DSGVO unterliegen, werden unabhängig davon, ob sie cloudbasierte oder lokale Datenbanken oder beides verwalten, sicherstellen müssen, dass qualifizierende Daten in ihren Datenbanksystemen entsprechend der DSGVO-Prinzipien angemessen behandelt und geschützt werden. Dies bedeutet, dass viele Kunden ihre Datenbankverwaltung und ihre Datenverarbeitungsprozesse überprüfen oder ändern müssen, besonders im Hinblick auf die Sicherheit der Datenverarbeitung, wie in der DSGVO festgelegt.
+Microsoft SQL-Kunden, die der DSGVO unterliegen, werden unabhängig davon, ob sie cloudbasierte und/oder lokale Datenbanken verwalten, sicherstellen müssen, dass qualifizierende Daten in ihren Datenbanksystemen entsprechend den DSGVO-Prinzipien angemessen behandelt und geschützt werden. Dies bedeutet, dass viele Kunden ihre Datenbankverwaltung und ihre Datenverarbeitungsprozesse überprüfen oder ändern müssen, besonders im Hinblick auf die Sicherheit der Datenverarbeitung, wie in der DSGVO festgelegt.
 
-Microsoft SQL-basierte Technologien bieten viele integrierten Sicherheitsfunktionen, die dabei helfen können, Risiken für Daten zu mindern und den Schutz und die Verwaltbarkeit von Daten auf Datenbankebene und darüber hinaus zu verbessern. In diesem Dokument werden diese Funktionen untersucht, und einige der Ansätze von Microsoft zur Verwendung von Microsoft SQL zum Erreichen der Datenschutzziele der DSGVO werden geteilt.
+Microsoft SQL-basierte Technologien bieten viele integrierte Sicherheitsfunktionen, die dabei helfen können, Risiken für Daten zu mindern und den Schutz und die Verwaltbarkeit von Daten auf Datenbankebene und darüber hinaus zu verbessern. In diesem Dokument werden diese Funktionen untersucht, und einige der Ansätze von Microsoft zur Verwendung von Microsoft SQL zum Erreichen der Datenschutzziele der DSGVO werden geteilt.
    
   
 **Autor:** Ronit Reger

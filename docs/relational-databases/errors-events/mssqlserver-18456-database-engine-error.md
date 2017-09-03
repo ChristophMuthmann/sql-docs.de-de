@@ -77,10 +77,10 @@ Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in 
 |12|Der Anmeldename ist gültig, beim Serverzugriff ist jedoch ein Fehler aufgetreten.|  
 |18|Das Kennwort muss geändert werden.|  
 |38, 46|Die vom Benutzer angeforderte Datenbank konnte nicht gefunden werden.|
-|102 - 111|AAD-Fehler|
-|122 - 124|Fehler wegen eines leeren Benutzernamens oder Kennworts.|
+|102 – 111|AAD-Fehler|
+|122 – 124|Fehler: Der Benutzername oder das Kennwort ist leer.|
 |126|Die vom Benutzer angeforderte Datenbank ist nicht vorhanden.|
-|132 - 133|AAD-Fehler|
+|132 – 133|AAD-Fehler|
   
 Andere Fehlerzustände liegen vor und weisen auf einen unerwarteten internen Verarbeitungsfehler hin.  
   

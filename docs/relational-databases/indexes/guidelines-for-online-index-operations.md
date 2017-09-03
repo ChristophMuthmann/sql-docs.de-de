@@ -105,12 +105,12 @@ Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten d
 - Die Option SORT_IN_TEMPDB=ON wird nicht unterstützt.
 
 > [!IMPORTANT]
-> Bei der fortsetzbaren Neuerstellung müssen Sie kein lang ausgeführtes Abschneiden offen halten, wobei das Protokoll während diesem Vorgang abgeschnitten werden kann und der Protokollspeicherplatz besser verwaltet werden kann. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
+> Für die fortsetzbare Neuerstellung muss kein Abschneiden mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
 >
 
 Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Vorgang zur Indexneuerstellung unterbrochen ist:
 - Bei Arbeitsauslastungen, die meistens nur gelesen werden, ist die Leistungsauswirkung unbedeutend. 
-- Bei Arbeitsauslastungen, die oft aktualisiert werden, tritt möglicherweise eine Minderung des Durchsatzes auf (bei unseren Tests ergab sich weniger als 10% Minderung).
+- Bei Arbeitsauslastungen, die oft aktualisiert werden, tritt möglicherweise eine Minderung des Durchsatzes auf (bei unseren Tests ergab sich eine Minderung von unter 10%).
 
 Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwischen fortsetzbaren und nicht fortsetzbaren Onlineindexneuerstellungen.
  

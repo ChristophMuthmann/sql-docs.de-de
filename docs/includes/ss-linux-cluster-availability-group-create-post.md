@@ -1,5 +1,5 @@
 
-## <a name="add-a-database-to-the-availability-group"></a>Hinzuzufügen einer Datenbank zu einer Verfügbarkeitsgruppe
+## <a name="add-a-database-to-the-availability-group"></a>Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe
 
 Stellen Sie sicher, dass sich die Datenbank, die Sie der Verfügbarkeitsgruppe hinzufügen möchten, im vollständigen Wiederherstellungsmodus befindet und eine gültige Protokollsicherung hat. Wenn es sich um eine Testdatenbank oder eine neu erstellte Datenbank handelt, nehmen Sie eine Datenbanksicherung vor. Führen Sie auf dem primären SQL Server das folgende Transact-SQL aus, um eine Datenbank mit dem Namen `db1` zu erstellen und zu sichern.
 

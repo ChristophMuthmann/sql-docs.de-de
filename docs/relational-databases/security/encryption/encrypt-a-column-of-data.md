@@ -56,7 +56,7 @@ ms.lasthandoff: 07/31/2017
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 
-Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbank-Hauptschlüssel verfügen. Wenn Ihre Datenbank noch über keinen Datenbank-Hauptschlüssel verfügt, erstellen Sie einen, indem Sie die folgende Anweisung ausführen, wobei Sie Ihr Kennwort bereitstellen:   
+Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbank-Hauptschlüssel verfügen. Wenn Ihre Datenbank noch nicht über einen Datenbank-Hauptschlüssel verfügt, führen Sie die folgende Anweisung aus, und geben Sie dabei Ihr Kennwort an, um einen solchen Schlüssel zu erstellen:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  

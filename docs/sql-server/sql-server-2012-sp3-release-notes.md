@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2012 SP3 Release Notes | Microsoft-Dokumentation
+title: Anmerkungen zur Version SQL Server 2012 SP3 | Microsoft-Dokumentation
 ms.prod: sql-server-2012
 ms.technology: server-general
 ms.custom: 
@@ -14,7 +14,7 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.sourcegitcommit: ef40e08f051397ed158d06cb4cc8de71d95f6fa2
 ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
 ms.contentlocale: de-de
 ms.lasthandoff: 07/31/2017

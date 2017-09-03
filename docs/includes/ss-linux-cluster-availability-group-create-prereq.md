@@ -2,7 +2,7 @@
 
 Bevor Sie die Verfügbarkeitsgruppe erstellen, müssen Sie:
 
-- Ihre Umgebung auf alle Server festlegen, sodass alle Server kommunizieren können, die die Verfügbarkeitsreplikate hosten werden
+- Ihre Umgebung so konfigurieren, dass alle Server kommunizieren können, die Verfügbarkeitsreplikate hosten sollen
 - SQL Server installieren
 
 >[!NOTE]
