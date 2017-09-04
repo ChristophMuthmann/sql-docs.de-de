@@ -4,19 +4,21 @@ description: Installieren, aktualisieren und Deinstallieren von SQL Server on Li
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In diesem Thema erläutert das installieren, aktualisieren und Deinstallieren von SQL Server-2017 unter Linux. SQL Server 2017 RC2 wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es ist auch verfügbar als Docker-Image, die auf den Docker-Modul unter Linux oder Docker für Windows/Mac ausgeführt werden kann
 
@@ -57,11 +59,11 @@ Sie können SQL Server on Linux über die Befehlszeile installieren. Anleitungen
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren Sie auf Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
+- [Führen Sie auf Docker](quickstart-install-connect-docker.md)
 
-## <a id="upgrade"></a>Aktualisieren von SQLServer
+## <a id="upgrade"></a>Aktualisieren Sie SQLServer
 
-So aktualisieren Sie die **Mssql Server** Paket auf Linux, verwenden Sie die folgenden Befehle, die basierend auf Ihrer Plattform:
+Beim Aktualisieren der **Mssql Server** Paket auf die neueste Version, verwenden Sie die folgenden Befehle, die basierend auf Ihrer Plattform:
 
 | Platform | Paket-Update-Befehle |
 |-----|-----|
@@ -70,6 +72,26 @@ So aktualisieren Sie die **Mssql Server** Paket auf Linux, verwenden Sie die fol
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 Diese Befehle die neuesten Downloadpaket und Ersetzen Sie die Binärdateien befindet sich im `/opt/mssql/`. Der vom Benutzer generierte Datenbanken und Systemdatenbanken werden von diesem Vorgang nicht betroffen.
+
+## <a id="rollback"></a>Rollback SQLServer
+
+Verwenden Sie Rollback oder Downgrade für die SQL Server auf einer früheren Version die folgenden Schritte aus:
+
+1. Identifizieren Sie die Versionsnummer für das SQL Server-Paket beim downgrade auf den gewünschten. Eine Liste der Paket-Zahlen, finden Sie unter der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+
+1. Ein Downgrade auf eine frühere Version von SQL Server. Ersetzen Sie in den folgenden Befehlen `<version_number>` mit der SQL Server-Versionsnummer, die Sie in Schritt 1 identifiziert.
+
+   | Platform | Paket-Update-Befehle |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> Es wird nur unterstützt, um ein Downgrade auf eine Version, innerhalb der gleichen Hauptversion, z. B. SQL Server-2017 auszuführen.
+
+> [!IMPORTANT]
+> Downgrade für die wird zu diesem Zeitpunkt nur zwischen RC2 und RC1 unterstützt.
 
 ## <a id="uninstall"></a>Deinstallieren von SQLServer
 
@@ -110,7 +132,7 @@ Eine ausführlichere Beispielskript finden Sie unter den folgenden Beispielen:
 
 ## <a id="offline"></a>Offline-Installation
 
-Wenn Ihre Linux-Computer auf den online-Repositorys verwendet keinen Zugriff hat die [Schnellstarts](#platforms), Sie können die Paketdateien direkt herunterladen. Diese Pakete befinden sich im Repository Microsoft [https://packages.microsoft.com](https://packages.microsoft.com).
+Wenn Ihre Linux-Computer auf den online-Repositorys verwendet keinen Zugriff hat die [Schnellstarts](#platforms), Sie können die Paketdateien direkt herunterladen. Diese Pakete befinden sich im Microsoft-Repository [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
 > Wenn Sie die Schritte in der Schnellstarts erfolgreich installiert, müssen Sie nicht herunterladen oder installieren Sie die folgenden Pakete manuell. Dieser Abschnitt ist nur für das Offlineszenario.

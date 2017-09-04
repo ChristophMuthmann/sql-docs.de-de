@@ -4,16 +4,16 @@ description: "Dieser Schnellstart-Lernprogramm zeigt, wie Docker Container-Image
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 95c360dad72a9cd075f2a85d2581dc8021adf941
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
@@ -66,6 +66,9 @@ Die folgenden Schritte geben Sie Speicher für Docker für Windows auf 4 GB.
 
     > [!TIP]
     > Für Linux, abhängig von Ihrer Konfiguration System- und Benutzer müssen möglicherweise jede voranzustellen `docker` mit `sudo`.
+
+    > [!NOTE]
+    > Den oben aufgeführten Befehl ruft das aktuelle SQL Server-Container-Bild. Wenn Sie ein bestimmtes Abbild abrufen möchten, fügen einen Doppelpunkt und der Name des Tags (z. B. `microsoft/mssql-server-linux:rc1`). Um alle verfügbaren Images anzeigen zu können, finden Sie unter [der Mssql-Server-Linux-Docker Hub-Seite](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
 1. Um die Container-Image mit Docker auszuführen, können Sie den folgenden Befehl in einem Bash-Shell (Linux/MacOS):
 
@@ -259,7 +262,7 @@ Andere häufig verwendete Tools für die Verbindung mit SQL Server gehören:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-So untersuchen Sie die anderen Szenarien, z. B. das Ausführen mehrerer Container, Datenpersistenz und Troublehshooting, finden Sie unter [Konfigurieren von SQL Server-2017 Container Bilder auf Docker](sql-server-linux-configure-docker.md).
+So untersuchen Sie die anderen Szenarien, z. B. das Ausführen von mehreren Containern Datenpersistenz und Fehlerbehebungen, finden Sie unter [Konfigurieren von SQL Server-2017 Container Bilder auf Docker](sql-server-linux-configure-docker.md).
 
 Darüber hinaus sehen Sie sich die [Mssql-Docker-GitHub-Repository](https://github.com/Microsoft/mssql-docker) für Ressourcen, Feedback und bekannte Probleme.
 
