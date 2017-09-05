@@ -100,7 +100,7 @@ ms.lasthandoff: 07/31/2017
 -   Bei der Wiederherstellung von einer komprimierten Sicherung kann eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt werden:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **Message Filemark on device `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` is not aligned. (Dateimarkierung für Gerät „https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak“ ist nicht ausgerichtet.) Geben Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet wurde, erneut aus: '65536' sieht wie ein möglicher Wert aus.**  
+        **Message Filemark on device `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` is not aligned. (Dateimarkierung für Gerät „https ://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak“ ist nicht ausgerichtet.) Geben Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet wurde, erneut aus: '65536' sieht wie ein möglicher Wert aus.**  
   
          Um diesen Fehler zu beheben, führen Sie die **BACKUP** -Anweisung erneut aus, und geben Sie dabei **BLOCKSIZE = 65536** an.  
   
