@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
+- sql13.dts.designer.transfererrormessagestask.general.f1
+- sql13.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
@@ -67,11 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>Konfiguration des Tasks "Fehlermeldungen übertragen"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Nachrichten“&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -83,6 +81,54 @@ ms.lasthandoff: 08/03/2017
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-error-messages-task-editor-general-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Allgemein)
+  Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Fehlermeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben. Der Task „Fehlermeldungen übertragen“ überträgt eine oder mehrere benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlermeldungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen.   
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie für den Task Fehlermeldungen übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung für den Task Fehlermeldungen übertragen ein.  
+  
+## <a name="transfer-error-messages-task-editor-messages-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Meldungen)
+  Verwenden Sie die Seite **Meldungen** im Dialogfeld **Editor für den Task „Fehlermeldungen übertragen“**, um die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldungen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere anzugeben. 
+  
+### <a name="options"></a>enthalten  
+ **SourceConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Quellserver zu erstellen.  
+  
+ **DestinationConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Zielserver zu erstellen.  
+  
+ **IfObjectExists**  
+ Wählen Sie aus, ob der Task vorhandene benutzerdefinierte Fehlermeldungen überschreiben, vorhandene Meldungen auslassen oder einen Fehler erzeugen soll, wenn auf dem Zielserver bereits Meldungen desselben Namens vorhanden sind.  
+  
+ **TransferAllErrorMessages**  
+ Wählen Sie aus, ob der Task alle oder nur die angegebenen benutzerdefinierten Meldungen vom Quell- auf den Zielserver kopieren soll.  
+  
+ Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Wahr**|Alle benutzerdefinierten Meldungen kopieren.|  
+|**False**|Nur die angegebenen benutzerdefinierten Meldungen kopieren.|  
+  
+ **ErrorMessagesList**  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die zu kopierenden Fehlermeldungen auszuwählen.  
+  
+> [!NOTE]  
+>  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  
+  
+ **ErrorMessageLanguagesList**  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Sprachen auszuwählen, für die benutzerdefinierte Fehlermeldungen auf den Zielserver kopiert werden. Auf dem Zielserver muss eine Version der Meldung in us_english (Codepage 1033) vorhanden sein, bevor Sie andere Sprachversionen auf den Server übertragen können.  
+  
+> [!NOTE]  
+>  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

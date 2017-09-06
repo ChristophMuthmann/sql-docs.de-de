@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
+- sql13.dts.designer.transferloginstask.general.f1
+- sql13.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02215c15fbbbcb4f7fd5ee5638afa4e0092e86c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"
@@ -70,11 +72,7 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Task Anmeldungen übertragen &#40;Seite Allgemein&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
-  
--   [Editor für den Task Anmeldungen übertragen &#40;Seite Anmeldungen&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)  
+ Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -87,4 +85,59 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask>  
   
+## <a name="transfer-logins-task-editor-general-page"></a>Editor für den Task Anmeldungen übertragen (Seite Allgemein)
+  Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Anmeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben.  
   
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie für den Task Anmeldungen übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des Tasks Anmeldungen übertragen ein.  
+  
+## <a name="transfer-logins-task-editor-logins-page"></a>Editor für den Task Anmeldungen übertragen (Seite Anmeldungen)
+  Verwenden Sie die Seite **Anmeldungen** des Dialogfelds **Editor für den Task 'Anmeldungen übertragen'** , um die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere anzugeben.  
+  
+> [!IMPORTANT]  
+>  Wenn der Task Anmeldungen übertragen ausgeführt wird, werden auf dem Zielserver Anmeldungen mit zufällig erzeugten Kennwörtern erstellt, und die Kennwörter werden deaktiviert. Um diese Anmeldungen zu verwenden, muss ein Mitglied der festen Serverrolle **sysadmin** die Kennwörter ändern und aktivieren. Die Anmeldung **sa** kann nicht übertragen werden.  
+  
+### <a name="options"></a>enthalten  
+ **SourceConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Quellserver zu erstellen.  
+  
+ **DestinationConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Zielserver zu erstellen.  
+  
+ **LoginsToTransfer**  
+ Wählen Sie die vom Quell- auf den Zielserver zu kopierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**AllLogins**|Alle auf dem Quellserver vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen werden auf den Zielserver kopiert.|  
+|**SelectedLogins**|Nur die mit **LoginsList** angegebenen Anmeldungen werden auf den Zielserver kopiert.|  
+|**AllLoginsFromSelectedDatabases**|Alle Anmeldungen aus den mit **DatabasesList** angegebenen Datenbanken werden auf den Zielserver kopiert.|  
+  
+ **LoginsList**  
+ Wählen Sie die auf dem Quellserver vorhandenen Anmeldungen aus, die auf den Zielserver kopiert werden sollen. Diese Option ist nur verfügbar, wenn für **LoginsToTransfer** **SelectedLogins**ausgewählt ist.  
+  
+ **DatabasesList**  
+ Wählen Sie die auf dem Quellserver vorhandenen Datenbanken aus, die Anmeldungen enthalten, die auf den Zielserver kopiert werden sollen. Diese Option ist nur verfügbar, wenn für **LoginsToTransfer** **AllLoginsFromSelectedDatabases**ausgewählt ist.  
+  
+ **IfObjectExists**  
+ Wählen Sie aus, wie der Task Anmeldungen behandeln soll, die auf dem Zielserver bereits mit demselben Namen vorhanden sind.  
+  
+ Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**FailTask**|Der Task schlägt fehl, wenn auf dem Zielserver bereits Anmeldungen mit demselben Namen vorhanden sind.|  
+|**Overwrite**|Der Task überschreibt auf dem Zielserver Anmeldungen mit demselben Namen.|  
+|**Skip**|Der Task lässt Anmeldungen aus, die auf dem Zielserver mit demselben Namen vorhanden sind.|  
+  
+ **CopySids**  
+ Wählen Sie aus, ob die den Anmeldungen zugeordneten Sicherheits-IDs auf den Zielserver kopiert werden sollen. **CopySids** muss auf **True** festgelegt sein, wenn der Task Anmeldungen übertragen zusammen mit dem Task Datenbanken übertragen verwendet wird. Anderenfalls werden die kopierten Anmeldungen von der übertragenen Datenbank nicht erkannt.  
+  
+

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>SQL Server-Ziel
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für SQL** festlegen können:  
-  
--   [Ziel-Editor für SQL &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [Ziel-Editor für SQL &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [Ziel-Editor für SQL &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,7 +120,88 @@ ms.lasthandoff: 08/03/2017
   
 -   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://go.microsoft.com/fwlink/?LinkId=233700)auf msdn.microsoft.com  
   
--   Technischer Artikel, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), auf simple-talk.com (in englischer Sprache).  
+-   Technischer Artikel [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Verwenden von SQL Server Integration Services für das Massenladen von Daten) auf simple-talk.com.  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>Ziel-Editor für SQL (Seite Verbindungs-Manager)
+  Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für SQL** können Sie Informationen zur Datenquelle angeben und eine Vorschau der Ergebnisse anzeigen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel lädt die Daten in die Tabellen oder Sichten einer Datenbank in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+### <a name="options"></a>enthalten  
+ **OLE DB-Verbindungs-Manager**  
+ Wählen Sie eine vorhandene Verbindung aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** eine neue Verbindung.  
+  
+ **Tabelle oder Sicht verwenden**  
+ Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
+  
+> [!NOTE]  
+>  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Vorschau**  
+ Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>Ziel-Editor für SQL (Seite Zuordnungen)
+  Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für SQL** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare Eingabespalten**  
+ Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
+  
+ **Verfügbare Zielspalten**  
+ Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
+  
+ **Eingabespalte**  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern.  
+  
+ **Zielspalte**  
+ Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>Ziel-Editor für SQL (Seite Erweitert)
+  Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für SQL** können Sie Optionen für die erweiterte Masseneinfügung angeben.  
+  
+### <a name="options"></a>enthalten  
+ **Identität beibehalten**  
+ Gibt an, ob der Task Werte in Identitätsspalten einfügen soll. Der Standardwert dieser Eigenschaft ist **False**.  
+  
+ **NULL-Werte beibehalten**  
+ Gibt an, ob der Task NULL-Werte beibehalten soll. Der Standardwert dieser Eigenschaft ist **False**.  
+  
+ **Tabellensperre**  
+ Gibt an, ob die Tabelle beim Laden der Daten gesperrt wird. Der Standardwert dieser Eigenschaft ist **True**.  
+  
+ **Check-Einschränkungen**  
+ Gibt an, ob Einschränkungen vom Task überprüft werden sollen. Der Standardwert dieser Eigenschaft ist **True**.  
+  
+ **Trigger auslösen**  
+ Gibt an, ob die Masseneinfügung Trigger in Tabellen auslösen soll. Der Standardwert dieser Eigenschaft ist **False**.  
+  
+ **Erste Zeile**  
+ Gibt die erste einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
+  
+> [!NOTE]  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
+  
+ **Letzte Zeile**  
+ Gibt die letzte einzufügende Zeile an. Der Standardwert dieser Eigenschaft ist **-1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
+  
+> [!NOTE]  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
+  
+ **Maximale Anzahl von Fehlern**  
+ Gibt die Anzahl der Fehler an, die auftreten können, bevor die Masseneinfügung abgebrochen wird. Der Standardwert dieser Eigenschaft ist **–1**. Er zeigt an, dass kein Wert zugewiesen wurde.  
+  
+> [!NOTE]  
+>  Löschen Sie den Inhalt des Textfelds im Dialogfeld **Ziel-Editor für SQL** , um anzugeben, dass Sie keinen Wert für diese Eigenschaft zuweisen möchten. Verwenden Sie im Fenster **Eigenschaften** , im Dialogfeld **Erweiterter Editor**und im Objektmodell den Wert -1.  
+  
+ **Timeout**  
+ Gibt die Anzahl der Sekunden an, die abgewartet werden, bevor die Masseneinfügung aufgrund eines Timeouts abgebrochen wird.  
+  
+ **Spalten sortieren**  
+ Geben Sie die Namen der zu sortierenden Spalten an. Jede Spalte kann in auf- oder absteigender Reihenfolge sortiert werden. Wenn Sie mehrere Spalten verwenden, nach denen sortiert werden soll, trennen Sie die Namen in der Liste mit Kommas.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  

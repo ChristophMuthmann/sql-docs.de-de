@@ -2,7 +2,7 @@
 title: Erstellen von Variablenwert-Dateien (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,21 +16,21 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ebc00ea1b5fc7eb9ca2383d8887b522f59428d1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablenwert-Dateien (AccessToSQL)
-Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie die Quelle oder Ziel-Servernamen, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von Datenbank-Migrationen auftreten, mehrere Dateien zum Speichern des Wert der einzelnen Quellserver werden erstellt und in master Skriptdatei mit verwiesen die **– V** zur Befehlszeile wechseln. Dadurch erhalten Sie statische Werte in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
+Ein Wert Variablendatei ist eine XML-Datei mit den Parameterwerten für Befehle (z. B. den Servernamen Quelle bzw. zum Ziel), die häufig für Migrationen zu ändern. Wenn eine große Anzahl von Datenbank-Migrationen auftreten, mehrere Dateien zum Speichern des Wert der einzelnen Quellserver erstellt und in einer master Skriptdatei mit referenziert werden die **– V** zur Befehlszeile wechseln. Dieses Verhalten hilft dabei, die statische Werte in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
   
 > [!NOTE]  
-> 1.  Variablennamen sind mit dem Präfix und Suffix ein Symbol, das $ (Dollar). Wenn einen Wert in der Datei Variablenwert in der Variablen nicht zugewiesen sind, treten einen Fehler während der Analyse der Skriptdatei an, was in der Konsole Ausführungsprozess führte.  
-> 2.  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält  **$**  Symbol (Dollar), klicken Sie dann  **$$**  muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
-> 3.  Aus Gründen der Verwaltbarkeit können Variablen deklariert werden in `‘variable-group’` Elemente logische Trennung von Benutzer definierte Variablen.  Verwendung dieses Elements ist nicht obligatorisch.  
+> -  Variablennamen sind mit dem Präfix und Suffix ein Symbol, das $ (Dollar). Wenn eine Variable einen Wert in der Datei der Wert der Variablen nicht zugewiesen ist, tritt ein Fehler während der Analyse der Skriptdatei, resultierende, in der Konsole Ausführungsprozess führte.  
+> -  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält eine  **$**  Symbol (Dollar), klicken Sie dann  **$$**  muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
+> -  Aus Gründen der Verwaltbarkeit können Variablen deklariert werden in `‘variable-group’` Elemente logische Trennung von benutzerdefinierten Variablen.  Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
   
@@ -95,13 +95,13 @@ Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie 
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Variablenwert-Dateiüberprüfung  
+## <a name="variable-value-file-validation"></a>Variablenwert-dateiüberprüfung  
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Variablenwert-Datei anhand der Schemadefinitionsdatei **ConsoleScriptVariablesSchema.xsd** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Im nächsten Schritt in der Konsole funktioniert [erstellen, die Server-Connection-Dateien &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen die Server-Verbindungsdateien (Access)](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+[Erstellen die Server-Verbindungsdateien (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
 

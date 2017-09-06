@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
+- sql13.dts.designer.adonetsource.connection.f1
+- sql13.dts.designer.adonetsource.columns.f1
+- sql13.dts.designer.adonetsource.erroroutput.f1
 helpviewer_keywords:
 - ADO.NET source
 - sources [Integration Services], ADO.NET
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78aaa7fb855184f1a13e79cf19a2466c83eeee8e
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
@@ -88,6 +91,116 @@ ms.lasthandoff: 08/03/2017
 -   [Benutzerdefinierte Eigenschaften von ADO.NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="ado-net-source-editor-connection-manager-page"></a>ADO.NET-Quellen-Editor (Seite 'Verbindungs-Manager')
+  Auf der Seite **Verbindungs-Manager** des Dialogfelds **ADO.NET-Quellen-Editor** wählen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager für die Quelle aus. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
+  
+ Weitere Informationen zur ADO NET-Quelle finden Sie unter [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **So öffnen Sie die Seite "Verbindungs-Manager"**  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Quelle hat.  
+  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ADO.NET-Quelle.  
+  
+3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Verbindungs-Manager**.  
+  
+### <a name="static-options"></a>Statische Optionen  
+ **ADO.NET-Verbindungs-Manager**  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **ADO.NET-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
+  
+ **Datenzugriffsmodus**  
+ Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
+  
+|Option|Beschreibung|  
+|------------|-----------------|  
+|Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
+|SQL-Befehl|Rufen Sie mit SQL-Abfrage Daten aus der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
+  
+ **Vorschau**  
+ Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der**Vorschau** können bis zu 200 Zeilen angezeigt werden.  
+  
+> [!NOTE]  
+>  In der Datenvorschau enthalten Spalten mit einem CLR-benutzerdefinierten Typ keine Daten. Stattdessen die Werte \<Wert zu groß zum Anzeigen > oder System.Byte [] angezeigt. Der erste Wert wird angezeigt, wenn mithilfe des [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Anbieters auf die Datenquelle zugegriffen wird. Der zweite Wert wird bei Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieters angezeigt.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
+  
+#### <a name="data-access-mode--table-or-view"></a>Datenzugriffsmodus = Tabelle oder Sicht  
+ **Name der Tabelle oder Sicht**  
+ Wählen Sie den Namen der Tabelle oder Sicht aus einer Liste der verfügbaren Namen in der Datenquelle aus.  
+  
+#### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
+ **SQL-Befehlstext**  
+ Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
+  
+ **Build query**  
+ Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
+  
+ **Durchsuchen**  
+ Mithilfe des Dialogfelds **Öffnen** können Sie nach der Datei suchen, die den Text der SQL-Abfrage enthält.  
+  
+## <a name="ado-net-source-editor-columns-page"></a>ADO.NET-Quellen-Editor (Seite 'Spalten')
+  Mithilfe der Seite **Spalten** des Dialogfelds **ADO.NET-Quellen-Editor** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
+  
+ Weitere Informationen zur ADO NET-Quelle finden Sie unter [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **So öffnen Sie die Seite "Spalten"**  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Quelle hat.  
+  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ADO.NET-Quelle.  
+  
+3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Spalten**.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare externe Spalten**  
+ Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
+  
+ **Externe Spalte**  
+ Zeigt die externen (Quell-)Spalten in der gleichen Reihenfolge an wie beim Konfigurieren von Komponenten, die Daten aus dieser Quelle verwenden.  
+  
+ **Ausgabespalte**  
+ Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der bereitgestellte Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
+  
+## <a name="ado-net-source-editor-error-output-page"></a>ADO.NET-Quellen-Editor (Seite 'Fehlerausgabe')
+  Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Quellen-Editor** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
+  
+ Weitere Informationen zur ADO NET-Quelle finden Sie unter [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **So öffnen Sie die Seite "Fehlerausgabe"**  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Quelle hat.  
+  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ADO NET-Quelle.  
+  
+3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
+  
+### <a name="options"></a>enthalten  
+ **Eingabe/Ausgabe**  
+ Zeigt den Namen der Datenquelle an.  
+  
+ **Column**  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **ADO.NET-Quellen-Editor** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
+  
+ **Fehler**  
+ Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Verwandte Themen:** [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Abschneiden**  
+ Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Description**  
+ Zeigt die Beschreibung des Fehlers an.  
+  
+ **Diesen Wert für ausgewählte Zellen festlegen**  
+ Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Anwenden**  
+ Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DataReader-Ziel](../../integration-services/data-flow/datareader-destination.md)   

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
+- sql13.dts.designer.partprocessingtransformation.connection.f1
+- sql13.dts.designer.partprocessingtransformation.mapping.f1
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - partitions [Analysis Services], processing
 - Partition Processing destination [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
@@ -50,14 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Partitionsverarbeitung** festlegen können:  
-  
--   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
-  
--   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
-  
--   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Erweitert&#41;](../../integration-services/data-flow/partition-processing-destination-editor-advanced-page.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -66,4 +61,127 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="partition-processing-destination-editor-connection-manager-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Verbindungs-Manager)
+  Geben Sie auf der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]an.  
   
+> [!NOTE]  
+>  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
+  
+### <a name="options"></a>enthalten  
+ **Connection manager**  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
+  
+ **Liste der verfügbaren Partitionen**  
+ Wählen Sie die zu verarbeitende Partition aus.  
+  
+ **Verarbeitungsmethode**  
+ Wählen Sie die Verarbeitungsmethode aus. Der Standardwert für diese Option ist **Vollständig**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|Hinzufügen (inkrementell)|Führt eine inkrementelle Verarbeitung der Partition aus.|  
+|Vollständig|Führt eine vollständige Verarbeitung der Partition aus.|  
+|Nur Daten|Führt eine Verarbeitung der Updates für die Partition aus.|  
+  
+## <a name="partition-processing-destination-editor-mappings-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Zuordnungen)
+  Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** können Sie Eingabespalten Partitionsspalten zuordnen.  
+  
+> [!NOTE]  
+>  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare Eingabespalten**  
+ Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
+  
+ **Verfügbare Zielspalten**  
+ Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
+  
+ **Eingabespalte**  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern.  
+  
+ **Zielspalte**  
+ Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
+  
+## <a name="partition-processing-destination-editor-advanced-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Erweitert)
+  Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** konfigurieren Sie die Fehlerbehandlung.  
+  
+> [!NOTE]  
+>  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
+  
+### <a name="options"></a>enthalten  
+ **Standardfehlerkonfiguration verwenden**  
+ Gibt an, ob die Standardfehlerbehandlung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden soll. Standardmäßig ist dieser Wert **True**.  
+  
+ **Schlüsselfehleraktion**  
+ Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert Unknown.|  
+|**DiscardRecord**|Verwirft den Datensatz.|  
+  
+ **Fehler ignorieren**  
+ Gibt an, dass Fehler ignoriert werden sollen.  
+  
+ **Bei Fehler beenden**  
+ Gibt an, dass die Verarbeitung beendet werden soll, wenn ein Fehler auftritt.  
+  
+ **Anzahl von Fehlern**  
+ Gibt den Schwellenwert für die Anzahl von Fehlern an, ab dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+  
+ **Aktion bei Fehler**  
+ Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Beendet die Verarbeitung.|  
+|**StopLogging**|Beendet das Protokollieren der Fehler.|  
+  
+ **Schlüssel nicht gefunden**  
+ Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **Doppelter Schlüssel**  
+ Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **NULL-Schlüssel in unbekanntes Element konvertiert**  
+ Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert Unknown konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **NULL-Schlüssel nicht zulässig**  
+ Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **Fehlerprotokollpfad**  
+ Geben Sie den Pfad für das Fehlerprotokoll ein, oder wählen Sie mit der Schaltfläche **Durchsuchen (...)** ein Ziel aus.  
+  
+ **Durchsuchen (…)**  
+ Wählen Sie einen Pfad für das Fehlerprotokoll aus.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)   
+

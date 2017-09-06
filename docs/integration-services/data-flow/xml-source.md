@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>XML-Quelle
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für XML** festlegen können:  
-  
--   [Quellen-Editor für XML &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [Quellen-Editor für XML &#40;Seite Spalten&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [Quellen-Editor für XML &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Festlegen der Eigenschaften anzuzeigen:  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>Quellen-Editor für XML (Seite Verbindungs-Manager)
+  Mithilfe der Seite **Verbindungs-Manager** in **Quellen-Editor für XML** können Sie eine XML-Datei und die XML-Schemadefinition (XSD) angeben, mit der die XML-Daten transformiert werden.  
+  
+### <a name="static-options"></a>Statische Optionen  
+ **Datenzugriffsmodus**  
+ Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
+|XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|XML-Daten aus Variable|Ruft XML-Daten aus einer Variablen ab.|  
+  
+ **Inlineschema verwenden**  
+ Gibt an, ob die XML-Quelldaten das XSD-Schema enthalten, mit dem die Struktur und die Daten definiert und überprüft werden.  
+  
+ **XSD-Speicherort**  
+ Geben Sie den Pfad und den Dateinamen der XSD-Schemadatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen**klicken.  
+  
+ **Durchsuchen**  
+ Mithilfe des Dialogfelds **Öffnen** können Sie die XSD-Schemadatei suchen.  
+  
+ **XSD-Code generieren**  
+ Mithilfe des Dialogfelds **Speichern unter** können Sie einen Speicherort für die automatisch generierte XSD-Schemadatei auswählen. Der Editor leitet das Schema aus der Struktur der XML-Daten ab.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
+  
+#### <a name="data-access-mode--xml-file-location"></a>Datenzugriffsmodus = Speicherort der XML-Datei  
+ **XML-Speicherort**  
+ Geben Sie den Pfad und den Dateinamen der XML-Datendatei ein, oder suchen Sie die Datei, indem Sie auf die Schaltfläche **Durchsuchen**klicken.  
+  
+ **Durchsuchen**  
+ Mithilfe des Dialogfelds **Öffnen** können Sie die XML-Datendatei suchen.  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>Datenzugriffsmodus = XML-Datei aus Variable  
+ **Variablenname**  
+ Wählt die Variable aus, die den Pfad und den Dateinamen der XML-Datei enthält.  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>Datenzugriffsmodus = XML-Daten aus Variable  
+ **Variablenname**  
+ Wählt die Variable aus, die die XML-Daten enthält.  
+  
+## <a name="xml-source-editor-columns-page"></a>Quellen-Editor für XML (Seite Spalten)
+  Mithilfe des Knotens **Spalten** im Dialogfeld **Quellen-Editor für XML** können Sie einer externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare externe Spalten**  
+ Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
+  
+ **Externe Spalte**  
+ Zeigt die externen (Quell-)Spalten in der Reihenfolge an, in der sie von dem Task gelesen werden. Sie können die Reihenfolge ändern, indem Sie zunächst die ausgewählten Spalten in der im Editor angezeigten Tabelle löschen. Wählen Sie anschließend die externen Spalten in einer anderen Reihenfolge aus der Liste aus.  
+  
+ **Ausgabespalte**  
+ Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
+  
+## <a name="xml-source-editor-error-output-page"></a>Quellen-Editor für XML (Seite Fehlerausgabe)
+  Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für XML** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
+  
+### <a name="options"></a>enthalten  
+ **Eingabe/Ausgabe**  
+ Zeigt den Namen der Datenquelle an.  
+  
+ **Column**  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
+  
+ **Fehler**  
+ Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Verwandte Themen:** [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Abschneiden**  
+ Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Description**  
+ Zeigt die Beschreibung des Fehlers an.  
+  
+ **Diesen Wert für ausgewählte Zellen festlegen**  
+ Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Anwenden**  
+ Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Extrahieren von Daten mithilfe der XML-Quelle](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

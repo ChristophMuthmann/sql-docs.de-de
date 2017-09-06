@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
@@ -86,9 +88,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>Konfiguration des Tasks "WMI-Datenleser"  
  Eigenschaften können Sie programmgesteuert oder mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Task „WMI-Datenleser“ &#40;Seite „WMI-Optionen“&#41;](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ Klicken Sie auf das folgende Thema, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -100,6 +100,87 @@ Select * FROM Win32_QuickFixEngineering
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="wmi-data-reader-task-editor-general-page"></a>Editor für den Task 'WMI-Datenleser' (Seite Allgemein)
+  Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Datenleser'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Datenleser' angeben.  
+  
+  Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI), [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL), in der MSDN Library.  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Task 'WMI-Datenleser' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung für den Task 'WMI-Datenleser' ein.  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Datenleser' (Seite WMI-Optionen)
+  Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Datenleser“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Ziel des Abfrageergebnisses angeben.  
+  
+ Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI), [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL), in der MSDN Library.  
+  
+### <a name="static-options"></a>Statische Optionen  
+ **WMIConnectionName**  
+ Wählen Sie einen WMI-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue WMI-Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Verwandte Themen:** [WMI-Verbindungs-Manager](../../integration-services/connection-manager/wmi-connection-manager.md), [WMI-Verbindungs-Manager-Editor](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Wählen Sie den Quelltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Direct input**|Legen Sie die Quelle für eine WQL-Abfrage fest. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
+|**File connection**|Wählen Sie eine Datei aus, in der die WQL-Abfrage enthalten ist. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
+|**Variable**|Legen Sie die Quelle für eine Variable fest, die die WQL-Abfrage definiert. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
+  
+ **OutputType**  
+ Geben Sie an, ob es sich bei der Ausgabe um eine Datentabelle, einen Eigenschaftswert oder einen Eigenschaftsnamen und -wert handeln soll.  
+  
+ **OverwriteDestination**  
+ Gibt an, ob die ursprünglichen Daten in der Zieldatei oder -variablen beibehalten, überschrieben oder an diese angefügt werden sollen.  
+  
+ **DestinationType**  
+ Wählen Sie den Zieltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**File connection**|Wählen Sie eine Datei aus, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
+|**Variable**|Legen Sie die Variable fest, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>Dynamische Optionen von WQLQuerySourceType  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Direct input  
+ **WQLQuerySource**  
+ Stellen Sie eine Abfrage bereit, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten, und geben Sie eine Abfrage mithilfe des Dialogfelds **WQL-Abfrage** ein.  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = File connection  
+ **WQLQuerySource**  
+ Wählen Sie einen Dateiverbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
+ **WQLQuerySource**  
+ Wählen Sie eine Variable in der Liste aus, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>Dynamische Optionen von DestinationType  
+  
+#### <a name="destinationtype--file-connection"></a>DestinationType = File connection  
+ **Ziel**  
+ Wählen Sie einen Dateiverbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>DestinationType = Variable  
+ **Ziel**  
+ Wählen Sie eine Variable in der Liste aus, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

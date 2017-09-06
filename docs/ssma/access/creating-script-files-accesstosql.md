@@ -2,7 +2,7 @@
 title: Erstellen von Skriptdateien (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (AccessToSQL)
@@ -37,7 +37,7 @@ Die Skriptdatei kann begrenzt in drei Abschnitte unterteilt werden..,:
   
 Jeder Abschnitt ist im folgenden ausführlich beschrieben:  
   
-## <a name="configuring-access-console-settings"></a>Konfigurieren der Zugriffseinstellungen für die Konsole  
+## <a name="configuring-access-console-settings"></a>Konfigurieren der zugriffseinstellungen für die Konsole  
 Die Konfigurationen eines Skripts werden in der Skriptdatei für die Konsole angezeigt.  
   
 Wenn eines der Elemente im Knoten "Konfiguration" angegeben werden, sind sie festgelegt als globale Einstellung d. h. sie gelten für alle Befehle des Skripts. Zu diesen Konfigurationselementen können auch festgelegt werden innerhalb jeder Befehl in der Skriptbefehl Abschnitt, wenn der Benutzer möchte die globale Einstellung außer Kraft setzen.  
@@ -353,7 +353,7 @@ Die Skriptdatei enthält eine Sequenz von Migration Workflowbefehle in das XML-F
   
 Eine typische Datenmigration, der eine bestimmte Tabelle in einer Access-Datenbank folgt z. B. die Hierarchie der: Datenbank -&gt; Tabelle.  
   
-Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet und das Steuerelement an den Benutzer zurückgegeben. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variableninformationen enthalten entweder in einem [Variable Wertdateien](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
+Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet und das Steuerelement an den Benutzer zurückgegeben. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variableninformationen enthalten entweder in einem [Variable Wertdateien](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
   
 **Beispiel:**  
   
@@ -394,10 +394,10 @@ Sie können Vorlagen (Dateien) ausgeführt wird, nachdem eine Änderung der Para
   
 Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40; AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="script-file-validation"></a>Skript-Dateiüberprüfung  
+## <a name="script-file-validation"></a>Skript-dateiüberprüfung  
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Skriptdatei anhand der Schemadefinitionsdatei **"A2SSConsoleScriptSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
-## <a name="next-step"></a>Nächster Schritt  
+## <a name="next-step"></a>Nächster Schritt
 Im nächsten Schritt in der Konsole funktioniert [erstellen Variable Wertdateien &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Konfiguration des Analysis Services-Tasks "DDL ausführen"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Analysis Services-Task „DDL ausführen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Editor für den Analysis Services-Task „DDL ausführen“ &#40;Seite „DDL“&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite Allgemein)
+  Auf der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie den Namen und eine Beschreibung des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tasks „DDL ausführen“ angeben.  
   
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task „DDL ausführen“ an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tasks 'DDL ausführen' ein.  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite DDL)
+  Auf der Seite **DDL** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie eine Verbindung mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank angeben sowie Informationen zur Quelle der DDL-Anweisungen (Data Definition Language) angeben.  
+  
+### <a name="static-options"></a>Statische Optionen  
+ **Verbindung**  
+ Wählen Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt oder eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verbindungs-Manager in der Liste aus, oder klicken Sie \< **neue Verbindung...** > und Verwenden der **Hinzufügen von Analysis Services Connection Manager** (Dialogfeld), um eine neue Verbindung zu erstellen.  
+  
+ **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ Geben Sie den Quelltyp der DDL-Anweisung an. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|**Direct Input**|Legen Sie die Quelle der im Textfeld **SourceDirect** gespeicherten DDL-Anweisung fest. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
+|**File Connection**|Legen Sie die Quelle für eine Datei fest, in der die DDL-Anweisung enthalten ist. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
+|**Variable**|Legen Sie die Quelle für eine Variable fest. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
+  
+### <a name="dynamic-options"></a>Dynamische Optionen  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = Direkteingabe  
+ **Quelle**  
+ Geben Sie die DDL-Anweisungen ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und geben Sie dann die Anweisungen im Dialogfeld **DDL-Anweisungen** ein.  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
+ **Quelle**  
+ Wählen Sie eine dateiverbindung aus der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > und Verwenden der **Dateiverbindungs-Manager** (Dialogfeld), um eine neue Verbindung zu erstellen.  
+  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = Variable  
+ **Quelle**  
+ Wählen Sie eine Variable in der Liste aus, oder klicken Sie auf \< **neue Variable...** > und Verwenden der **Variable hinzufügen** (Dialogfeld), um eine neue Variable zu erstellen.  
+  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+  
+
