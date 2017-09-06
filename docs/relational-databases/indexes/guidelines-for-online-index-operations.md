@@ -21,6 +21,8 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.product_service: sql-server-2016, sql-database
+ms.component: dbe-indexes
 ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
