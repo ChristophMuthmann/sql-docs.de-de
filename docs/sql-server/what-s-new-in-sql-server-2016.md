@@ -111,4 +111,4 @@ Weitere Informationen finden Sie unter [Reporting Services (SSRS)](https://msdn.
 - [Setup und Wartungsinstallation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 - [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

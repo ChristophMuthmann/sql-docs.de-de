@@ -164,4 +164,4 @@ Während der Installation fügt SQL Server 2016 Analysis Services ein gesonderte
 
 Sie können Ihren Dienst so konfigurieren, dass keine Nutzungsdaten gesendet werden. Wie Sie dazu vorgehen müssen, ist im Abschnitt „Festlegen von Registrierungsunterschlüsseln auf dem Server“ beschrieben. Wenn Sie dies machen, wird das Dienstkonto jedoch nicht entfernt. 
  
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

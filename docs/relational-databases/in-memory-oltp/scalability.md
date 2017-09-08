@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ab43ba6b6a27fa46b5214a60063c5df3f5496f4

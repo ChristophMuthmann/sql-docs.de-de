@@ -12,9 +12,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
