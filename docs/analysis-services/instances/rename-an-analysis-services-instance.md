@@ -1,30 +1,35 @@
 ---
-title: "Umbenennen einer Analysis Services-Instanz | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Instanzen von Analysis Services, umbenennen"
-  - "Umbenennen von Instanzen von Analysis Services"
-  - "Namen [Analysis Services], Umbenennen von Instanzen"
-  - "Namen [Analysis Services]"
+title: Umbenennen einer Analysis Services-Instanz | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Umbenennen einer Analysis Services-Instanz
+# <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
   Sie können eine vorhandene Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe des Tools **Instanz umbenennen** umbenennen, das mit Management Studio (Webinstallation) installiert wird.  
   
 > [!IMPORTANT]  
@@ -33,11 +38,11 @@ caps.handback.revision: 53
  Das Tool zum Umbenennen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen ändert nicht den Programmordner, der für die ursprüngliche Instanz erstellt wurde. Ändern Sie den Namen des Programmordners nicht entsprechend der umbenannten Instanz. Wenn Sie den Namen eines Programmordners ändern, kann dies dazu führen, dass Setup die Installation nicht reparieren oder deinstallieren kann.  
   
 > [!NOTE]  
->  Das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Tool zur Instanzumbenennung wird in einer Clusterumgebung nicht unterstützt.  
+>  Das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tool zur Instanzumbenennung wird in einer Clusterumgebung nicht unterstützt.  
   
-### So benennen Sie eine Instanz von Analysis Services um  
+### <a name="to-rename-an-instance-of-analysis-services"></a>So benennen Sie eine Instanz von Analysis Services um  
   
-1.  Starten Sie das **Tool zum Umbenennen von Instanzen**, asinstancerename.exe, im Verzeichnis **C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio**.  
+1.  Starten Sie das **Tool zum Umbenennen von Instanzen** , asinstancerename.exe, im Verzeichnis **C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio**.  
   
 2.  Wählen Sie im Dialogfeld **Instanz umbenennen** aus der Liste **Umzubenennende Instanz** die Instanz aus, die Sie umbenennen möchten.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 53
   
      Die Analysis Services-Instanz wird im Rahmen der Namensänderung beendet und neu gestartet.  
   
-### Prüfliste nach dem Umbenennen  
+### <a name="post-rename-checklist"></a>Prüfliste nach dem Umbenennen  
   
 1.  Um wieder auf die Datenbanken auf der umbenannten Instanz zugreifen zu können, müssen Sie die Datenverbindungen in Excel oder anderen Clientanwendungen manuell aktualisieren. Überprüfen Sie auch alle vordefinierten Verbindungen, z. B. freigegebene Reporting Services-Datenquellen, Excel-ODC-Dateien oder BI Semantikmodell-Verbindungsdateien, die möglicherweise auf die umbenannte Instanz verweisen. Weitere Informationen finden Sie unter [Verbinden mit Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md).  
   
@@ -55,13 +60,13 @@ caps.handback.revision: 53
   
 3.  Aktualisieren Sie die Projekteigenschaften für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekte, mit denen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]arbeiten. Für Serverinstanzen im tabellarischen Modus müssen die Eigenschaft Arbeitsbereichsserver für die Datei model.bim und die Eigenschaft Server für das Projekt aktualisiert werden.  
   
-4.  Je nachdem, wie Sie das Dienstkonto angegeben haben, müssen Sie ggf. Datenbank-Anmeldenamen oder Dateiberechtigungen aktualisieren, die dem Dienst Datenzugriffsrechte gewähren (z. B., wenn Sie das Dienstkonto verwenden, um Daten zu verarbeiten oder auf verknüpfte Objekte auf einem anderen Server zuzugreifen).  
+4.  Je nachdem, wie Sie das Dienstkonto angegeben haben, müssen Sie ggf. Datenbank-Anmeldenamen oder Dateiberechtigungen aktualisieren, die dem Dienst Datenzugriffsrechte gewähren (z. B., wenn Sie das Dienstkonto verwenden, um Daten zu verarbeiten oder auf verknüpfte Objekte auf einem anderen Server zuzugreifen).  
   
      Das Aktualisieren eines Datenbank-Anmeldenamens oder von Dateiberechtigungen ist erforderlich, wenn Sie ein virtuelles Konto zum Bereitstellen des Diensts verwendet haben. Virtuelle Konten basieren auf dem Instanznamen. Wenn Sie die Instanz umbenennen, wird daher gleichzeitig auch das virtuelle Konto aktualisiert. Dies bedeutet, dass alle vorherigen Anmeldenamen oder Berechtigungen, die Sie für die vorherige Instanz erstellt haben, nicht mehr gültig sind.  
   
      Dies wird im folgenden Beispiel veranschaulicht. Angenommen, Sie haben einen Server im tabellarischen Modus als Instanz mit dem Namen "Tabular" unter Verwendung des virtuellen Standardkontos installiert. Die resultierende Konfiguration sieht wie folgt aus:  
   
-    1.  Instancename = \<Server>\TABULAR  
+    1.  Instanzname = \<Server > \TABULAR  
   
     2.  Dienstname = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      Angenommen, Sie benennen die Instanz jetzt in "TAB2" um. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
   
-    1.  Instanzname = \<Server>\TAB2  
+    1.  Instanzname = \<Server > \TAB2  
   
     2.  Dienstname = MSOLAP$TAB2  
   

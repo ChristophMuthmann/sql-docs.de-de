@@ -1,22 +1,27 @@
 ---
-title: "Abfrageverarbeitungsereignisse – Datenspalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Query Processing Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Abfrageverarbeitungsereignisse – Datenspalten
+# <a name="query-processing-events-data-columns"></a>Abfrageverarbeitungsereignisse – Datenspalten
   Die Ereigniskategorie "Abfrageverarbeitung" besitzt die folgenden Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  In den folgenden Tabellen sind die Datenspalten für jede dieser Ereignisklassen aufgeführt.  
   
-## Query Cube Begin  
+## <a name="query-cube-begin"></a>Query Cube Begin  
   
 |||||  
 |-|-|-|-|  
@@ -54,7 +59,7 @@ caps.handback.revision: 6
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -68,14 +73,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Query Cube End  
+## <a name="query-cube-end"></a>Query Cube End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -89,14 +94,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Calculate Non Empty Begin  
+## <a name="calculate-non-empty-begin"></a>Calculate Non Empty Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Calculate Non Empty Current  
+## <a name="calculate-non-empty-current"></a>Calculate Non Empty Current  
   
 |||||  
 |-|-|-|-|  
@@ -119,7 +124,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Get Data<br /><br /> 2: Process Calculated Members<br /><br /> 3: Post Order|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -133,14 +138,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Calculate Non Empty End  
+## <a name="calculate-non-empty-end"></a>Calculate Non Empty End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -154,14 +159,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Serialize Results Begin  
+## <a name="serialize-results-begin"></a>Serialize Results Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Serialize Results Current  
+## <a name="serialize-results-current"></a>Serialize Results Current  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -183,7 +188,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Serialize Axes<br /><br /> 2: Serialize Cells<br /><br /> 3: Serialize SQL Rowset<br /><br /> 4: Serialize Flattened Rowset|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -197,14 +202,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Serialize Results End  
+## <a name="serialize-results-end"></a>Serialize Results End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Execute MDX Script Begin  
-  
-|**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
-|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
-|CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
-|CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|ProgressTotal|9|1|Gesamter Fortschritt.|  
-|IntegerData|10|1|Ganzzahlige Daten.|  
-|ObjectType|12|1|Objekttyp.|  
-|ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
-|DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
-|NTCanonicalUserName|40|8|Benutzername in kanonischer Form. Zum Beispiel "engineering.microsoft.com/software/someone".|  
-|SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
-|TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
-|ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
-  
-## Execute MDX Script Current  
-  
-|**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
-|CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
-|CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|ProgressTotal|9|1|Gesamter Fortschritt.|  
-|IntegerData|10|1|Ganzzahlige Daten.|  
-|ObjectType|12|1|Objekttyp.|  
-|ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
-|DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
-|NTCanonicalUserName|40|8|Benutzername in kanonischer Form. Zum Beispiel "engineering.microsoft.com/software/someone".|  
-|SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
-|TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
-|ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
-  
-## Execute MDX Script End  
+## <a name="execute-mdx-script-begin"></a>Execute MDX Script Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -269,7 +231,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Query Dimension  
+## <a name="execute-mdx-script-current"></a>Execute MDX Script Current  
+  
+|**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
+|CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
+|ProgressTotal|9|1|Gesamter Fortschritt.|  
+|IntegerData|10|1|Ganzzahlige Daten.|  
+|ObjectType|12|1|Objekttyp.|  
+|ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
+|ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
+|DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
+|NTCanonicalUserName|40|8|Benutzername in kanonischer Form. Zum Beispiel "engineering.microsoft.com/software/someone".|  
+|SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
+|TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
+|ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
+  
+## <a name="execute-mdx-script-end"></a>Execute MDX Script End  
+  
+|**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
+|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
+|ProgressTotal|9|1|Gesamter Fortschritt.|  
+|IntegerData|10|1|Ganzzahlige Daten.|  
+|ObjectType|12|1|Objekttyp.|  
+|ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
+|ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
+|DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
+|NTCanonicalUserName|40|8|Benutzername in kanonischer Form. Zum Beispiel "engineering.microsoft.com/software/someone".|  
+|SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
+|TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
+|ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
+  
+## <a name="query-dimension"></a>Query Dimension  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -291,7 +296,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ProgressTotal|9|1|Gesamter Fortschritt.|  
@@ -305,15 +310,15 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Query Subcube  
+## <a name="query-subcube"></a>Query Subcube  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
-|EventSubclass|1|1|EventSubclass enthält zusätzliche Informationen zu jeder Ereignisklasse:<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data<br /><br /> 3: Internal data<br /><br /> 4: SQL data<br /><br /> 11: Measure Group Structural Change<br /><br /> 12: Measure Group Deletion|  
+|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Cache data<br /><br /> 2: Non-cache data<br /><br /> 3: Internal data<br /><br /> 4: SQL data<br /><br /> 11: Measure Group Structural Change<br /><br /> 12: Measure Group Deletion|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Query Subcube Verbose  
+## <a name="query-subcube-verbose"></a>Query Subcube Verbose  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -333,7 +338,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
@@ -345,14 +350,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Get Data From Aggregation  
+## <a name="get-data-from-aggregation"></a>Get Data From Aggregation  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Get Data From Cache  
+## <a name="get-data-from-cache"></a>Get Data From Cache  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -372,7 +377,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Get data from measure group cache<br /><br /> 2: Get data from flat cache<br /><br /> 3: Get data from calculation cache<br /><br /> 4: Get data from persisted cache|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## VertiPaq SE Query Begin  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE Query Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## VertiPaq SE Query End  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE Query End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -417,7 +422,7 @@ caps.handback.revision: 6
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
@@ -430,7 +435,7 @@ caps.handback.revision: 6
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |ObjectReference|15|8|Objektverweis. Codiert als XML für alle übergeordneten Elemente, das Verwenden von Tags, um das Objekt zu beschreiben.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Resource Usage  
+## <a name="resource-usage"></a>Resource Usage  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## VertiPaq SE Query Cache Match  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE Query Cache Match  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,14 +489,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Direct Query Begin  
+## <a name="direct-query-begin"></a>Direct Query Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
@@ -502,7 +507,7 @@ caps.handback.revision: 6
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -512,14 +517,14 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Direct Query End  
+## <a name="direct-query-end"></a>Direct Query End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
@@ -530,7 +535,7 @@ caps.handback.revision: 6
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Abfrageverarbeitung (Ereigniskategorie)](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

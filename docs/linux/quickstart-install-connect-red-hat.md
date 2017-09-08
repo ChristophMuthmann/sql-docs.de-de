@@ -1,19 +1,19 @@
 ---
 title: Erste Schritte mit SQL Server-2017 unter Red Hat Enterprise Linux | Microsoft Docs
 description: Dieser Schnellstart-Tutorial wird gezeigt, wie 2017 von SQL Server unter Red Hat Enterprise Linux installieren und dann zu erstellen und Abfragen einer Datenbank mit Sqlcmd wird.
-author: sabotta
-ms.author: carlasab
-manager: craigg
-ms.date: 07/24/2017
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 53f3c2dbda293d6c3f9beb8bd16287b6aa0d9e26
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
@@ -50,7 +50,7 @@ Um SQL Server auf RHEL konfigurieren möchten, führen Sie die folgenden Befehle
    sudo yum install -y mssql-server
    ```
 
-1. Nach der Paket-Installation abgeschlossen ist, führen Sie **Mssql-Conf Setup** und befolgen Sie die Anweisungen das SA-Kennwort festlegen und Ihre Edition auswählen.
+1. Nach der Paket-Installation abgeschlossen ist, führen Sie **Mssql-Conf Setup** und befolgen Sie die Anweisungen, um das SA-Kennwort festlegen, und wählen die Version.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -116,3 +116,4 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
 > **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Verwaltungs- und Entwicklungstools Aufgaben ausführen. Andere Tools umfassen [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) und [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

@@ -1,38 +1,49 @@
 ---
-title: "Set-PowerPivotSystemService-Cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Set-PowerPivotSystemService-Cmdlet | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 6157a4fc3b43c1a7dad7805c3efa5677d85b4d66
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Set-PowerPivotSystemService-Cmdlet
+# <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService-Cmdlet
+  
+  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+  
   Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
+
+>[!NOTE] 
+>In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
   
  **Gilt für:** SharePoint 2010 und SharePoint 2013.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-UpdateAssemblyInformation <switch>] [-WorkbookUpgradeOnDataRefresh <boolean>] [-DirectTCPConnections <boolean>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Das Cmdlet „Set-PowerPivotSystemService“ aktualisiert die Eigenschaften des übergeordneten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service-Objekts in der Farm.  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
-### -Identity \<PowerPivotMidTierServicePipeBind>  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind >  
  Gibt das übergeordnete Objekt an, für das Sie Eigenschaften aktualisieren. Der Wert muss eine gültige GUID sein, die das Objekt in der Farm eindeutig identifiziert.  
   
 |||  
@@ -43,7 +54,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -UpdateAssemblyInformation \<switch>  
+### <a name="-updateassemblyinformation-switch"></a>' Updateassemblyinformation ' - \<wechseln >  
  Wird nur zu Upgradezwecken verwendet. Wenn sich die in der Farm bereitgestellte Assemblyversion von der Version unterscheidet, die in der SharePoint-Konfigurationsdatenbank gespeichert ist, können Sie dieses Cmdlet ausführen, um die Assemblyinformationen in der Konfigurationsdatenbank zu aktualisieren. Informationen zur Assemblyversion sind in den Dateieigenschaften der Datei Microsoft.AnalysisServices.SharePoint.Integration.dll verfügbar, die in der globalen Assembly gespeichert ist.  
   
 |||  
@@ -54,7 +65,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -WorkbookUpgradeOnDataRefresh \<boolean>  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<booleschen >  
  Wird verwendet, um eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Arbeitsmappe beim Starten einer geplanten Datenaktualisierung auf dem Server automatisch zu aktualisieren. Die Datenaktualisierung wird nur für Arbeitsmappen unterstützt, die mit der aktuellen Version des Servers übereinstimmen. Wenn Sie diese Eigenschaft aktivieren, wird eine Arbeitsmappe automatisch aktualisiert, damit die Datenaktualisierung fortgesetzt werden kann. Diese Eigenschaft wird auf Serverinstanzebene festgelegt. Sie können sie nicht für bestimmte Arbeitsmappen, Bibliotheken, Websites oder Benutzer variieren.  
   
 |||  
@@ -65,8 +76,8 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -DirectTCPConnections \<boolean>  
- Gibt an, dass Excel Services alle Abfragen direkt an die Instanz von SQL Server Analysis Services (POWERPIVOT) sendet, für die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenbank geladen wurde. So wird der MSOLAP-Datenanbieter- und Kanaltransport umgangen, der andernfalls für alle Abfrageanforderungen verwendet wird, die an eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenbank gesendet werden.  
+### <a name="-directtcpconnections-boolean"></a>– DirectTCPConnections \<booleschen >  
+ Gibt an, dass Excel Services alle Abfragen direkt an die Instanz von SQL Server Analysis Services (POWERPIVOT) sendet, für die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank geladen wurde. So wird der MSOLAP-Datenanbieter- und Kanaltransport umgangen, der andernfalls für alle Abfrageanforderungen verwendet wird, die an eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank gesendet werden.  
   
  Das Festlegen dieser Parameter verbessert die Leistung und Skalierbarkeit von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Abfragen, indem die Verbindungen mit geladenen Datenbanken effizienter gemacht werden. Beachten Sie, dass dieser Parameter nicht das Verhalten ändert, wie die anfängliche Ladeanforderung zugeordnet wird. Andere Parameter, z.B. –RoundRobinAllocation und –HealthBasedAllocation, die zum Zuordnen von Datenbankladeanforderungen für mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Instanzen in der Farm verwendet werden, sind nicht betroffen, da –DirectTCPConnections nur für Abfragen gilt, die nach dem Laden der Datenbank ausgegeben werden.  
   
@@ -80,7 +91,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Bestätigen Sie \<wechseln >  
  Fordert eine Bestätigung an, bevor der Befehl ausgeführt wird. Dieser Wert ist standardmäßig aktiviert. Geben Sie Confirm:$false für einen Befehl an, um die Bestätigungsantwort in einem Befehl zu umgehen.  
   
 |||  
@@ -91,10 +102,10 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### \<CommonParameters>  
- Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+ Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Eingaben und Ausgaben  
+## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
  Mit dem Eingabetyp wird festgelegt, welchen Typ von Objekten Sie über die Pipeline an das Cmdlet übergeben können. Der Rückgabetyp bezeichnet den Typ der vom Cmdlet zurückgegebenen Objekte.  
   
 |||  
@@ -102,7 +113,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Eingaben|Keine.|  
 |Ausgaben|Keine.|  
   
-## Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
 ```  
 C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true  
@@ -111,3 +122,4 @@ C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true
  Aktiviert das automatische Upgrade von Arbeitsmappen früherer Versionen, damit die geplante Datenaktualisierung fortgesetzt werden kann.  
   
   
+

@@ -1,24 +1,29 @@
 ---
-title: "L&#246;schen des Zwischenspeichers von Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Löschen der Analysis Services Caches | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# L&#246;schen des Zwischenspeichers von Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
   Zur Verbesserung der Abfrageleistung werden Daten von Analysis Services zwischengespeichert. In diesem Thema sind Empfehlungen für die Verwendung des XMLA ClearCache-Befehls enthalten. Der Befehl dient dazu, Zwischenspeicher zu leeren, die als Antwort auf eine MDX-Abfrage erstellt wurden. Die Auswirkungen der Ausführung von ClearCache sind abhängig davon, ob Sie ein tabellarisches oder ein mehrdimensionales Modell verwenden.  
   
  **Löschen des Zwischenspeichers für mehrdimensionale Modelle**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  Verglichen mit den Empfehlungen zum Löschen von mehrdimensionalen Modellzwischenspeichern während der Leistungstests gibt es keine umfassende Empfehlung zum Löschen von tabellarische Modellzwischenspeichern. Wenn Sie die Bereitstellung eines tabellarischen Modells nicht verwalten, das sensible Daten enthält, gibt es keine bestimmte administrative Aufgabe, die erfordert, den Zwischenspeicher zu löschen.  
   
-## Löschen des Zwischenspeichers für Analysis Services-Modelle  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Löschen des Zwischenspeichers für Analysis Services-Modelle  
  Verwenden Sie XMLA und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um den Zwischenspeicher zu löschen. Sie können den Zwischenspeicher auf Datenbank-, Cube-, Dimensions-, Tabellen- oder Measuregruppenebene löschen. Die folgenden Schritte zum Löschen des Zwischenspeichers auf Datenbankebene gelten für mehrdimensionale und tabellarische Modelle.  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  Zum Löschen des Zwischenspeichers müssen Sie einen Objektbezeichner für die **ClearCache** -Anweisung in einer XMLA-Abfrage bereitstellen. Im ersten Schritt in diesem Thema erfahren Sie, wie ein Objektbezeichner abgerufen wird.  
   
-#### Schritt 1: Abrufen des Objektbezeichners  
+#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Abrufen des Objektbezeichners  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der rechten Maustaste auf ein Objekt, wählen Sie **Eigenschaften** aus, und kopieren Sie den Wert aus der ID-Eigenschaft im Bereich **Eigenschaften**. Dieser Ansatz funktioniert für die Datenbank, Cube, Dimension oder Tabelle.  
+1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf ein Objekt, wählen Sie **Eigenschaften**aus, und kopieren Sie den Wert aus der ID-Eigenschaft im Bereich **Eigenschaften** . Dieser Ansatz funktioniert für die Datenbank, Cube, Dimension oder Tabelle.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Measuregruppe, und wählen Sie **Skript für Measuregruppe als** aus, um die Measuregruppen-ID abzurufen. Wählen Sie entweder **Erstellen** oder **Ändern**, und senden Sie die Abfrage an ein Fenster. Die ID der Measuregruppe ist in der Objektdefinition sichtbar. Kopieren Sie die ID der Objektdefinition.  
+2.  Klicken Sie mit der rechten Maustaste auf die Measuregruppe, und wählen Sie **Skript für Measuregruppe als**aus, um die Measuregruppen-ID abzurufen. Wählen Sie entweder **Erstellen** oder **Ändern**, und senden Sie die Abfrage an ein Fenster. Die ID der Measuregruppe ist in der Objektdefinition sichtbar. Kopieren Sie die ID der Objektdefinition.  
   
-#### Schritt 2: Ausführen der Abfrage  
+#### <a name="step-2-run-the-query"></a>Schritt 2: Ausführen der Abfrage  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Neue Abfrage**, und wählen Sie anschließend **XMLA** aus.  
+1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Neue Abfrage**, und wählen Sie anschließend **XMLA**aus.  
   
 2.  Kopieren Sie das folgende Codebeispiel in das XMLA-Abfragefenster. Ändern Sie **DatabaseID** in die ID der Datenbank auf der aktuellen Verbindung.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## Siehe auch  
- [Skriptverwaltungsaufgaben in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>Siehe auch  
  [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Aktionen in mehrdimensionalen Modellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aktionen [Analysis Services], erstellen"
-  - "Berichtsaktionen [Analysis Services]"
-  - "Drillthroughaktionen [Analysis Services]"
-  - "Cubes [Analysis Services], Aktionen"
+title: Aktionen in mehrdimensionalen Modellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aktionen in mehrdimensionalen Modellen
+# <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
   Eine Aktion ist ein vom Endbenutzer initiierter Vorgang, der auf einem ausgewählten Cube oder Teil eines Cubes ausgeführt wird. Der Vorgang kann eine Anwendung mit dem ausgewählten Element als Parameter starten, oder er kann Informationen zum ausgewählten Element abrufen. Weitere Informationen zu Aktionstypen finden Sie unter [Aktionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Mithilfe der Registerkarte **Aktionen** des Cube-Designers können Sie Aktionen für einen Cube erstellen. Geben Sie Folgendes an:  
@@ -82,7 +87,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Sie müssen Analysis Services Scripting Language (ASSL) oder Analysis Management Objects (AMO) verwenden, um HTML- und Befehlszeilen-Aktionstypen zu definieren. Weitere Informationen finden Sie unter [Action-Element &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Type-Element &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) und [Programmieren von erweiterten AMO OLAP-Objekten](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
-## Erstellen einer Berichtsaktion  
+## <a name="creating-a-reporting-action"></a>Erstellen einer Berichtsaktion  
  Der Berichtsserver antwortet auf URL-basierte Anforderungen nach Berichten. Klicken Sie zum Erstellen einer Berichtsaktion im Menü **Cube** auf **Neue Berichtsaktion**. Eine Berichtsaktion zeichnet sich durch die folgenden spezifischen Optionen aus.  
   
  **Berichtsserver**  
@@ -95,7 +100,7 @@ caps.handback.revision: 20
 |**Berichtsformat**|HTML5, HTML3, Excel oder PDF.|  
   
 > [!NOTE]  
->  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie in der Servernameneigenschaft Transport Layer Security (https:) angeben.  
+>  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie in der Servernameneigenschaft Transport Layer Security (https:) angeben.  
   
  **Parameter (Optional)**  
  Die Parameter werden als Bestandteil der URL-Zeichenfolge an den Server gesendet, wenn die Aktion erstellt wird. Dazu gehören **Parametername** und **Parameterwert**, wobei es sich um einen MDX-Ausdruck handelt.  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## Erstellen einer Drillthroughaktion  
+## <a name="creating-a-drillthrough-action"></a>Erstellen einer Drillthroughaktion  
  Eine Drillthroughaktion wird durch eine Rowsetaktion definiert, die als Drillthroughanweisung an die Clientanwendung zurückgegeben wird. Das Aktionsziel ist ein Mitglied einer Measuregruppe. Klicken Sie zum Erstellen einer neuen Drillthroughaktion im Menü **Cube** auf **Neue Drillthroughaktion**. Eine Drillthroughaktion zeichnet sich durch die folgenden spezifischen Optionen aus:  
   
  **Drillthroughspalten**  
  Wählen Sie eine oder mehrere Dimensionen aus und für jede Dimension die durch die Aktion an die Clientanwendung zurückgegebenen Drillthroughspalten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Cubes in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

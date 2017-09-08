@@ -1,31 +1,36 @@
 ---
-title: "Klassifikationsmatrix (Analysis Services   Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodelle [Analysis Services], überprüfen"
-  - "Überprüfen von Data Mining-Modellen"
-  - "Anzeigen der Mininggenauigkeit"
-  - "Anzeigen der Mininggenauigkeit"
-  - "Verwirrungsmatrix [Data Mining]"
-  - "Klassifikationsmatrix [Analysis Services]"
-  - "Genauigkeitstests [Data Mining]"
+title: "Klassifikationsmatrix (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], validating
+- validating data mining models
+- viewing mining accuracy
+- displaying mining accuracy
+- confusion matrix [data mining]
+- classification matrix [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccf1a17862dd132865111d6ab7c6c5175bf86c0d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Klassifikationsmatrix (Analysis Services   Data Mining)
+# <a name="classification-matrix-analysis-services---data-mining"></a>Klassifikationsmatrix (Analysis Services   Data Mining)
   In einer *Klassifikationsmatrix* werden alle im Modell enthaltenen Fälle in Kategorien unterteilt. Dabei wird festgestellt, ob der vorhergesagte Wert mit dem Istwert übereinstimmt. Alle Fälle in jeder Kategorie werden dann gezählt und die Summen in der Matrix angezeigt. Die Klassifikationsmatrix ist ein Standardtool für die Auswertung statistischer Modelle und auch unter dem Namen *Verwirrungsmatrix*bekannt.  
   
  In dem Diagramm, das bei Auswahl der **Klassifikationsmatrix** erstellt wird, werden die Istwerte für jeden angegebenen, vorhergesagten Status mit den vorhergesagten Werten verglichen. Durch die Zeilen der Matrix werden die vorhergesagten Werte und durch die Spalten die Istwerte des Modells dargestellt. In der Analyse werden die folgenden Kategorien verwendet: *falsch positiv*, *wahr positiv*, *falsch negativ*und *wahr negativ*.  
@@ -34,12 +39,12 @@ caps.handback.revision: 43
   
  In diesem Abschnitt wird erläutert, wie Sie eine Klassifikationsmatrix erstellen und die Ergebnisse interpretieren können.  
   
-## Grundlegendes zur Klassifikationsmatrix  
+## <a name="understanding-the-classification-matrix"></a>Grundlegendes zur Klassifikationsmatrix  
  Das erstellte Modell ist ein Teil des Lernprogramms zu den Data Mining-Grundlagen. Mit dem [TM_DecisionTree]-Modell, das die Erstellung einer Targeted Mailing-Kampagne erleichtert, kann vorhergesagt werden, welche Kunden am ehesten ein Fahrrad kaufen werden. Um die erwartete Brauchbarkeit dieses Modells zu testen, verwenden Sie ein Dataset, für das die Werte der Ergebnisattributs, [Bike Buyer], bereits bekannt sind. Normalerweise verwenden Sie ein Testdataset, das Sie beim Erstellen der Miningstruktur zum Trainieren des Modells reserviert haben.  
   
  Es gibt nur zwei mögliche Ergebnisse: Ja (der Kunde kauft wahrscheinlich ein Fahrrad), und Nein (der Kunde kauft wahrscheinlich kein Fahrrad). Die resultierende Klassifikationsmatrix ist daher relativ einfach.  
   
-## Interpretieren der Ergebnisse  
+## <a name="interpreting-the-results"></a>Interpretieren der Ergebnisse  
  Die folgende Tabelle enthält die Klassifikationsmatrix für das TM_DecisionTree-Modell. Bedenken Sie bei diesem vorhersagbaren Attribut, dass 0 Nein und 1 Ja bedeutet.  
   
 |Vorhergesagt|0 (Ist-Wert)|1 (Ist-Wert)|  
@@ -57,7 +62,7 @@ caps.handback.revision: 43
   
  Wenn Sie die Werte in den Zellen, die diagonal gegenüber liegen, addieren, können Sie die Gesamtgenauigkeit des Modells bestimmen. Eine Diagonale zeigt die Gesamtanzahl korrekter Vorhersagen an, die andere Diagonale gibt die Gesamtanzahl falscher Vorhersagen an.  
   
-### Verwenden von mehreren vorhersagbaren Werten  
+### <a name="using-multiple-predictable-values"></a>Verwenden von mehreren vorhersagbaren Werten  
  Der Fall [Bike Buyer] ist besonders leicht zu interpretieren, da es nur zwei mögliche Werte gibt. Wenn das vorhersagbare Attribut mehrere mögliche Werte hat, fügt die Klassifikationsmatrix eine neue Spalte für jeden möglichen Istwert hinzu und zählt dann die Anzahl der Übereinstimmungen für jeden vorhergesagten Wert. Die folgende Tabelle enthält die Ergebnisse für ein anderes Modell, in dem drei Werte (0, 1, 2) möglich sind.  
   
 |Vorhergesagt|0 (Ist-Wert)|1 (Ist-Wert)|2 (Istwert)|  
@@ -68,22 +73,22 @@ caps.handback.revision: 43
   
  Auch wenn der Bericht durch die zusätzlichen Spalten komplexer wird, können die zusätzlichen Angaben sehr nützlich sein, wenn Sie die kumulierten Kosten einer falschen Vorhersage beurteilen möchten. Um Summen für die Diagonalen zu erstellen oder die Ergebnisse verschiedener Zeilenkombinationen zu vergleichen, klicken Sie auf der Registerkarte **Klassifikationsmatrix** auf die Schaltfläche **Kopieren** , und fügen Sie den Bericht in Excel ein. Sie können auch einen Client wie den Data Mining-Client für Excel verwenden, der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen unterstützt, um direkt in Excel einen Klassifikationsbericht zu erstellen, der Zahlen und Prozentangaben enthält. Weitere Informationen finden Sie unter [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
   
-## Einschränkungen der Klassifikationsmatrix  
+## <a name="restrictions-on-the-classification-matrix"></a>Einschränkungen der Klassifikationsmatrix  
  Eine Klassifikationsmatrix kann nur mit diskreten vorhersagbaren Attributen verwendet werden.  
   
  Obwohl Sie bei der Modellauswahl auf der Registerkarte **Eingabeauswahl** im **Mininggenauigkeitsdiagramm** -Designer mehrere Modelle hinzufügen können, wird auf der Registerkarte **Klassifikationsmatrix** eine separate Matrix für jedes Modell angezeigt.  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Die folgenden Themen enthalten weitere Informationen zum Erstellen und Verwenden von Klassifikationsmatrizen und weiteren Diagrammen.  
   
 |Thema|Links|  
 |------------|-----------|  
-|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Lernprogramm zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Lernprogramm zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
 |Erläutert verwandte Diagrammtypen.|[Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Beschreibt die Verwendungsmöglichkeiten für die Kreuzvalidierung bei Miningmodellen und Miningstrukturen.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Beschreibt Schritte zum Erstellen von Prognosegütediagrammen und anderen Genauigkeitsdiagrammen.|[Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

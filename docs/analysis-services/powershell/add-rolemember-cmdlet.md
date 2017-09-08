@@ -1,37 +1,48 @@
 ---
-title: "Add-RoleMember-Cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Add-RoleMember-Cmdlet | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e2a71e5b4fb5aae12ce16b419da832d4b1237d28
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Add-RoleMember-Cmdlet
+# <a name="add-rolemember-cmdlet"></a>Add-RoleMember-Cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Fügen Sie der angegebenen Rolle einer Analysis Services-Tabelle oder einer multidimensionalen Datenbank ein Element hinzu.  
+
+>[!NOTE] 
+>In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `Add-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
   
  `Add-RoleMember [-MemberName] <System.String> [-DatabaseRole] <Microsoft.AnalysisServices.Role> [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Das Add-RoleMember-Cmdlet fügt einer vorhandenen Datenbankrolle ein gültiges Mitglied hinzu. Nur Datenbankrollen sind zulässig. Sie können dieses Cmdlet nicht verwenden, um einer Serverrolle Mitglieder hinzuzufügen.  
   
  Sie können jeweils nur ein Mitglied hinzufügen, das entweder ein Benutzer- oder ein Gruppenkonto sein kann.  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
-### -MemberName \<string>  
+### <a name="-membername-string"></a>-MemberName \<Zeichenfolge >  
  Gibt den Windows-Benutzer oder die Windows-Gruppe an, der bzw. die der Rolle hinzugefügt werden soll.  
   
 |||  
@@ -42,7 +53,7 @@ caps.handback.revision: 14
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Datenbank \<Zeichenfolge >  
  Gibt die Datenbank an, zu der die Rolle gehört.  
   
 |||  
@@ -53,7 +64,7 @@ caps.handback.revision: 14
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -RoleName \<string>  
+### <a name="-rolename-string"></a>-RoleName \<Zeichenfolge >  
  Gibt die Rolle an, der Sie Mitglieder hinzufügen.  
   
 |||  
@@ -64,7 +75,7 @@ caps.handback.revision: 14
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -DatabaseRole \<string>  
+### <a name="-databaserole-string"></a>DatabaseRole - \<Zeichenfolge >  
  Gibt das Microsoft.AnalysisServices.Role-Objekt an, dem das Mitglied hinzugefügt werden soll. Verwenden Sie diesen Parameter als Alternative zum –Database-Parameter und dem –RoleName-Parameter, wenn Sie die Datenbankrolle über Pipeline zur Verfügung stellen möchten.  
   
 |||  
@@ -75,10 +86,10 @@ caps.handback.revision: 14
 |Pipelineeingabe akzeptieren?|true (ByPropertyName)|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### \<CommonParameters>  
- Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+ Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Eingaben und Ausgaben  
+## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
  Mit dem Eingabetyp wird festgelegt, welchen Typ von Objekten Sie über die Pipeline an das Cmdlet übergeben können. Der Rückgabetyp bezeichnet den Typ der vom Cmdlet zurückgegebenen Objekte.  
   
 |||  
@@ -86,7 +97,7 @@ caps.handback.revision: 14
 |Eingaben|Keine.|  
 |Ausgaben|InclusionThresholdSetting|  
   
-## Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -94,7 +105,7 @@ PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername “adventure
   
  Dieser Befehl fügt der Leserrolle für die AdventureWorks-Datenbank, die auf einer lokalen Standardinstanz ausgeführt wird, ein Windows-Domänenbenutzerkonto hinzu.  
   
-## Beispiel 2  
+## <a name="example-2"></a>Beispiel 2  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> $roles= dir .\databases\AWTEST\Roles  
@@ -104,7 +115,7 @@ PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername:“adventure
   
  Zeile 1 fügt der Pipeline alle Datenbankrollen der AWTEST-Datenbank hinzu. In Zeile 2, in die Sie "$roles" an der Eingabeaufforderung eingeben, wird das Rollen-Array angezeigt. Zeile 3 fügt den Windows-Benutzer "adventure-works\bobh" als Mitglied der ersten Rolle im Array hinzu.  
   
-## Beispiel 3  
+## <a name="example-3"></a>Beispiel 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  
@@ -113,8 +124,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Add-ro
   
  Dieser Befehl fügt der ersten Rolle in einem Array ein Windows-Domänenbenutzerkonto hinzu. Dabei wird das Array durch Auflisten der untergeordneten Elemente des Ordners "Roles" im Kontext einer bestimmten Datenbank (AWTEST) erstellt.  
   
-## Siehe auch  
- [PowerShell-Skripts in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Verwalten von tabellarischen Modellen mit PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   

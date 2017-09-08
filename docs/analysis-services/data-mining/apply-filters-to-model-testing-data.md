@@ -1,27 +1,32 @@
 ---
-title: "Anwenden von Filtern zum Modellieren von Testdaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Eingabezeilen filtern [SQL Server]"
-  - "Filtern von Eingabezeilen [Analysis Services]"
-  - "Mininggenauigkeitsdiagramm [Analysis Services], Filtern von Eingabezeilen"
+title: Anwenden von Filtern zum Modellieren von Testdaten | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anwenden von Filtern zum Modellieren von Testdaten
+# <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
   Wenn Sie eine externe Datenquelle angeben, die beim Testen eines verwendet werden soll, können Sie optional einen Filter anwenden, um die Eingabedaten einzuschränken. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
   
  Beispiel: Im Targeted Mailing-Szenario von Adventure Works können Sie einen Filterausdruck wie den folgenden Ausdruck für ProspectiveBuyer erstellen. Dabei handelt es sich um die Tabelle, die die Testdaten enthält und die Testfälle nach Einkommensbereich einschränkt:  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  Weitere Informationen zu den Filtertypen, die angewendet werden können, und zur Auswertung von Filterausdrücken finden Sie unter [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
-### Erstellen eines Filters für externe Testdaten  
+### <a name="create-a-filter-on-external-testing-data"></a>Erstellen eines Filters für externe Testdaten  
   
 1.  Doppelklicken Sie auf die Miningstruktur, die das Modell enthält, das Sie testen möchten, um den Data Mining-Designer zu öffnen.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 44
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-4.  Klicken Sie auf die Durchsuchen-Schaltfläche **(...)**, um ein Dialogfeld zu öffnen, und wählen Sie das externe Dataset aus.  
+4.  Klicken Sie auf die Durchsuchen-Schaltfläche **(...)** , um ein Dialogfeld zu öffnen, und wählen Sie das externe Dataset aus.  
   
 5.  Wählen Sie die Falltabelle aus, und fügen Sie ggf. eine geschachtelte Tabelle hinzu. Ordnen Sie Spalten im Modell nach Bedarf Spalten im externen Dataset zu. Schließen Sie das Dialogfeld **Spaltenzuordnung angeben** , um die Quelltabellendefinition zu speichern.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 44
   
      **Hinweis** Geben Sie die Werte ohne Anführungszeichen ein.  
   
-9. Klicken Sie auf das Textfeld **Und/Oder**, und wählen Sie einen logischen Operator aus, um zu definieren, wie mehrere Bedingungen kombiniert werden.  
+9. Klicken Sie auf das Textfeld **Und/Oder** , und wählen Sie einen logischen Operator aus, um zu definieren, wie mehrere Bedingungen kombiniert werden.  
   
 10. Optional können Sie auf die Schaltfläche zum Durchsuchen **(…)** rechts neben dem Textfeld **Wert** klicken, um das Dialogfeld **Filter** zu öffnen und Bedingungen für die geschachtelte Tabelle oder die einzelnen Spalten der Falltabelle festzulegen.  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 44
   
      Die Filterbedingung wird auf die Datenquelle angewendet, wenn Sie das Genauigkeitsdiagramm erstellen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Wählen Sie eine Genauigkeit Diagrammtyp und einen Satz Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

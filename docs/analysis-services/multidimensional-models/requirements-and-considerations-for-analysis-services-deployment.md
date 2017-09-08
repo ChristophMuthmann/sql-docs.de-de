@@ -1,38 +1,43 @@
 ---
-title: "Anforderungen und &#220;berlegungen f&#252;r die Bereitstellung von Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Arbeitsspeicher [Analysis Services]"
-  - "Skalierbarkeit [Analysis Services]"
-  - "Bereich [Analysis Services]"
-  - "Analysis Services-Bereitstellungen, Anforderungen"
-  - "Bereitstellen [Analysis Services], Anforderungen"
-  - "Speicherplatz [Analysis Services]"
-  - "Anforderungen [Analysis Services]"
-  - "Prozessoren [Analysis Services]"
-  - "Systemanforderungen [Analysis Services]"
-  - "Verfügbarkeit [Analysis Services]"
+title: "Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- memory [Analysis Services]
+- scalability [Analysis Services]
+- space [Analysis Services]
+- Analysis Services deployments, requirements
+- deploying [Analysis Services], requirements
+- disk space [Analysis Services]
+- requirements [Analysis Services]
+- processors [Analysis Services]
+- system requirements [Analysis Services]
+- availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anforderungen und &#220;berlegungen f&#252;r die Bereitstellung von Analysis Services
-  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+# <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
+  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
-## Arbeitsspeicher- und Prozessoranforderungen  
+## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
   
 -   Wenn große oder komplexe Cubes verarbeitet werden. Diese benötigen eine größere Menge von Arbeitsspeicher- und Prozessorressourcen als kleine oder einfache Cubes.  
@@ -47,15 +52,15 @@ caps.handback.revision: 26
   
  Wie viel Arbeitsspeicher- und Prozessorressourcen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Verfügung stehen, hängt von der SQL Server-Edition, dem Betriebssystem, den Hardwarefunktionen sowie davon ab, ob Sie virtuelle oder physische Prozessoren verwenden. Weitere Informationen finden Sie unter den folgenden Links:  
   
- [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
+ [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)  
   
  [Spezifikationen der maximalen Kapazität &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
-## Anforderungen an den Datenträgerspeicher  
+## <a name="disk-space-requirements"></a>Anforderungen an den Datenträgerspeicher  
  Verschiedene Aspekte der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Installation und die Tasks, die sich auf Objektverarbeitung beziehen, erfordern unterschiedlichen Speicherplatz. In der folgenden Liste werden diese Anforderungen beschrieben.  
   
  Cubes  
@@ -73,24 +78,24 @@ caps.handback.revision: 26
 ##  <a name="BKMK_Availability"></a> Überlegungen zur Verfügbarkeit  
  In einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Umgebung ist ein Cube oder Miningmodell möglicherweise für die Abfrage nicht verfügbar, weil ein Hardware- oder Softwarefehler aufgetreten ist. Ein Cube kann auch nicht verfügbar sein, weil er verarbeitet werden muss.  
   
-### Gewährleisten der Verfügbarkeit im Fall von Hardware- oder Softwarefehlern  
+### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Gewährleisten der Verfügbarkeit im Fall von Hardware- oder Softwarefehlern  
  Die Hardware oder Software kann aus verschiedenen Gründen ausfallen. Das Wahren der Verfügbarkeit Ihrer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Installation bezieht sich jedoch nicht nur auf die Problembehandlung der Quellen dieser Fehler, sondern auch auf das Bereitstellen alternativer Ressourcen, die dem Benutzer die weitere Verwendung des Systems ermöglichen, wenn ein Fehler auftritt. Cluster- und Lastenausgleichsserver werden normalerweise zum Bereitstellen der alternativen Ressourcen verwendet, die zum Wahren der Verfügbarkeit erforderlich sind, wenn Hardware- oder Softwarefehler auftreten.  
   
- Um die Verfügbarkeit im Fall eines Hardware- oder Softwarefehlers zu gewährleisten, sollten Sie das Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in einem Failovercluster in Betracht ziehen. In einem Failovercluster führt [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering ein Failover auf einen sekundären Knoten durch, wenn der primäre Knoten aus einem bestimmten Grund einen Fehler aufweist oder neu gestartet werden muss. Nach dem schnell eintretenden Failover greifen Benutzer beim Ausführen einer Abfrage auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu, die auf dem sekundären Knoten ausgeführt wird. Weitere Informationen zu Failoverclustern finden Sie unter [Windows Server Technologies:  Failover Clusters](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx) (Windows Server-Technologien: Failovercluster).  
+ Um die Verfügbarkeit im Fall eines Hardware- oder Softwarefehlers zu gewährleisten, sollten Sie das Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in einem Failovercluster in Betracht ziehen. In einem Failovercluster führt [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering ein Failover auf einen sekundären Knoten durch, wenn der primäre Knoten aus einem bestimmten Grund einen Fehler aufweist oder neu gestartet werden muss. Nach dem schnell eintretenden Failover greifen Benutzer beim Ausführen einer Abfrage auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu, die auf dem sekundären Knoten ausgeführt wird. Weitere Informationen zu Failoverclustern finden Sie unter [Windows Server Technologies:  Failover Clusters](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)(Windows Server-Technologien: Failovercluster).  
   
  Eine andere Lösung bei Verfügbarkeitsproblemen besteht im Bereitstellen des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auf zwei oder mehr Produktionsservern. Anschließend können Sie die Netzwerklastenausgleich-Funktion von Windows-Servern zum Kombinieren der Produktionsserver in einem einzigen Cluster verwenden. In einem NLB-Cluster leitet der NLB-Dienst Benutzerabfragen an die Server um, die noch verfügbar sind, wenn ein Server im Cluster aufgrund von Hardware- oder Softwareproblemen nicht verfügbar ist.  
   
-### Gewährleisten der Verfügbarkeit während der Verarbeitung struktureller Änderungen  
+### <a name="providing-availability-while-processing-structural-changes"></a>Gewährleisten der Verfügbarkeit während der Verarbeitung struktureller Änderungen  
  Bestimmte Änderungen an einem Cube können bewirken, dass der Cube bis zu seiner Verarbeitung nicht verfügbar ist. Wenn Sie z.&nbsp;B. strukturelle Änderungen an einer Dimension in einem Cube vornehmen, muss selbst dann, wenn Sie die Dimension erneut verarbeiten, jeder Cube, der die geänderte Dimension verwendet, ebenfalls verarbeitet werden. Bis Sie diese Cubes verarbeitet haben, können sie nicht durch Benutzer abgefragt werden; es können auch keine Miningmodelle abgefragt werden, die auf einem Cube basieren, der die geänderte Dimension aufweist.  
   
  Wenn Sie die Verfügbarkeit gewährleisten möchten, während die Verarbeitung struktureller Änderungen erfolgt, die sich auf einen oder mehrere Cubes in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auswirken können, sollten Sie die Integration eines Stagingservers und das Verwenden des Assistenten zum Synchronisieren einer Datenbank in Betracht ziehen. Mit dieser Funktion können Sie Daten und Metadaten auf einem Stagingserver aktualisieren und dann eine Onlinesynchronisierung des Produktionsservers und des Stagingservers durchführen. Weitere Informationen finden Sie unter [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md).  
   
- Wenn Sie inkrementelle Aktualisierungen der Quelldaten transparent verarbeiten möchten, aktivieren Sie proaktives Zwischenspeichern. Durch proaktives Zwischenspeichern werden Cubes mit neuen Quelldaten aktualisiert, ohne dass manuelle Verarbeitung erforderlich ist bzw. die Verfügbarkeit von Cubes beeinträchtigt wird. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](../Topic/Proactive%20Caching%20\(Partitions\).md).  
+ Wenn Sie inkrementelle Aktualisierungen der Quelldaten transparent verarbeiten möchten, aktivieren Sie proaktives Zwischenspeichern. Durch proaktives Zwischenspeichern werden Cubes mit neuen Quelldaten aktualisiert, ohne dass manuelle Verarbeitung erforderlich ist bzw. die Verfügbarkeit von Cubes beeinträchtigt wird. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ##  <a name="BKMK_Scalability"></a> Skalierbarkeitsüberlegungen  
  Mehrere Instanzen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem gleichen Computer können zu Leistungsproblemen führen. Eine Option zum Lösen dieser Probleme kann im Vergrößern der Prozessor-, Arbeitsspeicher- und Datenträgerressourcen auf dem Server bestehen. Möglicherweise müssen Sie jedoch auch die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über mehrere Computer hinweg skalieren.  
   
-### Skalieren von Analysis Services über mehrere Computer hinweg  
+### <a name="scaling-analysis-services-across-multiple-computers"></a>Skalieren von Analysis Services über mehrere Computer hinweg  
  Es gibt mehrere Möglichkeiten, um eine Installation von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über mehrere Computer hinweg zu skalieren. In der folgenden Liste werden diese Optionen beschrieben.  
   
 -   Wenn mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf einem Computer vorhanden sind, können Sie eine oder mehrere Instanzen auf einen anderen Computer verschieben.  

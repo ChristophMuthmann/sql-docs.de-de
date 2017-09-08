@@ -1,27 +1,32 @@
 ---
-title: "Leistungsindikatoren (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Leistungsindikatoren (SSAS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Leistungsindikatoren (SSAS)
+# <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
   Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
   
- Der Systemmonitor ist ein MMC-Snap-In ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control), das die Verwendung von Ressourcen nachverfolgt. Sie können dieses MMC-Snap-In starten, indem Sie an der Eingabeaufforderung **PerfMon** eingeben oder in der Systemsteuerung auf **Verwaltung** und anschließend auf **Systemmonitor** klicken. Mithilfe des Systemmonitors können Sie die Leistung und Aktivität von Server und Prozessen mithilfe vordefinierter Objekte und Leistungsindikatoren nachverfolgen sowie Ereignisse mithilfe benutzerdefinierter Leistungsindikatoren überwachen. Der Systemmonitor erfasst Anzahlwerte anstelle von Daten zu den Ereignissen, z. B. die Speicherauslastung, die Anzahl der aktiven Transaktionen oder die CPU-Aktivität. Für bestimmte Leistungsindikatoren können auch Schwellenwerte festgelegt werden, um Warnungen zu generieren, durch die Operatoren benachrichtigt werden.  
+ Der Systemmonitor ist ein MMC-Snap-In ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control), das die Verwendung von Ressourcen nachverfolgt. Sie können dieses MMC-Snap-In starten, indem Sie an der Eingabeaufforderung **PerfMon** eingeben oder in der Systemsteuerung auf **Verwaltung**und anschließend auf **Systemmonitor**klicken. Mithilfe des Systemmonitors können Sie die Leistung und Aktivität von Server und Prozessen mithilfe vordefinierter Objekte und Leistungsindikatoren nachverfolgen sowie Ereignisse mithilfe benutzerdefinierter Leistungsindikatoren überwachen. Der Systemmonitor erfasst Anzahlwerte anstelle von Daten zu den Ereignissen, z. B. die Speicherauslastung, die Anzahl der aktiven Transaktionen oder die CPU-Aktivität. Für bestimmte Leistungsindikatoren können auch Schwellenwerte festgelegt werden, um Warnungen zu generieren, durch die Operatoren benachrichtigt werden.  
   
  Der Systemmonitor ist in der Lage, Remoteinstanzen und lokale Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Weitere Informationen finden Sie unter [Verwenden des Systemmonitors](http://technet.microsoft.com/library/cc749115.aspx).  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  Leistungsindikatoren werden so gruppiert, dass verwandte Leistungsindikatoren leichter auffindbar sind.  
   
-## Leistungsindikatoren nach Gruppen  
+## <a name="counters-by-groups"></a>Leistungsindikatoren nach Gruppen  
   
 |Gruppieren|Description|  
 |-----------|-----------------|  
@@ -159,7 +164,7 @@ caps.handback.revision: 14
 |Leistungsindikator|Description|  
 |-------------|-----------------|  
 |Seitenpool 64 KB zugeordnet|Von System geliehener Arbeitsspeicher in KB.  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
-|Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
+|Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
 |Seitenpool 8 KB zugeordnet|Von 64 KB-Seitenpool geliehener Arbeitsspeicher (in KB).  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
 |Seitenpool 8 KB Lookaside|Aktueller Speicher in 8 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
 |Seitenpool 1 KB zugeordnet|Von 64 KB-Seitenpool geliehener Arbeitsspeicher (in KB).  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Dateispeicher-Seitenfehler/s|Seitenfehlerrate des Dateispeichers.|  
 |Dateispeicher-Lesevorgänge/s|Dateispeicher-Seitenlesevorgänge/s|  
 |Dateispeicher-Lesevorgänge in KB/s|Dateispeicher-Lesevorgänge in KB/s|  
-|Dateispeicher-Schreibvorgänge/s|In Dateispeicher geschriebene Seiten pro Sekunde  Die Schreibvorgänge sind asynchron.|  
-|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher-Schreibvorgänge in KB/s.  Die Schreibvorgänge sind asynchron.|  
+|Dateispeicher-Schreibvorgänge/s|Im Dateispeicher geschriebene Seiten pro Sekunde.  Die Schreibvorgänge sind asynchron.|  
+|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher in KB/s.  Die Schreibvorgänge sind asynchron.|  
 |Dateispeicher-E/A-Fehler/s|Rate der Dateispeicher-E/A-Fehler.|  
 |Dateispeicher-E/A-Fehler|Dateispeicher-E/A-Fehler gesamt.|  
 |Dateispeicher-Clockpages überprüft/s|Rate, mit der der Hintergrundbereinigungsprozess Seiten daraufhin überprüft, ob sie entfernt werden können.|  

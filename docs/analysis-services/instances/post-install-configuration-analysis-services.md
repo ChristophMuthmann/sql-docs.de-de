@@ -1,33 +1,38 @@
 ---
-title: "Konfiguration nach der Installation (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: Konfiguration (Analysis Services) nach der Installation | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Konfiguration nach der Installation (Analysis Services)
+# <a name="post-install-configuration-analysis-services"></a>Konfiguration nach der Installation (Analysis Services)
   Nach der Installation von Analysis Services sind weitere Konfigurationsschritte erforderlich, um einen voll funktionsfähigen Server für die allgemeine Verwendung bereitzustellen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Sobald Datenbanken zur Bereitstellung verfügbar sind, müssen zusätzliche Schritte ausgeführt werden. Sie müssen Rollenmitgliedschaften für die Datenbank konfigurieren, um den Benutzerzugriff auf die Daten zu gewähren, eine Sicherungs- und Wiederherstellungsstrategie für Datenbanken entwerfen und entscheiden, ob Daten in regelmäßigen Intervallen nach einem Verarbeitungszeitplan aktualisiert werden sollen. Weitere Informationen zur Bereitstellung und Verwaltung von Datenbanken finden Sie unter den folgenden Links: [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) und [Tabellarische Modelldatenbanken &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
-## Instanzkonfiguration  
+## <a name="instance-configuration"></a>Instanzkonfiguration  
  Analysis Services ist ein replizierbarer Dienst, d. h., Sie können mehrere Instanzen des Diensts auf einem einzelnen Server installieren. Jede zusätzliche Instanz wird mithilfe von SQL Server-Setup separat als benannte Instanz installiert und unabhängig konfiguriert, um ihren jeweiligen Verwendungszweck zu erfüllen. Beispielsweise kann auf einem Entwicklungsserver Flight Recorder ausgeführt werden, oder es werden Standardwerte für die Datenspeicherung verwendet, die auf Servern mit Produktionsarbeitslasten normalerweise geändert werden müssen. Die Anpassung der Systemkonfiguration ist außerdem erforderlich, wenn die Analysis Services-Instanz auf Hardware installiert wird, die von anderen Diensten gemeinsam genutzt wird. Wenn mehrere datenintensive Anwendungen auf derselben Hardware gehostet werden, können Sie die Ressourcenverfügbarkeit anwendungsübergreifend optimieren, indem Sie die Arbeitsspeicherschwellenwerte mithilfe der Servereigenschaften herabsetzen.  
   
-## Aufgaben nach der Installation  
+## <a name="post-installation-tasks"></a>Aufgaben nach der Installation  
   
 |Link|Taskbeschreibung|  
 |----------|----------------------|  
@@ -39,12 +44,12 @@ caps.handback.revision: 10
 |[Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Während der Installation wählen Sie einen Servermodus aus, der den Modelltyp (mehrdimensional oder tabellarisch) angibt, unter dem der Server ausgeführt wird. Wenn Sie unsicher sind, welchen Servermodus Sie verwenden sollen, ermitteln Sie den installierten Modus anhand der Informationen in diesem Thema.|  
 |[Umbenennen einer Analysis Services-Instanz](../../analysis-services/instances/rename-an-analysis-services-instance.md)|Ein aussagekräftiger Name erleichtert es Ihnen, zwischen mehreren Instanzen mit unterschiedlichen Servermodi oder zwischen Instanzen, die in erster Linie von Abteilungen oder Teams verwendet werden, zu unterscheiden. Wenn Sie den Instanznamen in einen Namen ändern möchten, der die Verwaltung von Installationen vereinfacht, befolgen Sie die Anweisungen in diesem Thema.|  
   
-## Nächste Schritte  
+## <a name="next-steps"></a>Nächste Schritte  
  Erfahren Sie, wie Sie von Microsoft-Anwendungen oder benutzerdefinierten Anwendungen, die die Clientbibliotheken verwenden, eine Verbindung mit Analysis Services herstellen. Abhängig von den Anforderungen der Lösung kann es erforderlich sein, den Dienst für die Kerberos-Authentifizierung zu konfigurieren. Für domänenübergreifende Verbindungen ist der HTTP-Zugriff erforderlich. Unter [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) finden Sie Anweisungen zu den nächsten Schritten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Installation für SQLServer 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
- [Installieren von Analysis Services im mehrdimensionalen Modus und im Data Mining-Modus](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
+ [Installieren von Analysis Services im mehrdimensionalen Modus und im Data Mining-Modus](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Installieren von Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Installieren von Analysis Services im PowerPivot-Modus](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   

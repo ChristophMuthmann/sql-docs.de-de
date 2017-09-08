@@ -1,23 +1,28 @@
 ---
-title: "Vorhersageabfragen (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Vorhersageabfragen (Datamining) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Vorhersageabfragen (Data Mining)
+# <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
   Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
   
  Funktionell gibt es unterschiedliche Typen von Vorhersageabfragen, die in SQL Server unterstützt wurden, abhängig von der Art der Eingabe für die Abfrage:  
@@ -82,9 +87,9 @@ caps.handback.revision: 14
  Nachdem Sie alle relevanten Spalten erfolgreich zugeordnet haben, führen Sie die Abfrage aus. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt für jede Zeile in den neuen Daten Vorhersagen auf Grundlage der Muster im Modell. Sie können die Ergebnisse in einer neuen Tabelle in der Datenquellensicht speichern, die die externen Daten enthält, oder Sie können die Daten kopieren und einfügen, wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden.  
   
 > [!WARNING]  
->  Wenn Sie den Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, muss die externe Datenquelle zuerst als Datenquellensicht definiert werden.  
+>  Wenn Sie den Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwenden, muss die externe Datenquelle zuerst als Datenquellensicht definiert werden.  
   
- Wenn Sie einen PREDICTION JOIN mit DMX erstellen, können Sie die externe Datenquelle anhand der Befehle OPENQUERY, OPENROWSET oder SHAPE angeben. Die Standard-Datenzugriffsmethode in den DMX-Vorlagen ist OPENQUERY. Informationen zu diesen Methoden finden Sie unter [Quelldatenabfrage &#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md).  
+ Wenn Sie einen PREDICTION JOIN mit DMX erstellen, können Sie die externe Datenquelle anhand der Befehle OPENQUERY, OPENROWSET oder SHAPE angeben. Die Standard-Datenzugriffsmethode in den DMX-Vorlagen ist OPENQUERY. Informationen zu diesen Methoden finden Sie unter [Quelldatenabfrage &#60;source data query&#62;](../../dmx/source-data-query.md).  
   
 ###  <a name="bkmk_TSQuery"></a> Vorhersagen für Zeitreihenminingmodelle  
  Zeitreihenmodelle unterscheiden sich von anderen Modelltypen. Sie können entweder das unveränderte Modell verwenden, um Vorhersagen zu treffen, oder Sie können neue Daten für das Modell bereitstellen, um das Modell zu aktualisieren und Vorhersagen auf Grundlage der aktuellen Trends zu erstellen. Wenn Sie neue Daten hinzufügen, können Sie angeben, wie die neuen Daten verwendet werden sollen.  
@@ -95,7 +100,7 @@ caps.handback.revision: 14
   
 -   Beim*Ersetzen der Modellfälle* behalten Sie das trainierte Modell bei, ersetzen jedoch die zugrunde liegenden Fälle durch einen Satz neuer Falldaten. Diese Option ist nützlich, wenn Sie den Trend im Modell behalten, diesen aber auf einen anderen Satz von Daten anwenden möchten.  
   
-     Das ursprüngliche Modell könnte z. B. mit einem Satz von Daten mit sehr hohen Verkaufsvolumen trainiert worden sein. Wenn Sie die zugrunde liegenden Daten durch eine neue Reihe (vielleicht aus einer Filiale mit niedrigerem Verkaufsvolumen) ersetzen, wird der Trend beibehalten, aber die Vorhersagen beginnen mit den Werten der neuen ersetzten Reihe.  
+     Das ursprüngliche Modell könnte z. B. mit einem Satz von Daten mit sehr hohen Verkaufsvolumen trainiert worden sein. Wenn Sie die zugrunde liegenden Daten durch eine neue Reihe (vielleicht aus einer Filiale mit niedrigerem Verkaufsvolumen) ersetzen, wird der Trend beibehalten, aber die Vorhersagen beginnen mit den Werten der neuen ersetzten Reihe.  
   
  Unabhängig vom verwendeten Ansatz ist der Ausgangspunkt für Vorhersagen stets das Ende der ursprünglichen Reihe.  
   
@@ -147,7 +152,7 @@ FROM
   
  Wenn Ihr Anbieter keine hierarchischen Rowsets verarbeiten kann, können Sie die Ergebnisse mit dem FLATTEN-Schlüsselwort in der Vorhersageabfrage vereinfachen. Weitere Informationen sowie Beispiele vereinfachter Rowsets finden Sie unter [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inhaltsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [Datendefinitionsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

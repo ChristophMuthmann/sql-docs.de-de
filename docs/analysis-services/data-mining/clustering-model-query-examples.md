@@ -1,27 +1,32 @@
 ---
-title: "Beispiele f&#252;r Clusteringmodellabfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clustering [Data Mining]"
-  - "Inhaltsabfragen [DMX]"
-  - "Clustering-Algorithmen [Analysis Services]"
+title: Clusteringmodellabfragen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Beispiele f&#252;r Clusteringmodellabfragen
+# <a name="clustering-model-query-examples"></a>Beispiele für Clusteringmodellabfragen
   Wenn Sie eine Abfrage für ein Data Mining-Modell erstellen, können Sie Metadaten über das Modell abrufen oder eine Inhaltsabfrage erstellen, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
   
  In diesem Abschnitt wird erklärt, wie die Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus basieren.  
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-## Suchen nach Informationen über Cluster  
+## <a name="finding-information-about-clusters"></a>Suchen nach Informationen über Cluster  
  Die nützlichsten Inhaltsabfragen für Clustermodelle geben im Allgemeinen dieselben Informationen zurück, die Sie über das Durchsuchen des **Cluster-Viewers**finden können. Dies schließt Clusterprofile, Clustermerkmale und Clusterunterscheidung ein. Dieser Abschnitt enthält Beispiele für Abfragen, die diese Informationen abrufen.  
   
 ###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Zurückgeben eines Clusters oder einer Liste von Clustern  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   Die Spalte NODE_DESCRIPTION enthält eine durch Trennzeichen getrennte Liste von Attributen. Beachten Sie, dass die Liste der Attribute möglicherweise für Anzeigezwecke gekürzt wird.  
   
--   Die geschachtelte Tabelle in der Spalte NODE_DISTRIBUTION enthält die vollständige Liste der Attribute für den Cluster. Wenn Ihr Client keine hierarchischen Rowsets unterstützt, können Sie die geschachtelte Tabelle zurückgeben, indem Sie vor der Spaltenliste SELECT das Schlüsselwort FLATTENED hinzufügen. Weitere Informationen zum FLATTENED-Schlüsselwort finden Sie unter [SELECT FROM &#60;Modell&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md).  
+-   Die geschachtelte Tabelle in der Spalte NODE_DISTRIBUTION enthält die vollständige Liste der Attribute für den Cluster. Wenn Ihr Client keine hierarchischen Rowsets unterstützt, können Sie die geschachtelte Tabelle zurückgeben, indem Sie vor der Spaltenliste SELECT das Schlüsselwort FLATTENED hinzufügen. Weitere Informationen zum FLATTENED-Schlüsselwort finden Sie unter [SELECT FROM &#60;Modell&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md).  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
@@ -156,7 +161,7 @@ WHERE NODE_TYPE = 5
  Die zweite Codezeile fügt eine untergeordnete SELECT-Anweisung hinzu, mit der bestimmte Spalten der geschachtelten Tabellenspalte zurückgegeben werden. Außerdem beschränkt sie die Zeilen der geschachtelten Tabelle auf diejenigen, die sich auf das Zielattribut `Number Cars Owned`beziehen. Zur Vereinfachung der Anzeige wird die geschachtelte Tabelle als Alias verwendet.  
   
 > [!NOTE]  
->  Die geschachtelte Tabellenspalte `PROBABILITY` muss in Klammern gesetzt werden, da sie dem Namen eines reservierten MDX-Schlüsselworts entspricht.  
+>  Die geschachtelte Tabellenspalte `PROBABILITY`muss in Klammern gesetzt werden, da sie dem Namen eines reservierten MDX-Schlüsselworts entspricht.  
 >   
 >  Beispielergebnisse:  
   
@@ -249,7 +254,7 @@ WHERE IsInNode('001')
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-## Treffen von Vorhersagen mit dem Modell  
+## <a name="making-predictions-using-the-model"></a>Treffen von Vorhersagen mit dem Modell  
  Auch wenn Clustering in der Regel zum Beschreiben und zum Verstehen von Daten verwendet wird, können Sie mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Implementierung Vorhersagen über die Clustermitgliedschaft treffen und Wahrscheinlichkeiten im Zusammenhang mit der Vorhersage zurückgeben. Dieser Abschnitt enthält Beispiele für das Erstellen von Vorhersageabfragen für Clustermodelle. Sie können Vorhersagen für mehrere Fälle treffen, indem Sie eine tabellarische Datenquelle angeben, oder Sie können durch Erstellen einer SINGLETON-Abfrage jeweils neue Werte bereitstellen. Der Deutlichkeit halber handelt es sich bei den Beispielen in diesem Abschnitt nur um SINGLETON-Abfragen.  
   
  Weitere Informationen zum Erstellen von Vorhersageabfragen mit DMX finden Sie unter [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -283,7 +288,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- In diesem Beispiel besteht kein signifikanter Unterschied im Modell. Mitunter kann es jedoch wichtig sein, Unterschiede zwischen der tatsächlichen Verteilung der Werte und den Vorhersageergebnissen des Modells zu erkennen. Die Funktion [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) ist in diesem Szenario nützlich, da sie anhand des Modells Aufschluss darüber gibt, wie wahrscheinlich ein Fall ist.  
+ In diesem Beispiel besteht kein signifikanter Unterschied im Modell. Mitunter kann es jedoch wichtig sein, Unterschiede zwischen der tatsächlichen Verteilung der Werte und den Vorhersageergebnissen des Modells zu erkennen. Auf der Registerkarte [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) ist in diesem Szenario nützlich, da sie anhand des Modells Aufschluss darüber gibt, wie wahrscheinlich ein Fall ist.  
   
  Die von der PredictCaseLikelihood-Funktion zurückgegebene Zahl stellt die Wahrscheinlichkeit dar und bewegt sich daher stets zwischen 0 und 1. Der Wert 0,5 repräsentiert ein willkürliches Ergebnis. Ein Ergebnis kleiner als 0,5 bedeutet, dass der vorhergesagte Fall angesichts des Modells unwahrscheinlich ist. Ein Ergebnis größer als 0,5 gibt an, dass es wahrscheinlicher ist, dass der vorhergesagte Fall dem Modell entspricht, als dass er dem Modell nicht entspricht.  
   
@@ -333,7 +338,7 @@ NATURAL PREDICTION JOIN
  [Zurück zum Anfang](#bkmk_top2)  
   
 ###  <a name="bkmk_Query10"></a> Beispielabfrage 10: Zurückgeben aller möglichen Cluster mit Wahrscheinlichkeit und Entfernung  
- Im vorherigen Beispiel war das Wahrscheinlichkeitsergebnis nicht sehr hoch. Um zu bestimmen, ob es einen besseren Cluster gibt, verwenden Sie die Funktion [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md) zusammen mit der Funktion [Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md), um eine geschachtelte Tabelle, die alle möglichen Cluster enthält, sowie die Wahrscheinlichkeit zurückzugeben, dass der neue Fall zu dem jeweiligen Cluster gehört. Das FLATTENED-Schlüsselwort wird verwendet, um das hierarchische Rowset zur besseren Anzeige in eine flache Tabelle zu ändern.  
+ Im vorherigen Beispiel war das Wahrscheinlichkeitsergebnis nicht sehr hoch. Um zu bestimmen, ob es einen besseren Cluster gibt, verwenden Sie die Funktion [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md) zusammen mit der Funktion [Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md) , um eine geschachtelte Tabelle, die alle möglichen Cluster enthält, sowie die Wahrscheinlichkeit zurückzugeben, dass der neue Fall zu dem jeweiligen Cluster gehört. Das FLATTENED-Schlüsselwort wird verwendet, um das hierarchische Rowset zur besseren Anzeige in eine flache Tabelle zu ändern.  
   
 ```  
 SELECT FLATTENED PredictHistogram(Cluster())  
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  Standardmäßig werden die Ergebnisse nach Wahrscheinlichkeit geordnet. Die Ergebnisse bedeuten, dass trotz relativ niedriger Wahrscheinlichkeit für Cluster 2 dieser Cluster dennoch für den neuen Datenpunkt am besten geeignet ist.  
   
- **Hinweis:** Die zusätzliche Spalte `$DISTANCE`repräsentiert die Entfernung vom Datenpunkt zum Cluster. Standardmäßig verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clustering-Algorithmus skalierbares EM-Clustering, bei dem jedem Datenpunkt mehrere Cluster zugewiesen werden und die Rangfolge der möglichen Cluster bestimmt wird.  Wenn Sie das Clustermodell allerdings mit dem K-Means-Algorithmus erstellen, kann jedem Datenpunkt nur ein Cluster zugewiesen werden, und diese Abfrage würde nur eine Zeile zurückgeben. Diese Unterschiede zu verstehen ist notwendig, um die Ergebnisse der Funktion [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) interpretieren zu können. Weitere Informationen zu den Unterschieden zwischen EM- und K-Means-Clustering finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
+ **Hinweis:** Die zusätzliche Spalte `$DISTANCE`repräsentiert die Entfernung vom Datenpunkt zum Cluster. Standardmäßig verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clustering-Algorithmus skalierbares EM-Clustering, bei dem jedem Datenpunkt mehrere Cluster zugewiesen werden und die Rangfolge der möglichen Cluster bestimmt wird.  Wenn Sie das Clustermodell allerdings mit dem K-Means-Algorithmus erstellen, kann jedem Datenpunkt nur ein Cluster zugewiesen werden, und diese Abfrage würde nur eine Zeile zurückgeben. Diese Unterschiede zu verstehen ist notwendig, um die Ergebnisse der Funktion [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) Spalten aus der zugrunde liegenden Struktur einbeziehen. Weitere Informationen zu den Unterschieden zwischen EM- und K-Means-Clustering finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-## Funktionsliste  
+## <a name="function-list"></a>Funktionsliste  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Modelle, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus erstellt werden, unterstützen jedoch die in der folgenden Tabelle aufgeführten, zusätzlichen Funktionen.  
   
 |||  
@@ -387,9 +392,9 @@ NATURAL PREDICTION JOIN
   
  Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen – Funktionsreferenz &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
- [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   

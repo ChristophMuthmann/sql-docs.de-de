@@ -1,30 +1,35 @@
 ---
-title: "Aktionen (Analysis Services – Mehrdimensionale Daten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aktionen [Analysis Services]"
-  - "Aktionen [Analysis Services], Informationen zu Aktionen"
-  - "MDX [Analysis Services], Aktionen"
-  - "Cubes [Analysis Services], Aktionen"
-  - "OLAP-Objekte [Analysis Services], Aktionen"
+title: "Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aktionen (Analysis Services – Mehrdimensionale Daten)
+# <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
   Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
   
 -   Drillthroughaktionen geben die Zeilen zurück, die die zugrunde liegenden Daten der ausgewählten Zellen des Cubes darstellen, in dem die Aktion ausgeführt wird.  
@@ -35,13 +40,13 @@ caps.handback.revision: 34
   
  Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die Aktionen abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
- Ein einfaches <xref:Microsoft.AnalysisServices.Action>-Objekt besteht aus: grundlegenden Informationen, dem Ziel, auf dem die Aktion ausgeführt werden soll, einer Bedingung, um den Aktionsbereich einzuschränken und dem Typ. Grundlegende Informationen beinhalten den Namen der Aktion, die Beschreibung der Aktion, die für die Aktion vorgeschlagene Beschriftung usw.  
+ Ein einfaches <xref:Microsoft.AnalysisServices.Action> -Objekt besteht aus: grundlegenden Informationen, dem Ziel, auf dem die Aktion ausgeführt werden soll, einer Bedingung, um den Aktionsbereich einzuschränken und dem Typ. Grundlegende Informationen beinhalten den Namen der Aktion, die Beschreibung der Aktion, die für die Aktion vorgeschlagene Beschriftung usw.  
   
  Das Ziel ist die eigentliche Position im Cube, wo die Aktion ausgeführt werden soll. Das Ziel besteht aus einem Zieltyp und einem Zielobjekt. Der Zieltyp stellt die Objektart im Cube dar, wo die Aktion aktiviert werden soll. Zieltyp können unter anderem Ebenenelemente, Zellen, Hierarchie und Hierarchieelemente sein. Das Zielobjekt ist ein spezifisches Objekt des Zieltyps. Wenn der Zieltyp "Hierarchie" ist, ist das Zielobjekt eine der definierten Hierarchien in dem Cube.  
   
  Die Bedingung ist ein **Boolean** MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn die Bedingung **true**ergibt, dann wird die Aktion ausgeführt. Andernfalls wird die Aktion nicht ausgeführt.  
   
- Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction>-Klasse abgedeckt.  
+ Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
   
  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Aktion eine gespeicherte MDX-Anweisung, die Clientanwendungen angezeigt und von diesen verwendet werden kann. Eine Aktion ist also ein Clientbefehl, der auf dem Server definiert und gespeichert wird. Eine Aktion enthält auch Informationen, die angeben, wann und wie die MDX-Anweisung von der Clientanwendung angezeigt und verarbeitet werden soll. Durch den von der Aktion angegebenen Vorgang kann eine Anwendung (mithilfe der Informationen in der Aktion als Parameter) gestartet werden oder können Informationen basierend auf von der Aktion bereitgestellten Kriterien abgerufen werden.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Damit Anwender des Produkts im geschäftlichen Bereich Aktionen verwenden können, muss die vom Anwender verwendete Clientanwendung Aktionen unterstützen.  
   
-## Aktionstypen  
+## <a name="types-of-actions"></a>Aktionstypen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Aktionstypen aufgeführt:  
   
 |Aktionstyp|Description|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |Anweisung|Gibt einen OLE DB-Befehl zurück.|  
 |URL|Zeigt eine dynamische Webseite in einem Internetbrowser an.|  
   
-## Auflösen und Ausführen von Aktionen  
- Wenn ein geschäftlicher Benutzer auf das Objekt zugreift, für das das Befehlsobjekt definiert ist, wird die der Aktion zugeordnete Anweisung automatisch aufgelöst, wodurch sie für die Clientanwendung verfügbar wird. Die Aktion wird jedoch nicht automatisch ausgeführt. Die Aktion wird nur ausgeführt, wenn der Anwender des Produkts im geschäftlichen Bereich einen clientspezifischen Vorgang ausführt, der die Aktion initiiert. Clientanwendungen können z. B. eine Liste mit Aktionen als Popupmenü anzeigen, wenn der Benutzer mit der rechten Maustaste auf ein bestimmtes Element bzw. eine Zelle klickt.  
+## <a name="resolving-and-executing-actions"></a>Auflösen und Ausführen von Aktionen  
+ Wenn ein geschäftlicher Benutzer auf das Objekt zugreift, für das das Befehlsobjekt definiert ist, wird die der Aktion zugeordnete Anweisung automatisch aufgelöst, wodurch sie für die Clientanwendung verfügbar wird. Die Aktion wird jedoch nicht automatisch ausgeführt. Die Aktion wird nur ausgeführt, wenn der Anwender des Produkts im geschäftlichen Bereich einen clientspezifischen Vorgang ausführt, der die Aktion initiiert. Clientanwendungen können z. B. eine Liste mit Aktionen als Popupmenü anzeigen, wenn der Benutzer mit der rechten Maustaste auf ein bestimmtes Element bzw. eine Zelle klickt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Aktionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

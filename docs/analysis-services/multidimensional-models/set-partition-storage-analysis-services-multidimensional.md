@@ -1,44 +1,49 @@
 ---
-title: "Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MOLAP mit niedriger Latenzzeit"
-  - "Standardspeicherung [Analysis Services]"
-  - "Hybride OLAP"
-  - "Automatische MOLAP"
-  - "Relationale OLAP"
-  - "Mehrdimensionale OLAP"
-  - "Geplante MOLAP [Analysis Services]"
-  - "Partitionen [Analysis Services], Speicher"
-  - "HOLAP"
-  - "MOLAP"
-  - "Echtzeit-ROLAP"
-  - "Echtzeit-HOLAP"
-  - "ROLAP"
-  - "MOLAP mit mittlerer Latenzzeit"
+title: "Festlegen des Partitionsspeichers (Analysis Services – mehrdimensional) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- low latency MOLAP
+- standard storage [Analysis Services]
+- hybrid OLAP
+- automatic MOLAP
+- relational OLAP
+- multidimensional OLAP
+- scheduled MOLAP [Analysis Services]
+- partitions [Analysis Services], storage
+- HOLAP
+- MOLAP
+- real time ROLAP
+- real time HOLAP
+- ROLAP
+- medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
+# <a name="set-partition-storage-analysis-services---multidimensional"></a>Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Standardspeicherkonfigurationen für Speichermodi und Zwischenspeicherungsoptionen bereit. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
   
  Sie können den Partitionsspeicher auf der Registerkarte Partitionen des Cubes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder auf der Seite mit der Partitionseigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben.  
   
-## Richtlinien zur Auswahl eines Speichermodus  
+## <a name="guidelines-for-choosing-a-storage-mode"></a>Richtlinien zur Auswahl eines Speichermodus  
  Bei einer großen Measuregruppe empfiehlt es sich, den Speicher für die verschiedenen Partitionen unterschiedlich zu konfigurieren. Beachten Sie die folgenden Richtlinien:  
   
 -   Verwenden Sie Echtzeit-ROLAP für aktuelle Daten, die fortwährend aktualisiert werden.  
@@ -53,7 +58,7 @@ caps.handback.revision: 31
   
  Das sind allgemeine Richtlinien. Zum Entwickeln des optimalen Speicherschemas für Ihre Daten sind möglicherweise eine sorgfältige Analyse und Tests erforderlich. Darüber hinaus können Sie die Speichereinstellungen für eine Partition manuell konfigurieren, wenn keine der Standardkonfigurationen Ihre Anforderungen erfüllt.  
   
-## Beschreibungen der Speichereinstellungen  
+## <a name="storage-settings-descriptions"></a>Beschreibungen der Speichereinstellungen  
   
 |Standardspeichereinstellung|Description|  
 |------------------------------|-----------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 31
 |Geplante MOLAP|Detaildaten und Aggregationen werden in einem mehrdimensionalen Format gespeichert. Der Server empfängt keine Benachrichtigungen bei Datenänderungen. Die Verarbeitung wird automatisch alle 24 Stunden durchgeführt.<br /><br /> Diese Einstellung wird normalerweise für Datenquellen verwendet, bei denen nur ein tägliches Update erforderlich ist. Abfragen werden immer mit den Daten im MOLAP-Cache ausgeführt, der erst verworfen wird, wenn ein neuer Cache erstellt und die darin befindlichen Objekte verarbeitet wurden.|  
 |MOLAP|Proaktives Zwischenspeichern ist nicht aktiviert. Detaildaten und Aggregationen werden im mehrdimensionalen Format gespeichert. Der Server empfängt keine Benachrichtigungen bei Datenänderungen. Die Verarbeitung muss entweder geplant oder manuell ausgeführt werden.<br /><br /> Diese Einstellung wird normalerweise für Datenquellen verwendet, bei denen regelmäßige Updates für die Clientanwendungen nicht erforderlich sind, bei denen jedoch eine hohe Leistung wichtig ist.<br /><br /> Die MOLAP-Speicherung ohne proaktives Zwischenspeichern stellt die bestmögliche Leistung bereit, wenn die Anwendungen nicht die aktuellsten Daten benötigen. Das Verarbeiten von aktualisierten Objekten erfordert Downtime, auch wenn die Downtime durch Aktualisieren und Verarbeiten von Cubes auf einem Stagingserver und durch Verwenden der Datenbanksynchronisierung zum Kopieren der aktualisierten und verarbeiteten MOLAP-Objekte auf dem Produktionsserver auf ein Minimum beschränkt werden kann.|  
   
-## Benutzerdefinierte Speicheroptionen  
+## <a name="custom-storage-options"></a>Benutzerdefinierte Speicheroptionen  
  Statt eine der Standardspeichereinstellungen zu verwenden, können Sie das Speichern und proaktive Zwischenspeichern manuell konfigurieren. Bevor Sie benutzerdefinierte Speichereinstellungen erstellen, sollten Sie zunächst auf die Option **Standardeinstellung** klicken, und den Schieberegler zu der Standardeinstellung verschieben, die der Konfiguration am ähnlichsten ist, die Sie verwenden möchten. Um anschließend eine benutzerdefinierte Konfiguration zu erstellen, klicken Sie auf die Option **Benutzerdefinierte Einstellungen** und dann auf **Optionen**.  
   
 -   Sie können angeben, ob Änderungen in der Datenquelle Updates des Caches auslösen. Um die Belastung durch das Speichern auf ein akzeptables Maß zu begrenzen, können Sie ein Ruheintervall mit einer Mindestdauer angeben, das nach den Updates der Datenquelle eingehalten wird. Sie können ein Ruheintervall auch so angeben, dass der Cache nach einer bestimmten Zeit aktualisiert wird, wenn das Intervall zwischen den Änderungen der Datenquelle nie das Minimum erreicht.  
@@ -78,7 +83,7 @@ caps.handback.revision: 31
   
  Wenn Sie das Kontrollkästchen **Einstellungen auf Dimensionen anwenden** aktivieren, werden dieselben Speichereinstellungen auf die mit der Measuregruppe verknüpften Dimensionen angewendet. Die Dimensionswerte sind zu Beginn identisch mit den Partitionswerten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Partitionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

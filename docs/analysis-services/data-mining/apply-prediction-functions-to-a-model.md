@@ -1,25 +1,30 @@
 ---
-title: "Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodellvorhersage [Analysis Services], Auswählen von Miningmodellen"
+title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anwenden von Vorhersagefunktionen auf ein Modell
+# <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
   Zum Erstellen einer Vorhersageabfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining müssen Sie zuerst das Miningmodell auswählen, auf dem die Abfrage basieren soll. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
   
  Nachdem Sie ein Modell ausgewählt haben, fügen Sie der Abfrage eine *Vorhersagefunktion* hinzu. Eine Vorhersagefunktion kann verwendet werden, um eine Vorhersage zu erhalten. Aber Sie können auch Vorhersagefunktionen hinzufügen, die damit zusammenhängenden Statistiken zurückgeben, z. B. die Wahrscheinlichkeit des vorhergesagten Wert oder Informationen, die beim Generieren der Vorhersage verwendet wurden.  
@@ -42,9 +47,9 @@ caps.handback.revision: 17
   
  Beispiele zum Abfragen eines bestimmten Typs von Miningmodell finden Sie im Algorithmusreferenzthema unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-### Auswählen eines Miningmodells für die Vorhersage  
+### <a name="choose-a-mining-model-to-use-for-prediction"></a>Auswählen eines Miningmodells für die Vorhersage  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf das Modell, und wählen Sie **Vorhersageabfrage erstellen** aus.  
+1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf das Modell, und wählen Sie **Vorhersageabfrage erstellen**aus.  
   
      - oder -  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 17
   
      Sie können jedes Modell in der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auswählen. Damit eine Abfrage mithilfe eines Modells in einer anderen Datenbank erstellt werden kann, müssen Sie entweder ein neues Abfragefenster im Kontext dieser Datenbank öffnen oder die Projektmappendatei öffnen, die das Modell enthält.  
   
-### Hinzufügen von Vorhersagefunktionen zu einer Abfrage  
+### <a name="add-prediction-functions-to-a-query"></a>Hinzufügen von Vorhersagefunktionen zu einer Abfrage  
   
 1.  Konfigurieren Sie im **Generator für Vorhersageabfragen**die für die Vorhersage verwendeten Eingabedaten, und zwar entweder durch das Bereitstellen von Werten im Dialogfeld **SINGLETON-Abfrageeingabe** oder indem Sie einer externen Datenquelle das Modell zuordnen.  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 17
   
     |||  
     |-|-|  
-    |**\<Name des Modells>**|Aktivieren Sie diese Option, um Werte vom Miningmodell in die Ausgabe einzuschließen. Sie können nur vorhersagbaren Spalten hinzufügen.<br /><br /> Wenn Sie eine Spalte aus dem Modell hinzufügen, ist das zurückgegebene Ergebnis die nicht unterschiedliche Liste der Werte in dieser Spalte.<br /><br /> Die Spalten, die Sie mit dieser Option hinzufügen, sind im SELECT-Teil der resultierenden DMX-Anweisung enthalten.|  
-    |**Vorhersagefunktion**|Aktivieren Sie diese Option, um eine Liste von Vorhersagefunktionen zu durchsuchen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Anweisung werden die von Ihnen ausgewählten Werte oder die Funktionen hinzugefügt.<br /><br /> Die Liste der Vorhersagefunktionen wird durch den von Ihnen ausgewählten Modelltyp weder gefiltert noch eingeschränkt. Wenn Sie sich nicht sicher sind, ob die Funktion vom aktuellen Modelltyp unterstützt wird, können Sie demzufolge der Liste einfach die Funktion hinzufügen und anzeigen, ob ein Fehler vorliegt.<br /><br /> Listenelemente, denen $ (z. B. $ADJUSTEDPROBABILITY) vorangestellt werden, stellen Spalten von der geschachtelten Tabelle dar, die ausgegeben wird, wenn Sie die Funktion **PredictHistogram** verwenden. Dies sind Verknüpfungen, mit denen Sie eine einzelne Spalte, aber keine geschachtelte Tabelle zurückgeben können.|  
+    |**\<Modellname >**|Aktivieren Sie diese Option, um Werte vom Miningmodell in die Ausgabe einzuschließen. Sie können nur vorhersagbaren Spalten hinzufügen.<br /><br /> Wenn Sie eine Spalte aus dem Modell hinzufügen, ist das zurückgegebene Ergebnis die nicht unterschiedliche Liste der Werte in dieser Spalte.<br /><br /> Die Spalten, die Sie mit dieser Option hinzufügen, sind im SELECT-Teil der resultierenden DMX-Anweisung enthalten.|  
+    |**Prediction Function**|Aktivieren Sie diese Option, um eine Liste von Vorhersagefunktionen zu durchsuchen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Anweisung werden die von Ihnen ausgewählten Werte oder die Funktionen hinzugefügt.<br /><br /> Die Liste der Vorhersagefunktionen wird durch den von Ihnen ausgewählten Modelltyp weder gefiltert noch eingeschränkt. Wenn Sie sich nicht sicher sind, ob die Funktion vom aktuellen Modelltyp unterstützt wird, können Sie demzufolge der Liste einfach die Funktion hinzufügen und anzeigen, ob ein Fehler vorliegt.<br /><br /> Listenelemente, denen $ (z. B. $ADJUSTEDPROBABILITY) vorangestellt werden, stellen Spalten von der geschachtelten Tabelle dar, die ausgegeben wird, wenn Sie die Funktion **PredictHistogram**verwenden. Dies sind Verknüpfungen, mit denen Sie eine einzelne Spalte, aber keine geschachtelte Tabelle zurückgeben können.|  
     |**Benutzerdefinierter Ausdruck**|Aktivieren Sie diese Option, um einen benutzerdefinierten Ausdruck einzugeben und der Ausgabe dann einen Alias zuzuweisen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Vorhersageabfrage wird der benutzerdefinierte Ausdruck hinzugefügt.<br /><br /> Diese Option ist nützlich, wenn Sie Text für die Ausgabe mit jeder Zeile hinzufügen, VB-Funktionen oder benutzerdefinierte gespeicherte Prozeduren aufrufen möchten.<br /><br /> Informationen zum Verwenden von VBA- und Excel-Funktionen von DMX aus finden Sie unter [VBA-Funktionen in MDX und DAX](../../mdx/vba-functions-in-mdx-and-dax.md).|  
   
 3.  Wechseln Sie, nachdem Sie jede Funktion oder jeden Ausdruck hinzugefügt haben, zur DMX-Ansicht, um zu sehen, wie die Funktion in der DMX-Anweisung hinzugefügt wurde.  
@@ -76,11 +81,11 @@ caps.handback.revision: 17
     > [!WARNING]  
     >  Der Generator für Vorhersageabfragen überprüft die DMX erst, wenn Sie auf **Ergebnisse**klicken. Sie werden öfters feststellen, dass der vom Abfrage-Generator erzeugte Ausdruck kein gültiger DMX-Wert ist. Dies liegt normalerweise an einer Spalte, die sich nicht auf die vorhersagbare Spalte bezieht, oder an dem Versuch, eine Spalte in einer geschachtelten Tabelle vorherzusagen, die eine untergeordnete SELECT-Anweisung erfordert. Hierkönnen Sie zur DMX-Ansicht wechseln und die Anweisung weiterhin bearbeiten.  
   
-### Beispiel: Erstellen einer Abfrage für ein Clusteringmodell  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Beispiel: Erstellen einer Abfrage für ein Clusteringmodell  
   
-1.  Wenn Sie über kein Clustermodell für das Erstellen dieser Beispielabfrage verfügen, erstellen Sie das Modell [TM_Clustering] mithilfe des [Tutorials zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+1.  Wenn Sie über kein Clustermodell für das Erstellen dieser Beispielabfrage verfügen, erstellen Sie das Modell [TM_Clustering] mithilfe des [Tutorials zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-2.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf das Modell, [TM_Clustering]. und wählen Sie **Vorhersageabfrage erstellen** aus.  
+2.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf das Modell, [TM_Clustering]. und wählen Sie **Vorhersageabfrage erstellen**aus.  
   
 3.  Klicken Sie im Menü **Miningmodell** auf **SINGLETON-Abfrage**.  
   
@@ -90,11 +95,11 @@ caps.handback.revision: 17
   
     -   Arbeitsweg = 8–16 Kilometer (5–10 Meilen)  
   
-5.  Wählen Sie im Abfrageraster für **Quelle** „TM_Clustering-Miningmodell“ aus, und fügen Sie die Spalte „[Bike Buyer]“ hinzu.  
+5.  Wählen Sie im Abfrageraster für **Quelle**„TM_Clustering-Miningmodell“ aus, und fügen Sie die Spalte „[Bike Buyer]“ hinzu.  
   
 6.  Wählen Sie **Vorhersagefunktion**als **Quelle**aus, und fügen Sie die Funktion **Cluster**hinzu.  
   
-7.  Wählen Sie **Vorhersagefunktion** für **Quelle** aus, fügen Sie die Funktion **PredictSupport** hinzu, und ziehen Sie die Modellspalte „[Bike Buyer]“ in das Feld **Kriterium/Argument**. Geben Sie in der Spalte **Alias** die Zeichenfolge **Support** ein.  
+7.  Wählen Sie **Vorhersagefunktion**für **Quelle**aus, fügen Sie die Funktion **PredictSupport**hinzu, und ziehen Sie die Modellspalte „[Bike Buyer]“ in das Feld **Kriterium/Argument** . Geben Sie in der Spalte **Alias** die Zeichenfolge **Support** ein.  
   
      Kopieren Sie den Ausdruck, der die Vorhersagefunktion und den Spaltenverweis vom Feld **Kriterium/Argument** darstellt.  
   
@@ -124,7 +129,8 @@ caps.handback.revision: 17
   
  Wenn Sie an anderen Stellen weitere Klauseln in der Anweisung hinzufügen möchten, – wenn Sie beispielsweise eine WHERE-Klausel hinzufügen möchten – können Sie es nicht mit dem Raster hinzufügen, sondern müssen zuerst zur DMX-Ansicht wechseln.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
+

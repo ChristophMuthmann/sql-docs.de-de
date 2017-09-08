@@ -1,27 +1,32 @@
 ---
-title: "Verarbeiten von Analysis Services-Objekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLAP-Objekte [Analysis Services], verarbeiten"
-  - "OLAP-Objekte [Analysis Services]"
+title: Verarbeiten von Analysis Services-Objekte | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verarbeiten von Analysis Services-Objekten
+# <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
   Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Es ist wichtig, dass Sie sich der möglichen Konsequenzen des Verarbeitungsverhaltens bewusst sind, um eventuelle negative Auswirkungen zu vermeiden. Wenn Sie zum Beispiel die vollständige Verarbeitung einer Dimension wählen, werden alle von dieser Dimension abhängigen Partitionen in den Status 'Nicht verarbeitet' versetzt. Davon betroffene Cubes sind dann nicht für Abfragen verfügbar, bis die abhängigen Partitionen verarbeitet sind.  
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  Weitere Informationen zum Verarbeiten von Miningstrukturen und -modellen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tools und Ansätze für die Verarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Batchverarbeitung &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "Analysis Services-Ablaufverfolgungsereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "Überwachen von Analysis Services [SQL Server]"
-  - "Leistung [Analysis Services], SQL Server Profiler"
-  - "Ereignisse [Analysis Services]"
-  - "Ereignisklassen [Analysis Services], Informationen zu Ereignisklassen"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-  - "Ereignisklassen [Analysis Services]"
+title: Analysis Services-Ablaufverfolgungsereignisse | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services-Ablaufverfolgungsereignisse
+# <a name="analysis-services-trace-events"></a>Analysis Services-Ablaufverfolgungsereignisse
   Sie können der Aktivität einer Microsoft SQL Server Analysis Services (SSAS)-Instanz verfolgen, indem Sie die von der Instanz generierten Ablaufverfolgungsereignisse erfassen und anschließend analysieren.  Ablaufverfolgungsereignisse werden so gruppiert, dass verwandte Ablaufverfolgungsereignisse einfacher gefunden werden können.  Jedes Ablaufverfolgungsereignis enthält einen Satz von Daten, der für das Ereignis relevant ist. Nicht alle Datenelemente sind für sämtliche Ereignisse von Bedeutung.  
   
- Ablaufverfolgungsereignisse können mithilfe von **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** gestartet und aufgezeichnet werden (siehe [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Alternativ können sie mit einem XMLA-Befehl als **Erweiterte Ereignisse von SQL Server** gestartet und später analysiert werden (siehe [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
+ Ablaufverfolgungsereignisse können mithilfe von **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**gestartet und aufgezeichnet werden (siehe [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Alternativ können sie mit einem XMLA-Befehl als **Erweiterte Ereignisse von SQL Server** gestartet und später analysiert werden (siehe [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   
  In den folgenden Tabellen werden jede Ereigniskategorie und die Ereignisse in dieser Kategorie beschrieben. Jede Tabelle enthält die folgenden Spalten:  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Vorhandene Sitzung|Vorhandene Sitzung.|  
 |43|Sitzungsinitialisierung|Sitzungsinitialisierung.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

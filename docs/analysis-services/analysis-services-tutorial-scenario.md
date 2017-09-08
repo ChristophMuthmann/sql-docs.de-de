@@ -1,32 +1,37 @@
 ---
-title: "Analysis Services-Lernprogrammszenario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Analysis Services-Lernprogrammszenario | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services-Lernprogrammszenario
+# <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
 Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
   
 In den vergangenen Jahren hat [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] die kleine Fabrik Importadores Neptuno erworben, die sich in Mexiko befindet. Importadores Neptuno stellt einige wichtige Unterkomponenten für die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] -Produktlinie her. Diese Unterkomponenten werden für die Produktendmontage in Bothell angeliefert. Im Jahr 2005 wurde Importadores Neptuno alleiniger Hersteller und Vertreiber der Tourenrad-Produktgruppe.  
   
 Nach einem erfolgreichen Geschäftsjahr möchte [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] seinen Marktanteil erweitern, indem die Werbung auf die Hauptkunden konzentriert wird, die Produktverfügbarkeit durch eine externe Website erweitert wird, und die Kosten verkaufter Fahrräder durch eine Produktionskostensenkung reduziert werden.  
   
-## Aktuelle Analyseumgebung  
-Die Vertriebs- und Marketingteams sowie die oberen Managementebenen benötigen Datenanalysen. Um sie darin zu unterstützen, ruft die Firma derzeit Transaktionsdaten aus der [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]-Datenbank ab, und ruft außerdem nicht transaktionsbezogene Daten, z. B. Sollvorgaben für den Verkauf, aus Kalkulationstabellen ab. Diese Informationen werden anschließend im relationalen Data Warehouse **AdventureWorksDW2012** konsolidiert. Das relationale Data Warehouse stellt allerdings die folgenden Herausforderungen:  
+## <a name="current-analysis-environment"></a>Aktuelle Analyseumgebung  
+Die Vertriebs- und Marketingteams sowie die oberen Managementebenen benötigen Datenanalysen. Um sie darin zu unterstützen, ruft die Firma derzeit Transaktionsdaten aus der [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] -Datenbank ab, und ruft außerdem nicht transaktionsbezogene Daten, z. B. Sollvorgaben für den Verkauf, aus Kalkulationstabellen ab. Diese Informationen werden anschließend im relationalen Data Warehouse **AdventureWorksDW2012** konsolidiert. Das relationale Data Warehouse stellt allerdings die folgenden Herausforderungen:  
   
 -   Berichte sind statisch. Es gibt für die Benutzer keine Möglichkeit, die Daten in den Bericht interaktiv zu durchsuchen, um detailliertere Informationen zu erhalten, wie das beispielsweise bei einer [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel-Pivot-Tabelle möglich ist. Obwohl der vorhandene Satz vordefinierter Berichte für viele Benutzer ausreichend ist, benötigen fortgeschrittene Benutzer direkten Abfragezugriff auf die Datenbank für interaktive Abfragen und spezielle Berichte. Wegen der Komplexität der **AdventureWorksDW2012** -Datenbank ist allerdings das Erlernen der Erstellung effektiver Abfragen für solche Benutzer zu zeitaufwändig.  
   
@@ -46,8 +51,8 @@ Die Vertriebs- und Marketingteams sowie die oberen Managementebenen benötigen D
   
 -   Informationen sind schwer zu überwachen. Die Buchhaltungsabteilung verwendet derzeit die **AdventureWorksDW2012** -Datenbank nur als Quelle für Massendatenabfragen. Sie lädt dann die Daten in einzelne Kalkulationstabellen herunter und wendet beträchtliche Zeit für die Vorbereitung der Daten und die Bearbeitung der Kalkulationstabellen auf. Die Unternehmensfinanzberichte sind deshalb schwer zu erstellen, zu überwachen und über das gesamte Unternehmen hinweg zu verwalten.  
   
-## Die Lösung  
-Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012**-Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich deshalb entschieden, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erreichen der folgenden Ziele einzusetzen:  
+## <a name="the-solution"></a>Die Lösung  
+Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012** -Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich deshalb entschieden, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erreichen der folgenden Ziele einzusetzen:  
   
 -   Vereinheitlichung des Datenzugriffs durch eine gemeinsame Metadatenebene für die Analyse und Berichterstellung.  
   
@@ -63,8 +68,9 @@ Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen A
   
 Die Lektionen im Analysis Services-Lernprogramm bieten eine Anleitung zum Erstellen einer Cubedatenbank, die all diese Zielsetzungen erfüllt. Um mit der Erstellung zu beginnen, gehen Sie zur ersten Lektion über: [Lesson 1: Create a New Tabular Model Project](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
 [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
+

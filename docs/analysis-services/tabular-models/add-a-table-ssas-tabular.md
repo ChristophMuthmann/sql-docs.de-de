@@ -1,27 +1,32 @@
 ---
-title: "Hinzuf&#252;gen einer Tabelle (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen einer Tabelle (SSAS – tabellarisch) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Hinzuf&#252;gen einer Tabelle (SSAS – tabellarisch)
+# <a name="add-a-table-ssas-tabular"></a>Hinzufügen einer Tabelle (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Sie eine Tabelle aus einer Datenquelle hinzufügen, aus der Sie zuvor Daten in das Modell importiert haben. Um eine Tabelle aus derselben Datenquelle hinzuzufügen, können Sie die vorhandene Datenquellenverbindung verwenden. Es wird empfohlen, immer eine einzelne Verbindung zu verwenden, wenn Sie eine beliebige Anzahl von Tabellen aus einer einzelnen Datenquelle importieren.  
   
-### So fügen Sie eine Tabelle aus einer vorhandenen Datenquelle hinzu  
+### <a name="to-add-a-table-from-an-existing-data-source"></a>So fügen Sie eine Tabelle aus einer vorhandenen Datenquelle hinzu  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
   
@@ -39,8 +44,8 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  Wenn Sie mehrere Tabellen gleichzeitig aus einer einzelnen Datenquelle importieren, werden im Modell automatisch die Tabellenbeziehungen erstellt, die in der Datenquelle vorhanden waren. Wenn Sie später eine Tabelle hinzufügen, kann es jedoch erforderlich sein, manuell Beziehungen zwischen den neu hinzugefügten und den zuvor importierten Tabellen im Modell zu erstellen.  
   
-## Siehe auch  
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Importieren von Daten &#40;SSAS – tabellarisch&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [Löschen einer Tabelle &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

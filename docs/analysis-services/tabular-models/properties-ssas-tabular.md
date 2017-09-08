@@ -1,27 +1,32 @@
 ---
 title: "Eigenschaften (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Eigenschaften (SSAS – tabellarisch)
+# <a name="properties-ssas-tabular"></a>Eigenschaften (SSAS – tabellarisch)
   Projekte für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verfügen über verschiedene Eigenschaften, die Verhaltensweisen für das Projekt, das Modell, die Berichterstellung und die Bereitstellung definieren. Eigenschafteneinstellungen werden im XML-Format in der Datei Model.bim gespeichert, alle in diesem Abschnitt beschriebenen Eigenschaften können jedoch in den Fenstern **Eigenschaften** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]konfiguriert werden.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Thema|Description|  
 |-----------|-----------------|  

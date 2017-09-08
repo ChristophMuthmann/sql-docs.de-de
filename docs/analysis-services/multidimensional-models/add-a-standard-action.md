@@ -1,27 +1,32 @@
 ---
-title: "Hinzuf&#252;gen einer Standardaktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hinzufügen einer Standardaktion | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Hinzuf&#252;gen einer Standardaktion
+# <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
   Mithilfe der Aktionsansicht im Cube-Designer fügen Sie einer Datenbank eine Aktion hinzu. Auf diese Sicht kann von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]zugegriffen werden. Nachdem Sie eine Aktion erstellt haben, wird sie für Benutzer verfügbar, sobald der betreffende Cube erneut verarbeitet wurde. Weitere Informationen finden Sie unter [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
-### So erstellen Sie eine Aktion  
+### <a name="to-create-an-action"></a>So erstellen Sie eine Aktion  
   
 1.  Öffnen Sie den Cube, für den Sie eine Aktion erstellen möchten, und klicken Sie dann auf die Registerkarte **Aktionen** .  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 7
   
         |Ausgewählter Zieltyp|Auswahl unter "Zielobjekt"|  
         |---------------------------------------------|---------------------------------------------------|  
-        |Attributelemente|Die einzige gültige Auswahl ist eine einzelne Attributhierarchie. Der Zieltyp der Aktion entspricht allen Elementen des Attributs an jeder beliebigen Stelle (d. h., die Aktion gilt auch für benutzerdefinierte Hierarchien).|  
+        |Attributelemente|Die einzige gültige Auswahl ist eine einzelne Attributhierarchie. Der Zieltyp der Aktion entspricht allen Elementen des Attributs an jeder beliebigen Stelle (d. h., die Aktion gilt auch für benutzerdefinierte Hierarchien).|  
         |Zellen|Es können ausschließlich Zellen ausgewählt werden. Wenn Sie **Zellen** als Zieltyp auswählen, können Sie einen Ausdruck in **Bedingung** eingeben, um die Zellen einzuschränken, denen die Aktion zugeordnet ist.|  
         |Cube|Die einzige verfügbare Auswahl ist CURRENTCUBE. Die Aktion ist dem aktuellen Cube zugeordnet.|  
         |Dimensionselemente|Wählen Sie eine einzelne Dimension aus. Die Aktion wird allen Elementen der Dimension zugeordnet.|  
@@ -71,9 +76,9 @@ caps.handback.revision: 7
     -   Geben Sie in **Anwendung**den Namen der Anwendung ein, die der Aktion zugeordnet ist. Wenn Sie z. B. eine Aktion erstellen, durch die ein Benutzer zu einer bestimmten Website geleitet wird, sollte die der Aktion zugeordnete Anwendung Microsoft Internet Explorer oder ein anderer Webbrowser sein.  
   
         > [!NOTE]  
-        >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung** angegebenen Namen übereinstimmen.  
+        >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
-    -   Falls Sie unter **Aktionsinhalt** den URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen ein, z.B. „http://www.adventure-works.com“.  
+    -   Falls Sie unter **Aktionsinhalt**den URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen ein, z.B. „http://www.adventure-works.com“.  
   
     -   Geben Sie in **Beschreibung**eine Beschreibung für die Aktion ein.  
   

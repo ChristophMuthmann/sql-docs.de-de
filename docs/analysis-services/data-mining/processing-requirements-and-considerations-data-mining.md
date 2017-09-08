@@ -1,27 +1,32 @@
 ---
-title: "Anforderungen und &#220;berlegungen zur Verarbeitung (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Mining [Analysis Services], Objekte"
-  - "Miningstrukturen [Analysis Services], verarbeiten"
-  - "Miningmodelle [Analysis Services], verarbeiten"
+title: "Verarbeiten von Anforderungen und Überlegungen (Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], objects
+- mining structures [Analysis Services], processing
+- mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anforderungen und &#220;berlegungen zur Verarbeitung (Data Mining)
+# <a name="processing-requirements-and-considerations-data-mining"></a>Anforderungen und Überlegungen zur Verarbeitung (Data Mining)
   In diesem Thema werden in einige technische Überlegungen behandelt, die beim Verarbeiten von Data Mining-Objekten berücksichtigt werden sollten. Eine allgemeine Erklärung der Verarbeitung und deren Anwendung auf Data Mining finden Sie unter [Verarbeiten von Data Mining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Abfragen an relationalen Speicher](#bkmk_QueryReqs)  
@@ -35,18 +40,18 @@ caps.handback.revision: 30
   
  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gibt Abfragen an die Datenbank aus, die die Rohdaten bereitstellt. Bei dieser Datenbank kann es sich um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einer früheren Version des SQL Server-Datenbankmoduls handeln. Beim Verarbeiten einer Data Mining-Struktur werden die Daten der Quelle an die Miningstruktur übertragen und in einem neuen komprimierten Format auf dem Datenträger gespeichert. Es werden nicht alle Spalten der Datenquelle verarbeitet: Es werden nur die Spalten verarbeitet, die gemäß der Definition durch die Bindungen in der Miningstruktur enthalten sind.  
   
- Mit den Rohdaten baut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Index aller Daten und diskretisierten Spalten auf und erstellt einen separaten Index für fortlaufende Spalten. Für jede geschachtelte Tabelle wird zum Erstellen des Index eine Abfrage ausgegeben. Eine weitere Abfrage wird für jede geschachtelte Tabelle generiert, um die Beziehungen zwischen den einzelnen Paaren einer geschachtelten Tabelle und Falltabelle zu verarbeiten. Es werden mehrere Abfragen erstellt, um einen besonderen internen mehrdimensionalen Datenspeicher zu verarbeiten. Sie können die Anzahl der Abfragen, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an den relationalen Speicher gesendet werden, beschränken, indem Sie die Servereigenschaft **DatabaseConnectionPoolMax** festlegen. Weitere Informationen finden Sie unter [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
+ Mit den Rohdaten baut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Index aller Daten und diskretisierten Spalten auf und erstellt einen separaten Index für fortlaufende Spalten. Für jede geschachtelte Tabelle wird zum Erstellen des Index eine Abfrage ausgegeben. Eine weitere Abfrage wird für jede geschachtelte Tabelle generiert, um die Beziehungen zwischen den einzelnen Paaren einer geschachtelten Tabelle und Falltabelle zu verarbeiten. Es werden mehrere Abfragen erstellt, um einen besonderen internen mehrdimensionalen Datenspeicher zu verarbeiten. Sie können die Anzahl der Abfragen, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an den relationalen Speicher gesendet werden, beschränken, indem Sie die Servereigenschaft **DatabaseConnectionPoolMax**festlegen. Weitere Informationen finden Sie unter [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
   
  Beim Verarbeiten des Modells liest das Modell die Daten nicht erneut von der Datenquelle, sondern ruft stattdessen die Zusammenfassung der Daten aus der Miningstruktur ab. Mit dem erstellten Cube und den zwischengespeicherten Index- und Falldaten erstellt der Server unabhängige Threads zum Trainieren der Modelle.  
   
- Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die parallele Modellverarbeitung unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die parallele Modellverarbeitung unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Verarbeiten von Miningstrukturen  
  Eine Miningstruktur kann zusammen mit allen abhängigen Modellen oder getrennt verarbeitet werden. Die Verarbeitung einer Miningstruktur getrennt von Modellen kann nützlich sein, wenn manche Modelle voraussichtlich eine lange Verarbeitungszeit benötigen und Sie diesen Vorgang aufschieben möchten.  
   
  Weitere Informationen finden Sie unter [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
- Wenn es für Sie wichtig ist, Festplattenspeicherplatz zu sparen, beachten Sie, dass die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beibehaltene Miningstruktur lokal zwischengespeichert wird. Das bedeutet, dass alle Trainingsdaten auf die lokale Festplatte geschrieben werden. Wenn keine Daten zwischengespeichert werden sollen, können Sie die Standardeinstellung ändern, indem Sie für die <xref:Microsoft.AnalysisServices.MiningStructureCacheMode>-Eigenschaft der Miningstruktur auf **ClearAfterProcessing** festlegen. Auf diese Weise wird der Zwischenspeicher nach der Verarbeitung der Modelle gelöscht, und außerdem wird Drillthrough für die Miningstruktur deaktiviert. Weitere Informationen finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Wenn es für Sie wichtig ist, Festplattenspeicherplatz zu sparen, beachten Sie, dass die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beibehaltene Miningstruktur lokal zwischengespeichert wird. Das bedeutet, dass alle Trainingsdaten auf die lokale Festplatte geschrieben werden. Wenn keine Daten zwischengespeichert werden sollen, können Sie die Standardeinstellung ändern, indem Sie für die <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> -Eigenschaft der Miningstruktur auf **ClearAfterProcessing**. Auf diese Weise wird der Zwischenspeicher nach der Verarbeitung der Modelle gelöscht, und außerdem wird Drillthrough für die Miningstruktur deaktiviert. Weitere Informationen finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
  Wenn Sie den Cache löschen, können Sie außerdem nicht den Zurückhaltungstestsatz verwenden, wenn Sie einen solchen definiert haben, und die Definition der Testsatzpartition geht verloren. Weitere Informationen zu Zurückhaltungstestsätzen finden Sie unter [Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 30
   
  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie jedoch nicht mehrere Miningmodelle für die Verarbeitung mit der Struktur auswählen. Wenn Sie steuern müssen, welche Modelle verarbeitet werden, müssen Sie sie einzeln auswählen oder XMLA bzw. DMX verwenden, um die Modelle seriell zu verarbeiten.  
   
-## Wenn Neuverarbeitung erforderlich ist  
+## <a name="when-reprocessing-is-required"></a>Wenn Neuverarbeitung erforderlich ist  
  Sie müssen die von Ihnen definierten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modelle verarbeiten, bevor Sie damit arbeiten können. Darüber hinaus müssen Sie die Miningmodelle immer dann neu verarbeiten, wenn Sie Änderungen an der Struktur des Miningmodells vornehmen, die Trainingsdaten aktualisieren, ein vorhandenes Miningmodell ändern oder der Struktur ein neues Miningmodell hinzufügen.  
   
  Miningmodelle werden auch in folgenden Szenarien verarbeitet:  
@@ -66,7 +71,7 @@ caps.handback.revision: 30
   
  Beim Initiieren der Bereitstellung beginnt die Verarbeitung automatisch, es sei denn, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server befindet sich eine zu einem früheren Zeitpunkt verarbeitete Version und es gibt keine strukturellen Änderungen. Wählen Sie in der Dropdownliste **Projektmappe bereitstellen** aus, oder drücken Sie F5, um ein Projekt bereitzustellen. Folgende Aktionen sind möglich:  
   
- Weitere Informationen zum Festlegen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Bereitstellungseigenschaften, die steuern, wie Miningmodelle bereitgestellt werden, finden Sie unter [Bereitstellen von Data Mining-Lösungen](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
+ Weitere Informationen zum Festlegen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungseigenschaften, die steuern, wie Miningmodelle bereitgestellt werden, finden Sie unter [Bereitstellen von Data Mining-Lösungen](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
  **Verschieben eines Miningmodells**: Wenn Sie mit dem EXPORT-Befehl ein Miningmodell verschieben, wird nur die Definition des Modells exportiert. Dazu gehört der Name der Miningstruktur, die Daten an das Modell bereitstellen soll.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
  Weitere Informationen finden Sie unter [Exportieren und Importieren von Data Mining-Objekten](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

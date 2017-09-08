@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [Sortierung](#collation) | Legen Sie eine neue Sortierung für SQL Server unter Linux. |
 | [Kundenfeedback](#customerfeedback) | Wählen Sie aus, und zwar unabhängig davon, ob SQL Server Feedback an Microsoft sendet. |
+| [Datenbank-E-Mail-Profil](#dbmail) | Legen Sie das standardmäßige Datenbank-Mailprofil für SQL Server on Linux |
 | [Standarddatenverzeichnis](#datadir) | Ändern Sie das Standardverzeichnis für neue SQL Server-Datenbank-Datendateien (MDF). |
 | [Standard-Protokollverzeichnis](#datadir) | Ändert das Standardverzeichnis für neue SQL Server-Protokolldateien (LDF) Datenbankdateien an. |
 | [Dump Standardverzeichnis](#dumpdir) | Ändern Sie das Standardverzeichnis für neue Speicherabbilder und andere Dateien zur Problembehandlung. |
@@ -214,6 +215,13 @@ Die erste Phase Erfassung wird gesteuert, indem die **coredump.coredumptype** Ei
     | **gefiltert** | Gefilterte mithilfe einer Subtraktion basierende entwerfen, in dem alle Arbeitsspeicher des Prozesses enthalten ist, sofern nicht ausdrücklich ausgeschlossen. Der Entwurf versteht im Rahmen der SQLPAL und der hostumgebung, Ausschließen von bestimmten Regionen von das Speicherabbild.
     | **vollständige** | Vollständige befindet, die alle Regionen enthält vollständige prozessdump **/proc/$ pid/Zuordnungen**. Dies wird nicht gesteuert, indem **coredump.captureminiandfull** Einstellung. |
 
+## <a id="dbmail"></a>Legen Sie das standardmäßige Datenbank-Mailprofil für SQL Server on Linux
+
+Die **sqlpagent.databasemailprofile** können Sie das Standardprofil für die DB-Mail für e-Mail-Benachrichtigungen festlegen.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>Hohe Verfügbarkeit
 
 Die **hadr.hadrenabled** Option Verfügbarkeitsgruppen auf SQL Server-Instanz aktiviert. Der folgende Befehl aktiviert die Verfügbarkeitsgruppen durch Festlegen von **hadr.hadrenabled** auf 1. Sie müssen neu starten, SQL Server für die Einstellung wirksam wird.

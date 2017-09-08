@@ -1,28 +1,33 @@
 ---
-title: "Ausw&#228;hlen und Zuordnen von Modelltestdaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Spalten, [Data Mining], Genauigkeitsdiagramme für Mining"
-  - "Genauigkeitsdiagramm für Mining [Analysis Services], Spaltenzuordnungen"
-  - "Eingabespaltenzuordnung [Analysis Services]"
-  - "Zuordnen von Eingabespalten [Analysis Services]"
+title: "Auswählen und Zuordnen von Modelltestdaten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ausw&#228;hlen und Zuordnen von Modelltestdaten
+# <a name="choose-and-map-model-testing-data"></a>Auswählen und Zuordnen von Modelltestdaten
   Um in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ein Genauigkeitsdiagramm zu erstellen, müssen Sie die Daten auswählen, die zum Testen des Modells verwendet werden und die Daten dem Modell zuordnen.  
   
  Standardmäßig verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Miningmodelltestdaten, vorausgesetzt, dass bei der Erstellung der Miningstruktur ein zurückgehaltenes Dataset erstellt wurde. Die Erstellung eines zurückgehaltenen Testsatzes ist die einfachste Möglichkeit, Modelle zu testen, die auf der gleichen Miningstruktur basieren, da die Spaltennamen und Datentypen immer dem Modell entsprechen, und Sie können davon ausgehen, dass die Verteilung der Daten auf ähnliche Weise erfolgt. Außerdem erstellt der Designer die Beziehungen zwischen den Eingabe- und Modellspalten automatisch.  
@@ -51,7 +56,7 @@ caps.handback.revision: 44
   
 ##  <a name="bkmk_SelectInputs"></a> So wählen Sie Eingabetabellen zum Testen der Genauigkeit eines Miningmodells aus  
   
-1.  Doppelklicken Sie im Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] auf die Miningstruktur, die das Modell enthält, das Sie darstellen möchten.  
+1.  Doppelklicken Sie im Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf die Miningstruktur, die das Modell enthält, das Sie darstellen möchten.  
   
 2.  Klicken Sie auf die Registerkarte **Mininggenauigkeitsdiagramm** .  
   
@@ -75,17 +80,17 @@ caps.handback.revision: 44
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um ein Dialogfeld zu öffnen und die Definition des externen Datasets zu erstellen.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **…** ), um ein Dialogfeld zu öffnen und die Definition des externen Datasets zu erstellen.  
   
 5.  Wählen Sie im Dialogfeld **Miningstruktur auswählen** die Miningstruktur aus, mit der Sie arbeiten wollen, und klicken Sie dann auf **OK**.  
   
-6.  Klicken Sie im Data Mining-Designer in der Tabelle **Eingabetabelle(n) auswählen** der Registerkarte **Mininggenauigkeitsdiagramm** auf **Falltabelle auswählen**, um das Dialogfeld **Falltabelle auswählen** zu öffnen.  
+6.  Klicken Sie im Data Mining-Designer in der Tabelle **Eingabetabelle(n) auswählen** der Registerkarte **Mininggenauigkeitsdiagramm** auf **Falltabelle auswählen** , um das Dialogfeld **Falltabelle auswählen** zu öffnen.  
   
 7.  Wählen Sie im Dialogfeld **Tabelle auswählen** in der Liste **Datenquelle** eine Datenquelle aus. Wählen Sie die Tabelle mit den Daten aus, die Sie in den Vorhersageabfragen verwenden möchten, mit denen die Genauigkeit der Modelle ermittelt werden soll.  
   
 8.  Wählen Sie im Feld **Tabellen-/Sichtname** die Tabelle aus, die die Daten enthält, die zum Testen der Modelle verwendet werden sollen.  
   
-9. Bearbeiten Sie gegebenenfalls die Zuordnungen. Die Spalten der Miningstruktur werden automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Um Zuordnungen manuell zu erstellen, klicken Sie in der Tabelle **Eingabetabelle(n) auswählen** auf eine Spalte, und ziehen Sie diese auf die entsprechende Spalte der Tabelle **Miningstruktur**. Um eine Zuordnung zu löschen, klicken Sie auf die Linie, die die Spalte der Tabelle **Miningstruktur** mit der Spalte der Tabelle **Eingabetabelle(n) auswählen** verbindet, und drücken Sie dann ENTF.  
+9. Bearbeiten Sie gegebenenfalls die Zuordnungen. Die Spalten der Miningstruktur werden automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Um Zuordnungen manuell zu erstellen, klicken Sie in der Tabelle **Eingabetabelle(n) auswählen** auf eine Spalte, und ziehen Sie diese auf die entsprechende Spalte der Tabelle **Miningstruktur** . Um eine Zuordnung zu löschen, klicken Sie auf die Linie, die die Spalte der Tabelle **Miningstruktur** mit der Spalte der Tabelle **Eingabetabelle(n) auswählen** verbindet, und drücken Sie dann ENTF.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 44
   
 4.  Wählen Sie unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-5.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um ein Dialogfeld zu öffnen und die Definition der externen Datenquelle zu erstellen.  
+5.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **…** ), um ein Dialogfeld zu öffnen und die Definition der externen Datenquelle zu erstellen.  
   
 6.  Klicken Sie im Dialogfeld **Spaltenzuordnung angeben** auf **Falltabelle auswählen**.  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 44
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     Die neuen Spaltenzuordnungen werden im Dialogfeld **Spaltenzuordnung angeben** angezeigt. Sie können eine Zuordnung entfernen, indem Sie die Linie zwischen den Spalten auswählen und die ENTF-Taste drücken. Sie können eine neue Verbindung erstellen, indem Sie in der **Miningstruktur**-Tabelle eine Spalte auswählen und diese Spalte auf die entsprechende Spalte in der **Eingabetabelle(n) auswählen**-Tabelle ziehen.  
+     Die neuen Spaltenzuordnungen werden im Dialogfeld **Spaltenzuordnung angeben** angezeigt. Sie können eine Zuordnung entfernen, indem Sie die Linie zwischen den Spalten auswählen und die ENTF-Taste drücken. Sie können eine neue Verbindung erstellen, indem Sie in der **Miningstruktur** -Tabelle eine Spalte auswählen und diese Spalte auf die entsprechende Spalte in der **Eingabetabelle(n) auswählen** -Tabelle ziehen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

@@ -1,57 +1,62 @@
 ---
-title: "Eigenschaften f&#252;r Miningstrukturen und Strukturspalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningstrukturen [Analysis Services], Spalteneigenschaften"
-  - "Data Mining [Analysis Services], Eigenschaften"
-  - "Spalten [Data Mining], Eigenschaften"
-  - "Eigenschaften [Data Mining]"
+title: "Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], column properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4b342f6466a757ce2705d97680ed0e0460c0031f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Eigenschaften f&#252;r Miningstrukturen und Strukturspalten
+# <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
   Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
   
 > [!NOTE]  
 >  Wenn Sie den Wert einer beliebigen Eigenschaft in der Miningstruktur ändern, darunter auch Metadaten wie Name oder Beschreibung, müssen die Miningstruktur und zugehörige Modelle neu verarbeitet werden, bevor Sie das Modell anzeigen oder abfragen können.  
   
-## Eigenschaften von Miningstrukturen und Miningstrukturspalten  
+## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>Eigenschaften von Miningstrukturen und Miningstrukturspalten  
  In der folgenden Tabelle werden die Eigenschaften der für Data Mining spezifischen Miningstruktur und Miningstrukturspalten beschrieben. Diese können auf der Registerkarte **Miningstruktur** angezeigt oder konfiguriert werden. Klicken Sie mit der rechten Maustaste auf ein Element in der Strukturansicht, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.  
   
 -   Klicken Sie auf die Überschrift der Miningstruktur, um die Eigenschaften der Struktur anzuzeigen.  
   
 -   Um die Eigenschaften einer Spalte oder einer geschachtelten Tabelle anzuzeigen, klicken Sie auf den Spaltenname.  
   
-### Eigenschaften der Miningstruktur  
+### <a name="properties-of-the-mining-structure"></a>Eigenschaften der Miningstruktur  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis:** Dieses Attribut muss auf **KeepTrainingCases** festgelegt werden, um Drillthroughs und zurückgehaltene Daten zu ermöglichen.|  
+|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis:**  Dieses Attribut muss auf **KeepTrainingCases** festgelegt werden, um Drillthroughs und zurückgehaltene Daten zu ermöglichen.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Description**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
-|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:** Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases** festgelegt sein.|  
-|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:** Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases** festgelegt sein.|  
-|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann. **Hinweis:** Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases** festgelegt sein.|  
+|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
+|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
+|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
 |**ID**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die **Name** -Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
 |**Sprache**|Gibt die Sprache für die Beschriftungen in der Miningstruktur an.|  
 |**Name**|Gibt den Namen oder Alias der Miningstruktur an.<br /><br /> Wenn Sie den Wert für die Name-Eigenschaft ändern, wird der neue Name nur als Beschriftung oder Alias verwendet. Der Bezeichner für die Miningstruktur wird nicht geändert.|  
 |**Quelle**|Zeigt den Namen und den Typ der Datenquelle an.|  
   
-### Eigenschaften der Miningstrukturspalten  
+### <a name="properties-of-the-mining-structure-columns"></a>Eigenschaften der Miningstrukturspalten  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
@@ -73,7 +78,7 @@ caps.handback.revision: 23
   
  Weitere Informationen zum Festlegen oder Ändern von Eigenschaften finden Sie unter [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen einer relationalen Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   

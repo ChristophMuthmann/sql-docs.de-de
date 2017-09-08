@@ -1,23 +1,28 @@
 ---
-title: "Verwandte Projekte f&#252;r Data Mining-L&#246;sungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zusammenhängende Projekte für Datamining-Lösungen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verwandte Projekte f&#252;r Data Mining-L&#246;sungen
+# <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
   Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
   
 -   Vorbereitung und Auswahl der Daten und Variablen. Schließt Datenbereinigung, Metadatenverwaltung, Integration mehrerer Datenquellen, Konvertierung, Zusammenführung und das Hochladen von Daten in ein Data Warehouse ein.  
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   Nicht alle Volltextsprachen unterstützen die semantische Indizierung. Eine Liste mit unterstützten Sprachen finden Sie unter [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

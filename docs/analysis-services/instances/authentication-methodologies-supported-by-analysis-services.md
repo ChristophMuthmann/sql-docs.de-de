@@ -1,24 +1,29 @@
 ---
-title: "Von Analysis Services unterst&#252;tzte Authentifizierungsmethoden | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Von Analysis Services unterst&#252;tzte Authentifizierungsmethoden
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
   Verbindungen zwischen einer Clientanwendung und einer Analysis Services-Instanz erfordern die (integrierte) Windows-Authentifizierung. Sie können eine Windows-Benutzeridentität mithilfe einer der folgenden Methoden angeben:  
   
 -   NTLM  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
  Die Kerberos-Authentifizierung bildet die Grundlage der integrierten Windows-Sicherheit in Active Directory-Domänen. Wie bei NTLM ist der Identitätswechsel unter Kerberos auf Single-Hop-Verbindungen beschränkt, solange die Delegierung nicht aktiviert ist.  
   
- Zur Unterstützung von Multi-Hop-Verbindungen bietet Kerberos sowohl die eingeschränkte als auch die nicht eingeschränkte Delegierung. In den meisten Szenarien ist jedoch die eingeschränkte Delegierung als bewährte Sicherheitsmethode anzusehen. Bei der eingeschränkten Delegierung ist ein Dienst in der Lage, das Sicherheitstoken der Benutzeridentität an einen bestimmten untergeordneten Dienst auf einem Remotecomputer zu übergeben. Multi-Tier-Anwendungen machen es im Allgemeinen erforderlich, eine Benutzeridentität von einem Anwendungsserver der mittleren Ebene an eine Back-End-Datenbank (z. B. Analysis Services) zu delegieren. Beispielsweise erfordert ein tabellarisches oder mehrdimensionales Modell, das je nach Benutzeridentität unterschiedliche Daten zurückgibt, die Identitätsdelegierung von einem Dienst der mittleren Ebene. So wird vermieden, dass der Benutzer Anmeldeinformationen erneut eingeben oder Sicherheitsanmeldeinformationen auf andere Weise bereitstellen muss.  
+ Zur Unterstützung von Multi-Hop-Verbindungen bietet Kerberos sowohl die eingeschränkte als auch die nicht eingeschränkte Delegierung. In den meisten Szenarien ist jedoch die eingeschränkte Delegierung als bewährte Sicherheitsmethode anzusehen. Bei der eingeschränkten Delegierung ist ein Dienst in der Lage, das Sicherheitstoken der Benutzeridentität an einen bestimmten untergeordneten Dienst auf einem Remotecomputer zu übergeben. Multi-Tier-Anwendungen machen es im Allgemeinen erforderlich, eine Benutzeridentität von einem Anwendungsserver der mittleren Ebene an eine Back-End-Datenbank (z. B. Analysis Services) zu delegieren. Beispielsweise erfordert ein tabellarisches oder mehrdimensionales Modell, das je nach Benutzeridentität unterschiedliche Daten zurückgibt, die Identitätsdelegierung von einem Dienst der mittleren Ebene. So wird vermieden, dass der Benutzer Anmeldeinformationen erneut eingeben oder Sicherheitsanmeldeinformationen auf andere Weise bereitstellen muss.  
   
  Die eingeschränkte Delegierung erfordert zusätzliche Konfigurationsschritte in Active Directory. Hier wird festgelegt, welche Dienste auf Sender- und Empfängerseite zur Delegierung berechtigt sind. Diese Methode erfordert zwar einigen Konfigurationsaufwand im Vorfeld, ermöglicht jedoch nach der Konfiguration des Dienstes die unabhängige Verwaltung von Kennwortaktualisierungen in Active Directory. In diesem Fall müssen die in Anwendungen gespeicherten Kontoinformationen nicht aktualisiert werden wie etwa bei Verwendung der gespeicherten Anmeldeinformationen, die weiter unten beschrieben sind.  
   
@@ -71,19 +76,19 @@ caps.handback.revision: 8
   
  Bei der anonymen Authentifizierung können Sie die anonyme Benutzeridentität auf ein bestimmtes Windows-Benutzerkonto (standardmäßig IUSR_GUEST) oder eine Anwendungspoolidentität festlegen. Das anonyme Benutzerkonto wird für die Analysis Services-Verbindung verwendet und muss über Datenzugriffsberechtigungen auf der Analysis Services-Instanz verfügen. Bei diesem Ansatz wird für die Verbindung nur die Benutzeridentität verwendet, die dem anonymen Konto zugewiesen ist. Wenn die Anwendung eine zusätzliche Identitätsverwaltung erforderlich macht, sollten Sie sich für eine der anderen Methoden entscheiden oder eine zusätzliche Identitätsverwaltungslösung implementieren.  
   
- Die Standardauthentifizierung und die anonyme Authentifizierung sind nur verfügbar, wenn Sie Analysis Services für den HTTP-Zugriff konfigurieren, d. h. die Verbindung mit IIS und msmdpump.dll herstellen. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Die Standardauthentifizierung und die anonyme Authentifizierung sind nur verfügbar, wenn Sie Analysis Services für den HTTP-Zugriff konfigurieren, d. h. die Verbindung mit IIS und msmdpump.dll herstellen. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Gespeicherte Anmeldeinformationen**  
+ **Stored Credentials**  
   
- Die meisten Anwendungsdienste der mittleren Ebene umfassen Funktionen zum Speichern von Benutzernamen und Kennwörtern, die anschließend verwendet werden, um Daten aus einem untergeordneten Datenspeicher wie Analysis Services oder dem relationalen SQL Server-Modul abzurufen. So gesehen bieten gespeicherte Anmeldeinformationen eine fünfte Alternative zum Abrufen von Daten. Die Beschränkungen dieser Vorgehensweise liegen im erhöhten Wartungsaufwand, der mit der Aktualisierung von Benutzernamen und Kennwörtern verbunden ist, und der Verwendung einer einzelnen Identität für die Verbindung. Wenn Ihre Lösung die Identität des ursprünglichen Aufrufers erfordert, sind gespeicherte Anmeldeinformationen keine geeignete Alternative.  
+ Die meisten Anwendungsdienste der mittleren Ebene umfassen Funktionen zum Speichern von Benutzernamen und Kennwörtern, die anschließend verwendet werden, um Daten aus einem untergeordneten Datenspeicher wie Analysis Services oder dem relationalen SQL Server-Modul abzurufen. So gesehen bieten gespeicherte Anmeldeinformationen eine fünfte Alternative zum Abrufen von Daten. Die Beschränkungen dieser Vorgehensweise liegen im erhöhten Wartungsaufwand, der mit der Aktualisierung von Benutzernamen und Kennwörtern verbunden ist, und der Verwendung einer einzelnen Identität für die Verbindung. Wenn Ihre Lösung die Identität des ursprünglichen Aufrufers erfordert, sind gespeicherte Anmeldeinformationen keine geeignete Alternative.  
   
  Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und [Verwenden von Excel Services mit Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden des Identitätswechsels mit Transportsicherheit](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [SPN-Registrierung für eine Analysis Services-Instanz](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [SPN-Registrierung für Analysis Services-Instanz](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

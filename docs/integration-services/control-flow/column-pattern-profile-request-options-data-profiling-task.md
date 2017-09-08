@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", der Wert „(425) 123-4567“ wird mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
+-   **Symbole** wird standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Sind die Symbole beispielsweise "`()-`", wird der Wert "(425) 123-4567" mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder die Sicht aus, die die Spalte enthält, für die ein Profil erstellt werden soll.  
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

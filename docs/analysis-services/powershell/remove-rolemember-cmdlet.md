@@ -1,35 +1,46 @@
 ---
-title: "Remove-RoleMember-Cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Remove-RoleMember-Cmdlet | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e38f56ab-facd-4bef-9502-f52f8486a6a6
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c093787d86398acaaeaca8f282e1f588c3e726d7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Remove-RoleMember-Cmdlet
+# <a name="remove-rolemember-cmdlet"></a>Remove-RoleMember-Cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Entfernt ein Mitglied aus der angegebenen Rolle einer Analysis Services-Datenbank.  
+
+>[!NOTE] 
+>In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `Remove-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
   
  `Remove-RoleMember [-DatabaseRole] <Microsoft.AnalysisServices.Role> [-MemberName] <System.String>  [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Das Remove-RoleMember-Cmdlet entfernt ein vorhandenes Mitglied aus einer Rolle einer Analysis Services-Datenbank.  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
-### -MemberName \<string>  
+### <a name="-membername-string"></a>-MemberName \<Zeichenfolge >  
  Gibt den Windows-Benutzer oder die Windows-Gruppe an, der bzw. die aus der Rolle entfernt werden soll.  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 8
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Datenbank \<Zeichenfolge >  
  Gibt die Datenbank an, zu der die Rolle gehört.  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 8
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -RoleName \<string>  
+### <a name="-rolename-string"></a>-RoleName \<Zeichenfolge >  
  Gibt die Rolle an, aus der Sie Mitglieder entfernen.  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 8
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -DatabaseRole \<string>  
+### <a name="-databaserole-string"></a>DatabaseRole - \<Zeichenfolge >  
  Gibt das Microsoft.AnalysisServices.Role-Objekt an, aus dem das Mitglied entfernt wird. Verwenden Sie diesen Parameter als Alternative zum –Database-Parameter und dem –RoleName-Parameter, wenn Sie die Datenbankrolle über Pipeline zur Verfügung stellen möchten.  
   
 |||  
@@ -73,13 +84,13 @@ caps.handback.revision: 8
 |Pipelineeingabe akzeptieren?|true (ByPropertyName)|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### \<CommonParameters>  
- Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+ Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Eingaben und Ausgaben  
+## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
  Keine.  
   
-## Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -87,7 +98,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “advent
   
  Dieser Befehl entfernt aus der Leserrolle für die AdventureWorks-Datenbank, die auf einer lokalen Standardinstanz ausgeführt wird, ein Windows-Domänenbenutzerkonto.  
   
-## Beispiel 2  
+## <a name="example-2"></a>Beispiel 2  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> $roles= dir .\databases\AWTEST\Roles  
@@ -97,7 +108,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername:“advent
   
  Zeile 1 fügt der Pipeline alle Datenbankrollen der AWTEST-Datenbank hinzu. In Zeile 2, in die Sie "$roles" an der Eingabeaufforderung eingeben, wird das Rollen-Array angezeigt. Zeile 3 entfernt den Windows-Benutzer "adventure-works\bobh-adventure-works\bobh" aus der ersten Rolle im Array.  
   
-## Beispiel 3  
+## <a name="example-3"></a>Beispiel 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  
@@ -106,8 +117,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Remove
   
  Dieser Befehl entfernt aus der ersten Rolle in einem Array ein Windows-Domänenbenutzerkonto. Dabei wird das Array durch Auflisten der untergeordneten Elemente des Ordners "Roles" im Kontext einer bestimmten Datenbank (AWTEST) erstellt.  
   
-## Siehe auch  
- [PowerShell-Skripts in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Verwalten von tabellarischen Modellen mit PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   
