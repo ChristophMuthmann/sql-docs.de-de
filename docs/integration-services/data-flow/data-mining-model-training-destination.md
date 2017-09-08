@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
@@ -43,12 +45,6 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Trainings-Editor für Data Mining-Modelle** festlegen können:  
-  
--   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Verbindung&#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Spalten&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -57,4 +53,39 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
+  Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
+### <a name="options"></a>enthalten  
+ **Verbindungs-Manager**  
+ Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
+  
+ **eine neue**  
+ Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
+  
+ **Miningstruktur**  
+ Wählen Sie eine Struktur aus der Liste der verfügbaren Miningstrukturen, oder erstellen Sie durch Klicken auf **Neu**eine neue Struktur.  
+  
+ **eine neue**  
+ Erstellen Sie mithilfe von **Data Mining-Assistent**eine neue Miningstruktur und ein Miningmodell.  
+  
+ **Miningmodelle**  
+ Zeigt die Liste der mit der ausgewählten Miningstruktur verknüpften Miningmodelle an.  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
+  Mithilfe der Seite **Spalten** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** können Sie Eingabespalten Spalten in der Miningstruktur zuordnen.  
+  
+## <a name="options"></a>enthalten  
+ **Verfügbare Eingabespalten**  
+ Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
+  
+ **Miningstrukturspalten**  
+ Zeigt die Liste der Miningstrukturspalten an. Ziehen Sie Miningstrukturspalten, um sie verfügbaren Eingabespalten zuzuordnen.  
+  
+ **Eingabespalte**  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Verwenden Sie zum Ändern oder Entfernen einer Zuordnungsauswahl die Liste **Verfügbare Eingabespalten**.  
+  
+ **Miningstrukturspalten**  
+ Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
+  
+

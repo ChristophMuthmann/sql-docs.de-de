@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+- sql13.dts.designer.oledbsourceadapter.columns.f1
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
@@ -95,14 +98,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-source"></a>Konfigurieren der OLE DB-Quelle  
  Eigenschaften können Sie programmgesteuert oder mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für OLE DB** festlegen können:  
-  
--   [Quellen-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [Quellen-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -121,6 +116,118 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Wiki-Artikel, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
+  
+## <a name="ole-db-source-editor-connection-manager-page"></a>Quellen-Editor für OLE DB (Seite Verbindungs-Manager)
+  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für OLE DB** wählen Sie den OLE DB-Verbindungs-Manager für die Quelle aus. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
+  
+> [!NOTE]  
+>  Verwenden Sie zum Laden von Daten aus einer Datenquelle, für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 verwendet wird, eine OLE DB-Quelle. Sie können eine Excel-Quelle nicht zum Laden von Daten aus einer Excel 2007-Datenquelle verwenden. Weitere Informationen finden Sie unter [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>   
+>  Verwenden Sie zum Laden von Daten aus einer Datenquelle, für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 oder eine frühere Version verwendet wird, eine Excel-Quelle. Weitere Informationen finden Sie unter [Quellen-Editor für Excel &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+  
+> [!NOTE]  
+>  Die **CommandTimeout** -Eigenschaft der OLE DB-Quelle ist nicht im **Quellen-Editor für OLE DB**verfügbar, sie kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Öffnen Sie den Editor für OLE DB Source (Seite Verbindungs-Manager)  
+  
+1.  Fügen Sie die OLE DB-Quelle dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]hinzu.  
+  
+2.  Klicken Sie mit der rechten Maustaste auf die Quellkomponente, und klicken Sie dann auf **Bearbeiten**.  
+  
+3.  Klicken Sie auf **Verbindungs-Manager**.  
+  
+### <a name="static-options"></a>Statische Optionen  
+ **OLE DB-Verbindungs-Manager**  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
+  
+ **Datenzugriffsmodus**  
+ Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
+  
+|Option|Beschreibung|  
+|------------|-----------------|  
+|Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der OLE DB-Datenquelle ab.|  
+|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|SQL-Befehl|Rufen Sie mit SQL-Abfrage Daten aus der OLE DB-Datenquelle ab.|  
+|SQL-Befehl aus Variable|Gibt den SQL-Abfragetext in einer Variablen an.|  
+  
+ **Vorschau**  
+ Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der**Vorschau** können bis zu 200 Zeilen angezeigt werden.  
+  
+> [!NOTE]  
+>  In der Datenvorschau enthalten Spalten mit einem CLR-benutzerdefinierten Typ keine Daten. Stattdessen die Werte \<Wert zu groß zum Anzeigen > oder System.Byte [] angezeigt. Der erste Wert wird angezeigt, wenn mithilfe des SQL-OLE DB-Anbieters auf die Datenquelle zugegriffen wird. Der zweite Wert wird bei Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieters angezeigt.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
+  
+#### <a name="data-access-mode--table-or-view"></a>Datenzugriffsmodus = Tabelle oder Sicht  
+ **Name der Tabelle oder Sicht**  
+ Wählen Sie den Namen der Tabelle oder Sicht aus einer Liste der verfügbaren Namen in der Datenquelle aus.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname  
+ **Variablenname**  
+ Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
+  
+#### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
+ **SQL-Befehlstext**  
+ Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken. Wahlweise können Sie auch nach der Datei suchen, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
+  
+ **Parameter**  
+ Wenn Sie eine parametrisierte Abfrage eingeben und im Abfragetext ? als Parameterplatzhalter verwenden, können Sie den Paketvariablen mithilfe des Dialogfelds **Abfrageparameter festlegen** Abfrageeingabeparameter zuordnen.  
+  
+ **Build query**  
+ Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
+  
+ **Durchsuchen**  
+ Mithilfe des Dialogfelds **Öffnen** können Sie nach der Datei suchen, die den Text der SQL-Abfrage enthält.  
+  
+ **Abfrage analysieren**  
+ Überprüft die Syntax des Abfragetexts.  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>Datenzugriffsmodus = SQL-Befehl aus Variable  
+ **Variablenname**  
+ Wählen Sie die Variable aus, die den Text für die SQL-Abfrage enthält.  
+  
+## <a name="ole-db-source-editor-columns-page"></a>Quellen-Editor für OLE DB (Seite Spalten)
+  Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für OLE DB** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare externe Spalten**  
+ Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
+  
+ **Externe Spalte**  
+ Zeigt die externen (Quell-)Spalten in der gleichen Reihenfolge an wie beim Konfigurieren von Komponenten, die Daten aus dieser Quelle verwenden. Sie können die Reihenfolge ändern, indem Sie zunächst die ausgewählten Spalten in der Tabelle löschen. Wählen Sie anschließend die externen Spalten in einer anderen Reihenfolge aus der Liste aus.  
+  
+ **Ausgabespalte**  
+ Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der bereitgestellte Name wird im SSIS-Designer angezeigt.  
+  
+## <a name="ole-db-source-editor-error-output-page"></a>Quellen-Editor für OLE DB (Seite Fehlerausgabe)
+  Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OLE DB** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
+  
+### <a name="options"></a>enthalten  
+ **Eingabe/Ausgabe**  
+ Zeigt den Namen der Datenquelle an.  
+  
+ **Column**  
+ Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für OLE DB** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
+  
+ **Fehler**  
+ Gibt an, was bei Auftreten eines Fehlers geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Verwandte Themen:** [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Abschneiden**  
+ Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Description**  
+ Zeigt die Beschreibung des Fehlers an.  
+  
+ **Diesen Wert für ausgewählte Zellen festlegen**  
+ Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
+  
+ **Anwenden**  
+ Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   

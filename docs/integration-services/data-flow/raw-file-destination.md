@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 helpviewer_keywords:
 - append options [Integration Services]
 - destinations [Integration Services], Raw File
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-destination"></a>Rohdatendatei-Ziel
@@ -135,6 +137,90 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), auf sqlservercentral.com  
+  
+## <a name="raw-file-destination-editor-connection-manager-page"></a>Ziel-Editor für Rohdatendateien (Seite Verbindungs-Manager)
+  Verwenden Sie den Ziel-Editor für Rohdatendateien zum Konfigurieren des Rohdatendatei-Ziels, um Rohdaten in eine Datei zu schreiben.  
+  
+ **Was möchten Sie tun?**  
+  
+-   [Öffnen des Ziel-Editors für Rohdatendateien](#open)  
+  
+-   [Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"](#connection)  
+  
+-   [Festlegen von Optionen auf der Registerkarte "Spalten"](#mapping)  
+  
+###  <a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
+  
+1.  Fügen Sie das Rohdatendatei-Ziel in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket hinzu.  
+  
+2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
+  
+###  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+ **Zugriffsmodus**  
+ Wählen Sie aus, wie der Dateiname angegeben wird. Wählen Sie **Dateiname** aus, um den Dateinamen und Pfad direkt einzugeben, oder **Dateiname aus Variable** , um eine Variable anzugeben, die den Dateinamen enthält.  
+  
+ **Dateiname** oder **Variablenname**  
+ Geben Sie den Namen und Pfad der Rohdatendatei ein, oder wählen Sie die Variable aus, die den Dateinamen enthält.  
+  
+ **Schreiboption**  
+ Wählen Sie die Methode aus, die zum Erstellen und Schreiben in die Datei verwendet wird.  
+  
+ **Generieren einer anfänglichen Rohdatendatei**  
+ Klicken Sie auf die Schaltfläche, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Die Datei enthält die Spalten, die Sie auf der Seite **Spalten** von **Ziel-Editor für Rohdatendateien**ausgewählt haben. Sie können die Rohdatendatei-Quelle auf diese Nur-Metadaten-Datei verweisen.  
+  
+ Wenn Sie auf **Anfängliche Rohdatendatei generieren**klicken, wird ein Meldungsfeld angezeigt. Klicken Sie auf **OK** , um die Erstellung der Datei fortzusetzen. Klicken Sie auf **Abbrechen** , um eine andere Liste von Spalten auf der Seite **Spalten** auszuwählen.  
+  
+###  <a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
+ **Verfügbare Eingabespalten**  
+ Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
+  
+ **Eingabespalte**  
+ Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten**auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
+  
+ **Ausgabealias**  
+ Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
+  
+## <a name="raw-file-destination-editor-columns-page"></a>Ziel-Editor für Rohdatendateien (Seite Spalten)
+  Verwenden Sie den Ziel-Editor für Rohdatendateien zum Konfigurieren des Rohdatendatei-Ziels, um Rohdaten in eine Datei zu schreiben.  
+  
+ **Was möchten Sie tun?**  
+  
+-   [Öffnen des Ziel-Editors für Rohdatendateien](#open)  
+  
+-   [Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"](#connection)  
+  
+-   [Festlegen von Optionen auf der Registerkarte "Spalten"](#mapping)  
+  
+###  <a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
+  
+1.  Fügen Sie das Rohdatendatei-Ziel in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket hinzu.  
+  
+2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
+  
+###  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+ **Zugriffsmodus**  
+ Wählen Sie aus, wie der Dateiname angegeben wird. Wählen Sie **Dateiname** aus, um den Dateinamen und Pfad direkt einzugeben, oder **Dateiname aus Variable** , um eine Variable anzugeben, die den Dateinamen enthält.  
+  
+ **Dateiname** oder **Variablenname**  
+ Geben Sie den Namen und Pfad der Rohdatendatei ein, oder wählen Sie die Variable aus, die den Dateinamen enthält.  
+  
+ **Schreiboption**  
+ Wählen Sie die Methode aus, die zum Erstellen und Schreiben in die Datei verwendet wird.  
+  
+ **Generieren einer anfänglichen Rohdatendatei**  
+ Klicken Sie auf die Schaltfläche, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Sie können die Rohdatendatei-Quelle auf die Nur-Metadaten-Datei verweisen.  
+  
+ Wenn Sie auf die Schaltfläche klicken, wird eine Liste der Spalten angezeigt. Sie können auf "Abbrechen" klicken und die Spalten ändern, oder klicken Sie auf "OK", um das Erstellen der Datei fortzusetzen.  
+  
+###  <a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
+ **Verfügbare Eingabespalten**  
+ Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
+  
+ **Eingabespalte**  
+ Dieser Tabelle wird automatisch eine Eingabespalte hinzugefügt, wenn Sie sie unter **Verfügbare Eingabespalten**auswählen. Alternativ können Sie die Eingabespalte direkt in dieser Tabelle auswählen.  
+  
+ **Ausgabealias**  
+ Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Rohdatendatei-Quelle](../../integration-services/data-flow/raw-file-source.md)   

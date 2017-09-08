@@ -23,11 +23,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 0ace8ba0e6fd98f62280be116e4b80a7931da6ae
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrieren von Reporting Services-mithilfe von SOAP - Webanwendung

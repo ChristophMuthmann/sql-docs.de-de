@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
+- sql13.dts.designer.dimprocessingtransformation.connection.f1
+- sql13.dts.designer.dimprocessingtransformation.mappings.f1
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing destination
 - loading dimensions
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32a1d596ff1395a693f8316d7a6ee1f0d8aa918
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
@@ -48,19 +51,123 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** festlegen können:  
-  
--   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)  
-  
--   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
-  
--   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Erweitert&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md)  
-  
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften anzuzeigen, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Verbindungs-Manager)
+  Geben Sie im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** auf der Seite **Verbindungs-Manager** eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]an.  
+  
+### <a name="options"></a>enthalten  
+ **Connection manager**  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Neu**  
+ Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
+  
+ **Liste der verfügbaren Dimensionen**  
+ Wählen Sie die zu verarbeitende Dimension aus.  
+  
+ **Verarbeitungsmethode**  
+ Wählen Sie die Verarbeitungsmethode aus, die auf die in der Liste ausgewählte Dimension angewendet werden soll. Der Standardwert für diese Option ist **Vollständig**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Hinzufügen (inkrementell)**|Führt eine inkrementelle Verarbeitung der Dimension aus.|  
+|**Vollständig**|Führt eine vollständige Verarbeitung der Dimension aus.|  
+|**Update**|Führt eine Verarbeitung der Updates für die Dimension aus.|  
+  
+## <a name="dimension-processing-destination-editor-mappings-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
+  Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Dimensionsverarbeitung** können Sie eine Zuordnung von Eingabe- zu Dimensionsspalten vornehmen.  
+  
+### <a name="options"></a>enthalten  
+ **Verfügbare Eingabespalten**  
+ Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
+  
+ **Verfügbare Zielspalten**  
+ Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
+  
+ **Eingabespalte**  
+ Zeigen Sie die in obiger Tabelle ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern.  
+  
+ **Zielspalte**  
+ Zeigt alle verfügbaren Zielspalten unabhängig davon an, ob sie zugeordnet sind oder nicht.  
+  
+## <a name="dimension-processing-destination-editor-advanced-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Erweitert)
+  Verwenden Sie zum Konfigurieren der Fehlerbehandlung die Seite **Erweitert** im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** .  
+  
+### <a name="options"></a>enthalten  
+ **Standardfehlerkonfiguration verwenden**  
+ Gibt an, ob die Standardfehlerbehandlung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden soll. Standardmäßig ist dieser Wert **True**.  
+  
+ **Schlüsselfehleraktion**  
+ Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert **UnknownMember** .|  
+|**DiscardRecord**|Verwirft den Datensatz.|  
+  
+ **Fehler ignorieren**  
+ Gibt an, dass Fehler ignoriert werden sollen.  
+  
+ **Bei Fehler beenden**  
+ Gibt an, dass die Verarbeitung beendet werden soll, wenn ein Fehler auftritt.  
+  
+ **Anzahl von Fehlern**  
+ Gibt den Grenzwert für die Anzahl der Fehler an, bei dem die Verarbeitung beendet werden soll, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+  
+ **Aktion bei Fehler**  
+ Gibt die Aktion an, die bei Erreichen des Fehlergrenzwertes ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Beendet die Verarbeitung.|  
+|**StopLogging**|Beendet das Protokollieren der Fehler.|  
+  
+ **Schlüssel nicht gefunden**  
+ Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **Doppelter Schlüssel**  
+ Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **NULL-Schlüssel in unbekanntes Element konvertiert**  
+ Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert **UnknownMember** konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **NULL-Schlüssel nicht zulässig**  
+ Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
+|**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
+  
+ **Fehlerprotokollpfad**  
+ Geben Sie den Pfad für das Fehlerprotokoll ein, oder klicken Sie auf die Schaltfläche **Durchsuchen(…)** , um einen Zielpfad festzulegen.  
+  
+ **Durchsuchen (…)**  
+ Wählen Sie einen Pfad für das Fehlerprotokoll aus.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)   

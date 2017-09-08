@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>Prozess ausführen (Task)
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>Konfiguration des Tasks "Prozess ausführen"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
-  
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Task „Prozess ausführen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [Editor für den Task „Prozess ausführen“ &#40;Seite „Verarbeiten“&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
@@ -89,6 +85,61 @@ ms.lasthandoff: 08/03/2017
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
+  
+## <a name="execute-process-task-editor-general-page"></a>Editor für den Task 'Prozess ausführen' (Seite Allgemein)
+  Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Prozess ausführen“** können Sie den Task „Prozess ausführen“ benennen und beschreiben.  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Task 'Prozess ausführen' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des Tasks 'Prozess ausführen' ein.  
+  
+## <a name="execute-process-task-editor-process-page"></a>Editor für den Task 'Prozess ausführen' (Seite Verarbeiten)
+  Auf der Seite **Verarbeiten** des Dialogfelds **Editor für den Task 'Prozess ausführen'** können Sie die Optionen konfigurieren, die den Prozess ausführen. Zu den Optionen gehören der Name der ausführbaren Datei, der Speicherort dieser Datei, die Argumente der Eingabeaufforderung und die Variablen für die Ein- und Ausgabe.  
+  
+### <a name="options"></a>enthalten  
+ **RequireFullFileName**  
+ Geben Sie an, ob der Task fehlschlagen soll, wenn die ausführbare Datei am angegebenen Speicherort nicht gefunden wird.  
+  
+ **Ausführbare Datei**  
+ Geben Sie den Namen der ausführbaren Datei ein.  
+  
+ **Argumente**  
+ Geben Sie Argumente für die Eingabeaufforderung an.  
+  
+ **WorkingDirectory**  
+ Geben Sie den Pfad zu dem Ordner ein, in dem die ausführbare Datei enthalten ist, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und suchen Sie den Ordner.  
+  
+ **StandardInputVariable**  
+ Wählen Sie eine Variable für die Bereitstellung der Eingabe an den Prozess, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen:  
+  
+ **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **StandardOutputVariable**  
+ Wählen Sie eine Variable zum Erfassen der Ausgabe des Prozesses, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+  
+ **StandardErrorVariable**  
+ Wählen Sie eine Variable zum Erfassen der Fehlerausgabe des Prozessors, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+  
+ **FailTaskIfReturnCodeIsNotSuccessValue**  
+ Geben Sie an, ob beim Task ein Fehler auftritt, wenn der Prozessexitcode von dem unter **SuccessValue**angegebenen Wert abweicht.  
+  
+ **SuccessValue**  
+ Geben Sie den Wert an, der von der ausführbaren Datei zurückgegeben wird, um einen Erfolg zu melden. Standardmäßig ist dieser Wert auf **0**festgelegt.  
+  
+ **TimeOut**  
+ Geben Sie die Anzahl von Sekunden an, die der Prozess ausgeführt werden kann. Durch den Wert **0** wird angezeigt, dass kein Timeoutwert verwendet wird und der Prozess so lange ausgeführt wird, bis er entweder abgeschlossen ist oder ein Fehler auftritt.  
+  
+ **TerminateProcessAfterTimeOut**  
+ Geben Sie an, ob das Ende des Prozesses nach Ablauf des durch die Option **TimeOut** angegebenen Timeoutzeitraumes erzwungen wird. Diese Option ist nur verfügbar, wenn der Wert unter **TimeOut** nicht **0**ist.  
+  
+ **WindowStyle**  
+ Geben Sie die Fensteranordnung an, in der der Prozess ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

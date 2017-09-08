@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Miningmodell“&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Abfrage“&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Ausgabe“&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  Der Transformations-Editor für Data Mining-Abfragen weist keine Seite mit Ausdrücken auf. Verwenden Sie stattdessen das Fenster **Eigenschaften** für den Zugriff auf die Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken für Eigenschaften des Data Mining-Abfragetasks.  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Miningmodell)
+  Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie die zu verwendende Miningstruktur sowie das Miningmodell angeben.  
   
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Allgemeine Optionen  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für die Data Mining-Abfragetasks ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
+  
+### <a name="mining-model-tab-options"></a>Optionen der Registerkarte Miningmodell  
+ **Verbindung**  
+ Wählen Sie einen vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Verwandte Themen:**  [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **Neu**  
+ Erstellt einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungs-Manager.  
+  
+ **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Miningstruktur**  
+ Wählt eine Miningstruktur in der Liste aus.  
+  
+ **Miningmodelle**  
+ Wählt ein auf der ausgewählten Miningstruktur aufgebautes Miningmodell aus.  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
+  Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
+  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Allgemeine Optionen  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für die Data Mining-Abfragetasks ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
+  
+### <a name="build-query-tab-options"></a>Optionen der Registerkarte Abfrage erstellen  
+ **Data Mining-Abfrage**  
+ Geben Sie eine Data Mining-Abfrage ein.  
+  
+ **Verwandte Themen:** [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **Neue Abfrage erstellen**  
+ Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
+  
+ **Verwandte Themen:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
+ **Parametername**  
+ Sie können optional den Parameternamen aktualisieren. Ordnen Sie den Parameter einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
+  
+ **Variablenname**  
+ Wählen Sie in der Liste eine Variable aus, um sie dem Parameter zuzuordnen.  
+  
+ **Hinzufügen**  
+ Fügt der Liste einen Parameter hinzu.  
+  
+ **Entfernen**  
+ Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
+  
+### <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
+ **Ergebnisname**  
+ Sie können optional den Resultsetnamen aktualisieren. Ordnen Sie das Resultset einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
+  
+ Nachdem Sie das Ergebnis durch Klicken auf **Hinzufügen**hinzugefügt haben, geben Sie einen eindeutigen Namen für das Ergebnis an.  
+  
+ **Variablenname**  
+ Wählen Sie in der Liste eine Variable aus, um sie dem Resultset zuzuordnen.  
+  
+ **Ergebnistyp**  
+ Gibt an, ob eine einzelne Zeile oder ein vollständiges Resultset zurückgegeben werden soll.  
+  
+ **Hinzufügen**  
+ Fügt ein Resultset zur Liste hinzu.  
+  
+ **Entfernen**  
+ Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
+## <a name="data-mining-query-task-editor-output-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Ausgabe)
+  Mithilfe der Registerkarte **Ausgabe** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie das Ziel der Vorhersageabfrage angeben.  
+  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Allgemeine Optionen  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für die Data Mining-Abfragetasks ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
+  
+### <a name="output-tab-options"></a>Optionen der Registerkarte Ausgabe  
+ **Verbindung**  
+ Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
+  
+ **Neu**  
+ Erstellt einen neuen Verbindungs-Manager. Sie können nur die ADO.NET- und OLE DB-Verbindungsmanagertypen verwenden.  
+  
+ **Ausgabetabelle**  
+ Geben Sie die Tabelle an, in die die Vorhersageabfrage ihre Ergebnisse schreiben soll.  
+  
+ **Ausgabetabelle löschen und erneut erstellen**  
+ Gibt an, ob die Vorhersageabfrage den Inhalt in der Zieltabelle überschreiben soll, indem die Tabelle gelöscht und anschließend erneut erstellt wird.  
+  
+

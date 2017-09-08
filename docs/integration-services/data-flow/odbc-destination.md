@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
@@ -79,14 +82,107 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ziel-Editor für ODBC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [Ziel-Editor für ODBC &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [Ziel-Editor für ODBC &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
-  
 -   [Laden von Daten mithilfe des ODBC-Ziels](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Benutzerdefinierte Eigenschaften des ODBC-Ziels](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>Ziel-Editor für ODBC (Verbindungs-Manager-Seite)
+  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für ODBC** können Sie den ODBC-Verbindungs-Manager für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
   
+ **So öffnen Sie die Seite "Verbindungs-Manager" des Ziel-Editors für ODBC**  
+  
+### <a name="task-list"></a>Aufgabenliste  
+  
+-   Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Paket, das das ODBC-Ziel enthält.  
+  
+-   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ODBC-Ziel.  
+  
+-   Klicken Sie im **Ziel-Editor für ODBC**auf **Verbindungs-Manager**.  
+  
+### <a name="options"></a>Optionen  
+  
+#### <a name="connection-manager"></a>Verbindungs-Manager  
+ Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf Neu, um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
+  
+#### <a name="new"></a>Neu  
+ Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen Verbindungs-Manager erstellen können, wird geöffnet.  
+  
+#### <a name="data-access-mode"></a>Datenzugriffsmodus  
+ Wählen Sie die Methode zum Laden von Daten in das Ziel aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
+  
+|Option|Beschreibung|  
+|------------|-----------------|  
+|Tabellenname - Batch|Wählen Sie diese Option aus, um das ODBC-Ziel im Batchmodus zu konfigurieren. Bei Auswahl dieser Option sind die folgenden Optionen verfügbar:|  
+||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (\*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.<br /><br /> **Batchgröße**: Geben Sie die Größe des Batches für das Massenladen ein. Dies ist die Anzahl von Zeilen, die als Batch geladen werden.|  
+|Tabellenname - Zeile für Zeile|Wählen Sie diese Option aus, um das ODBC-Ziel so zu konfigurieren, dass jede Zeile einzeln in die Zieltabelle eingefügt wird. Bei Auswahl dieser Option ist die folgende Option verfügbar:|  
+||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht in der Datenbank aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.|  
+  
+#### <a name="preview"></a>Vorschau  
+ Klicken Sie auf **Vorschau** , um die ersten 200 Zeilen (max.) für die ausgewählte Tabelle anzuzeigen.  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>Ziel-Editor für ODBC (Seite Zuordnungen)
+  Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für ODBC** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
+  
+### <a name="options"></a>enthalten  
+  
+#### <a name="available-input-columns"></a>Verfügbare Eingabespalten  
+ Die Liste der verfügbaren Eingabespalten. Ordnen Sie die Eingabespalten per Drag & Drop den verfügbaren Zielspalten zu.  
+  
+#### <a name="available-destination-columns"></a>Verfügbare Zielspalten  
+ Die Liste der verfügbaren Zielspalten. Ordnen Sie die Zielspalten per Drag & Drop den verfügbaren Eingabespalten zu.  
+  
+#### <a name="input-column"></a>Eingabespalte  
+ Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie auswählen  **\<ignorieren >** um Spalten aus der Ausgabe auszuschließen.  
+  
+#### <a name="destination-column"></a>Zielspalte  
+ Zeigt alle verfügbaren Zielspalten an, sowohl die zugeordneten als auch die nicht zugeordneten.  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>Ziel-Editor für ODBC (Seite "Fehlerausgabe")
+  Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für ODBC** können Sie Optionen für die Fehlerbehandlung auswählen.  
+  
+ **So öffnen Sie die Seite "Fehlerausgabe" des Ziel-Editors für ODBC**  
+  
+### <a name="task-list"></a>Aufgabenliste  
+  
+-   Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Paket, das das ODBC-Ziel enthält.  
+  
+-   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ODBC-Ziel.  
+  
+-   Klicken Sie im **Ziel-Editor für ODBC**auf **Fehlerausgabe**.  
+  
+### <a name="options"></a>enthalten  
+  
+#### <a name="inputoutput"></a>Eingabe/Ausgabe  
+ Zeigt den Namen der Datenquelle an.  
+  
+#### <a name="column"></a>Column  
+ Wird nicht verwendet.  
+  
+#### <a name="error"></a>Fehler  
+ Wählen Sie aus, wie das ODBC-Ziel Fehler in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
+  
+#### <a name="truncation"></a>Abschneiden  
+ Wählen Sie aus, wie das ODBC-Ziel Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
+  
+#### <a name="description"></a>Description  
+ Zeigt eine Beschreibung des Fehlers an.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  
+ Wählen Sie aus, wie das ODBC-Ziel im Fall eines Fehlers oder einer Kürzung mit den ausgewählten Zellen verfahren soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
+  
+#### <a name="apply"></a>Anwenden  
+ Wendet die Fehlerbehandlungsoptionen auf die ausgewählten Zellen an.  
+  
+### <a name="error-handling-options"></a>Fehlerbehandlungsoptionen  
+ Mit den folgenden Optionen konfigurieren Sie, wie das ODBC-Ziel Fehler und Kürzungen behandelt.  
+  
+#### <a name="fail-component"></a>Fehler bei Komponente  
+ Bei einem Fehler oder beim Abschneiden von Daten wird der Datenflusstask nicht ausgeführt. Dies ist das Standardverhalten.  
+  
+#### <a name="ignore-failure"></a>Fehler ignorieren  
+ Der Fehler oder die Kürzung wird ignoriert.  
+  
+#### <a name="redirect-flow"></a>Zeile umleiten  
+ Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe des ODBC-Ziels umgeleitet. Weitere Informationen finden Sie unter "ODBC-Ziel".  
+  
+

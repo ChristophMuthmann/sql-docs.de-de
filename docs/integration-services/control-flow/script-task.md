@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scripttask.f1
+- sql13.dts.designer.scripttask.general.f1
+- sql13.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - scripts [Integration Services], tasks
 - Script task [Integration Services], about Script task
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 0ab143db0dfc6cda94bd0ba5e51fec66da7b46be
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="script-task"></a>Skripttask
@@ -90,6 +92,57 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie im folgenden Thema:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
+  
+## <a name="script-task-editor-general-page"></a>Skripttask-Editor (Seite Allgemein)
+  Auf der Seite **Allgemein** des Dialogfelds **Skripttask-Editor** können Sie einen Namen und eine Beschreibung für den Skripttask angeben.  
+  
+ Weitere Informationen zum Skripttask finden Sie unter [Skripttask](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Scripttask im Scripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Erweitern von Paketen mit dem Skripttask](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den Skripttask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des Skripttasks ein.  
+  
+## <a name="script-task-editor-script-page"></a>Skripttask-Editor (Seite Skript)
+  Mithilfe der Seite **Skript** des Dialogfelds **Skripttask-Editor** können Sie Skripteigenschaften festlegen und Variablen angeben, auf die dieses Skript zugreifen kann.  
+  
+> [!NOTE]  
+>  In [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] und höheren Versionen werden alle Skripts vorkompiliert. In früheren Versionen wurde eine **PrecompileScriptIntoBinaryCode** -Eigenschaft festgelegt, um anzugeben, dass das Skript vorkompiliert wurde.  
+  
+ Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Erweitern von Paketen mit dem Skripttask](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>enthalten  
+ **ScriptLanguage**  
+ Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+  
+ Nachdem Sie ein Skript für den Task erstellt haben, können Sie den Wert der **ScriptLanguage** -Eigenschaft nicht mehr ändern.  
+  
+ Um die Standardskriptsprache für den Skripttask festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+  
+ **EntryPoint**  
+ Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
+  
+ Wenn Sie den Namen der Methode im VSTA-Projekt geändert haben, müssen Sie den Wert der **EntryPoint** -Eigenschaft ändern.  
+  
+ **ReadOnlyVariables**  
+ Geben Sie eine durch Trennzeichen getrennte Liste von schreibgeschützten Variablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+  
+> [!NOTE]  
+>  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
+  
+ **ReadWriteVariables**  
+ Geben Sie eine durch Trennzeichen getrennte Liste von Lese-/Schreibvariablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+  
+> [!NOTE]  
+>  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
+  
+ **Skript bearbeiten**  
+ Öffnet die VSTA IDE, in der Sie das Skript erstellen oder ändern können.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

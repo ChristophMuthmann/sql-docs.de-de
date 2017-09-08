@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
+- sql13.dts.designer.ftptask.general.f1
+- sql13.dts.designer.ftptask.filetransfer.f1
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="ftp-task"></a>FTP-Task
@@ -78,9 +80,99 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
+## <a name="ftp-task-editor-general-page"></a>Editor für den FTP-Task (Seite Allgemein)
+  Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den FTP-Task** können Sie den FTP-Verbindungs-Manager angeben, der die Verbindung mit dem FTP-Server herstellt, mit dem der Task kommuniziert. Sie können den FTP-Task außerdem benennen und eine Beschreibung hinzufügen.  
+  
+### <a name="options"></a>enthalten  
+ **FtpConnection**  
+ Wählen Sie einen vorhandenen FTP-Verbindungs-Manager, oder klicken Sie auf \< **neue Verbindung...** > um einen Verbindungs-Manager erstellen.  
+  
+> [!IMPORTANT]  
+>  Der FTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
+  
+ **Verwandte Themen:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ Geben Sie an, ob der FTP-Task beendet wird, wenn ein FTP-Vorgang fehlschlägt.  
+  
+ **Name**  
+ Geben Sie einen eindeutigen Namen für den FTP-Task an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des FTP-Tasks ein.  
+  
+## <a name="ftp-task-editor-file-transfer-page"></a>Editor für den FTP-Task (Seite Dateiübertragung)
+  Mithilfe der Seite **Dateiübertragung** des Dialogfelds **Editor für den FTP-Task** können Sie den FTP-Vorgang konfigurieren, der durch den Task ausgeführt wird.  
+  
+### <a name="options"></a>enthalten  
+ **IsRemotePathVariable**  
+ Geben Sie an, ob der Remotepfad in einer Variablen gespeichert ist. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**True**|Der Zielpfad ist in einer Variablen gespeichert. Wenn Sie diesen Wert auswählen, wird die dynamische Option **RemoteVariable**angezeigt.|  
+|**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Wenn Sie diesen Wert auswählen, wird die dynamische Option **RemotePath**angezeigt.|  
+  
+ **OverwriteFileAtDestination**  
+ Geben Sie an, ob eine Datei am Ziel überschrieben werden kann.  
+  
+ **IsLocalPathVariable**  
+ Geben Sie an, ob der lokale Pfad in einer Variablen gespeichert ist. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**True**|Der Zielpfad ist in einer Variablen gespeichert. Wenn Sie diesen Wert auswählen, wird die dynamische Option **LocalVariable**angezeigt.|  
+|**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Wenn Sie diesen Wert auswählen, wird die dynamische Option **LocalPath**angezeigt.|  
+  
+ **Vorgang**  
+ Wählen Sie den auszuführenden FTP-Vorgang aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Dateien senden**|Senden Sie Dateien. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **LocalVariable**, **LocalPathRemoteVariable** und **RemotePath**angezeigt.|  
+|**Dateien empfangen**|Empfangen Sie Dateien. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **LocalVariable**, **LocalPathRemoteVariable** und **RemotePath**angezeigt.|  
+|**Lokales Verzeichnis erstellen**|Erstellen Sie ein lokales Verzeichnis. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **LocalVariable** und **LocalPath**angezeigt.|  
+|**Remoteverzeichnis erstellen**|Erstellen Sie ein Remoteverzeichnis. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **RemoteVariable** und **RemotePath**angezeigt.|  
+|**Lokales Verzeichnis entfernen**|Entfernen Sie ein lokales Verzeichnis. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **LocalVariable** und **LocalPath**angezeigt.|  
+|**Remoteverzeichnis entfernen**|Entfernen Sie ein Remoteverzeichnis. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **RemoteVariable** und **RemotePath**angezeigt.|  
+|**Lokale Dateien löschen**|Löschen Sie lokale Dateien. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **LocalVariable** und **LocalPath**angezeigt.|  
+|**Remotedateien löschen**|Löschen Sie Remotedateien. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen **RemoteVariable** und **RemotePath**angezeigt.|  
+  
+ **IsTransferASCII**  
+ Geben Sie an, ob die auf und von einem Remote-FTP-Server übertragenen Dateien im ASCII-Modus übertragen werden sollen.  
+  
+### <a name="isremotepathvariable-dynamic-options"></a>IsRemotePathVariable (dynamische Optionen)  
+  
+#### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
+ **RemoteVariable**  
+ Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \< **neue Variable...** > um eine benutzerdefinierte Variable zu erstellen.  
+  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Hinzufügen von Variablen  
+  
+#### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
+ **RemotePath**  
+ Wählen Sie einen vorhandenen FTP-Verbindungs-Manager, oder klicken Sie auf \< **neue Verbindung...** > um einen Verbindungs-Manager erstellen.  
+  
+ **Verwandte Themen:** [FTP-Verbindungs-Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable (dynamische Optionen)  
+  
+#### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
+ **LocalVariable**  
+ Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \< **neue Variable...** > um eine Variable zu erstellen.  
+  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Hinzufügen von Variablen  
+  
+#### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
+ **LocalPath**  
+ Wählen Sie einen vorhandenen Dateiverbindungs-Manager, oder klicken Sie auf \< **neue Verbindung...** > um einen Verbindungs-Manager erstellen.  
+  
+ **Verwandte Themen**: [Dateiverbindungs-Manager für Flatfiles](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
 ## <a name="see-also"></a>Siehe auch  
- [Editor für den FTP-Task &#40;Seite Allgemein&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP-Task-Editor &#40; Seite Dateiübertragung &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   

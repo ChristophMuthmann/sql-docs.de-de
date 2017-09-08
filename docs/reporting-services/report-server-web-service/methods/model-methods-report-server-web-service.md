@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 6f95a5e6d379d9f0a998cb58cbf32c00be980884
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="model-methods---report-server-web-service"></a>Modellmethoden - Berichtsserver-Webdienst

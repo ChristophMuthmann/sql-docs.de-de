@@ -10,13 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8dd5d857efc47a0dc181a0fc9bf1537cb8b08441
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Installieren Sie die folgenden Schritte [SQL Server-Volltextsuche](https://msdn.microsoft.com/library/ms142571.aspx) (**Mssql-Server-Fts**) unter Linux. Volltextsuche können Sie Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt. Bekannte Probleme in dieser Version finden Sie unter der [Release Notes](sql-server-linux-release-notes.md).
 
@@ -270,7 +272,7 @@ Um die semantische Suche zu verwenden, müssen Sie zuerst herunter, und fügen S
 3. Verschieben Sie die Datenbank und-Protokolldateien an Ihren Linux SQL Server-Computer.
 
     > [!TIP]
-    > Anleitungen zum Verschieben von Dateien aus Windows auf Linux finden Sie unter [übertragen Sie eine Datei auf Linux](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux).
+    > Anleitungen zum Verschieben von Dateien aus Windows auf Linux finden Sie unter [übertragen Sie eine Datei auf Linux](sql-server-linux-migrate-restore-database.md#scp).
 
 4. Führen Sie den folgenden Transact-SQL-Befehl für Ihre Linux SQL Server-Instanz die sprachstatistikdatenbank angefügt.
 

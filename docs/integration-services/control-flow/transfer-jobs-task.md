@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
+- sql13.dts.designer.transferjobstask.general.f1
+- sql13.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61839f15a36ff679f4edfc4585192100c370bb43
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)
@@ -64,11 +66,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-jobs-task"></a>Konfiguration des Tasks "Aufträge übertragen"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
-  
--   [Editor für den Task Aufträge übertragen &#40;Seite Allgemein&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [Editor für den Task Aufträge übertragen &#40;Seite Aufträge&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ Klicken Sie auf das folgende Thema, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -80,6 +78,74 @@ ms.lasthandoff: 08/03/2017
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-jobs-task-editor-general-page"></a>Editor für den Task Aufträge übertragen (Seite Allgemein)
+  Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Aufträge übertragen** können Sie den Task Aufträge übertragen benennen und beschreiben.  
+  
+> [!NOTE]  
+>  Nur Mitglieder der festen Serverrolle **sysadmin** oder einer der festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auf dem Zielserver können dort erfolgreich Aufträge erstellen. Um auf dem Quellserver auf Aufträge zuzugreifen, müssen Benutzer auf dem Server Mitglied mindestens einer festen Datenbankrolle **SQLAgentUserRole** sein. Weitere Informationen zu festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### <a name="options"></a>enthalten  
+ **Name**  
+ Geben Sie für den Task Aufträge übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
+  
+> [!NOTE]  
+>  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
+  
+ **Description**  
+ Geben Sie eine Beschreibung des Tasks Aufträge übertragen ein.  
+  
+## <a name="transfer-jobs-task-editor-jobs-page"></a>Editor für den Task Aufträge übertragen (Seite Aufträge)
+  Auf der Seite **Aufträge** des Dialogfelds **Editor für den Task "Aufträge übertragen"** können Sie die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträgen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere angeben.  
+  
+> [!NOTE]  
+>  Um auf dem Quellserver auf Aufträge zuzugreifen, müssen Benutzer auf dem Server Mitglied mindestens einer festen Serverrolle **SQLAgentUserRole** sein. Um auf dem Zielserver Aufträge erfolgreich zu erstellen, muss der Benutzer Mitglied der festen Datenbankrolle **sysadmin** oder einer der festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents sein. Weitere Informationen zu den festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents und zu deren Berechtigungen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### <a name="options"></a>enthalten  
+ **SourceConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Quellserver zu erstellen.  
+  
+ **DestinationConnection**  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung... >** um eine neue Verbindung mit dem Zielserver zu erstellen.  
+  
+ **TransferAllJobs**  
+ Wählen Sie aus, ob der Task alle oder nur angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträge vom Quell- auf den Zielserver kopieren soll.  
+  
+ Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Wahr**|Kopiert alle Aufträge.|  
+|**False**|Kopiert nur angegebene Aufträge.|  
+  
+ **JobsList**  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um die zu kopierenden Aufträge auszuwählen. Es muss mindestens ein Auftrag ausgewählt werden.  
+  
+> [!NOTE]  
+>  Geben Sie vor der Auswahl der zu kopierenden Aufträge **SourceConnection** an.  
+  
+ Die Option **JobsList** ist nicht verfügbar, wenn **TransferAllJobs** auf **True**festgelegt ist.  
+  
+ **IfObjectExists**  
+ Wählen Sie aus, wie der Task Aufträge behandeln soll, die auf dem Zielserver bereits mit demselben Namen vorhanden sind.  
+  
+ Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**FailTask**|Der Task schlägt fehl, wenn auf dem Zielserver bereits Aufträge mit demselben Namen vorhanden sind.|  
+|**Overwrite**|Der Task überschreibt auf dem Zielserver Aufträge mit demselben Namen.|  
+|**Skip**|Der Task lässt Aufträge aus, die auf dem Zielserver mit demselben Namen vorhanden sind.|  
+  
+ **EnableJobsAtDestination**  
+ Wählen Sie aus, ob die auf den Zielserver kopierten Aufträge aktiviert werden sollen.  
+  
+ Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
+  
+|Wert|Description|  
+|-----------|-----------------|  
+|**Wahr**|Aktiviert Jobs auf dem Zielserver.|  
+|**False**|Deaktiviert Jobs auf dem Zielserver.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
