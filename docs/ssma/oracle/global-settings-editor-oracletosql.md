@@ -11,8 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
 caps.latest.revision: 3
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

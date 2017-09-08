@@ -18,9 +18,9 @@ helpviewer_keywords:
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 239b7a8f4dbc3069e67d680b319bf426a0f917e6

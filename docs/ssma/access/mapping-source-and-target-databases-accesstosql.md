@@ -22,9 +22,9 @@ helpviewer_keywords:
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 8bc9bde868aa615c2e78ace576394a9d1f782e3e

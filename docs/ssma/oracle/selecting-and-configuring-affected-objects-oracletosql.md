@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

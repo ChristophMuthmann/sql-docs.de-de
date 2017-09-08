@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Data Migration,client side data migration
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ccb34908c2e3acc9328839b0ffadf93dcb42aa32

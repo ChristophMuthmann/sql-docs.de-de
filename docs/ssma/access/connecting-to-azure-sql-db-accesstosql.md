@@ -23,9 +23,9 @@ helpviewer_keywords:
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: dd42d05f0a5521b9e64742222147f584a2aaf518

@@ -19,9 +19,9 @@ helpviewer_keywords:
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: d4615763a634b408a523004df2bc674227c5e327

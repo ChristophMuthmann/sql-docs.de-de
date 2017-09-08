@@ -19,9 +19,9 @@ helpviewer_keywords:
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ef30f1ff45422bbe034c1fe815753ebb7e2543df

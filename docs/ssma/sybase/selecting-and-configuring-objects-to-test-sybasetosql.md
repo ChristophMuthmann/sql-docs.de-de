@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: e1cc9bf3ed4348e3875885c1c7bb6face6562753

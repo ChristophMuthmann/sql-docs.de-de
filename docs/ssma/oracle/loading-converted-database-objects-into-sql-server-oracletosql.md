@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

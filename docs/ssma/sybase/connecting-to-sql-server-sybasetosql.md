@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Connecting to SQL Server
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 3dd8b595d897aad93d580447af4afed330cb71f9

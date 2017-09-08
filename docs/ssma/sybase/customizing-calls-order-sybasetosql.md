@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,Customizing Calls Order
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2ab7267141f3a81cfc26d0ecb3bc9397c0a1910f

@@ -24,9 +24,9 @@ helpviewer_keywords:
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4016293e0ef155f5187da8f817cd4e000a087304

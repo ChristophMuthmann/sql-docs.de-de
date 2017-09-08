@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2e30171c86c56f232d17ed159eb53d0eaddae79c

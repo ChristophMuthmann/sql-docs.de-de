@@ -21,9 +21,9 @@ helpviewer_keywords:
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 caps.latest.revision: 20
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a060c0c1890a007ad14e21f526f436d03bb6c481

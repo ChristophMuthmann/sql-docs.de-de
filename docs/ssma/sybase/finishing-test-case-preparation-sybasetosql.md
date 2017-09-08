@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7568e7a78e0129204a23797cbc589139816ac13e

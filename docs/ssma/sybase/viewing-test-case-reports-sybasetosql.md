@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 6ac96a35ea5f97ef58be45b2fbd2a04980f8b4cb

@@ -13,8 +13,8 @@ helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

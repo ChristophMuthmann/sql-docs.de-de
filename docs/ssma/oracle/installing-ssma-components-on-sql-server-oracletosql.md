@@ -14,8 +14,8 @@ helpviewer_keywords:
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

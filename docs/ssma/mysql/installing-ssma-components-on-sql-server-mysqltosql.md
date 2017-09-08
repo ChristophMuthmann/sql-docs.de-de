@@ -16,9 +16,9 @@ helpviewer_keywords:
 - SSMA extension pack, Installation
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 9544fb62402871b9a93284df88e0082f62fec582

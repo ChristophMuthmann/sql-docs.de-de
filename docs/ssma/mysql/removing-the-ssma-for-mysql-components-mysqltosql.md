@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 765696847ddb1abd44dfac3463fdfd75f9a5c97a

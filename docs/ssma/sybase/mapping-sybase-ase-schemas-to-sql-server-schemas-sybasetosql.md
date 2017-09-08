@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 8f7b6a20ffcc0325ce3644c0a0667542aa2d3aca

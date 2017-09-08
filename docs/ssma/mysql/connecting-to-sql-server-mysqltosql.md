@@ -17,9 +17,9 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 8a00088252b6cab4971b7574f6f3e840c326d2f8

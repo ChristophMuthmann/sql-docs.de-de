@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Sybase Console,Variable Value File Validation
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: e23cffcc79e0276f5003537b4ecc724efe76b36d

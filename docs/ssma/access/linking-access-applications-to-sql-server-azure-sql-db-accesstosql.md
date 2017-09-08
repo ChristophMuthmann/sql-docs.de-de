@@ -27,8 +27,8 @@ helpviewer_keywords:
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 caps.latest.revision: 19
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2

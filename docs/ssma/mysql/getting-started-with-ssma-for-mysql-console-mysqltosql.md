@@ -17,9 +17,9 @@ helpviewer_keywords:
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 caps.latest.revision: 23
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 0b41087aeaa65c87269a34f3208a4b63d91971e7

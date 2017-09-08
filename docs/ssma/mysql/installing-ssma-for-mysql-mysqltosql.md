@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Installing SSMA 2008, Upgrading
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77dfcacd3c84e4c6ed8409dfc2533be6a38a31ab

@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,Managing Backups
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7d6f4f4ba8ee42fb987ef4c98970af6c1fca2765

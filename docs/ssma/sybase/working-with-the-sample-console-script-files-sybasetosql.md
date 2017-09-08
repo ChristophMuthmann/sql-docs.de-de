@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe

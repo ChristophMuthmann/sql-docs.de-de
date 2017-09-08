@@ -34,9 +34,9 @@ helpviewer_keywords:
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 5fd1535f35afdfa53895816da2e3e32f539c04b5

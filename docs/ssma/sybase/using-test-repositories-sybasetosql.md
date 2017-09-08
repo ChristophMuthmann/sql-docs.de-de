@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a8c790666f48f142e65a0293bef2170dc12eb5f7

@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Sybase Console,Appendix
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a6121c15131cc42ee064767cd5a25e428e0968cb

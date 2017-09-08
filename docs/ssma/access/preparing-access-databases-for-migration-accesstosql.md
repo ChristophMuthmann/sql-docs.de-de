@@ -25,8 +25,8 @@ helpviewer_keywords:
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 caps.latest.revision: 20
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
 ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99

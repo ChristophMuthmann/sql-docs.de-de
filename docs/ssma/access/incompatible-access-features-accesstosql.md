@@ -32,9 +32,9 @@ helpviewer_keywords:
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b60bab1d71142a74c8558ce05a6ca96451e7cfc9

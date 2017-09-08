@@ -18,9 +18,9 @@ helpviewer_keywords:
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a3e6e0a2bc661db9741ef3ee53eaed5426d1971c

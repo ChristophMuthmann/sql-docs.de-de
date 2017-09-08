@@ -21,9 +21,9 @@ helpviewer_keywords:
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: f1fbca03968ed7257cd7b65a42a6fff5180dbedc

@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Connecting to Sybase ASE
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4cbdcd08cc4186dd4fa6d7d8fcffebdfd1139799

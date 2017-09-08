@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 6f6472656dbfd31ca64348d066cca19f303b4a5f

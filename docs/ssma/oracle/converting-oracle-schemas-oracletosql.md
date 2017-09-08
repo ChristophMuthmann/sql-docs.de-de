@@ -13,8 +13,8 @@ helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

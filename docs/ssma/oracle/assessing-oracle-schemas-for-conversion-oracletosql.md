@@ -13,8 +13,8 @@ helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc

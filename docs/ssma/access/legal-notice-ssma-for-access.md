@@ -18,9 +18,9 @@ helpviewer_keywords:
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: f6f8e7504860b1502a4b3de0859cc9c4b9ddb1ea

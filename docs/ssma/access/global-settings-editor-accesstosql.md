@@ -14,9 +14,9 @@ applies_to:
 - SQL Server
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 caps.latest.revision: 3
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: de78e336322f07b571e1b0d3d11cc6d96a9e6608

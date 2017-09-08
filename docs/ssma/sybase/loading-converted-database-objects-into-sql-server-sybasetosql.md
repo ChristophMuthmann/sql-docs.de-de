@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Loading Converted Database Objects
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 25cf9044bfce0e52f0eee93c54b0c74466d970b3

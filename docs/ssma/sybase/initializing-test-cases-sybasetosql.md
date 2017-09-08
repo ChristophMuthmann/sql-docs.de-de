@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Tester Component,InitializingTest Cases
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 344c534bea866681241cc3936d57be0d01796e53

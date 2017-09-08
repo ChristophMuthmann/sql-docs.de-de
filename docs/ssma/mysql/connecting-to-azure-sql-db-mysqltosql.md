@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b7cb16b0b6ca0f98aaaa68d566092ef5327cd012

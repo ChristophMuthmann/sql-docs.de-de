@@ -17,9 +17,9 @@ helpviewer_keywords:
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 3dd2adf0b8f6379bd11dc80de4cc2aedf5b3c102

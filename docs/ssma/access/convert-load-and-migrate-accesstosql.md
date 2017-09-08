@@ -18,9 +18,9 @@ helpviewer_keywords:
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 06f893943a2e4e43b2faabc4e679c9e1cbb8dee4

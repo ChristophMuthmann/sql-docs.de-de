@@ -34,9 +34,9 @@ helpviewer_keywords:
 - uploading objects into SQL Server
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 5def0c73f1c77a289eb926c4d8ab7691a6d19253

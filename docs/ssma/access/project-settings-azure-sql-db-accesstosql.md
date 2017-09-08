@@ -17,9 +17,9 @@ helpviewer_keywords:
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b0400974355911eb56118054c28060559af16080

@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Generating reports
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 180b3176563baa70d05aa93f2530fd486601fbb5

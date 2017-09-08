@@ -23,9 +23,9 @@ helpviewer_keywords:
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 0df634087870db32ed0357c97b1211d4fc1ddcba

@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 121eaac78860ce58d2028f62f352e66e951558b9

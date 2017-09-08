@@ -19,9 +19,9 @@ helpviewer_keywords:
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 caps.latest.revision: 20
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 44d7c381e4cc0599e24f5df1024b31b75b1598f7

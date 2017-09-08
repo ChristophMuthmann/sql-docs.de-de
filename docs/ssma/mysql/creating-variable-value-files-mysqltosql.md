@@ -17,9 +17,9 @@ helpviewer_keywords:
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 30338e08efeb1023398a0d82a9367a47d9c5154f

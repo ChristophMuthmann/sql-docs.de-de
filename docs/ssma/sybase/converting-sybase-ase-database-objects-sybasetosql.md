@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Converting Database Objects
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: dd8fba1682d270251a865675f047e69a66e12479
