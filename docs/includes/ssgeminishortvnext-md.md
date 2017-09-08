@@ -1,1 +1,0 @@
- Power Pivot für SharePoint 2013 
