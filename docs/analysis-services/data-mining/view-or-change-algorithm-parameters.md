@@ -1,26 +1,31 @@
 ---
-title: "Anzeigen oder &#196;ndern von Algorithmusparametern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Algorithmen [Data Mining]"
-  - "Miningmodelle [Analysis Services], Algorithmen"
+title: "Anzeigen oder Ändern von Algorithmusparametern | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services], algorithms
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6144f270df1d20543b45c419df494a023a0f3bfb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anzeigen oder &#196;ndern von Algorithmusparametern
+# <a name="view-or-change-algorithm-parameters"></a>Anzeigen oder Ändern von Algorithmusparametern
   Sie können die Parameter ändern, die mit den Algorithmen zum Erstellen von Data Mining-Modellen bereitgestellt wurden, um die Ergebnisse des Modells anzupassen.  
   
  Durch die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmusparameter wird viel mehr als nur die Eigenschaften des Modells geändert. Sie können auch verwendet werden, um die Methode, mit der Daten verarbeitet, gruppiert und angezeigt werden, grundlegend zu ändern. Sie können mithilfe von Algorithmusparametern beispielsweise Folgende Aufgaben ausführen:  
@@ -37,9 +42,9 @@ caps.handback.revision: 15
   
  Die für jeden Algorithmus bereitgestellten Parameter variieren stark. Eine Liste der Parameter, die Sie für jeden Algorithmus festlegen können, finden Sie in den technische Referenzthemen in folgendem Abschnitt: [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-### Ändern eines Algorithmusparameters  
+### <a name="change-an-algorithm-parameter"></a>Ändern eines Algorithmusparameters  
   
-1.  Klicken Sie in der Registerkarte **Miningmodelle** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit der rechten Maustaste auf den Algorithmustyp des Miningmodells, dessen Algorithmus Sie optimieren wollen, und klicken Sie anschließend auf **Algorithmusparameter festlegen**.  
+1.  Klicken Sie in der Registerkarte **Miningmodelle** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mit der rechten Maustaste auf den Algorithmustyp des Miningmodells, dessen Algorithmus Sie optimieren wollen, und klicken Sie anschließend auf **Algorithmusparameter festlegen**.  
   
      Das Dialogfeld **Algorithmusparameter** wird geöffnet.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 15
   
      Der Algorithmusparameter wird auf den neuen Wert festgelegt. Die Parameteränderung wird erst dann im Miningmodell widergespiegelt, wenn Sie das Modell erneut verarbeitet haben.  
   
-### Anzeigen der in einem vorhandenen Modell verwendeten Parameter  
+### <a name="view-the-parameters-used-in-an-existing-model"></a>Anzeigen der in einem vorhandenen Modell verwendeten Parameter  
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein DMX-Abfragefenster in.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
   
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Datenspalten der Benachrichtigungsereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Benachrichtigungsereignisse (Ereigniskategorie)"
+title: Datenspalten der Benachrichtigungsereignisse | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenspalten der Benachrichtigungsereignisse
+# <a name="notification-events-data-columns"></a>Datenspalten der Benachrichtigungsereignisse
   Benachrichtigungsereignisse sind Ereignisse, die nicht direkt vom Benutzer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verursacht werden. Zu Benachrichtigungen kommt es z. B., weil Benutzer zugrunde liegende Tabellen für das proaktive Zwischenspeichern aktualisieren.  
   
  Die Ereigniskategorie Benachrichtigungsereignisse besitzt die folgende Ereignisklasse:  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  In der folgenden Tabelle sind die Datenspalten für die Ereignisklasse aufgeführt:  
   
-## Benachrichtigung  
+## <a name="notification"></a>Benachrichtigung  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -38,7 +43,7 @@ caps.handback.revision: 30
 |EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> Die folgenden **Unterklassen-ID**:<br />                      **Unterklassenname** -Paare sind definiert:<br /><br /> 0: Proaktives Zwischenspeichern Anfang<br /><br /> 1: Proaktives Zwischenspeichern Ende<br /><br /> 2: Flight Recorder gestartet<br /><br /> 3: Flight Recorder beendet<br /><br /> 4: Konfigurationseigenschaften aktualisiert<br /><br /> 5: SQL-Ablaufverfolgung<br /><br /> 6: Objekt erstellt<br /><br /> 7: Objekt gelöscht<br /><br /> 8: Objekt geändert<br /><br /> 9: Proaktiver Zwischenspeicherabruf Anfang<br /><br /> 10: Proaktiver Zwischenspeicherabruf Ende<br /><br /> 11: Flight Recorder-Momentaufnahme Anfang<br /><br /> 12: Flight Recorder-Momentaufnahme Ende<br /><br /> 13: Proaktives Zwischenspeichern: anzeigepflichtiges Objekt aktualisiert<br /><br /> 14: Verzögertes Verarbeiten: Start der Verarbeitung<br /><br /> 15: Verzögertes Verarbeiten: Verarbeitung abgeschlossen<br /><br /> 16: SessionOpened-Ereignis Anfang<br /><br /> 17: SessionOpened-Ereignis Ende<br /><br /> 18: SessionClosing-Ereignis Anfang<br /><br /> 19: SessionClosing-Ereignis Ende<br /><br /> 20: CubeOpened-Ereignis Anfang<br /><br /> 21: CubeOpened-Ereignis Ende<br /><br /> 22: CubeClosing-Ereignis Anfang<br /><br /> 23: CubeClosing-Ereignis Ende<br /><br /> 24: Transaktionsabbruch angefordert|  
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Benachrichtigungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |IntegerData|10|1|Enthält die mit dem Benachrichtigungsereignis verbundenen ganzzahligen Daten. Wenn die EventSubclass-Spalte 8 ist, sind die Werte:<br /><br /> 1 = Erstellt<br /><br /> 2 = Gelöscht<br /><br /> 3 = Geänderte Objekteigenschaften<br /><br /> 4 = Geänderte Eigenschaften der untergeordneten Elemente des Objekts<br /><br /> 6 = Untergeordnetes Element hinzugefügt<br /><br /> 7 = Untergeordnetes Element gelöscht<br /><br /> 8 = Objekt erfolgreich verarbeitet<br /><br /> 9 = Objekt teilweise verarbeitet<br /><br /> 10 = Objekt nicht verarbeitet<br /><br /> 11 = Objekt vollständig optimiert<br /><br /> 12 = Objekt teilweise optimiert<br /><br /> 13 = Objekt nicht optimiert|  
 |ObjectID|11|8|Enthält die Objekt-ID, für die diese Benachrichtigung ausgegeben wird; dies ist ein Zeichenfolgenwert.|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|Enthält den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, in der das Benachrichtigungsereignis aufgetreten ist.|  
 |RequestProperties|45|9|Enthält die Eigenschaften der XMLA-Anforderung.|  
   
-## Benutzerdefiniert  
+## <a name="user-defined"></a>Benutzerdefiniert  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Enthält die mit dem Benachrichtigungsereignis verbundenen Textdaten.|  
 |ServerName|43|8|Enthält den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, in der das Benachrichtigungsereignis aufgetreten ist.|  
   
-## Siehe auch  
- [Benachrichtigungsereignisse (Ereigniskategorie)](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

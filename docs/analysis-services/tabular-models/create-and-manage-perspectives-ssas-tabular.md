@@ -1,26 +1,31 @@
 ---
 title: "Erstellen und Verwalten von Perspektiven (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.perspectivedb.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2af9c28c5c63edc873ef549527333b4ba353cb08
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen und Verwalten von Perspektiven (SSAS – tabellarisch)
+# <a name="create-and-manage-perspectives-ssas-tabular"></a>Erstellen und Verwalten von Perspektiven (SSAS – tabellarisch)
   Eine Perspektive definiert sichtbare Teilmengen eines Modells, die fokussierte, unternehmensspezifische oder anwendungsspezifische Blickpunkte des Modells bereitstellen. In den Tasks in diesem Thema wird beschrieben, wie Perspektiven mithilfe des Dialogfelds **Perspektiven** im Modell-Designer erstellt und verwaltet werden.  
   
  Dieses Thema umfasst folgende Aufgaben:  
@@ -35,7 +40,7 @@ caps.handback.revision: 17
   
 -   [So kopieren Sie eine Perspektive](#bkmk_copy)  
   
-## Aufgaben  
+## <a name="tasks"></a>Aufgaben  
  Zum Erstellen von Perspektiven verwenden Sie das Dialogfeld **Perspektiven** , in dem Sie Perspektiven hinzufügen, bearbeiten, löschen, kopieren und anzeigen können. Um das Dialogfeld **Perspektiven** anzuzeigen, klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf das Menü **Modell** und dann auf **Perspektiven**.  
   
 ###  <a name="bkmk_add"></a> So fügen Sie eine Perspektive hinzu  
@@ -60,7 +65,7 @@ caps.handback.revision: 17
   
 -   Wenn Sie auf die Spaltenüberschrift einer Perspektive zeigen, wird die Schaltfläche **Kopieren** angezeigt. Klicken Sie auf die Schaltfläche **Kopieren** , um eine Kopie dieser Perspektive zu erstellen. Rechts neben den vorhandenen Perspektiven wird eine Kopie der ausgewählten Perspektive als neue Perspektive hinzugefügt. Die neue Perspektive erbt den Namen der kopierten Perspektive, und an das Ende des Namens wird die Anmerkung *-Kopieren* angefügt. Wenn beispielsweise eine Kopie der Perspektive *Sales* erstellt wird, erhält die neue Perspektive den Namen *Sales – Kopie*.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Perspektiven &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Hierarchien &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

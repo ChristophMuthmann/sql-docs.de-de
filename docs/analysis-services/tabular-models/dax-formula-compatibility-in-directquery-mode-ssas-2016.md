@@ -1,35 +1,42 @@
 ---
-title: "DAX-Formelkompatibilit&#228;t im DirectQuery-Modus (SSAS 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2016) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d7c13126b258662572b5ad5a9b02bcf7921c2346
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# DAX-Formelkompatibilit&#228;t im DirectQuery-Modus (SSAS 2016)
-Zu den wichtigsten Verbesserungen in [!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] gehört die DirectQuery-Modusfunktionalität für tabellarische 1200-Modelle. Viele Funktionseinschränkungen in früheren Versionen liegen nicht mehr vor. Insbesondere für DAX-Formeln gilt Folgendes:
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>DAX-Formelkompatibilität im DirectQuery-Modus 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+Für tabellarische 1200 oder höher Modelle im DirectQuery-Modus gelten viele funktionale Einschränkungen in früheren Versionen nicht mehr. Insbesondere für DAX-Formeln gilt Folgendes:
 
 - DirectQuery generiert jetzt einfachere Abfragen, die eine verbesserte Leistung bieten.
-- Sicherheit auf Zeilenebene (Row Level Security, RLS) wird jetzt im DirectQuery-Modus für tabellarische 1200-Modelle unterstützt.
-- Berechnete Spalten werden nun für tabellarische 1200-Modelle im DirectQuery-Modus unterstützt.
+- Sicherheit auf Zeilenebene (RLS) wird jetzt im DirectQuery-Modus unterstützt.
+- Berechnete Spalten werden jetzt für tabellarische Modelle im DirectQuery-Modus unterstützt.
 
-## DAX-Funktionen im DirectQuery-Modus
+## <a name="dax-functions-in-directquery-mode"></a>DAX-Funktionen im DirectQuery-Modus
 
-Alle DAX-Funktionen werden also für tabellarische 1200-Modelle im DirectQuery-Modus unterstützt. Allerdings werden nicht alle Funktionen für alle Formeltypen unterstützt, und nicht alle Funktionen wurden für tabellarische 1200-Modelle im DirectQuery-Modus optimiert. Auf der einfachsten Ebene können wir DAX-Funktionen in zwei Gruppen unterteilen: optimiert und nicht optimiert. Lassen Sie uns zuerst einen Blick auf optimierte Funktionen werfen.
+Kurz gesagt, werden alle DAX-Funktionen für DirectQuery-Modelle unterstützt. Allerdings nicht alle Funktionen werden für alle Formel Typen unterstützt, und nicht alle Funktionen wurden für DirectQuery-Modelle optimiert. Auf der einfachsten Ebene können wir DAX-Funktionen in zwei Gruppen unterteilen: optimiert und nicht optimiert. Lassen Sie uns zuerst einen Blick auf optimierte Funktionen werfen.
 
 
-### Für DirectQuery optimiert
+### <a name="optimized-for-directquery"></a>Für DirectQuery optimiert
 Dies sind Funktionen, die in erster Linie skalare oder aggregierte Ergebnisse zurückgeben. Diese Funktionen sind weiter unterteilt in diejenigen, die von allen Arten von Formeln unterstützt werden (Measures, Abfragen, berechnete Spalten, Sicherheit auf Zeilenebene), und in diejenigen, die nur in Measure- und Abfrageformeln unterstützt werden. Dazu gehören:    
 
 | In allen DAX-Formeln unterstützt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Nur in Measure- und Abfrageformeln unterstützt                                                                                                                                                                                                                                                                                                |
@@ -38,8 +45,8 @@ Dies sind Funktionen, die in erster Linie skalare oder aggregierte Ergebnisse zu
 
 
 
-### Für DirectQuery nicht optimiert
-Diese Funktionen wurden nicht zum Arbeiten mit DirectQuery in tabellarischen 1200-Modellen optimiert. Diese Funktionen *werden auf keinen Fall* in Formeln mit berechneten Spalten und Sicherheit auf Zeilenebene unterstützt. Jedoch werden diese Funktionen in Measure- und Abfrageformeln *unterstützt*, wenn auch mit ungewisser Leistung.
+### <a name="non-optimized-for-directquery"></a>Für DirectQuery nicht optimiert
+Diese Funktionen sind nicht optimiert worden, um die Arbeitsweise mit DirectQuery. Diese Funktionen *werden auf keinen Fall* in Formeln mit berechneten Spalten und Sicherheit auf Zeilenebene unterstützt. Jedoch werden diese Funktionen in Measure- und Abfrageformeln *unterstützt* , wenn auch mit ungewisser Leistung.
 
  Hier sind nicht alle Funktionen aufgelistet. Wenn eine Funktion nicht in einer der obigen Listen mit optimierten Funktionen enthalten ist, handelt es sich nicht um eine für DirectQuery optimierte Funktion.
 
@@ -47,12 +54,12 @@ Ein Grund, warum eine bestimmte Funktion nicht für DirectQuery optimiert werden
 
 Weitere Informationen zu allen DAX-Funktionen finden Sie unter [DAX-Funktionsreferenz]. (https://msdn.microsoft.com/de-de/library/ee634396.aspx)
 
-## DAX-Operatoren im DirectQuery-Modus
-Alle DAX-Vergleichs- und arithmetischen Operatoren werden in tabellarischen 1200-Modellen im DirectQuery-Modus vollständig unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](https://msdn.microsoft.com/library/ee634237.aspx).
+## <a name="dax-operators-in-directquery-mode"></a>DAX-Operatoren im DirectQuery-Modus
+Alle DAX-Vergleichsvorgängen sowie arithmetischen Operatoren werden im DirectQuery-Modus vollständig unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  
-## Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
+## <a name="differences-between-in-memory-and-directquery-mode"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
 Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Das liegt daran, dass Daten bei DirectQuery direkt aus einem relationalen Datenspeicher abgerufen und für Formeln erforderliche Aggregationen mithilfe des relevanten relationalen Moduls (SQL, Oracle, Teradata) ausgeführt werden, anstatt das xVelocity-Modul für Datenanalyse im Arbeitsspeicher für Speicherungs- und Rechenvorgänge zu verwenden.  
   
 Beispielsweise behandeln bestimmte relationale Datenspeicher numerische Werte, Daten, NULL-Werte usw. auf unterschiedliche Weise.  
@@ -61,11 +68,11 @@ Im Gegensatz dazu dient die DAX-Programmiersprache zum möglichst genauen Emulie
   
 Darüber sind einige Funktionen nicht für den DirectQuery-Modus optimiert, da andernfalls die Berechnung erfordern würde, dass die Daten im aktuellen Kontext an die relationale Datenquelle als Parameter gesendet werden. Dies gilt beispielsweise für Measures, die Zeitintelligenzfunktionen nutzen, die auf Datumsbereiche in einer Kalendertabelle verweisen. Eine relationale Datenquelle enthält möglicherweise keine Kalendertabelle.  
   
-## Semantische Unterschiede  
-Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
+## <a name="semantic-differences"></a>Semantische Unterschiede  
+Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
   
-### Vergleiche  
-Die DAX-Programmiersprache in speicherinternen Modellen unterstützt Vergleiche von zwei Ausdrücken, die in Skalarwerte verschiedener Datentypen aufgelöst werden. Modelle, die im DirectQuery-Modus bereitgestellt werden, verwenden jedoch die Datentypen und Vergleichsoperatoren des relationalen Moduls und geben daher u. U. unterschiedliche Ergebnisse zurück.  
+### <a name="comparisons"></a>Vergleiche  
+Die DAX-Programmiersprache in speicherinternen Modellen unterstützt Vergleiche von zwei Ausdrücken, die in Skalarwerte verschiedener Datentypen aufgelöst werden. Modelle, die im DirectQuery-Modus bereitgestellt werden, verwenden jedoch die Datentypen und Vergleichsoperatoren des relationalen Moduls und geben daher u. U. unterschiedliche Ergebnisse zurück.  
   
 Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Berechnung in einer DirectQuery-Datenquelle verwendet werden:  
   
@@ -80,16 +87,16 @@ Im Allgemeinen toleriert die DAX-Programmiersprache mehr Datentypkonflikte in sp
 **Vergleiche von Zeichenfolgen und Zahlen**  
 BEISPIEL: `“2” < 3`  
   
-Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sowohl bei Modellen im DirectQuery-Modus als auch bei speicherinternen Modellen **true**.  
+Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sowohl bei Modellen im DirectQuery-Modus als auch bei speicherinternen Modellen **true** .  
   
-Bei einem speicherinternen Modell lautet das Ergebnis **true**, da Zahlen als Zeichenfolgen implizit in einen numerischen Datentyp für Vergleiche mit anderen Zahlen umgewandelt werden. SQL wandelt auch Textzahlen implizit in Zahlen für den Vergleich mit numerischen Datentypen um.  
+Bei einem speicherinternen Modell lautet das Ergebnis **true** , da Zahlen als Zeichenfolgen implizit in einen numerischen Datentyp für Vergleiche mit anderen Zahlen umgewandelt werden. SQL wandelt auch Textzahlen implizit in Zahlen für den Vergleich mit numerischen Datentypen um.  
   
-Beachten Sie, dass dies eine Änderung des Verhaltens von der ersten Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] darstellt, die **false** zurückgeben würde, da der Text „2“ stets im Vergleich zu einer Zahl als größer betrachtet wird.  
+Beachten Sie, dass dies eine Änderung des Verhaltens von der ersten Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]darstellt, die **false**zurückgeben würde, da der Text „2“ stets im Vergleich zu einer Zahl als größer betrachtet wird.  
   
 **Vergleich von Text mit booleschen Werten**  
 BEISPIEL: `“VERDADERO” = TRUE`  
   
-Dieser Ausdruck vergleicht eine Textzeichenfolge mit einem booleschen Wert. Im Allgemeinen führt der Vergleich von einem Zeichenfolgenwert mit einem booleschen Wert bei DirectQuery-Modellen bzw. speicherinternen Modellen zu einem Fehler. Diese Regel gilt jedoch nicht, wenn die Zeichenfolge das Wort **true** oder **false** enthält. Wenn die Zeichenfolge Werte des Typs „true“ oder „false“ enthält, erfolgt eine Umwandlung in einen booleschen Wert. Daraufhin wird der Vergleich ausgeführt und ein logisches Ergebnis zurückgegeben.  
+Dieser Ausdruck vergleicht eine Textzeichenfolge mit einem booleschen Wert. Im Allgemeinen führt der Vergleich von einem Zeichenfolgenwert mit einem booleschen Wert bei DirectQuery-Modellen bzw. speicherinternen Modellen zu einem Fehler. Diese Regel gilt jedoch nicht, wenn die Zeichenfolge das Wort **true** oder **false**enthält. Wenn die Zeichenfolge Werte des Typs „true“ oder „false“ enthält, erfolgt eine Umwandlung in einen booleschen Wert. Daraufhin wird der Vergleich ausgeführt und ein logisches Ergebnis zurückgegeben.  
   
 **Vergleich von NULL-Werten**  
 BEISPIEL: `EVALUATE ROW("X", BLANK() = BLANK())`  
@@ -98,13 +105,13 @@ Diese Formel vergleicht die SQL-Entsprechung eines NULL-Werts mit einem NULL-Wer
   
 Beachten Sie, dass ein NULL-Wert in Transact-SQL niemals gleich einem NULL-Wert ist. In der DAX-Programmiersprache jedoch ist ein Leerzeichen gleich einem anderen Leerzeichen. Dieses Verhalten gilt für alle speicherinternen Modelle. Im DirectQuery-Modus wird hauptsächlich die Semantik von SQL Server verwendet. In diesem Fall wird jedoch von der Semantik abgewichen, indem ein neues Verhalten für Vergleiche von NULL-Werten verwendet wird.  
   
-### Umwandlungen  
+### <a name="casts"></a>Umwandlungen  
   
 Es gibt in der DAX-Programmiersprache keine Umwandlungsfunktion als solche, aber implizite Umwandlungen werden bei vielen Vergleichsvorgängen sowie arithmetischen Vorgängen ausgeführt. Anhand des Vergleichsvorgangs bzw. arithmetischen Vorgangs wird der Datentyp des Ergebnisses bestimmt. Beispiel:  
   
 -   Boolesche Werte werden bei arithmetischen Vorgängen als numerisch betrachtet, beispielsweise als TRUE + 1. Alternativ wird die Funktion MIN für eine Spalte mit booleschen Werten angewendet. Ein NOT-Vorgang gibt ebenfalls einen numerischen Wert zurück.  
   
--   Boolesche Werte werden stets als logische Werte in Vergleichen sowie bei Verwendung mit EXACT, AND, OR,&amp;&amp; oder || betrachtet.  
+-   Boolesche Werte werden stets als logische Werte in Vergleichen sowie bei Verwendung mit EXACT, AND, OR, &amp;&amp;oder || betrachtet.  
   
 **Umwandeln einer Zeichenfolge in einen booleschen Wert**  
 Bei speicherinternen Modellen sowie DirectQuery-Modellen sind Umwandlungen in boolesche Werte nur bei folgenden Zeichenfolgen zulässig: **""** (leere Zeichenfolge), **true**, **false**. Dabei wird eine leere Zeichenfolge in einen FALSE-Wert umgewandelt.  
@@ -112,34 +119,34 @@ Bei speicherinternen Modellen sowie DirectQuery-Modellen sind Umwandlungen in bo
 Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem Fehler.  
   
 **Umwandeln einer Zeichenfolge in ein Datum/eine Uhrzeit**  
-Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime**-Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.   
+Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime** -Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.   
   
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
 **Umwandeln von Zeichenfolgen in andere nicht-boolesche Werte**  
-Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/de-de/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Umwandlung von Zahlen in Zeichenfolgen nicht zulässig**  
 BEISPIEL: `CONCATENATE(102,”,345”)`  
   
 Die Umwandlung von Zahlen in Zeichenfolgen ist bei SQL Server nicht zulässig.  
   
-Diese Formel gibt einen Fehler in Tabellenmodellen und im DirectQuery-Modus zurück. Die Formel erzeugt allerdings in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ein Ergebnis.  
+Diese Formel gibt einen Fehler in Tabellenmodellen und im DirectQuery-Modus zurück. Die Formel erzeugt allerdings in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ein Ergebnis.  
   
 **Keine Unterstützung für Umwandlungen mit zwei Versuchen in DirectQuery**  
 Bei speicherinternen Modellen erfolgt oftmals ein zweiter Umwandlungsversuch, wenn der erste fehlgeschlagen ist. Dies geschieht nicht im DirectQuery-Modus.  
   
 BEISPIEL: `TODAY() + “13:14:15”`  
   
-In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string** auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double** aus. Bei speicherinternen Modellen versucht das Formelmodul, eine direkte Umwandlung in **double** vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime** umzuwandeln.  
+In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht das Formelmodul, eine direkte Umwandlung in **double**vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime**umzuwandeln.  
   
 Im DirectQuery-Modus wird nur die direkte Umwandlung von **string** in **double** übernommen. Schlägt diese Umwandlung fehl, gibt die Formel einen Fehler zurück.  
   
-### Mathematische Funktionen und arithmetische Vorgänge  
+### <a name="math-functions-and-arithmetic-operations"></a>Mathematische Funktionen und arithmetische Vorgänge  
 Einige mathematische Funktionen geben im DirectQuery-Modus andere Ergebnisse zurück. Dies ist auf Unterschiede des zugrunde liegenden Datentyps oder der Umwandlungen zurückzuführen, die in Vorgängen übernommen werden können. Zudem können sich die zuvor beschriebenen Einschränkungen der zulässigen Werte auf das Ergebnis von arithmetischen Vorgängen auswirken.  
   
 **Reihenfolge der Hinzufügung**  
-Wenn Sie eine Formel erstellen, die eine Reihe von Zahlen hinzufügt, verarbeitet ein speicherinternes Modell die Zahlen u. U. in einer anderen Reihenfolge als ein DirectQuery-Modell.  Liegen demnach viele sehr hohe positive Zahlen und sehr hohe negative Zahlen vor, wird möglicherweise ein Fehler in einem Vorgang zurückgegeben, und ein weiterer Vorgang wird ausgelöst.  
+Wenn Sie eine Formel erstellen, die eine Reihe von Zahlen hinzufügt, verarbeitet ein speicherinternes Modell die Zahlen u. U. in einer anderen Reihenfolge als ein DirectQuery-Modell.  Liegen demnach viele sehr hohe positive Zahlen und sehr hohe negative Zahlen vor, wird möglicherweise ein Fehler in einem Vorgang zurückgegeben, und ein weiterer Vorgang wird ausgelöst.  
   
 **Verwendung der POWER-Funktion**  
 BEISPIEL: `POWER(-64, 1/3)`  
@@ -160,14 +167,14 @@ SQL Server behandelt NULL-Werte und Leerzeichen anders als das xVelocity-Modul. 
   
 Die gleichen Einschränkungen gelten für die anderen logarithmischen Funktionen: LOG10 und LN.  
   
-Weitere Informationen zum **blank**-Datentyp in der DAX-Programmiersprache finden Sie in der [DAX-Syntaxspezifikation für PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Weitere Informationen zum **blank** -Datentyp in der DAX-Programmiersprache finden Sie in der [DAX-Syntaxspezifikation für PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 **Division durch 0 und Division durch Leerzeichen**  
 Im DirectQuery-Modus führt die Division durch null (0) bzw. die Division durch BLANK stets zu einem Fehler. SQL Server unterstützt nicht die Definition der Unendlichkeit, und da das natürliche Ergebnis jeder Division durch 0 die Unendlichkeit ist, entspricht das Ergebnis einem Fehler. SQL Server unterstützt jedoch die Division durch NULL-Werte, und das Ergebnis muss stets einem NULL-Wert entsprechen.  
   
 Anstelle der Rückgabe unterschiedlicher Ergebnisse für diese Vorgänge geben beide Vorgangstypen (Division durch null und Division durch einen NULL-Wert) im DirectQuery-Modus einen Fehler zurück.  
   
-Beachten Sie, dass die Division durch 0 in Excel und in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Modellen auch einen Fehler zurückgibt. Die Division durch ein Leerzeichen gibt ein Leerzeichen zurück.  
+Beachten Sie, dass die Division durch 0 in Excel und in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modellen auch einen Fehler zurückgibt. Die Division durch ein Leerzeichen gibt ein Leerzeichen zurück.  
   
 Die folgenden Ausdrücke sind in speicherinternen Modellen gültig, schlagen jedoch im DirectQuery-Modus fehl:  
   
@@ -181,7 +188,7 @@ Die folgenden Ausdrücke sind in speicherinternen Modellen gültig, schlagen jed
   
 Der Ausdruck `BLANK/BLANK` ist ein besonderer Fall, der `BLANK` sowohl in speicherinternen Modellen als auch im DirectQuery-Modus zurückgibt.  
   
-### Unterstützte numerische und Datums-/Uhrzeitbereiche  
+### <a name="supported-numeric-and-date-time-ranges"></a>Unterstützte numerische und Datums-/Uhrzeitbereiche  
 Formeln in speicherinternen Tabellenmodellen unterliegen im Hinblick auf die maximal zulässigen Werte für reelle Zahlen und Datumsangaben den gleichen Einschränkungen wie Excel. Unterschiede können jedoch entstehen, wenn der maximale Wert von einer Berechnung oder einer Abfrage zurückgegeben wird, oder wenn Werte konvertiert, umgewandelt, gerundet oder gekürzt werden.  
   
 -   Werden Werte der Typen **Currency** und **Real** multipliziert, und ist das Ergebnis größer als der maximal mögliche Wert, wird im DirectQuery-Modus kein Fehler ausgelöst. Zudem wird ein NULL-Wert zurückgegeben.  
@@ -199,7 +206,7 @@ Wenn in Formeln verwendete Datumsangaben außerhalb dieses Bereichs liegen, füh
 **Von CEILING unterstützte Gleitkommawerte**  
 BEISPIEL: `EVALUATE ROW("x", CEILING(-4.398488E+30, 1))`  
   
-Die Transact-SQL-Entsprechung für die DAX-CEILING-Funktion unterstützt nur Werte mit einer Größe von maximal 10^19. Als Faustregel gilt, dass Gleitkommawerte in **bigint** passen sollten.  
+Die Transact-SQL-Entsprechung für die DAX-CEILING-Funktion unterstützt nur Werte mit einer Größe von maximal 10^19. Als Faustregel gilt, dass Gleitkommawerte in **bigint**passen sollten.  
   
 **Datepart-Funktionen mit Datumsangaben außerhalb des Bereichs**  
 Bei Ergebnissen im DirectQuery-Modus wird gewährleistet, dass diese den Ergebnissen von speicherinternen Modellen nur entsprechen, wenn sich das als Argument verwendete Datum innerhalb des gültigen Datumsbereichs befindet. Werden diese Bedingungen nicht erfüllt, wird entweder ein Fehler ausgelöst, oder die Formel gibt in DirectQuery andere Ergebnisse zurück als im speicherinternen Modus.  
@@ -240,14 +247,14 @@ Im folgenden Beispiel wird veranschaulicht, wie dieser Wert berechnet wird:
 6.  60 entspricht 0.  
   
 **SQL-Zeitdatentyp nicht unterstützt**  
-Bei speicherinternen Modellen wird die Verwendung des neuen **Time**-Datentyps nicht unterstützt. Im DirectQuery-Modus geben Formeln, die mit diesem Datentyp auf Spalten verweisen, einen Fehler zurück. Zeitdatenspalten können nicht in ein speicherinternes Modell importiert werden.  
+Bei speicherinternen Modellen wird die Verwendung des neuen **Time** -Datentyps nicht unterstützt. Im DirectQuery-Modus geben Formeln, die mit diesem Datentyp auf Spalten verweisen, einen Fehler zurück. Zeitdatenspalten können nicht in ein speicherinternes Modell importiert werden.  
   
 Mitunter wandelt das Modul den Zeitwert in einen zulässigen Datentyp um, und die Formel gibt ein Ergebnis zurück.  
   
 Dieses Verhalten beeinflusst alle Funktionen, die eine Datumsspalte als Parameter verwenden.  
   
-### <a name="bkmk_Currency"></a>Währung  
-Im DirectQuery-Modus muss der Wert innerhalb des folgenden Bereichs liegen, wenn das Ergebnis eines arithmetischen Vorgangs den Typ **Currency** aufweist:  
+### <a name="bkmk_Currency"></a>Currency  
+Im DirectQuery-Modus muss der Wert innerhalb des folgenden Bereichs liegen, wenn das Ergebnis eines arithmetischen Vorgangs den Typ **Currency**aufweist:  
   
 -   Minimum: -922337203685477,5808  
   
@@ -297,7 +304,7 @@ BEISPIEL: `SEARCH(“within string”, “sample target  text”, 1, 1)`
   
 Wenn Sie mit der SEARCH-Funktion nach einer Zeichenfolge suchen und die Zielzeichenfolge länger ist als die WITHIN-Zeichenfolge, löst der DirectQuery-Modus einen Fehler aus.  
   
-Bei einem speicherinternen Modell wird die gesuchte Zeichenfolge zurückgegeben. Dabei wird jedoch ihre Länge auf die des &lt;WITHIN-Texts&gt; gekürzt.  
+Bei einem speicherinternen Modell wird die gesuchte Zeichenfolge zurückgegeben. Dabei wird jedoch ihre Länge auf die des &lt;WITHIN-Texts&gt;gekürzt.  
   
 BEISPIEL: `EVALUATE ROW("X", REPLACE("CA", 3, 2, "California") )`  
   
@@ -334,15 +341,16 @@ Diese Einschränkung gilt nicht für den DirectQuery-Modus.
 **Vorgänge für Teilzeichenfolgen geben abhängig von Zeichentyp andere Ergebnisse zurück**  
 BEISPIEL: `MID([col], 2, 5)`  
   
-Wenn der Eingabetext **varchar** oder **nvarchar** lautet, ist das Ergebnis der Formel immer gleich.  
+Wenn der Eingabetext **varchar** oder **nvarchar**lautet, ist das Ergebnis der Formel immer gleich.  
   
 Entspricht der Text jedoch einem Zeichen mit fester Länge, und ist der Wert für *&lt;num_chars&gt;* größer als die Länge der Zielzeichenfolge, wird im DirectQuery-Modus am Ende der Ergebniszeichenfolge ein Leerzeichen hinzugefügt.  
   
 Bei einem speicherinternen Modell endet das Ergebnis beim letzten Zeichenfolgenzeichen (ohne Auffüllung).  
 
 
-## Siehe auch  
-[DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/de-de/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>Siehe auch  
+[DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
+
 
 

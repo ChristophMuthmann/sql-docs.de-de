@@ -1,27 +1,32 @@
 ---
-title: "Beispiele f&#252;r lineare Regressionsmodellabfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Linear Regression-Algorithmen [Analysis Services]"
-  - "Lineare Regression [Analysis Services]"
-  - "Inhaltsabfragen [DMX]"
+title: Lineare Regressionsmodell-Abfragebeispiele | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- linear regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36f1f595cd087ff05582250c205681b2b7794702
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Beispiele f&#252;r lineare Regressionsmodellabfrage
+# <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die Regressionsformel zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, ob ein neuer Datenpunkt in das Modell passt. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  In diesem Abschnitt wird erläutert, wie Abfragen für Modelle erstellt werden, die auf dem Microsoft Linear Regression-Algorithmus basieren.  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
  [Verwenden von Vorhersagefunktionen mit einem Regressionsmodell](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> Suchen nach Informationen über das lineare Regressionsmodell  
- Die Struktur eines linearen Regressionsmodells ist äußerst einfach. Das Miningmodell repräsentiert die Daten als einzelnen Knoten, der die Regressionsformel definiert. Weitere Informationen finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Die Struktur eines linearen Regressionsmodells ist äußerst einfach. Das Miningmodell repräsentiert die Daten als einzelnen Knoten, der die Regressionsformel definiert. Weitere Informationen finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
  [Zurück zum Anfang](#bkmk_top)  
   
@@ -64,14 +69,14 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 |COMPLEXITY_PENALTY=0.9,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MINIMUM_SUPPORT=10,<br /><br /> SCORE_METHOD=4,<br /><br /> SPLIT_METHOD=3,<br /><br /> FORCE_REGRESSOR=|  
   
 > [!NOTE]  
->  Die Parametereinstellung "`FORCE_REGRESSOR =`" gibt an, dass der aktuelle Wert für den FORCE_REGRESSOR-Parameter NULL ist.  
+>  Die Parametereinstellung "`FORCE_REGRESSOR =` " gibt an, dass der aktuelle Wert für den FORCE_REGRESSOR-Parameter NULL ist.  
   
  [Zurück zum Anfang](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> Beispielabfrage 2: Abrufen der Regressionsformel für das Modell  
- Die folgende Abfrage gibt den Miningmodellinhalt für ein lineares Regressionsmodell zurück, das mit der Targeted Mailing-Datenquelle erstellt wurde, die bereits im [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)verwendet wurde. Dieses Modell sagt das Kundeneinkommen basierend auf dem Alter vorher.  
+ Die folgende Abfrage gibt den Miningmodellinhalt für ein lineares Regressionsmodell zurück, das mit der Targeted Mailing-Datenquelle erstellt wurde, die bereits im [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)verwendet wurde. Dieses Modell sagt das Kundeneinkommen basierend auf dem Alter vorher.  
   
- Die Abfrage gibt den Inhalt des Knotens zurück, der die Regressionsformel enthält. Jede Variable und jeder Koeffizient wird in einer separaten Zeile der geschachtelten NODE_DISTRIBUTION-Tabelle gespeichert. Wenn Sie die vollständige Regressionsformel anzeigen möchten, verwenden Sie den [Microsoft Tree-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md), klicken Sie auf den Knoten **(Alle)**, und öffnen Sie die **Mininglegende**.  
+ Die Abfrage gibt den Inhalt des Knotens zurück, der die Regressionsformel enthält. Jede Variable und jeder Koeffizient wird in einer separaten Zeile der geschachtelten NODE_DISTRIBUTION-Tabelle gespeichert. Wenn Sie die vollständige Regressionsformel anzeigen möchten, verwenden Sie den [Microsoft Tree-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md), klicken Sie auf den Knoten **(Alle)** , und öffnen Sie die **Mininglegende**.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -79,7 +84,7 @@ FROM LR_PredictIncome.CONTENT
 ```  
   
 > [!NOTE]  
->  Wenn Sie auf einzelne Spalten der geschachtelten Tabelle durch Verwenden einer Abfrage wie `SELECT <column name> from NODE_DISTRIBUTION` verweisen, müssen einige Spalten, wie **SUPPORT** oder **PROBABILITY**, in Klammern eingeschlossen werden, um sie von den gleichnamigen reservierten Schlüsselwörtern zu unterscheiden.  
+>  Wenn Sie auf einzelne Spalten der geschachtelten Tabelle durch Verwenden einer Abfrage wie `SELECT <column name> from NODE_DISTRIBUTION`verweisen, müssen einige Spalten, wie **SUPPORT** oder **PROBABILITY**, in Klammern eingeschlossen werden, um sie von den gleichnamigen reservierten Schlüsselwörtern zu unterscheiden.  
   
  Erwartete Ergebnisse:  
   
@@ -96,7 +101,7 @@ FROM LR_PredictIncome.CONTENT
   
  `Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)`  
   
- In der **Mininglegende** sind einige Zahlen gerundet. Die NODE_DISTRIBUTION-Tabelle und die **Mininglegende** enthalten im Wesentlichen jedoch die gleichen Werte.  
+ In der **Mininglegende**sind einige Zahlen gerundet. Die NODE_DISTRIBUTION-Tabelle und die **Mininglegende** enthalten im Wesentlichen jedoch die gleichen Werte.  
   
  Die Werte in der VALUETYPE-Spalte geben Aufschluss über die Art der in jeder Zeile enthaltenen Informationen. Dies ist nützlich, wenn Sie die Ergebnisse programmgesteuert verarbeiten. In der folgenden Tabelle werden die Werttypen, die für eine lineare Regressionsformel ausgegeben werden, angezeigt.  
   
@@ -137,7 +142,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Zurück zum Anfang](#bkmk_top)  
   
-## Treffen von Vorhersagen aus einem linearen Regressionsmodell  
+## <a name="making-predictions-from-a-linear-regression-model"></a>Treffen von Vorhersagen aus einem linearen Regressionsmodell  
  Mit der Registerkarte Miningmodellvorhersage im Data Mining-Designer können Sie Vorhersageabfragen für lineare Regressionsmodelle erstellen. Der Generator für Vorhersageabfragen ist sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar.  
   
 > [!NOTE]  
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  [Zurück zum Anfang](#bkmk_top)  
   
-## Liste der Vorhersagefunktionen  
+## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Allerdings unterstützt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus zusätzliche Funktionen, die in der folgenden Tabelle aufgelistet sind.  
   
 |||  
@@ -200,10 +205,10 @@ NATURAL PREDICTION JOIN
   
  Eine Liste der Funktionen, die allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen gemeinsam sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Weitere Informationen zum Verwenden dieser Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
- [Technische Referenz für den Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Erstellen eines Cubes mit dem Cube-Assistenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cubes [Analysis Services], erstellen"
+title: Erstellen eines Cubes mithilfe des Cube-Assistenten | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen eines Cubes mit dem Cube-Assistenten
+# <a name="create-a-cube-using-the-cube-wizard"></a>Erstellen eines Cubes mit dem Cube-Assistenten
   Sie können einen neuen Cube erstellen, indem Sie den Cube-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwenden.  
   
-### So erstellen Sie einen neuen Cube  
+### <a name="to-create-a-new-cube"></a>So erstellen Sie einen neuen Cube  
   
-1.  Klicken Sie im** **Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie dann auf **Neuer Cube**.  
+1.  Klicken Sie im **** Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie dann auf **Neuer Cube**.  
   
 2.  Wählen Sie auf der Seite **Erstellungsmethode auswählen** des Cube-Assistenten die Option **Vorhandene Tabellen verwenden**aus, und klicken Sie dann auf **Weiter**.  
   

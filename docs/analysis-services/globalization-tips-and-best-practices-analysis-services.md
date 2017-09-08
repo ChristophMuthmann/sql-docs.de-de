@@ -1,43 +1,36 @@
 ---
-title: "Tipps und Best Practices f&#252;r die Globalisierung (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Übersetzungen [Analysis Services], Clientanwendungen"
-  - "Datumsvergleiche"
-  - "Wochentagsvergleiche [Analysis Services]"
-  - "Zeit [Analysis Services]"
-  - "Monatsvergleiche [Analysis Services]"
+title: Globalisierung Tipps und empfohlene Vorgehensweisen (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tipps und Best Practices f&#252;r die Globalisierung (Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Nur Multidimensional  
   
  Diese Tipps und Richtlinien können helfen, die Portabilität von Business Intelligence-Lösungen zu erhöhen und Fehler zu vermeiden, die direkt mit der Sprache und Sortierung verbunden sind.  
-  
--   [Verwenden ähnlicher Sortierungen im ganzen Stapel](#bkmk_sameColl)  
-  
--   [Allgemeine Empfehlungen für die Sortierung](#bkmk_recos)  
-  
--   [Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern](#bkmk_objid)  
-  
--   [Gebietsschematests mit Excel und SQL Server Profiler](#bkmk_test)  
-  
--   [Schreiben von MDX-Abfragen in einer Projektmappe mit Übersetzungen](#bkmk_mdx)  
-  
--   [Schreiben von MDX-Abfragen mit Datums- und Uhrzeitwerten](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> Verwenden ähnlicher Sortierungen im ganzen Stapel  
  Versuchen Sie, möglichst dieselben Sortierungseinstellungen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wie für das Datenbankmodul zu verwenden. Legen Sie entsprechende Einstellungen für Unterscheidung nach Breite, Groß-/Kleinschreibung und Akzent fest.  
@@ -57,11 +50,11 @@ caps.handback.revision: 32
   
  Betrachten Sie diese Liste als Ausgangspunkt für weitere Untersuchungen, statt als definitive Empfehlung, die andere Optionen ausschließt. Unter Umständen stellen Sie fest, dass eine nicht ausdrücklich empfohlene Sortierung am besten für Ihre Daten geeignet ist. Gründliche Tests sind die einzige Möglichkeit zu überprüfen, ob Datenwerte richtig sortiert und verglichen werden. Achten Sie wie immer darauf, beim Testen der Sortierung sowohl Verarbeitungs- als auch Abfragearbeitsauslastungen auszuführen.  
   
--   Für Anwendungen, die die 26 Zeichen des lateinischen Alphabets verwenden, wird häufig [Latin1_General_100_AS](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet) verwendet.  
+-   Für Anwendungen, die die 26 Zeichen des lateinischen Alphabets verwenden, wird häufig [Latin1_General_100_AS](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)verwendet.  
   
--   Nordeuropäische Sprachen, die skandinavische Buchstaben (z. B. ø) enthalten, können Finnish_Swedish_100 verwenden.  
+-   Nordeuropäische Sprachen, die skandinavische Buchstaben (z. B. ø) enthalten, können Finnish_Swedish_100 verwenden.  
   
--   Osteuropäische Sprachen wie z. B. Russisch verwenden häufig Cyrillic_General_100.  
+-   Osteuropäische Sprachen wie z. B. Russisch verwenden häufig Cyrillic_General_100.  
   
 -   Die chinesische Sprache und Sortierung variiert je nach Region, ist im Allgemeinen jedoch entweder vereinfachtes Chinesisch oder traditionelles Chinesisch.  
   
@@ -69,9 +62,9 @@ caps.handback.revision: 32
   
      In Taiwan kommt häufiger traditionelles Chinesisch vor, bei dem die empfohlene Sortierreihenfolge auf der Anzahl der Striche basiert: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
   
-     Auch andere Regionen (z. B. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 und höher) recht häufig verwendet.  
+     Auch andere Regionen (z. B. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 und höher) recht häufig verwendet.  
   
--   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213) unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als dem relationalen Datenbankmodul von SQL Server stammen.  
+-   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als dem relationalen Datenbankmodul von SQL Server stammen.  
   
      Japanese_Bushu_Kakusu_100 wird selten auf Servern verwendet, die Analysis Services-Arbeitsauslastungen ausführen.  
   
@@ -90,7 +83,7 @@ caps.handback.revision: 32
  Die in der Tabelle beschriebenen Verhaltensweisen bezüglich Groß-/Kleinschreibung gelten nur für Objektbezeichner und nicht für Objektnamen. Wenn Sie eine geänderte Funktionsweise Ihrer Lösung beobachten (bei einem Vorher/nachher-Vergleich nach der Installation von SQL Server 2012 SP2 oder höher), handelt es sich wahrscheinlich um ein Problem der Verarbeitung. Abfragen werden nicht von Objektbezeichnern betroffen. Für beide Abfragesprachen (DAX und MDX) verwendet das Formelmodul den Objektnamen (nicht den Bezeichner).  
   
 > [!NOTE]  
->  Codeänderungen, die im Zusammenhang mit der Groß-/Kleinschreibung stehen, bedeuteten eine erhebliche Änderung für einige Anwendungen. Weitere Informationen finden Sie unter [Wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
+>  Codeänderungen, die im Zusammenhang mit der Groß-/Kleinschreibung stehen, bedeuteten eine erhebliche Änderung für einige Anwendungen. Weitere Informationen finden Sie unter [Wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) .  
   
 ##  <a name="bkmk_test"></a> Testen des Gebietsschemas mithilfe von Excel, SQL Server Profiler und SQL Server Management Studio  
  Beim Testen von Übersetzungen muss die Verbindung den LCID-Wert der Übersetzung angeben. Wie in [Übernehmen anderer Sprachen aus SSAS in Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)dokumentiert ist, können Sie Excel zum Testen Ihrer Übersetzungen verwenden.  
@@ -111,7 +104,7 @@ caps.handback.revision: 32
   
  In Management Studio können Sie die Gebietsschema-ID für eine Serververbindung angeben.  
   
--   Klicken Sie im Objekt-Explorer | **Verbinden** | **Analysis Services** | **Optionen** auf die Registerkarte **Zusätzliche Verbindungsparameter**.  
+-   Klicken Sie im Objekt-Explorer | **Verbinden** | **Analysis Services** | **Optionen**auf die Registerkarte **Zusätzliche Verbindungsparameter** .  
   
 -   Geben Sie `Local Identifier=1036` ein, und klicken Sie dann auf **Verbinden**.  
   
@@ -144,8 +137,7 @@ caps.handback.revision: 32
   
      Die folgende MDX-Abfrage aus einem Forumsbeitrag veranschaulicht, wie mit der Funktion Format Datumsangaben in einem bestimmten Format zurückgegeben werden, unabhängig von den zugrunde liegenden regionalen Einstellungen.  
   
-     Den ursprünglichen Beitrag finden Sie unter [SSAS 2012 generiert ungültige Datumsangaben (Forumsbeitrag auf Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globalisierungsszenarien für Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Schreiben internationaler Transact-SQL-Anweisungen](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

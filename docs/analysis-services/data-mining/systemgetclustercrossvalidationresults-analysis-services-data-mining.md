@@ -1,31 +1,36 @@
 ---
-title: "SystemGetClusterCrossValidationResults (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetClusterCrossValidationResults"
-  - "Gespeicherte Prozeduren [Analysis Services], Data Mining"
-  - "Kreuzvalidierung [Data Mining]"
+title: "SystemGetClusterCrossValidationResults (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetClusterCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c1a4bf1ffb2768e21c323fd8abc80c1e0706b7b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetClusterCrossValidationResults (Analysis Services – Data Mining)
+# <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services – Data Mining)
   Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
   
- **Hinweis** Diese gespeicherte Prozedur kann nur mit einer Miningstruktur verwendet werden, die mindestens ein Clustering-Modell enthält. Zur Kreuzvalidierung von Nichtclusteringmodellen müssen Sie [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md) verwenden.  
+ **Hinweis** Diese gespeicherte Prozedur kann nur mit einer Miningstruktur verwendet werden, die mindestens ein Clustering-Modell enthält. Zur Kreuzvalidierung von Nichtclusteringmodellen müssen Sie [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)verwenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,24 +42,24 @@ SystemGetClusterCrossValidationResults(
 <test list>])  
 ```  
   
-## Argumente  
- *Miningstruktur*  
+## <a name="arguments"></a>Argumente  
+ *mining structure*  
  Name einer Miningstruktur in der aktuellen Datenbank.  
   
  (erforderlich)  
   
- *Miningmodellliste*  
+ *mining model list*  
  Durch Trennzeichen getrennte Liste von Miningmodellen, die überprüft werden sollen.  
   
  Wenn keine Liste mit Miningmodellen angegeben wird, erfolgt die Kreuzvalidierung für alle Clustering-Modelle, die mit der angegebenen Struktur verknüpft sind.  
   
 > [!NOTE]  
->  Zur Kreuzvalidierung von Modellen, die keine Clusteringmodelle sind, müssen Sie eine separate gespeicherte Prozedur verwenden: [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
+>  Zur Kreuzvalidierung von Modellen, die keine Clusteringmodelle sind, müssen Sie eine separate gespeicherte Prozedur verwenden: [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)verwenden.  
   
  (Optional)  
   
- *Foldanzahl*  
- Ganzzahliger Wert, der die Anzahl der Partitionen angibt, in die Dataset geteilt werden soll. Der Mindestwert beträgt 2. Die maximale Anzahl von Aufteilungen ist **maximum integer** oder die Anzahl von Fällen, wobei der jeweils niedrigere Wert gilt.  
+ *fold count*  
+ Ganzzahliger Wert, der die Anzahl der Partitionen angibt, in die das Dataset aufgeteilt werden soll. Der Mindestwert beträgt 2. Die maximale Anzahl von Aufteilungen ist **maximum integer** oder die Anzahl von Fällen, wobei der jeweils niedrigere Wert gilt.  
   
  Jede Partition enthält in etwa diese Anzahl von Fällen: *max cases*/*fold count*.  
   
@@ -65,7 +70,7 @@ SystemGetClusterCrossValidationResults(
   
  (erforderlich)  
   
- *Maximale Anzahl von Fällen*  
+ *max cases*  
  Ganzzahliger Wert, der die maximale Anzahl von Fällen angibt, die getestet werden können.  
   
  Der Wert 0 gibt an, dass alle Fälle in der Datenquelle verwendet werden.  
@@ -81,12 +86,12 @@ SystemGetClusterCrossValidationResults(
   
  (Optional)  
   
-## Rückgabetyp  
+## <a name="return-type"></a>Rückgabetyp  
  Die Tabelle mit den Rückgabetypen enthält Bewertungen für jede einzelne Partition und Aggregate für alle Modelle.  
   
  In der folgenden Tabelle werden diese zurückgegebenen Spalten beschrieben.  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde.|  
 |AttributeName|Der Name der vorhersagbaren Spalte. Bei Clustermodellen immer **null**.|  
@@ -97,12 +102,12 @@ SystemGetClusterCrossValidationResults(
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Typ des vorhersagbaren Werts. Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Wert|Der Wert des angegebenen Testmeasures.|  
   
-## Hinweise  
- Um Genauigkeitsmetriken für das gesamte Dataset zurückzugeben, verwenden Sie [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
+## <a name="remarks"></a>Hinweise  
+ Um Genauigkeitsmetriken für das gesamte Dataset zurückzugeben, verwenden Sie [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)verwenden.  
   
- Auch wenn das Miningmodell bereits in Aufteilungen partitioniert wurde, können Sie die Verarbeitung umgehen und nur die Ergebnisse der Kreuzvalidierung zurückgeben, indem Sie [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md) verwenden.  
+ Auch wenn das Miningmodell bereits in Aufteilungen partitioniert wurde, können Sie die Verarbeitung umgehen und nur die Ergebnisse der Kreuzvalidierung zurückgeben, indem Sie [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)verwenden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Das folgende Beispiel veranschaulicht, wie man eine Miningstruktur in drei Aufteilungen partitioniert und dann zwei Clustering-Modelle testet, die mit der Miningstruktur verknüpft sind.  
   
  In Zeile 3 des Codes sind die spezifischen Miningmodelle aufgelistet, die Sie testen möchten. Wenn Sie die Liste nicht angeben, werden alle der Struktur zugeordneten Clustering-Modelle verwendet.  
@@ -131,12 +136,12 @@ CALL SystemGetClusterCrossValidationResults(
 |Cluster 2|||2|1288|Clustering|Fallwahrscheinlichkeit|0.934865535691068|  
 |Cluster 2|||3|1288|Clustering|Fallwahrscheinlichkeit|0.924724595688798|  
   
-## Anforderungen  
- Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verfügbar.  
+## <a name="requirements"></a>Anforderungen  
+ Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   

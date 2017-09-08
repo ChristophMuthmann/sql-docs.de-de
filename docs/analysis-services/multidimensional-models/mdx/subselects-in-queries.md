@@ -1,27 +1,32 @@
 ---
-title: "Unterauswahlen in Abfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Untergeordnete SELECT-Ausdrücke in Abfragen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Unterauswahlen in Abfragen
+# <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
   Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
   
-## Unterauswahlen zum Beispiel  
+## <a name="subselects-by-example"></a>Unterauswahlen zum Beispiel  
  Beginnen wir mit einem Beispiel, wie Unterauswahlen helfen können, die Ergebnisse zu erzeugen, die wir anzeigen möchten. Angenommen, Sie werden gebeten, eine Tabelle zu erzeugen, in der das Verkaufsverhalten für ein Jahr für die obersten 10 Produkte angezeigt wird.  
   
  Das Ergebnis sollte wie die folgende Tabelle aussehen:  
@@ -33,7 +38,7 @@ caps.handback.revision: 5
 |Product A||||  
 |...||||  
   
- Das o. a. Ergebnis könnte mit dem folgenden MDX-Ausdruck erreicht werden:  
+ Das o. a. Ergebnis könnte mit dem folgenden MDX-Ausdruck erreicht werden:  
   
 ```  
 SELECT [Date].[Calendar Year].MEMBERS on 0  
@@ -72,7 +77,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |Mountain-200 Black, 38|$1,634,647.94|(null)|(null)|$894,207.97|$740,439.97|  
 |Mountain-200 Black, 42|$1,285,524.65|(null)|(null)|$722,137.65|$563,387.00|  
 |Mountain-200 Silver, 38|$1,181,945.82|(null)|(null)|$634,600.78|$547,345.03|  
@@ -106,7 +111,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |All Products|$19,997,183.30|$1,696,815.63|$2,816,611.28|$7,930,797.72|$7,552,958.66|  
 |Mountain-200 Silver, 38|$2,160,981.60|(null)|(null)|$1,024,359.10|$1,136,622.49|  
 |Mountain-200 Silver, 42|$1,914,547.85|(null)|(null)|$903,061.68|$1,011,486.18|  
@@ -143,7 +148,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |All Products|$748,682.49|$32,204.43|$73,125.18|$269,506.56|$373,846.32|  
 |Mountain-200 Silver, 38|$90,479.61|(null)|(null)|$41,759.82|$48,719.79|  
 |Mountain-200 Silver, 42|$97,439.58|(null)|(null)|$39,439.83|$57,999.75|  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  Die oben erwähnten Ergebnisse sind die in Frankreich durch den Internetchannel verkauften Erste 10-Produkte.  
   
-## Unterauswahlanweisung  
+## <a name="subselect-statement"></a>Unterauswahlanweisung  
  Das BNF für die Unterauswahl ist:  
   
 ```  
@@ -209,7 +214,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |Washington|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
- Im oben erwähnten Beispiel ist Seattle ein untergeordnetes Element von Washington, Portland ist ein untergeordnetes Element von Oregon, Oregon und Washington sind untergeordnete Elemente von USA, und USA ist ein untergeordnetes Element von [Customer Geography] [All Customers]. Alle angezeigten Elemente in diesem Beispiel verfügen über andere gleichgeordnete Elemente, die zum übergeordneten Aggregatwert beitragen; d. h. sind Spokane, Tacoma und Everett gleichgeordnete Orte von Seattle und ihnen, die alle nach Washington Internet Sales Amount beitragen. Wiederverkäuferumsatzwert ist von Kundengeografieattribut unabhängig; also wird der All-Wert in den Ergebnissen angezeigt. Der nächste MDX-Ausdruck veranschaulicht den Filtereffekt der Unterauswahlklausel:  
+ Im oben erwähnten Beispiel ist Seattle ein untergeordnetes Element von Washington, Portland ist ein untergeordnetes Element von Oregon, Oregon und Washington sind untergeordnete Elemente von USA, und USA ist ein untergeordnetes Element von [Customer Geography] [All Customers]. Alle angezeigten Elemente in diesem Beispiel verfügen über andere gleichgeordnete Elemente, die zum übergeordneten Aggregatwert beitragen; d. h. sind Spokane, Tacoma und Everett gleichgeordnete Orte von Seattle und ihnen, die alle nach Washington Internet Sales Amount beitragen. Wiederverkäuferumsatzwert ist von Kundengeografieattribut unabhängig; also wird der All-Wert in den Ergebnissen angezeigt. Der nächste MDX-Ausdruck veranschaulicht den Filtereffekt der Unterauswahlklausel:  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Wie Sie sehen können, gibt es zwischen beiden Sätzen Unterschiede in den Ergebnissen. Die erste Abfrage hat die Frage von den besten verkaufenden Produkte der obersten fünf verkaufenden Bereiche beantwortet. die zweite Abfrage hat die Frage der größten Verkäufe der obersten fünf verkaufenden Produkte beantwortet.  
   
-### Hinweise  
+### <a name="remarks"></a>Hinweise  
  Unterauswahlen haben folgende Einschränkungen und Beschränkungen:  
   
 -   Die WHERE-Klausel filtert den Teilbereich nicht.  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Die HAVING-Klausel wird nicht in einer Achsenklausel zugelassen; verwenden Sie stattdessen einen [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)-Funktionsausdruck.  
   
--   Standardmäßig berechnete Elemente werden nicht in Unterauswahlen zugelassen; diese Einschränkung kann jedoch in einer Sitzungsbasis durch das Zuweisen eines Werts zu der **SubQueries**-Verbindungszeichenfolgen-Eigenschaft unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder der **DBPROP_MSMD_SUBQUERIES**-Eigenschaft unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von **SubQueries** oder **DBPROP_MSMD_SUBQUERIES**, finden Sie unter [Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md).  
+-   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig; allerdings diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgeneigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** Eigenschaft im [ Unterstützte XMLA-Eigenschaften &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Miningmodelltasks und Anweisungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Mining [Analysis Services], Modelle"
-  - "Miningmodelle [Analysis Services], Themen zur Vorgehensweise"
+title: "Tasks und Anweisungen für Miningmodell | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodelltasks und Anweisungen
+# <a name="mining-model-tasks-and-how-tos"></a>Miningmodelltasks und Anweisungen
   Mit der **Miningmodelle** -Registerkarte des Data Mining-Designers von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie die in einer Miningstruktur enthaltenen Miningmodelle verwalten und verarbeiten.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 34
   
 -   [Erstellen einer Data Mining-Dimension](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Miningmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Data Mining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Erstellen eines Analysis Services-Projekts (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorlagen [Analysis Services]"
-  - "Vorlagen [Analysis Services], Projekte"
-  - "Projekte [Analysis Services], erstellen"
-  - "Projekte [Analysis Services], Business Intelligence Development Studio"
-  - "Business Intelligence Development Studio, Definieren von Projekten [Analysis Services]"
-  - "Elemente [Analysis Services]"
+title: Erstellen eines Analysis Services-Projekts (SSDT) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services]
+- templates [Analysis Services], projects
+- projects [Analysis Services], creating
+- projects [Analysis Services], Business Intelligence Development Studio
+- Business Intelligence Development Studio, defining projects [Analysis Services]
+- items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen eines Analysis Services-Projekts (SSDT)
+# <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
   Sie können ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Assistenten zum Importieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank definieren, um die Inhalte einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu lesen. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
   
  Ein Analysis Services-Projekt enthält in einer einzelnen Analysis Services-Datenbank verwendete Objekte. Der Name des Servers und der Datenbank, unter denen die Projektmetadaten als instanziierte Objekte bereitgestellt werden, sind in den Bereitstellungseigenschaften des Projekts angegeben.  
@@ -55,13 +60,13 @@ caps.handback.revision: 37
   
 3.  Geben Sie im Textfeld **Name** den Namen des Projekts ein. Der eingegebene Name wird als Standardname für die Datenbank verwendet.  
   
-4.  Geben Sie in der Dropdownliste** Speicherort** den Ordner ein, oder wählen Sie den Ordner aus, in dem Sie die Dateien für das Projekt speichern möchten, oder klicken Sie auf **Durchsuchen**, um einen Ordner auszuwählen.  
+4.  Geben Sie in der Dropdownliste **Speicherort** den Ordner ein, oder wählen Sie den Ordner aus, in dem Sie die Dateien für das Projekt speichern möchten, oder klicken Sie auf **Durchsuchen** , um einen Ordner auszuwählen.  
   
-5.  Wählen Sie in der Dropdownliste **Projektmappe** die Option **Zur Projektmappe hinzufügen** aus, um das neue Projekt der vorhandenen Projektmappe hinzuzufügen.  
+5.  Wählen Sie in der Dropdownliste **Projektmappe** die Option **Zur Projektmappe hinzufügen**aus, um das neue Projekt der vorhandenen Projektmappe hinzuzufügen.  
   
      – oder –  
   
-     Wählen Sie in der Dropdownliste **Projektmappe** die Option **Neue Projektmappe erstellen** aus, um eine neue Projektmappe zu erstellen. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**, um einen neuen Ordner für die neue Projektmappe zu erstellen. Geben Sie im Feld **Projektmappenname**den Namen der neuen Projektmappe ein.  
+     Wählen Sie in der Dropdownliste **Projektmappe** die Option **Neue Projektmappe erstellen**aus, um eine neue Projektmappe zu erstellen. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**, um einen neuen Ordner für die neue Projektmappe zu erstellen. Geben Sie im Feld **Projektmappenname**den Namen der neuen Projektmappe ein.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 37
   
  Beim Hinzufügen eines vorhandenen Projekts zu einer Projektmappe wird das Projekt der Projektmappe zugeordnet, jedoch nicht kopiert. Wenn das Analysis Services-Projekt in einer anderen Projektmappe erstellt wurde, verbleiben die Projektdateien in der ursprünglichen Projektmappe, für die es erstellt wurde. Dies bedeutet, dass alle Änderungen, die Sie über eine der beiden Projektmappen am Projekt vornehmen, auf den gleichen Satz von Quelldateien angewendet werden. Wenn dieses Verhalten nicht gewünscht ist, sollten Sie die Projektdateien zuerst in den neuen Projektmappenordner kopieren oder verschieben und das Projekt erst dann der Projektmappe hinzufügen.  
   
-1.  Öffnen Sie die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die Projektmappe, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Vorhandenes Projekt**, um das hinzuzufügende Projekt auszuwählen.  
+1.  Öffnen Sie die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die Projektmappe, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Vorhandenes Projekt** , um das hinzuzufügende Projekt auszuwählen.  
   
 2.  Wählen Sie eine DWPROJ-Datei aus, die der Projektmappe hinzugefügt werden soll.  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 37
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projektdefinitionsdatei (DWPROJ)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Benutzereinstellungen für das Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  
-|Datenquelldatei (DS)|Enthält die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-ASSL-Elemente (Analysis Services Scripting Language), die die Metadaten für eine Datenquelle definieren.|  
+|Datenquelldatei (DS)|Enthält die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -ASSL-Elemente (Analysis Services Scripting Language), die die Metadaten für eine Datenquelle definieren.|  
 |Datenquellen-Sichtdatei (DSV)|Enthält die ASSL-Elemente, die die Metadaten für eine Datenquellensicht definieren.|  
 |Cubedatei (CUBE)|Enthält die ASSL-Elemente, die die Metadaten für einen Cube definieren, einschließlich Measuregruppen, Measures und Cubedimensionen.|  
 |Partitionsdatei (PARTITIONS)|Enthält die ASSL-Elemente, die die Metadaten für die Partitionen eines bestimmten Cubes definieren.|  
@@ -160,7 +165,7 @@ caps.handback.revision: 37
 ||Dimension|Startet den Dimensions-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenbankdimension hinzuzufügen.|  
 ||Miningstruktur|Startet den Data Mining-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Miningstruktur und das zugehörige Miningmodell hinzuzufügen.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

@@ -1,28 +1,33 @@
 ---
-title: "Tupel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tupel | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bdd0f236112d8c08e1bdc6356ac381d10d6b29b6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tupel
+# <a name="tuples"></a>Tupel
   Ein Tupel dient zur eindeutigen Identifizierung eines Slices von Daten aus einem Cube. Das Tupel wird durch eine Kombination aus Dimensionselementen gebildet, sofern nicht zwei oder mehr Elemente zur gleichen Hierarchie gehören.  
   
-## Implizite oder Standardattributelemente in einem Tupel  
- Zum Definieren eines Tupels in einer MDX-Abfrage oder in einem MDX-Ausdruck ist es nicht erforderlich, die Attributelemente aus allen Attributhierarchien explizit einzuschließen. Wenn ein Element aus einer Attributhierarchie nicht explizit in eine Abfrage oder einen Ausdruck eingeschlossen ist, wird das Standardelement der betreffenden Attributhierarchie implizit in das Tupel eingeschlossen. Sofern nicht anderweitig explizit in einem Cube definiert, ist das Standardelement jeder Attributhierarchie das (Alle)-Element, falls ein solches vorhanden ist. Wenn kein (Alle)-Element innerhalb einer Attributhierarchie vorhanden ist, wird als Standardelement ein Element der obersten Ebene der Attributhierarchie verwendet. Sofern kein anderes Standardmeasure explizit definiert wurde, wird als Standardmeasure das erste im Cube angegebene Measure verwendet. Weitere Informationen finden Sie unter [Definieren eines Standardelements](../../../analysis-services/multidimensional-models/define-a-default-member.md) und [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  
+## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Implizite oder Standardattributelemente in einem Tupel  
+ Zum Definieren eines Tupels in einer MDX-Abfrage oder in einem MDX-Ausdruck ist es nicht erforderlich, die Attributelemente aus allen Attributhierarchien explizit einzuschließen. Wenn ein Element aus einer Attributhierarchie nicht explizit in eine Abfrage oder einen Ausdruck eingeschlossen ist, wird das Standardelement der betreffenden Attributhierarchie implizit in das Tupel eingeschlossen. Sofern nicht anderweitig explizit in einem Cube definiert, ist das Standardelement jeder Attributhierarchie das (Alle)-Element, falls ein solches vorhanden ist. Wenn kein (Alle)-Element innerhalb einer Attributhierarchie vorhanden ist, wird als Standardelement ein Element der obersten Ebene der Attributhierarchie verwendet. Sofern kein anderes Standardmeasure explizit definiert wurde, wird als Standardmeasure das erste im Cube angegebene Measure verwendet. Weitere Informationen finden Sie unter [Definieren eines Standardelements](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) und [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  
   
  Beispielsweise identifiziert das folgende Tupel eine einzelne Zelle in der Adventure Works-Datenbank, wobei nur ein einziges Element der Measuredimension explizit definiert ist.  
   
@@ -44,12 +49,12 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Wenn Sie in einer Abfrage eine Achse für eine Menge angeben (in diesem Fall bestehend aus einem einzigen Tupel), müssen Sie zunächst eine Menge für die Spaltenachse und dann eine Menge für die Zeilenachse angeben. Die Spaltenachse wird auch als *axis(0)* oder einfach *0* bezeichnet. Weitere Informationen zu MDX-Abfragen finden Sie unter [Die grundlegende MDX-Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md).  
+>  Wenn Sie in einer Abfrage eine Achse für eine Menge angeben (in diesem Fall bestehend aus einem einzigen Tupel), müssen Sie zunächst eine Menge für die Spaltenachse und dann eine Menge für die Zeilenachse angeben. Die Spaltenachse wird auch als *axis(0)* oder einfach *0* bezeichnet. Weitere Informationen zu MDX-Abfragen finden Sie unter [Die grundlegende MDX-Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md).  
   
-### Tupel als Werte oder Elementverweise  
+### <a name="tuples-as-values-or-member-references"></a>Tupel als Werte oder Elementverweise  
  Wie das vorherige Beispiel zeigte, können Sie ein Tupel in einer Abfrage verwenden, um den Wert in der Zelle zurückzugeben, auf die das Tupel verweist. Sie können ein Tupel aber auch in einem Ausdruck verwenden, um explizit auf das im Tupel angegebene Element zu verweisen. Abfragen und Ausdrücke können mithilfe von Funktionen Tupel zurückgeben oder verarbeiten. Mit einem Tupel kann entweder auf den Wert einer Zelle, die das Tupel angibt, verwiesen werden oder, bei Verwendung in einer Funktion, eine Kombination von Elementen angegeben werden.  
   
-### Tupeldimensionalität  
+### <a name="tuple-dimensionality"></a>Tupeldimensionalität  
  Mit *Dimensionalität* eines Tupels ist die Sequenz oder Reihenfolge der Elemente im Tupel gemeint. Da implizite Elemente immer in der gleichen Reihenfolge auftreten, bezieht sich der Begriff Dimensionalität meistens ausschließlich auf die explizit definierten Elemente eines Tupels. Die Reihenfolge der Elemente eines Tupels ist beim Definieren einer Menge von Tupeln von großer Bedeutung. Im folgenden Beispiel werden zwei Elemente in ein Tupel auf der Spaltenachse eingeschlossen.  
   
 ```  
@@ -66,10 +71,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Auf ein Attributelement kann entweder mit seinem Elementnamen oder seinem Elementschlüssel verwiesen werden. Der Verweis auf [CY 2004] im vorherigen Beispiel könnte durch &[2004] ersetzt werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cuberaum](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [Arbeiten mit Elemente, Tupel und Mengen &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

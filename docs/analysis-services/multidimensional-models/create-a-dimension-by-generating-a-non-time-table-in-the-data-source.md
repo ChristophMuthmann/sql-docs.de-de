@@ -1,29 +1,34 @@
 ---
-title: "Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenquellen [Analysis Services], Dimensionen ohne Datenquelle"
-  - "Dimensionen [Analysis Services], Standard-"
-  - "Dimensionen [Analysis Services], Erstellen ohne Datenquelle"
-  - "Standarddimensionen [Analysis Services]"
+title: Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data sources [Analysis Services], dimensions without data source
+- dimensions [Analysis Services], standard
+- dimensions [Analysis Services], creating without data source
+- standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
+# <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension ohne vorhandene Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
   
  Im Dimensions-Assistenten werden Dimensionsvorlagen bereitgestellt, die Sie als Grundlage für verschiedene gängige Dimensionstypen verwenden können. Sie haben die Wahl zwischen den folgenden Dimensionstypen:  
@@ -74,14 +79,14 @@ caps.handback.revision: 41
   
  Wenn Sie eine Nichtzeitdimension ohne eine Datenquelle erstellen, führt Sie der Dimensions-Assistent durch die Schritte zum Angeben des Dimensionstyps und Identifizieren des Schlüsselattributs und langsam veränderlicher Dimensionen.  
   
-## Angeben des Dimensionstyps  
+## <a name="specify-dimension-type"></a>Angeben des Dimensionstyps  
  Auf der Seite **Dimensionstyp angeben** des Dimensions-Assistenten können Sie den Dimensionstyp angeben. Wenn Sie die Dimension auf Basis einer Vorlage erstellen, wird der Dimensionstyp für Sie definiert. Auf dieser Seite können Sie außerdem Standardattribute für den angegebenen Dimensionstyp auswählen, sofern welche verfügbar sind.  
   
  Wenn Sie eine Vorlage ausgewählt haben, die einem Dimensionstyp entspricht, wird diese Seite mit den Optionen für den jeweiligen Dimensionstyp aufgefüllt. Wenn Sie keine Vorlage ausgewählt haben, oder wenn kein entsprechender Dimensionstyp vorhanden ist, ist der Standarddimensionstyp **Regular**. Falls noch kein Dimensionstyp ausgewählt ist, wählen Sie den am besten geeigneten Typ für die von Ihnen erstellte Dimension aus. Falls kein geeigneter Typ für **Dimensionstyp**aufgelistet ist, verwenden Sie **Regular**.  
   
  Wenn Sie einen Dimensionstyp auswählen, werden im Assistenten unter **Dimensionsattribute**die Attributtypen für diese Dimension aufgelistet. Zum Auswählen eines Attributtyps aktivieren Sie das Kontrollkästchen **Einschließen** neben dem Attributtyp, und geben Sie unter **Dimensionsattribut**den Namen für das Attribut ein. Der Standardname entspricht dem **Attributtyp**.  
   
-## Identifizieren von Schlüsselattributen und veränderlichen Dimensionen  
+## <a name="identify-key-attribute-and-changing-dimensions"></a>Identifizieren von Schlüsselattributen und veränderlichen Dimensionen  
  Wählen Sie auf der Seite **Dimensionsschlüssel und -typ angeben** das Attribut aus, das Sie als Schlüsselattribut für die Dimension festlegen möchten. Das Schlüsselattribut entspricht normalerweise der Primärschlüsselspalte in der Hauptdimensionstabelle und indiziert die Blattelemente der Dimension.  
   
  Wenn Sie eine Vorlage ausgewählt haben und in der Vorlage ein Schlüsselattribut definiert ist, handelt es sich bei diesem Attribut um das Standardschlüsselattribut. Wenn Sie eine Vorlage ausgewählt haben, aber in der Vorlage kein Schlüsselattribut definiert ist, wird das erste Attribut als Standardschlüsselattribut verwendet. Die Liste enthält alle Attribute, die Sie auf der Seite **Dimensionstyp angeben** ausgewählt haben. Sie können jedes der Attribute, die Sie auf der Seite **Dimensionstyp angeben** ausgewählt haben, als Schlüsselattribut festlegen. Falls Sie keine Attribute ausgewählt haben, erstellt der Assistent automatisch ein Schlüsselattribut und benennt es, indem er den Dimensionsnamen und "ID" verkettet.  
@@ -101,10 +106,10 @@ caps.handback.revision: 41
   
  Sie können die Eigenschaften für eine langsam veränderliche Dimension mithilfe des Dimensions-Designers konfigurieren.  
   
-## Abschließen des Dimensions-Assistenten  
+## <a name="completing-the-dimension-wizard"></a>Abschließen des Dimensions-Assistenten  
  Geben Sie auf der Seite **Assistenten abschließen** einen Namen für die neue Dimension ein, und zeigen Sie die Dimensionsstruktur an. Aktivieren Sie das Kontrollkästchen **Schema jetzt generieren** , damit nach dem Klicken auf **Fertig stellen**der Schemagenerierungs-Assistent gestartet wird. In den meisten Fällen sollten Sie dieses Kontrollkästchen nicht aktivieren, wenn Sie weitere Objekte erstellen möchten. Wenn Sie dieses Kontrollkästchen nicht aktivieren, können Sie das Schema später mithilfe des Dimensions-Designers generieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   

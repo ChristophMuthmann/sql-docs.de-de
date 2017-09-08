@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autoexists | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   Das *Autoexists* -Konzept beschränkt den Cuberaum auf Zellen, die tatsächlich im Cube enthalten sind, anstatt alle Zellen einzubeziehen, die durch die Erstellung aller potenziellen Kombinationen von Attributhierarchieelementen in der gleichen Hierarchie vorhanden sein könnten. Dies liegt daran, dass Elemente einer Attributhierarchie nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden sein können. Wenn zwei oder mehr Attributhierarchien der gleichen Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß beschränkt werden, so dass sie die Kriterien aller anderen Attribute erfüllen.  
   
  Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn ein Ausdruck alle Elemente des City-Attributs zurückgibt und ein anderer Ausdruck die Elemente des Country-Attributs auf alle Länder Europas beschränkt, sind als City-Elemente nur Orte in europäischen Ländern möglich. Dies ist auf das Autoexists-Merkmal von Analysis Services zurückzuführen. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionszeilen bezeichnet werden.  
   
-## Vorhandensein von Zellen  
+## <a name="cell-existence"></a>Vorhandensein von Zellen  
  Die folgenden Zellen sind immer vorhanden:  
   
 -   Das (All)-Element jeder Hierarchie bei einer Schnittmenge mit Elementen anderer Hierarchien in der gleichen Dimension.  
   
 -   Berechnete Elemente bei einer Schnittmenge mit nicht berechneten gleichgeordneten Elementen oder mit den übergeordneten Elementen oder Nachfolgern der nicht berechneten gleichgeordneten Elemente  
   
-## Bereitstellen von nicht vorhandenen Zellen  
+## <a name="providing-non-existing-cells"></a>Bereitstellen von nicht vorhandenen Zellen  
  Eine nicht vorhandene Zelle ist eine Zelle, die vom System als Antwort auf eine Abfrage oder eine Berechnung bereitgestellt wird, in der eine im Cube nicht vorhandene Zelle angefordert wird. Wenn beispielsweise ein Cube eine City-Attributhierarchie und eine Country-Attributhierarchie, die zur Geography-Dimension gehören, und eine Internet Sales Amount-Measure aufweist, schließt der Cuberaum nur solche Elemente ein, die gemeinsam vorhanden sind. Wenn beispielsweise die City-Attributhierarchie die Städte New York, London, Paris, Tokyo und Melbourne und die Country-Attributhierarchie die Länder United States, United Kingdom, France, Japan, and Australia umfasst, schließt der Cuberaum nicht den Raum (die Zelle) am Schnittpunkt von Paris und United States ein.  
   
  Beim Abfragen von nicht vorhandenen Zellen wird NULL zurückgegeben, d. h., nicht vorhandene Zellen können keine Berechnungen enthalten, und Sie können auch keine Berechnungen definieren, die in sie schreiben. Die folgende Anweisung beinhaltet beispielsweise Zellen, die nicht vorhanden sind:  
@@ -45,11 +50,11 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  Diese Abfrage verwendet die [Members (Menge) (MDX)](../../../mdx/members-set-mdx.md)-Funktion, um eine Menge von Elementen der Gender-Attributhierarchie auf der Spaltenachse zurückzugeben und diese Menge mit der angegebenen Menge von Elementen der Customer-Attributhierarchie auf der Zeilenachse zu kreuzen.  
+>  Diese Abfrage verwendet die [Members (Menge) (MDX)](../../../mdx/members-set-mdx.md) -Funktion, um eine Menge von Elementen der Gender-Attributhierarchie auf der Spaltenachse zurückzugeben und diese Menge mit der angegebenen Menge von Elementen der Customer-Attributhierarchie auf der Zeilenachse zu kreuzen.  
   
  Beim Ausführen der vorherigen Abfrage zeigt die Zelle am Schnittpunkt zwischen Aaron A. Allen und Female eine Null an. Entsprechend zeigt die Zelle am Schnittpunkt zwischen Abigail Clark und Male ebenfalls eine Null an. Diese Zellen sind nicht vorhanden und können daher keine Werte enthalten, sie können jedoch im Ergebnis einer Abfrage angezeigt werden.  
   
- Wenn Sie die [Crossjoin (MDX)](../../../mdx/crossjoin-mdx.md)-Funktion verwenden, um das Kreuzprodukt von Attributhierarchie-Elementen und Attributhierarchien in der gleichen Dimension zurückzugeben, beschränkt auto-exist das zurückgegebene Ergebnis auf die Menge der Tupel, die tatsächlich vorhanden sind, und gibt nicht das vollständige kartesische Produkt zurück. Führen Sie z. B. die folgenden Abfrage aus, und überprüfen Sie die Ergebnisse.  
+ Wenn Sie die [Crossjoin (MDX)](../../../mdx/crossjoin-mdx.md) -Funktion verwenden, um das Kreuzprodukt von Attributhierarchie-Elementen und Attributhierarchien in der gleichen Dimension zurückzugeben, beschränkt Auto-exist das zurückgegebene Ergebnis auf die Menge der Tupel, die tatsächlich vorhanden sind, und gibt nicht das vollständige kartesische Produkt zurück. Führen Sie z. B. die folgenden Abfrage aus, und überprüfen Sie die Ergebnisse.  
   
 ```  
 SELECT CROSSJOIN  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Beachten Sie, dass 0 hier für die Spaltenachse steht (als Kurzform für axis(0)).  
   
- Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen *-Variante der [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md)-Funktion formuliert werden.  
+ Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen *-Variante der [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) -Funktion formuliert werden.  
   
 ```  
 SELECT   
@@ -89,7 +94,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Alle drei vorherigen Abfragen veranschaulichen die Auswirkung des auto-exist-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Tiefe und flache Autoexists  
+## <a name="deep-and-shallow-autoexists"></a>Tiefe und flache Autoexists  
  Autoexists können tief oder flach auf Ausdrücke angewendet werden. **Deep Autoexists** bedeutet, dass alle Ausdrücke ausgewertet werden, um nach Anwendung der Slicerausdrücke, untergeordneten SELECT-Ausdrücke usw. einen möglichst tiefen Raum abzudecken. **Shallow Autoexists** bedeutet, dass externe Ausdrücke vor dem aktuellen Ausdruck ausgewertet werden und dass diese Ergebnisse an den aktuellen Ausdruck übergeben werden. Die Standardeinstellung sind tiefe Autoexists.  
   
  Das folgende Szenario und die Beispiele veranschaulichen die verschiedenen Typen von Autoexists. In den folgenden Beispielen werden zwei Gruppen erstellt: eine als berechneteter Ausdruck und die andere als konstanter Ausdruck.  
@@ -135,16 +140,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
-|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
-|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
+|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
+|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
+|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
+|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
-|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
+|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
+|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
   
  Die erhaltene Produktgruppe ist offenbar die gleiche wie Preferred10Products. Die Gruppe Preferred10Products wird deshalb überprüft:  
   
@@ -187,16 +192,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
-|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
-|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
+|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
+|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
+|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
+|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
-|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
+|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
+|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
   
  Im folgenden Beispiel wird der Begriff "tiefes Autoexists" veranschaulicht. Im Beispiel filtern wir Top10SellingProducts mit dem [Product].[Product Line]-Attribut nach den in der [Mountain]-Gruppe enthaltenen Produkten. Beachten Sie, dass beide Attribute (Slicer und Achse) zur gleichen Dimension [Produkt] gehören.  
   
@@ -219,16 +224,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Mountain-300**|**1.907.249,38 €**|**876,95 €**|**0,05 %**|  
-|**Mountain-500**|**1.067.327,31 €**|**17.266,09 €**|**1,62 %**|  
-|**Mountain-400-W**|**592.450,05 €**|**303,49 €**|**0,05 %**|  
+|**Mountain-300**|**1.907.249,38 €**|**876,95 €**|**0,05 %**|  
+|**Mountain-500**|**1.067.327,31 €**|**17.266,09 €**|**1,62 %**|  
+|**Mountain-400-W**|**592.450,05 €**|**303,49 €**|**0,05 %**|  
 |**LL Mountain Frame**|**521.864,42 €**|**252,41 €**|**0,05 %**|  
-|**ML Mountain Frame-W**|**482.953,16 €**|**206,95 €**|**0,04 %**|  
+|**ML Mountain Frame-W**|**482.953,16 €**|**206,95 €**|**0,04 %**|  
 |**ML Mountain Frame**|**343.785,29 €**|**161,82 €**|**0,05 %**|  
-|**Women's Mountain Shorts**|**260.304,09 €**|**6.675,56 €**|**2,56 %**|  
+|**Women's Mountain Shorts**|**260.304,09 €**|**6.675,56 €**|**2,56 %**|  
   
  Das obige Resultset enthält sieben Neueinträge für die Liste mit den Top10SellingProducts und Mountain-200, Mountain-100 sowie HL Mountain Frame wurden an den Anfang der Liste verschoben. Im vorherigen Resultset befanden sich diese drei Werte an verschiedenen Stellen.  
   
@@ -277,15 +282,15 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
   
  Nach den oben aufgeführten Ergebnissen führt das Slicing zu einem Ergebnis, das nur die Produkte von Preferred10Products enthält, die Teil der Gruppe [Mountain] in [Product].[Product Line] sind. Dies entspricht den Erwartungen, da Preferred10Products ein konstanter Ausdruck ist.  
   
  Dieses Resultset wird auch als "flaches Autoexists" bezeichnet. Das liegt daran, dass der Ausdruck vor der Slicingklausel ausgewertet wird. Im vorherigen Beispiel war der Ausdruck ein konstanter Ausdruck, damit das Konzept anschaulicher eingeführt werden konnte.  
   
- Das Autoexists-Verhalten kann mit der **Autoexists** -Eigenschaft der Verbindungszeichenfolge auf Sitzungsebene geändert werden. Im folgenden Beispiel wird zunächst eine neue Sitzung geöffnet und dann die *Autoexists=3*-Eigenschaft zur Verbindungszeichenfolge hinzugefügt. Sie müssen eine neue Verbindung öffnen, um das Beispiel ausführen zu können. Sobald die Verbindung mit der Autoexist-Einstellung hergestellt ist, bleibt diese Einstellung bis zum Ende der Verbindung wirksam.  
+ Das Autoexists-Verhalten kann mit der **Autoexists** -Eigenschaft der Verbindungszeichenfolge auf Sitzungsebene geändert werden. Im folgenden Beispiel wird zunächst eine neue Sitzung geöffnet und dann die *Autoexists=3* -Eigenschaft zur Verbindungszeichenfolge hinzugefügt. Sie müssen eine neue Verbindung öffnen, um das Beispiel ausführen zu können. Sobald die Verbindung mit der Autoexist-Einstellung hergestellt ist, bleibt diese Einstellung bis zum Ende der Verbindung wirksam.  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -306,15 +311,15 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
   
- Das Autoexists-Verhalten kann geändert werden, wenn Sie in der Verbindungszeichenfolge den AUTOEXISTS=[1|2|3]-Parameter verwenden. Weitere Informationen zur Parameterverwendung finden Sie unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+ Autoexists-Verhalten kann geändert werden, mithilfe der AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [unterstützten XMLA-Eigenschaften &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cuberaum](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tupel](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   

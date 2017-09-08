@@ -1,33 +1,38 @@
 ---
-title: "Data Mining-Assistent (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dimensionen [Analysis Services], Data Mining"
-  - "OLAP[Analysis Services], Miningmodelle"
-  - "Data Mining-Assistent"
-  - "Relationale Miningmodelle [Analysis Services]"
+title: "Datamining-Assistenten (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- OLAP [Analysis Services], mining models
+- Data Mining Wizard
+- relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Assistent (Analysis Services - Data Mining)
+# <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
   Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird immer dann gestartet, wenn Sie einem Data Mining-Projekt eine neue Miningstruktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
   
  In der abschließenden Phase des Assistenten können Sie die Daten optional in Training und Testsätze unterteilen und Funktionen wie Drillthrough aktivieren.  
   
-## Wissenswertes vor dem Start  
+## <a name="what-to-know-before-you-start"></a>Wissenswertes vor dem Start  
  Die folgenden Dinge sollten Sie wissen, bevor Sie den Assistenten starten.  
   
 -   Werden die Data Mining-Struktur und die -Modelle von einer relationalen Datenbank aus oder von einem vorhandenen Cube in einer OLAP-Datenbank erstellt?  
@@ -51,7 +56,7 @@ caps.handback.revision: 57
   
  Anschließend müssen Sie die Miningstruktur und ein zugeordnetes Data Mining-Modell erstellen. Sie können auch nur die Miningstruktur erstellen und später Modelle hinzufügen. Es ist jedoch im Allgemeinen am einfachsten, zuerst ein Testmodell zu erstellen.  
   
-###  <a name="BKMK_Relational"></a> Vergleich der relationalen und OLAP-Miningmodelle  
+###  <a name="BKMK_Relational"></a>Vergleich der relationalen und OLAP-Miningmodelle  
  Sie sollten sich entscheiden, ob Sie eine relationale Datenquelle verwenden oder ob Ihr Modell auf multidimensionalen Daten (OLAP) basieren soll.  
   
  Im Data Mining-Assistenten gibt es an dieser Stelle zwei Möglichkeiten, je nachdem, ob Ihre Datenquelle relational oder in einem Cube ist: Abgesehen vom Datenauswahlprozess ist alles andere gleich – die Auswahl des Algorithmus, die Möglichkeit, ein Dataset mit zurückgehaltenen Daten hinzuzufügen usw. Die Auswahl der Cubedaten ist jedoch ein wenig komplexer als die Verwendung von relationalen Daten. (Sie erhalten am Ende auch einige zusätzliche Optionen, wenn Sie ein Modell auf Grundlage eines Cubes erstellen.)  
@@ -67,22 +72,22 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  Für ein Data Mining ist es nicht erforderlich, dass Sie einen Cube oder eine OLAP-Datenbank haben. Sofern Ihre Daten nicht bereits in einem Cube gespeichert sind oder Sie OLAP-Dimensionen oder die Ergebnisse von OLAP-Aggregationen oder -Berechnungen auswerten möchten, empfehlen wir die Verwendung einer relationalen Tabelle oder Datenquelle für das Data Mining.  
   
-### Auswählen eines Algorithmus  
+### <a name="choosing-an-algorithm"></a>Auswählen eines Algorithmus  
  Anschließend müssen Sie sich entscheiden, welcher Algorithmus für die Verarbeitung Ihrer Daten verwendet werden soll. Es kann schwierig sein, eine Entscheidung zu treffen. Jeder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellte Algorithmus verfügt über unterschiedliche Funktionen und führt zu unterschiedlichen Ergebnissen. Sie können experimentieren und verschiedene Modelle ausprobieren, bevor Sie das angemessenste Modell für Ihre Daten und Ihr Geschäftsproblem bestimmen. Im folgenden Thema finden Sie eine Erklärung der Aufgaben, für die jeder Algorithmus am besten geeignet ist.  
   
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Sie können mehrere Modelle mit unterschiedlichen Algorithmen erstellen oder die Parameter der Algorithmen ändern, um verschiedene Modelle zu erstellen. Sie werden in Bezug auf die Auswahl des Algorithmus nicht eingeschränkt, und es ist eine gute Übung, um mehrere unterschiedliche Modelle für die gleichen Daten zu erstellen.  
   
-### Definieren der für Modellierung verwendeten Daten  
+### <a name="define-the-data-used-for-modeling"></a>Definieren der für Modellierung verwendeten Daten  
  Zusätzlich zur Auswahl der Daten von einer Quelle müssen Sie angeben, welche der Tabellen in der Datenquellensicht die *Falldaten*enthält. Die Falltabelle wird verwendet, um das Data Mining-Modell zu erlernen. Sie sollte die zu analysierenden Entitäten enthalten, beispielsweise Kunden und deren demografische Informationen. Jeder Fall muss eindeutig sein und durch einen *Fallschlüssel*identifizierbar sein.  
   
  Zusätzlich zum Bestimmen der Falltabelle können Sie *geschachtelte Tabellen* in die Daten einbeziehen. Eine geschachtelte Tabelle enthält in der Regel zusätzliche Informationen zu den Entitäten in der Falltabelle, etwa von dem Kunden vorgenommene Transaktionen oder Attribute, die eine n:1-Beziehung zu der Entität aufweisen. Eine mit der Falltabelle **Kunden** verknüpfte geschachtelte Tabelle könnte beispielsweise eine Liste der von jedem Kunden erworbenen Produkte enthalten. In einem Modell, das Datenverkehr zu einer Website analysiert, könnte die geschachtelte Tabelle die Sequenzen von Seiten enthalten, die der Benutzer besucht hat. Weitere Informationen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
-### Zusätzliche Funktionen  
+### <a name="additional-features"></a>Zusätzliche Funktionen  
  Vom Data Mining-Assistenten werden diese zusätzlichen Funktionen bereitgestellt, um Ihnen dabei zu helfen, die richtigen Daten auszuwählen und die Datenquellen ordnungsgemäß zu konfigurieren:  
   
--   **Automatische Erkennung von Datentypen:** Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und empfiehlt anschließend den besten Datentyp sowie einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
+-   **Automatische Erkennung von Datentypen:**Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und empfiehlt anschließend den besten Datentyp sowie einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
   
 -   **Vorschläge für Variablen**: Sie können auf ein Dialogfeld klicken und einen Analyzer starten, der Korrelationen zwischen den in einem Modell einbezogenen Spalten berechnet und bestimmt, ob alle Spalten basierend auf der bisherigen Konfiguration des Modells wahrscheinliche Vorhersagen des Ausgabeattributs sind. Sie können diese Vorschläge überschreiben, indem Sie andere Werte eingeben.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 57
   
 -   **Automatische Aufteilung des Cubes**: Wenn das Miningmodell auf einer OLAP-Datenquelle basiert, besteht automatisch die Möglichkeit, das Modell mit Cubeattributen in Slices aufzuteilen. Dies ist praktisch, um Modelle auf Grundlage der Teilmengen von Cubedaten zu erstellen.  
   
-### Abschließen des Assistenten  
+### <a name="completing-the-wizard"></a>Abschließen des Assistenten  
  Der letzte Schritt im Assistenten besteht aus der Benennung der Miningstruktur und dem damit verbundenen Miningmodell. Je nachdem welchen Modelltyp Sie erstellt haben, stehen Ihnen die folgenden wichtigen Optionen zur Verfügung;  
   
 -   Wenn Sie **Drillthrough zulassen**auswählen, wird die Möglichkeit zum *Drillthrough* im Modell aktiviert. Mit Drillthrough können Benutzer, die die entsprechenden Berechtigungen haben, die Quelldaten analysieren, die beim Erstellen des Modells verwendet wurden.  
@@ -101,7 +106,7 @@ caps.handback.revision: 57
   
  [Zurück zum Anfang](#BKMK_Using_DM_Wizard)  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Weitere Informationen über die nötigen Entscheidungen bei der Erstellung eines Data Mining-Modells sind den folgenden Links zu entnehmen:  
   
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
  [Miningmodell-Drillthrough](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
  [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)  
   

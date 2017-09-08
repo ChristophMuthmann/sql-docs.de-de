@@ -1,24 +1,29 @@
 ---
 title: "Erstellen und Verwalten von Measures (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen und Verwalten von Measures (SSAS – tabellarisch)
+# <a name="create-and-manage-measures-ssas-tabular"></a>Erstellen und Verwalten von Measures (SSAS – tabellarisch)
   Ein Measure ist eine Formel, die zur Verwendung in einem Bericht oder einer PivotTable (oder einem PivotChart) von Excel erstellt wird. Measures können auf Standardaggregationsfunktionen basieren, z. B. COUNT oder SUM, oder Sie können mit DAX eigene Formeln definieren. In den Tasks in diesem Thema wird beschrieben, wie Measures mithilfe des Measurerasters einer Tabelle erstellt und verwaltet werden.  
   
  Dieses Thema umfasst folgende Aufgaben:  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [So löschen Sie ein Measure](#bkmk_delete)  
   
-## Aufgaben  
+## <a name="tasks"></a>Aufgaben  
  Zum Erstellen und Verwalten von Measures verwenden Sie das Measureraster einer Tabelle. Sie können das Measureraster für eine Tabelle nur in der Datensicht des Modell-Designers anzeigen. In der Diagrammsicht können Sie keine Measures erstellen und kein Measureraster anzeigen. Vorhandene Measures können in der Diagrammsicht jedoch angezeigt werden. Um das Measureraster für eine Tabelle anzuzeigen, klicken Sie auf das Menü **Tabelle** und dann auf **Measureraster anzeigen**.  
   
 ###  <a name="bkmk_create_stand"></a> So erstellen Sie ein Measure mithilfe einer Standardaggregationsformel  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   Klicken Sie im Measureraster mit der rechten Maustaste auf ein Measure, und klicken Sie auf **Löschen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Measures &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPIs &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

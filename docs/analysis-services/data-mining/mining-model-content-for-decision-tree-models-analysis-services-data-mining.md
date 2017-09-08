@@ -1,27 +1,32 @@
 ---
-title: "Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodellinhalt, Entscheidungsstrukturmodelle"
-  - "Entscheidungsstrukturalgorithmen [Analysis Services]"
-  - "Entscheidungsstrukturen [Analysis Services]"
+title: Miningmodellinhalt Entscheidungsstrukturmodellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining model content, decision tree models
+- decision tree algorithms [Analysis Services]
+- decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
+# <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
   
 ##  <a name="bkmk_Top"></a> Grundlegendes zur Struktur von Entscheidungsstrukturmodellen  
@@ -34,7 +39,7 @@ caps.handback.revision: 24
   
  ![Struktur des Modellinhalts für Entscheidungsstruktur](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "Struktur des Modellinhalts für Entscheidungsstruktur")  
   
- Die Struktur für jedes vorhersagbare Attribut enthält Informationen, die beschreiben, welche Auswirkungen die Eingabespalten, die Sie auswählen, auf das Ergebnis dieses vorhersagbaren Attributs haben. Jeder Struktur geht ein Knoten (NODE_TYPE = 9) voran, der das vorhersagbare Attribut enthält, gefolgt von einer Reihe von Knoten (NODE_TYPE = 10), die die Eingabeattribute darstellen. Ein Attribut entspricht entweder einer Spalte auf Fallebene oder Werten aus Spalten einer geschachtelten Tabelle. Hierbei handelt es sich in der Regel um Werte in der **Schlüssel**-Spalte der geschachtelten Tabelle.  
+ Die Struktur für jedes vorhersagbare Attribut enthält Informationen, die beschreiben, welche Auswirkungen die Eingabespalten, die Sie auswählen, auf das Ergebnis dieses vorhersagbaren Attributs haben. Jeder Struktur geht ein Knoten (NODE_TYPE = 9) voran, der das vorhersagbare Attribut enthält, gefolgt von einer Reihe von Knoten (NODE_TYPE = 10), die die Eingabeattribute darstellen. Ein Attribut entspricht entweder einer Spalte auf Fallebene oder Werten aus Spalten einer geschachtelten Tabelle. Hierbei handelt es sich in der Regel um Werte in der **Schlüssel** -Spalte der geschachtelten Tabelle.  
   
  Innere Knoten und Blattknoten stellen Teilungsbedingungen dar. Eine Struktur kann mehrmals auf dem gleichen Attribut teilen. Beispielsweise kann das Modell **TM_DecisionTree** auf [Yearly Income] und [Number of Children] und dann, weiter unten in der Struktur, erneut auf [Yearly Income] teilen.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 24
  Der Microsoft Decision Trees-Algorithmus lässt keine kontinuierlichen Datentypen als Eingaben zu. Daher werden die Werte diskretisiert, wenn Spalten über einen kontinuierlichen, numerischen Datentyp verfügen. Am Punkt einer Teilung führt der Algorithmus seine eigene Diskretisierung für alle kontinuierlichen Attribute aus.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wählt automatisch eine Methode für die Zuordnung von Buckets zu kontinuierlichen Attributen aus. Allerdings können Sie steuern, wie kontinuierliche Werte diskretisiert werden, indem Sie den Inhaltstyp der Miningstrukturspalte auf **Discretized** setzen und dann die Eigenschaft <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> einrichten.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Wählt automatisch eine Methode für Zuordnung von Buckets zu kontinuierlichen Attributen; Allerdings können Sie steuern, wie kontinuierliche Werte in den Eingaben diskretisiert werden, durch Festlegen den Inhaltstyp der Miningstrukturspalte auf **Discretized** festlegen und anschließend die <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> Eigenschaft.  
   
  [top](#bkmk_Top)  
   
@@ -159,7 +164,7 @@ caps.handback.revision: 24
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Im Gegensatz zum Knoten für Randstatistik, der in einem Naive Bayes- oder neuronalen Netzwerkmodell zu finden ist, verfügt ein Entscheidungsstrukturmodell nicht über einen separaten Knoten, der Statistiken für das gesamte Modell speichert. Stattdessen erstellt das Modell eine separate Struktur für jedes vorhersagbare Attribut, wobei sich ein Knoten (Alle) auf der oberen Ebene der Struktur befindet. Jede Struktur ist unabhängig von den anderen. Wenn Ihr Modell nur ein vorhersagbares Attribut enthält, gibt es nur eine Struktur und damit nur einen Knoten (Alle).  
   
  Jede Struktur, die ein Ausgabeattribut darstellt, wird weiter in innere Zweige (NODE_TYPE = 3) unterteilt, die Teilungen darstellen. Jede dieser Strukturen enthält Statistiken über die Verteilung des Zielattributs. Zusätzlich enthält ein Blattknoten (NODE_TYPE = 4) Statistiken, die sowohl Eingabeattribute als auch ihre Werte mit der Anzahl von Fällen im Unterstützungswert dieses Attribut-Werte-Paars beschreiben. Daher können Sie in jedem Zweig einer Entscheidungsstruktur die Wahrscheinlichkeiten oder die Verteilung der Daten leicht einsehen, ohne die Quelldaten abfragen zu müssen. Jede Ebene der Struktur stellt zwangsläufig die Summe seiner unmittelbar untergeordneten Knoten dar.  
@@ -168,23 +173,23 @@ caps.handback.revision: 24
   
  [top](#bkmk_Top)  
   
-## Beispiel für den Aufbau der Entscheidungsstruktur  
+## <a name="example-of-decision-tree-structure"></a>Beispiel für den Aufbau der Entscheidungsstruktur  
  Um zu verstehen, wie eine Entscheidungsstruktur funktioniert, betrachten Sie ein Beispiel, z. B. das Bike Buyer-Szenario von AdventureWorks. Unter der Annahme, dass es sich bei dem vorhersagbaren Attribut um die Kundeneinkäufe handelt, versucht der Decision Trees-Algorithmus, unter allen Eingaben, die Sie bereitstellen, eine Spalte mit Daten zu finden, die am effektivsten die Kunden herausstellt, die wahrscheinlich ein Fahrrad kaufen könnten oder die eher kein Fahrrad kaufen. Beispielsweise nimmt das Modell an, dass es sich beim Alter um den besten Indikator für Kaufverhalten handelt. Speziell, dass Kunden über 30 Jahren sehr wahrscheinlich ein Fahrrad kaufen könnten und alle anderen Kunden eher nicht. In diesem Szenario erstellt das Modell auf dem Age-Attribut eine *Teilung* . Dies bedeutet, dass sich die Struktur in zwei Zweige unterteilt. Ein Zweig enthält die Kunden über 30 und der andere diejenigen unter 30. Die neuen Verzweigungen werden in der Modellstruktur als zwei neue innere Strukturen (NODE_TYPE = 3) dargestellt.  
   
  Für jede Verzweigung sucht das Modell weiterhin nach zusätzlichen Attributen, die bei der Unterscheidung von Kunden verwendet werden sollen. Wenn die Hinweise in den Daten nicht ausreichen, um eine weitere Erstellung von Untergruppen von Kunden vorzunehmen, beendet das Modell den Strukturaufbau. Das Modell beendet darüber hinaus den Aufbau der Struktur, wenn die Anzahl der Fälle im Knoten zu klein ist, um fortzufahren, unabhängig davon, wie gut die Teilung ist oder ob der Wert null ist oder fehlt. Durch eine frühe Beendigung des weiteren Strukturwachstums verhindern Sie, dass das Modell ein zu enges Training auf ein bestimmtes Dataset durchführt.  
   
  Jeder innere Strukturknoten enthält Blattknoten, die eine Aufteilung der Ergebnisse anhand der aktuellen Klassifizierungsergebnisse bereitstellen. Beispielsweise könnten Sie einen inneren Knoten verwenden, der für Age >= 30 und Gender = Male steht. Der Knoten für diese Gruppe zeigt Ihnen, wie viele Kunden in dieser Kategroie etwas gekauft haben oder nichts gekauft haben. Beispielsweise könnte die Klassifizierung die folgenden Strukturteilungen enthalten:  
   
-|Innere Struktur|Split|  
+|Innere Struktur|Teilung|  
 |-------------------|-----------|  
 |Age >= 30|Age >= 30 und Gender = Male|  
 ||Age >= 30 und Gender = Female|  
 |Age < 30|Age < 30 und Gender = Male|  
-||Age \< 30 und Gender = Female|  
+||Age < 30 und Gender = Female|  
   
  Wenn Sie ein Entscheidungsstrukturmodell für Vorhersagen verwenden, übernimmt das Modell die Attribute, die Sie bereitstellen, als Argumente und folgt dem Pfad der Attribute in der Struktur nach unten. Im Allgemeinen wechseln alle Vorhersagen zu einem Blattknoten, und die inneren Knoten werden nur für Klassifizierung verwendet.  
   
- Ein Blattknoten verfügt immer über einen NODE_TYPE von 4 (Verteilung) und enthält ein Histogramm, das anhand der von Ihnen bereitgestellten Attribute Aufschluss über die Wahrscheinlichkeit eines jeden Ergebnisses (Einkauf oder kein Einkauf) gibt. Wenn Sie beispielsweise eine Vorhersage für einen neuen Kunden erstellen möchten, der männlich und über 60 Jahre alt ist, untersucht das Modell den entsprechenden Knoten (Age > 30 und Gender = Male) und gibt dann die Wahrscheinlichkeit für das angegebene Ergebnis zurück. Diese Wahrscheinlichkeiten werden in der [NODE_DISTRIBUTION](#bkmk_NodeDist_Discrete)-Tabelle für den Knoten gespeichert.  
+ Ein Blattknoten verfügt immer über einen NODE_TYPE von 4 (Verteilung) und enthält ein Histogramm, das anhand der von Ihnen bereitgestellten Attribute Aufschluss über die Wahrscheinlichkeit eines jeden Ergebnisses (Einkauf oder kein Einkauf) gibt. Wenn Sie beispielsweise eine Vorhersage für einen neuen Kunden erstellen möchten, der männlich und über 60 Jahre alt ist, untersucht das Modell den entsprechenden Knoten (Age > 30 und Gender = Male) und gibt dann die Wahrscheinlichkeit für das angegebene Ergebnis zurück. Diese Wahrscheinlichkeiten werden in der [NODE_DISTRIBUTION](#bkmk_NodeDist_Discrete) -Tabelle für den Knoten gespeichert.  
   
  Handelt es sich beim vorhersagbaren Attribut um eine fortlaufende Nummer, versucht der Algorithmus, eine Regressionsformel aufzustellen, die die Beziehung zwischen dem vorhersagbaren Attribut und den Eingaben modelliert.  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 24
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Angenommen, die Teilung erfolgt bei [Age] mittels eines 3-Wege-Verfahrens. Die drei untergeordneten Knoten könnten in diesem Fall mit "[Age] < 40", "40 <= [Age] \< 50" und "[Age] >= 50" beschriftet werden.|  
+|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Angenommen, die Teilung erfolgt bei [Age] mittels eines 3-Wege-Verfahrens. Die drei untergeordneten Knoten könnten in diesem Fall mit "[Age] < 40", "40 <= [Age] < 50" und "[Age] >= 50" beschriftet werden.|  
 |**NODE_DESCRIPTION**|Enthält eine vollständige Liste der Attribute, die diesen Knoten von anderen unterscheiden, beginnend mit dem übergeordneten Knoten des Modells. Beispiel: Product name = Apple und Color = Red.|  
   
  [top](#bkmk_Top)  
@@ -206,24 +211,24 @@ caps.handback.revision: 24
  Das vom XML-Fragment dargestellte Attribut kann entweder einfach oder komplex sein. Ein einfaches Attribut enthält den Namen der Modellspalte und den Wert des Attributs. Enthält die Modellspalte eine geschachtelte Tabelle, wird das Attribut der geschachtelten Tabelle als Verkettung aus Tabellenname, Schlüsselwert und Attribut dargestellt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Version 2.0 des PMML-Standards mit Erweiterungen zur Unterstützung geschachtelter Tabellen. Wenn Ihre Daten geschachtelte Tabellen enthalten und Sie eine PMML-Version des Modells erstellen, werden alle Elemente im Modell, die die Prädikate enthalten, als eine Erweiterung markiert.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Version 2.0 des PMML-Standards mit Erweiterungen zur Unterstützung von geschachtelten Tabellen. Wenn Ihre Daten geschachtelte Tabellen enthalten und Sie eine PMML-Version des Modells erstellen, werden alle Elemente im Modell, die die Prädikate enthalten, als eine Erweiterung markiert.  
   
  [top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Knotenverteilung für diskrete Attribute  
  In einem Entscheidungsstrukturmodell enthält die NODE_DISTRIBUTION-Tabelle nützliche Statistiken. Allerdings hängt der Typ der Statistik davon ab, ob die Struktur ein diskretes oder kontinuierliches Attribut vorhersagt. In diesem Abschnitt wird die Bedeutung der Knotenverteilungsstatistik für diskrete Attribute beschrieben.  
   
-#### Attributname und Attributwert  
+#### <a name="attribute-name-and-attribute-value"></a>Attributname und Attributwert  
  In einer Klassifizierungsstruktur enthält der Attributname immer den Namen der vorhersagbaren Spalte. Dieser Wert gibt Aufschluss darüber, was die Struktur vorhersagt. Da eine einzelne Struktur immer ein einzelnes vorhersagbares Attribut darstellt, wird dieser Wert überall in der Struktur wiederholt.  
   
  Für einen diskreten Datentyp listet das Feld für den Attributwert die möglichen Werte der vorhersagbaren Spalte plus dem **Missing** -Wert auf.  
   
-#### Support  
+#### <a name="support"></a>Support  
  Der Unterstützungswert für jeden Knoten gibt Aufschluss darüber, wie viele Fälle in diesem Knoten enthalten sind. Auf der Ebene (Alle) sollten Sie die Gesamtanzahl der Fälle sehen können, die für das Training des Modells verwendet wurden. Für jede Teilung in der Struktur ist der Unterstützungswert die Anzahl der Fälle, die im Knoten der Struktur gruppiert wurden. Die Summe der Fälle in den Blattknoten entspricht zwangsläufig der Anzahl der Fälle im übergeordneten Knoten der Struktur.  
   
  Für Knoten, die kontinuierliche Attribute darstellen, kann das Vorhandensein von null in den Daten zu nicht intuitiven Ergebnissen führen. Bei „m“ Fällen würde der Mittelwert beispielsweise mit „sum(all cases)/n“ berechnet, wobei „n“ einer Zahl kleiner als „m“ entspricht und „m-n“ die Anzahl der Fälle mit fehlenden Werten angibt. Die Unterstützung wird auch mit „n“ angegeben.  
   
-#### Wahrscheinlichkeit  
+#### <a name="probability"></a>Wahrscheinlichkeit  
  Die jedem Knoten zugeordnete Wahrscheinlichkeit gibt Aufschluss über die Wahrscheinlichkeit, über die jeder Fall im gesamten Dataset in diesem bestimmten Knoten verfügen wird. Wahrscheinlichkeitsergebnisse werden sowohl für die Struktur als ganzes als auch für die unmittelbare Teilung berechnet.  
   
  Die folgende Tabelle zeigt beispielsweise ein sehr einfaches Modell mit 100 Fällen.  
@@ -235,7 +240,7 @@ caps.handback.revision: 24
 |Age < 30|40|Age < 30 und Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 und Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt (Beispiel: Age \<30, Age = 30 und Age >30), und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0) oder Status **fehlt**. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt wird (z. B. Alter \<30, Age = 30, "und" Age > 30) und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0), Zustand ist  **Fehlende**. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  Die Wahrscheinlichkeiten für jeden Knoten werden fast direkt aus der Verteilung berechnet. Dies geschieht wie folgt:  
   
@@ -245,15 +250,15 @@ caps.handback.revision: 24
   
  Beim Treffen von Vorhersagen muss die Wahrscheinlichkeit der Verteilung durch die Wahrscheinlichkeit des Knotens ausgeglichen werden, um die Wahrscheinlichkeiten zu glätten. Trennt zum Beispiel eine Teilung in der Struktur die Fälle in einem Verhältnis von 9000/1000, so ist die Struktur extrem unausgeglichen. Hieraus folgt, dass eine Vorhersage aus einem kleinen Zweig nicht die gleiche Gewichtung hat wie eine Vorhersage aus einem Zweig mit vielen Fällen.  
   
-#### Variance  
+#### <a name="variance"></a>Variance  
  Varianz ist ein Maß dafür, wie zerstreut die Werte angesichts einer erwarteten Verteilung sind. Für diskrete Werte ist die Varianz definitionsgemäß 0.  
   
  Weitere Informationen zur Berechnung der Varianz für kontinuierliche Werte finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-#### Werttyp  
+#### <a name="value-type"></a>Werttyp  
  Die Spalte für den Werttyp stellt Informationen über die Bedeutung des numerischen Werts dar, der in den anderen Spalten der NODE_DISTRIBUTION-Tabelle bereitgestellt wird. Sie können den Werttyp in Abfragen verwenden, um bestimmte Zeilen aus den geschachtelten Tabellen abzurufen. Beispiele finden Sie unter [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- Die folgenden Typen der <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType>-Enumeration werden in Klassifizierungsstrukturen verwendet.  
+ Die folgenden Typen der <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> -Enumeration werden in Klassifizierungsstrukturen verwendet.  
   
 |Werttyp|Description|  
 |----------------|-----------------|  
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
  Wenn das Modell ein kontinuierliches, vorhersagbares Attribut enthält, kann die Struktur darüber hinaus Werttypen enthalten, die für die Regressionsformeln eindeutig sind. Eine Liste der Werttypen, die in Regressionsstrukturen verwendet werden, finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-###  <a name="NodeScore"></a> Knotenergebnis  
+###  <a name="NodeScore"></a> Knotenbewertung  
  Das Knotenergebnis stellt auf jeder Strukturebene leicht unterschiedliche Informationen dar. In der Regel handelt es sich beim Ergebnis um einen numerischen Wert, der Aufschluss darüber gibt, wie gut eine Teilung durch die Teilung auf der Bedingung erreicht wurde. Der Wert wird als doppelt dargestellt, wenn ein höherer Wert besser ist.  
   
  Definitionsgemäß haben der Modellknoten und alle Blattknoten ein Knotenergebnis von 0.  
@@ -271,7 +276,7 @@ caps.handback.revision: 24
   
  Für alle anderen Knoten in der Struktur (ausgenommen der Blattknoten) stellt das Ergebnis eines jeden Knotens das beste Teilungsergebnis für den aktuellen Knoten minus dem Teilungsergebnis für den übergeordneten Knoten dar. Üblicherweise sollte das Teilungsergebnis für einen übergeordneten Knoten immer besser sein als das Teilungsergebnis auf seinen untergeordneten Knoten. Grund hierfür ist, dass ein Entscheidungsstrukturmodell idealerweise zuerst auf den wichtigsten Attributen teilt.  
   
- Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)" auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
+ Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)" auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
   
 > [!NOTE]  
 >  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das sowohl über kontinuierliche als auch diskrete vorhersagbare Attribute verfügt, erhalten Sie völlig unterschiedliche Ergebnisse auf den Knoten (Alle), die jeden Strukturknoten darstellen. Jedes Modell sollte unabhängig voneinander berücksichtigt werden, und die für die Bewertungsregression verwendeten Methoden unterscheiden sich vollständig von denen, die für die Bewertungsklassifzierung verwendet werden. Die Knotenergebniswerte können nicht verglichen werden.  
@@ -287,16 +292,17 @@ caps.handback.revision: 24
   
 |Teilungsbedingung|Ergebnis im Knoten|  
 |---------------------|--------------------|  
-|wenn n \< 5|Beziehung kann als Gleichung 1 ausgedrückt werden|  
+|wenn n < 5|Beziehung kann als Gleichung 1 ausgedrückt werden|  
 |wenn n zwischen 5 und 10|Keine Gleichung|  
 |wenn n > 10|Beziehung kann als Gleichung 2 ausgedrückt werden|  
   
  Weitere Informationen zu Regressionsknoten finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
+

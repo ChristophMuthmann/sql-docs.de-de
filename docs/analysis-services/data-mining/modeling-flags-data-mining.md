@@ -1,43 +1,48 @@
 ---
-title: "Modellierungsflags (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attribute [Data Mining]"
-  - "Datentypen [Data Mining]"
-  - "REGRESSOR-Flag"
-  - "MODEL_EXISTENCE_ONLY-Flag"
-  - "REGRESSOR (Spalte)"
-  - "Spalten [Data Mining], Modellierungsflags"
-  - "NOT NULL-Modellierungsflag"
-  - "Modellierungsflags [Data Mining]"
-  - "NULL-Werte [Analysis Services]"
-  - "MODEL_EXISTENCE_ONLY (Spalte)"
-  - "Codierung [Data Mining]"
+title: Modellierungsflags (Datamining) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modellierungsflags (Data Mining)
+# <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
   Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
   
  Einige Modellierungsflags werden auf der Ebene der Miningstruktur definiert, während andere auf der Ebene der Miningmodellspalte definiert werden. Beispielsweise wird das **NOT NULL** -Modellierungsflag für Miningstrukturspalten verwendet. Sie können zusätzliche Modellierungsflags für die Miningmodellspalten definieren, abhängig vom Algorithmus, den Sie zur Erstellung des Modells verwenden.  
   
 > [!NOTE]  
->  Zusätzlich zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
+>  Zusätzlich zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
   
-## Liste der Modellierungsflags  
+## <a name="list-of-modeling-flags"></a>Liste der Modellierungsflags  
  In der folgenden Liste werden die Modellierungsflags beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt werden. Weitere Informationen zu den Modellierungsflags, die von bestimmten Algorithmen unterstützt werden, finden Sie unter dem Thema in der technischen Referenz für den Algorithmus, der zur Erstellung des Modells verwendet wurde.  
   
  **NOT NULL**  
@@ -46,17 +51,17 @@ caps.handback.revision: 48
  **MODEL_EXISTENCE_ONLY**  
  Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: **Missing** und **Existing**. Der Wert **NULL**wird wie der Wert Missing behandelt. Das MODEL_EXISTENCE_ONLY-Flag wird für das vorhersagbare Attribut übernommen und wird von den meisten Algorithmen unterstützt.  
   
- Tatsächlich wird durch Festlegen des MODEL_EXISTENCE_ONLY-Flags auf **TRUE** die Darstellung der Werte so geändert, dass es nur zwei Status gibt: **Missing** und **Existing**. Alle nicht fehlenden Status werden in einem einzelnen **Existing**-Wert kombiniert.  
+ Tatsächlich wird durch Festlegen des MODEL_EXISTENCE_ONLY-Flags auf **TRUE** die Darstellung der Werte so geändert, dass es nur zwei Status gibt: **Missing** und **Existing**. Alle nicht fehlenden Status werden in einem einzelnen **Existing** -Wert kombiniert.  
   
- Dieses Modellierungsflag wird in der Regel in Attributen verwendet, bei denen der **NULL** -Status eine implizite Bedeutung hat und der explizite Wert des **NOT NULL** -Status nicht so wichtig ist wie die Tatsache, dass die Spalte überhaupt einen Wert enthält. Beispielsweise kann die Spalte [DateContractSigned] den Wert **NULL** annehmen, wenn ein Vertrag nie unterschrieben wurde, und den Wert **NOT NULL**, wenn der Vertrag unterschrieben wurde. Wenn das Modell vorhersagen soll, ob ein Vertrag unterschrieben wird, können Sie daher das MODEL_EXISTENCE_ONLY-Flag einsetzen, um den genauen Datumswert in den Fällen mit **NOT NULL** zu ignorieren und nur zwischen den Fällen zu unterscheiden, in denen ein Vertrag **Missing** oder **Existing** lautet.  
+ Dieses Modellierungsflag wird in der Regel in Attributen verwendet, bei denen der **NULL** -Status eine implizite Bedeutung hat und der explizite Wert des **NOT NULL** -Status nicht so wichtig ist wie die Tatsache, dass die Spalte überhaupt einen Wert enthält. Beispielsweise kann die Spalte [DateContractSigned] den Wert **NULL** annehmen, wenn ein Vertrag nie unterschrieben wurde, und den Wert **NOT NULL** , wenn der Vertrag unterschrieben wurde. Wenn das Modell vorhersagen soll, ob ein Vertrag unterschrieben wird, können Sie daher das MODEL_EXISTENCE_ONLY-Flag einsetzen, um den genauen Datumswert in den Fällen mit **NOT NULL** zu ignorieren und nur zwischen den Fällen zu unterscheiden, in denen ein Vertrag **Missing** oder **Existing**lautet.  
   
 > [!NOTE]  
->  Missing ist ein spezieller vom Algorithmus verwendeter Statuswert, der nicht mit dem Textwert "Missing" bzw. "Fehlend" einer Spalte gleichbedeutend ist. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+>  Missing ist ein spezieller vom Algorithmus verwendeter Statuswert, der nicht mit dem Textwert "Missing" bzw. "Fehlend" einer Spalte gleichbedeutend ist. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
   
  **REGRESSOR**  
  Gibt an, dass die Spalte ein Kandidat für die Verwendung als Regressor während der Verarbeitung ist. Dieses Flag wird in einer Miningmodellspalte definiert und kann nur auf Spalten angewendet werden, die einen fortlaufenden numerischen Datentyp aufweisen. Weitere Informationen zur Verwendung dieses Flags finden Sie im Abschnitt in diesem Thema: [Verwendungszwecke für das REGRESSOR-Modellierungsflag](#bkmk_UseRegressors).  
   
-## Anzeigen und Ändern von Modellierungsflags  
+## <a name="viewing-and-changing-modeling-flags"></a>Anzeigen und Ändern von Modellierungsflags  
  Sie können die Modellierungsflags, die einer Miningstrukturspalte oder Modellspalte im Data Mining-Designer zugeordnet sind, betrachten, indem Sie die Eigenschaften der Struktur oder des Modells anzeigen.  
   
  Um zu bestimmen, welche Modellierungsflags für die aktuelle Miningstruktur übernommen wurden, können Sie eine Abfrage für das Data Mining-Schemarowset erstellen, das die Modellierungsflags ausschließlich für die Strukturspalten zurückgibt, indem eine Abfrage wie die Folgende verwendet wird:  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **Hinweis** Wenn Sie ein Miningmodell verändern und den Inhaltstyp einer Spalte von kontinuierlich in diskret ändern, müssen Sie das Flag für die Miningspalte von Hand ändern und das Modell dann erneut verarbeiten.  
   
-### Regressoren in linearen Regressionsmodellen  
+### <a name="regressors-in-linear-regression-models"></a>Regressoren in linearen Regressionsmodellen  
  Lineare Regressionsmodelle basieren auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Auch wenn Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus nicht verwenden, kann jedes Entscheidungsstrukturmodell eine Struktur oder Knoten enthalten, die eine Regression für ein kontinuierliches Attribut darstellt bzw. darstellen.  
   
  Sie müssen in diesen Modellen nicht angeben, dass eine kontinuierliche Spalte einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen. Wenn das Modellierungsflag festgelegt wurde, versucht der Algorithmus im Unterschied dazu Regressionsgleichungen der folgenden Form zu finden, um die Muster den Knoten der Struktur zuzuordnen.  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  Sie können durch Einsatz des FORCE_REGRESSOR-Parameters gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann mit dem Decision Trees-Algorithmus und dem Linear Regression-Algorithmus verwendet werden.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Verwenden Sie die folgenden Links, um weitere Informationen zum Verwenden von Modellierungsflags zu erhalten.  
   
 |Task|Thema|  

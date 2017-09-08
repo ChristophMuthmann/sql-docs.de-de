@@ -1,35 +1,40 @@
 ---
-title: "Miningmodellinhalt von Zuordnungsmodellen (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Itemsets [Analysis Services]"
-  - "Zuordnungsalgorithmen [Analysis Services]"
-  - "Miningmodellinhalt, Zuordnungsmodelle"
-  - "Regeln [Data Mining]"
-  - "Zuordnungen [Analysis Services]"
+title: "Miningmodellinhalt zuordnungsmodellen (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodellinhalt von Zuordnungsmodellen (Analysis Services – Data Mining)
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zuordnungsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, und Statistikterminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Grundlegendes zur Struktur von Zuordnungsmodellen  
+## <a name="understanding-the-structure-of-an-association-model"></a>Grundlegendes zur Struktur von Zuordnungsmodellen  
  Ein Zuordnungsmodell besitzt eine einfache Struktur. Jedes Modell verfügt über einen einzigen übergeordneten Knoten, der das Modell und seine Metadaten darstellt, und jeder übergeordnete Knoten enthält eine einfache Liste der Itemsets und Regeln. Die Itemsets und Regeln werden nicht in Baumstrukturen dargestellt, sie werden, wie im folgenden Diagramm gezeigt, zuerst nach Itemsets und anschließend nach Regeln geordnet.  
   
- ![Struktur des Modellinhalts für Zuordnungsmodelle](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "Struktur des Modellinhalts für Zuordnungsmodelle")  
+ ![Struktur des Modellinhalts für zuordnungsmodelle](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "Struktur des Modellinhalts für zuordnungsmodelle")  
   
  Jedes Itemset ist in seinem eigenen Knoten (NODE_TYPE = 7) enthalten. Der *Knoten* enthält die Definition des Itemsets, die Anzahl der Fälle, die dieses Itemset enthalten, sowie weitere Informationen.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
  **Hinweis** Wenn Sie die Regeln oder die Itemsets extrahieren möchten, können Sie eine Abfrage einsetzen, die nur den gewünschten Knotentyp zurückgibt. Weitere Informationen finden Sie unter [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-## Modellinhalt eines Zuordnungsmodells  
+## <a name="model-content-for-an-association-model"></a>Modellinhalt eines Zuordnungsmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Zuordnungsmodelle relevant sind.  
   
  Informationen zu den allgemeinen Spalten im Schemarowset, z.B. MODEL_CATALOG und MODEL_NAME, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -99,12 +104,12 @@ caps.handback.revision: 17
 |----------|-----------------|  
 |ITEMSET_COUNT|Anzahl aller Itemsets im Modell.|  
 |RULE_COUNT|Anzahl aller Regeln im Modell.|  
-|MIN_SUPPORT|Die minimale Unterstützung für jedes einzelnes Itemset.<br /><br /> **Hinweis** Dieser Wert kann sich von dem Wert unterscheiden, den Sie für den *MINIMUM_SUPPORT*-Parameter festgelegt haben.|  
-|MAX_SUPPORT|Die maximale Unterstützung für jedes einzelne Itemset.<br /><br /> **Hinweis** Dieser Wert kann sich von dem Wert unterscheiden, den Sie für den *MAXIMUM_SUPPORT*-Parameter festgelegt haben.|  
-|MIN_ITEMSET_SIZE|Die Größe des kleinsten Itemsets, die als Anzahl von Elementen dargestellt wird.<br /><br /> Ein Wert von 0 gibt an, dass der **Missing** -Status als unabhängiges Element behandelt wurde.<br /><br /> **Hinweis** Der Standardwert des *MINIMUM_ITEMSET_SIZE*-Parameters ist 1.|  
-|MAX_ITEMSET_SIZE|Gibt die Größe des größten Itemsets an, das gefunden wurde.<br /><br /> **Hinweis** Dieser Wert wird durch den Wert beschränkt, den Sie bei der Erstellung des Modells für den *MAX_ITEMSET_SIZE*-Parameter festgelegt haben. Der erste Wert kann den anderen Wert nie übersteigen, aber er kann kleiner sein. Der Standardwert ist 3.|  
-|MIN_PROBABILITY|Die minimale Wahrscheinlichkeit, die für jedes einzelne Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 0,400390625<br /><br /> **Hinweis** Bei Itemsets ist dieser Wert immer größer als der Wert, den Sie bei der Erstellung des Modells für den *MINIMUM_PROBABILITY*-Parameter festgelegt haben.|  
-|MAX_PROBABILITY|Die maximale Wahrscheinlichkeit, die für jedes einzelnes Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 1<br /><br /> **Hinweis** Es gibt keinen Parameter, der die maximale Wahrscheinlichkeit von Itemsets einschränkt. Wenn Sie Elemente ausschließen möchten, die zu häufig vorkommen, verwenden Sie stattdessen den *MAXIMUM_SUPPORT*-Parameter.|  
+|MIN_SUPPORT|Die minimale Unterstützung für jedes einzelnes Itemset.<br /><br /> **Hinweis** Dieser Wert kann sich von dem Wert unterscheiden, den Sie für den *MINIMUM_SUPPORT* -Parameter festgelegt haben.|  
+|MAX_SUPPORT|Die maximale Unterstützung für jedes einzelne Itemset.<br /><br /> **Hinweis** Dieser Wert kann sich von dem Wert unterscheiden, den Sie für den *MAXIMUM_SUPPORT* -Parameter festgelegt haben.|  
+|MIN_ITEMSET_SIZE|Die Größe des kleinsten Itemsets, die als Anzahl von Elementen dargestellt wird.<br /><br /> Ein Wert von 0 gibt an, dass der **Missing** -Status als unabhängiges Element behandelt wurde.<br /><br /> **Hinweis** Der Standardwert des *MINIMUM_ITEMSET_SIZE* -Parameters ist 1.|  
+|MAX_ITEMSET_SIZE|Gibt die Größe des größten Itemsets an, das gefunden wurde.<br /><br /> **Hinweis** Dieser Wert wird durch den Wert beschränkt, den Sie bei der Erstellung des Modells für den *MAX_ITEMSET_SIZE* -Parameter festgelegt haben. Der erste Wert kann den anderen Wert nie übersteigen, aber er kann kleiner sein. Der Standardwert ist 3.|  
+|MIN_PROBABILITY|Die minimale Wahrscheinlichkeit, die für jedes einzelne Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 0,400390625<br /><br /> **Hinweis** Bei Itemsets ist dieser Wert immer größer als der Wert, den Sie bei der Erstellung des Modells für den *MINIMUM_PROBABILITY* -Parameter festgelegt haben.|  
+|MAX_PROBABILITY|Die maximale Wahrscheinlichkeit, die für jedes einzelnes Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 1<br /><br /> **Hinweis** Es gibt keinen Parameter, der die maximale Wahrscheinlichkeit von Itemsets einschränkt. Wenn Sie Elemente ausschließen möchten, die zu häufig vorkommen, verwenden Sie stattdessen den *MAXIMUM_SUPPORT* -Parameter.|  
 |MIN_LIFT|Die Mindestmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 0,4309369632511<br /><br /> Hinweis: Wenn Sie den minimalen Lift kennen, können Sie leichter bestimmen, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
 |MAX_LIFT|Die Höchstmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 1,95758227647523 **Hinweis** Wenn Sie den maximalen Lift kennen, können Sie leichter bestimmen, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 17
   
  **Itemsetknoten** Listet jedes Element im Itemset zusammen mit einem Wahrscheinlichkeits- und Unterstützungswert auf. Wenn das Itemset beispielsweise zwei Itemset enthält, wird der Name jedes Produkts zusammen mit der Anzahl der Fälle aufgeführt, die jedes Produkt enthalten.  
   
- **Regelknoten** Enthält zwei Zeilen. Die erste Zeile enthält das Attribut von der rechten Seite der Regel, d. das vorhergesagte Element zusammen mit einem Vertrauenswert.  
+ **Regelknoten** Enthält zwei Zeilen. Die erste Zeile enthält das Attribut von der rechten Seite der Regel, d. das vorhergesagte Element zusammen mit einem Vertrauenswert.  
   
  Die zweite Zeile ist Zuordnungsmodellen eigen. Sie enthält einen Zeiger auf das Itemset auf der rechten Seite der Regel. Der Zeiger wird in der ATTRIBUTE_VALUE-Spalte als ID des Itemset dargestellt, das nur das Element von der rechten Seite enthält.  
   
@@ -192,7 +197,7 @@ caps.handback.revision: 17
  MSOLAP_NODE_SHORT_CAPTION  
  Leer.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  

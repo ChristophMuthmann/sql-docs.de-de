@@ -1,27 +1,32 @@
 ---
-title: "Beispiele f&#252;r Entscheidungsstruktur-Modellabfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Entscheidungsstrukturalgorithmen [Analysis Services]"
-  - "Inhaltsabfragen [DMX]"
-  - "Entscheidungsstrukturen [Analysis Services]"
+title: Decision Trees-Modell Abfragebeispiele | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- decision tree algorithms [Analysis Services]
+- content queries [DMX]
+- decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2822b60d236ab7d961ce02bf76cbc7ac996aefb0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Beispiele f&#252;r Entscheidungsstruktur-Modellabfragen
+# <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  In diesem Abschnitt wird erklärt, wie Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus basieren.  
@@ -61,7 +66,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MINIMUM_SUPPORT=10, SCORE_METHOD=4, SPLIT_METHOD=3, FORCE_REGRESSOR=  
   
 ###  <a name="bkmk_Query2"></a> Beispielabfrage 2: Zurückgeben von Details zum Modellinhalt mit DMX  
- Die folgende Abfrage gibt einige grundlegende Informationen über die Entscheidungsstrukturen zurück, die beim Erstellen des Modells im [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)erstellt wurden. Jede Struktur wird in einem eigenen Knoten gespeichert. Da dieses Modell nur ein einziges vorhersagbares Attribut enthält, gibt es nur einen Strukturknoten. Wenn Sie jedoch ein Zuordnungsmodell unter Verwendung des Decision Trees-Algorithmus erstellen, können Hunderte von Strukturen vorhanden sein, eine für jedes Produkt.  
+ Die folgende Abfrage gibt einige grundlegende Informationen über die Entscheidungsstrukturen zurück, die beim Erstellen des Modells im [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt wurden. Jede Struktur wird in einem eigenen Knoten gespeichert. Da dieses Modell nur ein einziges vorhersagbares Attribut enthält, gibt es nur einen Strukturknoten. Wenn Sie jedoch ein Zuordnungsmodell unter Verwendung des Decision Trees-Algorithmus erstellen, können Hunderte von Strukturen vorhanden sein, eine für jedes Produkt.  
   
  Diese Abfrage gibt alle Knoten vom Typ 2 zurück, die die Knoten auf oberster Ebene einer Struktur sind, welche ein bestimmtes vorhersagbares Attribut darstellt.  
   
@@ -130,7 +135,7 @@ AND NODE_TYPE = 4
 |00000000100010100|Total Children = 3|75|  
 |0000000010001010100|Number Children At Home = 1|75|  
   
-## Treffen von Vorhersagen mit einem Entscheidungsstrukturmodell  
+## <a name="making-predictions-using-a-decision-trees-model"></a>Treffen von Vorhersagen mit einem Entscheidungsstrukturmodell  
  Da Entscheidungsstrukturen für eine Vielzahl von Tasks wie Klassifikation, Regression und sogar Zuordnung eingesetzt werden können, stehen Ihnen beim Erstellen einer Vorhersageabfrage für ein Entscheidungsstrukturmodell zahlreiche Optionen zur Verfügung. Sie müssen den Zweck kennen, für den das Modell erstellt wurde, um die Ergebnisse der Vorhersage zu verstehen. In den folgenden Abfragebeispielen werden drei verschiedene Szenarien veranschaulicht:  
   
 -   Zurückgeben einer Vorhersage für ein Klassifikationsmodell, zusammen mit der Wahrscheinlichkeit, mit der diese Vorhersage richtig ist, und anschließendes Filtern der Ergebnisse nach der Wahrscheinlichkeit  
@@ -140,7 +145,7 @@ AND NODE_TYPE = 4
 -   Abrufen der Regressionsformel für einen Teil der Entscheidungsstruktur, in dem die Beziehung zwischen Eingabe und Ausgabe linear ist  
   
 ###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Zurückgeben von Vorhersagen mit Wahrscheinlichkeiten  
- In der folgenden Beispielabfrage wird das Entscheidungsstrukturmodell verwendet, das im [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)erstellt wurde. Die Abfrage gibt einen neuen Satz von Beispieldaten aus der Tabelle dbo.ProspectiveBuyers in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW weiter, um vorauszusagen, welche Kunden im neuen Dataset ein Fahrrad kaufen werden.  
+ In der folgenden Beispielabfrage wird das Entscheidungsstrukturmodell verwendet, das im [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt wurde. Die Abfrage gibt einen neuen Satz von Beispieldaten aus der Tabelle dbo.ProspectiveBuyers in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW weiter, um vorauszusagen, welche Kunden im neuen Dataset ein Fahrrad kaufen werden.  
   
  Die Abfrage verwendet die Vorhersagefunktion [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md), die eine geschachtelte Tabelle mit nützlichen Informationen über die in dem Modell erkannten Wahrscheinlichkeiten zurückgibt. Die Ergebnisse werden durch die letzte WHERE-Klausel der Abfrage so gefiltert, dass nur die Kunden zurückgegeben werden, für die die Wahrscheinlichkeit, dass sie ein Fahrrad kaufen, über 0 Prozent liegt.  
   
@@ -192,7 +197,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  Wenn Ihr Anbieter keine hierarchischen Rowsets wie die hier dargestellten unterstützt, können unter Verwendung des FLATTENED-Schlüsselworts in der Abfrage die Ergebnisse als Tabelle zurückgeben lassen, die NULL-Werte anstelle der wiederholten Spaltenwerte enthält. Weitere Informationen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) oder [Grundlegendes zur SELECT-Anweisung (DMX)](../../dmx/understanding-the-dmx-select-statement.md).  
   
 ###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Zuordnungen aus einem Entscheidungsstrukturmodell  
- Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
  Die folgende Beispielabfrage ist eine SINGLETON-Abfrage, die Sie mühelos in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen können, indem Sie Felder wählen und anschließend Werte für diese Felder in einer Dropdownliste auswählen.  
   
@@ -244,7 +249,7 @@ WHERE NODE_TYPE = 25
   
  Beispielergebnisse:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Nicht vorhanden|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -252,7 +257,7 @@ WHERE NODE_TYPE = 25
   
  Weitere Informationen zu den einzelnen Werttypen für Regressionsmodelle finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## Liste der Vorhersagefunktionen  
+## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt jedoch zusätzliche Funktionen, die in der folgenden Tabelle aufgeführt werden.  
   
 |||  
@@ -269,12 +274,12 @@ WHERE NODE_TYPE = 25
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
- Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen – Funktionsreferenz &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Technische Referenz für den Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Microsoft Decision Trees-Algorithmus technische Referenz](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

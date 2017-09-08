@@ -1,36 +1,41 @@
 ---
-title: "Data Mining-Schemarowsets (SSAs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Schemarowsets [Analysis Services], Data Mining"
-  - "Data Mining [Analysis Services], Abfragen"
-  - "Miningmodellinhalt"
-  - "Data Mining [Analysis Services], Schemarowsets"
-  - "Schemarowsets [Analysis Services], Abrufen"
-  - "Data Mining [Analysis Services], Problembehandlung"
+title: Data Mining-Schemarowsets (SSAs) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Schemarowsets (SSAs)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] werden viele der bestehenden OLE DB Data Mining-Schemarowsets als Gruppe von Systemtabellen verfügbar gemacht, die Sie mit DMX (Data Mining Extensions)-Anweisungen abfragen können. Durch das Erstellen von Queries für das Data Mining-Schemarowset können Sie die zur Verfügung stehenden Services identifizieren, Statusupdates für Ihre Modelle und Strukturen erhalten und Details über den Inhalt des Modells oder Parameter erfahren. Eine Beschreibung des Data Mining-Schemarowsets finden Sie unter [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+# <a name="data-mining-schema-rowsets-ssas"></a>Data Mining-Schemarowsets (SSAs)
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden viele der bestehenden OLE DB Data Mining-Schemarowsets als Gruppe von Systemtabellen verfügbar gemacht, die Sie mit DMX (Data Mining Extensions)-Anweisungen abfragen können. Durch das Erstellen von Queries für das Data Mining-Schemarowset können Sie die zur Verfügung stehenden Services identifizieren, Statusupdates für Ihre Modelle und Strukturen erhalten und Details über den Inhalt des Modells oder Parameter erfahren. Eine Beschreibung des Data Mining-Schemarowsets finden Sie unter [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Sie können auch das Data Mining-Schemarowset mithilfe von XMLA abfragen. Weitere Informationen dazu, wie Sie dies in SQL Server Management Studio tun, finden Sie unter [Erstellen einer Data Mining-Abfrage mit XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  
   
-## Liste der Data Mining-Schemarowsets  
+## <a name="list-of-data-mining-schema-rowsets"></a>Liste der Data Mining-Schemarowsets  
  In der folgenden Tabelle werden die Data Mining-Schemarowsets, die möglicherweise zum Abfragen und Überwachen nützlich sind, aufgelistet.  
   
 |Rowsetname|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Die Liste in der Tabelle ist nicht vollständig; es werden nur die Rowsets angezeigt, die für die Problembehandlung am wichtigsten sein könnten.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Der folgende Abschnitt enthält einige Beispiele für Abfragen gegen die Data Mining-Schemarowsets.  
   
-### Beispiel 1: Auflisten von Data Mining-Diensten  
+### <a name="example-1-list-data-mining-services"></a>Beispiel 1: Auflisten von Data Mining-Diensten  
  Die folgende Abfrage gibt eine Liste der Miningdienste zurück, die auf dem aktuellen Server zur Verfügung stehen, d. h. die aktivierten Algorithmen. Die für jeden Miningdienst bereitgestellten Spalten beinhalten die Modellierungsflags und Inhaltstypen, die von jedem Algorithmus verwendet werden können, die GUID für jeden Dienst und jegliche Vorhersagenbeschränkungen, die für jeden Dienst hinzugefügt worden sein könnten.  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### Beispiel 2: Auflisten von Miningmodellparametern  
+### <a name="example-2-list-mining-model-parameters"></a>Beispiel 2: Auflisten von Miningmodellparametern  
  Das folgende Beispiel gibt die Parameter zurück, die verwendet wurden, um ein bestimmtes Miningmodell zu erstellen.  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### Beispiel 3: Auflisten aller Rowsets  
+### <a name="example-3-list-all-rowsets"></a>Beispiel 3: Auflisten aller Rowsets  
  Im folgenden Beispiel wird eine umfassende Liste der Rowsets, die auf dem aktuellen Server verfügbar sind, zurückgegeben:  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

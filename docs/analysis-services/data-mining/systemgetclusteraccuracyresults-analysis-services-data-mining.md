@@ -1,34 +1,39 @@
 ---
-title: "SystemGetClusterAccuracyResults (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Gespeicherte Prozeduren [Analysis Services], Data Mining"
-  - "SystemGetClusterAccuracyResults"
-  - "Kreuzvalidierung [Data Mining]"
+title: "SystemGetClusterAccuracyResults (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetClusterAccuracyResults
+- cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e31548023acfa5ef3c202b978d7be3c46d788a0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetClusterAccuracyResults (Analysis Services – Data Mining)
+# <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services – Data Mining)
   Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und zugehörige Clustering-Modelle zurück.  
   
- Diese gespeicherte Prozedur gibt Metriken für das ganze Dataset als einzelne Partition zurück. Um das Dataset in Querschnitte zu partitionieren und Metriken für jede Partition zurückzugeben, verwenden Sie [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+ Diese gespeicherte Prozedur gibt Metriken für das ganze Dataset als einzelne Partition zurück. Um das Dataset in Querschnitte zu partitionieren und Metriken für jede Partition zurückzugeben, verwenden Sie [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Diese gespeicherte Prozedur funktioniert nur bei Clustering-Modellen. Verwenden Sie für Nicht-Clustermodelle [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,8 +44,8 @@ SystemGetClusterAccuracyResults(
 ,<test list>])  
 ```  
   
-## Argumente  
- *Miningstruktur*  
+## <a name="arguments"></a>Argumente  
+ *mining structure*  
  Name einer Miningstruktur in der aktuellen Datenbank.  
   
  (Erforderlich)  
@@ -70,12 +75,12 @@ SystemGetClusterAccuracyResults(
   
  (Optional)  
   
-## Rückgabetyp  
+## <a name="return-type"></a>Rückgabetyp  
  Eine Tabelle mit Bewertungen für jede einzelne Partition und Aggregaten für alle Modelle.  
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die von **SystemGetClusterAccuracyResults**zurückgegeben werden. Weitere Informationen zum Interpretieren der durch die gespeicherte Prozedur zurückgegebenen Informationen finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde. **Alles** gibt an, dass das Ergebnis ein Aggregat für alle Modelle ist.|  
 |AttributeName|Nicht anwendbar auf Clustering-Modelle.|  
@@ -86,7 +91,7 @@ SystemGetClusterAccuracyResults(
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Modelltyp und dem Typ des vorhersagbaren Werts.<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Wert|Ein Wahrscheinlichkeitsergebnis, das die Wahrscheinlichkeit des Clusterfalls angibt.|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält Beispiele für die Werte, mit denen Sie die Daten in der für die Kreuzvalidierung verwendeten Miningstruktur angeben können. Wenn Sie Testfälle für die Kreuzvalidierung verwenden möchten, muss die Miningstruktur bereits ein Testdataset enthalten. Informationen zum Definieren eines Testdatasets bei der Erstellung einer Miningstruktur finden Sie unter [Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Ganzzahliger Wert|Description|  
@@ -101,8 +106,8 @@ SystemGetClusterAccuracyResults(
   
  Weitere Informationen über die Szenarien, in denen Sie Kreuzvalidierung verwenden würden, finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## Beispiele  
- In diesem Beispiel werden Genauigkeitsmeasures für zwei Clustering-Modelle namens `Cluster 1` und `Cluster 2` zurückgegeben, die mit der vTargetMail-Miningstruktur verknüpft sind. Der Code in Zeile 4 gibt an, dass die Ergebnisse nur auf den Testfällen basieren sollen, ohne dass möglicherweise mit den einzelnen Modellen verknüpfte Filter verwendet werden.  
+## <a name="examples"></a>Beispiele  
+ In diesem Beispiel werden Genauigkeitsmeasures für zwei Clustering-Modelle namens `Cluster 1` und `Cluster 2`zurückgegeben, die mit der vTargetMail-Miningstruktur verknüpft sind. Der Code in Zeile 4 gibt an, dass die Ergebnisse nur auf den Testfällen basieren sollen, ohne dass möglicherweise mit den einzelnen Modellen verknüpfte Filter verwendet werden.  
   
 ```  
 CALL SystemGetClusterAccuracyResults (  
@@ -119,13 +124,13 @@ CALL SystemGetClusterAccuracyResults (
 |Cluster 1|||0|5545|Clustering|Fallwahrscheinlichkeit|0.796514342249313|  
 |Cluster 2|||0|5545|Clustering|Fallwahrscheinlichkeit|0.732122471228572|  
   
-## Anforderungen  
- Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verfügbar.  
+## <a name="requirements"></a>Anforderungen  
+ Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

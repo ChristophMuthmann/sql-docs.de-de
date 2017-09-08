@@ -1,73 +1,80 @@
 ---
-title: "Kompatibilit&#228;tsgrad f&#252;r tabellarische Modelle in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.versioncompat.f1"
+title: "Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 07/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58710676e09a49ecc1b49ad37c656e3589ee1257
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Kompatibilit&#228;tsgrad f&#252;r tabellarische Modelle in Analysis Services
-  Der *Kompatibilitätsgrad* eines Modells oder einer Datenbank bezieht sich auf eine Reihe von Release-spezifischen Verhalten im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Modul. Sie können Modelle mit jedem unterstützten Kompatibilitätsgrad erstellen, um Verhalten eines bestimmten Releases zu erhalten. Beispielsweise verfügen DirectQuery und tabellarische Objektmetadaten über verschiedene Implementierungen, abhängig von der Zuweisung des Kompatibilitätsgrads.  
+# <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Die *Kompatibilitätsgrad* bezieht sich auf die Release-spezifischen Verhalten in der Analysis Services-Modul. Beispielsweise verfügen DirectQuery und tabellarische Objektmetadaten verschiedene Implementierungen abhängig von den Kompatibilitätsgrad. Im Allgemeinen sollten Sie die neuesten Kompatibilitätsgrad von Ihren Servern unterstützt auswählen.
+
+  **Der aktuelle Kompatibilitätsgrad ist 1400** 
   
- **SQL Server 2016 RTM (1200)**, oder abgekürzt der Kompatibilitätsgrad 1200, ist neu in SQL Server 2016 und wird nur auf tabellarische Modelle angewendet.  Tabellarische Modelle mit Kompatibilitätsgrad 1200 laufen nur auf einer tabellarischen [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]-Instanz.  
+Der Kompatibilitätsgrad 1400 Hauptfunktionen sind:
+
+*  Neue Infrastruktur für die datenverbindungen und Import in tabellarischen Modellen mit Unterstützung für TOM-APIs und TMSL-Skripts. Dies ermöglicht die Unterstützung für zusätzliche Datenquellen wie z. B. Azure Blob-Speicher. Zusätzliche Daten von Quellen werden werden in zukünftigen Updates enthalten.
+*  Datentransformation und Funktionen für die Mashups mit Daten abrufen und M-Ausdrücken.
+*  Measures unterstützen jetzt eine Eigenschaft Detailzeilen mit einem DAX-Ausdruck, und Aktivieren von BI-Tools wie Microsoft Excel Drilldown zu detaillierten Daten aus einem aggregierten Bericht. Wenn Endbenutzer den Gesamtumsatz für eine Region und Monat anzeigen, können sie die zugehörigen Auftragsdetails anzeigen. 
+*  Objektebene Sicherheit für Tabellen- und Spaltennamen, zusätzlich zu den darin enthaltenen Daten.
+*  Verbesserte Unterstützung für unregelmäßige Hierarchien.
+*  Leistung und Überwachung von Verbesserungen.
+
   
- Zum Erstellen oder Upgraden eines tabellarischen Modells verwenden Sie SQL Server Data Tools (SSDT) und legen beim Erstellen des Projekts die **Kompatibilitätsgrad**-Eigenschaft fest. Sie können dies auch in der Datei **model.bim** festlegen, nachdem das Projekt erstellt wurde.  
+## <a name="supported-compatibility-levels-by-version"></a>Unterstützte Kompatibilitätsgrade nach version
   
-> [!NOTE]  
->  Mehrdimensionale Modelle halten sich im Hinblick auf Kompatibilitätsgrade an einen unabhängigen Versionspfad. Wenn die Zahlen übereinstimmen, wie es bei 1103 der Fall ist, ist dies zufällig. Weitere Informationen finden Sie unter [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+|||  
+|-|-|- 
+|**Kompatibilitätsgrad**|**Serverversion**| 
+|1400|Azure Analysis Services (Vorschau), SqlServer 2017 |  
+|1200|Azure Analysis Services, SqlServer 2017 SQLServer 2016| 
+|1103|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1|  
+|1100|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1, SqlServer 2012| 
+
+\*1100 und 1103 Kompatibilitätsgrade sind in SQL Server-2017 veraltet.
   
-## Unterstützte Kompatibilitätsgrade für tabellarische Modelldatenbanken  
- Analysis Services unterstützt die folgenden Kompatibilitätsgrade, die sowohl auf Modelle als auch auf Datenbanken angewendet werden können.  Die zum Erstellen eines Modells verwendete Version des Tools bestimmt, ob höhere Kompatibilitätsgrade zur Verfügung stehen.  
+## <a name="set-compatibility-level"></a>Set-Kompatibilitätsgrad 
+ Wenn Sie ein neues Projekt für tabellarische Modelle in SQL Server Data Tools (SSDT) erstellen, können Sie den Kompatibilitätsgrad angeben, auf die **Designer für tabellarische Modelle** Dialogfeld. 
   
-||||  
-|-|-|-|  
-|Kompatibilitätsgrad|Serverversion|Version des Modellierungstools|  
-|1200|Wird nur auf SQL Server 2016-Instanzen ausgeführt|[Nur SQL Server Data Tools für Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [Neuigkeiten in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) beschreibt die bei diesem Grad verfügbaren Funktionen.|  
-|1103|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1|[SQL Server Data Tools für Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>2</sup><br /><br /> [SQL Server Data Tools für Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools für Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)|  
-|1100|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1<br /><br /> SQL Server 2012|[SQL Server Data Tools für Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [SQL Server Data Tools für Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools für Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)<br /><br /> Business Intelligence Development Studio (wird in der Visual Studio 2010-Shell ausgeführt und über SQL Server-Setup installiert)|  
+ ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.png)  
   
- <sup>1</sup> Sie können SQL Server Data Tools für Visual Studio 2015 verwenden, um ein tabellarisches 1100-Modell oder 1103-Modell in früheren Releases von Analysis Services bereitzustellen.  
+ Bei Auswahl der **diese Meldung nicht mehr anzeigen** Option bei allen nachfolgende Projekten werden den Kompatibilitätsgrad, die Sie als Standard angegebene verwenden. Sie können den Standardkompatibilitätsgrad in SSDT unter **Tools** > **Optionen**ändern.  
   
- <sup>2</sup> Die Kompatibilitätsgrade 1100, 1103 und 1200 sind alle für Tabellenmodellprojekte in SQL Server Data Tools für Visual Studio 2015 gültig. Das 1200er-Modell steht Ihnen jedoch nur in einer SQL Server 2016-Instanz von SQL Server zur Verfügung.  
+ Um ein Projekt für tabellarische Modelle in SSDT aktualisieren möchten, legen Sie die **Kompatibilitätsgrad** Eigenschaft im Modell **Eigenschaften** Fenster. Bedenken, Aktualisieren des Kompatibilitätsgrads ist nicht umkehrbar.
   
-## Festlegen des Kompatibilitätsgrads beim Erstellen oder Upgraden eines neuen Tabellenprojekts in SSDT  
- Beim Erstellen eines neuen Tabellenmodellprojekts in SQL Server Data Tools (SSDT) können Sie im Dialogfeld **New Tabular project options** (Optionen für neues Tabellenprojekt) den Kompatibilitätsgrad angeben:  
+## <a name="check-compatibility-level-for-a-database-in-ssms"></a>Überprüfen des Kompatibilitätsgrads einer Datenbank in SSMS  
+ In SSMS mit der Maustaste des Datenbanknamens > **Eigenschaften** > **Kompatibilitätsgrad**.  
   
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
-  
- Sie können auch einen Standardkompatibilitätsgrad angeben, indem Sie die Option **Diese Meldung nicht mehr anzeigen** aktivieren. Bei allen nachfolgenden Projekten wird der angegebene Kompatibilitätsgrad verwendet. Sie können den Standardkompatibilitätsgrad in SSDT unter **Tools** > **Optionen** ändern.  
-  
- Zum Upgraden eines Tabellenmodellprojekts legen Sie die **Kompatibilitätsgrad**-Eigenschaft im Fenster **Eigenschaften** des Modells auf **SQL Server 2016 RTM (1200)** fest.  Weitere Informationen finden Sie unter [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
-  
-> [!NOTE]  
->  Eine Möglichkeit zum Erstellen eines tabellarischen Modells ist, es basierend auf einer importierten Power Pivot-Arbeitsmappe zu erstellen. Standardmäßig erstellt Power BI Desktop tabellarische Modelle automatisch mit dem Kompatibilitätsgrad 1200. Frühere Versionen von Power Pivot-Arbeitsmappen könnten jedoch den Grad 1100 aufweisen. Wenn Sie eine ältere Arbeitsmappe verwenden, vergessen Sie nicht, die **Kompatibilitätsgrad**-Eigenschaft zu ändern, um sie upzugraden.  
-  
-## Überprüfen des Kompatibilitätsgrads einer Datenbank in SSMS  
- Klicken Sie in SSMS mit der rechten Maustaste auf den Datenbanknamen > **Eigenschaften** > **Kompatibilitätsgrad**.  
-  
-## Überprüfen des unterstützten Kompatibilitätsgrads für einen Server in SSMS  
+## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Überprüfen des unterstützten Kompatibilitätsgrads für einen Server in SSMS  
  Klicken Sie in SSMS mit der rechten Maustaste auf den Servernamen > **Eigenschaften** > **Unterstützter Kompatibilitätsgrad**.  
   
- Diese Eigenschaft gibt den höchsten Kompatibilitätsgrad einer auf dem Server ausgeführten Datenbank an.  Der unterstützte Kompatibilitätsgrad ist schreibgeschützt und kann nicht geändert werden.  
+ Diese Eigenschaft gibt den höchsten Kompatibilitätsgrad einer Datenbank, die auf dem Server ausgeführt wird. Der unterstützte Kompatibilitätsgrad ist schreibgeschützt und kann nicht geändert werden.  
   
-## Siehe auch  
- [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Kompatibilitätsgrad einer mehrdimensionalen Datenbank](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Neuigkeiten in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
- [Importieren aus PowerPivot &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [Erstellen eines neuen Tabellenmodellprojekts &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
+ [Erstellen eines neuen tabellenmodellprojekts](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Datenbank-ReadWriteModes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbanken [Analysis Services], Lesen/Schreiben"
-  - "Datenbanken [Analysis Services], schreibgeschützt"
+title: Datenbank-ReadWriteModes | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [Analysis Services], read/write
+- databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 917f9e3802cdf0c003a956b464c7df8d8b10ca5e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenbank-ReadWriteModes
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministratoren (DBA) müssen oftmals eine Datenbank mit Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Die **ReadWriteMode**-Datenbankeigenschaft ermöglicht es dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-DBA, den Betriebsmodus der Datenbank in solchen Fällen problemlos zu ändern.  
+# <a name="database-readwritemodes"></a>Datenbank-ReadWriteModes
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministratoren (DBA) müssen oftmals eine Datenbank mit Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Die **ReadWriteMode** -Datenbankeigenschaft ermöglicht es dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -DBA, den Betriebsmodus der Datenbank in solchen Fällen problemlos zu ändern.  
   
-## ReadWriteMode-Datenbankeigenschaft  
- Die **ReadWriteMode** -Datenbankeigenschaft gibt an, ob sich die Datenbank im Lese-/Schreibmodus oder im schreibgeschützter Modus befindet. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft. Wenn sich die Datenbank im schreibgeschützten Modus befindet, können keine Änderungen oder Updates für die Datenbank übernommen werden. Im Lese-/Schreibmodus können hingegen Änderungen und Updates vorgenommen werden. Die Datenbankeigenschaft **ReadWriteMode** wird als schreibgeschützte Eigenschaft definiert. Sie kann nur über einen **Attach**-Befehl festgelegt werden.  
+## <a name="readwritemode-database-property"></a>ReadWriteMode-Datenbankeigenschaft  
+ Die **ReadWriteMode** -Datenbankeigenschaft gibt an, ob sich die Datenbank im Lese-/Schreibmodus oder im schreibgeschützter Modus befindet. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft. Wenn sich die Datenbank im schreibgeschützten Modus befindet, können keine Änderungen oder Updates für die Datenbank übernommen werden. Im Lese-/Schreibmodus können hingegen Änderungen und Updates vorgenommen werden. Die Datenbankeigenschaft **ReadWriteMode** wird als schreibgeschützte Eigenschaft definiert. Sie kann nur über einen **Attach** -Befehl festgelegt werden.  
   
  Wenn sich eine Datenbank im schreibgeschützten Modus befindet, gelten einige Beschränkungen, die sich auf die herkömmlichen für die Datenbank zulässigen Vorgänge auswirken können. Die eingeschränkten Vorgänge finden Sie in der folgenden Tabelle.  
   
@@ -36,20 +41,20 @@ caps.handback.revision: 19
 |DMX-Anweisungen<br /><br /> <br /><br /> Hinweis: Beim Ausführen einer dieser Anweisungen wird ein Fehler ausgegeben.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |Hintergrundoperationen|Alle Hintergrundoperationen, die die Datenbank ändern würden, werden deaktiviert. Dies schließt die verzögerte Verarbeitung und proaktives Zwischenspeichern ein.|  
   
-## Verwendung von ReadWriteMode  
- Die **ReadWriteMode** -Datenbankeigenschaft sollte im Rahmen eines **Attach** -Datenbankbefehls verwendet werden. Mit dem **Attach** -Befehl kann die Datenbankeigenschaft entweder auf **ReadWrite** oder auf **ReadOnly**festgelegt werden. Der **ReadWriteMode**-Datenbankeigenschaftswert kann nicht direkt aktualisiert werden, da die Eigenschaft als schreibgeschützt definiert ist. Datenbanken werden mit einer auf **ReadWriteMode** festgelegten **ReadWrite**-Eigenschaft erstellt. Eine Datenbank kann nicht im schreibgeschützten Modus erstellt werden.  
+## <a name="readwritemode-usage"></a>Verwendung von ReadWriteMode  
+ Die **ReadWriteMode** -Datenbankeigenschaft sollte im Rahmen eines **Attach** -Datenbankbefehls verwendet werden. Mit dem **Attach** -Befehl kann die Datenbankeigenschaft entweder auf **ReadWrite** oder auf **ReadOnly**festgelegt werden. Der **ReadWriteMode** -Datenbankeigenschaftswert kann nicht direkt aktualisiert werden, da die Eigenschaft als schreibgeschützt definiert ist. Datenbanken werden mit einer auf **ReadWriteMode** festgelegten **ReadWrite**-Eigenschaft erstellt. Eine Datenbank kann nicht im schreibgeschützten Modus erstellt werden.  
   
- Sie müssen eine Sequenz von **Detach/Attach**-Befehlen ausgeben, um die Datenbankeigenschaft **ReadWriteMode** von **ReadWrite** auf **ReadOnly** umzustellen.  
+ Sie müssen eine Sequenz von **Detach/Attach** -Befehlen ausgeben, um die Datenbankeigenschaft **ReadWriteMode** von **ReadWrite**auf **ReadOnly** umzustellen.  
   
  Mit allen Datenbankvorgängen, mit Ausnahme von **Attach**, wird der aktuelle Status der **ReadWriteMode** -Datenbankeigenschaft beibehalten. Mit Vorgängen wie **Alter**, **Backup**, **Restore**und **Synchronize** wird beispielsweise der **ReadWriteMode** -Wert beibehalten.  
   
 > [!NOTE]  
 >  Lokale Cubes können aus einer schreibgeschützten Datenbank erstellt werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Verschieben einer Analysis Services Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [Verschieben einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Detach-Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Attach-Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   

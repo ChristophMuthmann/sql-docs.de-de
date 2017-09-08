@@ -1,29 +1,34 @@
 ---
-title: "Data Mining-Abfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorhersageabfragen [Analysis Services]"
-  - "Abfragen [DMX], erstellen"
-  - "Vorhersageabfragen [DMX]"
-  - "Generator für Vorhersageabfragen"
-  - "Miningmodelle [Analysis Services], abfragen"
+title: Datamining-Abfragen | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Abfrage
+# <a name="data-mining-queries"></a>Data Mining-Abfrage
   Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind möglich:  
   
 -   Anwenden des Modells auf neue Daten, um einzelne oder mehrere Vorhersagen zu treffen. Sie können Eingabewerte als Parameter oder in einem Batch bereitstellen.  
@@ -76,11 +81,11 @@ caps.handback.revision: 44
 -   Überprüfen Sie den Modellinhalt für jeden Modelltyp mit dem **Microsoft Generic Content Tree Viewer**. Weitere Informationen zum Interpretieren dieser Informationen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Abfragetools und -schnittstellen  
- Sie können Data Mining-Abfragen interaktiv mit einem der von SQL Server bereitgestellten Abfragetools erstellen. Der grafische Generator für Vorhersageabfragen ist sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar. Wenn Sie den Generator für Vorhersageabfragen bisher noch nicht verwendet haben, empfehlen wir, die Schritte im [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) durchzuarbeiten, um sich mit der Oberfläche vertraut zu machen. Kurze Übersicht der Schritte, finden Sie unter Erstellen einer Abfrage mit der [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ Sie können Data Mining-Abfragen interaktiv mit einem der von SQL Server bereitgestellten Abfragetools erstellen. Der grafische Generator für Vorhersageabfragen ist sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar. Wenn Sie den Generator für Vorhersageabfragen bisher noch nicht verwendet haben, empfehlen wir, die Schritte im [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) durchzuarbeiten, um sich mit der Oberfläche vertraut zu machen. Kurze Übersicht der Schritte, finden Sie unter Erstellen einer Abfrage mit der [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  Der Generator für Vorhersageabfragen ist nützlich zum Erstellen grundlegender Abfragen, die Sie später weiter anpassen können. Sie können Datenquellen leicht hinzufügen und Spalten zuordnen und dann zu DMX wechseln und die Abfrage anpassen, indem Sie eine WHERE-Klausel oder andere Funktionen hinzufügen.  
   
- Sobald Sie mit den Data Mining-Modellen und dem Erstellen von Abfragen vertraut sind, können Sie die Abfragen auch direkt mithilfe der Data Mining-Erweiterungen (Data Mining Extensions, DMX) schreiben. DMX ist eine Abfragesprache, die Transact-SQL ähnelt und in vielen verschiedenen Clients verwendet werden kann. DMX ist das bevorzugte Tool zum Erstellen von benutzerdefinierten Vorhersagen und komplexen Abfragen. Eine Einführung in DMX finden Sie unter [Erstellen und Abfragen von Data Mining-Modellen mit DMX: Tutorials &#40;Analysis Services – Data Mining&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ Sobald Sie mit den Data Mining-Modellen und dem Erstellen von Abfragen vertraut sind, können Sie die Abfragen auch direkt mithilfe der Data Mining-Erweiterungen (Data Mining Extensions, DMX) schreiben. DMX ist eine Abfragesprache, die Transact-SQL ähnelt und in vielen verschiedenen Clients verwendet werden kann. DMX ist das bevorzugte Tool zum Erstellen von benutzerdefinierten Vorhersagen und komplexen Abfragen. Eine Einführung in DMX finden Sie unter [Erstellen und Abfragen von Data Mining-Modellen mit DMX: Tutorials &#40;Analysis Services – Data Mining&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0).  
   
  DMX-Editoren werden sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bereitgestellt. Sie können Abfragen auch zunächst mit dem Generator für Vorhersageabfragen erstellen und dann zur Text-Editor-Ansicht wechseln und die DMX-Anweisung in einen anderen Client kopieren. Weitere Informationen finden Sie unter [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  Weitere Informationen zu den Sicherheitskontexten, die zum Ausführen von Data Mining-Abfragen erforderlich sind, finden Sie unter [Sicherheitsübersicht &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md).  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  Die Themen in diesem Abschnitt stellen jeden Data Mining-Abfragetyp im Detail vor und enthalten Links zu ausführlichen Beispielen für das Erstellen von Abfragen für Data Mining-Modelle.  
   
  [Vorhersageabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -152,21 +157,21 @@ caps.handback.revision: 44
   
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Über diese Links erhalten Sie Informationen zum Erstellen und Verwenden von Data Mining-Abfragen.  
   
 |Aufgaben|Links|  
 |-----------|-----------|  
-|Lernprogramme und exemplarische Vorgehensweisen zu Data Mining-Abfragen|[Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [DMX-Lernprogramm für Zeitreihenvorhersagen](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
-|Verwenden von Data Mining-Abfragetools in SQL Server Management Studio und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Anwenden von Vorhersagefunktionen auf ein Modell](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Manuelles Bearbeiten eine Vorhersageabfrage](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|Lernprogramme und exemplarische Vorgehensweisen zu Data Mining-Abfragen|[Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [DMX-Lernprogramm für Zeitreihenvorhersagen](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
+|Verwenden von Data Mining-Abfragetools in SQL Server Management Studio und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Anwenden von Vorhersagefunktionen auf ein Modell](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Manuelles Bearbeiten eine Vorhersageabfrage](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Arbeiten mit externen, in Vorhersageabfragen verwendeten Daten|[Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Arbeiten mit Abfrageergebnissen|[Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Verwenden der in Management Studio verfügbaren DMX- und XMLA-Abfragevorlagen|[Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Weitere Informationen zu Inhaltsabfragen und Beispiele|[Erstellen einer Miningmodell-Inhaltsabfrage](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Festlegen von Abfrageoptionen und Problembehandlung bei Abfrageberechtigungen und Abfragen|[Ändern des Timeoutwerts für Data Mining-Abfragen](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Verwenden der Data Mining-Komponenten in Integration Services|[Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Transformation für Data Mining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Verwenden der Data Mining-Komponenten in Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Erste Schritte mit SQL Server Migration Assistant für Access (AccessToSQL)
@@ -114,7 +114,7 @@ Die Migration-Symbolleiste enthält die folgenden Befehle:
   
 |Schaltfläche|Funktion|  
 |----------|------------|  
-|**Konvertieren Sie, laden und migrieren**|Konvertiert den Zugriff auf Datenbanken, lädt die konvertierten Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, in einem Schritt.|  
+|**Convert, Load, and Migrate (Konvertieren, Laden und Migrieren)**|Konvertiert den Zugriff auf Datenbanken, lädt die konvertierten Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, in einem Schritt.|  
 |**Bericht erstellen**|Konvertiert das ausgewählte Schema für den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder eine ungültige Syntax für Azure SQL-Datenbank, und klicken Sie dann einen Bericht, der zeigt, wie erfolgreich die Konvertierung wurde erstellt.<br /><br />Mit diesem Befehl steht nur, wenn Objekte im Access-Metadaten-Explorer ausgewählt werden.|  
 |**Schema konvertieren**|Konvertiert das ausgewählte Schema für den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank-Schemas.<br /><br />Mit diesem Befehl steht nur, wenn Objekte im Access-Metadaten-Explorer ausgewählt werden.|  
 |**Migrieren von Daten**|Migration von Daten aus der Access-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank. Vor dem Ausführen dieses Befehls müssen Sie die Access-Schemas zum Konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank-Schemas, und Laden Sie die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.<br /><br />Mit diesem Befehl steht nur, wenn Objekte im Access-Metadaten-Explorer ausgewählt werden.|  
@@ -127,7 +127,7 @@ SSMA enthält die folgenden Menüs:
 |--------|---------------|  
 |**File**|Befehle für die Migrations-Assistenten arbeiten mit Projekten, hinzufügen und Entfernen von Access-Datenbankdateien und das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen nach und Arbeiten mit Text in den Detailseiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql_md.md)] aus dem SQL-Detailbereich. So öffnen die **Lesezeichen verwalten** Dialogfeld klicken Sie im Menü Bearbeiten, klicken Sie auf Verwalten von Lesezeichen. Klicken Sie im Dialogfeld sehen Sie eine Liste der vorhandenen Lesezeichen. Die Schaltflächen können auf der rechten Seite des Dialogfelds Sie um das Lesezeichen zu verwalten.|  
-|**Ansicht**|Enthält die **Synchronisieren der Metadaten-Explorer** Befehl. Hiermit erfolgt die Synchronisierung der Objekte zwischen Access-Metadaten-Explorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-DB-Metadaten-Explorer. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** und **Fehlerliste** Bereiche und eine Option **Layouts** mit Layouts verwalten.|  
+|**Sicht**|Enthält die **Synchronisieren der Metadaten-Explorer** Befehl. Hiermit erfolgt die Synchronisierung der Objekte zwischen Access-Metadaten-Explorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-DB-Metadaten-Explorer. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** und **Fehlerliste** Bereiche und eine Option **Layouts** mit Layouts verwalten.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten, Exportieren von Daten, Objekte und Daten migrieren, verknüpfen Sie Tabellen, und stellt den Zugriff auf globale und projekteinstellungen Dialogfelder bereit.|  
 |**Hilfe**|Bietet Zugriff auf das SSMA-Hilfe und die **zu** (Dialogfeld).|  
   

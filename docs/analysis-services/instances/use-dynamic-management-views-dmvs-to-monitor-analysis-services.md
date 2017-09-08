@@ -1,27 +1,32 @@
 ---
-title: "Verwenden von dynamischen Verwaltungssichten (DMVs) zum &#220;berwachen von Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verwenden von dynamischen Verwaltungssichten (DMVs) zum &#220;berwachen von Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
   Dynamische Verwaltungssichten (DMV) von Analysis Services sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
   
- Für die meisten DMV-Abfragen verwenden Sie eine **SELECT**-Anweisung und das **$System**-Schema mit einem XML/A-Schemarowset.  
+ Für die meisten DMV-Abfragen verwenden Sie eine **SELECT** -Anweisung und das **$System** -Schema mit einem XML/A-Schemarowset.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -60,7 +65,7 @@ SELECT * FROM $System.<schemaRowset>
 ##  <a name="bkmk_syn"></a> Abfragesyntax  
  Das Abfragemodul für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert auf der [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)-Anweisung.  
   
- Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
+ Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Wenn eine DMV für ein angegebenes Rowset nicht verfügbar ist, gibt der Server den folgenden Fehler zurück: „Der \<Schemarowset>-Anforderungstyp wurde vom Server nicht erkannt“. Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
+>  Wenn eine DMV nicht für ein angegebenes Rowset verfügbar ist, gibt der Server folgende Fehlermeldung zurück: "die \<Schemarowset > wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
   
 |Rowset|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES-Rowset](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Gibt eine Liste verfügbarer Kategorien zurück.|  
 |[DISCOVER_TRACES-Rowset](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Gibt eine Liste von Ablaufverfolgungen zurück, die über die aktuelle Verbindung aktiv ausgeführt werden.|  
 |[DISCOVER_TRANSACTIONS-Rowset](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Gibt eine Liste von Transaktionen zurück, die über die aktuelle Verbindung aktiv ausgeführt werden.|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION-Rowset](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Gibt eine Liste von xevent-Ablaufverfolgungen zurück, die über die aktuelle Verbindung aktiv ausgeführt werden.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION-Rowset](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Gibt eine Liste von xevent-Ablaufverfolgungen zurück, die über die aktuelle Verbindung aktiv ausgeführt werden.|  
 |[DMSCHEMA_MINING_COLUMNS-Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Listet die einzelnen Spalten aller Miningmodelle auf, die für die aktuelle Verbindung verfügbar sind.|  
 |[DMSCHEMA_MINING_FUNCTIONS-Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Gibt eine Liste mit den Funktionen zurück, die von den Data Mining-Algorithmen auf dem Server unterstützt werden.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT-Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Gibt ein Rowset zurück, das aus Spalten besteht, in denen das aktuelle Modell beschrieben wird.|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Gibt den vollqualifizierten Namen jeder Eigenschaft zusammen mit Eigenschaftstyp, Datentyp und anderen Metadaten zurück.|  
 |[MDSCHEMA_SETS-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Gibt eine Liste mit den Sätzen zurück, die unter der aktuellen Verbindung definiert sind.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Neu: System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [New System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Neue SYSTEMRESTRICTEDSCHEMA-Funktion für eingeschränkte Rowsets und DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

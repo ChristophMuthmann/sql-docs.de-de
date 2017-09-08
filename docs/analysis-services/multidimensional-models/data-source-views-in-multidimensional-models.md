@@ -1,37 +1,42 @@
 ---
-title: "Datenquellsichten in mehrdimensionalen Modellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenquellensichten [Analysis Services]"
-  - "Datenquellensichten [Analysis Services], Informationen zu Datenquellensichten"
-  - "SQL Server Analysis Services, Datenquellensichten"
-  - "Datenquellensichten [Analysis Services], mehrere"
-  - "Analysis Services, Datenquellensichten"
-  - "Mehrere Datenquellensichten"
-  - "SSAS, Datenquellensichten"
+title: Datenquellensichten in mehrdimensionalen Modellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services]
+- data source views [Analysis Services], about data source views
+- SQL Server Analysis Services, data source views
+- data source views [Analysis Services], multiple
+- Analysis Services, data source views
+- multiple data source views
+- SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenquellsichten in mehrdimensionalen Modellen
-  Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  
+# <a name="data-source-views-in-multidimensional-models"></a>Datenquellsichten in mehrdimensionalen Modellen
+  Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  
   
  Sie können mehrere Datenquellensichten in einem Projekt oder einer Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf der Grundlage einer oder mehrerer Datenquellen erstellen und die einzelnen Datenquellensichten so erstellen, dass sie die Anforderungen einer jeweils anderen Projektmappe erfüllen.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Definieren einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
@@ -56,8 +61,8 @@ caps.handback.revision: 36
   
  [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)   
- [Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

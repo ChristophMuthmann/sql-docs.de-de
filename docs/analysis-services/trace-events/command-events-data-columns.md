@@ -1,24 +1,29 @@
 ---
-title: "Datenspalten f&#252;r Befehlsereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Befehlsereignisse (Ereigniskategorie)"
+title: Command Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenspalten f&#252;r Befehlsereignisse
+# <a name="command-events-data-columns"></a>Datenspalten für Befehlsereignisse
   In der folgenden Tabelle sind die Datenspalten für jede Ereignisklasse in der **Befehlsereignisse** -Ereigniskategorie aufgeführt.  
   
  Die **Befehlsereignisse** -Ereigniskategorie weist folgende Ereignisklassen auf:  
@@ -54,10 +59,10 @@ caps.handback.revision: 36
 |ConnectionID|Enthält die eindeutige Verbindungs-ID, die dem Befehlsereignis zugeordnet ist.|  
 |TextData|Enthält die eindeutigen Textdaten, die dem Befehlsereignis zugeordnet sind.|  
 |ServerName|Enthält den Namen der Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , in der das Befehlsereignis aufgetreten ist.|  
-|CurrentTime|Enthält die aktuelle Zeit des Befehlsereignisses. Für das Filtern stehen die Formate *JJJJ*-*MM*-*TT* und *JJJJ*-*MM*-*TT HH*:*MM*:*SS* zur Verfügung.|  
+|CurrentTime|Enthält die aktuelle Zeit des Befehlsereignisses. Für das Filtern stehen die Formate *JJJJ*-*MM*-*TT* und *JJJJ*-*MM*-*TT HH*:*MM*:*SS*zur Verfügung.|  
 |DatabaseName|Enthält den Namen der Datenbank, in der der Befehl ausgeführt wird.|  
 |Dauer|Enthält die ungefähre Dauer zwischen dem Command Begin- und dem Command End-Ereignis.|  
-|EndTime|Enthält die Zeit, zu der das Befehlsereignis endete. Für das Filtern stehen die Formate *JJJJ*-*MM*-*TT* und *JJJJ*-*MM*-*TT HH*:*MM*:*SS* zur Verfügung.|  
+|EndTime|Enthält die Zeit, zu der das Befehlsereignis endete. Für das Filtern stehen die Formate *JJJJ*-*MM*-*TT* und *JJJJ*-*MM*-*TT HH*:*MM*:*SS*zur Verfügung.|  
 |EventSubclass|Enthält die Ereignisklasse innerhalb des Befehlsereignisses. Diese Werte werden unterstützt:<br /><br /> 0: Create<br /><br /> 1: Alter<br /><br /> 2: Delete<br /><br /> 3: Process<br /><br /> 4: DesignAggregations<br /><br /> 5: WBInsert<br /><br /> 6: WBUpdate<br /><br /> 7: WBDelete<br /><br /> 8: Backup<br /><br /> 9: Restore<br /><br /> 10: MergePartitions<br /><br /> 11: Subscribe<br /><br /> 12: Batch<br /><br /> 13: BeginTransaction<br /><br /> 14: CommitTransaction<br /><br /> 15: RollbackTransaction<br /><br /> 16: GetTransactionState<br /><br /> 17: Cancel<br /><br /> 18: Synchronize<br /><br /> 19: Import80MiningModels<br /><br /> 20: Attach<br /><br /> 21: Detach<br /><br /> 22: SetAuthContext<br /><br /> 23: ImageLoad<br /><br /> 24: ImageSave<br /><br /> 10000: Other|  
 |NTCanonicalUserName|Enthält den Windows-Benutzernamen, der dem Befehlsereignis zugeordnet ist. Der Benutzername liegt im kanonischen Format vor. Beispiel: engineering.microsoft.com/software/user.|  
 |NTUserName|Enthält das Windows-Benutzerkonto, das dem Befehlsereignis zugeordnet ist.|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|Enthält das Windows-Domänenkonto, das dem Befehlsereignis zugeordnet ist.|  
 |ClientProcessID|Enthält die eindeutige Clientprozess-ID, die dem Befehlsereignis zugeordnet ist.|  
   
-## Siehe auch  
- [Befehlsereignisse (Ereigniskategorie)](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

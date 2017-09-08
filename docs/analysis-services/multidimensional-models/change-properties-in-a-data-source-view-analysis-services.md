@@ -1,31 +1,36 @@
 ---
-title: "&#196;ndern von Eigenschaften in einer Datenquellensicht (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anzeigenamen [Analysis Services]"
-  - "Namen [Analysis Services], Datenquellensichten"
-  - "Anzeigen von Tabellen"
-  - "Anzeigen von Tabellen"
-  - "Datenquellensichten [Analysis Services], Tabellen"
-  - "Tabellen [Analysis Services], Datenquellensichten"
+title: "Ändern der Eigenschaften in einer Datenquellensicht (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# &#196;ndern von Eigenschaften in einer Datenquellensicht (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
   Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten definiert und der Datenquellensicht Tabellen, Sichten, benannte Berechnungen und benannte Abfrage hinzugefügt haben, kann es gewünscht sein, Eigenschaften zu ändern, die Folgendes betreffen:  
   
 -   Übereinstimmungskriterien für Datenquellensichten  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  Sie können zudem von der Datenquelle abgerufene Objektmetadaten anzeigen, die Sie nicht ändern können.  
   
-## Anzeigen oder Ändern der Eigenschaften von Datenquellensichten  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Anzeigen oder Ändern der Eigenschaften von Datenquellensichten  
  Eigenschaften einer Datenquellensicht werden, anders als eine Beschreibung der Datenquellensicht, vom Datenquellensicht-Assistenten festgelegt, wenn Sie die Datenquellensicht erstmalig definieren. In der folgenden Tabelle sind die Eigenschaften einer Datenquellensicht aufgeführt und beschrieben.  
   
 > [!NOTE]  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 |RetrieveRelationships|Gibt an, ob Beziehungen aus der Datenbank abgerufen werden. Der Standardwert lautet "True".|  
 |SchemaRestriction|Gibt ggf. die Einschränkungen für die Schemas an, die aus einer Datenquelle abgerufen werden. Standardmäßig sind keine Schemaeinschränkungen vorhanden.|  
   
-## Anzeigen oder Ändern von DataTable-Eigenschaften  
+## <a name="viewing-or-changing-datatable-properties"></a>Anzeigen oder Ändern von DataTable-Eigenschaften  
  **DataTable** -Eigenschaften sind die Eigenschaften von Tabellen, Sichten und benannten Abfragen in einer Datenquellensicht. Die Eigenschaften werden festgelegt, wenn der Datenquellensicht eines dieser Objekte hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataTable** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
   
 |Eigenschaft|Description|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Schema|Gibt das Datenbankschema an, das auf die Tabelle, die Sicht oder die benannte Abfrage angewendet wird. Diese Eigenschaft kann nicht bearbeitet werden.|  
 |TableType|Gibt den Tabellentyp für die Tabelle, die Sicht oder die benannte Abfrage an. Diese Eigenschaft kann nicht bearbeitet werden.|  
   
-## Anzeigen oder Ändern von DataColumn-Eigenschaften  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Anzeigen oder Ändern von DataColumn-Eigenschaften  
  **DataColumn** -Eigenschaften sind die Eigenschaften von Spalten in Tabellen, Sichten und benannten Abfragen in einer Datenquellensicht. Diese Eigenschaften werden festgelegt, wenn eines dieser Objekte entweder aus der zugrunde liegenden Tabelle oder Sicht, aus einer benannten Abfrage oder gemäß Definition durch eine benannte Berechnung der Datenquellensicht hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataColumn** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
   
 |Eigenschaft|Description|  
@@ -80,8 +85,8 @@ caps.handback.revision: 34
 |Länge|Gibt die maximale Länge der Spalte basierend auf den Daten in der Spalte in der zugrunde liegenden Tabelle oder Sicht an.|  
 |Name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  
   
-## Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Datenquellensichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

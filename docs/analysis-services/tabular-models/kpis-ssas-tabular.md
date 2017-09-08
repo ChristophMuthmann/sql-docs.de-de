@@ -1,35 +1,30 @@
 ---
 title: "KPIs (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# KPIs (SSAS – tabellarisch)
+# <a name="kpis"></a>KPIs (Key Performance Indicators)
   Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  
-  
- Abschnitte in diesem Thema:  
-  
--   [Vorteile](#bkmk_benefits)  
-  
--   [Beispiel](#bkmk_example)  
-  
--   [Erstellen und Bearbeiten von KPIs](#bkmk_create)  
-  
--   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Messung der Umsetzung von Geschäftszielen darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. Die Vertriebsabteilung eines Unternehmens könnte KPIs beispielsweise verwenden, um den monatlichen Bruttogewinn mit dem vorausgesagten Bruttogewinn zu vergleichen. Die Buchhaltung könnte die monatlichen Ausgaben und Einnahmen gegenüberstellen, um eine Kostenauswertung vorzunehmen, und die Personalabteilung könnte den Quartalsumsatz pro Mitarbeiter ermitteln. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten und Trends zu erkennen, greifen Fachanwender oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
@@ -48,7 +43,7 @@ caps.handback.revision: 13
 ##  <a name="bkmk_example"></a> Beispiel  
  Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter sollen in der PivotTable die tatsächlichen Verkaufszahlen (in Dollar), die Umsatzvorgabe (in Dollar) und eine einfache Statusgrafik angezeigt werden, die Aufschluss darüber gibt, ob der Vertriebsmitarbeiter unter oder über dieser Vorgabe liegt bzw. diese genau erfüllt. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
- Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
+ Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Der Vertriebsleiter verwendet dann Excel eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle, und erstellen Sie eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, und zwar unabhängig davon, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
   
  Im Modell wird ein Measure für die Spalte "SalesAmount" in der Tabelle "FactResellerSales" erstellt, das die tatsächlichen Vertriebszahlen für jeden Vertriebsmitarbeiter in Dollar angibt. Durch dieses Measure wird der Basiswert des KPIs definiert.  
   
@@ -75,7 +70,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Der Vertriebsleiter kann die tatsächlichen Umsatzzahlen, die Vertriebsvorgaben und den Status jedes Vertriebsmitarbeiters jetzt nach Jahr unterteilen. So lassen sich Vertriebstrends über Jahre analysieren, um zu ermitteln, ob die Vertriebsvorgaben für einen Vertriebsmitarbeiter angepasst werden müssen.  
   
-##  <a name="bkmk_create"></a> Erstellen und Bearbeiten von KPIs  
+##  <a name="bkmk_create"></a> Create and edit KPIs  
  Zum Erstellen von KPIs im Modell-Designer verwenden Sie das Dialogfeld Key Performance Indicator. Da KPIs einem Measure zugeordnet werden müssen, erstellen Sie einen KPI, indem Sie ein Measure erweitern, das einen Basiswert ergibt, und dann entweder ein Measure erstellen, das einen Zielwert ergibt, oder einen absoluten Wert eingeben. Nachdem Basismeasure (Wert) und Zielwert definiert wurden, können Sie die Parameter für den Statusschwellenwert zwischen dem Basis- und Zielwert definieren. Der Status wird in einem grafischen Format mit auswählbaren Symbolen, Balken, Diagrammen oder Farben angezeigt. Anschließend können Basiswert, Zielwert und Status einem Bericht oder einer PivotTable als Werte hinzugefügt werden, die für andere Datenfelder in Slices aufgeteilt werden können.  
   
  Um das Dialogfeld **Key Performance Indicator**im Measureraster für eine Tabelle anzuzeigen, klicken Sie mit der rechten Maustaste auf ein Measure, das als Basiswert dient, und klicken Sie dann auf KPI erstellen. Nachdem ein Measure als Basiswert zu einem KPI erweitert wurde, wird im Measureraster neben dem Measurenamen ein Symbol angezeigt, das angibt, dass das Measure einem KPI zugeordnet ist.  
@@ -84,10 +79,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Erstellen und Verwalten von KPIs &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
+|[Erstellen und Verwalten von KPIs](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
   
-## Siehe auch  
- [Measures &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Perspektiven &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Perspektiven](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hinzufügen von Beziehungen"
-  - "Beziehungen [Analysis Services], Datenquellensichten"
-  - "Datenquellensichten [Analysis Services], Beziehungen"
+title: Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
   Im Datenquellensicht-Assistenten und im Datenquellensicht-Designer werden automatisch Beziehungen zwischen Tabellen definiert, die einer Datenquellensicht (Data Source View, DSV) hinzugefügt werden. Das Definieren der Beziehungen erfolgt auf Grundlage der Beziehungen in der zugrunde liegenden Datenbank oder auf Grundlage der von Ihnen angegebenen Namensübereinstimmungskriterien.  
   
  Wenn Sie Daten aus mehreren Datenquellen verwenden, müssen Sie zur Ergänzung der automatisch definierten Beziehungen in der DSV u. U. logische Beziehungen manuell definieren. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sind Beziehungen erforderlich, um Fakten- und Dimensionstabellen zu identifizieren, Abfragen zum Abrufen von Daten und Metadaten aus den zugrunde liegenden Datenquellen zu erstellen und die erweiterten Business Intelligence-Funktionen nutzen zu können.  
@@ -52,7 +57,7 @@ caps.handback.revision: 37
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das Projekt, oder stellen Sie eine Verbindung mit der Datenbank her, das bzw. die die Datenquellensicht enthält, in der Sie eine logische Beziehung hinzufügen möchten.  
   
-2.  Erweitern Sie im Projektmappen-Explorer den Ordner **Datenquellensichten**, und doppelklicken Sie anschließend auf die Datenquellensicht, um sie im **Datenquellensicht-Designer** zu öffnen.  
+2.  Erweitern Sie im Projektmappen-Explorer den Ordner **Datenquellensichten** , und doppelklicken Sie anschließend auf die Datenquellensicht, um sie im **Datenquellensicht-Designer**zu öffnen.  
   
 3.  Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf die Tabelle, benannte Abfrage oder Sicht, der Sie eine Beziehung hinzufügen möchten, und klicken Sie anschließend auf **Neue Beziehung**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 37
   
 ##  <a name="bkmk_diagrampane"></a> So können Sie eine Beziehung im Bereich "Diagramm" anzeigen oder ändern  
   
--   Klicken Sie im Bereich **Diagramm** im **Datenquellensicht-Designer** mit der rechten Maustaste auf die Beziehung, die Sie anzeigen möchten, und klicken Sie auf **Beziehung bearbeiten** (oder doppelklicken Sie einfach auf den Beziehungspfeil).  Verwenden Sie das Dialogfeld **Beziehung bearbeiten** , um die Beziehung zu ändern.  
+-   Klicken Sie im Bereich **Diagramm** im **Datenquellensicht-Designer**mit der rechten Maustaste auf die Beziehung, die Sie anzeigen möchten, und klicken Sie auf **Beziehung bearbeiten** (oder doppelklicken Sie einfach auf den Beziehungspfeil).  Verwenden Sie das Dialogfeld **Beziehung bearbeiten** , um die Beziehung zu ändern.  
   
 ##  <a name="bkmk_tablespane"></a> So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 37
   
 3.  Klicken Sie mit der rechten Maustaste auf die zu ändernde Beziehung, und klicken Sie anschließend auf **Beziehung bearbeiten**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

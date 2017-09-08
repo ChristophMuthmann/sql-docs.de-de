@@ -1,29 +1,34 @@
 ---
-title: "Berechnete Elemente in untergeordneten SELECT-Ausdr&#252;cken und Teilcubes | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Berechnete Elemente in untergeordneten SELECT-Ausdr&#252;cken und Teilcubes
+# <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
   Ein berechnetes Element ist ein Dimensionselement, dessen Wert zur Laufzeit aus einem Ausdruck berechnet wird und das in untergeordneten SELECT-Ausdrücken und in Teilcubes verwendet werden kann, um den Cubebereich einer Abfrage genauer zu definieren.  
   
-## Aktivieren berechneter Elemente im Teilbereich  
- Die Verbindungszeichenfolgen-Eigenschaft **SubQueries** unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder die **DBPROPMSMDSUBQUERIES**-Eigenschaft unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) definiert das Verhalten oder die Zulässigkeit von berechneten Elementen oder berechneten Sätzen in Unterauswahlen oder Teilcubes. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
+## <a name="enabling-calculated-members-in-the-subspace"></a>Aktivieren berechneter Elemente im Teilbereich  
+ Die Verbindungszeichenfolgen-Eigenschaft **SubQueries** unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder die **DBPROPMSMDSUBQUERIES** -Eigenschaft unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definiert das Verhalten oder die Zulässigkeit von berechneten Elementen oder berechneten Sätzen in Unterauswahlen oder Teilcubes. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
   
  Die SubQueries-Eigenschaft lässt die folgenden Werte zu.  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  In den obigen Ergebnissen werden die aggregierten Werte für [All Geographies], [United States], [Oregon] und [Washington] durch Aggregation der Nachfolger von &[Portland]&[OR] und &[Spokane]&[WA] erzeugt. Aus dem berechneten Element werden keine Werte abgerufen.  
   
-### Hinweise  
+### <a name="remarks"></a>Hinweise  
  In untergeordneten SELECT-Ausdrücken und Teilcubes sind nur globale oder in der Sitzung berechnete Elemente zulässig. Wenn der MDX-Ausdruck in einer Abfrage berechnete Elemente enthält, wird bei der Auswertung des untergeordneten SELECT-Ausdrucks oder Teilcubes ein Fehler ausgelöst.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Unterauswahlen in Abfragen](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [Untergeordnete SELECT-Ausdrücke in Abfragen](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
+ [Unterstützte XMLA-Eigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

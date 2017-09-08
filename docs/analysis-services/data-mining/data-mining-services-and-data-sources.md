@@ -1,28 +1,33 @@
 ---
-title: "Data Mining-Dienste und Datenquellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datamining-Dienste und Datenquellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0207dac1835ae9e478802d2f3d501642d4866454
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Dienste und Datenquellen
+# <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
   Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul bereitgestellte Komponenten.  
   
  Dieses Thema enthält Informationen, die erforderlich sind, wenn Sie eine Verbindung zu einer lokalen oder Remoteinstanz von SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu erstellen, zu verarbeiten, bereitzustellen oder abzufragen.  
   
-## Data Mining-Dienste  
+## <a name="data-mining-services"></a>Data Mining-Dienste  
  Die Serverkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist die Anwendung msmdsrv.exe, die normalerweise als Windows-Dienst ausgeführt wird. Diese Anwendung besteht aus Sicherheitskomponenten, einer XMLA-Überwachungskomponente (XML for Analysis), einer Abfrageverarbeitungskomponente und zahlreichen internen Komponenten, die die folgenden Funktionen ausführen:  
   
 -   Analysieren von Anweisungen, die von Client empfangen werden  
@@ -43,7 +48,7 @@ caps.handback.revision: 19
   
 -   Verwalten von Serverressourcen  
   
-### XMLA-Überwachung  
+### <a name="xmla-listener"></a>XMLA-Überwachung  
  Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Port** in der Datei msmdsrv.ini können Sie einen Port angeben, der von einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht wird. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
   
 |Port|Description|  
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  Weitere Informationen zum Steuern der von diesem Dienst verwendeten Ports finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## Herstellen einer Verbindung mit Datenquellen  
+## <a name="connecting-to-data-sources"></a>Herstellen einer Verbindung mit Datenquellen  
  Bei jedem Erstellen oder Aktualisieren einer Data Mining-Struktur oder -Modells verwenden Sie Daten, die von einer Datenquelle definiert sind. Die Datenquelle enthält nicht die Daten, die Excel-Arbeitsmappen, Textdateien und SQL Server-Datenbanken enthalten könnten. Sie definiert nur die Verbindungsinformationen.  Eine Datenquellensicht (Data Source View, DSV) dient oben auf dieser Quelle als Abstraktionsebene, ändert oder ordnet die Daten zu, die aus der Quelle abgerufen werden.  
   
  Es ginge über dieses Thema hinaus, die Verbindungsanforderungen für jede dieser Quellen zu beschreiben. Weitere Informationen finden Sie in der Dokumentation für den Anbieter. Sie sollten im Allgemeinen jedoch die folgenden Anforderungen von Analysis Services beachten, wenn Sie mit Anbietern interagieren:  
@@ -67,8 +72,8 @@ caps.handback.revision: 19
   
 -   Wenn Sie ein Modell verschieben, sind die gleichen Anforderungen gültig: Sie müssen entsprechenden Zugriff zum Speicherort der alten Datenquelle einrichten, müssen die Datenquellen kopieren oder müssen eine neue Datenquelle konfigurieren. Sie müssen zudem Anmeldedaten und Rollen übertragen oder Berechtigungen einrichten, damit Data Mining-Objekte am neuen Speicherort verarbeitet und aktualisiert werden können.  
   
-## Konfigurieren von Berechtigungen und Servereigenschaften  
- Data Mining erfordert zusätzliche Berechtigungen für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank. Die meisten Data Mining-Eigenschaften können im [Dialogfeld „Eigenschaften für Analysis-Server“ &#40;Analysis Services&#41;](../Topic/Analysis%20Server%20Properties%20Dialog%20Box%20\(Analysis%20Services\).md) festgelegt werden.  
+## <a name="configuring-permissions-and-server-properties"></a>Konfigurieren von Berechtigungen und Servereigenschaften  
+ Data Mining erfordert zusätzliche Berechtigungen für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank. Die meisten Data Mining-Eigenschaften können im [Dialogfeld „Eigenschaften für Analysis-Server“ &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/b01ec658-c191-49c9-a6cb-549b21a368ab) festgelegt werden.  
   
  Weitere Informationen zu den Eigenschaften, die Sie konfigurieren können, finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -88,9 +93,9 @@ caps.handback.revision: 19
  Sie können auch Eigenschaften festlegen, mit denen Sie den Server optimieren und die Sicherheit für die Clientverwendung kontrollieren können. Weitere Informationen finden Sie unter [Feature Properties](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Weitere Informationen dazu, welche Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Plug-In-Algorithmen unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Weitere Informationen dazu, welche Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Plug-In-Algorithmen unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-## Programmgesteuerter Zugriff auf Data Mining-Objekte  
+## <a name="programmatic-access-to-data-mining-objects"></a>Programmgesteuerter Zugriff auf Data Mining-Objekte  
  Mit den folgenden Objektmodellen können Sie eine Verbindung zu einer Analysis Services-Datenbank herstellen und mit Data Mining-Objekten arbeiten.  
   
  **ADO** : Verwendet OLE DB zur Herstellung einer Verbindung mit einem Analysis Services-Server. Wenn Sie ADO verwenden, wird der Client auf Schemarowsetabfragen und DMX-Anweisungen beschränkt.  
@@ -103,7 +108,7 @@ caps.handback.revision: 19
   
  **AMO:** Verwaltungsschnittstelle für Analysis Services, die Entscheidungsunterstützungsobjekte (DSO) ersetzt. Beim Verwenden von AMO erfordern Vorgänge wie die Iteration von Objekten höhere Berechtigungen als bei Verwendung anderer Schnittstellen. Der Grund hierfür liegt darin, dass AMO direkt auf Metadaten zugreift, wohingegen ADOMD.NET und andere Schnittstellen nur auf die Datenbankschemas zugreifen.  
   
-### Durchsuchen und Abfragezugriff auf Server  
+### <a name="browse-and-query-access-to-servers"></a>Durchsuchen und Abfragezugriff auf Server  
  Sie können alle Arten von Vorhersagen mit einer Instanz von Analysis Services im OLAP-/Data Mining-Modus ausführen. Es gelten jedoch folgende Einschränkungen:  
   
 -   Wenn Sie Server-ADOMD verwenden, können Sie mit DMX auf den Server zugreifen, ohne eine Verbindung herzustellen. Anschließend können Sie die Ergebnisse direkt in eine Datentabelle kopieren. Server-ADOMD kann jedoch nicht ohne Remote-Instanzen verwendet werden. Sie können nur den lokalen Server abfragen.  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
   
 -   Mit ADOMD.NET können Sie eine gesamte Tabelle zur Verwendung als Parameter übergeben. Daher können Sie die Daten auf dem Client oder Daten verwenden, die für den Server nicht verfügbar sind. Möglich ist auch die Verwendung von gestalteten Tabellen als Vorhersageeingabe.  
   
-### Verwenden von Data Mining-gespeicherten Prozeduren  
+### <a name="using-data-mining-stored-procedures"></a>Verwenden von Data Mining-gespeicherten Prozeduren  
  Gespeicherte Prozeduren werden häufig zum Kapseln von Abfragen zur Wiederverwendung verwendet. Der Client kann CALL verwenden, um gespeicherte Prozeduren auszuführen, einschließlich gespeicherte Systemprozeduren von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Wenn die Prozedur ein Dataset zurückgibt, erhält der Client ein Dataset oder eine Datentabelle mit einer geschachtelten Tabelle, die die Zeilen enthält. Wenn Sie jedoch eine Abfrage für den Modellinhalt erstellen, gibt die Abfrage das ganze Modell zurück. Damit nicht zu viele Zeilen zurückgegeben werden, können Sie gespeicherte Prozeduren schreiben, indem Sie das ADOMD+-Objektmodell verwenden.  
@@ -122,8 +127,8 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  Gespeicherte Prozeduren können nicht verwendet werden, um die Sicherheit auf Datenserverobjekten zu ändern. Wenn Sie eine gespeicherte Prozedur ausführen, wird der aktuelle Kontext des Benutzers verwendet, um den Zugriff auf alle Serverobjekte zu bestimmen. Daher müssen Benutzer über entsprechende Berechtigungen für Datenbankobjekte verfügen, auf die sie zugreifen.  
   
-## Siehe auch  
- [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../Topic/Physical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   

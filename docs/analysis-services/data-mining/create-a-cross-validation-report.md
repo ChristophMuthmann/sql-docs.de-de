@@ -1,28 +1,33 @@
 ---
-title: "Erstellen von Berichten f&#252;r Kreuzvalidierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Überprüfen von Data Mining-Modellen"
-  - "Miningstrukturen [Analysis Services], Themen zur Vorgehensweise"
-  - "Kreuzvalidierung [Data Mining]"
-  - "Statistische Standardabweichung"
+title: Erstellen Sie einen Kreuzvalidierungsbericht | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen von Berichten f&#252;r Kreuzvalidierung
+# <a name="create-a-cross-validation-report"></a>Erstellen von Berichten für Kreuzvalidierung
   In diesem Thema wird die Erstellung eines Kreuzvalidierungsberichts auf der Registerkarte "Genauigkeitsdiagramm" im Data Mining-Designer erläutert. Allgemeine Informationen zum Aussehen eines Kreuzvalidierungsberichts und zu den statistischen Measures, die er enthält, finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Ein Kreuzvalidierungsbericht unterscheidet sich grundlegend von einem Genauigkeitsdiagramm, z. B. ein Prognosegütediagramm oder eine Klassifikationsmatrix.  
@@ -33,11 +38,11 @@ caps.handback.revision: 17
   
 -   Nur Modelle, die mit der gerade ausgewählten Struktur verknüpft werden, sind für die Kreuzvalidierung verfügbar.  
   
--   Wenn die derzeit ausgewählte Struktur eine Kombination aus Clustering- und Nicht-Clusteringmodellen unterstützt, lädt die gespeicherte Kreuzvalidierungsprozedur nach einem Klick auf **Ergebnisse abrufen** automatisch Modelle, die über die gleiche vorhergesagte Spalte verfügen. Clusteringmodelle, die nicht das gleiche vorhersagbare Attribut verwenden, werden ignoriert.  
+-   Wenn die derzeit ausgewählte Struktur eine Kombination aus Clustering- und Nicht-Clusteringmodellen unterstützt, lädt die gespeicherte Kreuzvalidierungsprozedur nach einem Klick auf **Ergebnisse abrufen**automatisch Modelle, die über die gleiche vorhergesagte Spalte verfügen. Clusteringmodelle, die nicht das gleiche vorhersagbare Attribut verwenden, werden ignoriert.  
   
 -   Sie können einen Kreuzvalidierungsbericht für ein Clusteringmodell erstellen, das nur dann nicht über ein vorhersagbares Attribut verfügt, wenn die Miningstruktur keine anderen vorhersagbaren Attribute unterstützt.  
   
-### Auswählen einer Miningstruktur  
+### <a name="select-a-mining-structure"></a>Auswählen einer Miningstruktur  
   
 1.  Öffnen Sie den Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 17
   
 5.  Klicken Sie auf die Registerkarte **Kreuzvalidierung** .  
   
-### Festlegen von Kreuzvalidierungsoptionen  
+### <a name="set-cross-validation-options"></a>Festlegen von Kreuzvalidierungsoptionen  
   
 1.  Klicken Sie auf der Registerkarte **Kreuzvalidierung** für **Foldanzahl**auf den Pfeil nach unten, um eine Zahl zwischen 1 und 10 auszuwählen. Der Standardwert lautet 10.  
   
      Die **Foldanzahl** stellt die Anzahl von Partitionen dar, die innerhalb des ursprünglichen Datasets erstellt werden. Wenn Sie die Foldanzahl auf 1 festgelegt haben, wird der Trainingssatz ohne Partitionierung verwendet.  
   
-2.  Klicken Sie für **Zielattribut**auf den Pfeil nach unten, und wählen Sie eine Spalte aus der Liste aus. Wenn das Modell ein Clustermodell ist, wählen Sie **#Cluster**, um anzugeben, dass das Modell nicht über ein vorhersagbares Attribut verfügt. Beachten Sie, dass der Wert **#Cluster** nur verfügbar ist, wenn die Miningstruktur keine anderen vorhersagbaren Attributtypen unterstützt.  
+2.  Klicken Sie für **Zielattribut**auf den Pfeil nach unten, und wählen Sie eine Spalte aus der Liste aus. Wenn das Modell ein Clustermodell ist, wählen Sie **#Cluster** , um anzugeben, dass das Modell nicht über ein vorhersagbares Attribut verfügt. Beachten Sie, dass der Wert **#Cluster**nur verfügbar ist, wenn die Miningstruktur keine anderen vorhersagbaren Attributtypen unterstützt.  
   
      Sie können nur ein vorhersagbares Attribut pro Bericht auswählen. Standardmäßig sind alle zugehörigen Modelle, die über das gleiche vorhersagbare Attribut verfügen, im Bericht enthalten.  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 17
   
 6.  Klicken Sie auf **Ergebnisse abrufen**.  
   
-### Drucken des Kreuzvalidierungsberichts  
+### <a name="print-the-cross-validation-report"></a>Drucken des Kreuzvalidierungsberichts  
   
 1.  Klicken Sie auf der Registerkarte **Kreuzvalidierung** mit der rechten Maustaste auf den abgeschlossenen Bericht.  
   
 2.  Wählen Sie aus dem Kontextmenü die Option **Drucken** oder **Seitenansicht** , um zunächst den Bericht zu überprüfen.  
   
-### Erstellen einer Kopie des Berichts in Microsoft Excel  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>Erstellen einer Kopie des Berichts in Microsoft Excel  
   
 1.  Klicken Sie auf der Registerkarte **Kreuzvalidierung** mit der rechten Maustaste auf den abgeschlossenen Bericht.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  Fügen Sie die Auswahl in eine geöffnete Excel-Arbeitsmappe ein. Wenn Sie die Option **Einfügen** verwenden, wird der Bericht als HTML in Excel eingefügt. Auf diese Weise werden Zeilen- und Spaltenformatierung beibehalten. Wenn Sie den Bericht mit den Optionen für **Inhalte einfügen** für Text oder Unicode-Text einfügen, wird der Bericht im nach Zeilen getrennten Format eingefügt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

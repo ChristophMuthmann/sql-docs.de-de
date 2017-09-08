@@ -1,24 +1,29 @@
 ---
-title: "Konfigurieren des Zeichenfolgenspeichers f&#252;r Dimensionen und Partitionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Konfigurieren des Zeichenfolgenspeichers f&#252;r Dimensionen und Partitionen
+# <a name="configure-string-storage-for-dimensions-and-partitions"></a>Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen
   Sie haben die Möglichkeit, Zeichenfolgenspeicher neu zu konfigurieren, um Platz für sehr große Zeichenfolgen in Dimensionsattributen oder Partitionen schaffen, die die maximale Dateigröße von 4 GB für Zeichenfolgenspeicher überschreiten. Wenn die Dimensionen oder Partitionen Zeichenfolgenspeicher dieser Größe beinhalten, können Sie die Dateigrößeneinschränkung durch Ändern der Eigenschaft **StringStoresCompatibilityLevel** auf Ebene der Dimension oder Partition für lokale als auch für verknüpfte Objekte (lokal oder remote) umgehen.  
   
  Beachten Sie, dass Sie Zeichenfolgenspeicher genau für jene Objekte erhöhen können, die zusätzlichen Kapazität benötigen. In den meisten mehrdimensionalen Modellen werden Zeichenfolgendaten Dimensionen zugeordnet. Von dieser Einstellung können jedoch auch Partitionen, die Distinct Count Measures enthalten, neben Zeichenfolgen profitieren. Da die Einstellung für Zeichenfolgen gilt, sind numerische Daten nicht betroffen.  
@@ -51,7 +56,7 @@ caps.handback.revision: 21
   
  In einer mehrdimensionalen Datenbank von Analysis Services werden Zeichenfolgen getrennt von numerischen Daten gespeichert, um Optimierungen basierend auf den Eigenschaften der Daten zuzulassen. Zeichenfolgendaten werden in der Regel in Dimensionsattributen gefunden, die Namen oder Beschreibungen darstellen. Zeichenfolgendaten können auch in Distinct Count Measures enthalten sein. Zeichenfolgendaten können auch in Schlüsseln verwendet werden.  
   
- Sie können einen Zeichenfolgenspeicher an der Dateierweiterung (z. B. .asstore-, .bstore-, .ksstore- oder .string-Dateien) erkennen. Standardmäßig gilt für jede dieser Dateien eine maximale Dateigröße von 4 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie die maximale Dateigröße überschreiben, indem Sie einen alternativen Speichermechanismus angeben, bei dem die Größe des Zeichenfolgenspeichers an die Anforderungen angepasst wird.  
+ Sie können einen Zeichenfolgenspeicher an der Dateierweiterung (z. B. .asstore-, .bstore-, .ksstore- oder .string-Dateien) erkennen. Standardmäßig gilt für jede dieser Dateien eine maximale Dateigröße von 4 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie die maximale Dateigröße überschreiben, indem Sie einen alternativen Speichermechanismus angeben, bei dem die Größe des Zeichenfolgenspeichers an die Anforderungen angepasst wird.  
   
  Im Gegensatz zur Architektur für Standardzeichenfolgenspeicher, in der es eine Obergrenze für die Größe der physischen Datei gibt, basiert der größere Zeichenfolgenspeicher auf einer maximalen Anzahl von Zeichenfolgen. Der größere Zeichenfolgenspeicher kann maximal 4 Milliarden eindeutige Zeichenfolgen oder 4 Milliarden Datensätze enthalten, je nachdem, welcher Wert zuerst erreicht wird. Der größere Zeichenfolgenspeicher erstellt Datensätze von gleichmäßiger Größe, wobei jeder Datensatz gleich einer 64-KB-Seite ist. Bei sehr langen Zeichenfolgen, die nicht in einen einzelnen Datensatz passen, liegt die tatsächliche Grenze bei weniger als 4 Milliarden Zeichenfolgen.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 21
   
 2.  Um den Zeichenfolgenspeicher für Dimensionen zu ändern, öffnen Sie Projektmappen-Explorer. Doppelklicken Sie auf die Dimension, für die Sie den Zeichenfolgenspeicher ändern.  
   
-3.  Stellen Sie im Dimensions-Designer im Bereich Attribute sicher, dass der übergeordnete Knoten der Dimension ausgewählt ist (wenn die Dimension z. B. "Kunden" ist, wählen Sie "Kunden" aus und nicht die untergeordneten Attribute).  
+3.  Stellen Sie im Dimensions-Designer im Bereich Attribute sicher, dass der übergeordnete Knoten der Dimension ausgewählt ist (wenn die Dimension z. B. "Kunden" ist, wählen Sie "Kunden" aus und nicht die untergeordneten Attribute).  
   
 4.  Legen Sie **StringStoresCompatibilityLevel** im Bereich Eigenschaften im Abschnitt Erweitert auf **1100**fest. Wiederholen Sie diesen Schritt für andere Dimensionen, die einen größeren Speicher erfordern, oder behalten Sie den Wert **1050** für die verbleibenden Dimensionen bei.  
   
@@ -83,14 +88,14 @@ caps.handback.revision: 21
 ##  <a name="bkmk_step2"></a> Schritt 2: Verarbeiten der Objekte  
  Die neue Speicherarchitektur wird verwendet, nachdem Sie die Objekte verarbeitet haben. Die Verarbeitung der Objekte zeigt auch an, dass das Problem der Speichereinschränkung behoben wurde, da der Fehler, der zuvor bei einer Überlaufbedingung des Zeichenfolgenspeichers gemeldet wurde, nicht mehr auftreten sollte.  
   
--   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die soeben geänderte Dimension, und wählen Sie **Verarbeiten** aus.  
+-   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die soeben geänderte Dimension, und wählen Sie **Verarbeiten**aus.  
   
  Sie müssen die Option Vollständig verarbeiten für jedes Objekt verwenden, das die neue Zeichenfolgenspeicherarchitektur verwendet. Führen Sie vor der Verarbeitung eine Auswirkungsanalyse für die Dimension durch, um festzustellen, ob abhängige Objekte ebenfalls eine erneute Verarbeitung erfordern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tools und Ansätze zum Verarbeiten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Speichermodi und Verarbeitung von Partitionen](../Topic/Partition%20Storage%20Modes%20and%20Processing.md)   
- [Speichern von Dimensionen](../Topic/Dimension%20Storage.md)  
+ [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Partition Speichermodi und Verarbeitung](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Speichern von Dimensionen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

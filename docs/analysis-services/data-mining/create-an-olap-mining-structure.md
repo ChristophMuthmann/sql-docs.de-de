@@ -1,23 +1,28 @@
 ---
-title: "Erstellen einer OLAP-Miningstruktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen eine OLAP-Miningstruktur | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer OLAP-Miningstruktur
+# <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
   Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
   
  In diesem Thema wird beschrieben, wie Sie eine OLAP-Miningstruktur auf Grundlage einer Dimension und verwandter Measures in einer vorhandenen mehrdimensionalen Lösung erstellen.  
@@ -37,12 +42,12 @@ caps.handback.revision: 12
 ##  <a name="bkmk_Reqs"></a> Anforderungen für OLAP-Miningstrukturen und -Miningmodelle  
  Wenn Sie ein OLAP-Miningmodell entwerfen, ist die Datenquelle bereits in der Datenbank vorhanden, die zum Erstellen des Cubes verwendet wurde. Sie können keine Verbindung mit einem Remotecube herstellen und Data Mining-Objekte erstellen. Die Cubeobjekte müssen innerhalb der gleichen Lösung wie die Datenbank und die Miningstruktur verfügbar sein, die Sie erstellen.  
   
- Wenn Sie die ursprünglichen Projektdateien nicht haben oder diese nicht ändern möchte, können Sie die Option **Von Server importieren (mehrdimensional und Data Mining)** Visual Studio verwenden, um eine Kopie der Metadaten- und Lösungsobjekte abzurufen. Sie können dann das Bereitstellungsziel ändern, die Datenquellen bearbeiten und mit den Cubeobjekten arbeiten, ohne dass sich dies auf die vorhandenen Objekte auswirkt.  
+ Wenn Sie die ursprünglichen Projektdateien nicht haben oder diese nicht ändern möchte, können Sie die Option **Von Server importieren (mehrdimensional und Data Mining)**Visual Studio verwenden, um eine Kopie der Metadaten- und Lösungsobjekte abzurufen. Sie können dann das Bereitstellungsziel ändern, die Datenquellen bearbeiten und mit den Cubeobjekten arbeiten, ohne dass sich dies auf die vorhandenen Objekte auswirkt.  
   
  Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Übersicht über den OLAP Data Mining-Prozess  
- Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und **Neue Miningstruktur** auswählen. Der Assistent führt Sie zum Erstellen der Struktur für eine neue Struktur und ein neues Modell durch folgende Schritte:  
+ Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und  **Neue Miningstruktur**auswählen. Der Assistent führt Sie zum Erstellen der Struktur für eine neue Struktur und ein neues Modell durch folgende Schritte:  
   
 1.  **Definitionsmethode auswählen**: Hier wählen Sie einen Datenquellentyp aus, in diesem Fall **Aus vorhandenem Cube**.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus|  
 |Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus|  
   
-##  <a name="bkmk_Filters"></a> Aufteilen eines Cubes in Slices und Filtern von Modellen  
+##  <a name="bkmk_Filters"></a>Aufteilen eines Cubes Vs an. Filtern von Modellen  
  Das Aufteilen des Cubes in Slices, während Sie ein Modell erstellen, entspricht dem Erstellen eines Filters für ein relationales Miningmodell. In einem relationalen Modell wird der Filter für die Datenquelle als WHERE-Klausel in einer SQL-Anweisung definiert. In einem Cube verwenden Sie den Editor, um Filteranweisungen mit MDX zu erstellen.  
   
  Ein Cube kann beispielsweise Informationen zu Produktkäufen weltweit enthalten. Für eine Marketingkampagne möchten Sie jedoch ein Modell auf Grundlage der Analyse weiblicher Kunden über 30 erstellen, die in Großbritannien leben.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   Für den zweiten Filter wählen Sie die Dimension „Customer“ und das Attribut „Gender“ aus. Anschließend wählen Sie aus der Liste der Attributwerte „Frau“ aus.  
   
- Nachdem die Miningstruktur erstellt wurde, können Sie sowohl die Definition der Cubedaten als auch die Filterkriterien ändern. Weitere Informationen finden Sie unter [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md).  
+ Nachdem die Miningstruktur erstellt wurde, können Sie sowohl die Definition der Cubedaten als auch die Filterkriterien ändern. Weitere Informationen finden Sie unter [Filter für Miningmodelle](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  Sowohl die Registerkarte **Miningstruktur** als auch die Registerkarte **Miningmodell** enthalten eine Option, mit der Sie einer vorhandenen Miningstruktur einen Filter hinzufügen können. Klicken Sie hierzu auf **Cubeslice definieren**. Das Dialogfeld **Cube in Slices aufteilen** hilft Ihnen, durch das Auswählen eines Werts aus Dropdownlisten einen gültigen MDX-Filterausdruck zu erstellen.  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 12
   
  Sie müssen für jedes Attribut oder Measure, das Sie der geschachtelten Tabelle hinzufügen, angeben, ob das geschachtelte Attribut für Vorhersagen verwendet wird. Wählen Sie hierzu im Dialogfeld **Geschachtelte Tabellenspalten auswählen** die Option **Vorhersagbar** oder **Eingabe** aus. Wenn Sie keine dieser Optionen auswählen, werden die Daten der Miningstruktur hinzugefügt, aber werden nicht für die Analyse verwendet.  
   
- Für jedes Attribut und Measure müssen Sie außerdem angeben, ob das Attribut diskret, diskretisiert oder kontinuierlich ist. Der Assistent wählt auf Grundlage des Datentyps des Attributs einen Standardwert aus, Sie können diese jedoch abhängig von den Algorithmusanforderungen ändern. Wenn Sie einen Inhaltstyp auswählen, der mit dem ausgewählten Algorithmus nicht kompatibel ist (z. B. wenn Sie einen kontinuierlichen numerischen Typ mit einem Naive Bayes-Modell verwenden), wird erst dann eine Fehlermeldung ausgegeben, wenn Sie versuchen, das Modell zu verarbeiten.  
+ Für jedes Attribut und Measure müssen Sie außerdem angeben, ob das Attribut diskret, diskretisiert oder kontinuierlich ist. Der Assistent wählt auf Grundlage des Datentyps des Attributs einen Standardwert aus, Sie können diese jedoch abhängig von den Algorithmusanforderungen ändern. Wenn Sie einen Inhaltstyp auswählen, der mit dem ausgewählten Algorithmus nicht kompatibel ist (z. B. wenn Sie einen kontinuierlichen numerischen Typ mit einem Naive Bayes-Modell verwenden), wird erst dann eine Fehlermeldung ausgegeben, wenn Sie versuchen, das Modell zu verarbeiten.  
   
  Nachdem Sie diese Optionen festgelegt haben, fügt der Assistent die geschachtelte Tabelle der Falltabelle hinzu. Der Standardname der geschachtelten Tabelle ist der Name der geschachtelten Dimension. Sie können jedoch die geschachtelte Tabelle und die darin befindlichen Spalten umbenennen. Wiederholen Sie diesen Prozess, um der Miningstruktur mehrere geschachtelte Tabellen hinzuzufügen.  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  Die Erstellung von Data Mining-Dimensionen wird nur von den folgenden Modelltypen unterstützt: Modelle auf Grundlage des Microsoft Clustering-Algorithmus, des Microsoft Decision Trees-Algorithmus oder des Microsoft Associations-Algorithmus.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
@@ -166,3 +171,4 @@ caps.handback.revision: 12
  [Eigenschaften für Miningstrukturen und Strukturspalten](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

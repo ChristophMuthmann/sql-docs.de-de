@@ -1,41 +1,46 @@
 ---
-title: "Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &amp;ndash; Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Time Series-Algorithmen [Analysis Services]"
-  - "Zeitreihe [Analysis Services]"
-  - "Miningmodellinhalt, Zeitreihenmodellen"
+title: "Miningmodellinhalt bei Zeitreihenmodellen (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time series algorithms [Analysis Services]
+- time series [Analysis Services]
+- mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &amp;ndash; Data Mining)
+# <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
   Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
   
  Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  Es empfiehlt sich, die Erläuterungen in diesem Thema anhand der Inhalte eines Zeitreihenmodells nachzuverfolgen. Sie können ein Zeitreihenmodell erstellen, indem Sie das Lernprogramm zu Data Mining-Grundlagen abschließen. Im Rahmen dieses Lernprogramms erstellen Sie ein gemischtes Modell, das zum Trainieren von Daten mit dem ARIMA- und dem ARTXP-Algorithmus dient. Informationen zum Anzeigen des Inhalts eines Miningmodells finden Sie unter [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md).  
   
-## Grundlegendes zur Struktur von Zeitreihenmodellen  
+## <a name="understanding-the-structure-of-a-time-series-model"></a>Grundlegendes zur Struktur von Zeitreihenmodellen  
  Ein Zeitreihenmodell verfügt über einen einzigen übergeordneten Knoten, der das Modell und die zugehörigen Metadaten darstellt. Diesem Knoten sind eine oder zwei Zeitreihenstrukturen untergeordnet, je nachdem, welchen Algorithmus Sie verwendet haben, um das Modell zu erstellen.  
   
  Wenn Sie ein gemischtes Modell erstellen, werden zwei separate Strukturen hinzugefügt, eine für ARIMA und eine für ARTXP. Wenn Sie nur den ARTXP-Algorithmus oder nur den ARIMA-Algorithmus verwenden, wird eine einzelne Struktur hinzugefügt, die dem jeweiligen Algorithmus entspricht. Den zu verwendenden Algorithmus können Sie mit dem FORECAST_METHOD-Parameter festlegen. Weitere Informationen dazu, welches Modell Sie verwenden sollten, finden Sie unter [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
  Das folgende Diagramm zeigt ein Beispiel für ein Data Mining-Zeitreihenmodell mit den Standardeinstellungen zur Erstellung eines gemischten Modells. Für einen besseren Überblick über die Unterschiede zwischen den beiden Modellen wird das ARTXP-Modell auf der linken Seite und das ARIMA-Modell auf der rechten Seite des Diagramms gezeigt.  Bei ARTXP handelt es sich um eine Baumstruktur mit immer detaillierter werdenden Verzweigungen, die mit dem ARIMA-Algorithmus erstellte Struktur ähnelt einer Pyramide, die von unten nach oben allgemeiner wird.  
   
- ![Struktur des Modellinhalts für Zeitreihenmodelle](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "Struktur des Modellinhalts für Zeitreihenmodelle")  
+ ![Struktur des Modellinhalts für zeitreihenmodelle](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "Struktur des Modellinhalts für zeitreihenmodelle")  
   
  Sie müssen unbedingt beachten, dass die Informationen innerhalb der ARIMA-Struktur und der ARTXP-Struktur vollkommen unterschiedlich angeordnet werden und dass die beiden Strukturen nur über den Stammknoten verbunden sind. Obwohl die beiden Darstellungen der Einfachheit halber in einem Modell gezeigt werden, müssen Sie sie als zwei unabhängige Modelle behandeln. ARTXP entspricht im Gegensatz zu ARIMA einer tatsächlichen Baumstruktur.  
   
@@ -50,19 +55,19 @@ caps.handback.revision: 26
   
  Die folgenden Abschnitte erklären, wie die Knoten innerhalb jedes dieser Modelltypen angeordnet sind.  
   
-### Struktur des ARTXP-Modells  
+### <a name="structure-of-an-artxp-model"></a>Struktur des ARTXP-Modells  
  Mit dem ARTXP-Algorithmus wird ein Modell erstellt, das einem Entscheidungsstrukturmodell entspricht. Vorhersagbare Attribute werden gruppiert und immer dann geteilt, wenn signifikante Unterschiede gefunden werden. Aus diesem Grund enthält jedes ARTXP-Modell eine separate Verzweigung für jedes vorhersagbare Attribut. Im Lernprogramm zu Data Mining-Grundlagen wird beispielsweise ein Modell erstellt, das den Betrag der Verkäufe für mehrere Regionen vorhersagt. In diesem Fall ist **[Amount]** das vorhersagbare Attribut, und für jede Region wird eine separate Verzweigung erstellt. Bei zwei vorhersagbaren Attributen, z.B. **[Amount]** und **[Quantity]**, wird für jede Attribut/Region-Kombination eine separate Verzweigung erstellt.  
   
  Der oberste Knoten der ARTXP-Struktur enthält dieselben Informationen wie der Stammknoten einer Entscheidungsstruktur. Dazu gehören die Anzahl der untergeordneten Elemente für diesen Knoten (CHILDREN_CARDINALITY), die Anzahl der Fälle, die die Bedingungen dieses Knotens erfüllen (NODE_SUPPORT), sowie verschiedene beschreibende Statistiken (NODE_DISTRIBUTION).  
   
  Wenn der Knoten keine untergeordneten Elemente hat, bedeutet dies, dass keine signifikanten Bedingungen gefunden wurden, die die weitere Unterteilung der Fälle rechtfertigen würden. Die Verzweigung endet an diesem Punkt, und der Knoten wird als *Blattknoten*bezeichnet. Der Blattknoten enthält die Attribute, Koeffizienten und Werte, aus denen sich die ARTXP-Formel zusammensetzt.  
   
- Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe \< 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
+ Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe < 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
   
 > [!NOTE]  
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
   
-### Struktur eines ARIMA-Modells  
+### <a name="structure-of-an-arima-model"></a>Struktur eines ARIMA-Modells  
  Der ARIMA-Algorithmus erstellt eine einzelne Information für jede Kombination aus einer Datenreihe (z.B. **[Region]**) und einem vorhersagbaren Attribut (z.B. **[Sales Amount]**) – die Formel, die die Änderung des vorhersagbaren Attributs im Laufe der Zeit beschreibt.  
   
  Die Formel für jede Reihe wird von mehreren Komponenten abgeleitet, eine für jede in den Daten gefundene periodische Struktur. Wenn Sie beispielsweise über Verkaufsdaten verfügen, die auf monatlicher Basis erfasst werden, können mit dem Algorithmus monatliche, vierteljährliche oder jährliche periodische Strukturen erkannt werden.  
@@ -79,7 +84,7 @@ caps.handback.revision: 26
   
  Die *Differenzreihenfolge* ist ein wichtiger Teil der Formel und wird in der Formel wiedergegeben. Weitere Informationen zur Verwendung der Differenzreihenfolge finden Sie unter [Technische Referenz für den Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
-## Modellinhalt eines Zeitreihenmodells  
+## <a name="model-content-for-time-series"></a>Modellinhalt eines Zeitreihenmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Zeitreihenmodelle relevant sind.  
   
  Informationen zu den allgemeinen Spalten im Schemarowset, z.B. MODEL_CATALOG und MODEL_NAME, sowie weitere Erläuterungen zur Miningmodell-Terminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -216,7 +221,7 @@ caps.handback.revision: 26
  **ARIMA:** Der BIC-Wert (Bayesian Information Criterion) des ARIMA-Modells. Dieser Wert wird für alle auf die Formel bezogenen ARIMA-Knoten festgelegt.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP:** Dieselben Informationen wie bei NODE_DESCRIPTION.  
+ **ARTXP:**  Dieselben Informationen wie bei NODE_DESCRIPTION.  
   
  **ARIMA:** Dieselben Informationen wie bei NODE_CAPTION, d.h. die Kurzform der ARIMA-Formel.  
   
@@ -225,7 +230,7 @@ caps.handback.revision: 26
   
  Beispiel: Wenn für die meisten Datenreihen eine direkte Korrelation zwischen Zeit- und Verkaufswerten besteht, ist jede Reihe in einer Zeitreihenstruktur (NODE_TYPE =16) enthalten, die keine untergeordneten Knoten für die einzelnen Datenreihen aufweist, sondern lediglich eine Regressionsformel. Wenn die Beziehung jedoch nicht linear ist, kann eine ARTXP-Zeitreihenstruktur anhand von Bedingungen in untergeordnete Knoten unterteilt werden wie bei einem Entscheidungsstrukturmodell. Wenn Sie den Modellinhalt im **Microsoft Generic Content Tree Viewer** anzeigen, sehen Sie, wo die Teilungen auftreten und welche Auswirkungen sie auf die Trendlinien haben.  
   
- Um dieses Verhalten besser zu verstehen, können Sie das im [Lernprogramm zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md)erstellte Zeitreihenmodell überprüfen. Dieses Modell, das auf dem AdventureWorks-Data Warehouse basiert, verwendet keine besonders komplexen Daten. Aus diesem Grund weist die ARTXP-Struktur nur wenige Teilungen auf. Selbst in diesem relativ einfachen Modell sind jedoch drei unterschiedliche Teilungsarten dargestellt:  
+ Um dieses Verhalten besser zu verstehen, können Sie das im [Lernprogramm zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellte Zeitreihenmodell überprüfen. Dieses Modell, das auf dem AdventureWorks-Data Warehouse basiert, verwendet keine besonders komplexen Daten. Aus diesem Grund weist die ARTXP-Struktur nur wenige Teilungen auf. Selbst in diesem relativ einfachen Modell sind jedoch drei unterschiedliche Teilungsarten dargestellt:  
   
 -   Die Trendlinie [Amount] für die Pazifikregion wird anhand des Zeitschlüssels unterteilt. Das heißt, der Trend ändert sich an einem bestimmten Zeitpunkt. Die Trendlinie ist bis zu einem bestimmten Punkt linear, danach nimmt die Kurve eine andere Form an. Beispiel: Eine Zeitreihe endet am 6. August 2002, und nach diesem Datum beginnt eine andere Zeitreihe.  
   
@@ -243,15 +248,15 @@ caps.handback.revision: 26
   
  Kurz: Data Mining bietet nützliche Hinweise auf Phänomene, die potenziell von Interesse sind. Um den Wert der Informationen im Kontext genau interpretieren zu können, sind jedoch weitere Untersuchungen und geschäftliches Fachwissen erforderlich.  
   
-### Elemente der ARTXP-Zeitreihenformel  
+### <a name="elements-of-the-artxp-time-series-formula"></a>Elemente der ARTXP-Zeitreihenformel  
  Verwenden Sie zur Anzeige der kompletten Formel für eine ARTXP-Struktur oder -Verzweigung die **Mininglegende** im [Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), in der alle Konstanten im lesbaren Format dargestellt werden.  
   
 -   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Im folgenden Abschnitt werden eine Beispielformel und die grundlegenden Begriffe vorgestellt.  
   
-#### Mininglegende für ARTXP-Formel  
- Das folgende Beispiel zeigt die ARTXP-Formel für einen Teil des Modells, wie sie in der **Mininglegende**dargestellt wird. So zeigen Sie diese Formel an: Öffnen Sie das Modell [Forecasting], das Sie im Tutorial zu Data Mining-Grundlagen erstellt haben, im Microsoft Time Series-Viewer, und klicken Sie auf die Registerkarte **Modell**. Wählen Sie dann die Struktur für die Datenreihe „R250: Europe“ aus.  
+#### <a name="mining-legend-for-an-artxp-formula"></a>Mininglegende für ARTXP-Formel  
+ Das folgende Beispiel zeigt die ARTXP-Formel für einen Teil des Modells, wie sie in der **Mininglegende**dargestellt wird. So zeigen Sie diese Formel an: Öffnen Sie das Modell [Forecasting], das Sie im Tutorial zu Data Mining-Grundlagen erstellt haben, im Microsoft Time Series-Viewer, und klicken Sie auf die Registerkarte **Modell** . Wählen Sie dann die Struktur für die Datenreihe „R250: Europe“ aus.  
   
  Um die für dieses Beispiel verwendete Formel anzuzeigen, klicken Sie auf den Knoten, der die Datenreihe am/nach dem 5.7.2003 darstellt.  
   
@@ -265,8 +270,8 @@ caps.handback.revision: 26
   
  Diese Formel weist mehrere Elemente auf, da berechnet wurde, dass der Mengenwert des R250-Modells für die Region Europa von den Werten verschiedener anderer Datenreihen abhängt.  
   
-#### Modellinhalt einer ARTXP-Formel  
- In der folgenden Tabelle werden dieselben Informationen für die Formel angezeigt und der Inhalt des relevanten Knotens verwendet, wie im [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md) angezeigt.  
+#### <a name="model-content-for-an-artxp-formula"></a>Modellinhalt einer ARTXP-Formel  
+ In der folgenden Tabelle werden dieselben Informationen für die Formel angezeigt und der Inhalt des relevanten Knotens verwendet, wie im [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) angezeigt.  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -282,7 +287,7 @@ caps.handback.revision: 26
   
  Beim Vergleich dieser Beispiele wird deutlich, dass der Inhalt des Miningmodells den Informationen entspricht, die in der **Mininglegende**verfügbar sind, jedoch mit den zusätzlichen Spalten *VARIANCE* und *SUPPORT*. Der Wert für SUPPORT gibt die Anzahl von Fällen an, die den mit dieser Formel beschriebenen Trend unterstützen.  
   
-### Verwenden der ARTXP-Zeitreihenformel  
+### <a name="using-the-artxp-time-series-formula"></a>Verwenden der ARTXP-Zeitreihenformel  
  Der Vorteil des ARTXP-Modells besteht für die meisten geschäftlichen Anwender darin, dass es eine Strukturansicht und eine lineare Darstellung der Daten kombiniert.  
   
 -   Wenn die Änderungen im vorhersagbaren Attribut als lineare Funktion der unabhängigen Variablen dargestellt werden können, berechnet der Algorithmus automatisch die Regressionsformel und gibt die Reihe in einem separaten Knoten aus.  
@@ -333,7 +338,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
 |Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
- Anhand dieser Ergebnisse, die Sie auch mit dem [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md) anzeigen können, erkennen Sie unmittelbar, welche Reihen vollständig linear sind, welche mehrere periodische Strukturen aufweisen und um welche Periodizitäten es sich handelt.  
+ Anhand dieser Ergebnisse, die Sie auch mit dem [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) anzeigen können, erkennen Sie unmittelbar, welche Reihen vollständig linear sind, welche mehrere periodische Strukturen aufweisen und um welche Periodizitäten es sich handelt.  
   
  An der Kurzform der ARIMA-Formel für die Datenreihe M200 Europe können Sie z. B. ablesen, dass nur der standardmäßige Tageszyklus erkannt wurde. Die Kurzform der Formel wird in der Spalte NODE_CAPTION bereitgestellt.  
   
@@ -368,7 +373,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Diese Beispiele veranschaulichen, dass bei jedem weiteren Drilldown in der ARIMA-Struktur mehr Details aufgerufen werden, die wichtigen Informationen werden jedoch kombiniert und auch im übergeordneten Knoten angezeigt.  
   
-### Zeitreihenformel für ARIMA  
+### <a name="time-series-formula-for-arima"></a>Zeitreihenformel für ARIMA  
  Verwenden Sie zur Anzeige der kompletten Formel für einen ARIMA-Knoten die **Mininglegende** im [Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), in der die autoregressive Reihenfolge, der gleitende Durchschnitt und andere Elemente der Formel in einem konsistenten und lesbaren Format dargestellt werden.  
   
 -   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
@@ -376,7 +381,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Dieser Abschnitt enthält eine Beispielformel sowie Erläuterungen zu den grundlegenden Begriffen.  
   
 ####  <a name="bkmk_ARIMA_2"></a> Mininglegende für ARIMA-Formel  
- Das folgende Beispiel zeigt die ARIMA-Formel für einen Teil des Modells, wie sie in der Mininglegende dargestellt wird. So zeigen Sie diese Formel an: Öffnen Sie das **Forecasting**-Modell im **Microsoft Time Series-Viewer**, und klicken Sie auf die Registerkarte **Modell**. Wählen Sie dann die Struktur für die Datenreihe **R250: Europe** aus, und klicken Sie auf den Knoten, der die Datenreihe am oder nach dem 5.7.2003 darstellt. In der Mininglegende werden alle Konstanten in einem lesbaren Format angezeigt, wie im folgenden Beispiel:  
+ Das folgende Beispiel zeigt die ARIMA-Formel für einen Teil des Modells, wie sie in der Mininglegende dargestellt wird. So zeigen Sie diese Formel an: Öffnen Sie das **Forecasting** -Modell im **Microsoft Time Series-Viewer**, und klicken Sie auf die Registerkarte **Modell** . Wählen Sie dann die Struktur für die Datenreihe **R250: Europe** aus, und klicken Sie auf den Knoten, der die Datenreihe am oder nach dem 5.7.2003 darstellt. In der Mininglegende werden alle Konstanten in einem lesbaren Format angezeigt, wie im folgenden Beispiel:  
   
  ARIMA-Formel:  
   
@@ -387,12 +392,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 > [!NOTE]  
 >  Zur Varianzberechnung wird von Analysis Services eine Konstante ermittelt, diese wird jedoch auf der Benutzeroberfläche nicht angezeigt. Sie können jedoch die Varianz für einen beliebigen Punkt in der Datenreihe als Funktion dieser Konstante anzeigen, indem Sie in der **Diagramm** -Sicht die Option **Abweichungen anzeigen** wählen. Die Varianz für spezifische vorhergesagte Punkte lässt sich in der QuickInfo zu jeder Datenreihe anzeigen.  
   
-#### Modellinhalt einer ARIMA-Formel  
+#### <a name="model-content-for-arima-formula"></a>Modellinhalt einer ARIMA-Formel  
  Ein ARIMA-Modell folgt einer Standardstruktur, bei der unterschiedliche Informationen in Knoten unterschiedlichen Typs enthalten sind. Um den Inhalt des ARIMA-Modells anzuzeigen, wechseln Sie zum **Microsoft Generic Content Tree Viewer**, und erweitern Sie den Knoten mit dem Attributnamen **R250 Europe:Quantity**.  
   
  Das ARIMA-Modell für eine Datenreihe enthält die grundlegende periodische Formel in vier verschiedenen Formaten, aus denen Sie das für Ihre Anwendung am besten geeignete Format auswählen können.  
   
- **NODE_CAPTION:** zeigt die Kurzform der Formel an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. `{4,0,6}` lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn die Kurzform etwa `{2,0,8} x {1,0,0}(4)` lautet, enthält der Knoten zwei periodische Strukturen.  
+ **NODE_CAPTION:** zeigt die Kurzform der Formel an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. `{4,0,6}`lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn die Kurzform etwa `{2,0,8} x {1,0,0}(4)`lautet, enthält der Knoten zwei periodische Strukturen.  
   
  **NODE DESCRIPTION:** Zeigt die Langform der Formel an, die dem Format der Formel in der **Mininglegende**entspricht. Die Langform entspricht der Kurzform, mit dem Unterschied, dass die Istwerte der Koeffizienten angezeigt werden.  
   
@@ -422,7 +427,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Eine Auflistung der möglichen Werttypen finden Sie unter <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
   
-### Verwenden der ARIMA-Strukturinformationen  
+### <a name="using-the-arima-tree-information"></a>Verwenden der ARIMA-Strukturinformationen  
  Wenn Sie in einer Geschäftslösung Vorhersagen verwenden, die auf dem ARIMA-Algorithmus basieren, sollten Sie die Formel in ein Dokument einfügen, um zu veranschaulichen, mit welcher Methode die Vorhersage erstellt wurde. Sie können die Beschriftung oder die Beschreibung verwenden, um die Formeln in Kurzform bzw. in Langform darzustellen.  
   
  Wenn Sie eine Anwendung entwickeln, die Zeitreihenvorhersagen verwendet, empfiehlt es sich, die ARIMA-Formel aus dem Modellinhalt abzurufen und dann eigene Vorhersagen zu erstellen. Zum Abrufen der ARIMA-Formel für eine bestimmte Ausgabe können Sie im ARIMA-Stamm eine direkte Abfrage nach dem Attribut ausführen, wie in den vorherigen Beispielen gezeigt.  
@@ -433,13 +438,14 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML-Darstellung: XML-Abfrage  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Abfrage von Informationen aus einer ARTXP-Struktur kann kompliziert sein, da sich die Informationen für jede Teilung innerhalb der Struktur an einer anderen Position befinden. Wenn Sie mit einem ARTXP-Modell arbeiten, müssen Sie aus diesem Grund alle Teile abrufen und dann einige Verarbeitungsvorgänge ausführen, um die vollständige Formel wieder zusammenzusetzen. Das Abrufen einer Formel aus einem ARIMA-Modell ist einfacher, da die Formel strukturweit verfügbar gemacht wird. Informationen zum Erstellen einer Abfrage zum Abrufen dieser Informationen finden Sie unter [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
+

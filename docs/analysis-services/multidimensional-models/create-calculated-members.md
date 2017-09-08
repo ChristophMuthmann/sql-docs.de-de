@@ -1,29 +1,34 @@
 ---
-title: "Erstellen von berechneten Elementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Berechnete Elemente [Analysis Services]"
-  - "Benutzerdefinierte Measures [Analysis Services]"
-  - "Elemente [Analysis Services], berechnete"
-  - "Berechnungen [Analysis Services], berechnete Elemente"
+title: Erstellen von berechneten Elementen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen von berechneten Elementen
+# <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
   Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
   
  Definitionen berechneter Elemente werden zwar gespeichert, ihre Werte sind jedoch nur im Arbeitsspeicher vorhanden. Im vorherigen Beispiel werden die Werte für Euros für Endbenutzer angezeigt, aber nicht als Cubedaten gespeichert.  
@@ -39,7 +44,7 @@ caps.handback.revision: 26
  Alternativ dazu können Sie das berechnete Element in die Measures statt in eine Dimension aufnehmen. Diese Option stellt auch eine neue Spalten- oder Zeilenüberschrift bereit, wird jedoch im Browser an Measures angefügt.  
   
  **Übergeordnetes Element**  
- Klicken Sie auf **Ändern**, um ein übergeordnetes Element auszuwählen, das das berechnete Element enthalten soll. Diese Option ist nicht verfügbar, wenn Sie eine Hierarchie mit einer einzelnen Ebene oder MEASURES als übergeordnete Dimension auswählen.  
+ Klicken Sie auf **Ändern** , um ein übergeordnetes Element auszuwählen, das das berechnete Element enthalten soll. Diese Option ist nicht verfügbar, wenn Sie eine Hierarchie mit einer einzelnen Ebene oder MEASURES als übergeordnete Dimension auswählen.  
   
  Hierarchien werden in Ebenen unterteilt, die Elemente enthalten. Jedes Element erzeugt eine Überschrift. Während des Anzeigens der Daten in einem Cube können Endbenutzer einen Drilldown von einer ausgewählten Überschrift zu zuvor nicht angezeigten untergeordneten Überschriften ausführen. Die Überschrift für das berechnete Element wird zu der Ebene hinzugefügt, die sich direkt unter dem von Ihnen ausgewählten übergeordneten Element befindet.  
   
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  Sie können Cubekomponenten aus der Registerkarte **Metadaten** im Bereich **Berechnungstools** in das Feld **Ausdruck** im Bereich für Berechnungsausdrücke kopieren oder ziehen. Sie können Funktionen aus der Registerkarte **Funktionen** im Bereich **Berechnungstools** in das Feld **Ausdruck** im Bereich für Berechnungsausdrücke kopieren oder ziehen.  
   
-## Adressieren von berechneten Elementen  
+## <a name="addressing-calculated-members"></a>Adressieren von berechneten Elementen  
  Wenn Sie ein berechnetes Element im **Cube-Designer** auf der Registerkarte **Berechnungen**erstellen, geben Sie die übergeordnete Hierarchie an, in der das berechnete Element gespeichert wird. Die übergeordnete Hierarchie bestimmt anhand der folgenden Regeln, wie ein berechnetes Element adressiert werden kann:  
   
 -   Wenn ein berechnetes Element in der Measuredimension erstellt wird, ist das berechnete Element in dieser Dimension adressierbar.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Berechnungen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

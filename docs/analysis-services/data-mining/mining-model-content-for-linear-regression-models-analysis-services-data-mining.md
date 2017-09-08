@@ -1,39 +1,44 @@
 ---
-title: "Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Linear Regression-Algorithmen [Analysis Services]"
-  - "Miningmodellinhalt, Lineare Regressionsmodelle"
-  - "Regressionsalgorithmen [Analysis Services]"
+title: "Miningmodellinhalt, lineare Regressionsmodell für | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- mining model content, linear regression models
+- regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d51c18399f6762976630b4498908e903a18847cf
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
+# <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Grundlegendes zur Struktur von linearen Regressionsmodellen  
+## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Grundlegendes zur Struktur von linearen Regressionsmodellen  
  Ein lineares Regressionsmodell verfügt über eine äußerst einfache Struktur. Jedes Modell verfügt über einen einzelnen übergeordneten Knoten, der das Modell und seine Metadaten darstellt, und über einen Regressionsstrukturknoten (NODE_TYPE = 25), der die Regressionsformel für jedes vorhersagbare Attribut enthält.  
   
- ![Struktur des Modells für lineare Regression](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Struktur des Modells für lineare Regression")  
+ ![Struktur des Modells für die lineare Regression](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Struktur des Modells für die lineare Regression")  
   
  Lineare Regressionsmodelle verwenden den gleichen Algorithmus wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Entscheidungsstrukturen. Allerdings kommen andere Parameter für die Einschränkung der Struktur zum Einsatz und es sind nur kontinuierliche Attribute als Eingaben zulässig. Da lineare Regressionsmodelle jedoch auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus basieren, werden lineare Regressionsmodelle mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Entscheidungsstruktur-Viewers (Decision Tree Viewer) angezeigt. Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
  Der nächste Abschnitt erklärt, wie Informationen im Regressionsformelknoten interpretiert werden. Diese Informationen gelten nicht nur für lineare Regressionsmodelle, sondern auch für Entscheidungsstrukturmodelle, die in einem Teil der Struktur Regressionen enthalten.  
   
-## Modellinhalt eines linearen Regressionsmodells  
+## <a name="model-content-for-a-linear-regression-model"></a>Modellinhalt eines linearen Regressionsmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für die lineare Regression relevant sind.  
   
  Informationen zu allgemeinen Spalten im Schemarowset finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -138,10 +143,10 @@ caps.handback.revision: 18
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Modell mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus erstellen, generiert das Data Mining-Modul eine besondere Instanz eines Entscheidungsstrukturmodells und liefert Parameter, die die Struktur darauf beschränkt, alle Trainingsdaten in einem einzelnen Knoten zu enthalten. Alle kontinuierlichen Eingaben werden als potenzielle Regressoren gekennzeichnet und als solche bewertet, aber nur diejenigen Regressoren, die den Daten entsprechen, werden als Regressoren in das endgültige Modell übernommen. Die Analyse erzeugt entweder eine einzelne Regressionsformel für jeden Regressor oder keine Regressionsformel.  
   
- Sie können die vollständige Regressionsformel unter **Mininglegende** einsehen, indem Sie auf den Knoten **(Alle)** im [Microsoft Struktur-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md) klicken.  
+ Sie können die vollständige Regressionsformel unter **Mininglegende**einsehen, indem Sie auf den Knoten **(Alle)** im [Microsoft Struktur-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)klicken.  
   
  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das ein kontinuierliches, vorhersagbares Attribut enthält, verfügt die Struktur zuweilen über Regressionsknoten, die die Eigenschaften von Regressionsstrukturknoten aufweisen.  
   
@@ -159,7 +164,7 @@ caps.handback.revision: 18
   
  Die NODE_DISTRIBUTION-Tabelle enthält mehrere Zeilen, die jeweils durch eine Variable gruppiert sind. Die ersten zwei Zeilen sind immer die Werttypen 1 und 3 und beschreiben das Zielattribut. Die folgenden Zeilen stellen Details über die Formel für einen besonderen *Regressor*bereit. Ein Regressor ist eine Eingangsvariable, die eine lineare Beziehung mit der Ausgabevariablen hat. Es sind mehrere Regressoren möglich und jeder Regressor verfügt über eine separate Zeile für den Koeffizienten (VALUETYPE = 7), den Ergebnisgewinn (VALUETYPE = 8) und die Statistik (VALUETYPE = 9). Schließlich verfügt die Tabelle über eine Zeile, die das konstante Glied der Gleichung (VALUETYPE = 11) enthält.  
   
-### Elemente der Regressionsformel  
+### <a name="elements-of-the-regression-formula"></a>Elemente der Regressionsformel  
  Die geschachtelte NODE_DISTRIBUTION-Tabelle enthält jedes Element der Regressionsformel in einer separaten Zeile. Die ersten beiden Zeilen von Daten in den Beispielergebnissen enthalten Informationen über das vorhersagbare Attribut **Yearly Income**, das die unabhängige Variable modelliert. In der Spalte SUPPORT wird die Anzahl der Fälle gezeigt, die die beiden Status dieses Attributs unterstützen: entweder stand ein Wert **Yearly Income** zur Verfügung oder der Wert **Yearly Income** fehlte.  
   
  Die Spalte VARIANCE gibt Aufschluss über die berechnete Varianz des vorhersagbaren Attributs. *Varianz* ist ein Maß dafür, wie zerstreut die Werte in einem Beispiel angesichts einer erwarteten Verteilung sind. Die Varianz wird berechnet, indem der durchschnittliche Wert der quadratischen Abweichung vom Mittelwert genommen wird. Die Quadratwurzel der Varianz wird auch als Standardabweichung bekannt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die Standardabweichung nicht bereit; Sie können diese jedoch leicht berechnen.  
@@ -168,16 +173,16 @@ caps.handback.revision: 18
   
  Schließlich enthält die Tabelle eine Zeile, die das konstante Glied der Gleichung bereitstellt.  
   
-#### Koeffizient  
+#### <a name="coefficient"></a>Koeffizient  
  Für jeden Regressor wird ein Koeffizient (VALUETYPE = 7) berechnet. Der Koeffizient selbst erscheint in der Spalte ATTRIBUTE_VALUE, während die Spalte VARIANCE die Varianz für den Koeffizienten angibt. Die Koeffizienten werden berechnet, um Linearität zu maximieren.  
   
-#### Ergebnisgewinn  
+#### <a name="score-gain"></a>Ergebnisgewinn  
  Der Ergebnisgewinn (VALUETYPE = 8) für jeden Regressor stellt den Interessantheitsgrad des Attributs dar. Sie können diesen Wert verwenden, um die Nützlichkeit von mehreren Regressoren einzuschätzen.  
   
-#### Statistik  
+#### <a name="statistics"></a>Statistik  
  Die Regressorstatistik (VALUETYPE = 9) ist der Mittelwert für das Attribut für Fälle, die über einen Wert verfügen. Die Spalte ATTRIBUTE_VALUE enthält den Mittelwert selbst, während die Spalte VARIANCE die Summe der Abweichungen vom Mittelwert enthält.  
   
-#### Konstantes Glied  
+#### <a name="intercept"></a>Konstantes Glied  
  In der Regel gibt das *konstante Glied* (VALUETYPE = 11) oder das *Residuum* in einer Regressionsgleichung den Wert des vorhersagbaren Attributs an dem Punkt an, an dem das Eingabeattribut 0 ist. In vielen Fällen geschieht dies nicht und könnte zu nicht intuitiven Ergebnissen führen.  
   
  Beispielsweise ist es bei einem Modell, das das Einkommen basierend auf dem Alter vorhersagt, nicht nützlich, das Einkommen bei einem Alter von 0 Jahren anzugeben. In realen Situationen ist es in der Regel nützlicher, das Verhalten in Bezug auf einen Durchschnittswert zu erfahren. Daher ändert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das kontante Glied so, dass jeder Regressor in Beziehung zum Mittelwert ausgedrückt wird.  
@@ -186,10 +191,10 @@ caps.handback.revision: 18
   
  Daher gibt das konstante Glied (VALUETYPE = 11) für die Regressionsformel bei einem Durchschnittsalter von 45 ein durchschnittliches Einkommen an.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Technische Referenz für den Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   

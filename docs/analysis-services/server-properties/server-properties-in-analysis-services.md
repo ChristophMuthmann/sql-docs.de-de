@@ -1,31 +1,36 @@
 ---
-title: "Servereigenschaften in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, Konfigurationseigenschaften"
-  - "Analysis Services, Konfigurationseigenschaften"
-  - "SQL Server Analysis Services, Konfigurationseigenschaften"
-  - "Konfigurationsoptionen [Analysis Services]"
-  - "Servereigenschaften [Analysis Services]"
-  - "Eigenschaften [Analysis Services], Konfiguration"
-  - "Eigenschaften [Analysis Services]"
+title: Servereigenschaften in Analysis Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Servereigenschaften in Analysis Services
-  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administrator kann die Standard-Serverkonfigurationseigenschaften einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden.  
+# <a name="server-properties-in-analysis-services"></a>Servereigenschaften in Analysis Services
+  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administrator kann die Standard-Serverkonfigurationseigenschaften einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden.  
   
  Zum Konfigurieren des Servers können Sie SQL Server Management Studio verwenden oder die Datei „msmdsrv.ini“ einer bestimmten Instanz bearbeiten.  
  
@@ -34,26 +39,26 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
 > [!NOTE]  
 >  Bei einer Standardinstallation befindet sich „msmdsrv.ini“ im Ordner „\Programme\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config“.
 > 
-> Zu anderen Eigenschaften, die die Serverkonfiguration beeinflussen, gehören Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md).
+> Zu anderen Eigenschaften, die die Serverkonfiguration beeinflussen, gehören Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
 ##  <a name="bkmk_config"></a> Konfigurieren von Eigenschaften in Management Studio 
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz her.  
   
-2. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz, und klicken Sie anschließend auf **Eigenschaften**. Die Seite Allgemein mit den gebräuchlicheren Eigenschaften wird angezeigt.  
+2. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, und klicken Sie anschließend auf **Eigenschaften**. Die Seite Allgemein mit den gebräuchlicheren Eigenschaften wird angezeigt.  
 
-3.  Aktivieren Sie zum Anzeigen weiterer Eigenschaften unten auf der Seite das Kontrollkästchen **Erweiterte (alle) Eigenschaften anzeigen**.  
+3.  Aktivieren Sie zum Anzeigen weiterer Eigenschaften unten auf der Seite das Kontrollkästchen **Erweiterte (alle) Eigenschaften anzeigen** .  
   
-     Das Ändern von Servereigenschaften wird nur für Server im tabellarischen Modus und mehrdimensionalen Modus unterstützt. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert haben, verwenden Sie, sofern vom Microsoft-Support nicht anders angegeben, immer die Standardwerte.  
+     Das Ändern von Servereigenschaften wird nur für Server im tabellarischen Modus und mehrdimensionalen Modus unterstützt. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installiert haben, verwenden Sie, sofern vom Microsoft-Support nicht anders angegeben, immer die Standardwerte.  
   
      Anweisungen zum Behandeln von Funktions- oder Leistungsproblemen mithilfe von Servereigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Informationen zu Servereigenschaften (die in den letzten Versionen größtenteils unverändert geblieben sind) finden Sie auch im Microsoft-Whitepaper [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102) (SQL Server 2005 Analysis Services-Servereigenschaften (SSAS)).    
+     Informationen zu Servereigenschaften (die in den letzten Versionen größtenteils unverändert geblieben sind) finden Sie auch im Microsoft-Whitepaper [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(SQL Server 2005 Analysis Services-Servereigenschaften (SSAS)).    
   
 ##  <a name="bkmk_msmdsrvini"></a> Konfigurieren von Eigenschaften in „msmdsrv.ini“
   Einige Eigenschaften können nur in der Datei msmdsrv.ini festgelegt werden. Wenn die gewünschte Eigenschaft auch nach dem Einblenden der erweiterten Eigenschaften nicht angezeigt wird, müssen Sie ggf. die Datei msmdsrv.ini direkt bearbeiten.
   
-1.  Überprüfen Sie die **DataDir**-Eigenschaft auf der Eigenschaftenseite „Allgemein“ in Management Studio, um den Speicherort der Analysis Services-Programmdateien zu bestätigen (einschließlich der Datei „msmdsrv.ini“).
+1.  Überprüfen Sie die **DataDir** -Eigenschaft auf der Eigenschaftenseite „Allgemein“ in Management Studio, um den Speicherort der Analysis Services-Programmdateien zu bestätigen (einschließlich der Datei „msmdsrv.ini“).
 
      Auf einem Server, der über mehrere Instanzen verfügt, wird durch die Überprüfung des Programmdateispeicherorts sichergestellt, dass Sie die richtige Datei bearbeiten.  
   
@@ -85,8 +90,8 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
 |[Sicherheitseigenschaften](../../analysis-services/server-properties/security-properties.md)|Im Abschnitt Sicherheit sind sowohl grundlegende als auch erweiterte Eigenschaften zum Definieren von Zugriffsberechtigungen enthalten. Hierzu zählen Einstellungen für Administratoren und Benutzer.|  
 |[Threadpooleigenschaften](../../analysis-services/server-properties/thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Instanzverwaltung](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Miningmodelleigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodelle [Analysis Services], Eigenschaften"
-  - "Data Mining [Analysis Services], Eigenschaften"
-  - "Spalten [Data Mining], Eigenschaften"
-  - "Data Mining-Designer"
-  - "Eigenschaften [Data Mining]"
+title: Eigenschaften von Miningmodellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodelleigenschaften
+# <a name="mining-model-properties"></a>Miningmodelleigenschaften
   Miningmodelle verfügen über die folgenden Arten von Eigenschaften:  
   
 -   Von der Miningstruktur geerbte Eigenschaften, die den Daten- und Inhaltstyp der von dem Modell verwendeten Daten definieren  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  Nach dem Ändern einer Eigenschaft müssen Sie das Modell erneut verarbeiten, damit sich die Änderungen im Modell widerspiegeln. Eine erneute Verarbeitung ist auch dann erforderlich, wenn die Änderung nur Metadaten betrifft, wie beispielsweise das Hinzufügen eines Spaltenalias oder einer Spaltenbeschreibung.  
   
-## Eigenschaften von Modellen  
+## <a name="properties-of-models"></a>Eigenschaften von Modellen  
  In der folgenden Tabelle werden die Eigenschaften, die für Miningmodelle spezifisch sind, beschrieben. Darüber hinaus gibt es Eigenschaften, die Sie im Mining in einzelnen Spalten festlegen können.  
   
 |Eigenschaft|Description|  
@@ -47,18 +52,18 @@ caps.handback.revision: 32
 |**Name**|Legt den Namen des Miningmodells fest.|  
 |**AllowDrillThrough**|Gibt an, ob Drillthrough für das Miningmodell aktiviert ist.|  
   
-## Eigenschaften der Modellspalte  
+## <a name="properties-of-model-columns"></a>Eigenschaften der Modellspalte  
  Sie können die folgenden für Data Mining spezifischen Eigenschaften für jede Spalte in einem Miningmodell festlegen. Diese Eigenschaften können für jedes Miningmodell in einer Miningstruktur auf einen unterschiedlichen Wert festgelegt werden.  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |**Description**|Beschreibt den Zweck der Miningspalte.|  
 |**Name**|Legt den Namen der Miningmodellspalte fest. Sie können einen neuen Namen eingeben, um einen Alias für die Miningmodellspalte anzugeben.|  
-|**ModelingFlags**|Legt algorithmusspezifische Flags für die Spalte fest. |  
+|**ModelingFlags**|Legt algorithmusspezifische Flags für die Spalte fest.|  
 |**SourceColumnID**|Gibt den Namen der Miningstrukturspalte an, auf der die Modellspalte basiert.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Verwendung**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
  [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

@@ -1,22 +1,27 @@
 ---
-title: "Laden von Dateien und Speichern von Datenspalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: File Load- und Save Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc37f3342781ace5e54a3ab9550e046933d25928
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Laden von Dateien und Speichern von Datenspalten
+# <a name="file-load-and-save-data-columns"></a>Laden von Dateien und Speichern von Datenspalten
   Die Dateiereigniskategorie "Laden und speichern" besitzt die folgende Ereignisklasse:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
@@ -32,7 +37,7 @@ caps.handback.revision: 5
   
  In der folgenden Tabelle sind die Datenspalten für diese Ereignisklasse aufgeführt.  
   
-## File Load Begin  
+## <a name="file-load-begin"></a>File Load Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -52,14 +57,14 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## File Load End  
+## <a name="file-load-end"></a>File Load End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
@@ -69,7 +74,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## File Save Begin  
+## <a name="file-save-begin"></a>File Save Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -98,14 +103,14 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt|  
   
-## File Save End  
+## <a name="file-save-end"></a>File Save End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
@@ -115,7 +120,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -124,7 +129,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## PageOut Begin  
+## <a name="pageout-begin"></a>PageOut Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -144,14 +149,14 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## PageOut End  
+## <a name="pageout-end"></a>PageOut End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
@@ -161,7 +166,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -170,7 +175,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## PageIn Begin  
+## <a name="pagein-begin"></a>PageIn Begin  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -190,14 +195,14 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## PageIn End  
+## <a name="pagein-end"></a>PageIn End  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
@@ -207,7 +212,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
 |Severity|22|1|Schweregrad einer Ausnahme.|  
-|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
+|Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -216,7 +221,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [File Load- und Save-Ereigniskategorie](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

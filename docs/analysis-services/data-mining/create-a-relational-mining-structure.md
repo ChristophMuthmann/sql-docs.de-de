@@ -1,29 +1,34 @@
 ---
-title: "Erstellen einer relationalen Miningstruktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dimensionen [Analysis Services], Data Mining"
-  - "Data Mining [Analysis Services], Struktur"
-  - "Miningstrukturen [Analysis Services], erstellen"
-  - "Relationale Miningmodelle [Analysis Services]"
-  - "OLAP-Miningmodelle [Analysis Services]"
+title: Erstellen Sie eine relationale Miningstruktur | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer relationalen Miningstruktur
+# <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
   Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
   
  Eine relationale Miningstruktur kann Daten aus ungleichartigen Quellen abrufen. Die Rohdaten können in Tabellen, Dateien oder relationalen Datenbanksystemen gespeichert werden, so lange die Daten als Teil der Datenquellensicht definiert werden können. Sie sollten z. B. eine relationale Miningstruktur verwenden, wenn die Daten in Excel, einem SQL Server Data Warehouse, einer SQL Server-Berichtsdatenbank oder aber in externen Quellen enthalten sind, auf die über die OLE DB- oder ODBC-Anbieter zugegriffen wird.  
@@ -42,13 +47,13 @@ caps.handback.revision: 35
   
  [Warum und wie wird Drillthrough aktiviert?](#BKMK_DrillThru)  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Zunächst müssen Sie über eine vorhandene Datenquelle verfügen. Sie können mithilfe des Datenquellen-Designers eine Datenquelle einrichten, wenn diese nicht bereits vorhanden ist. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Verwenden Sie danach den Datenquellensicht-Assistenten, um die erforderlichen Daten in einer einzelnen Datenquellensicht zusammenzustellen. Weitere Informationen darüber, wie Sie Daten mit Datenquellensichten auswählen, transformieren, filtern oder verwalten können, finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 ##  <a name="BKMK_Relational_Structure"></a> Übersicht über den Prozess  
- Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und dann **Neue Miningstruktur hinzufügen** auswählen. Der Assistent führt Sie beim Erstellen der Struktur eines neuen relationalen Miningmodells durch folgende Schritte:  
+ Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und dann **Neue Miningstruktur hinzufügen**auswählen. Der Assistent führt Sie beim Erstellen der Struktur eines neuen relationalen Miningmodells durch folgende Schritte:  
   
 1.  **Definitionsmethode auswählen**: Hier wählen Sie einen Datenquellentyp aus. Zudem wählen Sie **Aus relationaler Datenbank oder Data Warehouse**.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 35
 ##  <a name="BKMK_ChooseRelData"></a> So werden relationale Daten ausgewählt  
  Relationale Miningstrukturen können auf Daten basieren, die durch eine OLE DB-Datenquelle zur Verfügung gestellt werden. Wenn die Quelldaten in mehreren Tabellen enthalten sind, können Sie eine Datenquellensicht verwenden, um die von Ihnen benötigten Tabellen und Spalten an einem Ort zusammenzuführen.  
   
- Wenn die Tabellen 1:n-Beziehungen enthalten, haben Sie z. B. mehrere Kaufdatensätze für jeden Kunden, den Sie analysieren möchten. Sie können Tabellen hinzufügen und dann eine Tabelle als Falltabelle verwenden, wodurch Sie Daten für die zahlreichen Seiten der Beziehung als geschachtelte Tabelle verknüpfen können.  
+ Wenn die Tabellen 1:n-Beziehungen enthalten, haben Sie z. B. mehrere Kaufdatensätze für jeden Kunden, den Sie analysieren möchten. Sie können Tabellen hinzufügen und dann eine Tabelle als Falltabelle verwenden, wodurch Sie Daten für die zahlreichen Seiten der Beziehung als geschachtelte Tabelle verknüpfen können.  
   
  Die Daten in einer Miningstruktur werden von sämtlichen Komponenten abgeleitet, die in einer vorhandenen Datenquellensicht enthalten sind. Sie können Daten innerhalb der Datenquellensicht nach Bedarf ändern. Dabei können Sie Beziehungen oder abgeleitete Spalten hinzufügen, die in den zugrunde liegenden relationalen Daten unter Umständen nicht vorhanden sind. Sie können auch benannte Berechnungen oder Aggregationen innerhalb der Datenquellensicht erstellen. Diese Funktionen sind äußerst praktisch, wenn Sie keinen Einfluss auf die Anordnung der Daten in der Datenquelle haben oder wenn Sie mit unterschiedlichen Aggregationen der Daten für die Data Mining-Modelle experimentieren möchten.  
   
@@ -124,9 +129,9 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  Damit Sie Drillthrough verwenden können, müssen Sie es aktivieren, wenn Sie die Miningstruktur erstellen. Sie können zu einem späteren Zeitpunkt Drillthrough für Modelle aktivieren, indem Sie eine Eigenschaft für das Modell festlegen. Die Miningstrukturen machen es jedoch erforderlich, dass diese Option am Anfang festgelegt wird. Weitere Informationen finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Datamining-Assistenten &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   
  [Eigenschaften für Miningstrukturen und Strukturspalten](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

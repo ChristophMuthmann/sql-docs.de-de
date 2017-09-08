@@ -1,23 +1,28 @@
 ---
-title: "Data Mining-Architektur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datamining-Architektur | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Architektur
+# <a name="data-mining-architecture"></a>Data Mining-Architektur
   In diesem Abschnitt wird die Architektur von Data Mining-Lösungen beschrieben, die in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gehostet werden. In den Themen dieses Abschnitts werden die logische und physische Architektur einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz beschrieben, die Data Mining unterstützt. Darüber hinaus enthalten sie Informationen zu den Clients, Anbietern und Protokollen, die für die Kommunikation mit Data Mining-Servern und die lokale oder Remote-Bearbeitung von Data Mining-Objekten verwendet werden können.  
   
  Im Allgemeinen ist SQL Server Data Mining ein Dienst, der als ein Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz bereitgestellt und im mehrdimensionalen Modus ausgeführt wird. Daher empfiehlt es sich, dass Sie auch die folgenden Abschnitte in der Onlinedokumentation lesen, in denen Betrieb, Wartung und Konfiguration von mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösungen beschrieben werden.  
@@ -32,7 +37,7 @@ caps.handback.revision: 11
   
  Weitere Informationen darüber, wie Sie Data Mining in Ihrer Business Intelligence-Lösung implementieren, finden Sie im Abschnitt zu Lösungshandbüchern der MSDN-Bibliothek.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
@@ -43,8 +48,8 @@ caps.handback.revision: 11
   
  [Sicherheitsübersicht &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modellprogrammierung](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Data Mining-Programmierung](../../analysis-services/data-mining-programming.md)  
+ [Datamining-Programmierung](../../analysis-services/data-mining-programming.md)  
   
   

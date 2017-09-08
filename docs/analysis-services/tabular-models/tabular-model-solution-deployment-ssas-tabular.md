@@ -1,24 +1,29 @@
 ---
-title: "Bereitstellung von Tabellenmodelll&#246;sungen (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Bereitstellung von Tabellenmodelll&#246;sungen (SSAS – tabellarisch)
+# <a name="tabular-model-solution-deployment-ssas-tabular"></a>Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch)
   Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt haben, müssen Sie sie bereitstellen, damit Benutzer das Modell mit einer Berichterstellungsclientanwendung durchsuchen können. In diesem Thema werden die verschiedenen Eigenschaften und die Methoden beschrieben, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in der Umgebung bereitstellen.  
   
  Abschnitte in diesem Thema:  
@@ -36,41 +41,41 @@ caps.handback.revision: 22
 -   [Verwandte Aufgaben](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
- Beim Bereitstellen eines tabellarischen Modells wird eine Modelldatenbank in einer Test-, Staging- oder Produktionsumgebung erstellt. Benutzer können dann eine Verbindung mit dem bereitgestellten Modell über eine BISM-Verbindungsdatei in SharePoint herstellen, oder indem sie eine Datenverbindung direkt in Berichtserstellungsclientanwendungen wie Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]oder einer benutzerdefinierten Anwendung verwenden. Die Arbeitsbereichsdatenbank des Modells, die beim Erstellen eines neuen Projekts für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt wird und mit der Sie das Modell erstellen, verbleibt in der Arbeitsbereichsserverinstanz, sodass Sie Änderungen am Modellprojekt vornehmen und es dann bei Bedarf erneut für die Test-, Staging- oder Produktionsumgebung bereitstellen können.  
+ Beim Bereitstellen eines tabellarischen Modells wird eine Modelldatenbank in einer Test-, Staging- oder Produktionsumgebung erstellt. Benutzer können dann eine Verbindung mit dem bereitgestellten Modell über eine BISM-Verbindungsdatei in SharePoint herstellen, oder indem sie eine Datenverbindung direkt in Berichtserstellungsclientanwendungen wie Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]oder einer benutzerdefinierten Anwendung verwenden. Die Arbeitsbereichsdatenbank des Modells, die beim Erstellen eines neuen Projekts für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird und mit der Sie das Modell erstellen, verbleibt in der Arbeitsbereichsserverinstanz, sodass Sie Änderungen am Modellprojekt vornehmen und es dann bei Bedarf erneut für die Test-, Staging- oder Produktionsumgebung bereitstellen können.  
   
 ##  <a name="bkmk_deploying_bism"></a> Bereitstellen eines tabellarischen Modells von SQL Server-Datentools (SSDT)  
  Das Bereitstellen ist ein einfacher Vorgang, allerdings sind bestimmte Schritte erforderlich, um sicherzustellen, dass das Modell in der richtigen Analysis Services-Instanz und mit den richtigen Konfigurationsoptionen bereitgestellt wird.  
   
- Tabellarische Modelle werden mit mehreren bereitstellungsspezifischen Eigenschaften definiert. Beim Bereitstellen wird eine Verbindung mit der in der Eigenschaft **Server** angegebenen Analysis Services-Instanz hergestellt. Danach wird in dieser Instanz eine neue Modelldatenbank mit dem in der Eigenschaft **Datenbank** angegebenen Namen erstellt, sofern noch keine Datenbank vorhanden ist. Anschließend werden Metadaten aus der Datei Model.bim des Modellprojekts zum Konfigurieren von Objekten in der Modelldatenbank auf dem Bereitstellungsserver verwendet. Mit der **Verarbeitungsoption** können Sie angeben, ob nur die Modellmetadaten bereitgestellt werden, um die Modelldatenbank zu erstellen, oder ob **Standard** oder **Vollständig** angegeben ist, wobei Identitätswechselinformationen zum Herstellen einer Verbindung mit Datenquellen im Arbeitsspeicher von der Arbeitsbereichsdatenbank des Modells an die bereitgestellte Modelldatenbank übergeben werden. Analysis Services führt dann die Verarbeitung aus, um das bereitgestellte Modell mit Daten aufzufüllen. Nach Abschluss des Bereitstellungsprozesses kann über Clientanwendungen unter Verwendung einer Datenverbindung oder einer BISM-Verbindungsdatei in SharePoint eine Verbindung mit dem Modell hergestellt werden.  
+ Tabellarische Modelle werden mit mehreren bereitstellungsspezifischen Eigenschaften definiert. Beim Bereitstellen wird eine Verbindung mit der in der Eigenschaft **Server** angegebenen Analysis Services-Instanz hergestellt. Danach wird in dieser Instanz eine neue Modelldatenbank mit dem in der Eigenschaft **Datenbank** angegebenen Namen erstellt, sofern noch keine Datenbank vorhanden ist. Anschließend werden Metadaten aus der Datei Model.bim des Modellprojekts zum Konfigurieren von Objekten in der Modelldatenbank auf dem Bereitstellungsserver verwendet. Mit der **Verarbeitungsoption**können Sie angeben, ob nur die Modellmetadaten bereitgestellt werden, um die Modelldatenbank zu erstellen, oder ob **Standard** oder **Vollständig** angegeben ist, wobei Identitätswechselinformationen zum Herstellen einer Verbindung mit Datenquellen im Arbeitsspeicher von der Arbeitsbereichsdatenbank des Modells an die bereitgestellte Modelldatenbank übergeben werden. Analysis Services führt dann die Verarbeitung aus, um das bereitgestellte Modell mit Daten aufzufüllen. Nach Abschluss des Bereitstellungsprozesses kann über Clientanwendungen unter Verwendung einer Datenverbindung oder einer BISM-Verbindungsdatei in SharePoint eine Verbindung mit dem Modell hergestellt werden.  
   
 ##  <a name="bkmk_deploy_props"></a> Bereitstellungseigenschaften  
  Die Eigenschaften für Projektbereitstellungsoptionen und Bereitstellungsserver geben an, wie und wo ein Modell für eine Analysis Services-Staging- oder -Produktionsumgebung bereitgestellt wird. Während Standardeigenschaftseinstellungen für alle Modellprojekte definiert sind, können Sie je nach Bereitstellungsanforderungen diese Eigenschaftseinstellungen für jedes Projekt ändern. Weitere Informationen zum Festlegen der Standardeigenschaften für die Bereitstellung finden Sie unter [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-### Eigenschaften für Bereitstellungsoptionen  
+### <a name="deployment-options-properties"></a>Eigenschaften für Bereitstellungsoptionen  
  Zu den Eigenschaften für Bereitstellungsoptionen gehören:  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Verarbeitungsoption**|**Standardwert**|Diese Eigenschaft gibt den erforderlichen Verarbeitungstyp an, wenn Änderungen an Objekten bereitgestellt werden. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Standard** – Diese Einstellung gibt an, dass Analysis Services den erforderlichen Verarbeitungstyp bestimmt. Nicht verarbeitete Objekte werden verarbeitet, und ggf. werden Attributbeziehungen, Attributhierarchien, Benutzerhierarchien und berechnete Spalten neu berechnet. Diese Einstellung führt im Allgemeinen zu einer schnelleren Bereitstellung als das die Option der vollständigen Verarbeitung.<br /><br /> **Nicht verarbeiten** : Diese Einstellung gibt an, dass nur die Metadaten bereitgestellt werden. Nach der Bereitstellung kann es erforderlich sein, einen Verarbeitungsvorgang für das bereitgestellte Modell auszuführen, um Daten zu aktualisieren und zu neu berechnen.<br /><br /> **Vollständig** : Diese Einstellung gibt an, dass sowohl die Metadaten bereitgestellt als auch ein vollständiger Verarbeitungsvorgang ausgeführt wird. Dies gewährleistet, dass das bereitgestellte Modell über die neuesten Updates sowohl für die Metadaten als auch die Daten verfügt.|  
+|**Verarbeitungsoption**|**Standard**|Diese Eigenschaft gibt den erforderlichen Verarbeitungstyp an, wenn Änderungen an Objekten bereitgestellt werden. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Standard** – Diese Einstellung gibt an, dass Analysis Services den erforderlichen Verarbeitungstyp bestimmt. Nicht verarbeitete Objekte werden verarbeitet, und ggf. werden Attributbeziehungen, Attributhierarchien, Benutzerhierarchien und berechnete Spalten neu berechnet. Diese Einstellung führt im Allgemeinen zu einer schnelleren Bereitstellung als das die Option der vollständigen Verarbeitung.<br /><br /> **Nicht verarbeiten** : Diese Einstellung gibt an, dass nur die Metadaten bereitgestellt werden. Nach der Bereitstellung kann es erforderlich sein, einen Verarbeitungsvorgang für das bereitgestellte Modell auszuführen, um Daten zu aktualisieren und zu neu berechnen.<br /><br /> **Vollständig** : Diese Einstellung gibt an, dass sowohl die Metadaten bereitgestellt als auch ein vollständiger Verarbeitungsvorgang ausgeführt wird. Dies gewährleistet, dass das bereitgestellte Modell über die neuesten Updates sowohl für die Metadaten als auch die Daten verfügt.|  
 |**Transaktionsbereitstellung**|**False**|Diese Eigenschaft gibt an, ob es sich um eine Transaktionsbereitstellung handelt. Standardmäßig ist die Bereitstellung aller oder geänderter Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Einstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
 |**Abfragemodus**|**Speicherintern**|Diese Eigenschaft gibt den Modus an, in dem die Quelle, von der Abfrageergebnisse zurückgegeben werden, im speicherinternen (zwischengespeicherten) Modus oder im DirectQuery-Modus ausgeführt wird. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **DirectQuery** - Diese Einstellung gibt an, dass bei allen Abfragen des Modells nur die relationale Datenquelle verwendet werden soll.<br /><br /> **DirectQuery mit InMemory** – Diese Einstellung gibt an, dass Abfragen standardmäßig mit der relationalen Quelle beantwortet werden sollten, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemory** – Diese Einstellung gibt an, dass Abfragen nur mithilfe des Caches beantwortet werden sollten.<br /><br /> **InMemory mit DirectQuery** – Diese Einstellung gibt an, dass standardmäßig für Abfragen der Cache verwendet wird, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
-### Eigenschaften für Bereitstellungsserver  
+### <a name="deployment-server-properties"></a>Eigenschaften für Bereitstellungsserver  
  Zu den Eigenschaften für Bereitstellungsserver gehören:  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> Wird bei der Projekterstellung festgelegt.|**localhost**|Diese Eigenschaft wird bei der Projekterstellung festgelegt und gibt den Namen der Analysis Services-Instanz an, für die das Modell bereitgestellt wird. Standardmäßig wird das Modell in der Standardinstanz von Analysis Services auf dem lokalen Computer bereitgestellt. Sie können diese Einstellung jedoch ändern und eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem Remotecomputer angeben, auf dem Sie über die Berechtigung zum Erstellen von Analysis Services-Objekten verfügen.|  
 |**Edition**|Die gleiche Edition wie die Instanz, in der sich der Arbeitsbereichsserver befindet.|Diese Eigenschaft gibt die Edition des Analysis Services-Servers an, auf dem das Modell bereitgestellt wird. In der Serveredition sind verschiedene Funktionen definiert, die in das Projekt eingebunden werden können. Standardmäßig ist die Edition die des lokalen Analysis Services-Servers. Wenn Sie einen anderen Analysis Services-Server angeben, z. B. einen Analysis Services-Produktionsserver, müssen Sie die Edition dieses Analysis Services-Servers angeben.|  
-|**Datenbank**|**\<Projektname>**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
+|**Datenbank**|**\<Projektname >**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
 |**Cubename**|**Model**|Diese Eigenschaft gibt den Cubenamen an, wie in Clienttools (z. B. Excel) und AMO (Analysis Management Objects) angezeigt.|  
   
-### Eigenschaften für DirectQuery-Optionen  
+### <a name="directquery-options-properties"></a>Eigenschaften für DirectQuery-Optionen  
  Zu den Eigenschaften für Bereitstellungsoptionen gehören:  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Identitätswechseleinstellungen**|**Standardwert**|Diese Eigenschaft gibt die Identitätswechseleinstellungen an, die verwendet werden, wenn ein im DirectQuery-Modus ausgeführtes Modell eine Datenquellenverbindung herstellt. Beim Abfragen des speicherinternen Caches werden keine Identitätswechselinformationen verwendet. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Standard** : Diese Einstellung gibt an, dass die auf der Seite Identitätswechselinformationen beim Erstellen der Datenquellenverbindung mit dem Tabellenimport-Assistenten angegebene Option von Analysis Services verwendet wird.<br /><br /> **ImpersonateCurrentUser** : Diese Einstellung gibt an, dass das Benutzerkonto des derzeit angemeldeten Benutzers für alle Datenquellenverbindungen verwendet wird.|  
+|**Identitätswechseleinstellungen**|**Standard**|Diese Eigenschaft gibt die Identitätswechseleinstellungen an, die verwendet werden, wenn ein im DirectQuery-Modus ausgeführtes Modell eine Datenquellenverbindung herstellt. Beim Abfragen des speicherinternen Caches werden keine Identitätswechselinformationen verwendet. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Standard** : Diese Einstellung gibt an, dass die auf der Seite Identitätswechselinformationen beim Erstellen der Datenquellenverbindung mit dem Tabellenimport-Assistenten angegebene Option von Analysis Services verwendet wird.<br /><br /> **ImpersonateCurrentUser** : Diese Einstellung gibt an, dass das Benutzerkonto des derzeit angemeldeten Benutzers für alle Datenquellenverbindungen verwendet wird.|  
   
 ##  <a name="bkmk_meth"></a> Bereitstellungsmethoden  
  Es gibt mehrere Methoden, mit denen Sie ein Projekt für tabellarische Modelle bereitstellen können. Die meisten der Bereitstellungsmethoden, die für andere Analysis Services-Projekte verwendet werden können, z. B. die mehrdimensionale Methode, können auch verwendet werden, um Projekte für tabellarische Modelle bereitzustellen.  
@@ -100,7 +105,7 @@ caps.handback.revision: 22
 |[Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|Beschreibt, wie XMLA verwendet werden muss, um tabellarische und mehrdimensionale Lösungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitzustellen.|  
 |[Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Beschreibt, wie Sie den Assistenten zum Synchronisieren einer Datenbank verwenden müssen, um die Metadaten und Daten zwischen zwei tabellarischen oder mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken zu synchronisieren.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

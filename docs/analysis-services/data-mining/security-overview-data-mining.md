@@ -1,25 +1,30 @@
 ---
-title: "Sicherheits&#252;bersicht (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheit [Analysis Services – Data Mining], Informationen zur Sicherheit"
+title: "Sicherheitsübersicht (Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sicherheits&#252;bersicht (Data Mining)
+# <a name="security-overview-data-mining"></a>Sicherheitsübersicht (Data Mining)
   Der Prozess des Sicherns von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] findet auf mehreren Ebenen statt. Sie müssen jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und die entsprechenden Datenquellen sichern, um sicherzustellen, dass nur berechtigte Benutzer Lese- und Schreibberechtigungen für ausgewählte Dimensionen, Miningmodelle und Datenquellen haben. Sie müssen auch zugrunde liegende Datenquellen sichern, um zu verhindern, dass unbefugte Benutzer vertrauliche Geschäftsinformationen böswillig gefährden. Die folgenden Themen beschreiben das Sichern einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ##  <a name="bkmk_Architecture"></a> Sicherheitsarchitektur  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  Wenn Sie Integration Services-Pakete zum Bereinigen von Daten, zum Aktualisieren von Miningmodellen oder zum Treffen von Vorhersagen verwenden, müssen Sie sicherstellen, dass der Integration Services-Dienst über die entsprechenden Berechtigungen für die Datenbank verfügt, in der das Modell gespeichert ist, sowie über die entsprechenden Berechtigungen für die Quelldaten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

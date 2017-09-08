@@ -1,25 +1,30 @@
 ---
-title: "Erstellen von Prognoseg&#252;tediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mininggenauigkeitsdiagramm [Analysis Services], Miningstrukturen"
+title: "Erstellen Sie ein Prognosegütediagramm, Gewinndiagramm oder Klassifikationsmatrix | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen von Prognoseg&#252;tediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
   Sie können für ein Data Mining-Modell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit fünf grundlegenden Schritten ein Genauigkeitsdiagramm erstellen:  
   
 -   Wählen Sie die Miningstruktur aus, die die zu vergleichenden Miningmodelle enthält.  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
   
  Diese grundlegenden Schritte sind für das Prognosegütediagramm, das Gewinndiagramm und die Klassifizierungsmatrix identisch. Die folgenden Prozeduren gliedern die Schritte zur Konfiguration der grundlegenden Diagrammoptionen für diese Diagrammtypen. Informationen zum Erstellen eines übergreifenden Überprüfungsberichts finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-### Öffnen der Miningstruktur im Genauigkeitsdiagramm-Designer  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>Öffnen der Miningstruktur im Genauigkeitsdiagramm-Designer  
   
 1.  Öffnen Sie den Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 20
   
 3.  Klicken Sie auf die Registerkarte **Mininggenauigkeitsdiagramm** .  
   
-### Auswählen von Miningmodellen für die Einbeziehung in das Diagramm  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>Auswählen von Miningmodellen für die Einbeziehung in das Diagramm  
   
 1.  Klicken Sie in **auf der Registerkarte** Mininggenauigkeitsdiagramm [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Data Mining-Designer auf die Registerkarte **Eingabeauswahl** .  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 20
   
      Weitere Informationen finden Sie unter [Auswählen der zum Testen eines Miningmodells zu verwendenden Spalte](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
   
-### Auswählen von Testdaten  
+### <a name="select-testing-data"></a>Auswählen von Testdaten  
   
 1.  Geben Sie auf der Registerkarte **Eingabeauswahl** der Registerkarte **Mininggenauigkeitsdiagramm** die Datenquelle an, mit der Sie das Diagramm generieren. Wählen Sie dazu eine der Optionen in der Gruppe **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**aus.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Mithilfe der Registerkarte **Eingabeauswahl** können Sie keinen Filter für die Testfälle für das Miningmodell oder die Miningstruktur erstellen. Um einen Filter für das Miningmodell zu erstellen, ändern Sie die Filtereigenschaft des Modells. Weitere Informationen finden Sie unter [Anwenden eines Filters auf ein Miningmodell](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
   
-### Konfigurieren von Diagrammeinstellungen und Generieren des Diagramms  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>Konfigurieren von Diagrammeinstellungen und Generieren des Diagramms  
   
 1.  Klicken Sie in der Registerkarte **Mininggenauigkeitsdiagramm** auf die Registerkarte für das Diagramm, das Sie erstellen möchten.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 20
   
 3.  Klicken Sie für eine **Klassifikationsmatrix**auf die Registerkarte **Klassifikationsmatrix** . Es werden keine weiteren Einstellungen benötigt. Das Diagramm wird automatisch auf Grundlage der Eingabedaten und des Modells generiert, das Sie ausgewählt haben.  
   
-4.  Klicken Sie für ein **Gewinndiagramm**auf die Registerkarte **Prognosegütediagramm** . Wählen Sie anschließend in der Dropdownliste **Diagrammtyp** die Option **Gewinndiagramm** aus.  
+4.  Klicken Sie für ein **Gewinndiagramm**auf die Registerkarte **Prognosegütediagramm** . Wählen Sie anschließend in der Dropdownliste **Diagrammtyp** die Option **Gewinndiagramm**aus.  
   
      Geben Sie die folgenden Einstellungen im Dialogfeld **Gewinndiagrammeinstellungen** ein.  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 20
      **Einzelumsatz**  
      Die Höhe des mit einem erfolgreichen Verkauf verbundenen Umsatzes.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   

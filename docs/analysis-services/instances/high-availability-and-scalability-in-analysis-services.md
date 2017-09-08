@@ -1,29 +1,34 @@
 ---
-title: "Hohe Verf&#252;gbarkeit und Skalierbarkeit in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Hohe Verf&#252;gbarkeit und Skalierbarkeit in Analysis Services
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
   In diesem Artikel werden die am häufigsten verwendeten Techniken beschrieben, um Analysis Services-Datenbanken hoch verfügbar und skalierbar zu machen. Zwar lassen sich diese beiden Ziele separat behandeln, praktisch gehen sie jedoch oftmals Hand in Hand: Einer skalierbaren Bereitstellung für umfangreiche Abfrage- oder Verarbeitungsauslastungen wird normalerweise auch die Erwartung hoher Verfügbarkeit entgegengebracht.  
   
  Der umgekehrte Fall trifft jedoch nicht immer zu. Hohe Verfügbarkeit ohne Skalierbarkeit kann das einzige Ziel sein, wenn bindende Vereinbarungen zum Service Level für unternehmenswichtige, aber mäßige Abfrageauslastungen getroffen wurden.  
   
  Techniken, mit denen Analysis Services hoch verfügbar und skalierbar gestaltet werden, sind tendenziell für alle Servermodi (mehrdimensionaler, tabellarischer und integrierter SharePoint-Modus) gleich. Sofern nicht spezifisch anders vermerkt, können Sie davon ausgehen, dass sich die Informationen in diesem Artikel auf alle Modi beziehen.  
   
-## Die wichtigsten Punkte  
+## <a name="key-points"></a>Die wichtigsten Punkte  
  Da sich die Techniken zum Erzielen hoher Verfügbarkeit und Skalierbarkeit von denen des relationalen Datenbankmoduls unterscheiden, stellt eine kurze Zusammenfassung der wichtigsten Punkte eine wirksame Einführung in die für Analysis Services verwendeten Techniken dar:  
   
 -   Analysis Services verwendet die in die Windows-Serverplattform integrierten Mechanismen für hohe Verfügbarkeit und Skalierbarkeit: Netzwerklastenausgleich (NLB, Network Load Balancing), Windows Server Failover Clustering (WSFC) oder beide.  
@@ -48,7 +53,7 @@ caps.handback.revision: 14
   
  Ein einzelner High-End-Server mit mehreren Prozessoren kann möglicherweise aus sich heraus ausreichende Skalierbarkeit zur Verfügung stellen. Auf einem High-End-System mit einer großen Anzahl Kerne, viel RAM und Speicherplatz auf Datenträgern lässt sich die Skalierbarkeit potenziell im Rahmen eines einzelnen Systems erzielen.  
   
- Bei mehrdimensionalen Datenbanken können die Eigenschaften der Serverkonfiguration angepasst werden, um Affinitäten zwischen Prozessen und Prozessoren zu schaffen. Weitere Informationen dazu finden Sie unter [Threadpooleigenschaften](../../analysis-services/server-properties/thread-pool-properties.md).  
+ Bei mehrdimensionalen Datenbanken können die Eigenschaften der Serverkonfiguration angepasst werden, um Affinitäten zwischen Prozessen und Prozessoren zu schaffen. Weitere Informationen dazu finden Sie unter [Threadpooleigenschaften](../../analysis-services/server-properties/thread-pool-properties.md) .  
   
  **Mehrserverbereitstellungen**  
   
@@ -60,20 +65,20 @@ caps.handback.revision: 14
   
  Eine andere Strategie, um hohe Anforderungen an die Verfügbarkeit zu befriedigen, könnte die Verwendung virtueller Computer einschließen. Wenn die geforderte Verfügbarkeit durch Bereitstellung eines Ersatzservers innerhalb von Stunden anstelle von Minuten erreicht werden kann, ist möglicherweise der Einsatz von virtuellen Computern sinnvoll, die bei Bedarf gestartet und mit aktualisierten Datenbanken geladen werden können, die bei einem zentralen Speicherort abgerufen werden.  
   
-## Skalierbarkeit unter Verwendung von schreibgeschützten Datenbanken und Datenbanken mit Lese-/Schreibzugriff  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>Skalierbarkeit unter Verwendung von schreibgeschützten Datenbanken und Datenbanken mit Lese-/Schreibzugriff  
  Netzwerklastenausgleich wird für hohe oder eskalierende Abfrage- oder Verarbeitungsauslastungen empfohlen. Analysis Services-Datenbanken in einer NLB-Lösung werden als schreibgeschützte Datenbanken definiert, um über die Abfragen hinweg Konsistenz sicherzustellen.  
   
- Zwar sind die Ausführungen in [Horizontales Skalieren der Abfrageverarbeitung für Analysis Services mithilfe schreibgeschützter Datenbanken (Scale-out querying for Analysis Services using read-only databases; veröffentlicht 2008](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx)) recht alt, trotzdem sind sie im Allgemeinen noch gültig. Während sich Serverbetriebssysteme und Computerhardware entwickelt haben und die Verweise auf bestimmte Plattformen und Grenzen von CPUs veraltet sind, ist die grundlegende Technik, schreibgeschützte Datenbanken und Datenbanken mit Schreib-/Lesezugriff für große Abfragevolumina zu verwenden, unverändert geblieben.  
+ Zwar sind die Ausführungen in [Horizontales Skalieren der Abfrageverarbeitung für Analysis Services mithilfe schreibgeschützter Datenbanken (Scale-out querying for Analysis Services using read-only databases; veröffentlicht 2008](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) ) recht alt, trotzdem sind sie im Allgemeinen noch gültig. Während sich Serverbetriebssysteme und Computerhardware entwickelt haben und die Verweise auf bestimmte Plattformen und Grenzen von CPUs veraltet sind, ist die grundlegende Technik, schreibgeschützte Datenbanken und Datenbanken mit Schreib-/Lesezugriff für große Abfragevolumina zu verwenden, unverändert geblieben.  
   
  Der Ansatz kann in folgender Weise zusammengefasst werden:  
   
--   Verwenden Sie dedizierte Hardware und dedizierte Instanzen von Analysis Services zum Verarbeiten der Datenbank. Versetzen Sie die Datenbank nach dem Abschluss der Verarbeitung in den schreibgeschützten Modus. Anweisungen finden Sie unter [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md).  
+-   Verwenden Sie dedizierte Hardware und dedizierte Instanzen von Analysis Services zum Verarbeiten der Datenbank. Versetzen Sie die Datenbank nach dem Abschluss der Verarbeitung in den schreibgeschützten Modus. Anweisungen finden Sie unter [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) .  
   
 -   Verwenden Sie mehrere identische Abfrageserver, um Kopien der gleichen schreibgeschützten Analysis Services-Datenbank auszuführen. Server werden in einem NLB-Cluster bereitgestellt; der Zugriff erfolgt über einen virtuellen Servernamen, der als einzelner Einstiegspunkt zum Cluster fungiert.  
   
 -   Verwenden Sie robocopy, um ein gesamtes Datenverzeichnis vom Verarbeitungsserver auf jeden der Abfrageserver zu kopieren, und fügen Sie allen Abfrageservern die gleiche Datenbank im schreibgeschützten Modus hinzu. Sie können auch SAN-Momentaufnahmen, Synchronisierung oder beliebige andere Tools oder Methoden verwenden, die Sie einsetzen, um Produktionsdatenbanken zu verschieben.  
   
-## Ressourcenanforderungen bei tabellarischen und mehrdimensionalen Arbeitsauslastungen  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>Ressourcenanforderungen bei tabellarischen und mehrdimensionalen Arbeitsauslastungen  
  Die folgende Tabelle ist eine abstrakte Zusammenfassung der Weise, wie Analysis Services Systemressourcen für Abfragen und Verarbeitung verwendet, getrennt aufgeführt nach Servermodus und Speicher. Diese Zusammenfassung kann Ihnen ein Verständnis dafür vermitteln, welche Aspekte in einer Mehrserverbereitstellung, die eine verteilte Arbeitsauslastung verarbeitet, besonders betont werden müssen.  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |Mehrdimensionale Modelle mit MOLAP-Speicher|Wählen Sie eine ausgeglichene Konfiguration, die Datenträger-E/A zum schnellen Laden von Daten und ausreichend Arbeitsspeicher für gecachete Daten bietet.|  
 |Mehrdimensionale Modelle mit ROLAP-Speicher|Maximieren Sie Datenträger-E/A, und minieren Sie Netzwerklatenz.|  
   
-## Hohe Verfügbarkeit und Redundanz mithilfe von WSFC  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>Hohe Verfügbarkeit und Redundanz mithilfe von WSFC  
  Analysis Services können auf einem vorhandenen Windows Server-Failovercluster (WSFC) installiert werden, um hohe Verfügbarkeit zu erzielen, die den Dienst innerhalb der kürzest möglichen Zeit wiederherstellt.  
   
  Failovercluster bieten Vollzugriff (Lesen und Rückschreiben) auf die Datenbank, jedoch immer nur auf einem Knoten. Sekundäre Datenbanken werden auf weiteren Knoten im Cluster ausgeführt, die als Ersatzserver dienen, falls der erste Knoten ausfällt.  
@@ -99,9 +104,9 @@ caps.handback.revision: 14
  
  Ausführliche Anweisungen und Hintergrundinformationen zum Bereitstellen von Analysis Services auf einem Failovercluster finden Sie in diesem Whitepaper: [Clustern von SQL Server Analysis Services (How to Cluster SQL Server Analysis Services)](https://msdn.microsoft.com/library/dn736073.aspx). Zwar bezieht sich diese Hilfestellung auf SQL Server 2012, sie gilt jedoch auch für die neueren Versionen von Analysis Services.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Durchsetzen von NUMA-Affinität für tabellarische Analysis Services-Datenbanken](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in einer umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Das Erzwingen des NUMA-Affinität für tabellarische Analysis Services-Datenbanken](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

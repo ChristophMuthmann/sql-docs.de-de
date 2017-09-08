@@ -1,27 +1,32 @@
 ---
-title: "Sequenzclusteringmodellabfragebeispiele | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sequenzclusteralgorithmen [Analysis Services]"
-  - "Inhaltsabfragen [DMX]"
-  - "Sequenz [Analysis Services]"
+title: Sequence Clustering-Modell Abfragebeispiele | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sequenzclusteringmodellabfragebeispiele
+# <a name="sequence-clustering-model-query-examples"></a>Sequenzclusteringmodellabfragebeispiele
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage erstellen. Die Inhaltsabfrage liefert Details über die im Modell gespeicherten Informationen. Die Vorhersageabfrage nimmt hingegen Vorhersagen basierend auf von Ihnen angegebenen neuen Daten anhand der im Modell befindlichen Muster vor. Für ein Sequenzclustermodell bieten Inhaltsabfragen in der Regel weitere Details über die gefundenen Cluster oder über die Übergänge innerhalb dieser Cluster. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  Vorhersageabfragen für ein Sequenzclustermodell erstellen in der Regel Empfehlungen basierend auf den Sequenzen und Übergängen, auf nicht sequenziellen Attributen, die in das Modell einbezogen wurden, oder auf einer Kombination aus sequenziellen und nicht sequenziellen Attributen.  
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [Vorhersagen des bzw. der nächsten Statuswerte](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> Suchen nach Informationen über das Sequenzclustermodell  
- Um aussagekräftige Abfragen für den Inhalt eines Miningmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchen Knotentypen welche Arten von Informationen gespeichert sind. Weitere Informationen finden Sie unter [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md).  
+ Um aussagekräftige Abfragen für den Inhalt eines Miningmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchen Knotentypen welche Arten von Informationen gespeichert sind. Weitere Informationen finden Sie unter [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
 ###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Verwenden des Data Mining-Schemarowsets zur Rückgabe von Modellparametern  
  Durch Abfrage des Data Mining-Schemarowsets können Sie verschiedene Arten von Informationen über das Modell ermitteln, wie grundlegende Metadaten, Datum und Uhrzeit der Modellerstellung und der letzten Modellverarbeitung, den Namen der Miningstruktur, auf der das Modell basiert, und die als vorhersagbares Attribut verwendete Spalte.  
   
- Die folgende Abfrage gibt die Parameter zurück, die verwendet wurden, um das Modell `[Sequence Clustering]`zu erstellen und zu trainieren. Sie können dieses Modell in Lektion 5 vom [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)erstellen.  
+ Die folgende Abfrage gibt die Parameter zurück, die verwendet wurden, um das Modell `[Sequence Clustering]`zu erstellen und zu trainieren. Sie können dieses Modell in Lektion 5 vom [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Dieser Abschnitt enthält Beispiele, wie mit gespeicherten Systemprozeduren Abfragen für ein Sequenzclustermodell erstellt werden können:  
   
-#### Clusterprofile und Beispielfälle  
+#### <a name="cluster-profiles-and-sample-cases"></a>Clusterprofile und Beispielfälle  
  Die Registerkarte Clusterprofile enthält eine Liste der Cluster im Modell, die Größe der einzelnen Cluster und ein Histogramm, das die im Cluster enthaltenen Statuswerte angibt. Es gibt zwei gespeicherte Systemprozeduren, die Sie in Abfragen verwenden können, um ähnliche Informationen abzurufen:  
   
 -   `GetClusterProfile` gibt die Merkmale des Clusters mit allen Informationen zurück, die in der Tabelle NODE_DISTRIBUTION für den Cluster gefunden werden.  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- Weitere Informationen finden Sie unter [SELECT FROM &#60;Modell&#62;.SAMPLE_CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md).  
+ Weitere Informationen finden Sie unter [SELECT FROM &#60;Modell&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
   
-#### Clustermerkmale und Clusterunterscheidung  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>Clustermerkmale und Clusterunterscheidung  
  Auf der Registerkarte **Clustermerkmale** werden die Hauptattribute jedes Clusters nach Wahrscheinlichkeit geordnet zusammengefasst. Sie können feststellen, wie viele Fälle zu einem Cluster gehören und wie sich die Fälle im Cluster verteilen: Jedes Merkmal hat eine bestimmte Unterstützung. Um die Merkmale eines bestimmten Clusters anzuzeigen, muss Ihnen die ID des Clusters bekannt sein.  
   
  In den folgenden Beispielen werden anhand der gespeicherten Systemprozedur `GetClusterCharacteristics`alle Merkmale von Cluster 12 zurückgegeben, deren Wahrscheinlichkeitsergebnis über dem angegebenen Schwellenwert von 0,0005 liegt.  
@@ -206,16 +211,16 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Wenn Sie eine eigene Abfrage in DMX schreiben möchten, um zwei Cluster zu vergleichen oder einen Cluster mit dem entsprechenden Komplement zu vergleichen, müssen Sie zunächst einen Satz Merkmale abrufen und anschließend die Merkmale für den gewünschten Cluster abrufen und beide Sätze vergleichen. Dieses Szenario ist komplizierter und erfordert normalerweise Clientverarbeitungsleistung.  
   
-#### Status und Übergänge  
+#### <a name="states-and-transitions"></a>Status und Übergänge  
  Auf der Registerkarte **Statusübergänge** des Microsoft Sequence Clustering-Viewers werden komplizierte Abfragen am Back-End ausgeführt, um die statistischen Daten für verschiedene Cluster abzurufen und zu vergleichen. Zur Reproduktion dieser Ergebnisse ist eine komplexere Abfrage und Clientverarbeitungsleistung erforderlich.  
   
  Sie können jedoch mit den in Beispiel 2 dieses Abschnitts beschriebenen DMX-Abfragen, [Inhaltsabfragen](#bkmk_ContentQueries), Wahrscheinlichkeiten und Statuswerte für Sequenzen oder für einzelne Übergänge abrufen.  
   
-## Treffen von Vorhersagen mit dem Modell  
- Vorhersageabfragen für ein Sequenzclustermodell können viele der Vorhersagefunktionen integrieren, die von anderen Clustermodellen verwendet werden. Darüber hinaus können Sie die spezielle Vorhersagefunktion [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) verwenden, um Empfehlungen oder Vorhersagen zu den nächsten Statuswerten vorzunehmen.  
+## <a name="using-the-model-to-make-predictions"></a>Treffen von Vorhersagen mit dem Modell  
+ Vorhersageabfragen für ein Sequenzclustermodell können viele der Vorhersagefunktionen integrieren, die von anderen Clustermodellen verwendet werden. Darüber hinaus können Sie die spezielle Vorhersagefunktion [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)verwenden, um Empfehlungen oder Vorhersagen zu den nächsten Statuswerten vorzunehmen.  
   
 ###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen des bzw. der nächsten Statuswerte  
- Mit der [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)-Funktion können Sie anhand eines Werts den wahrscheinlich nächsten Status vorhersagen. Außerdem können Sie mehrere nächste Statuswerte vorhersagen: Sie können beispielsweise eine Liste mit den drei wahrscheinlichsten Produkten zurückgeben, die der Kunde kaufen wird, um ihm eine Liste mit Empfehlungen zu präsentieren.  
+ Mit der [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) -Funktion können Sie anhand eines Werts den wahrscheinlich nächsten Status vorhersagen. Außerdem können Sie mehrere nächste Statuswerte vorhersagen: Sie können beispielsweise eine Liste mit den drei wahrscheinlichsten Produkten zurückgeben, die der Kunde kaufen wird, um ihm eine Liste mit Empfehlungen zu präsentieren.  
   
  Bei der folgenden Beispielabfrage handelt es sich um eine SINGLETON-Abfrage, die die fünf besten Vorhersagen mit den entsprechenden Wahrscheinlichkeiten zurückgibt. Da das Modell eine geschachtelte Tabelle enthält, müssen Sie bei der Erstellung von Vorhersagen die geschachtelte Tabelle `[v Assoc Seq Line Items]`als Spaltenverweis verwenden. Wenn Sie außerdem Werte als Eingaben bereitstellen, müssen Sie die Spalten sowohl der Falltabelle als auch der geschachtelten Tabelle verknüpfen, wie in den geschachtelten SELECT-Anweisungen gezeigt.  
   
@@ -235,7 +240,7 @@ AS t
 |1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
-|4||Long-Sleeve logo Jersey|  
+|4||Long-Sleeve Logo Jersey|  
 |5||Half-Finger Gloves|  
 |6||All-Purpose Bike Stand|  
 |7||All-Purpose Bike Stand|  
@@ -248,7 +253,7 @@ AS t
   
  Die Werte in den Zeilen 6 und 7 sind Platzhalter. Wenn Sie das Ende der Kette möglicher Übergänge erreicht haben, statt die Vorhersageergebnisse zu beenden, wird der als Eingabe übergebene Wert den Ergebnissen hinzugefügt. Wenn Sie die Zahl der Vorhersagen auf 20 erhöhen, wären die Werte für die Zeilen 6 bis 20 alle gleich: "All-Purpose Bike Stand".  
   
-## Funktionsliste  
+## <a name="function-list"></a>Funktionsliste  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt die zusätzlichen Funktionen, die in der folgenden Tabelle aufgeführt werden.  
   
 |||  
@@ -271,10 +276,10 @@ AS t
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Siehe auch  
- [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
- [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

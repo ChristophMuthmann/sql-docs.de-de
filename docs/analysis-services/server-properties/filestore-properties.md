@@ -1,41 +1,46 @@
 ---
-title: "Dateispeichereigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Income (Eigenschaft)"
-  - "InitialBonus (Eigenschaft)"
-  - "PercentScanPerPrice (Eigenschaft)"
-  - "FileStore (Eigenschaften)"
-  - "BackgroundTrimCost (Eigenschaft)"
-  - "Tax (Eigenschaft)"
-  - "PerformanceTrace (Eigenschaft)"
-  - "MinimumBalance (Eigenschaft)"
-  - "UnbufferedThreshold (Eigenschaft)"
-  - "BackgroundTrimAmount (Eigenschaft)"
-  - "MaximumBalance (Eigenschaft)"
-  - "MemoryLimitMin (Eigenschaft)"
-  - "MemoryLimit (Eigenschaft)"
+title: Filestore (Eigenschaften) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Income property
+- InitialBonus property
+- PercentScanPerPrice property
+- FileStore properties
+- BackgroundTrimCost property
+- Tax property
+- PerformanceTrace property
+- MinimumBalance property
+- UnbufferedThreshold property
+- BackgroundTrimAmount property
+- MaximumBalance property
+- MemoryLimitMin property
+- MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68845b8dc5ff1b025134b227605363607db4b7cf
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Dateispeichereigenschaften
+# <a name="filestore-properties"></a>FileStore (Eigenschaften)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Dateispeicher-Servereigenschaften unterstützt. Hierbei handelt es sich um erweiterte Eigenschaften, die nicht ohne die Unterstützung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollten. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** mehrdimensionalen und Tabellenservermodus  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  **MemoryLimit**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
  **UnbufferedThreshold**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Arbeitsspeichermodell-Kategorie  
+## <a name="memory-model-category"></a>Arbeitsspeichermodell-Kategorie  
  **MemoryModel\Tax**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 19
  **MemoryModel\InitialBonus**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

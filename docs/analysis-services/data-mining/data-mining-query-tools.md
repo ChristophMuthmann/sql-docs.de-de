@@ -1,31 +1,36 @@
 ---
-title: "Data Mining-Abfragetools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorhersagen [Analysis Services], DMX-Vorhersageabfragen"
-  - "Vorhersagen [DMX]"
-  - "DMX [Analysis Services], Vorhersageabfragen"
-  - "Vorhersageabfragen [DMX]"
-  - "Vorhersagen [Analysis Services]"
-  - "Abfragen [DMX], Vorhersageabfragen"
-  - "Miningmodelle [Analysis Services], DMX"
+title: Data Mining-Abfragetools | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- DMX [Analysis Services], prediction queries
+- prediction queries [DMX]
+- predictions [Analysis Services]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 51
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Abfragetools
+# <a name="data-mining-query-tools"></a>Data Mining-Abfragetools
   Alle Data Mining-Abfragen verwenden die DMX-Sprache (Data Mining-Erweiterungen). DMX kann zum Erstellen von Modellen für alle Arten von Machine Learning-Tasks verwendet werden, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch DMX-Abfragen für Informationen zu Mustern und für Statistiken, die beim Verarbeiten des Modells generiert wurden, erstellen.  
   
  Sie können Ihre eigenen DMX-Abfragen schreiben, oder Sie können grundlegende DMX-Abfragen mithilfe eines Tools wie z.B. dem **Generator für Vorhersageabfragen** verwenden und anschließend anpassen. Sowohl [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellen Tools bereit, mit deren Hilfe Sie DMX-Vorhersageabfragen erstellen können. In diesem Thema wird das Erstellen und Ausführen von Data Mining-Abfragen unter Verwendung dieser Tools beschrieben.  
@@ -46,10 +51,10 @@ caps.handback.revision: 51
  Wenn Sie den Abfrage-Generator verwenden, wählen Sie ein Miningmodell aus und fügen neue Falldaten sowie Vorhersagefunktionen hinzu. Sie können dann zum Text-Editor wechseln, um die Abfrage manuell ändern, oder im Bereich **Ergebnisse** die Ergebnisse der Abfrage anzeigen.  
   
 ##  <a name="bkmk_QueryEditor"></a> Abfrage-Editor  
- Im Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie auch DMX-Abfragen erstellen und ausführen. Sie können eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
+ Im Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie auch DMX-Abfragen erstellen und ausführen. Sie können eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
   
 ##  <a name="bkmk_Templates"></a> DMX-Vorlagen  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt interaktive DMX-Abfragevorlagen bereit, die Sie verwenden können, um DMX-Abfragen zu erstellen. Wenn die Vorlagenliste nicht angezeigt wird, klicken auf der Symbolleiste auf **Ansicht** , und wählen Sie **Vorlagen-Explorer**aus. Klicken Sie auf das Cubesymbol, um alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Vorlagen, einschließlich der Vorlagen für DMX, MDX und XMLA, anzuzeigen.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt interaktive DMX-Abfragevorlagen bereit, die Sie verwenden können, um DMX-Abfragen zu erstellen. Wenn die Vorlagenliste nicht angezeigt wird, klicken auf der Symbolleiste auf **Ansicht** , und wählen Sie **Vorlagen-Explorer**aus. Klicken Sie auf das Cubesymbol, um alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Vorlagen, einschließlich der Vorlagen für DMX, MDX und XMLA, anzuzeigen.  
   
  Um mithilfe einer Vorlage eine Abfrage zu erstellen, können Sie die Vorlage in ein geöffnetes Abfragefenster ziehen oder auf die Vorlage doppelklicken, um eine neue Verbindung und einen neuen Abfragebereich zu öffnen.  
   
@@ -71,16 +76,17 @@ caps.handback.revision: 51
   
  XMLA bildet jedoch das zugrunde liegende Nachrichtenformat für alle Interaktionen mit einem Analysis Services-Server. Abfragen innerhalb einer XMLA-Nachricht werden unterschiedlich dargestellt, je nachdem, ob Sie eine Vorhersageabfrage auf Grundlage von DMX, eine Inhaltsabfrage oder eine Abfrage senden, von der Modellmetadaten mithilfe der Data Mining-Schemarowsets abgerufen werden.  
   
--   Der Text von **Vorhersageabfragen** (und allen anderen DMX-Anweisungen) wird unter Verwendung der [Execute-Methode&#40;XMLA&#41;](../Topic/Execute%20Method%20\(XMLA\).md) gesendet, wobei die DMX-Abfrage als Text in das [Statement-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) des [Command-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md) eingefügt wird.  
+-   Der Text von **Vorhersageabfragen** (und allen anderen DMX-Anweisungen) wird unter Verwendung der [Execute-Methode&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) gesendet, wobei die DMX-Abfrage als Text in das [Statement-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) des [Command-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md) eingefügt wird.  
   
--   Um den **Modellinhalt** und **Modellmetadaten** wie die Anzahl der Cluster, die in Entscheidungsstrukturen verwendeten Attribute, das letzte Verarbeitungsdatum des Modells und die beim Erstellen des Modells verwendeten Algorithmusparameter abzurufen, können Sie die [Discover-Methode &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md) verwenden und im Header des [RequestType-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) eines der Data Mining-Schemarowsets angeben. Um den Abfragebereich einzugrenzen, geben Sie innerhalb des [RestrictionList-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) Kriterien zur Einschränkung ein.  
+-   Um den **Modellinhalt** und **Modellmetadaten** wie die Anzahl der Cluster, die in Entscheidungsstrukturen verwendeten Attribute, das letzte Verarbeitungsdatum des Modells und die beim Erstellen des Modells verwendeten Algorithmusparameter abzurufen, können Sie die [Discover-Methode &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) verwenden und im Header des [RequestType-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) eines der Data Mining-Schemarowsets angeben. Um den Abfragebereich einzugrenzen, geben Sie innerhalb des [RestrictionList-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) Kriterien zur Einschränkung ein.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Grundlegendes zur SELECT-Anweisung (DMX)](../../dmx/understanding-the-dmx-select-statement.md)   
- [Struktur und Verwendung von DMX-Vorhersageabfragen](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Struktur und die Verwendung von DMX-Vorhersageabfragen](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Erstellen einer Vorhersageabfrage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
+

@@ -1,36 +1,41 @@
 ---
-title: "&#196;ndern der Eigenschaften einer Miningstruktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningstrukturen [Analysis Services], Eigenschaften"
+title: "Ändern der Eigenschaften einer Miningstruktur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], properties
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 908bf89105dbcfc4c61a4018c92a8cee71237fb9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# &#196;ndern der Eigenschaften einer Miningstruktur
+# <a name="change-the-properties-of-a-mining-structure"></a>Ändern der Eigenschaften einer Miningstruktur
   Es gibt zwei Arten von Eigenschaften in einer Miningstruktur, die jeweils geändert werden können:  
   
 -   Eigenschaften der Miningstruktur, die die gesamte Struktur betreffen.  
   
 -   Eigenschaften in einzelnen Spalten in der Struktur  
   
- Einige Eigenschaften sind von anderen Eigenschafteneinstellungen abhängig. Sie können beispielsweise keine Eigenschaften festlegen, die das Diskretisierungsverhalten steuern (wie <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>), solange Sie den Datentyp der Spalte auf **Diskretisiert** festgelegt haben.  
+ Einige Eigenschaften sind von anderen Eigenschafteneinstellungen abhängig. Sie können beispielsweise keine Eigenschaften festlegen, die das Diskretisierungsverhalten steuern (wie <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>), solange Sie den Datentyp der Spalte auf **Diskretisiert**festgelegt haben.  
   
  Weitere Informationen zu Miningstruktureigenschaften finden Sie unter [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md).  
   
-### So ändern Sie die Eigenschaften einer Miningstruktur  
+### <a name="to-change-the-properties-of-a-mining-structure"></a>So ändern Sie die Eigenschaften einer Miningstruktur  
   
 1.  Klicken Sie auf der Registerkarte **Miningstruktur** im Data Mining-Designer mit der rechten Maustaste entweder auf die Miningstruktur oder auf eine Spalte innerhalb der Miningstruktur, und klicken Sie anschließend auf **Eigenschaften**.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 28
   
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

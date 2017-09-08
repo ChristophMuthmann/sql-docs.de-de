@@ -1,32 +1,37 @@
 ---
-title: "Datenquellen in mehrdimensionalen Modellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Metadaten [Analysis Services]"
-  - "Analysis Services-Objekte, Datenquellen"
-  - "Speichern von Daten [Analysis Services], Datenquellen"
-  - "Datenquellen [Analysis Services], Informationen zu Datenquellen"
-  - "Sicherheit [Analysis Services ], Datenquellen"
-  - "Datenquellen [Analysis Services]"
-  - "Speicherung [Analysis Services], Datenquellen"
+title: Datenquellen in mehrdimensionalen Modellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- Analysis Services objects, data sources
+- storing data [Analysis Services], data sources
+- data sources [Analysis Services], about data sources
+- security [Analysis Services], data sources
+- data sources [Analysis Services]
+- storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 45
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb419325bc8490fdfb62fb044cb81c81e111e6e3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenquellen in mehrdimensionalen Modellen
+# <a name="data-sources-in-multidimensional-models"></a>Datenquellen in mehrdimensionalen Modellen
   Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stammen aus einer externen Datenquelle. In der Regel stammen Quelldaten aus einem Data Warehouse, das für Berichtszwecke entworfen wurde, sie können jedoch auch aus einer beliebigen relationalen Datenbank stammen, auf die direkt oder indirekt über einen Mittler zugegriffen wird, z. B. ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket.  
   
  Die direkte Verbindung mit einer externen Datenquelle wird von einem **Datenquellenobjekt** in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angegeben. Neben dem physischen Speicherort gibt ein Datenquellenobjekt die Verbindungszeichenfolge, den Datenanbieter, die Anmeldeinformationen und weitere Eigenschaften an, die das Verbindungsverhalten steuern.  
@@ -51,7 +56,7 @@ caps.handback.revision: 45
   
  Datenquellenobjekte können unabhängig von anderen Objekten im Modell verwaltet werden. Wenn Sie eine Datenquelle erstellt haben, können Sie deren Eigenschaften später ändern und dann das Modell vorverarbeiten, um sicherzustellen, dass die Daten ordnungsgemäß abgerufen werden.  
   
-## Verwandte Themen und Tasks  
+## <a name="related-topics-and-tasks"></a>Verwandte Themen und Tasks  
   
 |Thema|Description|  
 |-----------|-----------------|  
@@ -61,10 +66,10 @@ caps.handback.revision: 45
 |[Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Beschreibt jede Eigenschaft und erläutert deren Festlegung.|  
 |[Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Erklärt, wie die Optionen im Dialogfeld "Identitätswechselinformationen" konfiguriert werden.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Datenquellen und Bindungen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Datenquellen und Bindungen &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

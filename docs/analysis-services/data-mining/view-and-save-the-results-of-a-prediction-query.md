@@ -1,39 +1,44 @@
 ---
-title: "Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vorhersageabfragen [Analysis Services]"
-  - "Ergebnisse von Vorhersageabfragen anzeigen"
-  - "Anzeigen der Ergebnisse von Vorhersageabfragen"
-  - "Miningmodellvorhersage [Analysis Services], Anzeigen von Ergebnissen"
+title: Anzeigen und speichern Sie die Ergebnisse einer Vorhersageabfrage | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- viewing prediction query results
+- displaying prediction query results
+- Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a28c176cb6d08fee89ea5a0add547d1e2cee48c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage
+# <a name="view-and-save-the-results-of-a-prediction-query"></a>Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage
   Nachdem Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit dem Generator für Vorhersageabfragen eine Abfrage definiert haben, können Sie die Abfrage ausführen und die Abfrageergebnisse anzeigen, indem Sie zur Abfrageergebnissicht wechseln.  
   
  Sie können die Ergebnisse einer Vorhersageabfrage in einer Tabelle in jeder Datenquelle speichern, die in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert ist. Sie können dabei entweder eine neue Tabelle erstellen oder die Abfrageergebnisse in einer bereits vorhandenen Tabelle speichern. Wenn Sie die Ergebnisse in einer vorhandenen Tabelle speichern, können Sie entweder die aktuell in der Tabelle gespeicherten Daten überschreiben lassen. Ansonsten werden die Abfrageergebnisse an die vorhandenen Daten in der Tabelle angehängt.  
   
-### Ausführen von Abfragen und Anzeigen von Ergebnissen  
+### <a name="run-a-query-and-view-the-results"></a>Ausführen von Abfragen und Anzeigen von Ergebnissen  
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** im Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf **Ergebnis** .  
   
      Die Abfrageergebnissicht wird geöffnet, und die Abfrage wird ausgeführt. Die Ergebnisse werden im Viewer in einem Raster angezeigt.  
   
-### Speichern der Ergebnisse einer Vorhersageabfrage in einer Tabelle  
+### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>Speichern der Ergebnisse einer Vorhersageabfrage in einer Tabelle  
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** im Data Mining-Designer auf **Abfrageergebnis speichern**.  
   

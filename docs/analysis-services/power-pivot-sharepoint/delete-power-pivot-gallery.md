@@ -1,24 +1,29 @@
 ---
-title: "L&#246;schen eines Power Pivot-Katalogs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Löschen des PowerPivot-Katalogs | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e40f966299af98ae6b5379da7ea2605c70aa7c77
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# L&#246;schen eines Power Pivot-Katalogs
+# <a name="delete-power-pivot-gallery"></a>Löschen eines Power Pivot-Katalogs
   Beim Löschen eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogs werden auch sämtliche Elemente gelöscht, einschließlich des Datenaktualisierungsverlaufs für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen, die für die planmäßige Datenaktualisierung konfiguriert sind.  
   
 > [!NOTE]  
@@ -26,9 +31,9 @@ caps.handback.revision: 8
   
  Sie müssen Websitebesitzer sein, um eine Bibliothek zu löschen.  
   
-### Löschen des PowerPivot-Katalogs in SharePoint 2013  
+### <a name="delete-power-pivot-gallery-sharepoint-2013"></a>Löschen des PowerPivot-Katalogs in SharePoint 2013  
   
-1.  Klicken Sie auf „Einstellungen“ ![SharePoint-Einstellungen](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint-Einstellungen") und dann auf **Siteeinstellungen**.  
+1.  Klicken Sie auf Einstellungen ![SharePoint Einstellungen](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen"), klicken Sie dann auf **Siteeinstellungen**.  
   
 2.  Klicken Sie auf **Siteeinstellungen**.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 8
   
 5.  Klicken Sie unter Berechtigungen und Verwaltung auf **Diese Dokumentbibliothek löschen**.  
   
-### Löschen des PowerPivot-Katalogs in SharePoint 2010  
+### <a name="delete-power-pivot-gallery-sharepoint-2010"></a>Löschen des PowerPivot-Katalogs in SharePoint 2010  
   
 1.  Klicken Sie auf **Websiteaktionen**.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  Klicken Sie unter Berechtigungen und Verwaltung auf **Diese Bibliothek löschen**.  
   
-## Siehe auch  
- [Power Pivot-Katalog](../Topic/Power%20Pivot%20Gallery.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Power Pivot-Katalog](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   

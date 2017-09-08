@@ -1,30 +1,35 @@
 ---
-title: "Anpassen von Miningmodellen und -strukturen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attribute [Data Mining]"
-  - "Miningmodelle [Analysis Services], Eigenschaften"
-  - "Algorithmen [Data Mining]"
-  - "Miningmodelle [Analysis Services], erstellen"
-  - "Miningmodelle [Analysis Services], ändern"
-  - "Miningmodelle [Analysis Services], Informationen zu Data Mining-Modellen"
+title: Anpassen von Miningmodellen und-Strukturen | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- mining models [Analysis Services], properties
+- algorithms [data mining]
+- mining models [Analysis Services], creating
+- mining models [Analysis Services], modifying
+- mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a2e730d9e6f183e5311f29ffe87f1c46a73468a4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anpassen von Miningmodellen und -strukturen
+# <a name="customize-mining-models-and-structure"></a>Anpassen von Miningmodellen und -strukturen
   Nachdem Sie einen Algorithmus ausgewählt haben, der Ihren Geschäftsanforderungen entspricht, können Sie das Miningmodell mit den folgenden Verfahren anpassen, um die Ergebnisse potenziell zu verbessern.  
   
 -   Verwenden Sie verschiedene Spalten mit Daten im Modell, oder ändern Sie die Nutzung, den Inhaltstyp oder Diskretisierungsmethode der Spalten.  
@@ -37,15 +42,15 @@ caps.handback.revision: 23
   
  In diesem Thema werden diese Möglichkeiten beschrieben.  
   
-## Ändern der vom Modell verwendeten Daten  
+## <a name="changing-data-used-by-the-model"></a>Ändern der vom Modell verwendeten Daten  
  Die Auswahl der im Modell zu verwendenden Datenspalten sowie die Art und Weise, wie diese Daten verwendet und verarbeitet werden, beeinflussen die Ergebnisse der Analyse. Die folgenden Themen enthalten Informationen zu diesen Optionen.  
   
-### Verwenden der Funktionsauswahl  
+### <a name="using-feature-selection"></a>Verwenden der Funktionsauswahl  
  Die meisten Data Mining-Algorithmen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden einen Prozess namens *Funktionsauswahl* , um nur die nützlichsten Attribute zum Hinzufügen zu einem Modell auszuwählen. Wenn Sie die Anzahl von Spalten und Attributen reduzieren, kann die Leistung und die Qualität des Modells verbessert werden. Die verfügbaren Funktionsauswahlmethoden unterscheiden sich je nach ausgewähltem Algorithmus.  
   
  [Funktionsauswahl &#40;Data Mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
-### Ändern von Verwendung  
+### <a name="changing-usage"></a>Ändern von Verwendung  
  Sie können ändern, welche Spalten in einem Miningmodell enthalten sind und wie jede Spalte verwendet wird. Wenn Sie nicht die gewünschten Ergebnisse erhalten, sollten Sie die als Eingabe verwendeten Spalten überprüfen und ermitteln, ob es sich bei den Spalten um eine gute Auswahl handelt und ob Sie die Datenverarbeitung irgendwie verbessern können, z. B. durch folgende Maßnahmen:  
   
 -   Identifizieren von Kategorievariablen, das fälschlicherweise als Zahlen beschriftet sind.  
@@ -58,23 +63,23 @@ caps.handback.revision: 23
   
  Sie müssen die Spalten nicht physisch aus der Miningstruktur entfernen, sondern können die Spalte als **Ignorieren**kennzeichnen. Die Spalte wird aus dem Miningmodell entfernt, kann jedoch nach wie vor für andere Miningmodelle in der Struktur verwendet oder in einer Drillthrough-Abfrage referenziert werden.  
   
-### Erstellen von Aliasen für Modellspalten  
+### <a name="creating-aliases-for-model-columns"></a>Erstellen von Aliasen für Modellspalten  
  Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Miningmodell erstellt, werden die gleichen Spaltennamen verwendet, die sich in der Miningstruktur befinden. Sie können jeder Spalte im Miningmodell ein Alias hinzufügen. Auf diese Weise sind die Spalteninhalte oder deren Verwendung möglicherweise leichter zu erkennen, und der Name ist bei der Erstellung von Abfragen kürzer und damit einfacher zu handhaben. Aliase sind außerdem hilfreich, als Sie eine Kopie einer Spalte erstellen und dieser einen aussagekräftigen Namen zuweisen möchten.  
   
  Sie erstellen einen Alias, indem Sie die **Name** -Eigenschaft der Miningmodellspalte bearbeiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet weiterhin den ursprünglichen Namen als ID der Spalte. Der neue Wert, den Sie unter **Name** eingegeben haben, ist der Spaltenalias. Dieser wird im Raster neben der Spaltenverwendung in Klammern angezeigt.  
   
- ![Aliasnamen für Miningmodellspalten](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "Aliasnamen für Miningmodellspalten")  
+ ![Aliase für Mining model-Spalten](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "Aliasnamen für Mining model-Spalten")  
   
  In der Abbildung werden verwandte Modelle dargestellt, die mehrere Kopien einer Miningstrukturspalte enthalten, die sich alle auf das Einkommen beziehen. Jede Kopie der Strukturspalte wurde auf eine andere Weise diskretisiert. Die Modelle im Diagramm verwenden alle eine andere Spalte aus der Miningstruktur, um die Spalten im Modell jedoch einfacher vergleichen zu können, wurden die Spalten in allen Modellen zu [**Einkommen**] umbenannt.  
   
-### Hinzufügen von Filtern  
+### <a name="adding-filters"></a>Hinzufügen von Filtern  
  Sie können einem Miningmodell einen Filter hinzufügen. Ein Filter ist ein Satz von WHERE-Bedingungen, der die Daten in den Modellfällen auf eine bestimmte Teilmenge beschränkt. Der Filter wird beim Trainieren des Modells verwendet und kann optional verwendet werden, wenn Sie das Modell testen oder Genauigkeitsdiagramme erstellen.  
   
  Durch das Hinzufügen von Filtern können Sie Miningstrukturen wiederverwenden, aber Modelle auf Grundlage anderer Datenteilmengen erstellen. Sie können Filter auch einfach dazu verwenden, bestimmte Zeilen auszuschließen und die Qualität der Analyse zu verbessern.  
   
  Weitere Informationen finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
-## Ändern des Algorithmus  
+## <a name="changing-the-algorithm"></a>Ändern des Algorithmus  
  Obwohl Modelle, die Sie der Miningstruktur neu hinzufügen, das gleiche Dataset verwenden, können Sie abweichende Ergebnisse erzielen, indem Sie einen anderen Algorithmus nutzen (wenn die Daten dies unterstützen) oder indem Sie die Parameter für den Algorithmus ändern. Sie können darüber hinaus Modellierungsflags festlegen.  
   
  Die Algorithmusauswahl bestimmt, welche Ergebnisse Sie erhalten. Allgemeine Informationen darüber, wie ein bestimmter Algorithmus funktioniert, oder die Geschäftsszenarien, in denen Sie von einem bestimmten Algorithmus profitieren, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
@@ -89,7 +94,7 @@ caps.handback.revision: 23
 |[Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)|[Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)|  
 |[Microsoft Sequence Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)||  
   
-## Anpassen von Algorithmusparametern  
+## <a name="customizing-algorithm-parameters"></a>Anpassen von Algorithmusparametern  
  Jeder Algorithmus unterstützt Parameter, die Sie zum Anpassen des Algorithmusverhaltens und zum Optimieren der Ergebnisse des Modells verwenden können. Eine Beschreibung, wie die einzelnen Parameter verwendet werden, finden Sie in den folgenden Themen:  
   
  Das Thema für jeden Algorithmustyp umfasst auch die Vorhersagefunktionen, die mit Modellen, die auf diesem Algorithmus basieren, verwendet werden können.  
@@ -132,7 +137,7 @@ caps.handback.revision: 23
 |SPLIT_METHOD|[Technische Referenz für den Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   

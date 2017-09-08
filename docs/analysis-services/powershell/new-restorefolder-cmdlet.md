@@ -1,37 +1,48 @@
 ---
-title: "New-RestoreFolder-Cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: New-RestoreFolder-Cmdlet | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ee3a6068f376ff4f08af4cae67aa00d157d1f86
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# New-RestoreFolder-Cmdlet
+# <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder-Cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Stellt einen ursprünglichen Ordner in einem neuen Ordner wieder her.  
+
+>[!NOTE] 
+>In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `New-RestoreFolder [-OriginalFolder] <String> [-NewFolder] <String> [-AsTemplate] [-Server <String>] [-Credential <PSCredential>] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]`  
   
  `New-RestoreFolder [-Server <String>] [-Credential <PSCredential>] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]`  
   
- Allgemeine Parameter, z. B. –Verbose, -Debug, Fehler- und Warnparameter, -Whatif und –Confirm werden in der Windows PowerShell-Referenz dokumentiert. Weitere Informationen finden Sie unter [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx).  
+ Allgemeine Parameter, z. B. –Verbose, -Debug, Fehler- und Warnparameter, -Whatif und –Confirm werden in der Windows PowerShell-Referenz dokumentiert. Weitere Informationen finden Sie unter [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## Description  
+## <a name="description"></a>Description  
  Das New-RestoreFolder-Cmdlet wird verwendet, um auf Grundlage des Namens des ursprünglichen Ordners einen neuen Ordner zu erstellen.  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
-### -OriginalFolder \<string>  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<Zeichenfolge >  
  Ruft den ursprünglichen Speicherort des Ordners ab.  
   
 |||  
@@ -42,7 +53,7 @@ caps.handback.revision: 10
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -NewFolder \<string>  
+### <a name="-newfolder-string"></a>-NewFolder \<Zeichenfolge >  
  Legt den Speicherort eines neuen Ordners fest.  
   
 |||  
@@ -53,7 +64,7 @@ caps.handback.revision: 10
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<Switch-Parameter >  
  Gibt an, ob das Objekt im Arbeitsspeicher erstellt und zurückgegeben werden soll.  
   
 |||  
@@ -64,7 +75,7 @@ caps.handback.revision: 10
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Server \<string>  
+### <a name="-server-string"></a>-Server \<Zeichenfolge >  
  Gibt die Analysis Services-Instanz an, zu der das Cmdlet eine Verbindung herstellt und auf der es ausgeführt wird. Wenn kein Servername angegeben wird, wird eine Verbindung mit localhost hergestellt. Für Standardinstanzen geben Sie nur den Servernamen an. Verwenden Sie für benannte Instanzen das Format "servername\instanzenname". Verwenden Sie für HTTP-Verbindungen das Format "http[s]://server[:port]/virtualdirectory/msmdpump.dll".  
   
 |||  
@@ -75,12 +86,12 @@ caps.handback.revision: 10
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Credential \<PSCredential>  
- Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md) (Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste [IIS] 8.0) und [PowerShell-Skripts in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) für HTTP-Verbindungen.  
+### <a name="-credential-pscredential"></a>-Credential \<"PSCredential" >  
+ Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren des HTTP-Zugriffs auf Analysis Services unter Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) für HTTP-Verbindungen.  
   
  Wenn dieser Parameter angegeben wird, werden der Benutzername und das Kennwort verwendet, um eine Verbindung mit der angegebenen Analysis-Server-Instanz herzustellen. Wenn keine Anmeldeinformationen angegeben sind, wird das Standard-Windows-Konto des Benutzers, der das Tool ausführt, verwendet.  
   
- Um diesen Parameter zu verwenden, erstellen Sie zuerst mit Get-Credential ein PSCredential-Objekt, um den Benutzernamen und das Kennwort anzugeben (z.B. `$Cred=Get-Credential “adventure-works\bobh”`. Sie können dieses Objekt dann an den –Credential-Parameter `(-Credential:$Cred` weitergeben).  
+ Um diesen Parameter verwenden zu können, müssen Sie zuerst ein PSCredential-Objekt erstellen. Hierbei verwenden Sie Get-Credential, um den Benutzernamen und das Passwort anzugeben (z.B. `$Cred=Get-Credential “adventure-works\bobh”`). Sie können dieses Objekt anschließend an den –Credential-Parameter `(-Credential:$Cred`) übergeben.  
   
 |||  
 |-|-|  
@@ -90,18 +101,11 @@ caps.handback.revision: 10
 |Pipelineeingabe akzeptieren?|True (ByValue)|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-## Eingaben und Ausgaben  
+## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
  Mit dem Eingabetyp wird festgelegt, welchen Typ von Objekten Sie über die Pipeline an das Cmdlet übergeben können. Der Rückgabetyp bezeichnet den Typ der vom Cmdlet zurückgegebenen Objekte.  
   
 |||  
 |-|-|  
 |Eingaben||  
-|Ausgaben|InclusionThresholdSetting|  
-  
-## Beispiele  
-  
-## Siehe auch  
- [PowerShell-Skripterstellung in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Verwalten von tabellarischen Modellen mit PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+|Ausgaben|Keine|  
   

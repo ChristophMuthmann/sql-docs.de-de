@@ -1,74 +1,79 @@
 ---
-title: "Data Mining-Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "ClusterCount (Eigenschaft)"
-  - "AllowedProvidersInOpenRowset (Eigenschaft)"
-  - "MinimumSeriesValue (Eigenschaft)"
-  - "ScoreMethod (Eigenschaft)"
-  - "MinimumImportance (Eigenschaft)"
-  - "ModellingCardinality (Eigenschaft)"
-  - "BrentTolerance (Eigenschaft)"
-  - "ComplexityPenalty (Eigenschaft)"
-  - "MaximumItemsetCount (Eigenschaft)"
-  - "MinimumSupport (Eigenschaft)"
-  - "AllowSessionMiningModels (Eigenschaft)"
-  - "HoldoutPercentage (Eigenschaft)"
-  - "ClusterCountPrior (Eigenschaft)"
-  - "MaximumSequenceStates (Eigenschaft)"
-  - "OptimizedPredictionCount (Eigenschaft)"
-  - "Data Mining [Analysis Services], Eigenschaften"
-  - "MaximumStates (Eigenschaft)"
-  - "MaximumContinuousInputAttributes (Eigenschaft)"
-  - "MaximumOutputAttributes (Eigenschaft)"
-  - "AllowAdHocOpenRowsetQueries (Eigenschaft)"
-  - "Enabled-Eigenschaft"
-  - "HistoricModelGap (Eigenschaft)"
-  - "SampleSize (Eigenschaft)"
-  - "MaximumInputAttributes (Eigenschaft)"
-  - "PeriodicityHint (Eigenschaft)"
-  - "MissingValueSubstitution (Eigenschaft)"
-  - "SplitMethod (Eigenschaft)"
-  - "ForceRegressor (Eigenschaft)"
-  - "MaximumBucketsForContinuousSplit (Eigenschaft)"
-  - "MaxConcurrentPredictionQueries (Eigenschaft)"
-  - "MinimumItemsetSize (Eigenschaft)"
-  - "AcyclicGraph (Eigenschaft)"
-  - "HoldoutMethod (Eigenschaft)"
-  - "StoppingTolerance (Eigenschaft)"
-  - "Eigenschaften [Data Mining]"
-  - "AutoDetectPeriodicity (Eigenschaft)"
-  - "HoldoutTolerance (Eigenschaft)"
-  - "MinimumLeafCases (Eigenschaft)"
-  - "HoldoutSeed (Eigenschaft)"
-  - "MinimumClusterCases (Eigenschaft)"
-  - "ClusterCountDeviation (Eigenschaft)"
-  - "MinimumDependencyProbability (Eigenschaft)"
-  - "ClusteringMethod (Eigenschaft)"
-  - "MaximumItemsetSize (Eigenschaft)"
-  - "HiddenNodeRatio (Eigenschaft)"
-  - "MaximumSeriesValue (Eigenschaft)"
+title: Datamining-Eigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- ClusterCount property
+- AllowedProvidersInOpenRowset property
+- MinimumSeriesValue property
+- ScoreMethod property
+- MinimumImportance property
+- ModellingCardinality property
+- BrentTolerance property
+- ComplexityPenalty property
+- MaximumItemsetCount property
+- MinimumSupport property
+- AllowSessionMiningModels property
+- HoldoutPercentage property
+- ClusterCountPrior property
+- MaximumSequenceStates property
+- OptimizedPredictionCount property
+- data mining [Analysis Services], properties
+- MaximumStates property
+- MaximumContinuousInputAttributes property
+- MaximumOutputAttributes property
+- AllowAdHocOpenRowsetQueries property
+- Enabled property
+- HistoricModelGap property
+- SampleSize property
+- MaximumInputAttributes property
+- PeriodicityHint property
+- MissingValueSubstitution property
+- SplitMethod property
+- ForceRegressor property
+- MaximumBucketsForContinuousSplit property
+- MaxConcurrentPredictionQueries property
+- MinimumItemsetSize property
+- AcyclicGraph property
+- HoldoutMethod property
+- StoppingTolerance property
+- properties [data mining]
+- AutoDetectPeriodicity property
+- HoldoutTolerance property
+- MinimumLeafCases property
+- HoldoutSeed property
+- MinimumClusterCases property
+- ClusterCountDeviation property
+- MinimumDependencyProbability property
+- ClusteringMethod property
+- MaximumItemsetSize property
+- HiddenNodeRatio property
+- MaximumSeriesValue property
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d8dfbc8391518ff1375cf47102d4cb607992338
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Eigenschaften
+# <a name="data-mining-properties"></a>Data Mining-Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Data Mining-Eigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** Nur mehrdimensionaler Servermodus  
   
-## Nicht spezifische Kategorie  
+## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  **AllowSessionMiningModels**  
  Eine boolesche Eigenschaft, die anzeigt, ob Sitzungsminingmodelle erstellt werden können.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 19
  **MaxConcurrentPredictionQueries**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von gleichzeitigen Vorhersageabfragen definiert.  
   
-## Algorithmus-Kategorie  
+## <a name="algorithms-category"></a>Algorithmus-Kategorie  
  **Microsoft_Association_Rules\ Enabled**  
  Eine boolesche Eigenschaft, die anzeigt, ob der Microsoft_Association_Rules-Algorithmus aktiviert ist.  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  Zusätzlich zu den Data Mining-Diensten, die auf dem Server verfügbar sind, sind Data Mining-Eigenschaften vorhanden, die das Verhalten bestimmter Algorithmen definieren. Sie konfigurieren diese Eigenschaften, wenn Sie ein einzelnes Data Mining-Modell erstellen, nicht auf Serverebene. Weitere Informationen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

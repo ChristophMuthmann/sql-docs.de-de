@@ -1,23 +1,28 @@
 ---
-title: "Inhaltsabfragen (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inhaltsabfragen (Datamining) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Inhaltsabfragen (Data Mining)
+# <a name="content-queries-data-mining"></a>Inhaltsabfragen (Data Mining)
   Eine Inhaltsabfrage stellt eine Möglichkeit dar, Informationen über interne Statistiken und die Struktur des Miningmodells zu extrahieren. Mitunter enthält eine Inhaltsabfrage Details, die im Viewer nicht unmittelbar verfügbar sind. Sie können auch die Ergebnisse einer Inhaltsabfrage verwenden, um Informationen programmgesteuert zu anderen Verwendungszwecken zu extrahieren.  
   
  Dieser Abschnitt enthält allgemeine Informationen über die Art der Informationen, die Sie mit einer Inhaltsabfrage abrufen können, sowie die allgemeine DMX-Syntax für Inhaltsabfragen.  
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Weitere Informationen zum Arbeiten mit hierarchischen Rowsets finden Sie in der OLEDB-Spezifikation von MSDN.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zur SELECT-Anweisung (DMX)](../../dmx/understanding-the-dmx-select-statement.md)   
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   

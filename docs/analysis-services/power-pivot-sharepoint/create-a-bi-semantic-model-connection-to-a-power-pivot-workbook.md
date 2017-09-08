@@ -1,27 +1,32 @@
 ---
-title: "Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe
-  Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe in der gleichen Farm umleitet.  
+# <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe
+  Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in der gleichen Farm umleitet.  
   
- Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint-Berechtigungen konfiguriert haben, können Sie sie als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Berichte verwenden.  
+ Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint-Berechtigungen konfiguriert haben, können Sie sie als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwenden.  
   
  Das Thema enthält folgende Abschnitte: Führen Sie jede Aufgabe in der angegebenen Reihenfolge aus.  
   
@@ -38,21 +43,21 @@ caps.handback.revision: 10
 ##  <a name="bkmk_prereq"></a> Überprüfen der Voraussetzungen  
  Sie benötigen Teilnahmeberechtigungen oder weiterreichende Berechtigungen, um eine BI Semantikmodell-Verbindungsdatei zu erstellen.  
   
- Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden Sie unter [Hinzufügen eines BI-Semantikmodell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden Sie unter [Hinzufügen eines BI-Semantikmodell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Sie müssen die URL der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe kennen, für die Sie eine BI-Semantikmodellverbindung einrichten (Beispiel: http://adventure-works/shared documents/myworkbook.xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
+ Sie müssen wissen, dass die URL des der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappe für die Sie eine BI-semantikmodellverbindung einrichten (z. B. `http://adventure-works/shared documents/myworkbook.xlsx`). Die Arbeitsmappe muss in der gleichen Farm sein.  
   
  Alle Computer und Benutzer, die Teil der Verbindungssequenz sind, müssen in der gleichen Domäne bzw. vertrauenswürdigen Domäne (bidirektionale Vertrauensstellung) enthalten sein.  
   
 ##  <a name="bkmk_create"></a> Erstellen einer Verbindung  
   
-1.  Klicken Sie in der Bibliothek, die die BI-Semantikmodellverbindung enthalten soll, auf dem SharePoint-Menüband auf **Dokumente**. Klicken Sie in „Neues Dokument“ auf den Pfeil nach unten, und wählen Sie **BISM-Verbindungsdatei** aus, um die Seite „Neue BI-Semantikmodellverbindung“ zu öffnen.  
+1.  Klicken Sie in der Bibliothek, die die BI-Semantikmodellverbindung enthalten soll, auf dem SharePoint-Menüband auf **Dokumente** . Klicken Sie in „Neues Dokument“ auf den Pfeil nach unten, und wählen Sie **BISM-Verbindungsdatei** aus, um die Seite „Neue BI-Semantikmodellverbindung“ zu öffnen.  
   
-     ![Untermenü "Neues Dokument" in einer SharePoint-Bibliothek](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "Untermenü "Neues Dokument" in einer SharePoint-Bibliothek")  
+     ![Neues Dokument Untermenü in einer SharePoint-Bibliothek](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "neues Dokument Untermenü in einer SharePoint-Bibliothek")  
   
-2.  Legen Sie die **Server**-Eigenschaft auf die SharePoint-URL der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe fest, z.B. **http://mysharepoint/shared documents/myWorkbook.xlsx**. In einer Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten nur den Pfad zur Arbeitsmappe an. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Systemdienst bestimmt, welcher Server die Daten lädt.  
+2.  Legen Sie die **Server** -Eigenschaft auf die SharePoint-URL der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe fest, z.B. `http://mysharepoint/shared documents/myWorkbook.xlsx`. In einer Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten nur den Pfad zur Arbeitsmappe an. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst bestimmt, welcher Server die Daten lädt.  
   
-     Verwenden Sie nicht die **Database**-Eigenschaft, diese wird beim Angeben des Speicherorts einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe nicht verwendet.  
+     Verwenden Sie nicht die **Database** -Eigenschaft, diese wird beim Angeben des Speicherorts einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe nicht verwendet.  
   
      Die Seite sollte ähnlich der folgenden Abbildung aussehen.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 10
   
 1.  Klicken Sie in „Websiteaktionen“ auf **Websiteberechtigungen**.  
   
-2.  Klicken Sie auf **Gruppe erstellen**, und nennen Sie die neue Gruppe **BISM-Benutzer**.  
+2.  Klicken Sie auf **Gruppe erstellen** , und nennen Sie die neue Gruppe **BISM-Benutzer**.  
   
 3.  Wählen Sie die Berechtigungsstufe **Lesen** aus, und klicken Sie auf **Erstellen**.  
   
@@ -90,16 +95,16 @@ caps.handback.revision: 10
 4.  Klicken Sie auf **Benutzerberechtigungen entfernen**.  
   
 ##  <a name="bkmk_userdb"></a> Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe  
- Wenn Sie in einer Excel-Arbeitsmappe eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenbank verwenden, bestimmen die SharePoint-Berechtigungen für die Excel-Arbeitsmappe den Datenzugriff auf die BI-Semantikmodellverbindung. Alle Benutzer, die auf die Arbeitsmappe zugreifen, müssen Leseberechtigungen für die Arbeitsmappe haben, um sie als externe Datenquelle zu verwenden.  
+ Wenn Sie in einer Excel-Arbeitsmappe eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank verwenden, bestimmen die SharePoint-Berechtigungen für die Excel-Arbeitsmappe den Datenzugriff auf die BI-Semantikmodellverbindung. Alle Benutzer, die auf die Arbeitsmappe zugreifen, müssen Leseberechtigungen für die Arbeitsmappe haben, um sie als externe Datenquelle zu verwenden.  
   
  Wenn Sie eine Gruppe **BISM-Benutzer** mithilfe der Anweisungen im vorherigen Abschnitt erstellt haben, haben Benutzer- und Gruppenkonten, die Mitglieder von **BISM-Benutzer** sind, ausreichende Berechtigungen für die Arbeitsmappe und für die BI-Semantikmodell-Verbindungsdatei, wenn die Arbeitsmappe geerbte Berechtigungen verwendet.  
   
 ##  <a name="bkmk_next"></a> Nächste Schritte  
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und gesichert haben, können Sie sie als Datenquelle angeben. Weitere Informationen finden Sie unter [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [PowerPivot BI-Semantikmodellverbindung &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

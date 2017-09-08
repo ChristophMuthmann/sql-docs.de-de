@@ -1,40 +1,45 @@
 ---
-title: "Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anzeigen der Leistungskennzahlen"
-  - "Key Performance Indicators [Analysis Services]"
-  - "KPIs [Analysis Services]"
-  - "OLAP-Objekte [Analysis Services], Leistungsindikatoren"
-  - "Gewichtungen [Analysis Services]"
-  - "Anzeigen von KPIs (Key Performance Indicators)"
-  - "Übergeordnete KPIs [Analysis Services]"
-  - "Untergeordnete KPIs"
+title: Key Performance Indicators (KPIs) in mehrdimensionalen Modellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
+# <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
   Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse des KPIs anzeigen sollen.  
   
  Ein KPI verarbeitet Informationen über eine Auflistung von Zielen, die im Cube aufgezeichnete eigentliche Leistungsformel sowie Messungen, um den Leistungstrend und -status anzuzeigen. AMO wird verwendet, um die Formeln und andere Definitionen über die Werte eines KPIs zu definieren. Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die KPI-Werte abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
- Aus den grundlegenden Informationen, dem Ziel, dem erreichten Istwert, einem Statuswert, einem Trendwert und einem Ordner, in dem der KPI angezeigt wird, wird ein einfaches <xref:Microsoft.AnalysisServices.Kpi>-Objekt erstellt. Zu den grundlegenden Informationen gehören der Name und die Beschreibung des KPIs. Das Ziel ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Istwert ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Status- und Trendwert sind MDX-Ausdrücke, die eine Zahl ergeben. Der Ordner ist ein vorgeschlagener Speicherort, in dem der KPI für den Client dargestellt wird.  
+ Aus den grundlegenden Informationen, dem Ziel, dem erreichten Istwert, einem Statuswert, einem Trendwert und einem Ordner, in dem der KPI angezeigt wird, wird ein einfaches <xref:Microsoft.AnalysisServices.Kpi> -Objekt erstellt. Zu den grundlegenden Informationen gehören der Name und die Beschreibung des KPIs. Das Ziel ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Istwert ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Status- und Trendwert sind MDX-Ausdrücke, die eine Zahl ergeben. Der Ordner ist ein vorgeschlagener Speicherort, in dem der KPI für den Client dargestellt wird.  
   
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. So verwendet z. B. die Vertriebsabteilung eines Unternehmens den monatlichen Bruttogewinn als KPI, während die Personalabteilung desselben Unternehmens den vierteljährlichen Umsatz pro Mitarbeiter als KPI verwendet. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten, greifen Führungskräfte oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 43
   
  Zu den wichtigsten Vorteilen von KPIs in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt, dass sie serverbasiert sind und von verschiedenen Clientanwendungen verwendet werden können. Serverbasierte KPIs stellen eine einzelne Version im Gegensatz zu separaten Versionen in separaten Clientanwendungen dar. Die Durchführung der manchmal komplexen Berechnungen auf dem Server statt auf jedem Clientcomputer kann Leistungsvorteile bieten.  
   
-## Häufig verwendete KPI-Begriffe  
+## <a name="common-kpi-terms"></a>Häufig verwendete KPI-Begriffe  
  In der folgenden Tabelle werden die Definitionen für häufig verwendete KPI-Begriffe in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt.  
   
 |Begriff|Definition|  
@@ -58,15 +63,15 @@ caps.handback.revision: 43
 |Aktuelles Zeitelement|Ein MDX-Ausdruck, der das Element zurückgibt, das den zeitlichen Kontext des KPI identifiziert.|  
 |Weight|Ein numerischer MDX-Ausdruck, der einem KPI eine relative Bedeutung zuweist. Wenn der KPI einem übergeordneten KPI zugewiesen ist, wird die Gewichtung beim Berechnen des Werts des übergeordneten KPI zum proportionalen Anpassen der Ergebnisse des untergeordneten KPI-Werts verwendet.|  
   
-## Übergeordnete KPIs  
+## <a name="parent-kpis"></a>Übergeordnete KPIs  
  Ein Unternehmen kann verschiedene Unternehmensmaßsysteme auf unterschiedlichen Ebenen nachverfolgen. So kann z. B. mit nur zwei oder drei KPIs der Geschäftserfolg für das gesamte Unternehmen bestimmt werden, während diese unternehmensweiten KPIs auf drei oder vier anderen KPIs basieren können, die von den Geschäftsbereichen im gesamten Unternehmen nachverfolgt werden. Außerdem können die Geschäftsbereiche in einem Unternehmen unterschiedliche Statistiken zum Berechnen desselben KPI verwenden, dessen Ergebnisse in den unternehmensweiten KPI umgewandelt werden.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lässt Sie eine Über-/Unterordnungsbeziehung zwischen KPIs definieren. Durch diese Über-/Unterordnungsbeziehung können die Ergebnisse des untergeordneten KPI zum Berechnen des übergeordneten KPI verwendet werden. Clientanwendungen können diese Beziehung auch verwenden, um übergeordnete und untergeordnete KPIs entsprechend anzuzeigen.  
   
-## Gewichtungen  
+## <a name="weights"></a>Gewichtungen  
  Gewichtungen können außerdem untergeordneten KPIs zugeordnet werden. Gewichtungen ermöglichen es [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , beim Berechnen des Werts des übergeordneten KPI die Ergebnisse des untergeordneten KPI proportional anzupassen.  
   
-## Abrufen und Anzeigen von KPIs  
+## <a name="retrieving-and-displaying-kpis"></a>Abrufen und Anzeigen von KPIs  
  Die Anzeige von KPIs richtet sich nach der Implementierung der Clientanwendung. Beispielsweise demonstriert das Auswählen von **Browseransicht** auf der Symbolleiste der **KPIs** -Registerkarte des Cube-Designers eine mögliche Clientimplementierung. Dazu gehören die Grafiken, die zum Anzeigen der Status- und Trendindikatoren verwendet werden, die Anzeigeordner, die zum Gruppieren der KPIs verwendet werden, sowie die unter den übergeordneten KPIs angezeigten untergeordneten KPIs.  
   
  MDX-Funktionen können zum Abrufen einzelner Abschnitte (z. B. des Werts oder des Ziels) des KPI sowie in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden.  

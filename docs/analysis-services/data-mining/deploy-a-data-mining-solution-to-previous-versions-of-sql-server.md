@@ -1,31 +1,36 @@
 ---
-title: "Bereitstellen von Data Mining-L&#246;sungen f&#252;r fr&#252;here Versionen von SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abwärtskompatibilität [Analysis Services]"
-  - "Zurückgehaltene Daten [Data Mining]"
-  - "Bereitstellen [Analysis Services]"
-  - "Zeitreihe [Analysis Services]"
-  - "Bereitstellen [Analysis Services – Data Mining]"
-  - "Synchronisierung [Analysis Services]"
-  - "Bereitstellung [Analysis Services]"
+title: "Bereitstellen von Datamining-Lösungen für frühere Versionen von SQLServer | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Bereitstellen von Data Mining-L&#246;sungen f&#252;r fr&#252;here Versionen von SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server
   In diesem Abschnitt werden bekannte Kompatibilitätsprobleme beschrieben, die bei der Bereitstellung von Data Mining-Modellen oder Data Mining-Strukturen auftreten können, wenn diese in einer Instanz von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] für eine Datenbank erstellt worden sind, die SQL Server 2005 Analysis Services verwendet. Die gleichen Probleme können bei der Bereitstellung von Modellen auftreten, die in SQL Server 2005 für eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellt wurden.  
   
  Die Bereitstellung für eine Instanz von SQL Server 2000 Analysis Services wird nicht unterstützt.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Wenn es sich beim Provider, der als Datenquelle des Modells verwendet wird, um SQL Client Data Provider 10 handelt, müssen Sie auch die Datenquellendefinition ändern, um die vorherige Version von SQL Server Native Client anzugeben. Andernfalls wird von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert, wenn sie angeben, dass der Anbieter nicht registriert wird.  
   
 ##  <a name="bkmk_Holdout"></a> Bereitstellen von Modellen mit Zurückhaltung  
- Wenn Sie mithilfe von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] eine Miningstruktur erstellen, die eine Zurückhaltungspartition zum Testen von Data Mining-Modellen umfasst, kann die Miningstruktur für eine Instanz von SQL Server 2005 bereitgestellt werden. Die Partitionierungsdaten gehen dabei jedoch verloren.  
+ Wenn Sie eine Miningstruktur, die eine zurückhaltungspartition zum Testen von Datamining-Modelle enthält erstellen, kann die Miningstruktur mit einer Instanz von SQL Server 2005 bereitgestellt werden, aber die Partitionierungsdaten gehen verloren.  
   
  Wenn Sie die Miningstruktur in SQL Server 2005 Analysis Services öffnen, wird in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert und die Struktur zum Entfernen der Zurückhaltungspartition neu erstellt.  
   
- Nach der Neuerstellung der Struktur wird die Größe der Zurückhaltungspartition nicht mehr im Eigenschaftenfenster angezeigt. Der Wert \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>) ist jedoch möglicherweise noch in der ASSL-Skriptdatei vorhanden.  
+ Nach der Neuerstellung der Struktur ist die Größe der zurückhaltungspartition nicht mehr im Eigenschaftenfenster verfügbar. allerdings den Wert \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) möglicherweise immer noch in der ASSL-Skriptdatei vorhanden.  
   
 ##  <a name="bkmk_Filter"></a> Bereitstellen von Modellen mit Filtern  
- Wenn Sie mithilfe von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] einen Filter auf ein Miningmodell anwenden, kann das Modell für eine Instanz von SQL Server 2005 bereitgestellt werden, der Filter wird jedoch nicht angewendet.  
+ Wenn Sie einen Filter auf ein Miningmodell anwenden, kann das Modell mit einer Instanz von SQL Server 2005 bereitgestellt werden, aber der Filter wird nicht angewendet werden.  
   
  Wenn Sie das Miningmodell öffnen, wird von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein Fehler generiert, und das Modell wird neu erstellt, um den Filter zu entfernen.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  Wenn Sie versuchen, eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank zu synchronisieren, gibt der Server einen Fehler zurück, und die Datenbanksynchronisierung schlägt fehl.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

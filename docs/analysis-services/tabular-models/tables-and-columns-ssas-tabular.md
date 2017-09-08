@@ -1,24 +1,29 @@
 ---
 title: "Tabellen und Spalten (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tabellen und Spalten (SSAS – tabellarisch)
+# <a name="tables-and-columns-ssas-tabular"></a>Tabellen und Spalten (SSAS – tabellarisch)
   Nachdem Sie einem Modell mit dem Tabellenimport-Assistenten Tabellen und Daten hinzugefügt haben, können Sie Tabellen bearbeiten, indem Sie neue Datenspalten hinzufügen, Beziehungen zwischen Tabellen erstellen, Berechnungen zur Erweiterung der Daten definieren sowie die Daten in den Tabellen zur besseren Übersichtlichkeit filtern und sortieren.  
   
  Abschnitte in diesem Thema:  
@@ -42,15 +47,15 @@ caps.handback.revision: 13
  Sobald Sie zum ersten Mal Tabellen importieren, indem Sie den Tabellenimport-Assistenten verwenden oder neue Daten in berechneten Spalten erstellen, werden die Tabellenspalten mit Daten aufgefüllt. Wenn Daten in der Quelle geändert werden oder ein Modell aus dem Arbeitsspeicher entfernt wird, müssen Sie einen Verarbeitungsvorgang ausführen, um die Tabellen erneut mit Daten aufzufüllen.  
   
 ##  <a name="bkmk_working"></a> Arbeiten mit Tabellen und Spalten  
- Im Modell-Designer werden nicht direkt neue Modelltabellen erstellt. Es wird automatisch eine neue Registerkarte erstellt, wenn Daten aus einer anderen Datenquelle importiert oder kopiert werden. Jede Registerkarte (im Modell-Designer) enthält eine Tabelle mit Daten, z. B.:  
+ Im Modell-Designer werden nicht direkt neue Modelltabellen erstellt. Es wird automatisch eine neue Registerkarte erstellt, wenn Daten aus einer anderen Datenquelle importiert oder kopiert werden. Jede Registerkarte (im Modell-Designer) enthält eine Tabelle mit Daten, z. B.:  
   
--   Eine einzelne Tabelle oder Sicht aus einer relationalen Datenbank oder aus anderen nicht relationalen Quellen, z. B. einem Analysis Services-Cube.  
+-   Eine einzelne Tabelle oder Sicht aus einer relationalen Datenbank oder aus anderen nicht relationalen Quellen, z. B. einem Analysis Services-Cube.  
   
 -   Ein aus einem Feed oder einer Textdatei importierter Tabellensatz an Daten.  
   
 -   Eine Kombination sowohl aus relationalen Daten als auch aus Tabellendaten (HTML), die kopiert und in die Tabelle eingefügt wurden.  
   
- Wenn Sie Daten importieren, wird jede Tabelle bzw. Sicht, jedes Blatt oder jede Datendatei im Modell-Designer als Tabelle hinzugefügt. Normalerweise fügen Sie Daten aus verschiedenen Quellen auf separaten Registerkarten hinzu. Sie können Daten aber mit **Einfügen** und **Am Ende einfügen**in einer einzelnen Tabelle kombinieren. Weitere Informationen finden Sie unter [Kopieren und Einfügen von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md).  
+ Wenn Sie Daten importieren, wird jede Tabelle bzw. Sicht, jedes Blatt oder jede Datendatei im Modell-Designer als Tabelle hinzugefügt. Normalerweise fügen Sie Daten aus verschiedenen Quellen auf separaten Registerkarten hinzu. Sie können Daten aber mit **Einfügen** und **Am Ende einfügen**in einer einzelnen Tabelle kombinieren. Weitere Informationen finden Sie unter [Kopieren und Einfügen von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  Nachdem Sie alle benötigten Daten hinzugefügt haben, können Sie zusätzliche Beziehungen zwischen den Tabellen erstellen, verknüpfte Werte in anderen Tabellen suchen oder darauf verweisen oder abgeleitete Werte durch das Hinzufügen von neuen berechneten Spalten erstellen.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
 |[Umbenennen einer Tabelle oder Spalte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Beschreibt, wie eine Tabelle oder eine Spalte umbenannt wird, damit sie im Modell besser identifiziert werden kann.|  
 |[Festlegen des Datentyps einer Spalte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Beschreibt, wie der Datentyp einer Spalte geändert wird. Der Datentyp definiert, wie Daten in der Spalte gespeichert und dargestellt werden.|  
 |[Ausblenden oder Einfrieren von Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Beschreibt, wie Spalten ausgeblendet werden, die nicht angezeigt werden sollen, und wie ein Bereich eines Modells sichtbar gehalten wird, während Sie einen Bildlauf zu einem anderen Bereich des Modells durchführen, indem Sie bestimmte Spalten in einem Bereich fixieren (sperren).|  
-|[Berechnete Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)|In den Themen in diesem Abschnitt wird beschrieben, wie dem Modell mithilfe berechneter Spalten aggregierte Daten hinzugefügt werden.|  
-|[Filtern und Sortieren von Daten &#40;SSAS – tabellarisch&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|In den Themen in diesem Abschnitt wird beschrieben, wie Daten mit den Steuerelementen im Modell-Designer gefiltert oder sortiert werden.|  
+|[Berechnete Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|In den Themen in diesem Abschnitt wird beschrieben, wie dem Modell mithilfe berechneter Spalten aggregierte Daten hinzugefügt werden.|  
+|[Filtern und Sortieren von Daten &#40;SSAS – tabellarisch&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|In den Themen in diesem Abschnitt wird beschrieben, wie Daten mit den Steuerelementen im Modell-Designer gefiltert oder sortiert werden.|  
   
   

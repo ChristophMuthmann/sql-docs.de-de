@@ -1,29 +1,34 @@
 ---
-title: "Bereitstellen von Data Mining-L&#246;sungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodelle [Analysis Services], bereitstellen"
-  - "Bereitstellen [Analysis Services], Produktionsumgebungen"
-  - "Bereitstellen [Analysis Services – Data Mining]"
-  - "Lösungen [Analysis Services], bereitstellen"
-  - "Modelle [Analysis Services], Data Mining"
+title: "Bereitstellung von Datamining-Lösungen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Bereitstellen von Data Mining-L&#246;sungen
+# <a name="deployment-of-data-mining-solutions"></a>Bereitstellen von Data Mining-Lösungen
   Der letzte Schritt im Data Mining-Prozess besteht darin, die Modelle in einer Produktionsumgebung bereitzustellen. Die Bereitstellung ist wichtig, da dadurch die Modelle Benutzern zur Verfügung gestellt werden, damit Sie irgendeine der folgenden Aufgaben ausführen können:  
   
 -   Verwenden Sie die Modelle, um Vorhersagen und Geschäftsentscheidungen zu treffen. Weitere Informationen zu den Tools, mit denen Sie Abfragen erstellen können, finden Sie unter [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [Verwandte Ressourcen](#bkmk_Resources)  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportieren und Importieren von Data Mining-Objekten](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
  Bietet allgemeine Informationen über die Bereitstellungen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekten und beschreibt die Eigenschaften, die als Teil der Projektkonfiguration festgelegt werden können.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

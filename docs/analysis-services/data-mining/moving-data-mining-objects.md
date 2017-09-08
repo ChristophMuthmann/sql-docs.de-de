@@ -1,34 +1,39 @@
 ---
-title: "Verschieben von Data Mining-Objekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Mining [Analysis Services], Modelle"
-  - "Data Mining-Editor [Analysis Services]"
-  - "Miningmodelle [Analysis Services], verwalten"
-  - "Data Mining-Designer"
-  - "Miningmodelle [Analysis Services], ändern"
+title: Verschieben von Datamining-Objekten | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- data mining editor [Analysis Services]
+- mining models [Analysis Services], managing
+- Data Mining Designer
+- mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 198dd7792a24f0090aec82593704f0f2165b0d43
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verschieben von Data Mining-Objekten
+# <a name="moving-data-mining-objects"></a>Verschieben von Data Mining-Objekten
   Die häufigsten Szenarien beim Verschieben von Data Mining-Objekten sind das Bereitstellen eines Modells aus einer Test- oder Analyseumgebung in einer Produktionsumgebung oder die Freigabe von Modellen an andere Benutzer.  
   
  In diesem Thema wird beschrieben, wie Sie die Tools und Skripterstellungssprachen aus [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zum Verschieben von Data Mining-Objekten verwenden können.  
   
-## Verschieben von Data Mining-Objekten zwischen Datenbanken oder Servern  
+## <a name="moving-data-mining-objects-between-databases-or-servers"></a>Verschieben von Data Mining-Objekten zwischen Datenbanken oder Servern  
  Sie können Data Mining-Objekte zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken oder Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf folgende Weise verschieben:  
   
 -   Erneutes Bereitstellen der Lösung an eine andere Datenbank.  
@@ -41,15 +46,15 @@ caps.handback.revision: 45
   
  Im folgenden Abschnitt werden diese Optionen ausführlich erläutert.  
   
-### Bereitstellen  
+### <a name="deploying"></a>Bereitstellen  
  Für die Bereitstellung der Projektmappe auf einem anderen Server bzw. einer anderen Datenbank benötigen Sie die Projektmappendatei, die mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wurde.  
   
  Weitere Informationen zur Bereitstellung von Analysis Services-Projektmappen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-### Skripterstellung  
+### <a name="scripting"></a>Skripterstellung  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Sprachen bereit, mit denen Sie Skripte für Objekte erstellen können.  
   
--   **XMLA:** Sie können Objekte mit XMLA schreiben, indem Sie mit der rechten Maustaste auf Objekte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] klicken. Um das Skript auszuführen, öffnen Sie es in einem **XMLA-Abfrage** -Fenster auf dem Zielserver.  
+-   **XMLA:**Sie können Objekte mit XMLA schreiben, indem Sie mit der rechten Maustaste auf Objekte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Um das Skript auszuführen, öffnen Sie es in einem **XMLA-Abfrage** -Fenster auf dem Zielserver.  
   
 -   **DMX**: Sie können Skripte anhand von Vorlagen oder einem der Abfrage-Generatoren erstellen, die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bereitgestellt werden.  
   
@@ -65,12 +70,12 @@ caps.handback.revision: 45
   
  Weitere Informationen finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
-### Sichern und Wiederherstellen  
+### <a name="backup-and-restore"></a>Sichern und Wiederherstellen  
  Sichern und Wiederherstellen einer gesamten Analysis Services-Datenbank bietet sich an, wenn Ihre Data Mining-Projektmappe auf OLAP-Objekten aufbaut. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt die Sicherungs- und Wiederherstellungsfunktionalität bereit, mit der Datenbanksicherungen schneller und leichter erstellt werden können.  
   
  Weitere Informationen zur Sicherung finden Sie unter [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
-### Exportieren und Importieren  
+### <a name="exporting-and-importing"></a>Exportieren und Importieren  
  Das Exportieren und anschließende erneute Importieren von Miningmodellen und -Strukturen mit DMX-Anweisungen ist die einfachste Möglichkeit, einzelne relationale Data Mining-Objekte zu verschieben oder zu sichern. Weitere Informationen zur DMX-Syntax für diese Vorgänge finden Sie unter den folgenden Themen:  
   
 -   [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)  
@@ -82,7 +87,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Sie können OLAP-Modelle nicht mit DMX exportieren und importieren. Wenn das Miningmodell auf einem OLAP-Cube basiert, müssen Sie die Funktionalität verwenden, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Sichern und Wiederherstellen einer ganzen Datenbank bereitgestellt wird, oder den Cube und seine Modelle erneut bereitstellen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

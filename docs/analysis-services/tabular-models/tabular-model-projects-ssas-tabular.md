@@ -1,27 +1,32 @@
 ---
 title: "Tabellenmodellprojekte (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tabellenmodellprojekte (SSAS – tabellarisch)
+# <a name="tabular-model-projects-ssas-tabular"></a>Tabellenmodellprojekte (SSAS – tabellarisch)
   Zum Erstellen eines neuen tabellarischen Modells müssen Sie zunächst ein neues Projekt für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen. Wenn Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installieren, werden drei neue Business Intelligence-Projektvorlagen zum Erstellen von Projekten für tabellarische Modelle bereitgestellt. Jede Projektvorlage stellt einen Bezugsrahmen für die Erstellung von Modellen bereit. In diesem Abschnitt wird beschrieben, wie ein neues Projekt für tabellarische Modelle mithilfe von Projektvorlagen erstellt wird.  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Thema|Description|  
 |-----------|-----------------|  

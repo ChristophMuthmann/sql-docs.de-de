@@ -1,59 +1,64 @@
 ---
-title: "Allgemeine Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout (Eigenschaft)"
-  - "InstanceVisible (Eigenschaft)"
-  - "TempDir (Eigenschaft)"
-  - "AdminTimeout (Eigenschaft)"
-  - "MinIdleSessionTimeout (Eigenschaft)"
-  - "MaxIdleSessionTimeout (Eigenschaft)"
-  - "IdleOrphanSessionTimeout (Eigenschaft)"
-  - "BackupDir (Eigenschaft)"
-  - "CommitTimeout (Eigenschaft)"
-  - "ExternalCommandTimeout (Eigenschaft)"
-  - "Enabled-Eigenschaft"
-  - "ForceCommitTimeout (Eigenschaft)"
-  - "Port (Eigenschaft)"
-  - "CoordinatorShutdownMode (Eigenschaft)"
-  - "ServerTimeout (Eigenschaft)"
-  - "AllowedBrowsingFolders (Eigenschaft)"
-  - "CoordinatorCancelCount (Eigenschaft)"
-  - "DataDir (Eigenschaft)"
-  - "CoordinatorQueryMaxThreads (Eigenschaft)"
-  - "CoordinatorExecitionMode (Eigenschaft)"
-  - "ExternalConnectionTimeout (Eigenschaft)"
-  - "CollationName (Eigenschaft)"
-  - "EnableFast1033Locale (Eigenschaft)"
-  - "CoordinatorBuildMaxThreads (Eigenschaft)"
-  - "Language (Eigenschaft)"
-  - "StatisticsStoreSize (Eigenschaft)"
-  - "RepositoryConnectionString (Eigenschaft)"
+title: Allgemeine Eigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Allgemeine Eigenschaften
+# <a name="general-properties"></a>Allgemeine Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nichts anderes angegeben ist  
   
-## Nicht spezifische Kategorie  
+## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  **AdminTimeout**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die den Administratortimeoutwert in Sekunden definiert. Hierbei handelt es sich um eine erweiterte Eigenschaft, die nicht ohne die Unterstützung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. es findet kein Timeout statt.  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. es findet kein Timeout statt.  
   
  **AllowedBrowsingFolders**  
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
@@ -67,21 +72,17 @@ caps.handback.revision: 29
  **CommitTimeout**  
  Eine Ganzzahleigenschaft, die angibt, wie lange der Server wartet (in Millisekunden), um eine Schreibsperre für den Commit einer Transaktion abzurufen. Eine Wartezeit ist oftmals erforderlich, da der Server darauf warten muss, dass andere Sperren freigegeben werden, bevor eine Schreibsperre verwendet werden kann, die einen Commit für die Transaktion ausführt.  
   
- Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539) (SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
+ Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
   
  **CoordinatorBuildMaxThreads**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads zum Erstellen von Partitionsindizes definiert. Durch Erhöhen dieses Werts kann die Partitionsindizierung auf Kosten der Speicherauslastung beschleunigt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen.  
-  
- **CoordinatorCancelCount** wird im tabellarischen Servermodus ignoriert.  
+ Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen. Diese Eigenschaft wird im tabellarischen Servermodus ignoriert.  
   
  **CoordinatorExecutionMode**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von parallelen Servervorgängen definiert, einschließlich von Verarbeitungs- und Abfragevorgängen. Null (0) bedeutet, dass der Server basierend auf einem internen Algorithmus selbst entscheidet. Eine positive Zahl zeigt die maximale Anzahl von Vorgängen insgesamt an. Eine negative Zahl (mit umgekehrtem Vorzeichen) zeigt die maximale Anzahl von Vorgängen pro Prozessor an.  
-  
- **CoordinatorExecutionMode** wird im tabellarischen Servermodus ignoriert.  
-  
+
  Der Standardwert für diese Eigenschaft ist -4. Dies bedeutet, der Server ist auf 4 parallele Vorgänge pro Prozessor eingeschränkt. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorQueryMaxThreads**  
@@ -110,19 +111,19 @@ caps.handback.revision: 29
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
  **ExternalCommandTimeout**  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für Befehle definiert, die an externe Server ausgegeben werden, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für Befehle definiert, die an externe Server ausgegeben werden, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server.  
   
  Der Standardwert für diese Eigenschaft ist 3.600 (Sekunden).  
   
  **ExternalConnectionTimeout**  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
   
  Der Standardwert für diese Eigenschaft ist 60 Sekunden.  
   
  **ForceCommitTimeout**  
- Eine Ganzzahleigenschaft, die angibt, wie lange (Dauer in Millisekunden) ein Schreib-Commit-Vorgang warten soll, bevor andere Befehle abgebrochen werden, die dem aktuellen Befehl vorausgingen, einschließlich momentan ausgeführter Abfragen. Dadurch kann die Commit-Transaktion fortgesetzt werden, da Vorgänge mit niedrigerer Priorität, z. B. Abfragen, abgebrochen werden.  
+ Eine Ganzzahleigenschaft, die angibt, wie lange (Dauer in Millisekunden) ein Schreib-Commit-Vorgang warten soll, bevor andere Befehle abgebrochen werden, die dem aktuellen Befehl vorausgingen, einschließlich momentan ausgeführter Abfragen. Dadurch kann die Commit-Transaktion fortgesetzt werden, da Vorgänge mit niedrigerer Priorität, z. B. Abfragen, abgebrochen werden.  
   
- Der Standardwert für diese Eigenschaft ist 30 Sekunden (30.000 Millisekunden), d. h., dass für andere Befehle erst dann ein Timeout erzwungen wird, wenn die Commit-Transaktion 30 Sekunden lang gewartet hat.  
+ Der Standardwert für diese Eigenschaft ist 30 Sekunden (30.000 Millisekunden), d. h., dass für andere Befehle erst dann ein Timeout erzwungen wird, wenn die Commit-Transaktion 30 Sekunden lang gewartet hat.  
   
 > [!NOTE]  
 >  Abfragen und Prozesse, die von diesem Ereignis abgebrochen wurden, geben die folgende Fehlermeldung aus: „`Server: The operation has been cancelled`“.  
@@ -135,7 +136,7 @@ caps.handback.revision: 29
  **IdleConnectionTimeout**  
  Eine Ganzzahleigenschaft, die ein Timeout für inaktive Verbindungen angibt (in Sekunden).  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. bei Verbindungen im Leerlauf erfolgt kein Timeout.  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. bei Verbindungen im Leerlauf erfolgt kein Timeout.  
   
  **IdleOrphanSessionTimeout**  
  Eine Ganzzahleigenschaft, die definiert, wie lange verwaiste Sitzungen im Arbeitsspeicher des Servers beibehalten werden (Dauer in Sekunden). Eine verwaiste Sitzung ist eine Sitzung, die keine zugeordnete Verbindung besitzt. Der Standardwert ist 120 Sekunden.  
@@ -160,7 +161,7 @@ caps.handback.revision: 29
  **Port**  
  Eine Ganzzahleigenschaft, die die Portnummer definiert, an der der Server auf Clientverbindungen lauscht. Wird diese Eigenschaft nicht festgelegt, sucht der Server dynamisch nach dem ersten freien Port.  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. es wird standardmäßig Port 2383 verwendet. Weitere Informationen zur Portkonfiguration finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. es wird standardmäßig Port 2383 verwendet. Weitere Informationen zur Portkonfiguration finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Eine Ganzzahl, die das Timeout für Abfragen definiert (in Sekunden). Der Standardwert beträgt 3600 Sekunden (oder 60 Minuten). Null (0) gibt an, dass für Abfragen kein Timeout erzwungen wird.  
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  Eine Zeichenfolgeneigenschaft, die den Ort zum Speichern von temporären Dateien angibt, die während Verarbeitung, Wiederherstellung und anderer Vorgänge verwendet werden. Der Standardwert für diese Eigenschaft wird von Setup bestimmt. Wenn nichts angegeben wird, wird standardmäßig das Verzeichnis Data verwendet.  
   
-## RequestPrioritization-Kategorie  
+## <a name="requestprioritization-category"></a>RequestPrioritization-Kategorie  
  **Aktiviert**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
  **StatisticsStoreSize**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
