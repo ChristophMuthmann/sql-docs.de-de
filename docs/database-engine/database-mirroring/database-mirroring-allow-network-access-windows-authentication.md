@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="to-configure-logins-for-windows-authentication"></a>So konfigurieren Sie Anmeldenamen für die Windows-Authentifizierung  
   
-1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie eine [](../../t-sql/statements/create-login-transact-sql.md) CREATE LOGIN-Anweisung mit der FROM WINDOWS-Klausel.  
+1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie eine [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) -Anweisung mit der FROM WINDOWS-Klausel.  
   
      Weitere Informationen finden Sie unter [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md).  
   
