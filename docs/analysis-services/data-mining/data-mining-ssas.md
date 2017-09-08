@@ -1,38 +1,43 @@
 ---
-title: "Data Mining (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Mining [Analysis Services], Informationen zum Data Mining"
+title: Datamining (SSAS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23048ed60a625a573d4820435f4ba87c0375e013
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining (SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist seit der Veröffentlichung im Jahr 2000 führend bei Predictive Analytics und stellt in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining bereit. Die Kombination von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt eine integrierte Plattform für Predictive Analytics mit Datenbereinigung und -vorbereitung, Machine Learning und Berichterstellung bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining umfasst mehrere Standardalgorithmen, einschließlich EM- und K-Means-Clustermodellen, neuronalen Netzwerken, logistischer und linearer Regression, Entscheidungsstrukturen und Naive Bayes-Klassifizierungen. Alle Modelle umfassen Visualisierungen, mit denen Sie Ihre Modelle entwickeln, optimieren und auswerten können.  Die Integration von Data Mining in Business Intelligence-Lösungen unterstützt Sie bei fundierten Entscheidungen zu komplexen Problemen.  
+# <a name="data-mining-ssas"></a>Data Mining (SSAS)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist seit der Veröffentlichung im Jahr 2000 führend bei Predictive Analytics und stellt in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Data Mining bereit. Die Kombination von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt eine integrierte Plattform für Predictive Analytics mit Datenbereinigung und -vorbereitung, Machine Learning und Berichterstellung bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining umfasst mehrere Standardalgorithmen, einschließlich EM- und K-Means-Clustermodellen, neuronalen Netzwerken, logistischer und linearer Regression, Entscheidungsstrukturen und Naive Bayes-Klassifizierungen. Alle Modelle umfassen Visualisierungen, mit denen Sie Ihre Modelle entwickeln, optimieren und auswerten können.  Die Integration von Data Mining in Business Intelligence-Lösungen unterstützt Sie bei fundierten Entscheidungen zu komplexen Problemen.  
   
-## Vorteile des Data Minings  
+## <a name="benefits-of-data-mining"></a>Vorteile des Data Minings  
  Data Mining (auch als Predictive Analytics und Machine Learning bezeichnet) verwendet gut erforschte statistische Prinzipien für die Erkennung von Mustern in Ihren Daten. Indem die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthaltenen Data Mining-Algorithmen auf Daten angewendet werden, können Trends vorhergesagt, Muster identifiziert, Regeln und Empfehlungen aufgestellt, die Abfolge von Ereignissen in komplexen Datasets analysiert und neue Einblicke gewonnen werden.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist Data Mining leistungsstark, zugreifbar und integriert in die Tools, die viele für Analyse und Berichtswesen bevorzugen.  
   
-## Wichtige Data Mining-Funktionen  
+## <a name="key-data-mining-features"></a>Wichtige Data Mining-Funktionen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt die folgenden Funktionen zur Unterstützung integrierter Data Mining-Lösungen bereit:  
   
 -   Mehrere Datenquellen: Sie können beliebige tabellarische Datenquellen für Data Mining verwenden, einschließlich Tabellenkalkulationen und Textdateien. Darüber hinaus können Sie leicht für OLAP-Cubes, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurden, Data Mining durchführen. Sie können jedoch keine Daten aus einer speicherinternen Datenbank verwenden.  
   
--   Integrierte Datenbereinigung, Datenverwaltung und Berichterstellung: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]stellt Tools zur Profilerstellung und zum Bereinigen von Daten bereit. Sie können ETL-Prozesse zum Bereinigen von Daten als Vorbereitung für die Modellierung erstellen. Außerdem vereinfacht ssISnoversion auch das erneute Trainieren und Aktualisieren von Modellen.  
+-   Integrierte Datenbereinigung, Datenverwaltung und Berichterstellung: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Tools zur Profilerstellung und zum Bereinigen von Daten bereit. Sie können ETL-Prozesse zum Bereinigen von Daten als Vorbereitung für die Modellierung erstellen. Außerdem vereinfacht ssISnoversion auch das erneute Trainieren und Aktualisieren von Modellen.  
   
 -   Mehrere anpassbare Algorithmen: Neben Algorithmen, beispielsweise für das Clustering, neuronale Netzwerke und Entscheidungsstrukturen, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining die Entwicklung eigener benutzerdefinierter Plug-In-Algorithmen.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
 -   Sicherheit und Bereitstellung: Bietet rollenbasierte Sicherheit durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich separater Berechtigungen für Drillthroughs zu Modell- und Strukturdaten. Einfache Bereitstellung von Modellen auf anderen Servern, damit Benutzer auf die Muster zugreifen oder Vorhersagen ausführen können  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  In den Themen in diesem Abschnitt werden die Hauptfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining sowie verwandte Tasks eingeführt.  
   
 -   [Data Mining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)  
@@ -69,7 +74,8 @@ caps.handback.revision: 31
   
 -   [Sicherheitsübersicht &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   
+

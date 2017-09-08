@@ -1,24 +1,29 @@
 ---
-title: "Datenspalten f&#252;r Sitzungsereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Sitzungsereignisse (Ereigniskategorie)"
+title: "Datenspalten für Sitzungsereignisse | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Datenspalten f&#252;r Sitzungsereignisse
+# <a name="session-events-data-columns"></a>Datenspalten für Sitzungsereignisse
   Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse auf:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  In der folgenden Tabelle sind die Datenspalten für diese Ereignisklasse aufgeführt.  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Vorhandene Sitzung  
+## <a name="existing-session"></a>Vorhandene Sitzung  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
 |RequestProperties|45|9|XMLA-Anforderungseigenschaften.|  
   
-## Sitzungsinitialisierung  
+## <a name="session-initialize"></a>Sitzungsinitialisierung  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
 |RequestProperties|45|9|XMLA-Anforderungseigenschaften.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sicherheitsüberwachung-Ereigniskategorie](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

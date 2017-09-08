@@ -1,31 +1,36 @@
 ---
-title: "Globalisierungsszenarien f&#252;r Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unterstützung mehrerer Sprachen [Analysis Services]"
-  - "Sprachen [Analysis Services]"
-  - "SSAS, internationale Überlegungen"
-  - "Internationale Überlegungen [Analysis Services]"
-  - "Globale Überlegungen [Analysis Services]"
-  - "SQL Server Analysis Services, internationale Überlegungen"
-  - "Analysis Services, internationale Überlegungen"
+title: "Globalisierungsszenarien für Analysis Services | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple language support [Analysis Services]
+- languages [Analysis Services]
+- SSAS, international considerations
+- international considerations [Analysis Services]
+- global considerations [Analysis Services]
+- SQL Server Analysis Services, international considerations
+- Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Globalisierungsszenarien f&#252;r Analysis Services
+# <a name="globalization-scenarios-for-analysis-services"></a>Globalisierungsszenarien für Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] speichert und bearbeitet mehrsprachige Daten und Metadaten für tabellarische und mehrdimensionale Datenmodelle. Die Datenspeicherung erfolgt in Unicode (UTF-16) in Zeichensätzen, die Unicode-Codierung verwenden. Wenn Sie ANSI-Daten in ein Datenmodell laden, werden Zeichen mit entsprechenden Unicode-Codepunkten gespeichert.  
   
  Die Auswirkungen der Unicode-Unterstützung sehen so aus, dass [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Daten in allen von den Windows-Client- und -Serverbetriebssystemen unterstützten Sprachen speichern kann, sodass Daten in jedem auf einem Windows-Computer verwendeten Zeichensatz gelesen, geschrieben, sortiert und verglichen werden können. BI-Clientanwendungen, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Daten nutzen, können Daten in der vom Benutzer gewünschten Sprache darstellen, vorausgesetzt, die Daten sind in der jeweiligen Sprache im Modell vorhanden.  
@@ -34,9 +39,9 @@ caps.handback.revision: 39
   
 -   Daten werden, wie erwähnt, in einem beliebigen, in einem Windows-Clientbetriebssystem vorhandenen Unicode-codierten Zeichensatz gespeichert.  
   
--   Metadaten, z. B. Objektnamen, können übersetzt werden. Zwar variiert die Unterstützung je nach Modelltyp, jedoch unterstützen sowohl mehrdimensionale als auch tabellarische Modelle das Hinzufügen von übersetzten Zeichenfolgen innerhalb des Modells. Sie können mehrere Übersetzungen definieren und dann einen Gebietsschemabezeichner verwenden, um zu bestimmen, welche Übersetzung an den Client zurückgegeben wird. Weitere Informationen finden Sie unten unter [Features](#bkmk_features).  
+-   Metadaten, z. B. Objektnamen, können übersetzt werden. Zwar variiert die Unterstützung je nach Modelltyp, jedoch unterstützen sowohl mehrdimensionale als auch tabellarische Modelle das Hinzufügen von übersetzten Zeichenfolgen innerhalb des Modells. Sie können mehrere Übersetzungen definieren und dann einen Gebietsschemabezeichner verwenden, um zu bestimmen, welche Übersetzung an den Client zurückgegeben wird. Weitere Informationen finden Sie unten unter [Features](#bkmk_features) .  
   
--   Fehler-, Warn- und Informationsmeldungen, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Modul (msmdsrv) zurückgegeben werden, werden in die 43 von Office und Office 365 unterstützten Sprachen lokalisiert. Es ist keine Konfiguration erforderlich, um Meldungen in einer bestimmten Sprache abzurufen. Das Gebietsschema der Clientanwendung bestimmt, welche Zeichenfolgen zurückgegeben werden.  
+-   Fehler-, Warn- und Informationsmeldungen, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modul (msmdsrv) zurückgegeben werden, werden in die 43 von Office und Office 365 unterstützten Sprachen lokalisiert. Es ist keine Konfiguration erforderlich, um Meldungen in einer bestimmten Sprache abzurufen. Das Gebietsschema der Clientanwendung bestimmt, welche Zeichenfolgen zurückgegeben werden.  
   
 -   Die Konfigurationsdatei (msmdsrv.ini) und AMO PowerShell sind nur in Englisch verfügbar.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 39
   
 -   Ein Datenmodell bietet mehrere übersetzte Beschriftungen, sodass Feldnamen und Werte in der Sprache des Benutzers angezeigt werden. Für Unternehmen, die in zweisprachigen Ländern wie Kanada, Belgien oder der Schweiz agieren, ist die Unterstützung mehrerer Sprachen über Client- und Serveranwendungen hinweg eine Standardcodierungsanforderung. Dieses Szenario wird durch Übersetzungen und Währungsumrechnungen ermöglicht. Weitere Informationen und Links finden Sie unten unter [Features](#bkmk_features) .  
   
--   Entwicklungs- und Produktionsumgebungen befinden sich geografisch in verschiedenen Ländern. Es geschieht immer häufiger, dass eine Lösung in einem Land entwickelt und in einem anderen bereitgestellt wird. Zu wissen, wie Sprach- und Sortierungseigenschaften festgelegt werden, ist sehr wichtig, wenn Sie die Aufgabe erhalten, eine in einer Sprache entwickelte Lösung für die Bereitstellung auf einem Server vorzubereiten, der ein anderes Sprachpaket verwendet. Durch Festlegen dieser Eigenschaften können Sie die geerbten Standardeinstellungen überschreiben, die Sie vom ursprünglichen Hostsystem erhalten. Einzelheiten zum Festlegen von Eigenschaften finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+-   Entwicklungs- und Produktionsumgebungen befinden sich geografisch in verschiedenen Ländern. Es geschieht immer häufiger, dass eine Lösung in einem Land entwickelt und in einem anderen bereitgestellt wird. Zu wissen, wie Sprach- und Sortierungseigenschaften festgelegt werden, ist sehr wichtig, wenn Sie die Aufgabe erhalten, eine in einer Sprache entwickelte Lösung für die Bereitstellung auf einem Server vorzubereiten, der ein anderes Sprachpaket verwendet. Durch Festlegen dieser Eigenschaften können Sie die geerbten Standardeinstellungen überschreiben, die Sie vom ursprünglichen Hostsystem erhalten. Weitere Informationen finden Sie unten unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) .  
   
 ##  <a name="bkmk_features"></a> Features für die Erstellung einer globalisierten mehrsprachigen Lösung  
  Auf der Clientebene können globalisierte Anwendungen, die mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Daten verwenden oder bearbeiten, die mehrsprachigen und multikulturellen Features in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwenden.  
@@ -67,11 +72,11 @@ caps.handback.revision: 39
 |Implementieren der Übersetzungsunterstützung|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Übersetzungsdateien generieren, die Sie ausfüllen und dann zurück in das Modell importieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in Tabellenmodellen &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] die Übersetzungen für die Beschriftung, Beschreibung und Kontotypen für Cubes und Measures, Dimensionen und Attribute definieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in mehrdimensionalen Modellen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Eine Lektion zur Verwendung dieser Funktion finden Sie in [Lektion 9: Definieren von Perspektiven und Übersetzungen](../analysis-services/lesson-9-defining-perspectives-and-translations.md) im Tutorial [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Währungsumrechnung|Nicht verfügbar.|Die Währungsumrechnung erfolgt über spezielle MDX-Skripts, die Measures mit Währungsdaten konvertieren. Sie können den Business Intelligence-Assistenten in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] verwenden, um ein MDX-Skript zu generieren, das eine Kombination aus Daten und Metadaten aus Dimensionen, Attributen und Measuregruppen verwendet, um Measures mit Währungsdaten zu konvertieren. Siehe [Währungsumrechnungen &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internationalisierung für Windows-Anwendungen](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Schreiben von Windows Store-Apps mit gebietsschemabasiertem adaptiven Design](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Entwicklung von Universal Windows-Apps mit C# und XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Go Global-Entwicklercenter](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Schreiben von Windows Store-apps mit gebietsschemabasiertem adaptiven design](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Entwicklung von universellen Windows-Apps mit c# und XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

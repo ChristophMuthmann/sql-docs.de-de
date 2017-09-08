@@ -1,37 +1,42 @@
 ---
-title: "Migrieren von Power Pivot zu SharePoint&#160;2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Migrieren von PowerPivot für SharePoint 2013 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Migrieren von Power Pivot zu SharePoint&#160;2013
+# <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrieren von Power Pivot zu SharePoint 2013
   
   
- SharePoint 2013 unterstützt keine direkten Upgrades. Die **Upgrademethode mit Anfügen der Datenbanken** wird jedoch unterstützt. Das Verhalten unterscheidet sich vom Upgrade auf SharePoint 2010, bei dem ein Kunde zwischen zwei grundlegenden Upgradeansätzen wählen kann: dem direkten Upgrade und dem Upgrade mit Anfügen der Datenbanken.  
+ SharePoint 2013 unterstützt keine direkten Upgrades. Die **Upgrademethode mit Anfügen der Datenbanken**wird jedoch unterstützt. Das Verhalten unterscheidet sich vom Upgrade auf SharePoint 2010, bei dem ein Kunde zwischen zwei grundlegenden Upgradeansätzen wählen kann: dem direkten Upgrade und dem Upgrade mit Anfügen der Datenbanken.  
   
- Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]-Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013-Farm zu migrieren. Dieses Thema bietet eine Übersicht über die Schritte, die zum Ausführen eines Upgrades mit Anfügen der Datenbanken sowie für eine auf [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] bezogene Migration erforderlich sind:  
+ Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013-Farm zu migrieren. Dieses Thema bietet eine Übersicht über die Schritte, die zum Ausführen eines Upgrades mit Anfügen der Datenbanken sowie für eine auf [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]bezogene Migration erforderlich sind:  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-### Übersicht über die Migration  
+### <a name="migration-overview"></a>Übersicht über die Migration  
   
 |1|2|3|4|  
 |-------|-------|-------|-------|  
-|Vorbereiten der SharePoint 2013-Farm|Sichern, Kopieren und Wiederherstellen von Datenbanken|Einbinden von Inhaltsdatenbanken|Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Zeitplänen|  
+|Vorbereiten der SharePoint 2013-Farm|Sichern, Kopieren und Wiederherstellen von Datenbanken|Einbinden von Inhaltsdatenbanken|Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Zeitplänen|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint-Zentraladministration<br /><br /> -Windows PowerShell|-SharePoint-Anwendungsseiten<br /><br /> -Windows PowerShell|  
   
  **In diesem Thema:**  
@@ -46,12 +51,12 @@ caps.handback.revision: 18
   
 -   [Zusätzliche Ressourcen](#bkmk_additional_resources)  
   
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Vorbereiten der SharePoint 2013-Farm  
+##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Vorbereiten der SharePoint 2013-Farm  
   
 1.  > [!TIP]  
-    >  Überprüfen Sie die Authentifizierungsmethode, die in vorhandenen Webanwendungen konfiguriert wurde. SharePoint 2013-Webanwendungen verwenden standardmäßig die anspruchsbasierte Authentifizierung. Für den klassischen Authentifizierungsmodus konfigurierte SharePoint 2010-Webanwendungen erfordern zusätzliche Schritte, um Datenbanken von SharePoint 2010 zu SharePoint 2013 zu migrieren. Wenn die Webanwendungen für den klassischen Authentifizierungsmodus konfiguriert sind, lesen Sie die SharePoint 2013-Dokumentation.  
+    >  Überprüfen Sie die Authentifizierungsmethode, die in vorhandenen Webanwendungen konfiguriert wurde. SharePoint 2013-Webanwendungen verwenden standardmäßig die anspruchsbasierte Authentifizierung. Für den klassischen Authentifizierungsmodus konfigurierte SharePoint 2010-Webanwendungen erfordern zusätzliche Schritte, um Datenbanken von SharePoint 2010 zu SharePoint 2013 zu migrieren. Wenn die Webanwendungen für den klassischen Authentifizierungsmodus konfiguriert sind, lesen Sie die SharePoint 2013-Dokumentation.  
   
-2.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
+2.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
   
 3.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
@@ -60,24 +65,24 @@ caps.handback.revision: 18
 5.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services-SharePoint-Integration" in [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ##  <a name="bkmk_backup_restore"></a> 2) Sichern, Kopieren und Wiederherstellen der Datenbanken  
- Der Prozess „SharePoint-Upgrade mit Anfügen der Datenbanken“ umfasst eine Abfolge von Schritten, mit denen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-bezogene Inhalts- und Dienstanwendungsdatenbanken auf der SharePoint 2013-Farm gesichert, kopiert und wiederhergestellt werden.  
+ Der Prozess „SharePoint-Upgrade mit Anfügen der Datenbanken“ umfasst eine Abfolge von Schritten, mit denen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -bezogene Inhalts- und Dienstanwendungsdatenbanken auf der SharePoint 2013-Farm gesichert, kopiert und wiederhergestellt werden.  
   
-1.  **Schreibgeschützte Datenbank:** Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Eigenschaften**. Legen Sie auf der Seite **Optionen** die Eigenschaft **Datenbank schreibgeschützt** auf **True** fest.  
+1.  **Schreibgeschützte Datenbank:** Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Eigenschaften**. Legen Sie auf der Seite **Optionen** die Eigenschaft **Datenbank schreibgeschützt** auf **True**fest.  
   
-2.  **Sichern:** Sichern Sie jede Inhaltsdatenbank und jede Dienstanwendungsdatenbank, die Sie zur SharePoint 2013-Farm migrieren möchten. Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Tasks** und dann auf **Sichern**.  
+2.  **Sichern:** Sichern Sie jede Inhaltsdatenbank und jede Dienstanwendungsdatenbank, die Sie zur SharePoint 2013-Farm migrieren möchten. Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Tasks**und dann auf **Sichern**.  
   
 3.  Kopieren Sie die Datenbank-Sicherungsdateien (.bak) auf den gewünschten Zielserver.  
   
-4.  **Wiederherstellen:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]wieder her. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ausgeführt werden.  
+4.  **Wiederherstellen:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]wieder her. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
   
-5.  **Datenbank mit Lese-/Schreibzugriff:** Legen Sie **Datenbank schreibgeschützt** auf **False** fest.  
+5.  **Datenbank mit Lese-/Schreibzugriff:** Legen Sie **Datenbank schreibgeschützt** auf **False**fest.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
  Eine ausführliche Erläuterung der folgenden Anleitungen finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Datenbank offline schalten:**  
   
-     Schalten Sie jede SharePoint 2013-Inhaltsdatenbank mithilfe der SharePoint-Zentraladministration offline. Die Inhaltsdatenbanken werden durch die Datenbanken ersetzt, die Sie kopiert haben. Überlegen Sie, welches die beste Abfolge für Ihre Umgebung ist. Sie können die Datenbanken einzeln offline schalten und die zugehörige Ersatzdatenbank einbinden, bevor Sie die nächste Inhaltsdatenbank offline schalten. Oder Sie haben die Möglichkeit, alle Inhaltsdatenbanken als Gruppe offline zu schalten.  
+     Schalten Sie jede SharePoint 2013-Inhaltsdatenbank mithilfe der SharePoint-Zentraladministration offline. Die Inhaltsdatenbanken werden durch die Datenbanken ersetzt, die Sie kopiert haben. Überlegen Sie, welches die beste Abfolge für Ihre Umgebung ist. Sie können die Datenbanken einzeln offline schalten und die zugehörige Ersatzdatenbank einbinden, bevor Sie die nächste Inhaltsdatenbank offline schalten. Oder Sie haben die Möglichkeit, alle Inhaltsdatenbanken als Gruppe offline zu schalten.  
   
     1.  Klicken Sie in der SharePoint-Zentraladministration auf **Anwendungsverwaltung**.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 18
   
 -   **Inhaltsdatenbanken einbinden:**  
   
-     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die Dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell-Inhalt")  
+     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
@@ -104,7 +109,7 @@ caps.handback.revision: 18
     -   > [!TIP]  
         >  An dieser Stelle im Migrationsvorgang besteht die Möglichkeit, neue Zeitpläne für die migrierten Arbeitsmappen zu erstellen. Die Zeitpläne werden jedoch in der neuen Datenbank der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung erstellt und nicht in der Datenbank, die Sie aus der alten SharePoint-Farm kopiert haben. Daher enthält die Datenbank keinen der alten Zeitpläne. Nachdem Sie die folgenden Schritte ausgeführt haben, um die alte Datenbank zu verwenden und die alten Zeitpläne zu migrieren, sind die neuen Zeitpläne nicht verfügbar.  
   
-### Beheben von Problemen beim Einbinden von Datenbanken  
+### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Beheben von Problemen beim Einbinden von Datenbanken  
  In diesem Abschnitt sind mögliche Probleme zusammengefasst, die beim Einbinden der Datenbank auftreten können.  
   
 1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler auftreten, überprüfen Sie den Authentifizierungsmodus, der von den Quellwebanwendungen verwendet wird. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
@@ -130,7 +135,7 @@ caps.handback.revision: 18
   
 -   **Option 1 zum Migrieren von Zeitplänen: SharePoint-Farmadministrator**  
   
-    1.  Führen Sie in der SharePoint 2013-Verwaltung das `Set-PowerPivotServiceApplication`-Cmdlet mit dem `-StartMigratingRefreshSchedules`-Schalter aus, um die automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell-Inhalt") zu aktivieren. Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung vorhanden ist.  
+    1.  Führen Sie in der SharePoint 2013 Verwaltung der `Set-PowerPivotServiceApplication` Cmdlet mit dem `-StartMigratingRefreshSchedules` Switch So aktivieren Sie automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt"). Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung vorhanden ist.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -161,14 +166,14 @@ caps.handback.revision: 18
   
  **SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen**  
   
--   SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen werden nicht automatisch aktualisiert, wenn sie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 verwendet werden. Nach der Migration einer Inhaltsdatenbank, die 2008 R2-Arbeitsmappen enthält, können Sie die Arbeitsmappen zwar verwenden, die Zeitpläne werden jedoch nicht aktualisiert.  
+-   SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen werden nicht automatisch aktualisiert, wenn sie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 verwendet werden. Nach der Migration einer Inhaltsdatenbank, die 2008 R2-Arbeitsmappen enthält, können Sie die Arbeitsmappen zwar verwenden, die Zeitpläne werden jedoch nicht aktualisiert.  
   
 -   Weitere Informationen finden Sie unter [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_additional_resources"></a> Zusätzliche Ressourcen  
   
 > [!NOTE]  
->  Weitere Informationen zum [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]- und SharePoint-Upgrade mit Anfügen der Datenbanken finden Sie unter:  
+>  Weitere Informationen zum [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - und SharePoint-Upgrade mit Anfügen der Datenbanken finden Sie unter:  
   
 -   [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
@@ -176,6 +181,6 @@ caps.handback.revision: 18
   
 -   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
   

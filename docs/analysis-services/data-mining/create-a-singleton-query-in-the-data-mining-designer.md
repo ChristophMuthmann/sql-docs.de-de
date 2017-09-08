@@ -1,26 +1,31 @@
 ---
-title: "Erstellen einer SINGLETON-Abfrage im Data Mining-Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SINGLETON-Abfragen [Analysis Services]"
-  - "Miningmodellvorhersage [Analysis Services], Singleton-Abfragen"
+title: Erstellen eine Singleton-Abfrage im Datamining-Designer | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
   Eine SINGLETON-Abfrage ist nützlich, wenn Sie eine Vorhersage für einen einzelnen Fall erstellen möchten. Weitere Informationen zu SINGLETON-Abfragen finden Sie unter [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Auf der Registerkarte **Miningmodellvorhersage** im Data Mining-Designer können Sie zahlreiche unterschiedliche Abfragetypen erstellen. Sie können eine Abfrage mit dem Designer erstellen oder durch das Eingeben von DMX-Anweisungen (Data Mining-Erweiterungen). Sie können auch mit dem Designer beginnen und die auf diese Weise erstellte Abfrage durch Änderung der DMX-Anweisungen oder durch Hinzufügen einer WHERE- oder ORDER BY-Klausel anpassen.  
@@ -39,7 +44,7 @@ AS [t]
   
  Die folgenden Schritte erläutern, wie diese Vorhersageabfrage erstellt wird.  
   
-### So erstellen Sie eine SINGLETON-Abfrage mithilfe des Data Mining-Designers  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>So erstellen Sie eine SINGLETON-Abfrage mithilfe des Data Mining-Designers  
   
 1.  Klicken Sie auf die **Miningmodellvorhersage** -Registerkarte im Data Mining-Designer.  
   
@@ -63,13 +68,13 @@ AS [t]
   
      Ziehen Sie beispielsweise **Bike Buyer** in die Spalte **Quelle** .  
   
-6.  Fügen Sie je nach Bedarf die zusätzlichen Funktionen der Abfrage hinzu, indem Sie **Vorhersagefunktion** oder **Benutzerdefinierter Ausdruck** aus der Dropdownliste in der **Quelle**-Spalte auswählen.  
+6.  Fügen Sie je nach Bedarf die zusätzlichen Funktionen der Abfrage hinzu, indem Sie **Vorhersagefunktion** oder **Benutzerdefinierter Ausdruck** aus der Dropdownliste in der **Quelle** -Spalte auswählen.  
   
      Klicken Sie beispielsweise auf **Vorhersagefunktion**, und wählen Sie **PredictProbability**aus.  
   
-7.  Klicken Sie in der Zeile **PredictProbability** auf **Kriterium/Argument**, und geben Sie den Namen der vorherzusagenden Spalte ein und optional einen bestimmten vorherzusagenden Wert.  
+7.  Klicken Sie in der Zeile **PredictProbability** auf **Kriterium/Argument** , und geben Sie den Namen der vorherzusagenden Spalte ein und optional einen bestimmten vorherzusagenden Wert.  
   
-     Geben Sie beispielsweise **[Fahrradkäufer], 1** ein.  
+     Geben Sie beispielsweise **[Fahrradkäufer], 1**ein.  
   
 8.  Klicken Sie in der Zeile **PredictProbability** auf das Feld **Alias** , und geben Sie einen Verweisnamen für die neue Spalte ein.  
   
@@ -79,7 +84,7 @@ AS [t]
   
      Ein neuer Bildschirm wird geöffnet, der das Ergebnis der Abfrage anzeigt. Um die DMX-Anweisung anzuzeigen, die Sie gerade erstellt haben, klicken Sie auf **SQL**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Vorhersageabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

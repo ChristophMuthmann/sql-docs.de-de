@@ -1,52 +1,57 @@
 ---
-title: "Technische Referenz f&#252;r den Microsoft Logistic Regression-Algorithmus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logistische Regression [Analysis Services]"
-  - "MAXIMUM_INPUT_ATTRIBUTES-Parameter"
-  - "HOLDOUT_PERCENTAGE-Parameter"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES-Parameter"
-  - "MAXIMUM_STATES-Parameter"
-  - "SAMPLE_SIZE-Parameter"
-  - "Regressionsalgorithmen [Analysis Services]"
-  - "HOLDOUT_SEED-Parameter"
+title: Technische Referenz zu Microsoft Logistic Regression-Algorithmus | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- regression algorithms [Analysis Services]
+- HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f258864aae1f2dfbc41ad822d2f7f0793378843
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Technische Referenz f&#252;r den Microsoft Logistic Regression-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO*-Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.  
+# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO* -Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.  
   
-## Implementierung des Microsoft Logistic Regression-Algorithmus  
+## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementierung des Microsoft Logistic Regression-Algorithmus  
  Angenommen, die vorhersagbare Spalte enthält nur zwei Status, und Sie möchten dennoch eine Regressionsanalyse durchführen, indem Sie Eingabespalten mit der Wahrscheinlichkeit, dass die vorhersagbare Spalte einen bestimmten Status haben wird, in Beziehung setzen. Im folgenden Diagramm werden die resultierenden Ergebnisse dargestellt, wenn Sie die Werte 1 und 0 den Status der vorhersagbaren Spalte zuweisen, die Wahrscheinlichkeit berechnen, dass die Spalte einen bestimmten Status haben wird, und eine lineare Regression für eine Eingabevariable durchführen.  
   
- ![Schlecht modellierte Daten mit linearer Regression](../../analysis-services/data-mining/media/logistic-linear-regression.gif "Schlecht modellierte Daten mit linearer Regression")  
+ ![Schlecht modellierte Daten mit linearer Regression](../../analysis-services/data-mining/media/logistic-linear-regression.gif "schlecht modellierte Daten mit linearer Regression")  
   
  Die X-Achse enthält die Werte einer Eingabespalte. Die Y-Achse enthält die Wahrscheinlichkeiten, dass die vorhersagbare Spalte den einen oder anderen Status haben wird. Das Problem dabei ist, dass die lineare Regression die Spalte nicht auf einen Wert zwischen 0 und 1 einschränkt, obwohl dies die maximalen und minimalen Werte der Spalte sind. Um dieses Problem zu lösen, kann die logistische Regression ausgeführt werden. Anstatt eine gerade Linie zu erstellen, erstellt die logistische Regressionsanalyse eine Kurve in Form eines "S", die die maximalen und minimalen Einschränkungen enthält. Das folgende Diagramm stellt z. B. die resultierenden Ergebnisse dar, wenn Sie eine logistische Regression für die im vorigen Beispiel verwendeten Daten durchführen.  
   
- ![Mithilfe der logistischen Regression modellierte Daten](../../analysis-services/data-mining/media/logistic-regression.gif "Mithilfe der logistischen Regression modellierte Daten")  
+ ![Daten mithilfe der logistischen Regression modellierte](../../analysis-services/data-mining/media/logistic-regression.gif "Daten durch Verwenden der logistischen Regression modelliert wird.")  
   
  Beachten Sie, dass die Kurve nicht über den Wert 1 bzw. nicht unter den Wert 0 geht. Sie können die logistische Regression verwenden, um zu beschreiben, welche Eingabespalten zur Statusbestimmung der vorhersagbaren Spalte wichtig sind.  
   
-### Funktionsauswahl  
+### <a name="feature-selection"></a>Funktionsauswahl  
  Die Funktionsauswahl wird automatisch von allen Analysis Services Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl in logistischen Regressionsmodellen verwendete Methode hängt vom Datentyp des Attributs ab. Da die logistische Regression auf dem Microsoft Neural Network-Algorithmus basiert, verwendet sie eine Teilmenge der Funktionsauswahlmethoden, die für neuronale Netzwerke gelten. Weitere Informationen finden Sie unter [Funktionsauswahl &#40;Data Mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
-### Bewerten von Eingaben  
+### <a name="scoring-inputs"></a>Bewerten von Eingaben  
  *Bewertung* bezeichnet im Kontext eines neuronalen Netzwerkmodells oder eines logistischen Regressionsmodells den Prozess der Konvertierung der in den Daten vorhandenen Werte in einen Satz von Werten, die die gleiche Skala verwenden und daher miteinander verglichen werden können. Angenommen, die Eingaben für Income bewegen sich zwischen 0 und 100.000, während die Eingaben für [Number of Children] zwischen 0 und 5 liegen. Mit diesem Konvertierungsprozess können Sie die Wichtigkeit der einzelnen Eingaben unabhängig von der Unterschiedlichkeit der Werte vergleichen.  
   
- Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird mit der z-Ergebnis-Normalisierungsmethode (`(x – μ)\StdDev`) zu einem numerischen Format skaliert.  
+ Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird mit der z-Ergebnis-Normalisierungsmethode ( `(x – μ)\StdDev`) zu einem numerischen Format skaliert.  
   
  Während der z-Ergebnis-Normalisierung werden die mittlere (µ) und die Standardabweichung über den gesamten Trainingssatz abgerufen.  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 17
   
  Wert vorhanden:     `\(1 – μ)/σ` (Eins minus Mu geteilt durch Sigma)  
   
- Wert fehlt:    `(– μ)/σ`  (Negatives Mu geteilt durch Sigma)  
+ Wert fehlt:     `(– μ)/σ` (Negatives Mu geteilt durch Sigma)  
   
-### Grundlegendes zu logistischen Regressionskoeffizienten  
+### <a name="understanding-logistic-regression-coefficients"></a>Grundlegendes zu logistischen Regressionskoeffizienten  
  In der statistischen Literatur sind verschiedene Methoden zur Durchführung einer logistischen Regression vorhanden. Ein wichtiger Bestandteil aller Methoden besteht darin, die Güte des Modells zu bewerten. Eine Vielzahl von statistischen Daten zur Prüfung der Modellgüte sind vorgeschlagen worden, darunter Quotenverhältnisse (Odds Ratios) und Kovariaten-Muster. Eine Beschreibung, wie die Güte eines Modells gemessen wird, würde den Rahmen dieses Themas sprengen. Sie können jedoch den Wert der Koeffizienten im Modell abrufen und sie zur Entwicklung eigener Gütekennzahlen verwenden.  
   
 > [!NOTE]  
@@ -90,10 +95,10 @@ WHERE NODE_TYPE = 23
   
  Weitere Informationen finden Sie unter [Beispiele für logistische Regressionsmodellabfrage](../../analysis-services/data-mining/logistic-regression-model-query-examples.md).  
   
-## Anpassen des Logistic Regression-Algorithmus  
+## <a name="customizing-the-logistic-regression-algorithm"></a>Anpassen des Logistic Regression-Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt mehrere Parameter, die Auswirkungen auf das Verhalten, die Leistung und die Genauigkeit des resultierenden Miningmodells haben. Sie können auch das Verhalten des Modells ändern, indem Sie Modellierungsflags für die als Eingabe verwendeten Spalten festlegen.  
   
-### Festlegen von Algorithmusparametern  
+### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle werden die Parameter beschrieben, die mit dem Microsoft Logistic Regression-Algorithmus verwendet werden können.  
   
  HOLDOUT_PERCENTAGE  
@@ -104,7 +109,7 @@ WHERE NODE_TYPE = 23
  HOLDOUT_SEED  
  Gibt eine Zahl an, die als Ausgangswert für den Pseudozufallszahlen-Generator verwendet wird, um die auszunehmenden Daten zufällig zu bestimmen. Wenn HOLDOUT_SEED auf 0 festgelegt ist, generiert der Algorithmus den Ausgangswert basierend auf dem Modellnamen; so wird sichergestellt, dass der Inhalt bei erneuter Verarbeitung des Modells gleich bleibt.  
   
- Die Standardeinstellung ist 0.  
+ Die Standardeinstellung ist 0.  
   
  MAXIMUM_INPUT_ATTRIBUTES  
  Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.  
@@ -128,7 +133,7 @@ WHERE NODE_TYPE = 23
   
  Der Standardwert ist 10.000.  
   
-### Modellierungsflags  
+### <a name="modeling-flags"></a>Modellierungsflags  
  Die folgenden Modellierungsflags werden zur Verwendung mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt.  
   
  NOT NULL  
@@ -141,10 +146,10 @@ WHERE NODE_TYPE = 23
   
  Gilt für die Miningmodellspalte.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Ein logistisches Regressionsmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
-### Eingabespalten und vorhersagbare Spalten  
+### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt bestimmte Inhaltstypen für Eingabespalten und für vorhersagbare Spalten sowie Modellierungsflags, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Column|Inhaltstypen|  
@@ -152,10 +157,10 @@ WHERE NODE_TYPE = 23
 |Eingabeattribut|Continuous, Discrete, Discretized, Key, Table|  
 |Vorhersagbares Attribut|Continuous, Discrete, Discretized|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
+ [Lineare Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

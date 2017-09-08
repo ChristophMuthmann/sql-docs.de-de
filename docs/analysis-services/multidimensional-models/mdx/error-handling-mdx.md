@@ -1,27 +1,32 @@
 ---
-title: "Fehlerbehandlung (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Skripts [MDX], Ausnahmen"
-  - "Ausnahmen [MDX]"
+title: Fehlerbehandlung (MDX) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [MDX], exceptions
+- exceptions [MDX]
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbd604d132fa204da606b44d72551f198661c81a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Fehlerbehandlung (MDX)
+# <a name="error-handling-mdx"></a>Fehlerbehandlung (MDX)
   Jeder Cube kann steuern, wie Fehler in einem MDX-Skript (Multidimensional Expressions) behandelt werden. Die Fehlerbehandlung erfolgt über den **ScriptErrorHandlingMode** -Enumerator. Für diesen Enumerator sind folgende Werte möglich:  
   
  **IgnoreNone**  
@@ -30,7 +35,7 @@ caps.handback.revision: 26
  **IgnoreAll**  
  Veranlasst den Server dazu, alle Befehle im MDX-Skript zu ignorieren, die einen Fehler (Syntaxfehler, Fehler bei der Namensauflösung usw.) enthalten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices.Cube.ScriptErrorHandlingMode%2A>  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Tools und Ans&#228;tze zum Verarbeiten (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verarbeiten [Analysis Services]"
-  - "Verarbeitung [Analysis Services]"
+title: "Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tools und Ans&#228;tze zum Verarbeiten (Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
   Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
   
  Als Analysis Services-Systemadministrator können Sie die Verarbeitung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte mithilfe der folgenden Ansätze ausführen und überwachen:  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zum Verarbeiten von tabellarischen Modellen finden Sie unter [Verarbeiten von Datenbank, Tabelle oder Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
-### Verarbeiten von Objekten in SQL Server Management Studio  
+### <a name="processing-objects-in-sql-server-management-studio"></a>Verarbeiten von Objekten in SQL Server Management Studio  
   
 1.  Starten Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit Analysis Services her.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      Im Dialogfeld Verarbeitungsstatus wird für jeden Befehl fortlaufend der Status angezeigt. Wenn eine Statusmeldung abgeschnitten ist, können Sie auf **Details anzeigen** klicken, um die ganze Meldung zu lesen.  
   
-### Verarbeiten von Objekten in SQL Server Data Tools  
+### <a name="processing-objects-in-sql-server-data-tools"></a>Verarbeiten von Objekten in SQL Server Data Tools  
   
 1.  Starten Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , und öffnen Sie ein Projekt, das bereitgestellt wurde.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 34
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Dimension, und klicken Sie dann auf **Verarbeiten**. Sie können mit der rechten Maustaste auf mehrere Dimensionen klicken, um mehrere Objekte auf einmal zu verarbeiten. Weitere Informationen finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
-4.  Überprüfen Sie im Dialogfeld **Dimension aufbereiten** in der Spalte **Verarbeitungsoptionen** unter **Objektliste**, ob die Option für diese Spalte **Vollständig verarbeiten**lautet. Sollte dies nicht der Fall sein, klicken Sie unter **Verarbeitungsoptionen** auf die Option, und wählen Sie aus der Dropdownliste **Vollständig verarbeiten** aus.  
+4.  Überprüfen Sie im Dialogfeld **Dimension aufbereiten** in der Spalte **Verarbeitungsoptionen** unter **Objektliste**, ob die Option für diese Spalte **Vollständig verarbeiten**lautet. Sollte dies nicht der Fall sein, klicken Sie unter **Verarbeitungsoptionen**auf die Option, und wählen Sie aus der Dropdownliste **Vollständig verarbeiten** aus.  
   
 5.  Klicken Sie auf **Ausführen**.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
 3.  Klicken Sie auf **Auswirkungsanalyse**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scannt das Modell und berichtet über Neuverarbeitungsanforderungen für Objekte, die auf das für die Verarbeitung ausgewählte verweisen.  
   
-### Verarbeiten von Objekten mit XMLA  
+### <a name="processing-objects-using-xmla"></a>Verarbeiten von Objekten mit XMLA  
   
 1.  Starten Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit Analysis Services her.  
   
@@ -119,19 +124,19 @@ caps.handback.revision: 34
   
 7.  Klicken Sie in der Menüleiste auf **Abfrage**, und klicken Sie dann auf **Ausführen**.  
   
-### Verarbeiten von Objekten mit PowerShell  
+### <a name="processing-objects-using-powershell"></a>Verarbeiten von Objekten mit PowerShell  
   
 1.  Ab dieser Version von SQL Server können Sie Analysis Services PowerShell-Cmdlets zum Verarbeiten von Objekten verwenden. Die folgenden Cmdlets können interaktiv oder per Skript ausgeführt werden:  
   
     -   [Invoke-ProcessCube-Cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
-    -   [Invoke-ProcessDimension-Cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
+    -   [Invoke-ProcessDimension cmdlet (Invoke-ProcessDimension-Cmdlet)](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
     -   [Invoke-ProcessPartition-Cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Invoke-ASCmd-Cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
   
-### Überwachungsobjektverarbeitung mit SQL Server Profiler  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Überwachungsobjektverarbeitung mit SQL Server Profiler  
   
 1.  Stellen Sie in SQL Server Profiler eine Verbindung zu einer Analysis Services-Instanz her.  
   
@@ -149,15 +154,15 @@ caps.handback.revision: 34
   
     -   Fügen Sie alternativ Sperrereignisse hinzu, wenn Sie auf Verarbeitung bezogene Leistungsprobleme diagnostizieren  
   
-### Verarbeiten von Analysis Services-Objekten mit Integration Services  
+### <a name="process-analysis-services-objects-using-integration-services"></a>Verarbeiten von Analysis Services-Objekten mit Integration Services  
   
 1.  Erstellen Sie in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ein Paket, das den Analysis Services-Verarbeitungstask verwendet, um Objekte automatisch mit neuen Daten aufzufüllen wenn Sie regelmäßige Updates an der relationalen Quelldatenbank vornehmen.  
   
-2.  Doppelklicken Sie in der **SSIS-Toolbox** auf **Analysis Services-Verarbeitung**, um den Task zum Paket hinzuzufügen.  
+2.  Doppelklicken Sie in der **SSIS-Toolbox**auf **Analysis Services-Verarbeitung** , um den Task zum Paket hinzuzufügen.  
   
 3.  Bearbeiten Sie den Task, um eine Verbindung zur Datenbank anzugeben und um zu bestimmen, welche Objekte verarbeitet werden sollen und um die Verarbeitungsoption zu bestimmen. Weitere Informationen zum Implementieren dieses Tasks finden Sie unter [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

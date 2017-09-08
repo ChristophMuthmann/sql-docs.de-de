@@ -1,41 +1,46 @@
 ---
-title: "Technische Referenz f&#252;r den Microsoft Naive Bayes-Algorithmus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_DEPENDENCY_PROBABILITY-Parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES-Parameter"
-  - "Naives Bayes-Modell [Analysis Services]"
-  - "Bayes-Klassifizierungen"
-  - "Naive Bayes-Algorithmen [Analysis Services]"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES-Parameter"
-  - "MAXIMUM_STATES-Parameter"
+title: "Technische Referenz für den Microsoft Naive Bayes-Algorithmus | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_DEPENDENCY_PROBABILITY parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Technische Referenz f&#252;r den Microsoft Naive Bayes-Algorithmus
+# <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein Klassifikationsalgorithmus, der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Verwenden bei der Vorhersagemodellierung bereitgestellt wird. Der Algorithmus berechnet die bedingte Wahrscheinlichkeit zwischen Eingabespalten und vorhersagbaren Spalten und setzt die Unabhängigkeit der Spalten voraus. Diese Annahme der Unabhängigkeit führt zum Namen Naive Bayes.  
   
-## Implementierung des Microsoft Naive Bayes-Algorithmus  
+## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementierung des Microsoft Naive Bayes-Algorithmus  
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Der Algorithmus berücksichtigt jedes Eingabeattributwertpaar und Ausgabeattributwertpaar.  
   
  Eine Beschreibung der mathematischen Eigenschaften des Bayes-Theorems würde den Rahmen dieser Dokumentation sprengen. Weitere Informationen finden Sie unter Microsoft Research im Dokument mit dem Titel [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Eine Beschreibung, wie Wahrscheinlichkeiten in allen Modellen angepasst werden, um potenzielle fehlende Werte zu berücksichtigen, finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-### Funktionsauswahl  
+### <a name="feature-selection"></a>Funktionsauswahl  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus führt eine automatische Funktionsauswahl durch, um die Zahl der Werte, die beim Erstellen des Modells berücksichtigt werden, einzuschränken. Weitere Informationen finden Sie unter [Funktionsauswahl &#40;Data Mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
 |Algorithmus|Analysemethode|Kommentare|  
@@ -50,10 +55,10 @@ caps.handback.revision: 16
   
 -   Um die Anzahl der Werte zu beschränken, die für ein Attribut berücksichtigt werden können, setzen Sie den Wert von MINIMUM_STATES herab.  
   
-## Anpassen des Naive Bayes-Algorithmus  
+## <a name="customizing-the-naive-bayes-algorithm"></a>Anpassen des Naive Bayes-Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus unterstützt mehrere Parameter, die Auswirkungen auf das Verhalten, die Leistung und die Genauigkeit des resultierenden Miningmodells haben. Sie können außerdem Modellierungsflags für die Modellspalten festlegen, um die Verarbeitung der Daten zu steuern, oder Flags für die Miningstruktur setzen, um anzugeben, wie fehlende oder NULL-Werte behandelt werden sollen.  
   
-### Festlegen von Algorithmusparametern  
+### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus unterstützt mehrere Parameter, die Auswirkungen auf die Leistung und die Genauigkeit des resultierenden Miningmodells haben. In der folgenden Tabelle wird jeder Parameter beschrieben.  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
@@ -76,7 +81,7 @@ caps.handback.revision: 16
   
  Der Standardwert ist 100.  
   
-### Modellierungsflags  
+### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
 |Modellierungsflag|Description|  
@@ -84,10 +89,10 @@ caps.handback.revision: 16
 |MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Ein Naive Bayes-Strukturmodell muss eine Schlüsselspalte, mindestens ein vorhersagbares Attribut und mindestens ein Eingabeattribut enthalten. Kein Attribut darf kontinuierlich sein. Wenn die Daten kontinuierliche numerische Daten enthalten, werden sie ignoriert oder diskretisiert.  
   
-### Eingabespalten und vorhersagbare Spalten  
+### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Column|Inhaltstypen|  
@@ -98,9 +103,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Beispiele für Naive Bayes-Modellabfrage](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [Beispiele für Naive Bayes-Modell](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

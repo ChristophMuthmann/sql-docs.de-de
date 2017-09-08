@@ -1,29 +1,34 @@
 ---
-title: "Definieren einer Datenquellensicht (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Namen [Analysis Services], Datenquellensichten"
-  - "Namensübereinstimmungskriterien [Analysis Services]"
-  - "Datenquellensicht-Assistent"
-  - "Datenquellensichten [Analysis Services], erstellen"
+title: Definieren einer Datenquellensicht (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [Analysis Services], data source views
+- name matching criteria [Analysis Services]
+- Data Source View Wizard
+- data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3aae9714c37d9bd4272add2829d4cdef8f2d9c9d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definieren einer Datenquellensicht (Analysis Services)
+# <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
   Eine Datenquellensicht enthält das logische Modell des Schemas, das von mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankobjekten, also Cubes, Dimensionen und Miningstrukturen, verwendet wird. Eine Datenquellensicht ist die im XML-Format gespeicherte Metadatendefinition dieser Schemaelemente, die vom UDM (Unified Dimensional Model) und von den Miningstrukturen verwendet werden. Eine Datenquellensicht:  
   
 -   Enthält die Metadaten, die ausgewählte Objekte aus mindestens einer zugrunde liegenden Datenquelle darstellen bzw. die Metadaten, die zum Generieren eines zugrunde liegenden relationalen Datenspeichers verwendet werden, wenn zur Schemagenerierung der Top-Down-Ansatz verwendet wird.  
@@ -101,16 +106,16 @@ caps.handback.revision: 42
   
 4.  **Filtern verfügbarer Objekte**  
   
-     Wenn in der Liste Verfügbare Objekte eine Vielzahl von Objekten enthalten ist, können Sie die Liste durch einen einfachen Filter reduzieren, der eine Zeichenfolge als Auswahlkriterium angibt. Wenn Sie z. B. **dbo** eingeben und anschließend auf die Schaltfläche **Filter** klicken, werden nur die Elemente in der Liste **Verfügbare Objekte** angezeigt, die mit "dbo" beginnen. Der Filter kann eine Teilzeichenfolge ("sal" gibt z. B. Verkäufe und Gehalt zurück) sein, ist jedoch nicht in der Lage, mehrere Zeichenfolgen oder Operatoren einzuschließen.  
+     Wenn in der Liste Verfügbare Objekte eine Vielzahl von Objekten enthalten ist, können Sie die Liste durch einen einfachen Filter reduzieren, der eine Zeichenfolge als Auswahlkriterium angibt. Wenn Sie z. B. **dbo** eingeben und anschließend auf die Schaltfläche **Filter** klicken, werden nur die Elemente in der Liste **Verfügbare Objekte** angezeigt, die mit "dbo" beginnen. Der Filter kann eine Teilzeichenfolge ("sal" gibt z. B. Verkäufe und Gehalt zurück) sein, ist jedoch nicht in der Lage, mehrere Zeichenfolgen oder Operatoren einzuschließen.  
   
 5.  Bei relationalen Datenquellen, für die keine Tabellenbeziehungen definiert sind, wird die Seite **Namensübereinstimmung** angezeigt, auf der Sie die geeignete Methode zum Abgleich von Namen auswählen können. Weitere Informationen finden Sie im Abschnitt [Angeben von Namensübereinstimmungskriterien für Beziehungen](#bkmk_NameMatch) in diesem Thema.  
   
 ##  <a name="bkmk_secondaryDS"></a> Hinzufügen einer sekundären Datenquelle  
  Wenn Sie eine Datenquellensicht definieren, die Tabellen, Sichten oder Spalten aus mehreren Datenquellen enthält, wird die erste Datenquelle, aus der Sie Objekte zur Datenquellensicht hinzufügen, als primäre Datenquelle festgelegt (nach der Definition der primären Datenquelle kann diese Festlegung nicht mehr geändert werden). Nachdem Sie eine Datenquellensicht basierend auf Objekten aus einer einzelnen Datenquelle definiert haben, können Sie Objekte aus anderen Datenquellen hinzufügen.  
   
- Wenn für eine OLAP-Verarbeitungs- oder eine Data Mining-Abfrage Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe von **OpenRowset**unterstützen. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine **OpenRowset**-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn die Auffüllung eines OLAP-Objekts oder die Auflösung einer Data Mining-Abfrage jedoch mithilfe einer einzelnen Datenquelle möglich ist, wird keine **OpenRowset** -Abfrage erstellt. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine **OpenRowset** -Abfrage mehr erforderlich ist. Weitere Informationen zu Attributbeziehungen finden Sie unter [Attributbeziehungen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/define-attribute-relationships.md).  
+ Wenn für eine OLAP-Verarbeitungs- oder eine Data Mining-Abfrage Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe von **OpenRowset**unterstützen. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine **OpenRowset** -Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn die Auffüllung eines OLAP-Objekts oder die Auflösung einer Data Mining-Abfrage jedoch mithilfe einer einzelnen Datenquelle möglich ist, wird keine **OpenRowset** -Abfrage erstellt. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine **OpenRowset** -Abfrage mehr erforderlich ist. Weitere Informationen zu Attributbeziehungen finden Sie unter [Attributbeziehungen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)aus.  
   
- Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
 ##  <a name="bkmk_NameMatch"></a> Angeben von Namensübereinstimmungskriterien für Beziehungen  
  Wenn Sie eine Datenquellensicht erstellen, werden Beziehungen zwischen Tabellen erstellt, die auf FOREIGN KEY-Einschränkungen in der Datenquelle basieren. Diese Beziehungen sind erforderlich, damit das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul die geeigneten OLAP-Verarbeitungs- und Data Mining-Abfragen erstellen kann. Manchmal hat eine Datenquelle mit mehreren Tabellen keine FOREIGN KEY-Einschränkungen. Wenn eine Datenquelle nicht über FOREIGN KEY-Einschränkungen verfügt, werden Sie vom Datenquellensicht-Assistenten aufgefordert zu definieren, wie der Assistent Spaltennamen verschiedener Tabellen vergleichen soll.  
@@ -131,15 +136,15 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  Nachdem Sie den Datenquellensicht-Assistenten fertig gestellt haben, können Sie Beziehungen im Schemabereich von Datenquellensicht-Designer hinzufügen oder entfernen. Weitere Informationen finden Sie unter [Definieren von logischen Beziehungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Definieren logischer Primärschlüssel in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Definieren von benannten Abfragen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Durchsuchen von Daten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Löschen einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Definieren Sie logischer Primärschlüssel in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Definieren von benannten Berechnungen in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Definieren von benannten Abfragen in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Arbeiten Sie mit Diagrammen im Datenquellensicht-Designers &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Durchsuchen von Daten in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Löschen einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,0 +1,86 @@
+---
+title: ENDE (BEGIN... Ende) (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- END
+- END_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- enclosing statements [SQL Server]
+- END keyword
+- BEGIN...END keyword
+- END (BEGIN...END) keyword
+ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
+caps.latest.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f7a3c01fd0a038d226edcf605774c3a75f49b4f1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Schließt eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ein, die als Gruppe ausgeführt werden. BEGIN...END-Blöcke können geschachtelt werden.  
+  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Syntax  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+BEGIN   
+     { sql_statement | statement_block }   
+END   
+```  
+  
+## <a name="arguments"></a>Argumente  
+ { *Sql_statement*| *Statement_block*}  
+ Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die als Anweisungsblock definiert ist. Um einen Anweisungsblock (Batch) zu definieren, verwenden Sie die Schlüsselwörter BEGIN und END aus den Sprachkonstrukten zur Ablaufsteuerung. Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch (Anweisungsblock) gruppiert werden.  
+  
+## <a name="result-types"></a>Ergebnistypen  
+ **Boolean**  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Im folgenden Beispiel `BEGIN` und `END` definieren Sie eine Reihe von [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Anweisungen, die zusammen ausgeführt. Wenn die `BEGIN...END` Block sind nicht enthalten, die im folgende Beispiel werden in eine Endlosschleife.  
+  
+```  
+-- Uses AdventureWorks  
+  
+DECLARE @Iteration Integer = 0  
+WHILE @Iteration <10  
+BEGIN  
+    SELECT FirstName, MiddleName   
+    FROM dbo.DimCustomer WHERE LastName = 'Adams';  
+SET @Iteration += 1  
+END;  
+  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
+ [GESTARTET... END &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
+ [ELSE &#40; IF... ELSE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)   
+ [IF... ELSE &#40; Transact-SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
+  
+  
+
+
+

@@ -1,0 +1,92 @@
+---
+title: Synchronize-Element (XMLA) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname:
+- Synchronize Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+apitype: Schema
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- microsoft.xml.analysis.synchronize
+- urn:schemas-microsoft-com:xml-analysis#Synchronize
+- http://schemas.microsoft.com/analysisservices/2003/engine#Synchronize
+helpviewer_keywords:
+- Synchronize command
+ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
+caps.latest.revision: 15
+author: jeannt
+ms.author: jeannt
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 82e0186ddaf4c02a2a5a2ce5730c5ac150d5bbda
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="synchronize-element-xmla"></a>Synchronize-Element (XMLA)
+  Synchronisiert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank mit einer anderen vorhandenen Datenbank.  
+  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+  
+<Command>  
+   <Synchronize>  
+      <Source>...</Source>  
+      <SynchronizeSecurity>...</SynchronizeSecurity>  
+      <ApplyCompression>...</ApplyCompression>  
+      <Locations>...</Locations>  
+   </Synchronize>  
+</Command>  
+```  
+  
+## <a name="element-characteristics"></a>Elementmerkmale  
+  
+|Merkmal|Beschreibung|  
+|--------------------|-----------------|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+  
+## <a name="element-relationships"></a>Elementbeziehungen  
+  
+|Beziehung|Element|  
+|------------------|-------------|  
+|Übergeordnete Elemente|[Befehl](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
+|Untergeordnete Elemente|[ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [Speicherorte](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [Quelle](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md), [SynchronizeSecurity](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)|  
+  
+## <a name="remarks"></a>Hinweise  
+ Der **Synchronize** -Befehl synchronisiert die Zieldatenbank mit einer Quellinstanz und -datenbank, die im **Source** -Element festgelegt sind. Optional synchronisiert der Befehl **Synchronize** auf der Quelldatenbank definierte Remote-Partitionen.  
+  
+ Je nach dem Speichermodus der in der Sicherungsdatei gespeicherten Objekte werden mit dem **Synchronize** -Befehl die in der folgenden Tabelle aufgelisteten Informationen synchronisiert.  
+  
+|Speichermodus|Informationen|  
+|------------------|-----------------|  
+|Mehrdimensionale OLAP (MOLAP)|Quelldaten, Aggregationen und Metadaten|  
+|Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
+|Relationale OLAP (ROLAP)|Metadaten|  
+  
+ Bei der Ausführung des **Synchronize** -Befehls wird eine Schreibberechtigungssperre auf die Quelldatenbank und eine Schreibberechtigungssperre auf die Zieldatenbank angewendet. Beide Sperren werden nach Abschluss des **Synchronize** -Befehls wieder aufgehoben.  
+  
+ Weitere Informationen zum Synchronisieren von Datenbanken finden Sie unter [sichern, wiederherstellen, und Synchronisieren von Datenbanken &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Backup-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Batch-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Parallel-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [Restore-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Befehle &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+  
+  

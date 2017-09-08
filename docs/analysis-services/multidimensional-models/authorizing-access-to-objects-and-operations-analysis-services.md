@@ -1,44 +1,49 @@
 ---
-title: "Autorisieren des Zugriffs auf Objekte und Vorg&#228;nge (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "Zugriffsrechte [Analysis Services], Benutzer"
-  - "Berechtigungen [Analysis Services], Benutzer"
-  - "Sicherheit [Analysis Services], Benutzerzugriff"
-  - "Benutzerzugriffsrechte [Analysis Services]"
-  - "Erteilen von Berechtigungen [Analysis Services], Benutzer"
+title: "Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.general.f1
+- sql13.asvs.roledesignerdialog.membership.f1
+helpviewer_keywords:
+- access rights [Analysis Services], users
+- permissions [Analysis Services], users
+- security [Analysis Services], user access
+- user access rights [Analysis Services]
+- granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autorisieren des Zugriffs auf Objekte und Vorg&#228;nge (Analysis Services)
-  Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
+# <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
+  Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt die gültigen Berechtigungen für einen bestimmten Windows-Benutzer oder eine bestimmte Windows-Benutzergruppe, indem die Berechtigungen kombiniert werden, die jeder Datenbankrolle zugeordnet sind, zu der der Benutzer oder die Gruppe gehört. Das führt dazu, dass wenn eine bestimmte Datenbankrolle einem Benutzer oder einer Gruppe die Berechtigung zum Anzeigen einer Dimension, eines Measures oder eines Attributs erteilt, eine andere Datenbankrolle diese Benutzer- oder Gruppenberechtigung jedoch nicht erteilt, der Benutzer oder die Gruppe über die Berechtigung zum Anzeigen des Objekts verfügt.  
   
 > [!IMPORTANT]  
->  Mitglieder der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Serveradministratorrolle und Mitglieder einer Datenbankrolle, die über die Berechtigung „Vollzugriff (Administrator)“ verfügen, können auf alle Daten und Metadaten in der Datenbank zugreifen und benötigen keine weiteren Berechtigungen zum Anzeigen spezieller Objekte. Darüber hinaus kann den Mitgliedern der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Serverrolle in keiner Datenbank der Zugriff auf irgendein Objekt verweigert werden, und Mitgliedern einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankrolle, die über die Berechtigung „Vollzugriff (Administrator)“ verfügen, kann in dieser Datenbank nicht der Zugriff auf irgendein Objekt verweigert werden. Spezielle Administratorvorgänge wie die Verarbeitung können über separate Rollen mit weniger Berechtigungen autorisiert werden. Einzelheiten finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md).  
+>  Mitglieder der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Serveradministratorrolle und Mitglieder einer Datenbankrolle, die über die Berechtigung „Vollzugriff (Administrator)“ verfügen, können auf alle Daten und Metadaten in der Datenbank zugreifen und benötigen keine weiteren Berechtigungen zum Anzeigen spezieller Objekte. Darüber hinaus kann den Mitgliedern der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Serverrolle in keiner Datenbank der Zugriff auf irgendein Objekt verweigert werden, und Mitgliedern einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankrolle, die über die Berechtigung „Vollzugriff (Administrator)“ verfügen, kann in dieser Datenbank nicht der Zugriff auf irgendein Objekt verweigert werden. Spezielle Administratorvorgänge wie die Verarbeitung können über separate Rollen mit weniger Berechtigungen autorisiert werden. Einzelheiten finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md).  
   
-## Auflisten der für Ihre Datenbank definierten Rollen  
+## <a name="list-roles-defined-for-your-database"></a>Auflisten der für Ihre Datenbank definierten Rollen  
  Administratoren können eine einfache DMV-Abfrage in SQL Server Management Studio ausführen, um eine Liste aller auf dem Server definierter Rollen abzurufen.  
   
-1.  Klicken Sie in SSMS mit der rechten Maustaste auf eine Datenbank, und wählen Sie **Neue Abfrage** | **MDX** aus.  
+1.  Klicken Sie in SSMS mit der rechten Maustaste auf eine Datenbank, und wählen Sie **Neue Abfrage** | **MDX**aus.  
   
 2.  Geben Sie die folgende Abfrage ein, und drücken Sie F5, um sie auszuführen:  
   
@@ -48,12 +53,12 @@ caps.handback.revision: 35
   
      Die Ergebnisse enthalten den Datenbanknamen, eine Beschreibung, den Rollennamen und das Datum der letzten Änderung. Mit diesen Informationen als Ausgangspunkt können Sie mit individuellen Datenbanken fortfahren, um die Mitgliedschaft und Berechtigungen einer bestimmten Rolle zu prüfen.  
   
-## Umfassende Übersicht über die Analysis Services-Autorisierung  
+## <a name="top-down-overview-of-analysis-services-authorization"></a>Umfassende Übersicht über die Analysis Services-Autorisierung  
  In diesem Abschnitt ist der grundlegende Workflow für das Konfigurieren von Berechtigungen dargestellt.  
   
  **Schritt 1: Server-Verwaltung**  
   
- Entscheiden Sie als ersten Schritt, wer Administratorrechte auf der Serverebene haben wird. Während der Installation muss der lokale Administrator, der SQL Server installiert, mindestens ein Windows-Konto als Analysis Services-Serveradministrator angeben. Serveradministratoren verfügen über alle möglichen Berechtigungen auf einem Server, darunter die Berechtigung, jedes Objekt auf dem Server anzeigen, ändern und löschen oder damit verbundene Daten anzeigen zu können. Wenn die Installation abgeschlossen ist, kann ein Serveradministrator Konten hinzufügen oder löschen, um die Mitgliedschaft dieser Rolle zu ändern. Weitere Informationen zu dieser Berechtigungsebene finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Entscheiden Sie als ersten Schritt, wer Administratorrechte auf der Serverebene haben wird. Während der Installation muss der lokale Administrator, der SQL Server installiert, mindestens ein Windows-Konto als Analysis Services-Serveradministrator angeben. Serveradministratoren verfügen über alle möglichen Berechtigungen auf einem Server, darunter die Berechtigung, jedes Objekt auf dem Server anzeigen, ändern und löschen oder damit verbundene Daten anzeigen zu können. Wenn die Installation abgeschlossen ist, kann ein Serveradministrator Konten hinzufügen oder löschen, um die Mitgliedschaft dieser Rolle zu ändern. Weitere Informationen zu dieser Berechtigungsebene finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) .  
   
  **Schritt 2: Datenbankverwaltung**  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 35
   
  Sie können Berechtigungen auch auf der Basis der Benutzeridentität variieren. Dies wird oft als dynamische Sicherheit bezeichnet und wird über die Funktion [UserName &#40;MDX&#41;](../../mdx/username-mdx.md) implementiert.  
   
-## Bewährte Methoden  
+## <a name="best-practices"></a>Bewährte Methoden  
  Für eine bessere Verwaltung von Berechtigungen schlagen wir einen Ansatz wie den folgenden vor:  
   
 1.  Erstellen Sie Rollen nach Funktion (zum Beispiel dbadmin, cubedeveloper, processadmin), damit derjenige, der die Rollen verwaltet, auf einen Blick sehen kann, was die Rolle zulässt. Wie bereits erwähnt, können Sie Rollen in der Modelldefinition definieren und diese Rollen damit über nachfolgende Lösungsbereitstellungen beibehalten.  
@@ -91,7 +96,7 @@ caps.handback.revision: 35
   
  Ein solcher Ansatz minimiert die Belastung für Rollendefinitionen und Rollenmitgliedschaften im Modell und bietet einen transparenten Einblick in die Rollenzuweisungen, mit dem sich Cubeberechtigungen einfacher implementieren und verwalten lassen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

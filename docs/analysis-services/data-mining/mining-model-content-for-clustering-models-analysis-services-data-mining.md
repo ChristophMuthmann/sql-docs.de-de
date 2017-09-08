@@ -1,41 +1,46 @@
 ---
-title: "Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Nächster Nachbar [Data Mining]"
-  - "Clustering [Data Mining]"
-  - "Miningmodellinhalt, Clustermodellen"
-  - "Clustering-Algorithmen [Analysis Services]"
+title: "Miningmodellinhalt für Clustering-Modellen (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nearest neighbor [Data Mining]
+- clustering [Data Mining]
+- mining model content, clustering models
+- clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98ce20c3306de8d62a552df44684dd0c6cfebabc
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Clustering-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Grundlegendes zur Struktur von Clusteringmodellen  
+## <a name="understanding-the-structure-of-a-clustering-model"></a>Grundlegendes zur Struktur von Clusteringmodellen  
  Ein Clusteringmodell besitzt eine einfache Struktur. Jedes Modell verfügt über einen einzigen übergeordneten Knoten, der das Modell und seine Metadaten darstellt, und jeder übergeordnete Knoten enthält eine einfache Liste der Cluster (NODE_TYPE = 5). Dieser Aufbau wird in der folgenden Abbildung dargestellt.  
   
- ![Struktur des Modellinhalts für Clustering](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "Struktur des Modellinhalts für Clustering")  
+ ![Struktur des Modellinhalts für clustering](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "Struktur des Modellinhalts für clustering")  
   
  Jeder untergeordnete Knoten stellt ein einzelnes Cluster dar und enthält detaillierte Statistiken zu den Attributen der in diesem Cluster enthaltenen Fälle. Hierzu zählen die Anzahl der zum Cluster gehörigen Fälle und die Verteilung der Werte, durch die sich das betreffende Cluster von anderen Clustern unterscheidet.  
   
 > [!NOTE]  
 >  Sie müssen nicht alle Knoten durchsuchen, um die Anzahl der Cluster zu ermitteln und deren Beschreibung zu erhalten. Im übergeordneten Knoten des Modells wird auch die Anzahl und eine Auflistung der Knoten verzeichnet.  
   
- Der übergeordnete Knoten enthält nützliche statistische Daten, die die tatsächliche Verteilung aller Trainingsfälle beschreiben. Diese statistischen Daten befinden sich in der geschachtelten Tabellenspalte NODE_DISTRIBUTION. Beispielsweise enthält die folgende Tabelle einige Zeilen der Tabelle NODE_DISTRIBUTION, die die Verteilung der demografischen Kundendaten aus dem Clustermodell `TM_Clustering` beschreibt, das Sie im [Tutorial zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md) erstellen:  
+ Der übergeordnete Knoten enthält nützliche statistische Daten, die die tatsächliche Verteilung aller Trainingsfälle beschreiben. Diese statistischen Daten befinden sich in der geschachtelten Tabellenspalte NODE_DISTRIBUTION. Beispielsweise enthält die folgende Tabelle einige Zeilen der Tabelle NODE_DISTRIBUTION, die die Verteilung der demografischen Kundendaten aus dem Clustermodell `TM_Clustering`beschreibt, das Sie im [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen:  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -45,14 +50,14 @@ caps.handback.revision: 15
 |Geschlecht|V|6350|0.490764355823479|0|4 (Discrete)|  
 |Geschlecht|M|6589|0.509235644176521|0|4 (Discrete)|  
   
- Aus diesen Ergebnissen geht hervor, dass 12.939 Fälle zur Erstellung des Modells verwendet wurden, dass das Verhältnis zwischen männlichen und weiblichen Kunden etwa 50:50 war und dass das durchschnittliche Alter 44 Jahre betrug. Die beschreibenden Statistikdaten unterscheiden sich, je nachdem, ob das berechnete Attribut einen kontinuierlichen numerischen Datentyp oder einen diskreten Werttyp aufweist, wie beispielsweise Geschlecht. Die statistischen Measures *Mittelwert* und *Varianz* werden für kontinuierliche Datentypen berechnet, während *Wahrscheinlichkeit* und *Unterstützung* für diskrete Datentypen berechnet werden.  
+ Aus diesen Ergebnissen geht hervor, dass 12.939 Fälle zur Erstellung des Modells verwendet wurden, dass das Verhältnis zwischen männlichen und weiblichen Kunden etwa 50:50 war und dass das durchschnittliche Alter 44 Jahre betrug. Die beschreibenden Statistikdaten unterscheiden sich, je nachdem, ob das berechnete Attribut einen kontinuierlichen numerischen Datentyp oder einen diskreten Werttyp aufweist, wie beispielsweise Geschlecht. Die statistischen Measures *Mittelwert* und *Varianz* werden für kontinuierliche Datentypen berechnet, während *Wahrscheinlichkeit* und *Unterstützung* für diskrete Datentypen berechnet werden.  
   
 > [!NOTE]  
 >  Die Varianz repräsentiert die Gesamtvarianz des Clusters. Wenn der Varianzwert klein ist, bedeutet dies, dass die meisten Werte der Spalte relativ nah am Mittelwert liegen. Um die Standardabweichung zu erhalten, berechnen Sie die Quadratwurzel der Varianz.  
   
  Beachten Sie, dass jedes Attribut den Werttyp **Missing** enthält, der anzeigt, in wie vielen Fällen kein Wert für das Attribut gegeben war. Fehlende Daten können signifikant sein und die Berechnungen je nach Datentyp auf verschiedene Weise beeinflussen. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Modellinhalt eines Clusteringmodells  
+## <a name="model-content-for-a-clustering-model"></a>Modellinhalt eines Clusteringmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Clusteringmodelle relevant sind.  
   
  Informationen zu den allgemeinen Spalten im Schemarowset, z.B. MODEL_CATALOG und MODEL_NAME, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -152,13 +157,13 @@ caps.handback.revision: 15
   
  **Clusterknoten** Der Name des Clusters. Beispiel: Cluster 1.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Methoden zum Erstellen eines Clusteringmodells bereit. Wenn Sie nicht wissen, mithilfe welcher Methode das Modell, mit dem Sie arbeiten, erstellt wurde, können Sie die Modellmetadaten entweder programmgesteuert über einen ADOMD-Client oder über AMO oder durch Abfragen des Data Mining-Schemarowsets abrufen. Weitere Informationen finden Sie unter [Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  Struktur und Inhalt des Modells werden weder durch die verwendete Clusteringmethode noch die Parameter beeinflusst.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   

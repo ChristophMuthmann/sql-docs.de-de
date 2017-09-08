@@ -1,28 +1,33 @@
 ---
-title: "Mehrdimensionale Modelll&#246;sungsbereitstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services-Bereitstellungen, planen"
-  - "Bereitstellen [Analysis Services]"
-  - "Bereitstellen [Analysis Services], planen"
+title: "Mehrdimensionale Modelllösungsbereitstellung | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, planning
+- deploying [Analysis Services]
+- deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mehrdimensionale Modelll&#246;sungsbereitstellung
+# <a name="multidimensional-model-solution-deployment"></a>Mehrdimensionale Modelllösungsbereitstellung
   Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
   
  Dieses Thema enthält folgende Abschnitte:  
@@ -51,8 +56,8 @@ caps.handback.revision: 39
 |-------------------|------------------------------|  
 |Welche Hardware- und Softwareressourcen sind für diese Projektmappe erforderlich?|[Anforderungen und Überlegungen für die Bereitstellung von Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Wie sollen verbundene Objekte außerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektbereichs, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, Berichte oder relationale Datenbankschemas, bereitgestellt werden?||  
-|Wie werden die Daten in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank geladen und aktualisiert?<br /><br /> Wie werden die Metadaten (z.B. Berechnungen) in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank aktualisiert?|[Bereitstellungsmethoden](#bkmk_meth) in diesem Thema.|  
-|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)|  
+|Wie werden die Daten in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank geladen und aktualisiert?<br /><br /> Wie werden die Metadaten (z.B. Berechnungen) in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aktualisiert?|[Bereitstellungsmethoden](#bkmk_meth) in diesem Thema.|  
+|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Soll ein kontinuierlicher Abfragezugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten möglich sein?|[Anforderungen und Überlegungen für die Bereitstellung von Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Sollen Objekte mithilfe von verknüpften Objekten oder Remotepartitionen in einer verteilten Umgebung bereitgestellt werden?|[Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) und [Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
 |Wie sollen die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten gesichert werden?|[Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  

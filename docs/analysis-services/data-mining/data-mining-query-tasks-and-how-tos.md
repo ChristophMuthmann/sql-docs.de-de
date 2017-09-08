@@ -1,28 +1,33 @@
 ---
-title: "Data Mining-Abfragetasks und Anweisungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningmodelle [Analysis Services], Themen zur Vorgehensweise"
+title: "Data Mining-Abfragen, Tasks und Anweisungen für | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91ae26748640ae6fbcafe12ae1545fadc2adbde6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Abfragetasks und Anweisungen
+# <a name="data-mining-query-tasks-and-how-tos"></a>Data Mining-Abfragetasks und Anweisungen
   Die Möglichkeit zum Erstellen von Abfragen ist wichtig, wenn Sie die Data Mining-Modelle nutzen möchten. Dieser Abschnitt enthält Links zu Beispielen, die die Erstellung von Abfragen für ein Data Mining-Modell mithilfe der Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]veranschaulichen. Weitere Informationen zu Data Mining-Abfragen oder den unterschiedlichen Abfragetypen, die erstellt werden können, finden Sie unter [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## Erstellen von Abfragen mit dem Generator für Vorhersageabfragen  
+## <a name="creating-queries-with-prediction-query-builder"></a>Erstellen von Abfragen mit dem Generator für Vorhersageabfragen  
  Der Generator für Vorhersageabfragen steht sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als Methode der grafischen Erstellung von Abfragen für Data Mining-Modelle zur Verfügung. In den folgenden Themen wird erläutert, wie Sie ein Modell auswählen, eine Datenquelle angeben, die Vorhersagen anpassen und die Ausgabe speichern können.  
   
 -   [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
@@ -39,7 +44,7 @@ caps.handback.revision: 16
   
 -   [Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)  
   
-## Verwenden von Tools für Data Mining-Abfragen  
+## <a name="using-other-data-mining-query-tools"></a>Verwenden von Tools für Data Mining-Abfragen  
  Neben der Verwendung des Generators für Vorhersagenabfragen besteht außerdem die Möglichkeit, eine Abfrage mit DMX oder XMLA direkt in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einzugeben. Sie können auch programmgesteuert Vorhersageabfragen erstellen und sie an einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server senden. Die folgenden Themen enthalten weitere Informationen zur Erstellung und Verwendung von Vorhersageabfragen außerhalb des Vorhersageabfragen-Generators.  
   
  [Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
@@ -55,10 +60,10 @@ caps.handback.revision: 16
  Beschreibt die Erstellung von Abfragen, bei denen unter Verwendung der Data Mining-Schemarowsets ausführliche Informationen zurückgegeben werden, die im Miningmodell gespeichert sind.  
   
  [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
- Beschreibt, wie eine Abfrage für einen Miningmodellinhalt mit den XMLA-Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt wird.  
+ Beschreibt, wie eine Abfrage für einen Miningmodellinhalt mit den XMLA-Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellt wird.  
   
-## Siehe auch  
- [Abfragen- und Ausdruckssprachreferenz &#40;Analysis Services&#41;](../Topic/Query%20and%20Expression%20Language%20Reference%20\(Analysis%20Services\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Abfragen- und Ausdruckssprachreferenz &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
  [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

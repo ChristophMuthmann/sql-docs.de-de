@@ -1,38 +1,43 @@
 ---
-title: "Erstellen einer neuen OLAP-Miningstruktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningstrukturen [Analysis Services], OLAP"
-  - "Miningstrukturen [Analysis Services], erstellen"
-  - "OLAP[Analysis Services], Miningmodelle"
+title: Erstellen eine neue OLAP-Miningstruktur | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer neuen OLAP-Miningstruktur
+# <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
   Sie können den Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um eine Miningstruktur zu erstellen, in der Daten aus einem mehrdimensionalen Modell verwendet werden. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
   
-### So erstellen Sie eine neue OLAP-Miningstruktur  
+### <a name="to-create-a-new-olap-mining-structure"></a>So erstellen Sie eine neue OLAP-Miningstruktur  
   
-1.  Klicken Sie im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Miningstrukturen** in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt. Klicken Sie anschließend auf **Neue Miningstruktur**, um den Data Mining-Assistenten zu öffnen.  
+1.  Klicken Sie im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mit der rechten Maustaste auf den Ordner **Miningstrukturen** in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Klicken Sie anschließend auf **Neue Miningstruktur** , um den Data Mining-Assistenten zu öffnen.  
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
 3.  Wählen Sie auf der Seite **Definitionsmethode auswählen** die Option **Aus vorhandenem Cube**aus, und klicken Sie dann auf **Weiter**.  
   
-     Wenn Sie einen Fehler mit der Meldung Eine Liste der unterstützten Data Mining-Algorithmen kann nicht abgerufen werden erhalten, öffnen Sie das Dialogfeld **Projekteigenschaften**, und überprüfen Sie, ob Sie den Namen einer Analysis Services-Instanz angegeben haben, die mehrdimensionale Modelle unterstützt. Sie können keine Miningmodelle für eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellen, die Tabellenmodellierung unterstützt.  
+     Wenn Sie einen Fehler mit der Meldung Eine Liste der unterstützten Data Mining-Algorithmen kann nicht abgerufen werden erhalten, öffnen Sie das Dialogfeld **Projekteigenschaften** , und überprüfen Sie, ob Sie den Namen einer Analysis Services-Instanz angegeben haben, die mehrdimensionale Modelle unterstützt. Sie können keine Miningmodelle für eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellen, die Tabellenmodellierung unterstützt.  
   
 4.  Legen Sie auf der Seite **Data Mining-Struktur erstellen** fest, ob Sie nur eine Miningstruktur oder eine Miningstruktur und ein verknüpftes Miningmodell erstellen möchten. Im Allgemeinen ist es einfacher, gleichzeitig ein Miningmodell zu erstellen, damit Sie aufgefordert werden können, erforderliche Spalten einzuschließen.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 32
   
      Wenn Sie geschachtelte Daten hinzufügen, müssen Sie zwei zusätzliche Spalten angeben:  
   
-    -   Der Schlüssel der geschachtelten Tabelle: Der Schlüssel sollte vorab auf der Seite **Schlüssel der geschachtelten Tabelle auswählen** ausgewählt werden.  
+    -   Der Schlüssel der geschachtelten Tabelle: Der Schlüssel sollte vorab auf der Seite **Schlüssel der geschachtelten Tabelle auswählen**ausgewählt werden.  
   
     -   Die Attribute oder für die Analyse zu verwendenden Attribute: Die Seite **Geschachtelte Tabellenspalten auswählen**enthält eine Liste der Measures und Attribute in der Auswahl der geschachtelten Tabellen.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 32
 10. Legen Sie auf der Seite **Inhalt und Datentyp der Spalten angeben** unter **Miningmodellstruktur**den Inhalts- und den Datentyp für jede Spalte fest.  
   
     > [!NOTE]  
-    >  OLAP-Miningmodelle unterstützen nicht die **Erkennen**-Funktion, mit der automatisch erkannt wird, ob eine Spalte kontinuierliche oder diskrete Daten enthält.  
+    >  OLAP-Miningmodelle unterstützen nicht die **Erkennen** -Funktion, mit der automatisch erkannt wird, ob eine Spalte kontinuierliche oder diskrete Daten enthält.  
   
      Klicken Sie auf **Weiter**.  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **Cube mithilfe der Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für den neuen Cube an. Wenn Sie diese Option verwenden, wird ein neuer Cube erstellt, der sowohl die vorhandenen Dimensionen, die beim Erstellen der Struktur verwendet wurden, als auch die neue Data Mining-Dimension mit den Ergebnissen aus dem Modell beinhaltet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

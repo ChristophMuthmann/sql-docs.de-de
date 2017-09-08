@@ -1,24 +1,29 @@
 ---
-title: "Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services
+# <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services
   In diesem Thema wird erläutert, wie die BI-Semantikmodellverbindungen verwendet werden, die gemäß den Anweisungen in anderen Themen erstellt wurden. Falls Sie noch kein BI-Semantikmodell erstellt haben, gehen Sie unter [Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) und [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Herstellen einer Verbindung von Excel aus  
@@ -28,9 +33,9 @@ caps.handback.revision: 9
   
  **Starten mit SharePoint**  
   
--   Klicken Sie mit der rechten Maustaste auf eine BI-Semantikmodellverbindung in einer Bibliothek, und wählen Sie **Excel starten** aus.  
+-   Klicken Sie mit der rechten Maustaste auf eine BI-Semantikmodellverbindung in einer Bibliothek, und wählen Sie **Excel starten**aus.  
   
- ![Screenshot des BISM-Schnellstartbefehls](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Screenshot des BISM-Schnellstartbefehls")  
+ ![Screenshot des BISM-schnellstartbefehls](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Screenshot des BISM-schnellstartbefehls")  
   
  Klicken Sie auf **Aktivieren** , wenn Sie zur Aktivierung der Datenverbindungen aufgefordert werden. In Excel wird eine Arbeitsmappe geöffnet, die eine mit Feldern aus der zugrunde liegenden Datenquelle gefüllte PivotTable-Feldliste enthält.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 9
   
 2.  Klicken Sie auf **Aus Analysis Services** , und importieren Sie die Daten mithilfe des Datenverbindungs-Assistenten.  
   
-3.  Geben Sie die SharePoint-URL der BI-Semantikmodell-Verbindungsdatei ein (z.B. **http://mysharepoint/shared documents/myData.bism**). Nehmen Sie bei der Option der Anmeldeinformationen das Standardprotokoll **Windows-Authentifizierung verwenden**an. Klicken Sie auf **Weiter**.  
+3.  Geben Sie die SharePoint-URL der BI-Semantikmodell-Verbindungsdatei ein (z.B. `http://mysharepoint/shared documents/myData.bism`). Nehmen Sie bei der Option der Anmeldeinformationen das Standardprotokoll **Windows-Authentifizierung verwenden**an. Klicken Sie auf **Weiter**.  
   
 4.  Klicken Sie auf der nächsten Seite erneut auf **Weiter** . Obwohl Sie aufgefordert werden, eine Datenbank auszuwählen, können Sie nur die eine Datenbank verwenden, die in der BI-Semantikmodellverbindung angegeben wird.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 9
   
  Damit Verbindungen erfolgreich sind, müssen Excel 2010 und MSOLAP.5.dll auf dem Clientcomputer installiert sein. Sie können den Anbieter erhalten, indem Sie die Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel installieren, die für diese Version aktuell ist, oder Sie können nur den OLE DB-Anbieter für Analysis Services auf der [Feature Pack-Downloadseite](http://go.microsoft.com/fwlink/?linkid=214066)herunterladen.  
   
- Um zu überprüfen, ob MSOLAP.5.dll die aktuelle Version ist, überprüfen Sie in der Registrierung **HKEY_CLASSES_ROOT\MSOLAP**. **CurVer** muss auf MSOLAP.5 festgelegt sein.  
+ Um zu überprüfen, ob MSOLAP.5.dll die aktuelle Version ist, überprüfen Sie in der Registrierung **HKEY_CLASSES_ROOT\MSOLAP** . **CurVer** muss auf MSOLAP.5 festgelegt sein.  
   
  Sie müssen auch über Leseberechtigungen für die BI-Semantikmodelldatei in SharePoint verfügen. Leseberechtigungen schließen Downloadrechte ein. Excel lädt die BI-Semantikmodell-Verbindungsinformationen von SharePoint herunter und öffnet über **HTTP Get**eine direkte Verbindung mit der Datenbank. Verbindungsanforderungen werden erst dann für SharePoint übernommen, wenn die BI-Semantikmodell-Verbindungsinformationen lokal gespeichert werden.  
   

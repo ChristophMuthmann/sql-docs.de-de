@@ -1,37 +1,42 @@
 ---
-title: "Data Mining-Konzepte | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, Data Mining"
-  - "Cleanup von Daten"
-  - "Vorhersageanalysen"
-  - "Lernalgorithmen"
-  - "Data Mining [Analysis Services], Konzepte"
-  - "Induktives Lernen"
-  - "Data Mining [Analysis Services], Informationen zum Data Mining"
-  - "Miningmodelle [Analysis Services]"
-  - "Datenzugriff [Analysis Services]"
-  - "Computerlernalgorithmen [Analysis Services]"
-  - "Miningmodelle [Analysis Services], Informationen zum Data Mining"
-  - "SSAS, Data Mining"
-  - "Analysis Services, Data Mining"
+title: Datamining-Konzepte | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Analysis Services, data mining
+- cleaning data
+- predictive analytics
+- learning algorithms
+- data mining [Analysis Services], concepts
+- inductive learning
+- data mining [Analysis Services], about data mining
+- mining models [Analysis Services]
+- data access [Analysis Services]
+- machine learning algorithms [Analysis Services]
+- mining models [Analysis Services], about data mining
+- SSAS, data mining
+- Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Mining-Konzepte
+# <a name="data-mining-concepts"></a>Data Mining-Konzepte
   Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
   
  Diese Muster und Trends können gesammelt und als *Data Mining-Modell*definiert werden. Miningmodelle können auf spezifische Szenarien angewendet werden, beispielsweise:  
@@ -62,18 +67,18 @@ caps.handback.revision: 48
   
  Das folgende Diagramm beschreibt das Beziehungsgefüge dieser Schritte und die Technologien in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit denen Sie den jeweiligen Schritt ausführen können.  
   
- ![Wichtige Schritte im Data Mining-Prozess](../../analysis-services/data-mining/media/data-mining-process.gif "Wichtige Schritte im Data Mining-Prozess")  
+ ![Wichtige Schritte im Datamining-Prozesses](../../analysis-services/data-mining/media/data-mining-process.gif "wichtige Schritte im Datamining-Prozess")  
   
  Der im Diagramm veranschaulichte Prozess ist zyklisch, d. h., dass ein Data Mining-Modell in einem dynamischen, sich wiederholenden Prozess erstellt wird. Nachdem Sie die Daten durchsucht haben, kommen Sie u. U. zu dem Ergebnis, dass Ihr Datenmaterial nicht ausreicht, um die geeigneten Miningmodelle zu erstellen, und dass Sie deshalb nach weiteren Daten suchen müssen. Vielleicht erstellen Sie auch mehrere Modelle und stellen dann fest, dass diese nicht in geeigneter Weise das von Ihnen definierte Problem lösen und dass Sie deshalb das Problem neu definieren müssen. Möglicherweise müssen die Modelle nach ihrer Implementierung angepasst werden, da mehr Daten zur Verfügung stehen. Jeder Schritt des Prozesses kann so oft wiederholt werden, wie es für die Erstellung eines qualifizierten Modells notwendig ist.  
   
  Microsoft SQL Server Data Mining stellt eine integrierte Umgebung für die Erstellung und Verwendung von Data Mining-Modellen zur Verfügung. Diese Umgebung umfasst SQL Server Development Studio mit Data Mining-Algorithmen und Abfragetools, die das Erstellen einer umfassenden Projektmappe für unterschiedlichste Projekte erleichtern, sowie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit Tools zum Durchsuchen von Modellen und Verwalten von Data Mining-Objekten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ##  <a name="DefiningTheProblem"></a> Definieren der Problemstellung  
  Wie das folgende Diagramm verdeutlicht, besteht der erste Schritt des Data Mining-Prozesses darin, die Problemstellung exakt zu definieren und Möglichkeiten aufzuzeigen, wie das Problem anhand der richtigen Daten gelöst werden kann.  
   
- ![Erster Schritt beim Data Mining: Definieren der Problemstellung](../../analysis-services/data-mining/media/dmprocess-defining.gif "Erster Schritt beim Data Mining: Definieren der Problemstellung")  
+ ![Erste Schritt beim Datamining: Definieren der Problemstellung](../../analysis-services/data-mining/media/dmprocess-defining.gif "erste Schritt beim Datamining: Definieren der Problemstellung")  
   
  Dieser Schritt schließt das Analysieren der Geschäftsanforderungen, das Festlegen des Problemumfangs, das Definieren der Erfolgsfaktoren für die Modellbewertung und das Formulieren der spezifischen Zielsetzung des Data Mining-Projekts ein. Diese Tasks lassen sich u. a. in folgende Fragen übersetzen:  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 48
 ##  <a name="PreparingData"></a> Vorbereiten der Daten  
  Wie das folgende Diagramm verdeutlicht, besteht der zweite Schritt des Data Mining-Prozesses im Konsolidieren und Bereinigen der im Schritt [Definieren der Problemstellung](#DefiningTheProblem) identifizierten Daten.  
   
- ![Zweiter Schritt beim Data Mining: Vorbereiten von Daten](../../analysis-services/data-mining/media/dmprocess-preparing.gif "Zweiter Schritt beim Data Mining: Vorbereiten von Daten")  
+ ![Zweiter Schritt beim Datamining: Vorbereiten von Daten](../../analysis-services/data-mining/media/dmprocess-preparing.gif "zweiter Schritt beim Datamining: Vorbereiten von Daten")  
   
  Daten können im gesamten Unternehmen verstreut und in unterschiedlichen Formaten gespeichert sein. Mitunter weisen sie Inkonsistenzen wie falsche oder fehlende Einträge auf. Es kann beispielsweise vorkommen, dass den Daten zufolge ein Produkt gekauft wurde, das auf dem Markt zu diesem Zeitpunkt noch nicht erhältlich war, oder die Daten zeigen, dass ein Kunde regelmäßig in einem Geschäft 2.000 Meilen von seinem Wohnsitz entfernt Einkäufe tätigt.  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 48
 ##  <a name="ExploringData"></a> Durchsuchen von Daten  
  Wie das nachstehende Diagramm verdeutlicht, besteht der dritte Schritt des Data Mining-Prozesses im Durchsuchen der vorbereiteten Daten.  
   
- ![Dritter Schritt beim Data Mining: Durchsuchen von Daten](../../analysis-services/data-mining/media/dmprocess-exploring.gif "Dritter Schritt beim Data Mining: Durchsuchen von Daten")  
+ ![Dritter Schritt beim Datamining: Durchsuchen von Daten](../../analysis-services/data-mining/media/dmprocess-exploring.gif "dritten Schritt beim Datamining: Durchsuchen von Daten")  
   
  Nur wenn Sie Ihre Datensituation verstanden haben, können Sie beim Erstellen der Miningmodelle sinnvolle Entscheidungen treffen. Zu den Durchsuchungstechniken gehören das Berechnen von Mindest- und Maximalwerten, das Ermitteln von mittleren Abweichungen und Standardabweichungen und das Analysieren der Datenstreuung. Beispielsweise können Sie gegebenenfalls durch Prüfung der Maximal-, Mindest- und Mittelwerte ermitteln, dass die Daten nicht repräsentativ für Ihre Kunden oder Geschäftsprozesse sind und dass Sie daher ausgewogenere Daten benötigen oder die Annahmen prüfen müssen, die Grundlage Ihrer Erwartungen sind. Standardabweichungen und andere Streuungswerte können nützliche Informationen über die Stabilität und Genauigkeit der Ergebnisse bieten. Eine große Standardabweichung kann darauf hinweisen, dass ein weiteres Hinzufügen von Daten bei der Verbesserung des Modells hilfreich sein kann. Daten, die stark von einer Standardverteilung abweichen, können verfälscht sein oder ein genaues Abbild eines realen Problems darstellen. In jedem Fall erschweren Sie die Anpassung eines Modells auf die Daten.  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 48
 ##  <a name="BuildingModels"></a> Erstellen von Modellen  
  Wie das nachstehende Diagramm verdeutlicht, besteht der vierte Prozessschritt des Data Mining-Prozesses im Generieren eines oder mehrerer Miningmodelle. Sie werden die im Schritt [Durchsuchen von Daten](#ExploringData) gewonnenen Erkenntnisse verwenden, um die Modelle zu definieren und zu erstellen.  
   
- ![Vierter Schritt beim Data Mining: Erstellen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-building.gif "Vierter Schritt beim Data Mining: Erstellen von Miningmodellen")  
+ ![Vierter Schritt beim Datamining: Erstellen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-building.gif "vierter Schritt beim Datamining: Erstellen von Miningmodellen")  
   
  Sie definieren die zu verwendenden Datenspalten, indem Sie eine Miningstruktur erstellen. Die Miningstruktur ist zwar mit der Datenquelle verknüpft, enthält bis zu ihrer Verarbeitung jedoch keine Daten. Wenn Sie die Miningstruktur verarbeiten, erzeugt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Aggregate und andere statistische Informationen, die zu Analysezwecken verwendet werden können. Diese Informationen können von allen Miningmodellen verwendet werden, die auf der Struktur basieren. Weitere Informationen dazu, wie Miningstrukturen mit Miningmodellen in Beziehung stehen, finden Sie unter [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 48
 ##  <a name="ValidatingModels"></a> Durchsuchen und Validieren von Modellen  
  Wie das folgende Diagramm verdeutlicht, besteht der fünfte Schritt des Data Mining-Prozesses im Durchsuchen der von Ihnen generierten Miningmodelle und im Testen ihrer Wirksamkeit.  
   
- ![Fünfter Schritt beim Data Mining: Überprüfen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-validating.gif "Fünfter Schritt beim Data Mining: Überprüfen von Miningmodellen")  
+ ![Fünfter Schritt beim Datamining: Überprüfen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-validating.gif "fünften Schritt beim Datamining: Überprüfen von Miningmodellen")  
   
  Bevor Sie ein Modell in einer Produktionsumgebung einsetzen, möchten Sie wahrscheinlich testen, wie gut das Modell ist. Ferner erstellt man üblicherweise beim Aufbau eines Modells mehrere Modelle mit unterschiedlichen Konfigurationen und testet alle Modelle, um herauszufinden, welches die besten Ergebnisse für das Problem und die Daten erzielt.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet Tools, die hilfreich bei der Trennung Ihrer Daten in Trainings- und Testdatasets sind. So können Sie die Leistungsfähigkeit aller Modelle an den gleichen Daten genau bewerten. Mit dem Trainings-Dataset wird das Modell generiert, während das Test-Dataset mithilfe von Vorhersageabfragen die Genauigkeit des Modells testet. In [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]kann diese Partitionierung während der Erstellung des Miningmodells automatisch erfolgen. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet Tools, die hilfreich bei der Trennung Ihrer Daten in Trainings- und Testdatasets sind. So können Sie die Leistungsfähigkeit aller Modelle an den gleichen Daten genau bewerten. Mit dem Trainings-Dataset wird das Modell generiert, während das Test-Dataset mithilfe von Vorhersageabfragen die Genauigkeit des Modells testet. Diese Partitionierung ist möglich, während der Erstellung des Miningmodells automatisch. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  Die von den Algorithmen ermittelten Trends und Muster können mit den Viewern im Data Mining-Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]analysiert werden. Weitere Informationen finden Sie unter [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md). Darüber hinaus können Sie testen, wie gut die Modelle Vorhersagen erstellen. Für diese Tasks stehen im Designer Tools wie das Prognosegütediagramm und die Klassifikationsmatrix zur Verfügung. Sie können eine statistische Technik mit dem Namen *Kreuzvalidierung* nutzen, um automatisch Teilmengen der Daten zu erstellen und das Modell gegen jede Teilmenge zu testen, um zu bestimmen, ob das Modell spezifisch für Ihre Daten ist oder verwendet werden kann, um Rückschlüsse auf die allgemeine Population zu ziehen. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 48
 ##  <a name="DeployingandUpdatingModels"></a> Bereitstellen und Aktualisieren von Modellen  
  Wie das folgende Diagramm verdeutlicht, besteht der letzte Schritt des Data Mining-Prozesses darin, in einer Produktionsumgebung diejenigen Modelle bereitzustellen, die die besten Ergebnisse erzielen.  
   
- ![Sechster Schritt beim Data Mining: Bereitstellen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-deploying.gif "Sechster Schritt beim Data Mining: Bereitstellen von Miningmodellen")  
+ ![Sechster Schritt beim Datamining: Bereitstellen von Miningmodellen](../../analysis-services/data-mining/media/dmprocess-deploying.gif "sechster Schritt beim Datamining: Bereitstellen von Miningmodellen")  
   
  Sobald die Miningmodelle in eine Produktionsumgebung integriert wurden, stehen sie je nach Bedarf für zahlreiche Tasks zur Verfügung. Sie können u. a. folgende Tasks ausführen:  
   
@@ -166,9 +171,9 @@ caps.handback.revision: 48
   
 -   Erstellen von Inhaltsabfragen, um Statistik, Regeln oder Formeln für das Modell abzurufen. Weitere Informationen finden Sie unter [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md).  
   
--   Data Mining-Funktionen in eine Anwendung integrieren. Sie können Analysis Management Objects (AMO) hinzufügen, das mehrere Objekte enthält, mit denen Ihre Anwendung Miningstrukturen und -modelle erstellen, ändern, verarbeiten und löschen. Alternativ können Sie XMLA-Nachrichten (XML for Analysis) direkt an eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] senden. Weitere Informationen finden Sie unter [Bereitstellung (Analysis Services – Data Mining)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
+-   Data Mining-Funktionen in eine Anwendung integrieren. Sie können Analysis Management Objects (AMO) hinzufügen, das mehrere Objekte enthält, mit denen Ihre Anwendung Miningstrukturen und -modelle erstellen, ändern, verarbeiten und löschen. Alternativ können Sie XMLA-Nachrichten (XML for Analysis) direkt an eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]senden. Weitere Informationen finden Sie unter [Bereitstellung (Analysis Services – Data Mining)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
   
--   Mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein Paket erstellen, in dem mithilfe eines Miningmodells eingehende Daten eigenständig aufgeteilt und mehreren Tabellen zugeordnet werden. Wenn eine Datenbank beispielsweise fortlaufend mit potenziellen Neukunden aktualisiert wird, können Sie ein Miningmodell zusammen mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu verwenden, die eingehenden Daten zwei verschiedenen Kundengruppen zuzuordnen: einer Gruppe, deren Kunden wahrscheinlich ein Produkt kaufen, und einer anderen, deren Kunden wahrscheinlich kein Produkt kaufen. Weitere Informationen finden Sie unter [Typische Verwendungen von SQL Server Integration Services](http://msdn.microsoft.com/de-de/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
+-   Mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein Paket erstellen, in dem mithilfe eines Miningmodells eingehende Daten eigenständig aufgeteilt und mehreren Tabellen zugeordnet werden. Wenn eine Datenbank beispielsweise fortlaufend mit potenziellen Neukunden aktualisiert wird, können Sie ein Miningmodell zusammen mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu verwenden, die eingehenden Daten zwei verschiedenen Kundengruppen zuzuordnen: einer Gruppe, deren Kunden wahrscheinlich ein Produkt kaufen, und einer anderen, deren Kunden wahrscheinlich kein Produkt kaufen. Weitere Informationen finden Sie unter [Typische Verwendungen von SQL Server Integration Services](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
   
 -   Einen Bericht erstellen, mit dem Abfragen direkt für ein vorhandenes Miningmodell ausgeführt werden können. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 48
   
 -   Ein dynamischea Update der Modelle, während neue Daten in das Unternehmen kommen, und die konstante Vornahme von Änderungen zur Verbesserung der Effizienz der Lösung sollten Teil der Bereitstellungsstrategie sein. Weitere Informationen finden Sie unter [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)  
   

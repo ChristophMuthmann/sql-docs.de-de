@@ -1,24 +1,33 @@
 ---
-title: "Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
   Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
   
 -   [Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
@@ -42,7 +51,7 @@ caps.handback.revision: 9
   
  Sie können Berechtigungen testen, indem Sie SSMS unter einer bestimmten Benutzeridentität ausführen und dann unter Verwendung dieser Identität eine Verbindung mit Analysis Services herstellen.  
   
- Halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie mit der rechten Maustaste auf die Verknüpfung **SQL Server Management Studio**, um auf die Option **Als anderer Benutzer ausführen** zuzugreifen.  
+ Halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie mit der rechten Maustaste auf die Verknüpfung **SQL Server Management Studio** , um auf die Option **Als anderer Benutzer ausführen** zuzugreifen.  
   
 1.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Servertyp aus.  
   
@@ -50,7 +59,7 @@ caps.handback.revision: 9
   
      Bei einer benannten Instanz muss der Servername in folgendem Format angegeben werden: Servername\Instanzname. Ein Beispiel für diese Namenskonvention könnte ADV-SRV062-\Finance für einen Server sein, der den Netzwerknamen ADV-SRV062 hat, wo Analysis Services als benannte Instanz mit der Bezeichnung Finance installiert war.  
   
-     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz eines gruppierten relationalen Datenbankmoduls ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch das Datenbankmodul als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit dem Datenbankmodul mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
+     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz eines gruppierten relationalen Datenbankmoduls ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch das Datenbankmodul als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit dem Datenbankmodul mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
   
      Bei Servern, die in einem Cluster mit Netzwerklastenausgleich bereitgestellt werden, stellen Sie mithilfe des virtuellen Netzwerknamens des NLB-Servers eine Verbindung her.  
   
@@ -69,7 +78,7 @@ caps.handback.revision: 9
     ```  
   
 ##  <a name="bkmk_excel"></a> Herstellen einer Verbindung mithilfe von Excel  
- Microsoft Excel wird häufig zum Analysieren von Geschäftsdaten verwendet. Als Bestandteil einer Excel-Installation installiert Office den OLE DB-Anbieter für Analysis Services (MSOLAP.DLL), ADOMD.NET und andere Datenanbieter, damit Sie die Daten bequemer auf Netzwerkservern verwenden können. Wenn Sie eine neuere Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit einer früheren Version von Excel verwenden, müssen Sie wahrscheinlich neuere Datenanbieter auf jeder Arbeitsstation installieren, die eine Verbindung mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt. Weitere Informationen finden Sie unter [Für Analysis Services-Verbindungen verwendete Datenanbieter](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
+ Microsoft Excel wird häufig zum Analysieren von Geschäftsdaten verwendet. Als Bestandteil einer Excel-Installation installiert Office den OLE DB-Anbieter für Analysis Services (MSOLAP.DLL), ADOMD.NET und andere Datenanbieter, damit Sie die Daten bequemer auf Netzwerkservern verwenden können. Wenn Sie eine neuere Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit einer früheren Version von Excel verwenden, müssen Sie wahrscheinlich neuere Datenanbieter auf jeder Arbeitsstation installieren, die eine Verbindung mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt. Weitere Informationen finden Sie unter [Für Analysis Services-Verbindungen verwendete Datenanbieter](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md) .  
   
  Wenn Sie eine Verbindung mit einem Analysis Services-Cube oder einer Datenbank für tabellarische Modelle einrichten, speichert Excel die Verbindungsinformationen zur zukünftigen Verwendung in einer ODC-Datei. Die Verbindung wird im Sicherheitskontext des aktuellen Windows-Benutzers hergestellt. Das Benutzerkonto muss über Leseberechtigungen für die Datenbank verfügen, damit die Verbindung erfolgreich hergestellt werden kann.  
   
@@ -77,7 +86,7 @@ caps.handback.revision: 9
   
  Sie können Berechtigungen testen, indem Sie Excel unter einer bestimmten Benutzeridentität starten.  
   
- Halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie mit der rechten Maustaste auf die Verknüpfung **Excel**, um auf die Option **Als anderer Benutzer ausführen** zuzugreifen.  
+ Halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie mit der rechten Maustaste auf die Verknüpfung **Excel** , um auf die Option **Als anderer Benutzer ausführen** zuzugreifen.  
   
 1.  Klicken Sie auf der Registerkarte **Daten**in Excel auf **Aus anderen Quellen**, und klicken Sie dann auf Von Analysis Services. Geben Sie den Servernamen ein, und wählen Sie dann einen Cube oder eine Perspektive für die Abfrage aus.  
   
@@ -108,7 +117,7 @@ caps.handback.revision: 9
   
 2.  Überprüfen Sie in der Ereignisauswahl, ob **Audit Login** und **Audit Logout** im Abschnitt Sicherheitsüberwachung aktiviert sind.  
   
-3.  Stellen Sie von einem Remoteclientcomputer über einen Anwendungsdienst (z. B. SharePoint oder Reporting Services) eine Verbindung mit Analysis Services her. Das Audit Login-Ereignis zeigt die Identität des Benutzers an, der eine Verbindung mit Analysis Services herstellt.  
+3.  Stellen Sie von einem Remoteclientcomputer über einen Anwendungsdienst (z. B. SharePoint oder Reporting Services) eine Verbindung mit Analysis Services her. Das Audit Login-Ereignis zeigt die Identität des Benutzers an, der eine Verbindung mit Analysis Services herstellt.  
   
  Verbindungsfehler sind häufig auf eine unvollständige oder ungültige Serverkonfiguration zurückzuführen. Überprüfen Sie zunächst immer die Serverkonfiguration:  
   
@@ -120,7 +129,7 @@ caps.handback.revision: 9
   
      Verwenden Sie zum Testen Excel oder SSMS auf einem Remotecomputer, und geben Sie die IP-Adresse und den Port an, die von der Analysis Services-Instanz verwendet werden. Wenn Sie eine Verbindung herstellen können, sind die Firewallregeln für die Instanz gültig, und die Instanz lässt Remoteverbindungen zu.  
   
-     Wenn Sie TCP/IP für das Verbindungsprotokoll verwenden, sollten Sie zusätzlich beachten, dass für Analysis Services Clientverbindungen erforderlich sind, die von derselben Domäne oder einer vertrauenswürdigen Domäne stammen. Bei Verbindungen, die sich über Sicherheitsgrenzen erstrecken, müssen Sie wahrscheinlich den HTTP-Zugriff konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+     Wenn Sie TCP/IP für das Verbindungsprotokoll verwenden, sollten Sie zusätzlich beachten, dass für Analysis Services Clientverbindungen erforderlich sind, die von derselben Domäne oder einer vertrauenswürdigen Domäne stammen. Bei Verbindungen, die sich über Sicherheitsgrenzen erstrecken, müssen Sie wahrscheinlich den HTTP-Zugriff konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 -   Können Sie mithilfe einiger Tools eine Verbindung herstellen, mit anderen jedoch nicht? Das Problem kann auf eine falsche Clientbibliotheksversion zurückzuführen sein. Sie können Clientbibliotheken von der Downloadseite für das SQL Server Feature Pack herunterladen.  
   
@@ -128,10 +137,10 @@ caps.handback.revision: 9
   
  [Lösen allgemeiner Verbindungsprobleme in SQL Server 2005 Analysis Services – Verbindungsszenarien](http://technet.microsoft.com/library/cc917670.aspx). Obwohl dieses Dokument bereits einige Jahre älter ist, sind die enthaltenen Informationen und Methoden weiterhin gültig.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Identitätswechsel &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [Identitätswechsel &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "Modell mit dem Microsoft-Viewer f&#252;r Zuordnungsregeln durchsuchen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Itemsets [Analysis Services]"
-  - "Miningmodelle [Analysis Services], Zuordnungen"
-  - "Miningmodellinhalte, anzeigen"
-  - "Regeln [Data Mining]"
-  - "Zuordnungsregeln-Viewer [Analysis Services]"
-  - "Warenkorbanalyse (Market Basket Analysis) [Analysis Services]"
-  - "Zuordnungen [Analysis Services]"
-  - "Microsoft Zuordnungsregeln-Viewer"
-  - "Abhängigkeiten [Analysis Services]"
+title: Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- mining models [Analysis Services], associations
+- mining model content, viewing
+- rules [Data Mining]
+- Association Rules Viewer [Analysis Services]
+- market basket analysis [Analysis Services]
+- associations [Analysis Services]
+- Microsoft Association Rules Viewer
+- dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modell mit dem Microsoft-Viewer f&#252;r Zuordnungsregeln durchsuchen
+# <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein Zuordnungsalgorithmus zum Erstellen von Data Mining-Modellen, die Sie für die Warenkorbanalyse verwenden können. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
  Die primären Gründe zum Verwenden des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus sind die folgenden:  
@@ -37,9 +42,9 @@ caps.handback.revision: 39
 -   Zum Erkennen von Regeln, die, basierend auf vorhandenen Elementen, das Vorhandensein anderer Elemente in einer Transaktion vorhersagen.  
   
 > [!NOTE]  
->  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
- Eine exemplarische Vorgehensweise zum Erstellen, Erkunden und Verwenden eines Zuordnungsminingmodells finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ Eine exemplarische Vorgehensweise zum Erstellen, Erkunden und Verwenden eines Zuordnungsminingmodells finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Zuordnungsregeln-Viewer enthält die folgenden Registerkarten:  
@@ -83,8 +88,8 @@ caps.handback.revision: 39
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-## Siehe auch  
- [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   

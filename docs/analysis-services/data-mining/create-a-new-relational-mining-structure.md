@@ -1,32 +1,37 @@
 ---
-title: "Erstellen einer neuen relationalen Miningstruktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Miningstrukturen [Analysis Services], relational"
-  - "Miningstrukturen [Analysis Services], erstellen"
-  - "Relationale Miningmodelle [Analysis Services]"
+title: Erstellen eine neuen relationalen Miningstruktur | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], relational
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer neuen relationalen Miningstruktur
+# <a name="create-a-new-relational-mining-structure"></a>Erstellen einer neuen relationalen Miningstruktur
   Erstellen Sie mithilfe des Data Mining-Assistenten eine neue Miningstruktur. Verwenden Sie hierzu Daten aus einer relationalen Datenbank oder einer anderen Quelle. Speichern Sie dann die Struktur und beliebige verwandte Modelle in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank.  
   
-## So erstellen Sie eine relationale Miningstruktur  
+## <a name="to-create-a-relational-mining-structure"></a>So erstellen Sie eine relationale Miningstruktur  
   
-1.  Klicken Sie im Projektmappen-Explorer in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt mit der rechten Maustaste auf den Ordner **Miningstrukturen**, und klicken Sie dann auf **Neue Miningstruktur**.  
+1.  Klicken Sie im Projektmappen-Explorer in einem **-Projekt mit der rechten Maustaste auf den Ordner** Miningstrukturen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , und klicken Sie dann auf **Neue Miningstruktur**.  
   
      Der Data Mining-Assistent wird geöffnet.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
   
 11. Geben Sie auf der Seite **Assistenten abschließen** einen Namen für die zu erstellende Miningstruktur und das zugehörige ursprüngliche Miningmodell an. Klicken Sie anschließend auf **Fertig stellen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

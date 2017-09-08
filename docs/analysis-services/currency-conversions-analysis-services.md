@@ -1,35 +1,40 @@
 ---
-title: "W&#228;hrungsumrechnungen (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mehrere Währungsumrechnungen"
-  - "Währungsdatenwerte [SQL Server]"
-  - "Währung [Analysis Services]"
-  - "Umrechnen von Währungen"
-  - "1:n-Währungsumrechnungen"
-  - "n:n-Währungsumrechnungen [Analysis Services]"
-  - "n:1-Währungsumrechnungen [Analysis Services]"
+title: "Währungsumrechnungen (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple currency conversions
+- monetary data [SQL Server]
+- currency [Analysis Services]
+- converting currency
+- one-to-many currency conversions
+- many-to-many currency conversions [Analysis Services]
+- many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# W&#228;hrungsumrechnungen (Analysis Services)
+# <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Nur Multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet eine Kombination von Funktionen, die durch MDX-Skripts (Multidimensional Expressions) bestimmt werden, um für Cubes, die mehrere Währungen unterstützen, Währungsumrechnungen bereitzustellen.  
   
-## Terminologie zur Währungsumrechung  
+## <a name="currency-conversion-terminology"></a>Terminologie zur Währungsumrechung  
  Die folgende Terminologie wird in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet, um die Funktionen zur Währungsumrechnung zu beschreiben:  
   
  Pivotwährung  
@@ -80,13 +85,13 @@ caps.handback.revision: 18
   
 -   Die **Type** -Eigenschaft von einem Attribut innerhalb der Dimension wird auf CurrencyDestination festgelegt, und die Spalte, die an das Attribut gebunden ist, enthält den Währungsbezeichner, der die Berichtswährung für die Währungsumrechnung darstellt.  
   
-## Definieren von Währungsumrechnungen  
+## <a name="defining-currency-conversions"></a>Definieren von Währungsumrechnungen  
  Sie können mit dem Business Intelligence-Assistenten die Funktionen der Währungsumrechnung für einen Cube definieren, oder Sie können Währungsumrechnungen mithilfe von MDX-Skripts manuell definieren.  
   
-### Erforderliche Komponenten  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
  Bevor Sie eine Währungsumrechnung in einem Cube mithilfe des Business Intelligence-Assistenten definieren können, müssen Sie zunächst mindestens eine Währungsdimension, eine Zeitdimension und eine Wechselkurs-Measuregruppe definieren. Aus diesen Objekten kann der Business Intelligence-Assistent die Daten und Metadaten abrufen, mit deren Hilfe die notwendige Berichtswährungsdimension und das notwendige MDX-Skript zum Bereitstellen der Währungsumrechnungsfunktionen erstellt werden.  
   
-### Entscheidungen  
+### <a name="decisions"></a>Entscheidungen  
  Sie müssen die folgenden Entscheidungen treffen, bevor der Business Intelligence-Assistent die notwendige Berichtswährungsdimension und das notwendige MDX-Skript zum Bereitstellen der Währungsumrechnungsfunktionen erstellen kann:  
   
 -   Wechselkursrichtung  
@@ -99,7 +104,7 @@ caps.handback.revision: 18
   
 -   Berichtswährungen  
   
-### Wechselkursrichtungen  
+### <a name="exchange-rate-directions"></a>Wechselkursrichtungen  
  Die Wechselkurs-Measuregruppe enthält Measures, die Wechselkurse zwischen lokalen Währungen und Pivotwährungen (die häufig als Firmenwährungen bezeichnet werden) darstellen. Die Kombination aus Wechselkursrichtung und Umrechnungstyp bestimmt den Vorgang, die für die Measures ausgeführt wird, die von dem vom Business Intelligence-Assistenten erstellten MDX-Skript umgerechnet werden sollen. Die folgende Tabelle beschreibt die, abhängig vom Wechselkurs und Umrechnungstyp ausgeführten Vorgänge, die auf den im Business Intelligence-Assistenten verfügbaren Optionen für die Wechselkursrichtung und die Umrechnungsrichtungen basieren.  
   
 |||||  
@@ -108,9 +113,9 @@ caps.handback.revision: 18
 |**n Pivotwährung zu 1 Beispielwährung**|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Dividieren Sie anschließend das umgerechnete Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
 |**n Beispielwährung zu 1 Pivotwährung**|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Multiplizieren Sie anschließend das umgerechnete Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
   
- Wählen Sie die Wechselkursrichtung im Business Intelligence-Assistenten auf der Seite **Optionen für die Währungsumrechnung festlegen** aus. Weitere Informationen zum Festlegen der Umrechnungsrichtung finden Sie unter [Optionen für die Währungsumrechnung festlegen &#40;Business Intelligence-Assistent&#41;](../Topic/Set%20Currency%20Conversion%20Options%20\(Business%20Intelligence%20Wizard\).md).  
+ Wählen Sie die Wechselkursrichtung im Business Intelligence-Assistenten auf der Seite **Optionen für die Währungsumrechnung festlegen** aus. Weitere Informationen zum Festlegen der Umrechnungsrichtung finden Sie unter [Optionen für die Währungsumrechnung festlegen &#40;Business Intelligence-Assistent&#41;](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d).  
   
-### Umgerechnete Elemente  
+### <a name="converted-members"></a>Umgerechnete Elemente  
  Sie können mit dem Business Intelligence-Assistenten angeben, mit welchen Measures aus der Wechselkurs-Measuregruppen für folgende Elemente Werte umgerechnet werden:  
   
 -   Measures in anderen Measuregruppen.  
@@ -119,9 +124,9 @@ caps.handback.revision: 18
   
 -   Kontotypen, die von Elementen einer Attributhierarchie für ein Kontoattribut in einer Datenbankdimension verwendet werden.  
   
- Der Business Intelligence-Assistent verwendet diese Informationen innerhalb des MDX-Skripts, das vom Assistenten generiert wurde, um den Umfang der Währungsumrechnung zu bestimmen. Weitere Informationen zum Angeben von Elementen für die Währungsumrechnung finden Sie unter [Member auswählen &#40;Business Intelligence-Assistent&#41;](../Topic/Select%20Members%20\(Business%20Intelligence%20Wizard\).md).  
+ Der Business Intelligence-Assistent verwendet diese Informationen innerhalb des MDX-Skripts, das vom Assistenten generiert wurde, um den Umfang der Währungsumrechnung zu bestimmen. Weitere Informationen zum Angeben von Elementen für die Währungsumrechnung finden Sie unter [Member auswählen &#40;Business Intelligence-Assistent&#41;](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0).  
   
-### Umrechnungstypen  
+### <a name="conversion-types"></a>Umrechnungstypen  
  Der Business Intelligence-Assistent unterstützt drei verschiedene Währungsumrechnungstypen:  
   
 -   **1:n**  
@@ -144,14 +149,14 @@ caps.handback.revision: 18
   
  Durch das Angeben des Umrechnungstyps kann der Business Intelligence-Assistent die benannte Abfrage und die Dimensionsstruktur der Berichtswährungsdimension sowie die Struktur des für die Währungsumrechnung definierten MDX-Skripts definieren.  
   
-### Lokale Währungen  
+### <a name="local-currencies"></a>Lokale Währungen  
  Wenn Sie einen m:n- oder m:1-Umrechnungstyp für die Währungsumrechnung auswählen, müssen Sie angeben, wie die lokalen Währungen identifiziert werden sollen, aus denen das MDX-Skript vom Business Intelligence-Assistenten generiert wird, das die Berechnungen für die Währungsumrechnung ausführt. Die lokale Währung einer Transaktion kann in der Faktentabelle auf zweierlei Art identifiziert werden:  
   
 -   Die Measuregruppe enthält eine reguläre Dimensionsbeziehung zur Currency-Dimension. In der [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] -Beispieldatenbank [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verfügt die Internet Sales-Measuregruppe über eine reguläre Dimensionsbeziehung mit der Currency-Dimension. Die Faktentabelle für diese Measuregruppe enthält eine Fremdschlüsselspalte, die auf die Währungsbezeichner in der Dimensionstabelle für diese Dimension verweist. In diesem Fall können Sie das Attribut aus der Währungsdimension auswählen, auf die von der Measuregruppe zum Identifizieren der lokalen Währung für die Transaktionen in der Faktentabelle für diese Measuregruppe verweist. Diese Situation tritt sehr häufig in Bankanwendungen auf, bei denen die Transaktion selbst die Währung innerhalb der Transaktion bestimmt.  
   
 -   Die Measuregruppe enthält eine referenzierte Dimensionsbeziehung zur Währungsdimension über eine andere Dimension, die direkt auf die Currency-Dimension verweist. In der [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] -Beispieldatenbank [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthält die Financial Reporting-Measuregruppe beispielsweise eine Dimensionsbeziehung zur Currency-Dimension, auf die durch die Organization-Dimension verwiesen wird. Die Faktentabelle für diese Measuregruppe enthält eine Fremdschlüsselspalte, die auf Elemente in der Dimensionstabelle für die Dimension Organization verweist. Die Dimensionstabelle für die Organisationsdimension wiederum enthält eine Fremdschlüsselspalte, die auf die Währungsbezeichner in der Dimensionstabelle für die Währungsdimension verweist. Diese Situation tritt besonders häufig bei Finanzberichtsanwendungen auf, wenn der Ort oder die Niederlassung, in der eine Transaktion stattgefunden hat, die Währung für diese Transaktion bestimmt. In diesem Fall können Sie das Attribut auswählen, dass auf die Currency-Dimension von der Dimension der Geschäftseinheit verweist.  
   
-### Berichtswährungen  
+### <a name="reporting-currencies"></a>Berichtswährungen  
  Wenn Sie einen m:n- oder 1:n-Umrechnungstyp für die Währungsumrechnung auswählen, müssen Sie die Berichtswährungen angeben, für die das vom Business Intelligence-Assistenten generiert MDX-Skript die Berechnungen für die Währungsumrechnung ausführt. Sie können entweder alle Elemente der Currency-Dimension, die zur Wechselkurs-Measuregruppe gehören, angeben, oder Sie können einzelne Elemente aus der Dimension auswählen.  
   
  Der Business Intelligence-Assistent erstellt eine Berichtswährungsdimension, die auf einer benannten Abfrage basiert, die aus der Dimensionstabelle für die Währungsdimension mithilfe der ausgewählten Berichtswährungen erstellt wurde.  
@@ -161,10 +166,10 @@ caps.handback.revision: 18
   
  Eine separate Currency-Dmension wird für jede in einem Cube definierte Währungsumrechnung definiert. Sie können den Namen der Berichtswährungsdimensionen nach dem Erstellen ändern. In dem Fall müssen Sie jedoch auch das für die Währungsumrechnung generierte MDX-Skript aktualisieren, um sicherzustellen, dass der richtige Name vom Skriptbefehl beim Verweisen auf die Berichtswährungsdimension verwendet wird.  
   
-## Definieren mehrfacher Währungsumrechnungen  
+## <a name="defining-multiple-currency-conversions"></a>Definieren mehrfacher Währungsumrechnungen  
  Mit dem Business Intelligence-Assistenten können Sie so viele Währungsumrechnungen definieren, wie Sie für Ihre Business Intelligence-Projektmappe benötigen. Sie können entweder eine vorhandene Währungsumrechnung überschreiben oder eine neue Währungsumrechnung an das MDX-Skript für einen Cube anfügen. Mehrfache Währungsumrechnungen, die in einem einzelnen Cube definiert sind, sorgen für mehr Flexibilität in Business Intelligence-Anwendungen, die komplexe Berichtsanforderungen stellen, z.& ;B. Finanzberichtsanwendungen, die mehrere separate Umrechnungsanforderungen für internationale Berichte unterstützen.  
   
-### Identifizieren von Währungsumrechnungen  
+### <a name="identifying-currency-conversions"></a>Identifizieren von Währungsumrechnungen  
  Der Business Intelligence-Assistent identifiziert jede Währungsumrechnung durch Einbinden der Skriptbefehle für die Währungsumrechnungen in die folgenden Kommentare:  
   
  `//<Currency conversion>`  
@@ -183,7 +188,7 @@ caps.handback.revision: 18
   
  Sie können die Skriptbefehle in einer Währungsumrechnung nach Bedarf ändern. Wenn Sie die Währungsumwandlung jedoch überschreiben, gehen Ihre Änderungen jedoch verloren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globalisierungsszenarien für Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

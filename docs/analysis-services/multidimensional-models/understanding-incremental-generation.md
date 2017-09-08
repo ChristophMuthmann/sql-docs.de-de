@@ -1,28 +1,33 @@
 ---
-title: "Grundlegendes zur inkrementellen Generierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Inkrementelle Generierung [Analysis Services]"
-  - "Schemagenerierungs-Assistent, inkrementelle Generierung"
-  - "Relationales Schema [Analysis Services], inkrementelle Generierung"
+title: Grundlegendes zur inkrementellen Generierung | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental generation [Analysis Services]
+- Schema Generation Wizard, incremental generation
+- relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Grundlegendes zur inkrementellen Generierung
+# <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
   Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
   
 -   Wurde eine Tabelle vorher vom Assistenten generiert, wird die Tabelle überschrieben. Sie können verhindern, dass eine vom Assistenten erstellte Tabelle überschrieben wird, indem Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle in der Datenquellensicht in **false**ändern. Wenn Sie die Steuerung einer Tabelle übernehmen, wird die Tabelle wie jede andere benutzerdefinierte Tabelle behandelt und bleibt von der erneuten Generierung unberührt. Wenn Sie eine Tabelle aus der Generierung entfernen, können Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle später in der Datenquellensicht in **true** ändern und die Tabelle für Änderungen durch den Assistenten erneut öffnen. Weitere Informationen finden Sie unter [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
@@ -31,13 +36,13 @@ caps.handback.revision: 29
   
  Wenn der Schemagenerierungs-Assistent Tabellen erneut generiert, die vorher in der Themenbereichsdatenbank generiert wurden, können Sie wählen, ob der Assistent in diesen Tabellen vorhandene Daten beibehalten soll.  
   
-## Unterstützen der Beibehaltung von Daten  
+## <a name="supporting-data-preservation"></a>Unterstützen der Beibehaltung von Daten  
  Im Allgemeinen behält der Schemagenerierungs-Assistenten Daten bei, die in den von ihm erstellten Tabellen gespeichert sind. Darüber hinaus werden Daten auch dann vom Assistenten beibehalten, wenn Sie Spalten zu Tabellen hinzufügen, die vom Assistenten generiert wurden. Sie können diese Funktion verwenden, um Dimensionen und Cubes hinzuzufügen oder zu ändern und dann die zugrunde liegenden Objekte erneut zu generieren, ohne die in den zugrunde liegenden Tabellen gespeicherten Daten erneut laden zu müssen.  
   
 > [!NOTE]  
 >  Wenn Sie Daten aus durch Trennzeichen getrennten Textdateien laden, können Sie auch wählen, ob der Schemagenerierungs-Assistent diese Dateien und die in ihnen enthaltenen Daten während der erneuten Generierung überschreiben soll. Textdateien werden entweder vollständig oder überhaupt nicht überschrieben. Diese Dateien werden vom Schemagenerierungs-Assistent nicht teilweise überschrieben. Standardmäßig werden diese Dateien nicht überschrieben.  
   
-### Teilweise Beibehaltung  
+### <a name="partial-preservation"></a>Teilweise Beibehaltung  
  Der Schemagenerierungs-Assistent kann vorhandene Daten in einigen Fällen nicht beibehalten. Die folgende Tabelle enthält Beispiele für Situationen, in denen der Assistent bei der erneuten Generierung nicht alle in den zugrunde liegenden Tabellen vorhandenen Daten beibehalten kann.  
   
 |Art der Datenänderung|Behandlung|  
@@ -48,7 +53,7 @@ caps.handback.revision: 29
   
  Der Schemagenerierungs-Assistent gibt vor dem Löschen von Daten eine Warnung aus, damit Sie den Assistenten abbrechen können, ohne Daten zu verlieren. Der Schemagenerierungs-Assistent ist jedoch nicht in der Lage, zwischen einem erwarteten Datenverlust und einem unerwarteten Datenverlust zu unterscheiden. Wenn Sie den Assistenten ausführen, werden die Tabellen und Spalten mit Daten, die gelöscht werden, in einem Dialogfeld aufgelistet. Sie können den Assistenten entweder fortfahren und die Daten löschen lassen, oder Sie brechen den Assistenten ab und überarbeiten die Änderungen, die Sie an Tabellen und Spalten vorgenommen haben.  
   
-## Unterstützen von Cube- und Dimensionsänderungen  
+## <a name="supporting-cube-and-dimension-changes"></a>Unterstützen von Cube- und Dimensionsänderungen  
  Wenn Sie die Eigenschaften von Dimensionen und Cubes ändern,  werden die entsprechenden Objekte in der zugrunde liegenden Themenbereichsdatenbank sowie in der zugehörigen Datenquellensicht wie in der folgenden Tabelle beschrieben vom Schemagenerierungs-Assistenten erneut generiert.  
   
  Löschen eines Objekts, z. B. einer Dimension, eines Cubes oder eines Attributs  
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
  Kann der Schemagenerierungs-Assistent die erforderliche Änderung wegen des Vorhandenseins eines Benutzerobjekts in der Themenbereichsdatenbank nicht vornehmen (da das Datenbankmodul einen Fehler zurückgibt), erzeugt der Schemagenerierungs-Assistent einen Fehler und zeigt den vom Datenbankmodul zurückgegebenen Fehler an. Wenn Sie beispielsweise eine Primärschlüsseleinschränkung oder einen nicht gruppierten Index für eine Tabelle erstellen, nachdem der Assistent die Tabelle generiert hat, wird diese Tabelle nicht vom Schemagenerierungs-Assistenten gelöscht, da er die Einschränkung bzw. den Index nicht erstellt hat.  
   
-## Unterstützen von Schemaänderungen  
+## <a name="supporting-schema-changes"></a>Unterstützen von Schemaänderungen  
  Wenn Sie die Eigenschaften der Tabellen oder Spalten in der Themenbereichsdatenbank oder in der zugeordneten Datenquellensicht ändern, behandelt der Schemagenerierungs-Assistent die Änderungen wie in der folgenden Tabelle beschrieben.  
   
  Löschen einer Tabelle oder einer Spalte, die vom Schemagenerierungs-Assistenten generiert wurde  
@@ -77,14 +82,14 @@ caps.handback.revision: 29
  Hinzufügen einer Spalte zu einer vom Schemagenerierungs-Assistenten erstellten Tabelle oder Hinzufügen einer Tabelle zur Themenbereichsdatenbank oder Stagingbereichsdatenbank  
  Wenn Sie einer vom Schemagenerierungs-Assistenten erstellten Tabelle eine Spalte hinzufügen, behält der Assistent die zusätzliche Spalte zusammen mit den darin gespeicherten Daten bei der erneuten Generation bei. Wenn Sie jedoch der Themenbereichsdatenbank oder der Stagingbereichsdatenbank eine Tabelle hinzufügen, wird die neue Tabelle vom Schemagenerierungs-Assistenten nicht eingebunden. Die hinzugefügte Spalte bzw. Tabelle ist nicht im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt, in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, den DTS-Paketen, der Datenquellensicht oder an anderer Stelle im generierten Schema enthalten.  
   
-## Unterstützen von Änderungen an Datenquelle und Datenquellensicht  
+## <a name="supporting-data-source-and-data-source-view-changes"></a>Unterstützen von Änderungen an Datenquelle und Datenquellensicht  
  Wird der Schemagenerierungs-Assistent erneut ausgeführt, verwendet er dieselbe Datenquelle und Datenquellensicht wie für die ursprüngliche Generierung. Wenn Sie eine Datenquelle oder Datenquellensicht hinzufügen, wird diese vom Assistenten nicht verwendet. Wenn Sie die ursprüngliche Datenquelle oder Datenquellensicht nach der Anfangsgenerierung löschen, müssen Sie den Assistenten von Anfang an ausführen. Alle bisherigen Einstellungen im Assistenten werden ebenfalls gelöscht. Alle vorhandenen Objekte in einer zugrunde liegenden Datenbank, die mit einer gelöschten Datenquelle oder Datenquellensicht verbunden waren, werden bei dem nächsten Ausführen des Schemagenerierungs-Assistenten als vom Benutzer erstellte Objekte behandelt.  
   
  Gibt die Datenquellensicht nicht den tatsächlichen Status der zugrunde liegenden Datenbank zum Zeitpunkt der Generierung wieder, kann es bei dem Schemagenerierungs-Assistenten zu Fehlern bei der Generierung von Schemas für die Themenbereichsdatenbank und die Stagingbereichsdatenbank kommen. Wenn beispielsweise die Datenquellensicht angibt, dass der Datentyp für eine Spalte auf **int**festgelegt wird, der Datentyp für die Spalte aber tatsächlich auf **string**festgelegt ist, legt der Schemagenerierungs-Assistent den Datentyp für den Fremdschlüssel in Übereinstimmung mit der Datenquellensicht auf **int** fest und erzeugt dann beim Erstellen der Beziehung einen Fehler, da der tatsächliche Datentyp **string**ist.  
   
  Wenn Sie allerdings die Datenquellen-Verbindungszeichenfolge auf eine andere Datenbank aus der vorherigen Generierung ändern, wird kein Fehler generiert. Es wird die neue Datenbank verwendet und keine Änderung an der vorherigen Datenbank vorgenommen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Änderungen an Datenquellensichten und Datenquellen](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

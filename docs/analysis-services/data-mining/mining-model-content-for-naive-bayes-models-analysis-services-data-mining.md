@@ -1,31 +1,36 @@
 ---
-title: "Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Naives Bayes-Modell [Analysis Services]"
-  - "Bayes-Klassifizierungen"
-  - "Naive Bayes-Algorithmen [Analysis Services]"
-  - "Miningmodellinhalt von Naive Bayes-Modellen"
+title: "Miningmodellinhalt Naive Bayes-Modellen (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Grundlegendes zur Struktur von Naive Bayes-Modellen  
+## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Grundlegendes zur Struktur von Naive Bayes-Modellen  
  Ein Naive Bayes-Modell verfügt über einen einzigen übergeordneten Knoten, der das Modell und seine Metadaten darstellt. Unterhalb eines jeden übergeordneten Knotens befinden sich die unabhängigen Strukturen, die die von Ihnen ausgewählten vorhersagbaren Attribute darstellen. Zusätzlich zu den Strukturen für die Attribute enthält jedes Modell einen Knoten für Randstatistik (NODE_TYPE = 26), der beschreibende Statistiken über die Sätze der Trainingsfälle bietet. Weitere Informationen finden Sie unter [Informationen im Knoten für Randstatistik](#bkmk_margstats).  
   
  Für jedes vorhersagbare Attribut und jeden Wert gibt das Modell eine Struktur aus, die beschreibende Informationen darüber enthält, welche Auswirkungen die verschiedenen Eingabespalten auf das Ergebnis des entsprechenden vorhersagbaren Attributs haben. Jede Struktur enthält das vorhersagbare Attribut und seinen Wert (NODE_TYPE = 9) und weiterhin eine Reihe von Knoten, die die Eingabeattribute (NODE_TYPE = 10) darstellen. Da die Eingabeattribute in der Regel über mehrere Werte verfügen, kann jedes Eingabeattribut (NODE_TYPE = 10) mehrere untergeordnete Knoten (NODE_TYPE = 11) besitzen; jeweils einen für einen bestimmten Status des Attributs.  
@@ -33,9 +38,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Da ein Naive Bayes-Modell keine kontinuierlichen Datentypen zulässt, werden alle Werte der Eingabespalten diskret oder diskretisiert behandelt. Sie können festlegen, wie ein Wert diskretisiert wird. Weitere Informationen finden Sie unter [Ändern der Diskretisierung von Spalten in Miningmodellen](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![Struktur des Modellinhalts für Naive Bayes](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "Struktur des Modellinhalts für Naive Bayes")  
+ ![Struktur des Modellinhalts für Naive Bayes-](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "Struktur des Modellinhalts für naive Bayes")  
   
-## Modellinhalt eines Naive Bayes-Modells  
+## <a name="model-content-for-a-naive-bayes-model"></a>Modellinhalt eines Naive Bayes-Modells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Naive Bayes-Modelle relevant sind.  
   
  Informationen zu den allgemeinen Spalten im Schemarowset, z.B. MODEL_CATALOG und MODEL_NAME, die hier nicht beschrieben werden, sowie weitere Erläuterungen zur Miningmodell-Terminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -244,7 +249,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |Eingabeattribut (10)|Leer.|  
 |Eingabeattributstatus (11)|Enthält Statistiken, die die Verteilung der Werte in den Trainingsdaten für diese bestimmte Kombination aus vorhersagbarem Wert und Eingabeattributwert beschreiben.|  
   
- Sie können die Knoten-IDs oder Knotenbeschriftungen verwenden, um mehr Detailebenen abzurufen. Beispielsweise ruft die folgende Abfrage spezifische Spalten aus der NODE_DISTRIBUTION-Tabelle nur für die Eingabeattributknoten ab, die mit dem Wert `'Marital Status = S'` in Beziehung stehen.  
+ Sie können die Knoten-IDs oder Knotenbeschriftungen verwenden, um mehr Detailebenen abzurufen. Beispielsweise ruft die folgende Abfrage spezifische Spalten aus der NODE_DISTRIBUTION-Tabelle nur für die Eingabeattributknoten ab, die mit dem Wert `'Marital Status = S'`in Beziehung stehen.  
   
 ```  
 SELECT FLATTENED NODE_CAPTION,  
@@ -287,7 +292,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Der Wert **Missing** (VALUE_TYPE = 1) wird jedem Eingabe- und Ausgabeattribut hinzugefügt, um potenzielle Werte darzustellen, die in den Trainingsdaten nicht vorhanden waren. Es ist zwischen der Zeichenfolge "Missing" und dem Standardwert **Missing** zu unterscheiden. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   

@@ -1,75 +1,62 @@
 ---
-title: "In Analysis Services verwendete Tools und Anwendungen | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: Tools und Anwendungen, die in Analysis Services verwendete | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 8b56417b89b618598f716245e7562f5986a911b5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# In Analysis Services verwendete Tools und Anwendungen
-  Suchen Sie nach den Tools und Anwendungen, die Sie benötigen, um Analysis Services-Modelle zu erstellen und zugeordnete Datenbanken in einer Analysis Services-Instanz zu verwalten.  
+# <a name="tools-and-applications-used-in-analysis-services"></a>In Analysis Services verwendete Tools und Anwendungen
+  Suchen die Tools und Anwendungen, die Sie zum Erstellen von Analysis Services-Modellen benötigen und Verwalten von Datenbanken bereitgestellt.  
   
-## Analysis Services-Modell-Designer  
- Tabellarische und mehrdimensionale Modelle werden aus Projektvorlagen in einer Lösung erstellt, die in einer Visual Studio-Shell erstellt wurde. Die Projektvorlage stellt die Entwürfe für das Erstellen von Tabellen, Beziehungen, Cubes, Dimensionen und Rollen bereit, aus denen eine Analysis Services-Lösung besteht. Die Shell stellt den visuellen Arbeitsbereich, die Eigenschaftenseiten und das Befehlsframework bereit, in dem das Projekt erstellt wird. Der Modell-Designer, der sowohl Shell als auch Vorlagen bietet, ist einen kostenloser Webdownload.  
+## <a name="analysis-services-model-designers"></a>Analysis Services-Modell-Designer  
+ Modelle werden mithilfe von Projektvorlagen in SQL Server Data Tools (SSDT), einer Visual Studio-Shell erstellt. Projektvorlagen enthalten die Modell-Designer zum Erstellen der Model-Objekte, die eine Analysis Services-Lösung bilden. SSDT ist ein kostenloser Webdownload monatlich aktualisiert.
+
+ **[Herunterladen von SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)** 
   
- Modelle verfügen über eine Einstellung des Kompatibilitätsgrades, der die Funktionsverfügbarkeit bestimmt und welches Release von Analysis Services das Modell ausführt.  Der Modell-Designer bestimmt zum Teil, ob Sie einen angegebenen Kompatibilitätsgrad angeben können.  
+ Modelle verfügen über eine Einstellung des Kompatibilitätsgrades, der die Funktionsverfügbarkeit bestimmt und welches Release von Analysis Services das Modell ausführt.  Ob Sie angeben können, dass es sich bei ein bestimmten Kompatibilitätsgrad ist der Teil der Modell-Designer bestimmt.  
   
- Tabellarische Modelle, die die neueste Funktionalität in SQL Server 2016 verwenden, wie z.B. BIM-Dateien in JSON-Tabellenformat und bidirektionales Kreuzfiltern, müssen bei Kompatibilitätsgrad 1200 in der Version von SQL Server Data Tools für Visual Studio 2015 erstellt werden, die gleichzeitig mit SQL Server 2016 (Download-Link siehe unten) geliefert wird.  
+ Tabellarische Modelle, die die neueste Funktionen verwenden, z. B. BIM-Dateien im JSON-Tabellenformat und bidirektionales kreuzfilterrichtung, müssen erstellt oder mit dem Kompatibilitätsgrad 1200 oder höher aktualisiert werden.  
   
- Wenn Sie einen niedrigeren Kompatibilitätsgrad benötigen, weil Sie vielleicht ein Modell mit einer früheren Version von Analysis Services bereitstellen möchten, können Sie weiterhin den Modell-Designer in SSDT für Visual Studio 2015 verwenden. Neuere Versionen des Toolsupports erstellen jeden Modelltyp (tabellarisch oder mehrdimensional) mit jedem Kompatibilitätsgrad, den Sie benötigen. Es ist nicht erforderlich, ältere Tools nur zum Erstellen oder Bearbeiten eines älteren Modells zu behalten.  
+ Wenn Sie einen niedrigeren Kompatibilitätsgrad benötigen, vielleicht können weil ein Modell mit einer früheren Version von Analysis Services, bereitgestellt werden soll weiterhin im Modell-Designer in SSDT. Neuere Versionen des Tools wird das Erstellen von jedem Modelltyp (tabellarisch oder mehrdimensional) mit jedem Kompatibilitätsgrad unterstützt.   
+
+## <a name="administrative-tools"></a>Verwaltungstools  
   
-### Herunterladen des Modell-Designers  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], zuvor bekannt als SQL Server Data Tools für Business Intelligence (SSDT-BI) und davor als Business Intelligence Development Studio (BIDS), wird verwendet, um Analysis Services-Modelle zu erstellen.  
+ SQL Server Management Studio (SSMS) ist das primäre Verwaltungstool für alle SQL Server-Funktionen, einschließlich Analysis Services. SSMS ist ein kostenloser Webdownload monatlich aktualisiert. 
   
-||  
-|-|  
-|**[Herunterladen von SSDT für Visual Studio 2015](https://msdn.microsoft.com/mt429383)**|  
+**[Hier können Sie SQL Server Management Studio herunterladen.](https://msdn.microsoft.com/library/mt238290.aspx)** 
   
- Anstatt frühere Versionen des Designers zu verwenden, wird empfohlen, SQL Server Data Tools für Visual Studio 2015 zu verwenden. Es enthält Projektvorlagen für alle SQL Server-Inhaltstypen, wie die relationale Datenbank, Analysis Services-Modelle, Reporting Services-Berichte sowie Integration Services-Pakete.  
+ SSMS bietet erweiterte Ereignisse (xEvents), mit einem eine einfache Alternative zu SQL Server Profiler-ablaufverfolgungen zum Überwachen der Aktivität und Diagnostizieren von Problemen auf SQL Server 2016 und Azure Analysis Services-Server. Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
   
- SSDT wird in der Visual Studio 2015 Shell ausgeführt. Wenn Sie bereits Visual Studio 2015 besitzen, fügt SSDT Setup nur die Projektvorlagen hinzu. Wenn Sie Visual Studio 2015 nicht besitzen, werden sowohl die Shell als auch die Vorlagen installiert.  
+### <a name="sql-server-profiler"></a>SQL Server Profiler  
+ Auch wenn er zugunsten von xEvents offiziell als veraltet eingestuft ist, bietet SQL Server Profiler ein vertrautes Konzept zum Überwachen von Verbindungen, der MDX-Abfrageausführung und anderer Servervorgänge. SQL Server Profiler wird standardmäßig installiert. Sie können es mit SQL Server-Anwendungen für Apps in Windows finden.  
   
- Wenn auf Ihrem Computer eine frühere Version von SSDT-BI oder BIDS installiert ist, wird die neuere Version parallel zur vorherigen Version installiert.  
+### <a name="powershell"></a>PowerShell  
+ Mithilfe von PowerShell-Befehlen können Sie viele Verwaltungsaufgaben durchführen. Finden Sie unter [PowerShell-Referenz](../analysis-services/powershell/analysis-services-powershell-reference.md) für Weitere Informationen.  
   
- Nachdem Sie SSDT installiert haben, sollten die Business Intelligence-Vorlagen im Dialogfeld „Neues Projekt“ angezeigt werden.  
+### <a name="community-and-third-party-tools"></a>Community- und Drittanbietertools  
+ Community-Codebeispiele finden Sie auf der [Analysis Services-Codeplex-Seite](http://sqlsrvanalysissrvcs.codeplex.com/) . [Foren](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) können hilfreich sein, wenn Sie Empfehlungen für Drittanbietertools suchen, die Analysis Services unterstützen.  
   
- ![Neue Projektvorlagen in SSDT](../analysis-services/media/ssdt-biprojects.png "Neue Projektvorlagen in SSDT")  
-  
-## Verwaltungstools  
-  
-### Hier können Sie SQL Server Management Studio herunterladen.  
- Management Studio ist das primäre Verwaltungstool für alle SQL Server-Funktionen, einschließlich Analysis Services. Dies ist nun ein separater Download.  
-  
-||  
-|-|  
-|**[Hier können Sie SQL Server Management Studio herunterladen.](https://msdn.microsoft.com/library/mt238290.aspx)**|  
-  
- In SQL Server 2016 schließt Management Studio erweiterte Ereignisse (xEvents) für Analysis Services ein und bietet dadurch eine einfache Alternative zur SQL Server Profiler-Ablaufverfolgung, die zur Überwachung der Aktivität und Diagnose von Serverproblemen verwendet wird. Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
-  
-### SQL Server Profiler  
- Auch wenn er zugunsten von xEvents offiziell als veraltet eingestuft ist, bietet SQL Server Profiler ein vertrautes Konzept zum Überwachen von Verbindungen, der MDX-Abfrageausführung und anderer Servervorgänge. SQL Server Profiler wird standardmäßig installiert. Sie finden ihn mit SQL Server-Anwendungen bei den Apps in Windows Server 2012.  
-  
-### PowerShell  
- Mithilfe von PowerShell-Befehlen können Sie viele Verwaltungsaufgaben durchführen. Weitere Informationen finden Sie unter [PowerShell-Skripts in Analysis Services](../analysis-services/instances/powershell-scripting-in-analysis-services.md).  
-  
-### Community- und Drittanbietertools  
- Community-Codebeispiele finden Sie auf der [Analysis Services-Codeplex-Seite](http://sqlsrvanalysissrvcs.codeplex.com/). [Foren](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) können hilfreich sein, wenn Sie Empfehlungen für Drittanbietertools suchen, die Analysis Services unterstützen.  
-  
-## Siehe auch  
- [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Kompatibilitätsgrad einer mehrdimensionalen Datenbank](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [Kompatibilitätsgrad für tabellarische Modelle](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

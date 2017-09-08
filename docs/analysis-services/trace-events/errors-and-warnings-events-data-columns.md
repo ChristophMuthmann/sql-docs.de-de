@@ -1,31 +1,36 @@
 ---
-title: "Fehler- und Warnungsereignis-Datenspalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Fehler und Warnungen-Ereigniskategorie [SQL Server]"
+title: Fehler- und Warnungsereignis-Datenspalten | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Fehler- und Warnungsereignis-Datenspalten
+# <a name="errors-and-warnings-events-data-columns"></a>Fehler- und Warnungsereignis-Datenspalten
   Die Ereigniskategorie Sicherheitsüberwachung enthält die folgenden Ereignisklassen:  
   
 -   Fehlerklasse  
   
  In der folgenden Tabelle sind die Datenspalten für diese Ereignisklasse aufgeführt.  
   
-## Fehler-Ereignisklasse – Datenspalten  
+## <a name="error-event-classdata-columns"></a>Fehler-Ereignisklasse – Datenspalten  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -34,7 +39,7 @@ caps.handback.revision: 24
 |SessionType|8|8|Enthält den Typ der Entität, die den Fehler verursachte.|  
 |Severity|22|1|Enthält den Schweregrad einer Ausnahme, die dem Fehlerereignis zugeordnet ist. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
 |Success|23|1|Enthält die Angabe zum Erfolg oder Fehlschlagen des Fehlerereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
-|Error|24|1|Enthält die Fehlernummer eines Fehlers, der ggf. dem Fehlerereignis zugeordnet ist.|  
+|Fehler|24|1|Enthält die Fehlernummer eines Fehlers, der ggf. dem Fehlerereignis zugeordnet ist.|  
 |ConnectionID|25|1|Enthält die eindeutige Verbindungs-ID, die dem Fehlerereignis zugeordnet ist.|  
 |DatabaseName|28|8|Enthält den Namen der Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , für die das Fehlerereignis aufgetreten ist.|  
 |NTUserName|32|8|Enthält den Windows-Benutzernamen, der dem Fehlerereignis zugeordnet ist.|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|Enthält die Textdaten, die dem Fehlerereignis zugeordnet sind.|  
 |ServerName|43|8|Enthält den Namen des Servers, auf dem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ausgeführt wird, auf der das Fehlerereignis aufgetreten ist.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sicherheitsüberwachung-Ereigniskategorie](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

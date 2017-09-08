@@ -1,31 +1,36 @@
 ---
-title: "Durchsuchen eines Modells mit Microsoft Time Series-Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Mining [Analysis Services], kontinuierliche Spalten"
-  - "Miningmodellinhalte, anzeigen"
-  - "Microsoft Time Series-Viewer"
-  - "Diagramme [Analysis Services]"
-  - "Zeitreihe-Viewer [Analysis Services]"
-  - "Kontinuierliche Spalten"
-  - "Regressionsalgorithmen [Analysis Services]"
+title: Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Durchsuchen eines Modells mit Microsoft Time Series-Viewer
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Durchsuchen eines Modells mit Microsoft Time Series-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
   
 -   Dem ARTxp-Algorithmus, der für die kurzfristige Vorhersage optimiert ist  
@@ -37,7 +42,7 @@ caps.handback.revision: 44
  Weitere Informationen zu diesen Algorithmen finden Sie unter [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) und [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
 > [!NOTE]  
->  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer enthält die folgenden Registerkarten:  
@@ -85,10 +90,10 @@ caps.handback.revision: 44
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

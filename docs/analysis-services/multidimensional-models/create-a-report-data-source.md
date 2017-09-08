@@ -1,29 +1,34 @@
 ---
-title: "Erstellen einer Berichtsdatenquelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen eine Berichtsdatenquelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Erstellen einer Berichtsdatenquelle
+# <a name="create-a-report-data-source"></a>Erstellen einer Berichtsdatenquelle
   Damit Power View eine Verbindung mit einem mehrdimensionalen Modell herstellt, müssen Sie eine Datenquellendefinition für freigegebene Berichte, auch als RSDS-Datei bezeichnet, in einer SharePoint-Bibliothek erstellen. Die RSDS-Datei gibt den Namen einer Analysis Services-Serverinstanz, den Verbindungstyp, die Verbindungszeichenfolge und die Anmeldeinformationen an, die verwendet werden, um eine Verbindung mit einem mehrdimensionalen Modell herzustellen. Wenn ein Benutzer auf die RSDS-Datei klickt, wird ein neuer, leerer Power View-Bericht (eine RDLX-Datei) im Browser geöffnet.  
   
  Um eine RSDS-Verbindung zu erstellen, müssen SQL Server 2012 (oder höher) Reporting Services und das Reporting Services-Add-In für SharePoint 2010 oder SharePoint 2013 installiert sein.  
   
-## Herstellen einer RSDS-Verbindung (Berichtsdatenquelle) mit einem mehrdimensionalen Modell  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>Herstellen einer RSDS-Verbindung (Berichtsdatenquelle) mit einem mehrdimensionalen Modell  
  Bevor Sie beginnen, müssen Sie über folgende Informationen verfügen:  
   
 -   Den Namen der Analysis Services-Serverinstanz, die im mehrdimensionalen Modus ausgeführt wird  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   (Optional) Den Gebietsschemabezeichner  
   
-#### So erstellen Sie eine freigegebene Berichtsdaten-Quellendatei (RSDS-Datei) in Sharepoint 2010  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>So erstellen Sie eine freigegebene Berichtsdaten-Quellendatei (RSDS-Datei) in Sharepoint 2010  
   
 1.  Klicken Sie auf dem Bibliothekmenüband auf die Registerkarte **Dokumente** .  
   

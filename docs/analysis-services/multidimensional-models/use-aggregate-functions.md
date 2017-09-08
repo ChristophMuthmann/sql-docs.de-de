@@ -1,29 +1,34 @@
 ---
-title: "Verwenden von Aggregatfunktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aggregatfunktionen [Analysis Services]"
+title: Verwenden von Aggregatfunktionen | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verwenden von Aggregatfunktionen
+# <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
   Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion **Sum**. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
   
- In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregationstypen zählen **Sum**, **Min**, **Max**, **Count**, **Distinct Count**und einige andere, spezialisiertere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md).  
+ In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregationstypen zählen **Sum**, **Min**, **Max**, **Count**, **Distinct Count**und einige andere, spezialisiertere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   
  Measures, die über den Cube-Assistenten erstellt werden, wird als Teil der Measuredefinition ein Aggregationstyp zugewiesen. Der Aggregationstyp ist immer **Sum**, sofern die Quellspalte numerische Daten enthält. **Sum** wird unabhängig vom Datentyp der Quellspalte zugewiesen. Wenn Sie beispielsweise den Cube-Assistenten zum Erstellen von Measures verwendet und alle Spalten aus einer Faktentabelle abgerufen haben, werden Sie feststellen, dass alle sich daraus ergebenden Measures eine Aggregation von **Sum**aufweisen, selbst wenn die Quelle eine Datums-/Zeitspalte ist. Überprüfen Sie immer die vorab zugeordneten Aggregationsmethoden für Measures, die über den Assistenten erstellt wurden, um sicherzustellen, dass die Aggregationsfunktion geeignet ist.  
   
@@ -51,14 +56,14 @@ caps.handback.revision: 28
 |**Max**|Semiadditiv|Ruft den höchsten Wert für alle untergeordneten Elemente ab.|  
 |**DistinctCount**|Nicht additiv|Ruft die Zahl aller eindeutigen untergeordneten Elemente ab. Weitere Informationen finden Sie unter [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) im nächsten Abschnitt.|  
 |**InclusionThresholdSetting**|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
-|**ByAccount**|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Ist keine Kontodimension in der Measuregruppe vorhanden, wird der Wert als **None** -Aggregationsfunktion behandelt.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/create-a-finance-account-of-parent-child-type-dimension.md).|  
+|**ByAccount**|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Ist keine Kontodimension in der Measuregruppe vorhanden, wird der Wert als **None** -Aggregationsfunktion behandelt.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiadditiv|Berechnet den Durchschnitt der Werte für alle nicht leeren, untergeordneten Elemente.|  
 |**FirstChild**|Semiadditiv|Ruft den Wert des ersten untergeordneten Elements ab.|  
 |**LastChild**|Semiadditiv|Ruft den Wert des letzten untergeordneten Elements ab.|  
 |**FirstNonEmpty**|Semiadditiv|Ruft den Wert des ersten nicht leeren untergeordneten Elements ab.|  
 |**LastNonEmpty**|Semiadditiv|Ruft den Wert des letzten nicht leeren untergeordneten Elements ab.|  
   
-##  <a name="bkmk_distinct"></a> Informationen zu Distinct Count-Measures  
+##  <a name="bkmk_distinct"></a> About Distinct Count Measures  
  Ein Measure mit dem **Aggregate-Funktion** -Eigenschaftswert **Distinct Count** wird als "Distinct Count Measure" bezeichnet. Ein Distinct Count Measure kann verwendet werden, um die Vorkommen der Elemente der untersten Ebene einer Dimension in der Faktentabelle zu zählen. Da nur unterschiedliche Elemente gezählt werden, wird ein mehrfach auftretendes Element nur einmal gezählt. Ein Distinct Count-Measure wird immer in einer speziellen Measuregruppe platziert. Das Einfügen eines Distinct Count-Measures in seine eigene Measuregruppe ist eine bewährte Methode, die zur Leistungsoptimierung in den Designer integriert wurde.  
   
  Distinct Count Measures werden im Allgemeinen dazu verwendet, für jedes Element einer Dimension zu bestimmen, wie viele unterschiedliche Elemente der untersten Ebene einer anderen Dimension Zeilen der Faktentabelle gemeinsam nutzen. Beispielsweise wird in einem Sales-Cube bestimmt, wie viele unterschiedliche Produkte von den einzelnen Kunden und Kundengruppen gekauft wurden. (Auf die einzelnen Elemente der Customers-Dimension bezogen bedeutet das: Von wie vielen unterschiedlichen Elementen der untersten Ebene der Products-Dimension werden Zeilen der Faktentabelle gemeinsam genutzt?) Ein weiteres Beispiel: In einem Cube für die Zählung der Besucher einer Internetsite wird pro Sitebesucher und Sitebesuchergruppe bestimmt, wie viele unterschiedliche Seiten der Internetsite besucht wurden. (Auf die einzelnen Elemente der Site Visitors-Dimension bezogen bedeutet das: Von wie vielen unterschiedlichen Elementen der untersten Ebene der Pages-Dimension werden Zeilen der Faktentabelle gemeinsam genutzt?) In jedem dieser Beispiele werden die Elemente der untersten Ebene der zweiten Dimension über ein Distinct Count Measure gezählt.  
@@ -67,9 +72,9 @@ caps.handback.revision: 28
   
  Ein Distinct Count Measure, das zur Zählung von Elementen dient, basiert auf einer Fremdschlüsselspalte der Faktentabelle. (Das heißt, dass die **Source Column**-Eigenschaft des Measures diese Spalte identifiziert.) Diese Spalte verknüpft die Dimensionstabellenspalte, die die über das Distinct Count Measure gezählten Elemente identifiziert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Measures und Measuregruppen](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX-Funktionsreferenz &#40; MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
  [Erweiterung auswählen](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

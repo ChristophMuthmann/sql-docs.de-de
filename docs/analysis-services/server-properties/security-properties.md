@@ -1,36 +1,41 @@
 ---
-title: "Sicherheitseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Sicherheit [Analysis Services], Eigenschaften"
-  - "SecurityPackageList (Eigenschaft)"
-  - "BuiltinAdminsAreServerAdmins (Eigenschaft)"
-  - "DisableClientImpersonation (Eigenschaft)"
-  - "ErrorMessageMode (Eigenschaft)"
-  - "RequiredProtectionLevel (Eigenschaft)"
-  - "ServiceAccountIsServerAdmin (Eigenschaft)"
-  - "RequireClientAuthentication (Eigenschaft)"
+title: Sicherheitseigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- security [Analysis Services], properties
+- SecurityPackageList property
+- BuiltinAdminsAreServerAdmins property
+- DisableClientImpersonation property
+- ErrorMessageMode property
+- RequiredProtectionLevel property
+- ServiceAccountIsServerAdmin property
+- RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0233cd9c2e9eff5cc776b921e092206524546a52
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sicherheitseigenschaften
+# <a name="security-properties"></a>Sicherheitseigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Sicherheitseigenschaften des Servers aufgeführt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** mehrdimensionalen und Tabellenservermodus  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  **RequireClientAuthentication**  
  Eine boolesche Eigenschaft, die anzeigt, ob eine Client-Authentifizierung erforderlich ist.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 15
  **AdministrativeDataProtection\RequiredProtectionLevel**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

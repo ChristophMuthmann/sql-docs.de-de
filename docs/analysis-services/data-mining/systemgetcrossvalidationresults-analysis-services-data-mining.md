@@ -1,32 +1,37 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services – Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetCrossValidationResults"
-  - "Gespeicherte Prozeduren [Analysis Services], Data Mining"
-  - "Kreuzvalidierung [Data Mining]"
+title: "SystemGetCrossValidationResults (Analysis Services – Datamining) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8558bacfce7bd6a70b769b42c60d568e76b433e0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetCrossValidationResults (Analysis Services – Data Mining)
+# <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services – Data Mining)
   Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
   
 > [!NOTE]  
->  Die gespeicherte Prozedur kann nicht für die Kreuzvalidierung von Clusteringmodellen oder Modellen verwendet werden, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus oder des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Zur Kreuzvalidierung von Clusteringmodellen können Sie die gespeicherte Prozedur [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md) verwenden.  
+>  Die gespeicherte Prozedur kann nicht für die Kreuzvalidierung von Clusteringmodellen oder Modellen verwendet werden, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus oder des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Zur Kreuzvalidierung von Clusteringmodellen können Sie die gespeicherte Prozedur [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)verwenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetCrossValidationResults(
 [,<test list>])  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *mining structure*  
  Name einer Miningstruktur in der aktuellen Datenbank.  
   
@@ -55,7 +60,7 @@ SystemGetCrossValidationResults(
  Wenn keine Liste mit Miningmodellen angegeben wird, erfolgt die Kreuzvalidierung für alle Clustering-Modelle, die mit der angegebenen Struktur verknüpft sind und ein vorhersagbares Attribut enthalten.  
   
 > [!NOTE]  
->  Zur Kreuzvalidierung von Clusteringmodellen müssen Sie die gespeicherte Prozedur [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md) verwenden.  
+>  Zur Kreuzvalidierung von Clusteringmodellen müssen Sie die gespeicherte Prozedur [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)verwenden.  
   
  (Optional)  
   
@@ -111,7 +116,7 @@ SystemGetCrossValidationResults(
  Der Standardwert ist **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] löst keinen Fehler aus, wenn Sie *state threshold* auf 0,0 setzen; allerdings sollten Sie diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird kein Fehler ausgelöst, wenn Sie festlegen, *statusschwellenwert* auf 0,0 ist, aber Sie sollten diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
   
  (Optional)  
   
@@ -122,7 +127,7 @@ SystemGetCrossValidationResults(
   
  (Optional)  
   
-## Rückgabetyp  
+## <a name="return-type"></a>Rückgabetyp  
  Das Rowset, das zurückgegeben wird, enthält Bewertungen für jede Partition in jedem Modell.  
   
  In der folgenden Tabelle werden die Spalten in diesem Rowset beschrieben.  
@@ -138,12 +143,12 @@ SystemGetCrossValidationResults(
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Typ des vorhersagbaren Werts. Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Wert|Der Wert des angegebenen Testmeasures.|  
   
-## Hinweise  
- Um Genauigkeitsmetriken für das vollständige Dataset zurückzugeben, verwenden Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
+## <a name="remarks"></a>Hinweise  
+ Um Genauigkeitsmetriken für das vollständige Dataset zurückzugeben, verwenden Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)verwenden.  
   
- Wenn das Miningmodell bereits in Aufteilungen partitioniert wurde, können Sie die Verarbeitung umgehen und nur die Ergebnisse der Kreuzvalidierung zurückgeben, indem Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md) verwenden.  
+ Wenn das Miningmodell bereits in Aufteilungen partitioniert wurde, können Sie die Verarbeitung umgehen und nur die Ergebnisse der Kreuzvalidierung zurückgeben, indem Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)verwenden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Das folgende Beispiel veranschaulicht, wie man eine Miningstruktur zur Kreuzvalidierung in zwei Aufteilungen partitioniert und dann zwei Miningmodelle testet, die mit der Miningstruktur, `[v Target Mail]`, verknüpft sind.  
   
  In Zeile 3 des Codes sind die Miningmodelle aufgelistet, die Sie testen möchten. Wenn Sie die Liste nicht angeben, werden alle der Struktur zugeordneten Nicht-Clusteringmodelle verwendet. In Zeile 4 des Codes ist die Anzahl der Partitionen angegeben. Da für *max cases*kein Wert angegeben ist, werden alle Fälle in der Miningstruktur verwendet und gleichmäßig auf die Partitionen verteilt.  
@@ -182,13 +187,13 @@ NULL
 |Target Mail DT|Bike Buyer|1|2|500|Wahrscheinlichkeit|Lift|0.038997399132084|  
 |Target Mail DT|Bike Buyer|1|2|500|Wahrscheinlichkeit|Wurzel des mittleren quadratischen Fehlers|0.342721344892651|  
   
-## Anforderungen  
- Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verfügbar.  
+## <a name="requirements"></a>Anforderungen  
+ Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

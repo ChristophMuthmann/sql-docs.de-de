@@ -1,27 +1,32 @@
 ---
-title: "Model Properties (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.wspacedbconfig.f1"
-  - "sql13.asvs.bidtoolset.fileprop.f1"
+title: "Modelleigenschaften (SSAS – tabellarisch) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.wspacedbconfig.f1
+- sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Model Properties (SSAS Tabular)
+# <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
   In diesem Thema werden Eigenschaften für tabellarische Modelle beschrieben. Jedes Projekt für tabellarische Modelle verfügt über Modelleigenschaften, die Einfluss darauf haben, wie das jeweilige in SQL Server-Entwicklungstools erstellte Modell gesichert und die Arbeitsbereichsdatenbank gespeichert wird. Die hier beschriebenen Modelleigenschaften gelten nicht für Modelle, die bereits bereitgestellt wurden.  
   
  Abschnitte in diesem Thema:  
@@ -49,8 +54,9 @@ caps.handback.revision: 30
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
 |**Sortierung**|Die Standardsortierung für den Computer, für den Visual Studio installiert wurde.|Der Sortierungskennzeichner für das Modell.|  
-|**Kompatibilitätsgrad**|Standardmäßiger oder anderer Wert ist beim Erstellen des Projekts ausgewählt.|Gilt für SQL Server 2012 Analysis Services SP1 oder höher. Gibt die für dieses Modell verfügbaren Funktionen und Einstellungen an. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .|  
-|**Datensicherung**|Nicht auf Datenträger sichern|Gibt an, ob eine Sicherung der Modelldaten in einer Sicherungsdatei beibehalten wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Auf Datenträger sichern** – Gibt an, dass eine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Wenn das Modell gespeichert wird, werden die Daten auch in der Sicherungsdatei (ABF) gespeichert. Wenn diese Option ausgewählt wird, dauert es möglicherweise länger, Modelle zu speichern und zu laden.<br /><br /> **Nicht auf Datenträger sichern** – Gibt an, dass keine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Diese Option minimiert die Speicher- und Ladezeiten für Modelle.<br /><br /> <br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.|  
+|**Kompatibilitätsgrad**|Standardmäßiger oder anderer Wert ist beim Erstellen des Projekts ausgewählt.|Gilt für SQL Server 2012 Analysis Services SP1 oder höher. Gibt die für dieses Modell verfügbaren Funktionen und Einstellungen an. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
+|**Datensicherung**|Nicht auf Datenträger sichern|Gibt an, ob eine Sicherung der Modelldaten in einer Sicherungsdatei beibehalten wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Auf Datenträger sichern** – Gibt an, dass eine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Wenn das Modell gespeichert wird, werden die Daten auch in der Sicherungsdatei (ABF) gespeichert. Wenn diese Option ausgewählt wird, dauert es möglicherweise länger, Modelle zu speichern und zu laden.<br /><br /> **Nicht auf Datenträger sichern** – Gibt an, dass keine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Diese Option minimiert die Speicher- und Ladezeiten für Modelle.<br /><br /> <br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.| 
+|**Standardfilterrichtung**|Die Richtung|Bestimmt die standardfilterrichtung für Beziehungen.| 
 |**DirectQuery-Modus**|Off|Gibt an, ob dieses Modell im DirectQuery-Modus ausgeführt wird. Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
 |**Dateiname**|Model.bim|Gibt den Namen der BIM-Datei an. Der Dateiname sollte nicht geändert werden.|  
 |**Vollständiger Pfad**|Der beim Erstellen des Projekts angegebene Pfad.|Der Speicherort von model.bim. Diese Eigenschaft kann nicht im Eigenschaftenfenster festgelegt werden.|  
@@ -61,11 +67,11 @@ caps.handback.revision: 30
   
 ##  <a name="bkmk_conf_model_prop"></a> Konfigurieren der Eigenschafteneinstellungen für Modelle  
   
-1.  Klicken Sie in SSDT im **Projektmappen-Explorer** auf die Datei **Model.bim**.  
+1.  Klicken Sie in SSDT im **Projektmappen-Explorer**auf die Datei **Model.bim** .  
   
 2.  Klicken Sie im Fenster **Eigenschaften** auf eine Eigenschaft, und geben Sie dann einen Wert ein, oder klicken Sie auf den Pfeil nach unten, um eine Einstellungsoption auszuwählen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   

@@ -1,40 +1,45 @@
 ---
-title: "Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Struktur-Viewer [Analysis Services]"
-  - "Vorhersagen [Analysis Services], diskrete Attribute"
-  - "Miningmodellinhalte, anzeigen"
-  - "Vorhersagen [Analysis Services], kontinuierliche Attribute"
-  - "Mininglegende [Analysis Services]"
-  - "Diskrete Attribute [Analysis Services]"
-  - "Microsoft Decision Trees-Algorithmus [Analysis Services]"
-  - "Entscheidungsstrukturalgorithmen [Analysis Services]"
-  - "Microsoft Struktur-Viewer"
-  - "Entscheidungsstrukturen [Analysis Services]"
-  - "Abhängigkeiten [Analysis Services]"
-  - "Kontinuierliche Attribute"
+title: Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tree Viewer [Analysis Services]
+- predictions [Analysis Services], discrete attributes
+- mining model content, viewing
+- predictions [Analysis Services], continuous attributes
+- mining legend [Analysis Services]
+- discrete attributes [Analysis Services]
+- Microsoft Decision Trees algorithm [Analysis Services]
+- decision tree algorithms [Analysis Services]
+- Microsoft Tree Viewer
+- decision trees [Analysis Services]
+- dependencies [Analysis Services]
+- continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf93bd7a9be8f6de5e4f807730fcaa4bcb60ab5c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
+# <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt werden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
->  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_TabsPanes"></a> Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Struktur-Viewer umfasst die folgenden Registerkarten und Bereiche:  
@@ -52,7 +57,7 @@ caps.handback.revision: 46
   
  Sie können einzelne Knoten in der Struktur erweitern oder reduzieren, um die nach jedem Knoten vorkommenden Teilungen anzuzeigen bzw. auszublenden. Sie können auch mithilfe der Optionen auf der Registerkarte **Entscheidungsstruktur** Einfluss darauf nehmen, wie die Struktur angezeigt wird. Mit dem Schieberegler **Ebene anzeigen** wird die Anzahl von in der Struktur gezeigten Ebenen angepasst. Verwenden Sie die Option **Standarderweiterung** , um die Standardzahl der für alle Strukturen im Modell angezeigten Ebenen festzulegen.  
   
-#### Vorhersagen von diskreten Attributen  
+#### <a name="predicting-discrete-attributes"></a>Vorhersagen von diskreten Attributen  
  Wenn eine Struktur mit einem diskreten vorhersagbaren Attribut erstellt wird, zeigt der Viewer auf jedem Knoten in der Struktur Folgendes an:  
   
 -   Die Bedingung, die die Teilung verursacht hat.  
@@ -63,11 +68,11 @@ caps.handback.revision: 46
   
  Die Hintergrundfarbe jedes Knotens stellt die Konzentration von Fällen des speziellen Attributstatus dar, den Sie über die Option **Hintergrund** auswählen. Sie können diese Option verwenden, um Knoten zu markieren, die ein spezielles Ziel enthalten, das Sie interessiert.  
   
-#### Vorhersagen von kontinuierlichen Attributen  
+#### <a name="predicting-continuous-attributes"></a>Vorhersagen von kontinuierlichen Attributen  
  Wenn eine Struktur mithilfe eines kontinuierlichen Attributs erstellt ist, zeigt der Viewer für jeden Knoten in der Struktur ein Rautendiagramm statt eines Histogramms an. Das Rautendiagramm verfügt über eine Zeile, die den Bereich des Attributs darstellt. Die Raute befindet sich in der Mitte des Knotens. Die Breite der Raute gibt die Varianz des Attributs an diesem Knoten an. Eine schlankere Raute gibt an, dass der Knoten eine genauere Vorhersage erstellen kann. Der Viewer zeigt auch die Regressionsgleichung an, mit der die Teilung im Knoten festgelegt wird.  
   
-#### Weitere Anzeigeoptionen der Entscheidungsstruktur  
- Wenn Drillthrough für das Entscheidungsstrukturmodell aktiviert ist, können Sie auf die Trainingsfälle zugreifen, die einen Knoten unterstützen, indem Sie mit der rechten Maustaste auf den Knoten in der Struktur klicken und **Drillthrough** auswählen. Sie können Drillthrough im Data Mining-Assistenten aktivieren, oder indem Sie auf dem Miningmodell auf der Registerkarte **Miningmodelle** die Drillthrough-Eigenschaft anpassen.  
+#### <a name="additional-decision-tree-display-options"></a>Weitere Anzeigeoptionen der Entscheidungsstruktur  
+ Wenn Drillthrough für das Entscheidungsstrukturmodell aktiviert ist, können Sie auf die Trainingsfälle zugreifen, die einen Knoten unterstützen, indem Sie mit der rechten Maustaste auf den Knoten in der Struktur klicken und **Drillthrough**auswählen. Sie können Drillthrough im Data Mining-Assistenten aktivieren, oder indem Sie auf dem Miningmodell auf der Registerkarte **Miningmodelle** die Drillthrough-Eigenschaft anpassen.  
   
  Sie können die Zoomoptionen verwenden, die sich auf der Registerkarte **Entscheidungsstruktur** befinden, um eine Struktur zu vergrößern oder zu verkleinern, oder **An Bildschirmgröße anpassen** verwenden, um das Modell dem Viewer-Bildschirm anzupassen. Wenn eine Struktur zu groß ist, um auf den Bildschirm zu passen, können Sie die Option **Navigation**verwenden, um durch die Struktur zu navigieren. Wenn Sie auf **Navigation** klicken, wird ein separates Navigationsfenster geöffnet, mit dem Sie Abschnitte des Modells auswählen und anzeigen können.  
   
@@ -103,9 +108,9 @@ caps.handback.revision: 46
   
  [Zurück zum Anfang](#BKMK_TabsPanes)  
   
-## Siehe auch  
- [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../Topic/Mining%20Model%20Viewers%20\(Data%20Mining%20Model%20Designer\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [Miningmodell-Viewern &#40; Datamining-Modell-Designer &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  

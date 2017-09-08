@@ -1,29 +1,34 @@
 ---
-title: "Zeichenfolgenspeicher und -sortierung in Tabellenmodellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Zeichenfolgenspeicher und-Sortierung in Tabellenmodellen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Zeichenfolgenspeicher und -sortierung in Tabellenmodellen
+# <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und -sortierung in Tabellenmodellen
   Zeichenfolgen (Textwerte) werden in einem stark komprimierten Format in Tabellenmodellen gespeichert. Aufgrund dieser Komprimierung erhalten Sie unter Umständen unerwartete Ergebnisse, wenn Sie vollständige Zeichenfolgen oder Teilzeichenfolgen abrufen. Da das Zeichenfolgengebietsschema und die Sortierungen hierarchisch vom nächsten übergeordneten Objekt geerbt werden, wenn die Zeichenfolgensprache nicht explizit definiert wird, können das Gebietsschema und die Sortierung des übergeordneten Objekts beeinflussen, wie die einzelnen Zeichenfolgen gespeichert werden, und ob die Zeichenfolge entsprechend der übergeordneten Sortierung eindeutig ist oder mit ähnlichen Zeichenfolgen zusammengefügt wurde.  
   
  In diesem Thema wird der Mechanismus für die Komprimierung und Speicherung von Zeichenfolgen beschrieben. Außerdem finden Sie Beispiele dazu, wie Sortierung und Sprache die Ergebnisse von Textformeln in Tabellenmodellen beeinflussen.  
   
-## Speicherung  
+## <a name="storage"></a>Speicherung  
  In Tabellenmodellen werden alle Daten stark komprimiert, um eine zu hohe Auslastung des Arbeitsspeichers zu vermeiden. Infolgedessen werden alle Zeichenfolgen, die als lexikalisch äquivalent eingestuft werden können, nur einmal gespeichert. Die erste Instanz der Zeichenfolge wird als kanonische Darstellung verwendet, und anschließend wird jede entsprechende Zeichenfolge im gleichen komprimierten Wert wie das erste Vorkommen indiziert.  
   
  Die Hauptfrage lautet folgendermaßen: Woraus besteht eine lexikalisch äquivalente Zeichenfolge? Zwei Zeichenfolgen werden als lexikalisch äquivalent eingestuft, wenn sie als das gleiche Wort gelten. Wenn Sie zum Beispiel in einem englischen Wörterbuch den Begriff **violin** (Geige) suchen, finden Sie möglicherweise den Eintrag **Violin** oder **violin**, abhängig von den redaktionellen Richtlinien, die für das Wörterbuch gelten, doch im Allgemeinen werden beide Begriffe als identisch bzw. äquivalent betrachtet, und die unterschiedliche Schreibweise mit kleinem bzw. großem Anfangsbuchstaben wird ignoriert. In einem Tabellenmodell ist der entscheidende Faktor, durch den bestimmt wird, ob zwei Zeichenfolgen lexikalisch äquivalent sind, nicht die redaktionelle Richtlinie oder die Benutzereinstellung, sondern das Gebietsschema und die Sortierreihenfolge, die der Spalte zugewiesen sind.  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  Möglicherweise möchten Sie festlegen, welche Zeichenfolge als erste gespeichert werden soll (unter Berücksichtigung der von Ihnen als korrekt eingestuften Schreibweise), doch dies kann sich als sehr schwierig erweisen. Es existiert keine einfache Möglichkeit, im Voraus zu bestimmen, welche Zeile zuerst vom Modul verarbeitet werden soll, vorausgesetzt, dass alle Werte als identisch eingestuft werden. Stattdessen sollten beim Festlegen des Standardwerts alle Zeichenfolgen bereinigt werden, bevor das Modell geladen wird.  
   
-## Gebietsschema und die Sortierreihenfolge  
+## <a name="locale-and-collation-order"></a>Gebietsschema und die Sortierreihenfolge  
  Wenn Zeichenfolgen (Textwerte) miteinander verglichen werden, wird Äquivalenz normalerweise durch den kulturellen Aspekt bestimmt, der die Interpretation solcher Zeichenfolgen beeinflusst. In einigen Kulturen kann sich die Bedeutung einer Zeichenfolge durch einen Akzent oder die Großschreibung eines Zeichens vollständig ändern. Daher werden solche Unterschiede in der Regel berücksichtigt, wenn sie Äquivalenz für eine bestimmte Sprache oder einen Bereich festlegen.  
   
  Wenn Sie Ihren Computer verwenden, ist er normalerweise bereits entsprechend Ihren eigenen kulturellen Erwartungen und dem linguistischen Verhalten konfiguriert, und Zeichenfolgenoperationen wie das Sortieren und Vergleichen von Textwerten verhalten sich erwartungsgemäß. Die Einstellungen, die sprachspezifisches Verhalten steuern, werden durch die **Gebietsschema- und Regionseinstellungen** in Windows definiert. Anwendungen lesen diese Einstellungen und ändern deren Verhalten entsprechend. In einigen Fällen verfügt eine Anwendung möglicherweise über eine Funktion, die Ihnen das Ändern des kulturellen Verhaltens der Anwendung oder der Methode zum Zeichenfolgenvergleich ermöglicht.  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   Die Sortierung definiert die Reihenfolge der Zeichen und ihrer Äquivalenz.  
   
- Wichtig: Eine Sprachen-ID kennzeichnet nicht nur eine Sprache, sondern auch das Land oder die Region, in dem bzw. der die Sprache verwendet wird. Jede Sprachen-ID weist auch eine Standardsortierungsspezifikation auf. Weitere Informationen zu Sprachen-IDs finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://msdn.microsoft.com/goglobal/bb964664.aspx). Sie können die LCID DEC-Spalte verwenden, um die richtige ID zu erhalten, wenn Sie einen Wert manuell einfügen. Weitere Informationen zum SQL-Konzept von Sortierungen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md). Informationen zu den Sortierungskennzeichnern und den Vergleichsstilen für Windows-Sortierungsnamen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Das Thema [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ordnet die Namen der Windows-Sortierung den für SQL verwendeten Namen zu.  
+ Wichtig: Eine Sprachen-ID kennzeichnet nicht nur eine Sprache, sondern auch das Land oder die Region, in dem bzw. der die Sprache verwendet wird. Jede Sprachen-ID weist auch eine Standardsortierungsspezifikation auf. Weitere Informationen zu Sprachen-IDs finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://msdn.microsoft.com/goglobal/bb964664.aspx). Sie können die LCID DEC-Spalte verwenden, um die richtige ID zu erhalten, wenn Sie einen Wert manuell einfügen. Weitere Informationen zum SQL-Konzept von Sortierungen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md). Informationen zu den Sortierungskennzeichnern und den Vergleichsstilen für Windows-Sortierungsnamen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Das Thema [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ordnet die Namen der Windows-Sortierung den für SQL verwendeten Namen zu.  
   
  Sobald die Tabellenmodelldatenbank erstellt wurde, erben alle neuen Objekte im Modell die Sprach- und Sortierattribute von den Datenbankattributen. Dies gilt für alle Objekte. Der Vererbungspfad beginnt beim Objekt und sucht das übergeordnete Element für jedes zu erbende Sprach- und Sortierattribut. Wenn keine Attribute gefunden werden, wird der Vorgang am Anfang fortgesetzt, und die Sprach- und Sortierattribute werden auf der Datenbankebene gesucht. Anders ausgedrückt: Wenn Sie keine Sprach-und Sortierattribute für ein Objekt angeben, erbt das Objekt standardmäßig die Attribute des nächsten übergeordneten Elements.  
   

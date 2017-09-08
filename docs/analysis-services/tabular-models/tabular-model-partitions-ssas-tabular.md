@@ -1,26 +1,31 @@
 ---
 title: "Tabellenmodellpartitionen (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssms.partitions.partitionmgr.imbi.f1"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tabellenmodellpartitionen (SSAS – tabellarisch)
+# <a name="tabular-model-partitions-ssas-tabular"></a>Tabellenmodellpartitionen (SSAS – tabellarisch)
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Während der Modellerstellung werden die für ein Modell definierten Partitionen in ein bereitgestelltes Modell dupliziert. Nach der Bereitstellung können Sie diese Partitionen mit dem Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe eines Skripts verwalten. In diesem Thema werden Partitionen in einer Datenbank für bereitgestellte tabellarische Modelle beschrieben. Weitere Informationen zum Erstellen und Verwalten von Partitionen während der Modellerstellung finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Abschnitte in diesem Thema:  
@@ -66,16 +71,16 @@ caps.handback.revision: 11
  Weitere Informationen über die Erstellung von Rollen während der Modellerstellung mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md). Weitere Informationen zur Verwaltung von Rollenmitgliedern für die Rollen bereitgestellter tabellarischer Modelle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] finden Sie unter [Rollen tabellarischer Modelle &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Parallelverarbeitung  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] enthält Funktionen für die Parallelverarbeitung von Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Für die Parallelverarbeitung gibt es keine Konfigurationseinstellungen (siehe Hinweise). Die Parallelverarbeitung erfolgt standardmäßig bei der Verarbeitung von Tabellen bzw. wenn Sie für die gleiche Tabelle und den gleichen Prozess mehrere Partitionen auswählen. Dennoch können Sie die Partitionen einer Tabelle weiterhin auch einzeln verarbeiten.  
+Analysis Services enthält die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die verarbeitungsleistung erhöht. Für die Parallelverarbeitung gibt es keine Konfigurationseinstellungen (siehe Hinweise). Die Parallelverarbeitung erfolgt standardmäßig bei der Verarbeitung von Tabellen bzw. wenn Sie für die gleiche Tabelle und den gleichen Prozess mehrere Partitionen auswählen. Dennoch können Sie die Partitionen einer Tabelle weiterhin auch einzeln verarbeiten.  
   
 > [!NOTE]  
->  Sie können die Eigenschaftsoption **maxParallism** mit dem [Sequence-Befehl (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md) verwenden, um anzugeben, ob Aktualisierungsvorgänge sequenziell oder parallel auszuführen sind. TMSL wird nur für tabellarische 1200-Modelle unterstützt.
+>  Sie können die Eigenschaftsoption **maxParallism** mit dem [Sequence-Befehl (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)verwenden, um anzugeben, ob Aktualisierungsvorgänge sequenziell oder parallel auszuführen sind.
 
 > [!NOTE]  
 >  Bei Feststellung einer erneuten Codierung kann die Parallelverarbeitung die Systemressourcen erheblich beanspruchen, da verschiedene Operationen auf den Partitionen unterbrochen und mit der neuen Codierung parallel neu gestartet werden müssen.  
   
 ##  <a name="bkmk_process_partitions"></a> Partitionen verarbeiten  
- Partitionen können in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mithilfe des Dialogfelds **Partitionen** oder mithilfe eines Skripts unabhängig von anderen Partitionen verarbeitet (bzw. aktualisiert) werden. Folgende Optionen stehen für die Verarbeitung zur Verfügung:  
+ Partitionen können in **mithilfe des Dialogfelds** Partitionen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder mithilfe eines Skripts unabhängig von anderen Partitionen verarbeitet (bzw. aktualisiert) werden. Folgende Optionen stehen für die Verarbeitung zur Verfügung:  
   
 |Mode|Description|  
 |----------|-----------------|  
