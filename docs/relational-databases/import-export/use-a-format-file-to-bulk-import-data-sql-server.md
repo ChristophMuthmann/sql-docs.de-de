@@ -17,11 +17,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56c7e17bb97577907d21c0e1109ee3336337164b
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 4b5116850d429f147bb5bafc51af800e930c3c30
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
@@ -31,7 +31,7 @@ In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen
 
 |Outline|
 |---|
-|[Vorbereitungen](#begin)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />[Verwenden einer Formatdatei für einen Massenimport von Daten](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP- und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP- und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[Vorbereitungen](#begin)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />[Verwenden einer Formatdatei für einen Massenimport von Daten](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP- und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 ## Vorbereitungen<a name="begin"></a>
 * Damit eine Formatdatei mit einer Datendatei mit Unicode-Zeichen verwendet werden kann, müssen alle Eingabefelder Unicode-Textzeichenfolgen enthalten (d.h., entweder Unicode-Zeichenfolgen einer festen Länge oder Unicode-Zeichenfolgen mit Abschlusszeichen).
@@ -76,7 +76,7 @@ cls
 # revise directory as desired
 $dir = 'D:\BCP\';
 
-$bcpFile = $dir + 'MyFirstImport.bcp';
+$bcpFile = Join-Path -Path $dir -ChildPath 'MyFirstImport.bcp';
 
 # Confirm directory exists
 IF ((Test-Path -Path $dir) -eq 0)
