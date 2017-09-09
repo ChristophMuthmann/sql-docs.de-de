@@ -1,7 +1,7 @@
 ---
 title: Sofortige Datenbankdateiinitialisierung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>Sofortige Datenbankdateiinitialisierung
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Erstellen einer Datenbank  
   
--   Hinzufügen von Dateien, Protokoll- oder Datendateien, zu einer vorhandenen Datenbank.  
+-   Fügen Sie Dateien oder Protokolldateien zu einer vorhandenen Datenbank hinzu.  
   
 -   Vergrößern einer vorhanden Datei (einschließlich Vorgängen zur automatischen Vergrößerung).  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
  Die Dateiinitialisierung führt dazu, dass diese Vorgänge mehr Zeit benötigen. Aber wenn die Daten zum ersten Mal an die Dateien geschrieben werden, muss das Betriebssystem die Dateien nicht mit Nullen ausfüllen.  
   
 ## <a name="instant-file-initialization"></a>Sofortige Dateiinitialisierung  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Datendateien sofort initialisiert werden. Damit ist eine schnelle Ausführung der zuvor erwähnten Dateivorgänge möglich. Bei der sofortigen Dateiinitialisierung wird belegter Speicherplatz freigegeben, ohne diesen Speicherplatz mit Nullen auszufüllen. Stattdessen wird Datenträgerinhalt überschrieben, wenn neue Daten an die Dateien geschrieben werden. Protokolldateien können nicht sofort initialisiert werden.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Datendateien sofort initialisiert werden. Mit der sofortigen Dateiinitialisierung ist eine schnelle Ausführung der zuvor erwähnten Dateivorgänge möglich. Bei der sofortigen Dateiinitialisierung wird belegter Speicherplatz freigegeben, ohne diesen Speicherplatz mit Nullen auszufüllen. Stattdessen wird Datenträgerinhalt überschrieben, wenn neue Daten an die Dateien geschrieben werden. Protokolldateien können nicht sofort initialisiert werden.  
   
 > [!NOTE]  
 >  Die sofortige Dateiinitialisierung ist nur in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] oder [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] oder höheren Versionen verfügbar.  
   
  Die sofortige Dateiinitialisierung ist nur verfügbar, wenn dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)-Servicekonto SE_MANAGE_VOLUME_NAME erteilt wurde. Mitglieder der Windows-Administratorengruppe verfügen über dieses Recht und können es anderen Benutzern erteilen, indem sie diese der Sicherheitsrichtlinie **Durchführen von Volumewartungsaufgaben** hinzufügen. Weitere Informationen zum Zuweisen von Benutzerrechten finden Sie in der Windows-Dokumentation.  
   
- Die sofortige Dateiinitialisierung ist nicht verfügbar, wenn TDE aktiviert ist.  
+Einige Bedingungen z.B. TDE können die sofortige Dateiinitialisierung verhindern.  
   
  So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` :  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

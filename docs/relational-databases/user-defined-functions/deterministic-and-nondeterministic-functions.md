@@ -1,7 +1,7 @@
 ---
 title: Deterministische und nicht deterministische Funktionen | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Deterministische und nicht deterministische Funktionen
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>Aufrufen erweiterter gespeicherter Prozeduren aus Funktionen  
- Funktionen, die erweiterte gespeicherte Prozeduren aufrufen, sind nicht deterministisch, da erweiterte gespeicherte Prozeduren Nebeneffekte im Hinblick auf die Datenbank verursachen können. Nebeneffekte sind Änderungen am globalen Status der Datenbank, wie z. B. ein Update einer Tabelle, oder an einer externen Ressource, wie z. B. einer Datei oder des Netzwerkes. Beispiel: Änderungen an einer Datei oder Senden einer E-Mail-Nachricht. Sie sollten sich nicht auf die Rückgabe eines konsistenten Resultsets verlassen, wenn Sie eine erweiterte gespeicherte Prozedur von einer benutzerdefinierten Funktion aus ausführen. Die Verwendung benutzerdefinierter Funktionen, die zu Nebeneffekten hinsichtlich der Datenbank führen, wird nicht empfohlen.  
+ Funktionen, die erweiterte gespeicherte Prozeduren aufrufen, sind nicht deterministisch, da erweiterte gespeicherte Prozeduren Nebeneffekte im Hinblick auf die Datenbank verursachen können. Nebeneffekte sind Änderungen am globalen Status der Datenbank, wie z. B. ein Update einer Tabelle, oder an einer externen Ressource, wie z. B. einer Datei oder des Netzwerkes. Beispiel: Änderungen an einer Datei oder Senden einer E-Mail-Nachricht. Verlassen Sie sich nicht auf die Rückgabe eines konsistenten Resultsets, wenn Sie eine erweiterte gespeicherte Prozedur von einer benutzerdefinierten Funktion aus ausführen. Die Verwendung benutzerdefinierter Funktionen, die zu Nebeneffekten hinsichtlich der Datenbank führen, wird nicht empfohlen.  
   
  Wenn eine erweiterte gespeicherte Prozedur aus einer Funktion heraus aufgerufen wird, kann die Prozedur keine Resultsets an den Client zurückgeben. Jede Open Data Services-API, die Resultsets an den Client zurückgibt, weist den Rückgabecode FAIL auf.  
   
  Die erweiterte gespeicherte Prozedur kann erneut eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen. Die Prozedur kann jedoch keine Verbindung mit derselben Transaktion wie die ursprüngliche Funktion herstellen, durch die die erweiterte gespeicherte Prozedur aufgerufen wurde.  
   
- Wie bei Aufrufen von einem Batch oder einer gespeicherten Prozedur aus wird die erweiterte gespeicherte Prozedur im Kontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontos ausgeführt, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Besitzer der erweiterten gespeicherten Prozedur sollte dies berücksichtigen, wenn er anderen Benutzern Berechtigungen zum Ausführen der Prozedur erteilt.  
+ Wie bei Aufrufen von einem Batch oder einer gespeicherten Prozedur aus wird die erweiterte gespeicherte Prozedur im Kontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontos ausgeführt, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Besitzer der erweiterten gespeicherten Prozedur sollte diese Berechtigungen dieses Sicherheitskontexts berücksichtigen, wenn er anderen Benutzern Berechtigungen zum Ausführen der Prozedur erteilt.  
   
   
 
