@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  Ein symmetrischer Schlüssel ist ein Schlüssel, der sowohl für die Verschlüsselung als auch die Entschlüsselung verwendet wird. Die Verschlüsselung und Entschlüsselung mithilfe eines symmetrischen Schlüssels ist schnell und für einen routinemäßigen Einsatz mit sensiblen Daten in der Datenbank geeignet.  
   
 ### <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung  
- Transparente Datenverschlüsselung (Transparent Data Encryption, TDE) ist ein spezieller Fall der Verschlüsselung mithilfe eines symmetrischen Schlüssels. TDE verschlüsselt eine ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank wird mit anderen Schlüsseln oder Zertifikaten geschützt, die entweder mit dem Datenbankhauptschlüssel oder mit einem asymmetrischen, in einem EKM-Modul gespeicherten Schlüssel geschützt werden. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ Transparente Datenverschlüsselung (Transparent Data Encryption, TDE) ist ein spezieller Fall der Verschlüsselung mithilfe eines symmetrischen Schlüssels. TDE verschlüsselt eine ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank wird mit anderen Schlüsseln oder Zertifikaten geschützt, die entweder mit dem Datenbankhauptschlüssel oder mit einem asymmetrischen, in einem EKM-Modul gespeicherten Schlüssel geschützt werden. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  

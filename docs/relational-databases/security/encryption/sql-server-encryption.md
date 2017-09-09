@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
@@ -44,7 +44,7 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  [Auswählen eines Verschlüsselungsalgorithmus](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  Informationen zur Auswahl eines wirksamen Verschlüsselungsalgorithmus.  
   
- [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  Allgemeine Informationen über das transparente Verschlüsseln von Daten.  
   
  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
@@ -85,7 +85,7 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
 ## <a name="see-also"></a>Siehe auch  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Verschlüsselungsschlüssel für SSRS: Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Verschlüsselungsschlüssel für SSRS - sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
 

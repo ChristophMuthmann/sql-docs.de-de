@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>Installieren von SQL Server
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>Abrufen der Installationsmedien
 
-Der Downloadspeicherort für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ist abhängig von der Edition.
-
-- **SQL Server Enterprise-, Standard- und Express-Editionen** werden für die Verwendung in einer Produktionsumgebung lizenziert. Wenden Sie sich für die Installation von Medien für Enterprise- und Standard-Editionen an Ihren Softwareanbieter. Einkaufsinformationen und ein Verzeichnis mit Microsoft-Partner finden Sie auf der [Einkaufswebsite von Microsoft](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
-
-- **Kostenlose Editionen** sind unter [SQL Server-Downloads](http://www.microsoft.com/sql-server/sql-server-downloads).
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>Installation von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  

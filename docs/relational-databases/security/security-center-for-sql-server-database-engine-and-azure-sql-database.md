@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
-ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/31/2017
   
 |||  
 |-|-|  
-|**Verschlüsseln von Dateien**<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") BitLocker-Verschlüsselung (Laufwerksebene)<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") NTFS-Verschlüsselung (Ordnerebene)<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter-beide") Transparente Datenverschlüsselung (Dateiebene)<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter-beide") Sicherungsverschlüsselung (Dateiebene)|[BitLocker (Laufwerksebene)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS-Verschlüsselung (Ordnerebene)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [Transparente Datenverschlüsselung (Dateiebene)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)<br /><br /> [Sicherungsverschlüsselung (Dateiebene)](../../relational-databases/backup-restore/backup-encryption.md)|  
+|**Verschlüsseln von Dateien**<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") BitLocker-Verschlüsselung (Laufwerksebene)<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") NTFS-Verschlüsselung (Ordnerebene)<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter-beide") Transparente Datenverschlüsselung (Dateiebene)<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter-beide") Sicherungsverschlüsselung (Dateiebene)|[BitLocker (Laufwerksebene)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS-Verschlüsselung (Ordnerebene)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [Transparente Datenverschlüsselung (Dateiebene)](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [Sicherungsverschlüsselung (Dateiebene)](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**Verschlüsseln von Quellen**<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") Erweiterbares Schlüsselverwaltungsmodul<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") Im Azure Schlüsseltresor gespeicherte Schlüssel<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter-beide") Always Encrypted|[Erweiterbares Schlüsselverwaltungsmodul](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Im Azure Schlüsseltresor gespeicherte Schlüssel](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**Spalte, Daten und Schlüsselverschlüsselung**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Verschlüsseln durch Zertifikat<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Verschlüsseln mit symmetrischem Schlüssel<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Verschlüsseln mit asymmetrischem Schlüssel<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Verschlüsseln durch Passphrase|[Verschlüsseln durch Zertifikat](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [Verschlüsseln mit asymmetrischem Schlüssel](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [Verschlüsseln mit symmetrischem Schlüssel](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [Verschlüsseln durch Passphrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [Verschlüsseln einer Datenspalte](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
@@ -101,6 +101,5 @@ ms.lasthandoff: 07/31/2017
  [TRUSTWORTHY-Datenbankeigenschaft](../../relational-databases/security/trustworthy-database-property.md)   
  [Datenbankmodulfunktionen und Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Schutz Ihres geistigen SQL Server-Eigentums](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  
   
 

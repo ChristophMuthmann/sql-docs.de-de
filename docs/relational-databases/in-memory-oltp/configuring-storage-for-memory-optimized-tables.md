@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Konfigurieren von Speicher für speicheroptimierte Tabellen
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   Wenn Sie über eine gerade Anzahl an Spindeln verfügen, werden die Prüfpunktdateien anders als in SQL Server 2014 gleichmäßig auf alle Spindeln verteilt.  
   
 ## <a name="encryption"></a>Verschlüsselung  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird der Speicher für speicheroptimierte Tabellen im Rahmen der Aktivierung von TDE für die Datenbank verschlüsselt. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird der Speicher für speicheroptimierte Tabellen im Rahmen der Aktivierung von TDE für die Datenbank verschlüsselt. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
