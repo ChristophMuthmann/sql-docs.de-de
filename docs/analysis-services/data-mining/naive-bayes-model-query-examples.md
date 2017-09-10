@@ -1,27 +1,32 @@
 ---
-title: "Beispiele f&#252;r Naive Bayes-Modellabfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Naives Bayes-Modell [Analysis Services]"
-  - "Naive Bayes-Algorithmen [Analysis Services]"
-  - "Inhaltsabfragen [DMX]"
+title: "Beispiele für Naive Bayes-Modell Abfragen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Beispiele f&#252;r Naive Bayes-Modellabfrage
+# <a name="naive-bayes-model-query-examples"></a>Beispiele für Naive Bayes-Modellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Sie können mit einer Abfrage des Data Mining-Schemarowsets auch Metadaten über das Modell abrufen. In diesem Abschnitt wird erklärt, wie diese Abfragen für Modelle erstellt werden, die auf dem Microsoft Naive Bayes-Algorithmus basieren.  
   
  **Inhaltsabfragen**  
@@ -42,10 +47,10 @@ caps.handback.revision: 13
   
  [Vorhersagen von Zuordnungen](#bkmk_Query7)  
   
-## Suchen nach Informationen über ein Naive Bayes-Modell  
+## <a name="finding-information-about-a-naive-bayes-model"></a>Suchen nach Informationen über ein Naive Bayes-Modell  
  Der Inhalt eines Naive Bayes-Modells stellt aggregierte Informationen über die Verteilung der Werte in den Trainingsdaten zur Verfügung. Sie können auch Informationen über die Metadaten des Modells abrufen, indem Sie Abfragen für Data Mining-Schemarowsets erstellen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
  Metadaten für das Modell finden Sie, indem Sie das Data Mining-Schemarowset abfragen. Dazu gehören beispielsweise das Erstellungsdatum des Modells, das Datum der letzten Verarbeitung, der Name der Miningstruktur, auf der das Modell basiert, und der Name der als vorhersagbares Attribut verwendeten Spalten. Sie können auch die Parameter zurückgeben, die beim Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- Das für dieses Beispiel verwendete Modell basiert auf dem Naive Bayes-Modell, das Sie im [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)erstellt haben und das durch Hinzufügen eines zweiten vorhersagbaren Attributs und durch Anwenden eines Filters auf die Trainingsdaten geändert wurde.  
+ Das für dieses Beispiel verwendete Modell basiert auf dem Naive Bayes-Modell, das Sie im [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt haben und das durch Hinzufügen eines zweiten vorhersagbaren Attributs und durch Anwenden eines Filters auf die Trainingsdaten geändert wurde.  
   
 ###  <a name="bkmk_Query2"></a> Beispielabfrage 2: Abrufen einer Zusammenfassung der Trainingsdaten  
  In einem Naive Bayes-Modell speichert der Knoten für Randstatistik aggregierte Informationen über die Verteilung der Werte in den Trainingsdaten. Diese Zusammenfassung ist sehr nützlich und erspart Ihnen das Erstellen von SQL-Abfragen für die Trainingsdaten, um die entsprechenden Informationen abzurufen.  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  Weitere Informationen zu gespeicherten Analysis Services-Systemprozeduren finden Sie unter [Gespeicherte Data Mining-Prozeduren &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
-## Treffen von Vorhersagen mit einem Naive Bayes-Modell  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Treffen von Vorhersagen mit einem Naive Bayes-Modell  
  Der Microsoft Naive Bayes-Algorithmus wird normalerweise weniger für die Vorhersage als vielmehr für die Untersuchung des Beziehungsgefüges von Eingabe- und vorhersagbaren Attributen verwendet. Das Modell unterstützt jedoch die Verwendung von Vorhersagefunktionen sowohl für die Vorhersage als auch für die Zuordnung.  
   
 ###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Ergebnissen mit einer SINGLETON-Abfrage  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  Die letzte Zeile in der Tabelle zeigt die Anpassungen für Unterstützung und Wahrscheinlichkeit für den fehlenden Wert. Varianz- und Standardabweichungswerte sind immer 0, da Naive Bayes-Modelle keine kontinuierlichen Werte modellieren können.  
   
 ###  <a name="bkmk_Query7"></a> Beispielabfrage 7: Vorhersagen von Zuordnungen  
- Der Microsoft Naive Bayes-Algorithmus kann für die Zuordnungsanalyse verwendet werden, wenn die Miningstruktur eine geschachtelte Tabelle mit dem vorhersagbaren Attribut als Schlüssel verwendet. Sie könnten z.B. ein Naive Bayes-Modell mithilfe der Miningstruktur erstellen, die Sie im Data Mining-Tutorial in [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) erstellt haben. Das in diesem Beispiel verwendete Modell wurde geändert, und der Falltabelle wurden Informationen zum Einkommen und zur Kundenregion hinzugefügt.  
+ Der Microsoft Naive Bayes-Algorithmus kann für die Zuordnungsanalyse verwendet werden, wenn die Miningstruktur eine geschachtelte Tabelle mit dem vorhersagbaren Attribut als Schlüssel verwendet. Sie könnten z.B. ein Naive Bayes-Modell mithilfe der Miningstruktur erstellen, die Sie im Data Mining-Tutorial in [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a) erstellt haben. Das in diesem Beispiel verwendete Modell wurde geändert, und der Falltabelle wurden Informationen zum Einkommen und zur Kundenregion hinzugefügt.  
   
  Das folgende Abfragebeispiel zeigt eine SINGLETON-Abfrage, die Produkte vorhersagt, die mit Käufen des Produkts `'Road Tire Tube'`verknüpft sind. Anhand dieser Informationen können Sie einem bestimmten Kundentyp Produkte empfehlen.  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## Funktionsliste  
+## <a name="function-list"></a>Funktionsliste  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus unterstützt allerdings zusätzliche Funktionen, die in der folgenden Tabelle aufgelistet sind.  
   
 |||  
@@ -254,9 +259,9 @@ AS t
   
  Informationen zur Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen – Funktionsreferenz &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

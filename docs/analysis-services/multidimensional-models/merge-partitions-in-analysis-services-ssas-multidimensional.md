@@ -1,27 +1,32 @@
 ---
-title: "Zusammenf&#252;hren von Partitionen in Analysis Services (SSAS – Mehrdimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Partitionen [Analysis Services], zusammenführen"
-  - "Zusammenführen von Partitionen [Analysis Services]"
+title: "Zusammenführen von Partitionen in Analysis Services (SSAS – mehrdimensional) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Zusammenf&#252;hren von Partitionen in Analysis Services (SSAS – Mehrdimensional)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Zusammenführen von Partitionen in Analysis Services (SSAS – Mehrdimensional)
   Sie können Partitionen in einer bestehenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusammenführen, um Faktendaten aus mehreren Partitionen derselben Measuregruppe zu konsolidieren.  
   
  [Gängige Szenarien](#bkmk_Scenario)  
@@ -58,7 +63,7 @@ caps.handback.revision: 34
   
 -   Sie verfügen über denselben Kompatibilitätsgrad der Zeichenfolgenspeicher (gilt nur für partitionierte Distinct Count Measure-Gruppen).  
   
- Wenn die Zielpartition leer ist (d. h., sie verfügt über einen Aggregationsentwurf, aber keine Aggregationen), werden die Aggregationen für die Quellpartitionen beim Zusammenführen gelöscht. Sie müssen Index verarbeiten, Vollständig verarbeiten oder Standard verarbeiten für die Partition ausführen, um die Aggregationen zu erstellen.  
+ Wenn die Zielpartition leer ist (d. h., sie verfügt über einen Aggregationsentwurf, aber keine Aggregationen), werden die Aggregationen für die Quellpartitionen beim Zusammenführen gelöscht. Sie müssen Index verarbeiten, Vollständig verarbeiten oder Standard verarbeiten für die Partition ausführen, um die Aggregationen zu erstellen.  
   
  Remotepartitionen können nur mit anderen Remotepartitionen zusammengeführt werden, die mithilfe derselben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Remoteinstanz definiert wurden.  
   
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  Aus diesem Grund müssen Partitionen, die segmentierte Daten aus benannten Abfragen abrufen, ebenfalls aktualisiert werden. Die kombinierte Partition muss jetzt über eine benannte Abfrage verfügen, die das kombinierte Resultset zurückgibt, das zuvor aus separaten benannten Abfragen abgerufen wurde.  
   
-## Überlegungen zum Partitionsspeicher: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Überlegungen zum Partitionsspeicher: MOLAP  
  Beim Zusammenführen von MOLAP-Partitionen werden die in den mehrdimensionalen Strukturen der Partitionen gespeicherten Fakten ebenfalls zusammengeführt. Dies führt zu einer in sich vollständigen und konsistenten Partition. Die in MOLAP-Partitionen gespeicherten Fakten sind Kopien der Fakten in der Faktentabelle. Bei einem späteren Verarbeiten der Partition werden die Fakten in der mehrdimensionalen Struktur gelöscht (nur bei einer vollständigen Verarbeitung oder Aktualisierung) und Daten, wie durch die Datenquelle und den Filter der Partition angegeben, aus der Faktentabelle kopiert. Wenn die Quellpartition eine andere Faktentabelle aus der Zielpartition verwendet, muss die Faktentabelle der Quellpartition manuell mit der Faktentabelle der Zielpartition zusammengeführt werden, um sicherzustellen, dass eine vollständige Datenmenge verfügbar ist, wenn die sich ergebende Partition verarbeitet wird. Dies trifft auch zu, wenn die beiden Partitionen auf zwei unterschiedlichen benannten Abfragen basieren.  
   
 > [!IMPORTANT]  
 >  Eine zusammengeführte MOLAP-Partition mit einer unvollständigen Faktentabelle enthält eine intern zusammengeführte Kopie der Faktentabellendaten und wird bis zu ihrer Verarbeitung einwandfrei ausgeführt.  
   
-## Überlegungen zum Partitionsspeicher: HOLAP- und ROLAP-Partitionen  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Überlegungen zum Partitionsspeicher: HOLAP- und ROLAP-Partitionen  
  Beim Zusammenführen von HOLAP- oder ROLAP-Partitionen, die über verschiedene Faktentabellen verfügen, werden die Faktentabellen nicht automatisch zusammengeführt. Werden die Faktentabellen nicht manuell zusammengeführt, ist nur die mit der Zielpartition verknüpfte Faktentabelle für die sich ergebende Partition verfügbar. Mit der Quellpartition verknüpfte Fakten sind nicht für Drilldowns in der sich ergebenden Partition verfügbar, und beim Verarbeiten der Partition fassen die Aggregationen keine Daten aus der nicht verfügbaren Tabelle zusammen.  
   
 > [!IMPORTANT]  
@@ -116,29 +121,29 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Vor dem Zusammenführen von Partitionen kopieren Sie zunächst die Datenfilterinformationen (häufig die WHERE-Klausel für Filter basierend auf SQL-Abfragen). Nachdem die Zusammenführung abgeschlossen ist, sollten Sie später die Eigenschaft für die Partitionsquelle der Partition aktualisieren, in der die akkumulierten Faktendaten enthalten sind.  
   
-1.  Erweitern Sie im Objekt-Explorer den Knoten **Measuregruppen** des Cubes, in dem die zusammenzuführenden Partitionen enthalten sind. Anschließend erweitern Sie **Partitionen** und klicken mit der rechten Maustaste auf die Partition, die das Ziel des Zusammenführungsvorgangs ist. Wenn Sie z. B. vierteljährliche Faktendaten zu einer Partition verschieben, in der jährliche Faktendaten gespeichert sind, wählen Sie die Partition aus, in der die jährlichen Faktendaten enthalten sind.  
+1.  Erweitern Sie im Objekt-Explorer den Knoten **Measuregruppen** des Cubes, in dem die zusammenzuführenden Partitionen enthalten sind. Anschließend erweitern Sie **Partitionen**und klicken mit der rechten Maustaste auf die Partition, die das Ziel des Zusammenführungsvorgangs ist. Wenn Sie z. B. vierteljährliche Faktendaten zu einer Partition verschieben, in der jährliche Faktendaten gespeichert sind, wählen Sie die Partition aus, in der die jährlichen Faktendaten enthalten sind.  
   
-2.  Klicken Sie auf **Partitionen zusammenführen**, um das Dialogfeld **Partition \<Partitionsname> zusammenführen** zu öffnen.  
+2.  Klicken Sie auf **Partitionen zusammenführen** So öffnen die **Mergepartition \<Partitionsname >** (Dialogfeld).  
   
 3.  Aktivieren Sie unter **Quellpartitionen**das Kontrollkästchen neben jeder Quellpartition, die Sie mit der Zielpartition zusammenführen möchten, und klicken Sie auf **OK**.  
   
     > [!NOTE]  
     >  Quellpartitionen werden sofort gelöscht, nachdem die Quelle mit der Zielpartition zusammengeführt wurde. Aktualisieren Sie den Ordner Partitionen, um den Inhalt nach Ende der Zusammenführung zu aktualisieren.  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Partition mit den akkumulierten Daten, und wählen Sie **Eigenschaften** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die Partition mit den akkumulierten Daten, und wählen Sie **Eigenschaften**aus.  
   
 5.  Öffnen Sie die **Source** -Eigenschaft, und ändern Sie die WHERE-Klausel, in der die gerade zusammengeführten Partitionsdaten enthalten sind. Zur Erinnerung: Die **Source** -Eigenschaft wird nicht automatisch aktualisiert. Wenn Sie ohne Aktualisierung der **Source**-Eigenschaft eine erneute Verarbeitung ausführen, werden möglicherweise nicht alle erwarteten Daten zurückgeben.  
   
 ##  <a name="bkmk_partitionsXMLA"></a> Zusammenführen von Partitionen mithilfe von XMLA  
  Weitere Informationen zu diesem Thema finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verarbeiten von Analysis Services-Objekten](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Einrichten des Rückschreibens von Partitionen](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partitionen mit aktiviertem Schreibzugriff](../Topic/Write-Enabled%20Partitions.md)   
+ [Erstellen Sie und verwalten Sie einer Remotepartition &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Festlegen des Rückschreibens von Partitionen](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Partitionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

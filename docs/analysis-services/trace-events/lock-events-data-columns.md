@@ -1,22 +1,27 @@
 ---
-title: "Sperrenereignisse – Datenspalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Sperren Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sperrenereignisse – Datenspalten
+# <a name="lock-events-data-columns"></a>Sperrenereignisse – Datenspalten
   Die Sperren-Ereigniskategorie enthält die folgenden Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  In der folgenden Tabelle sind die Datenspalten für diese Ereignisklasse aufgeführt.  
   
-## Deadlock  
+## <a name="deadlock"></a>Deadlock  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,14 +44,14 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Lock Timeout  
+## <a name="lock-timeout"></a>Lock Timeout  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
+|EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |IntegerData|10|1|Ganzzahlige Daten.|  
 |ObjectType|12|1|Objekttyp.|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1|Serverprozess-ID. Hierdurch wird eine Benutzersitzung eindeutig gekennzeichnet. Dies entspricht direkt dem von XML/A verwendeten Sitzungs-GUID.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Lock Acquired  
+## <a name="lock-acquired"></a>Lock Acquired  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Lock Released  
+## <a name="lock-released"></a>Lock Released  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Lock Waiting  
+## <a name="lock-waiting"></a>Lock Waiting  
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dem Ereignis zugeordnete Textdaten.|  
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Sperren-Ereigniskategorie](../../analysis-services/trace-events/lock-events-category.md)  
   
   

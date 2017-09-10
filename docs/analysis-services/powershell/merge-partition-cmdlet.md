@@ -1,30 +1,41 @@
 ---
-title: "Merge-Partition-Cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Merge-Partition-Cmdlet | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4103154c133a430d3725aa30c073ab5e386f5c3f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Merge-Partition-Cmdlet
+# <a name="merge-partition-cmdlet"></a>Merge-Partition-Cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Führt die Daten von einer oder mehreren Quellpartitionen zu einer Zielpartition zusammen und löscht dann die Quellpartitionen.  
+
+>[!NOTE] 
+>In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Das Merge-Partition-Cmdlet führt die Daten von einer oder mehreren Quellpartitionen zu einer Zielpartition zusammen und löscht dann die Quellpartitionen. Partitionen können nur zusammengeführt werden, wenn sie sämtliche der folgenden Kriterien erfüllen:  
   
 -   Die Partitionen sind in der gleichen Measuregruppe.  
@@ -33,9 +44,9 @@ caps.handback.revision: 9
   
 -   Die Partitionen haben den gleichen (MOLAP, HOLAP und ROLAP für mehrdimensionale Datenbanken).  
   
-## Parameter  
+## <a name="parameters"></a>Parameter  
   
-### -Name \<Zeichenfolge>  
+### <a name="-name-string"></a>-Namen \<Zeichenfolge >  
  Gibt die Zielpartition an, mit der die Quellpartitionsdaten zusammengeführt werden. Die Partition muss bereits vorhanden sein.  
   
 |||  
@@ -46,7 +57,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -SourcePartition \<Zeichenfolge>  
+### <a name="-sourcepartition-string"></a>-SourcePartition \<Zeichenfolge >  
  Gibt die Quellpartition an, die mit der Zielpartition zusammengeführt wird. Sie können eine durch Kommas getrennte Liste der Partitionen erstellen, die Sie zusammenführen möchten. Verwenden Sie eine Variable, um die Liste zu speichern. Zum Beispiel: $Sources=”Sales_2008”, "Sales_2009”, "Sales_2010”.  
   
 |||  
@@ -57,7 +68,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Database \<Zeichenfolge>  
+### <a name="-database-string"></a>-Datenbank \<Zeichenfolge >  
  Gibt die Datenbank an, zu der die Partitionen gehören.  
   
 |||  
@@ -68,7 +79,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Cube \<Zeichenfolge>  
+### <a name="-cube-string"></a>-Cube \<Zeichenfolge >  
  Gibt den Cube an, zu dem die Partitionen gehören.  
   
 |||  
@@ -79,7 +90,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -MeasureGroup \<Zeichenfolge>  
+### <a name="-measuregroup-string"></a>Der MeasureGroup - \<Zeichenfolge >  
  Gibt die Measuregruppe an, zu der die Partition gehört.  
   
 |||  
@@ -90,7 +101,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Server \<Zeichenfolge>  
+### <a name="-server-string"></a>-Server \<Zeichenfolge >  
  Gibt die Analysis Services-Instanz an, zu der das Cmdlet eine Verbindung herstellt und auf der es ausgeführt wird. Wenn kein Servername angegeben wird, wird eine Verbindung mit localhost hergestellt. Für Standardinstanzen geben Sie nur den Servernamen an. Verwenden Sie für benannte Instanzen das Format "servername\instanzenname". Verwenden Sie für HTTP-Verbindungen das Format "http[s]://server[:port]/virtualdirectory/msmdpump.dll".  
   
 |||  
@@ -101,8 +112,8 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -Credential \<PSCredential>  
- Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md) und [PowerShell-Skripts in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) für HTTP-Verbindungen.  
+### <a name="-credential-pscredential"></a>-Credential \<"PSCredential" >  
+ Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren des HTTP-Zugriffs auf Analysis Services unter Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) für HTTP-Verbindungen.  
   
  Wenn dieser Parameter angegeben wird, werden der Benutzername und das Kennwort verwendet, um eine Verbindung mit der angegebenen Analysis-Server-Instanz herzustellen. Wenn keine Anmeldeinformationen angegeben sind, wird das Standard-Windows-Konto des Benutzers, der das Tool ausführt, verwendet.  
   
@@ -116,7 +127,7 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|True (ByValue)|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### -TargetPartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-targetpartition-microsoftanalysisservicespartition"></a>-TargetPartition \<das Microsoft.AnalysisServices.Partition >  
  Gibt die Zielpartition an, mit der die Quellpartitionen zusammengeführt werden.  
   
 |||  
@@ -127,10 +138,10 @@ caps.handback.revision: 9
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<Allgemeine Parameter >  
  Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Eingaben und Ausgaben  
+## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
  Mit dem Eingabetyp wird festgelegt, welchen Typ von Objekten Sie über die Pipeline an das Cmdlet übergeben können. Der Rückgabetyp bezeichnet den Typ der vom Cmdlet zurückgegebenen Objekte.  
   
 |||  
@@ -138,13 +149,10 @@ caps.handback.revision: 9
 |Eingaben|System.string|  
 |Ausgaben|InclusionThresholdSetting|  
   
-## Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> $Source=”Total_Orders_2001”, “Total_Orders_2002”, “Total_Orders_2003”` `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> Merge-Partition –Name “Total_Orders_2004” –SourcePartitions:$Source –database “AWTEST” –cube “Adventure Works” –MeasureGroup “Sales Orders”`  
   
  Dieser Befehl führt Partitionen von 2001, 2002 und 2003 mit der Partition für 2004 zusammen und löscht dann die Partitionen der vorherigen Jahre.  
   
-## Siehe auch  
- [PowerShell-Skripts in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Verwalten von tabellarischen Modellen mit PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+
   

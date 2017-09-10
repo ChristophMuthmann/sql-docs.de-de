@@ -1,26 +1,31 @@
 ---
-title: "Logistische Regressionsmodell-Abfragebeispiele | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logistische Regression [Analysis Services]"
-  - "Inhaltsabfragen [DMX]"
+title: Logistische Regressionsmodell-Abfragebeispiele | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b329e0883ef165a01577cd536a8030640c99d2e7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Logistische Regressionsmodell-Abfragebeispiele
+# <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
   Beim Generieren einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen mit neuen Daten anhand der im Modell befindlichen Muster vornimmt.  
   
  In diesem Abschnitt wird erläutert, wie diese beiden Abfragetypen für Modelle erstellt werden, die auf dem Microsoft Logistic Regression-Algorithmus basieren.  
@@ -38,11 +43,11 @@ caps.handback.revision: 22
  [Erstellen von Vorhersagen für einen diskreten Wert](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Abrufen von Informationen zum logistischen Regressionsmodell  
- Logistische Regressionsmodelle werden mithilfe des Microsoft Neural Network-Algorithmus mit einer speziellen Menge von Parametern erstellt. Daher verfügt das logistische Regressionsmodell über einige der Informationen, die auch das neuronale Netzwerk enthält, ist jedoch weniger komplex. Weitere Informationen zur Struktur des Inhaltsmodells und dazu, in welchen Knotentypen welche Arten von Informationen gespeichert sind, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Logistische Regressionsmodelle werden mithilfe des Microsoft Neural Network-Algorithmus mit einer speziellen Menge von Parametern erstellt. Daher verfügt das logistische Regressionsmodell über einige der Informationen, die auch das neuronale Netzwerk enthält, ist jedoch weniger komplex. Weitere Informationen zur Struktur des Inhaltsmodells und dazu, in welchen Knotentypen welche Arten von Informationen gespeichert sind, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
- Für die Abfrageszenarios können Sie ein logistisches Regressionsmodell erstellen, wie im folgenden Abschnitt des Data Mining-Tutorials für Fortgeschrittene beschrieben: [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ Für die Abfrageszenarios können Sie ein logistisches Regressionsmodell erstellen, wie im folgenden Abschnitt des Data Mining-Tutorials für Fortgeschrittene beschrieben: [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
   
- Sie können auch die Miningstruktur Targeted Mailing aus dem [Tutorial zu Data Mining-Grundlagen](../Topic/Basic%20Data%20Mining%20Tutorial.md) verwenden.  
+ Sie können auch die Miningstruktur Targeted Mailing aus dem [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)verwenden.  
   
 ```  
 ALTER MINING STRUCTURE [Targeted Mailing]  
@@ -99,12 +104,12 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|Nicht vorhanden|0|0|0|1|  
 |Commute Distance|5–10 Meilen|3033|0,173472889|0|4|  
   
- Die eigentliche Abfrage gibt weitaus mehr Zeilen zurück. Dieses Beispiel veranschaulicht jedoch die Art der Informationen, die über Eingaben zur Verfügung gestellt werden. Für diskrete Eingaben wird jeder mögliche Wert in der Tabelle aufgeführt. Für Eingaben mit kontinuierlichen Werten wie Age ist eine vollständige Auflistung unmöglich, daher wird die Eingabe als Mittelwert diskretisiert. Weitere Informationen dazu, wie Sie die Informationen im Knoten Randstatistik verwenden, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Die eigentliche Abfrage gibt weitaus mehr Zeilen zurück. Dieses Beispiel veranschaulicht jedoch die Art der Informationen, die über Eingaben zur Verfügung gestellt werden. Für diskrete Eingaben wird jeder mögliche Wert in der Tabelle aufgeführt. Für Eingaben mit kontinuierlichen Werten wie Age ist eine vollständige Auflistung unmöglich, daher wird die Eingabe als Mittelwert diskretisiert. Weitere Informationen dazu, wie Sie die Informationen im Knoten Randstatistik verwenden, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 > [!NOTE]  
 >  Die Ergebnisse wurden zugunsten einer leichteren Anzeige vereinfacht. Sie können die geschachtelte Tabelle jedoch in einer einzelnen Spalte zurückgeben, wenn Ihr Anbieter hierarchische Rowsets unterstützt.  
   
-## Vorhersageabfragen eines logistischen Regressionsmodells  
+## <a name="prediction-queries-on-a-logistic-regression-model"></a>Vorhersageabfragen eines logistischen Regressionsmodells  
  Sie können die Funktion [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) mit jeder Art von Miningmodell verwenden, um neue Daten für das Modell zur Verfügung zu stellen und Vorhersagen anhand der neuen Werte zu treffen. Außerdem können Sie mithilfe von Funktionen weitere Informationen über die Vorhersage zurückgeben, z. B. die Wahrscheinlichkeit, dass eine Vorhersage zutrifft. Dieser Abschnitt enthält einige Beispiele für Vorhersageabfragen für ein logistisches Regressionsmodell.  
   
 ###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Erstellen von Vorhersagen für einen kontinuierlichen Wert  
@@ -130,28 +135,28 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Weitere Informationen zu Wahrscheinlichkeit, Unterstützung und Standardabweichung der Werte in der geschachtelten NODE_DISTRIBUTION-Tabelle finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Weitere Informationen zu Wahrscheinlichkeit, Unterstützung und Standardabweichung der Werte in der geschachtelten NODE_DISTRIBUTION-Tabelle finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Erstellen von Vorhersagen für einen diskreten Wert  
- Die logistische Regression wird normalerweise in Szenarien verwendet, in denen die Faktoren analysiert werden sollen, die zu einem binären Ergebnis beitragen. Obwohl das im Tutorial verwendete Modell den kontinuierlichen Wert **ServiceGrade** in einem realistischen Szenario vorhersagt, möchten Sie möglicherweise das Modell für die Vorhersage einrichten, ob die Dienstqualität einem bestimmten diskretisierten Zielwert entsprochen hat. Alternativ könnten Sie die Vorhersagen mit einem kontinuierlichen Wert ausgeben, später jedoch die vorhergesagten Ergebnisse in **Gut**, **Durchschnittlich**oder **Schlecht**gruppieren.  
+ Die logistische Regression wird normalerweise in Szenarien verwendet, in denen die Faktoren analysiert werden sollen, die zu einem binären Ergebnis beitragen. Obwohl das im Tutorial verwendete Modell den kontinuierlichen Wert **ServiceGrade**in einem realistischen Szenario vorhersagt, möchten Sie möglicherweise das Modell für die Vorhersage einrichten, ob die Dienstqualität einem bestimmten diskretisierten Zielwert entsprochen hat. Alternativ könnten Sie die Vorhersagen mit einem kontinuierlichen Wert ausgeben, später jedoch die vorhergesagten Ergebnisse in **Gut**, **Durchschnittlich**oder **Schlecht**gruppieren.  
   
  Das folgende Beispiel veranschaulicht, wie die Methode zum Gruppieren des vorhersagbaren Attributs geändert wird. Erstellen Sie hierzu eine Kopie der Miningstruktur, und ändern Sie dann die Diskretisierungsmethode der Zielspalte, damit die Werte gruppiert werden anstatt kontinuierlich sind.  
   
  Im folgenden Verfahren wird beschrieben, wie die Gruppierung von ServiceGrade-Werten in den Callcenterdaten geändert wird.  
   
-##### So erstellen Sie eine diskretisierte Version der Callcenter-Miningstruktur und -Modelle  
+##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>So erstellen Sie eine diskretisierte Version der Callcenter-Miningstruktur und -Modelle  
   
 1.  Erweitern Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer **Miningstrukturen**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf „Call Center.dmm“, und wählen Sie **Kopieren** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf „Call Center.dmm“, und wählen Sie **Kopieren**aus.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **Miningstrukturen** , und wählen Sie **Einfügen**aus. Eine neue Miningstruktur mit dem Namen „Call Center 1“ wird hinzugefügt.  
   
-4.  Klicken Sie mit der rechten Maustaste auf die neue Miningstruktur, und wählen Sie **Umbenennen** aus. Geben Sie den neuen Namen **Callcenter diskretisiert**ein.  
+4.  Klicken Sie mit der rechten Maustaste auf die neue Miningstruktur, und wählen Sie **Umbenennen**aus. Geben Sie den neuen Namen **Callcenter diskretisiert**ein.  
   
 5.  Doppelklicken Sie auf die neue Miningstruktur, um sie im Designer zu öffnen. Beachten Sie, dass auch alle Miningmodelle kopiert wurden und die Erweiterung "1" haben. Ändern Sie die Namen zunächst nicht.  
   
-6.  Klicken Sie auf der Registerkarte **Miningstruktur** mit der rechten Maustaste auf die Spalte für ServiceGrade, und wählen Sie **Eigenschaften** aus.  
+6.  Klicken Sie auf der Registerkarte **Miningstruktur** mit der rechten Maustaste auf die Spalte für ServiceGrade, und wählen Sie **Eigenschaften**aus.  
   
 7.  Ändern Sie die **Content** -Eigenschaft von **Kontinuierlich** in **Diskretisiert**. Ändern Sie die **DiscretizationMethod** -Eigenschaft in **Cluster**. Geben Sie für DiscretizationBucketCount **3**ein.  
   
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  Beachten Sie, dass die vorhergesagten Ergebnisse wie angegeben in drei Kategorien gruppiert wurden. Diese Gruppierungen basieren jedoch auf dem Clustering der Istwerte in den Daten, nicht möglicherweise als Geschäftsziele festgelegter beliebiger Werte.  
   
-## Liste der Vorhersagefunktionen  
+## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt jedoch zusätzliche Funktionen, die in der folgenden Tabelle aufgelistet sind.  
   
 |||  
@@ -203,11 +208,11 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Für neuronale Netzwerk- und logistische Regressionsmodelle gibt die Funktion [PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) einen einzelnen Wert zurück, der die Größe des Trainingssatzes für das gesamte Modell repräsentiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
- [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Lektion 5: Erstellen von neuronalen Netzwerk und logistischen Regressionsmodellen &#40; Datamining-Lernprogramm für fortgeschrittene &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

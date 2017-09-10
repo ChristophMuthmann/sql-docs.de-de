@@ -1,26 +1,31 @@
 ---
-title: "Manuelle Verarbeitung von Daten (SSAS – tabellarisch) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "Manuelles verarbeiten Daten (SSAS – tabellarisch) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Manuelle Verarbeitung von Daten (SSAS – tabellarisch)
+# <a name="manually-process-data-ssas-tabular"></a>Manuelle Verarbeitung von Daten (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Arbeitsbereichsdaten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]manuell verarbeitet werden.  
   
  Wenn Sie ein tabellarisches Modell erstellen, das externe Daten verwendet, können Sie die Daten mit dem Befehl Verarbeiten manuell aktualisieren. Sie können eine einzelne Tabelle, alle Tabellen im Modell oder eine oder mehrere Partitionen verarbeiten. Wenn Sie Daten verarbeiten, müssen Sie möglicherweise auch Daten neu berechnen.  Verarbeiten von Daten bedeutet, dass die aktuellen Daten aus den externen Quellen abgerufen werden. Neuberechnen bedeutet, dass das Ergebnis jeder Formel aktualisiert wird, die die Daten verwendet.  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> Manuelle Verarbeitung von Daten  
   
-#### So verarbeiten Sie Daten für eine einzelne Tabelle oder alle Tabellen in einem Modell  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>So verarbeiten Sie Daten für eine einzelne Tabelle oder alle Tabellen in einem Modell  
   
 1.  Klicken Sie im Modell-Designer auf die Tabelle, die Sie verarbeiten möchten.  
   
 2.  Wählen Sie das Menü **Modell** . Klicken Sie dann auf **Verarbeiten**und danach auf **Verarbeiten** oder **Alles verarbeiten**.  
   
-#### So verarbeiten Sie Daten für alle Tabellen, die dieselbe Verbindung verwenden  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>So verarbeiten Sie Daten für alle Tabellen, die dieselbe Verbindung verwenden  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
   
 2.  Wählen Sie im Dialogfeld **Vorhandene Verbindungen** eine Verbindung aus, und klicken Sie dann auf **Verarbeiten**.  
   
-#### So verarbeiten Sie Daten für eine oder mehrere Partitionen  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>So verarbeiten Sie Daten für eine oder mehrere Partitionen  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Modell-Designer auf das Menü **Modell** . Navigieren Sie dann zu **Verarbeiten**, und klicken Sie anschließend auf **Partitionen verarbeiten**.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **Aktualisierung beenden**  
  Klicken Sie auf diese Option, um den Verarbeitungsvorgang anzuhalten. Diese Option ist nützlich, wenn der Vorgang zu lange dauert oder wenn es zu viele Fehler gibt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Problembehandlung von Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

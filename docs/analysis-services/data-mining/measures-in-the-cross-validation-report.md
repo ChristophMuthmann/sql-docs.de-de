@@ -1,29 +1,34 @@
 ---
-title: "Measures im Kreuzvalidierungsbericht | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wurzel des mittleren Fehlers zum Quadrat [Data Mining]"
-  - "Kreuzvalidierung [Data Mining]"
-  - "mittlerer absoluter Fehler [Data Mining]"
-  - "Protokollergebnis [Data Mining]"
-  - "Wahrscheinlichkeit [Data Mining]"
+title: "Measures in der übergreifenden Überprüfungsbericht | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Measures im Kreuzvalidierungsbericht
+# <a name="measures-in-the-cross-validation-report"></a>Measures im Kreuzvalidierungsbericht
   Während der Kreuzvalidierung werden die Daten in einer Miningstruktur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in mehrere Querschnitte unterteilt. Anschließend werden die Struktur und zugeordnete Miningmodelle iterativ getestet. Auf Grundlage dieser Analyse wird eine Reihe standardmäßiger Genauigkeitsmeasures für die Struktur und jedes Modell ausgegeben.  
   
  Der Bericht enthält einige grundlegende Informationen über die Anzahl der Folds in den Daten sowie die Menge der Daten in jeder Aufteilung sowie einen Satz allgemeiner Metriken zur Beschreibung der Datenverteilung. Sie können die Zuverlässigkeit der Struktur oder des Modells bewerten, indem Sie die allgemeinen Metriken für jeden Querschnitt vergleichen.  
@@ -32,8 +37,8 @@ caps.handback.revision: 28
   
  Dieser Abschnitt enthält eine Liste der im **Kreuzvalidierungsbericht** aufgeführten Measures sowie Erläuterungen zu deren Bedeutung. Ausführliche Informationen zur Berechnung der einzelnen Measures finden Sie unter [Kreuzvalidierungsformeln](../../analysis-services/data-mining/cross-validation-formulas.md).  
   
-## Liste der Measures im Kreuzvalidierungsbericht  
- In der folgenden Tabelle sind die Measures aufgelistet, die im Kreuzvalidierungsbericht angezeigt werden. Die Measures werden nach dem *Testtyp* gruppiert, der in der linken Spalte der folgenden Tabelle angegeben ist. In der rechten Spalte ist der Name des Measures, so wie im Bericht angezeigt, und eine kurze Erläuterung zu dessen Bedeutung enthalten.  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>Liste der Measures im Kreuzvalidierungsbericht  
+ In der folgenden Tabelle sind die Measures aufgelistet, die im Kreuzvalidierungsbericht angezeigt werden. Die Measures werden nach dem *Testtyp*gruppiert, der in der linken Spalte der folgenden Tabelle angegeben ist. In der rechten Spalte ist der Name des Measures, so wie im Bericht angezeigt, und eine kurze Erläuterung zu dessen Bedeutung enthalten.  
   
 |Testtyp|Measures und Beschreibungen|  
 |---------------|-------------------------------|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**Mittelwert**:<br />                      Mittelwert der Partitionswerte für ein bestimmtes Measure.|  
 ||**Standardabweichung**:<br />                      Durchschnitt der Abweichung vom Mittelwert für ein bestimmtes Measure für alle Partitionen in einem Modell.<br /><br /> Bei der Kreuzvalidierung impliziert ein höherer Wert für dieses Ergebnis eine erhebliche Variation zwischen den Folds.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

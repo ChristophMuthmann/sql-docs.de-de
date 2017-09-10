@@ -1,35 +1,40 @@
 ---
-title: "Verarbeiten eines mehrdimensionalen Modells (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Onlinemodus [Analysis Services]"
-  - "Verarbeiten von Objekten [Analysis Services]"
-  - "Partitionen [Analysis Services], verarbeiten"
-  - "Aufträge [Analysis Services]"
-  - "Objekte [Analysis Services], verarbeiten"
-  - "Erneutes Verarbeiten von Objekten"
-  - "Auswirkungsanalyse [Analysis Services]"
-  - "Dimensionen [Analysis Services], Verarbeitung"
-  - "Projektmodus [Analysis Services]"
-  - "Cubes [Analysis Services], Verarbeitung"
+title: Verarbeiten eines mehrdimensionalen Modells (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online mode [Analysis Services]
+- processing objects [Analysis Services]
+- partitions [Analysis Services], processing
+- jobs [Analysis Services]
+- objects [Analysis Services], processing
+- reprocessing objects
+- impact analysis [Analysis Services]
+- dimensions [Analysis Services], processing
+- project mode [Analysis Services]
+- cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 52
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verarbeiten eines mehrdimensionalen Modells (Analysis Services)
+# <a name="processing-a-multidimensional-model-analysis-services"></a>Verarbeiten eines mehrdimensionalen Modells (Analysis Services)
   Die Verarbeitung bezeichnet den Schritt oder eine Abfolge von Schritten, durch die Daten von Analysis Services aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen werden. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
   
  Die Verarbeitung wird standardmäßig ausgeführt, wenn eine Projektmappe auf dem Server bereitgestellt wird. Sie können eine Projektmappe auch vollständig oder teilweise verarbeiten, indem Sie entweder Ad-hoc-Tools wie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verwenden oder eine zeitgesteuerte Verarbeitung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und SQL Server-Agent durchführen. Wenn Sie eine strukturelle Änderung am Modell vornehmen, z.. B. eine Dimension entfernen oder den Kompatibilitätsgrad ändern, müssen Sie die Verarbeitung wiederholen, um die physischen und logischen Aspekte des Modells zu synchronisieren.  
@@ -42,7 +47,7 @@ caps.handback.revision: 52
   
  [Verarbeiten von Objekten](#bkmk_proc)  
   
- [Erneutes Verarbeiten von Objekten](#bkmk_reproc)  
+ [Reprocessing Objects](#bkmk_reproc)  
   
 ##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
   
@@ -62,13 +67,13 @@ caps.handback.revision: 52
  Weitere Informationen finden Sie unter [Tools und Ansätze für die Verarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
   
 ##  <a name="bkmk_proc"></a> Verarbeiten von Objekten  
- Die Verarbeitung betrifft die folgenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte: Measuregruppen, Partitionen, Dimensionen, Cubes, Miningmodelle, Miningstrukturen und Datenbanken. Wenn ein Objekt mindestens ein Objekt enthält, führt die Verarbeitung des Objekts der höchsten Ebene zum Kaskadieren der Verarbeitung aller Objekte der niedrigeren Ebenen. Beispielsweise enthält ein Cube in der Regel mindestens eine Measuregruppe (von denen jede eine oder mehrere Partitionen enthält) und Dimensionen. Die Verarbeitung eines Cubes bewirkt die Verarbeitung aller im Cube enthaltenen Measuregruppen und deren noch nicht verarbeitete Dimensionen. Weitere Informationen zur Verarbeitung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Verarbeiten von Analysis Services-Objekten](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+ Die Verarbeitung betrifft die folgenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte: Measuregruppen, Partitionen, Dimensionen, Cubes, Miningmodelle, Miningstrukturen und Datenbanken. Wenn ein Objekt mindestens ein Objekt enthält, führt die Verarbeitung des Objekts der höchsten Ebene zum Kaskadieren der Verarbeitung aller Objekte der niedrigeren Ebenen. Beispielsweise enthält ein Cube in der Regel mindestens eine Measuregruppe (von denen jede eine oder mehrere Partitionen enthält) und Dimensionen. Die Verarbeitung eines Cubes bewirkt die Verarbeitung aller im Cube enthaltenen Measuregruppen und deren noch nicht verarbeitete Dimensionen. Weitere Informationen zur Verarbeitung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten finden Sie unter [Verarbeiten von Analysis Services-Objekten](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
  Während der Ausführung des Verarbeitungsauftrags sind die betroffenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte für Abfragen verfügbar. Der Verarbeitungsauftrag erfolgt innerhalb einer Transaktion, welche ihrerseits ein Commit oder ein Rollback der Änderungen durchführt. Wenn der Verarbeitungsauftrag fehlschlägt, wird ein Rollback für die Transaktion ausgeführt. Wenn der Verarbeitungsauftrag erfolgreich ausgeführt wird, wird das Objekt während des Commits der Änderungen exklusiv gesperrt, d. h. das Objekt ist vorübergehend nicht für Abfragen oder andere Verarbeitungen verfügbar. Während der Commitphase der Transaktion können weiterhin Abfragen an das Objekt gesendet werden; diese werden jedoch in eine Warteschlangen gestellt, bis der Commit abgeschlossen ist.  
   
  Ob und wie Objekte von einem Verarbeitungsauftrag verarbeitet werden, ist von den Verarbeitungsoptionen abhängig, die für das Objekt festgelegt wurden. Weitere Informationen zu den spezifischen Verarbeitungsoptionen von Objekten finden Sie unter [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-##  <a name="bkmk_reproc"></a> Erneutes Verarbeiten von Objekten  
+##  <a name="bkmk_reproc"></a> Reprocessing Objects  
  Cubes, die nicht verarbeitete Elemente enthalten, müssen erneut verarbeitet werden, bevor sie durchsucht werden können. Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthalten Measuregruppen und Partitionen, die verarbeitet werden müssen, bevor der Cube abgefragt werden kann. Die Verarbeitung eines Cubes veranlasst [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die darin enthaltenen Dimensionen zu verarbeiten, falls sich diese im Status Nicht verarbeitet befinden. Nachdem ein Objekt das erste Mal verarbeitet wurde, ist die erneute Teil- oder vollständige Verarbeitung erforderlich, wenn eine der folgenden Situationen eintritt:  
   
 -   Die Struktur des Objekts ändert sich (z. B. wird in einer Faktentabelle eine Spalte gelöscht).  
@@ -79,8 +84,8 @@ caps.handback.revision: 52
   
  Beim Verarbeiten von Objekten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, oder Sie können die jeweils geeignete Verarbeitungsart automatisch mithilfe von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmen. Die verfügbaren Verarbeitungsmethoden unterscheiden sich von Objekt zu Objekt und basieren auf dem Objekttyp. Zusätzlich basieren die verfügbaren Methoden auf den Änderungen, die im Objekt seit der letzten Verarbeitung aufgetreten sind. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt. Weitere Informationen finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## Siehe auch  
- [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

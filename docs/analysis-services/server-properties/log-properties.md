@@ -1,68 +1,73 @@
 ---
-title: "Protokolleigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize (Eigenschaft)"
-  - "QueryLogTableName (Eigenschaft)"
-  - "TraceBackgroundDistributionPeriod (Eigenschaft)"
-  - "TraceMaxRowsetSize (Eigenschaft)"
-  - "NullKeyConvertedToUnknown (Eigenschaft)"
-  - "CrashReportsFolder (Eigenschaft)"
-  - "TraceDefinitionFile (Eigenschaft)"
-  - "SQLDumperFlagsOn (Eigenschaft)"
-  - "KeyErrorLimit (Eigenschaft)"
-  - "SnapshotDefinitionFile (Eigenschaft)"
-  - "MinidumpErrorList (Eigenschaft)"
-  - "ErrorLogFileName (Eigenschaft)"
-  - "KeyDuplicate (Eigenschaft)"
-  - "IgnoreDataTruncation (Eigenschaft)"
-  - "Protokolle [Analysis Services]"
-  - "Enabled-Eigenschaft"
-  - "FileSizeMB (Eigenschaft)"
-  - "TraceFileWriteTrailerPeriod (Eigenschaft)"
-  - "TraceQueryResponseTextChunkSize (Eigenschaft)"
-  - "File (Eigenschaft)"
-  - "FileBufferSize (Eigenschaft)"
-  - "TraceRowsetBackgroundFlushPeriod (Eigenschaft)"
-  - "ErrorLogFileSize (Eigenschaft)"
-  - "TraceRequestParameters (Eigenschaft)"
-  - "KeyErrorLimitAction (Eigenschaft)"
-  - "CreateQueryLogTable (Eigenschaft)"
-  - "LogDir (Eigenschaft)"
-  - "TraceBackgroundFlushPeriod (Eigenschaft)"
-  - "TraceFileBufferSize (Eigenschaft)"
-  - "SQLDumperFlagsOff (Eigenschaft)"
-  - "QueryLogConnectionString (Eigenschaft)"
-  - "KeyNotFound (Eigenschaft)"
-  - "KeyErrorLogFile (Eigenschaft)"
-  - "TraceReportFQDN (Eigenschaft)"
-  - "KeyErrorAction (Eigenschaft)"
-  - "QueryLogFileName (Eigenschaft)"
-  - "MessageLogs (Eigenschaft)"
-  - "MiniDumpFlagsOn (Eigenschaft)"
-  - "SnapshotFrequencySec (Eigenschaft)"
-  - "QueryLogSampling (Eigenschaft)"
-  - "CreateAndSendCrashReports (Eigenschaft)"
-  - "LogDurationSec (Eigenschaft)"
+title: Melden Sie sich Eigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Protokolleigenschaften
+# <a name="log-properties"></a>Protokolleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Protokollservereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Allgemein  
+## <a name="general"></a>Allgemein  
  **File**  
  Eine Zeichenfolge, die den Namen der Serverprotokolldatei anzeigt. Diese Eigenschaft gilt nur, wenn für die Protokollierung eine Datei auf dem Datenträger anstelle einer Datenbanktabelle (das Standardverhalten) verwendet wird.  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Fehlerprotokoll  
- Sie können diese Eigenschaften auf Serverinstanzebene festlegen, um die Standardwerte für die Fehlerkonfiguration zu ändern, die in anderen Tools und in Designern verfügbar sind. Weitere Informationen finden Sie unter [Fehlerkonfiguration für die Verarbeitung von Cubes, Partitionen und Dimensionen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) und <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>.  
+## <a name="error-log"></a>Fehlerprotokoll  
+ Sie können diese Eigenschaften auf Serverinstanzebene festlegen, um die Standardwerte für die Fehlerkonfiguration zu ändern, die in anderen Tools und in Designern verfügbar sind. Finden Sie unter [Fehlerkonfiguration für Cubes, Partitionen, und Dimensionsverarbeitung &#40; SSAS – mehrdimensional &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) und <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> für Weitere Informationen.  
   
  **ErrorLog\ErrorLogFileName**  
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
@@ -84,7 +89,7 @@ caps.handback.revision: 23
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
   
  **ErrorLog\KeyErrorAction**  
- Gibt die Aktion an, die bei Auftreten eines **KeyNotFound**-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
+ Gibt die Aktion an, die bei Auftreten eines **KeyNotFound** -Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
 -   **ConvertToUnknown** weist den Server an, den Fehlerschlüsselwert dem unbekannten Element zuzuordnen.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 23
 -   **StopLogging** weist den Server an, die Fehlerprotokollierung bei Erreichen der Fehlergrenze zu beenden, die Verarbeitung jedoch weiterhin zuzulassen.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Gibt die Aktion an, die bei Auftreten eines **KeyNotFound**-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
+ Gibt die Aktion an, die bei Auftreten eines **KeyNotFound** -Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
 -   **IgnoreError** weist den Server an, die Verarbeitung fortzusetzen, ohne den Fehler zu protokollieren oder auf den Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz wird abhängig von der **KeyErrorAction** -Eigenschaft entweder verworfen oder dem unbekannten Element hinzugefügt.  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
   
-## Exception  
+## <a name="exception"></a>Exception  
  **Exception\CreateAndSendCrashReports**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Flight Recorder  
+## <a name="flight-recorder"></a>Flight Recorder  
  **FlightRecorder\Enabled**  
  Eine boolesche Eigenschaft, die anzeigt, ob deie Funktion Flight Recorder aktiviert ist.  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  Der Standardwert für diese Eigenschaft ist leer. Dies bedeutet, dass standardmäßig die Datei FlightRecorderTraceDef.xml verwendet wird.  
   
-## Abfrageprotokoll  
+## <a name="query-log"></a>Abfrageprotokoll  
  **Gilt für:** Nur mehrdimensionaler Servermodus  
   
  **QueryLog\QueryLogFileName**  
@@ -197,9 +202,9 @@ caps.handback.revision: 23
  Der Standardwert für diese Eigenschaft ist FALSE. Dies bedeutet, dass der Server nicht automatisch die Protokolltabelle erstellt und keine Abfrageereignisse protokolliert.  
   
 > [!NOTE]  
->  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890) (Konfigurieren des Abfrageprotokolls von Analysis Services).  
+>  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Konfigurieren des Abfrageprotokolls von Analysis Services).  
   
-## Ablaufverfolgung  
+## <a name="trace"></a>Ablaufverfolgung  
  **Trace\TraceBackgroundDistributionPeriod**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
