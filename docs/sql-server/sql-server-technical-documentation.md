@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
@@ -85,13 +85,8 @@ Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Se
 - [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Weitere Informationen   
-+ Informationen zur Offlineanzeige der SQL Server-Dokumentation finden Sie unter [Help Viewer und Offlineinhalt für SQL Server](../release-notes/sql-server-help-installation.md).
++ Informationen zur Offlineanzeige der SQL Server-Dokumentation finden Sie unter [Help Viewer und Offlineinhalt für SQL Server](sql-server-help-installation.md).
 + [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Hilfe erhalten 
-- [Stapelüberlauf (Tag „sql-server“): Anlaufstelle für Fragen zur SQL-Entwicklung](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN-Foren: Anlaufstelle für technische Fragen](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect: Meldung von Programmfehlern und Vorschlagen von Features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit – allgemeine Erläuterung zu SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Lizenzbedingungen und -informationen zu Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
