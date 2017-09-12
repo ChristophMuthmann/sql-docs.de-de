@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 86a145cd23f40e41ef63b166e7536f91ee2129d9
