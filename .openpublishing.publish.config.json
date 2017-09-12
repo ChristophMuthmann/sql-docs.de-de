@@ -8,7 +8,7 @@
       "build_source_folder": "docs-msdn/analytics-platform-system",
       "build_output_subfolder": "sql/analytics-platform-system",
       "locale": "de-de",
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -21,7 +21,7 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "de-de",
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -36,6 +36,8 @@
     "live-oldev",
     "live"
   ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/sql-docs-pr.de-de",
+  "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
