@@ -1,7 +1,7 @@
 ---
 title: Variablen (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert eines bestimmten Typs aufnehmen kann. Variablen in Batches und Skripts werden in der Regel wie folgt verwendet: 
 
@@ -39,8 +39,9 @@ Das folgende Skript erstellt eine kleine Testtabelle, die mit 26 Zeilen aufgefü
 
 * Steuern, wie viele Zeilen eingefügt werden, indem gesteuert wird, wie oft die Schleife durchlaufen wird.
 * Bereitstellen des Werts, der in die Spalte mit ganzen Zahlen eingefügt wird.
-* Fungieren als Teil des Ausdrucks, der Buchstaben generiert, die in die Zeichenspalte eingefügt werden sollen.
-```
+* Fungieren als Teil des Ausdrucks, der Buchstaben generiert, die in die Zeichenspalte eingefügt werden sollen.  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ DECLARE-Anweisung initialisiert eine Transact-SQL-Variable durch:
 * Zuweisen eines vom System bereitgestellten oder benutzerdefinierten Datentyps und einer Länge. Für numerische Variablen werden außerdem die Genauigkeit und die Dezimalstellen zugewiesen. Für Variablen des Typs XML kann eine optionale Schemaauflistung zugewiesen werden.
 * Festlegen des Werts auf NULL.
 
-Beispielsweise die folgenden **DECLARE** -Anweisung erstellt eine lokale Variable namens  **@mycounter**  mit einem Int-Datentyp.
-```
+Beispielsweise die folgenden **DECLARE** -Anweisung erstellt eine lokale Variable namens  **@mycounter**  mit einem Int-Datentyp.  
+```sql
 DECLARE @MyCounter int;
 ```
 Zum Deklarieren von mehreren lokalen Variablen verwenden Sie ein Komma nach der ersten definierten lokalen Variablen und geben dann den Namen und den Datentyp der nächsten lokalen Variablen an.
 
-Beispielsweise die folgenden **DECLARE** -Anweisung erstellt drei lokale Variablen namens  **@LastName** ,  **@FirstName**  und  **@StateProvince** , und alle mit NULL initialisiert:
-```
+Beispielsweise die folgenden **DECLARE** -Anweisung erstellt drei lokale Variablen namens  **@LastName** ,  **@FirstName**  und  **@StateProvince** , und alle mit NULL initialisiert:  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-Der Gültigkeitsbereich einer Variablen ist der Bereich der Transact-SQL-Anweisungen, die die Variable verweisen können. Der Gültigkeitsbereich einer Variablen reicht von dem Punkt, an dem sie deklariert wurde, bis zum Ende des Batches oder der gespeicherten Prozedur, in dem bzw. der sie deklariert wurde. Das folgende Skript generiert z. B. einen Syntaxfehler, weil die Variable in einem Batch deklariert wird und dann in einem anderen Batch auf sie verwiesen wird:
-```
+Der Gültigkeitsbereich einer Variablen ist der Bereich der Transact-SQL-Anweisungen, die die Variable verweisen können. Der Gültigkeitsbereich einer Variablen reicht von dem Punkt, an dem sie deklariert wurde, bis zum Ende des Batches oder der gespeicherten Prozedur, in dem bzw. der sie deklariert wurde. Das folgende Skript generiert z. B. einen Syntaxfehler, weil die Variable in einem Batch deklariert wird und dann in einem anderen Batch auf sie verwiesen wird:  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-Variablen haben einen lokalen Gültigkeitsbereich und sind nur im Batch bzw. in der Prozedur sichtbar, in dem bzw. in der sie definiert sind. Im folgenden Beispiel bietet der zur Ausführung von sp_executesql erstellte geschachtelte Gültigkeitsbereich keinen Zugriff auf die Variable, die im höheren Geltungsbereich deklariert ist, und gibt einen Fehler zurück.
+Variablen haben einen lokalen Gültigkeitsbereich und sind nur im Batch bzw. in der Prozedur sichtbar, in dem bzw. in der sie definiert sind. Im folgenden Beispiel bietet der zur Ausführung von sp_executesql erstellte geschachtelte Gültigkeitsbereich keinen Zugriff auf die Variable, die im höheren Geltungsbereich deklariert ist, und gibt einen Fehler zurück.  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 Für eine Variable, die deklariert wird, wird der Wert anfangs auf NULL festgelegt. Verwenden Sie die SET-Anweisung, um einer Variablen einen Wert zuzuweisen. Diese Methode ist für die Zuweisung eines Werts zu einer Variablen zu bevorzugen. Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in der Auswahlliste einer SELECT-Anweisung verwiesen wird.
 
-Wenn Sie einer Variablen einen Wert mit der SET-Anweisung zuweisen, geben Sie den Variablennamen und den Wert an, der der Variablen zugewiesen werden soll. Diese Methode ist für die Zuweisung eines Werts zu einer Variablen zu bevorzugen. Der folgende Batch deklariert z. B. zwei Variablen, weist ihnen Werte zu und verwendet sie dann in der `WHERE`-Klausel einer `SELECT`-Anweisung:
+Wenn Sie einer Variablen einen Wert mit der SET-Anweisung zuweisen, geben Sie den Variablennamen und den Wert an, der der Variablen zugewiesen werden soll. Diese Methode ist für die Zuweisung eines Werts zu einer Variablen zu bevorzugen. Der folgende Batch deklariert z. B. zwei Variablen, weist ihnen Werte zu und verwendet sie dann in der `WHERE`-Klausel einer `SELECT`-Anweisung:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in einer Auswahlliste verwiesen wird. Wenn auf eine Variable in einer Auswahlliste verwiesen wird, sollte ihr ein Skalarwert zugewiesen werden, oder die SELECT-Anweisung sollte nur eine Zeile zurückgeben. Beispiel:
+Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in einer Auswahlliste verwiesen wird. Wenn auf eine Variable in einer Auswahlliste verwiesen wird, sollte ihr ein Skalarwert zugewiesen werden, oder die SELECT-Anweisung sollte nur eine Zeile zurückgeben. Beispiel:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > Wenn es in einer einzelnen SELECT-Anweisung mehrere Zuordnungsklauseln gibt, kann SQL Server die Bewertungsreihenfolge der Ausdrücke nicht sicherstellen. Beachten Sie, dass die Auswirkungen nur dann sichtbar sind, wenn es Verweise zwischen den Zuordnungen gibt.
 
-Wenn eine SELECT-Anweisung gibt mehr als eine Zeile zurück, und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable für den Ausdruck in der letzten Zeile des Resultsets zurückgegebenen Wert festgelegt. Z. B. in den folgenden Batch  **@EmpIDVariable**  festgelegt ist, um die **BusinessEntityID** Wert der letzten Zeile zurückgegeben, das 1 ist:
+Wenn eine SELECT-Anweisung gibt mehr als eine Zeile zurück, und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable für den Ausdruck in der letzten Zeile des Resultsets zurückgegebenen Wert festgelegt. Z. B. in den folgenden Batch  **@EmpIDVariable**  festgelegt ist, um die **BusinessEntityID** Wert der letzten Zeile zurückgegeben, das 1 ist:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [WÄHLEN SIE@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+
