@@ -1,10 +1,10 @@
 --- 
-redirect_url: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+redirect_url: /sql/relational-databases/import-export/overview-import-export
 ms.translationtype: HT
-ms.sourcegitcommit: 8ffa3bec08e42eaf5be7cfd734d9748dca82a3b6
-ms.openlocfilehash: de10877231899f0b8aa04d4a94ba0a65cf44cf83
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: dbe7c9077bf8fa1eabdfb3384844d27ca02e86d6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 09/14/2017
 
 --- 
 
