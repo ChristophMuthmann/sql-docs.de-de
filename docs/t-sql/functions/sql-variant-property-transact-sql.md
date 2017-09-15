@@ -1,7 +1,7 @@
 ---
 title: SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cc3088c7025333c5cea3766cc65f56efdd45134
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: bd9b181c04a96ee90b0bbb54546a1d925761224f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
@@ -49,14 +47,14 @@ SQL_VARIANT_PROPERTY ( expression , property )
  Ist ein Ausdruck vom Typ **Sql_variant**.  
   
  *Eigenschaft*  
- Enthält den Namen des der **Sql_variant** -Eigenschaft für die Informationen bereitgestellt werden. *Eigenschaft* ist **Varchar (**128**)**, und kann einen der folgenden Werte sein.  
+ Enthält den Namen des der **Sql_variant** -Eigenschaft für die Informationen bereitgestellt werden. *Eigenschaft* ist **Varchar (**128**)**, und kann einen der folgenden Werte sein:  
   
 |Wert|Description|Zurückgegebener Basistyp von sql_variant|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, beispielsweise:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **Datum**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **Uhrzeit**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Genauigkeit**|Anzahl der Stellen des numerischen Basisdatentyps:<br /><br /> **"DateTime"** = 23<br /><br /> **Smalldatetime** = 16<br /><br /> **"float"** = 53<br /><br /> **echte** = 24<br /><br /> **Decimal** (p, s) und **numerischen** (p, s) = p<br /><br /> **Money** = 19<br /><br /> **Smallmoney** = 10<br /><br /> **"bigint"** = 19<br /><br /> **Int** = 10<br /><br /> **"smallint"** = 5<br /><br /> **"tinyint"** = 3<br /><br /> **Bit** = 1<br /><br /> Alle sonstigen Typen = 0|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Dezimalstellen**|Anzahl der Stellen hinter dem Dezimalkomma des numerischen Basisdatentyps:<br /><br /> **Decimal** (p, s) und **numerischen** (p, s) = s<br /><br /> **Money** und **Smallmoney** = 4<br /><br /> **"DateTime"** = 3<br /><br /> Alle anderen Typen = 0|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**"TotalBytes" So**|Anzahl der Byte, die zum Speichern der Metadaten und der Daten des Werts erforderlich sind. Diese Informationen zur nützlich zum Überprüfen der maximalen Größe einer Datenseite in einem **Sql_variant** Spalte. Wenn der Wert größer als 900 ist, schlägt die Indexerstellung fehl.|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**"TotalBytes" So**|Anzahl der Byte, die zum Speichern der Metadaten und der Daten des Werts erforderlich sind. Diese Informationen zur nützlich zum Überprüfen der maximalen Größe einer Datenseite in einem **Sql_variant** Spalte. Wenn der Wert größer als 900 ist, schlägt fehl, Erstellung eines Indexes.|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Sortierung**|Stellt die Sortierung des entsprechenden **Sql_variant** Wert.|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**MaxLength**|Maximale Länge des Datentyps in Byte. Beispielsweise **MaxLength** von **Nvarchar (**50**)** ist 100, **MaxLength** von **Int** ist 4.|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
   
@@ -64,9 +62,10 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant**  
   
 ## <a name="examples"></a>Beispiele  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Verwenden eine Sql_variant in einer Tabelle  
  Das folgende Beispiel ruft `SQL_VARIANT_PROPERTY` Informationen zu den `colA` Wert `46279.1` , in denen `colB`  = `1689`, davon ausgehend, dass `tableA` hat `colA` vom Typ `sql_variant` und `colB`.  
   
-```  
+```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
 INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
@@ -86,10 +85,10 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Verwenden eine Sql_variant als variable   
  Das folgende Beispiel ruft `SQL_VARIANT_PROPERTY` Informationen zu einer Variablen mit dem Namen @v1.  
   
-```  
+```sql    
 DECLARE @v1 sql_variant;  
 SET @v1 = 'ABC';  
 SELECT @v1;  

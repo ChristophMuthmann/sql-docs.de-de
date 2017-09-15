@@ -1,0 +1,56 @@
+---
+title: IsClosed-Methode (SQLServerConnection) | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- SQLServerConnection.isClosed
+apilocation:
+- sqljdbc.jar
+apitype: Assembly
+ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
+caps.latest.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 634a402f06005c7235755988adf1435d38da0313
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="isclosed-method-sqlserverconnection"></a>IsClosed-Methode (SQLServerConnection)
+[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+
+  Gibt an, ob dies [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt geschlossen wurde.  
+  
+## <a name="syntax"></a>Syntax  
+  
+```  
+  
+public boolean isClosed()  
+```  
+  
+## <a name="return-value"></a>Rückgabewert  
+ **"true"** ist die Verbindung schließen, **"false"** wird jedoch nicht.  
+  
+## <a name="exceptions"></a>Ausnahmen  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+  
+## <a name="remarks"></a>Hinweise  
+ Diese IsClosed-Methode wird von der IsClosed-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+  
+ Überprüft den Status des aufgerufenen SQLServerConnection-Objekts. Eine Verbindung wird geschlossen, wenn die [schließen](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) Methode, die davon aufgerufen wurde oder bestimmte schwerwiegende Fehler aufgetreten sind. Von dieser Methode zurückgegeben **"true"** nur wenn sie aufgerufen wird, nachdem der close-Methode aufgerufen wurde.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+ [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+  
+  
