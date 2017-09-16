@@ -1,51 +1,51 @@
 ---
 title: 'Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio | Microsoft-Dokumentation'
 ms.custom: 
-ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 8ef902752c9ea7ead6129b0009f6762bc0457047
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: 28a91a6c2e41a7c360c484d8c34e5ee52761e865
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ein leistungsstarkes und flexibles Tool. Benutzer, für die Microsoft Visual Studio noch neu ist, haben jedoch manchmal Probleme, den schnellsten Weg für den Zugriff auf die gewünschten Funktionen zu finden. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) ist ein leistungsstarkes und flexibles Tool. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  
   
 Diese Lektion enthält die folgenden Themen:  
   
--   [Starten von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms166996.aspx)  
+-   [Starten von SQL Server Management Studio (SSMS)](lesson-1-1-start-sql-server-management-studio.md)  
   
--   [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](https://msdn.microsoft.com/library/ms170681.aspx)  
+-   [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
   
--   [Ändern des Umgebungslayouts](https://msdn.microsoft.com/library/ms170069.aspx)  
+-   [Ändern des Umgebungslayouts](lesson-1-3-change-the-environment-layout.md)  
   
--   [Anzeigen des Abfragefensters](https://msdn.microsoft.com/library/ms169823.aspx)  
+-   [Anzeigen des Abfragefensters](lesson-1-4-display-the-query-window.md)  
   
--   [Anzeigen der Seite Details zum Objekt-Explorer](https://msdn.microsoft.com/library/ms170076.aspx)  
+-   [Anzeigen der Seite Details zum Objekt-Explorer](lesson-1-5-show-the-object-explorer-details-page.md)  
   
--   [Auswählen des Schemas für Tastenkombinationen](https://msdn.microsoft.com/library/ms167416.aspx)  
+-   [Auswählen des Schemas für Tastenkombinationen](lesson-1-6-select-the-keyboard-shortcut-scheme.md)  
   
--   [Festlegen der Startoptionen](https://msdn.microsoft.com/library/ms166556.aspx) 
+-   [Festlegen der Startoptionen](lesson-1-7-set-the-startup-options.md) 
   
--   [Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](https://msdn.microsoft.com/library/ms166550.aspx)  
+-   [Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
--   [Zusammenfassung: Grundlagen zur Navigation](https://msdn.microsoft.com/library/ms170043.aspx)  
+-   [Zusammenfassung: Grundlagen zur Navigation](lesson-1-9-summary-basic-navigation.md)  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
-[Starten von SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md)  
+[Starten von SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
   
   
   
