@@ -19,7 +19,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: de-de
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie ein Abonnement erstellen, können Sie ein Ausgabedateiformat auswählen. Nicht alle Berichte funktionieren in jedem Format optimal. Bevor Sie ein Format in einem Abonnement auswählen, sollten Sie den Bericht öffnen und ihn in verschiedene Formate exportieren, um zu überprüfen, ob er wie erwartet angezeigt wird.  
   
- Benutzer benötigen die Listenberechtigung **Elemente bearbeiten** in SharePoint, wenn sie in der Lage sein sollen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zu erstellen. Weitere Informationen finden Sie unter [Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Benutzer benötigen die Listenberechtigung **Elemente bearbeiten** in SharePoint, wenn sie in der Lage sein sollen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zu erstellen. Weitere Informationen finden Sie unter [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 > [!IMPORTANT]  
 >  Bei einem Abonnement, bei dem ein Bericht an eine Bibliothek oder einen freigegebenen Ordner übermittelt wird, wird eine neue, statische Datei erstellt, die auf dem ursprünglichen Bericht basiert. Es handelt sich jedoch nicht um eine echte Berichtsdefinition, die im Berichts-Viewer-Webpart ausgeführt wird. Wenn der ursprüngliche Bericht über interaktive Funktionen (z. B. Drillthroughlinks) oder dynamischen Inhalt verfügt, sind diese Funktionen in der statischen Datei, die an den Zielspeicherort übermittelt wird, nicht verfügbar. Wenn Sie eine "Webseite" auswählen, können Sie begrenzt Interaktivität beibehalten. Da das Dokument jedoch keine RDL-Datei darstellt, die im Berichts-Viewer ausgeführt wird, werden durch das Durchklicken eines Berichts neue Seiten in der Browsersitzung erstellt, durch die Sie einen Bildlauf durchführen müssen, um zur Website zurückzukehren.  
