@@ -1,7 +1,7 @@
 ---
 title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/11/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2f355774338fc94a37411a74706c9b46b7c256
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -45,8 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -70,10 +68,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-set-the-lock-timeout-to-1800-seconds"></a>A: das Sperrtimeout auf 1800 Sekunden festgelegt  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: das Sperrtimeout auf 1800 Millisekunden festgelegt  
  Im folgenden Beispiel wird der Sperrtimeout auf `1800` Millisekunden festgelegt.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -83,13 +81,13 @@ GO
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Legen Sie das Sperrungstimeout ewig warten, bis eine Sperre aufgehoben wird.  
  Im folgenden Beispiel wird der Sperrtimeout ewig warten und laufen nie ab. Dies ist das Standardverhalten, das am Anfang jeder Verbindung bereits festgelegt ist.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  Im folgenden Beispiel wird der Sperrtimeout auf `1800` Millisekunden festgelegt. In dieser Version [!INCLUDE[ssDW](../../includes/ssdw-md.md)] analysieren Sie die Anweisung erfolgreich, aber werden ignoriert den Wert 1800 und weiterhin das Standardverhalten zu verwenden.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   
