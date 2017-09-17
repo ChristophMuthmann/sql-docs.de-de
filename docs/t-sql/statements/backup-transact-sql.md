@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -50,10 +50,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: ac638619fc3117551c774ecc26a43cae72826d39
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 3654be2e02163cd8069a95eb5e82d4649cec1ab5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -179,18 +179,19 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  Eine Medienfamilie muss immer auf demselben Medium innerhalb eines bestimmten Spiegels gesichert werden. Das Protokoll wird abgeschnitten, nachdem alle Datensätze innerhalb mindestens einer virtuellen Protokolldatei deaktiviert werden. Wenn das Protokoll nach routinemäßigen Protokollsicherungen nicht abgeschnitten wird, wird das Abschneiden des Protokolls möglicherweise verzögert. Weitere Informationen finden Sie weiter oben unter  
   
- { *Database_name*| **@**Database_name_var *}  
- Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird. Wenn als Variable (**@***Database_name_var*), kann dieser Name entweder als Zeichenfolgenkonstante ( **@**   *Database_name_var***=***Datenbankname*) oder als Variable eines Zeichenfolgen-Datentyp, mit Ausnahme der **Ntext** oder **Text** -Datentypen.  
+ { *Database_name* | **@**Database_name_var *}   
+ Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird. Wenn als Variable (**@***Database_name_var*), kann dieser Name entweder als Zeichenfolgenkonstante (** @ ** * Database_name_var***=***Datenbankname*) oder als Variable eines Zeichenfolgen-Datentyp, mit Ausnahme der **Ntext** oder **Text** -Datentypen.  
   
 > [!NOTE]  
 >  Eine Sicherung der Spiegeldatenbank in einer Datenbank-Spiegelungspartnerschaft ist nicht möglich.  
   
-\<File_or_filegroup > [ **,**...  *n*  ] Verwendet nur mit BACKUP DATABASE gibt eine Datenbankdatei oder Dateigruppe in eine dateisicherung eingeschlossen werden sollen, oder gibt eine schreibgeschützte Datei oder Dateigruppe in eine teilsicherung eingeschlossen werden sollen.  
+\<File_or_filegroup > [ **,**... *n* ]  
+ Wird nur mit BACKUP DATABASE verwendet, gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.  
   
- Datei  **=**  { *Logical_file_name*| **@***Logical_file_name_var* }  
+ Datei ** = ** { *Logical_file_name*| **@***Logical_file_name_var* }  
  Der logische Name einer Datei oder einer Variablen, deren Wert dem logischen Namen einer Datei entspricht, die in der Sicherung enthalten sein soll.  
   
- DATEIGRUPPE  **=**  { *logischer_dateigruppenname*| **@***Logical_filegroup_name_var* }  
+ DATEIGRUPPE ** = ** { *logischer_dateigruppenname*| **@***Logical_filegroup_name_var* }  
  Der logische Name einer Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer Dateigruppe entspricht, die in der Sicherung enthalten sein soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.  
   
 > [!NOTE]  
@@ -218,14 +219,14 @@ Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, de
   
  Weitere Informationen zu teilsicherungen finden Sie unter [Teilsicherungen &#40; SQLServer &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-UM \<Backup_device > [ **,**...  *n*  ] Gibt an, die dem zugehörigen von Satz [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) wird ein ungespiegeltes Medium festlegen oder den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für welche eine oder mehrere MIRROR TO Klauseln deklariert werden).  
+UM \<Backup_device > [ **,**... * n * ] Gibt an, die dem zugehörigen von Satz [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) wird ein ungespiegeltes Medium festlegen oder den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für welche eine oder mehrere MIRROR TO Klauseln deklariert werden).  
   
 \<Backup_device > Gibt ein logisches oder physisches Sicherungsmedium für den Sicherungsvorgang verwendet.  
   
  { *Logical_device_name* | **@***Logical_device_name_var* }  
- Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Wenn als Variable (@*Logical_device_name_var*), Name des Sicherungsmediums kann entweder als Zeichenfolgenkonstante (@*Logical_device_name_var*  **=**  logischen Sicherungsmediums) oder als Variable eines alle Zeichenfolgen-Datentyp mit Ausnahme der **Ntext** oder **Text** -Datentypen.  
+ Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Wenn als Variable (@*Logical_device_name_var*), Name des Sicherungsmediums kann entweder als Zeichenfolgenkonstante (@*Logical_device_name_var* ** = ** logischen Sicherungsmediums) oder als Variable eines alle Zeichenfolgen-Datentyp mit Ausnahme der **Ntext** oder **Text** -Datentypen.  
   
- {DISK | BAND | URL}  **=**  { **"***Physical_device_name***"**  |   **@**  *Physical_device_name_var* }  
+ {DISK | BAND | URL} ** = ** { **"***Physical_device_name***"**  |  ** @ ** *Physical_device_name_var* }  
  Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Windows Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen und Beispiele finden Sie unter [SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Lernprogramm finden Sie unter [Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -243,7 +244,7 @@ UM \<Backup_device > [ **,**...  *n*  ] Gibt an, die dem zugehörigen von Satz [
  *n*  
  Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.  
   
-MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei sekundären Sicherungsmedien, jedes der Spiegel den Sicherungsmedien in der TO-Klausel angegeben. Die MIRROR TO-Klausel muss denselben Typ und Anzahl der Sicherungsmedien wie die TO-Klausel angeben. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.  
+MIRROR TO \<Backup_device > [ **,**... * n * ] Gibt einen Satz von bis zu drei sekundären Sicherungsmedien, jedes der Spiegel den Sicherungsmedien in der TO-Klausel angegeben. Die MIRROR TO-Klausel muss denselben Typ und Anzahl der Sicherungsmedien wie die TO-Klausel angeben. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.  
   
  Diese Option ist nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.  
   
@@ -303,12 +304,12 @@ MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei s
     > [!WARNING]  
     >  Bei der Verschlüsselung in Verbindung mit dem FILE_SNAPSHOT-Argument verwendet wird, die Metadatendatei selbst wird mithilfe des angegebenen Verschlüsselungsalgorithmus verschlüsselt, und das System stellt sicher, dass TDE für die Datenbank abgeschlossen wurde. Keine zusätzliche Verschlüsselung erfolgt für die Daten selbst. Die Sicherung schlägt fehl, wenn die Datenbank nicht verschlüsselt wurde oder die backup-Anweisung wurde ausgegeben, wenn die Verschlüsselung nicht vor abgeschlossen wurde.  
   
- **Sicherungssatzoptionen**  
+**Sicherungssatzoptionen**  
   
- Diese Optionen werden für den durch diesen Sicherungsvorgang erstellten Sicherungssatz verwendet.  
+Diese Optionen werden für den durch diesen Sicherungsvorgang erstellten Sicherungssatz verwendet.  
   
 > [!NOTE]  
->  Um einen Sicherungssatz für einen Wiederherstellungsvorgang anzugeben, verwenden Sie die Datei  **=**   *\<Backup_set_file_number >* Option. Weitere Informationen zum Angeben eines Sicherungssatzes finden Sie unter "Angeben eines Sicherungssatzes" in [RESTORE-Argumente &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  Um einen Sicherungssatz für einen Wiederherstellungsvorgang anzugeben, verwenden Sie die Datei ** = ** * \<Backup_set_file_number >* Option. Weitere Informationen zum Angeben eines Sicherungssatzes finden Sie unter "Angeben eines Sicherungssatzes" in [RESTORE-Argumente &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Gibt an, dass die Sicherung ist ein *kopiesicherung*, wirkt sich nicht die normale Sequenz von Sicherungen. Eine Kopiesicherung wird unabhängig von den regelmäßig geplanten konventionellen Sicherungen erstellt. Eine Kopiesicherung hat keine Auswirkungen auf die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank.  
@@ -322,250 +323,240 @@ MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei s
   
 -   Bei Verwendung mit BACKUP LOG wird die COPY_ONLY-Option erstellt eine *kopiesicherungen protokollsicherung*, die das Transaktionsprotokoll nicht abschneidet. Die Kopieprotokollsicherung hat keine Auswirkungen auf die Protokollkette, und andere Protokollsicherungen verhalten sich so, als sei die Kopiesicherung nicht vorhanden.  
   
- Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
- { COMPRESSION | NO_COMPRESSION }  
- In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen gibt nur an, ob [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) für diese Sicherung, überschreiben die Standardeinstellung auf Serverebene ausgeführt wird.  
+{ COMPRESSION | NO_COMPRESSION }  
+In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen gibt nur an, ob [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) für diese Sicherung, überschreiben die Standardeinstellung auf Serverebene ausgeführt wird.  
   
- Die Sicherungskomprimierung wird bei der Installation standardmäßig deaktiviert. Diese Standardeinstellung kann jedoch geändert werden durch Festlegen der [Komprimierungsstandard für Sicherung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) Serverkonfigurationsoption. Informationen zum Anzeigen des aktuellen Wert dieser Option finden Sie unter [anzeigen oder Ändern von Servereigenschaften &#40; SQLServer &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+Die Sicherungskomprimierung wird bei der Installation standardmäßig deaktiviert. Diese Standardeinstellung kann jedoch geändert werden durch Festlegen der [Komprimierungsstandard für Sicherung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) Serverkonfigurationsoption. Informationen zum Anzeigen des aktuellen Wert dieser Option finden Sie unter [anzeigen oder Ändern von Servereigenschaften &#40; SQLServer &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
- COMPRESSION  
- Aktiviert die Sicherungskomprimierung explizit.  
+COMPRESSION  
+Aktiviert die Sicherungskomprimierung explizit.  
   
- NO_COMPRESSION  
- Deaktiviert die Sicherungskomprimierung explizit.  
+NO_COMPRESSION  
+Deaktiviert die Sicherungskomprimierung explizit.  
   
- DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
- Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.  
+DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.  
   
- Namen  **=**  { *Backup_set_name*| **@***Backup_set_var* }  
- Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.  
+Namen ** = ** { *Backup_set_name*| **@***Backup_set_var* }  
+Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.  
   
- {EXPIREDATE **= "***Datum***"**| RETAINDAYS  **=**  *Tage* }  
- Gibt an, wann der Sicherungssatz für diese Sicherung überschrieben werden kann. Wenn beide Optionen verwendet werden, hat RETAINDAYS Vorrang vor EXPIREDATE.  
+{EXPIREDATE **= "***Datum***"**| RETAINDAYS ** = ** *Tage* }  
+Gibt an, wann der Sicherungssatz für diese Sicherung überschrieben werden kann. Wenn beide Optionen verwendet werden, hat RETAINDAYS Vorrang vor EXPIREDATE.  
   
- Wenn keine der Optionen angegeben wird, richtet sich das Ablaufdatum durch die **Mediaretention** -Konfigurationseinstellung. Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
+Wenn keine der Optionen angegeben wird, richtet sich das Ablaufdatum durch die **Mediaretention** -Konfigurationseinstellung. Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
 > [!IMPORTANT]  
 >  Diese Optionen verhindern nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datei überschreibt. Bänder können mit anderen Methoden gelöscht werden, und Dateien auf einem Datenträger können mit entsprechenden Betriebssystembefehlen gelöscht werden. Weitere Informationen zur Prüfung des Ablaufdatums finden Sie unter SKIP und FORMAT in diesem Thema.  
   
- EXPIREDATE  **=**  { **"***Datum***"** |   **@**  *Date_var* }  
+EXPIREDATE ** = ** { **"***Datum***"** |  ** @ ** *Date_var* }  
  Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Wenn als Variable (@*Date_var*), dieses Datum muss das konfigurierte System folgen **"DateTime"** formatieren und als eines der folgenden angegeben werden:  
   
--   Eine Zeichenfolgenkonstante (@*Date_var*  **=**  Datum)  
-  
+-   Eine Zeichenfolgenkonstante (@*Date_var* ** = ** Datum)  
 -   Eine Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der **Ntext** oder **Text** Datentypen)  
-  
 -   Ein **Smalldatetime**  
-  
 -   Ein **"DateTime"** Variable  
   
- Beispiel:  
+Beispiel:  
   
 -   `'Dec 31, 2020 11:59 PM'`  
-  
 -   `'1/1/2021'`  
   
- Informationen zum Angeben der **"DateTime"** -Werte finden Sie in [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md).  
+Informationen zum Angeben der **"DateTime"** -Werte finden Sie in [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md).  
   
 > [!NOTE]  
 >  Zum Ignorieren des Ablaufdatums verwenden Sie die Option SKIP.  
   
- RETAINDAYS  **=**  { *Tage*| **@***Days_var* }  
+RETAINDAYS ** = ** { *Tage*| **@***Days_var* }  
  Gibt die Anzahl von Tagen an, die verstreichen müssen, bevor dieser Sicherungsmediensatz überschrieben werden kann. Wenn als Variable (**@***Days_var*), muss Sie als ganze Zahl angegeben werden.  
   
- **Mediensatzoptionen**  
+**Mediensatzoptionen**  
   
- Diese Optionen werden für den Mediensatz insgesamt verwendet.  
+Diese Optionen werden für den Mediensatz insgesamt verwendet.  
   
- { **NOINIT** | INIT}  
+{ **NOINIT** | INIT}  
  Steuert, ob der Sicherungsvorgang an die vorhandenen Sicherungssätze auf dem Sicherungsmedium angefügt wird oder diese überschreibt. Er wird standardmäßig an den neuesten Sicherungssatz auf dem Medium (NOINIT) angefügt.  
   
 > [!NOTE]  
 >  Informationen zu Interaktionen zwischen { **NOINIT** | INIT} und { **NOSKIP** | SKIP}, finden Sie unter "Hinweise" weiter unten in diesem Thema.  
   
- NOINIT  
+NOINIT  
  Zeigt an, dass der Sicherungssatz an den angegebenen Mediensatz angehängt wird, wobei vorhandene Sicherungssätze erhalten bleiben. Wenn für den Mediensatz ein Medienkennwort definiert ist, muss dieses Kennwort angegeben werden. NOINIT ist die Standardeinstellung.  
   
- Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md):  
+Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md):  
   
- INIT  
+INIT  
  Gibt an, dass alle Sicherungssätze überschrieben werden sollen, während der Medienheader erhalten bleibt. Wenn INIT angegeben wird, werden alle bereits auf dem Medium vorhandenen Sicherungssätze überschrieben (wenn die Bedingungen dies zulassen). Standardmäßig prüft BACKUP die folgenden Bedingungen und überschreibt die Sicherungsmedien nicht, wenn eine der Bedingungen erfüllt wird:  
   
 -   Einer der Sicherungssätze ist noch nicht abgelaufen. Weitere Informationen finden Sie unter den Optionen EXPIREDATE und RETAINDAYS.  
-  
 -   Der möglicherweise in der BACKUP-Anweisung angegebene Name des Sicherungssatzes stimmt nicht mit dem Namen auf dem Sicherungsmedium überein. Weitere Informationen finden Sie unter der Option NAME weiter oben in diesem Abschnitt.  
   
- Verwenden Sie die Option SKIP, um diese Überprüfungen zu überschreiben.  
+Verwenden Sie die Option SKIP, um diese Überprüfungen zu überschreiben.  
   
- Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md):  
+Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md):  
   
- { **NOSKIP** | SKIP}  
- Steuert, ob ein Sicherungsvorgang das Ablaufdatum und die Ablaufzeit der Sicherungssätze auf dem Medium überprüft, bevor diese überschrieben werden.  
+{ **NOSKIP** | SKIP}  
+Steuert, ob ein Sicherungsvorgang das Ablaufdatum und die Ablaufzeit der Sicherungssätze auf dem Medium überprüft, bevor diese überschrieben werden.  
   
 > [!NOTE]  
 >  Informationen zu Interaktionen zwischen { **NOINIT** | INIT} und { **NOSKIP** | SKIP}, finden Sie unter "Hinweise" weiter unten in diesem Thema.  
   
- NOSKIP  
- Weist die BACKUP-Anweisung an, das Ablaufdatum aller Sicherungssätze auf den Medien zu prüfen, bevor diese überschrieben werden dürfen. Dies ist das Standardverhalten.  
+NOSKIP  
+Weist die BACKUP-Anweisung an, das Ablaufdatum aller Sicherungssätze auf den Medien zu prüfen, bevor diese überschrieben werden dürfen. Dies ist das Standardverhalten.  
   
- SKIP  
- Deaktiviert die Prüfung von Ablaufdatum und Namen der Sicherungssätze. Diese Überprüfung wird normalerweise von der BACKUP-Anweisung ausgeführt, damit ein Überschreiben von Sicherungssätzen verhindert wird. Informationen zu Interaktionen zwischen { INIT | NOINIT } und { NOSKIP | SKIP } finden Sie unter "Hinweise" weiter unten in diesem Thema.  
+SKIP  
+Deaktiviert die Prüfung von Ablaufdatum und Namen der Sicherungssätze. Diese Überprüfung wird normalerweise von der BACKUP-Anweisung ausgeführt, damit ein Überschreiben von Sicherungssätzen verhindert wird. Informationen zu Interaktionen zwischen { INIT | NOINIT } und { NOSKIP | SKIP } finden Sie unter "Hinweise" weiter unten in diesem Thema.  
+Um das Ablaufdatum der Sicherungssätze anzuzeigen, Fragen Sie die **Expiration_date** Spalte die [Backupset](../../relational-databases/system-tables/backupset-transact-sql.md) Verlaufstabelle.  
   
- Um das Ablaufdatum der Sicherungssätze anzuzeigen, Fragen Sie die **Expiration_date** Spalte die [Backupset](../../relational-databases/system-tables/backupset-transact-sql.md) Verlaufstabelle.  
+{ **"NOFORMAT"** | DAS FORMAT}  
+Gibt an, dass der Medienheader auf alle Volumes geschrieben werden soll, die für diesen Sicherungsvorgang verwendet werden. Dabei werden vorhandene Medienheader und Sicherungssätze überschrieben.  
   
- { **"NOFORMAT"** | DAS FORMAT}  
- Gibt an, dass der Medienheader auf alle Volumes geschrieben werden soll, die für diesen Sicherungsvorgang verwendet werden. Dabei werden vorhandene Medienheader und Sicherungssätze überschrieben.  
+NOFORMAT  
+Gibt an, dass der Sicherungsvorgang die vorhandenen Medienheader und Sicherungssätze auf den Medienvolumes beibehält, die für diesen Vorgang verwendet werden. Dies ist das Standardverhalten.  
   
- NOFORMAT  
- Gibt an, dass der Sicherungsvorgang die vorhandenen Medienheader und Sicherungssätze auf den Medienvolumes beibehält, die für diesen Vorgang verwendet werden. Dies ist das Standardverhalten.  
-  
- FORMAT  
- Gibt an, dass ein neuer Mediensatz erstellt werden kann. FORMAT bewirkt, dass vom Sicherungsvorgang ein neuer Medienheader auf alle Medienvolumes geschrieben wird, die für den Sicherungsvorgang verwendet werden. Der vorhandene Inhalt des Volumes wird ungültig, da alle vorhandenen Medienheader und Sicherungssätze überschrieben werden.  
+FORMAT  
+Gibt an, dass ein neuer Mediensatz erstellt werden kann. FORMAT bewirkt, dass vom Sicherungsvorgang ein neuer Medienheader auf alle Medienvolumes geschrieben wird, die für den Sicherungsvorgang verwendet werden. Der vorhandene Inhalt des Volumes wird ungültig, da alle vorhandenen Medienheader und Sicherungssätze überschrieben werden.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie FORMAT mit Vorsicht. Die Formatierung von Volumes eines Mediensatzes führt dazu, dass der gesamte Mediensatz nicht mehr verwendet werden kann. Wird beispielsweise ein einzelnes Band initialisiert, das zu vorhandenen Stripesetmedien gehört, führt dies dazu, dass der gesamte Mediensatz unbrauchbar wird.  
   
- Durch die Angabe von FORMAT ist SKIP impliziert. SKIP muss nicht explizit angegeben werden.  
+Durch die Angabe von FORMAT ist SKIP impliziert. SKIP muss nicht explizit angegeben werden.  
   
- MEDIADESCRIPTION  **=**  { *Text* | **@***Text_variable* }  
- Gibt die Freiform-Textbeschreibung des Mediensatzes an. Diese kann aus maximal 255 Zeichen bestehen.  
+MEDIADESCRIPTION ** = ** { *Text* | **@***Text_variable* }  
+Gibt die Freiform-Textbeschreibung des Mediensatzes an. Diese kann aus maximal 255 Zeichen bestehen.  
   
- MEDIANAME  **=**  { *Media_name* | **@***Media_name_variable* }  
- Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird MEDIANAME angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.  
+MEDIANAME ** = ** { *Media_name* | **@***Media_name_variable* }  
+Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird MEDIANAME angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.  
   
- BLOCKSIZE  **=**  { *Blocksize* | **@***Blocksize_variable* }  
- Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.  
+BLOCKSIZE ** = ** { *Blocksize* | **@***Blocksize_variable* }  
+Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.  
   
- Geben Sie beim Erstellen einer Sicherung, die Sie auf eine CD-ROM kopieren und von dieser wiederherstellen möchten, BLOCKSIZE=2048 an.  
+Geben Sie beim Erstellen einer Sicherung, die Sie auf eine CD-ROM kopieren und von dieser wiederherstellen möchten, BLOCKSIZE=2048 an.  
   
 > [!NOTE]  
 >  Diese Option hat i. d. R. nur dann Auswirkungen auf die Leistung, wenn auf Bandmedien geschrieben wird.  
   
- **Datenübertragungsoptionen**  
+**Datenübertragungsoptionen**  
   
- "BUFFERCOUNT"  **=**  { *"BUFFERCOUNT"* | **@***Buffercount_variable* }  
- Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.  
+"BUFFERCOUNT" ** = ** { *"BUFFERCOUNT"* | **@***Buffercount_variable* }  
+Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.  
   
- Der von den Puffern belegte Gesamtspeicherplatz richtet sich nach: *"BUFFERCOUNT"***\****"MAXTRANSFERSIZE"*.  
+Der von den Puffern belegte Gesamtspeicherplatz richtet sich nach: *"BUFFERCOUNT"***\****"MAXTRANSFERSIZE"*.  
   
 > [!NOTE]  
 >  Wichtige Informationen zur Verwendung der BUFFERCOUNT-Option finden Sie unter der [falsche "BUFFERCOUNT" Data Transfer-Option kann dazu führen, dass OOM-Bedingung](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) Blog.  
   
- "MAXTRANSFERSIZE"  **=**  { *"MAXTRANSFERSIZE"* | **@***Maxtransfersize_variable* }  
+"MAXTRANSFERSIZE" ** = ** { *"MAXTRANSFERSIZE"* | **@***Maxtransfersize_variable* }  
  Gibt die größte zu verwendende Übertragungseinheit zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).  
 > [!NOTE]  
->  Wenn die Datenbank FILESTREAM konfiguriert wurde, oder enthält oder In-Memory-OLTP-Dateigruppen, `MAXTRANSFERSIZE` zum Zeitpunkt der Wiederherstellung muss größer als oder gleich, was beim Erstellen die Sicherung verwendet wurde.  
+>  Beim Erstellen von Sicherungen mithilfe der SQL Writer-Dienst, wenn die Datenbank FILESTREAM konfiguriert wurde, oder In-Memory-OLTP-Dateigruppen, enthält die `MAXTRANSFERSIZE` zum Zeitpunkt der Wiederherstellung muss größer als oder gleich der `MAXTRANSFERSIZE` wurde verwendet, wenn die Sicherung erstellt wurde. 
   
- **Fehlerverwaltungsoptionen**  
+**Fehlerverwaltungsoptionen**  
   
- Diese Optionen können Sie bestimmen, ob sicherungsprüfsummen für den Sicherungsvorgang aktiviert werden, und gibt an, ob der Vorgang bei Auftreten eines Fehlers beendet wird.  
+Diese Optionen können Sie bestimmen, ob sicherungsprüfsummen für den Sicherungsvorgang aktiviert werden, und gibt an, ob der Vorgang bei Auftreten eines Fehlers beendet wird.  
   
- { **NO_CHECKSUM** | CHECKSUM}  
+{ **NO_CHECKSUM** | CHECKSUM}  
  Steuert, ob Sicherungsprüfsummen aktiviert sind.  
   
- NO_CHECKSUM  
- Das Generieren von Sicherungsprüfsummen (und die Überprüfung von Seitenprüfsummen) wird explizit deaktiviert. Dies ist das Standardverhalten.  
+NO_CHECKSUM  
+Das Generieren von Sicherungsprüfsummen (und die Überprüfung von Seitenprüfsummen) wird explizit deaktiviert. Dies ist das Standardverhalten.  
   
- CHECKSUM  
- Gibt an, dass der Sicherungsvorgang jede Seite auf Prüfsumme und zerrissene Seiten überprüft, wenn aktiviert und verfügbar, und generiert eine Prüfsumme für die gesamte Sicherung.  
+CHECKSUM  
+Gibt an, dass der Sicherungsvorgang jede Seite auf Prüfsumme und zerrissene Seiten überprüft, wenn aktiviert und verfügbar, und generiert eine Prüfsumme für die gesamte Sicherung.  
   
- Die Verwendung von Sicherungsprüfsummen kann sich auf die Arbeitsauslastung und den Durchsatz bei der Sicherung auswirken.  
+Die Verwendung von Sicherungsprüfsummen kann sich auf die Arbeitsauslastung und den Durchsatz bei der Sicherung auswirken.  
   
- Weitere Informationen finden Sie unter [mögliche Medienfehler während der Sicherung und Wiederherstellung &#40; SQLServer &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+Weitere Informationen finden Sie unter [mögliche Medienfehler während der Sicherung und Wiederherstellung &#40; SQLServer &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- Steuert, ob ein Sicherungsvorgang beendet oder fortgesetzt wird, nachdem ein Fehler bei der Seitenprüfsumme aufgetreten ist.  
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
+Steuert, ob ein Sicherungsvorgang beendet oder fortgesetzt wird, nachdem ein Fehler bei der Seitenprüfsumme aufgetreten ist.  
   
- STOP_ON_ERROR  
- Von BACKUP wird ein Fehler erzeugt, wenn eine Seitenprüfsumme nicht stimmt. Dies ist das Standardverhalten.  
+STOP_ON_ERROR  
+Von BACKUP wird ein Fehler erzeugt, wenn eine Seitenprüfsumme nicht stimmt. Dies ist das Standardverhalten.  
   
- CONTINUE_AFTER_ERROR  
- BACKUP wird auch dann fortgesetzt, wenn Fehler auftreten, z. B. ungültige Prüfsummen oder zerrissene Seiten.  
+CONTINUE_AFTER_ERROR  
+BACKUP wird auch dann fortgesetzt, wenn Fehler auftreten, z. B. ungültige Prüfsummen oder zerrissene Seiten.  
   
- Wenn Sie nicht zum Sichern des Protokollfragments die NO_TRUNCATE mithilfe option, wenn die Datenbank beschädigt ist, können Sie versuchen eine [Sicherung des Protokollfragments](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) durch CONTINUE_AFTER_ERROR anstelle von NO_TRUNCATE angeben.  
+Wenn Sie nicht zum Sichern des Protokollfragments die NO_TRUNCATE mithilfe option, wenn die Datenbank beschädigt ist, können Sie versuchen eine [Sicherung des Protokollfragments](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) durch CONTINUE_AFTER_ERROR anstelle von NO_TRUNCATE angeben.  
   
- Weitere Informationen finden Sie unter [mögliche Medienfehler während der Sicherung und Wiederherstellung &#40; SQLServer &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+Weitere Informationen finden Sie unter [mögliche Medienfehler während der Sicherung und Wiederherstellung &#40; SQLServer &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **Kompatibilitätsoptionen**  
+**Kompatibilitätsoptionen**  
   
- RESTART  
- Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] keine Auswirkungen. Die Option wird von der Version aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angenommen.  
+RESTART  
+Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] keine Auswirkungen. Die Option wird von der Version aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angenommen.  
   
- **Optionen für die Überwachung**  
+**Optionen für die Überwachung**  
   
- STATS [  **=**  *Prozentsatz* ]  
+STATS [ ** = ** *Prozentsatz* ]  
  Zeigt eine Meldung, die jedes Mal, wenn eine andere *Prozentsatz* abgeschlossen ist, und wird als Statusanzeige verwendet. Wenn *Prozentsatz* weggelassen wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Meldung angezeigt, nach jeweils 10 Prozent abgeschlossen ist.  
   
- Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.  
+Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.  
   
- **Bandoptionen**  
+**Bandoptionen**  
   
- Diese Optionen werden nur für Bandmedien verwendet. Diese Optionen werden ignoriert, wenn ein anderes Medium als ein Bandmedium verwendet wird.  
+Diese Optionen werden nur für Bandmedien verwendet. Diese Optionen werden ignoriert, wenn ein anderes Medium als ein Bandmedium verwendet wird.  
   
- { **REWIND** | NOREWIND }  
- REWIND  
+{ **REWIND** | NOREWIND }  
+REWIND  
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band freigibt und zurückspult. REWIND ist die Standardeinstellung.  
   
- NOREWIND  
- Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band nach dem Sicherungsvorgang offen hält. Diese Option trägt zur Leistungsverbesserung bei, wenn mehrere Sicherungsvorgänge auf einem Band ausgeführt werden.  
+NOREWIND  
+Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band nach dem Sicherungsvorgang offen hält. Diese Option trägt zur Leistungsverbesserung bei, wenn mehrere Sicherungsvorgänge auf einem Band ausgeführt werden.  
   
- NOREWIND impliziert NOUNLOAD, und diese Optionen sind innerhalb einer BACKUP-Anweisung inkompatibel.  
+NOREWIND impliziert NOUNLOAD, und diese Optionen sind innerhalb einer BACKUP-Anweisung inkompatibel.  
   
 > [!NOTE]  
 >  Wenn Sie NOREWIND verwenden, bleibt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Besitzer des Bandlaufwerks, bis in einer BACKUP- oder RESTORE-Anweisung, die in demselben Prozess ausgeführt wird, die Option REWIND oder UNLOAD verwendet wird oder bis die Serverinstanz heruntergefahren wird. Ein Offenhalten des Bandes verhindert, dass andere Prozesse auf das Band zugreifen können. Informationen dazu, wie eine Liste offener Bänder anzeigen und Schließen eines offenen Bandes finden Sie unter [Sicherungsmedien &#40; SQLServer &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- { **ENTLADEN** | "NOUNLOAD"}  
- > [!NOTE]  
+{ **ENTLADEN** | "NOUNLOAD"}  
+> [!NOTE]  
 >  UNLOAD/NOUNLOAD ist eine Sitzungseinstellung, die für die Dauer der Sitzung oder bis zur Angabe der alternativen Einstellung persistent gespeichert wird.  
   
- UNLOAD  
+UNLOAD  
  Gibt an, dass das Band automatisch zurückgespult und ausgeworfen wird, wenn die Sicherung vollständig ausgeführt ist. UNLOAD ist die Standardeinstellung beim Beginn einer Sitzung. 
   
- NOUNLOAD  
+NOUNLOAD  
  Gibt an, dass nach der BACKUP-Vorgang im Bandlaufwerk auf dem Bandlaufwerk geladen bleibt.  
   
 > [!NOTE]  
 >  Beim Sichern auf einem Bandsicherungsmedium wirkt sich die Option BLOCKSIZE auf die Leistung des Sicherungsvorgangs aus. Diese Option hat i. d. R. nur dann Auswirkungen auf die Leistung, wenn auf Bandmedien geschrieben wird.  
   
- **Protokollspezifische Optionen**  
+**Protokollspezifische Optionen**  
   
- Diese Optionen werden nur mit BACKUP LOG verwendet.  
+Diese Optionen werden nur mit BACKUP LOG verwendet.  
   
 > [!NOTE]  
 >  Wenn Sie keine Protokollsicherungen vornehmen möchten, verwenden Sie das einfache Wiederherstellungsmodell. Weitere Informationen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
- {NORECOVERY | STANDBY  **=**  *Undo_file_name* }  
- NORECOVERY  
- Sichert das Protokollfragment und belässt die Datenbank im RESTORING-Status. NORECOVERY ist hilfreich, wenn ein Failover zu einer sekundären Datenbank erfolgt oder wenn das Protokollfragment vor einem RESTORE-Vorgang gesichert wird.  
+{NORECOVERY | STANDBY ** = ** *Undo_file_name* }  
+  NORECOVERY  
+  Sichert das Protokollfragment und belässt die Datenbank im RESTORING-Status. NORECOVERY ist hilfreich, wenn ein Failover zu einer sekundären Datenbank erfolgt oder wenn das Protokollfragment vor einem RESTORE-Vorgang gesichert wird.  
   
- Zum Ausführen einer Protokollsicherung, bei der die Protokollkürzung ausgelassen wird und die Datenbank automatisch den Status RESTORING erhält, verwenden Sie die Optionen NO_TRUNCATE und NORECOVERY zusammen.  
+  Zum Ausführen einer Protokollsicherung, bei der die Protokollkürzung ausgelassen wird und die Datenbank automatisch den Status RESTORING erhält, verwenden Sie die Optionen NO_TRUNCATE und NORECOVERY zusammen.  
   
- STANDBY  **=**  *Standby_file_name*  
- Sichert das Protokollfragment und belässt die Datenbank im schreibgeschützten Modus und im STANDBY-Status. Die STANDBY-Klausel schreibt Standbydaten (wobei ein Rollback durchgeführt wird, aber mit der Option weiterer Wiederherstellungen). Die Verwendung der Option STANDBY ist gleichbedeutend mit BACKUP LOG WITH NORECOVERY gefolgt von RESTORE WITH STANDBY.  
+  STANDBY ** = ** *Standby_file_name*  
+  Sichert das Protokollfragment und belässt die Datenbank im schreibgeschützten Modus und im STANDBY-Status. Die STANDBY-Klausel schreibt Standbydaten (wobei ein Rollback durchgeführt wird, aber mit der Option weiterer Wiederherstellungen). Die Verwendung der Option STANDBY ist gleichbedeutend mit BACKUP LOG WITH NORECOVERY gefolgt von RESTORE WITH STANDBY.  
   
- Verwenden von standby-Modus erfordert eine standbydatei gespeichert, die gemäß *Standby_file_name*, deren Speicherort im Protokoll der Datenbank gespeichert ist. Ist die angegebene Datei bereits vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überschrieben. Ist sie noch nicht vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt. Die Standbydatei wird Teil der Datenbank.  
+  Verwenden von standby-Modus erfordert eine standbydatei gespeichert, die gemäß *Standby_file_name*, deren Speicherort im Protokoll der Datenbank gespeichert ist. Ist die angegebene Datei bereits vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überschrieben. Ist sie noch nicht vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt. Die Standbydatei wird Teil der Datenbank.  
   
- Diese Datei enthält die Änderungen aus dem Rollback, die rückgängig gemacht werden müssen, wenn zu einem späteren Zeitpunkt RESTORE LOG-Vorgänge angewendet werden sollen. Es muss ausreichend Speicherplatz für die Vergrößerung der Standbydatei vorhanden sein, damit diese Datei alle Seiten aus der Datenbank enthalten kann, die durch das Rollback für die Transaktionen ohne Commit geändert wurden.  
+  Diese Datei enthält die Änderungen aus dem Rollback, die rückgängig gemacht werden müssen, wenn zu einem späteren Zeitpunkt RESTORE LOG-Vorgänge angewendet werden sollen. Es muss ausreichend Speicherplatz für die Vergrößerung der Standbydatei vorhanden sein, damit diese Datei alle Seiten aus der Datenbank enthalten kann, die durch das Rollback für die Transaktionen ohne Commit geändert wurden.  
   
- NO_TRUNCATE  
- Gibt an, dass das Protokoll nicht abgeschnitten wird, und bewirkt, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht die Sicherung unabhängig vom Status der Datenbank. Daraus folgt, dass eine Sicherung, die mit NO_TRUNCATE erstellt wird, u. U. unvollständige Metadaten enthält. Diese Option ermöglicht es, das Protokoll auch dann zu sichern, wenn die Datenbank beschädigt ist.  
+NO_TRUNCATE  
+Gibt an, dass das Protokoll nicht abgeschnitten wird, und bewirkt, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht die Sicherung unabhängig vom Status der Datenbank. Daraus folgt, dass eine Sicherung, die mit NO_TRUNCATE erstellt wird, u. U. unvollständige Metadaten enthält. Diese Option ermöglicht es, das Protokoll auch dann zu sichern, wenn die Datenbank beschädigt ist.  
   
- Die NO_TRUNCATE-Option von BACKUP LOG ist gleichbedeutend mit der Angabe von COPY_ONLY und CONTINUE_AFTER_ERROR.  
+Die NO_TRUNCATE-Option von BACKUP LOG ist gleichbedeutend mit der Angabe von COPY_ONLY und CONTINUE_AFTER_ERROR.  
   
- Ohne die Option NO_TRUNCATE muss sich die Datenbank im ONLINE-Status befinden. Wenn die Datenbank im SUSPENDED-Status ist, können Sie möglicherweise durch die Angabe von NO_TRUNCATE eine Sicherung erstellen. Wenn sich die Datenbank jedoch im Status OFFLINE oder EMERGENCY befindet, ist die Sicherung auch mit NO_TRUNCATE nicht zulässig. Informationen zum Status von Datenbanken finden Sie unter [Datenbankstatus](../../relational-databases/databases/database-states.md).  
+Ohne die Option NO_TRUNCATE muss sich die Datenbank im ONLINE-Status befinden. Wenn die Datenbank im SUSPENDED-Status ist, können Sie möglicherweise durch die Angabe von NO_TRUNCATE eine Sicherung erstellen. Wenn sich die Datenbank jedoch im Status OFFLINE oder EMERGENCY befindet, ist die Sicherung auch mit NO_TRUNCATE nicht zulässig. Informationen zum Status von Datenbanken finden Sie unter [Datenbankstatus](../../relational-databases/databases/database-states.md).  
   
 ## <a name="about-working-with-sql-server-backups"></a>Informationen zum Arbeiten mit SQL Server-Sicherungen  
  In diesem Abschnitt werden die folgenden grundlegenden Sicherungskonzepte erläutert:  
   
  [Sicherungstypen](#Backup_Types)  
-  
  [Kürzungen von Transaktionsprotokollen](#Tlog_Truncation)  
-  
  [Formatieren von Sicherungsmedien](#Formatting_Media)  
-  
  [Arbeiten mit Sicherungsmedien und Mediensätzen](#Backup_Devices_and_Media_Sets)  
-  
  [Wiederherstellen von SQL Server-Sicherungen](#Restoring_Backups)  
   
 > [!NOTE]  
@@ -580,7 +571,7 @@ MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei s
     |---------------------|------------------|  
     |Gesamte Datenbank|[Datenbanksicherungen](../../relational-databases/backup-restore/full-database-backups-sql-server.md) umfassen die gesamte Datenbank.<br /><br /> Optional kann jede datenbanksicherung als Basis einer Reihe von einem oder mehreren dienen [differenzielle datenbanksicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
     |Teilweise Datenbanksicherung|[Teilsicherungen](../../relational-databases/backup-restore/partial-backups-sql-server.md) Abdeckung zu lesen, Dateigruppen / / Schreibzugriff und möglicherweise eine oder mehrere schreibgeschützte Dateien oder Dateigruppen.<br /><br /> Optional kann jede teilsicherung als Basis einer Reihe von einem oder mehreren dienen [differenzielle teilsicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
-    |Datei oder Dateigruppe|[Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) abdecken einer oder mehrere Dateien oder Dateigruppen und nur für Datenbanken mit mehreren Dateigruppen relevant sind. Beim einfachen Wiederherstellungsmodell werden Dateisicherungen im Wesentlichen auf schreibgeschützte sekundäre Dateigruppen beschränkt.<br /><br /> Optional kann jede dateisicherung als Basis einer Reihe von einem oder mehreren dienen [differenzielle dateisicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
+    |Datei oder Dateigruppe|[Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) abdecken einer oder mehrere Dateien oder Dateigruppen und nur für Datenbanken mit mehreren Dateigruppen relevant sind. Beim einfachen Wiederherstellungsmodell werden Dateisicherungen im Wesentlichen auf schreibgeschützte sekundäre Dateigruppen beschränkt.<br /> Optional kann jede dateisicherung als Basis einer Reihe von einem oder mehreren dienen [differenzielle dateisicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
   
 -   Unter dem vollständigen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell, konventionelle Sicherungen auch enthalten die *transaktionsprotokollsicherungen* (oder *protokollsicherungen*), die erforderlich sind. Jede protokollsicherung umfasst den Teil des Transaktionsprotokolls, die beim Erstellen die Sicherung aktiv war, und enthält alle Protokolldatensätze, die nicht in einer vorherigen protokollsicherung gesichert.  
   
@@ -603,9 +594,7 @@ MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei s
  Sicherungsmedien werden durch eine BACKUP-Anweisung formatiert, und zwar nur dann, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   Die Option FORMAT ist angegeben.  
-  
 -   Das Medium ist leer.  
-  
 -   Mit dem Vorgang wird ein Anschlussband geschrieben.  
   
 ###  <a name="Backup_Devices_and_Media_Sets"></a>Arbeiten mit Sicherungsmedien und Mediensätzen  
@@ -615,7 +604,7 @@ MIRROR TO \<Backup_device > [ **,**...  *n*  ] Gibt einen Satz von bis zu drei s
   
  Im folgenden Beispiel wird eine Sicherung der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank in ein neues Stripesetmedium geschrieben, für das drei Datenträgerdateien verwendet werden.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
@@ -637,7 +626,7 @@ GO
   
  Bei einem gespiegelten Mediensatz muss jede MIRROR TO-Klausel dieselbe Anzahl (und denselben Typ) von Medien wie die TO-Klausel aufführen. Im folgenden Beispiel wird in einen gespiegelten Mediensatz geschrieben, der zwei Spiegel enthält und drei Medien pro Spiegel verwendet:  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
@@ -678,8 +667,8 @@ GO
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|Überprüft, wenn das Volume einen gültigen Medienheader enthält, ob der Medienname mit dem angegebenen MEDIANAME (sofern vorhanden) übereinstimmt. Wenn dies der Fall ist, wird der Sicherungssatz angefügt, wobei alle vorhandenen Sicherungssätze beibehalten werden.<br /><br /> Enthält das Volume keinen gültigen Medienheader, tritt ein Fehler auf.|Wenn das Volume einen gültigen Medienheader enthält, werden die folgenden Überprüfungen durchgeführt:<br /><br /> – Wenn MEDIANAME angegeben wurde, überprüft, ob der angegebene Medienname des Medienheaders Medien name.* * übereinstimmt<br /><br /> – Stellt sicher, dass keine abgelaufenen Sicherungssätze bereits auf dem Medium vorhanden sind. Wenn solche vorhanden sind, wird die Sicherung beendet.<br /><br /> Wenn diese Überprüfungen erfolgreich sind, werden alle Sicherungssätze auf dem Medium überschrieben, und nur der Medienheader wird beibehalten.<br /><br /> Wenn das Volume keinen gültigen Medienheader enthält, wird dieser mithilfe der angegebenen Optionen MEDIANAME und MEDIADESCRIPTION (sofern vorhanden) generiert.|  
-|SKIP|Wenn das Volume einen gültigen Medienheader enthält, wird der Sicherungssatz angefügt. Alle vorhandenen Sicherungssätze werden beibehalten.|Wenn das Volume einen gültigen enthält * Medienheader wird, werden alle Sicherungssätze auf dem Medium, das nur den Medienheader beibehalten überschrieben.<br /><br /> Wenn das Medium leer ist, wird ein Medienheader mithilfe der Optionen MEDIANAME und MEDIADESCRIPTION (sofern vorhanden) generiert.|  
+|NOSKIP|Überprüft, wenn das Volume einen gültigen Medienheader enthält, ob der Medienname mit dem angegebenen MEDIANAME (sofern vorhanden) übereinstimmt. Wenn dies der Fall ist, wird der Sicherungssatz angefügt, wobei alle vorhandenen Sicherungssätze beibehalten werden.<br /> Enthält das Volume keinen gültigen Medienheader, tritt ein Fehler auf.|Wenn das Volume einen gültigen Medienheader enthält, werden die folgenden Überprüfungen durchgeführt:<br /> – Wenn MEDIANAME angegeben wurde, überprüft, ob der angegebene Medienname des Medienheaders Medien name.* * übereinstimmt<br /> – Stellt sicher, dass keine abgelaufenen Sicherungssätze bereits auf dem Medium vorhanden sind. Wenn solche vorhanden sind, wird die Sicherung beendet.<br /> Wenn diese Überprüfungen erfolgreich sind, werden alle Sicherungssätze auf dem Medium überschrieben, und nur der Medienheader wird beibehalten.<br /> Wenn das Volume keinen gültigen Medienheader enthält, wird dieser mithilfe der angegebenen Optionen MEDIANAME und MEDIADESCRIPTION (sofern vorhanden) generiert.|  
+|SKIP|Wenn das Volume einen gültigen Medienheader enthält, wird der Sicherungssatz angefügt. Alle vorhandenen Sicherungssätze werden beibehalten.|Wenn das Volume einen gültigen enthält * Medienheader wird, werden alle Sicherungssätze auf dem Medium, das nur den Medienheader beibehalten überschrieben.<br /> Wenn das Medium leer ist, wird ein Medienheader mithilfe der Optionen MEDIANAME und MEDIADESCRIPTION (sofern vorhanden) generiert.|  
   
  * Gültigkeit gehören die MTF-Versionsnummer und andere Headerinformationen. Wenn die angegebene Version nicht unterstützt wird oder einen unerwarteten Wert hat, tritt ein Fehler auf.  
   
@@ -711,22 +700,18 @@ GO
   
 -   Vorgänge zum Verkleinern der Datenbank oder von Dateien. Dazu gehören auch Vorgänge zum automatischen Verkleinern.  
   
- Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungs- oder Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang angewendet wurde (der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert). Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
+Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungs- oder Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang angewendet wurde (der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert). Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
   
 ## <a name="metadata"></a>Metadaten  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind folgende Tabellen mit Sicherungsverläufen enthalten, in denen Sicherungsaktivitäten nachverfolgt werden:  
   
 -   [Backupfile &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
-  
 -   [Backupfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
-  
 -   [Backupmediafamily &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
-  
 -   [Backupmediaset &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
-  
 -   [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
   
- Wenn eine Wiederherstellung ausgeführt wird, wenn der Sicherungssatz nicht bereits in aufgezeichnet wurde die **Msdb** Datenbank, auf den Sicherungsverlauf Tabellen möglicherweise geändert werden.  
+Wenn eine Wiederherstellung ausgeführt wird, wenn der Sicherungssatz nicht bereits in aufgezeichnet wurde die **Msdb** Datenbank, auf den Sicherungsverlauf Tabellen möglicherweise geändert werden.  
   
 ## <a name="security"></a>Sicherheit  
  Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **Kennwort** und **MEDIAPASSWORD** -Optionen nicht mehr zum Erstellen von Sicherungen. Es ist weiterhin möglich, mit Kennwörtern erstellte Sicherungen wiederherzustellen.  
@@ -740,22 +725,14 @@ GO
  Dieser Abschnitt enthält die folgenden Beispiele:  
   
 -   A. [Sichern einer vollständigen Datenbank](#backing_up_db)  
-  
 -   B. [Sichern der Datenbank und des Protokolls](#backing_up_db_and_log)  
-  
 -   C. [Erstellen einer vollständigen dateisicherung der sekundären Dateigruppen](#full_file_backup)  
-  
 -   D. [Erstellen einer differenziellen dateisicherung der sekundären Dateigruppen](#differential_file_backup)  
-  
 -   E. [Erstellen und Sichern eines gespiegelten Medien festgelegt.](#create_single_family_mirrored_media_set)  
-  
 -   F. [Erstellen und Sichern auf einen gespiegelten festlegen](#create_multifamily_mirrored_media_set)  
-  
 -   G [Sichern auf einen vorhandenen gespiegelten Mediensatz](#existing_mirrored_media_set)  
-  
 -   H. [Erstellen einer komprimierter Sicherung in einem neuen Mediensatz](#creating_compressed_backup_new_media_set)  
-
-- I.  [Sichern im Microsoft Azure Blob Storage service](#url)
+-   I.  [Sichern im Microsoft Azure Blob Storage service](#url)  
   
 > [!NOTE]  
 >  In den Themen über die Vorgehensweisen bei der Sicherung sind weitere Beispiele aufgeführt. Weitere Informationen finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -763,7 +740,7 @@ GO
 ###  <a name="backing_up_db"></a> A. Sichern einer vollständigen Datenbank  
  Im folgende Beispiel sichert die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] Datenbank in eine Datei.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH FORMAT;  
@@ -777,7 +754,7 @@ GO
   
  Im Beispiel wird eine vollständige Datenbanksicherung in `AdvWorksData` erstellt, und nach einer Updateaktivität wird das Protokoll in `AdvWorksLog` gesichert.  
   
-```tsql  
+```sql  
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
@@ -810,7 +787,7 @@ GO
 ###  <a name="full_file_backup"></a> C. Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen  
  Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -822,7 +799,7 @@ GO
 ###  <a name="differential_file_backup"></a> D. Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen  
  Im folgenden Beispiel wird eine differenzielle Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -836,7 +813,7 @@ GO
 ###  <a name="create_single_family_mirrored_media_set"></a> E. Erstellen eines gespiegelten Mediensatzes für eine Medienfamilie und Sichern auf einen gespiegelten Mediensatz für eine Medienfamilie  
  Im folgenden Beispiel wird ein gespiegelter Mediensatz erstellt, der eine einzelne Medienfamilie und vier Spiegel umfasst. Auf diese wird die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank gesichert.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0'  
 MIRROR TO TAPE = '\\.\tape1'  
@@ -850,7 +827,7 @@ WITH
 ###  <a name="create_multifamily_mirrored_media_set"></a> F. Erstellen eines gespiegelten Mediensatzes für mehrere Medienfamilien und Sichern auf einen gespiegelten Mediensatz für mehrere Medienfamilien  
  Im folgenden Beispiel wird ein gespiegelter Mediensatz erstellt, in dem jeder Spiegel zwei Medienfamilien enthält. Im Beispiel wird dann die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank auf beide Spiegel gesichert.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -862,7 +839,7 @@ WITH
 ###  <a name="existing_mirrored_media_set"></a>G. Sichern auf einen vorhandenen gespiegelten Mediensatz  
  Im folgenden Beispiel wird ein Sicherungssatz an den Mediensatz angefügt, der im vorherigen Beispiel erstellt wurde.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -877,7 +854,7 @@ WITH
 ###  <a name="creating_compressed_backup_new_media_set"></a>H. Erstellen einer komprimierter Sicherung in einem neuen Mediensatz  
  Im folgenden Beispiel wird das Medium formatiert, wobei ein neuer Mediensatz angelegt wird, und eine vollständige, komprimierte Sicherung der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank wird erstellt.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   
@@ -887,7 +864,7 @@ WITH
 ###  <a name="url"></a>ICH. Sichern in den Microsoft Azure BLOB-Speicherdienst 
 Im Beispiel wird eine vollständige Sicherung der `Sales` an den Microsoft Azure Blob-Speicherdienst.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt.  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldeinformationen `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, erstellt wurde, mithilfe einer SAS, die der gespeicherten Zugriffsrichtlinie zugeordnet ist.  Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im Windows Azure-Blob-Speicherdienst gesichert [SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-```tsql  
+```sql  
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;

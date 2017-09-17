@@ -1,7 +1,7 @@
 ---
 title: Index_option (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64f1d5cec0e74509e59491f50feec3be705badf2
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e7563f9fe992dcf4f9308cccbf11f6310b7925a7
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE Index_option (Transact-SQL)
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
- PAD_INDEX  **=**  {ON | **OFF** }  
+ PAD_INDEX ** = ** {ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  Deaktivieren oder *Fillfactor* ist nicht angegeben.  
  Die Zwischenebenenseiten werden nahezu vollständig aufgefüllt, wobei jedoch ausreichend freier Speicherplatz verfügbar bleibt, um mindestens eine Zeile in der maximal für diesen Index gültigen Größe aufzunehmen, die sich aus der Schlüsselmenge auf den Zwischenseiten ergibt.  
   
- FILLFACTOR  **=**  *Fillfactor*  
+ FILLFACTOR ** = ** *Fillfactor*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  Der angegebene Wert muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0.  
@@ -89,14 +89,14 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Die Füllfaktorwerte 0 und 100 sind in jeglicher Hinsicht identisch.  
   
- IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
+ IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
  Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Die Option hat keine Auswirkungen, bei der Ausführung [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), oder [UPDATE](../../t-sql/queries/update-transact-sql.md). Der Standardwert ist OFF.  
   
  ON  
- Eine Warnmeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Es schlagen nur die Zeilen fehl, die gegen die Eindeutigkeitseinschränkung verstoßen.  
+ Eine Warnung tritt auf, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Nur die Zeilen, die gegen die Unique-Einschränkung ein Fehler auf.  
   
  OFF  
- Eine Fehlermeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Für den gesamten INSERT-Vorgang wird ein Rollback ausgeführt.  
+ Ein Fehler tritt auf, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Die gesamte INSERT-Vorgang wird ein Rollback ausgeführt.  
   
  IGNORE_DUP_KEY kann für Indizes, die für eine Sicht erstellt, nicht eindeutige Indizes, XML-Indizes, räumlichen Indizes und gefilterte Indizes auf ON festgelegt werden.  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
   
  In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
  Gibt an, ob Statistiken neu berechnet werden. Der Standardwert ist OFF.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Die automatischen Updates der Statistiken sind aktiviert.  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
+ ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Zeilensperren werden nicht verwendet.  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Seitensperren werden nicht verwendet.  
   
- SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
+ SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt an, ob zum Speichern der Ergebnisse des Sortierens in **Tempdb**. Der Standardwert ist OFF.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index.  
   
- ONLINE  **=**  {ON | **OFF** }  
+ ONLINE ** = ** {ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF. REBUILD kann als ONLINE-Vorgang ausgeführt werden.  
@@ -168,21 +168,16 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP  **=**  *Max_degree_of_parallelism*  
+ MAXDOP ** = ** *Max_degree_of_parallelism*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
  *Max_degree_of_parallelism* sind möglich:  
   
- 1  
- Unterdrückt das Generieren paralleler Pläne.  
-  
- \>1  
- Begrenzt die Höchstzahl von Prozessoren in einem parallelen Indexvorgang auf die angegebene Zahl  
-  
- 0 (Standard)  
- Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
+ - 1 - unterdrückt die Generierung paralleler Pläne.  
+ - \>1 - beschränkt die maximale Anzahl der Prozessoren, die in einem parallelen Indexvorgang auf die angegebene Anzahl verwendet.  
+ - 0 (Standard) – wird verwendet, die tatsächliche Anzahl von Prozessoren oder weniger basierend auf der aktuellen systemarbeitsauslastung.  
   
  Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -192,7 +187,7 @@ ms.lasthandoff: 09/01/2017
  DATA_COMPRESSION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen. Folgende Optionen stehen zur Verfügung:  
+ Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:  
   
  NONE  
  Die Tabelle oder die angegebenen Partitionen werden nicht komprimiert. Gilt nur für rowstore-Tabellen und nicht für columnstore-Tabellen.  
@@ -206,32 +201,30 @@ ms.lasthandoff: 09/01/2017
  COLUMNSTORE  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gilt nur für columnstore-Tabellen. COLUMNSTORE gibt an, dass eine Partition, die mit der COLUMNSTORE_ARCHIVE-Option komprimiert wurde, dekomprimiert werden soll. Nachdem die Daten wiederhergestellt wurden, sind sie weiterhin mit der columnstore-Komprimierung komprimiert, die für alle columnstore-Tabellen verwendet wird.  
+ Gilt nur für columnstore-Tabellen. COLUMNSTORE gibt an, dass eine Partition, die mit der COLUMNSTORE_ARCHIVE-Option komprimiert wurde, dekomprimiert werden soll. Wenn die Daten wiederhergestellt wurden, weiterhin der columnstore-Index mit der columnstore-Komprimierung komprimiert, die für alle columnstore-Tabellen verwendet wird.  
   
  COLUMNSTORE_ARCHIVE  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gilt nur für columnstore-Tabellen. Dies sind Tabellen, die mit einem gruppierten columnstore-Index gespeichert wurden. Durch COLUMNSTORE_ARCHIVE wird die angegebene Partition weiter in eine geringere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speicherbelegung und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
+ Gilt nur für columnstore-Tabellen. Dies sind Tabellen, die mit einem gruppierten columnstore-Index gespeichert wurden. Weitere COLUMNSTORE_ARCHIVE wird die angegebene Partition auf eine kleinere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speicherbelegung und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
  Weitere Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-AUF PARTITIONEN **(** { \<Partition_number_expression > | \<Bereich >} [ **,**...  *n*  ] **)** **Betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+AUF PARTITIONEN **(** { \<Partition_number_expression > | \<Bereich >} [ **,**... * n * ] **)** **Betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen einer partitionierten Tabelle.  
+ Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler aus. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option auf alle Partitionen einer partitionierten Tabelle.  
   
 \<Partition_number_expression > kann auf folgende Weise angegeben werden:  
   
 -   Geben Sie die Nummer einer Partition an, beispielsweise: ON PARTITIONS (2).  
-  
 -   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Trennzeichen getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
-  
 -   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise: ON PARTITIONS (2, 4, 6 TO 8).  
   
- \<Range > können durch das Wort TO, z. B. getrennte Partitionsnummern angegeben werden: ON PARTITIONS (6 TO 8).  
+\<Range > können durch das Wort TO, z. B. getrennte Partitionsnummern angegeben werden: ON PARTITIONS (6 TO 8).  
   
  Wenn Sie für verschiedene Partitionen unterschiedliche Datenkomprimierungstypen festlegen möchten, geben Sie die Option DATA_COMPRESSION mehrmals an, beispielsweise:  
   
-```  
+```sql  
 --For rowstore tables  
 REBUILD WITH   
 (  
@@ -252,20 +245,18 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  In den meisten Fällen werden bei der Neuerstellung eines Index alle Partitionen eines partitionierten Index ebenfalls neu erstellt. Die folgenden Optionen erstellen nicht alle Partitionen neu, wenn sie auf eine einzelne Partition angewendet werden.  
   
 -   SORT_IN_TEMPDB  
-  
 -   MAXDOP  
-  
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Ein **SWITCH** oder Neuerstellung von Onlineindizes abgeschlossen wird, sobald es keine blockierenden Vorgänge für diese Tabelle sind. *WAIT_AT_LOW_PRIORITY* gibt an, dass bei der **SWITCH** oder Vorgang zur onlineindexneuerstellung kann nicht abgeschlossen werden, sofort gewartet wird. Der Vorgang hält Sperren mit niedriger Priorität an und lässt die Fortsetzung anderer Vorgänge zu, die Sperren enthalten, die mit der DDL-Anweisung in Konflikt stehen. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ Ein **SWITCH** oder Neuerstellung von Onlineindizes abgeschlossen wird, sobald es keine blockierenden Vorgänge für diese Tabelle sind. *WAIT_AT_LOW_PRIORITY* gibt an, dass bei der **SWITCH** oder Vorgang zur onlineindexneuerstellung kann nicht sofort abgeschlossen werden, wartet er. Der Vorgang hält Sperren mit niedriger Priorität, sodass andere Vorgänge, die Sperren aufrechterhalten, die in Konflikt mit der DDL-Anweisung, um den Vorgang fortzusetzen. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *Zeit* [**Minuten** ]  
- Die Wartezeit (ein Integerwert in Minuten angegeben), die die **SWITCH** oder online Index Rebuild-Sperre, die abgerufen werden, muss warten, wenn den DDL-Befehl ausgeführt. SWITCH oder die Online-Neuerstellung des Index versucht sofort, den Vorgang abzuschließen. Wenn der Vorgang blockiert wird die **MAX_DURATION** Zeit, eines der **ABORT_AFTER_WAIT** -Aktionen ausgeführt. **MAX_DURATION** ist immer in Minuten, und das Wort **Minuten** kann ausgelassen werden.  
+ Die Wartezeit (ein Integerwert in Minuten angegeben), die die **SWITCH** oder online Index Rebuild-Sperre, die abgerufen werden muss, wartet, wenn der DDL-Befehl ausgeführt. SWITCH oder die Online-Neuerstellung des Index versucht sofort, den Vorgang abzuschließen. Wenn der Vorgang blockiert wird die **MAX_DURATION** Zeit, eines der **ABORT_AFTER_WAIT** Aktionen wird ausgeführt. **MAX_DURATION** ist immer in Minuten, und das Wort **Minuten** kann ausgelassen werden.  
   
-ABOUT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERN** }]  
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERN** }]  
  Keine  
  Weiterhin die **SWITCH** oder Neuerstellung des Onlineindexes ohne die sperrenpriorität (mit der regulären Priorität) zu ändern.  
   

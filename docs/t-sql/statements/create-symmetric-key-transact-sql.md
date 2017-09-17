@@ -1,7 +1,7 @@
 ---
 title: "Erstellen des SYMMETRISCHEN Schlüssels (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
  Erstellt einen neuen Schlüssel auf dem Extensible Key Management-Gerät.  Wenn bereits ein Schlüssel auf dem Gerät vorhanden ist, gibt die Anweisung eine Fehlermeldung zurück.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  Ordnet einen symmetrischen Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem vorhandenen Extensible Key Management-Schlüssel zu. Wenn CREATION_DISPOSITION = OPEN_EXISTING nicht bereitgestellt wird, wird der Standardwert CREATE_NEW angenommen.  
   
  *Name*  
  Gibt den Namen des Zertifikats an, das zum Verschlüsseln des symmetrischen Schlüssels verwendet wird. Das Zertifikat muss bereits in der Datenbank vorhanden sein.  
   
  **"** *Kennwort* **"**  
- Gibt ein Kennwort an, von dem ein TRIPLE_DES-Schlüssel zum Sichern des symmetrischen Schlüssels abgeleitet wird. *Kennwort* erfüllt die Anforderungen der Windows-Kennwortrichtlinien des Computers, der die Instanz ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es sollten immer sichere Kennwörter verwendet werden.  
+ Gibt ein Kennwort an, von dem ein TRIPLE_DES-Schlüssel zum Sichern des symmetrischen Schlüssels abgeleitet wird. *Kennwort* erfüllt die Anforderungen der Windows-Kennwortrichtlinien des Computers, der die Instanz ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie immer sichere Kennwörter.  
   
  *symmetric_key_name*  
- Gibt einen symmetrischen Schlüssel an, der zum Verschlüsseln des erstellten Schlüssels verwendet wird. Der angegebene Schlüssel muss bereits in der Datenbank vorhanden und geöffnet sein.  
+ Gibt einen symmetrischen Schlüssel zum Verschlüsseln des Schlüssels, der erstellt wird. Der angegebene Schlüssel muss bereits in der Datenbank vorhanden und geöffnet sein.  
   
  *asym_key_name*  
- Gibt einen asymmetrischen Schlüssel an, der zum Verschlüsseln des erstellten Schlüssels verwendet wird. Dieser asymmetrische Schlüssel muss bereits in der Datenbank vorhanden sein.  
+ Gibt einen asymmetrischen Schlüssel zum Verschlüsseln des Schlüssels, der erstellt wird. Dieser asymmetrische Schlüssel muss bereits in der Datenbank vorhanden sein.  
   
  \<Algorithmus >  
- Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Um ältere Algorithmen zu verwenden (was nicht empfohlen wird), müssen Sie den Kompatibilitätsgrad zwischen Datenbanken auf höchsten 120 festlegen.  
+Geben Sie den Verschlüsselungsalgorithmus an.   
+> [!WARNING]  
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Um ältere Algorithmen (nicht empfohlen) zu verwenden, müssen Sie den Kompatibilitätsgrad der Datenbanken auf höchsten 120 festlegen.  
   
 ## <a name="remarks"></a>Hinweise  
  Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  Temporäre Schlüssel befinden sich im Besitz des Benutzers, der sie erstellt. Temporäre Schlüssel gelten nur für die aktuelle Sitzung.  
   
- Von IDENTITY_VALUE wird ein GUID generiert, mit dem Daten gekennzeichnet werden, die mit dem neuen symmetrischen Schlüssel verschlüsselt werden. Mithilfe dieser Kennzeichnung können Schlüssel den verschlüsselten Daten zugeordnet werden. Von einem spezifischen Ausdruck wird immer derselbe GUID generiert. Nachdem ein Ausdruck zum Generieren eines GUIDs verwendet wurde, kann der Ausdruck nicht mehr wiederverwendet werden, es sei denn, es ist mindestens eine Sitzung vorhanden, in der der Ausdruck aktiv verwendet wird. IDENTITY_VALUE ist eine optionale Klausel. Die Verwendung dieser Klausel wird jedoch empfohlen, wenn Sie mit einem temporären Schlüssel verschlüsselte Daten speichern.  
+ Von IDENTITY_VALUE wird ein GUID generiert, mit dem Daten gekennzeichnet werden, die mit dem neuen symmetrischen Schlüssel verschlüsselt werden. Mithilfe dieser Kennzeichnung können Schlüssel den verschlüsselten Daten zugeordnet werden. Die GUID, die von einem bestimmten Ausdruck generiert ist immer gleich. Nachdem ein Ausdruck zum Generieren eines GUIDs verwendet wurde, kann der Ausdruck nicht mehr wiederverwendet werden, es sei denn, es ist mindestens eine Sitzung vorhanden, in der der Ausdruck aktiv verwendet wird. IDENTITY_VALUE ist eine optionale Klausel. Die Verwendung dieser Klausel wird jedoch empfohlen, wenn Sie mit einem temporären Schlüssel verschlüsselte Daten speichern.  
   
  Es gibt keinen Standardverschlüsselungsalgorithmus.  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **Erläuterung der DES-Algorithmen:**  
   
 -   DESX wurde falsch benannt. Symmetrische Schlüssel, die mit ALGORITHM = DESX erstellt sind, verwenden eigentlich die TRIPLE DES-Chiffre mit einem 192-Bit-Schlüssel. Der DESX-Algorithmus wird nicht bereitgestellt. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   Symmetrische Schlüssel, die mit ALGORITHM = TRIPLE_DES_3KEY erstellt sind, verwenden die TRIPLE DES-Chiffre mit einem 192-Bit-Schlüssel.  
-  
 -   Symmetrische Schlüssel, die mit ALGORITHM = TRIPLE_DES erstellt sind, verwenden die TRIPLE DES-Chiffre mit einem 128-Bit-Schlüssel.  
   
  **Veraltung des RC4-Algorithmus:**  
   
- Die wiederholte Verwendung der gleichen RC4- oder RC4_128-KEY_GUID für unterschiedliche Datenblocks führt zum gleichen RC4-Schlüssel, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht automatisch eine Salt bereitstellt. Die wiederholte Verwendung des gleichen RC4-Schlüssels stellt einen bekannter Fehler dar, der zu einer sehr schwachen Verschlüsselung führt. Deshalb wurden das RC4-Schlüsselwort und das RC4_128-Schlüsselwort als veraltet festgelegt. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Wiederholte Verwendung des gleichen RC4 oder RC4_128-KEY_GUID für unterschiedliche Datenblocks, führt in der gleichen RC4-Schlüssel, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird nicht automatisch eine Salt bereitstellt. Die wiederholte Verwendung des gleichen RC4-Schlüssels stellt einen bekannter Fehler dar, der zu einer sehr schwachen Verschlüsselung führt. Deshalb wurden das RC4-Schlüsselwort und das RC4_128-Schlüsselwort als veraltet festgelegt. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  

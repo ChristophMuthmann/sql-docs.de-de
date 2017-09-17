@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelemente – erste Schritte
@@ -242,7 +242,7 @@ Das ReportViewer-Steuerelement ist jetzt als ein NuGet-Paket zur Verfügung gest
 
     ![SsRS-Remove-alte-Rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Mit der rechten Maustaste an einer beliebigen Stelle in der Toolbox in, und wählen Sie dann **Elemente auswählen...** .
+3. Mit der rechten Maustaste an einer beliebigen Stelle in der Toolbox in, und wählen Sie dann **Elemente auswählen... **.
 
     ![SsRS-Toolbox-wählen-Element](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -281,6 +281,6 @@ Lassen Sie das Team Probleme erfahren Sie mit dem Steuerelement auftreten, auf d
 ## <a name="see-also"></a>Siehe auch
 
 [Die Datensammlung im Steuerelement ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Weiteren Fragen wenden? [Wiederholen Sie den Reporting Services-forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 

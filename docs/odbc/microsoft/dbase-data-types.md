@@ -1,0 +1,64 @@
+---
+title: dBASE-Datentypen | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Jet-based ODBC drivers [ODBC], DBasedriver
+- desktop database drivers [ODBC], DBasedriver
+- DBase driver [ODBC], data types
+- data types [ODBC], DBase driver
+- dbase data types [ODBC]
+- ODBC desktop database drivers [ODBC], DBasedriver
+ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
+caps.latest.revision: 5
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 49fb588f5793eb3ee2fce7417632301794a65a22
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="dbase-data-types"></a>dBASE-Datentypen
+Die folgende Tabelle zeigt, wie dBASE-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen unterstützt werden.  
+  
+|dBASE-Datentyp|ODBC-Datentyp|  
+|---------------------|--------------------|  
+|CHAR|SQL_VARCHAR|  
+|DATE|SQL_DATE|  
+|"FLOAT" [1]|SQL_DOUBLE|  
+|LOGISCHE|SQL_BIT|  
+|MEMO|SQL_LONGVARCHAR|  
+|NUMERISCH (BCD)|SQL_DOUBLE|  
+|OLEOBJECT-KLASSE [1]|SQL_LONGBINARY|  
+  
+ [1] gültig nur für dBASE, Version 5. *x*  
+  
+ Genauigkeit in dBASE III kann Zahlen mit oben um zweistellige Exponenten und dBASE IV Zahlen mit bis zu drei Ziffern Exponenten. Da Zahlen als Text gespeichert sind, werden sie in Zahlen umgewandelt. Wenn die zu konvertierende Zahl nicht in einem Feld unerklärliche Ergebnissen kommen passt.  
+  
+ Wenn dBASE, eine Genauigkeit und Dezimalstellen mit einem numerischen Datentyp angegeben werden kann, wird er vom dBASE ODBC-Treiber nicht unterstützt. Der ODBC-Treiber dBASE gibt immer eine Genauigkeit von 15 und einer Skala von 0 für einen numerischen Datentyp zurück.  
+  
+ Eine Spalte mit dem numerischen Datentyp mit der ODBC-dBASE Treiber ordnet den ODBC SQL_DOUBLE-Datentyp erstellt wird. Daher ist die Daten in dieser Spalte Rundung. Dieses Verhalten entspricht nicht dem, die der numerischen Daten in dBASE (Type-N) Geben Sie die Binary Coded Decimal (BCD) ist.  
+  
+> [!NOTE]  
+>  **SQLGetTypeInfo** gibt ODBC SQL-Datentypen. Alle Konvertierungen in Anhang D der *ODBC Programmer's Reference* werden für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführten unterstützt.  
+  
+ Die folgende Tabelle zeigt Einschränkungen auf dBASE Datentypen.  
+  
+|Datentyp|Description|  
+|---------------|-----------------|  
+|CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 254-Byte-Spalte.|  
+|Verschlüsselte Daten|DBASE-Treiber unterstützt keine verschlüsselten dBASE-Tabellen.|  
+|LOGISCHE|DBASE-Treiber kann nicht für eine logische Spalte einen Index erstellen.|  
+|MEMO|Die maximale Länge einer Spalte MEMO ist 65.500 Bytes.|  
+  
+ Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).

@@ -1,7 +1,7 @@
 ---
 title: Int, Bigint, Smallint und Tinyint (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint und tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Exakte Zahlendatentypen für ganzzahlige Daten.
+Exakte Zahlendatentypen für ganzzahlige Daten. Um Speicherplatz in der Datenbank zu speichern, verwenden Sie den kleinsten-Datentyp, der zuverlässig alle möglichen Werte enthalten kann. Beispielsweise würde "tinyint" für ein Alter Personen ausreichend sein, da kein aktiv ist, mehr als 255 Jahre alt sein. Aber "tinyint" würde nicht ausreichend, damit ein Alter Gebäude werden, da ein Erstellen von mehr als 255 Jahre alt sein kann.
   
 |Datentyp|Bereich|Speicherung|  
 |---|---|---|
@@ -58,11 +58,11 @@ Die **Int** -Datentyp ist der primäre ganzzahlige Datentyp in [!INCLUDE[ssNoVer
 Return-Funktionen **"bigint"** nur, wenn der Parameterausdruck ein **"bigint"** -Datentyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Stuft andere ganzzahlige Datentypen nicht automatisch (**"tinyint"**, **"smallint"**, und **Int**) zu **"bigint"**.
   
 > [!CAUTION]  
->  Bei Verwendung der +, -, \*, /, oder % arithmetische Operatoren, die implizite oder explizite Konvertierung von **Int**, **"smallint"**, **"tinyint"**, oder  **"bigint"** Konstantenwerten der **"float"**, **echte**, **decimal** oder **numerischen** Datentypen, die Regeln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gilt, wenn sie den Datentyp und die Genauigkeit der Ausdrucksergebnisse zu unterscheiden, je nachdem, ob die Abfrage automatisch parametrisiert wird berechnet.  
+>  Bei Verwendung der +, -, \*, /, oder % arithmetische Operatoren, die implizite oder explizite Konvertierung von **Int**, **"smallint"**, **"tinyint"**, oder ** "bigint"** Konstantenwerten der **"float"**, **echte**, **decimal** oder **numerischen** Datentypen, die Regeln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gilt, wenn sie den Datentyp und die Genauigkeit der Ausdrucksergebnisse zu unterscheiden, je nachdem, ob die Abfrage automatisch parametrisiert wird berechnet.  
 >   
 >  Aus diesem Grund können ähnliche Ausdrücke in Abfragen unterschiedliche Ergebnisse erzeugen. Wenn eine Abfrage nicht parametrisiert ist, wird der Konstante Wert zuerst in konvertiert **numerischen**, Precision wird gerade groß genug für den Wert der Konstante vor dem Konvertieren in den angegebenen Datentyp. Z. B. der Konstante Wert 1 konvertiert wird, um **Numeric (1, 0)**, und der Konstante Wert 250 in konvertiert **Numeric (3, 0)**.  
 >   
->  Wenn eine Abfrage automatisch parametrisiert wird, wird der Konstante Wert immer in konvertiert **Numeric (10, 0)** vor dem Konvertieren in den endgültigen Datentyp. Wenn der Operator / verwendet wird, kann bei ähnlichen Abfragen nicht nur die Genauigkeit des Ergebnistyps variieren, sondern auch der Ergebniswert. Der Ergebniswert z. B. von einer automatisch parametrisierten Abfrage, die der Ausdruck umfasst `SELECT CAST (1.0 / 7 AS float)` unterscheidet sich von der Ergebniswert derselben Abfrage, die nicht automatisch parametrisiert, da die Ergebnisse der Abfrage automatisch parametrisiert entsprechend abgeschnitten werden in der **Numeric (10, 0)** -Datentyp.  
+>  Wenn eine Abfrage automatisch parametrisiert wird, wird der Konstante Wert immer in konvertiert **Numeric (10, 0)** vor dem Konvertieren in den endgültigen Datentyp. Wenn der Operator / verwendet wird, kann bei ähnlichen Abfragen nicht nur die Genauigkeit des Ergebnistyps variieren, sondern auch der Ergebniswert. Der Ergebniswert z. B. von einer automatisch parametrisierten Abfrage, die der Ausdruck umfasst `SELECT CAST (1.0 / 7 AS float)`, unterscheidet sich von der Ergebniswert derselben Abfrage, die nicht automatisch parametrisiert werden, da die Ergebnisse der Abfrage automatisch parametrisiert werden abgeschnitten, um passt die **Numeric (10, 0)** -Datentyp.  
   
 ## <a name="converting-integer-data"></a>Konvertieren von ganzzahligen Daten
 Wenn ganze Zahlen implizit in einen Zeichendatentyp konvertiert werden und die ganze Zahl für das Zeichenfeld zu groß ist, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das ASCII-Zeichen 42 (Sternchen (*)) ein.

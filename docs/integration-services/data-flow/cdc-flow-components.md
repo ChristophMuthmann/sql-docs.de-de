@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 403fb295b690c0aca09c597dc7d5c0469646ce29
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
@@ -43,55 +43,47 @@ ms.lasthandoff: 08/03/2017
 ## <a name="installation"></a>Installation  
  In diesem Abschnitt werden die Installationsverfahren für die CDC-Komponenten für Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]beschrieben.  
   
- Die CDC-Komponenten für SSIS werden mit Microsoft® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL Server® 2016 in einem Paket bereitgestellt. Dieser Download ist Teil des SQL Server 2016 Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
+ Die CDC-Komponenten für SSIS werden mit dem Microsoft® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL Server® verpackt. Dieser Download ist Teil des SQL Server Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
   
-### <a name="version-support"></a>Versionsunterstützung  
- Die folgenden Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkte werden von den CDC-Komponenten für SSIS unterstützt:  
+### <a name="version-support"></a>Versionsunterstützung
+
+#### <a name="sql-server-version-support"></a>Unterstützung von SQL Server-version
+
+Die CDC-Komponenten für SSIS werden zu den unterstützten Versionen von Microsoft SQL Server unterstützt. Die unterstützten Versionen von SQL Server können derzeit, SQL Server 2012 bis SQL Server 2017 enthalten.
+
+#### <a name="operating-system-version-support"></a>Betriebssystem-versionsunterstützung
   
--   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+Die CDC-Komponenten für SSIS werden auf folgenden Betriebssystemen und Plattformen unterstützt:  
   
--   Microsoft [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] für Visual Studio 2015  
-  
- Die folgenden Versionen werden auf den angegebenen Betriebssystemen und Plattformen unterstützt:  
-  
--   Windows Vista mit Service Pack 2  
-  
--   Windows 7  
-  
+-   Windows 8 und 8.1
 -   Windows 10  
-  
--   Windows Server 2008 mit Service Pack 2  
-  
--   Windows Server 2008 R2  
-  
--   Windows Server 2012  
+-   Windows Server 2012 und 2012 R2
+-   Windows Server 2016
   
 ### <a name="running-the-installation-program"></a>Ausführen des Installationsprogramms  
- Bevor Sie den Installations-Assistenten ausführen, stellen sicher, dass die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] geschlossen wird. Folgen Sie anschließend den Anweisungen im Installations-Assistenten.  
+ Stellen Sie vor dem Ausführen des Installations-Assistenten sicher, dass [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] geschlossen ist. Folgen Sie anschließend den Anweisungen im Installations-Assistenten.  
   
-### <a name="restart-ssis"></a>Neustarten von SSIS  
- Nachdem Sie die CDC-Komponenten installiert haben, müssen Sie den SSIS-Dienst neu starten, um sicherzustellen, dass die Komponenten beim Entwickeln von Paketen in SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ordnungsgemäß funktionieren.  
+### <a name="restart-ssis-service"></a>SSIS-Dienst neu starten 
+Nachdem Sie die CDC-Komponenten installiert haben, müssen, starten Sie den SSIS-Dienst, um sicherzustellen, dass die Komponenten ordnungsgemäß funktioniert, beim Entwickeln von Paketen in SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
- Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie auf **Ja** , wenn eine Aufforderung angezeigt wird.  
+Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie auf **Ja** , wenn eine Aufforderung angezeigt wird.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Deinstallieren der Microsoft-CDC-Komponenten  
- Die CDC-Quelle, der CDC-Splitter und der CDC-Steuerungstask werden mithilfe des Deinstallations-Assistenten deinstalliert. Überprüfen Sie vor dem Deinstallieren der Komponenten Folgendes:  
-  
- Bei Verwendung der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] für die Paketentwicklung, stellen Sie sicher, dass die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] wird geschlossen, bevor Sie den Deinstallations-Assistenten ausführen.  
+ Die CDC-Quelle, der CDC-Splitter und der CDC-Steuerungstask werden mithilfe des Deinstallations-Assistenten deinstalliert. Wenn Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Paketentwicklung verwenden, muss [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] vor dem Ausführen des Deinstallations-Assistenten geschlossen werden.  
   
 ## <a name="benefits"></a>Vorteile  
- Die CDC-Komponenten für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglichen SSIS-Entwicklern, leicht zu SSIS-Pakete erstellen, die Änderungsdaten verarbeiten. Diese Komponenten erleichtern SSIS-Entwicklern die Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
+ Die CDC-Komponenten für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglichen SSIS-Entwicklern das mühelose Erstellen von SSIS-Paketen, die Änderungsdaten verarbeiten. Diese Komponenten erleichtern SSIS-Entwicklern die Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
   
  Die SSIS-CDC-Komponenten werden verwendet, um die Änderungsdaten in einer Form bereitzustellen, in der sie einfach zur Replikation, zum Laden eines Data Warehouse, Aktualisieren langsam veränderlicher Dimensionen für OLAP, Überwachen von Änderungen oder für weitere mögliche Zwecke verarbeitet werden können. Die Art der weiteren Verarbeitung wird vom SSIS-Entwickler bestimmt.  
   
  Die SSIS-CDC-Komponenten sind zur Verwendung mit der CDC-Funktion von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit Änderungstabellen konzipiert, die sich in derselben [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank befinden.  
   
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Erste Schritte mit den Change Data Capture-Komponenten  
- Ein typisches CDC-Paket verarbeitet Änderungen an einer Gruppe von Tabellen. Die unten stehende Abbildung zeigt den grundlegenden Ablaufsteuerungsteil dieses CDC-Pakettyps. Das Paket wird als Trickle-Feed-Verarbeitungspaket bezeichnet.  
+ Ein typisches CDC-Paket verarbeitet Änderungen an einer Gruppe von Tabellen. Die grundlegenden ablaufsteuerungsteil dieses Typs von CDC-Paket ist in der folgenden Abbildung gezeigt. Das Paket wird als Trickle-Feed-Verarbeitungspaket bezeichnet.  
   
  ![Trickle-Feed verarbeiten Paketablaufsteuerung](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle-Feed verarbeiten Paketablaufsteuerung")  
   
- Dies [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -ablaufsteuerung enthält zwei CDC-Steuerungstasks und der Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
+ Diese [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
   
  Weitere Informationen zur Verwendung der CDC-Steuerungstasks finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md) und [CDC-Steuerungstask-Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
   
@@ -101,9 +93,9 @@ ms.lasthandoff: 08/03/2017
   
  Die folgenden Schritte werden in der Abbildung dargestellt:  
   
--   **Änderungen für Tabelle X** ist eine CDC-Quelle, die Änderungen an Tabelle X in dem von der übergeordneten Ablaufsteuerung bestimmten CDC-Verarbeitungsbereich liest.  
+-   **Änderungen für Tabelle X** ist eine CDC-Quelle, die Änderungen an Tabelle X liest, die in den CDC vorgenommen wurden Verarbeitungsbereich bestimmt wird, in der übergeordneten ablaufsteuerung.  
   
--   **CDC-Splitter X** wird verwendet, um die Änderungen in Einfügungen, Löschungen und Updates zu teilen. In diesem Szenario wird davon ausgegangen, dass die CDC-Quelle zum Erzeugen von Nettoänderungen konfiguriert ist, sodass andere Änderungstypen parallel verarbeitet werden können.  
+-   **CDC-Splitter X** wird verwendet, um die Änderungen in einfügungen, löschungen, Teilen und aktualisiert. In diesem Szenario wird davon ausgegangen, dass die CDC-Quelle konfiguriert ist, um nettoänderungen zu erzeugen, sodass andere Änderungstypen parallel verarbeitet werden können.  
   
 -   Die spezifischen Änderungen werden dann downstream weiter verarbeitet. In dieser Abbildung werden die Änderungen in Tabellen mit mehreren ODBC-Zielen eingefügt, in der Realität kann die Verarbeitung jedoch anders aussehen.  
   
@@ -111,11 +103,11 @@ ms.lasthandoff: 08/03/2017
   
  [CDC-Quelle](../../integration-services/data-flow/cdc-source.md)  
   
- [Quellen-Editor für CDC &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
- [Quellen-Editor für CDC &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
- [Quellen-Editor für CDC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  Weitere Informationen zum CDC-Splitter finden Sie unter:  
   
@@ -143,7 +135,7 @@ ms.lasthandoff: 08/03/2017
   
  Das Übergeben des Status der CDC-Verarbeitung vom anfänglich geladenen Paket an das Trickle-Feed-Paket und zwischen anderen Tasks innerhalb jedes Pakets erfolgt mithilfe einer speziellen SSIS-Paketzeichenfolgenvariable. Der Wert dieser Variable wird als CDC-Status bezeichnet und gibt den aktuellen Status der CDC-Verarbeitung für die Tabellengruppen wieder, die vom anfänglich geladenen Paket und vom Trickle-Feed-Paket behandelt werden.  
   
- Der Wert der CDC-Statusvariable muss in einem permanenten Speicher verwaltet werden. Er sollte vor dem Start der CDC-Verarbeitung gelesen und mit dem aktuellen Status gespeichert werden, nachdem die Verarbeitung abgeschlossen wurde. Das Laden und Speichern des CDC-Status kann vom SSIS-Entwickler ausgeführt werden, die CDC-Steuerungskomponente bietet jedoch die Möglichkeit, diesen Task zu automatisieren, indem der CDC-Statuswert in einer Datenbanktabelle verwaltet wird.  
+ Der Wert der CDC-Statusvariable muss im dauerhaften Speicher beibehalten werden. Sie sollten vor dem Starten der CDC-Verarbeitung gelesen werden und mit dem aktuellen Zustand gespeichert werden soll, um nach der Verarbeitung abgeschlossen. Das Laden und Speichern des CDC-Status kann vom SSIS-Entwickler ausgeführt werden, die CDC-Steuerungskomponente bietet jedoch die Möglichkeit, diesen Task zu automatisieren, indem der CDC-Statuswert in einer Datenbanktabelle verwaltet wird.  
   
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
  In diesem Abschnitt werden einige Sicherheitsüberlegungen im Zusammenhang mit der Verwendung der CDC-Komponenten in SSIS erläutert.  
@@ -152,7 +144,7 @@ ms.lasthandoff: 08/03/2017
  Trickle-Feed-Updatepakete erfordern Zugriff auf die CDC-Funktionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Dieser Zugriff wird standardmäßig Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Da **db_owner** eine Rolle mit umfassenden Berechtigungen ist, wird empfohlen, jeder Aufzeichnungsinstanz bei ihrer Definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Gatingsicherheitsrolle zuzuordnen, die es dem SSIS-CDC-Paket ermöglicht, die Änderungen von einem Benutzer mit sehr viel geringeren Berechtigungen verarbeiten zu lassen.  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>Zugriff auf die aktuelle LSN der CDC-Datenbank  
- Die CDC-Steuerungstaskvorgänge zum Markieren der Start-LSN für die Änderungsverarbeitung müssen in der Lage sein, die aktuelle LSN der CDC-Datenbank zu finden. Zu diesem Zweck wird die **sp_replincrementlsn** -Prozedur der master-Datenbank verwendet. Die Ausführungsberechtigung für diese Prozedur muss dem Anmeldenamen zugewiesen werden, der zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendet wird.  
+ Die CDC-Steuerungstaskvorgänge zum Markieren der Start-LSN für die Änderungsverarbeitung müssen in der Lage sein, die aktuelle LSN der CDC-Datenbank zu finden. Die Komponenten der LSN mithilfe des Verfahrens suchen **Sp_replincrementlsn** aus der master-Datenbank. Die Ausführungsberechtigung für diese Prozedur muss dem Anmeldenamen zugewiesen werden, der zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendet wird.  
   
 ### <a name="access-to-cdc-states-table"></a>Zugriff auf die CDC-Statustabelle  
  Die CDC-Statustabelle dient zum automatischen Beibehalten von CDC-Status, bei denen es erforderlich ist, dass sie von dem zum Herstellen einer Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Datenbank verwendeten Anmeldenamen aktualisiert werden können. Da diese Tabelle vom SSIS-Entwickler erstellt wird, kann der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Systemadministrator als ein Benutzer festgelegt werden, der zum Erstellen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken sowie zum Ausführen von administrativen Tasks und Wartungstasks autorisiert ist. Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Systemadministrator, der mit CDC-fähigen Datenbanken arbeitet, muss zudem über entsprechende Kenntnisse in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC-Technologie und -Implementierung verfügen.  
@@ -160,7 +152,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="grouping-tables-for-cdc-processing"></a>Gruppieren von Tabellen für die CDC-Verarbeitung  
  Die Größe von Datenbankprojekten variiert zwischen einigen Tabellen und Tausenden von Tabellen. Beim Entwerfen der anfänglich geladenen Pakete und CDC-Pakete ist es von Vorteil, Tabellen in viel kleineren Gruppen zu gruppieren, um die Verwaltung zu vereinfachen und die Effizienz zu erhöhen. In diesem Abschnitt werden verschiedene Überlegungen im Zusammenhang mit der Sortierung von Tabellen in kleinen Gruppen erläutert. Die Tabellen in jedem Paket werden dabei anfänglich geladen und dann als Gruppe aktualisiert.  
   
- Die von CDC-Komponenten unterstützten CDC-Muster setzen voraus, dass diese Gruppierung bereits festgelegt ist. Jede Gruppe definiert einen separaten CDC-Kontext, der getrennt von anderen Gruppen verwaltet wird. Für jede Gruppe werden ein anfänglich geladenes Paket und ein Trickle-Feed-Updatepaket erstellt. Trickle-Feed-Updates werden auf Grundlage der für die Änderungsverarbeitung geltenden Einschränkungen (z. B. CPU- und EA-Verbrauch sowie Auswirkungen auf andere Systeme) und der gewünschten Latenz zur regelmäßigen Ausführung geplant.  
+ Die von CDC-Komponenten unterstützten CDC-Muster setzen voraus, dass diese Gruppierung bereits festgelegt ist. Jede Gruppe definiert einen separaten CDC-Kontext, der getrennt von anderen Gruppen verwaltet wird. Für jede Gruppe werden anfänglich geladenes Paket und Trickle-Feed-Updatepakete erstellt. Trickle-Feed-Updates werden auf Grundlage der für die Änderungsverarbeitung geltenden Einschränkungen (z. B. CPU- und EA-Verbrauch sowie Auswirkungen auf andere Systeme) und der gewünschten Latenz zur regelmäßigen Ausführung geplant.  
   
  Tabellen werden nach folgenden Gesichtspunkten gruppiert:  
   
@@ -192,7 +184,7 @@ ms.lasthandoff: 08/03/2017
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Der Status bei einem **GetProcessingRange** -Vorgang, der nach TFSTART stattfindet. Er gibt an, dass die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |7-FEHLER|Die CDC-Gruppe befindet sich in einem Fehlerstatus.|  
   
- Die folgende Abbildung zeit das Statusdiagramm für die CDC-Komponenten. Ein Fehlerstatus liegt vor, wenn ein nicht erwarteter Status erreicht wird. Die erwarteten Status werden im folgenden Diagramm dargestellt, der Fehlerstatus jedoch nicht.  
+ So sieht das Statusdiagramm für die CDC-Komponenten aus. Ein Fehlerstatus liegt vor, wenn ein nicht erwarteter Status erreicht wird. Die erwarteten Status werden in der folgenden Abbildung veranschaulicht. Das Diagramm wird jedoch nicht den Status "Fehler" angezeigt.  
   
  Wenn Sie am Ende eines anfänglich geladenen Pakets z. B. versuchen, den Status auf ILEND festzulegen, und der Status TFSTART lautet, befindet sich die CDC-Gruppe in einem Fehlerstatus, und das Trickle-Feed-Updatepaket wird nicht ausgeführt (das anfänglich geladene Paket wird ausgeführt).  
   
@@ -214,7 +206,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag zu [CDC in SSIS für SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/) auf mattmasson.com.  
+-   Blogeintrag zu [CDC in SSIS für SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)auf mattmasson.com.  
   
 -   Blogeintrag zum Einrichten des CDC-Diensts [CDC für Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)auf blogs.msdn.com.  
   

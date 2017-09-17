@@ -18,17 +18,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: df8ef05d3e1813453d2fdfa40c2e0a6eec4ddecf
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: d56cf1f72a7d7ea20ae63c59d119d372e76aa393
 ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-reporting-services-at-the-command-prompt"></a>Installieren von Reporting Services über die Eingabeaufforderung
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt eine Befehlszeileninstallation vom SQL Server-Setupprogramm aus. Dieses Thema enthält mehrere Beispiele für die Installation über die Befehlszeile, die speziell für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gelten. Eine vollständige Beschreibung der für alle SQL Server-Komponenten verfügbaren Befehlszeilenoptionen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Die Befehlszeilenoptionen für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte werden in diesem Thema nicht behandelt. Informationen zur Befehlszeileninstallation des Add-Ins finden Sie unter [Installieren des Add-Ins mithilfe der Installationsdatei "rsSharePoint.msi"](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt eine Befehlszeileninstallation vom SQL Server-Setupprogramm aus. Dieses Thema enthält mehrere Beispiele für die Installation über die Befehlszeile, die speziell für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gelten. Eine vollständige Beschreibung der für alle SQL Server-Komponenten verfügbaren Befehlszeilenoptionen, finden Sie unter [Installieren von SQL Server von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Die Befehlszeilenoptionen für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte werden in diesem Thema nicht behandelt. Informationen zur Befehlszeileninstallation des Add-Ins finden Sie unter [Installieren des Add-Ins mithilfe der Installationsdatei "rsSharePoint.msi"](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
 
 ##  <a name="bkmk_native_mode"></a> Einheitlicher Modus – Reporting Services
 
@@ -91,8 +91,8 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
-[SysPrep-Parameter](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#SysPrep)   
+[Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+[SysPrep-Parameter](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
 [Installieren von PowerPivot über die Eingabeaufforderung](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: CAST und CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: de-de
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Konvertiert einen Ausdruck von einem Datentyp in einen anderen.
+Konvertiert einen Ausdruck von einem Datentyp in einen anderen.  
+In den folgenden Beispielen werden z. B. dem Eingabedatentyp in zwei andere Datentypen mit anderen Genauigkeitsgraden ändern.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|Original   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > Viele [Beispiele](#BKMK_examples) finden Sie am Ende dieses Themas.  
   
@@ -75,17 +87,13 @@ Der Zieldatentyp. Dies schließt **Xml**, **"bigint"**, und **Sql_variant**. Ali
 Eine optionale ganze Zahl, die die Länge des Zieldatentyps angibt. Der Standardwert ist 30.
   
 *Stil*  
-Ist ein Ganzzahlausdruck, der angibt, wie die CONVERT-Funktion übersetzen *Ausdruck*. Wenn style NULL ist, wird NULL zurückgegeben. Der Bereich richtet sich nach *Data_type*. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.
+Ist ein Ganzzahlausdruck, der angibt, wie die CONVERT-Funktion übersetzen *Ausdruck*. Wenn style NULL ist, wird NULL zurückgegeben. Der Bereich richtet sich nach *Data_type*. 
   
 ## <a name="return-types"></a>Rückgabetypen
 Gibt *Ausdruck* übersetzt *Data_type*.
 
-[Springen Sie zu den Beispielen 15 am Ende dieses Themas](#BKMK_examples)
-  
-## <a name="remarks"></a>Hinweise  
-  
 ## <a name="date-and-time-styles"></a>Datums- und Uhrzeitformate  
-Wenn *Ausdruck* ist ein Datentyp Datum oder Uhrzeit *Stil* kann einen der Werte in der folgenden Tabelle gezeigt. Andere Werte werden als 0 verarbeitet. zugreifen. Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], die einzigen Formate, die unterstützt werden, beim Konvertieren von Datums- und Uhrzeittypen in **"DateTimeOffset"** sind 0 oder 1. Bei allen anderen Konvertierungsformaten wird der Fehler 9809 zurückgegeben.
+Wenn *Ausdruck* ist ein Datentyp Datum oder Uhrzeit *Stil* kann einen der Werte in der folgenden Tabelle gezeigt. Andere Werte werden als 0 verarbeitet. Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], die einzigen Formate, die unterstützt werden, beim Konvertieren von Datums- und Uhrzeittypen in **"DateTimeOffset"** sind 0 oder 1. Bei allen anderen Konvertierungsformaten wird der Fehler 9809 zurückgegeben.
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Datumsformat im arabischem Format, indem der kuwaitische Algorithmus verwendet wird.
@@ -182,7 +190,7 @@ Implizite Konvertierungen sind Konvertierungen, die ohne Angabe der CAST- oder C
   
 ![Datentyp-Konvertierungstabelle](../../t-sql/data-types/media/lrdatahd.png "Datentyp-Konvertierungstabelle")
   
-Bei der Konvertierung zwischen **"DateTimeOffset"** und den Zeichentypen **Char**, **Varchar**, **Nchar**, und **Nvarchar**  konvertierte Zeitzone offsetteil muss immer zwei Ziffern für sowohl für HH als auch für MM beispielsweise-08: 00.
+Bei der Konvertierung zwischen **"DateTimeOffset"** und den Zeichentypen **Char**, **Varchar**, **Nchar**, und **Nvarchar ** konvertierte Zeitzone offsetteil muss immer zwei Ziffern für sowohl für HH als auch für MM beispielsweise-08: 00.
   
 > [!NOTE]  
 >  Da Unicode-Daten immer eine gerade Anzahl von Bytes verwenden, seien Sie bei der Konvertierung **binäre** oder **Varbinary** in oder aus Unicode-Datentypen. Die folgende Konvertierung gibt z. B. nicht den Hexadezimalwert 41, sondern 4100 zurück: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
@@ -211,7 +219,7 @@ Wenn Sie der Ausgabe eine andere Sortierung zuweisen möchten, wenden Sie die CO
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>Abschneiden und Runden von Ergebnissen
-Bei der Konvertierung von Zeichen oder binäre Ausdrücke (**Char**, **Nchar**, **Nvarchar**, **Varchar**, **Binär**, oder **Varbinary**) auf einen Ausdruck, der einen anderen Datentyp, können die Daten abgeschnitten, nur teilweise angezeigt, oder ein Fehler wird zurückgegeben, da das Ergebnis zum Anzeigen zu kurz ist. Konvertierungen in **Char**, **Varchar**, **Nchar**, **Nvarchar**, **binäre**, und  **Varbinary** abgeschnitten werden, mit Ausnahme der in der folgenden Tabelle aufgelisteten Konvertierungen.
+Bei der Konvertierung von Zeichen oder binäre Ausdrücke (**Char**, **Nchar**, **Nvarchar**, **Varchar**, **Binär**, oder **Varbinary**) auf einen Ausdruck, der einen anderen Datentyp, können die Daten abgeschnitten, nur teilweise angezeigt, oder ein Fehler wird zurückgegeben, da das Ergebnis zum Anzeigen zu kurz ist. Konvertierungen in **Char**, **Varchar**, **Nchar**, **Nvarchar**, **binäre**, und ** Varbinary** abgeschnitten werden, mit Ausnahme der in der folgenden Tabelle aufgelisteten Konvertierungen.
   
 |Ausgangsdatentyp|Zieldatentyp|Ergebnis|  
 |---|---|---|
@@ -296,7 +304,7 @@ Falls eine Konvertierung von Datentypen vorgenommen wird, bei der der Zieldatent
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gibt eine Fehlermeldung angezeigt, wenn nicht numerische **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Daten konvertiert **Int** , **"float"**, **numerischen**, oder **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt auch einen Fehler, wenn eine leere Zeichenfolge ("") konvertiert **numerischen** oder **decimal**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gibt eine Fehlermeldung angezeigt, wenn nicht numerische **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Daten konvertiert **Int **, **"float"**, **numerischen**, oder **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt auch einen Fehler, wenn eine leere Zeichenfolge ("") konvertiert **numerischen** oder **decimal**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Bestimmte Datetime-Konvertierungen sind nicht deterministisch
 In der folgenden Tabelle werden die Formate aufgelistet, bei denen die Konvertierung von string in datetime nicht deterministisch ist.
@@ -310,7 +318,7 @@ In der folgenden Tabelle werden die Formate aufgelistet, bei denen die Konvertie
 <sup>1</sup> mit Ausnahme der Formate 20 und 21
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)
-Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bei der Verwendung eines Umwandlungsvorgangs aus ergänzenden Zeichen (SC) Sortierungen **Nchar** oder **Nvarchar** auf eine **Nchar** oder  **Nvarchar** -Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten werden; es vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.
+Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bei der Verwendung eines Umwandlungsvorgangs aus ergänzenden Zeichen (SC) Sortierungen **Nchar** oder **Nvarchar** auf eine **Nchar** oder ** Nvarchar** -Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten werden; es vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
