@@ -1,35 +1,40 @@
 ---
-title: "Speichereigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit (Eigenschaft)"
-  - "MinimumAllocatedMemory (Eigenschaft)"
-  - "MidMemoryPrice (Eigenschaft)"
-  - "MemoryHeapType (Eigenschaft)"
-  - "Arbeitsspeicher [Analysis Services]"
-  - "DefaultPagesCountToReuse (Eigenschaft)"
-  - "TotalMemoryLimit (Eigenschaft)"
-  - "SessionMemoryLimit (Eigenschaft)"
-  - "VirtualMemoryLimit (Eigenschaft)"
-  - "WaitCountIfHighMemory (Eigenschaft)"
-  - "HighMemoryPrice (Eigenschaft)"
-  - "HeapTypeForObjects (Eigenschaft)"
+title: Speichereigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Speichereigenschaften
+# <a name="memory-properties"></a>Speichereigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] belegt eine mittlere Menge an Arbeitsspeicher vorab, damit Anfragen unmittelbar bearbeitet werden können. Zusätzlicher Arbeitsspeicher wird belegt, wenn die Arbeitsauslastung durch Abfragen und Verarbeitung steigt. 
   
   Sie können die Schwellenwerte steuern, an denen Arbeitsspeicher freigegeben wird, indem Sie Konfigurationseinstellungen angeben. Die **HardMemoryLimit** -Einstellung gibt z.B. eine selbstauferlegte Speicherobergrenze an (dieser Schwellenwert ist standardmäßig nicht aktiviert), wobei neue Anfragen vollständig abgelehnt werden, bis mehr Ressourcen verfügbar sind.
@@ -96,12 +101,12 @@ Wenn sie auf 1 festgelegt ist, ist es weniger wahrscheinlich, dass bei der Verar
  **MemoryHeapType**  
   Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte. Gültige Werte in Analysis Services in SQL Server 2016 SP1 und höher sind wie folgt:
   
-  Einstellung | Beschreibung
+  Einstellung | Description
 --------|------------
 **-1** | (Standard) Automatisch. Das Modul entscheidet, welcher Typ verwendet wird.
 **1** | Analysis Services HEAP.
 **2** | Windows LFH.
-**5** | Hybridzuweisung. Diese Zuweisung verwendet Windows LFH für Zuordnungen \<= 16 KB und AS Heap für Zuordnungen > 16 KB. 
+**5** | Hybridzuweisung. Diese Zuweisung verwendet Windows LFH für \<= Zuordnungen von 16 KB und für die AS-Heap > Zuordnungen von 16 KB. 
 **6** | Intel TBB-Zuweisung. Verfügbar in SQL Server 2016 SP1 (und höher) Analysis Services.
   
   
@@ -141,3 +146,4 @@ Wenn sie auf 1 festgelegt ist, ist es weniger wahrscheinlich, dass bei der Verar
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

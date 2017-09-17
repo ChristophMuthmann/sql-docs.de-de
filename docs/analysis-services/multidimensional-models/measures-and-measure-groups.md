@@ -1,34 +1,39 @@
 ---
-title: "Measures und Measuregruppen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Measureguppen [Analysis Services]"
-  - "Measures [Analysis Services], Informationen zu Measures"
-  - "OLAP-Objekte [Analysis Services], Measures"
-  - "Aggregatfunktionen [Analysis Services]"
-  - "Granularität"
-  - "Measures [Analysis Services], Informationen zu Measuregruppen"
-  - "Measures [Analysis Services]"
-  - "Aggregationen [Analysis Services], Measures"
-  - "Faktentabellen [Analysis Services]"
+title: Measures und Measuregruppen | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services]
+- measures [Analysis Services], about measures
+- OLAP objects [Analysis Services], measures
+- aggregate functions [Analysis Services]
+- granularity
+- measure groups [Analysis Services], about measure groups
+- measures [Analysis Services]
+- aggregations [Analysis Services], measures
+- fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/01/2017
+
 ---
-# Measures und Measuregruppen
+# <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
   Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
   
  In diesem Thema werden [Measures](#bkmk_measure) und [Measure Groups](#bkmk_mg)beschrieben. Außerdem enthält es die folgende Tabelle mit Links zu Schritten zum Erstellen und Konfigurieren von Measures und Measuregruppen.  
@@ -43,7 +48,7 @@ caps.handback.revision: 42
 |[Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Führen Sie eine vorhandene Measuregruppe in anderen Cubes in derselben Datenbank oder in anderen Analysis Services-Datenbanken einem anderen Zweck zu.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
- Ein Measure stellt eine Spalte mit quantifizierbaren (und gewöhnlich numerischen) Daten dar, die aggregiert werden können. Measures stellen einen bestimmen Aspekt der Organisationstätigkeit dar, ausgedrückt in finanzieller Hinsicht (z. B. Umsatz, Margen oder Kosten), als Anzahlen (Menge des Bestands, Anzahl der Mitarbeiter, Kunden und Bestellungen) oder als eine komplexere Berechnung, die die Geschäftslogik umfasst.  
+ Ein Measure stellt eine Spalte mit quantifizierbaren (und gewöhnlich numerischen) Daten dar, die aggregiert werden können. Measures stellen einen bestimmen Aspekt der Organisationstätigkeit dar, ausgedrückt in finanzieller Hinsicht (z. B. Umsatz, Margen oder Kosten), als Anzahlen (Menge des Bestands, Anzahl der Mitarbeiter, Kunden und Bestellungen) oder als eine komplexere Berechnung, die die Geschäftslogik umfasst.  
   
  Jeder Cube muss über mindestens ein Measure verfügen, die meisten besitzen jedoch mehrere, einige sogar Hunderte. Strukturell gesehen ist ein Measure häufig einer Quellspalte in einer Faktentabelle zugeordnet, wobei die Spalte die Werte enthält, die zum Laden des Measures verwendet werden. Alternativ können Sie ein Measure auch mithilfe von MDX definieren.  
   
@@ -57,16 +62,16 @@ caps.handback.revision: 42
   
  Was geschieht, wenn das Measure keinen Bezug zu den in der Abfrage verwendeten Dimensionen aufweist? In der Regel werden Analysis Services das Standardmeasure anzeigen, und der Wert wird für alle Elemente gleich sein. In diesem Beispiel weisen **Internetverkäufe**, durch die Direktverkäufe von Kunden über den Onlinekatalog gemessen werden, keine Beziehung zur Vertriebsorganisation auf.  
   
- ![Pivottable showing repeated measure values](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![PivotTable mit wiederholten Measurewerten](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Pivottable mit wiederholten Measurewerten")  
   
  Um die Wahrscheinlichkeit zu senken, solche Verhaltensweisen in einer Clientanwendung zu finden, könnten Sie mehrere Cubes oder Perspektiven innerhalb derselben Datenbank erstellen und sicherstellen, dass jeder Cube oder jede Perspektive nur verknüpfte Objekte enthält. Sie müssen die Beziehungen zwischen der Measuregruppe (mit der Faktentabelle verknüpft) und den Dimensionen überprüfen.  
   
-##  <a name="bkmk_mg"></a> Measuregruppen  
+##  <a name="bkmk_mg"></a> Measure Groups  
  In einem Cube werden Measures nach den ihnen zugrunde liegenden Faktentabellen in Measuregruppen gruppiert. Measuregruppen werden verwendet, um Dimensionen Measures zuzuordnen. Measuregruppen werden auch für Measures verwendet, die Distinct Count als Aggregationsverhalten haben. Durch das Platzieren der Distinct Count Measures in der jeweils zugehörigen Measuregruppe wird die Aggregationsverarbeitung optimiert.  
   
- Ein einfaches <xref:Microsoft.AnalysisServices.MeasureGroup>-Objekt besteht aus grundlegenden Informationen wie dem Gruppennamen, dem Speichermodus und dem Verarbeitungsmodus. Es enthält auch seine Bestandteile, die Measures, Dimensionen und Partitionen, die die Measuregruppe bilden.  
+ Ein einfaches <xref:Microsoft.AnalysisServices.MeasureGroup> -Objekt besteht aus grundlegenden Informationen wie dem Gruppennamen, dem Speichermodus und dem Verarbeitungsmodus. Es enthält auch seine Bestandteile, die Measures, Dimensionen und Partitionen, die die Measuregruppe bilden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Cubes in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
