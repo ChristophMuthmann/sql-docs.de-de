@@ -1,7 +1,7 @@
 ---
 title: Datentypen (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8220765c51455b20a12439c18dcd2fb4bde6bb3d
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: a37fc487615827eb2a380c3fe608b9c29cfda3a8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
@@ -110,7 +110,8 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind einige Datenty
 |[Cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md)|[Räumliche Typen](http://msdn.microsoft.com/library/d1715574-34b1-4ce5-a29f-25e35027a54c)|  
+|[Räumliche Geometry-Typen](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Räumlichen Geography-Typen](../../t-sql/spatial-geography/spatial-types-geography.md)|  
+|[table](../../t-sql/data-types/table-transact-sql.md) | |
   
 ## <a name="see-also"></a>Siehe auch
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
