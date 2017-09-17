@@ -1,0 +1,8 @@
+# [Anforderungen an die Clientarchitektur für die Analysis Services-Entwicklung](client-architecture-requirements-for-analysis-services-development.md)
+# [Datentypen in Analysis Services](data-types-in-analysis-services.md)
+# [Lokale Cubes (Analysis Services – mehrdimensionale Daten)](local-cubes-analysis-services-multidimensional-data.md)
+# [Spezifikationen der maximalen Kapazität (Analysis Services)](maximum-capacity-specifications-analysis-services.md)
+# [Objektbenennungsregeln (Analysis Services)](object-naming-rules-analysis-services.md)
+# [OLAP-Modulserverkomponenten](olap-engine-server-components.md)
+# [Grundlegendes zur Microsoft OLAP-Architektur](understanding-microsoft-olap-architecture.md)
+# [Grundlegendes zur physischen Microsoft OLAP-Architektur](understanding-microsoft-olap-physical-architecture.md)

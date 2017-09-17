@@ -1,0 +1,7 @@
+# [Zugreifen auf den Abfragekontext in gespeicherten Prozeduren](accessing-query-context-in-stored-procedures.md)
+# [Aufrufen gespeicherter Prozeduren](calling-stored-procedures.md)
+# [Erstellen gespeicherter Prozeduren](creating-stored-procedures.md)
+# [Debuggen gespeicherter Prozeduren](debugging-stored-procedures.md)
+# [Definieren gespeicherter Prozeduren](defining-stored-procedures.md)
+# [Entwerfen gespeicherter Prozeduren](designing-stored-procedures.md)
+# [Festlegen der Sicherheit für gespeicherte Prozeduren](setting-security-for-stored-procedures.md)
