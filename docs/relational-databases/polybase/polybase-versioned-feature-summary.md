@@ -1,7 +1,7 @@
 ---
 title: Zusammenfassung der PolyBase-Funktionen mit Versionsangabe | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Zusammenfassung der PolyBase-Funktionen mit Versionsangabe
@@ -41,11 +41,23 @@ Zusammenfassung der PolyBase-Funktionen, die für SQL Server-Produkte und -Diens
 |Daten für Azure-BLOB-Speicher exportieren|ja|Nein|Ja|Ja|  
 |Daten aus Azure Data Lake Store importieren|Nein|Nein|ja|Nein|    
 |Daten aus Azure Data Lake Store exportieren|Nein|Nein|ja|Nein|
-|PolyBase-Abfragen über Microsoft BI-Tools ausführen|ja|Nein|Ja|ja|   
+|PolyBase-Abfragen über Microsoft BI-Tools ausführen|ja|Nein|Ja|Ja|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Von der Weitergabeberechnung unterstützte T-SQL-Operatoren
+In SQL Server und APS können nicht alle T-SQL-Operatoren an den Hadoop-Cluster weitergegeben werden. Die folgende Tabelle listet alle unterstützten und eine Teilmenge der nicht unterstützten Operatoren auf. 
 
-  
+||||
+|-|-|-| 
+|**Operatortyp**|**Weitergabe an Hadoop möglich**|**Weitergabe an Blob Storage möglich**|
+|Spaltenprojektionen|Ja|Nein|
+|Prädikate|Ja|Nein|
+|Aggregate|Teilweise|Nein|
+|Joins zwischen externen Tabellen|Nein|Nein|
+|Joins zwischen externen und lokale Tabellen|Nein|Nein|
+|Sortierungen|Nein|Nein|
+
+Partielle Aggregation bedeutet, dass eine endgültige Aggregation erfolgen muss, sobald die Daten SQL Server erreichen, aber ein Teil der Aggregation in Hadoop erfolgt. Dies ist eine häufig verwendete Methode zum Berechnen von Aggregationen in MPP-Systemen (Massively Parallel Processing).  
 ## <a name="see-also"></a>Siehe auch  
  [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)  
   

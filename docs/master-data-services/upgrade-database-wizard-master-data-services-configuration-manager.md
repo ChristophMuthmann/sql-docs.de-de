@@ -1,5 +1,5 @@
 ---
-title: Datenbankupgrade-Assistent (Master Data Services-Konfigurations-Manager) | Microsoft Docs
+title: "Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
-|**SQL Server-Instanz**|Der Name des derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] Instanz.|  
+|**SQL Server-Instanz**|Der Name der derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz.|  
 |**Master Data Services-Datenbank**|Der Name der derzeit ausgewählten [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  
   
 ## <a name="progress-and-finish"></a>Status und Fertig stellen  
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services-Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aktualisieren von Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

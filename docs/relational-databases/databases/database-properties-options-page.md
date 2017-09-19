@@ -2,7 +2,7 @@
 title: Datenbankeigenschaften (Seite Optionen) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
- Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte sind  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**und **SQL Server 2008 (100)**. Wenn eine SQL Server 2005-Datenbank auf SQL Server 2014 aktualisiert wird, wird der Kompatibilitätsgrad für die Datenbank von 90 in 100 geändert.  Der Kompatibilitätsgrad 90 wird in SQL Server 2014 nicht unterstützt. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine SQL Server-Datenbank aktualisiert wird, wird der Kompatibilitätsgrad für diese Datenbank nach Möglichkeit beibehalten oder wird auf den mindestens erforderlichen Grad geändert, der von der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. 
   
  **Einschlusstyp**  
  Geben Sie Kein oder Teilweise an, um festzulegen, ob es sich um eine eigenständige Datenbank handelt. Weitere Informationen zu eigenständigen Datenbanken finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md). Die Servereigenschaft **Eigenständige Datenbanken aktivieren** muss auf **TRUE** festgelegt werden, bevor eine Datenbank als eigenständige Datenbank konfiguriert werden kann.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **Automatisch schließen**  
  Gibt an, ob die Datenbank ordnungsgemäß heruntergefahren wird und Ressourcen freigegeben werden, nachdem der letzte Benutzer die Anwendung beendet hat. Mögliche Werte sind **True** und **False**. Ist der Wert **True**, dann wird die Datenbank ordnungsgemäß heruntergefahren, und die Ressourcen werden freigegeben, nachdem sich der letzte Benutzer abgemeldet hat.  
   
- Inkrementelle Statistiken automatisch erstellen  
+ **Inkrementelle Statistiken automatisch erstellen**  
  Gibt an, ob die Option INCREMENTAL beim Erstellen von Statistiken für einzelne Partitionen verwendet werden soll. Weitere Informationen zu inkrementellen Statistiken finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Statistiken automatisch erstellen**  
@@ -62,14 +62,14 @@ ms.lasthandoff: 06/22/2017
  Gibt an, ob die für die Datenbank veralteten Optimierungsstatistiken automatisch aktualisiert werden. Mögliche Werte sind **True** und **False**. Ist der Wert **True**, werden veraltete Statistiken, die von einer Abfrage zur Optimierung benötigt werden, automatisch während der Optimierung aktualisiert. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Statistiken automatisch asynchron aktualisieren**  
- Ist der Wert **True**, warten Abfragen, die ein automatisches Update veralteter Statistiken initiieren, vor dem Kompilieren nicht, bis die Statistiken aktualisiert sind. Nachfolgende Abfragen verwenden die aktualisierten Statistiken, sobald diese verfügbar sind.  
+ Ist der Wert **TRUE**, warten Abfragen, die ein automatisches Update veralteter Statistiken initiieren, vor dem Kompilieren nicht, bis die Statistiken aktualisiert sind. Nachfolgende Abfragen verwenden die aktualisierten Statistiken, sobald diese verfügbar sind.  
   
  Ist der Wert **False**, warten Abfragen, die ein automatisches Update veralteter Statistiken initiieren, bis die aktualisierten Statistiken im Abfrageoptimierungsplan verwendet werden können.  
   
  Wenn diese Option auf **True** festgelegt wird, hat dies keine Auswirkungen, es sei denn, die Option **Statistiken automatisch aktualisieren** ist ebenfalls auf **True**festgelegt.  
   
 ## <a name="containment"></a>Kapselung  
- In eigenständigen Datenbanken können einige Einstellungen, die normalerweise auf Serverebene konfiguriert werden, auf Datenbankebene konfiguriert werden.  
+ In einer eigenständigen Datenbank können einige Einstellungen, die normalerweise auf Serverebene konfiguriert werden, auf Datenbankebene konfiguriert werden.  
   
  **LCID der Volltext-Standardsprache**  
  Gibt eine Standardsprache für Spalten mit Volltextindex an. Linguistische Analysen von Daten mit Volltextindex werden von der Sprache der Daten bestimmt. Der Standardwert für diese Option ist die Sprache des Servers. Informationen zu der Sprache, die der angezeigten Einstellung entspricht, finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
+**Zulassen der Momentaufnahmeisolation**  
+Aktiviert dieses Feature.  
+
  **ANSI NULL Default**  
  Ermöglicht NULL-Werte für alle benutzerdefinierten Datentypen oder -spalten, die während einer **CREATE TABLE** - oder **ALTER TABLE** -Anweisung nicht explizit als **NOT NULL** festgelegt wurden (der Standardzustand). Weitere Informationen finden Sie unter [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) und [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  Bei **True**verwaltet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Korrelationsstatistiken zwischen zwei beliebigen Tabellen in der Datenbank, die durch eine FOREIGN KEY-Einschränkung verknüpft sind und über **datetime** -Spalten verfügen.  
   
  Bei **False**werden keine Korrelationsstatistiken verwaltet.  
-  
+ 
+ **Verzögerte Dauerhaftigkeit**  
+ Aktiviert dieses Feature.  
+ 
+ **Ist aktivierte READ COMMITTED-Momentaufnahme**  
+ Aktiviert dieses Feature.  
+ 
  **Abbruch bei numerischem Runden**  
  Gibt an, wie Rundungsfehler in der Datenbank behandelt werden. Mögliche Werte sind **True** und **False**. Beim Wert **True**wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt. Beim Wert **False** werden bei Genauigkeitsverlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert. Weitere Informationen finden Sie unter [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **Wiederherstellungszeit für das Ziel (Sekunden)**  
  Gibt die maximale Grenze für die Zeit in Sekunden an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
-  
+
+## <a name="service-broker"></a>Service Broker  
+**Broker aktiviert**  
+Aktiviert oder deaktiviert den Service Broker.  
+
+**Brokerpriorität berücksichtigen**  
+Schreibgeschützte Service Broker-Eigenschaft.  
+
+**Service Broker-Bezeichner**  
+Schreibgeschützter Bezeichner.  
+
 ## <a name="state"></a>Status  
  **Datenbank schreibgeschützt**  
- Gibt an, ob die Datenbank schreibgeschützt ist. Mögliche Werte sind **True** und **False**. Bei **True**können die Benutzer die Daten in der Datenbank nur lesen. Die Benutzer können keine Daten oder Datenbankobjekte ändern. Die Datenbank selbst kann jedoch mithilfe der DROP DATABASE-Anweisung gelöscht werden. Die Datenbank darf nicht verwendet werden, wenn ein neuer Wert für die Option **Datenbank schreibgeschützt** angegeben wird. Die master-Datenbank stellt eine Ausnahme dar, und nur der Systemadministrator darf die master-Datenbank verwenden, während die Option festgelegt wird.  
+ Gibt an, ob die Datenbank schreibgeschützt ist. Mögliche Werte sind **True** und **False**. Bei **True**können die Benutzer die Daten in der Datenbank nur lesen. Die Benutzer können keine Daten oder Datenbankobjekte ändern. Die Datenbank selbst kann jedoch mithilfe der `DROP DATABASE`-Anweisung gelöscht werden. Die Datenbank darf nicht verwendet werden, wenn ein neuer Wert für die Option **Datenbank schreibgeschützt** angegeben wird. Die master-Datenbank stellt eine Ausnahme dar, und nur der Systemadministrator darf die master-Datenbank verwenden, während die Option festgelegt wird.  
   
  **Datenbankstatus**  
  Zeigt den aktuellen Status der Datenbank an. Diese Option kann nicht bearbeitet werden. Weitere Informationen zum **Datenbankstatus**finden Sie unter [Datenbankstatus](../../relational-databases/databases/database-states.md).  
-  
+
+ **Verschlüsselung aktiviert**  
+ Bei **True**ist diese Datenbank für die Datenbankverschlüsselung aktiviert. Für die Verschlüsselung ist ein Verschlüsselungsschlüssel für eine Datenbank erforderlich. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 
  **Zugriff beschränken**  
  Gibt an, welche Benutzer auf die Datenbank zugreifen können. Folgende Werte sind möglich:  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      Nur Mitglieder der Rollen db_owner, dbcreator oder sysadmin können die Datenbank verwenden.  
   
- **Verschlüsselung aktiviert**  
- Bei **True**ist diese Datenbank für die Datenbankverschlüsselung aktiviert. Für die Verschlüsselung ist ein Verschlüsselungsschlüssel für eine Datenbank erforderlich. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
-  
+
+
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

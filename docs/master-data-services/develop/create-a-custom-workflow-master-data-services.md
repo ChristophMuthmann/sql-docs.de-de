@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen benutzerdefinierten Workflow (Master Data Services) | Microsoft Docs
+title: Erstellen eines benutzerdefinierten Workflows (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dacc515af7f4d05fc2bad2fd43535bc27c13ea76
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
@@ -56,13 +56,13 @@ ms.lasthandoff: 08/02/2017
 5.  Wenden Sie die Geschäftsregel auf ein Element an, das den benutzerdefinierten Workflow auslöst.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Erstellen der Workflowhandlerassembly  
- Ein benutzerdefinierter Workflow ist eine .NET-Klassenbibliotheksassembly, die die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle implementiert. Der SQL Server MDS Workflow Integration Service ruft zum Ausführen des Codes die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode auf. Z. B. Code, der implementiert <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, finden Sie unter [Beispiel für einen benutzerdefinierten Workflow &#40; Master Data Services &#41; ](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+ Ein benutzerdefinierter Workflow ist eine .NET-Klassenbibliotheksassembly, die die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle implementiert. Der SQL Server MDS Workflow Integration Service ruft zum Ausführen des Codes die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode auf. Beispielcode, der <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> implementiert, finden Sie unter [Beispiel für einen benutzerdefinierten Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  Gehen Sie wie folgt vor, um mit Visual Studio 2010 eine Assembly zu erstellen, die der SQL Server MDS Workflow Integration Service aufrufen kann, um einen benutzerdefinierten Workflow zu behandeln:  
   
-1.  Erstellen Sie in Visual Studio 2010 ein neues **-Klassenbibliothek** Projekt, das von Ihnen gewünschten Sprache verwendet. Um eine c#-Klassenbibliothek zu erstellen, wählen die **Visual C# \Windows** -Projekttypen sowie die **-Klassenbibliothek** Vorlage. Geben Sie einen Namen für das Projekt, z. B. **MDSWorkflowTest**, und klicken Sie auf **OK**.  
+1.  Erstellen Sie in Visual Studio 2010 ein neues **Klassenbibliotheksprojekt**, das Ihre gewünschte Sprache verwendet. Um eine C#-Klassenbibliothek zu erstellen, wählen Sie die **Visual C#\Windows**-Projekttypen sowie die **Klassenbibliotheksvorlage** aus. Geben Sie einen Namen für das Projekt ein, z.B. **MDSWorkflowTest**, und klicken Sie auf **OK**.  
   
-2.  Fügen Sie einen Verweis auf Microsoft.MasterDataServices.WorkflowTypeExtender.dll hinzu. Diese Assembly finden Sie in \<Ihr Installationsordner > \master.  
+2.  Fügen Sie einen Verweis auf Microsoft.MasterDataServices.WorkflowTypeExtender.dll hinzu. Diese Assembly befindet sich unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
   
 3.  Fügen Sie "using Microsoft.MasterDataServices.Core.Workflow;" der C#-Codedatei hinzu.  
   
@@ -70,12 +70,12 @@ ms.lasthandoff: 08/02/2017
   
 5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
-6.  Kopieren Sie die Assembly auf den Speicherort der die SQL Server MDS Workflow Integration Service ausführbare, mit dem Namen Microsoft.MasterDataServices.Workflow.exe, im \<Ihr Installationsordner > \master.  
+6.  Legen Sie eine Kopie der Assembly am Speicherort der ausführbaren Datei des SQL Server MDS Workflow Integration Service ab, die sich „Microsoft.MasterDataServices.Workflow.exe“ nennt (unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin).  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>Konfigurieren des SQL Server MDS Workflow Integration Service  
  Bearbeiten Sie die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Konfigurationsdatei, um Verbindungsinformationen für die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank einzubinden und der Workflowhandlerassembly wie folgt ein Tag zuzuordnen:  
   
-1.  Suchen von Microsoft.MasterDataServices.Workflow.exe.config in \<Ihr Installationsordner > \master.  
+1.  Suchen Sie nach der Datei „Microsoft.MasterDataServices.Workflow.exe.config“ unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
   
 2.  Fügen Sie der Einstellung "ConnectionString" die Verbindungsinformationen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank hinzu. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation eine Sortierung mit Berücksichtigung der Groß-/Kleinschreibung verwendet, muss der Name der Datenbank in der gleichen Schreibweise wie in der Datenbank eingegeben werden. Beispielsweise kann das vollständige Einstellungstag wie folgt aussehen:  
   
@@ -93,10 +93,10 @@ ms.lasthandoff: 08/02/2017
     </setting>  
     ```  
   
-     Der innere Text des der \<Wert >-Tag wird in Form von \<workflowtag > =\<Assembly qualifizierter workflowtypname >. \<Workflowtag > ist ein Name, die Sie verwenden, um die workflowhandlerassembly identifizieren, bei der Erstellung einer Geschäftsregel in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<Assembly qualifizierter workflowtypname > ist der Namespace-qualifizierten Namen der Workflowklasse, gefolgt von einem Komma gefolgt von den Anzeigenamen der Assembly. Verfügt die Assembly über einen starken Namen, binden Sie zudem Versionsinformationen und sowie das zugehörige PublicKeyToken ein. Sie können mehrere einschließen \<Einstellung >-Tags, wenn Sie mehrere workflowhandler für andere Arten von Workflows erstellt haben.  
+     Der innere Text des Tags \<Wert> hat das Format \<Workflowtag>=\<durch die Assembly qualifizierter Workflowtypname>. \<Workflowtag> ist ein Name, mit dem Sie die Workflowhandlerassembly identifizieren, wenn Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel erstellen. \<durch die Assembly qualifizierter Workflowtypname> entspricht dem durch einen Namespace qualifizierten Namen der Workflowklasse, gefolgt von einem Komma und dem Anzeigenamen der Assembly. Verfügt die Assembly über einen starken Namen, binden Sie zudem Versionsinformationen und sowie das zugehörige PublicKeyToken ein. Sie können mehrere \<Einstellungstags> einbinden, wenn Sie mehrere Workflowhandler für andere Arten von Workflows erstellt haben.  
   
 > [!NOTE]  
->  Je nach Serverkonfiguration wird möglicherweise der Fehler "Der Zugriff wurde verweigert" angezeigt, wenn Sie versuchen, die Datei "Microsoft.MasterDataServices.Workflow.exe.config" zu speichern. Tritt dieser Fehler auf, deaktivieren Sie vorübergehend die Benutzerkontensteuerung (UAC) auf dem Server. Zu diesem Zweck öffnen Sie die Systemsteuerung, klicken Sie auf **System und Sicherheit**. Klicken Sie unter **Wartungscenter**, klicken Sie auf **Einstellungen der Benutzerkontensteuerung ändern**. In der **Einstellungen zur Benutzerkontensteuerung** Dialogfeld, schieben Sie den Regler nach unten, damit Sie keine Benachrichtigung erhalten. Starten Sie den Computer neu, und wiederholen Sie die vorherigen Schritte, um die Konfigurationsdatei zu bearbeiten. Setzen Sie nach dem Speichern der Datei die UAC-Einstellungen auf die Standardebene zurück.  
+>  Je nach Serverkonfiguration wird möglicherweise der Fehler "Der Zugriff wurde verweigert" angezeigt, wenn Sie versuchen, die Datei "Microsoft.MasterDataServices.Workflow.exe.config" zu speichern. Tritt dieser Fehler auf, deaktivieren Sie vorübergehend die Benutzerkontensteuerung (UAC) auf dem Server. Öffnen Sie dazu die Systemsteuerung, und klicken Sie auf **System und Sicherheit**. Klicken Sie unter **Wartungscenter** auf **Einstellungen der Benutzerkontensteuerung ändern**. Schieben Sie im Dialogfeld **Einstellungen zur Benutzerkontensteuerung** den Balken nach unten, damit Sie keine Benachrichtigung erhalten. Starten Sie den Computer neu, und wiederholen Sie die vorherigen Schritte, um die Konfigurationsdatei zu bearbeiten. Setzen Sie nach dem Speichern der Datei die UAC-Einstellungen auf die Standardebene zurück.  
   
 ### <a name="start-sql-server-mds-workflow-integration-service"></a>Starten des SQL Server MDS Workflow Integration Service  
  Standardmäßig ist SQL Server MDS Workflow Integration Service nicht installiert. Sie müssen den Dienst installieren, bevor er verwendet werden kann. Erstellen Sie für eine maximale Sicherheit einen lokalen Benutzer für den Dienst, und weisen Sie diesem Benutzer nur die zum Ausführen von Workflowvorgängen erforderlichen Berechtigungen zu. Gehen Sie wie folgt vor, um einen Benutzer zu erstellen sowie den Dienst zu installieren und zu starten:  
@@ -105,11 +105,11 @@ ms.lasthandoff: 08/02/2017
   
 2.  Weisen Sie mithilfe von SQL Server Management Studio dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der gespeicherten Prozedur "[mdm].[udpExternalActionsGet]" zu. Erstellen Sie dazu eine neue Anmeldung für das Konto "mds_workflow_service", erstellen Sie in der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank einen neuen Benutzer, ordnen Sie diesen Benutzer der Anmeldung "mds_workflow_service" zu, und gewähren Sie dem Benutzer die EXECUTE-Berechtigung für die gespeicherte Prozedur "[mdm].[udpExternalActionsGet]".  
   
-3.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der Workflowhandlerassembly. Zu diesem Zweck fügen Sie den Benutzer "mds_workflow_service" die **Sicherheit** auf der Registerkarte die **Eigenschaften** des Workflows Ereignishandlerassembly und gewähren Sie dem Benutzer "mds_workflow_service" Lese- und AUSFÜHRBERECHTIGUNG.  
+3.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der Workflowhandlerassembly. Fügen Sie dazu den Benutzer „mds_workflow_service“ der Registerkarte **Sicherheit** im Bereich **Eigenschaften** der Workflowhandlerassembly hinzu, und gewähren Sie dem Benutzer „mds_workflow_service“ die READ- und EXECUTE-Berechtigung.  
   
-4.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der ausführbaren Datei des SQL Server MDS Workflow Integration Service. Zu diesem Zweck fügen Sie den Benutzer "mds_workflow_service" die **Sicherheit** auf der Registerkarte die **Eigenschaften** von Microsoft.MasterDataServices.Workflow.exe im \<Ihr Installationsordner > \master und gewähren Sie dem Benutzer "mds_workflow_service" Lese- und AUSFÜHRBERECHTIGUNG.  
+4.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der ausführbaren Datei des SQL Server MDS Workflow Integration Service. Fügen Sie dazu den Benutzer „mds_workflow_service“ der Registerkarte **Sicherheit** im Bereich **Eigenschaften** der Datei „Microsoft.MasterDataServices.Workflow.exe“ hinzu, die unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin gespeichert ist, und gewähren Sie dem Benutzer „mds_workflow_service“ die READ- und EXECUTE-Berechtigung.  
   
-5.  Installieren Sie SQL Server MDS Workflow Integration Service mithilfe des .NET-Installationshilfsprogramms (InstallUtil.exe). InstallUtil.exe finden Sie in der .NET Installationsordner auswählen möchten, z. B. C:\Windows\Microsoft.NET\Framework\v4.0.30319\\. Installieren Sie den SQL Server MDS Workflow Integration Service durch folgende Eingabe in einer Eingabeaufforderung für erhöhte Rechte:  
+5.  Installieren Sie SQL Server MDS Workflow Integration Service mithilfe des .NET-Installationshilfsprogramms (InstallUtil.exe). Die Datei „InstallUtil.exe“ befindet sich im .NET-Installationsordner, z.B. unter C:\Windows\Microsoft.NET\Framework\v4.0.30319\\\. Installieren Sie den SQL Server MDS Workflow Integration Service durch folgende Eingabe in einer Eingabeaufforderung für erhöhte Rechte:  
   
     ```  
     C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil Microsoft.MasterDataServices.Workflow.exe  
@@ -117,27 +117,27 @@ ms.lasthandoff: 08/02/2017
   
      Geben Sie während der Installation bei entsprechender Aufforderung den Benutzer "mds_workflow_service" an.  
   
-6.  Starten Sie SQL Server MDS Workflow Integration Service mithilfe des Dienst-Snap-Ins. Zu diesem Zweck finden Sie im Dienste-Snap-in SQL Server MDS Workflow Integration Service, wählen Sie ihn, und klicken Sie auf die **starten** Link.  
+6.  Starten Sie SQL Server MDS Workflow Integration Service mithilfe des Dienst-Snap-Ins. Suchen Sie dazu SQL Server MDS Workflow Integration Service im Dienst-Snap-In, wählen Sie den Dienst aus, und klicken Sie auf den Link **Starten**.  
   
 ### <a name="create-a-workflow-business-rule"></a>Erstellen einer Workflowgeschäftsregel  
- Erstellen und veröffentlichen Sie mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel, die bei Anwendung den Workflow startet. Die Geschäftsregel muss Aktionen enthalten, die Attributwerte ändern, damit die Regel den Wert "false" ergibt, nachdem sie einmal übernommen wurde. Beispielsweise kann die Geschäftsregel den Wert "true" ergeben, wenn ein Preisattributwert größer als 500 und der Approved-Attributwert leer ist. Die Regel kann dann zwei Aktionen umfassen, und zwar eine zum Festlegen des Approved-Attributwerts auf "Ausstehend" und eine zum Starten des Workflows. Sie können alternativ eine Regel erstellen, die auf die Bedingung "has changed" (wurde geändert) zurückgreift, und Ihre Attribute hinzufügen, um die Nachverfolgungsgruppen zu ändern. Weitere Informationen zu Geschäftsregeln finden Sie unter [Geschäftsregeln &#40; Master Data Services &#41; ](../../master-data-services/business-rules-master-data-services.md).  
+ Erstellen und veröffentlichen Sie mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel, die bei Anwendung den Workflow startet. Die Geschäftsregel muss Aktionen enthalten, die Attributwerte ändern, damit die Regel den Wert "false" ergibt, nachdem sie einmal übernommen wurde. Beispielsweise kann die Geschäftsregel den Wert "true" ergeben, wenn ein Preisattributwert größer als 500 und der Approved-Attributwert leer ist. Die Regel kann dann zwei Aktionen umfassen, und zwar eine zum Festlegen des Approved-Attributwerts auf "Ausstehend" und eine zum Starten des Workflows. Sie können alternativ eine Regel erstellen, die auf die Bedingung "has changed" (wurde geändert) zurückgreift, und Ihre Attribute hinzufügen, um die Nachverfolgungsgruppen zu ändern. Weitere Informationen finden zu Geschäftsregeln Sie unter [Geschäftsregeln &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
   
  Erstellen Sie wie folgt eine Geschäftsregel, mit der ein benutzerdefinierter Workflow in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gestartet wird:  
   
-1.  In der Geschäftsregel-Editor der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], nachdem Sie die Bedingungen für die Geschäftsregel, ziehen Sie angegeben haben die **Workflow starten** Aktion aus der **externe Aktionen** Liste der **dann** des Bereichs **Aktion** Bezeichnung.  
+1.  Ziehen Sie im Geschäftsregel-Editor von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] nach der Angabe der Bedingungen für die Geschäftsregel die Aktion **Workflow starten** von der Liste für **externe Aktionen** zur Bezeichnung **Aktion** des Bereichs **THEN**.  
   
-2.  In der **-Aktion bearbeiten** Bereich, in der **Workflowtyp** geben den Tag, die workflowhandlerassembly identifiziert. Hierbei handelt es sich um das Tag, das Sie in der Konfigurationsdatei für die Assembly angegeben haben, beispielsweise TEST.  
+2.  Geben Sie im Bereich **Aktion bearbeiten** im Feld **Workflowtyp** das Tag ein, mit dem die Workflowhandlerassembly identifiziert wird. Hierbei handelt es sich um das Tag, das Sie in der Konfigurationsdatei für die Assembly angegeben haben, beispielsweise TEST.  
   
-3.  Wählen Sie optional die **einschließen von Elementdaten** Kontrollkästchen. Wählen Sie diese Option aus, um Attributnamen und Werte in der XML einzuschließen, die an den Workflowhandler übergeben wird.  
+3.  Aktivieren Sie optional das Kontrollkästchen zum **Einschließen von Elementdaten**. Wählen Sie diese Option aus, um Attributnamen und Werte in der XML einzuschließen, die an den Workflowhandler übergeben wird.  
   
-4.  In der **workflowsite** geben den Namen einer Website. Dies gilt u. U. nicht für den benutzerdefinierten Workflow, kann jedoch für zusätzlichen Kontext angewendet werden.  
+4.  Geben Sie im Feld **Workflowsite** den Namen einer Website ein. Dies gilt u. U. nicht für den benutzerdefinierten Workflow, kann jedoch für zusätzlichen Kontext angewendet werden.  
   
-5.  In der **Workflowname** geben den Namen des Workflows von Visual Studio. Dies gilt u. U. nicht für den benutzerdefinierten Workflow, kann jedoch für zusätzlichen Kontext angewendet werden.  
+5.  Geben Sie im Feld **Workflowname** den Namen des Workflows von Visual Studio ein. Dies gilt u. U. nicht für den benutzerdefinierten Workflow, kann jedoch für zusätzlichen Kontext angewendet werden.  
   
 6.  Speichern und veröffentlichen Sie die Geschäftsregel.  
   
 ### <a name="apply-business-rules-to-start-a-workflow"></a>Anwenden von Geschäftsregeln zum Starten eines Workflows  
- Wenden Sie zum Starten des Workflows die Geschäftsregel auf die Daten an. Bearbeiten Sie dazu mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] die Entität mit den zu validierenden Elementen. Klicken Sie auf **Anwenden von Geschäftsregeln**. Als Reaktion auf die Geschäftsregel füllt [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] die Service Broker-Warteschlange der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank auf. Überprüft der SQL Server MDS Workflow Integration Service die Warteschlange, werden die Daten an die angegebene Workflowhandlerassembly gesendet, und die Warteschlange wird geleert. Die Workflowhandlerassembly führt die Aktionen aus, die Sie darin codiert haben.  
+ Wenden Sie zum Starten des Workflows die Geschäftsregel auf die Daten an. Bearbeiten Sie dazu mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] die Entität mit den zu validierenden Elementen. Klicken Sie auf **Geschäftsregeln anwenden**. Als Reaktion auf die Geschäftsregel füllt [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] die Service Broker-Warteschlange der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank auf. Überprüft der SQL Server MDS Workflow Integration Service die Warteschlange, werden die Daten an die angegebene Workflowhandlerassembly gesendet, und die Warteschlange wird geleert. Die Workflowhandlerassembly führt die Aktionen aus, die Sie darin codiert haben.  
   
 ## <a name="troubleshoot-custom-workflows"></a>Beheben von Fehlern bei benutzerdefinierten Workflows  
  Wenn die Workflowhandlerassembly keine Daten empfängt, versuchen Sie, SQL Server MDS Workflow Integration Service zu debuggen oder die Service Broker-Warteschlange anzuzeigen.  
@@ -152,10 +152,10 @@ ms.lasthandoff: 08/02/2017
 3.  Aktualisieren Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] das Element, und wenden Sie erneut Geschäftsregeln an. Ausführliche Protokolle werden im Konsolenfenster angezeigt.  
   
 ### <a name="view-the-service-broker-queue"></a>Anzeigen der Service Broker-Warteschlange  
- Die Service Broker-Warteschlange, die die als Teil des Workflows übergebenen Masterdaten enthält, lautet folgendermaßen: mdm.microsoft/mdm/queue/externalaction. Warteschlangen finden Sie in der **Objektexplorer** von SQL Management Studio unter dem Service Broker-Knoten, der die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Datenbank. Wenn der Dienst die Warteschlange ordnungsgemäß geleert hat, ist diese Warteschlange leer.  
+ Die Service Broker-Warteschlange, die die als Teil des Workflows übergebenen Masterdaten enthält, lautet folgendermaßen: mdm.microsoft/mdm/queue/externalaction. Warteschlangen befinden sich im **Objekt-Explorer** von SQL Management Studio unter dem Service Broker-Knoten der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank. Wenn der Dienst die Warteschlange ordnungsgemäß geleert hat, ist diese Warteschlange leer.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für einen benutzerdefinierten Workflow &#40; Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
- [Benutzerdefinierte Workflow-XML-Beschreibung &#40; Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
+ [Beispiel für einen benutzerdefinierten Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
+ [Benutzerdefinierte Workflow-XML-Beschreibung &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   

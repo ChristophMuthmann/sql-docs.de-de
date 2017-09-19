@@ -1,5 +1,5 @@
 ---
-title: Modellieren von Berechtigungen (Master Data Services) | Microsoft Docs
+title: Modellberechtigungen (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e54b1bd5e60c600e2447f37bdcf77e6f811e869
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4ae445565c9d115c0d8a7be32fd27dc80c50d19c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-permissions-master-data-services"></a>Modellberechtigungen (Master Data Services)
@@ -42,9 +42,9 @@ ms.lasthandoff: 08/02/2017
  Die Berechtigungen zum Lesen, Erstellen, Aktualisieren und Löschen können miteinander kombiniert werden. Wenn Berechtigungen zum Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Weisen Sie Modellobjektberechtigungen &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Modellierung von Objektberechtigungen &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Entitätsberechtigungen &#40; Master Data Services &#41;](../master-data-services/entity-permissions-master-data-services.md)   
- [Auflistungsberechtigungen &#40; Master Data Services &#41;](../master-data-services/collection-permissions-master-data-services.md)  
+ [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Entitätsberechtigungen &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
+ [Sammlungsberechtigungen &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
   
   

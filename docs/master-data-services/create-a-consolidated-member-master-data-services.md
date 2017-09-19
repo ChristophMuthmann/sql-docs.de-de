@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines konsolidierten Elements (Master Data Services) | Microsoft Docs
+title: Erstellen eines konsolidierten Elements (Master Data Services) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a48fd41c90f01925b2cd884f33cf37bc0407d533
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
@@ -59,10 +59,10 @@ ms.lasthandoff: 08/02/2017
 10. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie eine explizite Hierarchie &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Erstellen Sie ein Blattelement &#40; Master Data Services &#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [Mitglieder &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
- [Explizite Hierarchien &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Erstellen eines Blattelements &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
 

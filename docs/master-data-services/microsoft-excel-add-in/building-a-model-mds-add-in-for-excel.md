@@ -1,5 +1,5 @@
 ---
-title: "Erstellen eines Modells (MDS-Add-in für Excel) | Microsoft Docs"
+title: "Erstellen eines Modells (MDS-Add-In für Excel) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 88556cf988d88fac1d9cb9a4c18dd0cfc5a1e72f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
@@ -54,9 +54,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Entitäten &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)  
   
--   [Attribute &#40; Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)  
+-   [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [Domänenbasierte Attribute &#40; Master Data Services &#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Attributgruppen &#40;Master Data Services&#41;](../../master-data-services/attribute-groups-master-data-services.md)  
   

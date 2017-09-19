@@ -1,7 +1,7 @@
 ---
 title: "Neues im Datenbankmodul – SQL Server 2017 | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues im Datenbankmodul – SQL Server 2017
@@ -29,12 +29,9 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 > [!NOTE]  
 > SQL Server 2017 beinhaltet auch die in den SQL Server 2016 Service Packs hinzugefügten Features. Informationen zu diesen Elementen finden Sie unter [Neuigkeiten im Datenbankmodul](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
+**Erweiterungen**  
 
-## <a name="sql-server-database-engine-rc1"></a>SQL Server-Datenbankmodul (RC1)  
-- CLR-Assemblys können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen.
-
-## <a name="sql-server-database-engine-previous-ctps"></a>SQL Server-Datenbankmodul (Vorherige CTPs)  
-- CLR verwendet die Codezugriffssicherheit (Code Access Security, CAS) im .NET Framework, die nicht länger als Sicherheitsbegrenzung unterstützt wird. Eine CLR-Assembly, die mit `PERMISSION_SET = SAFE` erstellt wurde, kann womöglich auf externe Systemressourcen zugreifen, nicht verwalteten Code aufrufen und sysadmin-Privilegien erwerben. Ab [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] wird eine `sp_configure`-Option mit der Bezeichnung `clr strict security` eingeführt, um die Sicherheit von CLR-Assemblys zu erhöhen. `clr strict security` ist standardmäßig aktiviert und behandelt `SAFE`- und `EXTERNAL_ACCESS`-Assemblys so, als wären Sie als `UNSAFE` gekennzeichnet. Die Option `clr strict security` kann für die Abwärtskompatibilität deaktiviert werden, es wird jedoch nicht empfohlen. Microsoft empfiehlt, dass alle Assemblys durch ein Zertifikat oder einen asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen signiert werden, dem `UNSAFE ASSEMBLY`-Berechtigung für die Masterdatenbank gewährt wurde. Weitere Informationen finden Sie unter [CLR Strict Security](configure-windows/clr-strict-security.md).  
+- CLR verwendet die Codezugriffssicherheit (Code Access Security, CAS) im .NET Framework, die nicht länger als Sicherheitsbegrenzung unterstützt wird. Eine CLR-Assembly, die mit `PERMISSION_SET = SAFE` erstellt wurde, kann womöglich auf externe Systemressourcen zugreifen, nicht verwalteten Code aufrufen und sysadmin-Privilegien erwerben. Ab [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] wird eine `sp_configure`-Option mit der Bezeichnung `clr strict security` eingeführt, um die Sicherheit von CLR-Assemblys zu erhöhen. `clr strict security` ist standardmäßig aktiviert und behandelt `SAFE`- und `EXTERNAL_ACCESS`-Assemblys so, als wären Sie als `UNSAFE` gekennzeichnet. Die Option `clr strict security` kann für die Abwärtskompatibilität deaktiviert werden, es wird jedoch nicht empfohlen. Microsoft empfiehlt, dass alle Assemblys durch ein Zertifikat oder einen asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen signiert werden, dem `UNSAFE ASSEMBLY`-Berechtigung für die Masterdatenbank gewährt wurde. CLR-Assemblys können als Problemumgehung für das `clr strict security`-Feature einer Positivliste hinzugefügt werden. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen. Weitere Informationen finden Sie unter [CLR Strict Security](configure-windows/clr-strict-security.md).  
 - Eine neue DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), wird eingeführt, um zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien verfügbar zu machen. Dies ist hilfreich für die Überwachung der Integrität des Transaktionsprotokolls.  
 - Fortsetzbare Neuerstellungen von online geschalteten Indizes Mit fortsetzbaren Online-Indexneuerstellung können Sie den Vorgang einer Online-Indexneuerstellung dort fortsetzen, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz). Sie können es aus pausieren und den Vorgang der Online-Indexneuerstellung später fortsetzen. Es kann z.B. notwendig sein, dass Sie vorübergehend Systemressourcen verfügbar machen, um einen Task mit hoher Priorität auszuführen oder Indexneuerstellung in einem anderen Wartungsfenster abzuschließen, wenn das verfügbare Wartungsfenster zu klein für eine große Tabelle ist. Zudem erfordern fortsetzbare Online-Indexneuerstellungen keinen erheblichen Speicherplatz, wodurch Sie eine Protokollkürzung durchführen können, während der Vorgang der fortsetzbaren Erstellung ausgeführt wird. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **IDENTITY_CACHE-Option für ALTER DATABASE SCOPED CONFIGURATION** Die Option IDENTITY_CACHE wurde neue in `ALTER DATABASE SCOPED CONFIGURATION` T-SQL-Anweisungen hinzugefügt. Wenn diese Option auf `OFF` festgelegt ist, kann das Datenbankmodul Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover auf einen sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
@@ -66,8 +63,8 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
     - Unterstützung für berechnete Spalten in speicheroptimierten Tabellen und Indizes auf berechneten Spalten.
     - Vollständige Unterstützung für JSON-Funktionen in nativ kompilierten Modulen und CHECK-Einschränkungen.  
     - `CROSS APPLY` -Operator in nativ kompilierten Modulen.   
-- Die neuen Zeichenfolgenfunktionen [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md) und [TRIM](../t-sql/functions/trim-transact-sql.md) wurden hinzugefügt.   
-- Die `WITHIN GROUP`-Klausel wird nun für die [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md)-Funktion unterstützt.
+- Die neuen Zeichenfolgenfunktionen [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)und [TRIM](../t-sql/functions/trim-transact-sql.md) wurden hinzugefügt.   
+- Die `WITHIN GROUP` -Klausel wird nun für die [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) -Funktion unterstützt.
 - Es wurden zwei neue japanische Sortierungsfamilien (Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140) hinzugefügt, und die Sortierungsoption „Unterscheidung nach Variierungsauswahlzeichen“ (_VSS) wurde für die Verwendung in japanischen Sortierungen hinzugefügt. Einzelheiten dazu finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).   
 - Neue Bulk-Access-Optionen ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) ermöglichen den Zugriff auf Daten direkt aus einer Datei, die als CSV-Format angegeben ist, und über die neue `BLOB_STORAGE` -Option von [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)aus Dateien in Azure Blob Storage.
 - Der Datenbank- **KOMPATIBILITÄTSGRAD** 140 wurde hinzugefügt.   Kunden, die diesen Kompatibilitätsgrad ausführen, können die neuesten Sprachfeatures und Verhaltensweisen des Abfrageoptimierers nutzen. Dies schließt Änderungen in den einzelnen von Microsoft veröffentlichten Vorabversionen ein.

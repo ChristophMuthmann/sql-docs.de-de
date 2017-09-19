@@ -1,5 +1,5 @@
 ---
-title: Zuweisen eines Flags zu einer Version (Master Data Services) | Microsoft Docs
+title: Zuweisen eines Flags zu einer Version (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2fe233f28ef0fd602e775f90b5fae083a96a1848
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 74b49ecc3f49ca952e484af32ef98e4dac885655
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Zuweisen eines Flags zu einer Version (Master Data Services)
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 4.  Drücken Sie die EINGABETASTE, um die Änderung zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
- [Versionen &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

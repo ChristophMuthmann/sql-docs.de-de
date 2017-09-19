@@ -1,5 +1,5 @@
 ---
-title: "Geschäftsregelerweiterung (Master Data Services) | Microsoft Docs"
+title: "Geschäftsregelerweiterung (Master Data Services) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e83f09094cde9a2643913fceae32d1f6a07a7c09
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rules-extension-master-data-services"></a>Geschäftsregelerweiterung (Master Data Services)
@@ -117,7 +117,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="see-also"></a>Siehe auch  
  [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Geschäftsregelbedingungen &#40; Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Geschäftsregelaktionen &#40; Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Geschäftsregelbedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Geschäftsregelaktionen &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

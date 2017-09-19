@@ -1,5 +1,5 @@
 ---
-title: Sperren einer Version (Master Data Services) | Microsoft Docs
+title: Sperren einer Version (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8edd7ce020ad20917c4bdc76c636b8cf7a06fadd
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c0837857b0aeb20f449fd6fca34f5b5df95b4eeb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="lock-a-version-master-data-services"></a>Sperren einer Version (Master Data Services)
@@ -51,12 +51,12 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Überprüfen einer Version anhand von Geschäftsregeln &#40; Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [Übernehmen Sie eine Version &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)  
+-   [Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Versionen &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)   
- [Entsperren einer Version &#40; Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)  
+ [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)  
   
   

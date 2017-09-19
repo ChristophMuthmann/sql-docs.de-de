@@ -1,5 +1,5 @@
 ---
-title: "Übersicht über die Master Data Services (MDS) | Microsoft Docs"
+title: "Übersicht über Master Data Services (MDS) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Übersicht über Master Data Services (MDS)
   In diesem Thema werden die Organisations- und Verwaltungsfunktionen von Schlüsseldaten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]ermöglicht es Ihnen, einen master Satz der Daten Ihrer Organisation verwalten. Sie können die Daten in Modellen organisieren, erstellen Sie Regeln zum Aktualisieren der Daten und steuern, wer die Daten aktualisiert. Mit Excel können Sie die master-DataSet für andere Personen in Ihrer Organisation freigeben. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ermöglicht es Ihnen, einen Mastersatz der Daten Ihrer Organisation zu verwalten. Sie können die Daten in Modellen organisieren, Regeln für das Aktualisieren der Daten erstellen und steuern, wer die Daten aktualisiert. Mit Excel können Sie den Masterdatensatz für andere Personen in Ihrer Organisation freigeben. 
   
  >  Eine Beschreibung der [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Architektur finden Sie im Artikel [Master Data Services – The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) auf „simple-talk.com“. Informationen zu den neuen Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] finden Sie unter [Neues in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
    **Weitere Informationen zur Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], der Einrichtung der Datenbank und Website und der Bereitstellung der Beispielmodelle finden Sie unter** [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -39,17 +39,17 @@ ms.lasthandoff: 08/02/2017
   
  Ihr Onlineproduktmodell kann beispielsweise Entitäten wie „Produkt“, „Farbe“ und „Stil“ beinhalten. Die Entität „Farbe“ kann bestimmte Elemente für die Farben Rot, Silber und Schwarz enthalten.  
   
- ![Color-Entität](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color-Entität")  
+ ![Color-Entität](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color entity")  
   
  Modelle enthalten außerdem Attribute, die innerhalb von Entitäten definiert sind. Ein Attribut enthält Werte, die das Beschreiben der Entitätselemente unterstützen. Es gibt Freiformattribute und domänenbasierte Attribute.  Ein domänenbasiertes Attribut enthält Werte, die von Mitgliedern aus einer Entität aufgefüllt werden und als Attributwerte für andere Entitäten verwendet werden können.  
   
- Beispielsweise kann die Entität „Produkt“ über Freiformattribute für Kosten und Gewicht verfügen. Und es gibt ein domänenbasiertes Attribut für die Farbe des ![Nummer 1](../master-data-services/media/mds-number1.png "Nummer 1") enthält Werte, die mit den Elementen der Color-Entität aufgefüllt werden. Diese Masterliste der Farben dient als Attributwerte für die Product-Entität ![Nummer 2](../master-data-services/media/mds-number2.png "Nummer 2").  
+ Beispielsweise kann die Entität „Produkt“ über Freiformattribute für Kosten und Gewicht verfügen. Es gibt außerdem ein domänenbasiertes Attribut für Farbe ![Nummer 1](../master-data-services/media/mds-number1.png "Number 1"), dessen Werte aus den Elementen der Color-Entität stammen. Diese Hauptliste der Farben liefert die Attributwerte für die Product-Entität ![Nummer 2](../master-data-services/media/mds-number2.png "Number 2").  
   
- ![Domänenbasierte Attribut für die Farbe](../master-data-services/media/mds-productentity-color-domainattribute.png "domänenbasiertes Attribut für Farbe")  
+ ![Domänenbasiertes Attribut für die Farbe](../master-data-services/media/mds-productentity-color-domainattribute.png "Domain-based attribute for color")  
   
- Abgeleitete Hierarchien stammen aus den Beziehungen zwischen Entitäten in einem Modell. Hierbei handelt es sich um domänenbasierte Attributbeziehungen. Im Produktmodell beispielsweise, dass eine Farbe abgeleitete Hierarchie ![Nummer 1](../master-data-services/media/mds-number1.png "Nummer 1") wird, die aus der Beziehung zwischen der Farbe ![Nummer 2](../master-data-services/media/mds-number2.png "Nummer 2") und Produkt ![Nummer 3](../master-data-services/media/mds-number3.png "Nummer 3") Entitäten.  
+ Abgeleitete Hierarchien stammen aus den Beziehungen zwischen Entitäten in einem Modell. Hierbei handelt es sich um domänenbasierte Attributbeziehungen. Im Produktmodell kann z.B. eine aus der Farbe abgeleitete Hierarchie ![Nummer 1](../master-data-services/media/mds-number1.png "Number 1") verwendet werden, die auf der Beziehung zwischen den Color-![Nummer 2](../master-data-services/media/mds-number2.png "Number 2") und Product-Entitäten ![Nummer 3](../master-data-services/media/mds-number3.png "Number 3") basiert.  
   
- ![Farbe abgeleitete Hierarchie](../master-data-services/media/mds-derivedhierarchy.png ""Farbe" abgeleitete Hierarchie")  
+ ![Von Color abgeleitete Hierarchie](../master-data-services/media/mds-derivedhierarchy.png "Color derived hierarchy")  
   
  Sobald Sie eine grundlegende Struktur für Ihre Daten definiert haben, können Sie damit beginnen, Datensätze (Elementen) mithilfe der Importfunktion hinzuzufügen. Sie laden Daten in Stagingtabellen, überprüfen sie mithilfe von Geschäftsregeln, und laden die Daten in MDS-Tabellen.  Geschäftsregeln können auch zum Festlegen von Attributwerden verwendet werden.  
   

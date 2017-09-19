@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services-Add-in für Microsoft Excel | Microsoft Docs"
+title: "Master Data Services-Add-In für Microsoft Excel | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Sie mithilfe von Data Quality Services (DQS) Daten vor dem Laden in MDS zuordnen. Dadurch werden doppelte Daten in MDS verhindert.  
 
 ## <a name="downloads"></a>Downloads 
->*  Herunterladen der Master Data Services-Add-in für Excel für SQL Server 2016 SP1 aus [Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Herunterladen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] für SQL Server 2017 CTP1 aus [Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836867). Dieses add-in funktioniert auch für SQL Server 2017 RC1.
+>*  Sie können das Master Data Services Add-In für Excel und SQL Server 2016 SP1 von [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836866) herunterladen. 
+>* Laden Sie das [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] für SQL Server 2017 CTP1 von [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836867)herunter. Dieses Add-In funktioniert auch für SQL Server 2017 RC1.
 
  
   

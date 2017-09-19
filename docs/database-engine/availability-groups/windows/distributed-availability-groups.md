@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
 ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
@@ -45,8 +45,7 @@ In der folgenden Abbildung finden Sie eine Ansicht auf höchster Ebene für eine
 <a name="fig1"></a>
 ![Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe][1]
 
-Sie können die Datenverschiebung in verteilten Verfügbarkeitsgruppen als „synchron“ oder „asynchron“ konfigurieren. Die Datenverschiebung innerhalb von verteilten Verfügbarkeitsgruppen weicht jedoch geringfügig von der in einer herkömmlichen Verfügbarkeitsgruppe ab. Obwohl jede Verfügbarkeitsgruppe über ein primäres Replikat verfügt, kann nur eine Kopie der Datenbanken, die Teil einer verteilten Verfügbarkeitsgruppe sind, Einfügungen, Updates und Löschungen akzeptieren. AG 1 ist die primäre Verfügbarkeitsgruppe, wie in der folgenden Abbildung dargestellt. Das primäre Replikat sendet Transaktionen an das sekundäre Replikat von AG 1 und an das primäre Replikat von AG 2. Das primäre Replikat von AG 2 aktualisiert dann das sekundäre Replikat von AG 2. 
-
+Sie können die Datenverschiebung in verteilten Verfügbarkeitsgruppen als „synchron“ oder „asynchron“ konfigurieren. Die Datenverschiebung innerhalb von verteilten Verfügbarkeitsgruppen weicht jedoch geringfügig von der in einer herkömmlichen Verfügbarkeitsgruppe ab. Obwohl jede Verfügbarkeitsgruppe über ein primäres Replikat verfügt, kann nur eine Kopie der Datenbanken, die Teil einer verteilten Verfügbarkeitsgruppe sind, Einfügungen, Updates und Löschungen akzeptieren. AG 1 ist die primäre Verfügbarkeitsgruppe, wie in der folgenden Abbildung dargestellt. Das primäre Replikat sendet Transaktionen an das sekundäre Replikat von AG 1 und an das primäre Replikat von AG 2. Das primäre Replikat von AG 2 ist auch als *Weiterleitung* bekannt. Eine Weiterleitung ist ein primäres Replikat in einer sekundären Verfügbarkeitsgruppe in einer verteilten Verfügbarkeitsgruppe. Die Weiterleitung empfängt Transaktionen vom primären Replikat in der primären Verfügbarkeitsgruppe und leitet diese an die sekundären Replikaten in der eigenen Verfügbarkeitsgruppe weiter.  Die Weiterleitung hält dann die sekundären Replikate von AG 2 auf dem neuesten Stand. 
 
 ![Datenverschiebung in verteilten Verfügbarkeitsgruppen][2]
 
@@ -136,7 +135,7 @@ Verteilte Verfügbarkeitsgruppen bieten Ihnen ein besseres horizontales Hochskal
 * Sie können das primäre Replikat der sekundären Verfügbarkeitsgruppe in einer verteilten Verfügbarkeitsgruppe verwenden, um eine weitere verteilte Verfügbarkeitsgruppe zu erstellen, obwohl sich die Datenbank nicht um Status „RECOVERY“ befindet.
 * Sie können auch das primäre Replikat der primären Verfügbarkeitsgruppe verwenden, um eine weitere verteilte Verfügbarkeitsgruppe zu erstellen.
 
-Das heißt, ein primäres Replikat kann Teil von zwei unterschiedlichen verteilten Verfügbarkeitsgruppen sein. Die folgende Abbildung zeigt AG 1 und AG 2, die beide Teil der verteilten AG 1 sind, während AG 2 und AG 3 Teil der verteilten AG 2 sind. Das primäre Replikat von AG 2 ist sowohl ein sekundäres Replikat für die verteilte AG 1 als auch ein primäres Replikat der verteilten AG 2.
+Das heißt, ein primäres Replikat kann Teil von zwei unterschiedlichen verteilten Verfügbarkeitsgruppen sein. Die folgende Abbildung zeigt AG 1 und AG 2, die beide Teil der verteilten AG 1 sind, während AG 2 und AG 3 Teil der verteilten AG 2 sind. Das primäre Replikat (oder die Weiterleitung) von AG 2 ist sowohl ein sekundäres Replikat für die verteilte AG 1 als auch ein primäres Replikat der verteilten AG 2.
 
 ![Horizontales Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen][5]
 

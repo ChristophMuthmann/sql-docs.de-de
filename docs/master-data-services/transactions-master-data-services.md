@@ -1,5 +1,5 @@
 ---
-title: Transaktionen (Master Data Services) | Microsoft Docs
+title: Transaktionen (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>Transaktionen (Master Data Services)
 
 
 --------------------------------------------------
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] werden Transaktionen jedes Mal aufgezeichnet, wenn für ein Element eine Aktion ausgeführt wird. Transaktionen können von allen Benutzern angezeigt und von Administratoren umgekehrt werden. Für Transaktionen werden das Datum, die Uhrzeit, der Benutzer, der die Aktion ausgeführt hat, sowie weitere Details angezeigt. Benutzer können einer Transaktion eine Anmerkung hinzufügen, um anzugeben, wieso die Transaktion stattgefunden hat.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Transaktionen jedes Mal aufgezeichnet, wenn für ein Element eine Aktion ausgeführt wird. Transaktionen können von allen Benutzern angezeigt und von Administratoren umgekehrt werden. Für Transaktionen werden das Datum, die Uhrzeit, der Benutzer, der die Aktion ausgeführt hat, sowie weitere Details angezeigt. Benutzer können einer Transaktion eine Anmerkung hinzufügen, um anzugeben, wieso die Transaktion stattgefunden hat.  
   
 ## <a name="when-transaction-are-recorded"></a>Zeitpunkt der Transaktionsaufzeichnung  
  Transaktionen werden aufgezeichnet, wenn Elemente:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  Im Funktionsbereich **Versionsverwaltung** können Administratoren alle Transaktionen für alle Benutzer für die Modelle anzeigen, auf die sie Zugriff haben, und jede beliebige Transaktion umkehren.
  
 > [!NOTE]  
->  Administratoren können alle Transaktionen für alle Benutzer anzeigen, solange sie die Leseberechtigung verfügen, die angewendet haben die **Versionsverwaltung** Funktionsbereich ". Z. B. wenn die schreibgeschützte Berechtigung und Update Berechtigungsebene für den Administrator festgelegt ist, wird der Administrator nicht andere Benutzertransaktionen angezeigt werden, da die Leseberechtigung verfügen über die Update-Berechtigung Vorrang hat, können.
+>  Administratoren können alle Transaktionen für alle Benutzer anzeigen, solange nicht die Berechtigungsstufe „schreibgeschützt“ im Funktionsbereich **Versionsverwaltung** festgelegt ist. Wenn z.B. die Berechtigung „schreibgeschützt“ und UPDATE-Berechtigungsebene für den Administrator festgelegt ist, kann dieser keine anderen Transaktionen anzeigen, da die Berechtigung „schreibgeschützt“ Vorrang vor der UPDATE-Berechtigung hat.
   
  Sie können konfigurieren, wie lange Transaktionsprotokolldaten beibehalten werden, indem Sie die Eigenschaft **Protokollaufbewahrung in Tagen** in den Systemeinstellungen für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank festlegen, und durch Festlegen der **Tage für Protokollbeibehaltung** , wenn Sie ein Modell erstellen oder bearbeiten. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) und [Erstellen eines Modells &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Administratoren &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Anmerkungen &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Anmerkungen &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 

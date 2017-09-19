@@ -1,5 +1,5 @@
 ---
-title: Attribute (Master Data Services) | Microsoft Docs
+title: Attribute (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Zusammenhang zwischen Attributen und anderen Modellobjekten  
  Sie können sich ein Attribut als Spalte in einer Entitätstabelle vorstellen. Ein Attributwert dient zur Beschreibung eines bestimmten Elements.  
   
- ![Master Data Services-Entität als Tabelle dargestellte](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services-Entität als Tabelle dargestellt wird.")  
+ ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
   
  Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>Attributbeispiele  
  Im folgenden Beispiel verfügt die Entität über folgende Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Tabelle der Product-Entität Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike-Tabelle der Product-Entität")  
+ ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   
  Im folgenden Beispiel stellt die Entität Product Folgendes:  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Die Entität Subcategory wird als domänenbasiertes Attribut der Entität Product verwendet. Die Entität Category wird als domänenbasiertes Attribut der Entität Subcategory verwendet. Die Entitäten Category und Subcategory enthalten genauso wie die Entität Product jeweils die Standardattribute Name und Code.  
   
- ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Produktentitätsbaumstruktur")  
+ ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
   

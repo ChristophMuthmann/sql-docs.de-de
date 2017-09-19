@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Blattelements (Master Data Services) | Microsoft Docs
+title: Erstellen eines Blattelements (Master Data Services) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/17/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fc46786e571f0a33de6226f83e96584a5765b0e9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Erstellen eines Blattelements (Master Data Services)
@@ -64,6 +64,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines konsolidierten Elements &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Mitglieder &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
+ [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Changesets und Genehmigung (MDS-Add-in für Excel) | Microsoft Docs"
+title: "Changesets und Genehmigung (MDS-Add-In für Excel) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a2608c13cfd5d4f295910a871cd00cb35daab0ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 24a0db5ef21d00cf46617a011c5953c7cde74f39
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Changesets und Genehmigung (MDS-Add-in für Excel)

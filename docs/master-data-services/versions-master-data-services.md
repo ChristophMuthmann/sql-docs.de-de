@@ -1,5 +1,5 @@
 ---
-title: Versionen (Master Data Services) | Microsoft Docs
+title: Versionen (Master Data Services) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40; Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40; Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Übernehmen Sie eine Version &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern Sie Namens eines Versionsflags &#40; Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren Sie eine Version &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Löschen Sie eine vorhandene Version.|[Löschen einer Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Löschen Sie vorläufig gelöschte Elemente aus einer Version.|[Endgültiges Löschen von Versionselementen &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Umkehren einer Transaktion &#40; Master Data Services &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Umkehren einer Transaktion &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Benachrichtigungen &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Geschäftsregeln &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

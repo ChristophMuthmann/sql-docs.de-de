@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren eines Oracle-Verlegers | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  Erstellen Sie innerhalb der Oracle-Datenbank mit dem angegebenen Skript einen administrativen Replikationsbenutzer.  
   
-2.  Erteilen Sie dem in Schritt eins erstellten administrativen Oracle-Benutzer für die Tabellen, die Sie veröffentlichen möchten, direkt für die jeweilige Tabelle (nicht über eine Rolle) eine SELECT-Berechtigung.  
+2.  Erteilen Sie dem in Schritt 1 erstellten administrativen Oracle-Benutzer für die Tabellen, die Sie veröffentlichen möchten, direkt für die jeweilige Tabelle (nicht über eine Rolle) eine SELECT-Berechtigung.  
   
 3.  Installieren Sie die Oracle-Clientsoftware und den OLE DB-Anbieter auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler, und starten Sie den Server der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anschließend neu. Wenn der Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des Oracle OLE DB-Anbieters verwenden.  
   
 4.  Konfigurieren Sie die Oracle-Datenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger.  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die folgenden heterogenen Szenarien für die Transaktions- und Momentaufnahmereplikation:  
   
+-   Veröffentlichen von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten.  
+
+-   Beim Veröffentlichen von Daten an und von Oracle bestehen folgende Einschränkungen:  
+  | |2016 oder früher |2017 oder höher |
+  |-------|-------|--------|
+  |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |
+  |Replikation zu Oracle |Bis Oracle 12c |Nicht unterstützt |
+
+ Die heterogene Replikation an Nicht-SQL Server-Abonnenten ist veraltet. Das Veröffentlichen mit Oracle ist veraltet. Um Daten zu verschieben, erstellen Sie Lösungen mit Change Data Capture und [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  Eine Liste der Objekte, die aus der Oracle-Datenbank repliziert werden können, finden Sie unter [Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Es wurde ein Beispielskript angegeben, um das Setup des Schemas für den Oracle-Replikationsbenutzer zu erleichtern. Nach dem Installieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist das Skript im folgenden Verzeichnis verfügbar: *\<Laufwerk>*:\\\Programme\Microsoft SQL Server\\*\<Instanzname>*\MSSQL\Install\oracleadmin.sql. Es ist auch im Thema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)enthalten.  
   
- Stellen Sie mithilfe eines Kontos mit DBA-Berechtigungen eine Verbindung mit der Oracle-Datenbank her, und führen Sie das Skript aus. Dieses Skript fordert zur Eingabe des Benutzernamens und des Kennworts für das Schema des administrativen Replikationsbenutzers sowie der Standardtabellenbereich, in der die Objekte erstellt werden sollen (der Tabellenbereich muss in der Oracle-Datenbank bereits vorhanden sein), auf. Informationen zum Angeben anderer Tabellenbereiche für Objekte finden Sie unter [Verwalten von Oracle-Tabellenbereichen](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Wählen Sie einen beliebigen Benutzernamen und ein sicheres Kennwort aus, notieren Sie sich jedoch beides, da Sie später beim Konfigurieren der Oracle-Datenbank als Verleger erneut zum Eingeben dieser Informationen aufgefordert werden. Es empfiehlt sich, das Schema nur für Objekte zu verwenden, die für die Replikation erforderlich sind. Erstellen Sie keine Tabellen, die in diesem Schema veröffentlicht werden sollen.  
+ Stellen Sie mithilfe eines Kontos mit DBA-Berechtigungen eine Verbindung mit der Oracle-Datenbank her, und führen Sie das Skript aus. Dieses Skript fordert zur Eingabe des Benutzernamens und des Kennworts für das Schema des administrativen Replikationsbenutzers sowie der Standardtabellenbereich, in der die Objekte erstellt werden sollen (der Tabellenbereich muss in der Oracle-Datenbank bereits vorhanden sein), auf. Informationen zum Angeben anderer Tabellenbereiche für Objekte finden Sie unter [Verwalten von Oracle-Tabellenbereichen](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Wählen Sie einen beliebigen Benutzernamen und ein sicheres Kennwort aus. Notieren Sie sich jedoch beides, da Sie diese Informationen später beim Konfigurieren der Oracle-Datenbank als Verleger erneut bereitstellen müssen. Es empfiehlt sich, das Schema nur für Objekte zu verwenden, die für die Replikation erforderlich sind. Erstellen Sie keine Tabellen, die in diesem Schema veröffentlicht werden sollen.  
   
 ### <a name="creating-the-user-schema-manually"></a>Manuelles Erstellen des Benutzerschemas  
  Wenn Sie das Schema für den administrativen Replikationsbenutzer erstellen, müssen Sie dem Schema entweder direkt oder über eine Datenbankrolle folgende Berechtigungen erteilen:  
@@ -97,7 +110,7 @@ ms.lasthandoff: 06/22/2017
  Dem Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt sein, in dem die Oracle-Clientnetzwerksoftware installiert ist.  
   
 ### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Testen der Konnektivität zwischen dem SQL Server-Verteiler und dem Oracle-Verleger  
- Gegen Ende des Net-Konfigurationsassistenten ist möglicherweise eine Option zum Testen der Verbindung mit dem Oracle-Verleger verfügbar. Stellen Sie sicher, dass die Oracle-Datenbankinstanz online ist und der Oracle-Listener ausgeführt wird, bevor Sie die Verbindung testen. Wenn der Test nicht erfolgreich ist, wenden Sie sich an den Administrator der Oracle-Datenbank, zu der Sie die Verbindung herstellen möchten.  
+ Gegen Ende des Net Configuration Assistant sollte eine Option zum Testen der Verbindung mit dem Oracle-Verleger verfügbar sein. Stellen Sie sicher, dass die Oracle-Datenbankinstanz online ist und der Oracle-Listener ausgeführt wird, bevor Sie die Verbindung testen. Wenn der Test nicht erfolgreich ist, wenden Sie sich an den Administrator der Oracle-Datenbank, zu der Sie die Verbindung herstellen möchten.  
   
  Wenn Sie eine Verbindung mit dem Oracle-Verleger herstellen konnten, versuchen Sie, sich mit dem Konto und dem Kennwort bei der Datenbank anzumelden, die dem erstellten Schema für den administrativen Replikationsbenutzer zugeordnet sind. Beim Ausführen unter demselben Windows-Konto, das der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst verwendet, muss Folgendes ausgeführt werden:  
   
@@ -111,7 +124,7 @@ ms.lasthandoff: 06/22/2017
   
      Beispiel: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  Wenn die Netzwerkkonfiguration erfolgreich war, werden Sie jetzt angemeldet und sehen folgende `SQL` -Eingabeaufforderung.  
+4.  Wenn die Netzwerkkonfiguration erfolgreich war, werden Sie jetzt angemeldet und sehen folgende `SQL`-Eingabeaufforderung.  
   
 5.  Wenn Sie Probleme haben, eine Verbindung mit der Oracle-Datenbank herzustellen, finden Sie entsprechende Informationen in dem Abschnitt in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , der sich mit Verbindungsproblemen zwischen dem [ssNoVersion](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

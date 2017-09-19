@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore-Indizes - Designrichtlinien
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Allgemeine Empfehlungen für das Entwerfen von Columnstore-Indizes. Mit wenigen guten Entscheidungen erzielen Sie die hohe Datenkomprimierung und Abfrageleistung, für die Columnstore-Indizes entworfen wurden. 
+Allgemeine Empfehlungen für das Entwerfen von Columnstore-Indizes. Mit wenigen guten Entwurfsentscheidungen erzielen Sie die hohe Datenkomprimierung und Abfrageleistung, für die Columnstore-Indizes entworfen wurden. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 

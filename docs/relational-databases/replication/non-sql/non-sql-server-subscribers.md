@@ -1,7 +1,7 @@
 ---
 title: Nicht-SQL Server-Abonnenten | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
-  Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  
+# <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  
   
  Die heterogene Replikation an Nicht-SQL Server-Abonnenten ist veraltet. Das Veröffentlichen mit Oracle ist veraltet. Um Daten zu verschieben, erstellen Sie Lösungen mit Change Data Capture und [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Alle von Oracle unterstützten Plattformen|Oracle OLE DB-Anbieter (von Oracle bereitgestellt)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows ausgenommen Version 9.x|Microsoft Host Integration Server (HIS) OLE DB-Anbieter|  
+
+Oracle-Versionsinformationen:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die folgenden heterogenen Szenarien für die Transaktions- und Momentaufnahmereplikation:  
   
- Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, finden Sie unter [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) und [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+-   Veröffentlichen von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten.  
+
+-   Beim Veröffentlichen von Daten an und von Oracle bestehen folgende Einschränkungen:  
+  | |2016 oder früher |2017 oder höher |
+  |-------|-------|--------|
+  |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |
+  |Replikation zu Oracle |Bis Oracle 12c |Nicht unterstützt |
+
+
+ Die heterogene Replikation an Nicht-SQL Server-Abonnenten ist veraltet. Das Veröffentlichen mit Oracle ist veraltet. Um Daten zu verschieben, erstellen Sie Lösungen mit Change Data Capture und [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, finden Sie unter [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) und [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Überlegungen zu Nicht-SQL Server-Abonnenten  
  Beachten Sie beim Replizieren auf Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten Folgendes:  
@@ -55,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Wenn Sie eine Veröffentlichung im Assistenten für neue Veröffentlichung erstellen und dann im Dialogfeld Veröffentlichungseigenschaften für Nicht-SQL Server-Abonnenten aktivieren, wird bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten für keines der Objekte in der Abonnementdatenbank der Besitzer angegeben. Bei [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten hingegen wird der Besitzer des entsprechenden Objekts in der Veröffentlichungsdatenbank festgelegt.  
   
--   Weist eine Veröffentlichung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten auf, muss sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten aktiviert werden, damit Abonnements für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erstellt werden können.  
+-   Weist eine Veröffentlichung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten und Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten auf, muss sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten aktiviert werden, bevor Abonnements für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten erstellt werden.  
   
--   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der CREATE TABLE-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der `CREATE TABLE`-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   Das Konto, unter dem der Verteilungs-Agent ausgeführt wird, muss über Lesezugriff für das Installationsverzeichnis des OLE DB-Anbieters verfügen.  
   
@@ -67,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Bei IBM DB2 wird die Datenbank in der DM2-Verbindungszeichenfolge angegeben. Weitere Informationen finden Sie unter [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
--   Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des entsprechenden OLE DB-Anbieters verwenden.  
+-   Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des entsprechenden OLE DB-Anbieters verwenden.  
   
 -   Die Replikation verschiebt Daten im Unicode-Format, unabhängig von der auf dem Verleger und dem Abonnenten verwendeten Sortierung (bzw. den verwendeten Codeseiten). Es wird empfohlen, für die Replikation zwischen Verlegern und Abonnenten eine kompatible Sortierung/Codeseite auszuwählen.  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

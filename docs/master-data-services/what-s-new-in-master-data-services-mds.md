@@ -1,5 +1,5 @@
 ---
-title: Was &#39; s in Master Data Services (MDS) | Microsoft Docs
+title: Neues in Master Data Services (MDS) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/08/2016
@@ -12,17 +12,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="what39s-new-in-master-data-services-mds"></a>Was &#39; s in Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zusammengefasst. 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  **Download**  
   
--   Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, navigieren Sie zum  **[Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
   

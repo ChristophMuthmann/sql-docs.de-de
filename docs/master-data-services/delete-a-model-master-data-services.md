@@ -1,5 +1,5 @@
 ---
-title: "Löschen eines Modells (Master Data Services) | Microsoft Docs"
+title: "Löschen eines Modells (Master Data Services) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be50aa7e9de502b0db2cb427bf894081196b579e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-model-master-data-services"></a>Löschen eines Modells (Master Data Services)
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/02/2017
   
 6.  Klicken Sie im zusätzlichen Bestätigungsdialogfeld auf **OK**.  
   
- Die Spalte **Status** im Raster zeigt den Status des Vorgangs für das Modell. Beim Klicken auf die **speichern Modell** Schaltfläche, die ![aktualisieren](../master-data-services/media/mds-model-status-updating.png "aktualisieren") Bild angezeigt, was bedeutet, dass das Modell aktualisiert wird. Treten Fehler beim Erstellen oder Bearbeiten eines Modells der ![Fehler](../master-data-services/media/mds-model-status-error.png "Fehler") Bild angezeigt. Andernfalls lautet der Status „OK“, und das Bild ![OK](../master-data-services/media/mds-model-status-ok.png "OK") angezeigt.  
+ Die Spalte **Status** im Raster zeigt den Status des Vorgangs für das Modell. Beim Klicken auf die Schaltfläche **Modell speichern** wird das Bild ![Aktualisieren](../master-data-services/media/mds-model-status-updating.png "Updating") angezeigt, das angibt, dass das Modell aktualisiert wird. Wenn beim Erstellen oder Bearbeiten eines Modells Fehler auftreten, wird das Bild ![Fehler](../master-data-services/media/mds-model-status-error.png "Error") angezeigt. Andernfalls lautet der Status „OK“, und das Bild ![OK](../master-data-services/media/mds-model-status-ok.png "OK") angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Modelle &#40; Master Data Services &#41;](../master-data-services/models-master-data-services.md)   
- [Erstellen Sie ein Modell &#40; Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)  
+ [Modelle &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
+ [Erstellen eines Modells &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   
   

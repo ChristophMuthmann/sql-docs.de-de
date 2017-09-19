@@ -1,5 +1,5 @@
 ---
-title: 'Anzeigen von m: N-Beziehungen in abgeleiteten Hierarchien (Master Data Services) | Microsoft Docs'
+title: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e50d65ddecb9a22c852c9ed8543db4931df6dfb9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="many-to-many-m2m-relationships"></a>m:n-Beziehungen  
  Eine m:n-Beziehung zwischen zwei Entitäten kann mithilfe einer dritten Entität modelliert werden, die eine Zuordnung zwischen ihnen bietet.  
   
- ![Mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "Mds_hierarchies_manytomany")  
+ ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
   
  Im obigen Beispiel besteht eine m:n-Beziehung zwischen den Entitäten **Employee** (Mitarbeiter) und **TrainingClass** (Trainingskurs), die von der Zuordnungsentität **ClassRegistration**(Kursregistrierung) bereitgestellt wird. Ein Mitarbeiter kann als Teilnehmer in mehreren Kursen registriert sein, und jeder Kurs kann mehrere Teilnehmer enthalten.  
   
@@ -36,23 +36,23 @@ ms.lasthandoff: 08/02/2017
   
  Wechseln Sie zunächst zur Verwaltungsseite „Abgeleitete Hierarchie“, und erstellen Sie eine neue abgeleitete Hierarchie:  
   
- ![Mds_hierarchies_add_derived_hierarchy](../master-data-services/media/mds-hierarchies-add-derived-hierarchy.png "Mds_hierarchies_add_derived_hierarchy")  
+ ![mds_hierarchies_add_derived_hierarchy](../master-data-services/media/mds-hierarchies-add-derived-hierarchy.png "mds_hierarchies_add_derived_hierarchy")  
   
  Fügen Sie dann zur neuen abgeleiteten Hierarchie Ebenen hinzu, wobei Sie von unten beginnen. In diesem Beispiel möchten wir nach Kursen gruppierte Teilnehmer (Mitarbeiter) anzeigen. Die Entität **Employee** ist daher die Blattebene der Hierarchie und wird zuerst hinzugefügt:  
   
- ![Mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "Mds_hierarchies_edit_derived_hierarchy_one")  
+ ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
  Beachten Sie im obigen Screenshot, dass die Entität **Employee** unter **Aktuelle Ebenen** in der Mitte als einzige Ebene angezeigt wird. Die abgeleitete Hierarchie **Preview** auf der rechten Seite zeigt einfach eine Liste aller Elemente der Entität **Employee** an. Der Abschnitt **Verfügbare Ebenen** auf der linken Seite zeigt an, welche Ebenen oberhalb der aktuell obersten Ebene hinzugefügt werden können (**Employee**). Bei den meisten handelt es sich um domänenbasierte Attribute (DBAs) für die Entität **Employee** . Hierzu zählt auch das domänenbasierte Attribut **Department** .  
   
  Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z.B. **Class (zugeordnet über „ClassRegistration.Student“)**. Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
   
- ![Mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "Mds_hierarchies_edit_derived_hierarchy_two")  
+ ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
  In der Vorschau werden jetzt die nach Schulungskurs gruppierten Mitarbeiter angezeigt, für die diese registriert sind. Da dies eine m:n-Beziehung ist, kann jedes untergeordnete Element über mehrere übergeordnete Elemente verfügen. Im obigen Beispiel ist der Mitarbeiter **6 {Hillman, Reinout N}** als Teilnehmer für zwei Kurse registriert, **1 {Master Data Services 101}** und **4 {Career-Limiting Moves}**(nicht karriereförderliches Handeln).  
   
  Diese Zuordnungsbeziehung kann auch umgekehrt angezeigt werden, wobei die Kurse nach Teilnehmern gruppiert werden:  
   
- ![Mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "Mds_hierarchies_available_entities_and_hierarchies")  
+ ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
  Dies ist ein weiteres Beispiel dafür, dass ein untergeordnetes Element unter mehreren übergeordneten Elementen angezeigt werden kann: Schulungskurs **1 {Master Data Services 101}** wird sowohl unter **6 {Hillman, Reinout N}** als auch unter **40 {Ford, Jeffrey L}**angezeigt.  
   
@@ -86,11 +86,11 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
 ## <a name="one-many-relationship"></a>1:n-Beziehung  
  Ein Element einer abgeleiteten Hierarchie kann das übergeordnete Element vieler untergeordneter Elemente sein, aber es kann in der Regel nicht mehr als ein übergeordnetes Element aufweisen (Ausnahmen finden Sie unter [Elementsicherheit](#bkmk_member_security)). Angenommen, es gibt zwei Entitäten: „Employee“ und „Department“, wobei jeder „Employee“ zu einem einzelnen „Department“ gehört. Diese Beziehung wird durch Hinzufügen eines domänenbasierten Attributs zur Entität „Employee“ modelliert, das auf die Entität „Department“ verweist:  
   
- ![Mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "Mds_hierarchies_onetomany")  
+ ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
  Dies ist eine 1:n-Beziehung, da jeder „Employee“ nur zu einem „Department“ gehört, aber jedes „Department“ kann mehrere „Employee“-Entitäten enthalten. Es kann eine abgeleitete Hierarchie erstellt werden, in der „Employee“ nach „Department“ gruppiert angezeigt wird:  
   
- ![Mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "Mds_hierarchies_dh_screenshot")  
+ ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Elementsicherheit  
  Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  

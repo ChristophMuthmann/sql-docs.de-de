@@ -1,5 +1,5 @@
 ---
-title: "Übersicht: Importieren von Daten aus Tabellen (Master Data Services) | Microsoft Docs"
+title: "Übersicht: Importieren von Daten aus Tabellen (Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Übersicht: Importieren von Daten aus Tabellen (Master Data Services)
@@ -78,27 +78,27 @@ ms.lasthandoff: 08/02/2017
   
 -   [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Konsolidierte Elementstagingtabelle &#40; Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  Für jede Entität im Modell gibt es eine Stagingtabelle. Der Tabellenname gibt die entsprechende Entität und den Entitätstyp an, wie etwa ein Blattelement. In der folgenden Abbildung sind die Stagingtabellen für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Stagingtabellen in MDS-Datenbank](../master-data-services/media/mds-staging-tables.png "Stagingtabellen in MDS-Datenbank")  
+ ![Stagingtabellen in der MDS-Datenbank](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
   
  Der Name der Tabelle wird beim Erstellen einer Entität angegeben und kann nicht geändert werden. Wenn der Stagingtabellenname eine _1 oder eine andere Zahl enthält, war eine andere Tabelle dieses Namens bereits vorhanden, als die Entität erstellt wurde.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.  
   
--   udp_\<Name > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   udp_\<Name > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   udp_\<Name > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  Für jede Entität im Modell gibt es drei gespeicherte Prozeduren, die dem Blattelement, dem konsolidierten Element und der Stagingtabelle für Beziehungen entsprechen.  In der folgenden Abbildung sind die gespeicherten Stagingprozeduren für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Gespeicherte Prozeduren in der MDS-Datenbank](../master-data-services/media/mds-staging-storedprocedures.png "gespeicherte Prozeduren in der MDS-Datenbank")  
+ ![Gespeicherte Stagingprozeduren in der MDS-Datenbank](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
   
  Weitere Informationen zu den gespeicherten Prozeduren finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Überprüfung &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Überprüfung &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

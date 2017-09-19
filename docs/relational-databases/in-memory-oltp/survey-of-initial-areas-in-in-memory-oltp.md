@@ -1,7 +1,7 @@
 ---
 title: "Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung | Microsoft Dokumentation"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
@@ -136,7 +136,7 @@ Eine [speicheroptimierte Tabelle](../../relational-databases/in-memory-oltp/memo
   
 #### <a name="natively-compiled-modules"></a>Nativ kompilierte Module  
   
-Das T-SQL-Schlüsselwort NATIVE_COMPILATION in der CREATE PROCEDURE-Anweisung zeigt wie eine native Prozedur erstellt wird. Die T-SQL-Anweisungen werden jedes Mal bei der ersten Verwendung der nativen Prozedur in Computercode kompiliert, wenn die Datenbank erneut online gestellt wird. Die T-SQL-Anweisungen erdulden nicht länger das langsame Interpretieren jeder Anweisung.  
+Das T-SQL-Schlüsselwort NATIVE_COMPILATION in der CREATE PROCEDURE-Anweisung zeigt, wie eine nativ kompilierte gespeicherte Prozedur erstellt wird. Die T-SQL-Anweisungen werden jedes Mal bei der ersten Verwendung der nativen Prozedur in Computercode kompiliert, wenn die Datenbank erneut online gestellt wird. Die T-SQL-Anweisungen erdulden nicht länger das langsame Interpretieren jeder Anweisung.  
   
 - Es kann vorkommen, dass diese Kompilierung (nativ) nur 1 % der Zeit benötigt, die für eine interpretierte gespeicherte Prozedur benötigt wird.  
   
@@ -218,14 +218,12 @@ Auf Microsoft SQL Server müssen Sie vor der Erstellung einer speicheroptimierte
 Auf Azure SQL-Datenbank können und brauchen Sie keine solche FILEGROUP erstellen.  
 
 Das folgende T-SQL-Beispielskript aktiviert eine Datenbank für In-Memory-OLTP und konfiguriert alle empfohlene Einstellungen. Es funktioniert mit SQL Server und Azure SQL-Datenbank: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Beachten Sie, dass nicht alle Features von SQL Server für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe unterstützt werden. Weitere Informationen zu den Einschränkungen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md).
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4. Erstellen einer speicheroptimierten Tabelle  
-  
-  
-  
   
 Das entscheidende Transact-SQL-Schlüsselwort ist das MEMORY_OPTIMIZED-Schlüsselwort.  
   
@@ -302,6 +300,7 @@ Das entscheidende Schlüsselwort ist NATIVE_COMPILATION.
   
 Das Schlüsselwort SCHEMABINDING bedeutet, dass die Tabellen in der nativen Prozedur nicht gelöscht werden können, es sei denn, die native Prozedur wird zuvor gelöscht. Weitere Informationen finden Sie unter [Erstellen systemintern kompilierter gespeicherter Prozeduren](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Beachten Sie, dass Sie keine nativ kompilierte gespeicherte Prozedur erstellen müssen, um auf eine speicheroptimierte Tabelle zuzugreifen. Sie können auf speicheroptimierte Tabellen auch von herkömmlich gespeicherten Prozeduren und Ad-hoc-Batches verweisen.
   
 <a name="execute-the-native-proc-31e"></a>  
   

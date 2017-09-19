@@ -1,5 +1,5 @@
 ---
-title: "Ändern Sie einen benutzerdefinierten &#39; s e-Mail-Adresse (Master Data Services) | Microsoft Docs"
+title: "Ändern einer Benutzer-E-Mail-Adresse (Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49bb15d77cbc8dcf86421d76353a0a38f8688b6d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4f517794666925bf95095dc724b5bd3afd7067d8
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="change-a-user39s-email-address-master-data-services"></a>Ändern Sie einen benutzerdefinierten &#39; s e-Mail-Adresse (Master Data Services)
+# <a name="change-a-user39s-email-address-master-data-services"></a>Ändern einer Benutzer-E-Mail-Adresse (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie die E-Mail-Adresse ändern, an die Benachrichtigungen gesendet werden, sowie das Standardformat von Benachrichtigungs-E-Mails.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Zuweisen von Berechtigungen für Funktionsbereiche &#40; Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  

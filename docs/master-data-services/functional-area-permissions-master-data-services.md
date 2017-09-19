@@ -1,5 +1,5 @@
 ---
-title: "Berechtigungen für Funktionsbereiche (Master Data Services) | Microsoft Docs"
+title: "Berechtigungen für Funktionsbereiche (Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e0ad6fd33d69b9b6e3b76dcf1d2c18da528083d5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 34aa40c2c999709c871fe7b1e283c5d6e30ab1b4
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Berechtigungen für Funktionsbereiche (Master Data Services)
@@ -50,9 +50,9 @@ ms.lasthandoff: 08/02/2017
  Ein Benutzer oder eine Gruppe muss auf der Registerkarte **Modelle** über Berechtigungen für mindestens einen Funktionsbereich verfügen, damit auf [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zugegriffen werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Berechtigungen für Funktionsbereiche &#40; Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [Modellierung von Objektberechtigungen &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Berechtigungen für Hierarchieelemente &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Wie Berechtigungen &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Löschen einer Attributgruppe (Master Data Services) | Microsoft Docs"
+title: "Löschen einer Attributgruppe (Master Data Services) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0f472ad35afbf5a7f881638560338e1bf5900c3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d3db0c5966aebb609ff62e5f599ad08a8438696e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Löschen einer Attributgruppe (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie eine Attributgruppe löschen, wenn die Registerkarte nicht länger im Funktionsbereich **Explorer** von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] angezeigt werden muss.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Attributgruppe löschen, wenn die Registerkarte nicht länger im Funktionsbereich **Explorer** von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]angezeigt werden muss.  
   
 -   **Hinweis** Wenn Attributgruppen vorhanden sind, werden Attribute, die keiner Attributgruppe angehören, in **Explorer**nicht angezeigt. Wenn keine Attributgruppen vorhanden sind, werden alle Attribute angezeigt.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attributgruppen &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Erstellen Sie eine Attributgruppe aus &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

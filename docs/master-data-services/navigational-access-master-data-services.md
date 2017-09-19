@@ -1,5 +1,5 @@
 ---
-title: Navigationszugriff (Master Data Services) | Microsoft Docs
+title: Navigationszugriff (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3979b0f5749182f3188ee3baafd43cd3e0cbb8b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7a26c6e03d53fcd619446a82b2d2196476d159dc
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="navigational-access-master-data-services"></a>Navigationszugriff (Master Data Services)
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
  In diesem Beispiel werden einer Entität Berechtigungen zugewiesen, der Navigationszugriff wird daher auf der Modellebene gewährt.  
   
- ![Mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "Mds_conc_inheritance_model")  
+ ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
  **Entitäten**  
   
@@ -46,6 +46,6 @@ ms.lasthandoff: 08/02/2017
  Wenn Sie Auflistungen Berechtigungen zuweisen, können Sie den Namen, Code, die Beschreibung und Besitzer-ID lesen oder aktualisieren. Sie können auch den Modellnamen lesen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Wie Berechtigungen &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Abwärtskompatibilität (Master Data Services) | Microsoft Docs"
+title: "Abwärtskompatibilität (Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9a8db7f8483884fb06d140b9d5243d184f166e3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e255634ad8e28c1fd8bec597f58df30a6ee6a260
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="backward-compatibility-master-data-services"></a>Abwärtskompatibilität (Master Data Services)

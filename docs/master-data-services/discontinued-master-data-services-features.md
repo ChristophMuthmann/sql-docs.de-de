@@ -1,5 +1,5 @@
 ---
-title: "Nicht mehr unterstützte Funktionen von Master Data Services | Microsoft Docs"
+title: "Nicht mehr unterstützte Funktionen von Master Data Services | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cbc09731935738fc3d4eaa102dad71bbf083b9e
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3e4f11a2dd8cc4bc07f359f62daf5d444b0a46d3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="discontinued-master-data-services-features"></a>Eingestellte Master Data Services-Funktionen
