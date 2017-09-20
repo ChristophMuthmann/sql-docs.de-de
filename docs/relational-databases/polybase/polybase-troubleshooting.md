@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: de-de
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
@@ -229,7 +229,6 @@ ms.lasthandoff: 08/30/2017
  - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Textspalten wegen Java-Fehlermeldungen aufgrund von nicht ausreichendem Arbeitsspeicher auf höchstens 50 Spalten begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
  - Das Lesen oder Schreiben von verschlüsselten Daten im Ruhezustand in Hadoop ist nicht möglich. Dies schließt HDFS Encrypted Zones oder Transparent Encryption ein.
  - PolyBase kann sich nicht mit einer Hortonworks-Instanz verbinden, wenn KNOX aktiviert ist. 
- - PolyBase kann keine Verbindung mit einer Hadoop-Instanz herstellen, wenn die Einstellung „hadoop.RPC.Protection“ auf etwas anderes als „authentifizieren“ festgelegt ist.
 
 [PolyBase wird nicht installiert, wenn Sie einem SQL Server 2016-Failovercluster einen Knoten hinzufügen.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

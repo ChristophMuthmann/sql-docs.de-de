@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
@@ -28,7 +28,7 @@ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer S
   
 Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen von bestimmten Serverrollen bereit. Dies hilft, Wartung und Verwaltungsanforderungen und die Angriffsfläche für jene Serverrollen zu reduzieren. Weitere Informationen zur Server Core-Installation finden Sie unter [Installieren von Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Weitere Informationen zur Implementierung von Server Core unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)]finden Sie unter [Server Core für Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
- Eine Liste der aktuell unterstützten Betriebssysteme finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+ Eine Liste der aktuell unterstützten Betriebssysteme finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   

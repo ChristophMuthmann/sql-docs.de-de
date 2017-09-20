@@ -1,7 +1,7 @@
 ---
 title: "Neues im Datenbankmodul – SQL Server 2017 | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
 ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues im Datenbankmodul – SQL Server 2017
@@ -36,6 +36,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 - Fortsetzbare Neuerstellungen von online geschalteten Indizes Mit fortsetzbaren Online-Indexneuerstellung können Sie den Vorgang einer Online-Indexneuerstellung dort fortsetzen, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz). Sie können es aus pausieren und den Vorgang der Online-Indexneuerstellung später fortsetzen. Es kann z.B. notwendig sein, dass Sie vorübergehend Systemressourcen verfügbar machen, um einen Task mit hoher Priorität auszuführen oder Indexneuerstellung in einem anderen Wartungsfenster abzuschließen, wenn das verfügbare Wartungsfenster zu klein für eine große Tabelle ist. Zudem erfordern fortsetzbare Online-Indexneuerstellungen keinen erheblichen Speicherplatz, wodurch Sie eine Protokollkürzung durchführen können, während der Vorgang der fortsetzbaren Erstellung ausgeführt wird. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **IDENTITY_CACHE-Option für ALTER DATABASE SCOPED CONFIGURATION** Die Option IDENTITY_CACHE wurde neue in `ALTER DATABASE SCOPED CONFIGURATION` T-SQL-Anweisungen hinzugefügt. Wenn diese Option auf `OFF` festgelegt ist, kann das Datenbankmodul Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover auf einen sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] bietet jetzt Graphdatenbank-Funktionen zum Modellieren von m:n-Beziehungen. Dazu zählt [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)-Syntax zum Erstellen von Knoten- und Rahmentabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md).   
+- Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung wendet Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsarbeitsauslastung an. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/adaptive-query-processing.md).
 - Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Die automatische Optimierung in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] benachrichtigt Sie, wenn ein mögliches Leistungsproblem erkannt wird. Sie können mit Ihr Korrekturmaßnahme ergreifen. Zudem kann [!INCLUDE[ssde-md](../includes/ssde-md.md)] die Leistungsprobleme automatisch beheben. Weitere Informationen finden Sie unter [Automatic tuning (Automatische Optimierung)](../relational-databases/automatic-tuning/automatic-tuning.md).
 - PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Die Leistung von bwtree-Indexneuerstellung (kein Cluster) für MEMORY_OPTIMIZED-Tabellen während der Datenbankwiederherstellung wurde deutliche optimiert. Diese Verbesserung reduziert die Zeit der Datenbankwiederherstellung deutlich, wenn Nicht-Cluster-Indizes verwendet werden.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) hat drei neue Spalten: socket_count, cores_per_socket, numa_node_count.
