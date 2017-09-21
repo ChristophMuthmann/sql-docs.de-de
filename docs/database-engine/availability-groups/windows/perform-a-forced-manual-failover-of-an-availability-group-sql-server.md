@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Zurückführen der Verfügbarkeitsgruppe in deren ursprüngliche Topologie](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> Reagieren auf den schwerwiegenden Fehler im Hauptrechenzentrum  
  Die folgende Abbildung veranschaulicht die Abfolge von Aktionen, die in Reaktion auf einen schwerwiegenden Fehler im Hauptrechenzentrum im Remoterechenzentrum ausgeführt werden.  
   
  ![Schritte nach einem Fehler im Hauptrechenzentrum](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
