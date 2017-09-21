@@ -1,22 +1,27 @@
 ---
-title: "Datenabgleich | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datenabgleich | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Datenabgleich
+# <a name="data-matching"></a>Datenabgleich
   Der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenabgleichsprozesse ermöglichen es Ihnen, Datenduplizierung zu reduzieren und Datengenauigkeit in einer Datenquelle zu verbessern. Der Abgleich analysiert den Grad der Duplizierung in allen Datensätzen einer einzelnen Datenquelle und gibt gewichtete Wahrscheinlichkeiten einer Übereinstimmung zwischen den einzelnen verglichenen Datensatzgruppen zurück. Sie können dann entscheiden, welche Datensätze Übereinstimmungen sind und die entsprechende Aktion für die Quelldaten ergreifen.  
   
  Der DQS-Abgleichsprozess hat die folgenden Vorteile:  
@@ -31,11 +36,11 @@ caps.handback.revision: 29
   
 -   Sie können Daten, die aus der Quelle in die Stagingtabelle kopiert wurden, neu indizieren oder je nach Status der Abgleichsrichtlinie und der Quelldaten nicht neu indizieren. Wenn Sie die Daten nicht neu indizieren, kann die Leistung verbessert werden.  
   
- Sie können den Abgleichsprozess zusammen mit anderen Datenbereinigungsprozessen ausführen, um die Gesamtdatenqualität zu verbessern. Sie können auch Datendeduplizierung mit in Master Data Services integrierter DQS-Funktionalität ausführen. Weitere Informationen finden Sie unter [Übersicht über Master Data Services & #40; MDS & #41;](../master-data-services/master-data-services-overview-mds.md).  
+ Sie können den Abgleichsprozess zusammen mit anderen Datenbereinigungsprozessen ausführen, um die Gesamtdatenqualität zu verbessern. Sie können auch Datendeduplizierung mit in Master Data Services integrierter DQS-Funktionalität ausführen. Weitere Informationen finden Sie unter [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
  Die folgende Abbildung zeigt an, wie der Datenabgleich in DQS erfolgt:  
   
- ![Abgleichsprozess in DQS](../data-quality-services/media/dqs-matchingprocess.gif "Abgleichsprozess in DQS")  
+ ![Abgleichsprozess in DQS](../data-quality-services/media/dqs-matchingprocess.gif "Matching Process in DQS")  
   
 ##  <a name="How"></a> So führen Sie den Datenabgleich aus  
  Wie bei anderen Data Quality-Prozessen in DQS führen Sie den Abgleich durch, indem Sie eine Wissensdatenbank erstellen und eine Abgleichsaktivität in einem Data Quality-Projekt mit den folgenden Schritten ausführen:  
@@ -67,7 +72,7 @@ caps.handback.revision: 29
   
  Sie können die Ergebnisse des Abgleichsprozesses in eine SQL Server-Tabelle oder eine CSV-Datei exportieren. Sie können Abgleichsergebnisse in zwei Formen exportieren: erstens die übereinstimmenden und die nicht übereinstimmenden Datensätze und zweitens Survivorship-Datensätze, die nur den Survivor-Datensatz für einen Cluster und die Ergebnisse ohne Übereinstimmung enthalten. Wenn in den Survivorship-Datensätzen der gleiche Datensatz als Survivor-Datensatz für mehrere Cluster identifiziert wird, wird dieser Datensatz nur einmal exportiert.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  Sie können die folgenden Aufgaben für Abgleiche in DQS ausführen:  
   
 |||  

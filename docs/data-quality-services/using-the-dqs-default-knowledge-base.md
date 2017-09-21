@@ -1,41 +1,46 @@
 ---
-title: "Verwenden der DQS-Standard-Wissensdatenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden der DQS-Standard-Wissensdatenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 07/31/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbd80ca8bdeb9412646409eb08ba1955b31b75c4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Verwenden der DQS-Standard-Wissensdatenbank
-  Dieses Thema beschreibt die Standard-Wissensdatenbank **DQS-Daten**, installiert mit [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dies ist eine vordefinierte Standardwissensdatenbank, die die folgenden Domänen enthält:  
+# <a name="using-the-dqs-default-knowledge-base"></a>Verwenden der DQS-Standard-Wissensdatenbank
+  In diesem Thema wird die Standard-Wissensdatenbank **DQS-Daten**beschrieben, die mit [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) installiert wird. Dies ist eine vordefinierte Standardwissensdatenbank, die die folgenden Domänen enthält:  
   
--   **Land/Region**: enthält die konventionellen langen (Namen offizieller Name wie von Land/Region) und Kurznamen (allgemeiner Name in Listen auf Karten usw. verwendet), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Der führende Wert wird auf den langen Landnamen festgelegt.  
+-   **Land/Region**: Enthält die konventionellen langen Namen (offizieller Name wie von Land/Region festgelegt) und Kurznamen (allgemeiner Name, der in Listen, auf Karten usw. verwendet wird), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Der führende Wert wird auf den langen Landnamen festgelegt.  
   
--   **Land/Region (dreibuchstabig führend)**: enthält die konventionellen langen (Namen offizieller Name wie von Land/Region) und Kurznamen (allgemeiner Name in Listen auf Karten usw. verwendet), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Führende Werte ist auf die dreibuchstabige Abkürzung des Lands festgelegt.  
+-   **Land/Region (dreibuchstabig führend)**: Enthält die konventionellen langen Namen (offizieller Name wie von Land/Region festgelegt) und Kurznamen (allgemeiner Name, der in Listen, auf Karten usw. verwendet wird), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Führende Werte ist auf die dreibuchstabige Abkürzung des Lands festgelegt.  
   
--   **Land/Region (zweibuchstabig führend)**: enthält die konventionellen langen (Namen offizieller Name wie von Land/Region) und Kurznamen (allgemeiner Name in Listen auf Karten usw. verwendet), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Führender Wert ist auf die zweibuchstabige Abkürzung des Lands festgelegt.  
+-   **Land/Region (zweibuchstabig führend)**: Enthält die konventionellen langen Namen (offizieller Name wie von Land/Region festgelegt) und Kurznamen (allgemeiner Name, der in Listen, auf Karten usw. verwendet wird), zweibuchstabige Abkürzung, dreibuchstabige Abkürzung und dreistelligen Code für jeden Standort.  Führender Wert ist auf die zweibuchstabige Abkürzung des Lands festgelegt.  
   
--   **US - Countys**: enthält eine Liste der US-Countys.  
+-   **US - Countys**: Enthält eine Liste von US-Countys.  
   
--   **US - Nachname**: enthält eine Liste der Nachnamen (Nachnamen), 100 auftreten oder mehrmals in der Volkszählung 2000.  
+-   **US - Nachname**: Enthält eine Liste von Nachnamen, die in der Volkszählung 2000 mindestens 100 Mal vorkamen.  
   
--   **US - Orte**: enthält eine Liste von Orten für die 50 Staaten, das District Of Columbia und Puerto Rico, die aus der Volkszählung 2010.  
+-   **US - Orte**: Enthält eine Liste von Orten für die 50 Staaten, das District of Columbia und Puerto Rico, die aus der Volkszählung 2010 stammen.  
   
--   **US - Bundesstaat**: enthält den konventionellen langen (offiziellen) Namen und die zweibuchstabige Abkürzung für jeden Staat der USA. Führender Wert ist auf den konventionellen Staatennamen festgelegt.  
+-   **US - Bundesstaat**: Enthält den konventionellen langen (offiziellen) Namen und die zweibuchstabige Abkürzung für jeden Staat der USA. Führender Wert ist auf den konventionellen Staatennamen festgelegt.  
   
--   **US-Bundesstaat (Überschrift 2 Buchstaben)**: enthält den konventionellen langen (offiziellen) Namen und die zweibuchstabige Abkürzung für jeden Staat der USA. Führender Wert ist auf die zweibuchstabige Abkürzung des Bundesstaats festgelegt.  
+-   **US - Bundesstaat (zweibuchstabige Überschrift)**: Enthält den konventionellen langen (offiziellen) Namen und die zweibuchstabige Abkürzung für jeden Staat der USA. Führender Wert ist auf die zweibuchstabige Abkürzung des Bundesstaats festgelegt.  
   
-## Verwenden der Standard-Wissensdatenbank  
+## <a name="using-the-default-knowledge-base"></a>Verwenden der Standard-Wissensdatenbank  
  Sie können die DQS-Standardwissensdatenbank (DQS-Daten) auf folgende Weise verwenden:  
   
 -   Schnelles Starten und Ausführen eines Data Quality-Bereinigungsprojekts mithilfe der Standardwissensdatenbank, ohne zuerst in DQS eine neue Wissensdatenbank erstellen zu müssen.  
@@ -44,9 +49,9 @@ caps.handback.revision: 13
   
 -   Erstellen einer neuen Wissensdatenbank mithilfe der Standardwissensdatenbank. Informationen zum Erstellen einer Wissensdatenbank aus einer vorhandenen Wissensdatenbank finden Sie unter [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
--   Verwenden sie in der [Komponente zur DQS-Bereinigung in Integration Services](http://go.microsoft.com/fwlink/?LinkId=238830) und [Master Data Services-Add-in für Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+-   Verwendung in der [Komponente zur DQS-Bereinigung in Integration Services](http://go.microsoft.com/fwlink/?LinkId=238830) und im [Master Data Services-Add-In für Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

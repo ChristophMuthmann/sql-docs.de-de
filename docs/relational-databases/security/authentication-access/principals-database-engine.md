@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbankmodul)
@@ -83,6 +83,8 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ Diese Prinzipalkonten verfügen nicht über Kennwörter, die vom Administrator geändert werden können, da sie auf den an Microsoft ausgestellten Zertifikaten basieren.
   
 ## <a name="the-guest-user"></a>Der guest-Benutzer  
  Jede Datenbank enthält einen `guest`. Dem `guest` -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Der `guest`-Benutzer kann nicht gelöscht werden. Er kann jedoch deaktiviert werden, indem seine CONNECT-Berechtigung aufgehoben wird. Die CONNECT-Berechtigung kann durch Ausführen von `REVOKE CONNECT FROM GUEST;` in einer beliebigen Datenbank mit Ausnahme der `master`- oder `tempdb`-Datenbank aufgehoben werden.  

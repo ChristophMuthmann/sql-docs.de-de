@@ -1,22 +1,27 @@
 ---
-title: "Konzepte der Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Konzepte von Data Quality Services | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 01/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Konzepte der Data Quality Services
+# <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
   Dieses Thema enthält eine kurze Zusammenfassung der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Konzepte in Wissensverwaltung, Data Quality-Projekten und Datenqualitätsverwaltung.  
   
 ##  <a name="Knowledge"></a> Konzepte der Wissensverwaltung  
@@ -32,13 +37,13 @@ caps.handback.revision: 17
   
  **Übereinstimmende Richtlinie**  
   
- Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Data Matching](../data-quality-services/data-matching.md).  
+ Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md).  
   
  **Reference Data Services**  
   
  Sie können Verweisdaten verwenden, um die Daten zu überprüfen, zu korrigieren und anzureichern und dabei die Dienste von Unternehmen nutzen, die die Qualität ihrer Verweisdaten garantieren. Sie können die Dienste von Windows Azure Marketplace verwenden, um eine Verbindung mit Verweisdatenanbietern herzustellen, oder Sie können eine direkte Verbindung zu einem Anbieter nutzen. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
- Weitere Informationen zur wissensverwaltung in DQS finden Sie unter [DQS-Wissensdatenbanken und Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Weitere Informationen zur Wissensverwaltung in DQS finden Sie unter [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Konzepte des Data Quality-Projekts  
  Der Data Steward führt Data Quality-Vorgänge (Bereinigung und Abgleich) mithilfe eines Data Quality-Projekts in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
@@ -47,9 +52,9 @@ caps.handback.revision: 17
   
  Die Datenbereinigung in DQS wird auf Grundlage des Wissens in einer DQS-Wissensdatenbank ausgeführt. Die Datenbereinigung in DQS umfasst zwei Schritte:  
   
--   **Computerunterstützte Bereinigung**: DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das bereinigungsprojekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle vorzuschlagen.  
+-   **Computergestützte Bereinigung**: DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das Bereinigungsprojekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle anzubieten.  
   
--   **Interaktive Bereinigung**: der Data Steward kann zum Ändern oder Erweitern von Daten an, die vom computergestützten datenbereinigungsprozess vorgeschlagen wurden den interaktiven Bereinigungsprozess ausführen. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
+-   **Interaktive Bereinigung**: Der Data Steward kann den interaktiven Bereinigungsprozess ausführen, um Datenkorrekturen, die vom computergestützten Datenbereinigungsprozess vorgeschlagen wurden, zu ändern oder zu erweitern. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
   
  Der Data Steward kann die verarbeiteten Daten nach der Bereinigung in eine SQL Server-Datenbank, CSV- oder Excel-Datei exportieren. Weitere Informationen finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 17
   
  Die Datenprofilerstellung stellt Data Stewards während der Ausführung eines Data Quality-Projekts Statistiken und Informationen zu den von DQS verarbeiteten Daten in Echtzeit bereit, die für Bereinigungs- und Abgleichsaktivitäten verwendet werden. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse in einem Data Quality-Projekt bewerten. Außerdem unterstützen Benachrichtigungen den Benutzer bei Aktionen, die zur Verbesserung der Datenbereinigungs- und Datenabgleichsvorgänge ausgeführt werden können. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- Weitere Informationen zu Data Quality-Projekte in DQS, finden Sie unter [Data Quality-Projekte & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md).  
+ Weitere Informationen zu Data Quality-Projekten in DQS finden Sie unter [Data Quality-Projekte &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
 ##  <a name="Admin"></a> Konzepte der Data Quality-Verwaltung  
  Ein DQS-Administrator kann eine Vielzahl von administrativen Aufgaben mithilfe der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ausführen.  
@@ -78,7 +83,7 @@ caps.handback.revision: 17
   
 -   Festlegen der Schwellenwerte für die Bereinigungs- und Abgleichsaktivitäten. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Aktivieren/Deaktivieren von Profilerstellungsbenachrichtigungen. Weitere Informationen finden Sie unter [Aktivieren oder deaktivieren Sie Profiling Benachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
+-   Aktivieren/Deaktivieren von Profilerstellungsbenachrichtigungen. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
 -   Konfigurieren der Schweregradeinstellungen für die DQS-Protokolldateien auf der aktivitätsbasierten Ebene oder der erweiterten modulbasierten Ebene. Weitere Informationen finden Sie unter [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 17
   
  Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Importieren von Bereinigungsprojektwerten in eine Dom&#228;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importprojectvalues.f1"
+title: "Importieren von Bereinigungsprojektwerten in eine Domäne | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Importieren von Bereinigungsprojektwerten in eine Dom&#228;ne
+# <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie während des Bereinigungsprozesses in einem Datenqualitätsbereinigungsprojekt oder einem Integration Services-Paket mit der DQS-Bereinigungskomponente erfasstes Datenqualitätswissen in eine Domäne importieren. Dadurch wird sichergestellt, dass vertrauenswürdiges Wissen nicht verloren geht und dass die Wissensdatenbank ständig verbessert wird.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
@@ -45,11 +50,11 @@ caps.handback.revision: 21
 4.  Klicken Sie auf die Registerkarte **Domänenwerte** , klicken Sie auf das Symbol **Werte importieren** in der Symbolleiste, und klicken Sie dann auf **Projektwerte importieren**. Das Dialogfeld **Projektwerte importieren** wird mit einer Liste von Data Quality-Projekten und Integration Services-Paketen angezeigt, die mit der Domäne bereinigt wurden.  
   
     > [!NOTE]  
-    >  Wenn kein Projekt mit der Domäne oder einer verknüpften Domäne erstellt wurde, oder das Projekt nicht abgeschlossen wurde, die **Projektwerte** Option steht nicht zur Verfügung.  
+    >  Wenn kein Projekt mit der Domäne oder einer verknüpften Domäne erstellt wurde oder das Projekt nicht abgeschlossen wurde, ist die Option **Projektwerte importieren** nicht verfügbar.  
   
 5.  Im Dialogfeld **Projektwerte importieren** :  
   
-    -   Wählen Sie **alle** in die **importiert** Dropdown-Liste aus, um alle Projekte anzuzeigen oder **Nr.** um nur die Projekte anzuzeigen, deren Werte noch nicht importiert wurden.  
+    -   Wählen Sie in der Dropdownliste **Importiert** die Option **Alle** aus, um alle Projekte anzuzeigen, oder **Nein** , um nur die Projekte anzuzeigen, deren Werte noch nicht importiert wurden.  
   
     -   Wählen Sie das Projekt aus, aus dem Sie Werte importieren möchten.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 21
 10. Klicken Sie auf **Fertig stellen**.  
   
     > [!NOTE]  
-    >  Weitere Informationen zum Arbeiten mit Werten in der **Domänenwerte** finden Sie unter [Ändern von Domänenwerten](../data-quality-services/change-domain-values.md).  
+    >  Weitere Informationen zum Arbeiten mit Werten auf der Registerkarte **Domänenwerte** finden Sie unter [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Importieren von Projektwerten in eine Domäne  
  Nachdem Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen in eine Domäne importiert haben, können Sie andere Domänenverwaltungsaufgaben für die Domäne und die Werte ausführen. Weitere Informationen finden Sie unter [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md).  
@@ -109,7 +114,7 @@ caps.handback.revision: 21
   
 -   Sie können nur dann Werte aus einem Projekt importieren, wenn die Wissensdatenbank beschäftigt ist und vom importierenden Benutzer gesperrt wurde.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenbereinigung](../data-quality-services/data-cleansing.md)   
  [DQS-Bereinigungstransformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

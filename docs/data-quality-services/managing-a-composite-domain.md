@@ -1,29 +1,34 @@
 ---
-title: "Verwalten einer Verbunddom&#228;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verwalten einer Verbunddomäne | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 07/31/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32a0bb0592614c496a3ceff5a3cfa82f73032d9f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Verwalten einer Verbunddom&#228;ne
+# <a name="managing-a-composite-domain"></a>Verwalten einer Verbunddomäne
   In diesem Thema wird die Verwendung von Verbunddomänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. In einigen Fällen können die Daten eines Felds in einer einzelnen Domäne nicht zufriedenstellend dargestellt werden, und Sie können die Daten nur darstellen, indem Sie einzelne Domänen gruppieren. Hierzu erstellen Sie eine Verbunddomäne. Eine Verbunddomäne besteht aus zwei oder mehreren einzelnen Domänen. Sie wird einem Datenfeld zugeordnet, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden, aber in einem einzelnen zusammengesetzten Wert enthalten sind. Jeder Begriff im Wert wird durch eine andere einzelne Domäne dargestellt. Nachdem Sie einzelne Domänen in Verbunddomänen aufgenommen und dann die Verbunddomäne dem Datenfeld zugeordnet haben, können Sie Wissen zu den Daten in diesem Feld in der Wissensdatenbank erstellen, indem Sie Wissen in den einzelnen Domänen erstellen. Eine Verbunddomäne ist wie eine einzelne Domäne eine semantische Darstellung der Daten in einem einzelnen Datenfeld.  
   
  Die einzelnen Domänen in einer Verbunddomäne müssen einen gemeinsamen Wissensbereich haben. Beispiel: ein Adressenfeld mit Daten für Straße, Ort, Bundesland, Land und Postleitzahl. Die anderen Begriffe in diesem Feld könnten andere Datentypen haben. Ordnen Sie deswegen diese Begriffe den einzelnen Domänen zu. Ein anderes Beispiel ist ein Feld mit dem vollständigen Namen, das Daten für den Vornamen, zweiten Vornamen und Nachnamen aufweist. Um eine Verbunddomäne zu verwenden, müssen Sie die Daten im Feld in anderen einzelnen Domänen analysieren können, wobei eine Verbunddomäne für das Feld und eine einzelne Domäne für einen Teil des Felds erstellt wird.  
   
  Verbunddomänen verfügen über andere Funktionen als einzelne Domänen. Sie können die Werte nicht in der Verbunddomäne ändern, sondern nur in einer einzelnen Domäne. Sie können für Verbunddomänen domänenübergreifende Regeln verwenden, um die Werte in den einzelnen Domänen der Verbunddomäne zu testen. Sie können außerdem die Wertkombinationen anzeigen, die in den Verbunddomänen gefunden werden.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  Durch das Verwenden einer Verbunddomäne erhalten Sie folgende Möglichkeiten:  
   
 |||  
@@ -34,7 +39,7 @@ caps.handback.revision: 12
 |Erstellen Sie eine domänenübergreifende Regel, wenn der Wert einer Domäne in einer Verbunddomäne Auswirkungen auf den Wert einer anderen Domäne hat.|[Erstellen einer domänenübergreifenden Regel](../data-quality-services/create-a-cross-domain-rule.md)|  
 |Identifizieren Sie Wertkombinationen, damit DQS ihre Häufigkeit melden kann.|[Verwenden von Wertbeziehungen in einer Verbunddomäne](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

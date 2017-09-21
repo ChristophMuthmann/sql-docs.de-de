@@ -1,22 +1,27 @@
 ---
-title: "Sichern und Wiederherstellen von DQS-Datenbanken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sichern und Wiederherstellen von DQS-Datenbanken | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Sichern und Wiederherstellen von DQS-Datenbanken
+# <a name="backing-up-and-restoring-dqs-databases"></a>Sichern und Wiederherstellen von DQS-Datenbanken
   In diesem Thema wird beschrieben, wie die DQS-Datenbanken gesichert und wiederhergestellt werden.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken** .  
   
-3.  Sichern Sie die DQS_STAGING_DATA-Datenbank. Eine schrittweise Anleitung zum Sichern einer SQL Server-Datenbank finden Sie unter [Erstellen Sie eine vollständige Sicherung der Datenbank & #40; SQL Server & #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+3.  Sichern Sie die DQS_STAGING_DATA-Datenbank. Ausführliche Anweisungen zum Sichern einer SQL Server-Datenbank finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Sichern Sie die DQS_PROJECTS-Datenbank.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  Trennen Sie die Verbindung mit der aktuellen Instanz von SQL Server, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, auf der Sie diese Datenbanken wiederherstellen möchten.  
   
-7.  Stellen Sie die DQS_MAIN-Datenbank wieder her. Eine schrittweise Anleitung zum Wiederherstellen einer SQL Server-Datenbank finden Sie unter [Wiederherstellen einer Datenbank Sicherung mithilfe von SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Stellen Sie die DQS_MAIN-Datenbank wieder her. Ausführliche Anweisungen zum Wiederherstellen einer SQL Server-Datenbank finden Sie unter [Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Stellen Sie die DQS_PROJECTS-Datenbank wieder her.  
   
 9. Stellen Sie die DQS_STAGING_DATA-Datenbank wieder her.  
   
-10. Klicken Sie im Objekt-Explorer auf die Server, und klicken Sie dann auf **neue Abfrage**.  
+10. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Server, und klicken Sie dann auf **Neue Abfrage**.  
   
-11. Kopieren Sie im Abfrage-Editor-Fenster den folgenden SQL-Anweisungen, und Ersetzen Sie *\< Kennwort>* mit dem Kennwort, das Sie während der Installation von DQS für den Datenbank-Hauptschlüssel angegeben:  
+11. Kopieren Sie im Fenster des Abfrage-Editors die folgenden SQL-Anweisungen, und ersetzen Sie *\<KENNWORT>* durch das Kennwort, das Sie während der DQS-Installation für den Datenbank-Hauptschlüssel angegeben haben:  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im Bereich **Ergebnisse** , ob die Anweisungen erfolgreich ausgeführt wurden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von DQS-Datenbanken](../data-quality-services/manage-dqs-databases.md)  
   
   

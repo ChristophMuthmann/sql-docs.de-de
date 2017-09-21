@@ -1,32 +1,37 @@
 ---
-title: "Erstellen einer dom&#228;nen&#252;bergreifenden Regel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
+title: "Erstellen einer domänenübergreifenden Regel | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testcdrule.f1
+- sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Erstellen einer dom&#228;nen&#252;bergreifenden Regel
+# <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
   In diesem Thema wird beschrieben, wie eine domänenübergreifende Regel für eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine domänenübergreifende Regel testet die Beziehung zwischen Werten in einzelnen Domänen, die in einer Verbunddomäne enthalten sind. Eine domänenübergreifende Regel muss über eine Verbunddomäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Eine domänenübergreifende Regel wird verwendet, um Domänenwerte zu validieren, zu korrigieren und zu standardisieren.  
   
  Die If-Klausel und die Then-Klausel einer domänenübergreifenden Regel sind jeweils für eine der einzelnen Domänen in der Verbunddomäne definiert. Jede Klausel muss für eine andere einzelne Domäne definiert werden. Eine domänenübergreifende Regel muss sich auf mehrere einzelne Domänen beziehen; Sie können keine einfache Domänenregel (für nur eine einzelne Domäne) für eine Verbunddomäne definieren. Dies wäre der Fall, wenn Sie eine Domänenregel für eine einzelne Domäne definieren. Die If-Klausel und die Then-Klausel können jeweils eine oder mehrere Bedingungen enthalten.  
   
  Eine domänenübergreifende Regel, die definitive Bedingungen hat, übernimmt die Regellogik für Synonyme des Werts in den Bedingungen sowie die Werte selbst. Die definitiven Bedingungen für die If-Klausel und die Then-Klausel sind "Wert ist gleich", Wert ist ungleich", "Wert ist in" oder "Wert ist nicht in". Angenommen, Sie haben die folgende domänenübergreifende Regel für eine Verbunddomäne: "Falls für 'Ort' Wert ist gleich 'Los Angeles' ist, dann ist für 'Bundesland' Wert ist gleich 'CA'. "Wenn 'Los Angeles' und 'LA' Synonyme sind, gibt diese Regel das richtige Ergebnis für 'Los Angeles CA' und 'LA CA' und einen Fehler für 'Los Angeles WA' und 'LA WA' zurück.  
   
- Außer dass Sie erfahren, ob eine domänenübergreifende Regel, die endgültige *dann* -Klausel in einer domänenübergreifenden Regel **Wert ist gleich**, auch die Daten während der datenbereinigungsaktivität korrigiert. Weitere Informationen finden Sie unter [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
+ Abgesehen davon, dass erfahren, ob eine domänenübergreifenden Regel gültig ist, korrigiert die definitive *Then* -Klausel in einer domänenübergreifenden Regel **Wert ist gleich**auch die Daten während der Datenbereinigungsaktivität. Weitere Informationen finden Sie unter [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Domänenübergreifende Regeln werden nach allen einfachen Regeln berücksichtigt, die sich auf nur eine einzelne Domäne auswirken. Nur wenn ein Wert einzelne Domänenregeln besteht (falls vorhanden), wird die domänenübergreifende Regel angewendet. Die Verbunddomäne und die einzelnen Domänen, für die eine Regel ausgeführt wird, müssen definiert werden, bevor die Regel ausgeführt werden kann.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 13
   
 5.  Klicken Sie auf **Neue Domänenregel hinzufügen**, und geben Sie einen Namen und eine Beschreibung für die Regel an.  
   
-6.  Wählen Sie **Active** angeben, dass die Regel ausgeführt werden soll (Standardeinstellung), und deaktivieren, um zu verhindern, dass die Regel ausgeführt wird.  
+6.  Wählen Sie **Aktiv** aus, um anzugeben, dass die Regel ausgeführt wird (Standard), und deaktivieren Sie Option, um zu verhindern, dass die Regel ausgeführt wird.  
   
 7.  Erstellen Sie die If-Klausel wie folgt:  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 13
   
 1.  Testen Sie die domänenübergreifende Regel, wie folgt:  
   
-    1.  Klicken Sie auf die **ausgewählte domänenregel für Testdaten ausführen** -Symbol in der oberen rechten Ecke des verbunddomänenbereichs.  
+    1.  Klicken Sie auf das Symbol **Ausgewählte Domänenregel für Testdaten ausführen** in der oberen rechten Ecke des Verbunddomänenbereichs.  
   
     2.  Klicken Sie im Dialogfeld **Testdomänenregel** auf das Symbol **Fügt einen neuen Testbegriff für die Domänenregel hinzu** .  
   
-    3.  Geben Sie Testwerte für die einzelne Domäne ein, die der If-Klausel und der einzelnen der Then-Klausel zugeordneten Domäne zugeordnet ist. Die eingegebenen Testwerte in der Klausel muss den Regeln für diese Klausel entsprechen, oder ein Fragezeichen eingegeben werden die **Gültigkeit** Spalte gibt an, dass die domänenübergreifende Regel nicht für die Testdaten gilt.  
+    3.  Geben Sie Testwerte für die einzelne Domäne ein, die der If-Klausel und der einzelnen der Then-Klausel zugeordneten Domäne zugeordnet ist. Die in der If-Klausel eingegebenen Testwerte müssen die Bedingungen für diese Klausel erfüllen, oder ein Fragezeichen wird in der Spalte **Gültigkeit** eingegeben, das darauf hinweist, dass die domänenübergreifende Regel nicht für die Testdaten gilt.  
   
     4.  Klicken Sie auf das Symbol **Fügt einen neuen Testbegriff für die Domänenregel hinzu** , um einen anderen Satz von Testwerten hinzuzufügen.  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 13
   
     6.  Nachdem die Tests abgeschlossen wurden, klicken Sie im Dialogfeld **Verbunddomänenregel testen** auf **Schließen** .  
   
-2.  Wenn Sie die domänenübergreifende Regeln abgeschlossen haben, klicken Sie auf **Fertig stellen** um die domänenverwaltungsaktivität abzuschließen, wie in beschrieben [Beenden der Domänenverwaltungsaktivität](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+2.  Wenn Sie die domänenübergreifenden Regeln vervollständigt haben, klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer domänenübergreifenden Regel  
- Nachdem Sie eine übergreifende Regel erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md), oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
+ Nachdem Sie eine übergreifende Regel erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

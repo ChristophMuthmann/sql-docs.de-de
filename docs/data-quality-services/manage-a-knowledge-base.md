@@ -1,22 +1,27 @@
 ---
-title: "Verwalten einer Wissensdatenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwalten einer Wissensdatenbank | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Verwalten einer Wissensdatenbank
+# <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie Verwaltungsfunktionen für eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt werden. Sie können eine Wissensdatenbank löschen, entsperren, umbenennen, vorgenommene Anpassungen verwerfen und die Eigenschaften der Wissensdatenbank anzeigen.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
@@ -45,11 +50,11 @@ caps.handback.revision: 9
   
     3.  **Arbeit verwerfen**: Klicken Sie auf diese Option, wenn die Wissensdatenbank bearbeitet wird, wie durch einen Eintrag im Feld Status in der Tabelle angezeigt wird. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet oder wenn die Wissensdatenbank gesperrt ist. Weitere Informationen finden Sie unter [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Benennen Sie**: Klicken Sie auf die Wissensdatenbank Feld in der Tabelle für die Wissensdatenbank bearbeitbar, die Sie auf geklickt haben. Ändern Sie den Namen, und klicken Sie dann auf diese Wissensdatenbank und eine andere Wissensdatenbank in dem Feld, um die Namensänderung zu bestätigen.  
+    4.  **Umbenennen**: Klicken Sie auf diese Option, um das Wissensdatenbankfeld der Tabelle für die Wissensdatenbank, auf die Sie mit der rechten Maustaste geklickt haben, bearbeiten zu können. Ändern Sie den Namen, und klicken Sie dann auf diese Wissensdatenbank und eine andere Wissensdatenbank in dem Feld, um die Namensänderung zu bestätigen.  
   
-    5.  **Löschen Sie**: Klicken Sie zum Entfernen der Wissensdatenbank aus der DQS_MAIN-Datenbank auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Löschen**: Klicken Sie auf diese Option, um die Wissensdatenbank aus der DQS_MAIN-Datenbank auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]zu entfernen.  
   
-    6.  **Eigenschaften**: Klicken Sie zum Anzeigen von Eigenschaften für die Datenbank in einem schreibgeschützten Modus angezeigt.  
+    6.  **Eigenschaften**: Klicken Sie auf diese Option, um die Eigenschaften für die Datenbank im schreibgeschützten Modus anzuzeigen.  
   
         1.  **Quell-Wissensdatenbank**: Wissensdatenbank, auf der diese Datenbank basiert. Diese Eingabe ist optional.  
   

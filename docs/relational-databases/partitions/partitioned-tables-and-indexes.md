@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitionierte Tabellen und Indizes
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   Der Indexschlüssel ist eindeutig und enthält nicht die Partitionierungsspalte der Tabelle.  
   
 -   Sie möchten die Basistabelle an angeordneten Joins mit weiteren Tabellen beteiligen, die unterschiedliche Joinspalten verwenden.  
-  
- Partitionsentfernung  
- Der Prozess, durch den der Abfrageoptimierer nur auf relevante Partitionen zugreift, um die Filterkriterien der Abfrage zu erfüllen.  
+
+ Partitionsentfernung: Der Prozess, durch den der Abfrageoptimierer nur auf relevante Partitionen zugreift, um die Filterkriterien der Abfrage zu erfüllen.  
   
 ## <a name="performance-guidelines"></a>Leistungsrichtlinien  
  Die neue, höhere Grenze von 15.000 Partitionen wirkt sich auf den Arbeitsspeicher, Vorgänge mit partitionierten Indizes, DBCC-Befehle und Abfragen aus. In diesem Abschnitt werden die Auswirkungen auf die Leistung beschrieben, wenn die Anzahl der Partitionen mehr als 1.000 beträgt, und es werden mögliche Problemumgehungen bereitgestellt. Dadurch, dass die maximale Anzahl von Partitionen auf 15.000 erhöht wurde, können Sie Daten über einen längeren Zeitraum speichern. Sie sollten Daten jedoch nur so lange beibehalten, wie sie benötigt werden, und darauf achten, dass die Leistung und die Anzahl der Partitionen ausgewogen ist.  

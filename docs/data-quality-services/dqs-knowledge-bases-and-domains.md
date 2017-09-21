@@ -1,22 +1,27 @@
 ---
-title: "DQS-Wissensdatenbanken und -Dom&#228;nen | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DQS-Wissensdatenbanken und -Domänen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS-Wissensdatenbanken und -Dom&#228;nen
+# <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
   In diesem Thema wird beschrieben, was eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist. Zum Bereinigen von Daten müssen Sie über Wissen zu den Daten verfügen. Um Informationen für ein Data Quality-Projekt vorzubereiten, müssen Sie eine Wissensdatenbank (Knowledge Base, KB) erstellen und verwalten, die von DQS verwendet werden kann, um falsche oder ungültige Daten zu identifizieren. Mit DQS können Sie sowohl computerunterstützte als auch interaktive Prozesse verwenden, um Ihre Wissensdatenbank zu erstellen, aufzubauen und zu aktualisieren. Informationen in einer Wissensdatenbank werden in Domänen verwalten, wobei jede für ein Datenfeld spezifisch ist. Die Wissensdatenbank ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten.  
   
  DQS-Wissensdatenbanken bieten die folgenden Vorteile:  
@@ -31,11 +36,11 @@ caps.handback.revision: 32
   
 -   Es gibt eine klaren Unterschied zwischen dem Erstellen einer Wissensdatenbank und dem Anwenden von dieser auf einen Datenkorrekturprozess, wodurch Sie die Flexibilität in Bezug auf das Erstellen und Aktualisieren der Wissensdatenbank erhalten.  
   
- Der Data Steward verwendet die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]-Anwendung, um die computergestützten Schritte auszuführen und zu steuern sowie um die interaktiven Schritte auszuführen.  
+ Der Data Steward verwendet die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung, um die computergestützten Schritte auszuführen und zu steuern sowie um die interaktiven Schritte auszuführen.  
   
  Die folgende Abbildung zeigt verschiedene Komponenten in einer Wissensdatenbank und einer Domäne in DQS an:  
   
- ![Wissensdatenbank und Domänen in DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Wissensdatenbank und Domänen in DQS")  
+ ![Wissensdatenbank und Domänen in DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Knowledge Base and Domains in DQS")  
   
 ##  <a name="How"></a> Vorgehensweise: Erstellen und Aufbauen einer DQS-Wissensdatenbank  
  Das Aufbauen einer DQS-Wissensdatenbank schließt die folgenden Prozesse und Komponenten ein:  
@@ -61,10 +66,10 @@ caps.handback.revision: 32
   
  Für die Daten, für die eine Datenkorrektur durchgeführt wird, muss kein Wissensermittlungsprozess ausgeführt werden. DQS ermöglicht es, Wissen aus einem Satz von Datenbankfeldern zu erstellen und dieses Wissen auf einen zweiten Satz mit verknüpften Daten, die bereinigt werden müssen, anzuwenden. Der Data Steward kann eine neue Wissensdatenbank von Grund auf neu oder basierend auf einer vorhandenen Wissensdatenbank erstellen oder eine Wissensdatenbank aus einer Datendatei importieren. Sie können die Wissensermittlung auch auf einer vorhandenen Wissensdatenbank erneut ausführen. Sie können mehrere Wissensdatenbanken auf einem einzelnen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]verwalten. Sie können auch mehrere Instanzen einer Anwendung mit der gleichen Wissensdatenbank verbinden. DQS verhindert Parallelitätskonflikte, indem die Wissensdatenbank für einen Benutzer gesperrt wird, der sie in einer Wissensverwaltungssitzung öffnet.  
   
-### Nichtunterscheidung nach Groß-/Kleinbuchstaben in DQS  
+### <a name="case-insensitivity-in-dqs"></a>Nichtunterscheidung nach Groß-/Kleinbuchstaben in DQS  
  Bei Werten in DQS muss die Groß-/Kleinschreibung nicht beachtet werden. Wenn DQS die Wissensermittlung, die Domänenverwaltung oder den Abgleich ausführt, werden Werte nicht nach Groß-/Kleinschreibung unterschieden. Wenn Sie einen Wert in der Werteverwaltung hinzufügen, der sich von einem anderen Wert nur durch die Groß-/Kleinschreibung unterscheidet, werden die Werte als gleich und nicht als Synonyme angesehen. Wenn zwei Werte, die sich nur durch die Groß-/Kleinschreibung voneinander unterscheiden, in einem Abgleichsprozess verglichen werden, werden sie als genaue Übereinstimmung angesehen.  
   
- Sie können jedoch die Groß-/Kleinschreibung der Werte steuern, die Sie in Bereinigungsergebnissen exportieren. Dazu setzen die **Formatausgabe** Domäneneigenschaft (finden Sie unter [Domäneneigenschaften festgelegt](../data-quality-services/set-domain-properties.md)) und mithilfe der **Ausgabe standardisieren** das Kontrollkästchen, wenn Sie bereinigungsergebnisse exportieren (finden Sie unter [Bereinigen von Daten mithilfe von DQS & #40; intern & #41; Knowledge](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
+ Sie können jedoch die Groß-/Kleinschreibung der Werte steuern, die Sie in Bereinigungsergebnissen exportieren. Dies ist möglich, indem Sie die Domäneneigenschaft **Formatausgabe** (siehe [Festlegen von Domäneneigenschaften](../data-quality-services/set-domain-properties.md)) festlegen und das Kontrollkästchen **Ausgabe standardisieren** aktivieren, wenn Sie Bereinigungsergebnisse exportieren (siehe [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
 ##  <a name="Domains"></a> Domänenverwaltung  
  Die Domänenverwaltung ermöglicht es dem Data Steward, die Metadaten interaktiv zu ändern und zu verbessern, die von der computergestützten Wissensermittlungsaktivität generiert wurden. Jede von Ihnen vorgenommene Änderung ist für eine Wissensdatenbankdomäne. In der Domänenverwaltungsaktivität ist Folgendes möglich:  
@@ -89,18 +94,18 @@ caps.handback.revision: 32
   
  Wenn die Domänenverwaltungsaktivität abgeschlossen ist, können Sie die Wissensdatenbank zur Verwendung in einem Datenprojekt veröffentlichen.  
   
-### Festlegen von Domäneneigenschaften  
+### <a name="setting-domain-properties"></a>Festlegen von Domäneneigenschaften  
  Domäneneigenschaften definieren und steuern die Verarbeitung, die für die zugeordneten Werte angewendet wird. Sie können den Datentyp und die Sprache der Werte festlegen, angeben, dass die Quelldaten mit dem führenden Wert bereinigt werden (wenn diese Option deaktiviert ist, werden die Quelldaten mit der richtigen Benennung, jedoch nicht mit dem führenden Wert bereinigt), eine Datenstandardisierung sicherstellen, indem Sie die Formatierung konfigurieren, die angewendet wird, wenn die Datenwerte in der Domäne ausgegeben werden, und definieren, welche Algorithmen (Syntaxfehler, Rechtschreibprüfung und Zeichenfolgennormalisierung) angewendet werden.  
   
-### Reference Data Services  
+### <a name="reference-data-services"></a>Reference Data Services  
  Im Domänenverwaltungsprozess können Sie Onlineverweisdaten an eine Domäne anfügen. So können Sie die Daten in Ihrer Domäne mit den von einem Verweisdatenanbieter verwalteten Daten vergleichen. Sie müssen zuerst den Verweisdatenanbieter durch die DQS-Konfigurationsfunktionen im Abschnitt **Verwaltung** der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] konfigurieren. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
-### Anwenden von Domänenregeln  
+### <a name="applying-domain-rules"></a>Anwenden von Domänenregeln  
  Sie können Domänenregeln für die Datenvalidierung erstellen. Eine Domänenregel stellt die Genauigkeit der Daten sicher. Dies reicht von einer Basisbeschränkung wie möglichen Ausdrücken, die ein Zeichenfolgenwert sein können, bis hin zu komplexeren regulären Ausdrücken wie die gültigen Formate einer E-Mail-Adresse.  
   
  Für eine Verbunddomäne können Sie eine CD-Regel erstellen, die eine Beziehung zwischen einem Wert in einer einzelner Domäne und einem Wert in einer anderen einzelnen Domäne angibt, die jeweils beide Teile der Verbunddomäne sind.  
   
-### Festlegen von Domänenwerten  
+### <a name="setting-domain-values"></a>Festlegen von Domänenwerten  
  Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie Datenwerte in jeder Domäne der Wissensdatenbank auffüllen und anzeigen. Nach der Wissensermittlung zeigt DQS an, wie oft jeder Ausdruck angezeigt wird, wie der Status jedes Ausdrucks lautet sowie alle vorgeschlagenen Korrekturen. Sie können diese Informationen wie folgt verwalten:  
   
 -   Den Status eines Werts ändern (in korrekt, fehlerhaft oder ungültig)  
@@ -115,21 +120,21 @@ caps.handback.revision: 32
   
  Sie können Domänenwerte entweder in der Domänenverwaltungsaktivität oder im Schritt für die Verwaltung der Domänenwerte am Ende der Wissensermittlungsaktivität festlegen. Die Domänenwert-Funktionalität ist in beiden Aktivitäten gleich.  
   
-### Festlegen von Ausdrucksbeziehungen  
+### <a name="setting-term-relations"></a>Festlegen von Ausdrucksbeziehungen  
  In der Domänenverwaltung können Sie für eine einzelne Domäne eine begriffsbasierten Ausdruck angeben und eine Änderung an einem einzelnen Wert angeben.  
   
-### Verbunddomänen  
+### <a name="composite-domains"></a>Verbunddomänen  
  Eine Verbunddomäne ist eine Struktur, die aus zwei oder mehr einzelnen Domänen besteht, von denen jede Informationen über allgemeine Daten enthält. Zu den Beispielen für Daten, die von Verbunddomänen adressiert werden können, zählen der Vorname, ein weiterer Vorname und Familienamen in einem Namensfeld sowie die Hausnummer, Straße, Stadt, das Bundesland, die Postleitzahl und das Land im Adressenfeld. Wenn Sie einer Verbunddomäne ein einzelnes Feld zuordnen, teilt DQS die Daten von dem einen Feld in mehrere Domänen, die den Verbund bilden.  
   
  Manchmal stellt eine einzelne Domäne die Felddaten nicht vollständig dar. Durch das Gruppieren von mindestens zwei Domänen in einer Verbunddomäne können Sie die Daten effizient darstellen. Im Folgenden finden Sie Vorteile hinsichtlich der Verwendung von Verbunddomänen:  
   
 -   Das Analysieren der unterschiedlichen einzelnen Domänen, die eine Verbunddomäne bilden, kann beim Bewerten der Datenqualität ein effizienterer Weg sein.  
   
--   Wenn Sie eine Verbunddomäne verwenden, können Sie auch domänenübergreifende Regeln erstellen, mit denen Sie überprüfen können, ob die Beziehung zwischen Daten in mehreren Domänen ordnungsgemäß ist. Sie können z. B. überprüfen, ob die Zeichenfolge "Berlin" in einer Ortsdomäne der Zeichenfolge "Deutschland" in einer Landdomäne entspricht. Beachten Sie, dass domänenübergreifende Regeln nach Domänenregeln berücksichtigt werden.  
+-   Wenn Sie eine Verbunddomäne verwenden, können Sie auch domänenübergreifende Regeln erstellen, mit denen Sie überprüfen können, ob die Beziehung zwischen Daten in mehreren Domänen ordnungsgemäß ist. Sie können z. B. überprüfen, ob die Zeichenfolge "Berlin" in einer Ortsdomäne der Zeichenfolge "Deutschland" in einer Landdomäne entspricht. Beachten Sie, dass domänenübergreifende Regeln nach Domänenregeln berücksichtigt werden.  
   
 -   Daten in Verbunddomänen können an eine Verweisdaten-Quelle angefügt werden. In diesem Fall wird die Verbunddomäne an den Verweisdatenanbieter gesendet. Dies wird oft mit Adressdaten vorgenommen.  
   
- Wie die durch eine Verbunddomäne dargestellten Daten analysiert werden, wird von den Verbunddomäneneigenschaften bestimmt. Die Daten von einem Trennzeichen, durch die Reihenfolge der Domänen analysiert oder basierend auf den Informationen in den Domänen der verbunddomäne angefügt werden können (durch Auswählen der **Analyse der Wissensdatenbank verwenden** Eigenschaft in der verbunddomäne). Weitere Informationen finden Sie unter [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
+ Wie die durch eine Verbunddomäne dargestellten Daten analysiert werden, wird von den Verbunddomäneneigenschaften bestimmt. Die Daten können von einem Trennzeichen, anhand der Reihenfolge der Domänen oder auf Grundlage des Wissens in den an die Verbunddomäne angefügten Domänen analysiert werden (durch Auswählen der Eigenschaft **Analyse der Wissensdatenbank verwenden** in der Verbunddomäne). Weitere Informationen finden Sie unter [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
   
  Verbunddomänen werden anders verwaltet als einzelne Domänen. Sie müssen keine Werte in einer Verbunddomäne verwalten. Demgegenüber müssen Sie Werte für die einzelnen Domänen verwalten, aus der sich die Verbunddomäne zusammensetzt. In der Domänenliste der Domänenverwaltungsaktivität können Sie jedoch die Beziehungen zwischen den anderen Werten in einer Verbunddomäne und die Statistiken, die für sie gelten, sehen. Sie können beispielsweise anzeigen, wie viele Instanzen einer einzelnen Adresse vorhanden sind, die aus den gleichen fünf Zeichenfolgenwerten bestehen. Im Ermittlungsschritt der Wissensdatenbankaktivität wird die Profilerstellung auf die einzelnen Domänen innerhalb einer Verbunddomäne angewendet und nicht auf die Verbunddomäne selbst. Bei der interaktiven Bereinigung bereinigen Sie die Daten jedoch in der Verbunddomäne und nicht in den einzelnen Domänen.  
   
@@ -138,9 +143,9 @@ caps.handback.revision: 32
 ##  <a name="Matching"></a> Datenabgleich  
  Zusätzlich zu den manuellen Änderungen an einer Wissensdatenbank, die mit der Domänenverwaltung vorgenommen werden können, können Sie der Wissensdatenbank Abgleichswissen hinzufügen. Um DQS auf den Datendeduplizierungsprozess vorzubereiten, müssen Sie eine Abgleichsrichtlinie erstellen, mit der DQS die Wahrscheinlichkeit einer Übereinstimmung berechnet. Die Richtlinie schließt eine oder mehrere Abgleichsregeln ein, die der Data Steward erstellt, um zu identifizieren, wie DQS Zeilen der Daten vergleichen sollte. Der Data Steward bestimmt, welche Datenfelder in der Zeile verglichen werden sollten und über welche Gewichtung jedes Feld beim Abgleich verfügen sollte. Der Data Steward bestimmt auch, wie hoch die Wahrscheinlichkeit sein sollte, um einen Treffer als Übereinstimmung anzusehen. DQS fügt der Wissensdatenbank Abgleichsregeln für die Verwendung beim Ausführen einer Abgleichsaktivität in einem Data Quality-Projekt hinzu.  
   
- Weitere Informationen zur Wissensdatenbank finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md).  
+ Weitere Informationen zur Wissensdatenbank finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md)verwalten.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  Sie können die folgenden Vorgänge auf einer Wissensdatenbank und deren Domänen ausführen:  
   
 |||  

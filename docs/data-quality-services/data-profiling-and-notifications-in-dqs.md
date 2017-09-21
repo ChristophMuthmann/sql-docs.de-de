@@ -1,22 +1,27 @@
 ---
-title: "Datenprofilerstellung und Benachrichtigungen in DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datenprofilerstellung und Benachrichtigungen in DQS | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
-# Datenprofilerstellung und Benachrichtigungen in DQS
+# <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
   Datenprofilerstellung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist der Prozess des Analysierens der Daten in einer vorhandenen Datenquelle und des Anzeigens von Statistiken zu den Daten in DQS-Aktivitäten. Sie versorgt Sie mit automatischen Messungen der Datenqualität. DQS-Profilerstellung wird in DQS-Wissensverwaltung und Data Quality-Projekte integriert. Sie ist dynamisch und anpassbar. Die Profilerstellung hat zwei Hauptziele: erstens, Sie durch Data Quality-Prozesse zu führen und Ihre Entscheidungen zu unterstützen, und zweitens, die Effektivität der Prozesse zu bewerten. Der DQS-Profilerstellungsprozess hat die folgenden Vorteile:  
   
 -   Die Profilerstellung stellt einen Einblick in die Qualität der Quelldaten bereit und hilft Ihnen, Data Quality-Probleme zu identifizieren.  
@@ -65,7 +70,7 @@ caps.handback.revision: 25
   
 -   [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Bereinigen von Daten mit DQS & #40; interne & #41; Knowledge](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md)  
   
@@ -81,19 +86,19 @@ caps.handback.revision: 25
   
  Eine Benachrichtigung wird von einer QuickInfo mit einem Ausrufezeichen auf der Registerkarte **Profilerstellung** angegeben. Der Benachrichtigung zugeordnete Statistiken werden rot dargestellt, um die statistische Rechtfertigung für die Benachrichtigung anzugeben.  
   
- Können Sie (Standard) aktivieren oder Deaktivieren von Benachrichtigungen in der **Allgemeine Einstellungen** Registerkarte der **Verwaltung** Abschnitt der Startseite Data Quality-Client. Wenn die Benachrichtigung deaktiviert wird, werden keine QuickInfos angezeigt, und Statistiken werden nicht rot dargestellt. Durch das Deaktivieren von Benachrichtigungen entsteht keine deutliche Leistungsverbesserung. Die Profilerstellung ist immer noch funktionstüchtig, wenn Sie Benachrichtigungen deaktivieren.  
+ Sie können Benachrichtigungen auf der Registerkarte **Allgemeine Einstellungen** des Abschnitts **Verwaltung** der Data Quality-Clientstartseite aktivieren (Standard) oder deaktivieren. Wenn die Benachrichtigung deaktiviert wird, werden keine QuickInfos angezeigt, und Statistiken werden nicht rot dargestellt. Durch das Deaktivieren von Benachrichtigungen entsteht keine deutliche Leistungsverbesserung. Die Profilerstellung ist immer noch funktionstüchtig, wenn Sie Benachrichtigungen deaktivieren.  
   
  Informationen zu bestimmten Bedingungen, die Benachrichtigungen für eine Aktivität zugeordnet sind, finden Sie hier:  
   
 -   [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Bereinigen von Daten mit DQS & #40; interne & #41; Knowledge](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
   
-## Verwandte Aufgaben  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
