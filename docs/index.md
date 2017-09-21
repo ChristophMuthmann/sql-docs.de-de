@@ -3,6 +3,11 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über SQL"
+author: barbkess
+ms.author: barbkess
+ms.topic: article
+ms.technology:
+- database-engine
 ms.translationtype: HT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
 ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
