@@ -60,7 +60,7 @@ Dieses Beispiel verwendet ein selbst signiertes Zertifikat. In Produktionsszenar
 - Beschränken des Zugriffs auf`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - Verschieben Sie den SSL-Dateisystemverzeichnissen (optional)  
