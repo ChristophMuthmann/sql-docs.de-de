@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a37c630af512d85e22b3547eb520aebe22546040
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # TCP/IP-Eigenschaften (Registerkarte Protokoll)
@@ -36,14 +36,14 @@ ms.lasthandoff: 08/02/2017
  Geben Sie das Intervall (in Millisekunden) an, in dem Erhaltungspakete übertragen werden, die die Verfügbarkeit des Computers an der Remoteseite der Verbindung sicherstellen.  
   
  **Listen All**  
- Gibt an, ob SQL Server an alle IP-Adressen lauschen soll, die an Netzwerkkarten des Computers gebunden sind. Wenn für diese Option **Nein**festgelegt ist, müssen Sie jede IP-Adresse einzeln mithilfe des Dialogfeldes „Eigenschaften“ für jede IP-Adresse konfigurieren. Wenn für diese Option **Ja**festgelegt ist, gelten die Einstellungen des Eigenschaftenfeldes **IPAll** für alle IP-Adressen. Der Standardwert ist **Ja**.  
+ Specify whether SQL Server will listen on all the IP addresses that are bound to network cards on the computer. Wenn für diese Option **Nein**festgelegt ist, müssen Sie jede IP-Adresse einzeln mithilfe des Dialogfeldes „Eigenschaften“ für jede IP-Adresse konfigurieren. Wenn für diese Option **Ja**festgelegt ist, gelten die Einstellungen des Eigenschaftenfeldes **IPAll** für alle IP-Adressen. Der Standardwert ist **Ja**.  
   
  **No Delay**  
  SQL Server implementiert keine Änderungen an dieser Eigenschaft.  
   
 ## Siehe auch  
  [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP / IP-](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
   
   
 

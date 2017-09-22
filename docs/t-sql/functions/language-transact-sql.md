@@ -1,7 +1,7 @@
 ---
 title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cbf02aa47a4623d78062a63aa2c159f63ddd47e
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="language-transact-sql"></a>@@LANGUAGE (Transact-SQL)
+# <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40; LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den Namen der zurzeit verwendeten Sprache zurück.  
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 @@LANGUAGE  
 ```  
   

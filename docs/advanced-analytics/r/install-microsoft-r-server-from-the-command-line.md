@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Installieren von Microsoft R Server über die Befehlszeile
@@ -83,7 +83,7 @@ Standardmäßig alle Protokolle und Zusammenfassungen für SQL Server einrichten
 
 Für jede installierte Funktion wird ein eigener Unterordner erstellt.
 
-Informationen zum Einrichten einer anderen Instanz von Microsoft R Server mit denselben Parametern können Sie die Konfigurationsdatei erneut verwenden, die während der Installation erstellt wird. Weitere Informationen finden Sie unter [Installieren von SQL Server mithilfe einer Konfigurationsdatei](https://msdn.microsoft.com/library/dd239405.aspx)
+Informationen zum Einrichten einer anderen Instanz von Microsoft R Server mit denselben Parametern können Sie die Konfigurationsdatei erneut verwenden, die während der Installation erstellt wird. Weitere Informationen finden Sie unter [Installieren von SQL Server mithilfe einer Konfigurationsdatei](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>Anpassen der R-Umgebung

@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
@@ -57,14 +57,14 @@ Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisyst
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen.     
 > **Hinweis!** Sie müssen die Berechtigung haben, Tabellen in AdventureWorks oder andere Daten, die Sie verwenden, erstellen und löschen zu können.         
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)    
+-   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)    
     
 **Zielcomputer.** Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden Komponenten installiert sein:**    
     
 - SQL Server
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen. 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

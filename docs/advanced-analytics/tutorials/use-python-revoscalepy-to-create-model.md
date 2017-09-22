@@ -2,8 +2,8 @@
 title: Verwenden von Python mit Revoscalepy zum Erstellen eines Modells | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Verwenden von Python mit Revoscalepy zum Erstellen eines Modells
 
-In diesem Beispiel wird veranschaulicht, wie ein Logistisches Regressionsmodell in SQL Server mithilfe eines Algorithmus aus können die **Revoscalepy** Paket.
+In diesem Beispiel wird veranschaulicht, wie ein lineares Regressionsmodell in SQL Server mithilfe eines Algorithmus aus können die **Revoscalepy** Paket.
 
 Die **Revoscalepy** -Paket für Python-Objekte, Transformationen enthält und Algorithmen, die ähnliche aus Gründen der **"revoscaler"** -Paket für die Sprache "R". Mit dieser Bibliothek können Sie einen computekontext erstellen, Verschieben von Daten zwischen remotecomputekontexten, Transformieren von Daten und Vorhersagemodellen mit gängigen Algorithmen wie z. B. logistische und lineare Regression und Entscheidungsstrukturen zu trainieren.
 
-Weitere Informationen finden Sie unter [was Revoscalepy ist?](../python/what-is-revoscalepy.md)
+Weitere Informationen finden Sie unter [neuerungen Revoscalepy?](../python/what-is-revoscalepy.md) und [Python-Funktion Referenz](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -112,8 +112,8 @@ Nehmen wir den Code überprüfen, und markieren Sie einige wichtige Schritte.
 
 Eine Datenquelle unterscheidet sich von einen computekontext. Die _Datenquelle_ definiert die Daten in Ihrem Code verwendet. Die _computekontext_ definiert, in dem der Code ausgeführt wird.
 
-1. Erstellen Sie die Python-Variablen, z. B. `sql_query` und `sql_connection_string`, die definiert, die Quelle und die Daten, die Sie verwenden möchten. Diese Variablen dann an den Konstruktor RxSqlServerData implementieren übergeben der **Datenquellenobjekt** mit dem Namen `data_source`.
-2. Erstellen Sie eine Compute Context-Objekt mithilfe der **RxInSqlServer** Konstruktor. In diesem Beispiel übergeben Sie dieselbe Verbindungszeichenfolge, die Sie zuvor auf der Annahme definiert, die die Daten in der gleichen SQL Server-Instanz ist, die Sie als computekontext verwenden möchten. Allerdings können die Datenquelle und des computekontexts auf verschiedenen Servern sein. Das resultierende **compute Context-Objekt** lautet `sql_cc`.
+1. Erstellen Sie die Python-Variablen, z. B. `sql_query` und `sql_connection_string`, die definiert, die Quelle und die Daten, die Sie verwenden möchten. Diese Variablen zum Übergeben der [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) Konstruktor zum Implementieren der **Datenquellenobjekt** mit dem Namen `data_source`.
+2. Erstellen Sie eine Compute Context-Objekt mithilfe der [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) Konstruktor. In diesem Beispiel übergeben Sie dieselbe Verbindungszeichenfolge, die Sie zuvor auf der Annahme definiert, die die Daten in der gleichen SQL Server-Instanz ist, die Sie als computekontext verwenden möchten. Allerdings können die Datenquelle und des computekontexts auf verschiedenen Servern sein. Das resultierende **compute Context-Objekt** lautet `sql_cc`.
 3. Wählen Sie den aktiven computekontext. Standardmäßig Vorgänge werden lokal ausgeführt wird, d. h., wenn Sie einen anderen computekontext nicht angeben, werden die Daten aus der Datenquelle abgerufen werden und das Modell Anpassung wird in der aktuellen Python-Umgebung ausgeführt.
 
 ### <a name="changing-compute-contexts"></a>Ändern rechenkontexte
@@ -126,17 +126,15 @@ Das gleiche gilt, in dem Aufruf von **Rxsummary**, wobei computekontext wiederve
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-Sie können auch mithilfe der Funktion **Rxsetcomputecontext** zwischen rechenkontexte zu wechseln, die bereits definiert wurden. 
+Sie können auch mithilfe der Funktion [Rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) zwischen rechenkontexte zu wechseln, die bereits definiert wurden.
 
 ### <a name="setting-the-degree-of-parallelism"></a>Den Grad an Parallelität festlegen
 
-Beim Festlegen des computekontexts können Sie auch Parameter, die steuern festlegen wie die Daten von der computekontext behandelt werden. Diese Parameter variieren je nach Typ der Datenquelle. 
+Beim Festlegen des computekontexts können Sie auch Parameter, die steuern festlegen wie die Daten von der computekontext behandelt werden. Diese Parameter variieren je nach Typ der Datenquelle.
 
 Sie können für SQL Server-rechenkontexte legen Sie die Batchgröße oder Bereitstellen von Hinweisen zur den Grad der Parallelität in ausgeführten Aufgaben verwenden.
 
-Das Beispiel auf einem Computer mit vier Prozessoren ausgeführt wurde, damit wir setzen die *Num_tasks* Parameter 4. Wenn Sie diesen Wert auf 0 festlegen, verwendet SQL Server die Standardeinstellung, die so viele Aufgaben gleichzeitig wie möglich, unter dem aktuellen MAXDOP-Einstellungen für den Server ausgeführt wird. Hängt jedoch auch auf Servern mit vielen Prozessoren, die genaue Anzahl der Aufgaben, die möglicherweise viele andere Faktoren, z. B. Server-Einstellungen und andere Aufträge, die ausgeführt werden. 
-
-Weitere Informationen finden Sie unter [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver).
+Das Beispiel auf einem Computer mit vier Prozessoren ausgeführt wurde, damit wir setzen die *Num_tasks* Parameter 4. Wenn Sie diesen Wert auf 0 festlegen, verwendet SQL Server die Standardeinstellung, die so viele Aufgaben gleichzeitig wie möglich, unter dem aktuellen MAXDOP-Einstellungen für den Server ausgeführt wird. Hängt jedoch auch auf Servern mit vielen Prozessoren, die genaue Anzahl der Aufgaben, die möglicherweise viele andere Faktoren, z. B. Server-Einstellungen und andere Aufträge, die ausgeführt werden.
 
 ## <a name="related-samples"></a>Beispiele
 

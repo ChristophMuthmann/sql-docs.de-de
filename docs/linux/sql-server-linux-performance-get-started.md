@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f4f58b682451b7dabf336241ec94797a4d1469e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Leistungsfunktionen von SQL Server on Linux
@@ -157,11 +157,11 @@ SQL Server unterstützt systemintern kompilierte gespeicherte Prozeduren, die au
 ### <a name="learn-more-about-in-memory-oltp"></a>Weitere Informationen zu In-Memory OLTP
 Weitere Informationen zu In-Memory OLTP finden Sie unter den folgenden Themen:
 
-- [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Migrieren zu In-Memory OLTP](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](https://msdn.microsoft.com/library/dn465869.aspx)
-- [In-Memory OLTP (Arbeitsspeicheroptimierung)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [Migrieren zu In-Memory OLTP](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [In-Memory OLTP (Arbeitsspeicheroptimierung)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## <a name="use-query-store"></a>Verwenden Sie den Abfragespeicher
 Der Abfragespeicher sammelt detaillierte Leistungsinformationen über Abfragen, Ausführungspläne und Statistiken.

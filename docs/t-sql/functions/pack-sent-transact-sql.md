@@ -1,7 +1,7 @@
 ---
 title: '@@PACK_SENT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,13 +27,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c0a4d0882fe2a2d0a49ed4b6d3ccf67abd052e84
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 212f5ad5bbe56ab994ee50baba81b8a650bf0a93
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="packsent-transact-sql"></a>@@PACK_SENT (Transact-SQL)
+# <a name="x40x40packsent-transact-sql"></a>& #x 40; & #x 40; PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Anzahl der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start in das Netzwerk geschriebenen Ausgabepakete zurück.  
@@ -43,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 @@PACK_SENT  
 ```  
   
@@ -74,3 +73,4 @@ Pack Sent
  [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

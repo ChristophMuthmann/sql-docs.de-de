@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22d5628b55be9b20ea86f0625be287568fd4ee8f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ada9817d628b9c146899807bba35a6651842afa3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Starten Sie den SQLServer Import / Export-Assistenten
@@ -42,7 +42,7 @@ Sie können den Assistenten starten:
 -   Von [Visual Studio mit SQL Server Data Tools (SSDT)](#startVS).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung - ist der Assistent auf dem Computer installiert werden?
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 > [!NOTE]
 > Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
@@ -87,7 +87,7 @@ Führen Sie die 64-Bit-Version des Assistenten aus, sofern für die Datenquelle 
 
     ![Starten des Assistenten in SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-Wenn Sie SQL Server nicht installiert haben, bzw. SQL Server installiert haben, jedoch nicht SQL Server Management Studio, lesen Sie [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+Wenn Sie SQL Server nicht installiert haben, bzw. SQL Server installiert haben, jedoch nicht SQL Server Management Studio, lesen Sie [Herunterladen von SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
   
 ## <a name="startVS"></a>Visual Studio
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>Starten Sie den SQL Server-Import / Export-Assistent aus Visual Studio mit SQL Server Data Tools (SSDT) 
@@ -103,10 +103,10 @@ Wenn Sie SQL Server nicht installiert haben, bzw. SQL Server installiert haben, 
 
     ![Starten des Assistenten aus Paketen](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-Wenn Sie Visual Studio nicht installiert haben, bzw. Visual Studio installiert haben, jedoch nicht SQL Server Data Tools, lesen Sie [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie Visual Studio nicht installiert haben, bzw. Visual Studio installiert haben, jedoch nicht SQL Server Data Tools, lesen Sie [Herunterladen von SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="get-the-wizard"></a>Abrufen des Assistenten
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Aufrufen der Hilfe während der Ausführung des Assistent
 > [!TIP]

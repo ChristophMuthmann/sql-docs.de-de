@@ -2,7 +2,7 @@
 title: DROP DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Entfernt eine oder mehrere Benutzerdatenbanken oder Datenbank-Momentaufnahmen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  Löschen eine Datenbank aktivieren, für Stretch-Datenbank entfernt die Remotedaten nicht. Wenn Sie die Remotedaten löschen möchten, müssen Sie manuell entfernen.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Sie müssen mit der master-Datenbank verbunden sein, um eine Datenbank zu löschen.  
+ Sie müssen mit der master-Datenbank verbunden sein, um eine Datenbank zu löschen.
   
- Die DROP DATABASE-Anweisung muss die einzige Anweisung in einem SQL-Batch sein, und es darf jeweils nur eine Datenbank gelöscht werden.  
+ Die DROP DATABASE-Anweisung muss die einzige Anweisung in einem SQL-Batch sein, und es darf jeweils nur eine Datenbank gelöscht werden.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ Sie müssen mit der master-Datenbank verbunden sein, um eine Datenbank zu löschen.
+  
+ Die DROP DATABASE-Anweisung muss die einzige Anweisung in einem SQL-Batch sein, und es darf jeweils nur eine Datenbank gelöscht werden.
+
 ## <a name="permissions"></a>Berechtigungen  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

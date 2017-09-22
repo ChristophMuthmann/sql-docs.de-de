@@ -1,7 +1,7 @@
 ---
 title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 23ae1a37bcc84561a0ccedf10b1bb0c6ee7b6b73
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: fd32b0c7ebc6da51fe50787a8492d52928dd7d32
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="remserver-transact-sql"></a>@@REMSERVER (Transact-SQL)
+# <a name="x40x40remserver-transact-sql"></a>& #x 40; & #x 40; REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -44,7 +44,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 @@REMSERVER  
 ```  
   
@@ -81,3 +80,4 @@ LONDON2
  [Remoteserver](../../database-engine/configure-windows/remote-servers.md)  
   
   
+

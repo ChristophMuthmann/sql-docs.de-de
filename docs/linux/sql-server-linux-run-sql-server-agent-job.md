@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
@@ -35,7 +35,7 @@ Die folgenden Schritte bieten ein Beispiel zum Erstellen eines SQL Server-Agent-
 > [!TIP]
 > Alle T-SQL-Client können Sie diese Befehle werden ausgeführt. Beispielsweise unter Linux können Sie [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Von einem Remoteserver mit Windows können Sie auch Ausführen von Abfragen in SQL Server Management Studio (SSMS) oder mithilfe der UI-Schnittstelle für die auftragsverwaltung, die im nächsten Abschnitt beschrieben wird.
 
-1. **Erstellen des Auftrags**. Im folgenden Beispiel wird [Sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) beim Erstellen eines Auftrags mit dem Namen `Daily AdventureWorks Backup`.
+1. **Erstellen des Auftrags**. Im folgenden Beispiel wird [Sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) beim Erstellen eines Auftrags mit dem Namen `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ Die folgenden Schritte bieten ein Beispiel zum Erstellen eines SQL Server-Agent-
 
     ```
 
-2. **Fügen Sie eine oder mehrere Auftragsschritte**. Das folgende Transact-SQL-Skript verwendet [Sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) Sie einen Auftragsschritt zu erstellen, eine Sicherung erstellt, die `AdventureWlorks2014` Datenbank.
+2. **Fügen Sie eine oder mehrere Auftragsschritte**. Das folgende Transact-SQL-Skript verwendet [Sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) Sie einen Auftragsschritt zu erstellen, eine Sicherung erstellt, die `AdventureWlorks2014` Datenbank.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ Die folgenden Schritte bieten ein Beispiel zum Erstellen eines SQL Server-Agent-
     GO
     ```
 
-3. **Erstellen Sie einen Auftragszeitplan**. Dieses Beispiel verwendet [Sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) um einen täglichen Zeitplan für den Auftrag zu erstellen.
+3. **Erstellen Sie einen Auftragszeitplan**. Dieses Beispiel verwendet [Sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) um einen täglichen Zeitplan für den Auftrag zu erstellen.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ Die folgenden Schritte bieten ein Beispiel zum Erstellen eines SQL Server-Agent-
    GO
     ```
 
-4. **Fügen Sie den Auftragszeitplan an den Auftrag**. Verwendung [Sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) den Auftragszeitplan an dem Auftrag angefügt.
+4. **Fügen Sie den Auftragszeitplan an den Auftrag**. Verwendung [Sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) den Auftragszeitplan an dem Auftrag angefügt.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ Die folgenden Schritte bieten ein Beispiel zum Erstellen eines SQL Server-Agent-
     GO
     ```
 
-5. **Weisen Sie den Auftrag auf einem Zielserver**. Weisen Sie den Auftrag auf einem Zielserver mit [Sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). In diesem Beispiel ist der lokale Server das Ziel.
+5. **Weisen Sie den Auftrag auf einem Zielserver**. Weisen Sie den Auftrag auf einem Zielserver mit [Sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). In diesem Beispiel ist der lokale Server das Ziel.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71ad4edf319134eb347b0df26bf6878ccc4a9dcc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1a74389ea12c6c8987246946a9c81d8aeb3851cf
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="creating-tabular-models"></a>Erstellen von tabellarischen Modellen
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
   
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [Projekte für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)  
+ [Tabellenmodellprojekte](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)  
   
  [Eigenschaften](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
@@ -58,12 +58,12 @@ ms.lasthandoff: 09/01/2017
   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
- [In Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analysieren in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Bereitstellung von Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)   
+ [Herunterladen von SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)   
  [In Analysis Services verwendete Tools und Anwendungen](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   

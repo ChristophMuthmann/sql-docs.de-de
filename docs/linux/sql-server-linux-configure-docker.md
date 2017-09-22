@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
 ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Konfigurieren von SQL Server-2017 Container Bilder auf Docker
@@ -96,13 +96,13 @@ Docker bietet eine Möglichkeit, mehrere SQL Server-Container auf demselben Host
 Das folgende Beispiel erstellt zwei SQL Server-Container und ordnet sie Ports **1401** und **1402** auf dem Hostcomputer.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 Es gibt jetzt zwei Instanzen von SQL Server in separaten Containern ausgeführt. Clients können mit jeder SQL Server-Instanz verbinden, mit der IP-Adresse der Docker-Host und die Portnummer für den Container.
@@ -129,11 +129,11 @@ Ihre Änderungen an der Konfiguration von SQL Server und Datenbankdateien in den
 Die erste Möglichkeit besteht in einem Verzeichnis auf dem Host als Datenträger für Daten im Container eingebunden. Verwenden Sie hierzu die `docker run` -Befehl mit der `-v <host directory>:/var/opt/mssql` Flag. Dadurch werden die Daten zwischen Ausführungen Container wiederhergestellt werden.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 Mit dieser Technik können auch freigeben, und zeigen Sie die Dateien auf dem Docker-Host.
@@ -146,11 +146,11 @@ Mit dieser Technik können auch freigeben, und zeigen Sie die Dateien auf dem Do
 Die zweite Möglichkeit ist die Verwendung ein volumecontainers Daten. Sie können einen Volume-Container erstellen, unter Angabe eines Namens Volume, anstatt ein Hostverzeichnis mit den `-v` Parameter. Das folgende Beispiel erstellt eine freigegebene Datenvolume mit dem Namen **Sqlvolume**.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -170,6 +170,7 @@ Verwenden Sie zum Entfernen eines volumecontainers Daten der `docker volume rm` 
 > Wenn Sie den volumecontainer Daten löschen, ist SQL Server-Daten im Container *dauerhaft* gelöscht.
 
 ### <a name="backup-and-restore"></a>Sichern und Wiederherstellen
+
 Zusätzlich zu diesen Verfahren Container können Sie auch die Verwendung der standardmäßigen SQL Server-Sicherung und Techniken wiederherstellen. Sicherungsdateien können zum Schutz Ihrer Daten oder die Daten in eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [Sicherungs- und SQL Server-Datenbanken unter Linux](sql-server-linux-backup-and-restore-database.md).
 
 > [!WARNING]
@@ -210,6 +211,8 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 ```PowerShell
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
+
+## <a name="copy-files-into-a-container"></a>Kopieren von Dateien in einen container
 
 Um eine Datei in den Container zu kopieren, verwenden Sie den folgenden Befehl ein:
 
@@ -310,14 +313,14 @@ Unter Windows stellen Sie sicher, dass Sie PowerShell oder die Eingabeaufforderu
 
 Wenn der SQL Server-Container nicht ausgeführt werden, versuchen Sie die folgenden Tests:
 
-- Wenn Sie eine Fehlermeldung, wie z. B. erhalten **"Fehler beim Erstellen des Endpunkts CONTAINER_NAME auf Netzwerkbrücke. Fehler beim Starten der Proxy: Überwachung Tcp 0.0.0.0:1433 Bind: Adresse wird bereits verwendet. "** , und Sie versuchen, die Container-Port 1433, der einen Port zugeordnet, die bereits verwendet wird. Dies kann geschehen, wenn Sie SQL Server lokal auf dem Hostcomputer ausgeführt werden. Es kann auch vorkommen, wenn Sie zwei SQL Server-Container starten und versuchen, sie beide auf demselben hostPort zuzuordnen. In diesem Fall verwenden die `-p` der Container-Port 1433 an einen anderen hostPort zuzuordnenden Parameters. Beispiel: 
+- Wenn Sie eine Fehlermeldung, wie z. B. erhalten **"Fehler beim Erstellen des Endpunkts CONTAINER_NAME auf Netzwerkbrücke. Fehler beim Starten der Proxy: Überwachung Tcp 0.0.0.0:1433 Bind: Adresse wird bereits verwendet. " **, und Sie versuchen, die Container-Port 1433, der einen Port zugeordnet, die bereits verwendet wird. Dies kann geschehen, wenn Sie SQL Server lokal auf dem Hostcomputer ausgeführt werden. Es kann auch vorkommen, wenn Sie zwei SQL Server-Container starten und versuchen, sie beide auf demselben hostPort zuzuordnen. In diesem Fall verwenden die `-p` der Container-Port 1433 an einen anderen hostPort zuzuordnenden Parameters. Beispiel: 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - Überprüfen Sie, wenn Fehlermeldungen aus Container vorhanden sind.
@@ -331,6 +334,14 @@ Wenn der SQL Server-Container nicht ausgeführt werden, versuchen Sie die folgen
 - Wenn Sie einer Container-Management-Software verwenden, stellen Sie sicher, dass er als Stamm ausgeführten Container-Prozesse unterstützt. Sqlservr-Prozess im Container wird als Root ausgeführt werden.
 
 - Überprüfen Sie die [Setup und SQL Server-Fehlerprotokollen](#errorlogs).
+
+### <a name="enable-dump-captures"></a>Dump Erfassungen aktivieren
+
+Wenn SQL Server-Prozess innerhalb des Containers ein Fehler auftritt, erstellen Sie einen neuen Container mit **SYS_PTRACE** aktiviert. Dadurch wird die Linux-Funktion, um einen Prozess zu verfolgen, der zum Erstellen einer Dumpdatei auf eine Ausnahme erforderlich ist. Die Dumpdatei kann hinsichtlich der Unterstützung verwendet werden, um Hilfe bei der Fehlerbehebung. Die folgenden "Docker run" Befehl ermöglicht diese Funktion.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+```
 
 ### <a name="sql-server-connection-failures"></a>SQL Server-Verbindungsfehler
 

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  Klicken Sie mit der Maus, und ziehen Sie die Kante der Spalte nach links oder rechts, um die Spaltenbreite zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tablix-Datenbereich (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix-Datenbereichszelle, Zeilen und Spalten (Berichts-Generator) und SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix-Datenbereich (Berichts-Generator und SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix-Datenbereichszelle, Zeilen und Spalten (Berichts-Generator) und SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Listen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Matrizen (Berichts-Generator und SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [Listen (Berichts-Generator und SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

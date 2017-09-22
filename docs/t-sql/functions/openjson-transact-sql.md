@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -67,7 +67,7 @@ Wird standardmäßig die **OPENJSON** Funktion mit Tabellenrückgabe gibt drei S
   
 ![Syntax für WITH-Klausel in der OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH-Syntax")
 
-*With_clause* enthält eine Liste von Spalten, bei deren Typen für **OPENJSON** zurückgegeben. Standardmäßig **OPENJSON** entspricht der Schlüssel im *JsonExpression* mit den Spaltennamen in *With_clause*. Wenn ein Spaltenname ein Schlüsselname nicht übereinstimmt, können Sie eine optionale bereitstellen *Column_path*, also eine [JSON Path-Ausdruck](../../relational-databases/json/json-path-expressions-sql-server.md) , die auf einer Taste innerhalb der *JsonExpression*. 
+*With_clause* enthält eine Liste von Spalten, bei deren Typen für **OPENJSON** zurückgegeben. Standardmäßig **OPENJSON** entspricht der Schlüssel im *JsonExpression* mit den Spaltennamen in *With_clause* (in diesem Fall Übereinstimmungen Schlüssel setzt voraus, dass sie die Groß-/Kleinschreibung beachtet wird). Wenn ein Spaltenname ein Schlüsselname nicht übereinstimmt, können Sie eine optionale bereitstellen *Column_path*, also eine [JSON Path-Ausdruck](../../relational-databases/json/json-path-expressions-sql-server.md) , die auf einer Taste innerhalb der *JsonExpression*. 
 
 ## <a name="arguments"></a>Argumente  
 ### <a name="jsonexpression"></a>*jsonExpression*  

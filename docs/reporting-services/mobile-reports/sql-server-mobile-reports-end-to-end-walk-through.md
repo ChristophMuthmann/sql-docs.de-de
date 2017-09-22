@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise
@@ -37,11 +37,11 @@ Dieser Artikel begleitet Sie durch die folgenden Aufgaben:
 ## <a name="before-we-start"></a>Voraussetzungen  
 Um folgen zu können, benötigen Sie diese Produkte:  
   
-* Zum Erstellen von Datenquellen und KPIs und Veröffentlichen von Datasets und mobilen Berichten benötigen Sie Zugriff auf einen [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [-Berichtsserver im nativen Modus](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Zum [Erstellen freigegebener Datasets](#shared-dataset)müssen Sie den [Berichts-Generator installieren](https://msdn.microsoft.com/library/ff519551.aspx).  
+* Zum Erstellen von Datenquellen und -KPIs und Datasets und mobile Berichte veröffentlichen, benötigen Sie Zugriff auf eine [! UMFASSEN[SsRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
+* Um [freigegebene Datasets erstellen](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
 * Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks-Beispieldatenbanken und Skripts](http://msftdbprodsamples.codeplex.com/).  
-*  ODER: World Wide Importers-Beispieldatenbank, die auf der Seite [Microsoft SQL Server-Beispiele](https://msdn.microsoft.com/library/mt748083.aspx) verfügbar ist.
+*  OR: Wide World Importers-Beispieldatenbank verfügbar aus den [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) Seite.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
   *   [Registrieren beim Power BI-Dienst](http://go.microsoft.com/fwlink/?LinkID=513879) und
   *  [Herunterladen der mobilen Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
@@ -49,7 +49,7 @@ Um folgen zu können, benötigen Sie diese Produkte:
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
   
-Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Sehen Sie sich die [Liste unterstützter Datenquellen](https://msdn.microsoft.com/library/ms159219.aspx)an.  
+Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Finden Sie unter der [Liste der unterstützten Datenquellen](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
@@ -66,11 +66,11 @@ Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der 
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Erfahren Sie mehr über [freigegebene Datenquellen in Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
+Erfahren Sie mehr über [freigegebene Datenquellen in Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
    
 ## <a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
   
-Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]verwendet. [Installieren Sie Berichts-Generator](https://msdn.microsoft.com/library/ff519551.aspx), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.   
+Verwenden Sie ein vorhandenes [! UMFASSEN[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), oder starten Sie ihn aus dem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.   
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Paginierter Bericht** , um [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]zu starten.  
   

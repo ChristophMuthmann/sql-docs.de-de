@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>Was &#39; s neu in SQL Server 2017 Analysis Services
@@ -110,7 +110,7 @@ In SSDT können Sie den neuen Kompatibilitätsgrad 1400 auswählen, wenn Sie neu
 >[!NOTE]
 > Der integrierte Arbeitsbereich in der Dezember-Version von SQL Server Data Tools (SSDT) unterstützt den Kompatibilitätsgrad 1400. Wenn Sie neue Tabellenmodellprojekte auf einer Arbeitsbereichserverinstanz erstellen, muss es sich bei dieser Instanz bzw. bei allen bereitgestellten Instanzen um [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1 handeln. 
 
-So aktualisieren Sie ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft  **SQL Server-2017 (1400)**. 
+So aktualisieren Sie ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft ** SQL Server-2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>DAX-Verbesserungen
-Diese Version enthält einen `IN` -Operator für DAX-Ausdrücke. Dies ist vergleichbar mit dem [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) -Operator, der üblicherweise verwendet wird, um mehrere Werte in einer `WHERE` -Klausel anzugeben.
+Diese Version enthält einen `IN` -Operator für DAX-Ausdrücke. Dies ist vergleichbar mit dem [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql)-Operator, der üblicherweise verwendet wird, um mehrere Werte in einer `WHERE`-Klausel anzugeben.
 
 Früher war es üblich, mithilfe des logischen `OR` -Operators Filter für mehrere Werte anzugeben, wie beispielsweise im folgenden Measureausdruck:
 

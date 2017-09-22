@@ -20,17 +20,17 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
 
-Sie verwenden in diesem Lernprogramm Berichts-Designer in SQL Server Data Tools zum Erstellen einer grundlegenden [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -paginierten Bericht mit einer Tabelle, basierend auf den  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  Datenbank. Sie können auch erstellen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten mit Berichts-Generator. 
+Sie verwenden in diesem Lernprogramm Berichts-Designer in SQL Server Data Tools zum Erstellen einer grundlegenden [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -paginierten Bericht mit einer Tabelle, basierend auf den ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** Datenbank. Sie können auch erstellen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten mit Berichts-Generator. 
 
 Wie Sie dieses Lernprogramm durchgehen, werden Sie erstellen ein Berichtsprojekt, richten Verbindungsinformationen definieren Sie eine Abfrage, fügen einen Tabellendatenbereich hinzu, gruppieren und insgesamt einige Felder und in der Vorschau anzeigen.  
   
@@ -43,7 +43,7 @@ Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen
   
 -   Die [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank.  Weitere Informationen finden Sie unter [Adventure Works 2014-Beispieldatenbanken](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) ist mit den „SQL Server Reporting Services“-Komponenten installiert, sodass Sie den Berichts-Designer besitzen.    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) mit den "SQL Server Reporting Services"-Komponenten installiert, daher Sie den Berichts-Designer müssen.    
   
 Sie müssen auch über Leseberechtigung verfügen, um Daten aus der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank abrufen zu können.
 
@@ -66,4 +66,4 @@ Sie müssen auch über Leseberechtigung verfügen, um Daten aus der [!INCLUDE[ss
 
 [Tutorials zu Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Haben Sie dazu Fragen? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

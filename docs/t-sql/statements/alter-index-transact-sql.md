@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfe0bfe90cfb8a168fd2c87d662ba978c12a898e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
   
- SORT_IN_TEMPDB, MAXDOP und DATA_COMPRESSION sind die Optionen, die angegeben werden können, wenn Sie eine einzelne Partition neu erstellen (PARTITION =  *n* ). XML-Indizes können nicht bei der Neuerstellung einer einzelnen Partition angegeben werden.  
+ SORT_IN_TEMPDB, MAXDOP und DATA_COMPRESSION sind die Optionen, die angegeben werden können, wenn Sie eine einzelne Partition neu erstellen (PARTITION = * n *). XML-Indizes können nicht bei der Neuerstellung einer einzelnen Partition angegeben werden.  
   
  DISABLE  
  Markiert den Index als deaktiviert und als nicht verfügbar für das [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Jeder Index kann deaktiviert werden. Die Indexdefinition eines deaktivierten Indexes bleibt weiterhin im Systemkatalog ohne zugrunde liegende Indexdaten bestehen. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die zugrunde liegenden Tabellendaten verhindert. Verwenden Sie ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING, um einen Index zu aktivieren. Weitere Informationen finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md) und [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -356,7 +356,7 @@ FILLFACTOR = *Fillfactor*
   
  Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY  **=**  {ON | {OFF}  
+ IGNORE_DUP_KEY ** = ** {ON | {OFF}  
  Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Der Standardwert ist OFF.  
   
  ON  
@@ -371,7 +371,7 @@ FILLFACTOR = *Fillfactor*
   
  In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | {OFF}  
+ STATISTICS_NORECOMPUTE ** = ** {ON | {OFF}  
  Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.  
   
  ON  
@@ -407,7 +407,7 @@ FILLFACTOR = *Fillfactor*
  
 **Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.  
   
- ONLINE  **=**  {ON | **OFF** } \<wie für Rebuild_index_option >  
+ ONLINE ** = ** {ON | **OFF** } \<wie für Rebuild_index_option >  
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.  
   
  Bei XML-Indizes oder räumlichen Indizes wird nur ONLINE = OFF unterstützt, und wenn ONLINE auf ON festgelegt wird, wird ein Fehler ausgelöst.  
@@ -431,9 +431,9 @@ FILLFACTOR = *Fillfactor*
   
 -   Eine Teilmenge eines partitionierten Indexes (ein vollständiger partitionierter Index kann online neu erstellt werden).  
 
--  SQL-Datenbank vor V12 und SQL Server vor SQL Server 2012, lässt nicht die `ONLINE` option für den gruppierten Index erstellen oder Vorgänge neu zu erstellen, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max)**  Spalten.
+-  SQL-Datenbank vor V12 und SQL Server vor SQL Server 2012, lässt nicht die `ONLINE` option für den gruppierten Index erstellen oder Vorgänge neu zu erstellen, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max) ** Spalten.
 
-FORTSETZBARE  **=**  {ON | **OFF**}
+FORTSETZBARE ** = ** {ON | **OFF**}
 
 **Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)  
 
@@ -443,13 +443,13 @@ FORTSETZBARE  **=**  {ON | **OFF**}
 
  DEAKTIVIERT den Index ist der Vorgang nicht fortgesetzt werden können.
 
-MAX_DURATION  **=**  *Zeit* [**Minuten**] mit verwendet **kann wieder aufgenommen werden = ON** (erfordert **ONLINE = ON**).
+MAX_DURATION ** = ** *Zeit* [**Minuten**] mit verwendet **kann wieder aufgenommen werden = ON** (erfordert **ONLINE = ON**).
  
 **Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)  
 
 Gibt die Zeit (ein Integerwert in Minuten angegeben), dass eine fortsetzbar online-Vorgang Index werden ausgeführt, bevor er angehalten wurde. 
 
-ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
+ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
  
 **Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}
  OFF  
  Zeilensperren werden nicht verwendet.  
   
-ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
   
 **Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  Ein Index kann nicht neu organisiert werden, wenn ALLOW_PAGE_LOCKS auf OFF festgelegt ist.  
   
- MAXDOP  **=**  Max_degree_of_parallelism  
+ MAXDOP ** = ** Max_degree_of_parallelism  
  
 **Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  Parallele Indexvorgänge sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- COMPRESSION_DELAY  **=**  { **0** |*Dauer [Minuten]* }  
+ COMPRESSION_DELAY ** = ** { **0** |*Dauer [Minuten]* }  
  Dieses Feature steht ab SQL Server 2016  
   
  Verzögerung gibt die minimale Anzahl von Minuten an, die eine Delta-Zeilengruppen in den GESCHLOSSENEN Zustand verbleiben muss für eine datenträgerbasierte Tabelle in der deltazeilengruppe, vor SQL Server in der komprimierten Zeilengruppe komprimiert werden können. Da es sich bei datenträgerbasierten Tabellen nicht nachverfolgen einfügen und aktualisieren Zeiten für einzelne Zeilen, SQL Server gilt die Verzögerung in Delta-Zeilengruppen in den GESCHLOSSENEN Zustand übergeht.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE  **=**  {ON | **OFF** } \<wie für Single_partition_rebuild_index_option >  
+ ONLINE ** = ** {ON | **OFF** } \<wie für Single_partition_rebuild_index_option >  
  Gibt an, ob ein Index oder eine Indexpartition einer zugrunde liegenden Tabelle online oder offline neu erstellt werden kann. Wenn **REBUILD** online ausgeführt wird (**ON**) die Daten in dieser Tabelle sind für Abfragen und datenänderungen während des Indexvorgangs verfügbar.  Die Standardeinstellung ist **OFF**.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
   
- Bei der Onlineindexneuerstellung muss auf blockierende Vorgänge für diese Tabelle gewartet werden. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ Bei der Onlineindexneuerstellung muss auf blockierende Vorgänge für diese Tabelle gewartet werden. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
   
  MAX_DURATION = *Zeit* [**Minuten**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY mit verwendet **kann wieder aufgenommen werden = ON** und *
   
 **Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)
   
- Eine online-indexneuerstellung wird fortgesetzt, nachdem eine Pause auf blockierende Vorgänge für diese Tabelle gewartet hat. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ Eine online-indexneuerstellung wird fortgesetzt, nachdem eine Pause auf blockierende Vorgänge für diese Tabelle gewartet hat. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
 
 
 ANHALTEN

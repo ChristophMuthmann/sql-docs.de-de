@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5256cf1d1c63139c43fbb9900876297294f2d30a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server on Linux
@@ -27,7 +27,7 @@ Wenn Sie einen Linux-Benutzer, der noch nicht mit SQL Server ist sind, führen d
 
 ## <a name="create-a-login-and-a-database-user"></a>Erstellen Sie eine Anmeldung und einen Datenbankbenutzer 
 
-Gewähren Sie andere Benutzer Zugriff auf SQL Server durch Erstellen eines Anmeldenamens in der master-Datenbank mithilfe der [CREATE LOGIN](https://msdn.microsoft.com/library/ms189751.aspx) Anweisung. Beispiel:
+Gewähren Sie andere Benutzer Zugriff auf SQL Server durch Erstellen eines Anmeldenamens in der master-Datenbank mithilfe der [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql) Anweisung. Beispiel:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  Verwenden Sie immer ein sicheres Kennwort anstelle der oben genannten Sternchen.
 
-Anmeldungen können eine Verbindung mit SQL Server und Zugriffsrechte (mit eingeschränkten Berechtigungen) für die master-Datenbank. Zur Verbindung mit einer Benutzerdatenbank benötigt eine Anmeldung eine entsprechende Identität auf Datenbankebene, einen Datenbankbenutzer bezeichnet. Benutzer sind für jede Datenbank spezifisch und müssen separat erstellt werden, in jeder Datenbank aus, um ihnen den Zugriff zu erteilen. Im folgende Beispiel wird Sie in der AdventureWorks2014-Datenbank verschoben und verwendet dann die [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) -Anweisung zum Erstellen einer Benutzers namens Larry, die mit der Anmeldung mit dem Namen Larry anfallen. Obwohl die Anmeldung und der Benutzer verknüpft sind (die miteinander verknüpft sind), handelt es sich um unterschiedliche Objekte. Der Anmeldename ist einem Prinzipal auf Serverebene. Der Benutzer ist ein Prinzipal auf Datenbankebene.
+Anmeldungen können eine Verbindung mit SQL Server und Zugriffsrechte (mit eingeschränkten Berechtigungen) für die master-Datenbank. Zur Verbindung mit einer Benutzerdatenbank benötigt eine Anmeldung eine entsprechende Identität auf Datenbankebene, einen Datenbankbenutzer bezeichnet. Benutzer sind für jede Datenbank spezifisch und müssen separat erstellt werden, in jeder Datenbank aus, um ihnen den Zugriff zu erteilen. Im folgende Beispiel wird Sie in der AdventureWorks2014-Datenbank verschoben und verwendet dann die [CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql) -Anweisung zum Erstellen einer Benutzers namens Larry, die mit der Anmeldung mit dem Namen Larry anfallen. Obwohl die Anmeldung und der Benutzer verknüpft sind (die miteinander verknüpft sind), handelt es sich um unterschiedliche Objekte. Der Anmeldename ist einem Prinzipal auf Serverebene. Der Benutzer ist ein Prinzipal auf Datenbankebene.
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ Jetzt die Anmeldung Jerry können weitere Anmeldungen erstellen, und der Benutze
 
 Die erste Personen für die Verbindung mit einer Benutzerdatenbank werden das Administrator- und Konten für Datenbank-Besitzer. Jedoch diese Benutzer verfügen alle über die Berechtigungen für die Datenbank verfügbar. Dies ist über mehr Berechtigungen verfügen als die meisten Benutzer haben sollen. 
 
-Wenn Sie nur noch am Anfang stehen, können Sie einige allgemeine Kategorien von Berechtigungen zuweisen, mithilfe der integriertes *festen Datenbankrollen*. Z. B. die `db_datareader` festen Datenbankrolle "" alle Tabellen in der Datenbank lesen kann, aber keine Änderungen vornehmen. Mitgliedschaft in einer festen Datenbankrolle zu gewähren, mithilfe der [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) Anweisung. Im folgende Beispiel fügen Sie den Benutzer `Jerry` auf die `db_datareader` festen Datenbankrolle "".   
+Wenn Sie nur noch am Anfang stehen, können Sie einige allgemeine Kategorien von Berechtigungen zuweisen, mithilfe der integriertes *festen Datenbankrollen*. Z. B. die `db_datareader` festen Datenbankrolle "" alle Tabellen in der Datenbank lesen kann, aber keine Änderungen vornehmen. Mitgliedschaft in einer festen Datenbankrolle zu gewähren, mithilfe der [ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql) Anweisung. Im folgende Beispiel fügen Sie den Benutzer `Jerry` auf die `db_datareader` festen Datenbankrolle "".   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Eine Liste der festen Datenbankrollen, finden Sie unter [Datenbankrollen](https://msdn.microsoft.com/library/ms189121.aspx).
+Eine Liste der festen Datenbankrollen, finden Sie unter [Datenbankrollen](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles).
 
-Später, wenn Sie eine genauere den Zugriff auf Ihre Daten (empfohlen) konfigurieren möchten, erstellen eine eigene benutzerdefinierte Datenbankrollen, die mit [CREATE ROLE](https://msdn.microsoft.com/library/ms187936.aspx) Anweisung. Sie benutzerdefinierte Rollen bestimmte präzise Berechtigungen zuweisen.
+Später, wenn Sie eine genauere den Zugriff auf Ihre Daten (empfohlen) konfigurieren möchten, erstellen eine eigene benutzerdefinierte Datenbankrollen, die mit [CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql) Anweisung. Sie benutzerdefinierte Rollen bestimmte präzise Berechtigungen zuweisen.
 
 Z. B. die folgenden Anweisungen erstellen eine Datenbankrolle mit dem Namen `Sales`, gewährt die `Sales` gruppieren Sie die Möglichkeit, finden Sie unter, aktualisieren und Löschen von Zeilen aus der `Orders` Tabelle, und fügt dann den Benutzer `Jerry` auf die `Sales` Rolle.   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-Weitere Informationen über das Berechtigungssystem finden Sie unter [erste Schritte mit Berechtigungen für das Datenbankmodul](https://msdn.microsoft.com/library/mt667986.aspx).
+Weitere Informationen über das Berechtigungssystem finden Sie unter [erste Schritte mit Berechtigungen für das Datenbankmodul](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions).
 
 
 ## <a name="configure-row-level-security"></a>Konfigurieren der Sicherheit auf Zeilenebene  
 
-[Sicherheit auf Zeilenebene](https://msdn.microsoft.com/library/dn765131.aspx) ermöglicht es Ihnen, den Zugriff auf die Zeilen in einer Datenbank, basierend auf dem Benutzer, die Ausführung einer Abfrage einschränken. Diese Funktion eignet sich für Szenarien wie das sicherstellen, dass Kunden nur ihre eigenen Daten zugreifen können, oder dass Mitarbeiter nur auf Daten zugreifen können, die für ihre Abteilung relevant ist.   
+[Sicherheit auf Zeilenebene](/sql-docs/docs/relational-databases/security/row-level-security) ermöglicht es Ihnen, den Zugriff auf die Zeilen in einer Datenbank, basierend auf dem Benutzer, die Ausführung einer Abfrage einschränken. Diese Funktion eignet sich für Szenarien wie das sicherstellen, dass Kunden nur ihre eigenen Daten zugreifen können, oder dass Mitarbeiter nur auf Daten zugreifen können, die für ihre Abteilung relevant ist.   
 
 Die Schritte unten Gang durch das Einrichten von zwei Benutzern mit verschiedenen Zeilenebene Zugriff auf die `Sales.SalesOrderHeader` Tabelle. 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>Aktivieren Sie die dynamische datenmaskierung
 
-[Dynamische Datenmaskierung](https://msdn.microsoft.com/library/mt130841.aspx) ermöglicht es Ihnen, die Offenlegung sensibler Daten für Benutzer einer Anwendung von vollständig oder teilweise maskieren bestimmte Spalten beschränken. 
+[Dynamische Datenmaskierung](/sql-docs/docs/relational-databases/security/dynamic-data-masking) ermöglicht es Ihnen, die Offenlegung sensibler Daten für Benutzer einer Anwendung von vollständig oder teilweise maskieren bestimmte Spalten beschränken. 
 
 Verwenden einer `ALTER TABLE` -Anweisung eine Maskierungsfunktion zum Hinzufügen der `EmailAddress` Spalte in der `Person.EmailAddress` Tabelle: 
  
@@ -248,9 +248,9 @@ Um TDE zu entfernen, führen`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OF
 Die Verschlüsselung und Entschlüsselung Vorgänge werden von SQL Server in Hintergrundthreads geplant. Sie können den Status dieser Vorgänge mithilfe der in der Liste weiter unten in diesem Thema genannten Katalogsichten und dynamischen Verwaltungssichten anzeigen.   
 
 >  [!WARNING]
->  Sicherungsdateien von Datenbanken, für die TDE aktiviert wurde, werden ebenfalls mithilfe des Verschlüsselungsschlüssels für die Datenbank verschlüsselt. Darum muss bei der Wiederherstellung dieser Sicherungen das Zertifikat, das zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, verfügbar sein. Dies bedeutet, dass Sie zusätzlich zur Sicherung der Datenbank auch Sicherungskopien der Serverzertifikate aufbewahren müssen, um einem Datenverlust vorzubeugen. Ist das Zertifikat nicht mehr verfügbar, kann es zu einem Datenverlust kommen. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).  
+>  Sicherungsdateien von Datenbanken, für die TDE aktiviert wurde, werden ebenfalls mithilfe des Verschlüsselungsschlüssels für die Datenbank verschlüsselt. Darum muss bei der Wiederherstellung dieser Sicherungen das Zertifikat, das zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, verfügbar sein. Dies bedeutet, dass Sie zusätzlich zur Sicherung der Datenbank auch Sicherungskopien der Serverzertifikate aufbewahren müssen, um einem Datenverlust vorzubeugen. Ist das Zertifikat nicht mehr verfügbar, kann es zu einem Datenverlust kommen. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys).  
 
-Weitere Informationen zu TDE finden Sie unter [transparente datenverschlüsselung (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).   
+Weitere Informationen zu TDE finden Sie unter [transparente datenverschlüsselung (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde).   
 
 
 ## <a name="configure-backup-encryption"></a>Konfigurieren von sicherungsverschlüsselung
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](https://msdn.microsoft.com/library/dn449489.aspx).
+Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](/sql-docs/docs/relational-databases/backup-restore/backup-encryption).
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den Sicherheitsfeatures von SQL Server finden Sie unter [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](https://msdn.microsoft.com/library/bb510589.aspx).
+Weitere Informationen zu den Sicherheitsfeatures von SQL Server finden Sie unter [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
 

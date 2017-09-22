@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
@@ -32,16 +32,16 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Berichte, Berichtsteile und Berichtsdefinitionen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Beschreibt die unterschiedlichen Begriffe, mit denen die verschiedenen Zustände eines Berichts beschrieben werden, darunter die Anfangsdefinition, der veröffentlichte Bericht und der für den Benutzer angezeigte Bericht.  
   
  [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Erläutert die Unterschiede beim Erstellen, Speichern und Verwalten von eingebetteten und freigegebenen Datasets.  
   
- [Datenbereiche und Karten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Datenbereiche und Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Beschreibt die Datenbereichstypen, die einem Berichtslayout hinzugefügt werden können. Datenbereiche bestimmen die Darstellung eines Berichts: Tabelle, Matrix, Liste oder Diagramm.  
   
- [Berichtsparameter-Konzept (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  
+ [Berichtsparameter-Konzept (Berichts-Generator und SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
  Beschreibt die Möglichkeiten zum Definieren und Verwenden von Berichtsparametern und wie diese unabhängig von der Berichtsdefinition auf dem Berichtsserver verwaltet werden.  
   
 ## <a name="see-also"></a>Siehe auch  

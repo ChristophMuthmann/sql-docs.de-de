@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Neuigkeiten für SQL Server-2017 unter Linux
@@ -131,7 +131,7 @@ Unter dem Kompatibilitätsmodus 140:
 [Verbesserungen von Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in dieser Version CTP1.1:
 - Für CLR, Filestream/Filetable, Objekte im Arbeitsspeicher und der Abfragespeicher das Klonen von Datenbanken.
 - **Erstellen Sie** oder **ALTER** Operatoren für programmierbarkeitsobjekte.
-- Neue **verwenden Hinweis** -Abfrageoption verwenden, um Hinweise für die der Abfrageprozessor zu übermitteln. Erfahren Sie hier: [Abfragehinweise](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- Neue **verwenden Hinweis** -Abfrageoption verwenden, um Hinweise für die der Abfrageprozessor zu übermitteln. Erfahren Sie hier: [Abfragehinweise](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
 - SQL-Dienstkonto kann nun programmgesteuert aktivieren Sperren von Seiten im Speicher und die sofortige Dateiinitialisierung Berechtigungen identifizieren.
 - Unterstützung für die TempDB-Dateianzahl, Dateigröße und Wachstum dateieinstellungen.
 - Erweiterte Diagnose in Showplan XML.

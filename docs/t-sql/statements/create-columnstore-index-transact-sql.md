@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -54,12 +54,12 @@ Fahren Sie mit Beispielen:
 -   [Beispiele für nicht gruppierte columnstore-Indizes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Zu den Szenarien wechseln:  
--   [Columnstore-Indizes für die operative Echtzeitanalyse](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Columnstore-Indizes für Datawarehousing](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Columnstore-Indizes für die operative Echtzeitanalyse](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [Columnstore-Indizes für Datawarehousing](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
   
 Weitere Informationen:  
--   [Columnstore-Indizes](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Featurezusammenfassung für columnstore-Indizes](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Columnstore-Indizes](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
+-   [Featurezusammenfassung für columnstore-Indizes](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 ##  <a name="LimitRest"></a> Einschränkungen  
 
 **Jede Spalte in einem columnstore-Index muss eines der folgenden allgemeinen Geschäftsdatentypen sein:** 
--   "DateTimeOffset" [(  *n*  )]  
--   datetime2 [(  *n*  )]  
+-   "DateTimeOffset" [( * n * )]  
+-   datetime2 [( * n * )]  
 -   datetime  
 -   smalldatetime  
 -   Datum  
--   Zeit [(  *n*  )]  
--   "float" [(  *n*  )]  
--   echte [(  *n*  )]  
+-   Zeit [( * n * )]  
+-   "float" [( * n * )]  
+-   echte [( * n * )]  
 -   Dezimal [( *Genauigkeit* [ *, Skalierung* ] **)** ]
 -   numerische [( *Genauigkeit* [ *, Skalierung* ] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 -   smallint  
 -   tinyint  
 -   bit  
--   Nvarchar [(  *n*  )] 
+-   Nvarchar [( * n * )] 
 -   nvarchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)   
--   NCHAR [(  *n*  )]  
--   Varchar [(  *n*  )]  
+-   NCHAR [( * n * )]  
+-   Varchar [( * n * )]  
 -   varchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
--   Char [(  *n*  )]  
--   Varbinary [(  *n*  )] 
+-   Char [( * n * )]  
+-   Varbinary [( * n * )] 
 -   Varbinary (Max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
--   Binary [(  *n*  )]  
+-   Binary [( * n * )]  
 -   "uniqueidentifier" (gilt für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
   
 Wenn die zugrunde liegenden Tabelle eine Spalte mit einem Datentyp, die für columnstore-Indizes nicht unterstützt wird verfügt, müssen Sie diese Spalte aus dem nicht gruppierten columnstore-Index auslassen.  

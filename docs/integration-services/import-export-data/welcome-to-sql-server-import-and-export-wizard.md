@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f4d459aa5756e60ce309be21fb8641838cbafa37
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12ac0e3b42b647d90af01a96b8e9d2e8571447d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Willkommen beim SQL Server-Import/Export-Assistenten
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
 > Dieses Thema beschreibt nur die **erste Seite** des Assistenten. Wenn Sie für ein anderes Element suchen, finden Sie unter [Aufgaben und den Inhalt im Zusammenhang mit](#related).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung - ist der Assistent auf dem Computer installiert werden?
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="screen-shot-of-the-welcome-page"></a>Screenshot der Willkommensseite  
 Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Export-Assistenten** des Assistenten.  
@@ -62,7 +62,7 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
 -   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **So erhalten Sie den Wizard.** Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+-   **So erhalten Sie den Wizard.** Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 
 

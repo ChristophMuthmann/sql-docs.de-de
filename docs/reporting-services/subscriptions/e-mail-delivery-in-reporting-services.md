@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
  Für einen Berichtsserver im einheitlichen Modus wird die E-Mail-Übermittlungserweiterung mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager im einheitlichen Modus und durch Bearbeiten der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien konfiguriert. Für einen Berichtsserver im SharePoint-Modus wird die E-Mail-Übermittlungserweiterung auf SharePoint-Verwaltungsseiten und in PowerShell-Skripts konfiguriert.  
   
  
- Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)](https://msdn.microsoft.com/library/ms189342.aspx).
+ Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [e-Mail-Einstellungen - Reporting Services im einheitlichen Modus (Konfigurations-Manager)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
- [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
   

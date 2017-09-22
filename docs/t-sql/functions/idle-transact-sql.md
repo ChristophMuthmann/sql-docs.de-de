@@ -1,7 +1,7 @@
 ---
 title: '@@IDLE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 970997aa753194b6b50fb7889103449f4d6b9547
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: ab308bcb1fd3ffdda8e901b2238111abaddecb81
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="idle-transact-sql"></a>@@IDLE (Transact-SQL)
+# <a name="x40x40idle-transact-sql"></a>& #x 40; & #x 40; IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Zeit zurück, während der sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start im Leerlauf befunden hat. Das Ergebnis wird in CPU-Zeiteinheiten oder "Takten" angegeben. Es ist für alle CPUs kumulativ und kann also höher sein als die tatsächlich abgelaufende Zeit. Multiplizieren mit@TIMETICKS in Mikrosekunden konvertiert.  
@@ -45,7 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 @@IDLE  
 ```  
   
@@ -79,3 +78,4 @@ Idle microseconds  as of
  [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Behebung von Problemen bei der Paketausführung mithilfe der Protokollierung  
  Sie können die meisten Vorgänge beim Ausführen von Paketen durch Aktivieren der Protokollierung nachverfolgen. Bei der Protokollierung werden Informationen zu angegebenen Ereignissen zur späteren Analyse aufgezeichnet und in einer Datenbanktabelle, einer Flatfile, einer XML-Datei oder einem anderen unterstützten Ausgabeformat gespeichert.  
   
--   **Aktivieren der Protokollierung**. Sie können die Protokollierungsausgabe optimieren, indem Sie nur die Ereignisse und Informationen auswählen, die Sie aufzeichnen möchten. Weitere Informationen finden Sie unter [Integration Services-Protokollierung (SSIS)](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Aktivieren der Protokollierung**. Sie können die Protokollierungsausgabe optimieren, indem Sie nur die Ereignisse und Informationen auswählen, die Sie aufzeichnen möchten. Weitere Informationen finden Sie unter [Integration Services-Protokollierung (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
   
--   **Wählen Sie das Diagnostic-Ereignis des Pakets aus, um Probleme mit dem Anbieter zu behandeln.** Es sind Meldungen für die Protokollierung enthalten, mit denen Sie Probleme bei der Interaktion eines Pakets mit externen Datenquellen behandeln können. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Wählen Sie das Diagnostic-Ereignis des Pakets aus, um Probleme mit dem Anbieter zu behandeln.** Es sind Meldungen für die Protokollierung enthalten, mit denen Sie Probleme bei der Interaktion eines Pakets mit externen Datenquellen behandeln können. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
   
 -   **Verbessern der Standardprotokollierungsausgabe**. Bei der Protokollierung werden normalerweise bei jeder Paketausführung Zeilen an ein Protokollierungsziel angefügt. Zwar enthält jede Zeile der Protokollierungsausgabe den Namen und eindeutigen Bezeichner des Pakets sowie die eindeutige ExecutionID der Paketausführung, die umfangreiche Protokollierungsausgabe in einer einzigen Liste kann jedoch die Analyse erschweren.  
   

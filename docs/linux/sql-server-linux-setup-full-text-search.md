@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
@@ -86,7 +86,7 @@ Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in 
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
-Volltext-Suchdienst verwendet [wörtertrennungen](https://msdn.microsoft.com/library/ms142509.aspx) feststellen, dass einzelne Wörter, die basierend auf Sprache identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Wörtertrennungen für die folgenden Sprachen sind mit SQL Server 2017 RC2 installiert:
+Volltext-Suchdienst verwendet [wörtertrennungen](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) feststellen, dass einzelne Wörter, die basierend auf Sprache identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Wörtertrennungen für die folgenden Sprachen sind mit SQL Server 2017 RC2 installiert:
 
 | Sprache | Sprach-ID |
 |---|---|
@@ -146,7 +146,7 @@ Volltext-Suchdienst verwendet [wörtertrennungen](https://msdn.microsoft.com/lib
 
 ## <a id="filters"></a>Filter
 
-Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](https://msdn.microsoft.com/library/ms142499.aspx).
+Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 RC2 werden die folgenden Filter installiert:
 
@@ -258,9 +258,9 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |*.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Semantische Suche
-[Semantische Suche](https://msdn.microsoft.com/library/gg492075.aspx) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren, die für statistisch *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung von Dokumenten in der Datenbank abzufragen. Die Lösung schützt auch Dokumente zu identifizieren, die ähnlich sind.
+[Semantische Suche](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren, die für statistisch *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung von Dokumenten in der Datenbank abzufragen. Die Lösung schützt auch Dokumente zu identifizieren, die ähnlich sind.
 
-Um die semantische Suche zu verwenden, müssen Sie zuerst herunter, und fügen Sie der [semantische sprachstatistikdatenbank](https://msdn.microsoft.com/library/gg509085.aspx).
+Um die semantische Suche zu verwenden, müssen Sie zuerst herunter, und fügen Sie der [semantische sprachstatistikdatenbank](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. Auf einem Windows-Computer [Herunterladen der. MSI-Datei für die semantische sprachstatistikdatenbank](https://www.microsoft.com/download/details.aspx?id=54277).
 

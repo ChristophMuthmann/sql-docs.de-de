@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import / Export-Assistenten
 Erfahren Sie, was Sie erwartet in der SQL Server-Import / Export-Assistenten, indem ein häufiges Szenario – Importieren von Daten aus einem Excel-Arbeitsblatt mit einer SQL Server-Datenbank durchlaufen. Auch wenn Sie eine andere Quelle und ein anderes Ziel verwenden möchten, in diesem Thema werden die meisten der gesuchte kennen, den Assistenten ausführen.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung - ist der Assistent auf dem Computer installiert werden?
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Hier wird die Excel-Quelldaten für dieses Beispiel
 So sieht die Quelldaten, die Sie die offensichtlichen kopieren - eine kleine zweispaltige Tabelle im Arbeitsblatt WizardWalkthrough der WizardWalkthrough.xlsx Excel-Arbeitsmappe aus.

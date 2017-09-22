@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,15 +177,15 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 **-j** Zeigt unformatierte Fehlermeldungen auf dem Bildschirm an.
   
  **-K** *Anwendungszweck*  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).  
   
  **-M** *Multisubnetz-Failover*  
- Geben Sie immer **- M** beim Verbinden mit dem verfügbarkeitsgruppenlistener einer SQL Server-verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Geben Sie immer **- M** beim Verbinden mit dem verfügbarkeitsgruppenlistener einer SQL Server-verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [! UMFASSEN[SsHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQLServer)] (https://msdn.microsoft.comlibrary/ff929171.aspx, und [aktive sekundäre Replikate: lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
   
- **-P** *password*  
+ **-P** *Kennwort*  
  Ein vom Benutzer angegebenes Kennwort. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Wenn die Option -U verwendet wird, nicht aber die Option **-P** , und die SQLCMDPASSWORD-Umgebungsvariable nicht festgelegt wurde, wird der Benutzer von **sqlcmd** zur Angabe eines Kennworts aufgefordert. Um ein Null-Kennwort anzugeben (nicht empfohlen), verwenden Sie **-P ""**. Und denken Sie immer daran:
  
 #### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**Verwenden Sie ein sicheres Kennwort!**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
@@ -215,11 +215,11 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  **-S** [*Protokoll*:]*Servername*[**\\***Instanzname*][**,***Port*]  
  Gibt die Instanz von SQL Server für die Verbindung. Durch die Option wird die **sqlcmd** -Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *Server_name* für die Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer. Geben Sie *Server_name* [  **\\**  *Instance_name* ] für die Verbindung mit einer benannten Instanz von SQL Server auf diesem Servercomputer. Wenn kein Servercomputer angegeben wird, **Sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ Geben Sie *Server_name* für die Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer. Geben Sie *Server_name* [ ** \\ ** *Instance_name* ] für die Verbindung mit einer benannten Instanz von SQL Server auf diesem Servercomputer. Wenn kein Servercomputer angegeben wird, **Sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  *Protokoll* kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes).  
   
- Wenn Sie keinen angeben einer *Server_name* [  **\\**  *Instance_name* ] beim Starten **Sqlcmd**, SQL Server überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
+ Wenn Sie keinen angeben einer *Server_name* [ ** \\ ** *Instance_name* ] beim Starten **Sqlcmd**, SQL Server überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
   
 > [!NOTE]  
 >  Die OSQLSERVER-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDSERVER-Umgebungsvariable hat Vorrang vor der OSQLSERVER-Umgebungsvariablen. Das bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können und dass alte Skripts weiterhin funktionsfähig sind.  
@@ -234,18 +234,18 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  Wird die Option **-U** zusammen mit der Option **-E** verwendet (weiter unten in diesem Thema beschrieben), wird eine Fehlermeldung generiert. Werden nach der Option **-U** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-z** *new_password*  
+ **-z** *neues_Kennwort*  
  Kennwort ändern:  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** *neues_Kennwort*  
  Kennwort ändern und beenden:  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Eingabe-/Ausgabeoptionen**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
+  **-f** *Codepage* | **i:***Codepage*[**,o:***Codepage*] | **o:***odepage*[**,i:***Codepage*]  
  Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Windows-Codepage angibt.  
   
  Regeln zum Konvertieren von Codepages:  
@@ -561,7 +561,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  **Bearbeitungsbefehle**  
   [**:**] **ED**  
- Startet den Text-Editor. Dieser Editor zum Bearbeiten der aktuellen Transact-SQL-Batches verwendet werden kann, oder die zuletzt ausgeführte Batch. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED**-Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
+ Startet den Text-Editor. Dieser Editor zum Bearbeiten der aktuellen Transact-SQL-Batches verwendet werden kann, oder die zuletzt ausgeführte Batch. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED** -Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
   
  Der Text-Editor wird durch die SQLCMDEDITOR-Umgebungsvariable definiert. Der Standardeditor ist 'Edit'. Sie können den Editor ändern, indem Sie die SQLCMDEDITOR-Umgebungsvariable festlegen. Geben Sie beispielsweise, um den Editor Microsoft Notepad, an der Eingabeaufforderung festzulegen:  
   
@@ -685,7 +685,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  **Sonstige Befehle**  
   **:r \<** *filename***>**  
- Weitere Transact-SQL-Anweisungen analysiert und **Sqlcmd** Befehle aus der Datei, die vom angegebenen  **\<**  *Filename***>**in den Anweisungscache.  
+ Weitere Transact-SQL-Anweisungen analysiert und **Sqlcmd** Befehle aus der Datei, die vom angegebenen ** \< ** *Filename***>**in den Anweisungscache.  
   
  Wenn die Datei Transact-SQL-Anweisungen enthält, die durch nicht eingehalten werden **wechseln**, geben Sie **GO** auf der ersten Zeile nach **: R**.  
   
@@ -810,7 +810,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  Es ist nicht möglich, XML-Daten (Datenstrom) und Rowsetdaten zu mischen. Wenn der XML ON-Befehl vor der Ausführung einer Transact-SQL-Anweisung, die XML-Datenströme ausgibt nicht ausgegeben wurde, wird die Ausgabe verzerrt werden. Wenn der XML ON-Befehl ausgegeben wurde, können Sie Transact-SQL-Anweisungen ausführen, die reguläre Rowsets ausgeben.  
   
 > [!NOTE]  
->  Der **:XML**-Befehl unterstützt die SET STATISTICS XML-Anweisung nicht.  
+>  Der **:XML** -Befehl unterstützt die SET STATISTICS XML-Anweisung nicht.  
   
 ###  <a name="OutputJSON"></a> JSON-Ausgabeformat  
  Verwenden Sie den Befehl `:XML ON`, wenn Sie eine Ausgabe im JSON-Format erwarten. Andernfalls enthält die Ausgabe sowohl den Spaltennamen als auch den JSON-Text. Diese Ausgabe ist kein gültiger JSON-Code.  

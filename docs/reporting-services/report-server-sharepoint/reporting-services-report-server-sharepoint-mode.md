@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 95ed4009d425fbc3383812ba3689f4caff487cd7
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -142,8 +142,8 @@ ms.lasthandoff: 08/09/2017
 |--------------|--------------|  
 |Ausführliche Schritte zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus.|[Installieren von Reporting Services im SharePoint-Modus für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) und [hinzufügen ein zusätzlichen Berichtsservers zu einer Farm &#40; Horizontales Skalieren für SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Nehmen Sie eine horizontale Skalierung für Ihre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40; Horizontales Skalieren für SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
-|Fügen Sie zusätzliche SharePoint Web-Front-Ends hinzu, auf denen die zum Anzeigen und Melden von Elementen erforderlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten installiert sind.|[Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Konfigurieren Sie E-Mail für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenwarnungen und -Abonnementfunktionen.|[Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
+|Fügen Sie zusätzliche SharePoint Web-Front-Ends hinzu, auf denen die zum Anzeigen und Melden von Elementen erforderlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten installiert sind.|[Add an Additional Reporting Services Web Front-end to a Farm (Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm)](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
+|Konfigurieren von E-mail für [! UMFASSEN[SsRSnoversion](/sql-docs/docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application)|  
 |Neueste Informationen für diese Version, siehe TechNet Wiki.|[SQL Server 2012 Reporting Services – Tipps, Tricks und Problembehandlung](http://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -152,4 +152,4 @@ ms.lasthandoff: 08/09/2017
 [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
 [Quiz: Konfigurieren von SSRS 2012 für die SharePoint-Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

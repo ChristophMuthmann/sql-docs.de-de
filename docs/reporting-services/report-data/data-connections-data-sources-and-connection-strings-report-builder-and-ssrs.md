@@ -1,7 +1,7 @@
 ---
 title: Datenverbindungen, Datenquellen, Verbindung Zeichenfolgen-Berichts-Generator-SSRS | Microsoft Docs
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,32 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [Reporting Services], data sources
-- reports [Reporting Services], data
-- expressions [Reporting Services], data sources
-- data sources [Reporting Services], connections
-- connection strings [Reporting Services]
-- shared data sources [Reporting Services]
-- Reporting Services, data sources
-- logins [Reporting Services]
-ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 118
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: a0930e4f060379be894870fe6ac22b85cd225283
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)][! INCLUDE [Ssrs-Appliesto-Sharepoint-2013-2016i]... /.. /Includes/SSRS-appliesTo-SharePoint-2013-2016.MD)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Sie müssen zuerst [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Datenquellen  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und *Datasets* erstellen, um Daten in paginierten *- und*-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  Sie müssen zuerst [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Datenquellen  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und *Datasets* erstellen, um Daten in paginierten *- und*-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [eingebettete und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -122,7 +113,7 @@ ms.lasthandoff: 08/09/2017
 |SQL Server-Datenbank auf dem lokalen Server|`data source="(local)";initial catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server**fest. Weitere Informationen finden Sie unter [SQL Server-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |SQL Server-Instanz<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server**fest.|  
 |SQL Server Express-Datenbank|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server**fest.|  
-|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Legen Sie den Datenquellentyp auf **Microsoft Azure SQL-Datenbank**. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Azure SQL-Datenbank|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Legen Sie den Datenquellentyp auf **Microsoft Azure SQL-Datenbank**. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Parallel Data Warehouse**fest. Weitere Informationen finden Sie unter [SQL Server Parallel Data Warehouse-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services-Datenbank auf dem lokalen Server|`data source=localhost;initial catalog=Adventure Works DW`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. Weitere Informationen finden Sie unter [Analysis Services-Verbindungstyp für MDX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) oder [Analysis Services-Verbindungstyp für DMX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Analysis Services-Datenbank für tabellarische Modelle mit Sales-Perspektive|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. Geben Sie den Perspektivennamen in der "cube="-Einstellung an. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
@@ -174,6 +165,6 @@ ms.lasthandoff: 08/09/2017
 [Erstellen, ändern und Löschen von freigegebenen Datenquellen](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [Erstellen und Verwenden eingebetteter Datenquellen](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [Festlegen von Bereitstellungseigenschaften](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

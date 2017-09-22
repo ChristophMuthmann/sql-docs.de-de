@@ -1,7 +1,7 @@
 ---
 title: '@@MAX_PRECISION (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d52f6d347c274044d4902508920038e166efb65a
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 530dc9cd780d9dae2df1c326fcd1cc070450290a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="maxprecision-transact-sql"></a>@@MAX_PRECISION (Transact-SQL)
+# <a name="x40x40maxprecision-transact-sql"></a>& #x 40; & #x 40; MAX_PRECISION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den verwendeten Genauigkeitsgrad **decimal** und **numerischen** Datentypen, die derzeit auf dem Server festgelegt werden.  
@@ -64,3 +64,4 @@ SELECT @@MAX_PRECISION AS 'Max Precision'
  [Genauigkeit, Dezimalstellen und Länge &#40; Transact-SQL &#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
   
+

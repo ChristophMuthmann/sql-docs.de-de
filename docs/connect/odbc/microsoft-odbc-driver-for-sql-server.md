@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e867bb283434a6a7ae515823b370c73e4df4e131
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ODBC ist die primäre native Datenzugriffs-API für Anwendungen, die für SQL Server in C und C++ geschrieben. Ein ODBC-Treiber für die meisten Datenquellen ist vorhanden. Andere Sprachen, die ODBC verwenden, können enthalten COBOL, Perl, PHP und Python. ODBC wird häufig in Datenintegration verwendet.
 
-Der ODBC-Treiber stellt Tools wie z. B. [ **Sqlcmd** ](https://msdn.microsoft.com/library/ms162773.aspx) und [ **Bcp**](https://msdn.microsoft.com/library/ms162802.aspx). Die **Sqlcmd** -Hilfsprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und SQL-Skripts ausgeführt werden. Die **Bcp** Hilfsprogramm per Massenvorgang kopiert Daten zwischen einer Instanz von Microsoft SQL Server und einer Datendatei in einem Format, das Sie auswählen. Sie können **Bcp** viele neue Zeilen in SQL Server-Tabellen importieren oder Daten aus Tabellen in Datendateien zu exportieren.  
+Der ODBC-Treiber stellt Tools wie z. B. [ **Sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) und [ **Bcp**](/sql-docs/docs/tools/bcp-utility). Die **Sqlcmd** -Hilfsprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und SQL-Skripts ausgeführt werden. Die **Bcp** Hilfsprogramm per Massenvorgang kopiert Daten zwischen einer Instanz von Microsoft SQL Server und einer Datendatei in einem Format, das Sie auswählen. Sie können **Bcp** viele neue Zeilen in SQL Server-Tabellen importieren oder Daten aus Tabellen in Datendateien zu exportieren.  
 
 ## <a name="code-example-in-c"></a>Codebeispiel in C++
 

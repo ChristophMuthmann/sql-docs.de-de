@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc7eb87bc446752680c83aa656d9591fbb70e295
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f7c47ab0833a0ce5693effc269f24d9ed2baf3dd
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-data-developer"></a>Entwickler von SQL-Daten
@@ -44,12 +44,12 @@ Verwenden Sie Microsoft SQL-Datenplattform datenorientierte Lösungen über mobi
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Verwendung von SQLXML 4.0 relationale Daten in XML exportieren.
 
 ## <a name="data-collection-processing-and-visualization"></a>Die Datensammlung, Verarbeitung und die Visualisierung
-* [Analysis Services](https://msdn.microsoft.com/library/bb500153.aspx)
-* [Integration Services](https://msdn.microsoft.com/library/ms136025.aspx)  
-* [Master Data Services](https://msdn.microsoft.com/library/hh230994.aspx)
-* [Replication Services](https://msdn.microsoft.com/library/ms147384.aspx)
-* [Reporting Services](https://msdn.microsoft.com/library/bb522713.aspx)
-* [Service Broker](https://msdn.microsoft.com/library/bb522893.aspx)
+* [Analysis Services](/sql-docs/docs/analysis-services/analysis-services-developer-documentation)
+* [Integration Services](/sql-docs/docs/integration-services/integration-services-developer-documentation)  
+* [Master Data Services](/sql-docs/docs/master-data-services/develop/master-data-services-developer-documentation)
+* [Replication Services](/sql-docs/docs/relational-databases/replication/concepts/replication-developer-documentation)
+* [Reporting Services](/sql-docs/docs/reporting-services/reporting-services-developer-documentation)
+* [Service Broker](/sql-docs/docs/database-engine/configure-windows/sql-server-service-broker)
 
 
  

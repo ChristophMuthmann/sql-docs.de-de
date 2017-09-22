@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5828528bcf8bc05e6cb504ef7dc52769ea9a59a5
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>Legacy-Paketbereitstellung (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="package-configurations"></a>Paketkonfigurationen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Paketkonfigurationen bereit, die Sie zum Aktualisieren der Werte von Eigenschaften zur Laufzeit verwenden können.  
   
-> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Das projektbereitstellungsmodell ermöglicht Ihnen die Bereitstellung [! UMFASSEN[SsISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Eine Konfiguration ist ein Eigenschaft/Wert-Paar, das zu einem fertigen Paket hinzugefügt werden kann. Normalerweise erstellen Sie ein Paket, legen bei der Paketentwicklung die Eigenschaften der Paketobjekte fest und fügen die Konfiguration dem Paket hinzu. Bei der Ausführung ruft das Paket die neuen Werte für die Eigenschaften aus der Konfiguration ab. Sie können mithilfe einer Konfiguration beispielsweise die Verbindungszeichenfolge eines Verbindungs-Managers ändern oder den Wert einer Variablen aktualisieren.  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **HINWEISE:**
 >Sie können auch durch Klicken auf die Schaltfläche mit den Auslassungspunkten neben der Eigenschaft **Konfiguration** auf den **Paketkonfigurationsplaner** zugreifen. Die Eigenschaft Konfiguration wird im Eigenschaftenfenster für das Paket angezeigt.  
   
->Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+>Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Das projektbereitstellungsmodell ermöglicht Ihnen die Bereitstellung [! UMFASSEN[SsISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
 >Im Dialogfeld **Paketkonfigurationsplaner** können Sie Pakete zum Verwenden von Konfigurationen aktivieren, Konfigurationen hinzufügen und löschen sowie die bevorzugte Reihenfolge festlegen, in der die Konfigurationen geladen werden sollten. 
  
@@ -256,7 +256,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>Paketkonfigurationsplaner
   Mithilfe des Dialogfelds **Paketkonfigurationsplaner** können Sie Paketkonfigurationen aktivieren, eine Liste der Konfigurationen für das aktuelle Paket anzeigen und die bevorzugte Reihenfolge angeben, in der die Konfigurationen geladen werden sollten.  
   
-> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Das projektbereitstellungsmodell ermöglicht Ihnen die Bereitstellung [! UMFASSEN[SsISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Wenn mehrere Konfigurationen dieselbe Eigenschaft aktualisieren, ersetzen Werte aus Konfigurationen weiter unten in der Konfigurationsliste die Werte aus Konfigurationen weiter oben in der Liste. Der letzte in die Eigenschaft geladene Wert ist der Wert, der verwendet wird, wenn das Paket ausgeführt wird. Auch muss die indirekte Konfiguration, die auf den Speicherort der direkten Konfiguration verweist, weiter oben in der Liste stehen, wenn das Paket eine Kombination aus direkter Konfiguration, z. B. XML-Konfigurationsdatei, und indirekter Konfiguration, z. B. Umgebungsvariable, verwendet.  
   
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketkonfigurations-Assistenten
   Der **Paketkonfigurations-Assistent** unterstützt Sie dabei, Konfigurationen zu erstellen, durch die die Eigenschaften eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets und seiner Objekte zur Laufzeit aktualisiert werden. Dieser Assistent wird ausgeführt, wenn Sie im Dialogfeld **Paketkonfigurationsplaner** eine neue Konfiguration hinzufügen oder eine vorhandene Konfiguration ändern. Um das Dialogfeld **Paketkonfigurationsplaner** zu öffnen, wählen Sie in **im Menü** SSIS **die Option** Paketkonfigurationen [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aus. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).  
   
-> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **HINWEIS:** Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Das projektbereitstellungsmodell ermöglicht Ihnen die Bereitstellung [! UMFASSEN[SsISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  In den folgenden Abschnitten werden Seiten des Assistenten beschrieben.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**.  
   
-3.  In der  **\<Projektname > Eigenschaftenseiten** (Dialogfeld), klicken Sie auf **Bereitstellungshilfsprogramm**.  
+3.  In der ** \<Projektname > Eigenschaftenseiten** (Dialogfeld), klicken Sie auf **Bereitstellungshilfsprogramm**.  
   
 4.  Wenn die Paketkonfigurationen beim Bereitstellen der Pakete aktualisiert werden sollen, legen Sie **AllowConfigurationChanges** auf **True**fest.  
   

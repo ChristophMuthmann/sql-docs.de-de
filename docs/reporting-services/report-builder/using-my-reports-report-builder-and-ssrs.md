@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Verwenden von Meine Berichte (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
  Vom Prinzip her ist der Ordner Meine Berichte mit dem Ordner Meine Dateien des Windows-Dateisystems zu vergleichen. Zwar gibt es für jeden Benutzer einen Ordner Meine Berichte, jeder Benutzer greift jedoch auf einen anderen Ordner zu. Mit Ausnahme der Berichtsserveradministratoren haben andere Benutzer keinen Zugriff auf Ihren Ordner Meine Berichte.  
   
- Die Funktion Meine Berichte ist optional und kann von einem Berichtsserveradministrator deaktiviert werden. Wenn die Funktion aktiviert ist, wird ein Ordner Meine Berichte im Ordner Home angezeigt, den Sie mithilfe des Berichts-Managers oder einem Webbrowser öffnen können. Weitere Informationen finden Sie unter [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ Die Funktion Meine Berichte ist optional und kann von einem Berichtsserveradministrator deaktiviert werden. Wenn die Funktion aktiviert ist, wird ein Ordner Meine Berichte im Ordner Home angezeigt, den Sie mithilfe des Berichts-Managers oder einem Webbrowser öffnen können. Weitere Informationen finden Sie unter [suchen und Anzeigen von Berichten im Berichts-Manager &#40; Berichts-Generator und SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
  Auf einem Berichtsserver, der im integrierten SharePoint-Modus konfiguriert ist, gibt es kein Äquivalent für den Ordner Meine Berichte. Weitere Informationen finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Erstellen Sie einen persönlichen verknüpften Bericht, und speichern Sie ihn in Meine Berichte. Nicht alle Berichte können verknüpft werden. Weitere Informationen finden Sie unter [Erstellen eines verknüpften Berichts](../../reporting-services/reports/create-a-linked-report.md).  
   
--   Laden Sie eine Berichtsdefinitionsdatei (RDL), Berichtsmodelldatei (SMDL) oder andere Dateien aus dem Dateisystem hoch. Sie können zwar jede beliebige Datei hochladen, der Berichtsserver verarbeitet jedoch nur Berichtsdateien mit der Dateierweiterung .rdl oder.smdl. Weitere Informationen finden Sie unter „Report Definitions“ (Berichtsdefinitionen) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation und unter [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+-   Laden Sie eine Berichtsdefinitionsdatei (RDL), Berichtsmodelldatei (SMDL) oder andere Dateien aus dem Dateisystem hoch. Sie können zwar jede beliebige Datei hochladen, der Berichtsserver verarbeitet jedoch nur Berichtsdateien mit der Dateierweiterung .rdl oder.smdl. Weitere Informationen finden Sie unter Berichtsdefinitionen"in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation und [Hochladen einer Datei oder eines Berichts &#40; Berichts-Manager &#41; ](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   Erstellen und veröffentlichen Sie Ihre eigenen Berichte in Meine Berichte. Weitere Informationen finden Sie unter [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
+-   Erstellen und veröffentlichen Sie Ihre eigenen Berichte in Meine Berichte. Weitere Informationen finden Sie unter [Berichtsentwurfsansicht &#40; Berichts-Generator &#41; ](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  Gewöhnlich können Sie mit Berechtigungen für Meine Berichte den Ordner selbst verwalten. Der Berichtsserveradministrator legt letztlich fest, welche Aufgaben die Benutzer ausführen können. Wenn Sie durch unzureichende Berechtigungen Probleme beim Verwenden von Meine Berichte haben, wenden Sie sich an den Berichtsserveradministrator.  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Beim Durchsuchen einer Berichtsserver-Datenbank werden die Inhalte des Ordners Meine Berichte in die Suche einbezogen, während die Inhalte der Ordner Meine Berichte von anderen Benutzern ausgeschlossen werden. In den Suchergebnissen werden nur die Berichte aufgeführt, auf die Sie Zugriff haben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81b5951a4f4a79d7d56fbf01af3fc1cef247510c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Arbeiten mit Eingaben und Ausgaben (R in SQL-Schnellstart)
 
-Wenn R-Code in SQL Server ausgeführt werden sollen, müssen Sie das R-Skript in einer gespeicherten Prozedur umschließen [Sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). Diese gespeicherte Prozedur wird verwendet, um die R-Laufzeit im Kontext von SQL Server zu starten; diese Laufzeit übergibt Daten an R, verwaltet Sitzungen von Benutzern für R sicher und gibt alle Ergebnisse an den Client zurück.
+Wenn R-Code in SQL Server ausgeführt werden sollen, müssen Sie das R-Skript in einer gespeicherten Prozedur umschließen [Sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Diese gespeicherte Prozedur wird verwendet, um die R-Laufzeit im Kontext von SQL Server zu starten; diese Laufzeit übergibt Daten an R, verwaltet Sitzungen von Benutzern für R sicher und gibt alle Ergebnisse an den Client zurück.
 
 ## <a name="bkmk_SSMSBasics"></a>Erstellen einiger einfacher Testdaten
 
@@ -143,5 +143,5 @@ EXECUTE sp_execute_external_script
 
 Schauen Sie sich die Probleme an, auf die Sie möglicherweise stoßen, wenn Sie Daten zwischen R und SQL Server übergeben, wie z.B. implizite Konvertierungen und Unterschiede bei tabellarischen Daten zwischen R und SQL.
 
-[R und SQL-Typen und Daten Datenobjekte](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[R- und SQL-Datentypen und -Datenobjekte](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 

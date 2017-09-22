@@ -1,0 +1,5 @@
+# [Zusätzliche Skriptkomponentenbeispiele](additional-script-component-examples.md)
+# [Erstellen eines ODBC-Ziels mit der Skriptkomponente](creating-an-odbc-destination-with-the-script-component.md)
+# [Erweitern einer Fehlerausgabe mit der Skriptkomponente](enhancing-an-error-output-with-the-script-component.md)
+# [Analysieren von nicht standardmäßigen Textdateiformaten mit der Skriptkomponente](parsing-non-standard-text-file-formats-with-the-script-component.md)
+# [Simulieren einer Fehlerausgabe für die Skriptkomponente](simulating-an-error-output-for-the-script-component.md)

@@ -21,13 +21,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 20627d31b8b12990de28a5703244789a6171a388
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
-# <a name="performance-counters"></a>Leistungsindikatoren
+# <a name="performance-counters"></a>Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert eine Reihe von Leistungsindikatoren, mit denen Sie die Leistung des Datenflussmoduls überwachen können. Sie können beispielsweise den Indikator "Gespoolte Puffer" überwachen, um zu bestimmen, ob Datenpuffer vorübergehend auf den Datenträger geschrieben werden, während ein Paket ausgeführt wird. Diese Auslagerung reduziert die Leistung und weist darauf hin, dass der Computer nicht genügend Arbeitsspeicher hat.  
   
 > **HINWEIS:** Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Computer installieren, auf dem [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ausgeführt wird, und anschließend ein Upgrade des betreffenden Computers auf [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]ausführen, werden beim Upgradeprozess die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren vom Computer entfernt. Zum Wiederherstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren auf dem Computer führen Sie Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Reparaturmodus aus.  
@@ -121,5 +121,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Sie müssen den Dienst Leistungsprotokolle und Warnungen mithilfe eines lokalen Kontos oder eines Domänenkontos starten, das Mitglied der Administratorengruppe ist.  
 
 ## <a name="see-also"></a>Siehe auch  
- [Ausführung von Projekten und Paketen](https://msdn.microsoft.com/library/ms141708.aspx) [durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Ausführung von Projekten und Paketen](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages) [durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
 

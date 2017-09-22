@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 1fc1445538e541926b4ea3e1d593c93c5ac9d5b7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c927eece547ccd7fc2fc2ca92bcdf443e0c38a9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS-Bereinigungstransformation
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts](https://msdn.microsoft.com/library/hh510417.aspx)  
+-   [Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts](/sql-docs/docs/data-quality-services/open-unlock-rename-and-delete-a-data-quality-project)  
   
 -   Artikel [Bereinigung komplexer Daten unter Verwendung von Verbunddomänen](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)auf social.technet.microsoft.com.  
   

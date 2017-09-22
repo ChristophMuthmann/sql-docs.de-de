@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generieren von Dumpdateien für die Paketausführung
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      Rufen Sie diese gespeicherte Prozedur auf, um ein ausgeführtes Paket zu veranlassen, eine Dumpdatei anzuhalten und zu erstellen.  
   
- Wenn Sie das Paketbereitstellungsmodell verwenden, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md) und [dtutil Utility](../../integration-services/dtutil-utility.md). Weitere Informationen zu Paketbereitstellungsmodellen finden Sie unter [Bereitstellung von Integration Services-Projekten (SSIS) und -Paketen](https://msdn.microsoft.com/library/hh213290.aspx) und [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Wenn Sie das Paketbereitstellungsmodell verwenden, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [Dtexec-Hilfsprogramm](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) und [Legacy-Paketbereitstellung &#40; SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Format der Debugdumpdateien  
  Wenn Sie eine Debugdumpoption angeben, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die folgenden Debugdumpdateien:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Eine .tmp-Debugdumpdatei. Hierbei handelt es sich um eine textformatierte Datei.  
   
- Standardmäßig [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] speichert diese Dateien im Ordner  *\<Laufwerk >:*\Programme\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Standardmäßig [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] speichert diese Dateien im Ordner * \<Laufwerk >:*\Programme\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  In der folgenden Tabelle werden nur bestimmte Abschnitte der TMP-Datei beschrieben. Die TMP-Datei schließt weitere Daten ein, die nicht in der Tabelle aufgeführt werden.  
   

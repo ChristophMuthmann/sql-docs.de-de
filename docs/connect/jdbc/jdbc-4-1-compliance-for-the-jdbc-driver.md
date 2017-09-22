@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 4.1-Kompatibilität für den JDBC-Treiber
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Neue Funktion|Description|  
 |-----------------|-----------------|  
-|Neue Escape-Funktion<br /><br /> Limited Return Rows Escape|Teilweise unterstützt<br /><br /> Escape-Syntax: LIMIT \<Zeilen > [OFFSET < Row_offset >]<br /><br /> Die Escape-Syntax besteht aus zwei Teilen: der obligatorische Teil ‚rows‘ gibt die Anzahl der zurückzugebenden Zeichen zurück, der optionale Teil ‚row_offset‘ gibt die Anzahl der zu überspringenden Zeilen vor dem Beginn der Rückgabe an<br /><br /> Der Treiber unterstützt nur den obligatorischen Teil, indem er die Abfrage für die Verwendung von ‚TOP‘ anstelle von ‚LIMIT‘ transformiert (SQL Server unterstützt ‚LIMIT‘ nicht).<br /><br /> Der Treiber löst eine Ausnahme aus, wenn der optionale Teil ‚row_offset‘ verwendet wird, da SQL Server nicht über ein Konstrukt zur Unterstützung dieser Anweisung verfügt.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von SQL-Escapesequenzen](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Neue Escape-Funktion<br /><br /> Limited Return Rows Escape|Teilweise unterstützt<br /><br /> Escape-Syntax: LIMIT \<Zeilen > [OFFSET < Row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  Die Java Database Connectivity API 4.1-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
   

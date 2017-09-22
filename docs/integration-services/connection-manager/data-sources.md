@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>Datenquellen
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **HINWEIS:** Sie können Datenquellen nur Projekten hinzufügen, die für die Verwendung des Paketbereitstellungsmodells konfiguriert wurden. Wenn ein Projekt für die Verwendung des Projektbereitstellungsmodells konfiguriert wurde, können Sie anstelle von Datenquellen Verbindungs-Manager verwenden, die auf Projektebene zur Freigabe von Verbindungen erstellt wurden.  
 >   
->  Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx). Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  Die Verwendung von Datenquellen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen bietet folgende Vorteile:  
   

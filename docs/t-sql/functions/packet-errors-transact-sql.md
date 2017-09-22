@@ -1,7 +1,7 @@
 ---
 title: '@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 612ab7e2ac7f0969263bbd21d6b875ed83bbe5e1
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 57a215132b55d655752db867e0c3dadcced9e92e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="packeterrors-transact-sql"></a>@@PACKET_ERRORS (Transact-SQL)
+# <a name="x40x40packeterrors-transact-sql"></a>& #x 40; & #x 40; PACKET_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Anzahl der Netzwerkpaket-Fehler zurück, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetreten sind.  
@@ -74,3 +74,4 @@ Packet Errors
  [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

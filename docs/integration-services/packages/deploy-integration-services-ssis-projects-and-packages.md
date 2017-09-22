@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
@@ -109,13 +109,13 @@ Weitere Informationen zu den in diesem Abschnitt beschriebenen Fehler und zu den
         > [!NOTE]  
         >  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
-         Abhängig davon, ob Sie den Assistenten zum Konvertieren von Integration Services-Projekten ****  von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.  
+         Abhängig davon, ob Sie den Assistenten zum Konvertieren von Integration Services-Projekten ** ** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.  
   
         -   Wenn Sie den Assistenten über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ausführen, werden die im Projekt enthaltenen Pakete von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2005, 2008 oder 2008 R2 in das Format konvertiert, das von der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]verwendet wird. Ein Update des ursprünglichen Projekts (.dtproj) und der Paketdateien (.dtsx) wird durchgeführt.  
   
         -   Wenn Sie den Assistenten über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, generiert der Assistent eine Projektbereitstellungsdatei (.ispac) von den Paketen und Konfigurationen, die im Projekt enthalten sind. Ein Update der Originalpaketdateien (.dtsx) wird nicht durchgeführt.  
   
-             Sie können eine vorhandene Datei auswählen oder eine neue Datei erstellen (auf der Assistentenseite für das ****  Auswahlziel).  
+             Sie können eine vorhandene Datei auswählen oder eine neue Datei erstellen (auf der Assistentenseite für das ** ** Auswahlziel).  
   
              Zur Aktualisierung von Paketdateien bei der Konvertierung eines Projekts führen Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus. Wenn Paketdateien unabhängig von einer Projektkonvertierung aktualisiert werden sollen, führen Sie den Assistenten zum Konvertieren von Integration Services-Projekten **** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und führen Sie dann den **SSIS-Paketupgrade-Assistenten**aus. Wenn Sie die Paketdateien getrennt aktualisieren, stellen Sie sicher, dass Sie die Änderungen speichern. Andernfalls werden bei der Konvertierung des Projekts in das Projektbereitstellungsmodell alle nicht gespeicherten Änderungen am Paket nicht konvertiert.  
   
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Wenn das Projekt und alle Pakete den Kompatibilitätstest bestehen, klicken Sie auf **OK** , um das Paket zu konvertieren.  
   
-> **HINWEIS:** Verwenden Sie den **Assistenten für die Konvertierung von Integration Services-Projekten**, um ein Projekt ins Projektbereitstellungsmodell zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **HINWEIS:** Verwenden Sie den **Assistenten für die Konvertierung von Integration Services-Projekten**, um ein Projekt ins Projektbereitstellungsmodell zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
 
 ## <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Die **Bereitstellungs-Assistent für Integration Services** unterstützt zwei Bereitstellungsmodelle:
@@ -309,7 +309,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
   
 #### <a name="results"></a>Ergebnisse  
- Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**  um die Ergebnisse in eine XML-Datei oder klicken Sie auf Speichern **schließen** um den Assistenten zu beenden.
+ Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern... ** um die Ergebnisse in eine XML-Datei oder klicken Sie auf Speichern **schließen** um den Assistenten zu beenden.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 14. Klicken Sie zweimal auf **OK** , um die Änderungen zu speichern.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
-  Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt für die Verwendung des Projektbereitstellungsmodells konfigurieren, können Sie gespeicherte Prozeduren im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Katalog verwenden, um das Projekt bereitzustellen und die Pakete auszuführen. Informationen zum Projektbereitstellungsmodell finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+  Beim Konfigurieren einer [! UMFASSEN[SsISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Sie können auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] zum Bereitstellen des Projekts und zum Ausführen der Pakete verwenden. Weitere Informationen finden Sie in den im Abschnitt **Siehe auch** aufgeführten Themen.  
   
@@ -415,15 +415,15 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 > 3.  Legen Sie nach Bedarf Parameterwerte, Verbindungs-Manager-Eigenschaften und Optionen auf der Registerkarte **Erweitert** fest, zum Beispiel den Protokolliergrad.  
 >   
 >      Weitere Informationen zu Protokolliergraden finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
-> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt.  
+> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt.  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>So stellen Sie ein Paket mit gespeicherten Prozeduren bereit und führen es aus  
   
 1.  Rufen Sie [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) auf, um das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt bereitzustellen, das das Paket für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server enthält.  
   
-     Zum Abrufen des binären Inhalts der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -projektbereitstellungsdatei für die  *@project_stream*  Parameter, eine SELECT-Anweisung mit der OPENROWSET-Funktion und der BULK-Rowsetanbieter verwenden. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Um den binären Inhalt der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projektbereitstellungsdatei abzurufen, verwenden Sie für den *@project_stream* -Parameter eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment.ispac) gelesen und im *@ProjectBinary* -Parameter des Typs „varbinary(max)“ gespeichert. Der *@ProjectBinary* -Parameterwert wird dem *@project_stream* -Parameter zugewiesen.  
+     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment.ispac) gelesen und im *@ProjectBinary* -Parameter des Typs „varbinary(max)“ gespeichert. Der *@ProjectBinary* -Parameterwert wird dem *@project_stream* -Parameter zugewiesen.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -538,13 +538,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 -   [Festlegen der Optionen unter "Konvertierung ausführen"](#conversion)  
   
 ###  <a name="open_dialog"></a> Öffnen des Assistenten für die Konvertierung von Integration Services-Projekten  
- Führen Sie einen der folgenden Schritte aus, um den Assistenten zum Konvertieren von Integration Services-Projekten ****  zu öffnen.  
+ Führen Sie einen der folgenden Schritte aus, um den Assistenten zum Konvertieren von Integration Services-Projekten ** ** zu öffnen.  
   
 -   Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
 -   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
- Abhängig davon, ob Sie den Assistenten zum Konvertieren von Integration Services-Projekten ****  von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.   
+ Abhängig davon, ob Sie den Assistenten zum Konvertieren von Integration Services-Projekten ** ** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.   
   
 ###  <a name="locate"></a> Festlegen von Optionen auf der Seite "Pakete suchen"  
   

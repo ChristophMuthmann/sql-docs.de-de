@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Durch ein Integration Services-Paket protokollierte Ereignisse
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Dieses Thema enthält Informationen über die allgemeinen Ereignismeldungen, die von einem Paket im Anwendungsereignisprotokoll protokolliert werden. Standardmäßig protokolliert ein Paket einige dieser Meldungen, auch wenn Sie die Protokollfunktion für das Paket nicht aktiviert haben. Andere Meldungen werden hingegen vom Paket nur protokolliert, wenn Sie die Protokollfunktion für das Paket aktiviert haben. Unabhängig davon, ob das Paket diese Meldungen standardmäßig oder aufgrund der aktivierten Protokollfunktion protokolliert, ist die Ereignisquelle für die Meldungen SQLISPackage.  
   
- Allgemeine Informationen zum Ausführen von SSIS-Paketen finden Sie unter [Ausführung von Projekten und Paketen](https://msdn.microsoft.com/library/ms141708.aspx).  
+ Allgemeine Informationen zum Ausführen von SSIS-Paketen finden Sie unter [Ausführung von Projekten und Paketen](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
   
  Informationen zur Behandlung von Problemen bei der Ausführung von Paketen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
 |12249|DTS_MSG_EVENTLOGENTRY_WARNING|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Diese Meldung meldet eine Warnung, die aufgetreten ist.|  
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Diese Meldung enthält Informationen, die nicht mit einem Fehler oder einer Warnung verbunden sind.|  
 
-## <a name="view-log-entries-in-the-log-events-window"></a>Anzeigen der Protokolleinträge im Fenster 'Protokollereignisse'
+## <a name="view-log-entries-in-the-log-events-window"></a>Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“
   In diesem Verfahren wird das Ausführen eines Pakets und das Anzeigen der geschriebenen Protokolleinträge beschrieben. Sie können die Protokolleinträge in Echtzeit anzeigen. Die im Fenster **Protokollereignisse** geschriebenen Protokolleinträge können auch kopiert und für die spätere Analyse gespeichert werden.  
   
  Dabei müssen die Protokolleinträge nicht in ein Protokoll geschrieben werden, um die Einträge in das Fenster **Protokollereignisse** zu schreiben.  

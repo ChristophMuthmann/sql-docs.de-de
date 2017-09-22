@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c42fed70b1335a48bcc219682d5be5e4010e0e5
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 71703ec9a931538f5865f0a2792cb704d6969d8c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Lernprogramm: Schreiben von Transact-SQL-Anweisungen
@@ -54,7 +54,7 @@ Auf dem System muss Folgendes installiert sein:
   
 -   Eine beliebige Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--  [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)  
+-  [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
   
 
  

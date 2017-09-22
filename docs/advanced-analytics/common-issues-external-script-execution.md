@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
@@ -64,7 +64,7 @@ Der Launchpad-Dienst (Launchpad.exe) wird mithilfe eines Dienstkontos mit gering
 - Umgehen von durchsuchenden Prüfungen (SeChangeNotifyPrivilege)
 - Anpassen von Speicherkontingenten für einen Prozess (SeIncreaseQuotaSizePrivilege)
 
-Informationen über diese Benutzerrechte, finden Sie im Abschnitt "Windows-Berechtigungen und Rechte" in [service Konfigurieren von Windows-Dienstkonten und-Berechtigungen](https://msdn.microsoft.com/library/ms143504.aspx).
+Informationen über diese Benutzerrechte, finden Sie im Abschnitt "Windows-Berechtigungen und Rechte" in [service Konfigurieren von Windows-Dienstkonten und-Berechtigungen](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
 
 > [!TIP]
 > Wenn Sie mit der Verwendung des Tools Unterstützung Diagnose Plattform (SDP) für SQL Server-Diagnose vertraut sind, können Sie SDP verwenden, um die Ausgabedatei mit dem Namen MachineName_UserRights.txt zu überprüfen.
@@ -100,7 +100,7 @@ Während des Setups von Machine Learning-Services, SQL Server erstellt die Windo
 
 Allerdings in Organisationen, die denen restriktivere Sicherheitsrichtlinien durchgesetzt werden, die Rechte, die von dieser Gruppe erforderlich sind möglicherweise manuell entfernt, oder sie können automatisch von der Richtlinie aufgehoben werden. Wenn die Rechte entfernt wurden, Launchpad kann nicht mehr Verbinden mit SQL Server und SQL Server kann nicht die externen Laufzeit aufgerufen.
 
-Stellen Sie sicher, dass die Gruppe **SQLRUserGroup** über die Systemberechtigung **Allow Log in locally**  (Lokale Anmeldung erlauben) verfügt, um dieses Problem zu beheben.
+Stellen Sie sicher, dass die Gruppe **SQLRUserGroup** über die Systemberechtigung **Allow Log in locally ** (Lokale Anmeldung erlauben) verfügt, um dieses Problem zu beheben.
 
 Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
@@ -329,7 +329,7 @@ Um das Problem zu beheben, müssen Sie das Paket in der Bibliothek der SQL Serve
 
 [Die Datensammlung für die Problembehandlung von Machine Learning](data-collection-ml-troubleshooting-process.md)
 
-[Häufig gestellte Fragen zu Upgrade und installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[Häufig gestellte Fragen zu Upgrade und Installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Problembehandlung bei Datenbank-Engine-Verbindungen](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
 

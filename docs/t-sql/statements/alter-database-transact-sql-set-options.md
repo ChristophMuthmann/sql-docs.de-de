@@ -32,10 +32,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 802642d2c9ba70c2a8750dc0ed5536e198a33f6f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: d3e4af471573ffa2220eb9dfb1ee7a129899b5eb
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database) 
 
 -   [ALTER DATABASE &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
@@ -654,7 +654,7 @@ MULTI_USER
  FULL  
  Der vollständige nicht transaktionale Zugriff auf FILESTREAM-Daten in FileTables ist aktiviert.  
   
- DIRECTORY_NAME =  *\<Directory_name >*  
+ DIRECTORY_NAME = * \<Directory_name >*  
  Ein Windows-kompatibler Verzeichnisname. Dieser Name sollte für alle Verzeichnisnamen auf Datenbankebene in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig sein. Bei Eindeutigkeitsvergleichen wird unabhängig von den Sortiereinstellungen die Groß-/Kleinschreibung nicht beachtet. Diese Option muss vor dem Erstellen einer FileTable in dieser Datenbank festgelegt werden.  
   
  **\<HADR_options >:: =**  
@@ -987,7 +987,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | AUSSCHALTEN
 > [!IMPORTANT]  
 >  In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.  
   
- **Char (*n*) ** und  **binäre (*n*) ** Spalten, die es ermöglichen, für NULL-Werte auf die Länge der Spalte aufgefüllt werden, wenn ANSI_PADDING festgelegt ist auf ON aber nachfolgende Leerzeichen und Nullen werden abgeschnitten, wenn ANSI_PADDING auf OFF festgelegt ist. **Char (*n*) ** und  **binäre (*n*) ** Spalten, die keine NULL-Werte zulassen, werden immer auf die Länge der Spalte aufgefüllt.  
+ **Char (*n*) ** und * *binäre (*n*) ** Spalten, die es ermöglichen, für NULL-Werte auf die Länge der Spalte aufgefüllt werden, wenn ANSI_PADDING festgelegt ist auf ON aber nachfolgende Leerzeichen und Nullen werden abgeschnitten, wenn ANSI_PADDING auf OFF festgelegt ist. **Char (*n*) ** und * *binäre (*n*) ** Spalten, die keine NULL-Werte zulassen, werden immer auf die Länge der Spalte aufgefüllt.  
   
  Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird, wenn sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   

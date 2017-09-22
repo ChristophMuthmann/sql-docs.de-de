@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -394,7 +394,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Sichern Sie, Wiederherstellen Sie und verschieben Sie des SSIS-Katalogs
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]Schließt die SSISDB-Datenbank. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] schließt die SSISDB-Datenbank ein. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
   
  Der **SSISDB** -Katalog speichert die Pakete, die Sie auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt haben. Weitere Informationen zum Katalog finden Sie unter [SSIS-Katalog](../../integration-services/service/ssis-catalog.md).  
   
@@ -455,7 +455,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-CLR-gespeicherte Prozeduren erfordern UNSAFE-Berechtigungen, die der Anmeldung gewährt werden müssen, da die Anmeldung einen zusätzlichen Zugriff auf eingeschränkte Ressourcen (z. B. die Microsoft Win32-API) benötigt. Weitere Informationen zur UNSAFE-Codeberechtigung finden Sie unter [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -CLR-gespeicherte Prozeduren erfordern UNSAFE-Berechtigungen, die der Anmeldung gewährt werden müssen, da die Anmeldung einen zusätzlichen Zugriff auf eingeschränkte Ressourcen (z. B. die Microsoft Win32-API) benötigt. Weitere Informationen zur UNSAFE-Codeberechtigung finden Sie unter [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -471,7 +471,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     -   [Datenbank wiederherstellen &#40;Seite Dateien&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Datenbank wiederherstellen &#40;Seite Optionen&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
+    -   [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Führen Sie die Skripts aus, die Sie in [So sichern Sie die SSIS-Datenbank](#backup) für ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup und den SSIS-Serverwartungsauftrag erstellt haben. Bestätigen Sie, dass der SQL Server-Agent gestartet wurde.  
   
@@ -563,7 +563,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
      ![Überprüfen Sie die Ergebnisse im SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "überprüfen Sie die Ergebnisse im SSISDB-Upgrade-Assistenten")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn für SSIS-Katalog (SSISDB)
-  Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230.aspx).  
+  Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [Always On-Verfügbarkeitsgruppen](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
   
  Um eine hohe Verfügbarkeit für den SSIS-Katalog (SSISDB) und dessen Inhalt (Projekte, Pakete, Ausführungsprotokolle usw.) zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Benutzerdatenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
  
@@ -585,7 +585,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 2.  Installieren Sie SQL Server 2016 mit der Funktion Integration Services (SSIS) auf jedem Clusterknoten.  
   
-3.  Aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen für jede SQL Server-Instanz. Weitere Informationen finden Sie unter [Aktivieren von Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878259.aspx) .  
+3.  Aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen für jede SQL Server-Instanz. Weitere Informationen finden Sie unter [Aktivieren von Always On-Verfügbarkeitsgruppen](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) .  
   
 ###  <a name="Firsttime"></a> Konfigurieren der SSIS-Unterstützung für Always On  
   
@@ -607,12 +607,12 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 3.  Klicken Sie auf **CLR-Integration aktivieren**. Für den Katalog werden gespeicherte CLR-Prozeduren verwendet.  
   
-4.  Klicken Sie auf **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** , um die gespeicherte [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) -Prozedur jedes Mal ausführen zu lassen, wenn die SSIS-Serverinstanz neu gestartet wird. Durch die gespeicherte Prozedur wird der Status von Vorgängen für den SSISDB-Katalog verwaltet. Dabei wird der Status aller Pakete korrigiert, die während des Ausfalls der SSIS-Serverinstanz (falls zutreffend) ausgeführt wurden.  
+4.  Klicken Sie auf **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** , um die gespeicherte [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) -Prozedur jedes Mal ausführen zu lassen, wenn die SSIS-Serverinstanz neu gestartet wird. Durch die gespeicherte Prozedur wird der Status von Vorgängen für den SSISDB-Katalog verwaltet. Dabei wird der Status aller Pakete korrigiert, die während des Ausfalls der SSIS-Serverinstanz (falls zutreffend) ausgeführt wurden.  
   
-5.  Geben Sie ein **Kennwort**ein, und klicken Sie dann auf **OK**. Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Sichern eines Datenbank-Hauptschlüssels](https://msdn.microsoft.com/library/aa337546.aspx).  
+5.  Geben Sie ein **Kennwort**ein, und klicken Sie dann auf **OK**. Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Sichern eines Datenbank-Hauptschlüssels](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
   
 ####  <a name="Step2"></a> Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe  
- Das Hinzufügen der SSISDB-Datenbank zu einer Always On-Verfügbarkeitsgruppe ist fast identisch mit dem Hinzufügen einer anderen Benutzerdatenbank zu einer Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](https://msdn.microsoft.com/library/hh403415.aspx).  
+ Das Hinzufügen der SSISDB-Datenbank zu einer Always On-Verfügbarkeitsgruppe ist fast identisch mit dem Hinzufügen einer anderen Benutzerdatenbank zu einer Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio).  
   
  Sie müssen das Kennwort angeben, das Sie beim Erstellen des SSIS-Katalogs auf der Seite **Datenbanken auswählen** im Assistenten für die **Neue Verfügbarkeitsgruppe** angegeben haben.  
   

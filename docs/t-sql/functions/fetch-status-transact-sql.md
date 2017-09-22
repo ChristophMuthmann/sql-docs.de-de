@@ -1,7 +1,7 @@
 ---
 title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 59f409ed179d158194e98fa60c910c5b38c8e376
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 61e209f7cf2a3a654b33979129e9500d3734fe64
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="fetchstatus-transact-sql"></a>@@FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>& #x 40; & #x 40; Sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die für einen beliebigen der aktuell von der Verbindung geöffneten Cursor ausgegeben wurde.  

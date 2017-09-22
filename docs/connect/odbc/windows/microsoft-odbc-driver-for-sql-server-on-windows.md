@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be1cdd060537883c0bad107790847003b4749738
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ec9cbf6cc2e8d74fdc87881622e1a1258aeea260
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
@@ -32,7 +32,7 @@ Der Microsoft ODBC-Treiber für SQL Server kann verwendet werden, um neue Anwend
 
 | Version       | Unterstützte Funktionen      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 13.1 for SQLServer     | <ul><li>Always Encrypted</li><li>Azure AD-Authentifizierung</li><li>AlwaysOn-Verfügbarkeitsgruppen (VG)</li></ul>   | 
+| Microsoft ODBC Driver 13.1 for SQLServer     | <ul><li>Always Encrypted</li><li>Azure AD-Authentifizierung</li><li>Always On-Verfügbarkeitsgruppen (Availability Groups, AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQLServer      | <ul><li>Internationaler Domänenname (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Treiberfähiges Verbindungspooling</li><li>Verbindungsstabilität</li><li>Asynchrone Ausführung (Abruf-Methode)</li></ul> |    
 
@@ -55,8 +55,8 @@ Diese Dokumentation für den Microsoft ODBC Driver für [!INCLUDE[ssNoVersion](.
   
 ## <a name="see-also"></a>Siehe auch  
 - [Informationen zu SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Erstellen von Anwendungen mit SQL Server Native Client](https://msdn.microsoft.com/library/ms130904.aspx)   
+- [Erstellen von Anwendungen mit SQL Server Native Client](/sql-docs/docs/relational-databases/native-client/applications/building-applications-with-sql-server-native-client)   
 - [FAQ zu SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC-Programmierreferenz](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client (ODBC)](https://msdn.microsoft.com/library/ms131415.aspx)  
+- [SQL Server Native Client (ODBC)](/sql-docs/docs/relational-databases/native-client/odbc/sql-server-native-client-odbc)  
 

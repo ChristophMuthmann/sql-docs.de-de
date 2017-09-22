@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von PowerShell unter Windows zum Verwalten von SQLServer on Linux
@@ -24,7 +24,7 @@ Dieses Thema enthält [SQL Server PowerShell](https://msdn.microsoft.com/en-us/l
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Installieren Sie die neueste Version von SQL PowerShell unter Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) unter Windows ist im Lieferumfang [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SSMS und SQL PowerShell verwenden. Die neueste Version von SSMS wird laufend aktualisiert und optimiert und arbeitet zurzeit mit SQLServer 2017 RC2 unter Linux. Zum Herunterladen und installieren Sie die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Version für den download verfügbaren vorhanden ist. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) unter Windows ist im Lieferumfang [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SSMS und SQL PowerShell verwenden. Die neueste Version von SSMS wird laufend aktualisiert und optimiert und arbeitet zurzeit mit SQLServer 2017 RC2 unter Linux. Zum Herunterladen und installieren Sie die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Version für den download verfügbaren vorhanden ist. 
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
@@ -71,7 +71,7 @@ Kopieren Sie die nachfolgenden Befehle an der PowerShell-Eingabeaufforderung. We
 - Erstellen Sie eine Instanz von der [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) Objekt
 - Herstellen einer Verbindung mit der **Server** und einige Eigenschaften anzeigen
 
-Denken Sie daran, ersetzen Sie  **\<Your_server_instance\>**  mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017 RC2-Instanz unter Linux.
+Denken Sie daran, ersetzen Sie ** \<Your_server_instance\> ** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017 RC2-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ Kopieren Sie die nachfolgenden Befehle an der PowerShell-Eingabeaufforderung. Si
 - Verwenden der **Get-SqlErrorLog** -Cmdlet zum Herstellen einer Verbindung mit der 2017 von SQL Server-Instanz unter Linux und Abrufen von Fehler protokolliert seit **gestern**
 - Die Ausgabe an die **Out GridView** Cmdlet
 
-Denken Sie daran, ersetzen Sie  **\<Your_server_instance\>**  mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017 RC2-Instanz unter Linux.
+Denken Sie daran, ersetzen Sie ** \<Your_server_instance\> ** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017 RC2-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server-PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server-PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

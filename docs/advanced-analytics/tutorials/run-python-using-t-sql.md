@@ -1,8 +1,8 @@
 ---
 title: "Ausführen von Python mit T-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
@@ -57,7 +57,7 @@ GO
 
 Der folgende Code die Python-ausführbare Datei lädt, übergibt die Eingabedaten und für jede Zeile von Eingabedaten, aktualisiert die Tagesnamen in der Tabelle mit einer Zahl, die den Tag der Woche Index darstellt.
 
-Beachten Sie den Parameter  *@RowsPerRead* . Dieser Parameter gibt die Anzahl der Zeilen, die von SQL Server für die Python-Laufzeit übergeben werden.
+Beachten Sie den Parameter * @RowsPerRead *. Dieser Parameter gibt die Anzahl der Zeilen, die von SQL Server für die Python-Laufzeit übergeben werden.
 
 Der Python-Daten-Analysebibliothek genannt **Pandas**ist erforderlich für die Übergabe von Daten mit SQL Server und ist standardmäßig mit Machine Learning-Diensten enthalten.
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>Schritt 3: Anzeigen der Ergebnisse
 
-Die gespeicherte Prozedur gibt zurück die ursprünglichen Daten, wendet das Skript, und klicken Sie dann die geänderten Daten in der **Ergebnisse** Bereich von Management Studio oder anderen SQL-Abfragetool.
+Die gespeicherte Prozedur ruft die ursprünglichen Daten, wendet das Python-Skript und gibt dann die geänderten Daten in der **Ergebnisse** Bereich von Management Studio oder anderen SQL-Abfragetool.
 
 
 |DayOfWeek (vorher)| Amount|DayOfWeek (nachher) |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ Die Meldungsausgabe enthält das Arbeitsverzeichnis für die Ausführung des Skripts verwendet werden. In diesem Beispiel bezieht sich auf das workerkonto, der von SQL Server zum Verwalten des Auftrags "MSSQLSERVER01". Die GUID ist der Name eines temporären Ordners, die während der skriptausführung zum Speichern von Daten und Skript-Artefakten erstellt wird. Diese temporären Ordner durch SQL Server gesichert werden, und werden von der Windows-Auftragsobjekt nach bereinigt Skript beendet wurde.
++ Die **Nachricht** Ausgabe enthält das Arbeitsverzeichnis für die Ausführung des Skripts verwendet. In diesem Beispiel bezieht sich auf das workerkonto, der von SQL Server zum Verwalten des Auftrags "MSSQLSERVER01". 
 
-+ Im Abschnitt mit der Meldung "Hello World" Druckt zweimal. Dies liegt daran, dass der Wert der  *@RowsPerRead*  auf 5 festgelegt wurde und in der Tabelle 10 Zeilen vorhanden sind; daher sind die beiden Aufrufe von Python zum Verarbeiten aller Zeilen in der Tabelle erforderlich.
+    Die GUID ist der Name eines temporären Ordners, die während der skriptausführung zum Speichern von Daten und Skript-Artefakten erstellt wird. Diese temporären Ordner durch SQL Server gesichert werden, und werden von der Windows-Auftragsobjekt nach bereinigt Skript beendet wurde.
+
++ Im Abschnitt mit der Meldung "Hello World" Druckt zweimal. Dies liegt daran, dass der Wert der * @RowsPerRead * auf 5 festgelegt wurde und in der Tabelle 10 Zeilen vorhanden sind; daher sind die beiden Aufrufe von Python zum Verarbeiten aller Zeilen in der Tabelle erforderlich.
 
     In der produktionsumgebung ausgeführt wird wird empfohlen, dass Sie experimentieren mit unterschiedlichen Werten um die maximale Anzahl von Zeilen zu bestimmen, die in jedem Batch übergeben werden sollen. Die optimale Anzahl von Zeilen ist datenabhängig und sowohl die Anzahl der Spalten im Dataset und den Typ der Daten, die Sie weitergeben betroffen ist.
 
@@ -189,4 +191,4 @@ Diese zusätzliche Python-Beispiele und Lernprogramme für erweiterte Tipps und 
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Wenn Sie die gespeicherte Prozedur nicht finden können `sp_execute_external_script`, bedeutet dies wahrscheinlich noch nicht abgeschlossen Konfigurieren der Instanz zur Unterstützung von externer Laufzeiten. Nach dem 2017 von SQL Server-Setup ausführen und Python als Machine learning Sprache auswählen, müssen Sie auch ausdrücklich aktivieren die Funktion mit `sp_configure`, und klicken Sie dann die Instanz neu gestartet. Weitere Informationen finden Sie unter [Setup Machine Learning-Dienste mit Python](../python/setup-python-machine-learning-services.md).
+Wenn Sie die gespeicherte Prozedur nicht finden können `sp_execute_external_script`, bedeutet dies wahrscheinlich noch nicht abgeschlossen konfigurieren die Instanz, um das Ausführen des externen Skripts unterstützen. Nach dem 2017 von SQL Server-Setup ausführen und Python als Machine learning Sprache auswählen, müssen Sie auch ausdrücklich aktivieren die Funktion mit `sp_configure`, und klicken Sie dann die Instanz neu gestartet. Weitere Informationen finden Sie unter [Setup Machine Learning-Dienste mit Python](../python/setup-python-machine-learning-services.md).

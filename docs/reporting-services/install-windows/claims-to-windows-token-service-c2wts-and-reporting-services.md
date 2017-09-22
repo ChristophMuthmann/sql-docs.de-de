@@ -1,7 +1,7 @@
 ---
 title: Claims to Windows Token Service (c2WTS) und Reporting Services | Microsoft Docs
-ms.custom: 
-ms.date: 08/17/2017
+ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
+ms.date: 09/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,113 +9,98 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- c2wts.exe.config
-- SharePoint mode
-- C2WTS
-- WSS_WPG
-ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0190e9e7a7194f6d848b56a72953f81a0002f98
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
 ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/15/2017
 
 ---
-# <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Übersicht über Claims to Windows Token Service (c2WTS) und Reporting Services
+# <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  Der SharePoint-Dienst „Claims to Windows Token Service“ (C2WTS) ist im SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erforderlich, wenn Sie die Windows-Authentifizierung für Datenquellen verwenden möchten, die außerhalb der SharePoint-Farm liegen. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen Dienst für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] immer der Forderungsauthentifizierung unterliegt.  
-  
- c2WTS wird auch dann benötigt, auch sich die Datenquelle(n) auf demselben Computer wie der gemeinsame Dienst befinden. In diesem Szenario ist jedoch keine eingeschränkte Delegierung erforderlich.  
-  
- Die von c2WTS erstellten Token funktionieren nur bei der eingeschränkten Delegierung (Einschränkungen für bestimmte Dienste) und bei Verwendung der Konfigurationsoption "Beliebiges Authentifizierungsprotokoll verwenden". Wenn sich die Datenquellen auf demselben Computer wie der gemeinsame Dienst befinden, ist wie oben bereits erwähnt keine eingeschränkte Delegierung erforderlich.  
-  
- Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, dann müssen sich der SharePoint Server-Dienst und externe Datenquellen in derselben Windows-Domäne befinden. Jeder Dienst, der auf C2WTS (Claims to Windows Token Service) basiert, muss die **eingeschränkte** Kerberos-Delegierung verwenden, damit C2WTS den Kerberos-Protokollübergang verwenden kann, um Ansprüche (Claims) in Windows-Anmeldeinformationen zu übersetzen. Diese Anforderungen gelten für alle gemeinsamen SharePoint-Dienste. Weitere Informationen finden Sie unter [Planen der Kerberos-Authentifizierung in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
-  
- Die Prozedur wird in diesem Thema zusammengefasst.
+Claims to Windows Token Service (C2WTS) von SharePoint ist erforderlich, wenn Sie, zum Anzeigen von Berichten im einheitlichen Modus, in möchten der [SQL Server Reporting Services Berichts-Viewer-Webpart](../report-server-sharepoint/deploy-report-viewer-web-part.md).
 
-## <a name="prerequisites"></a>Voraussetzungen
+C2WTS ist auch mit SQL Server Reporting Services SharePoint-Modus erforderlich, wenn Sie Windows-Authentifizierung für Datenquellen, die außerhalb der SharePoint-Farm sind, verwenden möchten. C2WTS wird auch dann benötigt, auch sich die Datenquelle(n) auf demselben Computer wie der gemeinsame Dienst befinden. In diesem Szenario ist jedoch keine eingeschränkte Delegierung erforderlich.
 
 > [!NOTE]
->  Hinweis: Einige der Konfigurationsschritte ändern sich möglicherweise oder funktionieren nicht in bestimmten Farmtopologien. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.
+> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
 
-> [!IMPORTANT]
-> Wenn Sie Power View für Power Pivot-Arbeitsmappen zu verwenden, müssen Sie zusätzliche Konfigurationsschritte für Office Online Server durchführen: [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx)(Übersicht über Office Online Server). Weitere Informationen finden Sie in den folgenden Whitepapers: 
->
-> - [Bereitstellen von SQL Server 2016 PowerPivot und Power View in SharePoint 2016](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
-> 
-> - [Bereitstellen von SQL Server 2016 PowerPivot und Power View in einer Multi-Tier SharePoint 2016-Farm](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
-  
-### <a name="basic-steps-needed-to-configure-c2wts"></a>Grundlegende Schritte für die c2WTS-Konfiguration  
-  
-1.  Konfigurieren Sie das c2WTS-Dienstkonto. Fügen Sie das Dienstkonto der lokalen Administratorengruppe auf jedem Anwendungsserver, auf dem c2WTS ausgeführt wird, hinzu. Stellen Sie außerdem sicher, dass das Konto über die folgenden lokalen Sicherheitsrichtlinienrechte verfügt:  
-  
-    -   Einsetzen als Teil des Betriebssystems  
-  
-    -   Annehmen der Identität eines Clients nach der Authentifizierung  
-  
-    -   Anmelden als Dienst  
-  
-2.  Konfigurieren Sie die Delegierung für das c2WTS-Dienstkonto. Das Konto muss für die eingeschränkte Delegierung mit Protokollübergang konfiguriert werden. Außerdem benötigt es Berechtigungen für die Delegierung an Dienste, mit denen es kommunizieren muss (d.h. SQL Server Engine, SQL Server Analysis Services). Verwenden Sie das Snap-In "Active Directory-Benutzer und -Computer", um die Delegierung zu konfigurieren.  
+## <a name="report-viewer-web-part-configuration"></a>Berichts-Viewer Teil Webkonfiguration
+
+Der Berichts-Viewer-Webpart kann zum Einbetten von Berichten für SQL Server Reporting Services im einheitlichen Modus in der SharePoint-Website verwendet werden. Dieses Webpart ist für SharePoint 2013 und SharePoint 2016 verfügbar. Stellen Sie SharePoint 2013 und SharePoint 2016 von der anspruchsbasierten Authentifizierung verwenden. SQL Server Reporting Services (einheitlicher Modus) wird standardmäßig Windows-Authentifizierung verwendet. Daher muss C2WTS für Berichte, die für das einwandfreie Rendering ordnungsgemäß konfiguriert sein.
+
+## <a name="sharepoint-mode-integaration"></a>SharePoint-Modus integaration
+
+**Dieser Abschnitt gilt nur in SQL Server 2016 Reporting Services und früheren Versionen.**
+
+Claims to Windows Token Service (C2WTS) von SharePoint ist mit SQL Server Reporting Services SharePoint-Modus erforderlich, wenn Sie Windows-Authentifizierung für Datenquellen, die außerhalb der SharePoint-Farm sind, verwenden möchten. Dies gilt auch, wenn der Benutzer die Datenquellen mit Windows-Authentifizierung zugreift, da die Kommunikation zwischen dem Web-Front-End (WFE) und freigegebene Reporting Services-Diensts immer Anspruchsauthentifizierung verwendet werden.
+
+## <a name="steps-needed-to-configure-c2wts"></a>Schritte zum Konfigurieren von c2WTS
+
+Die von C2WTS erstellten Token funktionieren nur bei der eingeschränkten Delegierung (Einschränkungen für bestimmte Dienste) und bei Verwendung der Konfigurationsoption Beliebiges Authentifizierungsprotokoll verwenden. Wenn sich die Datenquellen auf demselben Computer wie der gemeinsame Dienst befinden, ist wie oben bereits erwähnt keine eingeschränkte Delegierung erforderlich.
+
+Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, dann müssen sich der SharePoint Server-Dienst und externe Datenquellen in derselben Windows-Domäne befinden. Jeder Dienst, der auf C2WTS (Claims to Windows Token Service) basiert, muss die **eingeschränkte** Kerberos-Delegierung verwenden, damit C2WTS den Kerberos-Protokollübergang verwenden kann, um Ansprüche (Claims) in Windows-Anmeldeinformationen zu übersetzen. Diese Anforderungen gelten für alle gemeinsamen SharePoint-Dienste. Weitere Informationen finden Sie unter [Planen der Kerberos-Authentifizierung in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
+
+1. Konfigurieren Sie das C2WTS-Dienstkonto. Fügen Sie das Dienstkonto der lokalen Administratorengruppe auf jedem Server, dass C2WTS verwendet werden soll.
+
+    Für die **Berichts-Viewer-Webpart**, diese Funktion wird die Web-Front-End (WFE)-Server sein. Für **integrierten SharePoint-Modus**, werden die Anwendungsserver, auf dem Reporting Services-Diensts ausgeführt wird.
+
+2. Konfigurieren Sie die Delegierung für das C2WTS-Dienstkonto.
+
+    Das Konto benötigt die eingeschränkte Delegierung mit Protokollübergang und Berechtigungen für die Delegierung an Dienste ist es erforderlich, für die Kommunikation mit (d. h. SQL Server-Datenbankmodul, SQL Server Analysis Services). Die Delegierung konfigurieren, können Sie das Snap-in Active Directory-Benutzer und Computer und ein Domänenadministrator sein müssen.
 
     > [!IMPORTANT]
-    > Alle Einstellungen, die Sie für das C2WTS-Dienstkonto auf der Registerkarte „Delegierung“ konfigurieren, müssen dem Reporting Services-Dienstkonto entsprechen. Wenn Sie C2WTS-Dienstkonto beispielsweise erlauben, an einen SQL-Dienst zu delegieren, müssen Sie auf dem Reporting Services-Dienstkonto dieselbe Konfiguration verwenden.
-  
-    1.  Klicken Sie mit der rechten Maustaste auf jedes Dienstkonto, und öffnen Sie das Eigenschaftendialogfeld. Klicken Sie im Dialogfeld auf die Registerkarte **Delegierung** .  
-  
-        > [!NOTE]  
-        >  Hinweis: Die Registerkarte „Delegierung“ ist nur sichtbar, wenn dem Objekt ein Dienstprinzipalname (Service Prinicpal Name; SPN) zugewiesen wurde. C2WTS erfordert grundsätzlich keinen SPN für das C2WTS-Konto; ohne einen SPN ist die Registerkarte **Delegierung** jedoch nicht sichtbar. Eine Alternative zur Konfiguration der eingeschränkten Delegierung ist die Verwendung des Hilfsprogramms **ADSIEdit**.  
-  
-    2.  Wesentliche Konfigurationsoptionen auf der Registerkarte "Delegierung":  
-  
-        -   Option "Benutzer bei Delegierungen angegebener Dienste vertrauen"  
-  
-        -   Option "Beliebiges Authentifizierungsprotokoll verwenden"  
+    > Alle Einstellungen konfigurieren Sie für das C2WTS-Dienstkonto auf der Registerkarte "Delegierung" Anforderungen entsprechend der Haupt-Dienstkonto verwendet wird. Für die **Berichts-Viewer-Webpart**, dies ist das Dienstkonto für die SharePoint-Webanwendung wird. Für **integrierten SharePoint-Modus**, dies ist das Reporting Services-Dienstkonto wird.
+    >
+    > Wenn Sie das C2WTS-Dienstkonto für die Delegierung an einen SQL-Dienst zulassen, müssen Sie z. B. auf dem Reporting Services-Dienstkonto für den integrierten SharePoint-Modus verwenden müssen.
 
-    3. Wählen Sie **Hinzufügen** zum Hinzufügen eines Dienstes, an den Sie delegieren können.
-    
-    4. Wählen Sie **Benutzer oder Computer...** *, und geben Sie das Konto, das den Dienst hostet. Angenommen, ein SQL-Server ausgeführt wird, unter einem Konto mit dem Namen *Sqlservice*, geben Sie `sqlservice`.
-    
-    5. Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen.
-    
-    6. Wählen Sie „OK“ aus, um die Dialogfelder zu verlassen.
-  
-3.  Konfigurieren von c2WTS 'AllowedCallers'  
-  
-     C2WTS erfordert, dass die Identitäten der „Aufrufer“ in der Konfigurationsdatei **c2WTShost.exe.config**explizit aufgeführt werden. c2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, e sei denn, der Dienst wurde entsprechend konfiguriert. In diesem Fall entspricht der 'Aufrufer' der WSS_WPG-Windows-Gruppe. Die Datei c2WTShost.exe.config wird im folgenden Ordner gespeichert:  
-     
-     > [!NOTE]
-     > Durch die Änderung des Dienstkontos für den C2WTS-Dienst in der SharePoint-Zentraladministration wird das Konto der Gruppe „WSS_WPG“ hinzugefügt.
-  
-     **\Programme\Windows Identity Foundation\v3.5 \c2WTShost.exe.config**  
-  
-     Im folgenden Beispiel wird die Konfigurationsdatei gezeigt:  
-  
-    ```  
-    <configuration>  
-      <windowsTokenService>  
+    * Klicken Sie mit der rechten Maustaste auf jedes Dienstkonto, und öffnen Sie das Eigenschaftendialogfeld. Klicken Sie im Dialogfeld auf die Registerkarte **Delegierung** .
+
+        Die Registerkarte "Delegierung" ist nur sichtbar, wenn das Objekt einen Service Prinicpal Name (SPN) zugewiesen wurde. C2WTS erfordert keinen SPN für das C2WTS-Dienstkonto jedoch ohne einen SPN der **Delegierung** Registerkarte nicht sichtbar sein. Eine Alternative zur Konfiguration der eingeschränkten Delegierung ist die Verwendung des Hilfsprogramms **ADSIEdit**.
+
+    * Wesentliche Konfigurationsoptionen auf der Registerkarte "Delegierung":
+
+        * Wählen Sie **Benutzer bei Delegierungen angegebener Dienste vertrauen**
+        * Wählen Sie **Beliebiges Authentifizierungsprotokoll verwenden**
+
+    * Wählen Sie **Hinzufügen** zum Hinzufügen eines Dienstes, an den Sie delegieren können.
+
+    * Wählen Sie **Benutzer oder Computer... ***, und geben Sie das Konto, das den Dienst hostet. Angenommen, ein SQL-Server ausgeführt wird, unter einem Konto mit dem Namen *Sqlservice*, geben Sie `sqlservice`. 
+
+    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen.
+
+    * Wählen Sie „OK“ aus, um die Dialogfelder zu verlassen.
+
+3. Konfigurieren von C2WTS *AllowedCallers*.
+
+    C2WTS erfordert explizit die Identitäten der 'Aufrufer' in der Konfigurationsdatei aufgelisteten **C2WTShost.exe.config**. C2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, e sei denn, der Dienst wurde entsprechend konfiguriert. In diesem Fall wird der 'Aufrufer' der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Verzeichnis gespeichert:
+
+    Durch die Änderung des Dienstkontos für den C2WTS-Dienst in der SharePoint-Zentraladministration wird das Konto der Gruppe „WSS_WPG“ hinzugefügt.
+
+    **\Programme\Windows Identity Foundation\v3.5 \c2WTShost.exe.config**
+
+    Im folgenden Beispiel wird die Konfigurationsdatei gezeigt:
+
+    ```
+    <configuration>
+      <windowsTokenService>
         <!--  
             By default no callers are allowed to use the Windows Identity Foundation Claims To NT Token Service.  
             Add the identities you wish to allow below.  
-          -->  
-        <allowedCallers>  
-          <clear/>  
-          <add value="WSS_WPG" />  
-        </allowedCallers>  
-      </windowsTokenService>  
-    </configuration>  
-    ```    
-4.  Starten Sie den Claims to Windows Token Service von SharePoint: Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf der Seite **Dienste auf dem Server verwalten** . Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Wenn Sie z.B. über einen WFE-Server und einen Anwendungsserver verfügen, auf dem der gemeinsame Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird, müssen Sie C2WTS nur auf dem Anwendungsserver starten. c2WTS wird auf dem WFE-Server nicht benötigt.
+          -->
+        <allowedCallers>
+          <clear/>
+          <add value="WSS_WPG" />
+        </allowedCallers>
+      </windowsTokenService>
+    </configuration>
+    ```
 
-## <a name="next-steps"></a>Nächste Schritte
+4. Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf die **Dienste auf dem Server verwalten** Seite. Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Z. B. Wenn Sie einen Server haben, d. h. ein WFE und einem anderen Server, der ein Anwendungsserver, den freigegebenen SQL Server Reporting Services-Dienst ausgeführt wird, verfügt, Sie nur C2WTS auf dem Anwendungsserver starten müssen. C2WTS wird nur auf einen WFE-Server erforderlich, wenn Sie den Berichts-Viewer-Webpart ausgeführt werden.
 
-[Übersicht über Claims to Windows Token Service (C2WTS)](http://msdn.microsoft.com/library/ee517278.aspx)   
-[Planen der Kerberos-Authentifizierung in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx)  
-
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

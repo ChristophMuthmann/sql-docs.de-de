@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 732e6fd574d80d58aef81a149acc54376231e6cc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5796c2d5faefdeef1a9bafe1a438b68c7461dd53
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit pymssql
@@ -54,7 +54,7 @@ Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Curso
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](https://msdn.microsoft.com/library/ms174335.aspx) -Anweisung übergibt, Parameter, die Schutz Ihrer Anwendung aus [SQL Injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) Sicherheitsrisiko, und rufen Sie den automatisch generierten [Primärschlüssel](https://msdn.microsoft.com/library/ms179610.aspx) Wert.    
+In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](/sql-docs/docs/t-sql/statements/insert-transact-sql) Anweisung sicher, übergeben von Parametern die schützen Ihre Anwendung von [SQL Injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) Wert.    
   
   
 ```python

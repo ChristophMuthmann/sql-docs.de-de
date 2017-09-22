@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 64a48967dfff1230a6e718a329f7c745bf068365
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Erstellen von Paketen in SQL Server-Datentools
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
  Unter [Erstellen eines Basispakets (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=131023)können Sie ein Video abspielen, in dem das Erstellen eines Basispakets mithilfe der Standardpaketvorlage veranschaulicht wird.  
 
 ## <a name="get-sql-server-data-tools"></a>Herunterladen von SQL Server Data Tools
-Informationen zum Installieren von SQL Server Data Tools (SSDT) finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Informationen zum Installieren von SQL Server Data Tools (SSDT) finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Erstellen eines Pakets in SQL Server Data Tools mithilfe der Paketvorlage  
   

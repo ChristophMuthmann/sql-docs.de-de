@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll**für alle Adressen sofort konfiguriert werden.  
   
- Die Änderungen werden bei einem Neustart von SQL Server wirksam. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter [Starten und Beenden des SQL Server-Browser-Dienstes](https://msdn.microsoft.com/library/hh403394.aspx).  
+ Die Änderungen werden bei einem Neustart von SQL Server wirksam. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter [Starten und Beenden des SQL Server-Browser-Dienstes](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
   
 ## <a name="static-vs-dynamic-ports"></a>Statische und Dynamische Ports  
  Die Standardinstanz von SQL Server lauscht für eingehende Verbindungen an Port 1433. Der Port kann aus Sicherheitsgründen oder wegen Anforderungen von Clientanwendungen geändert werden. Standardmäßig werden benannte Instanzen (einschließlich SQL Server Express) zur Überwachung von dynamischen Ports konfiguriert. Lassen Sie das Feld **Dynamische TCP-Ports** leer, und geben Sie eine verfügbare Portnummer in das Feld **TCP-Port** ein, um einen statischen Port zu konfigurieren. Weitere Informationen zum Öffnen von Ports in der Firewall finden Sie unter "Konfigurieren der Windows-Firewall für den SQL Server-Zugriff" in der Onlinedokumentation.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP / IP-](https://msdn.microsoft.com/library/ms191260.aspx)   
+ [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP / IP-](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
  [SQL Server-Browserdienst](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

@@ -24,11 +24,11 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "Abwärtskompatibilität | Reporting Services").  
   
- Weitere Informationen zu neuen Funktionen für [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], finden Sie unter [Neuigkeiten in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
+ Weitere Informationen zu neuen Funktionen für [! UMFASSEN[SsRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).  
 
 ##  <a name="bkmk_versionsupported"></a> Vom Upgrade unterstützte Versionen  
  Berichte, die in einer vorherigen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, können aktualisiert werden. Dazu gehören die folgenden Versionen:  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie eine RDL-Datei im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, erstellt der Berichts-Designer automatisch eine Sicherungsdatei und aktualisiert den Bericht auf den aktuellen Namespace. Dies ist die einzige Möglichkeit, wie Sie eine Berichtsdefinitionsdatei aktualisieren können.  
   
- Die von Ihnen festgelegten Bereitstellungseigenschaften können das Schema beeinflussen, in dem die Berichtsdefinitionsdatei gespeichert wird. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Die von Ihnen festgelegten Bereitstellungseigenschaften können das Schema beeinflussen, in dem die Berichtsdefinitionsdatei gespeichert wird. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
  Sie können eine RDL-Datei, die in einer früheren Version erstellten hochladen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] an der neuen Version und es wird bei der ersten Verwendung automatisch aktualisiert. Der Berichtsserver speichert die Berichtsdefinitionsdatei im ursprünglichen Format. Der Bericht wird automatisch aktualisiert, wenn er zum ersten Mal angezeigt wird. Die gespeicherte Berichtsdefinitionsdatei wird jedoch nicht verändert.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Nein** Wählen Sie **Nein** aus, wenn die CRIs im Bericht nicht konvertiert werden sollen. Diese CRIs können vom Berichtsprozessor nicht in ihrer aktuellen Version angezeigt werden. Wenn der Systemadministrator die Installation einer neuen CRI-Version von einem Softwaredrittanbieter plant, die mit dem neuen Berichtsdefinitionsformat kompatibel ist, sollten Sie **Nein**auswählen. Bis neue Versionen zur Verfügung stehen, werden die CRIs im Bericht als leere Textfelder mit einem roten X dargestellt.  
   
- In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als gespeichert  *\<Berichtsname >* `-` Backup.rdl. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
+ In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als gespeichert * \<Berichtsname >* `-` Backup.rdl. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
   
  Wenn Sie den Bericht nicht speichern, bleibt der ursprüngliche Bericht unverändert. Sie können nicht jedoch bearbeiten dieses Berichts in der SQL Server 2016-Version von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder einer berichterstellungsumgebung, die ein neueres berichterstellungsformat verwendet. Sie können weiterhin die ursprüngliche Version des Berichts durch Hochladen zu einem [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Berichtsserver über das Webportal. Weitere Informationen finden Sie unter [Webportal](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -153,4 +153,4 @@ ms.lasthandoff: 08/09/2017
 [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database (Aktualisieren der Berichtsserver-Datenbank)](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

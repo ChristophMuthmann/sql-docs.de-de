@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Abrufen von Fehlerinformationen  
  Im Bereich eines CATCH-Blocks können folgende Systemfunktionen verwendet werden, um Informationen zu dem Fehler abzurufen, der zur Ausführung des CATCH-Blocks geführt hat:  
   
--   ERROR_NUMBER() gibt die Fehlernummer zurück.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) gibt die Anzahl der Fehler zurück.  
   
--   ERROR_SEVERITY() gibt den Schweregrad zurück.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) gibt den Schweregrad zurück.  
   
--   ERROR_STATE() gibt die Fehlerzustandsnummer zurück.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) gibt die fehlerzustandsnummer zurück.  
   
--   ERROR_PROCEDURE() gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler auftrat.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, in dem der Fehler aufgetreten ist.  
   
--   ERROR_LINE() gibt die Zeilennummer in der Routine zurück, die den Fehler verursacht hat.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) gibt die Nummer der Zeile in der Routine, die den Fehler verursacht hat.  
   
--   ERROR_MESSAGE() gibt den gesamten Text der Fehlermeldung zurück. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) gibt den vollständigen Text der Fehlermeldung. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
   
  Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY…CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- Die RFRI * Funktionen funktionieren auch in einem `CATCH` -Block ein [systemintern kompilierte gespeicherte Prozedur](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Der Fehler\_ \* Funktionen funktionieren auch in einem `CATCH` -Block ein [systemintern kompilierte gespeicherte Prozedur](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Fehler, auf die sich ein TRY…CATCH-Konstrukt nicht auswirkt  
  TRY…CATCH-Konstrukte fangen folgende Bedingungen nicht auf:  
@@ -162,7 +162,7 @@ END CATCH;
   
  Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY…CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  Das Ausführen der `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur führt dazu, dass der Fehler auf einer Ebene unter dem `TRY`-Block auftritt. Der Fehler wird vom `TRY…CATCH`-Konstrukt behandelt.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Verwenden von TRY…CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Verwenden von TRY…CATCH in einer Transaktion  
  Das folgende Beispiel zeigt die Funktionsweise eines `TRY…CATCH`-Blocks innerhalb einer Transaktion. Die Anweisung innerhalb des `TRY`-Blocks generiert einen Fehler aufgrund einer Einschränkungsverletzung.  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Verwenden von TRY…CATCH mit XACT_STATE  
  Das folgende Beispiel zeigt, wie das `TRY…CATCH`-Konstrukt zur Behandlung von Fehlern verwendet wird, die innerhalb einer Transaktion auftreten. Über die `XACT_STATE`-Funktion wird bestimmt, ob für die Transaktion ein Commit oder ein Rollback ausgeführt werden soll. In diesem Beispiel hat `SET XACT_ABORT` den Wert `ON`. Dies bewirkt, dass die Transaktion nach dem Fehler aufgrund einer Einschränkungsverletzung nicht commitfähig ist.  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. Verwenden von TRY…CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

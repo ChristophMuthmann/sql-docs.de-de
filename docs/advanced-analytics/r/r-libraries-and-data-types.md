@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2661e1b32d604f4bdda75d478af9d9ea48ea2d4d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>R-Bibliotheken und R-Datentypen
@@ -80,9 +80,9 @@ Die folgende Tabelle zeigt die Änderungen der Datentypen und Werte an, wenn Dat
 
 ## <a name="data-types-not-supported-by-r"></a>Von R nicht unterstützte Datentypen
 
-Folgende Typen von Datentypkategorien, die vom [Typsystem von SQL Server](https://msdn.microsoft.com/library/ms187752.aspx) unterstützt werden, verursachen möglicherweise Probleme, wenn Sie an R-Code übergeben werden:
+Folgende Typen von Datentypkategorien, die vom [Typsystem von SQL Server](/sql-docs/docs/t-sql/data-types/data-types-transact-sql) unterstützt werden, verursachen möglicherweise Probleme, wenn Sie an R-Code übergeben werden:
 
-+ Datentypen in der **andere** Abschnitt des Themas System Typ SQL: **Cursor**, **Zeitstempel**, **Hierarchyid**,  **"uniqueidentifier"**, **Sql_variant**, **Xml**, **Tabelle**
++ Datentypen in der **andere** Abschnitt des Themas System Typ SQL: **Cursor**, **Zeitstempel**, **Hierarchyid**, ** "uniqueidentifier"**, **Sql_variant**, **Xml**, **Tabelle**
 + Alle räumlichen Typen
 + **image**
 
@@ -111,7 +111,7 @@ Im Allgemeinen ist es empfehlenswert, die  `str()` -Funktion zu verwenden, um di
 
 Wenn Sie Daten aus einer Datenbank abrufen, um diese in R-Code zu verwenden, sollte Sie in jedem Fall Spalten entfernen, die nicht in R verwendet werden können; ebenso sollten Sie Spalten entfernen, die keinen Nutzen für Ihre Analyse haben, wie z.B. GUIDs (uniqueidentifier), Zeitstempel und andere Spalten zum Überwachen, oder von ETL-Prozessen erstellte Informationen bezüglich der Datenherkunft. 
 
-Beachten Sie, dass die Leistung von R-Code durch unnötige Spalten deutlich beeinträchtigt werden kann, besonders dann, wenn Spalten mit hoher Kardinalität als Faktoren verwendet werden. Aus diesem Grund wird empfohlen, im System gespeicherte Prozeduren von SQL Server und Informationsansichten zu verwenden, um die Datentypen für eine angegebene Tabelle im Voraus abzurufen und inkompatible Spalten entweder zu löschen oder zu konvertieren. Weitere Informationen finden Sie unter [Information Schema Views in Transact-SQL (Ansichten des Informationsschemas in Transact-SQL)](https://msdn.microsoft.com/library/ms186778.aspx)
+Beachten Sie, dass die Leistung von R-Code durch unnötige Spalten deutlich beeinträchtigt werden kann, besonders dann, wenn Spalten mit hoher Kardinalität als Faktoren verwendet werden. Aus diesem Grund wird empfohlen, im System gespeicherte Prozeduren von SQL Server und Informationsansichten zu verwenden, um die Datentypen für eine angegebene Tabelle im Voraus abzurufen und inkompatible Spalten entweder zu löschen oder zu konvertieren. Weitere Informationen finden Sie unter [Information Schema Views in Transact-SQL (Ansichten des Informationsschemas in Transact-SQL)](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
 
 Falls ein bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp in R nicht unterstützt wird, Sie aber die Datenspalten im R-Skript verwenden müssen, empfehlen wir Ihnen, die Funktionen [„Cast“ und „Convert“ &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) zu verwenden, um sicherzustellen, dass die Datentypenkonvertierungen wie gewünscht ausgeführt werden, bevor Sie die Daten in Ihrem R-Skript verwenden.  
 

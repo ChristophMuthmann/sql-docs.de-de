@@ -15,11 +15,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Daten für mobile Berichte von Reporting Services
@@ -27,9 +27,9 @@ Das [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] -Datenmode
   
 Sie können Daten aus zwei Arten von Quellen importieren:   
   
-* **Lokale Excel-Dateien**: Wählen Sie ein Excel-Dokument aus und wählen Sie aus, welches Arbeitsblatt bzw. welche Arbeitsblätter Sie importieren möchten. Nach dem Import werden die Daten in der mobilen Berichtsdefinition gespeichert. Verwenden Sie den Befehl **Daten aktualisieren** rechts oben auf der [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Erfahren Sie mehr über das [Vorbereiten von Excel-Daten für mobile SSRS-Berichte](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
+* **Lokale Excel-Dateien**: Wählen Sie ein Excel-Dokument aus und wählen Sie aus, welches Arbeitsblatt bzw. welche Arbeitsblätter Sie importieren möchten. Nach dem Import werden die Daten in der mobilen Berichtsdefinition gespeichert. Verwenden Sie den Befehl **Daten aktualisieren** rechts oben auf der [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Erfahren Sie mehr über [Vorbereiten von Excel-Daten für mobile SSRS-Berichte](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]Freigegebene Datasets**: Durchsuchen Sie die Liste der veröffentlichten Datasets auf dem Server, und wählen Sie diejenigen aus, die für den mobilen Bericht hinzufügen. Auf Serverdaten basierende mobile Berichte erhalten immer die Verbindung mit den ursprünglichen Datasets und spiegeln den aktuellsten Zustand der Daten auf dem Server wider. Sehen Sie sich eine [Liste unterstützter Datenquellen](https://msdn.microsoft.com/library/ms159219.aspx)an.   
+* **[! UMFASSEN[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).   
   
   Erfahren Sie mehr über das [Abrufen von Daten aus freigegebenen Datasets im Publisher für mobile Berichte](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

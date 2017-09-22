@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
  Die Standarddimensionssicherheit ist die einfachste: Sie wählen einfach aus, welche Dimensionsattribute und Attributhierarchien in die Rolle eingeschlossen oder daraus ausgeschlossen werden. Die erweiterte Sicherheit ist komplexer und erfordert Kenntnisse im MDX-Skripting. Beiden Ansätze werden im Folgenden beschrieben.  
 
 > [!NOTE]  
->  Die folgenden Anweisungen setzen eine Clientverbindung voraus, die Abfragen in MDX ausgibt. Wenn der Client DAX verwendet, wie z.B. Power View in Power BI, ist die Dimensionssicherheit in den Abfrageergebnissen nicht ersichtlich. Weitere Informationen finden Sie unter [Grundlegendes zu Power View für mehrdimensionale Modelle](https://msdn.microsoft.com/library/jj969574.aspx) .
+>  Die folgenden Anweisungen setzen eine Clientverbindung voraus, die Abfragen in MDX ausgibt. Wenn der Client DAX verwendet, wie z.B. Power View in Power BI, ist die Dimensionssicherheit in den Abfrageergebnissen nicht ersichtlich. Weitere Informationen finden Sie unter [Grundlegendes zu Power View für mehrdimensionale Modelle](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models) .
       
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Nicht alle Measures oder Dimensionselemente können in benutzerdefinierten Zugriffsszenarien verwendet werden. Eine Verbindung schlägt fehl, wenn eine Rolle den Zugriff auf ein Standardmeasure oder -element oder auf Measures einschränkt, die Teil von Measureausdrücken sind.  

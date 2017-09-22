@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
@@ -28,7 +28,7 @@ Wide World Importers OLTP-Datenbank Installations- und konfigurationsanleitung f
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server-Evaluierung, Developer, Enterprise Edition ein.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
 
 ## <a name="download"></a>Herunterladen
 
@@ -56,7 +56,7 @@ Um eine Sicherung einer SQL Server-Instanz wiederherzustellen, können Sie Manag
 5. Wenn erforderlich, ändern Sie den Zielspeicherort für die Daten und Protokolldateien, in der **Dateien** Bereich. Beachten Sie, dass es die bewährte Methode zum Hinzufügen von Daten und Protokolldateien auf verschiedenen Laufwerken handelt.
 6. Klicken Sie auf **OK**. Hierdurch wird die Wiederherstellung der Datenbank ausgelöst. Nachdem der Vorgang abgeschlossen ist, müssen Sie die Datenbank "wideworldimporters" auf SQL Server-Instanz installiert.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
 Um eine bacpac-Datei in eine neue SQL-Datenbank importieren, können Sie Management Studio verwenden.
 
