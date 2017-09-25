@@ -187,7 +187,7 @@ Informationen zum Festlegen des Wiederherstellungsintervalls finden Sie unter [K
 > [!TIP]  
 >  Die erweiterte Setupoption „-k“ von SQL Server ermöglicht Datenbankadministratoren, das Prüfpunkt-E/A-Verhalten auf Basis des Durchsatzes des E/A-Subsystems für einige Prüfpunkttypen zu drosseln. Die Setupoption „-k“ gilt für automatische Prüfpunkte sowie für andere, nicht gedrosselte Prüfpunkte. 
  
-Automatische Prüfpunkte schneiden den ungenutzten Teil des Transaktionsprotokolls ab, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet. Das Protokoll wird jedoch nicht durch automatische Prüfpunkte abgeschnitten, wenn die Datenbank das Modell der vollständigen oder massenprotokollierten Wiederherstellung verwendet. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &amp;#40;SQL Server&amp;#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
+Automatische Prüfpunkte schneiden den ungenutzten Teil des Transaktionsprotokolls ab, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet. Das Protokoll wird jedoch nicht durch automatische Prüfpunkte abgeschnitten, wenn die Datenbank das Modell der vollständigen oder massenprotokollierten Wiederherstellung verwendet. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
 Die CHECKPOINT-Anweisung stellt jetzt ein optionales checkpoint_duration-Argument bereit, das die gewünschte Zeitdauer (in Sekunden) für die zu beendenden Prüfpunkte angibt. Weitere Informationen finden Sie unter [CHECKPOINT (Transact-SQL)](../t-sql/language-elements/checkpoint-transact-sql.md).
 
