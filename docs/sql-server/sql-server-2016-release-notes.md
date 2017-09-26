@@ -16,11 +16,11 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
@@ -28,11 +28,11 @@ ms.lasthandoff: 06/22/2017
     
  **Probieren Sie es aus:**    
    
-[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+[![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** herunter.    
     
 [![Azure Virtual Machine (klein)](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
     
-[![SSMS herunterladen](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.   
+[![SSMS herunterladen](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.   
     
  Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Datenbankmodul (GA)](#bkmk_ga_instalpatch) 
 
--   [Stretch-Datenbank (GA)](#bkmk_ga_stretch)
+-   [Stretch Database (GA)](#bkmk_ga_stretch)
 
 -   [Abfragespeicher (GA)](#bkmk_ga_query_store)
 
@@ -89,15 +89,15 @@ ms.lasthandoff: 06/22/2017
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problem mit einem bestimmten Zeichen in einem Datenbank- oder Tabellennamen
 
-**Problem und Kundenbeeinträchtigung:** Der Versuch, Stretch-Datenbank in einer Datenbank oder Tabelle zu aktivieren, resultiert in einem Fehler, wenn der Name des Objekts ein Zeichen enthält, das beim Konvertieren von Klein- zu Großschreibung als anderes Zeichen behandelt wird. Ein Beispiel für ein Zeichen, das dieses Problem auslöst, ist das Zeichen „ƒ“ (durch Drücken von ALT + 159 erstellt).
+**Problem und Kundenbeeinträchtigung:** Der Versuch, Stretch Database in einer Datenbank oder Tabelle zu aktivieren, resultiert in einem Fehler, wenn der Name des Objekts ein Zeichen enthält, das beim Konvertieren von Klein- zu Großschreibung als anderes Zeichen behandelt wird. Ein Beispiel für ein Zeichen, das dieses Problem auslöst, ist das Zeichen „ƒ“ (durch Drücken von ALT + 159 erstellt).
 
-**Lösung:** Wenn Sie die Stretch-Datenbank in einer Datenbank oder Tabelle aktivieren möchten, ist die einzige Option, das Objekt umzubenennen und das Problemzeichen zu entfernen.
+**Lösung:** Wenn Sie Stretch Database in einer Datenbank oder Tabelle aktivieren möchten, ist die einzige Option, das Objekt umzubenennen und das Problemzeichen zu entfernen.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problem mit einem Index, der das Schlüsselwort INCLUDE verwendet
 
-**Problem und Kundenbeeinträchtigung:** Der Versuch, Stretch-Datenbank in einer Tabelle zu aktivieren, die über einen Index verfügt, der das INCLUDE-Schlüsselwort verwendet, um zusätzliche Spalten in den Index einzubeziehen, resultiert in einem Fehler.
+**Problem und Kundenbeeinträchtigung:** Der Versuch, Stretch Database in einer Tabelle zu aktivieren, die über einen Index verfügt, der das INCLUDE-Schlüsselwort verwendet, um zusätzliche Spalten in den Index einzubeziehen, resultiert in einem Fehler.
 
-**Lösung:** Löschen Sie den Index, der das INCLUDE-Schlüsselwort verwendet, aktivieren Sie Stretch-Datenbank in der Tabelle, und erstellen Sie den Index neu. Wenn Sie dies tun, achten Sie darauf, die Wartungsmethoden und Richtlinien Ihrer Organisation einzuhalten, um sicherzustellen, dass für Benutzer der betreffenden Tabelle höchstens minimale Auswirkungen entstehen.
+**Lösung:** Löschen Sie den Index, der das INCLUDE-Schlüsselwort verwendet, aktivieren Sie Stretch Database in der Tabelle, und erstellen Sie den Index neu. Wenn Sie dies tun, achten Sie darauf, die Wartungsmethoden und Richtlinien Ihrer Organisation einzuhalten, um sicherzustellen, dass für Benutzer der betreffenden Tabelle höchstens minimale Auswirkungen entstehen.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 

@@ -1,42 +1,47 @@
 ---
-title: "Rangfolgeneinschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.precedenceconstraint.f1"
-helpviewer_keywords: 
-  - "Tasks [Integration Services], Rangfolgeneinschränkungen"
-  - "Ablaufsteuerung [Integration Services], Rangfolgeneinschränkungen"
-  - "Rangfolgeneinschränkungen [Integration Services]"
-  - "Einschränkungen [Integration Services]"
-  - "Ausführungsreihenfolgeoptionen [Integration Services]"
-  - "Container [Integration Services], Rangfolgeneinschränkungen"
+title: "Rangfolgeneinschränkungen | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
+helpviewer_keywords:
+- tasks [Integration Services], precedence constraints
+- control flow [Integration Services], precedence constraints
+- precedence constraints [Integration Services]
+- constraints [Integration Services]
+- sequence execution options [Integration Services]
+- containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# Rangfolgeneinschr&#228;nkungen
+# <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
   Rangfolgeneinschränkungen verknüpfen ausführbare Dateien, Container und Tasks in Paketen in einer Ablaufsteuerung und geben Bedingungen an, die bestimmen, ob ausführbare Dateien ausgeführt werden. Bei einer ausführbaren Datei kann es sich um einen For-Schleifencontainer, einen Foreach-Schleifencontainer, einen Task oder einen Ereignishandler handeln. Ereignishandler verwenden Rangfolgeneinschränkungen zum Verlinken der ausführbaren Dateien zu einer Ablaufsteuerung.  
   
  Eine Rangfolgeneinschränkung verlinkt zwei ausführbare Dateien: die ausführbare Datei der Rangfolge und die eingeschränkte ausführbare Datei. Die ausführbare Datei der Rangfolge wird vor der eingeschränkten ausführbaren Datei ausgeführt, und das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann bestimmen, ob die eingeschränkte ausführbare Datei ausgeführt wird. Im folgenden Diagramm werden zwei ausführbare Dateien dargestellt, die durch eine Rangfolgeneinschränkung verlinkt sind.  
   
- ![Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien](../../integration-services/control-flow/media/ssis-pcsimple.gif "Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien")  
+ ![Ausführbare Dateien durch eine rangfolgeneinschränkung verbundene](../../integration-services/control-flow/media/ssis-pcsimple.gif "ausführbaren Dateien mit einer rangfolgeneinschränkung verbunden")  
   
- Bei einer linearen Ablaufsteuerung, also einer Ablaufsteuerung ohne Verzweigungen, bestimmen Rangfolgeneinschränkungen alleine die Reihenfolge, in der Tasks ausgeführt werden. Falls sich eine Ablaufsteuerung verzweigt, bestimmt das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Laufzeitmodul die Ausführungsreihenfolge für die Tasks und Container, die unmittelbar auf die Verzweigung folgen. Das Laufzeitmodul bestimmt außerdem die Ausführungsreihenfolge für nicht verbundene Workflows in einer Ablaufsteuerung.  
+ Bei einer linearen Ablaufsteuerung, also einer Ablaufsteuerung ohne Verzweigungen, bestimmen Rangfolgeneinschränkungen alleine die Reihenfolge, in der Tasks ausgeführt werden. Falls sich eine Ablaufsteuerung verzweigt, bestimmt das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeitmodul die Ausführungsreihenfolge für die Tasks und Container, die unmittelbar auf die Verzweigung folgen. Das Laufzeitmodul bestimmt außerdem die Ausführungsreihenfolge für nicht verbundene Workflows in einer Ablaufsteuerung.  
   
  Die geschachtelte Containerarchitektur von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht allen Containern (mit Ausnahme des Taskhostcontainers, der nur einen einzelnen Task kapselt), andere Container mit jeweils eigener Ablaufsteuerung einzuschließen. Der For-Schleifencontainer, der Foreach-Schleifencontainer und der Sequenzcontainer können mehrere Tasks und andere Container, die wiederum mehrere Tasks und Container enthalten können, einschließen. Angenommen, ein Paket mit einem Skripttask und einem Sequenzcontainer weist eine Rangfolgeneinschränkung auf, die den Skripttask und den Sequenzcontainer verlinkt. Der Sequenzcontainer schließt drei Skripttasks ein, und die Rangfolgeneinschränkungen verlinken die drei Skripttasks zu einer Ablaufsteuerung. Im folgenden Diagramm werden die Rangfolgeneinschränkungen in einem Paket mit zwei Schachtelungsebenen dargestellt.  
   
- ![Rangfolgeneinschränkungen in einem Paket](../../integration-services/control-flow/media/mw-dts-12.gif "Rangfolgeneinschränkungen in einem Paket")  
+ ![Rangfolgeneinschränkungen in einem Paket](../../integration-services/control-flow/media/mw-dts-12.gif "rangfolgeneinschränkungen in einem Paket")  
   
  Das Paket befindet sich ganz oben in der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Containerhierarchie. Deshalb können mehrere Pakete nicht durch Rangfolgeneinschränkungen verlinkt werden. Sie können jedoch einem Paket einen Task Paket ausführen hinzufügen und indirekt ein anderes Paket mit der Ablaufsteuerung verlinken.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 50
   
 -   Geben Sie an, ob die Rangfolgeneinschränkung einzeln oder zusammen mit anderen Einschränkungen, die auf die eingeschränkte ausführbare Datei zutreffen, ausgewertet wird.  
   
-## Auswertungsvorgänge  
+## <a name="evaluation-operations"></a>Auswertungsvorgänge  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Auswertungsvorgänge bereit:  
   
 -   Eine Einschränkung, die nur mithilfe des Ausführungsergebnisses der ausführbaren Datei der Rangfolge bestimmt, ob die eingeschränkte ausführbare Datei ausgeführt wird. Das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann Beendigung, Erfolg oder Fehler sein. Dies ist der Standardvorgang.  
@@ -65,7 +70,7 @@ caps.handback.revision: 50
   
  Der Ausdruck muss ein gültiger [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausdruck sein, der Funktionen, Operatoren sowie Systemvariablen und benutzerdefinierte Variablen einschließen kann. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) und [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Ausführungsergebnisse  
+## <a name="execution-results"></a>Ausführungsergebnisse  
  Die Rangfolgeneinschränkung kann die folgenden Ausführungsergebnisse separat oder in Kombination mit einem Ausdruck verwenden.  
   
 -   Für die Beendigung muss die ausführbare Datei der Rangfolge ungeachtet des Ergebnisses abgeschlossen worden sein, damit die eingeschränkte ausführbare Datei ausgeführt wird.  
@@ -77,29 +82,190 @@ caps.handback.revision: 50
 > [!NOTE]  
 >  Nur Rangfolgeneinschränkungen, die Elemente derselben **Precedence Constraint** -Auflistung sind, können mit einer logischen AND-Bedingung gruppiert werden. Beispielsweise können Rangfolgeneinschränkungen aus zwei Foreach-Schleifencontainern nicht kombiniert werden.  
   
-## Konfiguration der Rangfolgeneinschränkung  
- Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Legen Sie die Eigenschaften einer rangfolgeneinschränkung mit der Rangfolgeneinschränkungs-Editor  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer festlegen können, finden Sie unter [Rangfolgeneinschränkungs-Editor](../Topic/Precedence%20Constraint%20Editor.md).  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
- Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
+2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-## Verwandte Aufgaben  
- Klicken Sie auf eines der folgenden Themen, um nähere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
--   [Festlegen der Eigenschaften von Rangfolgeneinschränkungen](../Topic/Set%20the%20Properties%20of%20a%20Precedence%20Constraint.md)  
+4.  Doppelklicken Sie auf die Rangfolgeneinschränkung.  
   
--   [Festlegen des Werts einer Rangfolgeneinschränkung mithilfe des Kontextmenüs](../Topic/Set%20the%20Value%20of%20a%20Precedence%20Constraint%20by%20Using%20the%20Shortcut%20Menu.md)  
+     Das Dialogfeld **Rangfolgeneinschränkungs-Editor** wird geöffnet.  
   
--   [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+5.  Wählen Sie in der Dropdownliste **Auswertungsvorgang** einen Auswertungsvorgang aus.  
   
-     Dieses Thema enthält Informationen dazu, wie Sie das Standardverhalten für Rangfolgeneinschränkungen festlegen und ausführbare Dateien mithilfe der Standardrangfolgeneinschränkungen verbinden.  
+6.  Wählen Sie in der Dropdownliste **Wert** das Ausführungsergebnis der ausführbaren Datei der Rangfolge aus.  
   
-## Verwandte Inhalte  
- Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+7.  Wenn der Auswertungsvorgang einen Ausdruck verwendet, geben Sie in das Feld **Ausdruck** einen Ausdruck ein, und klicken Sie auf **Testen** , um den Ausdruck auszuwerten.  
   
-## Siehe auch  
- [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](../Topic/Add%20Expressions%20to%20Precedence%20Constraints.md)   
- [Mehrere Rangfolgeneinschränkungen](../Topic/Multiple%20Precedence%20Constraints.md)  
+    > [!NOTE]  
+    >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
+8.  Falls mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **Logisches AND** aus, um anzugeben, dass die Ausführungsergebnisse aller vorherigen ausführbaren Dateien zu **true**ausgewertet werden müssen. Wählen Sie **Logisches OR** aus, um anzugeben, dass nur ein Ausführungsergebnis zu **true**ausgewertet werden muss.  
   
+9. Klicken Sie auf **OK** , um das Dialogfeld **Rangfolgeneinschränkungs-Editor**zu schließen.  
+  
+10. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
+
+## <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
+Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
+  
+### <a name="options"></a>enthalten  
+ **Auswertungsvorgang**  
+ Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
+  
+ **Wert**  
+ Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
+  
+> [!NOTE]  
+>  Die Rangfolgeneinschränkungslinie wird bei **Erfolg**grün, bei einem **Fehler**hervorgehoben und bei **Beendigung**blau dargestellt.  
+  
+ **Ausdruck**  
+ Wenn Sie den Vorgang **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, geben Sie einen Ausdruck ein, oder starten Sie den Ausdrucks-Generator, um einen Ausdruck zu erstellen. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
+  
+ **Test**  
+ Überprüfen Sie den Ausdruck.  
+  
+ **Logisches AND**  
+ Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Sämtliche Einschränkungen müssen mit **True**ausgewertet werden.  
+  
+> [!NOTE]  
+>  Dieser Typ der Rangfolgeneinschränkung wird als durchgehende grüne, hervorgehobene oder blaue Linie dargestellt.  
+  
+ **Logisches OR**  
+ Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Mindestens eine Einschränkung muss mit **True**ausgewertet werden.  
+  
+> [!NOTE]  
+>  Dieser Typ der Rangfolgeneinschränkung wird als gepunktete grüne, hervorgehobene oder blaue Linie dargestellt.  
+  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>Festlegen der Eigenschaften von rangfolgeneinschränkungen im Fenster "Eigenschaften"  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie ändern möchten.  
+  
+2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** . Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf Rangfolgeneinschränkung, und klicken Sie auf **Eigenschaften**. Ändern Sie im Fenster Eigenschaften die Eigenschaftswerte.  
+  
+4.  Legen Sie im Fenster **Eigenschaften** die folgenden Lese-/Schreibeigenschaften der Rangfolgeneinschränkung fest:  
+  
+    |Lese/Schreibeigenschaft|Konfigurationsaktion|  
+    |--------------------------|--------------------------|  
+    |Description|Bereitstellen einer Beschreibung.|  
+    |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die Vorgänge **Expression**, **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
+    |Ausdruck|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
+    |LogicalAnd|Legen Sie **LogicalAnd** fest, um anzugeben, ob die Rangfolgeneinschränkung zusammen mit anderen Rangfolgeneinschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verlinkt sind.|  
+    |Name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
+    |ShowAnnotation|Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** aus, um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **ConstraintName** , um automatisch den Wert mithilfe der Name-Eigenschaft anzumerken, **ConstraintDescription** , um automatisch den Wert mithilfe der Description-Eigenschaft anzumerken, und **ConstraintOptions** , um automatisch den Wert mithilfe der Eigenschaften Value und Expression anzumerken.|  
+    |Wert|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
+  
+5.  Schließen Sie das Fenster Eigenschaften.  
+  
+6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
+
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Legen Sie den Wert einer rangfolgeneinschränkung mit dem Kontextmenü  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+  
+2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
+  
+4.  Klicken Sie auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf die Rangfolgeneinschränkung, und klicken Sie dann auf **Erfolg**, **Fehler**oder **Beendigung**.  
+  
+5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
+
+## <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
+ Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf **Success**, **Failure**oder **Completion**festlegen. Für**Success** muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für **Failure** muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. **Completion** zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+  
+ Der Ausdruck muss zu **Wahr** oder **Falsch** ausgewertet werden, und er muss ein gültiger [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruck sein. Für diesen Ausdruck sind Literale, Systemvariablen und benutzerdefinierte Variablen sowie die Funktionen und Operatoren zulässig, die von der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausdrucksgrammatik bereitgestellt werden. Beispielsweise verwendet der Ausdruck `@Count == SQRT(144) + 10` die **Count**-Variable, die SQRT-Funktion und die Operatoren „equal“ (==) und „add“ (+) . Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+  
+ In der folgenden Abbildung sind Task A und Task B durch eine Rangfolgeneinschränkung miteinander verlinkt, die ein Ausführungsergebnis und einen Ausdruck verwendet. Der Einschränkungswert ist auf **Success** festgelegt, und der Ausdruck lautet  `@X >== @Z`. Task B, der eingeschränkte Task, wird nur ausgeführt, wenn Task A erfolgreich abgeschlossen wird und der Wert der **X** -Variablen größer oder gleich dem Wert der **Z**-Variablen ist.  
+  
+ ![Rangfolgeneinschränkung zwischen zwei Tasks](../../integration-services/control-flow/media/mw-dts-03.gif "rangfolgeneinschränkung zwischen zwei Tasks")  
+  
+ Ausführbare Dateien können auch mithilfe mehrerer Rangfolgeneinschränkungen miteinander verlinkt werden, die unterschiedliche Ausdrücke enthalten. Beispielsweise sind in der folgenden Abbildung Task B und Task C mit Task A durch Rangfolgeneinschränkungen verlinkt, die Ausführungsergebnisse und Ausdrücke verwenden. Beide Einschränkungswerte sind auf **Success**festgelegt. festgelegt. Eine Rangfolgeneinschränkung enthält den Ausdruck `@X >== @Z`, und die andere Rangfolgeneinschränkung den Ausdruck `@X < @Z`. In Abhängigkeit von den Werten der **X** -Variablen und der **Z**-Variablen wird Task C oder Task B ausgeführt.  
+  
+ ![Ausdrücke für rangfolgeneinschränkungen](../../integration-services/control-flow/media/mw-dts-04.gif "Ausdrücke für rangfolgeneinschränkungen")  
+  
+ Mit dem **Rangfolgeneinschränkungs-Editor** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer und im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie einen Ausdruck hinzufügen oder ändern. Das Eigenschaftenfenster ermöglicht jedoch keine Überprüfung der Ausdruckssyntax.  
+  
+ Wenn eine Rangfolgeneinschränkung einen Ausdruck einschließt, wird auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** neben der Rangfolgeneinschränkung ein Symbol angezeigt, und die QuickInfo auf dem Symbol zeigt den Ausdruck an.  
+
+### <a name="add-an-expression-to-a-precedence-constraint"></a>Fügen Sie einer rangfolgeneinschränkung einen Ausdruck  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+  
+2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
+  
+4.  Doppelklicken Sie auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf die Rangfolgeneinschränkung. Das Dialogfeld **Rangfolgeneinschränkungs-Editor** wird geöffnet.  
+  
+5.  Wählen Sie **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung** in der Liste **Auswertungsvorgang** aus.  
+  
+6.  Geben Sie in das Textfeld **Ausdruck** einen Ausdruck ein, oder starten Sie den Ausdrucks-Generator, um einen Ausdruck zu erstellen.  
+  
+7.  Klicken Sie auf **Testen**, um die Ausdruckssyntax zu überprüfen.  
+  
+8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
+ 
+### <a name="combine-execution-values-and-expressions"></a>Kombinieren von ausführungswerten und Ausdrücken  
+ In der folgenden Tabelle werden die Auswirkung durch das Kombinieren einer Ausführungswerteinschränkung und eines Ausdrucks in einer Rangfolgeneinschränkung beschrieben.  
+  
+|Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
+|--------------------------|-----------------------------|-----------------------------|---------------------------------|  
+|Einschränkung|Wahr|–|Wahr|  
+|Einschränkung|Falsch|–|Falsch|  
+|expression|–|Wahr|Wahr|  
+|expression|–|Falsch|Falsch|  
+|Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
+|Einschränkung und Ausdruck|Wahr|Falsch|Falsch|  
+|Einschränkung und Ausdruck|Falsch|Wahr|Falsch|  
+|Einschränkung und Ausdruck|Falsch|Falsch|Falsch|  
+|Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
+|Einschränkung oder Ausdruck|Wahr|Falsch|Wahr|  
+|Einschränkung oder Ausdruck|Falsch|Wahr|Wahr|  
+|Einschränkung oder Ausdruck|Falsch|Falsch|False|  
+
+
+## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Komplexen Einschränkung Szenarien mit mehreren rangfolgeneinschränkungen 
+Eine Rangfolgeneinschränkung verbindet zwei ausführbare Dateien: zwei Tasks, zwei Container oder einen Task und einen Container. Sie werden als ausführbare Datei der Rangfolge und als eingeschränkte ausführbare Datei bezeichnet. Eine eingeschränkte ausführbare Datei kann mehrere Rangfolgeneinschränkungen haben. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+  
+ Wenn Sie komplexe Einschränkungsszenarien durch Gruppieren von Einschränkungen zusammenfassen, können Sie eine komplexe Ablaufsteuerung in Paketen implementieren. Beispielsweise ist in der folgenden Abbildung der Task D mit dem Task A durch eine **Success** -Einschränkung verlinkt, der Task D ist mit dem Task B durch eine **Failure** -Einschränkung verlinkt, und der Task D ist mit dem Task C durch eine **Success** -Einschränkung verlinkt. Die Rangfolgeneinschränkungen zwischen Task D und Task A, zwischen Task D und Task B sowie zwischen Task D und Task C nehmen an einer logischen *AND* -Beziehung teil. Damit Task D ausgeführt wird, muss Task A erfolgreich ausgeführt werden, bei Task B muss ein Fehler auftreten, und Task C muss erfolgreich ausgeführt werden.  
+  
+ ![Aufgaben, die durch rangfolgeneinschränkungen verknüpfte](../../integration-services/control-flow/media/precedenceconstraints.gif "Aufgaben durch rangfolgeneinschränkungen verknüpfte")  
+  
+### <a name="logicaland-property"></a>LogicalAnd-Eigenschaft  
+ Falls ein Task oder ein Container mehrere Einschränkungen aufweist, gibt die **LogicalAnd** -Eigenschaft an, ob eine Rangfolgeneinschränkung einzeln oder zusammen mit anderen Einschränkungen ausgewertet wird.  
+  
+ Sie können die **LogicalAnd**-Eigenschaft mithilfe des **Rangfolgeneinschränkungs-Editors** im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer oder im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] festlegen.  
+
+## <a name="set-the-default-value-for-precedence-constraints"></a>Der Standardwert für rangfolgeneinschränkungen festlegen  
+Wenn Sie den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zum ersten Mal verwenden, lautet der Standardwert einer Rangfolgeneinschränkung **Erfolg**. Führen Sie die folgenden Schritte aus, um für den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer einen anderen Standardwert für Rangfolgeneinschränkungen zu konfigurieren.
+  
+1.  Öffnen Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Klicken Sie im Menü **Extras** auf **Optionen**.  
+  
+3.  Erweitern Sie im Dialogfeld **Optionen** den Ordner **Business Intelligence-Designer** , und erweitern Sie dann **Integration Services-Designer**.  
+  
+4.  Klicken Sie auf **Automatische Ablaufsteuerungsverbindung** , und aktivieren Sie das Kontrollkästchen **Neue Form standardmäßig mit der ausgewählten Form verbinden**.  
+  
+5.  Wählen Sie in der Dropdownliste **Failure-Einschränkung für die neue Form verwenden** oder **Completion-Einschränkung für die neue Form verwenden**aus.  
+  
+6.  Klicken Sie auf **OK**.  
+  
+## <a name="create-a-default-precedence-constraint"></a>Erstellen Sie eine standardrangfolgeneinschränkung  
+  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+  
+2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
+  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
+  
+4.  Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Task oder Container, und ziehen Sie dessen Konnektor auf die ausführbare Datei, auf die Sie die Rangfolgeneinschränkung anwenden möchten.  
+  
+5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
+

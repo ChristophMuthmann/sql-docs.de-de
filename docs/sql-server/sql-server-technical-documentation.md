@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0412057a8d3e0849ddaeecfeb199e00b46a96d7b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
@@ -50,7 +50,7 @@ Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Se
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 herunterladen](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
 - [Starten eines virtuellen Computers, auf dem SQL Server 2016 bereits installiert ist](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [ SQL Server Management Studio (SSMS) herunterladen](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Download aus dem Evaluierungscenter](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [SQL Server Management Studio (SSMS) herunterladen](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [ SQL Server Data Tools (SSDT) herunterladen](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server-Technologien    

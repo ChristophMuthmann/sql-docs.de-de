@@ -1,44 +1,52 @@
 ---
-title: "Azure HDInsight Pig-Task | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/28/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afppigtask.f1"
-  - "sql14.dts.designer.afppigtask.f1"
+title: Azure HDInsight Pig-Task | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/28/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afppigtask.f1
+- sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9874b119b634966b146f8fa9d22c016bcd91617b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# Azure HDInsight Pig-Task
-  Verwenden Sie den **Azure HDInsight Pig-Task** zum Ausführen eines Pig-Skripts auf einem Azure HDInsight-Cluster. 
-    
-Um einen **Azure HDInsight-Pig-Task** hinzuzufügen, legen Sie ihn mittels Drag & Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten**, um das folgende Dialogfeld **Azure HDInsight-Pig-Task-Editor** anzuzeigen.  
+# <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig-Task
+Verwenden Sie den **Azure HDInsight Pig-Task** zum Ausführen eines Pig-Skripts auf einem Azure HDInsight-Cluster.
+     
+Um einen **Azure HDInsight-Pig-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Pig-Task-Editor** anzuzeigen.  
   
- Der **Azure HDInsight-Pig-Task** ist eine Komponente des SQL Server Integration Services (SSIS) Feature Packs für Azure für SQL Server 2016. Laden Sie das Feature Pack [hier](http://go.microsoft.com/fwlink/?LinkID=626967) herunter.  
+Die **Azure HDInsight Pig-Task** ist eine Komponente von der [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
-1.  Wählen Sie für das Feld **AzureSubscriptionConnection** einen vorhandenen Azure-Abonnementverbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure-Abonnement verweist, in dem der HDInsight-Cluster gehostet wird.  
+ Die folgende Liste beschreibt Felder in diesem Dialogfeld.  
   
-2.  Geben Sie im Feld **HDInsightClusterName** den Namen des HDInsight-Clusters ein, auf dem Sie das Pig-Skript ausführen möchten.  
+1.  Für die **HDInsightConnection** Feld, wählen Sie einen vorhandenen Azure HDInsight-Verbindungs-Manager aus, oder erstellen Sie ein neues eine, die auf den Azure HDInsight-Cluster verweist verwendet, um das Skript auszuführen.
   
-3.  Klicken Sie im Feld **LocalLogFolder** auf **... (Auslassungszeichen)**, und wählen Sie den Ordner aus, in den die Pig-Verarbeitungsprotokolle aus dem HDInsight-Cluster heruntergeladen werden soll.  
+2.  Für die **AzureStorageConnection** Feld, wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie ein neues Azure-Speicherkonto bezieht sich mit dem Cluster verbundenen. Dies ist nur erforderlich, wenn die Ausgabe und Fehler protokolliert das Skript-Ausführung heruntergeladen werden soll.
+ 
+3.  Für die **BlobContainer** Feld, mit dem Cluster verbundenen speichercontainername angeben. Dies ist nur erforderlich, wenn die Ausgabe und Fehler protokolliert das Skript-Ausführung heruntergeladen werden soll.
   
-4.  Sie haben zwei Möglichkeiten, das Pig-Skript anzugeben:  
+4.  Für die **LocalLogFolder** -Feld verwendet wird, geben Sie den Ordner, auf die Ausgabe und Fehler protokolliert das Skript die Ausführung auf heruntergeladen werden. Dies ist nur erforderlich, wenn die Ausgabe und Fehler protokolliert das Skript-Ausführung heruntergeladen werden soll.   
   
-    1.  **Inlineskript**: Klicken Sie neben dem Feld **Skript** auf **... (Auslassungszeichen)**, und geben Sie im Dialogfeld **Skript eingeben** das Inlineskript ein.  
+5.  Es gibt zwei Möglichkeiten zum Angeben der Pig-Skript ausführen:
   
-    2.  **Skriptdatei**: Laden Sie die Skriptdatei in einen Blobspeicherort hoch, und geben Sie **BlobName** an. Befindet sich das Blob nicht im Standardspeicher oder Container des HDInsight-Clusters, müssen **ExternalStorageAccountName** und **ExternalBlobContainer** angegeben werden. Stellen Sie bei einem externen Blob sicher, dass es als öffentlich zugänglich konfiguriert ist.  
+    1.  **Inline-Skript**: Geben Sie die **Skript** Feld durch Eingabe in-Line-das Skript in die **Skriptnamen eingeben** (Dialogfeld).
   
-     Wenn Skriptdatei und Inline-Skript angegeben sind, wird die Skriptdatei verwendet und das Inline-Skript ignoriert.  
+    2.  **Skriptdatei**: die Skriptdatei in Azure Blob-Speicher hochladen, und geben Sie die **"blobname"** Feld. Wenn das Blob nicht im standardmäßigen Speicherkonto oder Container gehört, mit dem HDInsight-Cluster ist die **ExternalStorageAccountName** und **ExternalBlobContainer** Felder müssen angegeben werden. Stellen Sie für ein externes Blob sicher, dass es konfiguriert ist als öffentlich zugegriffen werden kann.  
   
-  
+     Wenn beide angegeben sind, Skriptdatei verwendet werden, und das Inline-Skript ignoriert werden.
+

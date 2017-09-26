@@ -1,32 +1,37 @@
 ---
-title: "Fehler- und Meldungsreferenz von Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Fehlernummern [Integration Services]"
-  - "hresults [Integration Services]"
-  - "Fehler [Integration Services], Liste"
+title: Integration Services Fehler- und Meldungsreferenz | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# Fehler- und Meldungsreferenz von Integration Services
+# <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
   
  Diese Liste kann nützlich sein, wenn ein Fehlercode ohne zugehörige Beschreibung angezeigt wird. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
 > [!IMPORTANT]  
->  Viele Fehlermeldungen, die bei der Arbeit mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auftreten können, stammen von anderen Komponenten. In diesem Thema finden Sie alle von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Komponenten ausgelösten Fehler. Wenn der bei Ihnen aufgetretene Fehler nicht in der Liste enthalten ist, wurde er von einer Komponente außerhalb von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ausgelöst. Zu diesen Komponenten zählen OLE DB-Anbieter, andere Datenbankkomponenten wie die [!INCLUDE[ssDE](../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oder andere Dienste bzw. Komponenten wie das Dateisystem, der SMTP-Server, Message Queueing (auch als MSMQ bezeichnet) usw. Informationen zu diesen externen Fehlermeldungen finden Sie in der Dokumentation der entsprechenden Komponenten.  
+>  Viele Fehlermeldungen, die bei der Arbeit mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auftreten können, stammen von anderen Komponenten. In diesem Thema finden Sie alle von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponenten ausgelösten Fehler. Wenn der bei Ihnen aufgetretene Fehler nicht in der Liste enthalten ist, wurde er von einer Komponente außerhalb von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]ausgelöst. Zu diesen Komponenten zählen OLE DB-Anbieter, andere Datenbankkomponenten wie die [!INCLUDE[ssDE](../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oder andere Dienste bzw. Komponenten wie das Dateisystem, der SMTP-Server, Message Queueing (auch als MSMQ bezeichnet) usw. Informationen zu diesen externen Fehlermeldungen finden Sie in der Dokumentation der entsprechenden Komponenten.  
   
  Diese Liste enthält die folgenden Meldungsgruppen:  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 44
 -   [Fehlermeldungen der Datenflusskomponenten (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> Fehlermeldungen  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit **DTS_E_**.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_E_**.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -52,7 +57,7 @@ caps.handback.revision: 44
 |0x8020838C|-2145352820|DTS_E_XMLSRCSCHEMACOLUMNNOTINEXTERNALMETADATA|Die Spalte %1 in der Tabelle %2 des XML-Schemas weist keine Zuordnung in den externen Metadatenspalten auf.|  
 |0xC0000032|-1073741774|DTS_E_NOTINITIALIZED|Ein internes Objekt oder eine interne Variable wurde nicht initialisiert. Dies ist ein interner Produktfehler.  Dieser Fehler wird zurückgegeben, wenn für eine Variable ein gültiger Wert fehlt.|  
 |0xC0000033|-1073741773|DTS_E_EXPIRED|Der Evaluierungszeitraum für Integration Services ist abgelaufen.|  
-|0xC0000034|-1073741772|DTS_E_NEGATIVEVALUESNOTALLOWED|Dieser Eigenschaft kann kein negativer Wert zugewiesen werden. Dieser Fehler tritt auf, wenn einer Eigenschaft, für die nur positive Werte zulässig sind, ein negativer Wert zugewiesen wird. Dies gilt z. B. für die COUNT-Eigenschaft.|  
+|0xC0000034|-1073741772|DTS_E_NEGATIVEVALUESNOTALLOWED|Dieser Eigenschaft kann kein negativer Wert zugewiesen werden. Dieser Fehler tritt auf, wenn einer Eigenschaft, für die nur positive Werte zulässig sind, ein negativer Wert zugewiesen wird. Dies gilt z. B. für die COUNT-Eigenschaft.|  
 |0xC0000035|-1073741771|DTS_E_NEGATIVEINDEXNOTALLOWED|Indizes dürfen nicht negativ sein. Dieser Fehler tritt auf, wenn ein negativer Wert als Index für eine Auflistung verwendet wird.|  
 |0xC00060AB|-1073717077|DTS_E_INVALIDSSISSERVERNAME|Ungültiger Servername "%1". Der SSIS-Dienst unterstützt nicht mehrere Instanzen. Verwenden Sie nur den Servernamen anstelle von "Servername\Instanz".|  
 |0xC0008445|-1073707963|DTS_E_SCRIPTMIGRATIONFAILED64BIT|Die Migration für VSA-Skripts kann aufgrund fehlender Designer-Unterstützung von Visual Tools for Applications nicht auf 64-Bit-Plattformen ausgeführt werden. Führen Sie die Migration unter WOW64 für 64-Bit-Plattformen aus.|  
@@ -93,7 +98,7 @@ caps.handback.revision: 44
 |0xC0010204|-1073675772|DTS_E_SETCACHEFORREADFAILED|Fehler beim Vorbereiten des Caches zum Bereitstellen von Daten.|  
 |0xC0010205|-1073675771|DTS_E_READNOTFILLEDCACHE|%1 schreibt in den Cache. Dieser kann von %2 nicht gelesen werden.|  
 |0xC0010206|-1073675770|DTS_E_WRITEWHILECACHEINUSE|Der Cache wird von %1 gelesen. %2 kann nicht in den Cache schreiben.|  
-|0xC0011001|-1073672191|DTS_E_CANTLOADFROMNODE|Das Laufzeitobjekt kann nicht aus dem angegebenen XML-Knoten geladen werden.  Dieser Fehler tritt auf, wenn ein Paket oder ein anderes Objekt aus einem XML-Knoten geladen wird, der nicht den richtigen Typ aufweist, z. B. ein Knoten, der kein SSIS-XML-Knoten ist.|  
+|0xC0011001|-1073672191|DTS_E_CANTLOADFROMNODE|Das Laufzeitobjekt kann nicht aus dem angegebenen XML-Knoten geladen werden.  Dieser Fehler tritt auf, wenn ein Paket oder ein anderes Objekt aus einem XML-Knoten geladen wird, der nicht den richtigen Typ aufweist, z. B. ein Knoten, der kein SSIS-XML-Knoten ist.|  
 |0xC0011002|-1073672190|DTS_E_OPENPACKAGEFILE|Fehler beim Öffnen der Paketdatei „%1“ aufgrund des Fehlers 0x%2!8.8X! „%3“.  Dieser Fehler tritt auf, wenn ein Paket geladen wird und die Datei im XML-Dokument nicht ordnungsgemäß geöffnet oder geladen werden kann. Dies ist darauf zurückzuführen, dass beim Aufrufen von LoadPackage ein falscher Dateiname angegeben oder für die XML-Datei ein falsches Format angegeben wurde.|  
 |0xC0011003|-1073672189|DTS_E_LOADPACKAGEXML|Fehler beim Laden von XML aufgrund des Fehlers 0x%1!8.8X! „%2“. Dieser Fehler tritt auf, wenn ein Paket geladen wird und die Datei im XML-Dokument nicht ordnungsgemäß geöffnet oder geladen werden kann.  Dies ist darauf zurückzuführen, dass für die LoadPackage-Methode ein falscher Dateiname angegeben oder für die XML-Datei ein falsches Format angegeben wurde.|  
 |0xC0011004|-1073672188|DTS_E_LOADPACKAGEXMLFILE|Fehler beim Laden von XML aus der Paketdatei „%1“ aufgrund des Fehlers 0x%2!8.8X! „%3“.  Dieser Fehler tritt auf, wenn ein Paket geladen wird und die Datei in einem XML-Dokument nicht ordnungsgemäß geöffnet oder geladen werden kann. Dies ist darauf zurückzuführen, dass für die LoadPackage-Methode ein falscher Dateiname angegeben oder für die XML-Datei ein falsches Format angegeben wurde.|  
@@ -107,7 +112,7 @@ caps.handback.revision: 44
 |0xC001100F|-1073672177|DTS_E_SAVEPACKAGEFILE|Fehler beim Speichern der Paketdatei „%1“: 0x%2!8.8X! „%3“.|  
 |0xC001200D|-1073668083|DTS_E_IDTSNAMENOTSUPPORTED|Das Objekt muss IDTSName100 erben. Dies ist nicht der Fall.|  
 |0xC0012018|-1073668072|DTS_E_CONFIGFORMATINVALID_PACKAGEDELIMITER|Der Konfigurationseintrag "%1" weist ein falsches Format auf, weil er nicht mit dem Pakettrennzeichen beginnt. Das Trennzeichen "\package" fehlt.|  
-|0xC0012019|-1073668071|DTS_E_CONFIGFORMATINVALID|Der Konfigurationseintrag "%1" weist ein falsches Format auf. Dies kann auf ein fehlendes Trennzeichen oder Formatierungsfehler, z. B ein ungültiges Arraytrennzeichen, zurückzuführen sein.|  
+|0xC0012019|-1073668071|DTS_E_CONFIGFORMATINVALID|Der Konfigurationseintrag "%1" weist ein falsches Format auf. Dies kann auf ein fehlendes Trennzeichen oder Formatierungsfehler, z. B ein ungültiges Arraytrennzeichen, zurückzuführen sein.|  
 |0xC001201B|-1073668069|DTS_E_CONFIGFILEFAILEDEXPORT|Fehler beim Exportieren der Konfigurationsdatei.|  
 |0xC0012021|-1073668063|DTS_E_PROPERTIESCOLLECTIONREADONLY|Die Properties-Auflistung kann nicht geändert werden.|  
 |0xC0012022|-1073668062|DTS_E_DTRXMLSAVEFAILURE|Die Konfigurationsdatei kann nicht gespeichert werden. Möglicherweise ist die Datei schreibgeschützt.|  
@@ -137,7 +142,7 @@ caps.handback.revision: 44
 |0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|Fehler beim SSIS-Protokollierungsanbieter "%1" (Fehlercode: 0x%2!8.8X!) (%3).  Dieser Fehler weist darauf hin, dass dieser Protokollierungsfehler auf den angegebenen Protokollanbieter zurückzuführen ist.|  
 |0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|Fehler bei der SaveToSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X! (%2) wurde zurückgegeben.  Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
 |0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|Fehler bei der LoadFromSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X!) (%2) wurde zurückgegeben.  Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
-|0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|Fehler bei der RemoveFromSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X!) (%2) Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
+|0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|Fehler bei der RemoveFromSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X!) (%2) Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
 |0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|Fehler bei der ExistsOnSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X!) (%2) wurde zurückgegeben. Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
 |0xC0014015|-1073659883|DTS_E_CONNECTIONSTRING|OLE DB konnte mit der eingegebenen Verbindungszeichenfolge keine Datenbankverbindung herstellen.|  
 |0xC0014016|-1073659882|DTS_E_FROMEXECISNOTCHILD|Beim Hinzufügen einer Rangfolgeneinschränkung wurde eine ausführbare From-Datei angegeben, die kein untergeordnetes Element dieses Containers ist.|  
@@ -149,7 +154,7 @@ caps.handback.revision: 44
 |0xC001401C|-1073659876|DTS_E_SQLPERSISTENCEVERSION|Zum Speichern oder Ändern von Paketen in SQL Server müssen SSIS Runtime und die Datenbank die gleiche Version aufweisen. Das Speichern von Paketen in früheren Versionen wird nicht unterstützt.|  
 |0xC001401D|-1073659875|DTS_E_CONNECTIONVALIDATIONFAILED|Fehler beim Überprüfen der "%1"-Verbindung.|  
 |0xC001401E|-1073659874|DTS_E_INVALIDFILENAMEINCONNECTION|Der in der Verbindung angegebene Dateiname "%1" war ungültig.|  
-|0xC001401F|-1073659873|DTS_E_MULTIPLEFILESONRETAINEDCONNECTION|In einer Verbindung können nicht mehrere Dateinamen angegeben werden, wenn die Retain-Eigenschaft TRUE ist. In der Verbindungszeichenfolge wurden senkrechte Striche gefunden, d. h., es sind mehrere Dateinamen angegeben, und außerdem ist die Retain-Eigenschaft TRUE.|  
+|0xC001401F|-1073659873|DTS_E_MULTIPLEFILESONRETAINEDCONNECTION|In einer Verbindung können nicht mehrere Dateinamen angegeben werden, wenn die Retain-Eigenschaft TRUE ist. In der Verbindungszeichenfolge wurden senkrechte Striche gefunden, d. h., es sind mehrere Dateinamen angegeben, und außerdem ist die Retain-Eigenschaft TRUE.|  
 |0xC0014020|-1073659872|DTS_E_ODBCERROR|Ein ODBC-Fehler % 1!d! ist aufgetreten.|  
 |0xC0014021|-1073659871|DTS_E_PRECEDENCECONSTRAINT|Fehler in der Rangfolgeneinschränkung zwischen "%1" und "%2".|  
 |0xC0014022|-1073659870|DTS_E_FAILEDPOPNATIVEFEE|Fehler beim Auffüllen der ForEachEnumeratorInfos-Auflistung mit systemeigenen ForEachEnumerators-Elementen (Fehlercode: %1).|  
@@ -183,7 +188,7 @@ caps.handback.revision: 44
 |0xC001403E|-1073659842|DTS_E_UNKNOWNLOGPROVIDERTYPENOSUBS|Der Protokollanbietertyp wird nicht als gültiger Protokollanbietertyp erkannt. Dieser Fehler tritt beim Erstellen eines Protokollanbieters für einen unbekannten Protokollanbietertyp auf. Überprüfen Sie, ob Sie den Namen des Protokollanbietertyps richtig eingegeben haben.|  
 |0xC001403F|-1073659841|DTS_E_UNKNOWNCONNECTIONMANAGERTYPENOSUBS|Der für den Verbindungs-Manager angegebene Verbindungstyp ist kein gültiger Verbindungs-Manager-Typ. Dieser Fehler tritt beim Erstellen eines Verbindungs-Managers für einen unbekannten Verbindungstyp auf. Überprüfen Sie, ob Sie den Namen des Verbindungstyps richtig eingegeben haben.|  
 |0xC0014040|-1073659840|DTS_E_PACKAGEREMOVEFAILED|Fehler beim Entfernen des "%1"-Pakets aus SQL Server.|  
-|0xC0014042|-1073659838|DTS_E_FOLDERADDFAILED|Fehler beim Erstellen eines Ordners in SQL Server mit dem Namen "%1" im Ordner "%2".|  
+|0xC0014042|-1073659838|DTS_E_FOLDERADDFAILED|Fehler beim Erstellen eines Ordners in SQL Server mit dem Namen "%1" im Ordner "%2".|  
 |0xC0014043|-1073659837|DTS_E_CREATEFOLDERONSQLSERVER_OLEDB|Fehler bei der CreateFolderOnSQLServer-Methode (OLE DB-Fehlercode: 0x%1!8.8X!) (%2) Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
 |0xC0014044|-1073659836|DTS_E_FOLDERRENAMEFAILED|Fehler beim Umbenennen des Ordners „%1\\\\%2“ in „%1\\\\%3“ auf SQL Server.|  
 |0xC0014045|-1073659835|DTS_E_RENAMEFOLDERONSQLSERVER_OLEDB|Fehler bei der RenameFolderOnSQLServer-Methode (OLE DB-Fehlercode 0x%1!8.8X! (%2) wurde zurückgegeben. Die ausgegebene SQL-Anweisung konnte nicht ausgeführt werden.|  
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Der Objektname „%1“ ist ungültig. Der Name muss mit einem Buchstaben beginnen.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Der Objektname „%1“ ist ungültig. Der Name muss mit einem Buchstaben oder einem Unterstrich "_" beginnen.|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Der Objektname „%1“ ist ungültig. Der Name darf nur alphanumerische Zeichen und Unterstriche "_" enthalten.|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Der Objektname „%1“ ist ungültig. Der Name darf keines der folgenden Zeichen enthalten: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Der Objektname „%1“ ist ungültig. Der Name darf keines der folgenden Zeichen enthalten: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Fehler beim Laden der Werteigenschaft "%1" mit Standardpersistenz.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Der Verbindungs-Manager „%1“ ist nicht vom Typ „%2“.|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" ist ohne Eintrag|  
@@ -377,7 +382,7 @@ caps.handback.revision: 44
 |0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Fehler beim Task "%1": 0x%2!8.8X! beim Abrufen von Abhängigkeiten. Die Laufzeitumgebung hat Abhängigkeiten von der Abhängigkeitsauflistung des Tasks abgerufen, als der Fehler auftrat. Möglicherweise hat der Task eine der Abhängigkeitsschnittstellen falsch implementiert.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Fehler bei der Tasküberprüfung.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|Ungültiges Format der Verbindungszeichenfolge. Sie muss aus mindestens einer Komponente im Format X=Y bestehen, getrennt durch Semikolons. Dieser Fehler tritt auf, wenn im Datenbankverbindungs-Manager eine Verbindungszeichenfolge mit 0 (null) Komponenten festgelegt wird.|  
-|0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Die Komponenten der Verbindungszeichenfolge dürfen keine Semikolons ohne Anführungszeichen enthalten. Falls für den Wert ein Semikolon erforderlich ist, schließen Sie den gesamten Wert in Anführungszeichen ein. Dieser Fehler tritt auf, wenn Werte in der Verbindungszeichenfolge Semikolons ohne Anführungszeichen enthalten, z. B. die InitialCatalog-Eigenschaft.|  
+|0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Die Komponenten der Verbindungszeichenfolge dürfen keine Semikolons ohne Anführungszeichen enthalten. Falls für den Wert ein Semikolon erforderlich ist, schließen Sie den gesamten Wert in Anführungszeichen ein. Dieser Fehler tritt auf, wenn Werte in der Verbindungszeichenfolge Semikolons ohne Anführungszeichen enthalten, z. B. die InitialCatalog-Eigenschaft.|  
 |0xC002410A|-1073594102|DTS_E_LOGPROVIDERVALIDATIONFAILED|Fehler beim Überprüfen von mindestens einem Protokollanbieter. Das Paket kann nicht ausgeführt werden. Das Paket wird nicht ausgeführt, wenn ein Protokollanbieter nicht überprüft werden kann..|  
 |0xC002410B|-1073594101|DTS_E_INVALIDVALUEINARRAY|Ungültiger Wert im Array.|  
 |0xC002410C|-1073594100|DTS_E_ENUMERATIONELEMENTNOTENUMERABLE|Ein vom ForEach-Enumerator zurückgegebenes Enumeratorelement implementiert IEnumerator nicht. Dies steht im Widerspruch zu der CollectionEnumerator-Eigenschaft des ForEach-Enumerators.|  
@@ -504,7 +509,7 @@ caps.handback.revision: 44
 |0xC002917E|-1073573506|DTS_E_FTPTASK_VARIABLENOTFOUND|Die "%1"-Variable ist nicht vorhanden.|  
 |0xC002917F|-1073573505|DTS_E_FTPTASK_INVALIDPATHONOPERATION|Ungültiger Pfad für den "%1"-Vorgang.|  
 |0xC0029180|-1073573504|DTS_E_FTPTASK_DIRECTORYEXISTS|"%1" ist bereits vorhanden.|  
-|0xC0029182|-1073573502|DTS_E_FTPTASK_CONNECTIONTYPENOTFILE|Der „%1“-Verbindungstyp ist keine Datei.|  
+|0xC0029182|-1073573502|DTS_E_FTPTASK_CONNECTIONTYPENOTFILE|Der "%1"-Verbindungstyp ist keine Datei.|  
 |0xC0029183|-1073573501|DTS_E_FTPTASK_FILEDOESNOTEXIST|Die durch "%1" dargestellte Datei ist nicht vorhanden.|  
 |0xC0029184|-1073573500|DTS_E_FTPTASK_INVALIDDIRECTORY|Das Verzeichnis ist in der "%1"-Variablen nicht angegeben.|  
 |0xC0029185|-1073573499|DTS_E_FTPTASK_NOFILESFOUND|In "%1" wurden keine Dateien gefunden.|  
@@ -1021,10 +1026,10 @@ caps.handback.revision: 44
 |0xC004708C|-1073450868|DTS_E_EXPREVALFNSUBSTRINGINVALIDSTARTINDEX|Der Startindex "%1!d!" ist für die %2-Funktion ungültig. Der Startindexwert muss eine ganze Zahl größer als 0 (null) sein. Der Startindex ist einsbasiert, nicht nullbasiert.|  
 |0xC004708E|-1073450866|DTS_E_EXPREVALCHARMAPPINGFAILED|Die "%1"-Funktion kann die Zeichenzuordnung für die Zeichenfolge "%2" nicht ausführen.|  
 |0xC004708F|-1073450865|DTS_E_EXPREVALINVALIDDATEPART|"%1" ist kein gültiger Datumsteil für die "%2"-Funktion.|  
-|0xC0047090|-1073450864|DTS_E_EXPREVALINVALIDNULLPARAM|Der Parameter mit der Nummer %1!d! der NULL-Funktion mit dem %2-Datentyp ist ungültig. Die Parameter von NULL() müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0047090|-1073450864|DTS_E_EXPREVALINVALIDNULLPARAM|Der Parameter mit der Nummer %1!d! der NULL-Funktion mit dem %2-Datentyp ist ungültig. Die Parameter von NULL() müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
 |0xC0047091|-1073450863|DTS_E_EXPREVALINVALIDNULLPARAMTYPE|Der Parameter mit der Nummer %1!d! der NULL-Funktion mit dem %2-Datentyp ist keine ganze Zahl. Parameter von NULL() müssen eine ganze Zahl oder von einem Datentyp sein, der in eine ganze Zahl konvertiert werden kann.|  
-|0xC0047092|-1073450862|DTS_E_EXPREVALFUNCTIONPARAMNOTSTATIC|Der Parameter mit der Nummer %1!d! der %2-Funktion ist nicht statisch. Dieser Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
-|0xC0047093|-1073450861|DTS_E_EXPREVALINVALIDCASTPARAM|Der Parameter mit der Nummer %1!d! der Umwandlung in den %2-Datentyp ist ungültig. Die Parameter von Umwandlungsoperatoren müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0047092|-1073450862|DTS_E_EXPREVALFUNCTIONPARAMNOTSTATIC|Der Parameter mit der Nummer %1!d! der %2-Funktion ist nicht statisch. Dieser Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0047093|-1073450861|DTS_E_EXPREVALINVALIDCASTPARAM|Der Parameter mit der Nummer %1!d! der Umwandlung in den %2-Datentyp ist ungültig. Die Parameter von Umwandlungsoperatoren müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
 |0xC0047094|-1073450860|DTS_E_EXPREVALINVALIDCASTPARAMTYPE|Der Parameter mit der Nummer %1!d! der Umwandlung in den %2-Datentyp ist keine ganze Zahl. Parameter von Umwandlungsoperatoren müssen einer ganzen Zahl entsprechen oder einen Datentyp aufweisen, der in eine ganze Zahl konvertiert werden kann.|  
 |0xC0047095|-1073450859|DTS_E_EXPREVALINVALIDCAST|Der Ausdruck "%1" kann nicht vom "%2"-Datentyp in den "%3"-Datentyp umgewandelt werden. Die angeforderte Umwandlung wird nicht unterstützt.|  
 |0xC0047096|-1073450858|DTS_E_EXPREVALINVALIDTOKEN|Fehler beim Analysieren des Ausdrucks "%1".  Das "%2"-Token in Zeile Nummer "%3", Zeichen Nummer "%4", wurde nicht erkannt. Der Ausdruck kann nicht analysiert werden, weil er an der angegebenen Position ungültige Elemente enthält.|  
@@ -1044,7 +1049,7 @@ caps.handback.revision: 44
 |0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|Der Ausdruck enthält das unbekannte Token "%1". Falls "%1" eine Variable ist, sollte das Format "@%1" dafür verwendet werden. Das angegebene Token ist ungültig. Falls das Token ein Variablenname sein soll, sollte das Symbol @ vorangestellt werden.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|Der Ausdruck enthält das unbekannte Token "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|Die "%1"-Variable wurde in der Variables-Auflistung nicht gefunden. Möglicherweise ist die Variable nicht im richtigen Bereich vorhanden.|  
-|0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Fehler beim Analysieren des Ausdrucks "%1". Der Ausdruck enthält möglicherweise ein ungültiges Token, ein unvollständiges Token oder ein ungültiges Element. Er ist möglicherweise fehlerhaft, oder es fehlt ein Teil eines erforderlichen Elements, wie z. B. eine Klammer.|  
+|0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Fehler beim Analysieren des Ausdrucks "%1". Der Ausdruck enthält möglicherweise ein ungültiges Token, ein unvollständiges Token oder ein ungültiges Element. Er ist möglicherweise fehlerhaft, oder es fehlt ein Teil eines erforderlichen Elements, wie z. B. eine Klammer.|  
 |0xC00470A8|-1073450840|DTS_E_BLANKOUTPUTCOLUMNNAME|Der Name für "%1" ist leer. Namen dürfen jedoch nicht leer sein.|  
 |0xC00470A9|-1073450839|DTS_E_HASSIDEEFFECTSWITHSYNCINP|Für "%1"' ist die HasSideEffects-Eigenschaft auf TRUE festgelegt, aber "%1" ist synchron, weshalb dies nicht zulässig ist. Legen Sie die HasSideEffects-Eigenschaft auf FALSE fest.|  
 |0xC00470AA|-1073450838|DTS_E_EXPREVALINVALIDCASTCODEPAGE|Der Wert %1!d!, der für den Codepageparameter der Umwandlung in den "%2"-Datentyp angegeben ist, ist ungültig. Die Codepage ist auf dem Computer nicht installiert.|  
@@ -1105,7 +1110,7 @@ caps.handback.revision: 44
 |0xC00470ED|-1073450771|DTS_E_EXPREVALCONDITIONALOPDTSTRNOTSUPPORTED|Für Operanden des Bedingungsoperators wird der DT_STR-Datentyp nur für Eingabespalten und Umwandlungsvorgänge unterstützt. Der Ausdruck "%1" weist einen DT_STR-Operanden auf, der keine Eingabespalte und nicht das Ergebnis einer Typumwandlung ist und daher nicht im Bedingungsvorgang verwendet werden kann. Für diesen Vorgang muss der Operand explizit mit einem Umwandlungsoperator umgewandelt werden.|  
 |0xC00470EE|-1073450770|DTS_E_EXPREVALFNFINDSTRINGINVALIDOCCURRENCECOUNT|Die Anzahl der Vorkommen von %1!d! ist für die %2-Funktion ungültig. Dieser Parameter muss größer als 0 (null) sein.|  
 |0xC00470EF|-1073450769|DTS_E_INDIVIDUALPUTLOGENTRYINFOS|"%1" konnte die LogEntryInfos-Auflistung nicht zwischenspeichern und gab den Fehlercode 0x%2!8.8X! zurück.|  
-|0xC00470F0|-1073450768|DTS_E_EXPREVALINVALIDDATEPARTNODE|Der für die %1-Funktion angegebene date part-Parameter ist ungültig. Es muss eine statische Zeichenfolge sein.  Der date part-Parameter darf keine dynamischen Elemente enthalten, wie z. B. Eingabespalten, und muss vom Typ DT_WSTR sein.|  
+|0xC00470F0|-1073450768|DTS_E_EXPREVALINVALIDDATEPARTNODE|Der für die %1-Funktion angegebene date part-Parameter ist ungültig. Es muss eine statische Zeichenfolge sein.  Der date part-Parameter darf keine dynamischen Elemente enthalten, wie z. B. Eingabespalten, und muss vom Typ DT_WSTR sein.|  
 |0xC00470F1|-1073450767|DTS_E_EXPREVALINVALIDCASTLENGTH|Der Wert %1!d! , der für den length-Parameter der Umwandlung in den %2-Datentyp angegeben ist, ist negativ und daher ungültig. Der Wert für die Länge muss positiv sein.|  
 |0xC00470F2|-1073450766|DTS_E_EXPREVALINVALIDNULLCODEPAGE|Der Wert %1!d! , der für den Codepageparameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, ist ungültig. Die Codepage ist nicht auf dem Computer installiert.|  
 |0xC00470F3|-1073450765|DTS_E_EXPREVALINVALIDNULLPRECISION|Der Wert %1!d! , der für den precision-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, liegt außerhalb des zulässigen Bereichs. Der Wert für die Genauigkeit muss zwischen %3!d! und „%4!d!“ liegen.|  
@@ -1175,10 +1180,10 @@ caps.handback.revision: 44
 |0xC0049042|-1073442750|DTS_E_EXPREVALSTATIC_INVALIDNUMBEROFPARAMS|An eine Funktion wurde eine falsche Parameteranzahl übergeben. Der Funktionsname wurde erkannt, aber die Parameteranzahl war nicht richtig.|  
 |0xC0049043|-1073442749|DTS_E_EXPREVALSTATIC_CHARMAPPINGFAILED|Fehler bei einer Zeichenzuordnungsfunktion.|  
 |0xC0049044|-1073442748|DTS_E_EXPREVALSTATIC_INVALIDDATEPART|Für eine Datumsfunktion wurde ein unbekannter date part-Parameter angegeben.|  
-|0xC0049045|-1073442747|DTS_E_EXPREVALSTATIC_INVALIDNULLPARAM|Für die NULL-Funktion wurde ein ungültiger Parameter angegeben. Die Parameter von NULL müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0049045|-1073442747|DTS_E_EXPREVALSTATIC_INVALIDNULLPARAM|Für die NULL-Funktion wurde ein ungültiger Parameter angegeben. Die Parameter von NULL müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
 |0xC0049046|-1073442746|DTS_E_EXPREVALSTATIC_INVALIDNULLPARAMTYPE|Für die NULL-Funktion wurde ein ungültiger Parameter angegeben. Parameter von NULL müssen eine ganze Zahl oder von einem Datentyp sein, der in eine ganze Zahl konvertiert werden kann.|  
-|0xC0049047|-1073442745|DTS_E_EXPREVALSTATIC_FUNCTIONPARAMNOTSTATIC|Für eine Funktion wurde ein ungültiger Parameter angegeben. Dieser Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
-|0xC0049048|-1073442744|DTS_E_EXPREVALSTATIC_INVALIDCASTPARAM|Für einen Umwandlungsvorgang wurde ein ungültiger Parameter angegeben. Parameter von Umwandlungsoperatoren müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0049047|-1073442745|DTS_E_EXPREVALSTATIC_FUNCTIONPARAMNOTSTATIC|Für eine Funktion wurde ein ungültiger Parameter angegeben. Dieser Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0049048|-1073442744|DTS_E_EXPREVALSTATIC_INVALIDCASTPARAM|Für einen Umwandlungsvorgang wurde ein ungültiger Parameter angegeben. Parameter von Umwandlungsoperatoren müssen statisch sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
 |0xC0049049|-1073442743|DTS_E_EXPREVALSTATIC_INVALIDCASTPARAMTYPE|Für einen Umwandlungsvorgang wurde ein ungültiger Parameter angegeben. Parameter von Umwandlungsoperatoren müssen einer ganzen Zahl entsprechen oder einen Datentyp aufweisen, der in eine ganze Zahl konvertiert werden kann.|  
 |0xC004904A|-1073442742|DTS_E_EXPREVALSTATIC_INVALIDCAST|Der Ausdruck enthielt eine nicht unterstützte Typumwandlung.|  
 |0xC004904B|-1073442741|DTS_E_EXPREVALSTATIC_INVALIDTOKEN|Der Ausdruck enthielt ein unbekanntes Token. Der Ausdruck konnte nicht analysiert werden, weil er ungültige Elemente enthält.|  
@@ -1194,7 +1199,7 @@ caps.handback.revision: 44
 |0xC0049055|-1073442731|DTS_E_EXPREVALSTATIC_INPUTCOLUMNIDNOTFOUND|Fehler beim Suchen einer Eingabespalte anhand der Herkunfts-ID. Die Eingabespalte wurde in der Eingabespaltenauflistung nicht gefunden.|  
 |0xC0049056|-1073442730|DTS_E_EXPREVALSTATIC_NOINPUTCOLUMNCOLLECTION|Der Ausdruck enthält ein unbekanntes Token, das ein Eingabespaltenverweis zu sein scheint, aber die Eingabespaltenauflistung steht nicht zur Verarbeitung von Eingabespalten zur Verfügung. Die Eingabespaltenauflistung wurde der Ausdrucksauswertung nicht bereitgestellt, aber eine Eingabespalte wurde in den Ausdruck eingeschlossen.|  
 |0xC0049057|-1073442729|DTS_E_EXPREVALSTATIC_VARIABLENOTFOUND|Eine angegebene Variable wurde in der Auflistung nicht gefunden. Möglicherweise ist sie nicht im richtigen Bereich vorhanden. Überprüfen Sie, ob die Variable vorhanden und der Bereich richtig ist.|  
-|0xC0049058|-1073442728|DTS_E_EXPREVALSTATIC_INVALIDTOKENSTATE|Fehler beim Analysieren des Ausdrucks. Der Ausdruck enthält ein ungültiges oder unvollständiges Token. Es ist möglich, dass er ungültige Elemente enthält, dass ein Teil eines erforderlichen Elements, wie z. B. schließende Klammern fehlen, oder dass der Ausdruck fehlerhaft ist.|  
+|0xC0049058|-1073442728|DTS_E_EXPREVALSTATIC_INVALIDTOKENSTATE|Fehler beim Analysieren des Ausdrucks. Der Ausdruck enthält ein ungültiges oder unvollständiges Token. Es ist möglich, dass er ungültige Elemente enthält, dass ein Teil eines erforderlichen Elements, wie z. B. schließende Klammern fehlen, oder dass der Ausdruck fehlerhaft ist.|  
 |0xC0049059|-1073442727|DTS_E_EXPREVALSTATIC_INVALIDCASTCODEPAGE|Der für den Codepageparameter der Umwandlung in den Datentyp DT_STR oder DT_TEXT angegebene Wert ist ungültig. Die angegebene Codepage ist nicht auf dem Computer installiert.|  
 |0xC004905A|-1073442726|DTS_E_EXPREVALSTATIC_INVALIDCASTPRECISION|Der für den precision-Parameter des Umwandlungsvorgangs angegebene Wert liegt für die Typumwandlung außerhalb des zulässigen Bereichs.|  
 |0xC004905B|-1073442725|DTS_E_EXPREVALSTATIC_INVALIDCASTSCALE|Der für den scale-Parameter eines Umwandlungsvorgangs angegebene Wert liegt für die Typumwandlung außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und darf nicht negativ sein.|  
@@ -1210,7 +1215,7 @@ caps.handback.revision: 44
 |0xC0049065|-1073442715|DTS_E_EXPREVALFAILEDTOCONVERTSTRCOLUMNTOWSTR|Fehler beim Konvertieren von "%1" vom DT_STR-Datentyp in den DT_WSTR-Datentyp (Fehlercode: 0x%2!8.8X!). Fehler bei der impliziten Konvertierung für die Eingabespalte.|  
 |0xC0049066|-1073442714|DTS_E_EXPREVALSTATIC_FAILEDTOCONVERTSTRCOLUMNTOWSTR|Fehler beim Konvertieren einer Eingabespalte vom DT_STR-Datentyp in den DT_WSTR-Datentyp. Fehler bei der impliziten Konvertierung für die Eingabespalte.|  
 |0xC0049067|-1073442713|DTS_E_EXPREVALSTATIC_FUNCTIONCOMPUTEFAILED|Fehler beim Auswerten der Funktion.|  
-|0xC0049068|-1073442712|DTS_E_EXPREVALSTATIC_FUNCTIONCONVERTPARAMTOMEMBERFAILED|Ein Funktionsparameter kann nicht in einen statischen Wert konvertiert werden. Der Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
+|0xC0049068|-1073442712|DTS_E_EXPREVALSTATIC_FUNCTIONCONVERTPARAMTOMEMBERFAILED|Ein Funktionsparameter kann nicht in einen statischen Wert konvertiert werden. Der Parameter muss statisch sein und darf keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten.|  
 |0xC0049088|-1073442680|DTS_E_EXPREVALSTATIC_FNRIGHTINVALIDLENGTH|Der length-Parameter ist für die RIGHT-Funktion ungültig. Der length-Parameter darf nicht negativ sein.|  
 |0xC0049089|-1073442679|DTS_E_EXPREVALSTATIC_FNREPLICATEINVALIDREPEATCOUNT|Der repeat count-Parameter für die REPLICATE-Funktion ist ungültig. Dieser Parameter darf nicht negativ sein.|  
 |0xC0049096|-1073442666|DTS_E_EXPREVALSTATIC_BINARYOPERATORCODEPAGEMISMATCH|Die Codepages stimmen in einer binären Operation nicht überein. Die Codepage des linken Operanden stimmt nicht mit der Codepage des rechten Operanden überein. Für diese binäre Operation müssen die Codepages identisch sein.|  
@@ -1225,7 +1230,7 @@ caps.handback.revision: 44
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|Für Operanden einer binären Operation wird der DT_STR-Datentyp nur für Eingabespalten und Umwandlungsvorgänge unterstützt. Ein DT_STR-Operand, der keine Eingabespalte und nicht das Ergebnis einer Typumwandlung ist, kann nicht in einer binären Operation verwendet werden. Für diesen Vorgang muss der Operand explizit mit einem Umwandlungsoperator umgewandelt werden.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|Für Operanden des Bedingungsoperators wird der DT_STR-Datentyp nur für Eingabespalten und Umwandlungsvorgänge unterstützt. Ein DT_STR-Operand, der keine Eingabespalte und nicht das Ergebnis einer Typumwandlung ist, kann nicht in einem Bedingungsvorgang verwendet werden. Für diesen Vorgang muss der Operand explizit mit einem Umwandlungsoperator umgewandelt werden.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|Der occurrence count-Parameter für die FINDSTRING-Funktion ist ungültig. Dieser Parameter muss größer als 0 (null) sein.|  
-|0xC00490DD|-1073442595|DTS_E_EXPREVALSTATIC_INVALIDDATEPARTNODE|Der für eine Datumsfunktion angegebene date part-Parameter ist ungültig. Die date part-Parameter müssen statische Zeichenfolgen sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten. Sie müssen vom Typ DT_WSTR sein.|  
+|0xC00490DD|-1073442595|DTS_E_EXPREVALSTATIC_INVALIDDATEPARTNODE|Der für eine Datumsfunktion angegebene date part-Parameter ist ungültig. Die date part-Parameter müssen statische Zeichenfolgen sein und dürfen keine dynamischen Elemente, wie z. B. Eingabespalten, enthalten. Sie müssen vom Typ DT_WSTR sein.|  
 |0xC00490DE|-1073442594|DTS_E_EXPREVALSTATIC_INVALIDCASTLENGTH|Der für den length-Parameter eines Umwandlungsvorgangs angegebene Wert ist ungültig. Der Wert für die Länge muss positiv sein. Die für die Typumwandlung angegebene Länge ist negativ. Ändern Sie die Länge in einen positiven Wert.|  
 |0xC00490DF|-1073442593|DTS_E_EXPREVALSTATIC_INVALIDNULLLENGTH|Der für den length-Parameter einer NULL-Funktion angegebene Wert ist ungültig. Der Wert für die Länge muss positiv sein. Die für die NULL-Funktion angegebene Länge ist negativ. Ändern Sie die Länge in einen positiven Wert.|  
 |0xC00490E0|-1073442592|DTS_E_EXPREVALSTATIC_INVALIDNULLCODEPAGE|Der für den Codepageparameter der NULL-Funktion mit dem Datentyp DT_STR oder DT_TEXT angegebene Wert ist ungültig. Die angegebene Codepage ist nicht auf dem Computer installiert. Ändern Sie die angegebene Codepage, oder installieren Sie die Codepage auf dem Computer.|  
@@ -1233,7 +1238,7 @@ caps.handback.revision: 44
 |0xC00490E2|-1073442590|DTS_E_EXPREVALSTATIC_INVALIDNULLSCALE|Der für den scale-Parameter einer NULL-Funktion angegebene Wert ist ungültig. Der angegebene Wert liegt für die NULL-Funktion außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und muss positiv sein.|  
 |0xC00490E8|-1073442584|DTS_E_XMLSRCERRORSETTINGERROROUTPUTCOLUMNDATA|%1 konnte keine Daten auf %2 in %3 schreiben. %4|  
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|Die Transformation für Suche hat eine Abbruchanforderung vom Benutzer erhalten.|  
-|0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Die Verarbeitung von Zeichen oder BLOB-Daten (Binary Large Object) wurde beendet, da das Limit von 4 GB erreicht wurde.|  
+|0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Die Verarbeitung von Zeichen oder BLOB-Daten (Binary Large Object) wurde beendet, da das Limit von 4 GB erreicht wurde.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|Die verwaltete Pipelinekomponente "%1" konnte nicht geladen werden.  Die Ausnahme war: %2.|  
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS-Fehlercode DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: Der Excel-Verbindungs-Manager wird in der 64-Bit-Version von SSIS nicht unterstützt, da kein OLE DB-Anbieter verfügbar ist.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|Die Cachedatei ist beschädigt, oder die Datei wurde nicht mithilfe des Cacheverbindungs-Managers erstellt.  Stellen Sie eine gültige Cachedatei bereit.|  
@@ -1332,7 +1337,7 @@ caps.handback.revision: 44
 |0xC0202082|-1071636350|DTS_E_TXPIVOTBADUSAGE|Der PivotUsage-Wert für die Eingabespalte "%1" (%2!d!) ist ungültig.|  
 |0xC0202083|-1071636349|DTS_E_TXPIVOTTOOMANYPIVOTKEYS|Zu viele Pivotschlüssel wurden gefunden. Nur eine Eingabespalte kann als Pivotschlüssel verwendet werden.|  
 |0xC0202084|-1071636348|DTS_E_TXPIVOTNOPIVOTKEY|Ein Pivotschlüssel wurde nicht gefunden. Eine Eingabespalte muss als Pivotschlüssel verwendet werden.|  
-|0xC0202085|-1071636347|DTS_E_TXPIVOTINPUTALREADYMAPPED|Mehrere Ausgabespalten (z. B. "%1" (%2!d!)) sind der Eingabespalte "%3" (%4!d!) zugeordnet.|  
+|0xC0202085|-1071636347|DTS_E_TXPIVOTINPUTALREADYMAPPED|Mehrere Ausgabespalten (z. B. "%1" (%2!d!)) sind der Eingabespalte "%3" (%4!d!) zugeordnet.|  
 |0xC0202086|-1071636346|DTS_E_TXPIVOTCANTMAPPIVOTKEY|Die Ausgabespalte "%1" (%2!d!) darf nicht der PivotKey-Eingabespalte zugeordnet werden.|  
 |0xC0202087|-1071636345|DTS_E_TXPIVOTCANTMAPPINGNOTFOUND|Die Ausgabespalte "%1" (%2!d!) weist den SourceColumn-Wert %3!d! auf, der keine gültige Eingabespalten-Herkunfts-ID darstellt.|  
 |0xC0202088|-1071636344|DTS_E_TXPIVOTEMPTYPIVOTKEYVALUE|Die Ausgabespalte "%1" (%2!d!) ist der Eingabespalte vom Typ Pivotierter Wert zugeordnet, aber ihr PivotKeyValue-Eigenschaftswert fehlt.|  
@@ -1488,7 +1493,7 @@ caps.handback.revision: 44
 |0xC0207004|-1071615996|DTS_E_PROPERTYISEMPTY|Die Eigenschaft "%1" ist leer. Die Eigenschaft darf nicht leer sein.|  
 |0xC0207005|-1071615995|DTS_E_CREATEEXPRESSIONOBJECTFAILED|Für den Ausdruck "%1" kann kein Arbeitsspeicher zugeordnet werden. Beim Erstellen eines internen Objekts zum Speichern des Ausdrucks war nicht genügend Arbeitsspeicher verfügbar.|  
 |0xC0207006|-1071615994|DTS_E_EXPRESSIONPARSEFAILED|Der Ausdruck "%1" kann nicht analysiert werden. Der Ausdruck war ungültig, oder es war nicht genügend Arbeitsspeicher verfügbar.|  
-|0xC0207007|-1071615993|DTS_E_EXPRESSIONCOMPUTEFAILED|Fehler beim Berechnen des Ausdrucks "%1" (Fehlercode: 0x%2!8.8X!). Möglicherweise weist der Ausdruck Fehler auf (z. B. Division durch 0), die beim Analysieren nicht erkannt werden können, oder es ist nicht genügend Arbeitsspeicher verfügbar.|  
+|0xC0207007|-1071615993|DTS_E_EXPRESSIONCOMPUTEFAILED|Fehler beim Berechnen des Ausdrucks "%1" (Fehlercode: 0x%2!8.8X!). Möglicherweise weist der Ausdruck Fehler auf (z. B. Division durch 0), die beim Analysieren nicht erkannt werden können, oder es ist nicht genügend Arbeitsspeicher verfügbar.|  
 |0xC0207008|-1071615992|DTS_E_FAILEDTOCREATEEXPRESSIONARRAY|Den Expression-Objekten kann kein Arbeitsspeicher zugeordnet werden. Beim Erstellen des Arrays mit den Expression-Objektzeigern war nicht genügend Arbeitsspeicher verfügbar.|  
 |0xC020700A|-1071615990|DTS_E_FAILEDTOCREATEEXPRESSIONMANANGER|Fehler bei %1 (Fehlercode: 0x%2!8.8X!) während der Erstellung des Ausdruck-Managers.|  
 |0xC020700B|-1071615989|DTS_E_SPLITEXPRESSIONNOTBOOLEAN|Der Ausdruck "%1" ist kein boolescher Wert. Der Ergebnistyp des Ausdrucks muss ein boolescher Wert sein.|  
@@ -2017,7 +2022,7 @@ caps.handback.revision: 44
 |||DTS_E_COMPONENTINITFAILED|Komponente %1!s! konnte nicht gestartet werden, und zwar aufgrund des Fehlers 0x%2!8.8X! „%3!s!“.|  
   
 ##  <a name="msgWarning"></a> Warnmeldungen  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Warnmeldungen beginnen mit **DTS_W_**.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Warnmeldungen beginnen mit **DTS_W_**.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2032,7 +2037,7 @@ caps.handback.revision: 44
 |0x80012016|-2147409898|DTS_W_CONFIGTYPEINVALID|Der Konfigurationstyp in einem der Konfigurationseinträge war ungültig. Gültige Typen sind in der DTSConfigurationType-Enumeration aufgeführt.|  
 |0x80012017|-2147409897|DTS_W_CANNOTFINDOBJECT|Der Paketpfad verwies auf ein Objekt, das nicht gefunden wurde: "%1". Dieses Problem tritt auf, wenn ein Paketpfad zu einem Objekt aufgelöst wird, das nicht gefunden wurde.|  
 |0x80012018|-2147409896|DTS_W_CONFIGFORMATINVALID_PACKAGEDELIMITER|Der Konfigurationseintrag "%1" weist ein falsches Format auf, weil er nicht mit dem Pakettrennzeichen beginnt. Stellen Sie dem Paketpfad "\package" voran.|  
-|0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|Der Konfigurationseintrag "%1" weist ein falsches Format auf. Dies kann auf ein fehlendes Trennzeichen oder Formatierungsfehler, z. B ein ungültiges Arraytrennzeichen, zurückzuführen sein.|  
+|0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|Der Konfigurationseintrag "%1" weist ein falsches Format auf. Dies kann auf ein fehlendes Trennzeichen oder Formatierungsfehler, z. B ein ungültiges Arraytrennzeichen, zurückzuführen sein.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|Die Konfiguration der übergeordneten Variable "%1" ist nicht erfolgt, weil keine übergeordnete Variablenauflistung vorhanden war.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Fehler beim Importieren der Konfigurationsdatei: "%1".|  
 |0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|Die Konfiguration der übergeordneten Variable "%1" ist nicht erfolgt, weil keine übergeordnete Variable vorhanden war. Fehlercode: 0x%2!8.8X!.|  
@@ -2163,7 +2168,7 @@ caps.handback.revision: 44
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|Die Tabelle "%1" wurde geändert. Möglicherweise wurden der Tabelle neue Spalten hinzugefügt.|  
   
 ##  <a name="msgInfo"></a> Informationsmeldungen  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Informationsmeldungen beginnen mit **DTS_I_**.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Informationsmeldungen beginnen mit **DTS_I_**.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2262,7 +2267,7 @@ caps.handback.revision: 44
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|Die Eigenschaft der maximalen Einfügungscommitgröße des OLE DB-Ziels "%1" wird auf 0 (null) festgelegt. Diese Einstellung kann dazu führen, dass das ausgeführte Paket nicht mehr antwortet. Weitere Informationen finden Sie im F1-Hilfethema 'Ziel-Editor für OLE DB' (Verbindungs-Manager-Seite).|  
   
 ##  <a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit **DTS_MSG_**.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_MSG_**.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2301,7 +2306,7 @@ caps.handback.revision: 44
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Ereignisname: %1<br /><br /> Meldung: %9<br /><br /> Operator: %2<br /><br /> Quellenname: %3<br /><br /> Quellen-ID: %4<br /><br /> Ausführungs-ID: %5<br /><br /> Startzeit: %6<br /><br /> Beendigungszeit: %7<br /><br /> Datencode: %8|  
   
 ##  <a name="msgSuccess"></a> Erfolgsmeldungen  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Erfolgsmeldungen beginnen mit **DTS_S_**.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Erfolgsmeldungen beginnen mit **DTS_S_**.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2310,14 +2315,14 @@ caps.handback.revision: 44
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Beim Auswerten des Ausdrucks wurden Daten abgeschnitten. Der Abschneidevorgang erfolgte während der Auswertung, wozu jeder beliebige Punkt in einem Zwischenschritt zählen kann.|  
   
 ##  <a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
- Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit **DTSBC_E_**, wobei „BC“ auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
+ Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTSBC_E_**, wobei „BC“ auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
   
 |Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Die Gesamtanzahl der Ausgaben und Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Die Ausgabe mit dem Index %1!lu! kann nicht abgerufen werden.|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|Die Anzahl der Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|Der folgende Überprüfungsstatuswert ist falsch: "%1!lu! “.  Dieser Wert muss einer der Werte in der DTSValidationStatus-Enumeration sein.|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|Der folgende Überprüfungsstatuswert ist falsch: "%1!lu! ".  Dieser Wert muss einer der Werte in der DTSValidationStatus-Enumeration sein.|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|Die Eingabe „%1!lu!“ hat keine synchrone Ausgabe.|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|Die Eingabe „%1!lu!“ weist keine synchrone Fehlerausgabe auf.|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|Der HowToProcessInput-Wert %1!lu! ist ungültig. Dieser Wert muss einer der Werte aus der HowToProcessInput-Enumeration sein.|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 lässt das Einfügen von externen Metadatenspalten nicht zu.|  
   
   
+

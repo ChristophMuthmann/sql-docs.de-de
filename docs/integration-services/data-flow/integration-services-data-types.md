@@ -1,31 +1,36 @@
 ---
-title: "SQL Server Integration Services-Datentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ändern von Datentypen"
-  - "Datentypen [Integration Services], Liste"
-  - "Datentypen [Integration Services]"
-  - "Spaltendatentypen [Integration Services]"
-  - "SSIS, Datentypen"
-  - "Integration Services, Datentypen"
-  - "SQL Server Integration Services, Datentypen"
+title: Integration Services-Datentypen | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- data types [Integration Services], listed
+- data types [Integration Services]
+- column data types [Integration Services]
+- SSIS, data types
+- Integration Services, data types
+- SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 98
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# SQL Server Integration Services-Datentypen
-  Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
+# <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
+  Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
   
  Einige Datenflusskomponenten konvertieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen in verwaltete Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 98
 |DT_NTEXT|Eine Unicode-Zeichenfolge mit einer maximalen Länge von 2^30-1 (1.073.741.823) Zeichen.|  
 |DT_TEXT|Eine [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge mit einer maximalen Länge von 2^31-1 (2.147.483.647) Zeichen.|  
   
-## Datentypkonvertierung  
+## <a name="conversion-of-data-types"></a>Datentypkonvertierung  
  Falls die Daten in einer Spalte nicht die vom Quelldatentyp zugeordnete normale Breite benötigen, können Sie den Datentyp der Spalte ändern. Wenn jede Datenzeile so schmal wie möglich ist, wird die Leistung beim Übertragen von Daten optimiert, denn umso schmaler eine Zeile ist, desto schneller werden die Daten von der Quelle an das Ziel verschoben.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält einen vollständigen Satz numerischer Datentypen, sodass der Datentyp in hohem Maß auf die Größe der Daten abgestimmt werden kann. Wenn z. B. die Werte in einer Spalte mit einem DT_UI8-Datentyp immer ganze Zahlen zwischen 0 und 3000 sind, können Sie den Datentyp in DT_UI2 ändern. Wenn entsprechend eine Spalte mit dem DT_CY-Datentyp die Datenanforderungen des Pakets erfüllen kann, indem stattdessen ein ganzzahliger Datentyp verwendet wird, können Sie den Datentyp in DT_I4 ändern.  
@@ -78,12 +83,12 @@ caps.handback.revision: 98
   
 -   Verwenden Sie die Transformation für abgeleitete Spalten, um eine Kopie einer Spalte zu erstellen, die einen anderen Datentyp als die ursprüngliche Spalte aufweist. Weitere Informationen finden Sie unter [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-### Konvertieren zwischen Zeichenfolgen und Datums-/Uhrzeitdatentypen  
+### <a name="converting-between-strings-and-datetime-data-types"></a>Konvertieren zwischen Zeichenfolgen und Datums-/Uhrzeitdatentypen  
  In der folgenden Tabelle sind die Ergebnisse der Umwandlung oder der Konvertierung zwischen Datums- und Uhrzeitdatentypen und Zeichenfolgen aufgelistet:  
   
 -   Mit dem Umwandlungsoperator oder der Transformation für Datenkonvertierung wird der Datums- oder Uhrzeitdatentyp in die entsprechende Zeichenfolge umgewandelt. Zum Beispiel wird der DT_DBTIME-Datentyp in eine Zeichenfolge im Format "hh:mm:ss" konvertiert.  
   
--   Zur Umwandlung einer Zeichenfolge in einen Datums- oder Zeitdatentyp muss die Zeichenfolge in einem Zeichenfolgenformat vorliegen, das zum entsprechenden Datums- oder Zeitdatentyp passt. Um z. B. Datumszeichenfolgen erfolgreich in den DT_DBDATE-Datentyp umzuwandeln, müssen diese Zeichenfolgen im Format "yyyy-mm-dd" vorliegen.  
+-   Zur Umwandlung einer Zeichenfolge in einen Datums- oder Zeitdatentyp muss die Zeichenfolge in einem Zeichenfolgenformat vorliegen, das zum entsprechenden Datums- oder Zeitdatentyp passt. Um z. B. Datumszeichenfolgen erfolgreich in den DT_DBDATE-Datentyp umzuwandeln, müssen diese Zeichenfolgen im Format "yyyy-mm-dd" vorliegen.  
   
     |Datentyp|Zeichenfolgenformat|  
     |---------------|-------------------|  
@@ -101,10 +106,10 @@ caps.handback.revision: 98
   
  Das Datumsformat für DT_DBTIMESTAMPOFFSET schließt auch ein Zeitzonenelement ein. Es gibt ein Leerzeichen zwischen dem Zeitelement und dem Zeitzonenelement.  
   
-### Konvertieren von Datums- und Zeitdatentypen  
+### <a name="converting-datetime-data-types"></a>Konvertieren von Datums- und Zeitdatentypen  
  Sie können den Datentyp einer Spalte mit Datums-/Zeitdaten ändern, um den Datums- oder Zeitteil der Daten zu extrahieren. Die folgende Tabelle führt die Ergebnisse der Umwandlung von einem Datums- und Zeitdatentyp in einen anderen Datums- und Zeitdatentyp auf.  
   
-#### Konvertieren von DT_FILETIME  
+#### <a name="converting-from-dtfiletime"></a>Konvertieren von DT_FILETIME  
   
 |Konvertieren von DT_FILETIME in|Ergebnis|  
 |-----------------------------|------------|  
@@ -117,7 +122,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Konvertieren von DT_DATE  
+#### <a name="converting-from-dtdate"></a>Konvertieren von DT_DATE  
   
 |Konvertieren von DT_DATE in|Ergebnis|  
 |-------------------------|------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Konvertiert den Datentyp.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### Konvertieren von DT_DBDATE  
+#### <a name="converting-from-dtdbdate"></a>Konvertieren von DT_DBDATE  
   
 |Konvertieren von DT_DBDATE in|Ergebnis|  
 |---------------------------|------------|  
@@ -143,7 +148,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Legt die Zeitfelder im DT_DBTIMESTAMP-Datentyp auf Null fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt die Zeitfelder und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### Konvertieren von DT_DBTIME  
+#### <a name="converting-from-dtdbtime"></a>Konvertieren von DT_DBTIME  
   
 |Konvertieren von DT_DBTIME in|Ergebnis|  
 |---------------------------|------------|  
@@ -156,7 +161,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.|  
   
-#### Konvertieren von DT_DBTIME2  
+#### <a name="converting-from-dtdbtime2"></a>Konvertieren von DT_DBTIME2  
   
 |Konvertieren von DT_DBTIME2 in|Ergebnis|  
 |----------------------------|------------|  
@@ -169,7 +174,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Konvertieren von DT_DBTIMESTAMP  
+#### <a name="converting-from-dtdbtimestamp"></a>Konvertieren von DT_DBTIMESTAMP  
   
 |Konvertieren von DT_DBTIMESTAMP in|Ergebnis|  
 |--------------------------------|------------|  
@@ -182,7 +187,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Konvertieren von DT_DBTIMESTAMP2  
+#### <a name="converting-from-dtdbtimestamp2"></a>Konvertieren von DT_DBTIMESTAMP2  
   
 |Konvertieren von DT_DBTIMESTAMP2 in|Ergebnis|  
 |---------------------------------|------------|  
@@ -191,11 +196,11 @@ caps.handback.revision: 98
 |DT_DBDATE|Entfernt den durch den DT_DBTIMESTAMP2-Datentyp dargestellten Zeitwert.|  
 |DT_DBTIME|Entfernt den durch den DT_DBTIMESTAMP2-Datentyp dargestellten Datumswert.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIME enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Entfernt den durch den DT_DBTIMESTAMP2-Datentyp dargestellten Datumswert.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIME2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Überschreitet der durch den DT_DBTIMESTAMP2-Datentyp dargestellte Wert den für den DT_DBTIMESTAMP-Datentyp gültigen Bereich, wird der DB_E_DATAOVERFLOW-Fehler zurückgegeben.<br /><br /> DT_DBTIMESTAMP2 wird dem SQL Server-Datentyp "datetime2" mit dem Bereich vom 1. Januar 1 n. Chr. bis zum 31. Dezember 9999 zugeordnet. DT_DBTIMESTAMP wird dem SQL Server-Datentyp datetime mit dem kleineren Bereich vom 1. Januar 1753 bis zum 31. Dezember 9999 zugeordnet.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert.<br /><br /> Weitere Informationen zu Fehlern finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
+|DT_DBTIMESTAMP|Überschreitet der durch den DT_DBTIMESTAMP2-Datentyp dargestellte Wert den für den DT_DBTIMESTAMP-Datentyp gültigen Bereich, wird der DB_E_DATAOVERFLOW-Fehler zurückgegeben.<br /><br /> DT_DBTIMESTAMP2 wird dem SQL Server-Datentyp "datetime2" mit dem Bereich vom 1. Januar 1 n. Chr. bis zum 31. Dezember 9999 zugeordnet. DT_DBTIMESTAMP wird dem SQL Server-Datentyp datetime mit dem kleineren Bereich vom 1. Januar 1753 bis zum 31. Dezember 9999 zugeordnet.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert.<br /><br /> Weitere Informationen zu Fehlern finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Zieldatentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Konvertieren von DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dtdbtimestampoffset"></a>Konvertieren von DT_DBTIMESTAMPOFFSET  
   
 |Konvertieren von DT_DBTIMESTAMPOFFSET in|Ergebnis|  
 |--------------------------------------|------------|  
@@ -208,8 +213,8 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Ändert den durch den DT_DBTIMESTAMPOFFSET-Datentyp dargestellten Zeitwert in UTC.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Zieldatentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-## Zuordnen von SQL Server Integration Services-Datentypen zu Datenbank-Datentypen  
- Die folgenden Tabelle gibt Hinweise für die Zuordnung von Datentypen bestimmter Datenbanken zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen. Diese Zuordnungen sind den Zuordnungsdateien entnommen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten beim Importieren von Daten aus den betreffenden Quellen verwendet werden. Weitere Informationen zu diesen Zuordnungsdateien finden Sie unter [SQL Server-Import/Export-Assistent](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md).  
+## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>Zuordnen von SQL Server Integration Services-Datentypen zu Datenbank-Datentypen  
+ Die folgenden Tabelle gibt Hinweise für die Zuordnung von Datentypen bestimmter Datenbanken zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen. Diese Zuordnungen sind den Zuordnungsdateien entnommen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten beim Importieren von Daten aus den betreffenden Quellen verwendet werden. Weitere Informationen zu diesen Zuordnungsdateien finden Sie unter [SQL Server-Import/Export-Assistent](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 > [!IMPORTANT]  
 >  Die Zuordnungen sind nicht als strenge Entsprechungen zu verstehen, sondern stellen lediglich Anhaltspunkte dar. In bestimmten Fällen muss möglicherweise ein anderer Dateityp als der in der Tabelle angegebene verwendet werden.  
@@ -219,7 +224,7 @@ caps.handback.revision: 98
   
 |Datentyp|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
-|DT_BOOL|bit|bit|Bit||||  
+|DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Währung||||  
 |DT_DATE|||||||  
@@ -233,13 +238,13 @@ caps.handback.revision: 98
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|SMALLINT|  
+|DT_I2|smallint|smallint|Short||smallint|smallint|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|bigint|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|DECIMAL, NUMERIC|decimal, numeric|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Single||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|CHAR, VARCHAR|  
+|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -251,10 +256,11 @@ caps.handback.revision: 98
   
  Weitere Informationen zur Zuordnung von Datentypen im Datenfluss finden Sie unter [Verwenden von Datentypen im Datenfluss](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
-## Verwandte Inhalte  
+## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Daten in Datenflüssen](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
+

@@ -1,40 +1,48 @@
 ---
-title: "Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.configureflatfiledest.f1"
+title: Flatfileziel (SQL Server-Import / Export-Assistent) konfigurieren | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
-  Wenn Sie ein Flatfileziel ausgewählt haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent **Flatfileziel konfigurieren** an, nachdem Sie eine Tabelle zum Kopieren angegeben oder eine Abfrage bereitgestellt haben. Auf dieser Seite geben Sie Formatierungsoptionen für das Flatfileziel an. Optional können Sie die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.  
+# <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
+  Wenn Sie ein Flatfileziel ausgewählt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistent zeigt **Flatfileziel konfigurieren** nach dem Sie angeben, dass eine Tabelle kopiert werden soll, oder nachdem Sie eine Abfrage bereitzustellen. Auf dieser Seite geben Sie Formatierungsoptionen für das Flatfileziel an. Optional können Sie die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>Screenshot der Seite „Flatfileziel konfigurieren“  
- Der folgende Screenshot zeigt die Seite **Flatfileziel konfigurieren** des Assistenten an.
+ Der folgende Screenshot zeigt ein Beispiel der **Flatfileziel konfigurieren** Seite des Assistenten.
  
- In diesem Beispiel möchte der Benutzer eine typische CSV-Datei (comma-separated values, durch Trennzeichen getrennte Werte) erstellen, d.h. jede Datenzeile in der Ausgabe mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub abschließen und Datenspalten innerhalb jeder Zeile mit einem Komma trennen.
+ In diesem Beispiel hat der Benutzer die folgenden Optionen zum Erstellen einer typischen CSV-Datei (mit kommagetrennten Werten) angegeben.
+-   **Zeilentrennzeichen**. Jede Datenzeile in der Ausgabe endet mit einem Wagenrücklauf-Zeilenvorschub Kombination.
+-   **Spaltentrennzeichen**. Datenspalten innerhalb jeder Zeile werden durch ein Komma getrennt.
 
- ![Configure flat file page of the Import and Export Wizard](../../integration-services/import-export-data/media/flat-file.png "Configure flat file page of the Import and Export Wizard")  
+ ![Flatfile-Konfigurationsseite des Import / Export-Assistenten](../../integration-services/import-export-data/media/flat-file.png "Flatfile-Konfigurationsseite des Import / Export-Assistenten")  
   
-## <a name="pick-a-source-table"></a>Wählen Sie eine Quelltabelle aus. 
+## <a name="pick-a-source-table"></a>Wählen Sie eine Quelltabelle
  **Quelltabelle oder -sicht**  
- Wählen Sie die Quelltabelle oder -sicht aus.  
+-   Wenn Sie auf einer vorherigen Seite angegeben haben, dass Sie eine Tabelle kopieren möchten, wählen Sie die Quelltabelle oder-Sicht aus der Dropdown-Liste.
+-   Wenn Sie eine Abfrage bereitgestellt `"Query"` ausgewählt ist, und ist die einzige Option.  
 
-## <a name="specify-the-row-and-column-delimiters"></a>Angeben der Zeilen- und Spaltentrennzeichen
+## <a name="specify-row-and-column-delimiters-for-the-output"></a>Geben Sie die Zeilen- und Spaltentrennzeichnen für die Ausgabe
  **Zeilentrennzeichen**  
- Wählen Sie ein Trennzeichen für Zeilen aus der Liste aus. Es gibt keine Option zum Angeben eines benutzerdefinierten Zeilentrennzeichens.  
+ Wählen Sie aus der Liste der Trennzeichen zum Trennen von Zeilen in der Ausgabe. Es gibt keine Option zum Angeben einer *benutzerdefinierte* Zeilentrennzeichen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -48,7 +56,7 @@ caps.handback.revision: 50
 |**Senkrechter Strich {&#124;}**|Trennen von Zeilen mit einem senkrechten Strich.|  
   
  **Spaltentrennzeichen**  
- Wählen Sie ein Trennzeichen für Spalten aus der Liste aus. Es gibt keine Option zum Angeben eines benutzerdefinierten Spaltentrennzeichens.  
+ Wählen Sie aus der Liste der Trennzeichen zum Trennen der Spalten in der Ausgabe. Es gibt keine Option zum Angeben einer *benutzerdefinierte* Spaltentrennzeichen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -61,19 +69,21 @@ caps.handback.revision: 50
 |**Tabulator {t}**|Trennen von Spalten mit einem Tabstoppzeichen.|  
 |**Senkrechter Strich {&#124;}**|Trennen von Spalten mit einem senkrechten Strich.|  
 
-## <a name="optionally-edit-column-mappings-and-preview-sample-data"></a>Optionales Bearbeiten der Spaltenzuordnungen und Anzeigen einer Vorschau mit Beispieldaten
+## <a name="optionally-review-column-mappings-and-preview-data"></a>Optional, überprüfen Sie die spaltenzuordnungen und anzeigen Daten in der Vorschau
 
 **Zuordnungen bearbeiten**   
-Klicken Sie optional auf **Zuordnungen bearbeiten**, um das Dialogfeld **Spaltenzuordnungen** für die ausgewählte Tabelle anzuzeigen. Verwenden Sie das Dialogfeld **Spaltenzuordnungen**, um Folgendes auszuführen.
+Klicken Sie optional auf **Zuordnungen bearbeiten** zum Anzeigen der **Spaltenzuordnungen** im Dialogfeld für die ausgewählte Tabelle. Verwenden Sie das Dialogfeld **Spaltenzuordnungen** , um Folgendes auszuführen.
 -   Überprüfen Sie die Zuordnung einzelner Spalten zwischen der Quelle und dem Ziel.
 -   Wenn Sie nur eine Teilmenge von Spalten kopieren möchten, wählen Sie **ignore** für Spalten aus, die Sie nicht kopieren möchten.
 
 Weitere Informationen finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Vorschau**  
-Klicken Sie optional auf **Vorschau**, um bis zu 200 Zeilen mit Beispieldaten im Dialogfeld **Datenvorschau** anzuzeigen. Dadurch können Sie sicherstellen, dass der Assistent die Daten kopieren wird, die Sie kopieren möchten. Weitere Informationen finden Sie unter [Datenvorschau](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Klicken Sie optional auf **Vorschau** um bis zu 200 Zeilen der Beispieldaten in der Vorschau anzuzeigen die **Vorschaudaten** (Dialogfeld). Dadurch können Sie sicherstellen, dass der Assistent die Daten kopieren wird, die Sie kopieren möchten. Weitere Informationen finden Sie unter [Datenvorschau](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
-Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern, die Sie auf den vorherigen Seiten des Assistenten ausgewählt haben. Wechseln Sie zum Vornehmen dieser Änderungen zurück auf die Seite **Flatfileziel konfigurieren**, und klicken Sie anschließend auf **Zurück**, um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre Auswahl ändern können.  
+Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern, die Sie auf den vorherigen Seiten des Assistenten ausgewählt haben. Wechseln Sie zum Vornehmen dieser Änderungen zurück auf die Seite **Flatfileziel konfigurieren** , und klicken Sie anschließend auf **Zurück** , um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre Auswahl ändern können.  
 
 ## <a name="whats-next"></a>Wie geht es weiter?  
- Nachdem Sie Formatierungsoptionen für die Zielflatfile angegeben haben, ist die nächste Seite **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Vorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+ Nachdem Sie Formatierungsoptionen für die Zielflatfile angegeben haben, ist die nächste Seite **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Vorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration Sie möglicherweise auch zum Speichern der Einstellungen als ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paket, um ihn anzupassen und späteren Wiederverwendung. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+
+

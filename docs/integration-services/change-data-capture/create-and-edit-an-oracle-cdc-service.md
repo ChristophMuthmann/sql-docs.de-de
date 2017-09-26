@@ -1,40 +1,44 @@
 ---
-title: "Erstellen und Bearbeiten eines Oracle CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: Erstellen und Bearbeiten eines Oracle CDC Service | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
+ms.contentlocale: de-de
+ms.lasthandoff: 09/26/2017
+
 ---
-# Erstellen und Bearbeiten eines Oracle CDC Service
+# <a name="create-and-edit-an-oracle-cdc-service"></a>Erstellen und Bearbeiten eines Oracle CDC Service
   Sie erstellen und bearbeiten einen neuen Oracle CDC-Windows-Dienst über die CDC Service Configuration Console.  
   
- Um einen neuen Oracle CDC-Windows-Dienst zu erstellen, wählen Sie im linken Bereich **Local CDC Services** aus und klicken dann im **Aktionsbereich** auf **Neuer Dienst** . Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst** auswählen. Das Dialogfeld New Oracle CDC Windows Service wird geöffnet.  
+ Um einen neuen Oracle CDC-Windows-Dienst zu erstellen, wählen Sie im linken Bereich **Local CDC Services** aus und klicken dann im **Aktionsbereich** auf **Neuer Dienst** . Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Neuer Dienst**auswählen. Das Dialogfeld New Oracle CDC Windows Service wird geöffnet.  
   
  **OR**  
   
- Um die Eigenschaften des CDC-Diensts zu bearbeiten, wählen Sie den Dienst aus, für den Sie die Eigenschaften bearbeiten möchten, und klicken im **Aktionsbereich** auf **Eigenschaften** . Sie können auch mit der rechten Maustaste auf den Dienst klicken, den Sie verwenden, und **Eigenschaften** wählen. Das Dialogfeld CDC Service Properties wird geöffnet.  
+ Um die Eigenschaften des CDC-Diensts zu bearbeiten, wählen Sie den Dienst aus, für den Sie die Eigenschaften bearbeiten möchten, und klicken im **Aktionsbereich** auf **Eigenschaften** . Sie können auch mit der rechten Maustaste auf den Dienst klicken, den Sie verwenden, und **Eigenschaften**wählen. Das Dialogfeld CDC Service Properties wird geöffnet.  
   
  Geben Sie im Dialogfeld New Oracle CDC Windows Service oder CDC Service Properties die folgenden Informationen ein.  
   
- Dienstname  
+** Service Name **  
  Geben Sie den Namen des neuen Oracle CDC-Windows-Diensts ein. Sie sollten nach Möglichkeit keine langen Namen verwenden. Die Zeichen "/" und "\" dürfen im Dienstnamen nicht verwendet werden.  
   
 > [!NOTE]  
-  
- Beim Bearbeiten des Diensts ist diese Option nicht verfügbar. Sie können den Namen eines Windows-Diensts, der bereits vorhanden ist, nicht ändern.  
+> Beim Bearbeiten des Diensts ist diese Option nicht verfügbar. Sie können den Namen eines Windows-Diensts, der bereits vorhanden ist, nicht ändern.  
   
  **Description**  
  Geben Sie eine Beschreibung des Diensts als Hilfe zur Identifizierung ein.  
@@ -56,7 +60,7 @@ caps.handback.revision: 8
   
      Sie können ein lokales Windows-Konto oder ein Windows-Domänenkonto für das Dienstkonto verwenden. In diesem Fall müssen Sie das **Kennwort** für dieses Konto eingeben. Dieses Konto kann für den lokalen Host gelten oder ein Domänenkonto sein. Beachten Sie, dass Sie das Kennwort, falls es sich ändert, in der Windows-Systemsteuerung unter Lokale Dienste aktualisieren müssen.  
   
- **Servername**: Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, zu der eine Verbindung hergestellt werden soll, z.B. **\\\\<Computername>\\<Instanzname>**. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+ **Servernamen**: Wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung (z. B. ** \\ \\< Computer_name >\\< Instance_name >**). Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
  Wählen Sie eine der folgenden Optionen aus:  
@@ -65,7 +69,7 @@ caps.handback.revision: 8
   
 -   **SQL Server-Authentifizierung**: Wenn Sie diese Option aktivieren, müssen Sie den **Benutzernamen** und das **Kennwort** für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung eingeben, die Sie verwenden möchten. Der Oracle CDC Service verwendet diese Anmeldeinformationen beim Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
   
- Die vom Oracle CDC Service verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung muss lediglich Mitglied der festen Serverrolle public sein. Es sind keine anderen Berechtigungen erforderlich. Nachdem neue Oracle CDC-Instanzen hinzugefügt wurden, wird über diese Anmeldung der **db_owner**-Zugriff auf die zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-CDC-Datenbanken gewährt.  
+ Die vom Oracle CDC Service verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung muss lediglich Mitglied der festen Serverrolle public sein. Es sind keine anderen Berechtigungen erforderlich. Nachdem neue Oracle CDC-Instanzen hinzugefügt wurden, wird über diese Anmeldung der **db_owner** -Zugriff auf die zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -CDC-Datenbanken gewährt.  
   
  Zum Erstellen der Definition des Oracle CDC-Windows-Diensts benötigt das Programm Aktualisierungszugriff auf die MSXDBCDC-Datenbank in der zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Wenn Sie auf **OK**klicken, wird der Benutzer in einem Dialogfeld aufgefordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mit Aktualisierungszugriff auf die MSXDBCDC-Datenbank einzugeben.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 8
   
  Das gleiche Masterkennwort muss auch verwendet werden, wenn andere Instanzen des gleichen Diensts auf anderen Knoten eines Clusters in der Konfiguration für hohe Verfügbarkeit eingerichtet werden. Wenn Sie das Masterkennwort vergessen oder ändern, müssen alle in Oracle CDC-Instanzdatenbanken gespeicherten Log Mining-Kennwörter über die CDC Designer Console neu eingegeben werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
