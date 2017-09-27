@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  Die Leistung eines Datenbanksystems hängt von verschiedenen Faktoren ab, die jedoch nicht alle durch den Transaktionsleistungssammler beobachtet und gemessen werden können. Daher gewährleistet der Transaktionsleistungsanalysebericht nicht, dass die tatsächlichen Leistungssteigerungen den ggf. getroffenen Vorhersagen entsprechen.  
   
- Der Bericht zur Transaktionsleistungsanalyse und die Migrationsratgeber werden im Rahmen von SQL Server Management Studio (SSMS) installiert, wenn Sie bei der Installation von ****  Verwaltungstools – Einfach **oder** Verwaltungstools – Erweitert [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]auswählen, oder wenn Sie [SQL Server Management Studio herunterladen](https://msdn.microsoft.com/library/mt238290.aspx).  
+ Der Bericht zur Transaktionsleistungsanalyse und die Migrationsratgeber werden im Rahmen von SQL Server Management Studio (SSMS) installiert, wenn Sie bei der Installation von ****  Verwaltungstools – Einfach **oder** Verwaltungstools – Erweitert [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]auswählen, oder wenn Sie [SQL Server Management Studio herunterladen](https://msdn.microsoft.com/library/mt238290.aspx).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Berichte zur Transaktionsleistungsanalyse  
  Sie können Berichte zur Transaktionsleistungsanalyse erstellen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Datenbank klicken und nacheinander **Berichte**, **Standardberichte**und **Übersicht der Transaktionsleistungsanalyse**auswählen. Die Datenbank muss eine aktive oder eine kurz zuvor ausgeführte Arbeitsauslastung aufweisen, damit ein aussagekräftiger Analysebericht erstellt werden kann.  

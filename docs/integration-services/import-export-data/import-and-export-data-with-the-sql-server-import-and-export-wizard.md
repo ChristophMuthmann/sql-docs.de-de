@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten
@@ -41,11 +41,11 @@ ms.lasthandoff: 09/21/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mit dem Import/Export-Assistenten können Daten mühelos aus einer Quelle in ein Ziel kopiert werden. In dieser Übersicht werden die Datenquellen, die der Assistent als Quellen und Zielen verwenden kann sowie die Berechtigungen, die Sie benötigen, um den Assistenten auszuführen.
 
 ## <a name="get-the-wizard"></a>Abrufen des Assistenten
-Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! UMFASSEN[MsCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Was geschieht, wenn ich den Assistenten ausführen?
 -    **Zeigen Sie die Liste der Schritte an.** Eine Beschreibung der Schritte im Assistenten, finden Sie unter [Schritte in der SQL Server-Import / Export-Assistenten](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Es gibt auch eine separate Seite der Dokumentation für jede Seite des Assistenten.  
-    \- oder \-
+    \-oder\-
 -   **Finden Sie ein einfaches Beispiel.** Für einen kurzen Blick auf die mehrere Bildschirme in eine typische Sitzung angezeigt werden soll, sehen Sie sich diesem einfachen End-to-End-Beispiel auf einer Seite - [beginnen Sie mit diesem einfachen Beispiel des Import / Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Verwenden Quellen und Ziele kann ich?  
@@ -62,7 +62,7 @@ Wenn Sie den Assistenten ausführen möchten, aber Sie verfügen nicht über [! 
 
 ## <a name="how-do-i-connect-to-my-data"></a>Wie verbinde ich mich mit meiner Daten?
 Informationen zum Herstellen einer Verbindung mit einer häufig verwendeten Datenquelle finden Sie unter den folgenden Seiten.
--   [Connect to SQL Server (Herstellen einer Verbindung mit SQL Server)](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [Herstellen einer Verbindung mit SQLServer](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Flatfile-Dateien (Textdateien)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

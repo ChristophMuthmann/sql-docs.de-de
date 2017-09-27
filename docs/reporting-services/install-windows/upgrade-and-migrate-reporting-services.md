@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 

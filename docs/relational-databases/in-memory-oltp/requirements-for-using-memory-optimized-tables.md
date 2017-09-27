@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   In-Memory-OLTP wird als Teil von **Database Engine Services**installiert.  
   
-     Zum Installieren der Berichtgenerierung ([Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory-OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (um In-Memory-OLTP über den Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu verwalten) gehen Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
+     Zum Installieren der Berichtgenerierung ([Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory-OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (um In-Memory-OLTP über den Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu verwalten) gehen Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   

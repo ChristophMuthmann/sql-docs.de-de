@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS)-Paket und Projektparametern
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [Gespeicherte Systemprozeduren &#40; Integration Services-Katalog &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Konfigurieren (Dialogfeld)](../integration-services/service/configure-dialog-box.md)  
+-   [Dialogfeld "konfigurieren"](../integration-services/service/configure-dialog-box.md)  
   
 -   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -165,7 +165,7 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
     > **WARNUNG FEHLERHAFT SIND.** Nehmen Sie Bearbeitungen direkt in der Liste vor, oder verwenden Sie das Fenster **Eigenschaften**, um die Werte von Parametereigenschaften zu ändern. Sie können mit der Symbolleistenschaltfläche **Löschen (X)** einen Parameter löschen. Über die letzte Symbolleistenschaltfläche können Sie das Dialogfeld **Parameterwerte verwalten** öffnen, um einen Wert für einen Parameter anzugeben, der nur verwendet wird, wenn Sie das Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen.  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-Die **parametrisieren** Dialogfeld können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft eines Tasks zuordnen. Öffnen Sie das Dialogfeld durch Rechtsklicken auf eine Aufgabe oder der Registerkarte Ablaufsteuerung in [! UMFASSEN[SsIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).
+Die **parametrisieren** Dialogfeld können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft eines Tasks zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### <a name="options"></a>enthalten  
  **Eigenschaft**  
