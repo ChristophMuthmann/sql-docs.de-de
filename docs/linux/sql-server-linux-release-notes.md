@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
@@ -73,7 +73,7 @@ Details zum Paket und downloadpfaden für die RPM und Debian Pakete werden in de
 | [SQL Server Data Tools für Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio-Code](https://code.visualstudio.com) mit der [Mssql-Erweiterung](https://aka.ms/mssql-marketplace) | neueste |
 
-### <a name="unsupported-features-and-services"></a>Nicht unterstützte Funktionen und Dienste
+### <a name="Unsupported"></a>Nicht unterstützte Funktionen und Dienste
 
 Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unter Linux. Die Unterstützung dieser Funktionen wird immer während der monatlichen Updates Rhythmus der Preview-Programm aktiviert werden.
 
@@ -810,7 +810,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
 
 - SQL Server-Konfigurations-Manager Verbindung keine mit SQL Server on Linux.
 
-- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\>**  Methode stattdessen vorläufig. 
+- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\> ** Methode stattdessen vorläufig. 
 
 #### <a name="databases"></a>Datenbanken
 - Systemdatenbanken können nicht mit dem Hilfsprogramm Mssql-Conf verschoben werden.
@@ -987,7 +987,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
 
 - SQL Server-Konfigurations-Manager Verbindung keine mit SQL Server on Linux.
 
-- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\>**  Methode stattdessen vorläufig. 
+- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\> ** Methode stattdessen vorläufig. 
 
 #### <a name="databases"></a>Datenbanken
 - Ändern die Speicherorte der Daten- und Protokolldateien TempDB-Dateien wird nicht unterstützt.
@@ -1147,7 +1147,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
 
 - SQL Server-Konfigurations-Manager Verbindung keine mit SQL Server on Linux.
 
-- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\>**  Methode stattdessen vorläufig. 
+- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\> ** Methode stattdessen vorläufig. 
 
 #### <a name="databases"></a>Datenbanken
 - Ändern die Speicherorte der Daten- und Protokolldateien TempDB-Dateien wird nicht unterstützt.
@@ -1292,7 +1292,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
 
 - SQL Server-Konfigurations-Manager Verbindung keine mit SQL Server on Linux.
 
-- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\>**  Methode stattdessen vorläufig. 
+- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\> ** Methode stattdessen vorläufig. 
 
 #### <a name="databases"></a>Datenbanken
 - Ändern die Speicherorte der Daten- und Protokolldateien TempDB-Dateien wird nicht unterstützt.
@@ -1424,7 +1424,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dieser Version von SQL
 
 - SQL Server-Konfigurations-Manager Verbindung keine mit SQL Server on Linux.
 
-- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\>**  Methode stattdessen vorläufig.
+- **CREATE ASSEMBLY** funktioniert nicht bei dem Versuch, eine Datei zu verwenden. Verwenden der **FROM \<Bits\> ** Methode stattdessen vorläufig.
 
 #### <a name="databases"></a>Datenbanken
 - Ändern die Speicherorte der Daten- und Protokolldateien TempDB-Dateien wird nicht unterstützt.

@@ -2,7 +2,7 @@
 title: "Was &#39; s in SSMA für die MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 6dff8473750c454984d824eee17abb9358ce18fe
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
 ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Was &#39; s in SSMA für die MySQL (MySQLToSql)
 In diesem Thema werden die SSMA für MySQL-Änderungen in jeder Version aufgelistet. 
+
+## <a name="ssma-v75"></a>SSMA 7.5
+Die Version 7.5 von SSMA für MySQL wurde verbessert, mit zahlreiche Verbesserungen, um größere Barrierefreiheit für Personen mit behinderungen sicherzustellen.
+
+> [!IMPORTANT]
+> .NET 4.5.2 ist eine Voraussetzung für die Installation von SSMA 7.5. Darüber hinaus wird v7.4 ab, die 32-Bit-Version von SSMA nicht mehr unterstützt wird.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Die v7.4-Version von SSMA für MySQL enthält die folgenden Änderungen:

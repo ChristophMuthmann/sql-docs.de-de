@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
-Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und Sybase.  
+Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE konzipiert.  
   
 ## <a name="migration-sources"></a>Migration von Datenquellen  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
   
 -   [SQL Server Migration Assistant für Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SQL Server Migration Assistant für Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [SQL Server Migration Assistant für SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Unterstützte Quellen und Zielversionen
 Überprüfen Sie die Informationen im Download Center für den Download SSMA, für unterstützte Datenquellen.
@@ -49,19 +49,18 @@ Die folgende Zielversionen werden für SSMA unterstützt.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Azure SQL-Datenbank
 - SQLServer 2017 unter Windows und Linux (Vorschau)
 - ** Azure SQL Datawarehouse
 
 ** Dieses Ziel wird nur von SSMA für Oracle unterstützt.
  
-
 ## <a name="downloads"></a>Downloads
 - [SSMA für Access](http://aka.ms/ssmaforaccess)
 - [SSMA für DB2](http://aka.ms/ssmafordb2)
 - [SSMA für MySql](http://aka.ms/ssmaformysql)
 - [SSMA für die Oracle](http://aka.ms/ssmafororacle)
-- [SSMA für Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA für SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA-Support erhalten  
 **Hilfe und Support für Microsoft SQL Server Migration Assistant (SSMA):**  
