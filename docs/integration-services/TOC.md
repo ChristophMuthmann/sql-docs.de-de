@@ -6,6 +6,28 @@
 ## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-integration-services.md)
 ## [Von den SQL Server 2016-Editionen unterstützte Integration Services-Funktionen](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services – Abwärtskompatibilität](integration-services-backward-compatibility.md)
+
+# Schnellstarts
+## Bereitstellen
+### [Bereitstellen mit SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Bereitstellen mit Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Bereitstellen mit Transact-SQL (VS-Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Bereitstellen über die Eingabeaufforderung](./ssis-quickstart-deploy-cmdline.md)
+### [Bereitstellen mit PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Bereitstellen mit C#](./ssis-quickstart-deploy-dotnet.md) 
+## Ausführen
+### [Ausführen mit SSMS](./ssis-quickstart-run-ssms.md)
+### [Ausführen mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Ausführen mit Transact-SQL (VS-Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Ausführen über die Eingabeaufforderung](./ssis-quickstart-run-cmdline.md)
+### [Ausführen mit PowerShell](ssis-quickstart-run-powershell.md)
+### [Ausführen mit C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Migration von SSIS-Paketen zu Azure per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial: Bereitstellen, Ausführen und Überwachen eines Pakets in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Verbinden mit dem SSIS-Katalog in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Zeitliche Planung der Paketausführung in Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Verbinden mit Datenquellen mit der Windows-Authentifizierung](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Installation oder Upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Entwicklungs- und Verwaltungstools](integration-services-ssis-development-and-management-tools.md)

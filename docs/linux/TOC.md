@@ -4,6 +4,7 @@
 ## [Versionsanmerkungen](sql-server-linux-release-notes.md)
 ## [What's new in this release? (Neuerungen in dieser Version)](sql-server-linux-whats-new.md)
 ## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-linux.md)
+## [Editionen und unterstützte Funktionen](sql-server-linux-editions-and-components-2017.md)
 
 # Schnellstarts
 ## [Install & Connect - Red Hat (Installieren und Verbinden – Red Hat)](quickstart-install-connect-red-hat.md)
@@ -44,7 +45,10 @@
 ### [Export and import a BACPAC from Windows (Exportieren und Importieren einer BACPAC-Datei von Windows)](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant (Migrieren mit SQL Server Migration Assistant)](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp (Massenkopieren mit bcp)](sql-server-linux-migrate-bcp.md)
-### [Load data with (SSIS) (Laden von Daten mit SSIS)](sql-server-linux-migrate-ssis.md)
+
+## [Extrahieren, Transformieren, Laden](sql-server-linux-migrate-ssis.md)
+### [Konfigurieren von SSIS](sql-server-linux-configure-ssis.md)
+### [Zeitliches Planen von SSIS-Paketen](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Configure Business Continuity (Konfigurieren des Geschäftskontinuität)](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore (Sichern und Wiederherstellen)](sql-server-linux-backup-and-restore-database.md)
