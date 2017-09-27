@@ -504,9 +504,9 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|ja|ja|ja|Benutzerkontensteuerung|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|ja|ja|ja|ja|  
-|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|ja|ja|ja|ja|ja|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|ja|ja|ja|ja|ja|  
+|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|ja|  
   
 **\&#42;** Laden Sie das Konnektivitätspatch für ADO.NET mit .NET Framework 4.0 herunter: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
