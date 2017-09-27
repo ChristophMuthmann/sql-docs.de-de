@@ -68,13 +68,12 @@ ms.lasthandoff: 06/22/2017
 7.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
-    -- Creates a backup of the "AdventureWorks2012" master key.  
-    -- Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2012;  
-    GO  
-    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'   
-        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
-    GO  
+    -- Creates a backup of the service master key.
+    USE master;
+    GO
+    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'
+        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+    GO
     ```  
   
     > [!NOTE]  
@@ -87,3 +86,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) und [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
   
   
+
