@@ -126,7 +126,7 @@ ms.lasthandoff: 08/28/2017
 |Komponenten, die von allen Instanzen von gemeinsam genutzt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fester Pfad|  
   
 >[!WARNING]
->Stellen Sie sicher, dass der Ordner „\Programme\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\“ durch entsprechend eingeschränkte Berechtigungen geschützt wird.  
+>Stellen Sie sicher, dass der Ordner „\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\“ durch entsprechend eingeschränkte Berechtigungen geschützt wird.  
   
 Beachten Sie, dass das Standardlaufwerk für Dateispeicherorte *systemdrive*lautet, normalerweise Laufwerk C. Installationspfade für untergeordnete Funktionen werden durch die Installationspfade der übergeordneten Funktion bestimmt.  
   
