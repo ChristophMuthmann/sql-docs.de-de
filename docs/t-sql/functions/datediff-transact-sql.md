@@ -53,8 +53,6 @@ Größere Unterschiede finden Sie unter [DATEDIFF_BIG &#40; Transact-SQL &#41; ]
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   

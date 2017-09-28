@@ -39,8 +39,6 @@ Gibt die Eigenschaft einer angegebenen Sortierung in [!INCLUDE[ssCurrent](../../
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

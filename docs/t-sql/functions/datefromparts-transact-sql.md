@@ -38,8 +38,6 @@ Gibt eine **Datum** Wert für den angegebenen Werten für Jahr, Monat und Tag.
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEFROMPARTS ( year, month, day )  
 ```  
   

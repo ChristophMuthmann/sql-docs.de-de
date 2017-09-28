@@ -41,8 +41,6 @@ Sucht in einem Ausdruck nach einem anderen Ausdruck und gibt dessen Startpositio
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   

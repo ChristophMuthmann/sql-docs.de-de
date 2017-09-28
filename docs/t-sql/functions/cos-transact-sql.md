@@ -39,8 +39,6 @@ Eine mathematische Funktion, die den trigonometrischen Kosinus des im angegebene
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COS ( float_expression )  
 ```  
   

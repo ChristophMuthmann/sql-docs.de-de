@@ -34,8 +34,6 @@ Zeigt die Anzahl der Zeilen, reservierte Speicherplatz und Speicherplatz für ei
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

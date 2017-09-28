@@ -40,8 +40,6 @@ Gibt die kleinste ganze Zahl zurück, die größer oder gleich dem angegebenen n
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   

@@ -38,8 +38,6 @@ Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung von zwei oder me
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   

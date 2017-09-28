@@ -42,8 +42,6 @@ Gibt den Namen des aktuellen Benutzers zurück. Diese Funktion entspricht USER_N
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CURRENT_USER  
 ```  
 

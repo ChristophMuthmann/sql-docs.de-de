@@ -40,8 +40,6 @@ Gibt den Winkel im Bogenmaß wieder, dessen Sinus dem angegebenen **"float"** Au
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ASIN ( float_expression )  
 ```  
   

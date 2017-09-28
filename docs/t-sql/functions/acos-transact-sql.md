@@ -40,8 +40,6 @@ Eine mathematische Funktion, der den Winkel im Bogenmaß zurückgibt, dessen Kos
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ACOS ( float_expression )  
 ```  
   

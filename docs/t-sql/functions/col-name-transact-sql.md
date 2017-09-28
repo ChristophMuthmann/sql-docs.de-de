@@ -41,8 +41,6 @@ Gibt den Namen einer Spalte mit einer angegebenen Tabellenidentifikationsnummer 
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

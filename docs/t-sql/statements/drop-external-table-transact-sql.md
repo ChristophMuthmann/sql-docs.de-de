@@ -33,8 +33,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_name   
 [;]  
 ```  

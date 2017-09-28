@@ -40,8 +40,6 @@ Gibt den Winkel im Bogenmaß (Radiant) zwischen der positiven X-Achse und dem St
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

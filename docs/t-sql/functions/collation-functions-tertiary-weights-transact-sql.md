@@ -40,8 +40,6 @@ Gibt eine binäre Zeichenfolge der Schriftbreiten für jedes Zeichen in einem Ni
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

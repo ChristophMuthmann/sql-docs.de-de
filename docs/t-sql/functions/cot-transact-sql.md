@@ -39,8 +39,6 @@ Eine mathematische Funktion, die den trigonometrischen Kotangens des angegebenen
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COT ( float_expression )  
 ```  
   

@@ -32,8 +32,6 @@ Reduziert die Größe des Transaktionsprotokolls *über die Appliance* für den 
 ## <a name="syntax"></a>Syntax  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   
