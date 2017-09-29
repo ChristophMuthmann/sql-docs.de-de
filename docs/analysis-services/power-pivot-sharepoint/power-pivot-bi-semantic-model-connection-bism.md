@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> Unterstützte Datenbanken  
  Eine BI-Semantikmodellverbindung verweist auf tabellarische Modelldaten. Es gibt drei Quellen für diese Daten:  
   
--   Eine Datenbank für tabellarische Modelle, die auf einer eigenständigen Analysis Services-Instanz im Tabellenservermodus ausgeführt wird. Die Bereitstellung einer eigenständigen Analysis Services-Instanz ist für die Farm extern. Für den Zugriff auf Datenquellen außerhalb der Farm sind zusätzliche Berechtigungen erforderlich, die in folgendem Thema erläutert werden: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Eine Datenbank für tabellarische Modelle, die auf einer eigenständigen Analysis Services-Instanz im Tabellenservermodus ausgeführt wird. Die Bereitstellung einer eigenständigen Analysis Services-Instanz ist für die Farm extern. Für den Zugriff auf Datenquellen außerhalb der Farm sind zusätzliche Berechtigungen erforderlich, die in folgendem Thema erläutert werden: [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] In SharePoint gespeicherte Arbeitsmappen. Eingebettete [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbanken in Excel-Arbeitsmappen entsprechen Datenbanken für tabellarische Modelle, die auf einem eigenständigen Analysis Services-Server im Tabellenmodus ausgeführt werden. Wenn Sie bereits [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwenden, können Sie eine BI-Semantikmodellverbindung definieren, die auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen in einer SharePoint-Bibliothek verweist, und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte anhand vorhandener [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten erstellen.  Sie können entweder in der SQL Server 2008 R2-Version oder in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Versionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellte Arbeitsmappen verwenden.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

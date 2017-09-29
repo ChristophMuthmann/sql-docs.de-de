@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>Bereitstellen in SQL Server Data Tools
   Verwenden Sie die Aufgaben in diesem Thema, um eine Projektmappe für tabellarische Modelle bereitstellen, indem Sie mit dem Bereitstellungsbefehl in SSDT.  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> Konfigurieren der Eigenschaften "Bereitstellungsoptionen" und "Bereitstellungsserver"  
  Bevor Sie die Projektmappe für tabellarische Modelle bereitstellen, müssen Sie die Eigenschaft Bereitstellungsoptionen und die Eigenschaft Bereitstellungsserver angeben. Weitere Informationen zu Bereitstellungseigenschaften und Einstellungen finden Sie unter [tabellarische Bereitstellung von Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-options-and-properties"></a>So konfigurieren Sie Optionen und Eigenschaften  

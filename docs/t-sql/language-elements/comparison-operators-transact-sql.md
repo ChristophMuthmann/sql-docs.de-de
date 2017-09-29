@@ -44,9 +44,9 @@ ms.lasthandoff: 09/01/2017
 |[>= (Greater Than or Equal To) (>= (Größer als oder gleich)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Größer als oder gleich|  
 |[<= (Less Than or Equal To) (<= (Kleiner als oder gleich))](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Kleiner als oder gleich|  
 |[<> (Not Equal To) (<> (Ungleich))](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Ungleich|  
-|[! = (Ungleich)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Nicht gleich (kein ISO-Standard)|  
-|[! < (Nicht kleiner als)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Nicht kleiner als (kein ISO-Standard)|  
-|[! > (Nicht größer als)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Nicht größer als (kein ISO-Standard)|  
+|[!= (Ungleich)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Nicht gleich (kein ISO-Standard)|  
+|[!< (Nicht kleiner als)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Nicht kleiner als (kein ISO-Standard)|  
+|[!> (Nicht größer als)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Nicht größer als (kein ISO-Standard)|  
   
 ## <a name="boolean-data-type"></a>Boolesche Datentypen  
  Das Ergebnis eines Vergleichsoperators hat die **booleschen** -Datentyp. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die Zurückgeben einer **booleschen** -Datentyp werden als boolesche Ausdrücke bezeichnet.  
