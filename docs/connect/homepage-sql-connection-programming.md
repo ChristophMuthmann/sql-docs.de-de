@@ -95,7 +95,7 @@ Die .NET-verwaltete-Sprachen wie c# und Visual Basic sind die häufigsten Benutz
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework-logo][image-ref-333-ef] Entity Framework (EF) mit C & #x 23;
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework-logo][image-ref-333-ef] Entity Framework (EF) mit C&#x23;
 
 Entity Framework (EF) bietet objektrelationales Mapping (ORM). ORM erleichtert es den Quellcode objektorientiertes Programmierung (OOP) zum Bearbeiten von Daten, die aus einer relationalen SQL­Datenbank abgerufen wurden.
 
@@ -118,7 +118,7 @@ Die [Startseite für Entity Framework](http://docs.microsoft.com/ef/) führt EF 
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft hat EF zuerst im August 2008 veröffentlicht. Im März 2015 kündigte Microsoft, die EF 6.x wurde der endgültigen Version, die Microsoft entwickeln möchten. Microsoft hat den Quellcode in der öffentlichen Domäne veröffentlicht.<br /><br />Anfangs war EF Teil von .NET Framework. Aber EF 6.x aus .NET Framework entfernt wurde.<br /><br />[EF 6.x-Quellcode für Github erstellt im Repository *Aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft hat die neu entwickelten EF Core im Juni 2016 veröffentlicht. EF Core dient für eine größere Flexibilität und Portabilität. EF Core kann auf hinter nur Microsoft-Windows-Betriebssystemen ausführen. Und EF-Core mit hinter nur Microsoft SQL Server-Datenbanken und andere relationalen Datenbanken interagieren kann.<br /><br />**C & #x 23; Codebeispiele:**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Erste Schritte mit EF Core unter .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft hat die neu entwickelten EF Core im Juni 2016 veröffentlicht. EF Core dient für eine größere Flexibilität und Portabilität. EF Core kann auf hinter nur Microsoft-Windows-Betriebssystemen ausführen. Und EF-Core mit hinter nur Microsoft SQL Server-Datenbanken und andere relationalen Datenbanken interagieren kann.<br /><br />**C&#x23; Codebeispiele:**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Erste Schritte mit EF Core unter .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF und verwandten Technologien sind leistungsstarke, und viele für den Entwickler erfahren Sie, den gesamten Bereich "master" möchte.
