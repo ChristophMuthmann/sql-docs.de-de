@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
@@ -63,8 +63,8 @@ Gängige Workloadszenarien sind u.a. Wertpapierhandel, Sportwetten, Spiele auf M
 Verwenden Sie speicheroptimierte Tabellen für Ihre wichtigsten Transaktionstabellen, d.h. die Tabelle mit den meisten leistungskritischen Transaktionen. Verwenden Sie nativ kompilierte gespeicherte Prozeduren zum Optimieren der Ausführung der Logik, die den Geschäftstransaktion zugeordnet ist. Je mehr Logik Sie in gespeicherte Prozeduren in der Datenbank verschieben können, desto mehr können Sie von In-Memory-OLTP profitieren.
 
 So fangen Sie bei einer vorhandenen Anwendung an
-1. Verwenden Sie den [Bericht mit der Transaktionsleistungsanalyse](https://msdn.microsoft.com/library/dn205133.aspx) , um die Objekte zu bestimmen, die Sie migrieren möchten. 
-2. Verwenden Sie die Ratgeber für [Speicheroptimierung](https://msdn.microsoft.com/library/dn284308.aspx) und [native Kompilierung](https://msdn.microsoft.com/library/dn358355.aspx) , die Sie bei der Migration unterstützen.
+1. Verwenden Sie den [Bericht mit der Transaktionsleistungsanalyse](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) , um die Objekte zu bestimmen, die Sie migrieren möchten. 
+2. Verwenden Sie die Ratgeber für [Speicheroptimierung](memory-optimization-advisor.md) und [native Kompilierung](native-compilation-advisor.md) , die Sie bei der Migration unterstützen.
 
 #### <a name="customer-case-studies"></a>Fallstudien von Kunden
 
@@ -82,8 +82,8 @@ Allgemeine Anwendungsmuster sind: Erfassen von Sensormesswerten und -ereignissen
 
 Verwenden Sie für die Datenerfassung eine speicheroptimierte Tabelle. Wenn die Erfassung hauptsächlich aus Einfügungen (anstelle von Aktualisierungen) besteht und der In-Memory-OLTP-Speicherbedarf von Belang ist, haben Sie diese Optionen:
 
-- Verwenden Sie einen Auftrag, der [verwendet, um Daten regelmäßig per Batchvorgang in einer datenträgerbasierten Tabelle mit einem](https://msdn.microsoft.com/library/gg492088.aspx)gruppierten Columnstore-Index `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`abzuladen, oder
-- Arbeiten Sie mit einer [temporalen speicheroptimierten Tabelle](https://msdn.microsoft.com/library/mt590207.aspx) zum Verwalten von Verlaufsdaten. In diesem Modus befinden sich die Verlaufsdaten auf dem Datenträger, und die Datenverschiebung wird vom System verwaltet.
+- Verwenden Sie einen Auftrag, der [verwendet, um Daten regelmäßig per Batchvorgang in einer datenträgerbasierten Tabelle mit einem](../indexes/columnstore-indexes-overview.md)gruppierten Columnstore-Index `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`abzuladen, oder
+- Arbeiten Sie mit einer [temporalen speicheroptimierten Tabelle](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) zum Verwalten von Verlaufsdaten. In diesem Modus befinden sich die Verlaufsdaten auf dem Datenträger, und die Datenverschiebung wird vom System verwaltet.
 
 Das SQL Server-Repository mit Beispielen enthält eine Smart Grid-Anwendung, die eine temporale speicheroptimierte Tabelle, einen speicheroptimierten Tabellentyp und eine nativ kompilierte gespeicherte Prozedur verwendet, um die Datenerfassung zu beschleunigen, während der In-Memory-OLTP-Speicherbedarf der Sensordaten verwaltet wird: 
 
@@ -228,10 +228,10 @@ Das folgende Skript veranschaulicht In-Memory-OLTP-Objekte, die Sie in der Daten
 - Eine Demo der Leistung bei Verwenden von In-Memory-OLTP finden Sie unter: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minütiges Video mit einer Erläuterung von In-Memory-OLTP und Präsentation der Demo](https://www.youtube.com/watch?v=l5l5eophmK4) (Demo bei 8:25)
 - [Skript zum Aktivieren von In-Memory-OLTP und Festlegen empfohlener Optionen](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Hauptdokumentation zu In-Memory-OLTP](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Hauptdokumentation zu In-Memory-OLTP](in-memory-oltp-in-memory-optimization.md)
 - [Vorteile bei der Nutzung von Leistung und Ressourcen des In-Memory OLTP in der Azure SQL-Datenbank](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization (Verbesserung der temporären Tabelle und Tabellenvariablenleistung mithilfe der Speicheroptimierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimieren der Leistung mithilfe von In-Memory-Technologie in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](https://msdn.microsoft.com/library/mt590207.aspx)
+- [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [In-Memory-OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx) 
 

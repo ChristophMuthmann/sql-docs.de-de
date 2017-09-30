@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
@@ -84,18 +84,18 @@ Aus diesem Grund ist es erforderlich, einen Tabellenhinweis auf die speicheropti
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- Explizite Transaction.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Tabellenhinweis.  
+                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 Beachten Sie, dass der `WITH (SNAPSHOT)` -Hinweis durch Verwendung der Datenbankoption `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`vermieden werden kann. Wenn diese Option auf `ON`festgelegt ist, wird der Zugriff auf eine speicheroptimierte Tabelle einer niedrigeren Isolationsstufe automatisch auf die SNAPSHOT-Isolation hochgestuft.  
   
@@ -308,7 +308,7 @@ Folgendes gilt für das folgende Transact-SQL-Codebeispiel:
   
 - Es sind im Hauptteil einer systemeigenen Prozess keine expliziten Transaktionssteueranweisungen zulässig. BEGIN TRANSACTION, ROLLBACK TRANSACTION usw. sind alle nicht zulässig.  
   
-- Weitere Informationen zur Transaktionssteuerung mit ATOMIC-Blöcken finden Sie unter [ATOMIC-Blöcke](https://msdn.microsoft.com/library/dn452281.aspx).  
+- Weitere Informationen zur Transaktionssteuerung mit ATOMIC-Blöcken finden Sie unter [ATOMIC-Blöcke](atomic-blocks-in-native-procedures.md).  
   
 <a name="othertxnlinks44ni"/>  
   

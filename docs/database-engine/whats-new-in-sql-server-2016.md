@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues im Datenbankmodul – SQL Server 2016
@@ -438,7 +438,7 @@ Durch direktes Seeding kann das Seeding eines sekundären Replikats automatisch 
 ###  <a name="Tools"></a> Toolverbesserungen
 
 ####  <a name="SSMS"></a> Management Studio
-Laden Sie das neueste [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)herunter
+Laden Sie das neueste [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)herunter
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] unterstützt die Active Directory Authentication Library (ADAL), die für die Verbindung mit Microsoft Azure entwickelt wird. Dies ersetzt die zertifikatbasierte Authentifizierung von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Die[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installation erfordert die Installation von .NET 4.6 als erforderliche Komponente. .NET 4.6 wird automatisch vom Setupprogramm installiert, wenn [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installiert wird.

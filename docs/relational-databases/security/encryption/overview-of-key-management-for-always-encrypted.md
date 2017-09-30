@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
@@ -70,7 +70,7 @@ Wenn Always Encrypted-Schlüssel ohne Rollentrennung verwaltet werden, kann eine
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Tools zum Verwalten von Always Encrypted-Schlüsseln
 
-Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) und [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx)verwaltet werden:
+Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) und [PowerShell](../../scripting/sql-server-powershell.md)verwaltet werden:
 
 - **SQL Server Management Studio (SSMS)** stellt die Dialogfelder und Assistenten bereit, die Aufgaben im Zusammenhang mit dem Zugriff auf den Schlüsselspeicher und die Datenbank kombinieren. SSMS unterstützt die Rollentrennung daher nicht, vereinfacht jedoch das Konfigurieren Ihrer Schlüssel. Weitere Informationen zum Verwalten von Schlüsseln mithilfe von SSMS finden Sie hier:
     - [Bereitstellen von Spaltenhauptschlüsseln](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Remotezugriff
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/11/2017
   
 -   [Vorgehensweise: Verbinden mit SQL Server mithilfe der SQL-Authentifizierung in ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
--   [Herstellen einer Verbindung zu einer Instanz von SQL Server](https://msdn.microsoft.com/library/ms162132.aspx)  
+-   [Herstellen einer Verbindung zu einer Instanz von SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
 -   [Vorgehensweise: Erstellen von Verbindungen zu SQL Server-Datenbanken](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   

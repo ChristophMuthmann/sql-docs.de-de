@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  Legen Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer für sekundäre Objekte (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank fest. Dies entspricht dem [Ablaufverfolgungsflag 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **Max. DOP**  
- Legen Sie die Standardeinstellung [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) für das primäre Objekt fest, die für Anweisungen verwendet werden soll.  
+ Legen Sie die Standardeinstellung [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für das primäre Objekt fest, die für Anweisungen verwendet werden soll.  
   
  **Max. DOP für sekundäres Objekt**  
- Legen Sie die Standardeinstellung [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) für sekundäre Objekte fest (sofern vorhanden), die für Anweisungen verwendet werden soll.  
+ Legen Sie die Standardeinstellung [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für sekundäre Objekte fest (sofern vorhanden), die für Anweisungen verwendet werden soll.  
   
  **Parameterermittlung**  
  Aktiviert oder deaktiviert die Parameterermittlung auf dem primären Objekt. Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/en-us/kb/980653).  

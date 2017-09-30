@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1167a74aff5a5cfa495bc5a00a6b52e30a5c2e7b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
@@ -51,7 +51,7 @@ Die verfügbaren integrierten Anbieter richten sich danach, welcher Treiber, wel
 
 ### <a name="supported-tools"></a>Unterstützte Tools
 
-Sie können [SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) und das [SQL Server PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) verwenden, um Always Encrypted zu konfigurieren und Always Encrypted-Schlüssel zu verwalten. Eine Liste der von diesen Tools unterstützen Schlüsselspeicher finden Sie hier:
+Sie können [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) und das [SQL Server PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) verwenden, um Always Encrypted zu konfigurieren und Always Encrypted-Schlüssel zu verwalten. Eine Liste der von diesen Tools unterstützen Schlüsselspeicher finden Sie hier:
 
 - [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
@@ -109,7 +109,7 @@ Um einem Benutzer die Berechtigung *Lesen* für ein im Zertifikatspeicherort des
 5.  Klicken Sie im Dialogfeld **Zertifikat-Snap-In** auf **Computerkonto**, und klicken Sie dann auf **Fertig stellen**.
 6.  Klicken Sie im Dialogfeld **Eigenständiges Snap-In** hinzufügen auf **Schließen**.
 7.  Klicken Sie im Dialogfeld **Snap-In hinzufügen/entfernen** auf **OK**.
-8.  Finden Sie das Zertifikat im **Zertifikat-Snap-In** im Ordner  **Eigene Zertifikate**, klicken Sie mit der rechten Maustaste auf das Zertifikat, zeigen Sie auf **Alle Aufgaben**, und klicken Sie dann auf **Private Schlüssel verwalten**.
+8.  Finden Sie das Zertifikat im **Zertifikat-Snap-In** im Ordner ** Eigene Zertifikate**, klicken Sie mit der rechten Maustaste auf das Zertifikat, zeigen Sie auf **Alle Aufgaben**, und klicken Sie dann auf **Private Schlüssel verwalten**.
 9.  Fügen Sie bei Bedarf im Dialogfeld **Sicherheit** die Leseberechtigung für ein Benutzerkonto hinzu.
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Erstellen von Spaltenhauptschlüsseln in Azure Key Vault

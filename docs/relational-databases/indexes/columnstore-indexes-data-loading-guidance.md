@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes – Leitfaden zum Datenladevorgang
@@ -32,7 +32,7 @@ Optionen und Empfehlungen für das Laden von Daten mithilfe der Funktion zum SQL
 
 ## <a name="what-is-bulk-loading"></a>Was ist Massenladen?
 *Massenladen* bezieht sich auf die Möglichkeit, eine große Anzahl von Zeilen in einen Datenspeicher hinzuzufügen. Es ist der leistungsfähigste Weg, Daten in einen Columnstore-Index zu verschieben, da mit Zeilenbatches gearbeitet wird. Das Massenladen füllt Zeilengruppen bis zur Kapazitätsgrenze auf und komprimiert diese direkt in den Columnstore. Nur Zeilen am Ende eines Ladevorgangs, die nicht mindestens 102.400 Zeilen pro Zeilengruppe erfüllen, werden in den Deltastore verschoben.  
-Um einen Massenladungsvorgang auszuführen, können Sie das [bcp-Hilfsprogramm](https://msdn.microsoft.com/library/ms162802.aspx) oder [Integration Services](https://msdn.microsoft.com/library/ms141026.aspx) verwenden, oder Sie können Zeilen aus einer Stagingtabelle auswählen.
+Um einen Massenladungsvorgang auszuführen, können Sie das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) oder [Integration Services](../../integration-services/sql-server-integration-services.md) verwenden, oder Sie können Zeilen aus einer Stagingtabelle auswählen.
 
 ![Laden in einen geclusterten Columnstore-Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>Was ist das Anwenden der Einfügung?
 
-Das *Anwenden der Einfügung* bezieht sich auf die Methode, wie einzelne Zeilen in den Columnstore-Index verschoben werden. Das Anwenden der Einfügung verwendet die [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx)-Anweisung. Mit der Einfügungsanwendung werden alle Zeilen in den Deltastore verschoben. Dies ist nützlich für eine kleine Anzahl von Zeilen, aber für große Datenmengen nicht geeignet.
+Das *Anwenden der Einfügung* bezieht sich auf die Methode, wie einzelne Zeilen in den Columnstore-Index verschoben werden. Das Anwenden der Einfügung verwendet die [INSERT INTO](../../t-sql/statements/insert-transact-sql.md)-Anweisung. Mit der Einfügungsanwendung werden alle Zeilen in den Deltastore verschoben. Dies ist nützlich für eine kleine Anzahl von Zeilen, aber für große Datenmengen nicht geeignet.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

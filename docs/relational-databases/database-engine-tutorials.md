@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zum Datenbankmodul
@@ -48,10 +48,10 @@ Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../inc
 [Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien zur Durchsetzung von Standards zur Websiteverwaltung erstellen.  
   
-[Tutorial: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 In diesem Lernprogramm wird veranschaulicht, wie Sie eine SQL Server-Sicherung und -Wiederherstellung im Lernprogramm für den Windows Azure-BLOB-Speicherdienst ausführen.  
   
-[Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  
   
 ## <a name="see-also"></a>Siehe auch  

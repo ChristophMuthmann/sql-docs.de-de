@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereits installiert ist.  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Verwenden von Azure-Momentaufnahmen zum Sichern von in Azure gespeicherten Datenbankdateien  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  Nach der ersten vollständigen Sicherung, die zum Einrichten der Transaktionsprotokoll-Sicherungskette (die eine Dateimomentaufnahme-Sicherung sein kann) erforderlich ist, brauchen nur noch Sicherungen des Transaktionsprotokolls ausgeführt werden, da jeder Dateimomentaufnahme-Sicherungssatz des Transaktionsprotokolls die Dateimomentaufnahmen aller Datenbankdateien enthält und verwendet werden kann, um eine Datenbank- oder Protokollwiederherstellung durchzuführen. Nach der ersten vollständigen Datenbanksicherung brauchen Sie keine zusätzlichen vollständigen oder differenziellen Sicherungen mehr auszuführen, da der Azure-BLOB-Speicherdienst die Unterschiede zwischen jeder Dateimomentaufnahme und dem aktuellen Zustand des Basis-BLOBs für jede Datenbankdatei behandelt.  
   
 > [!NOTE]  
->  Ein Tutorial zur Verwendung von SQL Server 2016 mit Microsoft Azure Blob Storage finden Sie unter [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  Ein Tutorial zur Verwendung von SQL Server 2016 mit Microsoft Azure Blob Storage finden Sie unter [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Wiederherstellung mithilfe von Dateimomentaufnahme-Sicherungen  
  Da jeder Dateimomentaufnahme-Sicherungssatz eine Dateimomentaufnahme jeder einzelnen Datenbankdatei enthält, erfordert ein Wiederherstellungsvorgang höchstens zwei aufeinander folgende Dateimomentaufnahme-Sicherungssätze. Dies gilt unabhängig davon, ob der Sicherungssatz aus einer vollständigen Sicherung oder einer Protokollsicherung stammt. Dies unterscheidet sich wesentlich vom Wiederherstellungsvorgang unter Verwendung herkömmlicher Streamingsicherungsdateien. Bei der herkömmlichen Streamingsicherung ist für den Wiederherstellungsvorgang eine vollständige Kette von Sicherungssätzen erforderlich: die vollständige Sicherung, eine differenzielle Sicherung und eine oder mehrere Transaktionsprotokollsicherungen. Der Wiederherstellungsteil Wiederherstellungsvorgangs ist identisch, unabhängig davon, ob von der Wiederherstellung ein Dateimomentaufnahme-Sicherungs- oder ein Streamingsicherungssatz verwendet wird.  
@@ -184,7 +184,7 @@ GO
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|Der Abfragespeicher trennt die Zeit in automatisch generierte Zeitfenster (Intervalle) und speichert aggregierte Statistiken für jeden ausgeführten Plan auf diesem Intervall. Die Größe des Intervalls wird gesteuert durch die Konfigurationsoption „Intervall für Statistikerfassung“ (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) oder durch `INTERVAL_LENGTH_MINUTES` mithilfe von [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Aggregierte Laufzeitstatistiken für ausgeführte Pläne. Alle erfassten Metriken werden in Form von 4 Statistikfunktionen ausgedrückt: Mittelwert, Minimum, Maximum und Standardabweichung.|  
   
- Weitere Informationen zu Abfragespeichersichten finden Sie im Abschnitt **Zugehörige Sichten, Funktionen und Prozeduren** in [Überwachen der Leistung mit dem Abfragespeicher](https://msdn.microsoft.com/library/dn817826.aspx).  
+ Weitere Informationen zu Abfragespeichersichten finden Sie im Abschnitt **Zugehörige Sichten, Funktionen und Prozeduren** in [Überwachen der Leistung mit dem Abfragespeicher](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Abfrageverarbeitung  
  Der Abfragespeicher interagiert mit der Abfrageverarbeitungspipeline mit den folgenden wichtigen Punkten:  

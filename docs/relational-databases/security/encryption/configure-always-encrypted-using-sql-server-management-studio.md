@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt die Aufgaben, die bei der Konfiguration von Always Encrypted und der Verwaltung von Datenbanken anfallen, die Always Encrypted mit [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) verwenden.
+Dieser Artikel beschreibt die Aufgaben, die bei der Konfiguration von Always Encrypted und der Verwaltung von Datenbanken anfallen, die Always Encrypted mit [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) verwenden.
 
 Wenn Sie SSMS zur Konfiguration von Always Encrypted verwenden, verwaltet SSMS beide Always Encrypted-Schlüssel und sensible Daten. Beide Schlüssel und die Daten werden daher in SSMS als Klartext angezeigt. Es ist daher wichtig, dass Sie SSMS auf einem sicheren Computer ausführen. Wenn Ihre Datenbank in SQL Server gehostet wird, sollten Sie sicherstellen, dass SSMS auf einem anderen Computer als dem Computer ausgeführt wird, der Ihre SQL Server-Instanz hostet. Der primäre Zweck von Always Encrypted ist, sicherzustellen, dass verschlüsselte sensible Daten sicher sind, selbst wenn das Datenbanksystem kompromittiert wird. Daher kann das Ausführen eines PowerShell-Skripts, das Schlüssel und/oder sensible Daten auf dem SQL Server-Computer verarbeitet, die Vorteile der Funktion einschränken oder zunichte machen. Weitere Empfehlungen finden Sie unter [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Überlegungen zur Verwaltung von Schlüsseln).
 
@@ -89,7 +89,7 @@ Wenn `SSN` eine verschlüsselte Spalte `char(11)` in der Tabelle `Patients` ist,
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung   
 
 Durch Aktivieren von Always Encrypted für eine Datenbankverbindung wird der .NET Framework-Datenanbieter für SQL Server, der von SQL Server Management Studio verwendet wird, aufgefordert, die folgenden Aufgaben transparent auszuführen:   
 -   Entschlüsseln aller Werte, die aus verschlüsselten Spalten abgerufen und in Abfrageergebnissen zurückgegeben werden   
@@ -105,7 +105,7 @@ Geben Sie zum Deaktivieren von Always Encrypted für eine Datenbankverbindung `C
 >  4.   Wählen Sie die Registerkarte **Zusätzliche Eigenschaften** aus, und geben Sie `Column Encryption Setting=Enabled` ein, um Always Encrypted zu aktivieren, oder entfernen Sie die Einstellung, um Always Encrypted zu deaktivieren.   
 >  5.   Klicken Sie auf **Verbinden**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Parametrisierung für Always Encrypted   
  
 „Parametrisierung für Always Encrypted“ ist ein Feature in SQL Server Management Studio, das Transact-SQL-Variablen automatisch in Abfrageparameter (Instanzen der [„SqlParameter“-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)) konvertiert. (Erfordert mindestens SSMS Version 17.0) Dies ermöglicht dem zugrunde liegenden .NET Framework-Datenanbieter für SQL Server das Erkennen von Daten für verschlüsselte Spalten und das Verschlüsseln dieser Daten, ehe sie an die Datenbank gesendet werden. 
   

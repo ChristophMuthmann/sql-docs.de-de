@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   Ein *Wiederherstellungsmodell* ist eine Datenbankeigenschaft, die steuert, wie Transaktionen protokolliert werden, ob das Transaktionsprotokoll gesichert werden muss (und kann) und welche Arten von Wiederherstellungsvorgängen verfügbar sind. Es stehen drei Wiederherstellungsmodelle zur Verfügung: einfach, vollständig und massenprotokolliert. Für eine Datenbank wird im Allgemeinen das vollständige oder das einfache Wiederherstellungsmodell verwendet. Eine Datenbank kann jederzeit auf ein anderes Wiederherstellungsmodell umgestellt werden. Die **model** -Datenbank legt das Standardwiederherstellungsmodell der neuen Datenbanken fest.  
   
-  Eine ausführlichere Erläuterung zu [Wiederherstellungsmodellen](https://msdn.microsoft.com/library/ms189275.aspx)finden Sie im Artikel [SQL Server-Wiederherstellungsmodelle](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , der von den Leuten bei [MSSQLTips!](https://www.mssqltips.com/)bereitgestellt wird.
+  Eine ausführlichere Erläuterung zu [Wiederherstellungsmodellen](recovery-models-sql-server.md)finden Sie im Artikel [SQL Server-Wiederherstellungsmodelle](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , der von den Leuten bei [MSSQLTips!](https://www.mssqltips.com/)bereitgestellt wird.
   
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Sichern Sie das Transaktionsprotokoll](back-up-a-transaction-log-sql-server.md), **bevor** Sie vom [vollständigen oder massenprotokollierten Wiederherstellungsmodell](recovery-models-sql-server.md) umschalten, .  
   
 -   Beim massenprotokollierten Modell ist keine Zeitpunktwiederherstellung möglich. Wenn Sie Transaktionen im massenprotokollierten Wiederherstellungsmodell ausführen, für die eine Wiederherstellung des Transaktionsprotokolls erforderlich ist, besteht die Gefahr eines Datenverlusts. Um die Wiederherstellbarkeit von Daten im Notfall zu maximieren, wechseln Sie nur unter folgenden Bedingungen zum massenprotokollierten Wiederherstellungsmodell:  
   

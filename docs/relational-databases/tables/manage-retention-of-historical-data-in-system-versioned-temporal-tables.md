@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 
  Bei jedem dieser Ansätze basiert die Logik für die Migration oder Bereinigung von Verlaufsdaten auf der Spalte, die dem Ende der Dauer in der aktuellen Tabelle entspricht. Der Wert für das Ende der Dauer für jede Zeile bestimmt den Moment, an dem die Zeilenversion „geschlossen“ wird, an dem sie also in die Verlaufstabelle aufgenommen wird. Beispielsweise gibt die Bedingung `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` an, dass Verlaufsdaten, die älter als einen Monat sind, aus der Verlaufstabelle entfernt oder verschoben werden müssen.  
   
-> **HINWEIS:**  In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](https://msdn.microsoft.com/library/mt590957.aspx)verwendet.  
+> **HINWEIS:**  In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](creating-a-system-versioned-temporal-table.md)verwendet.  
   
 ## <a name="using-stretch-database-approach"></a>Verwenden des Ansatzes mit Stretch-Datenbank  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/31/2017
   
 -   **Strecken eines Teils der Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
     Wenn Sie eine deterministische Prädikatfunktion verwenden, können Sie einen Teil des Verlaufs in derselben Datenbank zusammen mit den aktuellen Daten behalten, während der Rest zu Azure migriert wird.    
-    Beispiele und Informationen zu Einschränkungen finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](https://msdn.microsoft.com/library/mt613432.aspx) Da nicht deterministische Funktionen nicht gültig sind, wenn Sie Verlaufsdaten in der Form eines gleitendes Fensters übertragen möchten, müssten Sie die Definition der Inlineprädikatfunktion regelmäßig ändern, damit das Fenster von Zeilen, das Sie lokal speichern, im Hinblick auf das Alter konstant ist. Mit einem gleitenden Fenster können Sie Verlaufsdaten, die älter als ein Monat sind, kontinuierlich nach Azure verschieben. Ein Beispiel dieses Ansatzes ist weiter unten dargestellt.  
+    Beispiele und Informationen zu Einschränkungen finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) Da nicht deterministische Funktionen nicht gültig sind, wenn Sie Verlaufsdaten in der Form eines gleitendes Fensters übertragen möchten, müssten Sie die Definition der Inlineprädikatfunktion regelmäßig ändern, damit das Fenster von Zeilen, das Sie lokal speichern, im Hinblick auf das Alter konstant ist. Mit einem gleitenden Fenster können Sie Verlaufsdaten, die älter als ein Monat sind, kontinuierlich nach Azure verschieben. Ein Beispiel dieses Ansatzes ist weiter unten dargestellt.  
   
 > **HINWEIS:** Stretch-Datenbank migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/)an.  
   
@@ -111,7 +111,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Verwenden von Transact-SQL zum Strecken eines Teils der Verlaufstabelle  
- Um nur einen Teil der Verlaufstabelle zu strecken, erstellen Sie zunächst eine [Inlineprädikatfunktion](https://msdn.microsoft.com/library/mt613432.aspx). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass alle Verlaufsdaten, die älter als der 1. November 2015 sind, auf Azure gestreckt werden sollen. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
+ Um nur einen Teil der Verlaufstabelle zu strecken, erstellen Sie zunächst eine [Inlineprädikatfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass alle Verlaufsdaten, die älter als der 1. November 2015 sind, auf Azure gestreckt werden sollen. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -165,7 +165,7 @@ COMMIT ;
  Verwenden Sie den SQL Server-Agent oder einen anderen Planungsmechanismus, damit eine gültige Definition der Prädikatfunktion immer sichergestellt ist.  
   
 ## <a name="using-table-partitioning-approach"></a>Verwenden des Ansatzes mit Tabellenpartitionierung  
- Die[Tabellenpartitionierung](https://msdn.microsoft.com/library/ms188730.aspx) kann bewirken, dass sich große Tabellen besser verwalten und skalieren lassen. Wenn Sie den Ansatz mit Tabellenpartitionierung verwenden, können Sie Verlaufstabellenpartitionen nutzen, um eine angepasste Datenbereinigung oder Offlinearchivierung basierend auf einer Zeitbedingung zu implementieren. Durch Tabellenpartitionierung erhalten Sie über die Partitionsentfernung auch Leistungsvorteile beim Abfragen von temporalen Tabellen für einen Teil des Datenverlaufs.  
+ Die[Tabellenpartitionierung](../partitions/create-partitioned-tables-and-indexes.md) kann bewirken, dass sich große Tabellen besser verwalten und skalieren lassen. Wenn Sie den Ansatz mit Tabellenpartitionierung verwenden, können Sie Verlaufstabellenpartitionen nutzen, um eine angepasste Datenbereinigung oder Offlinearchivierung basierend auf einer Zeitbedingung zu implementieren. Durch Tabellenpartitionierung erhalten Sie über die Partitionsentfernung auch Leistungsvorteile beim Abfragen von temporalen Tabellen für einen Teil des Datenverlaufs.  
   
  Mit der Tabellenpartitionierung können Sie den Ansatz mit einem gleitenden Fenster implementieren, um den ältesten Teil der Verlaufsdaten aus der Verlaufstabelle zu verschieben und die Größe des beibehaltenen Teils im Hinblick auf das Alter konstant zu halten. So verwalten Sie die Daten in der Verlaufstabelle entsprechend der erforderlichen Beibehaltungsdauer. Der Vorgang des Austauschens von Daten aus der Verlaufstabelle wird unterstützt, wenn SYSTEM_VERSIONING auf ON festgelegt ist. Dies bedeutet, dass ein Teil der Verlaufsdaten bereinigt werden kann, ohne ein Wartungsfenster einzurichten oder normale Arbeitsauslastungen zu blockieren.  
   
@@ -428,7 +428,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für die Richtlinie zur Beibehaltung temporaler Verlaufsdaten
+## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien
 > **HINWEIS:** Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.  
 
 Die Beibehaltung temporaler Verlaufsdaten kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden der temporalen Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.

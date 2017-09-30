@@ -1,7 +1,7 @@
 ---
 title: "Hinzufügen eines verbesserten Datenbank-Failovers zu einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff670b7dd9ece16e281d9d0944a5d66d1529b726
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 
@@ -88,5 +88,4 @@ Fragen Sie die dynamische Verwaltungssicht `sys.availablity_groups` ab, um anzuz
  
 - [Erstellen einer Verfügbarkeitsgruppe mit Transact-SQL](create-an-availability-group-transact-sql.md)
 
->Dieser Inhalt wurde von [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20%20Hirt), einem Microsoft Most Valued Professional, verfasst.
 

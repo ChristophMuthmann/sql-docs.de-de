@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cf076244d1a73b543f1907400c26ef0c27695ff9
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>Leitfäden für Entwickler für SQL Server
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="more-resources"></a>Weitere Ressourcen 
 
  [Transact-SQL-Referenz](../t-sql/language-reference.md)   
- [Technische Dokumentation zu SQL Server](https://msdn.microsoft.com/library/ms130214.aspx)   
+ [Technische Dokumentation zu SQL Server](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server-Tutorial](../sql-server/tutorials-for-sql-server-2016.md)  
   
 

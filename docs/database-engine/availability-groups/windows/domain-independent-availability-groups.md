@@ -1,7 +1,7 @@
 ---
 title: "Domänenunabhängige Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ Die nächste Abbildung zeigt ein Beispiel einer domänenunabhängigen Verfügbar
 
 ![Workgroupcluster mit zwei Knoten, die mit einer Domäne verknüpft sind][2]
 
-Eine domänenunabhängige Verfügbarkeitsgruppe ist nicht nur für Multisite- oder Notfallwiederherstellungsszenarios vorhanden. Sie kann in einem einzelnen Rechenzentrum bereitgestellt und sogar mit einer [Standardverfügbarkeitsgruppe](https://msdn.microsoft.com/library/mt614935.aspx) (auch als Verfügbarkeitsgruppe der Standard Edition bekannt) verwendet werden, um eine ähnliche Architektur bereitzustellen, wie die, die mithilfe der Datenbankspiegelung mit Zertifikaten erreicht wurde, so wie hier dargestellt.
+Eine domänenunabhängige Verfügbarkeitsgruppe ist nicht nur für Multisite- oder Notfallwiederherstellungsszenarios vorhanden. Sie kann in einem einzelnen Rechenzentrum bereitgestellt und sogar mit einer [Standardverfügbarkeitsgruppe](basic-availability-groups-always-on-availability-groups.md) (auch als Verfügbarkeitsgruppe der Standard Edition bekannt) verwendet werden, um eine ähnliche Architektur bereitzustellen, wie die, die mithilfe der Datenbankspiegelung mit Zertifikaten erreicht wurde, so wie hier dargestellt.
 
 
 ![Überblick über eine Verfügbarkeitsgruppe in der Standard Edition][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Erstellen Sie den Endpunkt, der von der Verfügbarkeitsgruppe auf jeder Instanz verwendet wird, die ein Replikat sein wird. Für Verfügbarkeitsgruppen muss der Endpunkt über einen Typ DATABASE_MIRRORING verfügen. Der Endpunkt nutzt das in Schritt 4 erstellte Zertifikat für diese Instanz zur Authentifizierung. Eine Beispielsyntax zum Erstellen eines Endpunkts mithilfe eines Zertifikats ist unten dargestellt. Verwenden Sie die passende Verschlüsselungsmethode und andere Optionen, die relevant für Ihre Umgebung sind. Weitere Informationen zu den verfügbaren Optionen finden Sie unter [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx).
+12. Erstellen Sie den Endpunkt, der von der Verfügbarkeitsgruppe auf jeder Instanz verwendet wird, die ein Replikat sein wird. Für Verfügbarkeitsgruppen muss der Endpunkt über einen Typ DATABASE_MIRRORING verfügen. Der Endpunkt nutzt das in Schritt 4 erstellte Zertifikat für diese Instanz zur Authentifizierung. Eine Beispielsyntax zum Erstellen eines Endpunkts mithilfe eines Zertifikats ist unten dargestellt. Verwenden Sie die passende Verschlüsselungsmethode und andere Optionen, die relevant für Ihre Umgebung sind. Weitere Informationen zu den verfügbaren Optionen finden Sie unter [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Sobald die zugrunde liegenden Zertifikate und die Endpunktsicherheit konfiguriert ist, erstellen Sie die Verfügbarkeitsgruppe mit Ihrer bevorzugten Methode. Es wird empfohlen, eine manuelle Sicherung sowie eine Kopie und Wiederherstellung der Sicherung auszuführen, die zum Initialisieren des sekundären Replikats verwendet wird, oder verwenden Sie alternativ [automatisches Seeding](https://msdn.microsoft.com/library/mt735149.aspx). Das Verwenden des Assistenten zum Initialisieren des sekundären Replikats beinhaltet die Verwendung der Server Message Block-Dateien (SMB), die möglicherweise nicht funktionieren, wenn Sie einen Workgroupcluster nutzen, der nicht mit der Domäne verbunden ist.
+14. Sobald die zugrunde liegenden Zertifikate und die Endpunktsicherheit konfiguriert ist, erstellen Sie die Verfügbarkeitsgruppe mit Ihrer bevorzugten Methode. Es wird empfohlen, eine manuelle Sicherung sowie eine Kopie und Wiederherstellung der Sicherung auszuführen, die zum Initialisieren des sekundären Replikats verwendet wird, oder verwenden Sie alternativ [automatisches Seeding](automatically-initialize-always-on-availability-group.md). Das Verwenden des Assistenten zum Initialisieren des sekundären Replikats beinhaltet die Verwendung der Server Message Block-Dateien (SMB), die möglicherweise nicht funktionieren, wenn Sie einen Workgroupcluster nutzen, der nicht mit der Domäne verbunden ist.
 15. Wenn Sie einen Listener erstellen, stellen Sie sicher, dass der Name und die IP-Adresse jeweils in DNS registriert sind.
 
 ### <a name="next-steps"></a>Nächste Schritte 
@@ -151,8 +151,6 @@ GO
 - [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Erstellen einer Verfügbarkeitsgruppe mit Transact-SQL](create-an-availability-group-transact-sql.md)
-
->Dieser Inhalt wurde von [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), einem Microsoft Most Valued Professional, verfasst.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

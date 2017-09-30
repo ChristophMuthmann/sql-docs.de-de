@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
@@ -45,7 +45,7 @@ Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer SQL Server
 |-------|-------|
 |Data |Datenzeilen mit allen Daten, ausgenommen Daten der Typen text, ntext, image, nvarchar(max), varchar(max), varbinary(max) und xml, wenn „text in row“ auf ON festgelegt wurde. |
 |Index |Indexeinträge |
-|Test/Image |LOB-Datentypen (Large Object): (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) und xml) <br> Spalten variabler Länge, wenn die Datenzeile 8 KB übersteigt: (varchar, nvarchar, varbinary und sql_variant) |
+|Text/Image |LOB-Datentypen (Large Object): (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) und xml) <br> Spalten variabler Länge, wenn die Datenzeile 8 KB übersteigt: (varchar, nvarchar, varbinary und sql_variant) |
 |Global Allocation Map, Shared Global Allocation Map |Informationen dazu, ob Blöcke zugeordnet sind. |
 |Page Free Space (PFS) |Informationen zur Seitenzuordnung sowie zum freien Speicherplatz, der auf Seiten verfügbar ist. |
 |Index Allocation Map (IAM) |Informationen zu Blöcken, die von einer Tabelle oder einem Index pro Zuordnungseinheit verwendet werden. |

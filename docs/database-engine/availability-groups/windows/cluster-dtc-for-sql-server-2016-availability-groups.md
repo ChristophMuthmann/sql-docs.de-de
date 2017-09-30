@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd12e9e9a611a850b739522be29e79ff850ce3a2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster-DTC für SQL Server 2016-Verfügbarkeitsgruppen
@@ -59,9 +59,9 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 
 [Weitere Informationen zum Testen von DTC für Verfügbarkeitsgruppen:](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
 
-[Überwachen der Katalogsichten von Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878305.aspx)
+[Überwachen der Katalogsichten von Always On-Verfügbarkeitsgruppen](monitor-availability-groups-transact-sql.md)
 
-[Schritt-für-Schritt-Anleitung zum Erstellen von Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878307.aspx)
+[Schritt-für-Schritt-Anleitung zum Erstellen von Verfügbarkeitsgruppen](create-an-availability-group-transact-sql.md)
 
 
 [SQL Server 2016 DTC-Unterstützung in Verfügbarkeitsgruppen](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 

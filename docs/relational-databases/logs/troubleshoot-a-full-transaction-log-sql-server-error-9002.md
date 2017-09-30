@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  Mithilfe der Spalten **log_reuse_wait** und **log_reuse_wait_desc** der **sys.database**-Katalogsicht können Sie feststellen, wodurch eine Protokollkürzung verhindert wurde. Weitere Informationen finden Sie unter [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Eine Beschreibung von Faktoren, die eine Protokollkürzung verzögern können, finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **WICHTIG!**  
->  Wenn sich die Datenbank zu dem Zeitpunkt, als der Fehler 9002 auftrat, gerade im Wiederherstellungsmodus befand, müssen Sie nach Behebung des Problems die Datenbank mithilfe von [ALTER DATABASE *database_name* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx) wiederherstellen.  
+>  Wenn sich die Datenbank zu dem Zeitpunkt, als der Fehler 9002 auftrat, gerade im Wiederherstellungsmodus befand, müssen Sie nach Behebung des Problems die Datenbank mithilfe von [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) wiederherstellen.  
   
  Alternativ sind als Reaktion auf ein volles Transaktionsprotokoll auch folgende Aktionen möglich:  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>Abschließen oder Abbrechen einer Transaktion mit langer Ausführungszeit
 ### <a name="discovering-long-running-transactions"></a>Ermitteln von Transaktionen mit langer Ausführungszeit
 Eine Transaktion mit sehr langer Ausführungszeit kann zum Auffüllen des Transaktionsprotokolls führen. Verwenden Sie eine der folgenden Optionen, um nach lang andauernden Transaktionen zu suchen:
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Diese dynamische Verwaltungssicht gibt Informationen zu Transaktionen auf Datenbankebene zurück. Bei einer lang andauernden Transaktion gehören der Zeitpunkt des ersten Protokolldatensatzes [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), der aktuelle Status der Transaktion [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)und die Protokollfolgenummer [(Log Sequence Number, LSN)](https://msdn.microsoft.com/library/ms191459.aspx) des ersten Datensatzes im Transaktionsprotokoll [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx)zu den Spalten von besonderem Interesse.
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+Diese dynamische Verwaltungssicht gibt Informationen zu Transaktionen auf Datenbankebene zurück. Bei einer lang andauernden Transaktion gehören der Zeitpunkt des ersten Protokolldatensatzes [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), der aktuelle Status der Transaktion [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)und die Protokollfolgenummer [(Log Sequence Number, LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) des ersten Datensatzes im Transaktionsprotokoll [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)zu den Spalten von besonderem Interesse.
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 Mithilfe dieser Anweisung können Sie die Benutzer-ID des Transaktionsbesitzers identifizieren. Auf diese Weise können Sie die Quelle der Transaktion ermitteln und die Transaktion ordnungsgemäß beenden (durch ein Commit anstelle eines Rollbacks).
 
 ### <a name="kill-a-transaction"></a>Abbrechen einer Transaktion
-Manchmal müssen Sie den Prozess einfach nur beenden. Möglicherweise müssen Sie dazu die [KILL](https://msdn.microsoft.com/library/ms173730.aspx) -Anweisung verwenden. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden, die Sie nicht abbrechen möchten. Weitere Informationen finden Sie unter [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx).
+Manchmal müssen Sie den Prozess einfach nur beenden. Möglicherweise müssen Sie dazu die [KILL](../../t-sql/language-elements/kill-transact-sql.md) -Anweisung verwenden. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden, die Sie nicht abbrechen möchten. Weitere Informationen finden Sie unter [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
 ## <a name="see-also"></a>Siehe auch  
 [KB-Supportartikel – Ein Transaktionsprotokoll wächst unerwartet in SQL Server oder wird voll](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

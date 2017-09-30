@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Eine Reihe von Speicherlösungen von Drittanbietern haben RBS-Anbieter entwickelt, die diesen Standard-APIs entsprechen und BLOB-Speicherung auf verschiedenen Speicherplattformen unterstützen.  
   
 ## <a name="rbs-requirements"></a>RSB-Anforderungen  
- RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden.  Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern. RBS erfordert mindestens ODBC-Treiberversion 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und ODBC-Treiber, Version 13 für [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] , um eine Verbindung mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]herzustellen. Treiber stehen unter [Herunterladen von ODBC-Treibern für SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)zur Verfügung.   
+ - RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden.  Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern. RBS erfordert mindestens ODBC-Treiberversion 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und ODBC-Treiber, Version 13 für [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] , um eine Verbindung mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]herzustellen. Treiber stehen unter [Herunterladen von ODBC-Treibern für SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)zur Verfügung.    
   
  RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  Wenn Sie RBS verwenden, sollten Sie in regelmäßigen Abständen den symmetrischen Schlüssel des Anmeldeinformationsspeichers drehen. Dies ist eine allgemeine bewährte Sicherheitsmethode, um organisationsweite Sicherheitsrichtlinien zu erfüllen.  Eine Möglichkeit, den symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers zu rotieren, ist die Verwendung des [unten aufgeführten Skripts](#Key_rotation) in der RBS-Datenbank.  Mit diesem Skript können Sie auch zu stärkeren Verschlüsselungsstärkeeigenschaften migrieren, z.B. Algorithmus oder Schlüssellänge. Sichern Sie Ihre Datenbank vor der Schlüsselrotation.  Am Ende des Skripts finden Sie einige Überprüfungsschritte.  
 Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algorithmus oder Schlüssellänge) aus den angebotenen benötigen, kann das Skript als Vorlage verwendet werden. Ändern Sie die Schlüsseleigenschaften an zwei Stellen: 1) die Erstellung des temporären Schlüssels, 2) die Erstellung des permanenten Schlüssels.  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> RSB-Ressourcen  
   
  **RSB-Beispiele**  
  In den auf [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
@@ -85,7 +85,7 @@ Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algo
  **RBS-Blog**  
  Der [RBS-Blog](http://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> Skript zur Schlüsselrotation  
  In diesem Beispiel wird eine gespeicherte Prozedur namens `sp_rotate_rbs_symmetric_credential_key` erstellt, um den aktuell verwendeten symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers  
 durch einen Schlüssel Ihrer Wahl zu ersetzen.  Sie sollten dies tun, wenn eine Sicherheitsrichtlinie   
 die regelmäßige Rotation von Schlüsseln erfordert oder der Algorithmus besondere Anforderungen hat.  

@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung mit SQL Server Management Studio wiederhergestellt wird.    
        
 ### <a name="important"></a>Wichtig!    
-Bevor eine Datenbank im vollständigen oder im massenprotokollierten Wiederherstellungsmodell wiederhergestellt werden kann, muss möglicherweise das Protokoll der aktiven Transaktion (als [Protokollfragment](https://msdn.microsoft.com/library/ms179314.aspx)bezeichnet) gesichert werden. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
+Bevor eine Datenbank im vollständigen oder im massenprotokollierten Wiederherstellungsmodell wiederhergestellt werden kann, muss möglicherweise das Protokoll der aktiven Transaktion (als [Protokollfragment](tail-log-backups-sql-server.md)bezeichnet) gesichert werden. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
 
 Berücksichtigen Sie beim Wiederherstellen einer Datenbank aus einer anderen Instanz die Informationen unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
     

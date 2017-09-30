@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
@@ -45,7 +45,7 @@ Der [ring_buffer-Abschnitt](#h2_target_ring_buffer) enthält ein Beispiel zur Ve
 
 
 - Vorhandene Installation einer neueren Version des häufig aktualisierten Hilfsprogramms SQL Server Management Studio (SSMS.exe). Einzelheiten dazu finden Sie unter:
-    - [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - In SSMS.exe sollte die Verwendung des **Objekt-Explorers** bekannt sein, um mit der rechten Maustaste auf den Zielknoten für die Ereignissitzung zu klicken, um die [bequeme Anzeige der Ausgabedaten](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)zu erreichen.

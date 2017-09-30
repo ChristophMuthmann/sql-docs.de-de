@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. Verwenden Sie im Abschnitt **Verschlüsselung** das Kontrollkästchen **Sicherung verschlüsseln** , um festzulegen, ob für die Sicherung Verschlüsselung verwendet werden soll. Verwenden Sie die Dropdownliste **Algorithmus** , um einen Verschlüsselungsalgorithmus auszuwählen.  Verwenden Sie die Dropdownliste **Zertifikat oder asymmetrischer Schlüssel** , um ein vorhandenes Zertifikat oder einen asymmetrischen Schlüssel auszuwählen. Die Verschlüsselung wird in SQL Server 2014 und höheren Versionen unterstützt. Weitere Informationen zu den Verschlüsselungsoptionen finden Sie unter [Datenbank sichern &#40;Seite 'Sicherungsoptionen'&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md):  
   
   
-Sie können den [Wartungsplanungs-Assistenten](https://msdn.microsoft.com/library/ms191002.aspx) zum Erstellen von Datenbanksicherungen verwenden. 
+Sie können den [Wartungsplanungs-Assistenten](../maintenance-plans/use-the-maintenance-plan-wizard.md) zum Erstellen von Datenbanksicherungen verwenden. 
 
 ### <a name="examples"></a>Beispiele  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Vollständige Sicherung auf Datenträger am Standardspeicherort**
@@ -176,7 +176,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\
 
 5.  Klicken Sie auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen.
 
-6.  Geben Sie im Textfeld `E:\MSSQL\BAK\Sales_20160801.bak` Dateiname ****  ein.
+6.  Geben Sie im Textfeld `E:\MSSQL\BAK\Sales_20160801.bak` Dateiname ** ** ein.
 
 7.  Klicken Sie auf **OK**.
 
