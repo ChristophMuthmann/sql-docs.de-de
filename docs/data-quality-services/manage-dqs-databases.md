@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Einige Entitäten außerhalb der DQS-Datenbank müssen vorhanden sein, damit die DQS-Datenbank als [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]funktionsfähig ist. Das gilt insbesondere für die beiden SQL Server-Anmeldenamen (##MS_dqs_db_owner_login## und ##MS_dqs_service_login##) und eine gespeicherte Initialisierungsprozedur (DQInitDQS_MAIN) in der Masterdatenbank.  
   
- Ausführliche Informationen zur Sicherung und Wiederherstellung in SQL Server finden Sie unter [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Ausführliche Informationen zur Sicherung und Wiederherstellung in SQL Server finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Standardmäßige automatische Vergrößerung und Wiederherstellungsmodell für DQS-Datenbanken  
  So verhindern Sie, dass DQS-Datenbanken und Transaktionsprotokolle immer größer werden und sich die Kapazität der Festplatte erschöpft:  
