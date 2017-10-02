@@ -57,7 +57,7 @@ ms.lasthandoff: 09/09/2017
   
  Das Erstellen einer Abgleichsregel ist ein iterativer Prozess, da Sie möglicherweise die relativen Gewichtungen der Domänen in der Regel oder die Ähnlichkeit oder die erforderliche Eigenschaft für eine Domäne oder die minimale Treffergenauigkeit für die Regel ändern müssen, um die gewünschten Ergebnisse zu erzielen. Möglicherweise stellen Sie auch fest, dass Sie mehrere Regeln erstellen müssen, von denen jede ausgeführt wird, um die Treffergenauigkeit zu erstellen. Es ist möglicherweise schwierig, das benötigte Ergebnis mit nur einer Regel zu erzielen. Mehrere Regeln stellen andere Sichten einer erforderlichen Übereinstimmung bereit. Mit mehreren Regeln sind Sie möglicherweise in der Lage, weniger Domänen in die einzelnen Regeln einzuschließen, höhere Gewichtungen für die einzelnen Domänen zu verwenden und bessere Ergebnisse zu erzielen. Wenn die Daten weniger genau und weniger vollständig sind, benötigen Sie möglicherweise mehr Regeln, um erforderliche Übereinstimmungen zu finden. Wenn die Daten genauer und vollständiger sind, benötigen Sie weniger Regeln.  
   
- Die Profilerstellung gibt Einblicke in Vollständigkeit und Eindeutigkeit. Berücksichtigen Sie Vollständigkeit und Eindeutigkeit zusammen. Verwenden Sie Vollständigkeits- und Eindeutigkeitsdaten, um zu bestimmen, welche Gewichtung ein Feld im Abgleichsprozess erhalten soll. Wenn es einen hohen Eindeutigkeitsgrad in einem Feld gibt, können durch Verwenden des Felds in einer Abgleichsrichtlinie die Abgleichsergebnisse verringert werden. Daher sollten Sie die Gewichtung für dieses Feld auf einen relativ kleinen Wert festlegen. Wenn Sie für eine Spalte eine niedrige Eindeutigkeit, aber auch eine niedrige Vollständigkeit haben, sollten Sie keine Domäne für diese Spalte einschließen. Bei einer niedrigen Eindeutigkeit aber einer hohen Vollständigkeit sollten Sie die Domäne einschließen. Einige Spalten, z. B. Geschlecht, haben normalerweise einen niedrigen Eindeutigkeitsgrad. Weitere Informationen finden Sie unter [Profiler and Results Tabs](#Tabs).  
+ Die Profilerstellung gibt Einblicke in Vollständigkeit und Eindeutigkeit. Berücksichtigen Sie Vollständigkeit und Eindeutigkeit zusammen. Verwenden Sie Vollständigkeits- und Eindeutigkeitsdaten, um zu bestimmen, welche Gewichtung ein Feld im Abgleichsprozess erhalten soll. Wenn es einen hohen Eindeutigkeitsgrad in einem Feld gibt, können durch Verwenden des Felds in einer Abgleichsrichtlinie die Abgleichsergebnisse verringert werden. Daher sollten Sie die Gewichtung für dieses Feld auf einen relativ kleinen Wert festlegen. Wenn Sie für eine Spalte eine niedrige Eindeutigkeit, aber auch eine niedrige Vollständigkeit haben, sollten Sie keine Domäne für diese Spalte einschließen. Bei einer niedrigen Eindeutigkeit aber einer hohen Vollständigkeit sollten Sie die Domäne einschließen. Einige Spalten, z. B. Geschlecht, haben normalerweise einen niedrigen Eindeutigkeitsgrad. Weitere Informationen finden Sie unter [Registerkarten „Profiler“ und „Ergebnisse“](#Tabs).  
   
 ##  <a name="Starting"></a> Erster Schritt: Starten einer Abgleichsrichtlinie  
  Sie führen die Abgleichsrichtlinienaktivität im Wissensdatenbank-Verwaltungsbereich der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
@@ -136,7 +136,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Wenn Sie auf einen Datensatz in der Abgleichsergebnistabelle doppelklicken, zeigt DQS das Popupfenster **Details zur Treffergenauigkeit** an, das den Pivotdatensatz und den Quelldatensatz anzeigt (und die Werte in allen ihren Feldern), das Ergebnis zwischen ihnen und einen Drilldown des Datensatzabgleichs. Der Drilldown zeigt die Werte in jedem Feld des Pivotdatensatzes und Quelldatensatzes an, damit Sie sie vergleichen können, und zeigt die Treffergenauigkeit an, die jedes Feld zur Gesamttreffergenauigkeit für die zwei Datensätze beiträgt.  
   
-14. Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Weitere Informationen finden Sie unter [Profiler and Results Tabs](#Tabs).  
+14. Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Weitere Informationen finden Sie unter [Registerkarten „Profiler“ und „Ergebnisse“](#Tabs).  
   
 15. Wenn die Regel geändert werden muss, ändern Sie sie im Regel-Editor, und klicken Sie auf **Neustart**.  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Wenn Sie auf einen Datensatz in der Abgleichsergebnistabelle doppelklicken, zeigt DQS das Popupfenster **Details zur Treffergenauigkeit** an, das den Pivotdatensatz und den Quelldatensatz anzeigt (und die Werte in allen ihren Feldern), das Ergebnis zwischen ihnen und einen Drilldown des Datensatzabgleichs. Der Drilldown zeigt die Werte in jedem Feld des Pivotdatensatzes und Quelldatensatzes an, damit Sie sie vergleichen können, und zeigt die Treffergenauigkeit an, die jedes Feld zur Gesamttreffergenauigkeit für die zwei Datensätze beiträgt.  
   
-5.  Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Klicken Sie auf die Registerkarte **Abgleichsregeln** , um die Domäneneinstellungen für die einzelnen Regeln anzuzeigen. Weitere Informationen finden Sie unter [Profiler and Results Tabs](#Tabs).  
+5.  Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Klicken Sie auf die Registerkarte **Abgleichsregeln** , um die Domäneneinstellungen für die einzelnen Regeln anzuzeigen. Weitere Informationen finden Sie unter [Registerkarten „Profiler“ und „Ergebnisse“](#Tabs).  
   
 6.  Wenn Sie mit den Ergebnissen aller Regeln nicht zufrieden sind, klicken Sie auf **Zurück** , um zur Seite **Abgleichsrichtlinie** zurückzukehren, ändern Sie ggf. eine oder mehrere Regeln, kehren Sie zur Seite **Abgleichsergebnisse** zurück, und klicken Sie dann auf **Neustart**.  
   
@@ -193,7 +193,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
  Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Profiler and Results Tabs  
+##  <a name="Tabs"></a> Registerkarten „Profiler“ und „Ergebnisse“  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für die Abgleichsrichtlinie und die Abgleichsergebnisseiten.  
   
 ###  <a name="Profiler"></a> Registerkarte „Profiler“  
