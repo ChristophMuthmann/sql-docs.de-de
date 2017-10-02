@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Sicherstellen der Datenintegrität mithilfe von Transaktionen**. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](../../integration-services/integration-services-transactions.md).  
   
--   **Erneutes Ausführen von Paketen ab dem Punkt, an dem der Fehler aufgetreten ist, mithilfe von Prüfpunkten**. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Erneutes Ausführen von Paketen ab dem Punkt, an dem der Fehler aufgetreten ist, mithilfe von Prüfpunkten**. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Abfangen und Behandeln von Paketfehlern mithilfe von Ereignishandlern  
  Sie können auf viele Ereignisse, die vom Paket und den Objekten im Paket ausgelöst wurden, mit Ereignishandlern reagieren.  
