@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lektion 1-1: Starten von SQL Server Management Studio
@@ -35,7 +35,7 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
   * Zeigen Sie für ältere Versionen von Windows im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server Management Studio**. Geben Sie alternativ im Dialogfeld **Ausführen** **SSMS.exe** ein, und klicken Sie anschließend auf **OK**.  
   
     > [!NOTE]  
-    >  Wenn SSMS nicht angezeigt wird, haben Sie SSMS möglicherweise nicht richtig installiert. Installieren Sie SSMS aus dem [Download-Center](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). SSMS wird nicht automatisch mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 installiert. Verwenden Sie die neueste Version, um auf alle Features zuzugreifen.  
+    >  Wenn SSMS nicht angezeigt wird, haben Sie SSMS möglicherweise nicht richtig installiert. Installieren Sie SSMS aus dem [Download-Center](../download-sql-server-management-studio-ssms.md). SSMS wird nicht automatisch mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 installiert. Verwenden Sie die neueste Version, um auf alle Features zuzugreifen.  
   
 2.  Im nächsten Schritt stellen Sie mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekt-Explorer **-Komponente von SSMS eine Verbindung mit** her. Wenn der Bereich Objekt-Explorer nicht sichtbar ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**. Klicken Sie im Menü des Objekt-Explorers auf die Schaltfläche **Verbinden** und anschließend auf **Datenbankmodul**. Das Dialogfeld **Verbindung mit Server herstellen** sollte angezeigt werden. (Wenn Sie zuvor SSMS installiert haben, erscheint durch die Benutzereinstellungen das Dialogfeld **Verbindung mit dem Server herstellen** möglicherweise automatisch.)  
   

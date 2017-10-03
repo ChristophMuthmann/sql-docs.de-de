@@ -9,6 +9,11 @@
 ## [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Programm zur Verbesserung der Benutzerfreundlichkeit](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configure SQL Server to send feedback to Microsoft (Konfigurieren von SQL Server zum Senden von Feedback an Microsoft)](sql-server-customer-feedback.md)
+### Partner
+#### [Überwachung](partner-monitor-sql-server.md)
+#### [Hochverfügbarkeit und Notfallwiederherstellung](partner-hadr-sql-server.md)
+#### [Verwaltung](partner-management-sql-server.md)
+#### [Entwicklung](partner-dev-sql-server.md)
 
 # [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](sql-server-new-updated-sql-docs-pr.md)
 

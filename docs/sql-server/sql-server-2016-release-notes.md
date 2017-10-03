@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: d9c156a1305606948daf277d7b4436372c291e53
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
     
 [![Azure Virtual Machine (klein)](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
     
-[![SSMS herunterladen](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.   
+[![SSMS herunterladen](../ssms/download-sql-server-management-studio-ssms.md) **SSMS:** Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.   
     
  Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -115,11 +115,11 @@ Darüber hinaus sollten Sie manuelle Bereinigungsoptionen erwägen, um zu verhin
 
 Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeichers regelmäßig aus, um Laufzeitstatistik, bestimmte Abfragen oder Plänen zu bereinigen:
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> Produktdokumentation (GA) 

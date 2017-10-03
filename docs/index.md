@@ -9,10 +9,10 @@ ms.topic: article
 ms.technology:
 - database-engine
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b57efe0e53049269ed8df20eb1d5c7cea1c1f874
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 
@@ -46,8 +46,8 @@ ms.lasthandoff: 09/08/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
-                                                    <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017 Preview</a></li>
-                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services Preview</a></li>
+                                                    <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services</a></li>
                                                     <li><a href="/sql/linux/sql-server-linux-whats-new">SQL Server unter Linux</a></li>
                                                 </ul>
                                             </div>
@@ -95,7 +95,7 @@ ms.lasthandoff: 09/08/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2016</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017 Preview</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services (SSRS)</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
