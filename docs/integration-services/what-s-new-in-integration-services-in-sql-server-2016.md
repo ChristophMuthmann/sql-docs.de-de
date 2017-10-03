@@ -2,7 +2,7 @@
 title: Was &#39; s in Integration Services in SQLServer 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/16/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,18 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
 ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Was &#39; s in Integration Services in SQLServer 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- Dieses Thema beschreibt die Funktionen, die hinzugefügt oder in SQL Server 2016 aktualisiert wurden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## <a name="improvements-grouped-by-category"></a>Verbesserungen nach Kategorien gruppiert  
+Dieses Thema beschreibt die Funktionen, die hinzugefügt oder in SQL Server 2016 aktualisiert wurden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Es enthält auch Funktionen hinzugefügt oder aktualisiert werden, der [Azure Feature Pack für Integration Services &#40; SSIS &#41; ](../integration-services/azure-feature-pack-for-integration-services-ssis.md) innerhalb des Zeitrahmens für SQL Server 2016.  
+
+## <a name="new-for-ssis-in-azure-data-factory"></a>Neue für SSIS in Azure Data Factory
+
+Mit der öffentlichen Vorschau von Azure Data Factory, Version 2 im September 2017 können Sie jetzt Folgendes tun:
+-   Bereitstellen von Paketen zur SSIS-Katalogdatenbank (SSISDB) für Azure SQL-Datenbank.
+-   Ausführen von Paketen, die in Azure auf der Azure-SSIS-Integrationslaufzeit, eine Komponente von Azure Data Factory, Version 2 bereitgestellt wird.
+
+Weitere Informationen finden Sie unter [Lift- and -Shift SQL Serverintegration Services-arbeitsauslastungen in die Cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder höher, aber keine 2017 von SQL Server oder SQL Server 2016 erfordern. Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Paket-Bereitstellungs-Assistent die Pakete immer auf das aktuelle Paketformat.
+
+## <a name="2016-improvements-by-category"></a>2016 Verbesserungen nach Kategorien sortiert  
   
 -   **Verwaltbarkeit**  
   
@@ -154,7 +164,7 @@ ms.lasthandoff: 08/21/2017
  Weitere Informationen finden Sie unter [SSIS-Katalog &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Unterstützung für Always On im SSIS-Katalog  
- Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230.aspx).  
+ Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  SSIS führt SQL Server 2016 neue Funktionen, mit die Sie problemlos einen zentralisierten SSIS-Katalog (d. h. SSISDB-Benutzerdatenbank) bereitstellen können. Um eine hohe Verfügbarkeit für die SSISDB-Datenbank und ihren Inhalt – Projekte, Pakete, Ausführungsprotokolle usw. – zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Datenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
   
@@ -173,7 +183,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
 -   Die API des Management Object Model (MOM)  
   
- Weitere Informationen finden Sie unter [Bereitstellen von Integration Services (SSIS) Projects and Packages] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Weitere Informationen finden Sie unter [Bereitstellen von Integration Services (SSIS) Projects and Packages] (.. / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Unterstützung für Always Encrypted im SSIS-Katalog  
  SSIS unterstützt bereits die Funktion Always Encrypted in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie im folgenden Blogbeitrag.  
@@ -280,8 +290,8 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="SAPBW"></a> Veröffentlichung von Microsoft Connector für SAP BW für SQL Server 2016  
  Der Microsoft® Connector für SAP BW für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht. Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.
  
-#### <a name="oracleteradata"></a> Connectors, Version 4;.0, für Oracle und Teradata veröffentlicht
-Die Microsoft-Connectors, Version 4;.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
+#### <a name="oracleteradata"></a> Connectors, Version&4;.0, für Oracle und Teradata veröffentlicht
+Die Microsoft-Connectors, Version&4;.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
 
 ### <a name="pdwau5"></a> Connectors für Analytics Platform System (PDW) Appliance Update 5 veröffentlicht
 Die Zieladapter zum Laden von Daten in PDW mit AU5 wurden veröffentlicht. Die Adapter können unter [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)heruntergeladen werden.
@@ -313,7 +323,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 ### <a name="better-design-experience"></a>Ansprechenderes Designerlebnis
 
 ####  <a name="OneDesigner"></a> Festlegung mehrerer Zielversionen und Unterstützung mehrerer Versionen im SSIS-Designer  
- Sie können den SSIS-Designer in den SQL Server Data Tools (SSDT) nun in Visual Studio 2015 verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, 2014 oder 2012 ausgerichtet sind. Die neuesten SSDT können Sie unter [Download der neuesten SQL Server-Datatools](https://msdn.microsoft.com/library/mt204009.aspx)herunterladen. 
+ Sie können den SSIS-Designer in den SQL Server Data Tools (SSDT) nun in Visual Studio 2015 verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, 2014 oder 2012 ausgerichtet sind. Die neuesten SSDT können Sie unter [Download der neuesten SQL Server-Datatools](../ssdt/download-sql-server-data-tools-ssdt.md)herunterladen. 
 
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
    

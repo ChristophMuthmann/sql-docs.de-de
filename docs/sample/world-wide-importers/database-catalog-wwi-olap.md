@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>Datenbankkatalog
@@ -181,7 +181,7 @@ Hierbei handelt es sich um die Verfahren, die von einer Clientanwendung, z. B. e
 
 ### <a name="integration-schema"></a>Integration Schema
 
-Die gespeicherten Prozeduren in diesem Schema werden von der ETL-Prozess verwendet. Sie erhalten die benötigten Daten aus verschiedenen Tabellen für den Zeitraum erforderlich die [ETL-Pakets](https://msdn.microsoft.com/library/mt734218.aspx).
+Die gespeicherten Prozeduren in diesem Schema werden von der ETL-Prozess verwendet. Sie erhalten die benötigten Daten aus verschiedenen Tabellen für den Zeitraum erforderlich die [ETL-Pakets](etl-workflow.md).
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation-Schema
 

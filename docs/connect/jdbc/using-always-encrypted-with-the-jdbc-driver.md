@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ddf82a6ef055d951c987c8bc156f025c1162f6c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber
@@ -40,7 +40,7 @@ Immer kann verschlüsselte Clients zum Verschlüsseln von sensiblen Daten und ni
     -   Wenn die Datei sqljdbc42.jar verwenden, können die Richtliniendateien von heruntergeladen werden [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Richtliniendateien 8 herunterladen](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)   
     
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Aktivieren von Always Encrypted für Anwendungsabfragen  
-Die einfachste Möglichkeit zum Aktivieren der Verschlüsselung von Parametern und die Entschlüsselung der Abfrageergebnisse, die für die verschlüsselte Spalten wird durch Festlegen des Werts, der die **ColumnEncryptionSetting** Schlüsselwort für Verbindungszeichenfolgen zu ** Aktiviert**.
+Die einfachste Möglichkeit zum Aktivieren der Verschlüsselung von Parametern und die Entschlüsselung der Abfrageergebnisse, die für die verschlüsselte Spalten wird durch Festlegen des Werts, der die **ColumnEncryptionSetting** Schlüsselwort für Verbindungszeichenfolgen zu  **Aktiviert**.
 
 Im folgenden finden ein Beispiel für eine Verbindungszeichenfolge, die Always Encrypted in der JDBC-Treiber ermöglicht:
   
@@ -152,7 +152,7 @@ Im folgenden Beispiel wird das Filtern von Daten auf Basis verschlüsselter Wert
 - Alle Werte, die vom Programm gedruckt wird als nur-Text wie Microsoft JDBC Driver für SQL Server aus den Spalten "ssn" und "BirthDate" abgerufenen Daten transparent entschlüsselt werden.
 
 > [!NOTE]  
->  Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie unter der **Auswählen der deterministischen oder zufälligen Verschlüsselung** Teil der [Always Encrypted (Datenbankmodul)](https://msdn.microsoft.com/library/mt163865.aspx) Thema.  
+>  Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie unter der **Auswählen der deterministischen oder zufälligen Verschlüsselung** Teil der [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Thema.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ Dieser Abschnitt beschreibt allgemeine Kategorien von Fehlern beim Abfragen vers
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Nicht unterstützte Fehler bei der Datentypkonvertierung
 
-Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Finden Sie unter [Always Encrypted (Datenbankmodul)](https://msdn.microsoft.com/library/mt163865.aspx) für eine ausführliche Liste der unterstützten typkonvertierungen. Stellen Sie Folgendes sicher, um Fehler bei der Datentypkonvertierung zu vermeiden:
+Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Finden Sie unter [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) für eine ausführliche Liste der unterstützten typkonvertierungen. Stellen Sie Folgendes sicher, um Fehler bei der Datentypkonvertierung zu vermeiden:
 
 - Wenn Werte für die Parameter für verschlüsselte Spalten übergeben, damit die SQL Server-Datentyp des Parameters ist entweder genau mit dem Typ der Zielspalte oder eine Konvertierung von der SQL Server-Datentyp des Parameters, verwenden die entsprechenden Setter-Methoden an das Ziel ist der Typ der Spalte unterstützt. Beachten Sie, dass die neue API-Methoden SQLServerPreparedStatement und SQLServerCallableStatement mit SQLServerResultSet Klassen zum Übergeben von Parametern, die für bestimmte SQL Server-Datentypen hinzugefügt wurden. Beispielsweise ist eine Spalte unverschlüsselte können setTimestamp()-Methode Sie einen Parameter oder eine Datetime-Spalte einen datetime2 übergeben. Aber wenn eine Spalte verschlüsselt wird, haben, verwenden Sie die genaue Methode, die den Typ der Spalte in der Datenbank darstellt. Verwenden Sie z. B. setTimestamp() Werte übergeben, um eine verschlüsselte datetime2-Spalte und setDateTime() zum Übergeben von Werten in einer verschlüsselten "DateTime"-Spalte verwenden. Finden Sie unter [Always Encrypted-API-Referenz für den JDBC-Treiber](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) für eine vollständige Liste der neuen APIs. 
 - Die Genauigkeit und Dezimalstellenanzahl von Parametern, die auf Spalten der SQL Server-Datentypen „decimal“ und „numeric“ ausgerichtet sind, ist mit der für die Zielspalte konfigurierten Genauigkeit und Dezimalstellenanzahl identisch. Beachten Sie, dass die neue API-Methoden SQLServerPreparedStatement und SQLServerCallableStatement mit SQLServerResultSet-Klassen, die Genauigkeit und Dezimalstellenanzahl zusammen mit den Datenwerten für Parameter oder Spalten, die Datentypen decimal und numeric darstellt akzeptieren hinzugefügt wurden. Finden Sie unter [Always Encrypted-API-Referenz für den JDBC-Treiber](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) für eine vollständige Liste der APIs neue/überladen.  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [Azure-Active Directory-Bibliothek-für-Java-Bibliotheken](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>Mithilfe der Windows-Zertifikatspeicher-Anbieter
-Die SQLServerColumnEncryptionCertificateStoreProvider kann verwendet werden, zum Speichern von spaltenhauptschlüsseln im Windows-Zertifikatspeicher. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder andere unterstützte Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Des gleiche Assistenten verwendet werden kann, um ein selbstsigniertes Zertifikat in Windows-Zertifikatspeicher zu generieren, die als spaltenhauptschlüssel verwendet wird, für die immer verschlüsselten Daten. Weitere Informationen zu spaltenhauptschlüssel und spaltenverschlüsselung Key T-SQL-Syntax finden Sie auf [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx) und [CREATE COLUMN Encryption KEY](https://msdn.microsoft.com/library/mt146372.aspx) bzw.
+Die SQLServerColumnEncryptionCertificateStoreProvider kann verwendet werden, zum Speichern von spaltenhauptschlüsseln im Windows-Zertifikatspeicher. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder andere unterstützte Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Des gleiche Assistenten verwendet werden kann, um ein selbstsigniertes Zertifikat in Windows-Zertifikatspeicher zu generieren, die als spaltenhauptschlüssel verwendet wird, für die immer verschlüsselten Daten. Weitere Informationen zu spaltenhauptschlüssel und spaltenverschlüsselung Key T-SQL-Syntax finden Sie auf [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN Encryption KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) bzw..
 
 Der Name des der SQLServerColumnEncryptionCertificateStoreProvider "MSSQL_CERTIFICATE_STORE" ist und die getName()-API des Objekts Anbieter abgefragt werden kann. Es wird automatisch vom Treiber registriert und kann ohne Änderung Anwendung nahtlos verwendet werden.
 
@@ -356,7 +356,7 @@ Beachten Sie, den Keystore ist der PKCS12 eingeben, und klicken Sie dann das Hil
 
 Sie können auch ein Zertifikat aus dem Windows-Zertifikatspeicher im PFX-Format exportieren und verwenden, die mit der SQLServerColumnEncryptionJavaKeyStoreProvider. Das exportierte Zertifikat kann auch auf die Java-Schlüsselspeicher als JKS Keystore Typ importiert werden. 
 
-Nach dem Erstellen des Eintrags Keytool müssen Sie die Spaltenmetadaten des Hauptschlüssels in der Datenbank zu erstellen, die von der Name des Schlüsselspeicheranbieters und dem Schlüsselpfad benötigt. Weitere Informationen zum Erstellen von Hauptschlüssel-Spaltenmetadaten finden Sie auf [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx). Für SQLServerColumnEncryptionJavaKeyStoreProvider ist die Schlüsselpfad nur den Alias des Schlüssels. Und der Name der SQLServerColumnEncryptionJavaKeyStoreProvider ist "MSSQL_JAVA_KEYSTORE". Sie können auch diesen Namen, die mit der öffentlichen getName()-API der Klasse SQLServerColumnEncryptionJavaKeyStoreProvider Abfragen. 
+Nach dem Erstellen des Eintrags Keytool müssen Sie die Spaltenmetadaten des Hauptschlüssels in der Datenbank zu erstellen, die von der Name des Schlüsselspeicheranbieters und dem Schlüsselpfad benötigt. Weitere Informationen zum Erstellen von Hauptschlüssel-Spaltenmetadaten finden Sie auf [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). Für SQLServerColumnEncryptionJavaKeyStoreProvider ist die Schlüsselpfad nur den Alias des Schlüssels. Und der Name der SQLServerColumnEncryptionJavaKeyStoreProvider ist "MSSQL_JAVA_KEYSTORE". Sie können auch diesen Namen, die mit der öffentlichen getName()-API der Klasse SQLServerColumnEncryptionJavaKeyStoreProvider Abfragen. 
 
 Die T-SQL-Syntax zum Erstellen des spaltenhauptschlüssels ist:
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Verwenden von Spaltenhauptschlüssel-Speicheranbietern für die programmgesteuerte Schlüsselbereitstellung
 
-Wenn für den Zugriff auf verschlüsselte Spalten sucht nach Microsoft JDBC Driver für SQL Server transparent und ruft die rechte Spalte Speicheranbieter für spaltenhauptschlüssel um spaltenverschlüsselungsschlüssel zu entschlüsseln. In der Regel ruft der normale Anwendungscode die Speicheranbieter für Spaltenhauptschlüssel nicht direkt auf. Sie können einen Anbieter jedoch explizit instanziieren und aufrufen, um Always Encrypted-Schlüssel programmgesteuert bereitzustellen und zu verwalten: Zum Generieren eines verschlüsselten Spaltenverschlüsselungsschlüssels und Entschlüsseln eines Spaltenverschlüsselungsschlüssels (z. B. im Rahmen einer Spaltenhauptschlüsselrotation) Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](https://msdn.microsoft.com/library/mt708953.aspx).
+Wenn für den Zugriff auf verschlüsselte Spalten sucht nach Microsoft JDBC Driver für SQL Server transparent und ruft die rechte Spalte Speicheranbieter für spaltenhauptschlüssel um spaltenverschlüsselungsschlüssel zu entschlüsseln. In der Regel ruft der normale Anwendungscode die Speicheranbieter für Spaltenhauptschlüssel nicht direkt auf. Sie können einen Anbieter jedoch explizit instanziieren und aufrufen, um Always Encrypted-Schlüssel programmgesteuert bereitzustellen und zu verwalten: Zum Generieren eines verschlüsselten Spaltenverschlüsselungsschlüssels und Entschlüsseln eines Spaltenverschlüsselungsschlüssels (z. B. im Rahmen einer Spaltenhauptschlüsselrotation) Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 Beachten Sie, dass die Implementierung eigener Schlüsselverwaltungstools möglicherweise nur erforderlich ist, wenn Sie einen benutzerdefinierten Schlüsselspeicheranbieter verwenden. Bei Verwendung in Windows-Zertifikatspeicher oder Azure Key Vault gespeicherte Schlüsseln können Sie vorhandene Tools, z. B. SQL Server Management Studio oder PowerShell verwenden, verwalten und Bereitstellen von Schlüsseln zu verwenden. Wenn Sie Schlüssel gespeichert sind, in der Java-Schlüsselspeicher verwenden zu können, müssen Sie Schlüssel programmgesteuert bereitzustellen. Das folgenden Beispiel veranschaulicht die Verwendung von SQLServerColumnEncryptionJavaKeyStoreProvider-Klasse zum Verschlüsseln des Schlüssels mit einem Schlüssel in der Java-Schlüsselspeicher gespeichert.
 
 ```  
@@ -650,6 +650,6 @@ Mit "sqlserverbulkcopy" können Sie Daten kopieren, die bereits verschlüsselt u
 Hinweis: Seien Sie bei "allowencryptedvaluemodifications" angeben, da dies zur Beschädigung der Datenbank, da der Microsoft JDBC-Treiber für SQL Server nicht überprüft, wenn die Daten tatsächlich verschlüsselt oder ordnungsgemäß mit der gleichen Verschlüsselung verschlüsselt wurden, führen kann Typ, Algorithmus und Schlüssel wie die Zielspalte.
 
 ## <a name="see-also"></a>Siehe auch  
- [„Immer verschlüsselt“ (Datenbankmodul)](https://msdn.microsoft.com/library/mt163865.aspx)  
+ [„Immer verschlüsselt“ (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
