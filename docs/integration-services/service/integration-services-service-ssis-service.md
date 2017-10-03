@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/21/2017
  Wenn Sie die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren, wird auch der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst installiert. Standardmäßig wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst gestartet, und der Starttyp des Dienstes ist auf automatisch festgelegt. Sie müssen jedoch auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installieren, um den Dienst zur Verwaltung gespeicherter und ausgeführter [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden zu können.  
   
 > [!NOTE]
-> Die verwendete Version von SQL Server Management Studio (SSMS) muss mit der SQL Server-Version kompatibel sein, unter der Integration Services ausgeführt wird, damit eine direkte Verbindung zu einer Instanz einer älteren Version von Integration Services hergestellt werden kann. Sie benötigen z.B. die für SQL Server 2016 veröffentlichte SSMS-Version, um eine Verbindung mit der Vorgängerversion von Integration Services herzustellen, die auf einer SQL Server 2016-Instanz ausgeführt wird. [Herunterladen von SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)
+> Die verwendete Version von SQL Server Management Studio (SSMS) muss mit der SQL Server-Version kompatibel sein, unter der Integration Services ausgeführt wird, damit eine direkte Verbindung zu einer Instanz einer älteren Version von Integration Services hergestellt werden kann. Sie benötigen z.B. die für SQL Server 2016 veröffentlichte SSMS-Version, um eine Verbindung mit der Vorgängerversion von Integration Services herzustellen, die auf einer SQL Server 2016-Instanz ausgeführt wird. [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 >
 >   Im Dialogfeld **Verbindung mit Server herstellen** in SSMS können Sie nicht den Namen eines Servers eingeben, auf dem eine ältere Version des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts ausgeführt wird. Sie müssen jedoch zum Verwalten von Paketen auf einem Remoteserver keine Verbindung mit der Instanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts auf dem betreffenden Remoteserver herstellen. Bearbeiten Sie stattdessen die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, sodass die auf dem Remoteserver gespeicherten Pakete von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden.   
   
@@ -278,7 +278,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
  Zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Remoteserver über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder eine andere Verwaltungsanwendung benötigt der Benutzer der Anwendung einen bestimmten Satz von Rechten auf dem Server.  
   
 > [!IMPORTANT]
-> Die verwendete Version von SQL Server Management Studio (SSMS) muss mit der SQL Server-Version kompatibel sein, unter der Integration Services ausgeführt wird, damit eine direkte Verbindung zu einer Instanz einer älteren Version von Integration Services hergestellt werden kann. Sie benötigen z.B. die für SQL Server 2016 veröffentlichte SSMS-Version, um eine Verbindung mit der Vorgängerversion von Integration Services herzustellen, die auf einer SQL Server 2016-Instanz ausgeführt wird. [Herunterladen von SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)
+> Die verwendete Version von SQL Server Management Studio (SSMS) muss mit der SQL Server-Version kompatibel sein, unter der Integration Services ausgeführt wird, damit eine direkte Verbindung zu einer Instanz einer älteren Version von Integration Services hergestellt werden kann. Sie benötigen z.B. die für SQL Server 2016 veröffentlichte SSMS-Version, um eine Verbindung mit der Vorgängerversion von Integration Services herzustellen, die auf einer SQL Server 2016-Instanz ausgeführt wird. [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 >
 >  Zum Verwalten von Paketen auf einem Remoteserver müssen Sie keine Verbindung mit der Instanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts auf dem betreffenden Remoteserver herstellen. Bearbeiten Sie stattdessen die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, sodass die auf dem Remoteserver gespeicherten Pakete von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden.
   

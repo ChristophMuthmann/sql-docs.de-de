@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>Installieren von SQL Server Analysis Services
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="get-tools-and-designers"></a>Aufrufen von Tools und Designern  
  SQL Server-Setup ist nicht mehr für die Installation der Modell-Designer oder Management-Tools zuständig, mit denen Projektmappen entworfen oder Server verwaltet werden. In dieser Version werden Tools separat installiert, und zwar über die folgenden Links:  
   
--   [Herunterladen von SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-   [Herunterladen von SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [Herunterladen von SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [Herunterladen von SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  Sie benötigen sowohl SSMS und SSDT zum Arbeiten mit Analysis Services-Instanzen und Daten. Tools können überall installiert werden, aber Achten Sie darauf, dass Sie Ports auf dem Server zu konfigurieren, bevor Sie versuchen, eine Verbindung herzustellen. Siehe [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   

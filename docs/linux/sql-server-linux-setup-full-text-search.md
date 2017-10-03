@@ -4,16 +4,16 @@ description: Dieses Thema beschreibt, wie SQL Server-Volltextsuche unter Linux z
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
@@ -86,7 +86,7 @@ Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in 
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
-Volltext-Suchdienst verwendet [wörtertrennungen](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) feststellen, dass einzelne Wörter, die basierend auf Sprache identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Wörtertrennungen für die folgenden Sprachen sind mit SQL Server 2017 RC2 installiert:
+Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) feststellen, dass einzelne Wörter, die basierend auf Sprache identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Mit SQL Server-2017 werden wörtertrennungen für die folgenden Sprachen installiert:
 
 | Sprache | Sprach-ID |
 |---|---|
@@ -146,9 +146,9 @@ Volltext-Suchdienst verwendet [wörtertrennungen](/sql-docs/docs/relational-data
 
 ## <a id="filters"></a>Filter
 
-Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
+Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 RC2 werden die folgenden Filter installiert:
+Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 werden die folgenden Filter installiert:
 
 | Komponentenname | Klassen-ID | Version |
 |---|---|---|
@@ -258,37 +258,28 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |*.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Semantische Suche
-[Semantische Suche](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren, die für statistisch *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung von Dokumenten in der Datenbank abzufragen. Die Lösung schützt auch Dokumente zu identifizieren, die ähnlich sind.
+[Semantische Suche](../relational-databases/search/semantic-search-sql-server.md) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren, die für statistisch *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung von Dokumenten in der Datenbank abzufragen. Die Lösung schützt auch Dokumente zu identifizieren, die ähnlich sind.
 
-Um die semantische Suche zu verwenden, müssen Sie zuerst herunter, und fügen Sie der [semantische sprachstatistikdatenbank](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
+Um die semantische Suche zu verwenden, müssen Sie zuerst die Semantic Language Statistics-Datenbank auf den Computer wiederherstellen.
 
-1. Auf einem Windows-Computer [Herunterladen der. MSI-Datei für die semantische sprachstatistikdatenbank](https://www.microsoft.com/download/details.aspx?id=54277).
+1. Verwenden Sie ein Tool wie [Sqlcmd](sql-server-linux-setup-tools.md), um den folgenden Transact-SQL-Befehl für Ihre Linux SQL Server-Instanz ausführen. Dieser Befehl stellt die Language Statistics-Datenbank wieder her.
 
-    > [!NOTE]
-    > Auf dieser Zeit den Download für die Datenbank ein. MSI-Datei, ein Windows-Computer für diesen Schritt erforderlich ist.
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. Führen Sie die. MSI-Datei extrahieren der Datenbank und Protokolldateien.
+   > [!NOTE]
+   > Aktualisieren Sie bei Bedarf die Pfade in der vorherigen RESTORE-Befehl, um für Ihre Konfiguration anzupassen.
 
-3. Verschieben Sie die Datenbank und-Protokolldateien an Ihren Linux SQL Server-Computer.
+1. Führen Sie den folgenden Transact-SQL-Befehl, um die semantische sprachstatistikdatenbank zu registrieren.
 
-    > [!TIP]
-    > Anleitungen zum Verschieben von Dateien aus Windows auf Linux finden Sie unter [übertragen Sie eine Datei auf Linux](sql-server-linux-migrate-restore-database.md#scp).
-
-4. Führen Sie den folgenden Transact-SQL-Befehl für Ihre Linux SQL Server-Instanz die sprachstatistikdatenbank angefügt.
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. Führen Sie den folgenden Transact-SQL-Befehl, um die semantische sprachstatistikdatenbank zu registrieren.
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>Nächste Schritte

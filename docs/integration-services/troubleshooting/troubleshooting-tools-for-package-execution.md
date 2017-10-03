@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Sicherstellen der Datenintegrität mithilfe von Transaktionen**. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](../../integration-services/integration-services-transactions.md).  
   
--   **Erneutes Ausführen von Paketen ab dem Punkt, an dem der Fehler aufgetreten ist, mithilfe von Prüfpunkten**. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Erneutes Ausführen von Paketen ab dem Punkt, an dem der Fehler aufgetreten ist, mithilfe von Prüfpunkten**. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Abfangen und Behandeln von Paketfehlern mithilfe von Ereignishandlern  
  Sie können auf viele Ereignisse, die vom Paket und den Objekten im Paket ausgelöst wurden, mit Ereignishandlern reagieren.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Behebung von Problemen bei der Paketausführung mithilfe der Protokollierung  
  Sie können die meisten Vorgänge beim Ausführen von Paketen durch Aktivieren der Protokollierung nachverfolgen. Bei der Protokollierung werden Informationen zu angegebenen Ereignissen zur späteren Analyse aufgezeichnet und in einer Datenbanktabelle, einer Flatfile, einer XML-Datei oder einem anderen unterstützten Ausgabeformat gespeichert.  
   
--   **Aktivieren der Protokollierung**. Sie können die Protokollierungsausgabe optimieren, indem Sie nur die Ereignisse und Informationen auswählen, die Sie aufzeichnen möchten. Weitere Informationen finden Sie unter [Integration Services-Protokollierung (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Aktivieren der Protokollierung**. Sie können die Protokollierungsausgabe optimieren, indem Sie nur die Ereignisse und Informationen auswählen, die Sie aufzeichnen möchten. Weitere Informationen finden Sie unter [Integration Services-Protokollierung (SSIS)](../performance/integration-services-ssis-logging.md).  
   
--   **Wählen Sie das Diagnostic-Ereignis des Pakets aus, um Probleme mit dem Anbieter zu behandeln.** Es sind Meldungen für die Protokollierung enthalten, mit denen Sie Probleme bei der Interaktion eines Pakets mit externen Datenquellen behandeln können. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Wählen Sie das Diagnostic-Ereignis des Pakets aus, um Probleme mit dem Anbieter zu behandeln.** Es sind Meldungen für die Protokollierung enthalten, mit denen Sie Probleme bei der Interaktion eines Pakets mit externen Datenquellen behandeln können. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Verbessern der Standardprotokollierungsausgabe**. Bei der Protokollierung werden normalerweise bei jeder Paketausführung Zeilen an ein Protokollierungsziel angefügt. Zwar enthält jede Zeile der Protokollierungsausgabe den Namen und eindeutigen Bezeichner des Pakets sowie die eindeutige ExecutionID der Paketausführung, die umfangreiche Protokollierungsausgabe in einer einzigen Liste kann jedoch die Analyse erschweren.  
   

@@ -1,7 +1,7 @@
 ---
 title: Transaktionen (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8660d0ac8d6205a94fdab24f41e41bac40a8671e
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: c09104746dff6c34d94192217b8f2635cb0adc67
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="transactions-transact-sql"></a>Transaktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Eine Transaktion ist eine einzelne Arbeitseinheit. Ist eine Transaktion erfolgreich, wird für alle Datenänderungen, die während der Transaktion vorgenommen wurden, ein Commit ausgeführt, und sie werden dauerhaft in der Datenbank gespeichert. Treten während einer Transaktion Fehler auf, die den Abbruch oder ein Rollback der Transaktion erfordern, werden alle Datenänderungen rückgängig gemacht.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in den folgenden Transaktionsmodi ausgeführt.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in den folgenden Transaktionsmodi arbeitet:  
   
  Autocommit-Transaktionen  
  Jede einzelne Anweisung ist eine Transaktion.  
@@ -49,19 +49,23 @@ ms.lasthandoff: 09/01/2017
   
  Transaktionen mit batchbereich  
  Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktion im Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt.  
-  
+
+> [!NOTE] 
+> Besondere Aspekte im Zusammenhang mit der Data Warehouse-Produkte finden Sie unter [Transaktionen (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Transaktionsanweisungen bereit.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Stellt die folgenden transaktionsanweisungen bereit:  
   
 |||  
 |-|-|  
 |[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
 |[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[COMMIT FÜR TRANSAKTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SPEICHERN SIE DIE TRANSAKTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[FÜHREN SIE AUFGABEN AUS](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
+|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
  [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

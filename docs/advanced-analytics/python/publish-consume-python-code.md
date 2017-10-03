@@ -1,7 +1,7 @@
 ---
 title: "Veröffentlichen und Nutzen von Python-Code | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>Veröffentlichen und Nutzen von Webdiensten Python
 
-**Gilt für: SQL Server 2017 CTP 2.0 (öffentliche Vorschau)**
+Sie können eine funktionierende Lösung Python an einen Webdienst mithilfe der operationalisierung-Funktion im Microsoft Machine Learning-Server bereitstellen. Dieses Thema beschreibt die Schritte zum Veröffentlichen erfolgreich, und führen Sie die Projektmappe.
 
-Sie können eine funktionierende Lösung Python an einen Webdienst mithilfe der operationalisierung-Funktion im Microsoft Machine Learning-Server bereitstellen.
-
-Dieses Thema beschreibt die Schritte befolgen, um erfolgreich zu veröffentlichen, und führen Sie die Projektmappe.
+> [!IMPORTANT]
+>
+> Dieses Beispiel wurde für die Version von Python entwickelt, das ist im Lieferumfang von Machine Learning-Server (eigenständig) und Funktionen in Machine Learning Server, Version 9.1.0 verwendet.
+ > 
+ > Um ein ähnliches Beispiel anzuzeigen, die Funktionen in der neuesten Version von Microsoft Machine Learning-Server, Version 9.2.0, nutzt finden Sie im Artikel auf der Website Machine Learning: [bereitstellen und Verwalten von Webdiensten in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
 
 Die Zielgruppe für diesen Artikel ist die Datenanalysten, die Informationen zum Veröffentlichen von Python-Code oder Modelle als Webdienste, die im Microsoft Machine Learning-Server gehostet werden soll. Außerdem erfahren Sie, wie Anwendungen nutzen können die den Code oder Modelle. In diesem Artikel wird davon ausgegangen, dass Sie in Python versiert sind.
 
-> [!IMPORTANT]
-> Python-Webdienste sind nur mit Python-fähigen Installationen von SQL Server 2017 CTP 2.0 (öffentliche Vorschau) verfügbar. Die Verfügbarkeit dieser Funktion wird in zukünftigen Versionen erweitert werden.
+**Gilt für: SQL Server 2017 Machine Learning-Server (eigenständig)**
 
 ## <a name="overview-of-workflow"></a>Übersicht über Workflows
 

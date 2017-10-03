@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Parameter (Registerkarte)  
  Mit Integration Services-Parametern (SSIS) können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können Projektparameter auf Projektebene und Paketparameter auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen. Mit dieser Registerkarte können Sie Paketparameter verwalten.  
   
- Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **WICHTIG!**  Parameter sind nur für Projekte verfügbar, die für das Projektbereitstellungsmodell entwickelt wurden. Daher sehen Sie die Registerkarte "Parameter" nur für Pakete, die ein Teil eines Projekts sind, das für die Verwendung des Projektbereitstellungsmodells konfiguriert wurde.  
   

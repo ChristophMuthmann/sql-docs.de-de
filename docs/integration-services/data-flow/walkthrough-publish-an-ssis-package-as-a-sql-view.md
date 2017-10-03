@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder höher mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Schritt 1: Erstellen und Bereitstellen des SSIS-Projekts im SSIS-Katalog  
  In diesem Schritt erstellen Sie ein SSIS-Paket, das Daten aus einer von SSIS unterstützten Datenquelle extrahiert (in diesem Beispiel verwenden wir eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank) und die Daten mithilfe einer Datenstreamingziel-Komponente ausgibt. Dann erstellen Sie das SSIS-Projekt und stellen es im SSIS-Katalog bereit.  

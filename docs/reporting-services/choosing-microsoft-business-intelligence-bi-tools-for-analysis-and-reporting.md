@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c41e28d5083de71906106a09cf4b129d3e1907c5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Auswählen von Microsoft Business Intelligence (BI)-Tools für Analyse und Berichtswesen
@@ -38,17 +38,17 @@ In der folgenden Tabelle werden die verschiedenen Arbeitsauslastungen für Daten
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 wird unterstützt)|  
 |Visualisieren und Untersuchen von Daten||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D-Karten](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Fragen mithilfe von Abfragen in natürlicher Sprache|||||[Q & A](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von < 10MB-Dateien)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(mithilfe der Power BI-Apps für mobile Geräte)|  
+|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von < 10MB-Dateien)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(mithilfe der Power BI-Apps für mobile Geräte)|  
 |Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Websites](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint-Teamwebsites](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Unternehmens-BI**|Professionelle IT-Anwender||||||  
-|Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](/sql-docs/docs/analysis-services/analysis-services)|  
+|Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Erstellen von Ad-hoc-Datenvisualisierungen|||[Power View für SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Erstellen von Dashboards|||[SharePoint-Dashboards](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint-Dienste](http://technet.microsoft.com/library/ee424392.aspx)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|Erstellen von Betriebsberichten||||||*[Reporting Services](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
-|Erstellen benutzerdefinierter und eingebetteter Berichte|||||[Power BI Embedded](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
+|Erstellen von Betriebsberichten||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|Erstellen benutzerdefinierter und eingebetteter Berichte|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Erweiterte Analysen**|Datenanalysten||||||  
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 wird unterstützt)|  
-|Verwenden von Data Mining-Algorithmen||||||[Datamining in Analysis Services](/sql-docs/docs/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Verwenden von Data Mining-Algorithmen||||||[Datamining in Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  *Reporting Services bietet verschiedene Features, die die Bereitstellung moderner, paginierter Berichte unterstützen.  
   

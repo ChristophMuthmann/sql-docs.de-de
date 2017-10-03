@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5796c2d5faefdeef1a9bafe1a438b68c7461dd53
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f230af88796afce17b6858a7e4ac5136a04e9dd3
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit pymssql
@@ -54,7 +54,7 @@ Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Curso
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](/sql-docs/docs/t-sql/statements/insert-transact-sql) Anweisung sicher, übergeben von Parametern die schützen Ihre Anwendung von [SQL Injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) Wert.    
+In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](../../../t-sql/statements/insert-transact-sql.md) Anweisung sicher, übergeben von Parametern die schützen Ihre Anwendung von [SQL Injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
   
   
 ```python

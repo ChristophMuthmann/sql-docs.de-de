@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL)
@@ -80,7 +80,7 @@ FÜR SEKUNDÄRE OBJEKTE
  
 Gibt die Einstellungen für die sekundären Datenbanken (alle sekundäre Datenbanken müssen die identische Werte haben).  
   
-MAXDOP ** = ** {\<Wert > | PRIMÄRE}  
+MAXDOP  **=**  {\<Wert > | PRIMÄRE}  
 **\<Wert >**  
   
 Gibt die Standard-MAXDOP festlegen, die für Anweisungen verwendet werden soll. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet werden soll. Der MAXDOP im Datenbankbereich überschreibt (es sei denn, es auf 0 festgelegt ist) die **Max. Grad an Parallelität** auf Serverebene von Sp_configure festgelegt. Abfragehinweise können weiterhin die Datenbank überschreiben MAXDOP begrenzt, um bestimmte Abfragen optimieren, die andere Einstellung benötigen. All diese Einstellungen werden durch die MAXDOP, legen Sie für die Arbeitsauslastungsgruppe begrenzt.   
@@ -96,7 +96,7 @@ PRIMARY
   
 Kann nur festgelegt werden, für die protokollsicherungskopien verfügbar, während die Datenbank in der primären Datenbank und gibt an, dass die Konfiguration der einen Satz für die primäre sein wird. Wenn die Konfiguration für die primäre geändert wird, den Wert auf den sekundären Replikaten zu ändern, wird der Wert entsprechend ohne die Notwendigkeit zum Festlegen der sekundären Replikaten explizit. **PRIMÄRE** ist die Standardeinstellung für den sekundären Replikaten.  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRIMÄRE}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRIMÄRE}  
 
 Können Sie das Query Optimizer kardinalitätsschätzungsmodell auf die SQL Server 2012 und früheren Version unabhängig vom Kompatibilitätsgrad der Datenbank festgelegt. Die Standardeinstellung ist **OFF**, welche legt das kardinalitätsschätzungsmodell für Abfrage Abfrageoptimierer auf den Kompatibilitätsgrad der Datenbank basierend. Wenn dieser **ON** entspricht der Aktivierung von [Ablaufverfolgungsflag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -107,7 +107,7 @@ PRIMARY
   
 Dieser Wert ist nur gültig für sekundäre Replikate, während die Datenbank in der primären Datenbank und gibt an, dass der Wert für die primäre Abfrageoptimierer Modell Einstellung für die kardinalitätsschätzung für alle sekundären Datenbanken wird. Wenn die Konfiguration auf dem primären Replikat für das kardinalitätsschätzungsmodell für Abfrage Abfrageoptimierer ändert, wird der Wert auf den sekundären Replikaten entsprechend geändert. **PRIMÄRE** ist die Standardeinstellung für den sekundären Replikaten.  
   
-PARAMETER_SNIFFING ** = ** { **ON** | DEAKTIVIEREN | PRIMÄRE}  
+PARAMETER_SNIFFING  **=**  { **ON** | DEAKTIVIEREN | PRIMÄRE}  
 
 Aktiviert oder deaktiviert die [parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Dies entspricht dem [Ablaufverfolgungsflag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -118,7 +118,7 @@ PRIMARY
   
 Dieser Wert ist nur gültig für sekundäre Replikate, während die Datenbank in der primären Datenbank und gibt an, dass der Wert für diese Einstellung auf alle sekundären Datenbanken für den primären festgelegte Wert. Wenn die Konfiguration auf dem primären Replikat für die Verwendung von [parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) ändert, der Wert auf den sekundären Replikaten ändert sich entsprechend ohne die Notwendigkeit zum Festlegen der sekundären Replikate-Wert explizit. Dies ist die Standardeinstellung für den sekundären Replikaten.  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRIMÄRE}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMÄRE}  
 
 Aktiviert oder deaktiviert Hotfixes für die abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**. Dies entspricht dem Aktivieren der [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Empfehlungen und Richtlinien für die Konfigurationsoption "Max. Grad an Parallelität" in SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION-Ressourcen    
-* [Kardinalitätsschätzung (SQLServer)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Kardinalitätsschätzung (SQLServer)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING Ressourcen    

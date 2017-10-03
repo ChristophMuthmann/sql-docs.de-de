@@ -2,7 +2,7 @@
 title: Was &#39; s neu in Machine Learning Services | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: de-de
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Was ist neu in Machine Learning Services in SQL Server
@@ -30,16 +30,13 @@ In SQL Server 2017 wird Machine Learning noch leistungsfähiger, durch Hinzufüg
 
 Fangen Sie hier die neueste Ankündigung! [Python in SQL Server-2017: Erweiterte in Datenbank-Machine Learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Jetzt können Sie R in Azure SQL-Datenbanken ausführen! Weitere Informationen finden Sie unter [in diesem Artikel](r/using-r-in-azure-sql-database.md), oder aus der SQL Server-Entwicklungsteam-Blog: [Ankündigung Vorschau der Machine Learning-Dienste mit Unterstützung für R in Azure SQL-Datenbank](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 
 Microsoft Machine Learning-Server in SQL Server bietet jetzt eine umfassende Unterstützung für das Erstellen und Bereitstellen von Machine Learning-Lösungen in R oder Python. Hier sind die wichtigsten dieser Version:
 
-> [!IMPORTANT]
-> 
-> Machine Learning-Dienste, einschließlich der Verwendung von R oder Python, werden derzeit nicht unterstützt, wenn SQL Server unter Linux oder in Azure SQL-Datenbank ausgeführt. Suchen Sie nach Änderungen in einer späteren Version.
-> 
-> Systemeigene Bewertung mithilfe der PREDICT-Funktion ist derzeit in der Linux-Edition unterstützt.
- 
 ### <a name="in-database-python-integration"></a>Python-Integration in der Datenbank
 
 Sie können Python in gespeicherten Prozeduren ausführen oder Python Remote mithilfe von SQL Server-Computers als computekontext auszuführen. Diese Integration eröffnet neue Möglichkeiten für die großen Community von Python-Entwickler und Datenanalysten ausnutzen der Leistungsfähigkeit von SQL Server. 
@@ -60,9 +57,13 @@ Ausgeführte Python, die nur in der Datenbank ist nicht "machine learning, wie".
 
 + Python-Unterstützung in Microsoft Machine Learning-Server (eigenständig)
 
-    SQL Server-2017 umfasst die Möglichkeit, eine eigenständige Version des Microsoft Machine learning-Plattform zu installieren. Mithilfe von Machine Learning-Server können Sie verteilen und Skalieren von R oder Python-Code ohne Verwendung von SQL Server.
+    SQL Server-2017 umfasst die Möglichkeit, eine eigenständige Version von Microsoft Machine Learning-Server installieren. Mithilfe von Machine Learning-Server können Sie verteilen und Skalieren von R oder Python-Code ohne Verwendung von SQL Server.
 
-    Ein Beispiel für Python im Microsoft Machine Learning-Server ausgeführt wird, finden Sie unter [veröffentlichen und Nutzen von Python-Code](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Linux-Unterstützung
+
+Machine Learning mithilfe von R oder Python in der Datenbank ist derzeit nicht in SQL Server on Linux unterstützt. Suchen Sie nach Ankündigungen in einer späteren Version.
+
+Allerdings unter Linux können Sie ausführen [native Bewertung](sql-native-scoring.md) mit der VORHERSAGE von T-SQL-Funktion. Systemeigene Bewertung können Sie aus einem vortrainierte Modell sehr schnell zu bewerten, ohne aufrufen oder sogar eine R-Laufzeit erfordern. Dies bedeutet, dass Sie SQL Server on Linux verwenden können, zum Generieren von Vorhersagen, die sehr schnell, um Clientanwendungen zu fungieren.
 
 ### <a name="new-algorithms"></a>Neue Algorithmen
 

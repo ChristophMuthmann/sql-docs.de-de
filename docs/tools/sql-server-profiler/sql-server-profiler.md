@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>Wo befindet sich der Profiler?
  
- Sie können den Profiler auf verschiedene Arten in SSMS starten. [Hier ist ein Thema, die Methoden zum start des Profilers aufgelistet sind.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ Sie können den Profiler auf verschiedene Arten in SSMS starten. [Hier ist ein Thema, die Methoden zum start des Profilers aufgelistet sind.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Aufzeichnen und Wiedergeben von Ablaufverfolgungsdaten 
 In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfehlen, um Ablaufverfolgungsdaten zu erfassen und wiederzugeben.
@@ -57,8 +57,8 @@ In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir i
 ||||  
 |-|-|-|  
 |**Funktion/Zielarbeitsauslastung**|**Relationales Modul**|**Analysis Services**|  
-|**Ablaufverfolgungssammlung**|Grafische Benutzeroberfläche für[erweiterte Ereignisse](/sql-docs/docs/relational-databases/extended-events/extended-events) in SQL Server Management Studio|SQL Server Profiler|  
-|**Wiedergabe von ablaufverfolgungen**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**Ablaufverfolgungssammlung**|Grafische Benutzeroberfläche für[erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md) in SQL Server Management Studio|SQL Server Profiler|  
+|**Wiedergabe von ablaufverfolgungen**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine grafische Benutzeroberfläche für die SQL-Ablaufverfolgung zur Überwachung einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder Analysis Services. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche gespeicherten Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wird z. B. für Aktivitäten verwendet:  

@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services-Problembehandlung
   Mithilfe dieses Abschnitts können Sie Probleme bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bestimmen und beheben.  
 
-![Kleines Dateiordnersymbol](../../reporting-services/troubleshooting/media/filefolder-small.png)**Behandeln von Problemen mit Reporting Services   **  
+![Kleines Dateiordnersymbol](../../reporting-services/troubleshooting/media/filefolder-small.png)**Behandeln von Problemen mit Reporting Services**   
 + [Problembehandlung bei Reporting Services-Problemen mit Berichten](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,9 +39,9 @@ ms.lasthandoff: 09/21/2017
 
 +  [Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Problembehandlung bei Server- und Datenbankverbindungsproblemen Datenbankverbindungsproblemen mit Reporting Services](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [Problembehandlung bei Server- und Datenbankverbindungsproblemen Datenbankverbindungsproblemen mit Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![Kleines Dateiordnersymbol](../../reporting-services/troubleshooting/media/filefolder-small.png)**Fehler- und Ereignisreferenz   **  
+ ![Kleines Dateiordnersymbol](../../reporting-services/troubleshooting/media/filefolder-small.png)**Fehler- und Ereignisreferenz**   
  + [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Ursachen und Lösungen für Reporting Services-Fehler](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  

@@ -16,17 +16,17 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c4de8bcf161a8e4a5e33535769d3f8f7b5f7ad7a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f40894ea8ee3d7b998a8a45170e9833f2e6c763f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Installation und Konfiguration
 Anweisungen zu Installation und Konfiguration für die WideWorldImportersDW-Datenbank.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Um die vollständige Version des Beispiels zu verwenden, verwenden Sie SQL Server-Evaluierung, Developer, Enterprise Edition.
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
 
 ## <a name="download"></a>Herunterladen
 

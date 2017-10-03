@@ -1,7 +1,7 @@
 ---
 title: Einrichten von SQL Server Machine Learning-Services (Datenbankintern) | Microsoft Docs
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Einrichten von SQL Server Machine Learning-Services (Datenbankintern)
@@ -97,15 +97,15 @@ Um Machine Learning verwenden zu können, müssen Sie SQLServer 2016 oder höher
 
 6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten sind, und Sie dann wählen **installieren**.
 
-   **SQL Server 2016**
-   - Datenbankmoduldienste
-   - R Services (In-Database)
-
    **SQL Server 2017**
    - Datenbankmoduldienste
    - Machine Learning-Dienste (datenbankintern)
    - R, Python oder beides
-    
+
+   **SQL Server 2016**
+   - Datenbankmoduldienste
+   - R Services (In-Database)
+
 7. Wenn die Installation abgeschlossen ist, starten Sie den Computer neu.
 
 ##  <a name="bkmk_enableFeature"></a>Schritt 2: Aktivieren von externen Skripts services
@@ -189,12 +189,15 @@ Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client mö
 
 1. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**.
 2. In der **Anmeldung - neu** wählen Sie im Dialogfeld **Suche**.
-3. Wählen Sie die **Objekttypen** und **Gruppen** Kontrollkästchen, und deaktivieren Sie alle anderen Kontrollkästchen. 
-4. In **Geben Sie die zu verwendenden Objektnamen**, Typ **SQLRUserGroup**, und wählen Sie dann **Namen überprüfen**.  
-    Der Name der lokalen Gruppe, dem die Instanz Launchpad-Dienst zugeordnet sind, sollte sich in etwa auflösen *Instancename\SQLRUserGroup*. 
-5. Wählen Sie **OK**.
-6. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zum Datenbankmodul herzustellen.
-7. Wählen Sie **OK**.
+3. Wählen Sie die **Objekttypen** und **Gruppen** Kontrollkästchen, und deaktivieren Sie alle anderen Kontrollkästchen.
+4. Klicken Sie auf **erweitert**, überprüfen Sie, ob die zu suchende Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
+5. Führen Sie einen Bildlauf durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnen mit gefunden `SQLRUserGroup`.
+    
+    + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer nur **SQLRUserGroup**. Wählen Sie dieses Konto nur für die Standardinstanz.
+    + Bei Verwendung einer _benannte Instanz_, wird der Instanzname dem Standardnamen angefügt `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" benannt wird, der Standardbenutzernamen Gruppe für diese Instanz wäre **SQLRUserGroupMLTest**.
+5. Klicken Sie auf **OK** , schließen Sie das Dialogfeld "Erweiterte Suche" aus, und stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz können eigenen Launchpad-Dienst und die Gruppe für diesen Dienst erstellt haben.
+6. Klicken Sie auf **OK** einmal zum Schließen der **Benutzer oder Gruppe auswählen** (Dialogfeld).
+7. In der **Anmeldung - neu** (Dialogfeld), klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zum Datenbankmodul herzustellen.
 
 ### <a name="bkmk_AllowLogon"></a>Vergabe von Benutzerberechtigungen für das Ausführen externer Skripts.
 

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f7c47ab0833a0ce5693effc269f24d9ed2baf3dd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b68e218e549ee6bccc716d6f3430774065f9390
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-data-developer"></a>Entwickler von SQL-Daten
@@ -44,12 +44,12 @@ Verwenden Sie Microsoft SQL-Datenplattform datenorientierte Lösungen über mobi
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Verwendung von SQLXML 4.0 relationale Daten in XML exportieren.
 
 ## <a name="data-collection-processing-and-visualization"></a>Die Datensammlung, Verarbeitung und die Visualisierung
-* [Analysis Services](/sql-docs/docs/analysis-services/analysis-services-developer-documentation)
-* [Integration Services](/sql-docs/docs/integration-services/integration-services-developer-documentation)  
-* [Master Data Services](/sql-docs/docs/master-data-services/develop/master-data-services-developer-documentation)
-* [Replication Services](/sql-docs/docs/relational-databases/replication/concepts/replication-developer-documentation)
-* [Reporting Services](/sql-docs/docs/reporting-services/reporting-services-developer-documentation)
-* [Service Broker](/sql-docs/docs/database-engine/configure-windows/sql-server-service-broker)
+* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Integration Services](../integration-services/integration-services-developer-documentation.md)  
+* [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
+* [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
+* [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
+* [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
 
 
  

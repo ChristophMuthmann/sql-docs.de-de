@@ -1,19 +1,19 @@
 ---
-title: "Neuigkeiten für SQL Server 2017 RC1 unter Linux | Microsoft Docs"
+title: "Neuigkeiten für SQLServer 2017 unter Linux | Microsoft Docs"
 description: "In diesem Thema werden die Neuigkeiten für die aktuelle Version von SQL Server-2017 unter Linux hervorgehoben."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Neuigkeiten für SQL Server-2017 unter Linux
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Dieses Thema beschreibt die Neuigkeiten für SQL Server-2017 auf Linux ausgeführt wird.
+
+## <a name="ga"></a>GA
+
+Die allgemeinen Availaiblity (GA) Version enthält die folgenden Verbesserungen und Fehlerbehebungen auf:
+
+- Datenbankdateien können jetzt auf NFS gehostet werden. Dies behebt Probleme mit freigegebenen NFS-Datenträger-Szenarien, Einbinden von Remotespeicher für Container-Plattformen und Bereitstellen von Ordnern für Docker für Windows.
+- Andere verschiedene Fehlerbehebungen und Verbesserungen.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ Unter dem Kompatibilitätsmodus 140:
 [Verbesserungen von Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in dieser Version CTP1.1:
 - Für CLR, Filestream/Filetable, Objekte im Arbeitsspeicher und der Abfragespeicher das Klonen von Datenbanken.
 - **Erstellen Sie** oder **ALTER** Operatoren für programmierbarkeitsobjekte.
-- Neue **verwenden Hinweis** -Abfrageoption verwenden, um Hinweise für die der Abfrageprozessor zu übermitteln. Erfahren Sie hier: [Abfragehinweise](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- Neue **verwenden Hinweis** -Abfrageoption verwenden, um Hinweise für die der Abfrageprozessor zu übermitteln. Erfahren Sie hier: [Abfragehinweise](../t-sql/queries/hints-transact-sql-query.md).
 - SQL-Dienstkonto kann nun programmgesteuert aktivieren Sperren von Seiten im Speicher und die sofortige Dateiinitialisierung Berechtigungen identifizieren.
 - Unterstützung für die TempDB-Dateianzahl, Dateigröße und Wachstum dateieinstellungen.
 - Erweiterte Diagnose in Showplan XML.

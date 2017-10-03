@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [Datenbereiche und Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Beschreibt die Datenbereichstypen, die einem Berichtslayout hinzugefügt werden können. Datenbereiche bestimmen die Darstellung eines Berichts: Tabelle, Matrix, Liste oder Diagramm.  
   
- [Berichtsparameter-Konzept (Berichts-Generator und SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [Berichtsparameter-Konzept (Berichts-Generator und SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Beschreibt die Möglichkeiten zum Definieren und Verwenden von Berichtsparametern und wie diese unabhängig von der Berichtsdefinition auf dem Berichtsserver verwaltet werden.  
   
 ## <a name="see-also"></a>Siehe auch  

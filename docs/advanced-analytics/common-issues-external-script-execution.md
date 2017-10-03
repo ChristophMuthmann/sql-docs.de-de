@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
@@ -64,7 +64,7 @@ Der Launchpad-Dienst (Launchpad.exe) wird mithilfe eines Dienstkontos mit gering
 - Umgehen von durchsuchenden Prüfungen (SeChangeNotifyPrivilege)
 - Anpassen von Speicherkontingenten für einen Prozess (SeIncreaseQuotaSizePrivilege)
 
-Informationen über diese Benutzerrechte, finden Sie im Abschnitt "Windows-Berechtigungen und Rechte" in [service Konfigurieren von Windows-Dienstkonten und-Berechtigungen](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
+Informationen über diese Benutzerrechte, finden Sie im Abschnitt "Windows-Berechtigungen und Rechte" in [service Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 > [!TIP]
 > Wenn Sie mit der Verwendung des Tools Unterstützung Diagnose Plattform (SDP) für SQL Server-Diagnose vertraut sind, können Sie SDP verwenden, um die Ausgabedatei mit dem Namen MachineName_UserRights.txt zu überprüfen.
@@ -100,7 +100,7 @@ Während des Setups von Machine Learning-Services, SQL Server erstellt die Windo
 
 Allerdings in Organisationen, die denen restriktivere Sicherheitsrichtlinien durchgesetzt werden, die Rechte, die von dieser Gruppe erforderlich sind möglicherweise manuell entfernt, oder sie können automatisch von der Richtlinie aufgehoben werden. Wenn die Rechte entfernt wurden, Launchpad kann nicht mehr Verbinden mit SQL Server und SQL Server kann nicht die externen Laufzeit aufgerufen.
 
-Stellen Sie sicher, dass die Gruppe **SQLRUserGroup** über die Systemberechtigung **Allow Log in locally ** (Lokale Anmeldung erlauben) verfügt, um dieses Problem zu beheben.
+Stellen Sie sicher, dass die Gruppe **SQLRUserGroup** über die Systemberechtigung **Allow Log in locally**  (Lokale Anmeldung erlauben) verfügt, um dieses Problem zu beheben.
 
 Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Sie können Sicherungen der Datenbanken von SQL Server 2017 RC2 unter Linux mit den gleichen Tools wie andere Plattformen ausführen. Auf einem Linux-Server, können Sie `sqlcmd` zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](http://msdn.microsoft.com/library/dn435916.aspx). 
+Sie können Sicherungen der Datenbanken von SQL Server-2017 unter Linux mit den gleichen Tools wie andere Plattformen schalten. Auf einem Linux-Server, können Sie `sqlcmd` zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Sicherung mit sqlcmd
 
@@ -75,7 +75,7 @@ Sie können SSMS auf einem Windows-Computer verwenden, eine Verbindung mit einer
 
 Die folgenden Schritte führen über eine Sicherung mit SSMS. 
 
-1. Starten Sie SSMS aus, und verbinden Sie Ihre Server in SQL Server 2017 RC2 unter Linux.
+1. Starten Sie SSMS aus, und verbinden Sie Ihre Server in SQL Server-2017 unter Linux.
 
 1. Objekt-Explorer mit der Maustaste auf die Datenbank aus, klicken Sie auf **Aufgaben**, und klicken Sie dann auf **sichern...** .
 

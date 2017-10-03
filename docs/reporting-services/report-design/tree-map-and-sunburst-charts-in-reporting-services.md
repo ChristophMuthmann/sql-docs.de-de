@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  In einem Treemap-Diagramm wird die Diagrammfläche in Rechtecke unterteilt, die die verschiedenen Ebenen und die relative Größe der Datenhierarchie darstellen. Die Darstellung ähnelt dem Geäst eines Baums, das am Stamm beginnt und sich in immer feinere Zweige aufspaltet. Jedes Rechteck wird in kleinere Rechtecke aufgespaltet, die die nächste Hierarchieebene darstellen. Die größten Rechtecke des Treemap-Diagramms werden mit ihrem größten Rechteck in der oberen linken Ecke des Diagramms angeordnet. Diese Rechtecke stellen die oberste Hierarchieebene dar. Die Rechtecke sind nach absteigender Hierarchie angeordnet, und das kleinste Rechteck befindet sich in der unteren rechten Ecke.  Innerhalb eines Rechtecks sind die Rechtecke ebenfalls der Hierarchie entsprechend von oben links nach unten rechts angeordnet.  
   
- In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „Southwest“ (Südwesten) das größte und „Germany“ (Deutschland) das kleinste. Innerhalb des Südwestens ist das Feld „Road Bikes“ (Rennräder) größer als das für „Mountain Bikes“.  
+ Beispielsweise in der folgenden Abbildung eines Beispiel-TreeMap, Gebiet Südwestens ist das größte und (Deutschland) das kleinste. Innerhalb des Südwestens ist das Feld „Road Bikes“ (Rennräder) größer als das für „Mountain Bikes“.  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>So fügen Sie ein Treemap-Diagramm und konfigurieren es für die Adventureworks-Beispieldaten  
- **Hinweis:** Bevor Sie Ihrem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
+   
+[!NOTE] Bevor Sie dem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, anschließend auf **Einfügen**, und klicken Sie danach auf **Diagramm** .  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>So fügen Sie ein Sunburst-Diagramm ein und konfigurieren es für die Adventureworks-Beispieldaten  
- **Hinweis:** Bevor Sie Ihrem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
+ [!NOTE] Bevor Sie dem Bericht ein Diagramm hinzufügen, erstellen Sie eine Datenquelle und ein Dataset.  Beispieldaten und eine Beispielabfrage finden Sie im Abschnitt [Adventureworks-Beispieldaten](#bkmk_sample_data) in diesem Thema.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, anschließend auf **Einfügen**, und klicken Sie danach auf **Diagramm** .  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  Ändern Sie den Standarddiagrammtitel auf „Categorized Sales by Territory, with sales reason“ (Verkäufe nach Kategorie und Territorium, unter Berücksichtigung des Kaufgrunds).  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Um dem Sunburst-Diagramm die Werte der Kategoriegruppen hinzuzufügen, legen Sie die Beschriftungseigenschaften wie folgt fest: **Visible** = TRUE und **UseValueAsLabel**= FALSE.<br /><br /> Die angezeigten Beschriftungswerte werden durch die Größe der Schriftart, die Gesamtgröße der Diagrammfläche und die Größe der jeweiligen Rechtecke beeinflusst.  Um weitere Beschriftungen anzuzeigen, ändern Sie die LineTotal-Eigenschaft „Schriftart“ von den standardmäßig eingestellten 10 Punkt auf 8 Punkt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Um dem Sunburst-Diagramm die Werte der Kategoriegruppen hinzuzufügen, legen Sie die Beschriftungseigenschaften wie folgt fest: **Visible** = TRUE und **UseValueAsLabel**= FALSE.<br /><br /> Die angezeigten Beschriftungswerte werden durch die Größe der Schriftart, die Gesamtgröße der Diagrammfläche und die Größe der jeweiligen Rechtecke beeinflusst.  Um weitere Beschriftungen anzuzeigen, ändern Sie die LineTotal-Eigenschaft „Schriftart“ von den standardmäßig eingestellten 10 Punkt auf 8 Punkt.|
   
 7.  Wenn Sie den Farbbereich ändern möchten, verändern Sie im Diagramm die Eigenschaft **Palette** .  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   

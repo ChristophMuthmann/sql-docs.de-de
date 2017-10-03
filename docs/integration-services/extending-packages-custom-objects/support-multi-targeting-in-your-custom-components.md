@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dc111f1d884a3553156b55ab490afef2f8df9d61
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Festlegung von Zielversionen in Ihre benutzerdefinierten Komponenten zu unterstützen
- Sie können nun SSIS-Designer in SQL Server Data Tools (SSDT) erstellen, verwalten und Ausführen von Paketen, für SQL Server 2016, SQL Server 2014 oder SQL Server 2012. SSDT für Visual Studio 2015 finden Sie unter [herunterladen neueste SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
+ Sie können nun SSIS-Designer in SQL Server Data Tools (SSDT) erstellen, verwalten und Ausführen von Paketen, für SQL Server 2016, SQL Server 2014 oder SQL Server 2012. SSDT für Visual Studio 2015 finden Sie unter [herunterladen neueste SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
    

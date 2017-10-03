@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d8bec900fef84f2a1c75105b39a9c8aad31db250
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,10 +177,10 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 **-j** Zeigt unformatierte Fehlermeldungen auf dem Bildschirm an.
   
  **-K** *Anwendungszweck*  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-M** *Multisubnetz-Failover*  
- Geben Sie immer **- M** beim Verbinden mit dem verfügbarkeitsgruppenlistener einer SQL Server-verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [! UMFASSEN[SsHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQLServer)] (https://msdn.microsoft.comlibrary/ff929171.aspx, und [aktive sekundäre Replikate: lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Geben Sie immer **- M** beim Verbinden mit dem verfügbarkeitsgruppenlistener einer SQL Server-verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [! UMFASSEN[SsHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQLServer)] (https://msdn.microsoft.comlibrary/ff929171.aspx, und [aktive sekundäre Replikate: lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
@@ -215,11 +215,11 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  **-S** [*Protokoll*:]*Servername*[**\\***Instanzname*][**,***Port*]  
  Gibt die Instanz von SQL Server für die Verbindung. Durch die Option wird die **sqlcmd** -Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *Server_name* für die Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer. Geben Sie *Server_name* [ ** \\ ** *Instance_name* ] für die Verbindung mit einer benannten Instanz von SQL Server auf diesem Servercomputer. Wenn kein Servercomputer angegeben wird, **Sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ Geben Sie *Server_name* für die Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer. Geben Sie *Server_name* [  **\\**  *Instance_name* ] für die Verbindung mit einer benannten Instanz von SQL Server auf diesem Servercomputer. Wenn kein Servercomputer angegeben wird, **Sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  *Protokoll* kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes).  
   
- Wenn Sie keinen angeben einer *Server_name* [ ** \\ ** *Instance_name* ] beim Starten **Sqlcmd**, SQL Server überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
+ Wenn Sie keinen angeben einer *Server_name* [  **\\**  *Instance_name* ] beim Starten **Sqlcmd**, SQL Server überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
   
 > [!NOTE]  
 >  Die OSQLSERVER-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDSERVER-Umgebungsvariable hat Vorrang vor der OSQLSERVER-Umgebungsvariablen. Das bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können und dass alte Skripts weiterhin funktionsfähig sind.  
@@ -685,7 +685,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  **Sonstige Befehle**  
   **:r \<** *filename***>**  
- Weitere Transact-SQL-Anweisungen analysiert und **Sqlcmd** Befehle aus der Datei, die vom angegebenen ** \< ** *Filename***>**in den Anweisungscache.  
+ Weitere Transact-SQL-Anweisungen analysiert und **Sqlcmd** Befehle aus der Datei, die vom angegebenen  **\<**  *Filename***>**in den Anweisungscache.  
   
  Wenn die Datei Transact-SQL-Anweisungen enthält, die durch nicht eingehalten werden **wechseln**, geben Sie **GO** auf der ersten Zeile nach **: R**.  
   

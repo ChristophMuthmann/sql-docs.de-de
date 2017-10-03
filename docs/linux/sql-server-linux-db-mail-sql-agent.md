@@ -4,16 +4,16 @@ description: In diesem Thema wird beschrieben, wie mithilfe von DB-E-Mails und e
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 Die folgenden Schritte veranschaulichen, wie DB Mail einrichten und verwenden es mit SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. 
 
 > [!NOTE]
-> Um die DB-Mail mit SQL Server on Linux verwenden zu können, müssen Sie SQL Server 2017 RC2 verwenden oder höher.
+> Um die DB-Mail mit SQL Server on Linux verwenden zu können, müssen Sie SQL Server 2017 RC1 verwenden oder höher.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
--   SQL Server 2017 RC2 und höher
--   SQL Server-Agent v14.0.800.90-2 und höher (Wenn Sie e-Mail-Dienst für Benachrichtigungen verwenden möchten)
+
+- SQL Server 2017 RC1 und höher
+- SQL Server-Agent v14.0.800.90-2 und höher (Wenn Sie e-Mail-Dienst für Benachrichtigungen verwenden möchten)
 
 ## <a name="1-enable-db-mail"></a>1. DB-Mail aktivieren
 

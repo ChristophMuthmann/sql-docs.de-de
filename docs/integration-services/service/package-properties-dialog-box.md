@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 07d44a56b531bc2e933480559a2f6d3d2457578e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a3d348ee8bfe53c20d66b5dc39f96b4a4be635c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
   Im Dialogfeld **Paketeigenschaften** können Sie Eigenschaften für Pakete anzeigen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server gespeichert sind.  
   
- Weitere Informationen finden Sie unter [Integration Services-Server &#40;SSIS&#41;](/sql-docs/docs/integration-services/integration-services-ssis-packages).  
+ Weitere Informationen finden Sie unter [Integration Services-Server &#40;SSIS&#41;](../integration-services-ssis-packages.md).  
   
  **Was möchten Sie tun?**  
   

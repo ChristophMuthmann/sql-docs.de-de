@@ -4,23 +4,23 @@ description: Dieser Schnellstart-Tutorial wird gezeigt, wie zum Installieren von
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f530c1fb9f1d21054631598a2d2ff06d6e2c5f46
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
 ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank für Ubuntu
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In diesem Schnellstart-Tutorial installieren Sie zunächst SQL Server 2017 RC2 auf Ubuntu 16.04. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
+In diesem Schnellstart-Tutorial installieren Sie zunächst SQL Server 2017 auf Ubuntu 16.04. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 
 > [!TIP]
 > Dieses Lernprogramm erfordert Benutzereingaben und eine Internetverbindung. Wenn Sie interessiert sind die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
@@ -37,6 +37,9 @@ Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderun
 
 Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befehle in einem abschließenden zum Installieren der **Mssql Server** Paket.
 
+> [!IMPORTANT]
+> Wenn Sie eine CTP bzw. RC-Version von SQL Server-2017 zuvor installiert haben, müssen Sie zuerst die alte Repository entfernen, vor der Registrierung eines den GA-Repositorys. Weitere Informationen finden Sie unter [Repositorys aus dem Repository Vorschau in GA-Repository ändern](sql-server-linux-change-repo.md)
+
 1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel:
 
    ```bash
@@ -46,8 +49,11 @@ Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befeh
 1. Das Microsoft SQL Server-Ubuntu-Repository zu registrieren:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
+
+   > [!NOTE]
+   > Dies ist das kumulative Update (CU)-Repository. Weitere Informationen zu Ihrem Repository-Optionen und deren Unterschiede finden Sie unter [ändern quellrepositorys](sql-server-linux-setup.md#repositories).
 
 1. Führen Sie die folgenden Befehle zum Installieren von SQL Server:
 
@@ -63,14 +69,10 @@ Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befeh
    ```
 
    > [!TIP]
-   > Stellen Sie sicher, dass ein sicheres Kennwort für das SA-Konto (minimale Länge von 8 Zeichen, einschließlich Groß- und Kleinbuchstaben, Ziffern der Basis 10 und/oder nicht alphanumerische Symbole) angeben.
+   > Wenn Sie SQL Server-2017 in diesem Lernprogramm versuchen, die folgenden Editionen kostenlos lizenziert: Evaluation, Developer und Express.
 
-   > [!TIP]
-   > Bei der Installation von RC2 sind keine erworbenen Lizenzen erforderlich, um eine der Editionen versuchen. Da es sich um ein Release Candidate handelt, wird die folgende Meldung angezeigt, unabhängig von der Edition, die Sie auswählen:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Diese Meldung reflektiert nicht die Edition, die Sie ausgewählt haben. Er bezieht sich auf die Preview-Zeitraums für RC2.
+   > [!NOTE]
+   > Stellen Sie sicher, dass ein sicheres Kennwort für das SA-Konto (minimale Länge von 8 Zeichen, einschließlich Groß- und Kleinbuchstaben, Ziffern der Basis 10 und/oder nicht alphanumerische Symbole) angeben.
 
 1. Sobald die Konfiguration abgeschlossen ist, stellen Sie sicher, dass der Dienst ausgeführt wird:
 

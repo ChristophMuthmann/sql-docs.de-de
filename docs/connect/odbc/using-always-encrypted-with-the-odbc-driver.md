@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Verwenden von Always Encrypted with the Odbcdriver 13.1 for SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Dieser Artikel enthält Informationen zum Entwickeln von ODBC-Anwendungen mit [Always Encrypted (Datenbankmodul)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) und [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Dieser Artikel enthält Informationen zum Entwickeln von ODBC-Anwendungen mit [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Always Encrypted aktiviert-Treiber, wie z. B. den ODBC Driver 13.1 for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine).
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Always Encrypted aktiviert-Treiber, wie z. B. den ODBC Driver 13.1 for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -240,7 +240,7 @@ Dieser Abschnitt beschreibt allgemeine Kategorien von Fehlern beim Abfragen vers
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>Konvertierungsfehler durch nicht unterstützte Datentypen
 
-Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Finden Sie unter [Always Encrypted (Datenbankmodul)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) für eine ausführliche Liste der unterstützten typkonvertierungen. Um Fehler bei der datentypkonvertierung zu vermeiden, stellen Sie sicher, dass Sie die folgenden Punkte beachten, wenn Sie Parameter für verschlüsselte Spalten SQLBindParameter mit:
+Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Finden Sie unter [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) für eine ausführliche Liste der unterstützten typkonvertierungen. Um Fehler bei der datentypkonvertierung zu vermeiden, stellen Sie sicher, dass Sie die folgenden Punkte beachten, wenn Sie Parameter für verschlüsselte Spalten SQLBindParameter mit:
 
 - Der SQL-Typ des Parameters ist entweder genau identisch mit dem Typ der entsprechenden Spalte, oder die Konvertierung von der SQL-Typ in den Typ der Spalte wird unterstützt.
 
@@ -284,7 +284,7 @@ Dieser Abschnitt beschreibt die integrierten leistungsoptimierungen in den ODBC 
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Steuern der Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, den ODBC Driver 13.1 für SQL Server wird in der Standardeinstellung rufen [Sys. sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql) für jede parametrisierte Abfrage übergeben Sie die abfrageanweisung (ohne Parameter (Werten) mit SQL Server. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, wenn alle Parameter müssen verschlüsselt werden, und wenn dies der Fall ist, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter für den Treiber an sie verschlüsseln kann. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten sein, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in den Parametern.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, den ODBC Driver 13.1 für SQL Server wird in der Standardeinstellung rufen [Sys. sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage übergeben Sie die abfrageanweisung (ohne Parameter (Werten) mit SQL Server. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, wenn alle Parameter müssen verschlüsselt werden, und wenn dies der Fall ist, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter für den Treiber an sie verschlüsseln kann. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten sein, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in den Parametern.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Das Verhalten "immer verschlüsselt" pro-Anweisung
 
@@ -344,7 +344,7 @@ Der ODBC Driver 13.1 for SQL Server enthält die folgenden integrierten-Schlüss
 |Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
 |Windows-Zertifikatspeicher|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- Sie (oder Ihrem DBA) müssen sicherstellen, dass die in den Metadaten des spaltenhauptschlüssels, konfigurierte Anbietername richtig ist und der Pfad des Hauptschlüssels Spalte Schlüsselpfad Format für den gegebenen Provider einhält. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) ausgegeben wird.
+- Sie (oder Ihrem DBA) müssen sicherstellen, dass die in den Metadaten des spaltenhauptschlüssels, konfigurierte Anbietername richtig ist und der Pfad des Hauptschlüssels Spalte Schlüsselpfad Format für den gegebenen Provider einhält. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird.
 
 - Sie müssen sicherstellen, dass die Anwendung den Schlüssel im Schlüsselspeicher zugreifen können. Dies u. Gewähren von Ihrer Anwendungszugriff auf den Schlüssel und/oder Schlüsselspeicher, je nach den Schlüsselspeicher oder andere Keystore-spezifische Konfigurationsschritte ausführen. Beispielsweise müssen ein Azure-Schlüsseltresor für den Zugriff auf die richtigen Anmeldeinformationen des Keystore.
 
@@ -514,10 +514,10 @@ Ein Beispiel für einen eigenen Schlüsselspeicheranbieter implementieren, finde
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted
 
 ### <a name="bulk-copy-function-usage"></a>Verwendung von Bulk Copy-Funktion
-Verwenden der [SQL-Massenkopieren Funktionen](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc) wird nicht unterstützt, wenn den ODBC-Treiber mit Always Encrypted. Keine transparente Ver-/Entschlüsselung erfolgt auf verschlüsselte Spalten, die mit den Funktionen der SQL-Massenkopieren verwendet werden.
+Verwenden der [SQL-Massenkopieren Funktionen](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) wird nicht unterstützt, wenn den ODBC-Treiber mit Always Encrypted. Keine transparente Ver-/Entschlüsselung erfolgt auf verschlüsselte Spalten, die mit den Funktionen der SQL-Massenkopieren verwendet werden.
 
 ### <a name="asynchronous-operations"></a>Asynchrone Vorgänge
-Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel) mit Always Encrypted, besteht eine Leistungseinbuße auf den Betrieb Wenn Always Encrypted aktiviert ist. Der Aufruf von `sys.sp_describe_parameter_encryption` verschlüsselungsmetadaten zu bestimmen, für die Anweisung blockiert wird, und dazu, den Treiber für den Server dass führt zurückzugebenden Metadaten vor der Rückgabe warten `SQL_STILL_EXECUTING`.
+Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) mit Always Encrypted, besteht eine Leistungseinbuße auf den Betrieb Wenn Always Encrypted aktiviert ist. Der Aufruf von `sys.sp_describe_parameter_encryption` verschlüsselungsmetadaten zu bestimmen, für die Anweisung blockiert wird, und dazu, den Treiber für den Server dass führt zurückzugebenden Metadaten vor der Rückgabe warten `SQL_STILL_EXECUTING`.
 
 ## <a name="always-encrypted-api-summary"></a>Always Encrypted-API-Zusammenfassung
 
@@ -552,7 +552,7 @@ Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Always Encrypted (Datenbankmodul)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
+- [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

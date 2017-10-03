@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
@@ -90,7 +90,7 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
    sudo ip addr show
    ```
 
-   Legen Sie den Computernamen auf jedem Knoten ein. Geben Sie jeden Knoten einen eindeutigen Namen, der 15 Zeichen oder weniger. Legen Sie die Computernamen durch Hinzufügen zu `/etc/hosts`. Das folgende Skript können Sie bearbeiten `/etc/hosts` mit `vi`. 
+   Legen Sie den Computernamen auf jedem Knoten ein. Geben Sie jeden Knoten einen eindeutigen Namen, der 15 Zeichen oder weniger. Legen Sie die Computernamen durch Hinzufügen zu `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
@@ -315,7 +315,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA-Add-On wurde Zauns Agents für VMWare und KVM. Fencing muss für alle anderen Hypervisoren deaktiviert werden. Deaktivierung Zäune Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der RC2 Zeitrahmens befinden sich keine Fencing-Agents, für Hyper-v- oder Cloud-Umgebungen. Wenn Sie eine der folgenden Konfigurationen ausführen, müssen Sie Fencing deaktivieren. \**Dies empfiehlt sich nicht in einem Produktionssystem!**
+   > RHEL HA-Add-On wurde Zauns Agents für VMWare und KVM. Fencing muss für alle anderen Hypervisoren deaktiviert werden. Deaktivierung Zäune Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der Zeitrahmen befinden sich keine Fencing-Agents, für Hyper-v- oder Cloud-Umgebungen. Wenn Sie eine der folgenden Konfigurationen ausführen, müssen Sie Fencing deaktivieren. \**Dies empfiehlt sich nicht in einem Produktionssystem!**
 
    Der folgende Befehl deaktiviert die Fencing-Agents.
 

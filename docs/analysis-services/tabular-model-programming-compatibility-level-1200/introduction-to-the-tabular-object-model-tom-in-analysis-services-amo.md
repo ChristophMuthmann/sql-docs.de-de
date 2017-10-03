@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Einführung in die im tabellarischen Objektmodell (TOM) in Analysis Services AMO
@@ -51,17 +51,17 @@ Die AMO-Infrastruktur mit diesem für mehrdimensionale und tabellarische Datenba
 Dies wirkt sich einige praktische.
 Erste daran, bei der Verwaltung von Objekten, die in tabellarischen Metadaten nicht angegeben werden (z. B. eine **Server** oder **Datenbank**), müssen Sie die Teile des vorhandenen AMO-Stapels zu nutzen, die diese Objekte beschreiben. Wird Sie zusammen mit dem legacy-API das Konzept der Haupt- und Nebenversionsnummern-Objekten, die eine präzise Beschreibung des Objektstatus als ermittelt den Server oder bei Veröffentlichung auf dem Server gespeichert bereitstellen. Die MajorObject-Klasse finden Sie unter "Microsoft.AnalysisServices"-Namespace stellt Methoden für **aktualisieren** und **Update**. Nebenobjekte sind nur aktualisieren oder über das Hauptobjekt gespeichert, die sie enthält.
 
-Im Gegensatz dazu bei der Verwaltung von Objekten, die Teil der tabellarischen Metadaten sind (z. B. **Modell** oder **Tabelle**), Sie nutzen einen vollständig neuen tabellarischen Stapel. In diesem Stapel Updates sind differenzierte, d. h. alle Metadatenobjekt (abgeleitet wurde. die **MetadataObject** Klasse finden Sie unter der Microsoft.AnalysisServices.Tabular-Namespace) einzeln auf dem Server gespeichert werden. In der Regel würden Sie ermitteln, die gesamte **Modell**, nehmen dann Änderungen einzelne Metadatenobjekte darunter (z. B. **Tabelle** oder **Spalte**), rufen Sie anschließend ** Model.SaveChanges()** -Methode (die differenzierte Ebene von Ihnen vorgenommenen Änderungen versteht), senden Befehle an den Server nur die Objekte zu aktualisieren, die sich geändert.
+Im Gegensatz dazu bei der Verwaltung von Objekten, die Teil der tabellarischen Metadaten sind (z. B. **Modell** oder **Tabelle**), Sie nutzen einen vollständig neuen tabellarischen Stapel. In diesem Stapel Updates sind differenzierte, d. h. alle Metadatenobjekt (abgeleitet wurde. die **MetadataObject** Klasse finden Sie unter der Microsoft.AnalysisServices.Tabular-Namespace) einzeln auf dem Server gespeichert werden. In der Regel würden Sie ermitteln, die gesamte **Modell**, nehmen dann Änderungen einzelne Metadatenobjekte darunter (z. B. **Tabelle** oder **Spalte**), rufen Sie anschließend  **Model.SaveChanges()** -Methode (die differenzierte Ebene von Ihnen vorgenommenen Änderungen versteht), senden Befehle an den Server nur die Objekte zu aktualisieren, die sich geändert.
 
 ### <a name="tom-and-xmla"></a>PETER und XMLA
 
-Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla), die Analysis Services Scripting Language-Erweiterung des XMLA. Wenn Sie tabellarische Objekte zu verwalten, verwendet dem tabellarische SSAS-Protokoll bei TOM auch die eine Erweiterung der XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
+Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), die Analysis Services Scripting Language-Erweiterung des XMLA. Wenn Sie tabellarische Objekte zu verwalten, verwendet dem tabellarische SSAS-Protokoll bei TOM auch die eine Erweiterung der XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
 
 ### <a name="tom-and-json"></a>PETER und JSON
 
-Tabellarische Metadaten, die als JSON-Dokumente strukturiert ist, verfügt über eine neue Befehl und Objekt Modell definitionssyntax über die Tabular Model Scripting Language [TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference). Die verwendete Skriptsprache verwendet JSON für den Text der Anforderungen und Antworten.
+Tabellarische Metadaten, die als JSON-Dokumente strukturiert ist, verfügt über eine neue Befehl und Objekt Modell definitionssyntax über die Tabular Model Scripting Language [TMSL](../tabular-model-scripting-language-tmsl-reference.md). Die verwendete Skriptsprache verwendet JSON für den Text der Anforderungen und Antworten.
 
-Obwohl dieselben Objekte verfügbar, TMSL und TOM machen (**Tabelle**, **Spalte**usw.) und die gleichen Vorgänge (**erstellen**, **löschen**, ** Aktualisieren Sie**), TOM TMSL nicht bei der Übertragung (er verwendet das tabellarische MS-SSAS-Protokoll stattdessen, wie bereits erwähnt) verwendet.
+Obwohl dieselben Objekte verfügbar, TMSL und TOM machen (**Tabelle**, **Spalte**usw.) und die gleichen Vorgänge (**erstellen**, **löschen**,  **Aktualisieren Sie**), TOM TMSL nicht bei der Übertragung (er verwendet das tabellarische MS-SSAS-Protokoll stattdessen, wie bereits erwähnt) verwendet.
 
 Als Benutzer können Sie auswählen, ob zum Verwalten von tabellarischer Datenbanken über die Bibliothek TOM aus dem C#-Programm oder die PowerShell-Skript oder TMSL-Skript über PowerShell, SQL Server Management Studio (SSMS) oder einem SQL Server-Agent-Auftrag ausgeführt.
 

@@ -1,6 +1,6 @@
 ---
 title: Migration von einer SQL Server-Datenbank von Windows, Linux | Microsoft Docs
-description: Dieses Thema veranschaulicht das Erstellen einer Sicherung einer SQL Server-Datenbank auf Windows und auf einem Linux-Computer mit SQL Server 2017 RC2 wiederherstellen.
+description: Dieses Lernprogramm veranschaulicht die Sicherung einer SQL Server-Datenbank unter Windows und in einem Linux-Computer mit SQL Server-2017 wiederhergestellt werden kann.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migration von einer SQL Server-Datenbank von Windows, Linux mit Sicherung und Wiederherstellung
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server die Sicherung und die Wiederherstellungsfunktion ist die empfohlene Methode zum Migrieren einer Datenbank von SQL Server unter Windows auf SQL Server 2017 RC2 unter Linux. In diesem Lernprogramm führt Sie durch die erforderlichen Schritte zum Verschieben einer Datenbank auf Linux mit Sicherung und Wiederherstellung von Techniken.
+SQL Server die Sicherung und die Wiederherstellungsfunktion ist die empfohlene Methode zum Migrieren einer Datenbank von SQL Server unter Windows, SQL Server-2017 unter Linux. In diesem Lernprogramm führt Sie durch die erforderlichen Schritte zum Verschieben einer Datenbank auf Linux mit Sicherung und Wiederherstellung von Techniken.
 
 > [!div class="checklist"]
 > * Erstellen Sie eine Sicherungsdatei auf Windows mit SSMS
@@ -39,8 +39,7 @@ Die folgenden Voraussetzungen sind erforderlich, um dieses Lernprogramm abzuschl
   * Die Zieldatenbank zu migrieren.
 
 * Linux-Computer mit Folgendes installiert:
-  * SQL Server 2017 RC2. Finden Sie unter der Installations-Schnellstarts für [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md).
-  * SQL Server 2017 RC2 [Befehlszeilentools](sql-server-linux-setup-tools.md).
+  * SQL Server-2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md)) mit den Befehlszeilentools.
 
 ## <a name="create-a-backup-on-windows"></a>Erstellen Sie eine Sicherung in Windows
 
@@ -182,7 +181,7 @@ Um die datenbanksicherung wiederherzustellen, können Sie die **RESTORE DATABASE
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Lernprogramm haben Sie gelernt, wie Sichern einer Datenbank auf Windows und verschieben Sie sie für einen Linux-Server, die mit SQL Server 2017 RC2. Sie haben gelernt, wie auf:
+In diesem Lernprogramm haben Sie gelernt, wie Sichern einer Datenbank auf Windows und für einen Linux-Server, die mit SQL Server-2017 verschieben. Sie haben gelernt, wie auf:
 > [!div class="checklist"]
 > * Verwenden von SSMS und Transact-SQL zum Erstellen einer Sicherungsdatei unter Windows
 > * Installieren von Bash-Shell unter Windows

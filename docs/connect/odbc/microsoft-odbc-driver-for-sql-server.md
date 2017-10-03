@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC ist die primäre native Datenzugriffs-API für Anwendungen, die für SQL Server in C und C++ geschrieben. Ein ODBC-Treiber für die meisten Datenquellen ist vorhanden. Andere Sprachen, die ODBC verwenden, können enthalten COBOL, Perl, PHP und Python. ODBC wird häufig in Datenintegration verwendet.
 
-Der ODBC-Treiber stellt Tools wie z. B. [ **Sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) und [ **Bcp**](/sql-docs/docs/tools/bcp-utility). Die **Sqlcmd** -Hilfsprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und SQL-Skripts ausgeführt werden. Die **Bcp** Hilfsprogramm per Massenvorgang kopiert Daten zwischen einer Instanz von Microsoft SQL Server und einer Datendatei in einem Format, das Sie auswählen. Sie können **Bcp** viele neue Zeilen in SQL Server-Tabellen importieren oder Daten aus Tabellen in Datendateien zu exportieren.  
+Der ODBC-Treiber stellt Tools wie z. B. [ **Sqlcmd** ](../../tools/sqlcmd-utility.md) und [ **Bcp**](../../tools/bcp-utility.md). Die **Sqlcmd** -Hilfsprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und SQL-Skripts ausgeführt werden. Die **Bcp** Hilfsprogramm per Massenvorgang kopiert Daten zwischen einer Instanz von Microsoft SQL Server und einer Datendatei in einem Format, das Sie auswählen. Sie können **Bcp** viele neue Zeilen in SQL Server-Tabellen importieren oder Daten aus Tabellen in Datendateien zu exportieren.  
 
 ## <a name="code-example-in-c"></a>Codebeispiel in C++
 
