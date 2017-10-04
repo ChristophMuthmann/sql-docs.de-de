@@ -52,9 +52,9 @@ In der folgenden Tabelle wird jede Sprache Bild einen Link zu den Details zu SQL
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [C#-Logo] [Abbildung-Ref-320-Csharp]](#an-110-ado-net-docu) | &nbsp;[! [ORM-Entity Framework von .NET Framework] [Abbildung-Ref-333-Ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Java-Logo] [Abbildung-Ref-330-Java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Node.js-Logo] [Abbildung-Ref-340-Node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [PHP-Logo] [Abbildung-Ref-360-Php]](#an-170-php-docu) |
-| &nbsp;[! [Python-Logo] [Abbildung-Ref-370-Python]](#an-180-python-docu) | &nbsp;[! [Ruby Logo] [Abbildung-Ref-380-Ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java logo][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF hat direkte oder indirekte Beziehungen mit den folgenden Technologien:
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), oder [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Syntax-spracherweiterungen, wie z. B. die ** => ** Operator in C# geschrieben.
+- Syntax-spracherweiterungen, wie z. B. die  **=>**  Operator in C# geschrieben.
 - Praktisch Programme, die Quellcode für Klassen zu generieren, die die Tabellen in der SQL-Datenbank zuordnen. Z. B. [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
