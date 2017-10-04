@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
@@ -40,7 +40,7 @@ Für einfache Verwaltung und Wartungszwecke wurde empfohlen, um die Ausführungs
 
 Hier ist ein einfaches Beispiel für ein Shellskript, das nur einzelnen Befehl zum Ausführen eines Pakets enthält. Sie können nach Bedarf weitere Befehle hinzufügen.
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 
