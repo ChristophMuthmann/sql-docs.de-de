@@ -33,8 +33,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 -- Drop an external file format  
 DROP EXTERNAL FILE FORMAT external_file_format_name  
 [;]  

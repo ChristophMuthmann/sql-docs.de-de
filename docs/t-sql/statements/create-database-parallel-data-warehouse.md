@@ -31,8 +31,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for Parallel Data Warehouse  
-  
 CREATE DATABASE database_name   
 WITH (   
     [ AUTOGROW = ON | OFF , ]   

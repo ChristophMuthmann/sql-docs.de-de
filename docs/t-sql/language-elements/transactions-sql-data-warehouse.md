@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  

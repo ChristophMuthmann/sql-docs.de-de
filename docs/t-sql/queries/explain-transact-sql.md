@@ -32,8 +32,6 @@ ms.lasthandoff: 09/01/2017
   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 EXPLAIN SQL_statement  
 [;]  
 ```  

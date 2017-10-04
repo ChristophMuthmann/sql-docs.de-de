@@ -33,8 +33,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 -- Drop an external data source  
 DROP EXTERNAL DATA SOURCE external_data_source_name  
 [;]  

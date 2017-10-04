@@ -43,8 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   

@@ -36,8 +36,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for Parallel Data Warehouse  
-  
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N’{<session_xml>}’;  
   

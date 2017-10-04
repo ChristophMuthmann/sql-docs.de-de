@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
   
  Geben Sie an der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Eingabeaufforderung Folgendes ein:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ### <a name="examples"></a>Beispiele  
  In den Beispielen in diesem Abschnitt wird jeweils ein Massenimport von Zeichendaten aus der `Department-c-t.txt` -Datendatei, die im vorhergehenden Beispiel erstellt wurde, in die `myDepartment` -Tabelle in der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Beispieldatenbank ausgeführt. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie zum Erstellen dieser Tabelle unter dem **dbo** -Schema im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor den folgenden Code aus:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 DROP TABLE myDepartment;  
@@ -163,7 +163,7 @@ GO
   
  Geben Sie an der Windows-Eingabeaufforderung Folgendes ein:  
   
-```  
+```cmd
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
@@ -178,7 +178,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
  Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'  

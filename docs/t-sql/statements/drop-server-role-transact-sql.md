@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
 DROP SERVER ROLE role_name  
 ```  
   
