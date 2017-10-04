@@ -1,0 +1,17 @@
+# [ADO Programmer's Guide (Programmierhandbuch zu ADO)](ado-programmer-s-guide.md)
+
+# [Daten +](../../ado/guide/data/ado-fundamentals.md)
+# [Erweiterungen +](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+# [Multidimensional +](../../ado/guide/multidimensional/ado-md-fundamentals.md)
+# [Remote Data Service +](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+# [Anhänge +](../../ado/guide/appendixes/appendix-a-providers.md)
+
+# [Referencing the ADO Libraries In a Visual C++ Application (Verweis auf die ADO-Bibliotheken in Visual C++-Anwendungen)](referencing-the-ado-libraries-in-a-visual-c-application.md)
+# [Referencing the ADO Libraries In a Visual Basic 6 Application (Verweis auf die ADO-Bibliotheken in Visual Basic 6 -Anwendungen)](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
+# [Einführung in ADO](ado-introduction.md)
+# [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](ado-security-design-issues.md)
+# [ADO-Verlauf](ado-history.md)
+# [Verweisen auf die ADO-Bibliotheken](referencing-the-ado-libraries.md)
+# [Voraussetzungen für die Verwendung der ADO-Dokumentation](prerequisites-for-using-the-ado-documentation.md)
+# [ADO Technology Table (ADO-Technologientabelle)](ado-technology-table.md)
+# [ADO Task Table (ADO-Aufgabentabelle)](ado-task-table.md)

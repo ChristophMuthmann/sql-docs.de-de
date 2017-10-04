@@ -1,0 +1,6 @@
+# [Entwickeln einer benutzerdefinierten Zielkomponente](developing-a-custom-destination-component.md)
+# [Entwickeln einer benutzerdefinierten Quellkomponente](developing-a-custom-source-component.md)
+# [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](developing-a-custom-transformation-component-with-asynchronous-outputs.md)
+# [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](developing-a-custom-transformation-component-with-synchronous-outputs.md)
+# [Entwickeln von Datenflusskomponenten mit mehreren Eingaben](developing-data-flow-components-with-multiple-inputs.md)
+# [Entwickeln bestimmter Arten von Datenflusskomponenten](developing-specific-types-of-data-flow-components.md)
