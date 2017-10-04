@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a> Attribute des \<FIELD>-Elements  
  In diesem Abschnitt werden die Attribute des \<FIELD>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a> Attribute des \<COLUMN>-Elements  
  In diesem Abschnitt werden die Attribute des \<COLUMN>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
   
- \<COLUMN  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Einfügen des xsi:type-Werts in ein Dataset  
  Wird ein XML-Dokument durch die XSD-Sprache (XML Schema Definition) überprüft, wird der xsi:type-Wert nicht in das Dataset eingefügt. Sie können die xsi:type-Informationen jedoch in das Dataset einfügen, indem Sie die XML-Formatdatei in ein XML-Dokument laden (z. B. `myDoc`), wie durch den folgenden Codeausschnitt veranschaulicht:  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins. Im `<ROW>` -Element ordnet die Formatdatei die `Age` -Spalte dem ersten Feld, die `FirstName` -Spalte dem zweiten Feld und die `LastName` -Spalte dem dritten Feld zu.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  Im `<ROW>` -Element ordnet die Formatdatei die `Age` -Spalte dem ersten Feld, die `FirstName` -Spalte dem dritten Feld und die `LastName` -Spalte dem zweiten Feld zu.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  Im `<ROW>` -Element ordnet die Formatdatei die `Age` -Spalte dem ersten Feld, die `FirstName` -Spalte dem dritten Feld und die `LastName` -Spalte dem vierten Feld zu.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. Zuordnen von \<FIELD> xsi:type zu \<COLUMN> xsi:type  
  Das folgende Beispiel zeigt verschiedene Typen von Feldern und ihre Zuordnungen zu Spalten.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. Zuordnen von XML-Daten zu einer Tabelle  
  Im folgenden Beispiel wird eine leere zweispaltige Tabelle (`t_xml`) erstellt, in der die erste Spalte dem `int` -Datentyp und die zweite Spalte dem `xml` -Datentyp zugeordnet ist.  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  Die folgende XML-Formatdatei lädt eine Datendatei in die `t_xml`-Tabelle.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. Importieren von Feldern mit fester Länge oder fester Breite  
  Im folgenden Beispiel werden Felder mit einer festen Länge bzw. Breite von jeweils `10` und `6` Zeichen beschrieben. Die Formatdatei stellt diese Feldlängen bzw. -breiten als `LENGTH="10"` und `LENGTH="6"`dar. Jede Zeile der Datendatei endet mit einer Kombination von Wagenrücklauf/Zeilenvorschub, {CR}{LF}, was in der Formatdatei als `TERMINATOR="\r\n"`dargestellt wird.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  

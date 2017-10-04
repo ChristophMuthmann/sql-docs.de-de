@@ -25,11 +25,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3abb7e7f582c7699b128d8b9d70b4aec34041424
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
  Beispielsweise wird mithilfe der folgenden `BULK INSERT` -Anweisung ein Massenimport von Daten aus der Datendatei `SalesOrderDetail` in die `AdventureWorks` -Tabelle der `newdata.txt`-Datenbank ausgeführt. Diese Datendatei befindet sich im freigegebenen Ordner `\dailyorders` auf dem `salesforce` -Netzwerkfreigabeverzeichnis des `computer2`-Systems.  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM '\\computer2\salesforce\dailyorders\neworders.txt';  
 GO  

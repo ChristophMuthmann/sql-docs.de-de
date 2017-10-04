@@ -24,11 +24,11 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 280e52e4ffbb86b02007493c4d000d3be0decece
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
@@ -40,7 +40,7 @@ Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen 
 
 |Outline|
 |---|
-|[Beibehalten von NULL-Werten](#keep_nulls)<br />[Verwenden von Standardwerten mit INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />&emsp;&#9679;&emsp;[Beispiel einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />[Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten von NULL-Werten ohne Formatdatei](#bcp_null)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Verwenden von Standardwerten ohne Formatdatei](#bcp_default)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten von NULL-Werten ohne Formatdatei](#bulk_null)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Verwenden von Standardwerten ohne Formatdatei](#bulk_default)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#openrowset__default_fmt)<p>                                                                                                                                                                                                                  </p>|
+|[Beibehalten von NULL-Werten](#keep_nulls)<br />[Verwenden von Standardwerten mit INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />&emsp;&#9679;&emsp;[Beispiel einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />[Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten von NULL-Werten ohne Formatdatei](#bcp_null)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Verwenden von Standardwerten ohne Formatdatei](#bcp_default)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten von NULL-Werten ohne Formatdatei](#bulk_null)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Verwenden von Standardwerten ohne Formatdatei](#bulk_default)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und Beibehalten von NULL-Werten mit einer Nicht-XML-Formatdatei](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und Verwenden von Standardwerten mit einer Nicht-XML-Formatdatei](#openrowset__default_fmt)
 
 ## Beibehalten von NULL-Werten<a name="keep_nulls"></a>  
 Die folgenden Qualifizierer geben an, dass ein leeres Feld in der Datendatei seinen NULL-Wert während des Massenimportvorgangs beibehält, statt (ggf.) einen Standardwert für die Tabellenspalten zu übernehmen.  Standardmäßig werden für [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), Spalten, die nicht im Massenladevorgang angegeben sind, auf NULL festgelegt.
@@ -67,7 +67,8 @@ Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle, einer Da
 
 ### **Beispieltabelle**<a name="sample_table"></a>
 Das folgende Skript erstellt eine Testdatenbank und eine Tabelle namens `myNulls`.  Beachten Sie, dass die vierte Tabellenspalte `Kids`einen Standardwert hat.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -83,6 +84,7 @@ CREATE TABLE dbo.myNulls (
 
 ### **Beispieldatendatei**<a name="sample_data_file"></a>
 Erstellen Sie im Editor die leere Datei `D:\BCP\myNulls.bcp` , und fügen Sie die nachstehenden Daten ein.  Beachten Sie, dass im dritten Datensatz in der vierten Spalte kein Wert vorhanden ist.
+
 ```
 1,Anthony,Grosse,Yes,1980-02-23
 2,Alica,Fatnowna,No,1963-11-14
@@ -90,6 +92,7 @@ Erstellen Sie im Editor die leere Datei `D:\BCP\myNulls.bcp` , und fügen Sie di
 ```
 
 Alternativ können Sie das folgende PowerShell-Skript ausführen, um die Datei zu erstellen und aufzufüllen:
+
 ```powershell
 cls
 # revise directory as desired
@@ -120,7 +123,7 @@ Invoke-Item $bcpFile;
 ### **Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
 SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myNulls.fmt`zu erstellen, die auf dem Schema von `myNulls`basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md) -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich werden folgende Qualifizierer verwendet: **c** , um Zeichendaten anzugeben, **t** , um ein Komma als [Feldabschlusszeichen](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
- ```
+ ```cmd
 bcp TestDatabase.dbo.myNulls format nul -c -f D:\BCP\myNulls.fmt -t, -T
 
 REM Review file
@@ -141,7 +144,8 @@ Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei u
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten von NULL-Werten ohne Formatdatei**<a name="bcp_null"></a>
 
 Schalter**-k** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -154,7 +158,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten von NULL-Werten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
 Schalter**-k** und **-f** . Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -167,7 +172,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Verwenden von Standardwerten ohne Formatdatei**<a name="bcp_default"></a>
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -180,7 +186,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Verwenden von Standardwerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
 Schalter**-f** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -193,7 +200,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Beibehalten von NULL-Werten ohne Formatdatei**<a name="bulk_null"></a>
 **KEEPNULLS** -Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 TRUNCATE TABLE dbo.myNulls; -- for testing
@@ -211,7 +219,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Beibehalten von NULL-Werten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
 **KEEPNULLS** und das Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +238,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Verwenden von Standardwerten ohne Formatdatei**<a name="bulk_default"></a>
 Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -247,7 +257,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und Verwenden von Standardwerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -265,7 +276,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ### **Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und Beibehalten von NULL-Werten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -284,7 +295,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ### **Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und Verwenden von Standardwerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
 Tabellenhinweis**KEEPDEFAULTS** und Argument **FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 

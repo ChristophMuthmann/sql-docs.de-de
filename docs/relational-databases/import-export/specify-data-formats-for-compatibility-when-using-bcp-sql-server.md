@@ -20,11 +20,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aecc25b2c402c27d2a425107565573ba0390effa
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 56ca94eab2b7245d3d42c898fbf5d51c4c249026
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
  Der Befehl gibt weder eine Formatdatei noch einen Datentyp an, weshalb **bcp** zur Eingabe von Datenformatinformationen auffordert. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   

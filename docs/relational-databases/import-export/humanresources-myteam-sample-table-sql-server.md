@@ -18,11 +18,11 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd4e971fa001faeafd26468a80e9a95f18dc261e
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: a65e93209a471963bba180b1fb0703b9c34ac846
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam-Beispieltabelle (SQL Server)
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen:  
   
-    ```  
+    ```sql
     --Create HumanResources.MyTeam:   
     USE AdventureWorks;  
     GO  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Führen Sie die folgenden `INSERT` -Anweisungen zum Auffüllen der Tabelle mit zwei Zeilen aus:  
   
-    ```  
+    ```sql
     USE AdventureWorks;  
     GO  
     INSERT INTO HumanResources.myTeam(EmployeeID,Name,Title,Background)  
