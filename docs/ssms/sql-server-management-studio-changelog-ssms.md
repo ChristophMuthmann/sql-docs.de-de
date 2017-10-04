@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
@@ -353,9 +353,9 @@ Allgemein verfügbar | Buildnummer: 13.0.16106.4
 
 In dieser Version wurden folgende Probleme behoben:
 
-* Das seit SSMS 16.5.2 auftretende Problem wurde behoben, das die Erweiterung des Knotens „Tabelle“ verursacht hat, wenn die Tabelle mindestens eine Spalte mit geringer Dichte aufwies.
+* Das seit SSMS 16.5.2 auftretende Problem wurde behoben, das die Erweiterung des Knotens „Tabelle“ verursacht hat, wenn die Tabelle mindestens eine Sparsespalte aufwies.
 
-* Benutzer können SSIS-Pakete bereitstellen, die den OData-Verbindungs-Manager enthalten und die eine AX/CRM-Onlineressource von Microsoft Dynamix mit dem SSIS-Katalog verbinden. Weitere Informationen finden Sie unter [OData-Verbindungs-Manager](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
+* Benutzer können SSIS-Pakete bereitstellen, die den OData-Verbindungs-Manager enthalten und die eine AX/CRM-Onlineressource von Microsoft Dynamix mit dem SSIS-Katalog verbinden. Weitere Informationen finden Sie unter [OData-Verbindungs-Manager](../integration-services/connection-manager/odata-connection-manager.md).
 
 * Konfigurieren von „Always Encrypted“ schlägt für eine vorhandene Tabelle fehl mit Fehlern für nicht verknüpfte Objekte. [Connect-ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -436,7 +436,7 @@ Allgemein verfügbar | Buildnummer: 13.0.15900.1
 [Microsoft Connect-Element #3058105](https://connect.microsoft.com/SQLServer/feedback/details/3058105)  
 [Microsoft Connect-Element #3101136](https://connect.microsoft.com/SQLServer/feedback/details/3101136)
     
-*  Es wurde ein Problem behoben, das dazu geführt hat, dass kein Zugriff auf das Monitorfenster einer gestreckten Datenbank möglich war.
+*  Es wurde ein Problem behoben, das dazu geführt hat, dass kein Zugriff auf das Monitorfenster einer Stretch-Datenbank möglich war.
     
 *  Es wurde ein Problem behoben, das dazu geführt hat, dass die F1-Hilfe immer Onlineinhalt geöffnet hat. Benutzer können jetzt über den Befehl „Hilfeeinstellungen festlegen“ aus dem Menü „Hilfe“ festlegen, ob Online- oder Offlinehilfe angezeigt werden soll.   
 [Microsoft Connect-Element #2826366](https://connect.microsoft.com/SQLServer/feedback/details/2826366)
@@ -481,7 +481,7 @@ Allgemein verfügbar | Versionsnummer: 13.0.15700.28
 
 * [Neue Authentifizierungsoption**„Universelle Active Directory-Authentifizierung“**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Dieser tokenbasierte Authentifizierungsmechanismus wird durch Azure Active Directory gestützt und bietet Unterstützung für mehrstufige, kennwortbasierte und integrierte Authentifizierungsmechanismen.
 
-* Neue Vorlagen für erweiterte Ereignisse mit derselben Funktionalität wie SQL Server Profiler-Vorlagen [(Microsoft Connect-Element #2543925).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
+* Neue Vorlagen für erweiterte Ereignisse mit derselben Funktionalität wie SQL Server Profiler-Vorlagen [(Microsoft Connect-Element #2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Neue Dialogfelder zum Erstellen von Datenbanken sowie für Datenbankeigenschaften für Azure SQL-Datenbanken.
 

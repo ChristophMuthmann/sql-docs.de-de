@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5625df3149ad6386cf903d00a655e56d070bd792
 ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
@@ -146,7 +146,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 <sup>1</sup> Die Enterprise Edition mit einer Lizenzierung auf der Grundlage von Serverlizenz + Clientzugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro SQL Server-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> RDBMS: Hohe Verfügbarkeit  
+##  <a name="RDBMSHA">
+            </a> RDBMS: Hochverfügbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -398,7 +399,7 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
 |StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|Nein|Nein| 
 |StreamInsight HA|StreamInsight Premium-Edition|Nein|Nein|Nein|Nein|   
   
-> [![Herunterladen von SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Laden Sie die neueste Version von SQL Server Management Studio herunter.](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![Herunterladen von SSMS](../ssms/download-sql-server-management-studio-ssms.md) **[Laden Sie die neueste Version von SQL Server Management Studio herunter.](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="next-steps"></a>Nächste Schritte 
  [Product Specifications for SQL Server (Produktspezifikationen für SQL Server 2016)](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
