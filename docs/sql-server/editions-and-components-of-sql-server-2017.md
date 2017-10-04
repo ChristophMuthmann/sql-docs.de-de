@@ -3,7 +3,7 @@ title: "Editionen und unterstützte Funktionen von SQL Server 2017 | Microsoft-D
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
@@ -57,8 +57,6 @@ Informationen zu früheren Versionen finden Sie unter:
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
->[!NOTE]
->Alle Informationen in diesem Artikel können sich ändern, da sie sich auf eine vorläufige Version von SQL Server-2017 beziehen. 
   
 Die Installationsanforderungen variieren je nach den benötigten Anwendungen. Die verschiedenen Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tragen den individuellen Leistungs-, Laufzeit- und Preisanforderungen von Organisationen und Einzelpersonen Rechnung. Welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten Sie installieren, hängt auch von den individuellen Anforderungen ab. In den folgenden Abschnitten erfahren Sie, wie Sie die bestmögliche Auswahl unter den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Editionen und Komponenten treffen.  
 
@@ -84,7 +82,7 @@ Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie übe
 |Enterprise|Das Premium-Angebot, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition, übermittelt umfassende hochwertige Datencenterfunktionen mit blitzschneller Performance, unbegrenzter Virtualisierung und End-to-End Business Intelligence – und bietet so hohe Servicelevel für unternehmenswichtige Arbeitslasten und Endbenutzerzugriff auf Dateneinblicke.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition stellt eine grundlegende Datenverwaltungs- und Business Intelligence-Datenbank bereit, auf der Abteilungen und kleinere Unternehmen ihre Anwendungen ausführen. Diese unterstützt allgemeine Entwicklungstools für lokale und Cloudverwendung und ermöglicht eine effektive Datenbankverwaltung mit minimalen IT-Ressourcen.|  
 |Web|Die[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition ist eine mit geringen Anschaffungs- und Betriebskosten verbundene Option für Webhoster und Web-VAPs, die kostengünstige Skalierbarkeit und Verwaltungsfunktionen für Webpräsenzen jeder Größe bietet.|  
-|Entwickler|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition ermöglicht Entwicklern das Erstellen beliebiger Anwendungen auf der Basis von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sämtliche Funktionen der Enterprise Edition stehen zur Verfügung. Die Lizenz bezieht sich jedoch auf die Verwendung als Entwicklungs- und Testsystem und nicht als Produktionsserver. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer ist eine ideale Option zum Erstellen<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] und Testen von Anwendungen.|  
+|Entwickler|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition ermöglicht Entwicklern das Erstellen beliebiger Anwendungen auf der Basis von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sämtliche Funktionen der Enterprise Edition stehen zur Verfügung. Die Lizenz bezieht sich jedoch auf die Verwendung als Entwicklungs- und Testsystem und nicht als Produktionsserver. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer ist eine ideale Option zum Erstellen und Testen von Anwendungen.|  
 |Express-Editionen|Die Express Edition ist eine kostenlose Datenbank auf Einstiegsebene und eignet sich ideal zum Üben und zum Erstellen von datengesteuerten Anwendungen für Desktopcomputer und kleine Server. Dies ist die beste Wahl für unabhängige Softwareanbieter, Entwickler und Tüftler, die Clientanwendungen erstellen. Wenn Sie erweiterte Datenbankfunktionen benötigen, können Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express nahtlos auf höhere Endversionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aktualisieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, eine neue Light-Version von Express, die sämtliche Programmierbarkeitsfunktionen besitzt, wird noch im Benutzermodus ausgeführt und bietet eine schnelle, konfigurationsfreie Installation und eine kurze Liste an Voraussetzungen.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Verwenden von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit einem Internetserver  
@@ -157,9 +155,9 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Datenbankspiegelung|ja|ja<br /><br /> Nur vollständige Sicherheit|Nur WITNESS|Nur WITNESS|Nur WITNESS| 
 |Sicherungskomprimierung|ja|ja|Nein|Nein|Nein| 
 |Datenbankmomentaufnahme|ja|ja|ja|ja|ja|
-|Always On-Failoverclusterinstanzen|ja<br /><br /> Anzahl der Knoten ist das Maximum des Betriebssystems|ja<br /><br /> Unterstützung für 2 Knoten|Nein|Nein|Nein|  
-|AlwaysOn-Verfügbarkeitsgruppen|ja<br /><br /> Bis zu 8 sekundäre Replikate, einschließlich 2 synchronen sekundären Replikaten|Nein|Nein|Nein|Nein|
-|Basis-Verfügbarkeitsgruppen <sup>2</sup>|Nein|ja<br /><br /> Unterstützung für 2 Knoten|Nein|Nein|Nein|
+|Always On-Failoverclusterinstanzen<sup>2</sup>|ja|ja|Nein|Nein|Nein|  
+|Always On-Verfügbarkeitsgruppen<sup>3</sup>|ja|Nein|Nein|Nein|Nein|
+|Basis-Verfügbarkeitsgruppen<sup>4</sup>|Nein|Ja|Nein|Nein|Nein|
 |Onlineseiten- und Onlinedateiwiederherstellung|ja|Nein|Nein|Nein|Nein|
 |Online-Indizierung|ja|Nein|Nein|Nein|Nein|
 |Fortsetzbare Neuerstellung von online geschalteten Indizes|ja|Nein|Nein|Nein|Nein|
@@ -170,12 +168,18 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Datenbankwiederherstellungsberater|ja|ja|ja|ja|ja|
 |Verschlüsselte Sicherung|ja|ja|Nein|Nein|Nein|
 |Hybridsicherung in Windows Azure (Sicherung über URL)|ja|ja|Nein|Nein|Nein|
-|Verfügbarkeitsgruppe ohne Cluster|ja|ja|ja|Nein|Nein|Nein|
+|Verfügbarkeitsgruppe ohne Cluster|ja|ja|Nein|Nein|Nein|Nein|
 |Mindestreplikate für Commitverfügbarkeitsgruppen|ja|ja|ja|Nein|Nein|Nein|
   
- <sup>1</sup> Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Install SQL Server on Server Core (Installieren von SQL unter Server Core)](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
-<sup>2</sup> Weitere Informationen über Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Install SQL Server on Server Core (Installieren von SQL unter Server Core)](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+
+<sup>2</sup> Bei der Enterprise Edition entspricht die Anzahl der Knoten dem Maximum des Betriebssystems. Bei der Standard Edition werden nur zwei Knoten unterstützt. 
+
+<sup>3</sup> Bei der Enterprise Edition werden bis zu acht sekundäre Replikate unterstützt, einschließlich zwei synchronen sekundären Replikaten. 
+
+<sup>4</sup> Bei der Standard Edition werden Basis-Verfügbarkeitsgruppen unterstützt. Eine Basis-Verfügbarkeitsgruppe unterstützt zwei Replikate mit einer Datenbank. Weitere Informationen über Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+
 
 ##  <a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
   
@@ -263,8 +267,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Benutzerinstanzen|Nein|Nein|Nein|Ja|ja| 
 |LocalDB|Nein|Nein|Nein|Ja|Nein| 
 |Dedizierte Administratorverbindung|ja|ja|ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
-|PowerShell-Skriptunterstützung|ja|ja|ja|ja|ja| 
 |SysPrep-Unterstützung <sup>1</sup>|ja|ja|ja|ja|ja| 
+|PowerShell-Skriptunterstützung<sup>2</sup>|ja|ja|ja|ja|ja| 
 |Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|ja|ja|ja|ja|ja| 
 |Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|ja|ja|ja|Nein|Nein|   
 |Sammler von Leistungsdaten|ja|ja|ja|Nein|Nein| 
@@ -282,6 +286,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
  <sup>1</sup> Weitere Informationen finden Sie unter [Überlegungen zur Installation von SQL Server mit SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
+ <sup>2</sup> Unter Linux werden PowerShell-Skripts von Windows-Computern unterstützt, die SQL Server unter Linux als Ziel verwenden. 
 ##  <a name="DevTools"></a> Entwicklungstools  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express| 
@@ -393,7 +398,7 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
 |StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|Nein|Nein| 
 |StreamInsight HA|StreamInsight Premium-Edition|Nein|Nein|Nein|Nein|   
   
-> [![Herunterladen von SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Laden Sie die neueste Version von **[SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) herunter.**    
+> [![Herunterladen von SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Laden Sie die neueste Version von SQL Server Management Studio herunter.](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>Nächste Schritte 
  [Product Specifications for SQL Server (Produktspezifikationen für SQL Server 2016)](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
