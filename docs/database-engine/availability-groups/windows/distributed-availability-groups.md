@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
@@ -40,7 +40,7 @@ Die Ressourcen einer herkömmlichen Verfügbarkeitsgruppe werden in einem WSFC-C
 
 Bei einer verteilten Verfügbarkeitsgruppe ist erforderlich, dass die zugrunde liegenden Verfügbarkeitsgruppen über einen Listener verfügen. Anstatt den zugrundeliegenden Servernamen für eine eigenständige Instanz (oder bei einer SQL Server-Failoverclusterinstanz (FCI) den Wert, der der Netzwerknamenressource zugeordnet ist) bereitzustellen, wie es bei einer herkömmlichen Verfügbarkeitsgruppe üblich ist, geben Sie beim Erstellen den für die verteilte Verfügbarkeitsgruppe konfigurierten Listener mithilfe des Parameters „ENDPOINT_URL“ an. Obwohl jede zugrunde liegende Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe über einen Listener verfügt, besitzt eine verteilte Verfügbarkeitsgruppe nicht über einen Listener.
 
-In der folgenden Abbildung finden Sie eine Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe, die zwei Verfügbarkeitsgruppen (AG 1 und AG 2) umfasst, von der jede in ihrem eigenen WSFC-Cluster konfiguriert wurde. Die verteilte Verfügbarkeitsgruppe besitzt zwei Replikate in jeder Verfügbarkeitsgruppe, also insgesamt vier Replikate. Jede Verfügbarkeitsgruppe kann so viele Replikate unterstützen, bis die maximale Anzahl erreicht ist. Eine verteilte Verfügbarkeitsgruppe, die auf der Standard Edition basiert, kann also bis zu vier Replikate besitzen und eine auf der Enterprise Edition basierte Verfügbarkeitsgruppe bis zu 18 Replikate.
+In der folgenden Abbildung finden Sie eine Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe, die zwei Verfügbarkeitsgruppen (AG 1 und AG 2) umfasst, von der jede in ihrem eigenen WSFC-Cluster konfiguriert wurde. Die verteilte Verfügbarkeitsgruppe besitzt zwei Replikate in jeder Verfügbarkeitsgruppe, also insgesamt vier Replikate. Jede Verfügbarkeitsgruppe kann die maximale Anzahl von Replikaten unterstützen. Eine verteilte Verfügbarkeitsgruppe kann also insgesamt bis zu 18 Replikate einschließen.
 
 <a name="fig1"></a>
 ![Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe][1]
@@ -59,7 +59,7 @@ Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von
 Verteilte Verfügbarkeitsgruppen funktionieren derzeit nur mit Verfügbarkeitsgruppen, die mit der derselben Hauptversion von SQL Server erstellt werden. Zum Beispiel müssen alle Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, derzeit mit SQL Server 2016 erstellt werden. Da die Funktion für verteilte Verfügbarkeitsgruppen in SQL Server 2012 oder 2014 noch nicht existiert hat, können Verfügbarkeitsgruppen, die mit diesen Versionen erstellt wurden, nicht Teil von verteilten Verfügbarkeitsgruppen werden. 
 
 > [!NOTE]
-> Verteilte Verfügbarkeitsgruppen können mit der Standard Edition oder Enterprise Edition konfiguriert werden, eine Mischung der Editionen in einer verteilten Verfügbarkeitsgruppe wird jedoch nicht unterstützt.
+> Verteilte Verfügbarkeitsgruppen können nicht mit der Standard Edition oder mit einer Kombination aus Standard Edition und Enterprise Edition konfiguriert werden.
 
 Da zwei separate Verfügbarkeitsgruppen vorliegen, weicht der Installationsprozess für ein Service Pack oder ein kumulatives Update auf ein Replikat, das Teil einer verteilten Verfügbarkeitsgruppe ist, geringfügig von dem für eine herkömmliche Verfügbarkeitsgruppe ab:
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Erstellen einer Verfügbarkeitsgruppe mit Transact-SQL](create-an-availability-group-transact-sql.md)
-
-Dieser Inhalt wurde von [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), einem Microsoft Most Valued Professional, verfasst.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

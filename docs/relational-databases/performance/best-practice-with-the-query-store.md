@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen `database.schema.object`.   
 
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.  
+
+##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenswichtige Server zur effizienteren Notfallwiederherstellung
+ 
+  Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden.
   
+  Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor SQL Server beendet werden kann.
+  
+  Durch das Ablaufverfolgungsflag 7752 können von SQL Server Abfragen ausgeführt werden, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
+
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

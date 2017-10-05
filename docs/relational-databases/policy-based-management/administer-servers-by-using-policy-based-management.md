@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
@@ -74,11 +74,9 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
      Wenn keine automatisierten Richtlinien aktiviert sind, hat die richtlinienbasierte Verwaltung keine Auswirkungen auf die Systemleistung.  
   
 ## <a name="terms"></a>Begriffe  
- **Verwaltetes Ziel der richtlinienbasierten Verwaltung** 
- Entitäten, die durch die richtlinienbasierte Verwaltung verwaltet werden, beispielsweise eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz, eine Datenbank, eine Tabelle oder ein Index. Alle Ziele in einer Serverinstanz bilden eine Zielhierarchie. Ein Zielsatz ist der Satz der Ziele, der sich aus der Anwendung eines Satzes von Zielfiltern auf die Zielhierarchie ergibt, z. B. alle Tabellen in der Datenbank, die im Besitz des HumanResources-Schemas sind.  
+ **Verwaltetes Ziel der richtlinienbasierten Verwaltung**: Entitäten, die durch die richtlinienbasierte Verwaltung verwaltet werden, beispielsweise eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz, eine Datenbank, eine Tabelle oder ein Index Alle Ziele in einer Serverinstanz bilden eine Zielhierarchie. Ein Zielsatz ist der Satz der Ziele, der sich aus der Anwendung eines Satzes von Zielfiltern auf die Zielhierarchie ergibt, z. B. alle Tabellen in der Datenbank, die im Besitz des HumanResources-Schemas sind.  
   
- **Facet der richtlinienbasierten Verwaltung**
- Ein Satz logischer Eigenschaften, die das Verhalten oder die Eigenschaften bestimmter Typen von verwalteten Zielen modellieren. Die Anzahl und die Merkmale der Eigenschaften sind in das Facet integriert und können nur durch den Ersteller des Facets hinzugefügt oder entfernt werden. Ein Zieltyp kann ein oder mehrere Verwaltungsfacets implementieren, und ein Verwaltungsfacet kann von einem oder mehreren Zieltypen implementiert werden. Bestimmte Eigenschaften eines Facets können nur für eine bestimmte Version gelten.  
+ **Facet der richtlinienbasierten Verwaltung**: Eine Menge logischer Eigenschaften, die das Verhalten oder die Eigenschaften bestimmter Typen von verwalteten Zielen modellieren Die Anzahl und die Merkmale der Eigenschaften sind in das Facet integriert und können nur durch den Ersteller des Facets hinzugefügt oder entfernt werden. Ein Zieltyp kann ein oder mehrere Verwaltungsfacets implementieren, und ein Verwaltungsfacet kann von einem oder mehreren Zieltypen implementiert werden. Bestimmte Eigenschaften eines Facets können nur für eine bestimmte Version gelten.  
   
  **Bedingung der richtlinienbasierten Verwaltung**  
  Ein boolescher Ausdruck, der einen Satz zulässiger Zustände eines durch die richtlinienbasierte Verwaltung verwalteten Ziels für ein Verwaltungsfacet angibt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Sortierungen beizubehalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen den Windows-Sortierungen nicht genau entsprechen, testen Sie die Bedingung, um zu ermitteln, wie Konflikte vom Algorithmus aufgelöst werden.  
@@ -108,7 +106,7 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
 ## <a name="links-to-specific-tasks"></a>Links zu bestimmten Aufgaben 
 
- - [Speichern von Richtlinien zur richtlinienbasierten Verwaltung](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Speichern von Richtlinien zur richtlinienbasierten Verwaltung](policy-based-management-storage.md)|  
  - [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Erstellen einer neuen Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Löschen einer Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
 
   
  ## <a name="examples"></a>Beispiele
- - [Erstellen der Richtlinie 'Standardmäßig aus'](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Erstellen der Richtlinie 'Standardmäßig aus'](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>Siehe auch  
  [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

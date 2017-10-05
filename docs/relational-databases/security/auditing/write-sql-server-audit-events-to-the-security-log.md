@@ -1,7 +1,7 @@
 ---
 title: "Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll
-  In einer Umgebung mit hoher Sicherheit ist das Windows-Sicherheitsprotokoll der geeignete Speicherort für Ereignisse, die Objektzugriffe aufzeichnen. Andere Überwachungsspeicherorte werden unterstützt, können aber leichter manipuliert werden.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+In einer Umgebung mit hoher Sicherheit ist das Windows-Sicherheitsprotokoll der geeignete Speicherort für Ereignisse, die Objektzugriffe aufzeichnen. Andere Überwachungsspeicherorte werden unterstützt, können aber leichter manipuliert werden.  
   
  Es gibt zwei Hauptanforderungen für das Schreiben von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Serverüberwachungen in das Windows-Sicherheitsprotokoll:  
   
 -   Die Einstellungen für die Überwachung von Objektzugriffsversuchen müssen so konfiguriert sein, dass die Ereignisse aufgezeichnet werden. Das Tool für Überwachungsrichtlinien (`auditpol.exe`) macht eine Vielzahl von Einstellungen für Unterrichtlinien in der Kategorie **Überwachung von Objektzugriffsversuchen** verfügbar. Um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Überwachung des Objektzugriffs zu ermöglichen, konfigurieren Sie die Einstellung **automatisch generiert** .  
-  
 -   Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss über die Berechtigung zum **Generieren von Sicherheitsüberwachungen** verfügen, um in das Windows-Sicherheitsprotokoll schreiben zu können. Standardmäßig verfügen die Konten LOCAL SERVICE und NETWORK SERVICE über diese Berechtigung. Dieser Schritt ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter einem dieser Konten ausgeführt wird.  
+-   Vergeben Sie an das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkonto die Vollberechtigung zum Zugriff auf die Registrierungsstruktur `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- Die Windows-Überwachungsrichtlinie kann sich auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auswirken, wenn sie so konfiguriert wurde, dass sie in das Windows-Sicherheitsprotokoll schreibt. In diesem Fall besteht bei einer falschen Konfiguration der Überwachungsrichtlinie die Gefahr, dass Ereignisse verloren gehen. Das Windows-Sicherheitsprotokoll ist standardmäßig so konfiguriert, dass ältere Ereignisse überschrieben werden. Hierdurch werden immer die neuesten Ereignisse beibehalten. Wurde das Windows-Sicherheitsprotokoll jedoch so festgelegt, dass ältere Ereignisse nicht überschrieben werden, löst das System das Windows-Ereignis 1104 aus, sobald das Sicherheitsprotokoll voll ist. In diesem Fall geschieht Folgendes:  
-  
+Die Windows-Überwachungsrichtlinie kann sich auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auswirken, wenn sie so konfiguriert wurde, dass sie in das Windows-Sicherheitsprotokoll schreibt. In diesem Fall besteht bei einer falschen Konfiguration der Überwachungsrichtlinie die Gefahr, dass Ereignisse verloren gehen. Das Windows-Sicherheitsprotokoll ist standardmäßig so konfiguriert, dass ältere Ereignisse überschrieben werden. Hierdurch werden immer die neuesten Ereignisse beibehalten. Wurde das Windows-Sicherheitsprotokoll jedoch so festgelegt, dass ältere Ereignisse nicht überschrieben werden, löst das System das Windows-Ereignis 1104 aus, sobald das Sicherheitsprotokoll voll ist. In diesem Fall geschieht Folgendes:  
 -   Es werden keine weiteren Sicherheitsereignisse aufgezeichnet.  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann nicht erkennen, dass das System keine Ereignisse mehr im Sicherheitsprotokoll aufzeichnen kann, sodass Überwachungsereignisse möglicherweise verloren gehen.  
-  
 -   Nachdem der Administrator das Sicherheitsprotokoll korrigiert hat, wird die Protokollierung wieder wie gewohnt ausgeführt.  
-  
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Sicherheit](#Security)  
-  
--   **So schreiben Sie SQL-Serverüberwachungsereignisse in das Sicherheitsprotokoll**  
-  
-     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "auditpol"](#auditpolAccess)  
-  
-     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "secpol"](#secpolAccess)  
-  
-     [Erteilen von Berechtigungen zum Generieren von Sicherheitsüberwachungen für ein Konto mit "secpol"](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

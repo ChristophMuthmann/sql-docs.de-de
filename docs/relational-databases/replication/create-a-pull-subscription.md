@@ -20,11 +20,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f568f9e74e17bce1d2e5af044e8820e49203a210
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dc76b8cf1cdd104a0a536389d768ad6165ac8fc3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-pull-subscription"></a>Erstellen eines Pullabonnements
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Wenn **allow_pull** den Wert **0** hat, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus, und geben Sie **allow_pull** für **@property** und **true** für **@value** an.  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).   
   
 3.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) aus. Geben Sie Folgendes an:  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 06/22/2017
   
     -   (Optional) Den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung für den Verbindungsaufbau mit dem Verleger verwendet werden muss.  
   
-    -   Einen Zeitplan für den Merge-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+    -   Einen Zeitplan für den Merge-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  Führen Sie auf dem Verleger [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) aus. Geben Sie **@publication**, **@subscriber**, **@subscriber_db**und den Wert **pull** für **@subscription_type**. Damit wird das Pullabonnement registriert.  
   
@@ -269,21 +269,21 @@ GO
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So erstellen Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Erstellen Sie sowohl mit dem Abonnenten als auch mit dem Verleger Verbindungen, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Stellen Sie die Verbindung zum Abonnenten und zum Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> an.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
-4.  Führen Sie ein bitweises logisches AND (**&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweise logischen OR (**|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu aktivieren.  
+4.  Führen Sie ein bitweises logisches AND (**&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (**|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu ermöglichen.  
   
-5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database>-Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription>-Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription> -Klasse.  
   
 7.  Legen Sie folgende Eigenschaften für das Abonnement fest:  
   
-    -   Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> an den Abonnenten, die in Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> erstellt wurde.  
+    -   Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> zu dem in Schritt 1 erstellten Abonnenten für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>  
   
     -   Name der Abonnementdatenbank für <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -293,39 +293,39 @@ GO
   
     -   Name der Veröffentlichung für <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zu ändern, unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, legen Sie das Feld <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und das Feld <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> fest. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
+    -   Die Parameter <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> , um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt wird. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
   
         > [!NOTE]  
-        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde. Die Verwendung dieser Eigenschaft wird jedoch empfohlen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Optional) Den Wert **true** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>-Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Optional) Den Wert **true** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> -Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  SQL Server Agent is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Wenn Sie den Wert **true** für Express-Abonnenten angeben, wird der Agentauftrag nicht erstellt. Jedoch werden wichtige abonnementbezogene Metadaten auf dem Abonnenten gespeichert.  
+        >  Der SQL Server-Agent ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Wenn Sie den Wert **true** für Express-Abonnenten angeben, wird der Agentauftrag nicht erstellt. Jedoch werden wichtige abonnementbezogene Metadaten auf dem Abonnenten gespeichert.  
   
     -   (Optional) Legen Sie die Werte der Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> für <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung verwenden, um die Verbindung zum Verteiler herzustellen.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>-Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> -Methode auf.  
   
-9. Rufen Sie mit der Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse aus Schritt 2 die <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A>-Methode auf, um das Pullabonnement beim Verleger zu registrieren. Wenn diese Registrierung bereits vorhanden ist, tritt eine Ausnahme auf.  
+9. Rufen Sie mit der Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse aus Schritt 2 die <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> -Methode auf, um das Pullabonnement beim Verleger zu registrieren. Wenn diese Registrierung bereits vorhanden ist, tritt eine Ausnahme auf.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>So erstellen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
-1.  Erstellen Sie sowohl mit dem Abonnenten als auch mit dem Verleger Verbindungen, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Stellen Sie die Verbindung zum Abonnenten und zum Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> an.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
-4.  Führen Sie ein bitweises logisches AND (**&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweise logischen OR (**|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu aktivieren.  
+4.  Führen Sie ein bitweises logisches AND (**&** in Visual C# und **And** in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (**|** in Visual C# und **Or** in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu ermöglichen.  
   
-5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database>-Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription> -Klasse.  
   
 7.  Legen Sie folgende Eigenschaften für das Abonnement fest:  
   
-    -   Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> an den Abonnenten, die in Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> erstellt wurde.  
+    -   Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> zu dem in Schritt 1 erstellten Abonnenten für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>  
   
     -   Name der Abonnementdatenbank für <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -335,20 +335,20 @@ GO
   
     -   Name der Veröffentlichung für <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zu ändern, unter dem der Merge-Agent auf dem Abonnenten ausgeführt wird, legen Sie die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> fest. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
+    -   Die Parameter <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> , um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Merge-Agent auf dem Abonnenten ausgeführt wird. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
   
         > [!NOTE]  
-        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle **sysadmin** erstellt wurde. Die Verwendung dieser Eigenschaft wird jedoch empfohlen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Optional) Den Wert **true** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>-Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Optional) Den Wert **true** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> -Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
     -   (Optional) Legen Sie die Werte der Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> für <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung verwenden, um die Verbindung zum Verteiler herzustellen.  
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>-Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> -Methode auf.  
   
-9. Rufen Sie mit der Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse aus Schritt 2 die <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A>-Methode auf, um das Pullabonnement beim Verleger zu registrieren. Wenn diese Registrierung bereits vorhanden ist, tritt eine Ausnahme auf.  
+9. Rufen Sie mit der Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse aus Schritt 2 die <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> -Methode auf, um das Pullabonnement beim Verleger zu registrieren. Wenn diese Registrierung bereits vorhanden ist, tritt eine Ausnahme auf.  
   
 ###  <a name="PShellExample"></a> Beispiel (RMO)  
  Im folgenden Beispiel wird ein neues Pullabonnement für eine Transaktionsveröffentlichung erstellt. Die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, mit dem der Verteilungs-Agentauftrag erstellt wird, werden zur Laufzeit übergeben.  

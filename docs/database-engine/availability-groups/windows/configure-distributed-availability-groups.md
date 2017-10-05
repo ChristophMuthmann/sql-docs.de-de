@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anwe
         );  
        
       ```  
-  
+   >[!NOTE]
+   >Ähnlich wie bei normalen Verfügbarkeitsgruppen hängt der Synchronisierungsstatus zwischen zwei Replikatteilen der Verfügbarkeitsgruppen einer verteilten Verfügbarkeitsgruppe vom Verfügbarkeitsmodus beider Replikate ab. Damit beispielsweise ein synchroner Commit ausgeführt werden kann, müssen sowohl die aktuelle primäre Verfügbarkeitsgruppe als auch die sekundäre Verfügbarkeitsgruppe mit dem Verfügbarkeitsmodus „synchronous_commit“ konfiguriert sein.  
+
+
 1. Warten Sie, bis sich der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED`geändert hat. Führen Sie die folgende Abfrage auf dem SQL-Server aus, der das primäre Replikat der primären Verfügbarkeitsgruppe hostet. 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+
