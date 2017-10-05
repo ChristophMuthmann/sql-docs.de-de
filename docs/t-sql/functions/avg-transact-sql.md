@@ -93,13 +93,13 @@ WHERE JobTitle LIKE 'Vice President%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Average vacation hours       Total sick leave hours`
+```
+Average vacation hours       Total sick leave hours
+ ----------------------       ----------------------
+25                           97
   
-`----------------------       ----------------------`
-  
-`25                           97`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. Verwenden der Funktionen SUM und AVG mit einer GROUP BY-Klausel  
 In Verbindung mit einer `GROUP BY`-Klausel erzeugt jede Aggregatfunktion einen einzelnen Wert für jede Gruppe anstelle eines Werts für die gesamte Tabelle. Im folgenden Beispiel werden für alle Vertriebsgebiete in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank Zusammenfassungswerte erzeugt. In der Zusammenfassung werden die durchschnittlichen Bonusleistungen von Vertriebsmitarbeitern der einzelnen Regionen und die Summe der Verkaufszahlen für das laufende Jahr pro Region aufgelistet.
@@ -141,11 +141,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+437.4042
   
-`437.4042`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-using-avg-without-distinct"></a>D. Verwenden von AVG ohne DISTINCT  
 Ohne DISTINCT wird mithilfe der `AVG`-Funktion der durchschnittliche Listenpreis aller Produkte in der `Product`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gesucht, einschließlich aller doppelten Werte.
@@ -157,11 +158,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+438.6662
   
-`438.6662`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="e-using-the-over-clause"></a>E. Verwenden der OVER-Klausel  
 Im folgenden Beispiel wird die AVG-Funktion mit der OVER-Klausel verwendet, um einen gleitenden Durchschnitt des Jahresumsatzes für jedes Gebiet in der `Sales.SalesPerson`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen. Die Daten werden nach `TerritoryID` partitioniert und logisch nach `SalesYTD` sortiert. Folglich wird die AVG-Funktion auf Grundlage des Verkaufsjahres für jedes Gebiet berechnet. Beachten Sie, dass für `TerritoryID` 1 zwei Zeilen für das Verkaufsjahr 2005 vorhanden sind, die die beiden Vertriebsmitarbeiter mit dem Umsatz aus diesem Jahr darstellen. Der durchschnittliche Umsatz für diese zwei Zeilen wird berechnet, und anschließend wird die dritte Zeile, die den Umsatz für das Jahr 2006 darstellt, in die Berechnung einbezogen.

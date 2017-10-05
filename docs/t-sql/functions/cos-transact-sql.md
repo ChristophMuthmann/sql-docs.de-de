@@ -80,11 +80,11 @@ SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`cosCalc1  cosCalc2`
-  
-`--------  --------`
-  
-`-0.58     0.99`
+```
+cosCalc1  cosCalc2
+--------  --------
+-0.58     0.99
+```
   
 ## <a name="see-also"></a>Siehe auch
 [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

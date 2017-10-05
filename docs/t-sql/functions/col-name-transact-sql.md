@@ -78,11 +78,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Column Name`
-  
------------------\-
-  
-`BusinessEntityID`
+```
+Column Name
+------------------
+BusinessEntityID
+```
   
 ## <a name="examples"></a>Beispiele
 
