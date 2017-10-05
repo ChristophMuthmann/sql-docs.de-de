@@ -91,6 +91,6 @@ sudo systemctl restart mssql-server
 
 Falls Sie eine Offline-Installation durchführen möchten, finden Sie den SQL Server-Agent-Paketdownload in den [Release Notes](sql-server-linux-release-notes.md). Verwenden Sie zum installieren anschließend die in [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Installationsschritte. 
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Weitere Schritte
 Weitere Informationen zur Verwendung von SQL Server-Agent zum erstellen, planen und ausführen von Aufträgen finden Sie unter [Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux](sql-server-linux-run-sql-server-agent-job.md).
 
