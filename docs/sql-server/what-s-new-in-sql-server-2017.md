@@ -1,7 +1,7 @@
 ---
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 09/14/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
 ms.contentlocale: de-de
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
+SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt.
 
-SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Dieses Thema fasst die Neuigkeiten für bestimmte Funktionsbereiche in den neuesten Versionen von SQL Server 2017 Release Candidate (RC2, August 2017) und Community Technical Preview (CTP) zusammen.
-
-[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
-Diese Version enthält Fehlerbehebungen und Leistungsverbesserungen.
+[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: Oktober 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Führen Sie SQL Server unter Linux aus!** Weitere Informationen finden Sie in der [Dokumentation zu SQL Server unter Linux](https://docs.microsoft.com/sql/linux/).
 

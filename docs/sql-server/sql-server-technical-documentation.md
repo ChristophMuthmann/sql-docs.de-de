@@ -1,6 +1,6 @@
 ---
 title: Technische Dokumentation zu SQL Server | Microsoft-Dokumentation
-ms.date: 08/07/2017
+ms.date: 10/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0412057a8d3e0849ddaeecfeb199e00b46a96d7b
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8898a815eac39966c1dd8ced8d6230e2cf8b4cac
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
@@ -49,8 +49,8 @@ Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Se
 **Probieren Sie SQL Server aus!**    
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 herunterladen](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [Starten eines virtuellen Computers, auf dem SQL Server 2016 bereits installiert ist](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download aus dem Evaluierungscenter](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [SQL Server Management Studio (SSMS) herunterladen](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
+- [![Erstellen von virtuellen Computern](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Starten von virtuellen Computern mit SQL Server 2016 SP1 oder SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [ SQL Server Management Studio (SSMS) herunterladen](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [ SQL Server Data Tools (SSDT) herunterladen](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server-Technologien    

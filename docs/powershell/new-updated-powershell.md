@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: a5106430bbe73d9bc7cf8761961af451e93e7d0e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
 ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>Neue und zuletzt aktualisiert: PowerShell-Dokumente
@@ -34,7 +34,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich der Updates*: &nbsp; **18.7.2017** &nbsp; bis &nbsp; **11.9.2017**
+- *Datumsbereich des Updates:* &nbsp; **11.9.2017** &nbsp; bis &nbsp; **27.9.2017**
 - *Themenbereich:* &nbsp; **PowerShell**.
 
 
@@ -44,7 +44,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 ## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
 
-Die folgenden Links leiten Sie zu neuen Artikeln weiter, die kürzlich erstellt wurden.
+Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
 ***Dieses Mal sind keine neuen Artikel aufgeführt.***
@@ -69,9 +69,9 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
+### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
-Diese kompakte Liste enthält Links zu allen aktualisierten Artikeln, die im Abschnitt mit Auszügen aufgeführt sind.
+Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
 
 
@@ -93,35 +93,35 @@ Diese kompakte Liste enthält Links zu allen aktualisierten Artikeln, die im Abs
     Then run Run-533-*.BAT
 -->
 
-Dieser Abschnitt enthält sehr ähnliche Artikel für kürzlich aktualisierte Artikel in anderen Themenbereichen innerhalb unseres öffentlichen GitHub.com-Repositorys: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu und aktualisiert (3+12): **Advanced Analytics für SQL** – Dokumentation](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neu und aktualisiert (5+0): **Herstellen einer Verbindung mit SQL** – Dokumentation](../connect/new-updated-connect.md)
-- [Neu und aktualisiert (5+1): **Datenbankmodul für SQL** – Dokumentation](../database-engine/new-updated-database-engine.md)
-- [Neu und aktualisiert (19+82): **Integration Services für SQL** – Dokumentation](../integration-services/new-updated-integration-services.md)
-- [Neu und aktualisiert (1+8): **Linux für SQL** – Dokumentation](../linux/new-updated-linux.md)
-- [Neu und aktualisiert (12+1): **Relationale Datenbanken für SQL** – Dokumentation](../relational-databases/new-updated-relational-databases.md)
-- [Neu und aktualisiert (0+1): **Reporting Services für SQL** – Dokumentation](../reporting-services/new-updated-reporting-services.md)
-- [Neu und aktualisiert (7+1): **Microsoft SQL Server** – Dokumentation](../sql-server/new-updated-sql-server.md)
-- [Neu und aktualisiert (1+1): **SQL Server Data Tools (SSDT)** – Dokumentation](../ssdt/new-updated-ssdt.md)
-- [Neu und aktualisiert (0+2): **SQL Server Migration Assistant (SSMA)** – Dokumentation](../ssma/new-updated-ssma.md)
-- [Neu und aktualisiert (1+4): **SQL Server Management Studio (SSMS)** – Dokumentation](../ssms/new-updated-ssms.md)
-- [Neu und aktualisiert (4+1): **Transact-SQL** – Dokumentation](../t-sql/new-updated-t-sql.md)
-- [Neu und aktualisiert (0+1): **Tools für SQL** – Dokumentation](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs (Neu + Aktualisiert (4+1): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0):  **Integration Services for SQL** docs (Neu + Aktualisiert (17+0):Dokumentation zu Integration Services für SQL)](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs (Neu + Aktualisiert (3+0): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (1+1): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [Neu und aktualisiert (0+0): **Analysis Services für SQL** – Dokumentation](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL)](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
-- [Neu und aktualisiert (0+0): **Master Data Services (MDS) für SQL** – Dokumentation](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs (Neu + Aktualisiert: Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 
