@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Verwenden von SUBSTRING mit text-, ntext- und image-Daten  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  Das folgende Beispiel zeigt die Wirkung von SUBSTRING auf beiden **Text** und **Ntext** Daten. Zunächst wird in diesem Beispiel eine neue Tabelle in der `pubs`-Datenbank namens `npub_info` erstellt. Im nächsten Schritt wird die Spalte `pr_info` in der `npub_info`-Tabelle aus den ersten 80 Zeichen der `pub_info.pr_info`-Spalte erstellt und ein `ü` als erstes Zeichen hinzugefügt. Abschließend wird eine `INNER JOIN` Ruft alle Verleger-IDs und die `SUBSTRING` beider der **Text** und **Ntext** -Spalten mit Verlegerinformationen.  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  Im folgende Beispiel wird gezeigt, wie das zweite zurückzugebenden dritten und vierten Buchstaben der Zeichenfolgenkonstanten `abcdef`.  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

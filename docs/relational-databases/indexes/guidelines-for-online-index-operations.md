@@ -2,11 +2,9 @@
 title: "Richtlinien für Onlineindexvorgänge | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,8 +19,9 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.product_service: sql-server-2016, sql-database
-ms.component: dbe-indexes
+ms.suite: SQL
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
 ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3

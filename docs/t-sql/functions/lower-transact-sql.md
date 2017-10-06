@@ -67,15 +67,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                    Upper                    LowerUpper`  
+ ```
+Lower                    Upper                    LowerUpper  
+---------------------    ---------------------    --------------------  
+minipump                 MINIPUMP                 minipump 
+taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
   
- `---------------------    ---------------------    --------------------`  
-  
- `minipump                 MINIPUMP                 minipump`  
-  
- `taillights - battery     TAILLIGHTS - BATTERY     taillights - battery`  
-  
- `(2 row(s) affected)`  
+(2 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  In diesem Beispiel werden die `LOWER`- und die `UPPER`-Funktion sowie eine Schachtelung der `UPPER`-Funktion in der `LOWER`-Funktion verwendet, um die Produktnamen auszuwählen, deren Preis zwischen 11 $ und 20 $ liegt.  
@@ -93,13 +92,12 @@ WHERE ListPrice between 11.00 and 20.00;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                 Upper                  LowerUpper`  
-  
- `--------------------  ---------------------  --------------------`  
-  
- `minipump              MINIPUMP               minipump`  
-  
- `taillights – battery  TAILLIGHTS – BATTERY   taillights - battery`  
+ ```
+Lower                 Upper                  LowerUpper  
+--------------------  ---------------------  --------------------  
+minipump              MINIPUMP               minipump  
+taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

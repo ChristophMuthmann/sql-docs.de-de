@@ -36,7 +36,6 @@ Installieren Sie SQL Server-Volltextsuche für Ihre Plattform:
 Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Fts** unter Red Hat Enterprise Linux. 
 
 ```bash
-sudo yum update
 sudo yum install -y mssql-server-fts
 ```
 

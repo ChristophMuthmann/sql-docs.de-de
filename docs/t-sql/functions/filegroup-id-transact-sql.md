@@ -67,13 +67,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Filegroup ID`  
-  
- `------------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
+```
+Filegroup ID  
+------------  
+1  
+
+(1 row(s) affected)
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Filegroup_name &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   

@@ -71,19 +71,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SalesQuota     TotalSalesYTD       Grouping`  
-  
- `------------   -----------------   --------`  
-  
- `NULL           1533087.5999          0`  
-  
- `250000.00      33461260.59           0`  
-  
- `300000.00      9299677.9445          0`  
-  
- `NULL           44294026.1344         1`  
-  
- `(4 row(s) affected)`  
+ ```
+ SalesQuota     TotalSalesYTD       Grouping  
+------------   -----------------   --------  
+NULL           1533087.5999          0  
+250000.00      33461260.59           0  
+300000.00      9299677.9445          0  
+NULL           44294026.1344         1  
+
+(4 row(s) affected)
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [GROUPING_ID &#40; Transact-SQL &#41;](../../t-sql/functions/grouping-id-transact-sql.md)   

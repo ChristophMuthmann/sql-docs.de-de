@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Titel**|**nvarchar(50)**|NULL zulassen|Titel des Mitarbeiters in meinem Team.|  
 |**Hintergrund**|**nvarchar(50)**|Nicht NULL|Datum und Uhrzeit des letzten Updates der Zeile. (Standardwert)|  
   
- **So erstellen Sie HumanResources.myTeam**  
+**So erstellen Sie HumanResources.myTeam**  
   
 -   Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen:  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **So füllen Sie HumanResources.myTeam auf**  
+**So füllen Sie HumanResources.myTeam auf**  
   
 -   Führen Sie die folgenden `INSERT` -Anweisungen zum Auffüllen der Tabelle mit zwei Zeilen aus:  
   

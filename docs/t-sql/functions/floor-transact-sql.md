@@ -73,9 +73,11 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
   
  Das Ergebnis ist der ganzzahlige Teil des berechneten Werts den gleichen Datentyp wie *Numeric_expression*.  
   
- `-----   ---------    -----------`  
+ ```
+ -----   ---------    -----------  
   
- `123     -124         123`  
+ 123     -124         123
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

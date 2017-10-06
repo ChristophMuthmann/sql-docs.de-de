@@ -2,11 +2,10 @@
 title: "Funktionsweise von Onlineindexvorgängen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.suite: SQL
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,8 +20,8 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.product_service: sql-server-2016, sql-database
-ms.component: dbe-indexes
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57

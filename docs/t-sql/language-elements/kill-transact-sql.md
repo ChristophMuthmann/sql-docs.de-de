@@ -116,8 +116,10 @@ Verwenden Sie@SPID den Sitzungs-ID-Wert für die aktuelle Sitzung angezeigt.
   
  Wenn das Rollback der Sitzungs-ID oder UOW zum Zeitpunkt der Ausführung der KILL *Sitzungs-ID*|*UOW* WITH STATUSONLY-Anweisung ausgeführt wird, oder wenn keine Sitzungs-ID oder UOW, KILL Rollbackwird*Sitzungs-ID*|*UOW* WITH STATUSONLY wird der folgenden Fehler zurückgegeben:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  Der gleiche Statusbericht erhalten Sie, indem Sie Wiederholen der gleichen KILL *Sitzungs-ID*|*UOW* -Anweisung ohne Verwendung der Option WITH STATUSONLY; allerdings nicht empfehlenswert, auf diese Weise. Wiederholen einer KILL *Sitzungs-ID* Anweisung möglicherweise einen neuen Prozess beendet, wenn das Rollback abgeschlossen wurde und die Sitzungs-ID eine neue Aufgabe vor dem Ausführen der neuen KILL-Anweisung zugewiesen wurde. Mit der Angabe von WITH STATUSONLY wird dies verhindert.  
   

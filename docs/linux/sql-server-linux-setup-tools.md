@@ -60,14 +60,12 @@ Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** unter 
 1. Wenn Sie eine frühere Version des mussten **Mssql-Tools** installiert haben, entfernen Sie alle älteren UnixODBC-Paketen.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Führen Sie die folgenden Befehle zum Installieren **Mssql-Tools** mit dem UnixODBC Developer-Paket.
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 

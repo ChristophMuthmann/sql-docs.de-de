@@ -77,9 +77,10 @@ SELECT SIN(45.175643);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------`  
-  
- `0.929607`  
+ ```
+---------  
+0.929607
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

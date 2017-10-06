@@ -118,17 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### <a name="c-using-round-to-truncate"></a>C. Verwenden von ROUND zum Kürzen  
  Das folgende Beispiel verwendet zwei `SELECT`-Anweisungen, um den Unterschied zwischen dem Runden und dem Kürzen zu verdeutlichen. Die erste Anweisung rundet das Ergebnis. Die zweite Anweisung kürzt das Ergebnis.  
@@ -164,10 +164,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### <a name="e-using-round-and-rounding-approximations"></a>E. Verwenden von ROUND und gerundeten Näherungswerten  
  Das folgende Beispiel zeigt das Runden und die Näherungsberechnung von Werten.  
@@ -177,10 +178,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## <a name="see-also"></a>Siehe auch  
  [CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   

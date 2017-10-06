@@ -89,38 +89,32 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Object Name`  
-  
- `------------------------------`  
-  
- `Person`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorks2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
+```
+Object Name
+------------------------------
+Person
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorks2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+ ```
+ 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird `PARSENAME` verwendet, um Informationen zur `Person`-Tabelle in der `AdventureWorks2012`-Datenbank zurückzugeben.  
   
@@ -135,38 +129,31 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `DimCustomer`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorksPDW2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
+```
+Object Name
+------------------------------
+DimCustomer
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+dbo
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorksPDW2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+```
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

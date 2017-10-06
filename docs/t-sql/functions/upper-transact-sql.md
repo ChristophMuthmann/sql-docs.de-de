@@ -78,15 +78,13 @@ ORDER BY LastName;
   
  Dies ist ein Auszug aus dem Resultset.  
   
- `Name`  
-  
- `------------------------------`  
-  
- `ABBAS, Syed`  
-  
- `ABERCROMBIE, Kim`  
-  
- `ABOLROUS, Hazem`  
+ ```
+Name
+------------------------------
+ABBAS, Syed
+ABERCROMBIE, Kim
+ABOLROUS, Hazem
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

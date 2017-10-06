@@ -207,11 +207,11 @@ GO
   
  Das Resultset zeigt, dass es sich bei dem Basistyp des zugrunde liegenden Objekts, der `Employee`-Tabelle, um eine Benutzertabelle handelt.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. Zurückgeben eines Eigenschaftswerts  
  Im folgenden Beispiel wird die Anzahl der UPDATE-Trigger für die angegebene Tabelle zurückgegeben.  

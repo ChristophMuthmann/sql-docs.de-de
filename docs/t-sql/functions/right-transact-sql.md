@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  Dies ist ein Auszug aus dem Resultset.  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>C. Verwenden von rechts mit einer Zeichenfolge  
  Im folgenden Beispiel wird `RIGHT` zurückzugebenden die beiden äußeren rechten Zeichen der Zeichenfolge `abcdefg`.  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

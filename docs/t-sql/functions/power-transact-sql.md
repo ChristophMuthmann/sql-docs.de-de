@@ -149,9 +149,10 @@ SELECT POWER(2.0, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------`  
-  
- `8.0`  
+ ```
+------------ 
+8.0
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   

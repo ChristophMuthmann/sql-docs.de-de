@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -69,14 +69,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel gibt die Funktion Statistiken für eine aktive Ausführung mit einer ID von 34 zurück.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel gibt die Funktion Statistiken für alle Ausführungen, die unter der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server, abhängig von Ihren Berechtigungen.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

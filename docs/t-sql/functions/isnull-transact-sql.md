@@ -76,11 +76,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-isnull"></a>B. Verwenden von ISNULL  
  Im folgenden Beispiel werden die Beschreibung, der Prozentsatz des Rabatts, die Mindestmenge und die Höchstmenge für alle Sonderangebote in `AdventureWorks2012` ausgewählt. Wenn die Höchstmenge für ein bestimmtes Sonderangebot NULL ist, wird für `MaxQty` im Resultset `0.00` angezeigt.  

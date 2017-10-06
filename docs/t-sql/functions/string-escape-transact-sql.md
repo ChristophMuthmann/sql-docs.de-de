@@ -83,11 +83,11 @@ SELECT STRING_ESCAPE('\   /
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
-  
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
+ ```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
 ### <a name="b-format-json-object"></a>B. Format JSON-Objekt  
  Die folgende Abfrage erstellt ein JSON-Text aus der Variablen "Anzahl" und "Zeichenfolge und umgeht alle JSON Sonderzeichen in der Variablen.  

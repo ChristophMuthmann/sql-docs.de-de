@@ -104,17 +104,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Color`  
-  
- `--------------- --------------------- ---------------------`  
-  
- `Black           27404.84              5214.9616`  
-  
- `Silver          26462.84              14665.6792`  
-  
- `White           19.00                 6.7926`  
-  
- `(3 row(s) affected)`  
+ ```
+Color
+--------------- --------------------- ---------------------
+Black           27404.84              5214.9616
+Silver          26462.84              14665.6792
+White           19.00                 6.7926
+
+(3 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Verwenden der OVER-Klausel  
  Im folgenden Beispiel wird die SUM-Funktion mit der OVER-Klausel verwendet, um einen kumulativen Gesamtwert der Jahresumsätze für jedes Gebiet in der `Sales.SalesPerson`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen. Die Daten werden nach `TerritoryID` partitioniert und logisch nach `SalesYTD` sortiert. Folglich wird die SUM-Funktion auf Grundlage des Verkaufsjahres für jedes Gebiet berechnet. Beachten Sie, dass für `TerritoryID` 1 zwei Zeilen für das Verkaufsjahr 2005 vorhanden sind, die die beiden Vertriebsmitarbeiter mit dem Umsatz aus diesem Jahr darstellen. Der kumulierte Umsatz für diese zwei Zeilen wird berechnet, und anschließend wird die dritte Zeile, die den Umsatz für das Jahr 2006 darstellt, in die Berechnung einbezogen.  
@@ -207,17 +205,14 @@ ORDER BY ProductKey;
   
  Dies ist ein Auszug aus dem Resultset.  
   
- `ProductKey  TotalPerProduct`  
-  
- `----------  ---------------`  
-  
- `214         31421.0200`  
-  
- `217         31176.0900`  
-  
- `222         29986.4300`  
-  
- `225          7956.1500`  
+ ```
+ProductKey  TotalPerProduct
+----------  ---------------
+214         31421.0200
+217         31176.0900
+222         29986.4300
+225          7956.1500
+ ```
   
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. Berechnen von Summenwerten für Gruppen mit mehr als eine Spalte  
  Im folgenden Beispiel wird die Summe von `ListPrice` und `StandardCost` für jede in der `Product`-Tabelle aufgeführte Farbe berechnet.  
@@ -234,19 +229,15 @@ ORDER BY Color;
   
  Der erste Teil des Resultsets ist unten dargestellt:  
   
- `Color       TotalList      TotalCost`  
-  
- `----------  -------------  --------------`  
-  
- `Black       101295.7191    57490.5378`  
-  
- `Blue         24082.9484    14772.0524`  
-  
- `Grey           125.0000       51.5625`  
-  
- `Multi          880.7468      526.4095`  
-  
- `NA            3162.3564     1360.6185`  
+ ```
+Color       TotalList      TotalCost
+----------  -------------  --------------
+Black       101295.7191    57490.5378
+Blue         24082.9484    14772.0524
+Grey           125.0000       51.5625
+Multi          880.7468      526.4095
+NA            3162.3564     1360.6185
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

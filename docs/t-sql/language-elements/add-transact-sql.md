@@ -86,13 +86,13 @@ SELECT @startdate + 1.25 AS 'Start Date',
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Start Date                  Add Date`  
+ ```
+Start Date                  Add Date
+--------------------------- ---------------------------
+1900-01-11 06:00:00.000     1900-01-15 00:00:00.000
   
- `--------------------------- ---------------------------`  
-  
- `1900-01-11 06:00:00.000     1900-01-15 00:00:00.000`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. Addieren bei Zeichen- und ganzzahligen Datentypen  
  Im folgenden Beispiel wird ein **Int** -Datentyp, Wert und einen Zeichenwert durch Konvertieren der Zeichendatentyp in **Int**. Ein Zeichen, das ungültig ist ggf. in der **Char** Zeichenfolge, die [!INCLUDE[tsql](../../includes/tsql-md.md)] gibt einen Fehler zurück.  
@@ -105,11 +105,12 @@ SELECT '125127' + @addvalue;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
+ ```
+-----------------------
+125142
   
- `125142`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
