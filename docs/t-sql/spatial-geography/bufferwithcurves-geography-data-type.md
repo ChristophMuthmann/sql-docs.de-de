@@ -78,62 +78,68 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Aufrufen von BufferWithCurves() mit einem Parameterwert < 0 für eine eindimensionale geography-Instanz  
  Im folgenden Beispiel wird eine leere Instanz von `GeometryCollection` zurückgegeben:  
   
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString();`  
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(-1).ToString();
+``` 
   
 ### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>B. Aufrufen von BufferWithCurves() mit einem Parameterwert < 0 für eine zweidimensionale geography-Instanz  
  Das folgende Beispiel gibt eine `CurvePolygon` Instanz mit einem negativen Puffer:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString()`  
+ ```sql
+ DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.BufferWithCurves(-1).ToString()
+ ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Aufrufen von BufferWithCurves() mit einem Parameterwert < 0 zur Rückgabe einer leeren GeometryCollection  
  Das folgende Beispiel zeigt, was geschieht, wenn die *Abstand* Parameter-2 entspricht:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.BufferWithCurves(-2).ToString();`  
+ ```sql
+ DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.BufferWithCurves(-2).ToString();
+ ```  
   
  Dies **wählen** -Anweisung zurückgibt`GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Aufrufen von BufferWithCurves() mit einem Parameterwert = 0  
  Das folgende Beispiel gibt eine Kopie der aufrufenden **Geography** Instanz:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(0).ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(0).ToString();
+ ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Aufrufen von BufferWithCurves() mit einem sehr kleinen Parameterwert ungleich 0  
  Das folgende Beispiel gibt auch eine Kopie der aufrufenden **Geography** Instanz:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.BufferWithCurves(@distance).ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.BufferWithCurves(@distance).ToString();
+ ```  
   
 ### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Aufrufen von BufferWithCurves() mit einem Parameterwert > 0  
  Das folgende Beispiel gibt eine `CurvePolygon` Instanz:  
-  
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(2).ToString();`  
-  
+
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(2).ToString();
+ ```  
 ### <a name="g-passing-a-valid-string-parameter"></a>G. Übergeben eines gültigen Zeichenfolgenparameters  
  Im folgende Beispiel gibt denselben Wert zurück `CurvePolygon` Instanz fest, wie bereits erwähnt, jedoch ein Zeichenfolgenparameter an die Methode übergeben wird:  
-  
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves('2').ToString();`  
+
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves('2').ToString();
+```  
   
 ### <a name="h-passing-an-invalid-string-parameter"></a>H. Übergeben eines ungültigen Zeichenfolgenparameters  
  Im folgenden Beispiel wird ein Fehler ausgelöst:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)'`  
-  
- `SELECT @g.BufferWithCurves('a').ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)'  
+ SELECT @g.BufferWithCurves('a').ToString();
+ ```  
   
  Beachten Sie, dass in den beiden vorangehenden Beispielen ein Zeichenfolgenliteral an die `BufferWithCurves()`-Methode übergeben wurde. Das erste Beispiel kann ordnungsgemäß ausgeführt werden, da das Zeichenfolgenliteral in einen numerischen Wert konvertiert werden kann. Im zweiten Beispiel wird allerdings eine `ArgumentException`ausgelöst.  
   

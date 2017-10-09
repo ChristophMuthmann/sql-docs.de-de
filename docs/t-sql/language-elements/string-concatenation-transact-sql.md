@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. Verwenden der Verkettung mehrerer Zeichenfolgen  
  Im folgenden Beispiel werden mehrere Zeichenfolgen verkettet, um eine lange Zeichenfolge zu bilden. Dabei wird der Nachname und der Anfangsbuchstabe des Vornamens der Vizepräsidenten in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt. Nach dem Nachnamen wird ein Komma hinzugefügt. Nach dem Anfangsbuchstaben des Vornamens wird ein Punkt hinzugefügt.  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Verwenden große Zeichenfolgen in Verkettung
 Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet und versucht dann, um die Länge der endgültigen Zeichenfolge zu berechnen. Die endgültige Länge des Resultset 16000: Da beginnt mit Ausdruck der Auswertung, die Links, @x + @z + @y = > (@x + @z) + @y. In diesem Fall das Ergebnis (@x + @z) ist auf 8000 Byte abgeschnitten und dann @y Resultset, dadurch ist die endgültige Zeichenfolgenlänge 16000 hinzugefügt wird. Da @y ist eine Typzeichenfolge hohen Wert nicht abgeschnitten.
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. Verwenden von Zeichenfolgenverkettungen  

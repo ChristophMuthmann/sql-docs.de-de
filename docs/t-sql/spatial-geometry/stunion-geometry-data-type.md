@@ -68,11 +68,11 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>B. Berechnen der Union einer Polygon-Instanz und einer CurvePolygon-Instanz  
  Im folgenden Beispiel wird eine `GeometryCollection` -Instanz zurückgegeben, die ein Kreisbogensegment enthält.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
  `STUnion()` gibt ein Ergebnis zurück, das ein Kreisbogensegment enthält, da die Instanz, die `STUnion()` aufgerufen hat, ein Kreisbogensegment enthält.  
   

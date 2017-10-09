@@ -57,20 +57,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Verwenden von STNumCurves() in einer CircularString-Instanz  
  Im folgenden Beispiel wird gezeigt, wie die Anzahl der Kurven einer Instanz von `CircularString` abgerufen wird:  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geography; 
+ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. Verwenden von STNumCurves() in einer CompoundCurve-Instanz  
  Im folgenden Beispiel wird mit `STNumCurves()` die Anzahl der Kurven in einer Instanz von `CompoundCurve` zurückgegeben.  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)   

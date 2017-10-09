@@ -77,23 +77,26 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Aufrufen von STBuffer() mit einem Parameterwert < 0 für eine eindimensionale geometry-Instanz  
  Im folgenden Beispiel wird eine leere Instanz von `GeometryCollection` zurückgegeben:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Aufrufen von STBuffer() mit parameter_value < 0 für eine Polygon-Instanz  
  Im folgenden Beispiel wird eine Instanz von `Polygon` mit einem negativen Puffer zurückgegeben:  
   
- `DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Aufrufen von STBuffer() mit parameter_value < 0 für eine CurvePolygon-Instanz  
  Im folgenden Beispiel wird eine Instanz von `Polygon` mit einem negativen Puffer von einer `CurvePolygon` -Instanz zurückgegeben:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 > [!NOTE]  
 >  Anstelle einer Instanz von `Polygon` wird eine Instanz von `CurvePolygon` zurückgegeben.  Zurückgeben einer `CurvePolygon` Instanz ist, finden Sie unter [BufferWithCurves &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
@@ -101,47 +104,52 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Aufrufen von STBuffer() mit einem negativen Parameterwert zur Rückgabe einer leeren Instanz  
  Im folgenden Beispiel wird gezeigt, was geschieht, wenn der *distance* -Parameter aus dem vorangehenden Beispiel -2 entspricht.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-2).ToString();
+ ```  
   
  Dies **wählen** Anweisung gibt ein`GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Aufrufen von STBuffer() mit parameter_value = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von `geometry` zurückgegeben:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(0).ToString();
+ ```  
   
 ### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. Aufrufen von STBuffer() mit einem äußerst kleinen Parameterwert ungleich 0  
  Im folgenden Beispiel wird auch eine Kopie der aufrufenden Instanz von `geometry` zurückgegeben:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.STBuffer(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.STBuffer(@distance).ToString();
+ ```  
   
 ### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Aufrufen von STBuffer() mit parameter_value > 0  
  Im folgenden Beispiel wird eine Instanz von `Polygon` zurückgegeben:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(2).ToString();
+ ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. Aufrufen von STBuffer() mit einem Zeichenfolgenparameterwert  
  Im folgenden Beispiel wird die gleiche Instanz von `Polygon` zurückgegeben, die bereits erwähnt wurde, es wird jedoch ein Zeichenfolgenparameter an die Methode übergeben:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('2').ToString();
+ ```  
   
  Im folgenden Beispiel wird ein Fehler ausgelöst:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('a').ToString();
+ ```  
   
 > [!NOTE]  
 >  In den beiden vorangehenden Beispielen wurde ein Zeichenfolgenliteral an den `STBuffer()`übergeben.  Das erste Beispiel kann ordnungsgemäß ausgeführt werden, da das Zeichenfolgenliteral in einen numerischen Wert konvertiert werden kann. Im zweiten Beispiel wird allerdings eine `ArgumentException`ausgelöst.  
@@ -149,13 +157,12 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>I. Aufrufen von STBuffer() für eine MultiPoint-Instanz  
  Im folgenden Beispiel werden zwei Instanzen von `MultiPolygon` sowie eine Instanz von `Polygon` zurückgegeben:  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.STBuffer(1).ToString();`  
-  
- `SELECT @g.STBuffer(1.5).ToString();`  
-  
- `SELECT @g.STBuffer(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.STBuffer(1).ToString(); 
+ SELECT @g.STBuffer(1.5).ToString(); 
+ SELECT @g.STBuffer(1.6).ToString();
+ ```  
   
  Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT** -Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   

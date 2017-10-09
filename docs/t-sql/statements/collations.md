@@ -130,34 +130,28 @@ ORDER BY Place
 COLLATE Traditional_Spanish_ci_ai ASC;  
 GO  
 ```  
-  
+
  Dies sind die Ergebnisse der ersten Abfrage.  
   
- `Place`  
-  
- `-------------`  
-  
- `California`  
-  
- `Chiapas`  
-  
- `Cinco Rios`  
-  
- `Colima`  
+ ```
+ Place 
+ ------------- 
+ California 
+ Chiapas 
+ Cinco Rios 
+ Colima
+ ```  
   
  Dies sind die Ergebnisse der zweiten Abfrage.  
   
- `Place`  
-  
- `-------------`  
-  
- `California`  
-  
- `Cinco Rios`  
-  
- `Colima`  
-  
- `Chiapas`  
+ ```
+ Place 
+ ------------- 
+ California 
+ Cinco Rios 
+ Colima 
+ Chiapas
+ ```  
   
 ### <a name="b-additional-examples"></a>B. Zusätzliche Beispiele  
  Für zusätzliche Beispiele, in denen **COLLATE**, finden Sie unter [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) Beispiel **G. Erstellen einer Datenbank und Angeben eines sortierungsnamens und Optionen**, und [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) Beispiel **V. Ändern der spaltensortierung**.  

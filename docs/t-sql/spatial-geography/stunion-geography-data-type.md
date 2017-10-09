@@ -77,20 +77,20 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-producing-a-fullglobe-result"></a>B. Erzeugen eines FullGlobe-Ergebnisses  
  Im folgenden Beispiel wird ein `FullGlobe` erzeugt, wenn von `STUnion()` zwei `Polygon` -Instanzen kombiniert werden.  
   
- `DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';  
+ DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. Erzeugen eines dreieckigen Lochs aus der Vereinigungsmenge eines CurvePolygons und eines dreieckigen Lochs.  
  Im folgenden Beispiel wird ein dreieckiges Loch aus der Vereinigungsmenge eines `CurvePolygon` und einer `Polygon` -Instanz erzeugt.  
   
- `DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';`  
-  
- `DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';  
+ DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

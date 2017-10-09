@@ -83,9 +83,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Verwenden von THROW zum erneuten Auslösen einer Ausnahme  
  Im folgenden Beispiel wird gezeigt, wie die `THROW`-Anweisung verwendet wird, um die zuletzt ausgelöste Ausnahme erneut auszulösen.  
@@ -111,13 +113,12 @@ END CATCH;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `PRINT 'In catch block.';`  
-  
- `Msg 2627, Level 14, State 1, Line 1`  
-  
- `Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.`  
-  
- `The statement has been terminated.`  
+ ```
+ PRINT 'In catch block.';  
+ Msg 2627, Level 14, State 1, Line 1  
+ Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
+ The statement has been terminated.
+ ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. Verwenden von FORMATMESSAGE mit THROW  
  Im folgenden Beispiel wird gezeigt, wie die `FORMATMESSAGE`-Funktion mit `THROW` verwendet wird, um eine benutzerdefinierte Fehlermeldung auszulösen. Zunächst wird im Bespiel eine benutzerdefinierte Fehlermeldung mithilfe von `sp_addmessage` erstellt. Da die THROW-Anweisung keine Ersetzungsparameter im zulässt der *Nachricht* Parameter in der Weise, die RaiseError der FORMATMESSAGE-Funktion wird verwendet, um die drei von Fehlermeldung 60000 erwarteten Parameterwerte übergeben.  
@@ -138,9 +139,10 @@ THROW 60000, @msg, 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 60000, Level 16, State 1, Line 2`  
-  
- `This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).`  
+ ```
+ Msg 60000, Level 16, State 1, Line 2  
+ This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -153,9 +155,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   

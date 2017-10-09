@@ -548,11 +548,11 @@ GO
   
  Dies ist das am 12. April 2004 ('`2004-04-12'`) generierte Resultset. Die Spalten `ScrapReasonIDActual` und `ModifiedDate` spiegeln die vom Triggervorgang generierten Werte wider, anstelle der von der `INSERT`-Anweisung bereitgestellten Werte.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Verwenden von OUTPUT INTO mit Identitätsspalten und berechneten Spalten  
  Im folgenden Beispiel wird die `EmployeeSales`-Tabelle erstellt, und anschließend werden mehrere Zeilen unter Verwendung einer `INSERT`-Anweisung mit einer `SELECT`-Anweisung in die Tabelle eingefügt, um Daten aus Quelltabellen abzurufen. Die `EmployeeSales`-Tabelle enthält eine Identitätsspalte (`EmployeeID`) und eine berechnete Spalte (`ProjectedSales`).  

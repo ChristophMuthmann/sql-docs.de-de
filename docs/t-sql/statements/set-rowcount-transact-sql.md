@@ -84,13 +84,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Count`  
-  
- `-----------`  
-  
- `537`  
-  
- `(1 row(s) affected)`  
+ ```
+ Count 
+ ----------- 
+ 537 
+ 
+ (1 row(s) affected)
+ ```  
   
  Legen Sie jetzt `ROWCOUNT` auf `4` fest, und geben Sie alle Zeilen zurück, um zu zeigen, dass nur 4 Zeilen zurückgegeben werden.  
   
@@ -100,9 +100,9 @@ SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
-```  
   
- `(4 row(s) affected)`  
+(4 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT beendet die Verarbeitung nach der angegebenen Anzahl von Zeilen. Im folgenden Beispiel beachten Sie, dass mehr als 20 Zeilen mit dem Kriterium `AccountType = 'Assets'`. Wenn SET ROWCOUNT angewendet wurde, werden jedoch nicht alle Zeilen zurückgegeben.  

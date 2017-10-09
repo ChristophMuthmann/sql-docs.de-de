@@ -201,10 +201,10 @@ Die folgenden Berechtigungen erforderlich, um eine CLR-Assembly beim `CLR strict
 > [!NOTE]  
 >  Die `ComplexNumber`-Assembly kann durch Ausführen der UserDefinedDataType-Beispielskripts erstellt werden. Weitere Informationen finden Sie unter [benutzerdefinierte Typ](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Hinzufügen einer Datei, die einer Assembly zugeordnet werden soll  
  Im folgenden Beispiel wird die Quellcodedatei `Class1.cs` hochgeladen, die der `MyClass`-Assembly zugeordnet werden soll. In diesem Beispiel wird davon ausgegangen, dass die `MyClass`-Assembly bereits in der Datenbank vorhanden ist.  
   

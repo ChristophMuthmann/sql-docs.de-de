@@ -64,9 +64,10 @@ SELECT @g.STCentroid().ToString();
 ### <a name="b-computing-the-centroid-of-a-curvepolygon-instance"></a>B. Berechnen des Schwerpunkts einer CurvePolygon-Instanz  
  Im folgenden Beispiel wird der Schwerpunkt für eine `CurvePolygon`-Instanz berechnet:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';`  
-  
- `SELECT @g.STCentroid().ToString() AS Centroid`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';  
+ SELECT @g.STCentroid().ToString() AS Centroid
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

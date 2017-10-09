@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  Im Folgenden finden Sie das Resultset.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  Die unerwarteten Ergebnisse werden zurückgegeben, da die logische Ausführung der TOP-Klausel der logischen Ausführung der ORDER BY-Klausel vorangeht, mit der die Ergebnisse des Operators (hier: UNION ALL) sortiert werden. Aus diesem Grund werden von der vorstehenden Abfrage ein beliebiges rotes und ein beliebiges blaues Auto zurückgegeben, und das Ergebnis dieser Union wird nach dem Preis sortiert. Im folgenden Beispiel wird veranschaulicht, wie eine Abfrage geschrieben wird, um das gewünschte Ergebnis zu erzielen.  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  Im Folgenden finden Sie das Resultset.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Wenn TOP mit INSERT, UPDATE, MERGE oder DELETE verwendet wird, werden die Zeilen, auf die verwiesen wird, nicht auf bestimmte Weise angeordnet, und die ORDER BY-Klausel kann in diesen Anweisungen nicht direkt angegeben werden. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, zu löschen oder zu bearbeiten, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden. Weitere Informationen finden Sie im Abschnitt "Beispiele" in diesem Thema.  

@@ -99,39 +99,32 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Y      `  
+ ```
+ Y       
+ ------- 
+ 8000 
   
- `-------`  
-  
- `8000`  
-  
-  `(1 row(s) affected)` 
+ (1 row(s) affected) 
   
     
-  `Y      `  
+ Y       
+ ------- 
+ 12000 
   
- `-------`  
-  
- `12000`  
-  
-  `(1 row(s) affected)` 
+ (1 row(s) affected) 
 
-`Y      `  
+ Y       
+ ------- 
+ 8000 
   
- `-------`  
+ (1 row(s) affected) 
   
- `8000`  
+ Y       
+ ------- 
+ 8000 
   
-  `(1 row(s) affected)` 
-  
-    
-  `Y      `  
-  
- `-------`  
-  
- `8000`  
-  
-  `(1 row(s) affected)`   
+ (1 row(s) affected)
+  ```   
    
 ## <a name="see-also"></a>Siehe auch  
  [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   

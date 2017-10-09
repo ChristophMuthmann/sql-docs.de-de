@@ -94,11 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------------------`  
+ ```
+ -------------------
   
- `5.00`  
+ 5.00
   
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Verwenden der OVER-Klausel  
  Im folgenden Beispiel werden die Funktionen MIN, MAX, AVG und COUNT mit der OVER-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen.  

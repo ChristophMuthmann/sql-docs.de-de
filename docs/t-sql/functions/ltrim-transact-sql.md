@@ -65,8 +65,10 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------------------------------------------------------------`  
-  `Five spaces are at the beginning of this string.`  
+ ```
+ ---------------------------------------------------------------  
+  Five spaces are at the beginning of this string.
+  ```  
 
 ### <a name="b-example-using-a-variable"></a>B: Beispiel mit einer Variablen   
   

@@ -73,13 +73,12 @@ SELECT @g.STDifference(@h).ToString();
 ### <a name="b-using-a-fullglobe-with-stdifference"></a>B. Verwenden eines FullGlobe mit STDifference()  
  Im folgenden Beispiel wird eine Instanz von `FullGlobe` verwendet. Das erste Ergebnis ist eine leere `GeometryCollection` , und das zweite Ergebnis ist eine `Polygon` -Instanz. `STDifference()`Gibt ein leeres `GeometryCollection` bei einem `FullGlobe` Instanz ist der Parameter. Alle Punkte in einer aufrufenden Instanz von `geography` sind in einer Instanz von `FullGlobe` enthalten.  
   
- `DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'FULLGLOBE';`  
-  
- `SELECT @g.STDifference(@h).ToString(),`  
-  
- `@h.STDifference(@g).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ DECLARE @h geography = 'FULLGLOBE';  
+ SELECT @g.STDifference(@h).ToString(),  
+ @h.STDifference(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

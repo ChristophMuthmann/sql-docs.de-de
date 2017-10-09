@@ -55,7 +55,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   
@@ -136,21 +136,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. Erstellen eines Synonyms zu einem Remoteobjekt  
  Im folgenden Beispiel befindet sich das Basisobjekt, `Contact`, auf einem Remoteserver namens `Server_Remote`.  

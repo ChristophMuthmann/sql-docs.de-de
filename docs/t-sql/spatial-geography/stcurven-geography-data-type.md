@@ -68,9 +68,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. Verwenden von STCurveN() für einen CircularString  
  Im folgenden Beispiel wird die zweite Kurve in einer Instanz von **CircularString** zurückgegeben:  
   
- `DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Die Rückgabe des Beispiels lautet wie folgt.  
   
@@ -79,9 +80,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. Verwenden von STCurveN() für eine CompoundCurve  
  Im folgenden Beispiel wird die zweite Kurve in einer Instanz von **CompoundCurve** zurückgegeben:  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Die Rückgabe des Beispiels lautet wie folgt.  
   
@@ -90,9 +92,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. Verwenden von STCurveN() für eine CompoundCurve mit drei CircularStrings  
  Im folgenden Beispiel wird eine Instanz von **CompoundCurve** , die drei separate Instanzen von **CircularString** kombiniert, in der gleichen Kurvensequenz wie im vorherigen Beispiel zurückgegeben:  
   
- `DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Die Rückgabe des Beispiels lautet wie folgt.  
   
@@ -103,21 +106,16 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
  Im folgende Beispiel wird gezeigt, wie Sie sicher, dass  *n*  gültig ist, bevor Sie die Methode von STCurveN() aufrufen:  
   
- `DECLARE @g geography;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 2;`  
-  
- `SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geography;  
+ DECLARE @n int;  
+ SET @n = 2;  
+ SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+  ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

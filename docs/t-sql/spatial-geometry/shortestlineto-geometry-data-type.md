@@ -54,20 +54,20 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. Aufrufen von ShortestLineTo() für sich nicht überschneidende Instanzen  
  In diesem Beispiel wird der geringste Abstand zwischen einer Instanz von `CircularString` und einer Instanz von `LineString` ermittelt, und die Instanz von `LineString` wird zurückgegeben, die die beiden Punkte verbindet:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>B. Aufrufen von ShortestLineTo() für sich überschneidende Instanzen  
  In diesem Beispiel wird eine leere Instanz von `LineString` zurückgegeben, da die sich die Instanz von `LineString` und die Instanz von `CircularString` überschneiden:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [ShortestLineTo &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  

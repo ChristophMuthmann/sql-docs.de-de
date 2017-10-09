@@ -76,32 +76,31 @@ SELECT @g.Reduce(.75).ToString();
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Verwenden von Reduce() in einem CircularString und veränderlichen Toleranzebenen  
  Im folgenden Beispiel wird `Reduce()` in einer **CircularString** -Instanz mit drei Toleranzebenen verwendet:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)';`  
-  
- `SELECT @g.Reduce(5).ToString();`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
+ SELECT @g.Reduce(5).ToString(); 
+ SELECT @g.Reduce(15).ToString(); 
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  Hierdurch wird folgende Ausgabe generiert:  
   
- `CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0)`  
-  
- `COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0))`  
-  
- `LINESTRING (0 0, 24 0)`  
+ ```
+ CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 
+ COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0)) 
+ LINESTRING (0 0, 24 0)
+ ```  
   
  Alle zurückgegebenen Instanzen enthalten die Endpunkte (0 0) und (24 0).  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. Verwenden von Reduce() in einer CompoundCurve mit veränderlichen Toleranzebenen  
  Im folgenden Beispiel wird `Reduce()` in einer **CompoundCurve** -Instanz mit drei Toleranzebenen verwendet:  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
+ SELECT @g.Reduce(15).ToString();  
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  Beachten Sie in diesem Beispiel, dass die zweite **SELECT** -Anweisung die **LineString** -Instanz mit drei Toleranzebenen verwendet: `LineString(0 0, 16 0)`.  
   

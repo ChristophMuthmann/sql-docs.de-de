@@ -60,19 +60,15 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein `EnvelopeAggregate` für eine Reihe von **geography** -Standorten in einer Stadt durchgeführt.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte statische Geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

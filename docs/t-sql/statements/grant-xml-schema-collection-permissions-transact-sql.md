@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die `EXECUTE`-Berechtigung für die XML-Schemaauflistung `Invoices4` dem Benutzer `Wanida` erteilt. Die XML-Schemaauflistung `Invoices4` befindet sich im `Sales`-Schema der `AdventureWorks2012`-Datenbank.  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verweigern von Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
