@@ -69,7 +69,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT gibt NULL zurück.  
- Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT "0" zurückgibt, wenn die Umwandlung fehlerhaft ist.  
+ Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT NULL zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
 ```tsql  
 SELECT   
