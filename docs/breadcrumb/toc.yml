@@ -348,6 +348,9 @@
                 - name: Leistung
                   href: /sql/integration-services/performance/
                   homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
+                - name: Horizontale Hochskalierung
+                  href: /sql/integration-services/scale-out/
+                  homepage: /sql/integration-services/scale-out/integration-services-ssis-scale-out
                 - name: Sicherheit
                   href: /sql/integration-services/security/
                   homepage: /sql/integration-services/security/security-overview-integration-services

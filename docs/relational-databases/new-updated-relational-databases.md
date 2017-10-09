@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Neu und zuletzt aktualisiert: Dokumentation zu relationalen Datenbanken
@@ -34,7 +34,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **18.07.2017** &nbsp; –bis– &nbsp; **11.09.2017**
+- *Datumsbereich des Updates*: &nbsp; **11.9.2017** &nbsp; bis &nbsp; **27.9.2017**
 - *Themenbereich:* &nbsp; **Relationale Datenbanken**
 
 
@@ -47,18 +47,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank](import-export/import-data-from-excel-to-sql.md)
-2. [Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase-Kerberos-Konnektivität)](polybase/polybase-troubleshoot-connectivity.md)
-3. [Transparente Datenverschlüsselung (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Transparent Data Encryption für Azure SQL-Datenbank und Data Warehouse](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell: Aktivieren von Transparent Data Encryption mithilfe Ihres eigenen Schlüssels aus Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SQL Server Shared Management Objects (SMO) License Terms (Lizenzbedingungen für SQL Server Shared Management Objects (SMO))](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [Importieren und Exportieren von Daten des SQL Servers und der Azure SQL-Datenbank](import-export/overview-import-export.md)
 
 
 
@@ -80,11 +69,11 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
+### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Automatische Optimierung](#TitleNum_1)
+1. [Übersicht über räumliche Datentypen](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Automatische Optimierung](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1. &nbsp; [Übersicht über räumliche Datentypen](spatial/spatial-data-types-overview.md)
 
-*Aktualisiert: 16.08.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Aktualisiert: 26.9.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**Automatische Korrektur der Planauswahl**
-
-
-„..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ kann automatisch zum letzten bekannten geeigneten Plan wechseln, unabhängig davon, wann die Regression der Planauswahl erkannt wurde.
-
-„![SQL plan choice correction--media/force-last-good-plan.png „SQL-Korrektur der Planauswahl“)
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ erkennt automatisch alle potenziellen Regressionen von Planauswahlen, einschließlich des Plans, der statt des falschen Plans verwendet werden soll.
-Wenn „..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ für den letzten bekannten geeigneten Plan gilt, wird die Leistung des erzwungenen Plans automatisch überwacht. Wenn der erzwungene Plan nicht besser als der zurückgestellte Plan ist, wird der neue Plan nicht mehr erzwungen und „..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ kompiliert einen neuen Plan. Wenn „..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ bestätigt, dass der erzwungene Plan besser als der zurückgestellte ist, wird der erzwungene Plan bis zu einer Neukompilierung (z.B. bei der nächsten Statistik oder Schemaänderung) beibehalten, die besser als der zurückgestellte Plan ist.
-
-**Aktivieren der automatischen Korrektur der Planauswahl**
-
-
-Sie können die automatische Optimierung pro Datenbank aktivieren und angeben, dass der letzte geeignete Plan erzwungen werden soll, wenn eine Regression der Planänderung erkannt wird. Die automatische Optimierung wird durch folgenden Befehl aktiviert:
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-Wenn Sie diese Option aktivieren, erzwingt „..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]“ automatisch jede Empfehlung, bei der der geschätzte CPU-Gewinn größer als 10 Sekunden ist oder bei der die Anzahl von Fehlern im neuen Plan höher als die Anzahl von Fehlern im empfohlenen Plan ist. Außerdem wird überprüft, ob der erzwungene Plan besser als der aktuelle ist.
-
-**Alternative – manuelle Korrektur der Planauswahl**
-
-
-Ohne die automatische Optimierung müssen Benutzer ihr System regelmäßig überwachen und nach zurückgestellten Abfragen suchen. Wenn Pläne zurückgestellt wurden, sollte der Benutzer diese finden.
+ -  Es gibt zwei Typen von räumlichen Daten. Der **geometry** -Datentyp unterstützt planare bzw. euklidische Daten (flache Erdabbildung). Der **geometry** -Datentyp entspricht der Version 1.1.0. der Simple Features for SQL-Spezifikation des Open Geospatial Consortium (OGC) und ist auch mit SQL MM (ISO-Standard) kompatibel.
+ -
+ - Zudem unterstützt ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] den **geography**-Datentyp, der ellipsenförmige Daten (runde Erdabbildung) wie GPS-Breiten- und -Längenkoordinaten speichert.
+ -
+ -> [!IMPORTANT]
+ ->  Laden Sie das folgende Whitepaper herunter, um eine ausführliche Beschreibung und Beispiele der in ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)] eingeführten räumlichen Funktionen (u.a. Erweiterungen der räumlichen Datentypen) zu erhalten: [New Spatial Features in SQL Server Code-Named „Denali“ (Neue räumliche Funktionen in SQL Server Codename „Denali“)](http://go.microsoft.com/fwlink/?LinkId=226407).
+ -
+ -##  <a name="objects"></a> Räumliche Datenobjekte
+ - Der **geometry** -Datentyp und der **geography** -Datentyp unterstützen 16 räumliche Datenobjekte bzw. Instanztypen. Nur elf dieser Instanztypen sind jedoch *instanziierbar*. Sie können diese Instanzen erstellen und Sie in einer Datenbanken bearbeiten (oder instanziieren). Diese Instanzen leiten bestimmte Eigenschaften von ihren übergeordneten Datentypen ab, die sie als **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** oder als mehrere Instanzen von **geometry** oder **geography** in einer **GeometryCollection**auszeichnen. Der**Geography** -Typ verfügt über einen zusätzlichen Instanztyp **FullGlobe**.
+ -
+ - Die nachfolgende Abbildung stellt die **geometry** -Hierarchie dar, auf der der **geometry** -Datentyp und der **geography** -Datentyp basieren. Die instanziierbaren Typen von **geometry** und **geography** sind in Blau dargestellt.
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - Wie aus der Abbildung hervorgeht, handelt es sich bei den zehn instanziierbaren Typen der Datentypen **geometry** und **geography** **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**und **GeometryCollection**. Es gibt einen zusätzlichen instanziierbaren Typen für den geography-Datentyp: **FullGlobe**. Die Typen **geometry** und **geography** können eine spezifische Instanz erkennen, wenn es sich um eine wohlgeformte Instanz handelt. Dies gilt auch, wenn die Instanz nicht explizit definiert ist. Wenn Sie beispielsweise eine **Point** -Instanz explizit mit der STPointFromText()-Methode definieren, erkennen **geometry** und **geography** die Instanz als **Point**, sofern die Methodeneingabe wohlgeformt ist. Wenn Sie die gleiche Instanz mit der `STGeomFromText()` -Methode definieren, erkennen sowohl der **geometry** - als auch der **geography** -Datentyp die Instanz als **Point**.
 
 
 
@@ -151,24 +130,20 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [New + Updated (3+12): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (3+12): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (5+0): **Connect to SQL** docs (Neu + Aktualisiert (1+2): Dokumentation zur Herstellung einer Verbindung mit SQL)](../connect/new-updated-connect.md)
-- [New + Updated (5+1): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
-- [New + Updated (19+82): **Integration Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu SSIS für SQL)](../integration-services/new-updated-integration-services.md)
-- [New + Updated (1+8): **Linux for SQL** docs (Neu + Aktualisiert (13+2): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
-- [New + Updated (12+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (0+1): **Reporting Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (7+1): **Microsoft SQL Server** docs (Neu + Aktualisiert (2+2): Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (1+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+2): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [New + Updated (1+4): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (4+1): **Transact-SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
-- [New + Updated (0+1): **Tools for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs (Neu + Aktualisiert (4+1): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0):  **Integration Services for SQL** docs (Neu + Aktualisiert (17+0):Dokumentation zu Integration Services für SQL)](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs (Neu + Aktualisiert (3+0): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (1+1): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS) Dokumentation](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs (Neu + Aktualisiert: Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 

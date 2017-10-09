@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -203,13 +203,13 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  Die generierte Formatdatei, `Department-c.xml`, enthält die folgenden XML-Elemente:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  Die generierte Formatdatei, `Department-n.xml`, enthält die folgenden XML-Elemente:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

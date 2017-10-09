@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
@@ -30,10 +30,10 @@ Die dynamische Datenmaskierung (DDM) beschränkt die Offenlegung vertraulicher D
 
 Mit der dynamischen Datenmaskierung können Sie unbefugten Zugriff auf sensible Daten verhindern, indem Kunden festlegen können, wie viele sensible Daten mit minimaler Auswirkung auf die Anwendungsschicht offengelegt werden. DDM kann für die Datenbank konfiguriert werden, um sensible Daten in Resultsets von Abfragen in festgelegten Datenbankfeldern auszublenden, während die Daten in der Datenbank nicht geändert werden. Die dynamische Datenmaskierung ist für vorhandene Anwendungen einfach zu verwenden, da Maskierungsregeln auf die Abfrageergebnisse angewendet werden. Viele Clientanwendungen können sensible Daten maskieren, ohne vorhandene Abfragen zu ändern.
 
-*  Eine zentrale Datenmaskierungsrichtlinie wirkt sich direkt auf vertrauliche Felder in der Datenbank aus.
-*  Festlegen berechtigter Benutzer oder Rollen, die über Zugriff auf vertrauliche Daten verfügen.
-*  DDM umfasst Funktionen für die vollständige und teilweise Maskierung sowie eine willkürliche Maske für numerische Daten.
-*  Einfache [!INCLUDE[tsql_md](../../includes/tsql-md.md)]-Befehle dienen zum Definieren und Verwalten von Masken.
+* Eine zentrale Datenmaskierungsrichtlinie wirkt sich direkt auf vertrauliche Felder in der Datenbank aus.
+* Festlegen berechtigter Benutzer oder Rollen, die Zugriff auf vertrauliche Daten haben.
+* DDM umfasst Funktionen zur vollständigen und partiellen Maskierung sowie eine willkürliche Maske für numerische Daten.
+* Einfache [!INCLUDE[tsql_md](../../includes/tsql-md.md)]-Befehle dienen zum Definieren und Verwalten von Masken.
 
 Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren. Diese Datenelemente dürfen dem Supportmitarbeiter aber nicht vollständig verfügbar gemacht werden. Es kann eine Maskierungsregel definiert werden, die alle außer den letzten vier Ziffern einer Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer beliebigen Abfrage maskiert. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
 

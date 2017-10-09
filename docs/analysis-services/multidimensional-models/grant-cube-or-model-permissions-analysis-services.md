@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Wenn Excel geöffnet wird, verbinden Sie sich über die Registerkarte "Daten" mit Analysis Services. Da Sie Excel als anderer Windows-Benutzer ausführen, ist die Option **Windows-Authentifizierung verwenden** der richtige Anmeldeinformationstyp für das Testen von Rollen. Falls Sie Hilfe bei den Schritten benötigen, lesen Sie unter [Herstellen einer Verbindung von Clientanwendungen &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md) nach.  
   
-     Wenn bei der Verbindung Fehlermeldungen angezeigt werden, überprüfen Sie die Portkonfiguration für Analysis Services, und vergewissern Sie sich, dass der Server Remoteverbindungen akzeptiert. Informationen zur Portkonfiguration finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+     Wenn bei der Verbindung Fehlermeldungen angezeigt werden, überprüfen Sie die Portkonfiguration für Analysis Services, und vergewissern Sie sich, dass der Server Remoteverbindungen akzeptiert. Informationen zur Portkonfiguration finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>Schritt 5: Definition und Zuweisungen der Skriptrolle  
   

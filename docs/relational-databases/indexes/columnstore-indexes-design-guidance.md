@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore-Indizes - Designrichtlinien
@@ -50,7 +50,7 @@ Im Folgenden finden Sie eine Übersicht über die Optionen und Empfehlungen.
 | Columnstore-Option | Empfehlungen für die Verwendung | Komprimierung |
 | :----------------- | :------------------- | :---------- |
 | Gruppierter Columnstore-Index | Verwendung für:<br></br>1) Herkömmliche Data Warehouse-Arbeitsauslastung mit einem Stern- oder Schneeflockenschema<br></br>2) Bei IoT-Arbeitsauslastungen (Internet der Dinge), bei denen mit minimalen Aktualisierungen und Löschvorgängen große Datenmengen eingefügt werden | Durchschnittlich zehnfach |
-| Nicht gruppierte BTree-Indizes in einem gruppierten Columnstore-Index | Verwendungszweck:<br></br>    1) Durchsetzen von Primärschlüssel- und Fremdschlüsseleinschränkungen bei einem gruppierten Columnstore-Index<br></br>    2) Beschleunigen von Abfragen, die nach bestimmten Werten oder kleinen Wertebereichen suchen<br></br>    3) Beschleunigen von Aktualisierungen und Löschvorgängen bei bestimmten Zeilen| Durchschnittlich zehnfach plus zusätzlicher Speicher für die nicht gruppierten Indizes|
+| Nicht gruppierte BTree-Indizes in einem gruppierten Columnstore-Index | Verwendungszweck:<br></br>    1) Durchsetzen von Primärschlüssel- und Fremdschlüsseleinschränkungen bei einem gruppierten Columnstore-Index<br></br>    2) Beschleunigen von Abfragen, die nach bestimmten Werten oder kleinen Wertebereichen suchen.<br></br>    3) Beschleunigen von Updates und Löschvorgängen von bestimmten Zeilen.| Durchschnittlich zehnfach plus zusätzlicher Speicher für die nicht gruppierten Indizes|
 | Nicht gruppierter Columnstore-Index in einem datenträgerbasierten Heap- oder BTree-Index | Verwendung für: <br></br>1) Eine OLTP-Arbeitsauslastung mit einigen Analyseabfragen. Sie können für Analysen erstellte BTree-Indizes löschen und durch einen nicht gruppierten Columnstore-Index ersetzen.<br></br>2) Zahlreiche herkömmliche OLTP-Arbeitsauslastungen, die ETL-Vorgänge (Extract Transform and Load) durchführen, um Daten in ein separates Data Warehouse zu verschieben. Wenn Sie einen nicht gruppierten Columnstore-Index erstellen, benötigen Sie bei einigen OLTP-Tabellen weder ETL-Vorgänge noch ein separates Data Warehouse. | Ein nicht gruppierter Columnstore-Index ist ein zusätzlicher Index, der im Durchschnitt einen um 10% größeren Speicher erforderlich macht.|
 | Columnstore-Index in einer In-Memory-Tabelle | Dieselben Empfehlungen gelten für den nicht gruppierten Columnstore-Index in einer datenträgerbasierten Tabelle, wobei es sich bei der Basistabelle jedoch um eine In-Memory-Tabelle handelt. | Der Columnstore-Index ist ein zusätzlicher Index.|
 
@@ -113,7 +113,7 @@ Bei umfangreichen Tabelle lassen sich Datenbereiche praktisch nur mithilfe von P
 
 Sowohl in Rowstore- als auch in Columnstore-Tabellen werden Partitionen in folgenden Fällen verwendet:
 
-- Steuern der Größe von inkrementellen Sicherungen. Sie können Partitionen sichern, um Dateigruppen zu trennen und anschließend als schreibgeschützt zu kennzeichnen. Auf diese Weise werden die schreibgeschützten Dateigruppen bei zukünftigen Sicherungen übersprungen. 
+- Steuern der Größe von inkrementellen Sicherungen. Sie können Partitionen sichern, um Dateigruppen zu trennen und sie anschließend als schreibgeschützt zu kennzeichnen. Auf diese Weise werden die schreibgeschützten Dateigruppen bei zukünftigen Sicherungen übersprungen. 
 - Sparen bei Speicherkosten durch Verschieben älterer Partitionen in kostengünstigeren Speicher. Durch Partitionswechsel können Sie beispielsweise eine Partition an einen kostengünstigeren Speicherort verschieben.
 - Effizientes Durchführen von Vorgängen durch Begrenzen der Vorgänge auf eine Partition. Sie können beispielsweise nur die fragmentierten Partitionen für die Indexwartung verwenden.
 
@@ -166,7 +166,7 @@ So können Sie die Sortierreihenfolge bei der Konvertierung beibehalten:
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## <a name="related-tasks"></a>Verwandte Aufgaben  

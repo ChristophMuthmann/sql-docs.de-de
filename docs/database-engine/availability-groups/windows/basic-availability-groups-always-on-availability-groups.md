@@ -1,8 +1,10 @@
 ---
 title: "Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Basis-Verfügbarkeitsgruppen (AlwaysOn-Verfügbarkeitsgruppen)
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>Einschränkungen  
  Basis-Verfügbarkeitsgruppen verwenden eine Teilmenge der Funktionen verglichen mit erweiterten Verfügbarkeitsgruppen auf SQL Server 2016 Enterprise Edition. Basis-Verfügbarkeitsgruppen beinhalten die folgenden Einschränkungen:  
   
--   Beschränkung auf zwei Replikate (primäres und sekundäres)  
+- Beschränkung auf zwei Replikate (primäres und sekundäres)  
   
--   Kein Lesezugriff auf das sekundäre Replikat.  
+- Kein Lesezugriff auf das sekundäre Replikat.  
   
--   Keine Sicherung auf das sekundäre Replikat.  
-  
--   Keine Unterstützung für Replikate, die auf Servern gehostet werden, die eine Version von SQL Server vor SQL Server 2016 Community Technology Preview 3 (CTP3) ausführen.  
-  
--   Keine Unterstützung für das Hinzufügen oder Entfernen eines Replikats an oder von einer vorhandenen Basis-Verfügbarkeitsgruppe.  
-  
--   Unterstützung für eine Verfügbarkeitsdatenbank.  
-  
--   Basis-Verfügbarkeitsgruppen können nicht zu erweiterten Verfügbarkeitsgruppen upgegradet werden. Die Gruppe muss gelöscht und erneut einer Gruppe hinzugefügt werden, die nur Server enthält, die SQL Server 2016 Enterprise Edition ausführen.  
-  
--   Basis-Verfügbarkeitsgruppen werden nur für Standard Editions-Server unterstützt. 
+- Keine Sicherung auf das sekundäre Replikat.  
 
--   Grundlegende Verfügbarkeitsgruppen können nicht Teil einer verteilten Verfügbarkeitsgruppe sein. 
+- Keine Integritätsüberprüfungen der sekundären Replikate 
+
+- Keine Unterstützung für Replikate, die auf Servern gehostet werden, die eine Version von SQL Server vor SQL Server 2016 Community Technology Preview 3 (CTP3) ausführen.  
+  
+- Keine Unterstützung für das Hinzufügen oder Entfernen eines Replikats an oder von einer vorhandenen Basis-Verfügbarkeitsgruppe.  
+  
+- Unterstützung für eine Verfügbarkeitsdatenbank.  
+  
+- Basis-Verfügbarkeitsgruppen können nicht zu erweiterten Verfügbarkeitsgruppen upgegradet werden. Die Gruppe muss gelöscht und erneut einer Gruppe hinzugefügt werden, die nur Server enthält, die SQL Server 2016 Enterprise Edition ausführen.  
+  
+- Basis-Verfügbarkeitsgruppen werden nur für Standard Editions-Server unterstützt. 
+
+- Grundlegende Verfügbarkeitsgruppen können nicht Teil einer verteilten Verfügbarkeitsgruppe sein. 
   
 ## <a name="configuration"></a>Konfiguration  
  Eine Basis-AlwaysOn-Verfügbarkeitsgruppe kann auf zwei beliebigen SQL Server 2016 Standard Edition-Servern erstellt werden. Wenn Sie eine Basis-Verfügbarkeitsgruppe erstellen, müssen Sie beide Replikate während der Erstellung angeben.  

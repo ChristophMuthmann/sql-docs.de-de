@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Neue und kürzlich aktualisierte Dokumentation zu Datenbankmodulen
@@ -34,7 +34,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **18.07.2017** &nbsp; –bis– &nbsp; **11.09.2017**
+- *Datumsbereich des Updates:* &nbsp; **11.9.2017** &nbsp; bis &nbsp; **27.9.2017**
 - *Themenbereich:* &nbsp; **Datenbankmodul**.
 
 
@@ -47,11 +47,10 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [SQL Server-Installation](install-windows/installation-for-sql-server.md)
-2. [Unterstützte Versions- und Editionsupgrades in SQL Server 2017](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [SQL Server-Datenbankmodul](sql-server-database-engine-overview.md)
-4. [Neues im Datenbankmodul – SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [Neues im Datenbankmodul – SQL Server 2017](whats-new-in-sql-server-2017.md)
+1. [Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
+2. [Installieren von SQL Server von der Eingabeaufforderung](install-windows/install-sql-server-from-the-command-prompt.md)
+3. [Installieren von SQL Server mithilfe einer Konfigurationsdatei](install-windows/install-sql-server-using-a-configuration-file.md)
+4. [Business continuity and database recovery - SQL Server (Geschäftskontinuität und Datenbankwiederherstellung mit SQL Server)](sql-server-business-continuity-dr.md)
 
 
 
@@ -73,11 +72,11 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
+### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Automatisches Seeding für sekundäre Replikate](#TitleNum_1)
+1. [Installieren von Updates an der Eingabeaufforderung](#TitleNum_1)
 
 
 
@@ -88,41 +87,36 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1. &nbsp; [Automatisches Seeding für sekundäre Replikate](availability-groups/windows/automatic-seeding-secondary-replicas.md)
+### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1. &nbsp; [Installieren von Updates an der Eingabeaufforderung](install-windows/installing-updates-from-the-command-prompt.md)
 
-*Updated: 21.08.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Aktualisiert: 12.9.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
+<!-- Source markdown line 48.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
+<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
 
 
 
-Bis SQL Server 2016 muss der Ordner, in dem die Datenbank durch das automatische Seeding erstellt wird, bereits vorhanden und mit dem Pfad auf dem primären Replikat identisch sein.
+- Aktualisieren Sie alle Instanzen von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools auf Ihrem Computer:
 
-In SQL Server 2017 empfiehlt Microsoft, denselben Pfad für Daten und Protokolldateien für alle Replikate zu verwenden, die in einer Verfügbarkeitsgruppe enthalten sind. Sie können jedoch bei Bedarf unterschiedliche Pfade verwenden. In einer plattformübergreifenden Verfügbarkeitsgruppe kann sich beispielsweise eine Instanz von SQL Server unter Windows und eine weitere Instanz von SQL Server unter Linux befinden. Die unterschiedlichen Plattformen verfügen über unterschiedliche Standardpfade. SQL Server 2017 unterstützt Verfügbarkeitsgruppenreplikate auf Instanzen von SQL Server mit unterschiedlichen Standardpfaden.
+```
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
+```
 
-Die folgende Tabelle enthält Beispiele für die unterstützten Datenträgerlayouts, die automatisches Seeding unterstützen können:
+- Entfernen Sie ein Update für eine einfache Instanz von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
 
-|Primäre Instanz</br>Standarddatenpfad|Sekundäre Instanz</br>Standarddatenpfad|Primäre Instanz</br>Quelldateispeicherort|Sekundäre Instanz</br> Zieldateispeicherort
-|:------|:------|:------|:------
-|C:\\Daten\\ |/var/opt/mssql/data/ |C:\\Daten\\ |/var/opt/mssql/data/|
-|C:\\Daten\\ |/var/opt/mssql/data/ |C:\\Daten\\group1\\ |/var/opt/mssql/data/group1/|
-|C:\\Daten\\ |D:\\Daten\\ |C:\\Daten\\ |D:\\Daten\\
-|C:\\Daten\\ |D:\\Daten\\ |C:\\Daten\\group1\\ |D:\\Daten\\group1\
+```
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+```
 
-Szenarios, bei denen der Speicherort der Datenbank der primären und sekundären Replikate nicht dem Standardpfad der Instanz entspricht, sind von dieser Änderung nicht betroffen. Die Anforderung, dass die Dateipfade von sekundären Replikaten mit denen der primären Replikate übereinstimmen müssen, besteht weiterhin.
+- Entfernen Sie ein Update für ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], nur für freigegebene Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
 
-|Primäre Instanz</br>Standarddatenpfad|Sekundäre Instanz</br>Standarddatenpfad|Primäre Instanz</br>Dateispeicherort|Sekundäre Instanz</br> Dateispeicherort
-|:------|:------|:------|:------
-|C:\\Daten\\ |C:\\Daten\\ |D:\\group1\\ |D:\\group1\\
-|C:\\Daten\\ |C:\\Daten\\ |D:\\Daten\\ |D:\\Daten\\
-|C:\\Daten\\ |C:\\Daten\\ |D:\\Daten\\group1\\ |D:\\Daten\\group1\\
-
-Beim Kombinieren von Standard- und Nicht-Standardpfaden auf den primären und sekundären Replikaten verhält sich SQL Server 2017 anders als die vorherigen Versionen. In der folgenden Tabelle wird das Verhaltensmuster von SQL Server 2017 veranschaulicht.
+```
+    <package_name>.exe /qs /Action=RemovePatch
+```
 
 
 
@@ -141,24 +135,20 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [New + Updated (3+12): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (3+12): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (5+0): **Connect to SQL** docs (Neu + Aktualisiert (1+2): Dokumentation zur Herstellung einer Verbindung mit SQL)](../connect/new-updated-connect.md)
-- [New + Updated (5+1): **Database Engine for SQL** docs (Neu + Aktualisiert (6+0): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
-- [New + Updated (19+82): **Integration Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu SSIS für SQL)](../integration-services/new-updated-integration-services.md)
-- [New + Updated (1+8): **Linux for SQL** docs (Neu + Aktualisiert (13+2): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
-- [New + Updated (12+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (8+4): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (0+1): **Reporting Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (7+1): **Microsoft SQL Server** docs (Neu + Aktualisiert (2+2): Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (1+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+2): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [New + Updated (1+4): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (4+1): **Transact-SQL** docs (Neu + Aktualisiert (1+0): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
-- [New + Updated (0+1): **Tools for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs (Neu + Aktualisiert (4+1): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0):  **Integration Services for SQL** docs (Neu + Aktualisiert (17+0):Dokumentation zu Integration Services für SQL)](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs (Neu + Aktualisiert (3+0): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (1+1): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS) Dokumentation](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
@@ -166,6 +156,10 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs (Neu + Aktualisiert: Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 

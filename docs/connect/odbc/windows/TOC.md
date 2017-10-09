@@ -9,3 +9,10 @@
 # [Treiberfähiges Verbindungspooling im ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [Beispiel für asynchrone Ausführung (Benachrichtigungsmethode)](asynchronous-execution-notification-method-sample.md)
+
+# Hilfethemen
+## [Datenquellen-Assistent (Bildschirm 1)](dsn-wizard-1.md)
+## [Datenquellen-Assistent (Bildschirm 2)](dsn-wizard-2.md)
+## [Datenquellen-Assistent (Bildschirm 3)](dsn-wizard-3.md)
+## [Datenquellen-Assistent (Bildschirm 4)](dsn-wizard-4.md)
+## [SQL Server-Anmeldedialogfeld](sql-server-login-dialog.md)

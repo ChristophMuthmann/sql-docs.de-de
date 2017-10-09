@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  Der Zugriff auf Daten auf Zeilenebene in einer Tabelle wird durch ein Sicherheitsprädikat beschränkt, das als Inline-Tabellenwertfunktion definiert ist. Die Funktion wird dann aufgerufen und durch eine Sicherheitsrichtlinie erzwungen. Für FILTER-Prädikate gilt: Es gibt keinen Hinweis für die Anwendung, dass Zeilen aus dem Resultset gefiltert wurden. Wenn alle Zeilen gefiltert werden, wird ein Nullsatz zurückgegeben. Für BLOCK-Prädikate gilt: Alle Vorgänge, die gegen das Prädikat verstoßen, misslingen mit einem Fehler.  
   
- Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet, das betrifft alle Abrufvorgänge: **SELECT**, **DELETE** (d. h. Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE** (d. h. Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
+ Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet. Dies betrifft alle GET-Vorgänge: **AUSWÄHLEN** **LÖSCHEN** (d.h., der Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE** (d.h., der Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
   
 -   Die Prädikate AFTER INSERT und AFTER UPDATE können Benutzer am Ändern von Zeilen in Werte hindern, die gegen das Prädikat verstoßen.  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  FILTER- und BLOCK-Prädikate und Sicherheitsrichtlinien weisen folgendes Verhalten auf:  
   
--   Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON`erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle **SELECT** - oder **EXECUTE** -Berechtigungen für diese zusätzlichen Tabellen und Funktionen.  
-  
-     Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Die Verknüpfungsfunktion ist über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen.  
+-   Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON`erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle **SELECT** - oder **EXECUTE** -Berechtigungen für diese zusätzlichen Tabellen und Funktionen.
   
 -   Sie können eine Abfrage auf eine Tabelle anwenden, für die ein Sicherheitsprädikat zwar definiert, jedoch deaktiviert ist. Alle Zeilen, die gefiltert oder blockiert worden wären, sind nicht betroffen.  
   
