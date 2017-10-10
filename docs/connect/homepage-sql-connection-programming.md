@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für den Client für Microsoft SQL Server-Programmierung
@@ -52,9 +52,9 @@ In der folgenden Tabelle wird jede Sprache Bild einen Link zu den Details zu SQL
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![C#-Logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM-Entity Framework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java-Logo][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js-Logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP-Logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Python-Logo][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby-Logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -152,7 +152,7 @@ Die JDBC-Dokumentation enthält die folgenden Hauptbereichen:
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Stamm der JDBC-Dokumentation. |
 | [Referenz](./jdbc/reference/index.md) | Schnittstellen, Klassen und Member. |
-| [Programmierhandbuch für JDBC-Treiber](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Informationen zu Konfigurationen sowie Codebeispiele. |
+| [Programmierhandbuch für den JDBC-SQL-Treiber](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Informationen zu Konfigurationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 
