@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |Eigenschaft|Wert|  
 |--------------|-----------|  
-|Syntax|**Zeit** [(*Genauigkeit in Sekundenbruchteilen*)]|  
+|Syntax|**Zeit** [(*Bruchteilen zweite Skala*)]|  
 |Verwendung|Deklarieren Sie @MyTime **time(7)**<br /><br /> Erstellen der Tabelle Table1 (Column1 **time(7)** )|  
-|*Genauigkeit in Sekundenbruchteilen*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Bei Informatica – kann dies eine Ganzzahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Sekundenbruchteil beträgt 7 (100 ns).|  
+|*Sekundenbruchteile*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Bei Informatica – kann dies eine Ganzzahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für die Sekundenbruchteile Dezimalstellen ist 7 (100 NS).|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|ss [.nnnnnnn] (ss [.nnn] für Informatica –)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
 |Bereich|00:00:00.0000000 über 23:59:59.9999999 (00:00:00.000 über 23:59:59.999 für Informatica –)|  
-|Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica n\* ist null bis drei Ziffern im Bereich von 0 bis 999.|  
+|Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> n\*ist null bis sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica n\* ist null bis drei Ziffern im Bereich von 0 bis 999.|  
 |Zeichenlänge|mindestens 8 Positionen (HH) bis maximal 16 (ss.nnnnnnn). Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
 |Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Finden Sie in der folgenden Tabelle aus.|  
 |Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. Im Informatica –, die Standardeinstellung ist 4 Bytes fest, der Standardwert ist 1 ms Bruchteilen zweiter mit einfacher Genauigkeit.|  

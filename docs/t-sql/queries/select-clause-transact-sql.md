@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="select-clause-transact-sql"></a>SELECT-Klausel (Transact-SQL)
@@ -140,13 +140,12 @@ FROM Cities;
   
  Aliasnamen werden auch verwendet, um Namen für die Ergebnisse von Ausdrücken anzugeben, beispielsweise:  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *Spaltenalias* können in einer ORDER BY-Klausel verwendet werden. Sie kann jedoch nicht in einer WHERE-, GROUP BY- oder HAVING-Klausel verwendet werden. Wenn der Abfrageausdruck Teil einer DECLARE CURSOR-Anweisung ist *Spaltenalias* kann nicht in der FOR UPDATE-Klausel verwendet werden.  
   

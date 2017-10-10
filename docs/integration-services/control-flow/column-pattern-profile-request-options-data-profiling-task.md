@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** wird standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Sind die Symbole beispielsweise "`()-`", wird der Wert "(425) 123-4567" mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
+-   **Symbole** wird standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%` sowie den Teilstrich. Sind die Symbole beispielsweise "`()-`", wird der Wert "(425) 123-4567" mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
  **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   

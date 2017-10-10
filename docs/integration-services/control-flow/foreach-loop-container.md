@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 709fd98f48764c19b4e358812c20cbf1dc52b8e4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
 ms.contentlocale: de-de
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach-ADO-Enumerator zum Aufzählen von Zeilen in Tabellen. Beispielsweise können Sie die Zeilen in einem ADO-Recordset abrufen.  
   
-     Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer **Object** -Paketvariablen des Datentyps gespeichert ist. Sie verwenden typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Die für den Foreach-ADO-Enumerator angegebene Variable muss den Datentyp <ui>Object>/ui> haben. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer **Object** -Paketvariablen des Datentyps gespeichert ist. Sie verwenden typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Die für den Foreach-ADO-Enumerator angegebene Variable muss den Datentyp <ui>Object>/ui> haben. Weitere Informationen über das recordsetziel finden Sie unter [Verwenden eines Recordsetziels](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   Enumerator für Foreach-ADO.NET-Schemarowset zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank aufzählen und eine Liste dafür abrufen.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach-Azure-Blob-Enumerator zum Aufzählen von Blobs in einem Blobcontainer in Azure Storage.  
 
--   Foreach-ADLS File-Enumerator zum Aufzählen von Dateien in einem ADLS-Verzeichnis.
+-   Foreach-ADLS File-Enumerator zum Aufzählen von Dateien in einem Verzeichnis in Azure Data Lake-Speicher.
   
  Das folgende Diagramm zeigt einen Foreach-Schleifencontainer mit einem Task Dateisystem. Die Foreach-Schleife verwendet den Foreach-Dateienumerator, und der Task Dateisystem ist so konfiguriert, dass eine Datei kopiert wird. Falls der vom Enumerator angegebene Ordner vier Dateien enthält, wird die Schleife viermal wiederholt, und die vier Dateien werden kopiert.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/29/2017
 |Foreach-SMO-Enumerator|Geben Sie die Verbindung mit einer Datenbank und die aufzuzählenden SMO-Objekte an.|  
 |Foreach-HDFS-Datei-Enumerator|Geben Sie einen Ordner sowie die aufzuzählenden Dateien und das Format des Dateinamens der abgerufenen Dateien an. Geben Sie darüber hinaus an, ob Unterordner durchsucht werden sollen.|  
 |Foreach-Azure-Blob-Enumerator|Geben Sie den Azure-BLOB-Container mit den aufzuzählenden Blobs an.|  
-|Foreach-ADLS-Datei|Geben Sie den ADLS-Verzeichnis mit den Dateien aufgelistet werden sollen, sowie einige Filter sind.|
+|Foreach-ADLS-Datei|Geben Sie das Azure Data Lake-Speicher-Verzeichnis, das die aufzuzählenden Dateien enthält.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Hinzufügen einer Enumeration zu einer ablaufsteuerung mit einem ForEach-Schleifencontainer
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Schließt den ForEach-Schleifencontainer, ein ablaufsteuerungselement, die einfach eine Schleifenkonstruktion einschließen können, die Dateien und Objekte in der ablaufsteuerung eines Pakets aufgezählt werden vereinfacht. Weitere Informationen finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -129,7 +129,7 @@ In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers bes
   
 5.  Geben Sie einen Enumerator an, und legen Sie wie folgt Enumeratoroptionen fest:  
   
-    -   Wenn Sie den Foreach-Dateienumerator verwenden möchten, stellen Sie den Ordner bereit, der die aufzuzählenden Dateien enthält. Geben Sie einen Filter für den Dateinamen und den Typ an, und geben Sie an, ob der vollqualifizierte Dateiname zurückgegeben werden soll. Zeigen Sie außerdem an, ob Unterordner nach weiteren Dateien durchsucht werden sollen.  
+    -   Wenn die foreach-Dateienumerator verwenden möchten, geben Sie den Ordner mit der Dateien zum Aufzählen, geben Sie einen Filter für den Dateinamen und den Typ und gibt an, ob der vollqualifizierte Dateiname zurückgegeben werden sollen. Zeigen Sie außerdem an, ob Unterordner nach weiteren Dateien durchsucht werden sollen.  
   
     -   Wenn Sie den Foreach Item-Enumerator verwenden möchten, klicken Sie auf **Spalten**, und klicken Sie im Dialogfeld **For Each Item-Spalten** auf **Hinzufügen** , um Spalten hinzuzufügen. Wählen Sie aus der Liste **Datentyp** einen Datentyp für jede Spalte aus, und klicken Sie auf **OK**.  
   
@@ -155,16 +155,16 @@ In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers bes
   
          Klicken Sie anschließend auf „EnumerationType“, und wählen Sie einen Enumerationstyp aus der Liste aus. Wenn EnumerationType den Wert **Navigator, Node oder NodeText**hat, klicken Sie auf OuterXPathStringSourceType, wählen Sie den Quelltyp aus, und klicken Sie dann auf OuterXPathString. Je nach dem für OuterXPathStringSourceType festgelegten Wert wählen Sie eine Variable bzw. eine Dateiverbindung aus der Liste aus, erstellen Sie eine neue Variable bzw. Dateiverbindung, oder geben Sie die Zeichenfolge für den äußeren XPath-Ausdruck (XML Path Language) ein.  
   
-         Wenn EnumerationType den Wert **ElementCollection**hat, legen Sie OuterXPathStringSourceType und OuterXPathString wie oben beschrieben fest. Klicken Sie anschließend auf InnerElementType, und wählen Sie einen Enumerationstyp für die inneren Elemente aus. Klicken Sie dann auf InnerXPathStringSourceType. Je nachdem, welchen Wert Sie für InnerXPathStringSourceType festgelegt haben, wählen Sie eine Variable bzw. eine Dateiverbindung aus, erstellen Sie eine neue Variable bzw. Dateiverbindung, oder geben Sie die Zeichenfolge für den inneren XPath-Ausdruck ein.  
+         Wenn EnumerationType ist **ElementCollection**, OuterXPathStringSourceType und OuterXPathString festlegen, wie oben beschrieben. Klicken Sie anschließend auf InnerElementType, und wählen Sie einen Enumerationstyp für die inneren Elemente aus. Klicken Sie dann auf InnerXPathStringSourceType. Je nachdem, welchen Wert Sie für InnerXPathStringSourceType festgelegt haben, wählen Sie eine Variable bzw. eine Dateiverbindung aus, erstellen Sie eine neue Variable bzw. Dateiverbindung, oder geben Sie die Zeichenfolge für den inneren XPath-Ausdruck ein.  
   
     -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus, oder klicken Sie in der Liste **Verbindung** auf **Neue Verbindung** , und geben Sie die zu verwendende Zeichenfolge ein, oder klicken Sie auf **Durchsuchen**. Dadurch haben Sie ****im Dialogfeld **SMO-Enumeration auswählen** die Möglichkeit, den aufzuzählenden Objekttyp und den Enumerationstyp auszuwählen. Klicken Sie dann auf **OK**.  
   
 6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit den drei Punkten **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  
+    >  Die Eigenschaften aufgeführt, die der **Eigenschaft** Liste variieren je nach Enumerator.  
   
-7.  Klicken Sie optional auf **Variablenzuordnungen** , um Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie dann folgende Aktionen aus:  
+7.  Klicken Sie optional auf **Variablenzuordnungen** Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie folgende Schritte:  
   
     1.  In der **Variablen** Liste, wählen Sie eine Variable aus, oder klicken Sie auf  **\<neue Variable >** um eine neue Variable zu erstellen.  
   
@@ -184,7 +184,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Foreach-Schleifencontainer an. Dieser Name wird als Bezeichnung des Tasksymbols und in Protokollen verwendet.  
   
@@ -195,13 +195,13 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Geben Sie eine Beschreibung des Foreach-Schleifencontainers an.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Seite "Sammlung" - foreach-Schleifen-Editor
- Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor** , um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
+ Verwenden der **Auflistung** auf der Seite der **foreach-Schleifen-Editor** Dialogfeld den Enumeratortyp angeben und den Enumerator konfigurieren.  
   
  Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Enumerator**  
- Wählen Sie den Enumeratortyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Wählen Sie den Enumeratortyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -214,7 +214,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 |**Foreach-SMO-Enumerator**|Zählt ein SMO-Objekt auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-SMO-Enumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-HDFS-Datei-Enumerator**|Aufzählen von HDFS-Dateien am angegebenen HDFS-Speicherort. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-HDFS-Datei-Enumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-Azure-Blob-Enumerator**|Auflisten von Blob-Dateien am angegebenen Blob-Speicherort. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Foreach-Azure-Blob-Enumerator**angezeigt.|  
-|**ADLS Foreach-Dateienumerator**|Auflisten von Dateien auf ADLS mit Filtern. Bei Auswahl dieses Wertes werden die dynamischen Optionen im Abschnitt **foreach-Dateienumerator für ADLS**.|
+|**ADLS Foreach-Dateienumerator**|Auflisten von Dateien im angegebenen Verzeichnis Data Lake-Speicher. Bei Auswahl dieses Wertes werden die dynamischen Optionen im Abschnitt **foreach-Dateienumerator für ADLS**.|
   
  **Ausdrücke**  
  Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten**(…)**, um einer Enumeratoreigenschaft einen Eigenschaftsausdruck hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
@@ -226,13 +226,13 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 #### <a name="enumerator--foreach-file-enumerator"></a>Enumerator = Foreach-Dateienumerator  
  Mithilfe des Foreach-Dateienumerators können Dateien in einem Ordner aufgezählt werden. Wenn die Foreach-Schleife z. B. einen Task SQL ausführen enthält, können Sie mithilfe des Foreach-Dateienumerators Dateien aufzählen, die vom Task SQL ausführen ausgeführte SQL-Anweisungen enthalten. Der Enumerator kann so konfiguriert werden, dass Unterordner in der Aufzählung berücksichtigt werden.  
   
- Der Inhalt der Ordner und Unterordner, die der Foreach-Dateienumerator aufzählt, ändert sich möglicherweise beim Durchlaufen der Schleife, da externe Prozesse oder Tasks in der Schleife beim Durchlaufen der Schleife Dateien hinzufügen, umbenennen oder löschen. Dies kann zu unerwarteten Ergebnissen führen:  
+ Der Inhalt der Ordner und Unterordner, die der Foreach-Dateienumerator aufzählt, ändert sich möglicherweise beim Durchlaufen der Schleife, da externe Prozesse oder Tasks in der Schleife beim Durchlaufen der Schleife Dateien hinzufügen, umbenennen oder löschen. Diese Änderungen möglicherweise unerwartete Situationen auftreten:  
   
--   Wenn Dateien gelöscht werden, bearbeitet ein Task in der Foreach-Schleife möglicherweise einen anderen Satz Dateien als den, der von nachfolgenden Tasks bearbeitet wird.  
+-   Wenn Dateien gelöscht werden, beeinträchtigen die Aktionen einer Aufgabe in der foreach-Schleife einen anderen Satz von Dateien als den von nachfolgenden Tasks verwendet.  
   
--   Wenn Dateien umbenannt werden und ein externer Prozess Dateien automatisch hinzufügt, um die umbenannten Dateien zu ersetzen, wird derselbe Dateiinhalt möglicherweise zweimal von der Foreach-Schleife bearbeitet.  
+-   Wenn Dateien umbenannt werden, und ein externer Prozess Dateien automatisch hinzufügt, um die umbenannten Dateien zu ersetzen, können die gleichen Dateien, die für die Aktionen der Tasks in der foreach-Schleife zweimal auswirken.  
   
--   Wenn Dateien hinzugefügt werden, kann es sich als schwierig erweisen, die von der Foreach-Schleife bearbeiteten Dateien zu erkennen.  
+-   Wenn Dateien hinzugefügt werden, ist es möglicherweise schwierig zu bestimmen, für die Dateien der foreach-Schleife betroffen.  
   
  **Ordner**  
  Gibt den Pfad für den Stammordner für die Aufzählung an.  
@@ -246,12 +246,12 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 > [!NOTE]  
 >  Sie können Platzhalterzeichen (*) verwenden, um die in der Sammlung zu berücksichtigenden Dateien anzugeben. Um Dateien einzubeziehen, deren Name „abc“ enthält, verwenden Sie beispielsweise den folgenden Filter: \*abc\*.  
 >   
->  Wenn Sie eine Dateierweiterung angeben, gibt der Enumerator auch Dateien mit derselben Erweiterung mit angehängten zusätzlichen Zeichen zurück. (Dieses Verhalten entspricht dem Verhalten des **dir**-Befehls im Betriebssystem, mit dem 8.3-Dateinamen auf Abwärtskompatibilität überprüft werden.) Dieses Verhalten des Enumerators könnte unerwartete Ergebnisse verursachen. Angenommen, Sie möchten nur Excel 2003-Dateien auflisten und geben "*.xls" an. Der Enumerator gibt in diesem Fall auch Excel 2007-Dateien zurück, da diese Dateien die Erweiterung, ".xlsx", haben.  
+>  Wenn Sie eine Dateierweiterung angeben, gibt der Enumerator auch Dateien mit derselben Erweiterung mit angehängten zusätzlichen Zeichen zurück. (Dieses Verhalten entspricht dem Verhalten des **dir**-Befehls im Betriebssystem, mit dem 8.3-Dateinamen auf Abwärtskompatibilität überprüft werden.) Dieses Verhalten des Enumerators könnte unerwartete Ergebnisse verursachen. Angenommen, Sie möchten nur Excel 2003-Dateien auflisten und geben "*.xls" an. Der Enumerator auch dagegen die Excel 2007-Dateien, da diese Dateien die Erweiterung aufweisen ".xlsx".  
 >   
 >  Sie können einen Ausdruck verwenden, um die in eine Sammlung einzubeziehenden Dateien anzugeben. Erweitern Sie dazu **Ausdrücke** auf der Seite **Sammlung** , wählen Sie die **FileSpec** -Eigenschaft aus, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (…), um den Eigenschaftsausdruck hinzuzufügen.  
   
  **Vollqualifiziert**  
- Wählen Sie diese Option aus, um den vollqualifizierten Pfad von Dateinamen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die zurückgegebenen vollqualifizierten Pfade mit dem Filter überein.  
+ Wählen Sie diese Option aus, um den vollqualifizierten Pfad von Dateinamen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die voll qualifizierten Pfade, die zurückgegeben werden dem Filter überein.  
   
  **Nur Name**  
  Wählen Sie diese Option aus, um nur die Dateinamen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die zurückgegebenen Dateinamen mit dem Filter überein.  
@@ -342,7 +342,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Weitere Informationen zum Arbeiten mit XML-Dokumenten und Daten finden Sie unter "[XML im .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in der MSDN Library.  
   
  **DocumentSourceType**  
- Wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Wählen Sie den Quelltyp des XML-Dokuments aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
- Wählen Sie einen Enumerationstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Wählen Sie einen Enumerationstyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -372,7 +372,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 |**ElementCollection**|Zählt Elementknoten auf, die durch einen XPath-Vorgang zurückgegeben wurden.|  
   
  **OuterXPathStringSourceType**  
- Wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar: 
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -395,7 +395,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Wenn **EnumerationType** auf **ElementCollection**festgelegt ist, wählen Sie den Typ des inneren Elements in der Liste aus.  
   
  **InnerXPathStringSourceType**  
- Wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -415,7 +415,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach-SMO-Enumerator  
- Mithilfe des Foreach-SMO-Enumerators werden SQL Server Management Object (SMO)-Objekte aufgezählt. Wenn die Foreach-Schleife z. B. einen Task SQL ausführen enthält, können Sie den Foreach-SMO-Enumerator zum Aufzählen der Tabellen in der **AdventureWorks** -Datenbank und Ausführen von Abfragen, mit denen die Anzahl von Zeilen pro Tabelle ermittelt wird, verwenden.  
+ Mithilfe des Foreach-SMO-Enumerators werden SQL Server Management Object (SMO)-Objekte aufgezählt. Beispielsweise, wenn die ForEach-Schleifencontainer einen Task SQL ausführen enthält, können den Foreach-SMO-Enumerator zum Aufzählen der Tabellen in der **AdventureWorks** -Datenbank und Ausführen von Abfragen, die die Anzahl der Zeilen in jeder Tabelle.  
   
  **Verbindung**  
  Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
@@ -440,14 +440,14 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Geben Sie den Namen des HDFS-Verzeichnisses an, das die aufzuzählenden HDFS-Dateien enthält.  
   
  **Dateinamensfilter**  
- Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt*.xls\* “ schließt „MeinArbeitsblatt001.xls“ und „MeinArbeitsblattABC.xlsx“ ein.  
+ Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispielsweise Meinarbeitsblatt\* schließt "meinarbeitsblatt001.xls" und "meinarbeitsblattabc.xlsx" ein.  
   
  **Dateinamen abrufen**  
  Geben Sie den Typ der von SSIS abgerufenen Dateinamen an.  
   
--   **Vollqualifizierter Name** bezeichnet den vollständigen Namen, der den Verzeichnispfad und Dateinamen enthält.  
+-   **Vollqualifizierte Namen** bedeutet, dass der vollständige Name, der den Pfad und den Dateinamen enthält.  
   
--   **Nur Name** bedeutet, dass nur der Dateiname abgerufen wird.  
+-   **Nur Name** bedeutet, dass der Dateiname ohne Pfad abgerufen wird.  
   
  **Unterordner durchsuchen**  
  Geben Sie an, ob Unterordner rekursiv in einer Schleife durchlaufen werden sollen.  
@@ -455,7 +455,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Erstellen oder wählen Sie auf der Seite **Variablenzuordnungen** eine Variable zum Speichern des Namens der aufgezählten HDFS-Datei.  
   
 ####  <a name="ForeachAzureBlob"></a>Enumerator = foreach-Azure-Blob-Enumerator  
- Der  **Azure-Blob-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Blob-Dateien am angegebenen Blob-Speicherort. Der Name von aufgezählten Blob-Dateien kann in einer Variablen gespeichert und in Aufgaben innerhalb des Foreach-Schleifencontainers verwendet werden.  
+ Der  **Azure-Blob-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Blob-Dateien am angegebenen Blob-Speicherort. Sie können der Name von aufgezählten Blob-Dateien in einer Variablen speichern und sie in Aufgaben innerhalb des foreach-Schleifencontainers.  
   
  Der **Azure-Blob-Enumerator** ist eine Komponente des SQL Server Integration Services (SSIS) Feature Pack für Azure für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Laden Sie das Feature Pack [hier](http://go.microsoft.com/fwlink/?LinkID=626967)herunter.  
   
@@ -465,28 +465,28 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Verwandte Themen: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob-Containername**  
- Geben Sie den Namen des Blob-Containers an, der die aufzuzählenden Blob-Dateien enthält.  
+ Geben Sie den Namen des Blob-Containers, der die aufzuzählenden Blob-Dateien enthält.
   
  **BLOB-Verzeichnis**  
- Geben Sie das Blob-Verzeichnis an, das die aufzuzählenden Blob-Dateien enthält. Das Blob-Verzeichnis ist eine virtuelle hierarchische Struktur.  
+ Geben Sie das blobverzeichnis, das die aufzuzählenden Blob-Dateien enthält. Das Blob-Verzeichnis ist eine virtuelle hierarchische Struktur.  
   
  **BLOB-Namensfilter**  
- Geben Sie einen Namensfilter zum Auflisten von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt*.xls\* “ schließt „MeinArbeitsblatt001.xls“ und „MeinArbeitsblattABC.xlsx“ ein.  
+ Geben Sie einen Namensfilter zum Auflisten von Dateien mit einem bestimmten Namensmuster an. Beispielsweise `MySheet*.xls\*` schließt "meinarbeitsblatt001.xls" und "meinarbeitsblattabc.xlsx" ein.  
   
  **BLOB-Zeitbereich von/zu filtern**  
- Geben Sie einen Filter für den Zeitbereich an. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, werden aufgezählt. 
+ Geben Sie einen Filter für den Zeitbereich an. Dateien nach der geänderte **TimeRangeFrom** und vor dem **TimeRangeTo** aufgelistet sind. 
 
 ####  <a name="ForeachAdlsFile"></a>Enumerator = foreach-ADLS-Datei-Enumerator 
-Die **ADLS-Dateienumerator** ermöglicht einem SSIS-Paket zum Aufzählen von Dateien auf ADLS mit Filtern. Der Schrägstrich (`/`) – mit Präfix vollständiger Pfad der aufgelisteten Dateien in einer Variablen gespeichert und in Aufgaben innerhalb des foreach-Schleifencontainers verwendet werden kann.
+Die **ADLS-Dateienumerator** ermöglicht einem SSIS-Paket zum Aufzählen von Dateien in Azure Data Lake-Speicher. Sie können den vollständigen Pfad der Datei aufgelisteten speichern (mit dem Präfix mit einem Schrägstrich - `/`) in einer Variablen und verwenden Sie den Dateipfad in Aufgaben innerhalb des foreach-Schleifencontainers.
   
 **AzureDataLakeConnection**  
 Gibt einen Azure Data Lake-Verbindungs-Manager oder eine neue erstellt, die auf ein ADLS-Konto verweist.   
   
 **AzureDataLakeDirectory**  
-Gibt den ADLS zu durchsuchende Verzeichnis an.
+Gibt das ADLS-Verzeichnis, das die aufzuzählenden Dateien enthält.
   
 **FileNamePattern**  
-Legt einen Dateinamensfilter. Nur Dateien, deren Name mit das angegebene Muster übereinstimmt, werden, aufgezählt. Platzhalter `*` und `?` werden unterstützt. 
+Legt einen Dateinamensfilter. Nur Dateien, deren Namen mit das angegebene Muster entsprechen, werden aufgelistet. Die Platzhalter `*` und `?` werden unterstützt. 
   
 **SearchRecursively**  
 Gibt an, ob rekursiv im angegebenen Verzeichnis zu suchen.  
@@ -494,13 +494,13 @@ Gibt an, ob rekursiv im angegebenen Verzeichnis zu suchen.
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Seite Variablenzuordnungen - foreach-Schleifen-Editor
  Mithilfe der Seite **Variablenzuordnungen** des Dialogfelds **Foreach-Schleifen-Editor** können Sie dem Auflistungswert Variablen zuordnen. Der Wert der Variable wird bei jeder Iteration der Schleife mit den Ausflistungswerten aktualisiert.  
   
- Informationen zum Verwenden des Foreach-Schleifencontainers in einem Integration Services-Paket finden Sie unter [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) . Informationen zum Konfigurieren dieses Containers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Informationen zum Verwenden des foreach-schleifencontainers in einem Integration Services-Paket finden Sie unter [ForEach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md). Informationen zum Konfigurieren dieses Containers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  Das Lernprogramm für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, die Ihnen zeigt, wie Sie eine Foreach-Schleife hinzufügen und konfigurieren können.  
   
 ### <a name="options"></a>enthalten  
  **Variable**  
- Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+ Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **neue Variable...**  um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
 >  Nachdem Sie eine Variable zugeordnet haben, wird der Liste **Variable** automatisch eine neue Zeile hinzugefügt.  
@@ -548,9 +548,9 @@ Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die 
  Wählen Sie eine Spalte aus, und klicken Sie auf **Entfernen**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
-Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen**, um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz anzugeben und den Enumerationstyp auszuwählen.  
+Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz anzugeben und den Enumerationstyp auszuwählen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Auflisten von**  
  Erweitern des Servers und Auswählen eines SMO-Objekts.  
   

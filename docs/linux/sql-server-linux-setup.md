@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
@@ -31,7 +31,7 @@ SQL Server-2017 wird auf den folgenden Linux-Plattformen unterstützt:
 
 | Platform | Unterstützte Versionen | Herunterladen
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [RHEL 7.3 abrufen](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 oder 7.4 | [RHEL 7.4 abrufen](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 abrufen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 abrufen](http://www.ubuntu.com/download/server)
 | **Docker-Modul** | 1.8+ | [Abrufen von Docker](http://www.docker.com/products/overview)
@@ -49,9 +49,6 @@ SQL Server-2017 hat die folgenden Systemanforderungen für Linux:
 | **Prozessorkerne** | 2 Kerne |
 | **Prozessortyp** | X64-kompatiblen |
 
-> [!NOTE]
-> SQL Server-Datenbankmodul wurde bis zu 1 TB Arbeitsspeicher zu diesem Zeitpunkt getestet.
-
 Bei Verwendung von **System NFS (Network File)** Remotefreigaben in der Produktion Beachten Sie die folgenden Anforderungen für die Unterstützung:
 
 - Verwenden Sie NFS Version **4.2 oder höher**. Ältere Versionen von NFS unterstützen keine erforderliche Features, z. B. Fallocate und Erstellung von Dateien mit geringer Dichte, moderne Dateisystemen gemeinsam.
@@ -66,6 +63,7 @@ Sie können SQL Server on Linux über die Befehlszeile installieren. Anleitungen
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren Sie auf Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen Sie auf Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a>Aktualisieren Sie SQLServer
 
@@ -122,6 +120,12 @@ Zum Ändern von GDR-Repository im CU-Repository, verwenden Sie die folgenden Sch
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. Für **Ubuntu nur**, importieren Sie die öffentlichen Repositorys GPG Schlüssel.
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. Konfigurieren Sie das neue Repository.
 
    | Platform | Repository | Befehl |
@@ -130,17 +134,8 @@ Zum Ändern von GDR-Repository im CU-Repository, verwenden Sie die folgenden Sch
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. Aktualisieren Sie Ihr System.
-
-   | Platform | Befehl "Update" |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [Installieren Sie](#platforms) oder [aktualisieren](#upgrade) SQL Server aus dem Repository neue.
 

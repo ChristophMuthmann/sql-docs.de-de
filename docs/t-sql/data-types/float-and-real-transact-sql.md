@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float und real (Transact-SQL)
@@ -65,7 +65,7 @@ Werte des **"float"** werden bei der Konvertierung in einen ganzzahligen Datenty
   
 Wenn Sie konvertieren möchten **"float"** oder **echte** in Zeichendaten mithilfe der STR-Zeichenfolgenfunktion wird in der Regel nützlicher, als CAST (). Der Grund hierfür ist, dass STR Ihnen bessere Steuerungsmöglichkeiten über die Formatierung bietet. Weitere Informationen finden Sie unter [STR &#40; Transact-SQL &#41; ](../../t-sql/functions/str-transact-sql.md) und [Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/functions.md).
   
-Konvertierung von **"float"** Werte, die wissenschaftliche für Schreibweise **decimal** oder **numerischen** auf den Werten der Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.
+Konvertierung von **"float"** Werte, die wissenschaftliche für Schreibweise **decimal** oder **numerischen** auf den Werten der Genauigkeit von 17 Stellen beschränkt. Jeder Wert < 5e-18 auf 0 abgerundet.
   
 ## <a name="see-also"></a>Siehe auch
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

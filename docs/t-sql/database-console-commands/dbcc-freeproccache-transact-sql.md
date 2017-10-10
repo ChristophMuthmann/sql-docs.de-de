@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bda4cf8c1859d011e0a320887fd8a9cc53d8cea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -157,16 +157,14 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-{!!! Mispalced Text? !!!}
- `plan_handle                                         text`  
+```
+plan_handle                                         text  
+--------------------------------------------------  -----------------------------  
+0x060006001ECA270EC0215D05000000000000000000000000  SELECT * FROM Person.Address;  
   
- `--------------------------------------------------  -----------------------------`  
-  
- `0x060006001ECA270EC0215D05000000000000000000000000  SELECT * FROM Person.Address;`  
-  
- `(1 row(s) affected)`  
-{End Misplaed Text bitten}
-  
+(1 row(s) affected)
+ ```
+ 
 ```sql  
 -- Remove the specific plan from the cache.  
 DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);  

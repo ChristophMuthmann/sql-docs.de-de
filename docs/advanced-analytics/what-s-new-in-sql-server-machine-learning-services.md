@@ -2,7 +2,7 @@
 title: Was &#39; s neu in Machine Learning Services | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: de-de
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Was ist neu in Machine Learning Services in SQL Server
@@ -37,6 +37,16 @@ Fangen Sie hier die neueste Ankündigung! [Python in SQL Server-2017: Erweiterte
 
 Microsoft Machine Learning-Server in SQL Server bietet jetzt eine umfassende Unterstützung für das Erstellen und Bereitstellen von Machine Learning-Lösungen in R oder Python. Hier sind die wichtigsten dieser Version:
 
+> [!IMPORTANT]
+> 
+> Machine Learning-Dienste, einschließlich der Verwendung von R oder Python, werden derzeit nicht unterstützt, wenn SQL Server unter Linux oder in Azure SQL-Datenbank ausgeführt. Suchen Sie nach Änderungen in einer späteren Version.
+> 
+> Systemeigene Bewertung mithilfe der PREDICT-Funktion ist derzeit in der Linux-Edition unterstützt.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Neues im kumulativen Update 1 für SQL Server-2017
+
+Sie können jetzt die Python- und R-Komponenten auf Machine Learning-Server 9.2.1 aktualisieren. Diese Version bietet zahlreiche Verbesserungen zu **Revoscalepy** und **"revoscaler"**, einschließlich leistungsverbesserungen.
+ 
 ### <a name="in-database-python-integration"></a>Python-Integration in der Datenbank
 
 Sie können Python in gespeicherten Prozeduren ausführen oder Python Remote mithilfe von SQL Server-Computers als computekontext auszuführen. Diese Integration eröffnet neue Möglichkeiten für die großen Community von Python-Entwickler und Datenanalysten ausnutzen der Leistungsfähigkeit von SQL Server. 

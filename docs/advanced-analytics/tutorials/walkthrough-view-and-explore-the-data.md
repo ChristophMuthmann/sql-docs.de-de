@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Anzeigen und Durchsuchen von Daten mit SQL (Exemplarische Vorgehensweise)
@@ -53,7 +53,7 @@ Stellen Sie zuerst fest, dass Ihre Daten korrekt geladen wurden.
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    Wenn keine Daten in der Tabelle nicht angezeigt werden, wechseln Sie im vorherigen Abschnitt zu [Problembehandlung](/walkthrough-prepare-the-data.md) .
+    Wenn keine Daten in der Tabelle nicht angezeigt werden, wechseln Sie im vorherigen Abschnitt zu [Problembehandlung](walkthrough-prepare-the-data.md) .
 
 4. Diese Datentabelle wurde für setbasierte Vorgänge optimiert, indem ein [Columnstore-Index](../../relational-databases/indexes/columnstore-indexes-overview.md) hinzugefügt wurde. Führen Sie diese Anweisung, um eine kurze Zusammenfassung für die Tabelle generieren.
 
@@ -69,9 +69,9 @@ Stellen Sie zuerst fest, dass Ihre Daten korrekt geladen wurden.
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Zusammenfassen von Daten mithilfe von R](/walkthrough-view-and-summarize-data-using-r.md)
+[Zusammenfassen von Daten mithilfe von R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Vorbereiten der Daten mithilfe von PowerShell](/walkthrough-prepare-the-data.md)
+[Vorbereiten der Daten mithilfe von PowerShell](walkthrough-prepare-the-data.md)
 

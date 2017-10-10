@@ -1,7 +1,7 @@
 ---
-title: Der Berichts-Viewer-Webpart auf einer SharePoint-Website bereitstellen | Microsoft Docs
+title: Das SQL Server Reporting Services Berichts-Viewer-Webpart auf einer SharePoint-Website bereitstellen | Microsoft Docs
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen Sie der Berichts-Viewer-Webpart auf einer SharePoint-Website
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen Sie das SQL Server Reporting Services Berichts-Viewer-Webpart auf einer SharePoint-Website
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -32,9 +32,6 @@ Gehen Sie folgendermaßen vor, das Lösungspaket, die der Berichts-Viewer-Webpar
 **Der Berichts-Viewer-Webpart ist ein eigenständiges Lösungspaket und ist nicht mit den integrierten SharePoint-Modus für SQL Server Reporting Services verknüpft.**
 
 ## <a name="requirements"></a>Anforderungen
-
-**Unterstützte Betriebssysteme:**  
-* Windows Server 2008 R2 SP1 und höher
 
 **Unterstützung von SharePoint Server-Versionen:**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ Gehen Sie folgendermaßen vor, das Lösungspaket, die der Berichts-Viewer-Webpar
 
 Der Berichts-Viewer-Webpart ist im Microsoft Download Center verfügbar.
 
-[Herunterladen von Berichts-Viewer Web Teil-Lösungspaket](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Herunterladen von Berichts-Viewer Web Teil-Lösungspaket](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Bereitstellen der farmlösung
 
@@ -84,7 +81,7 @@ In diesem Abschnitt wird gezeigt, wie das Lösungspaket zur SharePoint-Farm bere
 
     ![Standorteinstellungen aus dem Zahnradsymbol.](media/sharepoint-site-settings.png)
 
-    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie eine SharePoint-Website häufig durch Eingabe zugreifen können *http://<computer name> * um die Stammwebsitesammlung zu öffnen.
+    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie eine SharePoint-Website häufig durch Eingabe zugreifen können *http://<computer name>*  um die Stammwebsitesammlung zu öffnen.
 
 3. In **Websitesammlungsverwaltung**Option **Websitesammlungs-Features**.
 
@@ -92,7 +89,7 @@ In diesem Abschnitt wird gezeigt, wie das Lösungspaket zur SharePoint-Farm bere
 
 5. Wählen Sie **Aktivieren**aus.
 
-    ![Aktivieren Sie Berichts-Viewer-Webpart-Funktion](media/web-part-activiate-feature.png)
+    ![Berichts-Viewer-Webpart webfunktion aktivieren](media/web-part-activiate-feature.png)
 
 6. Wiederholen Sie für zusätzliche Websitesammlungen, indem Sie jede Website öffnen und auf Website-Aktionen.
 
@@ -124,7 +121,7 @@ Zurückziehen der Lösung wird der Berichts-Viewer-Webpart nicht aus der Liste d
 
     ![Standorteinstellungen aus dem Zahnradsymbol.](media/sharepoint-site-settings.png)
 
-    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie eine SharePoint-Website häufig durch Eingabe zugreifen können *http://<computer name> * um die Stammwebsitesammlung zu öffnen.
+    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie eine SharePoint-Website häufig durch Eingabe zugreifen können *http://<computer name>*  um die Stammwebsitesammlung zu öffnen.
 
 2. Klicken Sie unter **Web-Designer-Kataloge**Option **-Webparts**.
 
@@ -135,6 +132,22 @@ Zurückziehen der Lösung wird der Berichts-Viewer-Webpart nicht aus der Liste d
     ![Bearbeiten Sie und löschen Sie die im einheitlichen Modus von Berichts-Viewer-Webpart](media/report-viewer-native-mode-edit-delete.png)
 
 Löschen des Webparts kann versucht werden, mithilfe von PowerShell, aber es ist kein direkter Befehl dafür. Ein-Skript-Beispiel finden Sie unter [Löschen von Webparts aus dem Webpartkatalog](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## <a name="supported-languages"></a>Unterstützte Sprachen
+
+Mit dem Webpart werden die folgenden Sprachen unterstützt:
+
+* Englisch (En)
+* Deutsch (Deutschland)
+* Spanisch (sp)
+* Französisch (fr)
+* Italienisch (it)
+* Japanisch (Japan)
+* Koreanisch (Ko)
+* Portugiesisch (pt)
+* Russisch (ru)
+* Chinesisch (vereinfacht - Zh-HANS und Zh-CHS)
+* Chinesisch (traditionell - Zh-HANT und Zh-CHT)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

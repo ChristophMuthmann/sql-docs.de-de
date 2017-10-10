@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts von der Befehlszeile aus mit ISDeploymentWizard.exe
 Dieser Schnellstart-Lernprogramm veranschaulicht, wie ein SSIS-Projekt, von der Befehlszeile aus bereitstellen, indem Sie mit dem Integration Services-Bereitstellungs-Assistenten `ISDeploymentWizard.exe`.
 
-Weitere Informationen zu den Bereitstellungs-Assistenten von Integration Services, finden Sie unter [Integration Services Deployment Wizard](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Weitere Informationen zu den Bereitstellungs-Assistenten von Integration Services, finden Sie unter [Integration Services Deployment Wizard](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Starten Sie den Bereitstellungs-Assistenten von Integration Services
 1. Öffnen Sie ein Eingabeaufforderungsfenster.
@@ -46,7 +46,7 @@ Weitere Informationen zu den Bereitstellungs-Assistenten von Integration Service
   
 5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, ist die **Ergebnisse** -Seite wird geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Wenn der Vorgang fehlgeschlagen ist, klicken Sie auf **Fehler** in der **Ergebnis** Spalte um eine Erklärung des Fehlers anzuzeigen.
-    -   Klicken Sie optional auf **Bericht speichern... ** um die Ergebnisse als XML-Datei zu speichern.
+    -   Klicken Sie optional auf **Bericht speichern...**  um die Ergebnisse als XML-Datei zu speichern.
     -   Klicken Sie auf **schließen** um den Assistenten zu beenden.
 
 ## <a name="next-steps"></a>Nächste Schritte

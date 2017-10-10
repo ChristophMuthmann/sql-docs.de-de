@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fc6b6100060c8af5b4e1a1a08b97ba515af699e5
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: ff76342009f28aa66a398c0d0525c7d86391ed61
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -118,20 +118,21 @@ FROM Person.Person p JOIN Person.EmailAddress pe
 ON p.BusinessEntityID = pe.BusinessEntityID  
 AND p.BusinessEntityID = 1;  
 GO  
-```sql
+```
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Ken Sanchez`
+```
+Ken Sanchez
+ken0@adventure-works.com
   
-`ken0@adventure-works.com`
+(1 row(s) affected)
+```
   
-`(1 row(s) affected)`
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Using ASCII and CHAR to print ASCII values from a string  
-The following example assumes an ASCII character set and returns the character value for 6 ASCII character numbers.
+### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Verwenden von ASCII und CHAR, um die ASCII-Werte einer Zeichenfolge auszugeben  
+Im folgende Beispiel wird angenommen, ein ASCII-Zeichen festgelegt und gibt den Zeichenwert für 6 Ziffern von ASCII-Zeichen.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   

@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planen der Ausführung eines SSIS-Pakets in Azure
@@ -58,13 +58,13 @@ Planen eines Pakets mit SQL Server-Agent lokal, Erstellen eines Auftrags mit ein
 
 ## <a name="elastic"></a>Planen eines Pakets mit elastischen Aufträge des SQL-Datenbank
 
-Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Erforderliche Komponenten
 
 Bevor Sie elastischen Aufträge so planen Sie SSIS-Pakete, die in der Datenbank SSISDB-Katalog auf einer Azure SQL-Datenbankserver gespeichert verwenden können, müssen Sie folgende Schritte auszuführen:
 
-1.  Installieren Sie und konfigurieren Sie die Komponenten der elastischen Datenbank Aufträge. Weitere Informationen finden Sie unter [elastischen Datenbank installieren Aufträge (Übersicht)](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Installieren Sie und konfigurieren Sie die Komponenten der elastischen Datenbank Aufträge. Weitere Informationen finden Sie unter [elastischen Datenbank installieren Aufträge (Übersicht)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Erstellen Sie die datenbankbezogenen Anmeldeinformationen, die Aufträge zum Senden von Befehlen, die SSIS-Katalogdatenbank verwenden können. Weitere Informationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ Informationen zum Planen eines Pakets mit der Azure Data Factory SQL Server Stor
 3.  Erstellen Sie eine ausgabedataset, das die Planung Laufwerke.
 4.  Erstellen Sie eine Data Factory-Pipeline, die die SQL Server Stored Procedure-Aktivität zum Ausführen des SSIS-Pakets verwendet.
 
-Dieser Abschnitt enthält einen Überblick über die folgenden Schritte aus. Ein umfassendes Lernprogramm der Data Factory ist nicht Gegenstand dieses Artikels. Weitere Informationen finden Sie unter [SQL Server gespeicherte Prozedur-Aktivität](/azure/data-factory/data-factory-stored-proc-activity.md).
+Dieser Abschnitt enthält einen Überblick über die folgenden Schritte aus. Ein umfassendes Lernprogramm der Data Factory ist nicht Gegenstand dieses Artikels. Weitere Informationen finden Sie unter [SQL Server gespeicherte Prozedur-Aktivität](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Erstellt einen verknüpften Dienst für die SQL-Datenbank, der als Host SSISDB
 Der verknüpfte Dienst kann Data Factory SSISDB herstellen.
@@ -221,4 +221,4 @@ Weitere Informationen über den Code in diesem Skript finden Sie unter [bereitst
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zu SQL Server-Agent, finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).
 
-Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

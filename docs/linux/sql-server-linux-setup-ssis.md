@@ -1,6 +1,6 @@
 ---
 title: Installieren von SQL Server Integrationsservices unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt, wie SQL Server Integration Services unter Linux zu installieren.
+description: Dieses Thema beschreibt, wie SQL Server Integration Services (SSIS) unter Linux zu installieren.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -8,13 +8,12 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
-ms.assetid: 
+ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
@@ -31,37 +30,36 @@ Installieren Sie SQL Server-Integration-Server für Ihre Plattform aus:
 ## <a name="ubuntu"></a>Installieren Sie SSIS für Ubuntu
 So installieren Sie die `mssql-server-is` Paket auf Ubuntu, gehen Sie folgendermaßen vor:
 
-1.  Importieren Sie die öffentlichen Repositorys GPG Schlüssel.
+1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel.
 
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    ```
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
 
-2.  Registrieren Sie die Microsoft SQL Server-Ubuntu-Repositorys.
+2. Registrieren Sie die Microsoft SQL Server-Ubuntu-Repositorys.
 
-    ```bash
-    curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
-    ```
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
 
-3.  Führen Sie die folgenden Befehle zum Installieren von SQL Server Integration Services.
+3. Führen Sie die folgenden Befehle zum Installieren von SQL Server Integration Services.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y mssql-server-is
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server-is
+   ```
 
+4. Führen Sie nach dem Installieren von Integration Services, `ssis-conf`. Weitere Informationen finden Sie unter [konfigurieren SSIS unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).
 
-4.  Führen Sie nach dem Installieren von Integration Services, `ssis-conf`. Weitere Informationen finden Sie unter [konfigurieren SSIS unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
+5. Nachdem die Konfiguration abgeschlossen ist, legen Sie den Pfad an.
 
-5.  Nachdem die Konfiguration abgeschlossen ist, legen Sie den Pfad an.
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>Aktualisieren von SSIS
 Falls Sie noch `mssql-server-is` installiert haben, können Sie auf die neueste Version mit dem folgenden Befehl aktualisieren:
@@ -79,47 +77,30 @@ sudo apt-get remove msssql-server-is
 ## <a name="RHEL"></a>Installieren Sie SSIS auf RHEL
 So installieren Sie die `mssql-server-is` Paket auf RHEL, gehen Sie folgendermaßen vor:
 
+1. Herunterladen der Konfigurationsdatei für Microsoft SQL Server-Red Hat-Repository.
 
-1.  Geben Sie ein Superuser-Modus.
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
 
-    ```bash
-    sudo su
-    ```
+1. Führen Sie die folgenden Befehle zum Installieren von SQL Server Integration Services.
 
-
-2.  Herunterladen der Konfigurationsdatei für Microsoft SQL Server-Red Hat-Repository.
-
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-    ```
+   ```bash
+   sudo yum install -y mssql-server-is
+   ```
 
 
-3.  Exit-Superuser-Modus.
+1. Nach der Installation auszuführenden `ssis-conf`. Weitere Informationen finden Sie unter [konfigurieren SSIS unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).
 
-    ```bash
-    exit
-    ```
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
+1. Sobald die Konfiguration abgeschlossen ist, legen Sie Pfad ein.
 
-4.  Führen Sie die folgenden Befehle zum Installieren von SQL Server Integration Services.
-
-    ```bash
-    sudo yum install -y mssql-server-is
-    ```
-
-
-5.  Nach der Installation auszuführenden `ssis-conf`. Weitere Informationen finden Sie unter [konfigurieren SSIS unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).
-
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
-
-
-6.  Sobald die Konfiguration abgeschlossen ist, legen Sie Pfad ein.
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>Aktualisieren von SSIS
 Falls Sie noch `mssql-server-is` installiert haben, können Sie auf die neueste Version mit dem folgenden Befehl aktualisieren:

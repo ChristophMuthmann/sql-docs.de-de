@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Verwenden Sie für Tabellen, die ein oder mehrere dieser Eigenschaften aufweisen, stattdessen die DELETE-Anweisung.  
   
- TRUNCATE TABLE kann keinen Trigger aktivieren, da der Vorgang keine einzelnen Zeilenlöschungen protokolliert. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ TRUNCATE TABLE kann keinen Trigger aktivieren, da der Vorgang keine einzelnen Zeilenlöschungen protokolliert. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
+ 
+ In [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- TRUNCATE TABLE ist in der EXPLAIN-Anweisung nicht zulässig.
+
+- TRUNCATE TABLE kann nicht innerhalb einer Transaktion ausgeführt werden.
   
 ## <a name="truncating-large-tables"></a>Abschneiden von großen Tabellen  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die Berechtigung zum Löschen oder Abschneiden von Tabellen, die mehr als 128 Blöcke haben, ohne simultane Sperren für alle für das Löschen erforderlichen Blöcke aufrechtzuerhalten.  

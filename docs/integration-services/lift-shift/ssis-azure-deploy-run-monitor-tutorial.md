@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen Sie, führen Sie aus und überwachen Sie ein SSIS-Paket in Azure
@@ -22,7 +22,7 @@ In diesem Lernprogramm wird gezeigt, wie ein SQL Server Integration Services-Pro
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie Version 17.2 oder höher von SQL Server Management Studio verwenden. Informationen zum Herunterladen der neuesten Version von SSMS finden Sie unter [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Stellen Sie außerdem sicher, dass Sie die SSISDB-Datenbank einrichten und der Azure-SSIS-Integrationslaufzeit bereitgestellt haben. Informationen zum Bereitstellen von SSIS in Azure finden Sie unter [Lift- and -Shift SQL Server Integration Services (SSIS)-Pakete Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Stellen Sie außerdem sicher, dass Sie die SSISDB-Datenbank einrichten und der Azure-SSIS-Integrationslaufzeit bereitgestellt haben. Informationen zum Bereitstellen von SSIS in Azure finden Sie unter [Lift- and -Shift SQL Server Integration Services (SSIS)-Pakete Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit dem SSISDB-Datenbank
 
@@ -77,7 +77,7 @@ Verwenden Sie SQL Server Management Studio, um im SSIS-Katalog auf dem Azure SQL
   
 5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, ist die **Ergebnisse** -Seite wird geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Wenn Fehler bei der Aktion auswählen **Fehler** in der **Ergebnis** Spalte um eine Erklärung des Fehlers anzuzeigen.
-    -   Wählen Sie optional **Bericht speichern... ** um die Ergebnisse als XML-Datei zu speichern.
+    -   Wählen Sie optional **Bericht speichern...**  um die Ergebnisse als XML-Datei zu speichern.
     -   Wählen Sie **schließen** um den Assistenten zu beenden.
 
 ## <a name="run-a-package"></a>Ausführen eines Pakets
@@ -86,7 +86,7 @@ Verwenden Sie SQL Server Management Studio, um im SSIS-Katalog auf dem Azure SQL
 
 2. Mit der rechten Maustaste, und wählen Sie **Execute** So öffnen die **Paketausführungs** (Dialogfeld).
 
-3.  In der **Paketausführungs** Dialogfeld Feld, konfigurieren Sie die Ausführung des Pakets mit den Einstellungen auf der **Parameter**, **Verbindungs-Manager**, und **erweitert ** Registerkarten.
+3.  In der **Paketausführungs** Dialogfeld Feld, konfigurieren Sie die Ausführung des Pakets mit den Einstellungen auf der **Parameter**, **Verbindungs-Manager**, und **erweitert**  Registerkarten.
 
 4.  Wählen Sie **OK** zum Ausführen des Pakets.
 

@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Ein R-Modell zu erstellen und speichern in SQL Server
@@ -146,8 +146,9 @@ In diesem Abschnitt experimentieren Sie mit beiden Techniken.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. Generieren Sie eine lokale Darstellung, basierend auf den Werten in der Output-Variable gespeicherten `pred`.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ In der nächsten und letzten Lektion erfahren Sie, wie zum Ausführen der Bewert
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Das R-Modell bereitstellen und dort in SQL nutzen](/walkthrough-deploy-and-use-the-model.md)
+[Das R-Modell bereitstellen und dort in SQL nutzen](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Erstellen Sie mithilfe von R und SQL Data-Funktionen](/walkthrough-create-data-features.md)
+[Erstellen Sie mithilfe von R und SQL Data-Funktionen](walkthrough-create-data-features.md)
 
 

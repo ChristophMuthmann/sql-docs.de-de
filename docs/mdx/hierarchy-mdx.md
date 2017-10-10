@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
 ### <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der Name der Calendar Year-Hierarchie im AdventureWorks-Cube zurückgegeben.  
+ Das folgende Beispiel gibt den Namen der Calendar-Hierarchie in der Date-Dimension in der AdventureWorks-Cube zurück.  
   
  `WITH`  
   

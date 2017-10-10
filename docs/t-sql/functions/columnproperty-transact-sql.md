@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc9d610cf1c2ee7163f0de53e06a609ba7765ed0
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: c6c2af8d231f03c40ee87d3468977c3b66cbeeb4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
@@ -76,7 +76,7 @@ Ist ein Ausdruck, der für die zurückgegebenen Informationen enthält *Id*, und
 |**SystemDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in den Systemkatalogen oder virtuellen Tabellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**UserDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in Benutzertabellen zugreift, einschließlich Sichten und temporäre Tabellen, die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**UsesAnsiTrim**|Bei der Erstellung der Tabelle wurde für ANSI_PADDING die Einstellung ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **Char** oder **Varchar**.|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsSparse**|Spalte ist eine Spalte mit geringer Dichte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsSparse**|Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**"Generatedalwaystype"**|Spaltenwert wird vom System generiert werden. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = nicht immer generierten<br /><br /> 1 = Generated always as Zeile starten<br /><br /> 2 – generated always als Zeilenende|  
 |**"IsHidden"**|Spaltenwert wird vom System generiert werden. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = nicht ausgeblendete<br /><br /> 1 = ausgeblendet|  
@@ -104,15 +104,15 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Column Length`
-  
-------------\-
-  
- `50`  
+```
+Column Length
+-------------
+50
+```  
   
 ## <a name="see-also"></a>Siehe auch
 [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-MS.Date: "07/24/2017" [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+[TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   
 

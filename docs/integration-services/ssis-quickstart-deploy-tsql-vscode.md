@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Projekts von Visual Studio-Code mit Transact-SQL
@@ -21,7 +21,7 @@ Dieser Schnellstart veranschaulicht, wie Visual Studio-Code zum Herstellen einer
 > [!NOTE]
 > In diesem Artikel beschriebene Methode ist nicht verfügbar, bei der Herstellung einer Verbindung mit eines Azure SQL-Datenbankserver mit Visual Studio Code. Die `catalog.deploy_project` gespeicherte Prozedur erwartet den Pfad zu der `.ispac` Datei im Dateisystem lokalen (lokal).
 
-Visual Studio-Code ist ein Codeeditor für Windows, Mac OS und Linux, der Erweiterungen, einschließlich unterstützt die `mssql` -Erweiterung für das Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank oder Azure SQL Data Warehouse. Weitere Informationen zu Visual Studio Code, finden Sie unter [Visual Studio Cod](https://code.visualstudio.com/).
+Visual Studio-Code ist ein Codeeditor für Windows, Mac OS und Linux, der Erweiterungen, einschließlich unterstützt die `mssql` -Erweiterung für das Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank oder Azure SQL Data Warehouse. Weitere Informationen zu Visual Studio Code, finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -31,7 +31,7 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie die neueste Version von Visual 
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Modus "Sprache" in SQL in Visual Studio Code festlegen
 
-So aktivieren Sie `mssql` Befehle und T-SQL-IntelliSense wird der Modus "Sprache" wird festgelegt **SQL** in Visual Studio-Code.
+So aktivieren Sie `mssql` Befehle und T-SQL-IntelliSense, legen Sie die Language-Modus auf **SQL** in Visual Studio-Code.
 
 1. Öffnen Sie Visual Studio-Code, und klicken Sie dann öffnen Sie ein neues Fenster. 
 

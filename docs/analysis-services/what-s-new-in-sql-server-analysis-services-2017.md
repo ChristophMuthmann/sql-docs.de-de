@@ -1,37 +1,34 @@
 ---
-title: Was &#39; s neu in SQL Server 2017 Analysis Services | Microsoft Docs
-ms.custom: 
-ms.date: 09/21/2017
+title: Neuigkeiten in SQL Server 2017 Analysis Services | Microsoft Docs
+ms.date: 10/03/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
 ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 
-# <a name="what39s-new-in-sql-server-2017-analysis-services"></a>Was &#39; s neu in SQL Server 2017 Analysis Services
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuigkeiten in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 2017 Analysis Services zu den wichtigsten Verbesserungen seit SQL Server 2012 wird angezeigt. Auf den Erfolg des tabellarischen Modus (eingeführt in SQL Server 2012 Analysis Services), diese Version erstellen, können tabellarische Modelle leistungsfähiger als je zuvor.
+SQL Server 2017 Analysis Services finden Sie einige der wichtigsten Verbesserungen seit SQL Server 2012. Auf den Erfolg des tabellarischen Modus (eingeführt in SQL Server 2012 Analysis Services), diese Version erstellen, können tabellarische Modelle leistungsfähiger als je zuvor.
 
 Im mehrdimensionalen Modus und PowerPivot für SharePoint-Modus sind eine Klammer bei vielen Analysis Services-Bereitstellungen. In der Analysis Services-Produktlebenszyklus sind diese Modi ausgereifte. Es sind keine neuen Funktionen für einen der folgenden Modi in dieser Version. Fehlerbehebungen und leistungsverbesserungen werden jedoch berücksichtigt.
 
-Die hier beschriebenen Funktionen sind in SQL Server 2017 Analysis Services enthalten. Aber um von ihnen nutzen können, müssen Sie auch die neuesten Versionen der verwenden [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) und [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT und SSMS aktualisiert werden monatlich mit neuen und verbesserten features in der Regel das Conincide neue Funktionen in SQL Server.  
+Die hier beschriebenen Funktionen sind in SQL Server 2017 Analysis Services enthalten. Aber um von ihnen nutzen können, müssen Sie auch die neuesten Versionen der verwenden [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) und [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT und SSMS werden monatlich mit neuen und verbesserten Features aktualisiert, die in der Regel mit neuen Funktionen in SQL Server.  
 
-Obwohl Fun Wrapper deaktiviert alle neuen Funktionen werden darf, ist es auch wichtig zu wissen, was wird als veraltet markiert und in dieser Version und zukünftigen Versionen nicht mehr unterstützt. Achten Sie darauf, dass Sie Auschecken [Abwärtskompatibilität (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
+Während es wichtig, den neuen Funktionen vertraut ist, ist es auch wichtig zu wissen, was wird als veraltet markiert und in dieser Version und zukünftigen Versionen nicht mehr unterstützt. Achten Sie darauf, dass Sie Auschecken [Abwärtskompatibilität (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
 
 Werfen wir einen Blick auf einige der wichtigsten neuen Funktionen in dieser Version.
 
@@ -43,7 +40,7 @@ In SSDT können Sie den neuen Kompatibilitätsgrad 1400 auswählen, wenn Sie neu
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-So aktualisieren Sie ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft ** SQL Server-2017 (1400)**. 
+So aktualisieren Sie ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft  **SQL Server-2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -56,12 +53,12 @@ Die moderne Daten abrufen auftreten bereitgestellten Unterstützung für eine Br
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- Eine leistungsstarke und intuitive Benutzeroberfläche stellen Ihre Daten und Data Transformation/Mashup-Funktionen ist einfacher als je zuvor auswählen.
+ Eine leistungsstarke und intuitive Benutzeroberfläche macht auswählen, Ihre Daten und Data Transformation/Mashup-Funktionen ist einfacher als je zuvor.
 
 ![Erweiterte kombinieren](../analysis-services/media/as-get-data-advanced.png)
 
 
-Auftreten, die moderne Daten abrufen und M-Mashup-Funktionen gelten nicht für vorhandene Ugraded für tabellarische Modelle aus dem Kompatibilitätsgrad 1200 1400. Die neue Umgebung gilt nur für neue Modelle mit Kompatibilitätsgrad 1400 erstellt.
+Auftreten, die moderne Daten abrufen und M-Mashup-Funktionen gelten nicht für vorhandene Upraded für tabellarische Modelle aus dem Kompatibilitätsgrad 1200 1400. Die neue Umgebung gilt nur für neue Modelle mit Kompatibilitätsgrad 1400 erstellt.
 
 ## <a name="encoding-hints"></a>Codierung Hinweise
 Diese Version führt Codierung Hinweise, eine erweiterte Funktion, die zur Optimierung der Verarbeitung (Refresh Data) des großen tabellarischen in-Memory-Modellen verwendet. Zum besseren Verständnis Codierung finden Sie unter [Leistung optimieren von tabellarischen Modellen in SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx) in diesem Whitepaper Codierung besser zu verstehen.
@@ -70,9 +67,9 @@ Diese Version führt Codierung Hinweise, eine erweiterte Funktion, die zur Optim
 
 * Hashcodierung wird bevorzugt für Group by-Spalten (häufig Dimensionstabelle Werte) und Fremdschlüssel. Zeichenfolgenspalten sind immer Hash codiert.
 
-Numerische Spalten können mit dieser Codierung Methoden verwenden. Wenn Analysis Services ist entweder die Tabelle leer ist (mit oder ohne Partitionen) startet die Verarbeitung einer Tabelle oder ein vollständigen Tabelle Verarbeitungsvorgang durchgeführt werden, werden Beispiele Werte für jede numerische Spalte zu bestimmen, ob die anzuwendende Wert oder hashcodierung übernommen. . Wertcodierung wird standardmäßig ausgewählt, wenn das Beispiel von unterschiedlichen Werten in der Spalte ist groß genug – andernfalls hashcodierung wird in der Regel bieten eine bessere Komprimierung. Es ist möglich, dass Analysis Services Codierungsmethode ändern, nachdem die Spalte basierend auf Weitere Informationen über die datenverteilung teilweise verarbeitet wird, und starten Sie den Prozess der codieren. Dies natürlich erhöhen die Verarbeitungszeit und ist ineffizient. Im Whitepaper zur Optimierung der Leistung wird die Codierung erneut im Detail erläutert und beschrieben, wie mit SQL Server Profiler erkannt.
+Numerische Spalten können mit dieser Codierung Methoden verwenden. Wenn Analysis Services ist entweder die Tabelle leer ist (mit oder ohne Partitionen) startet die Verarbeitung einer Tabelle oder ein vollständigen Tabelle Verarbeitungsvorgang durchgeführt werden, werden Beispiele Werte für jede numerische Spalte zu bestimmen, ob die anzuwendende Wert oder hashcodierung übernommen. . Wertcodierung wird standardmäßig ausgewählt, wenn das Beispiel von unterschiedlichen Werten in der Spalte ist groß genug – hashcodierung andernfalls in der Regel eine bessere Komprimierung bietet. Es ist möglich, dass Analysis Services Codierungsmethode ändern, nachdem die Spalte basierend auf Weitere Informationen über die datenverteilung teilweise verarbeitet wird, und Starten des Codierungsvorgangs; Diese können jedoch erhöhen die Verarbeitungszeit und ist ineffizient. Im Whitepaper zur Optimierung der Leistung wird die Codierung erneut im Detail erläutert und beschrieben, wie mit SQL Server Profiler erkannt.
 
-Codierung Hinweise können der Modellierer eine Einstellung dafür Codierungsmethode erhält Vorkenntnisse von datenprofilerstellungs und/oder als Antwort auf die erneute Verschlüsselung Ablaufverfolgungsereignisse an. Da Aggregation über Spalten Hash-codierte langsamer ist als über Spalten Wert-codierte wertcodierung als Hinweis für solche Spalten angegeben werden kann. Es ist nicht sichergestellt, dass die Einstellung angewendet werden; Daher ist es ein Hinweis im Gegensatz zu einer Einstellung an. Um eine codierungshinweis anzugeben, legen Sie die EncodingHint-Eigenschaft für die Spalte ein. Mögliche Werte sind "Default", "Value" und "Hash". Der folgende Codeausschnitt von JSON-basierte Metadaten aus der Datei Model.bim gibt die Codierung für die Spalte Sales Amount Wert an.
+Codierung Hinweise können der Modellierer eine Einstellung dafür Codierungsmethode erhält Vorkenntnisse von datenprofilerstellungs und/oder als Antwort auf die erneute Verschlüsselung Ablaufverfolgungsereignisse an. Da Aggregation über Spalten Hash-codierte langsamer ist als über Spalten Wert-codierte wertcodierung als Hinweis für solche Spalten angegeben werden kann. Es ist nicht sichergestellt, dass die Einstellung angewendet wird. Es ist ein Hinweis im Gegensatz zu einer Einstellung. Um eine codierungshinweis anzugeben, legen Sie die EncodingHint-Eigenschaft für die Spalte ein. Mögliche Werte sind "Default", "Value" und "Hash". Der folgende Codeausschnitt von JSON-basierte Metadaten aus der Datei Model.bim gibt die Codierung für die Spalte Sales Amount Wert an.
 
 ```
 {
@@ -116,7 +113,7 @@ Mit der Eigenschaft **Detailzeilenausdruck** für Measures können Modellautoren
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-Die DAX-Funktion [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) wird häufig in einem Detailzeilenausdruck verwendet. Mit dem folgenden Beispiel werden die Spalten definiert, die für Zeilen in der Tabelle „Internetumsatz“ im Beispieltabellenmodell von Adventure Works zurückgegeben werden:
+Die [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX-Funktion wird häufig in einem Ausdruck verwendet Detail Zeilen verwendet. Mit dem folgenden Beispiel werden die Spalten definiert, die für Zeilen in der Tabelle „Internetumsatz“ im Beispieltabellenmodell von Adventure Works zurückgegeben werden:
 
 ```
 SELECTCOLUMNS(
@@ -133,7 +130,7 @@ Wenn die Eigenschaft definiert und das Modell bereitgestellt wurde, wird ein ben
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>Eigenschaft „Standard-Detailzeilenausdruck“ für Tabellen
-Neben Measures verfügen Tabellen auch über eine Eigenschaft, um einen Detailzeilenausdruck zu definieren. Die Eigenschaft **Standard-Detailzeilenausdruck** fungiert als Standard für alle Measures innerhalb der Tabelle. Measures, für die kein eigener Ausdruck definiert wurde, erben den Ausdruck der Tabelle und zeigen den für die Tabelle definierten Zeilensatz an. Dies ermöglicht die Wiederverwendung von Ausdrücken, und neue Measures, die später zur Tabelle hinzugefügt werden, erben automatisch den Ausdruck.
+Neben Measures verfügen Tabellen auch über eine Eigenschaft, um einen Detailzeilenausdruck zu definieren. Die Eigenschaft **Standard-Detailzeilenausdruck** fungiert als Standard für alle Measures innerhalb der Tabelle. Measures, die keine eigene definierter Ausdruck erbt den Ausdruck aus der Tabelle und das Rowset für die Tabelle definierten anzeigen. Dies ermöglicht die Wiederverwendung von Ausdrücken und neue Measures, die automatisch an die Tabelle später erbt den Ausdruck.
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -244,7 +241,7 @@ Zusätzlich zu den neuen Features gehören Analysis Services, SSDT und SSMS, die
 * Hierarchie und Spalte Wiederverwendung eingeblendet, in aussagekräftigere Speicherorte in der Liste der Power BI-Feld.
 * Datum Beziehungen problemlos Beziehungen zu Datumsdimensionen auf Grundlage von Datumsfeldern zu erstellen.
 * Die Standardinstallationsoption für Analysis Services ist jetzt für den Tabellenmodus.
-* Neue Daten abrufen (Power Qery) Datenquellen.
+* Neue Datenquellen "Daten abrufen" (Power Abfrage).
 * DAX-Editor für SSDT.
 * Vorhandene DirectQuery-Datenquellen für M Abfragen unterstützen.
 * SSMS-Verbesserungen, z. B. anzeigen, bearbeiten und die Unterstützung der Skripterstellung für strukturierte Datenquellen.
