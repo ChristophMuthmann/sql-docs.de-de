@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: a689293fadb1a442f94d88cc06a9e7a4ef06650f
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: be3d22491e1cf5e6446f9ac597d613e1d203a28e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
@@ -44,9 +44,9 @@ Verwenden Sie SQL Server Management Studio (SSMS) zum Abfragen, Entwerfen und Ve
 
 SSMS 17.X ist die größte Generation von *SQL Server Management Studio* und stellt Unterstützung für SQL Server 2017 bereit.
 
-**Download[ ![](../ssdt/media/download.png)Download SQL Server Management Studio 17.2 (Herunterladen von SQL Server Management Studio 17.2)](https://go.microsoft.com/fwlink/?linkid=854085)**
+**[![Download](../ssdt/media/download.png) Herunterladen von SQL Server Management Studio 17.3](https://go.microsoft.com/fwlink/?linkid=858904)**
 
-**Download[ ![](../ssdt/media/download.png)Download SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2) (Herunterladen des Upgradepakets von SQL Server Management Studio 17.2 (Upgrades 17.X bis 17.2))](https://go.microsoft.com/fwlink/?linkid=854087)**
+**[![Download](../ssdt/media/download.png) Herunterladen des Upgradepakets von SQL Server Management Studio 17.3 (Upgrades 17.X bis 17.3)](https://go.microsoft.com/fwlink/?linkid=858906)**
 
 Die Installation von SSMS 17.X upgradet oder ersetzt nicht die Versionen 16.X oder früher von SSMS. SSMS 17.x wird parallel zu früheren Versionen installiert, damit beide Versionen zur Verfügung stehen.
 Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich vergewissern, dass Sie die richtige Version für Ihre speziellen Anforderungen starten. Die neueste Version heißt *Microsoft SQL Server Management Studio 17* und verfügt über ein neues Symbol: 
@@ -61,58 +61,30 @@ Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich verge
 
 **Versionsinformationen**
 
-Versionsnummer: 17.2 Buildnummer dieser Version: 14.0.17177.0
+Versionsnummer: 17.3
+
+Buildnummer dieses Release: 14.0.17199.0
 
 ## <a name="new-in-this-release"></a>In dieser Version neu
 
-SSMS 17.2 ist die neueste Version von SQL Server Management Studio. Die Generation 17.X von SSMS bietet Support für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2017. Version 17.X unterstützt auch SQL Analysis Service-PaaS.
+SSMS 17.3 ist die neueste Version von SQL Server Management Studio. Die Generation 17.X von SSMS bietet Support für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2017. Version 17.X unterstützt auch SQL Analysis Service-PaaS.
 
-Version 17.2 enthält Folgendes:
+Version 17.3 enthält Folgendes:
 
-- Multi-Factor Authentication (MFA)
-  - Azure AD-Authentifizierung für mehrere Benutzer für eine universelle Authentifizierung mit Multi-Factor Authentication (UA mit MFA)
-  - Ein neues Eingabefeld für Benutzeranmeldeinformationen wurde der universellen Authentifizierung mit MFA hinzugefügt, um die Authentifizierung für mehrere Benutzer zu unterstützen.
-- Das Dialogfeld „Verbindung“ unterstützt nun die folgenden fünf Authentifizierungsmethoden:
-  - Windows-Authentifizierung
-  - SQL Server-Authentifizierung
-  - Active Directory: Universell mit MFA-Unterstützung
-  - Active Directory: Kennwort
-  - Active Directory: Integriert
-
-- Der Assistent für Datenbankimport und -export für DacFx kann nun die universelle Authentifizierung mit MFA verwenden.
-- Informationen zur API-Unterstützung finden Sie unter [IUniversalAuthProvider-Schnittstelle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
-- Die von ADAL verwaltete Bibliothek, die von der universellen Authentifizierung mit MFA in Azure AD verwendet wird, wurde auf Version 3.13.9 aktualisiert.
-- Eine neue CLI-Schnittstelle, die Azure AD-Administratoreinstellungen für SQL Datenbank und SQL Data Warehouse unterstützt.
-
- Weitere Informationen zu den Authentifizierungsmethoden in Active Directory finden Sie unter [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA) (Universelle Authentifizierung mit SQL-Datenbank und SQL Data Warehouse (SSMS-Unterstützung für MFA))](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) und [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio (Konfigurieren der mehrstufigen Authentifizierung in Azure SQL-Datenbank für SQL Server Management Studio)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
-
-- Das Ausgabefenster enthält Einträge für Abfragen, die während der Erweiterung der Objekt-Explorer-Knoten ausgeführt wurden
-- Aktivierter Sicht-Designer für Azure SQL-Datenbanken
-- Die Standardoptionen für die Skripterstellung für Skripterstellungsobjekte aus dem Objekt-Explorer in SSMS haben sich geändert:
-  - Zuvor war das generierte Skript bei einer neuen Installation standardmäßig auf die neueste Version von SQL Server (aktuell SQL Server 2017) ausgerichtet.
-  - Mit SSMS 17.2 wurde eine neue Option hinzugefügt: *Skripteinstellungen mit Quelle abgleichen*. Mit der Einstellung *TRUE* ist das generierte Skript auf dieselbe Version, denselben Modultyp und dieselbe Moduledition wie die des Servers, von dem aus das Skript für das Objekt erstellt wird, ausgerichtet.
-  - Der Wert für *Skripteinstellungen mit Quelle abgleichen* ist standardmäßig auf *TRUE* festgelegt. Neue Installationen von SSMS verfügen somit automatisch über die Standardeinstellung, dass die Skripte von Objekten an dasselbe Ziel wie das des Originalservers gerichtet werden.
-  - Wenn der Wert für *Skripteinstellungen mit Quelle abgleichen* auf *FALSE* festgelegt ist, werden die normalen Zieloptionen für die Skripterstellung aktiviert und funktionieren wie bisher.
-  - Zusätzlich wurden alle Skripterstellungsoptionen in ihren eigenen Abschnitt verschoben: *Versionsoptionen*. Sie befinden sich nicht länger unter*Allgemeine Skriptoptionen*.
-
-- Unterstützung für nationale Clouds in „Wiederherstellen aus URL“
-- Die QueryStoreUI-Berichte unterstützen nun zusätzliche Metriken (RowCount, DOP, CLR Time usw.) aus „sys.query_store_runtime_stats“.
-- IntelliSense wird nun für die Azure SQL-Datenbank unterstützt
-    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
-- Sicherheit: Das Verbindungsdialogfeld stuft Serverzertifikate standardmäßig als nicht vertrauenswürdig ein und fordert Verschlüsselung für Azure SQL-Datenbankverbindungen an
-- Allgemeine Verbesserungen für die Unterstützung von SQL Server unter Linux:
- - Der Knoten „Datenbank-E-Mail“ ist zurück
- - Einige auf Pfade bezogene Probleme wurden behoben
- - Verbesserungen der Stabilität des Aktivitätsmonitors
- - Das Dialogfeld „Verbindungseigenschaften“ zeigt die korrekte Plattform an
-- Der Leistungsdashboard-Serverbericht ist nun als Standardbericht verfügbar:
-  - Verbindung zu SQL Server 2008 und höheren Versionen möglich.
-  - Der Unterbericht zu fehlenden Indizes verwendet Bewertungen, um das Identifizieren der nützlichsten Indizes zu unterstützen.
-  - Der Unterbericht zum Verlauf der Wartezustände aggregiert die Wartevorgänge nun nach Kategorie. Wartevorgänge, die sich im Leerlauf oder Ruhezustand befinden, werden standardmäßig herausgefiltert.
-  - Ein neuer Unterbericht für den Verlauf von Latches.
-- Die Showplan-Knotensuche ermöglicht die Suche in Planeigenschaften. Einfache Suche nach beliebigen Operatoreigenschaften wie z.B. Tabellennamen. Das Verwenden dieser Option beim Anzeigen eines Plans:
-  - Klicken Sie mit der rechten Maustaste auf „Plan“ und im Kontextmenü auf die Option „Knoten finden“
-  - Drücken Sie STRG+F
+- Es wurde ein neuer Assistent zum Importieren von Flatfiles hinzugefügt, um den Import von CSV-Dateien mithilfe eines intelligenten Frameworks zu optimieren, wozu minimale Benutzerintervention oder spezielles Domänenwissen erforderlich ist. Weitere Informationen finden Sie unter [Import Flat File to SQL Wizard (Importieren einer Flat File zum SQL-Assistenten)](../relational-databases/import-export/import-flat-file-wizard.md).
+- Hinzugefügter „XEvent Profiler“-Knoten zum Objekt-Explorer. Weitere Informationen finden Sie unter [Use the SSMS XEvent Profiler (Verwenden des SSMS XEvent Profiler)](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- Aktualisierte Wartevorgangsfilterung und -kategorisierung in historischen Wartevorgangsberichten des Performance Dashboards.
+- Die Syntaxprüfung der „Predict“-Funktion wurde hinzugefügt.
+- Die Syntaxprüfung der Abfragen der externen Bibliotheksverwaltung wurde hinzugefügt.
+- SMO-Unterstützung für die externe Bibliotheksverwaltung wurde hinzugefügt.
+- Die Unterstützung „PowerShell starten“ wurde dem Fenster „Registrierte Server“ hinzugefügt (erfordert ein neues SQL PowerShell-Modul).
+- Always On: [die schreibgeschützte Routingunterstützung](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) für Verfügbarkeitsgruppen wurde hinzugefügt.
+- Eine Option zum Senden von Ablaufverfolgungsdetails an das Ausgabefenster für „Active Directory: universell mit MFA-Unterstützung“-Logins wurde hinzugefügt (standardmäßig deaktiviert, muss in den Benutzereinstellungen unter „Tools > Optionen > Azure-Dienste > Azure Cloud > Ablaufverfolgungsebene für ADAL-Ausgabefenster“ aktiviert werden). 
+- Abfragespeicher: 
+  - Es kann auf die Abfragespeicher-Benutzeroberfläche zugegriffen werden, auch wenn QDS deaktiviert ist, solange QDS Daten aufgezeichnet hat.
+  - Die Abfragespeicher-Benutzeroberfläche macht die Kategorisierung von Wartevorgängen in allen vorhandenen Berichten verfügbar. Dadurch können Kunden die Szenarios der wichtigsten wartenden Abfragen und vieles mehr entsperren.
+- Inklusionen der Header von Skriptparametern sind jetzt optional (standardmäßig deaktiviert, kann in den Benutzereinstellungen unter „Tools > Optionen > SQL Server-Objekt-Explorer > Skripts > Header für Skriptparameter einbeziehen“ aktiviert werden) – [Connect-Artikel 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
+- Das „RC“-Branding wurde entfernt.
 
 Die vollständige Liste der Änderungen finden Sie unter [SQL Server Management Studio - Changelog (SSMS) (SQL Server Management Studio: Änderungsprotokoll (SSMS))](../ssms/sql-server-management-studio-changelog-ssms.md).
 
@@ -158,33 +130,29 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
 
 Diese Version von SSMS kann in folgenden Sprachen installiert werden:
 
-SQL Server Management Studio 17.2:<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+SQL Server Management Studio 17.3:<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
-Upgradepaket von SQL Server Management Studio 17.2 (Upgrades 17.X bis 17.2):<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
+Upgradepaket für SQL Server Management Studio 17.3 (Upgrades 17.X bis 17.3):<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>Versionsanmerkungen
 
-Version 17.2 weist folgende Probleme und Einschränkungen auf:
+Version 17.3 weist folgende Probleme und Einschränkungen auf:
 
-- Bei Abfragefenstern, die die universelle Active Directory-Authentifizierung mit MFA-Unterstützung verwenden, kann ein Fehler ähnlich dem Folgenden auftreten, wenn versucht wird, eine Abfrage durchzuführen, nachdem das Fenster für eine Stunde oder länger geöffnet war:
+**SSMS Allgemein**
 
-   `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of *ConnectRetryCount* to increase the number of recovery attempts.`
+- Die folgenden SSMS-Funktionen werden für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
+   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die folgende kryptische Fehlermeldung angezeigt wird: „Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…“ (Datei oder Assembly ‚Microsoft.IdentityModel.Clients.ActiveDirectory,…‘ konnte nicht geladen werden), obwohl man eigentlich folgende Fehlermeldung erwarten würde: „Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
+- Bei dem Versuch, eine Abfrage in DTA zu analysieren entsteht folgender Fehler: "Object must implement IConvertible. (mscorlib)“ (Objekt muss IConvertible implementieren).
+- *Rückläufige Abfragen* fehlen in der Liste der Berichte im Abfragespeicher im Objekt-Explorer.
+   - Problemumgehung: Klicken Sie mit der rechten Maustaste auf den Knoten **Abfragespeicher**, und wählen Sie **View Regressed Queries (Rückläufige Abfragen anzeigen)** aus.
 
-   Ein erneutes Ausführen der Abfrage sollte den Fehler überwinden und erfolgreich sein.
+**Integration Services (IS)**
 
-- Die folgenden SSMS-Funktionalitäten werden in Azure AD nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
-  - Der Designer **Neue Tabelle/Sicht** zeigt die Anmeldeaufforderung im alten Format an, außerdem funktioniert die Azure AD-Authentifizierung nicht.
-  - Das Feature **Die ersten 200 Zeilen bearbeiten** unterstützt die Azure AD-Authentifizierung nicht.
-  - Die Komponente **Registrierter Server** unterstützt die Azure AD-Authentifizierung nicht.
-  - Der **Datenbankoptimierungsratgeber** wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem der Benutzer eine wenig hilfreiche Fehlermeldung angezeigt bekommt: *Datei oder Assembly ‚Microsoft.IdentityModel.Clients.ActiveDirectory,…‘ konnte nicht geladen werden* Entgegen der Erwartung *wird die Microsoft Azure SQL-Datenbank nicht vom Datenbankoptimierungsratgeber unterstützt. (DTAClient)*.
+- Der [Ausführungspfad] in [Katalog].[Ereignismeldungen] ist für Paketausführungen in Scale Out falsch. Der [Ausführungspfad] beginnt mit „\Package“ anstelle des Objektnamens des ausführbaren Pakets. Beim Anzeigen der Übersichtsberichte von Paketausführungen in SSMA kann der Link zum „Ausführungspfad“ in der Übersicht über die Ausführung nicht funktionieren. Klicken Sie im Übersichtsbericht auf „Nachrichten anzeigen“, um alle Ereignismeldungen zu prüfen.
 
-**AS**
 
-- Der Objekt-Explorer in SSAS zeigt den Benutzernamen der Windows-Authentifizierung nicht in den AS Azure-Verbindungseigenschaften an.
-Weitere Informationen finden Sie im [SSMS-Änderungsprotokoll](sql-server-management-studio-changelog-ssms.md).
 
 ## <a name="previous-releases"></a>Vorgängerversionen
 

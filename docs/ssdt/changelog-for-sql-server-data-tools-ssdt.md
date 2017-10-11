@@ -1,7 +1,7 @@
 ---
 title: "Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 für Visual Studio 2015
+Buildnummer: 14.0.61709.290
+
+### <a name="whats-new"></a>Neues
+
+**Analysis Services (AS)**
+
+- Cosmos DB und HDI Spark werden in 1400-Modellen aktiviert
+- Tabellarische Datenquelleneigenschaften
+- Die „Leere Abfrage“ ist nun eine unterstützte Option zum Erstellen einer neuen Abfrage im Abfrage-Editor für Modelle des Kompatibilitätsgrads 1400.
+- Der Abfrage-Editor für Modelle im Modus 1400 erlaubt nun das Speichern von Abfragen, ohne das neue Tabellen automatisch verarbeitet werden.
+
+**Reporting Services (RS)**
+
+- Beim Öffnen eines Projekts werden Benutzer dazu aufgefordert, das upgegradete Format für die Verwendung von MSBuild zum Erstellen und Bereitstellen zu verwenden.
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+**Analysis Services (AS)**
+
+- Modelle des Kompatibilitätsgrads 1400 im Direct Query-Modus, bei denen Perspektiven bei der Abfrage oder Ermittlung von Metadaten fehlschlagen.
+
+**Reporting Services (RS)**
+
+- Das neue Berichtsprojektformat behält keine Quellcodeverwaltungsbindung bei und löst einen Fehler ähnlich der folgenden Meldung aus:
+
+   *Die Projektdatei "C:\path" ist nicht an die Quellcodeverwaltung gebunden, aber die Projektmappe enthält Quellcodebindungsinformationen.*
+ 
+   Um dieses Problem zu umgehen, klicken Sie jedes Mal, wenn die Projektmappe geöffnet wird, auf **Projektmappenbindung verwenden**.
+
+- Nachdem Sie Ihr Projekt auf das neue MSBuild-Format upgegradet haben, kann die Speicherung mit einer Meldung ähnlich der folgenden fehlschlagen:
+
+   *„Parameter "unevaluatedValue" darf nicht NULL sein.“*
+
+   Aktualisieren Sie Ihre *Projektkonfigurationen*, und füllen Sie die *Platform*-Eigenschaft auf, um dieses Problem zu umgehen.
+
+### <a name="bug-fixes"></a>Fehlerbehebungen
+
+**Analysis Services (AS)**
+
+- Erheblich verbesserte Leistung beim Laden der Diagrammansicht des tabellarischen Modells.
+- Eine Anzahl von Problemen wurde behoben, um die PowerQuery-Integration und Erfahrung in 1400-Kompatibilitätsgradmodellen zu verbessern.
+   - Ein Problem wurde behoben, bei dem die Bearbeitung von Berechtigungen für Dateiquellen verhindert wurde.
+   - Ein Problem wurde behoben, bei dem die Quelle für Dateiquellen nicht geändert werden konnte.
+   - Ein Problem wurde behoben, bei dem die falsche Benutzeroberfläche für Dateiquellen angezeigt wurde.
+- Ein Problem wurde behoben, das dazu geführt hat, dass die „JoinOnDate“-Eigenschaft entfernt wurde, als eine „Verknüpfen nach Datum“-Beziehung inaktiv wurde.
+- Die neue Abfrageoption im Abfrage-Generator erlaubt Ihnen nun das Erstellen einer neuen leeren Abfrage.
+- Ein Problem wurde behoben, das dazu geführt hat, dass Bearbeitungen an einer vorhandenen Datenquellenabfrage die Modelldefinition der Tabelle im Kompatibilitätsgrad 1400 nicht aktualisiert hat.
+- Probleme mit benutzerdefinierten Kontextausdrücken wurden behoben, die womöglich zu Ausnahmen geführt haben.
+- Wenn Sie eine neue Tabelle mit doppeltem Namen in tabellarischen 1400-Modellen importieren, wird der Benutzer jetzt informiert, dass es einen Namenskonflikt gab, und der angepasste Name eindeutig sein muss.
+- Der Identitätswechselmodus für den aktuellen Benutzer wurde aus den Modellen im „Import“-Modus entfernt und ist kein unterstütztes Szenario.
+- Die PowerQuery-Integration unterstützt nun Optionen für zusätzliche Datenquellen (OData.Feed. Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
+- Zeichenfolgen von PowerQuery-Optionen für Datenquellen zeigen nun Text basierend auf dem Client-Gebietsschema ordnungsgemäß an.
+- Die Diagrammansicht zeigt nun neu erstellte Spalten aus dem M-Abfrage-Editor in 1400-Kompatibilitätsgradmodellen.
+- Der Power Query-Editor stellt nun die Option bereit, Daten nicht zu importieren.
+- Ein Problem wurde behoben, bei dem beim Installieren einer Daten-Cartridge Tabellen von Oracle in mehrdimensionalen Modellen in VS2017 importiert wurden.
+- Ein Problem wurde behoben, das womöglich in seltenen Fällen zu einem Absturz geführt hätte, wenn der Mauszeiger von der Tabellenformelleiste entfernt worden wäre.
+- Ein Problem wurde im Dialogfeld „Bearbeiten von Tabelleneigenschaften“ behoben, was dazu geführt hat, dass beim Ändern des Tabellennamens auch der Quelltabellenname falsch geändert wurde, was zu einem unerwarteten Fehler geführt hat.
+- Eine Absturzursache wurde behoben, die in VS2017 auftreten könnte, wenn „Cubesicherheit testen“ im Rollen-Designer und im Designer der Registerkarte „Zellendaten“ in mehrdimensionalen Projekten aufgerufen wird.
+- SSDT: Eigenschaften können für tabellarische Datenquellen nicht editiert werden.
+- Ein Problem wurde behoben, das womöglich dazu geführt hat, dass MSBuild- und DevEnd-Builds in einigen Fällen mit Projektmappendateien nicht ordnungsgemäß gearbeitet haben.
+- Deutlich verbesserte Leistung beim Ausführen eines Commits für Modelländerungen (DAX-Bearbeitungen für Measures, berechnete Spalten), wenn das tabellarische Modell größere Metadaten enthält.
+- Es wurden eine Reihe von Problemen für das Importieren von Daten mithilfe von PowerQuery in Modellen des Kompatibilitätsgrades 1400 behoben.
+   - Nach Klicken auf „Importieren“ dauert der Import sehr lange, und die Benutzeroberfläche zeigt keinen Status an.
+   - Eine lange Liste von Tabellen wird auf der Ansicht „Navigator“ angezeigt, wenn langsam versucht wird, Tabellen zum Importieren auszuwählen.
+   - Die niedrige Leistung des Abfrage-Editors beim Arbeiten mit einer Liste von 35 Abfragen in der Ansicht des Abfrage-Editors (ebenfalls Problem auf dem PBI-Desktop).
+   - Der Import mehrerer Tabellen hat die Symbolleiste deaktiviert und kann in einigen Situationen möglicherweise nicht beendet werden. 
+   - Der Modellen-Designer scheint deaktiviert zu sein und hat keine Daten nach dem Import der Tabellen mithilfe von PQ angezeigt.
+   - Das Aufheben der Auswahl „Neue Tabelle erstellen“ auf der PQ-Benutzeroberfläche hat noch immer dazu geführt, dass eine neue Tabelle erstellt wurde.
+   - Die Ordnerdatenquelle fordert keine Anmeldeinformationen. 
+   - Der Objektverweis hat keine Ausnahme festgelegt, die beim Versuch, aktualisierte Anmeldeinformationen auf der strukturierten Datenquelle zu erhalten, aufgetreten ist.
+   - Das Öffnen des Partitions-Managers mit dem M-Ausdruck war sehr langsam.
+   - Das Auswählen von Eigenschaften in der Tabelle des PQ-Editors hat keine Eigenschaften angezeigt.
+- Verbesserte Stabilität in der Integration der Power Query-Benutzeroberfläche zum Erfassen allgemeiner Ausnahmen und Anzeigen im Ausgabefenster
+- Ein Problem wurde behoben, bei dem ChangeSource auf der Strukturdatenquelle keine Änderungen bei Kontextausdrücken beibehalten hat
+- Ein Problem wurde behoben, bei dem M-Ausdrucksfehler Fehler beim Update des Modells ohne angezeigte Fehlermeldung verursacht haben.
+- Ein Problem wurde behoben, bei dem beim Schließen von SSDT folgender Fehler auftrat: „Das Build muss beendet werden, bevor die Projektmappe geschlossen werden kann.“
+- Ein Problem wurde behoben, bei dem VS anscheinend hängt, wenn der falsche Identitätswechselmodus im Kompatibilitätsgradmodus 1400 festgelegt wird. 
+- Die Detailzeileneigenschaft wird jetzt nur zu JSON serialisiert, wenn sie nicht leer ist (Standardeinstellung umgestellt).
+- Der OLEDB-Triver von Oracle ist nun in der List für den tabellarischen Direct Query-Modus verfügbar.
+- Das Hinzufügen von M-Ausdrücken in Kombatibilitätsgradmodellen von 1400 erscheinen nun im tabellarischen Modell-Explorer (TME) bzw. wird darin aktualisiert.
+- Ein Problem wurde behoben, das dazu geführt hat, dass der MSOPAP-Anbieter nicht in VS2017 erscheint, wenn versucht wurde mithilfe der Datenquelle „Andere“ in Kompatibilitätsgradmodellen vor 1400 zu importieren.
+- Ein Problem wurde behoben, bei dem das Hinzufügen einer Übersetzung über TME Fehler verursacht hat. 
+- Ein Problem wurde in der Schnittstelle der Sicherheit auf Objektebene behoben, das dazu geführt hat, dass die Registerkarte in einigen Fällen falsch angezeigt oder ausgeblendet wurde.
+- Ein Problem wurde behoben, bei dem ein Fehler auftreten und versuchen könnte, zuvor geladene mehrdimensionale Modelle mithilfe des Dialogfelds „Mit Datenbank verbinden“ zu öffnen.
+- Ein Problem wurde behoben, das einen Fehler beim Hinzufügen benutzerdefinierter Assemblys zu einem mehrdimensionalen Modell verursacht hat.
+
+**Reporting Services (RS)**
+
+- Ein Problem beim Kompilieren und Erstellen von RDLC in VS 2017 wurde behoben.
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT für Visual Studio 2017 (15.3.0, Vorschauversion)
 Buildnummer: 14.0.16121.0
@@ -129,7 +220,7 @@ Buildnummer: : 14.0.61704.140
 **Datenbankprojekte:**
 - Das Ändern eines gruppierten Index in einer Ansicht blockiert keine Bereitstellungen mehr
 - Schemavergleichszeichenfolgen, die mit der Spaltenverschlüsselung in Zusammenhang stehen, verwenden den tatsächlichen Namen und nicht den Instanznamen.   
-- Eine neue Befehlszeilenoption wurde zu SqlPackage hinzugefügt: ModelFilePath.  Dies bietet eine Option für fortgeschrittene Benutzer, um eine externe model.xml-Datei für Import-, Veröffentlichungs- und Skriptvorgänge anzugeben   
+- Eine neue Befehlszeilenoption wurde zu SqlPackage hinzugefügt: ModelFilePath.  Dies bietet eine Option für fortgeschrittene Benutzer, um eine externe „model.xml“-Datei für Import-, Veröffentlichungs- und Skriptvorgänge anzugeben   
 - Die DacFx-API wurde erweitert, um die universale Azure AD-Authentifizierung und die mehrstufige Authentifizierung (MFA) zu unterstützen
 
 **IS-Projekte:**

@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
