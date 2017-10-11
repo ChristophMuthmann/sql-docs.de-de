@@ -81,7 +81,7 @@ Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, fin
   
     -   Bei Oracle weist ein Server höchstens eine Datenbank auf, deshalb ist die Angabe der Datenbank nicht erforderlich.  
   
-    -   Bei IBM DB2 wird die Datenbank in der DM2-Verbindungszeichenfolge angegeben. Weitere Informationen finden Sie unter [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   Bei IBM DB2 wird die Datenbank in der DM2-Verbindungszeichenfolge angegeben. Weitere Informationen finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des entsprechenden OLE DB-Anbieters verwenden.  
   
