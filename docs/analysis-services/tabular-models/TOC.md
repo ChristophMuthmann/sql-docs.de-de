@@ -20,6 +20,7 @@
 ### [Unterstützte Datenquellen](data-sources-supported-ssas-tabular.md)  
 ### [Unterstützte Datentypen](data-types-supported-ssas-tabular.md)  
 ### [Identitätswechsel](impersonation-ssas-tabular.md)  
+### [Importieren von Daten mit einer nativen Abfrage](ssas-import-query.md)
 ### [Daten importieren – Relationale Datenquelle](ssas-import-data-relational-data-source.md)  
 ### [Daten importieren – Mehrdimensionale Datenquelle](ssas-import-data-multidimensional-data-source.md)  
 ### [Daten importieren – Datenfeed](ssas-import-data-data-feed.md)  
