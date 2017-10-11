@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   In diesem Thema erhalten Sie einen Überblick über die Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT-Anweisung und der INSERT...SELECT * FROM OPENROWSET(BULK...)-Anweisung, mit denen ein Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ermöglicht wird. In diesem Thema werden zudem Sicherheitsaspekte beim Verwenden von BULK INSERT und OPENROWSET(BULK…) beschrieben, und mithilfe dieser Methoden wird ein Massenimport aus einer Remotedatenquelle ausgeführt.  
   
-> **HINWEIS:** Für die Verwendung von BULK INSERT oder OPENROWSET(BULK…) ist es wichtig, nachvollziehen zu können, wie Identitätswechsel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen verarbeitet werden. Weitere Informationen finden Sie unter "Sicherheitsüberlegungen" weiter unten in diesem Thema.  
+> [!NOTE]
+> Für die Verwendung von BULK INSERT oder OPENROWSET(BULK…) ist es wichtig, nachvollziehen zu können, wie Identitätswechsel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen verarbeitet werden. Weitere Informationen finden Sie unter "Sicherheitsüberlegungen" weiter unten in diesem Thema.  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT-Anweisung  
  BULK INSERT lädt Daten aus einer Datendatei in eine Tabelle. Die Funktionalität ähnelt derjenigen der Option **in** des **bcp** -Befehls. Die Datendatei wird jedoch vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess gelesen. Eine Beschreibung der BULK INSERT-Syntax finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Massenimport aus einer Remotedatendatei  
  Die Datendatei muss zwischen zwei Computern freigegeben sein, um mithilfe von BULK INSERT oder INSERT...SELECT \* FROM OPENROWSET(BULK...) den Massenimport von Daten von einem Computer zum anderen auszuführen. Verwenden Sie zum Angeben einer freigegebenen Datendatei den UNC-Namen (Universal Naming Convention) im allgemeinen Format **\\\\***Servername***\\***Freigabename***\\***Pfad***\\***Dateiname*. Zudem muss das Konto, mit dem auf die Datendatei zugegriffen wird, über die Berechtigungen verfügen, die zum Lesen der Datei auf dem Remotedatenträger erforderlich sind.  
   
- Beispielsweise wird mithilfe der folgenden `BULK INSERT` -Anweisung ein Massenimport von Daten aus der Datendatei `SalesOrderDetail` in die `AdventureWorks` -Tabelle der `newdata.txt`-Datenbank ausgeführt. Diese Datendatei befindet sich im freigegebenen Ordner `\dailyorders` auf dem `salesforce` -Netzwerkfreigabeverzeichnis des `computer2`-Systems.  
+ Beispielsweise wird mithilfe der folgenden `BULK INSERT` -Anweisung ein Massenimport von Daten aus der Datendatei `SalesOrderDetail` in die `AdventureWorks` -Tabelle der `newdata.txt`-Datenbank ausgeführt. Diese Datendatei befindet sich im freigegebenen Ordner `\dailyorders` auf dem `salesforce`-Netzwerkfreigabeverzeichnis des `computer2`-Systems.  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **HINWEIS:** Diese Einschränkung gilt nicht für das Hilfsprogramm **bcp** , da die Datei vom Client unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gelesen wird.  
+> [!NOTE]
+> Diese Einschränkung gilt nicht für das Hilfsprogramm **bcp**, da die Datei vom Client unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelesen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

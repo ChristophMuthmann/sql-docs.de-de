@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 In diesem Thema zeigt, wie die **Mssql** -Erweiterung für Visual Studio-Code (Visual Studio-Code), SQL Server-Datenbanken zu entwickeln.
 
-Visual Studio-Code ist eine grafische Code-Editor für Linux, Mac OS und Windows, der Erweiterungen unterstützt. Die [**Mssql** -Erweiterung für Visual Studio Code] ermöglicht es Ihnen, eine Verbindung mit SQL Server, Abfrage mit Transact-SQL (T-SQL) und die Ergebnisse anzuzeigen.
+Visual Studio-Code ist eine grafische Code-Editor für Linux, Mac OS und Windows, der Erweiterungen unterstützt. Die [ **Mssql** -Erweiterung für Visual Studio Code] ermöglicht es Ihnen, eine Verbindung mit SQL Server, Abfrage mit Transact-SQL (T-SQL) und die Ergebnisse anzuzeigen.
 
 ## <a name="install-vs-code"></a>Installieren von VS-Code
 1. Wenn Sie Visual Studio-Code nicht bereits installiert haben [herunterladen und installieren Sie Visual Studio Code] auf Ihrem Computer.
@@ -141,7 +141,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
    > [!TIP]
    > Sie können die Verknüpfung von schlüsselbindungen für die Befehle der Mssql-Erweiterung anpassen. Finden Sie unter [Tastenkombinationen anpassen].
 
-## <a name="create-a-table"></a>Erstellen Sie eine Tabelle
+## <a name="create-a-table"></a>Erstellen einer Tabelle
 
 1. Entfernen Sie den Inhalt im Editor-Fenster.
 
@@ -256,7 +256,7 @@ Weitere Informationen zu verwenden, oder der Mssql-Erweiterung verwendet werden 
 
 Weitere Informationen zur Verwendung von Visual Studio Code finden Sie unter der [Dokumentation zu Visual Studio Code](https://code.visualstudio.com/docs).
 
-[**Mssql** -Erweiterung für Visual Studio Code]:https://aka.ms/mssql-marketplace
+[** Mssql ** Erweiterung für Visual Studio-Code]:https://aka.ms/mssql-marketplace
 [herunterladen und installieren Sie Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core Anweisungen]:https://www.microsoft.com/net/core
 [Verwalten von remoteverbindungsprofilen]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles

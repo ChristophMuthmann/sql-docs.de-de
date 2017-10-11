@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>Beispieltabelle und Datendatei  
  Für die folgenden Beispiele muss in der `myTestSkipCol` -Beispieldatenbank unter dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dbo **-Schema eine Tabelle mit der Bezeichnung** erstellt werden. Erstellen Sie diese Tabelle folgendermaßen  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle ausgeführt werden kann, muss `Col1`das erste Datenfeld von der Formatdatei zugeordnet werden, `Col3`muss das zweite Feld zugeordnet werden. `Col2`wird ausgelassen.  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>Erstellen einer standardmäßigen Nicht-XML-Formatdatei  
  In diesem Thema wird die standardmäßige Nicht-XML-Formatdatei verwendet, die mithilfe des folgenden `myTestSkipCol` bcp **-Befehls für die** -Beispieltabelle erstellt wurde:  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>Verwenden von BULK INSERT  
  Für dieses Beispiel wird eine der geänderten Nicht-XML-Formatdateien verwendet, die weiter oben in diesem Thema unter "Methoden zum Ändern von Nicht-XML-Formatdateien" erstellt wurden. In diesem Beispiel lautet der Name der geänderten Formatdatei `C:\myTestSkipCol2.fmt`. Führen Sie im Abfrage-Editor von `BULK INSERT` den folgenden Code aus, um mithilfe von `myTestSkipCol2.dat` einen Massenimport der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Datendatei auszuführen:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +129,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>Erstellen einer standardmäßigen XML-Formatdatei  
  Die Beispiele der geänderten Formatdateien beruhen auf der `myTestSkipCol` -Beispieltabelle und der Datendatei, die unter "Beispieltabelle und -datendatei" weiter oben in diesem Thema erstellt wurden. Mit dem folgenden **bcp** -Befehl wird eine standardmäßige XML-Formatdatei für die `myTestSkipCol` -Tabelle erstellt:  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  In der erstellten standardmäßigen Nicht-XML-Formatdatei wird eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben. Dies erfolgt folgendermaßen:  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>Beispiele  
  Für die Beispiele in diesem Abschnitt werden die `myTestSkipCol` -Beispieltabelle und die `myTestSkipCol2.dat` -Beispieldatendatei verwendet, die unter "Beispieltabelle und -datendatei" weiter oben in diesem Thema erstellt wurden. Zum Importieren der Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle wird in den Beispielen die folgende geänderte XML-Formatdatei verwendet: `myTestSkipCol2-x.xml`. Diese Datei basiert auf der Formatdatei, die unter "Erstellen einer standardmäßigen XML-Formatdatei" weiter oben in diesem Thema erstellt wurde.  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  

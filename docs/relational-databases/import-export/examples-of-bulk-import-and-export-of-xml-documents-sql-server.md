@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
-  
- **Hinweis:** Weitere Informationen finden Sie in den folgenden Themen 
-  - [Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [Importieren von XML in SQL Server mit der Komponente zum XML-Massenladen.](https://support.microsoft.com/en-us/kb/316005)
-     - [XML-Schemaauflistungen (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+Weitere Informationen finden Sie in den nachfolgenden Themen.
+- [Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [Importieren von XML in SQL Server mit der Komponente zum XML-Massenladen.](https://support.microsoft.com/en-us/kb/316005)
+- [XML-Schemaauflistungen (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Beispiele  
  Es werden folgende Beispiele aufgeführt:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>Beispieltabelle  
  Zum Testen des unten aufgeführten Beispiels A erstellen Sie die folgende Beispieltabelle `T`.  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>Beispieldatendatei  
  Bevor Sie Beispiel A ausführen können, müssen Sie die UTF-8-codierte Datei (`C:\SampleFolder\SampleData3.txt`) erstellen, die die folgende Beispielinstanz enthält, die das `UTF-8` -Codierungsschema angibt.  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>Beispiel A  
  In diesem Beispiel wird die `SINGLE_BLOB` -Option in einer `INSERT ... SELECT * FROM OPENROWSET(BULK...)` -Anweisung verwendet, um die Daten aus einer Datei namens `SampleData3.txt` zu importieren und eine XML-Instanz in eine Beispieltabelle mit einer einzelnen Spalte `T`einzufügen.  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>Beispieldatendatei  
  In Beispiel B wird eine veränderte Version der Beispieldatendatei `SampleData3.txt` aus dem vorhergehenden Beispiel verwendet. Ändern Sie den Inhalt dieser Datei wie folgt, um dieses Beispiel auszuführen:  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>Beispiel B  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>Beispieldatendatei  
  Bevor Sie dieses Beispiel für den Massenimport testen, müssen Sie zunächst die Datei`C:\temp\Dtdfile.xml`erstellen, die die folgende Beispielinstanz enthält:  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>Beispieltabelle  
  In Beispiel C wird die Beispieltabelle `T1` verwendet, die Sie durch die folgende `CREATE TABLE` -Anweisung erstellen:  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>Beispiel C  
  In diesem Beispiel wird mit `OPENROWSET(BULK...)` die `CONVERT` -Option in der `SELECT` -Klausel angegeben, um die XML-Daten aus `Dtdfile.xml` in die Beispieltabelle `T1`zu importieren.  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  In diesem Beispiel wird gezeigt, wie Sie dieses Feldabschlusszeichen in der Beispieltabelle `xTable` verwenden. Verwenden Sie zum Erstellen dieser Beispieltabelle die folgende `CREATE TABLE` -Anweisung:  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>Beispiel D  
  In diesem Beispiel wird die `Xmltable.fmt` -Formatdatei in einer `BULK INSERT` -Anweisung verwendet, um den Inhalt einer XML-Datendatei namens `Xmltable.dat`zu importieren.  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> Massenexport von XML-Daten  
  Im folgenden Beispiel werden XML-Daten mithilfe von `bcp` per Massenexport aus der im vorherigen Beispiel erstellten Tabelle exportiert. Dabei wird dieselbe XML-Formatdatei verwendet. Im folgenden `bcp` -Befehl stellen `<server_name>` und `<instance_name>` Platzhalter dar, die durch die entsprechenden Werte ersetzt werden müssen:  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   

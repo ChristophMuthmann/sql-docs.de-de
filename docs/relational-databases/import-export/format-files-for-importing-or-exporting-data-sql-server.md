@@ -18,11 +18,11 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d0e3abc1c4ae024257be18f3e3ad3ba5f5566457
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="a-using-a-non-xml-format-file"></a>A. Verwenden einer Nicht-XML-Formatdatei  
  Die folgende Nicht-XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam` . Diese Formatdatei wurde mithilfe des folgenden `bcp` -Befehls erstellt.  
   
-```  
+```cmd 
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
 The contents of this format file are as follows: 9.0  
 4  
@@ -62,13 +62,13 @@ The contents of this format file are as follows: 9.0
 ### <a name="b-using-an-xml-format-file"></a>B. Verwenden einer XML-Formatdatei  
  Die folgende XML-Formatdatei verwendet das systemeigene Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Tabelle `HumanResources.myTeam` . Diese Formatdatei wurde mithilfe des folgenden `bcp` -Befehls erstellt.  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
 ```  
   
  Die Formatdatei enthält Folgendes:  
   
-```  
+```xml
  <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

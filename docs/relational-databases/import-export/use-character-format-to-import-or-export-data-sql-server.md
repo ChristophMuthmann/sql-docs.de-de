@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -81,7 +81,8 @@ Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle und einer
 
 ### **Beispieltabelle**<a name="sample_table"></a>
 Das folgende Skript erstellt eine Testdatenbank sowie eine Tabelle namens `myChar` und füllt die Tabelle mit einigen ursprünglichen Werten auf.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -108,7 +109,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ### **Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
 SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myChar.fmt`zu erstellen, die auf dem Schema von `myChar`basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md) -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich wird in diesem Beispiel der Qualifizierer **c** verwendet, um Zeichendaten anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```
+```cmd
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
 
 REM Review file
@@ -126,7 +127,8 @@ In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, 
 
 ### **Verwenden von bcp und dem Zeichenformat zum Exportieren von Daten**<a name="bcp_char_export"></a>
 Der Schalter**-c** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
 
 REM Review results
@@ -135,7 +137,8 @@ NOTEPAD D:\BCP\myChar.bcp
 
 ### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_char_import"></a>
 Der Schalter**-c** und der **IN** -Befehl.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -148,7 +151,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_char_import_fmt"></a>
 Die Schalter**-c** und **-f** switches und **IN** commund.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -161,7 +165,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **Verwenden von BULK INSERT und dem Zeichenformat ohne eine Formatdatei**<a name="bulk_char"></a>
 **DATAFILETYPE** -Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
     FROM 'D:\BCP\myChar.bcp'
@@ -175,7 +180,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **Verwenden von BULK INSERT und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="bulk_char_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
    FROM 'D:\BCP\myChar.bcp'
@@ -189,7 +195,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **Verwenden von OPENROWSET und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="openrowset_char_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
     SELECT *

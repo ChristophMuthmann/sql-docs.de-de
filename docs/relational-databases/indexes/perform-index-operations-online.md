@@ -2,11 +2,9 @@
 title: "Ausführen von Onlineindexvorgängen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,13 +16,14 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.product_service: sql-server-2016, sql-database
-ms.component: dbe-indexes
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.suite: SQL
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
+ms.translationtype: HT
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2a7e07e2af46446f9271eb82d1dae13f6da2145
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="perform-index-operations-online"></a>Ausführen von Onlineindexvorgängen

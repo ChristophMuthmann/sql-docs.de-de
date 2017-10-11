@@ -16,7 +16,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e3aac41bd87f52998edf366d7c3da2326de3f26
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
