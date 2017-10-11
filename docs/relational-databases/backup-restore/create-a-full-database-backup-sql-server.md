@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
@@ -176,7 +176,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\
 
 5.  Klicken Sie auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen.
 
-6.  Geben Sie im Textfeld `E:\MSSQL\BAK\Sales_20160801.bak` Dateiname ** ** ein.
+6.  Geben Sie im Textfeld `E:\MSSQL\BAK\Sales_20160801.bak` Dateiname ****  ein.
 
 7.  Klicken Sie auf **OK**.
 
