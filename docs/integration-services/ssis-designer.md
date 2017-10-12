@@ -1,5 +1,5 @@
 ---
-title: SSIS-Designer | Microsoft Docs
+title: SSIS-Designer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  Im folgenden Diagramm werden der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer und das Fenster **Toolbox** angezeigt.  
   
- ![Screenshot von SSIS-Designer und-Toolbox](../integration-services/media/denali-designerandtoolbox.gif "Screenshot von SSIS-Designer und-Toolbox")  
+ ![Screenshot des SSIS-Designers und der Toolbox](../integration-services/media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält zusätzliche Dialogfelder und Fenster, um Paketen Funktionalität hinzuzufügen, und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt Fenster und Dialogfelder zum Konfigurieren der Entwicklungsumgebung und zum Verwenden von Paketen bereit. Weitere Informationen finden Sie unter [SQL Server Integration Services-Benutzeroberfläche](../integration-services/integration-services-user-interface.md).  
   
@@ -158,7 +158,7 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
  **Delete**  
  Wählen Sie einen Ereignishandler aus, und entfernen Sie ihn anschließend aus dem Paket, indem Sie auf **Löschen** klicken.  
   
- **Klicken Sie hier, um das Erstellen einer \<Ereignishandlernamen\> für die ausführbare Datei \<Name der ausführbaren Datei\>**  
+ **Klicken Sie hier, um einen \<Ereignishandlername\> für die ausführbare Datei \<Name der ausführbaren Datei\> zu erstellen.**  
  Klicken Sie, um den Ereignishandler zu erstellen.  
   
  Erstellen Sie den Steuerungsfluss, indem Sie grafische Objekte, die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Tasks und -Container darstellen, aus der **Toolbox** auf die Entwurfsoberfläche der Registerkarte **Ereignishandler** ziehen und diese Objekte dann verbinden, indem Sie Rangfolgeneinschränkungen zum Definieren der Ausführungssequenz verwenden.  
