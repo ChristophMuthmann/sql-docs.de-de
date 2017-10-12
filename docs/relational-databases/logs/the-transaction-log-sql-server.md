@@ -1,7 +1,7 @@
 ---
 title: Das Transaktionsprotokoll (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,19 +19,22 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
   Jede SQL Server-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen aufgezeichnet werden, die von den einzelnen Transaktionen vorgenommen werden.
   
-Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank. Wenn ein Systemfehler auftritt, benötigen Sie dieses Protokoll, um Ihre Datenbank wieder in einen konsistenten Zustand zu versetzen. Dieses Protokoll sollten Sie nicht löschen oder verschieben, wenn Sie sich über die Auswirkungen dieses Vorgangs nicht vollständig im Klaren sind. 
+Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank. Wenn ein Systemfehler auftritt, benötigen Sie dieses Protokoll, um Ihre Datenbank wieder in einen konsistenten Zustand zu versetzen. 
 
-  
- > **Zusatzinformationen** Einige bekannte gute Ausgangspunkte für das Anwenden von Transaktionsprotokollen während der Datenbankwiederherstellung werden durch Prüfpunkte vorgegeben. Weitere Informationen finden Sie unter [Datenbankprüfpunkte (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+> [!IMPORTANT] 
+> Dieses Protokoll sollten Sie nicht löschen oder verschieben, wenn Sie sich über die Auswirkungen dieses Vorgangs nicht vollständig im Klaren sind. 
+
+> [!TIP]
+> Einige bekannte gute Ausgangspunkte für das Anwenden von Transaktionsprotokollen während der Datenbankwiederherstellung werden durch Prüfpunkte vorgegeben. Weitere Informationen finden Sie unter [Datenbankprüfpunkte (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>Vom Transaktionsprotokoll unterstützte Operationen  
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
@@ -44,7 +47,7 @@ Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank. Wenn ein S
   
 -   Unterstützen der Transaktionsreplikation.  
   
--   Lösungen zur Unterstützung von hoher Verfügbarkeit und Notfallwiederherstellung: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand.
+-   Lösungen zur Unterstützung von Hochverfügbarkeit und Notfallwiederherstellung: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand.
 
 ## <a name="individual-transaction-recovery"></a>Wiederherstellen einzelner Transaktionen
 Wenn eine Anwendung eine ROLLBACK-Anweisung ausgibt oder wenn das Datenbankmodul einen Fehler erkennt, z. B. die unterbrochene Verbindung mit einem Client, werden die Protokolldatensätze verwendet, um für die Änderungen, die von unvollständigen Transaktionen vorgenommen wurden, einen Rollback auszuführen. 
@@ -73,9 +76,9 @@ In einem Datenbankspiegelungsszenario wird jedes Update einer Datenbank (der Pri
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Transaktionsprotokolle: 
--  Das Transaktionsprotokoll wird als eine separate oder mehrere Dateien in der Datenbank implementiert. Der Protokollcache wird getrennt vom Puffercache für Datenseiten verwaltet, woraus sich ein einfacher, schneller und zuverlässiger Code innerhalb des Datenbankmoduls ergibt.
+-  Das Transaktionsprotokoll wird als eine separate oder mehrere Dateien in der Datenbank implementiert. Der Protokollcache wird getrennt vom Puffercache für Datenseiten verwaltet, woraus sich ein einfacher, schneller und zuverlässiger Code innerhalb des Datenbankmoduls ergibt. Weitere Informationen finden Sie unter [Physische Architektur des Transaktionsprotokolls](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  Das Format der Protokolldatensätze und -seiten muss nicht dem Format von Datenseiten entsprechen.
--  Das Transaktionsprotokoll kann in Form mehrerer Dateien implementiert werden. Für die Dateien kann automatische Vergrößerung durch Festlegen des FILEGROWTH-Werts für das Protokoll definiert werden. Auf diese Weise nimmt die Wahrscheinlichkeit ab, dass im Transaktionsprotokoll kein Speicherplatz mehr verfügbar ist. Zudem wird der Verwaltungsaufwand verringert. Weitere Informationen finden Sie unter [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
+-  Das Transaktionsprotokoll kann in Form mehrerer Dateien implementiert werden. Für die Dateien kann automatische Vergrößerung durch Festlegen des FILEGROWTH-Werts für das Protokoll definiert werden. Auf diese Weise nimmt die Wahrscheinlichkeit ab, dass im Transaktionsprotokoll kein Speicherplatz mehr verfügbar ist. Zudem wird der Verwaltungsaufwand verringert. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  Der Mechanismus zum erneuten Verwenden des freien Speicherplatzes in den Protokolldateien ist schnell und wirkt sich nur minimal auf den Transaktionsdurchsatz aus.
 
 ##  <a name="Truncation"></a> Kürzung des Transaktionsprotokolls  
@@ -91,12 +94,13 @@ Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Trans
   
  Weitere Informationen finden Sie unter [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation)weiter unten in diesem Thema.  
   
-> **HINWEIS!** Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> [!NOTE]
+> Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Bleiben Protokolldatensätze lange aktiv, verzögert sich die Transaktionsprotokollkürzung. Dabei kann sich das Transaktionsprotokoll auffüllen, wie bereits oben erwähnt wurde.  
   
-> **WICHTIG!** Informationen zum Umgang mit einem voll aufgefüllten Transaktionsprotokoll finden Sie unter [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+> Informationen zum Umgang mit einem voll aufgefüllten Transaktionsprotokoll finden Sie unter [Problembehandlung bei vollen Transaktionsprotokollen &#40;SQL Server-Fehler 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Die Protokollkürzung kann tatsächlich aus verschiedenen Gründen verzögert werden. Sie können ermitteln, wodurch die Protokollkürzung verhindert wird, indem Sie die Spalten **log_reuse_wait** und **log_reuse_wait_desc** der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) abfragen. In der folgenden Tabelle werden die Werte dieser Spalten beschrieben.  
   
@@ -121,9 +125,11 @@ Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Trans
 ##  <a name="MinimallyLogged"></a> Vorgänge, für die eine minimale Protokollierung verfügbar ist  
  Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md) minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
   
-> **HINWEIS!** Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt.  
+> [!NOTE]
+> Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt.  
   
-> **WEITERER HINWEIS!** Unter dem vollständigen [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md)werden alle Massenvorgänge vollständig protokolliert. Sie können die Protokollierung für eine Reihe von Massenvorgängen jedoch verringern, indem Sie die Datenbank bei Massenvorgängen vorübergehend in das massenprotokollierte Wiederherstellungsmodell schalten. Die minimale Protokollierung ist effizienter als die vollständige Protokollierung und senkt die Wahrscheinlichkeit, dass ein umfangreicher Massenvorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während einer Massentransaktion auffüllt. Wenn die Datenbank bei Aktivierung der minimalen Protokollierung jedoch beschädigt wird oder verloren geht, können Sie die Datenbank nicht bis zu dem Punkt wiederherstellen, an dem der Fehler aufgetreten ist.  
+> [!NOTE]
+> Unter dem vollständigen [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md)werden alle Massenvorgänge vollständig protokolliert. Sie können die Protokollierung für eine Reihe von Massenvorgängen jedoch verringern, indem Sie die Datenbank bei Massenvorgängen vorübergehend in das massenprotokollierte Wiederherstellungsmodell schalten. Die minimale Protokollierung ist effizienter als die vollständige Protokollierung und senkt die Wahrscheinlichkeit, dass ein umfangreicher Massenvorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während einer Massentransaktion auffüllt. Wenn die Datenbank bei Aktivierung der minimalen Protokollierung jedoch beschädigt wird oder verloren geht, können Sie die Datenbank nicht bis zu dem Punkt wiederherstellen, an dem der Fehler aufgetreten ist.  
   
  Die folgenden Vorgänge, die unter dem vollständigen Wiederherstellungsmodell vollständig protokolliert werden, werden unter dem einfachen und massenprotokollierten Wiederherstellungsmodell minimal protokolliert:  
   
@@ -139,7 +145,8 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) -Anweisung und [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) -Anweisung beim Einfügen oder Anfügen neuer Daten an die Datentypspalten **text**, **ntext**und **image** . Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
   
-    >  Die WRITETEXT- und die UPDATETEXT-Anweisung sind **veraltet**, sollten also in neuen Anwendungen nicht mehr verwendet werden.  
+    > [!IMPORTANT]
+    > Die WRITETEXT- und die UPDATETEXT-Anweisung sind **veraltet**, sollten also in neuen Anwendungen nicht mehr verwendet werden.  
   
 -   Wenn für die Datenbank das einfache oder massenprotokollierte Wiederherstellungsmodell festgelegt ist, werden einige Index-DDL-Vorgänge minimal protokolliert, unabhängig davon, ob der Vorgang offline oder online ausgeführt wird. Die minimal protokollierten Indexvorgänge sind nachfolgend aufgeführt:  
   
@@ -147,7 +154,8 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD- oder DBCC DBREINDEX-Vorgänge.  
   
-        > Die **DBCC DBREINDEX-Anweisung** ist **veraltet**, sollte also in neuen Anwendungen nicht verwendet werden.  
+        > [!IMPORTANT]
+        > Die **DBCC DBREINDEX-Anweisung** ist **veraltet** und sollte daher in neuen Anwendungen nicht verwendet werden.  
   
     -   Neuerstellungen neuer Heaps mit DROP INDEX (falls zutreffend). (Aufhebungen von Indexseitenzuordnungen während eines [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) -Vorgangs werden **immer** vollständig protokolliert.)
   

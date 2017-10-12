@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
@@ -323,11 +323,11 @@ Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen,
 
 ##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenswichtige Server zur effizienteren Notfallwiederherstellung
  
-  Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden.
+  Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
   Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor SQL Server beendet werden kann.
   
-  Durch das Ablaufverfolgungsflag 7752 können von SQL Server Abfragen ausgeführt werden, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
+  Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespeichers und erlaubt SQL Server die Ausführung von Abfragen, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
 
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

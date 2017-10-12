@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Weitere Informationen zur Verwendung von Unicode-Zeichendaten finden Sie unter [Verwenden des Unicode-Zeichenformats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Verwenden einer Formatdatei mit der Codeseitenoption  
- Wenn Sie eine Formatdatei mit dem bcp-Befehl erstellen (d.h. mit „`bcp forma`t …“), werden Informationen zur Sortierung/Codepage in die Formatdatei geschrieben.   
+Wenn Sie eine Formatdatei mit dem bcp-Befehl erstellen (d. h. mithilfe von `bcp format`), werden Informationen zur Sortierung/Codepage in die Formatdatei geschrieben.   
 Die folgende Beispielformatdatei für eine Tabelle mit 5 Spalten beinhaltet die Sortierung.  
   
 ```  

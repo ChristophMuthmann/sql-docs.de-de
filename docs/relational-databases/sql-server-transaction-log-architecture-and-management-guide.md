@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> Physische Architektur des Transaktionsprotokolls  
  Das Transaktionsprotokoll in einer Datenbank erstreckt sich über eine oder mehrere physische Dateien. Konzeptionell ist die Protokolldatei eine Folge von Protokolldatensätzen. Physisch wird die Folge von Protokolldatensätzen effizient in dem Satz physischer Dateien gespeichert, die das Transaktionsprotokoll implementieren. Für jede Datenbank muss mindestens eine Protokolldatei vorhanden sein.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] teilt jede physische Protokolldatei intern in mehrere virtuelle Protokolldateien auf. Virtuelle Protokolldateien haben keine feste Größe, und es gibt keine feststehende Anzahl virtueller Protokolldateien für eine physische Protokolldatei. [!INCLUDE[ssDE](../includes/ssde-md.md)] wählt die Größe der virtuellen Protokolldateien dynamisch beim Erstellen oder Erweitern von Protokolldateien aus. [!INCLUDE[ssDE](../includes/ssde-md.md)] versucht, immer nur eine kleine Anzahl virtueller Dateien aufrechtzuerhalten. Welche Größe die virtuellen Dateien haben, nachdem eine Protokolldatei erweitert wurde, hängt von der zusammengenommenen Größe des vorhandenen Protokolls und dem Umfang der Dateierweiterung ab. Die Größe oder Anzahl der virtuellen Protokolldateien kann nicht von Administratoren konfiguriert oder festgelegt werden.  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] teilt jede physische Protokolldatei intern in mehrere virtuelle Protokolldateien (VLFs) auf. Virtuelle Protokolldateien haben keine feste Größe, und es gibt keine feststehende Anzahl virtueller Protokolldateien für eine physische Protokolldatei. [!INCLUDE[ssDE](../includes/ssde-md.md)] wählt die Größe der virtuellen Protokolldateien dynamisch beim Erstellen oder Erweitern von Protokolldateien aus. [!INCLUDE[ssDE](../includes/ssde-md.md)] versucht, immer nur eine kleine Anzahl virtueller Dateien aufrechtzuerhalten. Welche Größe die virtuellen Dateien haben, nachdem eine Protokolldatei erweitert wurde, hängt von der zusammengenommenen Größe des vorhandenen Protokolls und dem Umfang der Dateierweiterung ab. Die Größe oder Anzahl der virtuellen Protokolldateien kann nicht von Administratoren konfiguriert oder festgelegt werden.  
+
+> [!NOTE]
+> Die VLF-Erstellung folgt dieser Methode:
+> - Wenn die nächste Dateivergrößerung weniger als 1/8 der aktuellen physischen Protokollgröße beträgt, wird 1 VLF erstellt, die den Umfang der Dateivergrößerung abdeckt (beginnend mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
+> - Wenn die Dateivergrößerung unter 64 MB liegt, werden 4 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 1 MB vier VLFs von 256 KB erstellt.)
+> - Wenn die Dateivergrößerung zwischen 64 MB und 1 GB beträgt, werden 8 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 512 MB acht VLFs von 64 MB erstellt.)
+> - Bei einer Dateivergrößerung von mehr als 1 GB werden 16 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 8 GB sechzehn VLFs von 512 MB erstellt.)
+
  Virtuelle Protokolldateien wirken sich nur dann auf die Systemleistung aus, wenn die physischen Protokolldateien mit geringen Werten für *size* und *growth_increment* definiert sind. Der *size* -Wert entspricht der Anfangsgröße der Protokolldatei und der *growth_increment* -Wert der Menge von Speicherplatz, die der Datei immer dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. Wenn die Protokolldateien durch viele kleine Schritte auf eine beträchtliche Größe anwachsen, enthalten sie zahlreiche virtuelle Protokolldateien. Hierdurch werden möglicherweise das Starten der Datenbank sowie Protokollsicherungs- und -wiederherstellungsvorgänge verlangsamt. Es wird empfohlen, den Protokolldateien einen *size*-Wert zuzuweisen, der ungefähr der endgültigen erforderlichen Größe entspricht, und darüber hinaus einen relativ hohen Wert für *growth_increment* festzulegen. Weitere Informationen zu diesen Parametern finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  Das Transaktionsprotokoll ist eine umbrechende Protokolldatei. Nehmen Sie beispielsweise an, eine Datenbank verfügt über eine physische Protokolldatei, die in vier virtuelle Protokolldateien unterteilt ist. Wenn die Datenbank erstellt wird, beginnt die logische Protokolldatei am Anfang der ersten physischen Protokolldatei. Neue Protokolldatensätze werden am Ende des logischen Protokolls hinzugefügt, das in Richtung des Endes des physischen Protokolls erweitert wird. Beim Abschneiden eines Protokolls werden alle virtuellen Protokolle freigegeben, deren Datensätze sich ohne Ausnahme vor der Mindestwiederherstellungs-Protokollfolgenummer (Minimum Recovery Log Sequence Number, MinLSN) befinden. *MinLSN* ist die Protokollfolgenummer des ältesten Protokolldatensatzes, der für einen erfolgreichen Rollback der gesamten Datenbank benötigt wird. Das Transaktionsprotokoll in der Beispieldatenbank würde in etwa so aussehen wie das Protokoll in der folgenden Abbildung.  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Wenn die FILEGROWTH-Einstellung für das Protokoll aktiviert und auf dem Datenträger Speicherplatz verfügbar ist, wird die Datei um die Menge vergrößert, die im *growth_increment*-Parameter angegeben ist, und der Erweiterung werden neue Protokolldatensätze hinzugefügt. Weitere Informationen zur FILEGROWTH-Einstellung finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Wenn die FILEGROWTH-Einstellung nicht aktiviert ist oder der Datenträger mit der Protokolldatei über weniger freien Speicherplatz verfügt als in *growth_increment* angegeben, wird der Fehler 9002 generiert.  
+-   Wenn die FILEGROWTH-Einstellung nicht aktiviert ist oder der Datenträger mit der Protokolldatei über weniger freien Speicherplatz verfügt als in *growth_increment* angegeben, wird der Fehler 9002 generiert. Weitere Informationen finden Sie unter [Problembehandlung bei vollen Transaktionsprotokollen](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Wenn das Protokoll mehrere physische Protokolldateien enthält, durchläuft das logische Protokoll alle physischen Protokolldateien, bevor es umbricht und neue Einträge am Anfang der ersten physischen Protokolldatei einfügt.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  Die Protokollkürzung kann durch verschiedene Faktoren verzögert werden. Im Falle einer langen Verzögerung der Protokollkürzung kann sich das Transaktionsprotokoll füllen. Weitere Informationen finden Sie unter [Faktoren, die die Protokollkürzung verzögern können](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) und [Problembehandlung bei vollen Transaktionsprotokollen &#40;SQL Server Error 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Write-Ahead-Transaktionsprotokoll  
- In diesem Abschnitt wird die Aufgabe des Write-Ahead-Transaktionsprotokolls beim Aufzeichnen von Datenänderungen auf dem Datenträger beschrieben. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet ein Write-Ahead-Protokoll, durch das sichergestellt wird, dass Datenänderungen erst dann auf den Datenträger geschrieben werden, nachdem der entsprechende Protokolldatensatz auf den Datenträger geschrieben wurde. Dies schützt die ACID-Eigenschaften einer Transaktion.  
+ In diesem Abschnitt wird die Aufgabe des Write-Ahead-Transaktionsprotokolls beim Aufzeichnen von Datenänderungen auf dem Datenträger beschrieben. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen Write-Ahead-Protokollalgorithmus (WAL), durch das sichergestellt wird, dass Datenänderungen erst dann auf den Datenträger geschrieben werden, nachdem der entsprechende Protokolldatensatz auf den Datenträger geschrieben wurde. Dies schützt die ACID-Eigenschaften einer Transaktion.  
   
  Um die Funktionsweise des Write-Ahead-Protokolls zu verstehen, müssen Sie zunächst wissen, wie geänderte Daten auf den Datenträger geschrieben werden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwaltet einen Puffercache, in den Datenseiten gelesen werden, wenn Daten abgerufen werden müssen. Eine Seite, die im Puffercache geändert wurde, wird nicht sofort auf den Datenträger geschrieben, sondern als *geändert*markiert. Auf einer Datenseite können mehrere logische Schreibvorgänge ausgeführt werden, bevor sie physisch auf den Datenträger geschrieben wird. Für jeden logischen Schreibvorgang wird ein Transaktionsprotokoll-Datensatz in den Protokollcache geschrieben, der die Änderung aufzeichnet. Die Protokolldatensätze müssen auf den Datenträger geschrieben werden, bevor die zugehörige modifizierte Seite aus dem Puffercache entfernt und auf den Datenträger geschrieben wird. Mit dem Prüfpunktprozess (checkpoint) wird der Puffercache regelmäßig auf Puffer mit Seiten aus einer angegebenen Datenbank überprüft, und alle modifizierten Seiten werden auf den Datenträger geschrieben. Durch Prüfpunkte kann bei einer späteren Wiederherstellung Zeit eingespart werden, da ein Punkt erstellt wird, an dem auf jeden Fall alle modifizierten Seiten auf den Datenträger geschrieben worden sind.  
   
@@ -217,8 +224,11 @@ Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Tran
 ## <a name="additional-reading"></a>Zusätzliches Lesematerial  
  In den folgenden empfohlenen Artikeln und Büchern finden Sie zusätzliche Informationen zu Transaktionsprotokollen.  
   
- [Understanding Logging and Recovery in SQL Server by Paul Randal (Grundlegendes zur Protokollierung und Wiederherstellung in SQL Server von Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [Verwalten der Größe der Transaktionsprotokolldatei](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Erläuterungen zu Protokollierung und Wiederherstellung in SQL Server von Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Verwaltung von SQL Server-Transaktionsprotokollen von Tony Davis und Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
