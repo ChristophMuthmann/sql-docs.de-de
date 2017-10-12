@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
-  In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
+  In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md).  
   
  Die Datenbereinigung wird in vier Phasen ausgeführt: eine *Zuordnungsphase* , in der Sie die zu reinigende Datenquelle identifizieren und den erforderlichen Domänen in einer Wissensdatenbank zuordnen, einer *computerunterstützten Bereinigungsphase* , in der DQS die Wissensdatenbank auf die zu bereinigenden Daten anwendet und Änderungen an den Quelldaten vorschlägt/vornimmt, eine *interaktive Bereinigungsphase* , in der Data Stewards die Datenänderungen analysieren und annehmen/ablehnen können, und schließlich die *Exportphase* , in der die Sie die bereinigten Daten exportieren können. Jeder dieser Prozesse wird auf einer separaten Seite des Bereinigungsaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Bereinigungsprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. DQS stellt Ihnen Statistiken zu den Quelldaten und den Bereinigungsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zur Datenbereinigung zu treffen.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
--   Sie müssen entsprechende Schwellenwerte für die Bereinigungsaktivität angegeben haben. Weitere Informationen dazu finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Sie müssen entsprechende Schwellenwerte für die Bereinigungsaktivität angegeben haben. Weitere Informationen dazu finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Eine DQS-Wissensdatenbank muss auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] verfügbar sein, um Ihre Quelldaten vergleichen und bereinigen zu können. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z. B. die Quelldaten bereinigen, die US-Adressen enthalten, benötigen Sie eine Wissensdatenbank, die gegen „hochwertige“ Beispieldaten für US-Adressen erstellt wurde.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> Erstellen eines Data Quality-Bereinigungsprojekts  
  Sie müssen den Datenbereinigungsvorgang mithilfe eines Data Quality-Projekts ausführen. So erstellen Sie ein Data Quality-Bereinigungsprojekt:  
   
-1.  Führen Sie die Schritte 1-3 im Thema [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)aus.  
+1.  Führen Sie die Schritte 1-3 im Thema [Erstellen eines Data Quality-Projekts](../data-quality-services/create-a-data-quality-project.md)aus.  
   
 2.  Wählen Sie in Schritt 3.d die **Bereinigungsaktivität** aus.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 2.  Ordnen Sie unter **Zuordnungen**die Datenspalten in den Quelldaten den entsprechenden Domänen in der Wissensdatenbank zu, indem Sie eine Quellspalte aus der Dropdownliste in der Spalte **Quellspalte** auswählen und dann eine Domäne aus der Dropdownliste in der Spalte **Domäne** in der gleichen Zeile auswählen. Wiederholen Sie diesen Schritt, um alle Spalten in den Quelldaten entsprechenden Domänen in der Wissensdatenbank zuzuordnen. Klicken Sie ggf. auf das Symbol **Spaltenzuordnung hinzufügen** , um der Zuordnungstabelle Zeilen hinzuzufügen.  
   
     > [!NOTE]  
-    >  Sie können die Quelldaten zum Durchführen der Datenbereinigung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu unterstützten Quelldatentypen finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Sie können die Quelldaten zum Durchführen der Datenbereinigung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu unterstützten Quelldatentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 3.  Klicken Sie auf das Symbol **Vorschau der Datenquelle** , um die Daten in der ausgewählten SQL Server-Tabelle oder -Sicht oder im ausgewählten Excel-Arbeitsblatt anzuzeigen.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      Klicken Sie in beiden Fällen auf **Ja** , um die aktualisierte Wissensdatenbank für die computerunterstützte Bereinigung zu verwenden. Wenn es darüber hinaus Konflikte zwischen aktuellen Zuordnungen und der aktualisierten Wissensdatenbank gibt (wenn z. B. Domänen gelöscht wurden oder der Domänendatentyp geändert wurde) gibt, fordert die Meldung Sie auch auf, die aktuellen Zuordnungen zu korrigieren, um die aktualisierte Wissensdatenbank zu verwenden. Wenn Sie auf **Ja** klicken, gelangen Sie zur Seite **Struktur** , wo Sie die Zuordnungen korrigieren können, bevor Sie mit der computerunterstützten Bereinigung fortfahren.  
   
-2.  Während der computerunterstützten Bereinigungsphase können Sie den Profiler einschalten, indem Sie auf die Registerkarte **Profiler** klicken, um Echtzeitdaten zur Profilerstellung und zu Benachrichtigungen anzuzeigen. Weitere Informationen finden Sie unter [Profiler Statistics](#Profiler).  
+2.  Während der computerunterstützten Bereinigungsphase können Sie den Profiler einschalten, indem Sie auf die Registerkarte **Profiler** klicken, um Echtzeitdaten zur Profilerstellung und zu Benachrichtigungen anzuzeigen. Weitere Informationen finden Sie unter [Profiler-Statistik](#Profiler).  
   
 3.  Wenn Sie mit den Ergebnissen nicht zufrieden sind, klicken Sie auf **Zurück** , um zur Seite **Struktur** zurückzukehren, ändern Sie ggf. eine oder mehrere Zuordnungen, kehren Sie zur Seite **Bereinigen** zurück, und klicken Sie dann auf **Neustart**.  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Interactive"></a> Interaktive Bereinigungsphase  
  In der interaktiven Bereinigungsphase können Sie die von DQS vorgeschlagenen Änderungen anzeigen und durch Annehmen oder Ablehnen der Änderungen entscheiden, ob sie implementiert werden sollen. Im linken Bereich der Seite **Ergebnisse verwalten und anzeigen** zeigt DQS eine Liste aller Domänen an, die Sie zuvor in der Zuordnungsphase zusammen mit der Anzahl der Werte in den Quelldaten, die gegen alle Domänen während der computerunterstützten Bereinigungsphase analysiert wurden, zugeordnet haben. Im dem rechten Bereich der Seite **Ergebnisse verwalten und anzeigen** kategorisiert DQS auf Grundlage des Einhaltens der Domänenregeln, Syntaxfehlerregeln und erweiterter Algorithmen die Daten auf fünf Registerkarten mithilfe des *Vertrauensgrads*. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an und basiert auf den folgenden Schwellenwerten:  
   
--   **Schwellenwert für die automatische Korrektur**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts wird von DQS automatisch korrigiert. Der Data Steward kann die Änderung jedoch während der interaktiven Bereinigung überschreiben. Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Schwellenwert für die automatische Korrektur**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts wird von DQS automatisch korrigiert. Der Data Steward kann die Änderung jedoch während der interaktiven Bereinigung überschreiben. Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Schwellenwert für automatische Vorschläge**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts, jedoch unterhalb des Schwellenwerts für die automatische Korrektur, wird als Ersetzungswert vorgeschlagen. DQS nimmt die Änderung nur vor, wenn sie vom Data Steward genehmigt wird. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Schwellenwert für automatische Vorschläge**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts, jedoch unterhalb des Schwellenwerts für die automatische Korrektur, wird als Ersetzungswert vorgeschlagen. DQS nimmt die Änderung nur vor, wenn sie vom Data Steward genehmigt wird. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   **Sonstige**: Jeder Wert unterhalb des Schwellenwerts für automatische Vorschläge wird von DQS unverändert gelassen.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  Die Rechtschreibprüfungsfunktion ist nur im oberen Bereich (Domänenwerte) verfügbar. Darüber hinaus können Sie die Rechtschreibprüfung nicht für Verbunddomänen aktivieren oder deaktivieren. Für die untergeordneten Domänen in einer Verbunddomäne, die von einem Zeichenfolgentyp sind und für die die Rechtschreibprüfungsfunktion aktiviert wurde, ist die Rechtschreibprüfungsfunktion in der interaktiven Bereinigungsphase standardmäßig aktiviert.  
   
-4.  Während der interaktiven Bereinigungsphase können Sie den Profiler einschalten, indem Sie auf die Registerkarte **Profiler** klicken, um Echtzeitdaten zur Profilerstellung und zu Benachrichtigungen anzuzeigen. Weitere Informationen finden Sie unter [Profiler Statistics](#Profiler).  
+4.  Während der interaktiven Bereinigungsphase können Sie den Profiler einschalten, indem Sie auf die Registerkarte **Profiler** klicken, um Echtzeitdaten zur Profilerstellung und zu Benachrichtigungen anzuzeigen. Weitere Informationen finden Sie unter [Profiler-Statistik](#Profiler).  
   
 5.  Nachdem Sie alle Domänenwerte überprüft haben, klicken Sie auf **Weiter** , um zur Exportphase zu gelangen.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **Excel-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der Excel-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die Excel-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Zum Beispiel „c:\ExportedData.xlsx“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
   
-2.  Aktivieren Sie das Kontrollkästchen **Ausgabe standardisieren** , um die Ausgabe auf Grundlage des für die Domäne ausgewählten Ausgabeformats zu standardisieren. Ändern Sie z. B. den Zeichenfolgenwert in Großbuchstaben, oder schreiben Sie den ersten Buchstaben des Worts groß. Informationen zum Angeben des Ausgabeformats einer Domäne finden Sie in der Liste **Formatausgabe** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+2.  Aktivieren Sie das Kontrollkästchen **Ausgabe standardisieren** , um die Ausgabe auf Grundlage des für die Domäne ausgewählten Ausgabeformats zu standardisieren. Ändern Sie z. B. den Zeichenfolgenwert in Großbuchstaben, oder schreiben Sie den ersten Buchstaben des Worts groß. Informationen zum Angeben des Ausgabeformats einer Domäne finden Sie in der Liste **Formatausgabe** in [Domäne-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
   
 3.  Wählen Sie danach die Datenausgabe aus: Exportieren Sie nur die bereinigten Daten, oder exportieren Sie die bereinigten Daten zusammen mit den Bereinigungsinformationen.  
   
@@ -228,6 +228,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Die Genauigkeitsstufe des Felds ist sehr niedrig. Sie sollten die Zuordnung überprüfen, oder erwägen, die Wissensermittlung zuerst auszuführen.  
   
- Weitere Informationen zur Profilerstellung finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Weitere Informationen zur Profilerstellung finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   

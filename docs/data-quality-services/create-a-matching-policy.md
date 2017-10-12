@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  Wählen Sie unter **Zuordnungen**ein Feld in der Datenquelle für **Quellspalte**aus, und wählen Sie dann die entsprechende Domäne aus. Wiederholen Sie den Vorgang für alle Domänen, die Sie im Abgleichsprozess verwenden. Erstellen Sie Domänen bei Bedarf durch Klicken auf **Domäne erstellen** oder **Verbunddomäne erstellen**.  
   
     > [!NOTE]  
-    >  Sie können beim Erstellen einer Abgleichsrichtlinie Ihren Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Sie können beim Erstellen einer Abgleichsrichtlinie Ihren Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 5.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabellen eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. Klicken Sie auf **Abbrechen** , um die Abgleichsrichtlinienaktivität abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Startseite zurückzukehren.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
- Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
+ Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Registerkarten „Profiler“ und „Ergebnisse“  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für die Abgleichsrichtlinie und die Abgleichsergebnisseiten.  
