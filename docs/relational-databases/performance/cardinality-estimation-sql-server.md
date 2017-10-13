@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- In einer SQL Server-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, zwingt die Aktivierung des [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 das System dazu, Version 70 der Kardinalitätsschätzung zu verwenden.  
+ In einer SQL Server-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, zwingt die Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) das System dazu, Version 70 der Kardinalitätsschätzung zu verwenden.  
   
  **Ältere Kardinalitätsschätzung**: In einer SQL Server-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Abfragespeicher:**Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen.  In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe) wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
+ **Abfragespeicher:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > Wir empfehlen, jeden Monat die neueste Version von [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) zu installieren.  
+ > Es wird empfohlen, die neueste Version von [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) zu installieren und häufig zu aktualisieren.  
   
- Eine andere Option zum Nachverfolgen des Prozesses der Kardinalitätsschätzung ist die Verwendung des erweiterten Ereignisses **query_optimizer_estimate_cardinality**.  Das folgende T-SQL-Codebeispiel wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt. Es schreibt eine XEL-Datei in C:\Temp\ (Sie können den Pfad ändern). Wenn Sie die XEL-Datei in SSMS öffnen, werden die detaillierten Daten in einer von Benutzern gut lesbaren Weise angezeigt.  
+ Eine andere Option zum Nachverfolgen des Prozesses der Kardinalitätsschätzung ist die Verwendung des erweiterten Ereignisses **query_optimizer_estimate_cardinality**. Das folgende T-SQL-Codebeispiel wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt. Es schreibt eine XEL-Datei in C:\Temp\ (Sie können den Pfad ändern). Wenn Sie die XEL-Datei in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] öffnen, werden die detaillierten Daten in einer von Benutzern gut lesbaren Weise angezeigt.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Informationen zu erweiterten Ereignissen, die speziell auf Azure SQL-Datenbank zugeschnitten sind, finden Sie unter [Erweiterte Ereignisse in SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ Informationen zu erweiterten Ereignissen, die speziell auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] zugeschnitten sind, finden Sie unter [Erweiterte Ereignisse in SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>Schritte für die Bewertung der Version der Kardinalitätsschätzung  
@@ -169,7 +169,7 @@ go
   
     -   **CardinalityEstimationModelVersion**.  
   
-    -   **Geschätzte Anzahl von Zeilen.**.  
+    -   **Geschätzte Anzahl von Zeilen**.  
   
     -   **Geschätzte E/A-Kosten**sowie einige weitere ähnliche *geschätzte* Eigenschaften, die sich eher auf die tatsächliche Leistung als auf Vorhersagen zur Zeilenanzahl beziehen.  
   
