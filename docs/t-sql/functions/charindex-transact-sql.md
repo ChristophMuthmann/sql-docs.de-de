@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5049508aac52724bbf0b05c9962b154db7af1474
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5467f9d98562fac8262e537887d03c1d68b25d88
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
