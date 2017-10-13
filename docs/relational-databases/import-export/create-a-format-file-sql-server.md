@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Erstellen einer Nicht-XML-Formatdatei für systemeigene Unicode-Daten  
  Verwenden Sie zum Erstellen einer Nicht-XML-Formatdatei für systemeigene Unicode-Daten für die `HumanResources.Department`-Tabelle den folgenden Befehl:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
  Verwenden Sie zum Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten für die `HumanResources.Department`-Tabelle den folgenden Befehl:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   

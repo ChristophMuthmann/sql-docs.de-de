@@ -80,14 +80,18 @@ Benutzer-Id und Kennwort für die Verbindung.
 ### <a name="connection-string-format"></a>Format der Verbindungszeichenfolge
 Hier ist das Format für eine typische Verbindungszeichenfolge.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Geben Sie die Verbindungszeichenfolge
 Geben Sie die Verbindungszeichenfolge in der **"ConnectionString"** Feld aus, oder geben Sie den DNS-Namen in der **Dsn** Feld, auf die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Nachdem Sie die Verbindungszeichenfolge eingeben, wird der Assistent analysiert die Zeichenfolge und zeigt die einzelnen Eigenschaften und ihre Werte in der Liste.
 
 Im folgenden Beispiel wird diese Verbindungszeichenfolge.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+    ```
 
 Hier ist der Bildschirm, den nach dem Eingeben der Verbindungszeichenfolge angezeigt.
 

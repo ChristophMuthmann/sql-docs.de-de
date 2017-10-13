@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  Verwenden Sie für den Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht Folgendes:  
   
 -   **bcp** (Hilfsprogramm)  
- Sie können das **bcp** -Hilfsprogramm auch verwenden, um Daten von einem beliebigen Speicherort in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zu exportieren, wo eine SELECT-Anweisung verwendet werden kann, einschließlich partitionierter Sichten.  
+    Sie können das **bcp** -Hilfsprogramm auch verwenden, um Daten von einem beliebigen Speicherort in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zu exportieren, wo eine SELECT-Anweisung verwendet werden kann, einschließlich partitionierter Sichten.  
   
 -   BULK INSERT  
   

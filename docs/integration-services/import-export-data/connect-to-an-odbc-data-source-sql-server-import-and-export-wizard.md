@@ -93,7 +93,9 @@ Wenn Sie die Verbindungsinformationen mit einer Verbindungszeichenfolge angeben 
 
 In diesem Beispiel geht die folgende Verbindungszeichenfolge verwendet wird, die eine Verbindung mit Microsoft SQL Server herstellt.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Geben Sie die Verbindungszeichenfolge in der **"ConnectionString"** Feld der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Nachdem Sie die Verbindungszeichenfolge eingeben, wird der Assistent analysiert die Zeichenfolge und zeigt die einzelnen Eigenschaften und ihre Werte in der Liste.
 
@@ -138,20 +140,24 @@ Zum Erstellen und testen die Verbindungszeichenfolge für die ODBC-Treiber auf d
 
 10. Öffnen Sie die gespeicherte Datei mit Editor oder einem anderen Texteditor. Folgen Sie den Inhalt der SQL Server-Beispiel.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Kopieren Sie die erforderlichen Werte in einer Verbindungszeichenfolge, in der die Name-Wert-Paare durch Semikolons getrennt sind.
 
     Nachdem Sie die erforderlichen Werte aus der Beispieldatei-DSN zusammentragen, müssen Sie die folgende Verbindungszeichenfolge.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     In der Regel erforderlich nicht alle Einstellungen in einem DSN, der von ODBC-Datenquellen-Administrator um eine Verbindungszeichenfolge zu erstellen, die funktioniert erstellt.  
     -   Sie müssen immer die ODBC-Treiber angeben.

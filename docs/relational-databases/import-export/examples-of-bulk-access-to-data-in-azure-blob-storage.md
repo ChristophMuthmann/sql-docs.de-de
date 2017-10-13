@@ -42,7 +42,7 @@ Alle nachfolgenden Beispiele erfordern für die komplette Datenbank gültige Anm
  
 Erstellen Sie datenbankweit gültige Anmeldeinformationen mithilfe von `IDENTITY`, die auf `SHARED ACCESS SIGNATURE` festgelegt sein muss. Verwenden Sie den geheimen Schlüssel aus dem Azure-Portal. Beispiel:  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -51,7 +51,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Zugriff auf Daten in einer CSV-Datei, die auf einen Speicherort von Azure Blob Storage verweisen   
 Im folgenden Beispiel wird eine externe Datenquelle verwendet, die auf ein Azure-Speicherkonto mit dem Namen `newinvoices` verweist.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -61,7 +61,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 Die `OPENROWSET`-Anweisung fügt den Containernamen (`week3`) zur Dateibeschreibung hinzu. Die Datei heißt `inv-2017-01-19.csv`.
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -70,7 +70,7 @@ SELECT * FROM OPENROWSET(
 
 Verwenden Sie den Container und die Dateibeschreibung mithilfe von `BULK INSERT`:
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -80,7 +80,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Zugriff auf Daten in einer CSV-Datei, die auf einen Container an einem Speicherort von Azure BLOB-Speicher verweisen   
 
 Im folgenden Beispiel wird eine externe Datenquelle verwendet, die auf einen Container (mit dem Namen `week3`) in einem Azure-Speicherkonto verweist.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -90,7 +90,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 Die `OPENROWSET`-Anweisung enthält den Containernamen nicht in der Dateibeschreibung:
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -99,7 +99,7 @@ SELECT * FROM OPENROWSET(
 
 Verwenden Sie den Containernamen mithilfe von `BULK INSERT` nicht in der Dateibeschreibung: 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',

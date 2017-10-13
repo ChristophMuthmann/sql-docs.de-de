@@ -72,14 +72,18 @@ Die **Uid** (Benutzer-Id) und **Pwd** (Kennwort) für die Verbindung.
 ### <a name="connection-string-format"></a>Format der Verbindungszeichenfolge
 Hier ist das Format für eine typische Verbindungszeichenfolge. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Geben Sie die Verbindungszeichenfolge
 Geben Sie die Verbindungszeichenfolge in der **"ConnectionString"** Feld aus, oder geben Sie den DNS-Namen in der **Dsn** Feld, auf die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Nachdem Sie die Verbindungszeichenfolge eingeben, wird der Assistent analysiert die Zeichenfolge und zeigt die einzelnen Eigenschaften und ihre Werte in der Liste.
 
 Im folgenden Beispiel wird diese Verbindungszeichenfolge.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Hier ist der Bildschirm, den nach dem Eingeben der Verbindungszeichenfolge angezeigt.
 
