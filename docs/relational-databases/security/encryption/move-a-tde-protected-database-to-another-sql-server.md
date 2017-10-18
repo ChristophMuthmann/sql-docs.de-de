@@ -81,7 +81,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 ###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -256,7 +256,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 ###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

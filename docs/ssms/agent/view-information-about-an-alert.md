@@ -53,7 +53,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 #### <a name="to-view-information-about-an-alert"></a>So zeigen Sie Informationen zu einer Warnung an  
   
-1.  Klicken Sie im Objekt-Explorer **** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie Informationen über eine Warnung anzeigen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie Informationen über eine Warnung anzeigen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   

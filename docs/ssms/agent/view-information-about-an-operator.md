@@ -62,7 +62,7 @@ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Fest
   
 #### <a name="to-view-information-about-an-operator"></a>So zeigen Sie Informationen zu einem Operator an  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie anzeigen möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie anzeigen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   

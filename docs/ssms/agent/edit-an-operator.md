@@ -62,7 +62,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 #### <a name="to-edit-an-operator"></a>So bearbeiten Sie einen Operator  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie bearbeiten möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie bearbeiten möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
