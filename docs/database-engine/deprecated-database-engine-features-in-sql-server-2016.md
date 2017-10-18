@@ -52,7 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|Keine|Zurückgeben von Ergebnissen aus Triggern|12|  
 |Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
 |Remoteserver|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Remoteserver|@@remserver|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|Keine|Keine|  
+|Remoteserver|@@remserver |Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|Keine|Keine|  
 |Remoteserver|SET REMOTE_PROC_TRANSACTIONS|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET-Optionen|**SET ROWCOUNT** für die **INSERT**-, **UPDATE**-Anweisung und die **DELETE** -Anweisung|TOP-Schlüsselwort|SET ROWCOUNT|109|  
 |Tabellenhinweise|HOLDLOCK-Tabellenhinweis ohne Klammern.|Verwenden Sie HOLDLOCK mit Klammern.|HOLDLOCK-Tabellenhinweis ohne Klammern|167|  
@@ -156,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von #, ## als Name für eine temporäre Tabelle oder eine temporäre gespeicherte Prozedur|Verwenden Sie mindestens ein zusätzliches Zeichen.|'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von '@', '@@' oder '@@' als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|@ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden.|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von '@', '@@' oder '@@' als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|@ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden.|' @ ' und Namen, die mit ' @@ ' beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung des DEFAULT-Schlüsselworts als Standardwert.|Verwenden Sie das Wort DEFAULT nicht als Standardwert.|DEFAULT-Schlüsselwort als Standardwert|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung eines Leerzeichens als Trennzeichen zwischen Tabellenhinweisen|Trennen Sie die Tabellenhinweise durch Kommas.|Mehrere Tabellenhinweise ohne Komma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Die Auswahlliste einer indizierten Aggregatsicht muss im Kompatibilitätsmodus '90' oder höher den Wert COUNT_BIG (*) enthalten.|Verwenden Sie COUNT_BIG(*).|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|2|  

@@ -132,7 +132,7 @@ ms.lasthandoff: 10/05/2017
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
  **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und " @ " für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
