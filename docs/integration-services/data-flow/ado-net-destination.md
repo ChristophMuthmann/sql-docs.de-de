@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Wenn eine SQL Server oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie "SQL ausführen"-Tasks verwenden, um IDENTITY_INSERT vor der ADO NET-Ziel zu aktivieren und deaktivieren Sie es danach erneut. (Die identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung kann die expliziten Werte aus der Quelltabelle in die Identitätsspalte in der Zieltabelle eingefügt werden.)  
 >   
->   Um die SET IDENTITY_INSERT-Anweisungen und erfolgreich Laden der Daten auszuführen, müssen Sie folgende Schritte auszuführen.
->       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager aus, für die SQL ausführen-Tasks und die ADO.NET-Ziel.
->       2. Legen Sie auf den Verbindungs-Manager die **RetainSameConnection** Eigenschaft und die **MultipleActiveResultSets** Eigenschaft auf "true".
->       3. Legen Sie die ADO.NET-Ziel die **UseBulkInsertWhenPossible** Eigenschaft auf "false".
+>   Um die SET IDENTITY_INSERT-Anweisungen und erfolgreich Laden der Daten auszuführen, müssen Sie folgende Schritte auszuführen. 
+>       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager aus, für die SQL ausführen-Tasks und die ADO.NET-Ziel. 
+>       2. Legen Sie auf den Verbindungs-Manager die **RetainSameConnection** Eigenschaft und die **MultipleActiveResultSets** Eigenschaft auf "true". 
+>       3. Legen Sie die ADO.NET-Ziel die **UseBulkInsertWhenPossible** Eigenschaft auf "false". 
 >
 >  Weitere Informationen finden Sie unter [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) und [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
   
+
