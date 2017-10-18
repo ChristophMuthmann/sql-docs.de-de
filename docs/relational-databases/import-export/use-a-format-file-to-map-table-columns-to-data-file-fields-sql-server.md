@@ -17,11 +17,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
@@ -29,7 +29,7 @@ Eine Datendatei kann Felder in einer anderen Reihenfolge als die der entsprechen
 
 |Outline|
 |---|
-|[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Ändern der Nicht-XML-Formatdatei](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />&emsp;&#9679;&emsp;[Ändern der XML-Formatdatei](#modify_xml_format_file)<br />[Importieren von Daten mit einer Formatdatei, um Tabellenspalten zu Datendateifeldern zuzuordnen](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Ändern der Nicht-XML-Formatdatei](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />&emsp;&#9679;&emsp;[Ändern der XML-Formatdatei](#modify_xml_format_file)<br />[Importieren von Daten mit einer Formatdatei, um Tabellenspalten zu Datendateifeldern zuzuordnen](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)|
 
 > [!NOTE]  
 >  Mithilfe einer Nicht-XML- oder XML-Formatdatei kann der Massenimport einer Datendatei in die Tabelle ausgeführt werden. Hierzu kann ein [bcp-Hilfsprogramm](../../tools/bcp-utility.md)-Befehl, eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)- oder eine INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung verwendet werden. Weitere Informationen finden Sie unter [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
@@ -39,7 +39,7 @@ Die in diesem Thema enthaltenen Beispiele der geänderten Formatdateien basieren
 
 ### Beispieltabelle<a name="sample_table"></a>
 Das folgende Skript erstellt eine Testdatenbank und eine Tabelle namens `myRemap`.  Führen Sie die folgenden Transact-SQL-Anweisungen in Microsoft SQL Server Management Studio (SSMS) aus:
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -77,9 +77,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### Ändern der Nicht-XML-Formatdatei <a name="modify_nonxml_format_file"></a>
 Informationen zur Terminologie finden Sie unter [Struktur von Nicht-XML-Formatdateien](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) .  Öffnen Sie `D:\BCP\myRemap.fmt` in Editor, und nehmen Sie die folgenden Änderungen vor:
-1) Ändern Sie die Reihenfolge der Zeilen in der Formatdatei, sodass die Zeilen in derselben Reihenfolge vorliegen wie die Daten in `myRemap.bcp`.
-2) Stellen Sie sicher, dass die Werte für die Reihenfolge der Hostfelder sequenziell sind.
-3) Stellen Sie sicher, dass nach der letzten Zeile der Formatdatei ein Zeilenumbruch eingefügt wird.
+1.  Ändern Sie die Reihenfolge der Zeilen in der Formatdatei, sodass die Zeilen in derselben Reihenfolge vorliegen wie die Daten in `myRemap.bcp`.
+2.  Stellen Sie sicher, dass die Werte für die Reihenfolge der Hostfelder sequenziell sind.
+3.  Stellen Sie sicher, dass nach der letzten Zeile der Formatdatei ein Zeilenumbruch eingefügt wird.
 
 Vergleichen Sie die Änderungen:     
 **vor**
@@ -115,9 +115,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### Ändern der XML-Formatdatei <a name="modify_xml_format_file"></a>
 Informationen zur Terminologie finden Sie unter [Schemasyntax für XML-Formatdateien](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) .  Öffnen Sie `D:\BCP\myRemap.xml` in Editor, und nehmen Sie die folgenden Änderungen vor:
-1) Die Reihenfolge, in der die \<FIELD>-Elemente in der Formatdatei deklariert sind, ist die Reihenfolge, in der diese Felder in der Datendatei angezeigt werden. Kehren Sie daher die Reihenfolge für die \<FIELD>-Elemente mit den ID-Attributen 2 und 3 um.
-2) Stellen Sie sicher, dass die Werte des \<FIELD>-Attributs ID sequenziell sind.
-3) Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese durch den Massenvorgang zurückgegeben werden.  Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  Die Reihenfolge der \<COLUMN>-Elemente ist unabhängig von der Reihenfolge der \<FIELD>-Elemente in einer \<RECORD>-Definition.  Jedes \<COLUMN>-Element entspricht einem \<FIELD>-Element (dessen ID im SOURCE-Attribut des \<COLUMN>-Elements angegeben ist).  Somit sind die Werte für \<COLUMN> SOURCE die einzigen Attribute, die eine Überarbeitung erfordern.  Kehren Sie die Reihenfolge für die \<COLUMN>-Attribute SOURCE 2 und 3 um.
+1. Die Reihenfolge, in der die \<FIELD>-Elemente in der Formatdatei deklariert sind, ist die Reihenfolge, in der diese Felder in der Datendatei angezeigt werden. Kehren Sie daher die Reihenfolge für die \<FIELD>-Elemente mit den ID-Attributen 2 und 3 um.
+2. Stellen Sie sicher, dass die Werte des \<FIELD>-Attributs ID sequenziell sind.
+3. Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese durch den Massenvorgang zurückgegeben werden.  Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  Die Reihenfolge der \<COLUMN>-Elemente ist unabhängig von der Reihenfolge der \<FIELD>-Elemente in einer \<RECORD>-Definition.  Jedes \<COLUMN>-Element entspricht einem \<FIELD>-Element (dessen ID im SOURCE-Attribut des \<COLUMN>-Elements angegeben ist).  Somit sind die Werte für \<COLUMN> SOURCE die einzigen Attribute, die eine Überarbeitung erfordern.  Kehren Sie die Reihenfolge für die \<COLUMN>-Attribute SOURCE 2 und 3 um.
 
 Vergleichen Sie die Änderungen:  
 **vor**
@@ -180,7 +180,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 
 ### Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Führen Sie die folgenden Transact-SQL-Anweisungen in Microsoft SQL Server Management Studio (SSMS) aus:
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Führen Sie die folgenden Transact-SQL-Anweisungen in Microsoft SQL Server Management Studio (SSMS) aus:
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Führen Sie die folgenden Transact-SQL-Anweisungen in Microsoft SQL Server Management Studio (SSMS) aus:
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Führen Sie die folgenden Transact-SQL-Anweisungen in Microsoft SQL Server Management Studio (SSMS) aus:
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

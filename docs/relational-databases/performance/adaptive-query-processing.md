@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: "Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern"
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 10/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 
@@ -225,9 +225,10 @@ Pläne mit der verschachtelten Ausführung können erzwungen werden. Der Plan is
 
 ## <a name="see-also"></a>Siehe auch
 
-[Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)
 
 [Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 
 

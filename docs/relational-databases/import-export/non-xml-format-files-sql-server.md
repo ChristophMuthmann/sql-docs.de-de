@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Sie können eine Formatdatei für einen bestimmten Datentyp z. B. Zeichendaten oder systemeigene Daten erstellen.  
   
-     Sie können Nicht-XML-Formatdateien erstellen, die interaktiv angegebene Attribute für jedes Datenfeld enthalten. Weitere Informationen finden Sie unter [Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Sie können Nicht-XML-Formatdateien erstellen, die interaktiv angegebene Attribute für jedes Datenfeld enthalten. Weitere Informationen finden Sie unter [Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  XML-Formatdateien bieten verschiedene Vorteile gegenüber Nicht-XML-Formatdateien. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  In der folgenden Abbildung werden die Felder der Formatdatei in einem Beispiel einer Nicht-XML-Formatdatei gezeigt.  
   
- ![Identifiziert die Felder einer Datei, die nicht im XML-Format vorliegt](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifiziert die Felder einer Datei, die nicht im XML-Format vorliegt")  
+ ![Identifiziert die Felder einer Datei, die nicht im XML-Format vorliegt](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   

@@ -17,11 +17,11 @@ caps.latest.revision: 32
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdd63f41c8a567bde4fcadab2802a2c0b6f468cd
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 4d61f38522712ff0d550bac46cc19bb83d5418b0
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -57,7 +57,7 @@ Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle und einer
 
 ### **Beispieltabelle**<a name="sample_table"></a>
 Das folgende Skript erstellt eine Testdatenbank sowie eine Tabelle namens `myWidenative` und füllt die Tabelle mit einigen ursprünglichen Werten auf.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -135,7 +135,7 @@ REM Review results is SSMS
 
 ### **Verwenden von BULK INSERT und des nativen Unicode-Zeichenformats ohne eine Formatdatei**<a name="bulk_widenative"></a>
 **DATAFILETYPE** -Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
     FROM 'D:\BCP\myWidenative.bcp'
@@ -149,7 +149,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 
 ### **Verwenden von BULK INSERT und des nativen Unicode-Zeichenformats mit einer Nicht-XML-Formatdatei**<a name="bulk_widenative_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
    FROM 'D:\BCP\myWidenative.bcp'
@@ -163,7 +163,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 
 ### **Verwenden von OPENROWSET und des nativen Unicode-Zeichenformats mit einer Nicht-XML-Formatdatei**<a name="openrowset_widenative_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidenative
     SELECT *
