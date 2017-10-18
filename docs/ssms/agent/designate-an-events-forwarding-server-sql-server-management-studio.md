@@ -49,7 +49,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .
   
 #### <a name="to-designate-an-events-forwarding-server"></a>So bestimmen Sie einen Ereignisweiterleitungsserver  
   
-1.  Klicken Sie im Objekt-Explorer **** auf das Pluszeichen, um den Server zu erweitern, von dem aus Sie Ereignisse an andere Server weiterleiten möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, von dem aus Sie Ereignisse an andere Server weiterleiten möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   

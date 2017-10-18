@@ -75,7 +75,7 @@ ms.lasthandoff: 06/22/2017
 4.  Wählen Sie **Zeilenumbruch**.  
   
 ## <a name="enabling-virtual-space-mode"></a>Aktivieren des Modus des virtuellen Bereichs  
- Im Modus des ****  virtuellen Bereichs verhält sich der Editor, als ob der Bereich nach dem Zeilenende mit einer unendlichen Anzahl von Leerzeichen gefüllt wäre, sodass Codezeilen außerhalb des sichtbaren Bildschirmbereichs fortgesetzt werden können.  
+ Im Modus des **virtuellen Bereichs** verhält sich der Editor, als ob der Bereich nach dem Zeilenende mit einer unendlichen Anzahl von Leerzeichen gefüllt wäre, sodass Codezeilen außerhalb des sichtbaren Bildschirmbereichs fortgesetzt werden können.  
   
 #### <a name="to-enable-virtual-space-mode"></a>So aktivieren Sie den Modus des virtuellen Bereichs  
   

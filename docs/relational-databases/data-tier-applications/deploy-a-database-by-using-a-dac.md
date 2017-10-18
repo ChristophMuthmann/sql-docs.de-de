@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Datenbankoptionen wie TRUSTWORTHY, DB_CHAINING und HONOR_BROKER_PRIORITY können nicht im Rahmen des Bereitstellungsprozesses angepasst werden. Physische Eigenschaften, z. B. die Anzahl der Dateigruppen oder die Anzahl und Größe der Dateien, können nicht im Rahmen des Bereitstellungsprozesses geändert werden. Nachdem die Bereitstellung abgeschlossen wurde, können Sie die ALTER DATABASE-Anweisung, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oder PowerShell für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, um die Datenbank individuell anzupassen.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
- Der Assistent zum Bereitstellen von Datenbanken ****  unterstützt das Bereitstellen einer Datenbank:  
+ Der Assistent zum **Bereitstellen von Datenbanken** unterstützt das Bereitstellen einer Datenbank:  
   
 -   Von einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
     -   [Ergebnisse](#Results)  
   
 ##  <a name="Introduction"></a> Seite "Einführung"  
- Auf dieser Seite werden die Schritte des Assistenten zum Bereitstellen von Datenbanken ****  beschrieben.  
+ Auf dieser Seite werden die Schritte des Assistenten zum **Bereitstellen von Datenbanken** beschrieben.  
   
  **Optionen**  
   

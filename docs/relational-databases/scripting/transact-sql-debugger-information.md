@@ -58,11 +58,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Eine SELECT-Anweisung, die einen einzelnen Wert zurückgibt, zum Beispiel SELECT CharCol FROM MyTable WHERE PrimaryKey = 1.  
   
- Mithilfe des Fensters **Schnellüberwachung** können Sie den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen und anschließend diesen Ausdruck in einem **** Überwachungsfenster speichern. Zum Auswählen eines Ausdrucks in **Schnellüberwachung**wählen Sie den Namen des Ausdrucks entweder im Feld **Ausdruck** aus oder geben ihn dort ein.  
+ Mithilfe des Fensters **Schnellüberwachung** können Sie den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen und anschließend diesen Ausdruck in einem **Überwachungsfenster** speichern. Zum Auswählen eines Ausdrucks in **Schnellüberwachung**wählen Sie den Namen des Ausdrucks entweder im Feld **Ausdruck** aus oder geben ihn dort ein.  
   
- Die vier **** Überwachungsfenster zeigen Informationen über Variablen und Ausdrücke an, die Sie ausgewählt haben. Der Satz von Ausdrücken, die in den **** Überwachungsfenstern aufgeführt sind, ändert sich erst dann, wenn Sie Ausdrücke entweder der Liste hinzufügen oder aus dieser entfernen.  
+ Die vier **Überwachungsfenster** zeigen Informationen über Variablen und Ausdrücke an, die Sie ausgewählt haben. Der Satz von Ausdrücken, die in den **Überwachungsfenstern** aufgeführt sind, ändert sich erst dann, wenn Sie Ausdrücke entweder der Liste hinzufügen oder aus dieser entfernen.  
   
- Zum Hinzufügen eines Ausdrucks zu einem **** Überwachungsfenster können Sie entweder im Dialogfeld **Schnellüberwachung** die Option **Überwachung hinzufügen** auswählen oder den Namen des Ausdrucks in die **Namensspalte** einer leeren Zeile in einem **** Überwachungsfenster eingeben.  
+ Zum Hinzufügen eines Ausdrucks zu einem **Überwachungsfenster** können Sie entweder im Dialogfeld **Schnellüberwachung** die Option **Überwachung hinzufügen** auswählen oder den Namen des Ausdrucks in die **Namensspalte** einer leeren Zeile in einem **Überwachungsfenster** eingeben.  
   
  Sie können die Datenwerte für Variablen in den Fenstern **Lokal**, **Überwachung**oder **Schnellüberwachung** festlegen, indem Sie mit der rechten Maustaste auf die Zeile klicken und dann **Wert bearbeiten**auswählen. Die **Wert** -Spalten im Fenster **Lokal** , im Fenster **Überwachung** und im Dialogfeld **Schnellüberwachung** unterstützen alle Text-, XML- und HTML-Datenschnellansichten. Die Schnellansichten werden durch einen Vergrößerungsglas-Datentipp ganz rechts neben der Spalte **Werte** dargestellt. Mithilfe der Schnellansichten können Sie Text-, XML- oder HTML-Datenwerte in Anzeigen für die entsprechenden Datentypen, z. B. XML-Dateien in einem Browserfenster, betrachten.  
   

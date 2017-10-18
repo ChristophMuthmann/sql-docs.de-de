@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu  
   
-1.  Klicken Sie im ****Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit der Spalte, für die Sie den Ordner **Spalten** ändern und erweitern möchten.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle mit der Spalte, für die Sie den Ordner **Spalten** ändern und erweitern möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Spalte, für die Sie die Formel einer berechneten Spalte angeben möchten, und klicken Sie auf **Löschen**. Klicken Sie auf **OK**.  
   

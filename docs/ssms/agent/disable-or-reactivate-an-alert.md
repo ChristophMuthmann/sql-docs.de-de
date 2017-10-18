@@ -57,7 +57,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>So deaktivieren oder reaktivieren Sie eine Warnung  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Server zu erweitern, der die Warnung enthält, die Sie deaktivieren oder erneut aktivieren möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der die Warnung enthält, die Sie deaktivieren oder erneut aktivieren möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   

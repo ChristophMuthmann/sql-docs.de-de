@@ -61,7 +61,7 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 #### <a name="to-configure-sql-server-agent-to-automatically-restart"></a>So konfigurieren Sie den automatischen Neustart des SQL Server-Agents  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den automatischen Neustart des SQL Server Agents konfigurieren möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den automatischen Neustart des SQL Server Agents konfigurieren möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   

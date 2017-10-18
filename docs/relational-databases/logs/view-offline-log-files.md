@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie im Startmenü **** auf **Suche starten** , geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü**auf **Suche starten** , geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie auf **Start**, dann auf **Ausführen**, geben Sie **wmimgmt.msc**ein, und drücken Sie dann die EINGABETASTE.  
   

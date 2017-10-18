@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Verbindung zu einer Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]her.  
   
-2.  Klicken Sie im ****Objekt-Explorer mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann den Menübefehl **Datenebenenanwendung importieren** aus, um den Assistenten zu starten.  
+2.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann den Menübefehl **Datenebenenanwendung importieren** aus, um den Assistenten zu starten.  
   
 3.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   

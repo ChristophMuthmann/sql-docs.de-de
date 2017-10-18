@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erstellen Sie eine Prozedur im Abfrage-Editor**  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie im Menü **Datei** auf **Neue Abfrage**.  
   

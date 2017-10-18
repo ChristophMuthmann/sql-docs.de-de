@@ -41,7 +41,7 @@ Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Objekttypen auswählen*
 **Geben Sie den Objektnamen ein**  
 Enthält den Namen des Objekts, das nicht gefunden wurde. Korrigieren Sie den Namen des Objekts, oder geben Sie einen neuen Objektnamen ein.  
   
-<object name> **aus der Auswahl** ** **entfernen**  
+**Entfernen** *<object name>*  **aus der Auswahl**  
 Wählen Sie diese Option aus, um das Dialogfeld **Name nicht gefunden** zu schließen und das Element aus dem Dialogfeld **Objekte auswählen** zu entfernen.  
   
 

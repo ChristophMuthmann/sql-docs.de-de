@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  Folgende zusätzliche Änderungen sind für eine inaktive Ereignissitzung möglich:  
   
--   Aktivieren Sie die Option zum Nachverfolgen der Beziehung zwischen Ereignissen **** .  
+-   Aktivieren Sie die Option zum **Nachverfolgen der Beziehung zwischen Ereignissen** .  
   
 -   Ändern Sie die Konfiguration für erweiterte Eigenschaften.  
   

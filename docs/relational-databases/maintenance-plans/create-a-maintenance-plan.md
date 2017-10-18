@@ -81,7 +81,7 @@ Die [Agent XPs-Serverkonfigurationsoption](../../database-engine/configure-windo
   
 #### <a name="to-create-a-maintenance-plan"></a>So erstellen Sie einen Wartungsplan  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

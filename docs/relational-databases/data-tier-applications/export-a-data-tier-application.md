@@ -62,11 +62,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Verbindung zu einer Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]her.  
   
-2.  Erweitern Sie im Objekt-Explorer ****den Knoten für die Instanz, von der aus Sie die DAC exportieren möchten.  
+2.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, von der aus Sie die DAC exportieren möchten.  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Datenbanknamen.  
   
-4.  Klicken Sie auf **Tasks** , und wählen Sie dann ****  
+4.  Klicken Sie auf **Tasks** , und wählen Sie dann **Exportieren von Datenebenenanwendungen**  
   
 5.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   

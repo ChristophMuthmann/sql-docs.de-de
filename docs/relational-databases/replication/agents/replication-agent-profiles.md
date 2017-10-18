@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Die Replikation stellt ein Standardprofil für jeden Agent und zusätzliche vordefinierte Profile für den Protokolllese-Agent, den Verteilungs-Agent und den Merge-Agent bereit. Neben den bereitgestellten Profilen können Sie Profile erstellen, die sich für Ihre Anwendungsanforderungen eignen. Ein Agentprofil ermöglicht ein einfaches Ändern von Schlüsselparametern für alle Agents, die dem Profil zugeordnet sind. Wenn Sie z. B. 20 Momentaufnahme-Agents haben und den Zeittimeout für Abfragen ändern müssen (den **-QueryTimeout** -Parameter), können Sie das Profil für die Momentaufnahme-Agents aktualisieren. Beim nächsten Ausführen verwenden alle Agents dieses Typs automatisch den neuen Wert.  
   
- Sie können auch verschiedene Profile für unterschiedliche Instanzen eines Agents verwenden. Ein Merge-Agent, der beispielsweise über eine DFÜ-Verbindung mit dem Verleger und dem Verteiler verbunden wird, könnte einen Satz Parameter verwenden, die sich besser für die langsamere Kommunikationsverbindung eignen, indem er das **** Profil für langsame Links verwendet.  
+ Sie können auch verschiedene Profile für unterschiedliche Instanzen eines Agents verwenden. Ein Merge-Agent, der beispielsweise über eine DFÜ-Verbindung mit dem Verleger und dem Verteiler verbunden wird, könnte einen Satz Parameter verwenden, die sich besser für die langsamere Kommunikationsverbindung eignen, indem er das Profil für **langsame** Links verwendet.  
   
 > [!NOTE]  
 >  Wenn Sie einen Wert für einen Agentparameter in der Befehlszeile angeben, überschreibt dieser Wert den Wert, der für denselben Parameter im Agentprofil festgelegt wurde.  

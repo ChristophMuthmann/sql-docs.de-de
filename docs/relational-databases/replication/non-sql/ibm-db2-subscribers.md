@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
     1.  Zeigen Sie im Menü **Start**auf **Programme**, dann auf **Microsoft OLE DB-Anbieter für DB2**, und klicken Sie dann auf **Data Access Tool**.  
   
-    2.  Folgen Sie im Data Access Tool ****den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
+    2.  Folgen Sie im **Data Access Tool**den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
   
     3.  Greifen Sie auf die Verbindungszeichenfolge zu: Klicken Sie mit der rechten Maustaste auf die UDL im Data Access Tool, und wählen Sie **Verbindungszeichenfolge anzeigen**aus.  
   

@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>So aktivieren Sie einen deaktivierten Index mit ALTER INDEX  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-a-disabled-index-using-create-index"></a>So aktivieren Sie einen deaktivierten Index mit CREATE INDEX  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>So aktivieren Sie einen deaktivierten Index mit DBCC DBREINDEX  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>So aktivieren Sie alle Indizes auf einer Tabelle mit ALTER INDEX  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>So aktivieren Sie alle Indizes auf einer Tabelle mit DBCC DBREINDEX  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

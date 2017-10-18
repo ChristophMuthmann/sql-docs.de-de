@@ -55,7 +55,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .
   
 #### <a name="to-specify-a-target-servers-location"></a>So geben Sie den Speicherort eines Zielservers an  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie auf **Zielserver verwalten**.  
   

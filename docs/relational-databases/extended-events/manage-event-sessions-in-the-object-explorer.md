@@ -72,7 +72,7 @@ STATE = STOP
  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und **Sitzungen**, klicken mit der rechten Maustaste auf eine Sitzung und klicken anschließend auf **Sitzung starten** oder **Sitzung beenden** , um im **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse zu starten oder zu beenden.  
   
 ## <a name="export-an-extended-events-session-template"></a>Exportieren einer Sitzungsvorlage für erweiterte Ereignisse  
- Sie können mit dem **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse exportieren und diese als XML-Vorlage speichern. Beispielsweise können Sie eine Sitzung exportieren und anschließend mithilfe des **Assistenten für neue Sitzungen** die Vorlage auf eine neue Ereignissitzung anwenden. ****  
+ Sie können mit dem **Objekt-Explorer**eine Sitzung für erweiterte Ereignisse exportieren und diese als XML-Vorlage speichern. Beispielsweise können Sie eine Sitzung exportieren und anschließend mithilfe des **Assistenten für neue Sitzungen** die Vorlage auf eine **neue Ereignissitzung** anwenden.  
   
  Stellen Sie beim Exportieren einer Sitzung sicher, dass Sie die Vorlagendatei an einem Speicherort speichern, der das NTFS-Dateisystem verwendet. Schränken Sie zudem den Zugriff auf Benutzer ein, die zum Anzeigen der Informationen autorisiert sind.  
   

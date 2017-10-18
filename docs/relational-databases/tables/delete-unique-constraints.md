@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>So löschen Sie eine eindeutige Einschränkung mit dem Tabellen-Designer  
   
-1.  Klicken Sie im ****Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit der UNIQUE-Einschränkung, und klicken Sie dann auf **Entwerfen**.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf die Tabelle mit der UNIQUE-Einschränkung, und klicken Sie dann auf **Entwerfen**.  
   
 2.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-delete-a-unique-constraint"></a>So löschen Sie eine Unique-Einschränkung  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

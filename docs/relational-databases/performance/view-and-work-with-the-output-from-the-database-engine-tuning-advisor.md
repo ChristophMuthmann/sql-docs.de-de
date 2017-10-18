@@ -171,7 +171,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
-4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung XML **** .  
+4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML** .  
   
 5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Bei der Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird dieses Schema unter dem folgenden Pfad installiert:  
   

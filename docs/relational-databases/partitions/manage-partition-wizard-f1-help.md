@@ -45,10 +45,10 @@ ms.lasthandoff: 06/22/2017
   
  Allgemeine Informationen zu Partitionen und Indizes finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem Assistenten zum Verwalten von Partitionen ****erforderlich sind.  
+ Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen**erforderlich sind.  
   
 ##  <a name="Top"></a> In diesem Abschnitt  
- Die folgenden Abschnitte stellen Hilfe für die Seiten des Assistenten zum Verwalten von Partitionen ****bereit.  
+ Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen**bereit.  
   
  [Assistent zum Verwalten von Partitionen (Seite 'Partitionsaktion auswählen')](#SelectPartitionAction)  
   

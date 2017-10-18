@@ -95,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Geben Sie Ihr [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript in den Abfrage-Editor ein. Dieses Skript sollte eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an mindestens eine zu optimierende Datenbank enthalten.  
   
-3.  Speichern Sie die Datei mit der Erweiterung SQL **** . Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
+3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
 ###  <a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
   

@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |**DatabaseName**|**nvarchar**|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
 |**Dauer**|**bigint**|Die erforderliche Zeitdauer (in Millisekunden), um die Datei zu vergrößern.|13|ja|  
-|**EndTime**|**datetime**|Der Zeitpunkt, zu dem die automatische Vergrößerung **** der Protokolldatei beendet wurde.|18|ja|  
+|**EndTime**|**datetime**|Der Zeitpunkt, zu dem die **automatische Vergrößerung** der Protokolldatei beendet wurde.|18|ja|  
 |**EventClass**|**int**|Ereignistyp = 93.|27|Nein|  
 |**EventSequence**|**int**|Die Sequenz der **CursorClose** -Ereignisklasse im Batch.|51|Nein|  
 |**Filename**|**nvarchar**|Der logische Name der zu vergrößernden Datei.|36|ja|  

@@ -60,7 +60,7 @@ Mitglieder der festen Serverrolle **sysadmin** können Operatoren löschen.
   
 #### <a name="to-delete-an-operator"></a>So löschen Sie einen Operator  
   
-1.  Klicken Sie im Objekt-Explorer ****auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie löschen möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie löschen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   

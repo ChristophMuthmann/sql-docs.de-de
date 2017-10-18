@@ -65,17 +65,17 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die P
   
 3.  Klicken Sie mit der rechten Maustaste auf **Warnungen** , und wählen Sie **Neue Warnung**aus.  
   
-4.  Geben Sie im Dialogfeld **Neue Warnung** einen ****  Namen für diese Warnung ein.  
+4.  Geben Sie im Dialogfeld **Neue Warnung** einen **Namen** für diese Warnung ein.  
   
 5.  Aktivieren Sie das Kontrollkästchen **Aktivieren** , um die Ausführung der Warnung zu ermöglichen. Standardmäßig ist **Aktivieren** aktiviert.  
   
 6.  Klicken Sie in der Liste **Typ** auf **SQL Server-Ereigniswarnung**.  
   
-7.  Klicken Sie in der Liste **Datenbankname**auf den ****  Datenbanknamen, um die Warnung auf eine bestimmte Datenbank zu beschränken.  
+7.  Klicken Sie in der Liste **Datenbankname**auf den **Datenbanknamen**, um die Warnung auf eine bestimmte Datenbank zu beschränken.  
   
 8.  Klicken Sie unter **Warnungen werden ausgelöst basierend auf**auf **Fehlernummer**, und geben Sie anschließend eine gültige Fehlernummer für diese Warnung ein. Klicken Sie alternativ auf **Schweregrad** , und wählen Sie anschließend den spezifischen Schweregrad, mit dem die Warnung ausgelöst wird.  
   
-9. Aktivieren Sie das Kontrollkästchen neben **Warnung auslösen, wenn eine Meldung Folgendes enthält** , um die Warnung auf eine bestimmte Zeichenfolge zu beschränken, und geben Sie dann ein Schlüsselwort oder Zeichenfolge für den Meldungstext **** ein. Es können maximal 100 Zeichen eingegeben werden.  
+9. Aktivieren Sie das Kontrollkästchen neben **Warnung auslösen, wenn eine Meldung Folgendes enthält** , um die Warnung auf eine bestimmte Zeichenfolge zu beschränken, und geben Sie dann ein Schlüsselwort oder Zeichenfolge für den **Meldungstext**ein. Es können maximal 100 Zeichen eingegeben werden.  
   
 10. Klicken Sie auf **OK**.  
   

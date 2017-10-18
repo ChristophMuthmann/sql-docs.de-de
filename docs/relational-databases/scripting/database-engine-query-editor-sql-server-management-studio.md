@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  Gibt die Abfrageergebnisse als ein oder mehrere Raster im Fenster **Ergebnisse** zurück.  
   
  **Ergebnisse in Datei**  
- Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname**den Namen der Datei ein, und klicken Sie dann auf **Speichern** , um die Abfrageergebnisse als **** Berichtsdatei mit der Dateierweiterung ".rpt" zu speichern. Klicken Sie auf den Pfeil nach unten auf der Schaltfläche **Speichern** , und klicken Sie anschließend auf **Mit Codierung speichern**, um erweiterte Optionen anzugeben.  
+ Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname**den Namen der Datei ein, und klicken Sie dann auf **Speichern** , um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung ".rpt" zu speichern. Klicken Sie auf den Pfeil nach unten auf der Schaltfläche **Speichern** , und klicken Sie anschließend auf **Mit Codierung speichern**, um erweiterte Optionen anzugeben.  
   
  **Auswahl kommentieren**  
  Markiert die aktuelle Zeile als Kommentar, indem am Zeilenanfang ein Kommentaroperator (--) hinzugefügt wird.  

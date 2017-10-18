@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **Von Gerät**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen. Wählen Sie im Dialogfeld für das Angeben der Sicherungsgeräte **** einen der im Listenfeld **Sicherungsmedientyp** aufgeführten Medientypen aus. Klicken Sie zum Auswählen von einem oder mehreren Medien für das Listenfeld **Sicherungsmedien** auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen. Wählen Sie im Dialogfeld für das **Angeben der Sicherungsgeräte** einen der im Listenfeld **Sicherungsmedientyp** aufgeführten Medientypen aus. Klicken Sie zum Auswählen von einem oder mehreren Medien für das Listenfeld **Sicherungsmedien** auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   

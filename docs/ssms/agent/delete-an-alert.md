@@ -60,7 +60,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Warnu
   
 #### <a name="to-delete-an-alert"></a>So löschen Sie eine Warnung  
   
-1.  Klicken Sie im Objekt-Explorer **** auf das Pluszeichen, um den Server zu erweitern, der die SQL Server-Agent-Warnung enthält, die Sie löschen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der die SQL Server-Agent-Warnung enthält, die Sie löschen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
