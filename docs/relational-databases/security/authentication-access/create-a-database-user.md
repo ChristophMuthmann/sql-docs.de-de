@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
      Geben Sie das Zertifikat ein, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
      **Name des asymmetrischen Schlüssels**  
-     Geben Sie den Schlüssel ein, der für den Datenbankbenutzer benutzt werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Die Option für den asymmetrischen Schlüsselnamen**** ist verfügbar, wenn Sie die Option **Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie den Schlüssel ein, der für den Datenbankbenutzer benutzt werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Die Option für den **asymmetrischen Schlüsselnamen** ist verfügbar, wenn Sie die Option **Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
