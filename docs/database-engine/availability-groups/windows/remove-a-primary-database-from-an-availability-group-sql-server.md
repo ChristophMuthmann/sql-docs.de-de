@@ -105,7 +105,7 @@ ms.lasthandoff: 08/02/2017
   
     ```  
     Remove-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
+    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\AvailabilityDatabases\MyDb9
     ```  
   
     > [!NOTE]  
