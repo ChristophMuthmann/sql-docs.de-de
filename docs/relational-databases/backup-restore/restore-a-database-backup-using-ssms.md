@@ -218,7 +218,7 @@ Im folgenden Beispiel wird eine Datenbank in den am 30. Mai 2016 um 13:23:17 Uhr
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Wiederherstellen einer Sicherung aus dem Microsoft Azure-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**
 In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus einer Sicherung ausgeführt, die sich im Microsoft Azure-Speicherdienst befindet.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten sechs Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 7**.
-1.  Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
 
@@ -243,7 +243,7 @@ In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus e
     13. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
     14. Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
     15. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
-    16. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern.**.
+    16. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
     17. Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
     18. Klicken Sie auf **OK**.
 
@@ -260,7 +260,7 @@ In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus e
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)**
 Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` im Microsoft Azure-Speichercontainer `E:\MSSQL\BAK`wiederhergestellt.  Die SQL Server-Anmeldeinformationen für den Azure-Container wurden bereits erstellt.  SQL Server-Anmeldeinformationen für den Zielcontainer müssen bereits vorhanden sein, da sie durch den **Wiederherstellungstask** nicht erstellt werden können.  Die Datenbank `Sales` ist auf dem Server derzeit nicht vorhanden.
-1.  Stellen Sie im ****Objekt-Explorer eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.

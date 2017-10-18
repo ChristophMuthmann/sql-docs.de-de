@@ -30,7 +30,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; & #x 40; Fehler (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Fehler (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Fehlernummer für die zuletzt ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung zurück.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
  Da @@ERROR deaktiviert ist und nach jeder ausgeführten Anweisung zurücksetzen checken Sie es sofort nach der Anweisung, die überprüft wird, oder speichern Sie sie an eine lokale Variable, die später aktiviert werden kann.  
   
- Verwenden Sie das TRY...CATCH-Konstrukt zur Behandlung von Fehlern. Wiederholen Sie dann... CATCH erstellen auch unterstützt zusätzliche Systemfunktionen (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE), die mehr Fehlerinformationen als @ zurückgeben@ERROR. TRY...CATCH unterstützt darüber hinaus eine ERROR_NUMBER-Funktion, die nicht darauf beschränkt ist, die Fehlernummer in der Anweisung zurückzugeben, die unmittelbar auf die Anweisung folgt, die einen Fehler generiert hat. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Verwenden Sie das TRY...CATCH-Konstrukt zur Behandlung von Fehlern. Wiederholen Sie dann... CATCH erstellen auch unterstützt zusätzliche Systemfunktionen (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE), die mehr Fehlerinformationen als zurückgeben @@ERROR . TRY...CATCH unterstützt darüber hinaus eine ERROR_NUMBER-Funktion, die nicht darauf beschränkt ist, die Fehlernummer in der Anweisung zurückzugeben, die unmittelbar auf die Anweisung folgt, die einen Fehler generiert hat. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Mit@ERROR mit @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. Mit@ERROR mit @@ROWCOUNT   
  Im folgenden Beispiel wird `@@ERROR` mit `@@ROWCOUNT` verwendet, um den Vorgang einer `UPDATE`-Anweisung zu überprüfen. Der Wert von `@@ERROR` wird auf Fehler überprüft, und `@@ROWCOUNT` wird verwendet, um sicherzustellen, dass das Update erfolgreich auf eine Zeile in der Tabelle angewendet wurde.  
   
 ```  

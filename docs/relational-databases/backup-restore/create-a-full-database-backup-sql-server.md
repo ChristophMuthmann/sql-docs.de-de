@@ -176,7 +176,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\
 
 5.  Klicken Sie auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen.
 
-6.  Geben Sie im Textfeld `E:\MSSQL\BAK\Sales_20160801.bak` Dateiname ****  ein.
+6.  Geben Sie `E:\MSSQL\BAK\Sales_20160801.bak` im Textfeld **Dateiname** ein.
 
 7.  Klicken Sie auf **OK**.
 
@@ -214,20 +214,20 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
 *
     5.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
 
-    6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
+    6.  Geben Sie `Sales_stripe1of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
 
     7.  Klicken Sie auf **OK**.
 
     8.  Wiederholen Sie die Schritte **4** und **5**.
 
-    9.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe2of2_20160601.bak`ein.
+    9.  Geben Sie `Sales_stripe2of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
 
     10.  Klicken Sie auf **OK**.
 
     11.   Klicken Sie auf **OK**.
 
     **D2.  Eine Shared Access Signature ist vorhanden und eine SQL Server-Anmeldeinformation ist nicht vorhanden**
-  5.    Geben Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in das Textfeld **Azure-Speichercontainer:** ein.
+  5.    Geben Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in das Textfeld **Azure-Speichercontainer:** ein
   
   6.    Geben Sie die SAS in das Textfeld **Shared Access Signature:** ein.
   

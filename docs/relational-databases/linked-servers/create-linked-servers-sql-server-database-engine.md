@@ -172,7 +172,7 @@ ms.lasthandoff: 08/03/2017
   
 ##### <a name="to-view-the-provider-options"></a>So zeigen Sie die Anbieteroptionen an  
   
--   Um die Optionen anzuzeigen, die der Anbieter zur Verfügung stellt, klicken Sie auf die Seite für ****  die Anbieteroptionen.  
+-   Um die Optionen anzuzeigen, die der Anbieter zur Verfügung stellt, klicken Sie auf die Seite für **die Anbieteroptionen**.  
   
      Nicht alle Anbieter verfügen über die gleichen Optionen. Bei einigen Typen von Daten sind z. B. Indizes verfügbar, für einige nicht. Mittels dieses Dialogfelds kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Funktionen des Anbieters verstehen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert einige allgemeine Datenanbieter; wenn das Produkt, das die Daten bereitstellt, jedoch geändert wird, unterstützt der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installierte Anbieter möglicherweise nicht alle neuesten Funktionen. Die beste Informationsquelle zu den Funktionen des Produkts, das die Daten bereitstellt, ist die Dokumentation für dieses Produkt.  
   
