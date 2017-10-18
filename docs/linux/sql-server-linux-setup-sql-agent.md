@@ -23,7 +23,7 @@ ms.lasthandoff: 10/02/2017
 Führen Sie die folgenden Schritte aus, um den SQL Server-Agent (**Mssql-Server-Agent**) unter Linux zu installieren. Der [SQL Server-Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) führt geplante SQL Server-Aufträge aus. Informationen zu Features, die für diese Version von SQL Server-Agent unterstützt werden, finden Sie in den [Release Notes](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> [Installieren Sie den SQL Server-2017](sql-server-linux-setup.md#platforms), bevor Sie den SQL Server-Agent installieren. Dadurch werden die Schlüssel und Repositories konfiguriert, die zur Installation des **Mssql-Server-Agent** Pakets benötigt werden.
+> Installieren Sie vor dem SQL Server-Agent zunächst [SQL Server-2017](sql-server-linux-setup.md#platforms). Auf diese Weise werden die Schlüssel und Repositorys konfiguriert, die bei der Installation des **mssql-server-agent**-Pakets verwendet werden.
 
 Installieren Sie SQL Server-Agent für Ihre Plattform:
 
@@ -31,16 +31,16 @@ Installieren Sie SQL Server-Agent für Ihre Plattform:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installieren Sie auf RHEL</a>
+## <a name="RHEL">Installation unter RHEL</a>
 
-Verwenden Sie die folgenden Schritte zum Installieren des **Mssql-Server-Agent** unter Red Hat Enterprise Linux. 
+Gehen Sie wie folgt vor, um **mssql-server-agent** unter Red Hat Enterprise Linux zu installieren.  
 
 ```bash
 sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls der **Mssql-Server-Agent** bereits installiert ist, können Sie mit den folgenden Befehlen das Update auf die aktuellste Version durchführen:
+Falls **mssql-server-agent** bereits installiert ist, können Sie mit den folgenden Befehlen auf die neueste Version aktualisieren: 
 
 ```bash
 sudo yum check-update
@@ -48,11 +48,11 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls Sie eine Offline-Installation durchführen möchten, finden Sie den SQL Server-Agent-Paketdownload in den [Release Notes](sql-server-linux-release-notes.md). Verwenden Sie zum installieren anschließend die in [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Installationsschritte. 
+Falls Sie eine Offline-Installation durchführen möchten, finden Sie den Downloadlink für das SQL Server-Agent-Paket in den [Anmerkungen zur Version](sql-server-linux-release-notes.md). Befolgen Sie anschließend die unter [„Installieren von SQL Server“](sql-server-linux-setup.md#offline) für die Offline-Installation beschriebenen Schritte. 
 
 ## <a name="ubuntu">Installieren Sie auf Ubuntu</a>
 
-Verwenden Sie die folgenden Schritte zum Installieren des **Mssql-Server-Agent** auf Ubuntu. 
+Gehen Sie wie folgt vor, um **mssql-server-agent** unter Ubuntu zu installieren.  
 
 ```bash
 sudo apt-get update 
@@ -60,7 +60,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls der **Mssql-Server-Agent** bereits installiert ist, können Sie mit den folgenden Befehlen das Update auf die aktuellste Version durchführen:
+Falls **mssql-server-agent** bereits installiert ist, können Sie mit den folgenden Befehlen auf die neueste Version aktualisieren:
 
 ```bash
 sudo apt-get update 
@@ -68,11 +68,11 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls Sie eine Offline-Installation durchführen möchten, finden Sie den SQL Server-Agent-Paketdownload in den [Release Notes](sql-server-linux-release-notes.md). Verwenden Sie zum installieren anschließend die in [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Installationsschritte. 
+Falls Sie eine Offline-Installation durchführen möchten, finden Sie den Downloadlink für das SQL Server-Agent-Paket in den [Anmerkungen zur Version](sql-server-linux-release-notes.md). Befolgen Sie anschließend die unter [„Installieren von SQL Server“](sql-server-linux-setup.md#offline) für die Offline-Installation beschriebenen Schritte.  
 
 ## <a name="SLES">Installieren Sie auf SLES</a>
 
-Verwenden Sie die folgenden Schritte zum Installieren des **Mssql-Server-Agent** für SUSE Linux Enterprise Server. 
+Gehen Sie wie folgt vor, um **mssql-server-agent** unter SUSE Linux Enterprise Server zu installieren. 
 
 Installieren Sie **Mssql-Server-Agent** 
 
@@ -81,7 +81,7 @@ sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls der **Mssql-Server-Agent** bereits installiert ist, können Sie mit den folgenden Befehlen das Update auf die aktuellste Version durchführen:
+Falls **mssql-server-agent** bereits installiert ist, können Sie mit den folgenden Befehlen auf die neueste Version aktualisieren:
 
 ```bash
 sudo zypper refresh
@@ -89,8 +89,8 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Falls Sie eine Offline-Installation durchführen möchten, finden Sie den SQL Server-Agent-Paketdownload in den [Release Notes](sql-server-linux-release-notes.md). Verwenden Sie zum installieren anschließend die in [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Installationsschritte. 
+Falls Sie eine Offline-Installation durchführen möchten, finden Sie den Downloadlink für das SQL Server-Agent-Paket in den [Anmerkungen zur Version](sql-server-linux-release-notes.md). Befolgen Sie anschließend die unter [„Installieren von SQL Server“](sql-server-linux-setup.md#offline) für die Offline-Installation beschriebenen Schritte. 
 
-## <a name="next-steps"></a>Weitere Schritte
-Weitere Informationen zur Verwendung von SQL Server-Agent zum erstellen, planen und ausführen von Aufträgen finden Sie unter [Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux](sql-server-linux-run-sql-server-agent-job.md).
+## <a name="next-steps"></a>Nächste Schritte
+Weitere Informationen zum Erstellen, Planen und Ausführen von Aufträgen mithilfe des SQL Server-Agents finden Sie unter [„Erstellen und Ausführen von SQL Server-Agent-Aufträgen unter Linux“](sql-server-linux-run-sql-server-agent-job.md).
 
