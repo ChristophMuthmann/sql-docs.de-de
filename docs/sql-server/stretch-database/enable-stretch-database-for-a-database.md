@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  Führen Sie zum manuellen Aktivieren von Stretch-Datenbank auf dem Server **sp_configure** aus, und aktivieren Sie die Option **remote data archive** . Im folgenden Beispiel wird die Option **remote data archive** aktiviert, indem ihr Wert auf 1 festgelegt wird.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
